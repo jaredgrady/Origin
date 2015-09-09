@@ -177,3 +177,4 @@ exports.commands = {
         	Rooms.global.writeChatRoomData();
         	this.sendReply('Removed "' + target + '" from the whitelist for the room bank"');
 	}
+}
