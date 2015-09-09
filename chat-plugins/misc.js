@@ -697,35 +697,6 @@ exports.commands = {
 	},
 	sharthelp: ["/shart [username] - Sharts on a user. Requires: @ & ~"],
 
-	regdate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		if (!target || target === "0") target = toId(user.userid);
-		if (!target || target === "." || target === "," || target === "'") return this.parse('/help regdate');
-		var username = toId(target);
-		target = target.replace(/\s+/g, '');
-		var self = this, data;
-		request('http://pokemonshowdown.com/users/~' + target, function (error, response, content) {
-			if (!(!error && response.statusCode === 200)) return;
-			content = content + '';
-			content = content.split("<em");
-			if (content[1]) {
-				content = content[1].split("</p>");
-				if (content[0]) {
-					content = content[0].split("</em>");
-					if (content[1]) {
-						var regdate = content[1].split('</small>')[0] + '.';
-						data = Tools.escapeHTML(username) + " was registered on" + regdate;
-					}
-				}
-			} else {
-				data = Tools.escapeHTML(username) + " is not registered.";
-			}
-			self.sendReplyBox(Tools.escapeHTML(data));
-			room.update();
-		});
-	},
-	regdatehelp: ["/regdate - Please specify a valid username."],
-
     	showauth: 'show',
 	show: function (target, room, user) {
 		if (!this.can('lock')) return false;
@@ -787,6 +758,42 @@ exports.commands = {
 		this.privateModCommand("(" + user.name + " has removed from the watchlist user list: " + targets.join(", ") + ")");
 	},
 
+regdate: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		if (!target || target === "0") target = toId(user.userid);
+		if (!target || target === "." || target === "," || target === "'") return this.parse('/help regdate');
+		var username = toId(target);
+		target = target.replace(/\s+/g, '');
+		var self = this, data;
+		request('http://pokemonshowdown.com/users/~' + target, function (error, response, content) {
+			if (!(!error && response.statusCode === 200)) return;
+			content = content + '';
+			content = content.split("<em");
+			if (content[1]) {
+				content = content[1].split("</p>");
+				if (content[0]) {
+					content = content[0].split("</em>");
+					if (content[1]) {
+						var regdate = content[1].split('</small>')[0] + '.';
+						data = Tools.escapeHTML(username) + " was registered on" + regdate;
+					}
+				}
+			} else {
+				data = Tools.escapeHTML(username) + " is not registered.";
+			}
+			self.sendReplyBox(Tools.escapeHTML(data));
+			room.update();
+		});
+	},
+	regdatehelp: ["/regdate - Please specify a valid username."],
+
+	show: function (target, room, user) {
+		if (!this.can('lock')) return false;
+		user.hiding = false;
+		user.updateIdentity();
+		this.sendReply("You have revealed your staff symbol.");
+	},
+
 	sb: 'showdownboilerplate',
 	showdownboilerplate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -800,7 +807,7 @@ exports.commands = {
 		var targetUser = Users.get(target);
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
 		target = Tools.escapeHTML(target);
-		var seen = Seen[toId(target)];
+		var seen = Db('seen')[toId(target)];
 		if (!seen) return this.sendReplyBox(target + " has never been online on this server.");
 		this.sendReplyBox(target + " was last seen <b>" + moment(seen).fromNow() + "</b>.");
 	},
