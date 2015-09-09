@@ -1,0 +1,144 @@
+[2015-08-26T00:12:32.325Z] (hitmonleague) Sableye free agent was appointed to Room Founder by Void Neo.
+[2015-08-26T00:13:02.173Z] (hitmonleague) inferno sasuke was banned from room hitmonleague by Sableye free agent.
+[2015-08-26T00:14:35.142Z] (hitmonleague) NPhoenix was banned from room hitmonleague by Sableye free agent.
+[2015-08-26T00:19:29.782Z] (hitmonleague) Hm Sableye was appointed Room Owner by Sableye free agent.
+[2015-08-26T00:26:02.708Z] (hitmonleague) Logicality was promoted to Room Voice by Hm Sableye.
+[2015-08-26T01:14:20.481Z] (hitmonleague) Hm ninjacake was promoted to Room Moderator by Hm Sableye.
+[2015-08-26T01:15:41.386Z] (hitmonleague) Hm Finesse was promoted to Room Moderator by Hm Sableye.
+[2015-08-26T01:23:25.684Z] (hitmonleague) Hm Zantier was promoted to Room Moderator by Hm Sableye.
+[2015-08-26T01:26:39.612Z] (hitmonleague) (Hm Sableye changed the roomdesc to: "new league looking for all types GL and E4 Spots open".)
+[2015-08-26T02:06:08.296Z] (hitmonleague) Hm Zuuzifer was promoted to Room Moderator by Hm Sableye.
+[2015-08-26T03:26:54.871Z] (hitmonleague) (Hm Finesse was demoted to Room Voice by Hm Sableye.)
+[2015-08-26T03:31:51.442Z] (hitmonleague) Hm Zuuzifer was promoted to Room Leader by Hm Sableye.
+[2015-08-26T03:59:19.212Z] (hitmonleague) (Hm Sableye changed the roomdesc to: "New League GL Spots Open ".)
+[2015-08-26T05:00:51.386Z] (hitmonleague) Raіn Kuro was promoted to Room Voice by Hm Sableye.
+[2015-08-26T05:10:39.898Z] (hitmonleague) Raіn Kuro was promoted to Room Leader by Hm Sableye.
+[2015-08-26T05:10:44.043Z] (hitmonleague) (Raіn Kuro changed the roomintro.)
+[2015-08-26T05:11:10.416Z] (hitmonleague) (Raіn Kuro was demoted to Room Voice by Hm Sableye.)
+[2015-08-26T06:41:43.124Z] (hitmonleague) Raіn Kuro was promoted to Room Leader by Hm Sableye.
+[2015-08-26T06:45:08.675Z] (hitmonleague) (Raіn Kuro changed the roomintro.)
+[2015-08-26T06:47:04.479Z] (hitmonleague) (Raіn Kuro was demoted to Room Voice by Hm Sableye.)
+[2015-08-26T06:57:34.432Z] (hitmonleague) Primal Theta was kicked from the room by Hm Sableye.
+[2015-08-26T08:05:58.425Z] (hitmonleague) Hm Zelda was promoted to Room Voice by Hm Sableye.
+[2015-08-26T08:13:44.793Z] (hitmonleague) Hm Zelda was promoted to Room Moderator by Hm Sableye.
+[2015-08-26T08:17:54.034Z] (hitmonleague) Neimenko was promoted to Room Voice by Hm Sableye.
+[2015-08-26T18:05:26.066Z] (hitmonleague) HM Vodoom was promoted to Room Moderator by Hm Sableye.
+[2015-08-27T01:13:06.503Z] (hitmonleague) Hm Rider was promoted to Room Voice by Hm Sableye.
+[2015-08-27T01:28:24.897Z] (hitmonleague) Hm Phyren was promoted to Room Moderator by Hm Sableye.
+[2015-08-27T02:06:47.207Z] (hitmonleague) Hm Rider was promoted to Room Moderator by Hm sableye.
+[2015-08-27T02:27:48.964Z] (hitmonleague) mevin6 was banned from room hitmonleague by Hm sableye.
+[2015-08-27T02:51:16.564Z] (hitmonleague) Primal Theta was promoted to Room Voice by Hm sableye.
+[2015-08-27T03:11:16.643Z] (hitmonleague) HM Vodoom was changed to Gym Leader by Hm sableye.
+[2015-08-27T03:12:10.160Z] (hitmonleague) Hm Rider was changed to Gym Leader by Hm sableye.
+[2015-08-27T03:12:26.131Z] (hitmonleague) hm zelda was changed to Gym Leader by Hm sableye.
+[2015-08-27T03:12:59.212Z] (hitmonleague) Hm Zuuzifer was changed to Gym Leader by Hm sableye.
+[2015-08-27T03:14:13.453Z] (hitmonleague) Hm Phyren was changed to Gym Leader by Hm sableye.
+[2015-08-27T03:26:26.501Z] (hitmonleague) Hm sableye was changed to Champion by Hm sableye.
+[2015-08-27T03:26:52.482Z] (hitmonleague) Hm Zuuzifer was changed to Professor by Hm sableye.
+[2015-08-27T03:27:37.563Z] (hitmonleague) hm finesse was changed to Gym Trainer by Hm sableye.
+[2015-08-27T20:11:42.023Z] (hitmonleague) hm ninjacake was changed to Gym Leader by Hm Sableye.
+[2015-08-28T02:17:28.805Z] (hitmonleague) Hm MandL was promoted to Room Voice by Hm Sableye.
+[2015-08-28T02:19:52.080Z] (hitmonleague) Hm MandL was changed to Gym Trainer by Hm Sableye.
+[2015-08-28T04:34:17.637Z] (hitmonleague) Snowy Meteor was promoted to Room Voice by Hm Zuuzifer.
+[2015-08-28T20:42:59.427Z] (hitmonleague) HM SSBU was promoted to Room Voice by Hm Sableye.
+[2015-08-28T20:44:46.111Z] (hitmonleague) SWL HB was promoted to Room Voice by Hm Sableye.
+[2015-08-28T21:08:28.422Z] (hitmonleague) HM SSBU was promoted to Room Moderator by Hm Sableye.
+[2015-08-28T21:09:27.849Z] (hitmonleague) HM SSBU was changed to Gym Leader by Hm Sableye.
+[2015-08-28T21:17:58.293Z] (hitmonleague) Hm Gallade was promoted to Room Moderator by Hm Sableye.
+[2015-08-28T21:18:18.250Z] (hitmonleague) Hm Gallade was changed to Gym Leader by Hm Sableye.
+[2015-08-28T21:51:42.816Z] (hitmonleague) Hm Hitmonlee was promoted to Room Voice by Hm Sableye.
+[2015-08-28T22:19:27.117Z] (hitmonleague) Hm Hitmonlee was promoted to Room Moderator by Hm Zuuzifer.
+[2015-08-29T00:29:01.637Z] (hitmonleague) Guard Fancii was promoted to Room Voice by Hm Zuuzifer.
+[2015-08-29T00:42:15.589Z] (hitmonleague) Finny was promoted to Room Voice by Hm Zuuzifer.
+[2015-08-29T01:43:28.673Z] (hitmonleague) Hm Hitmonlee was changed to Gym Leader by Hm Sableye.
+[2015-08-29T01:49:24.588Z] (hitmonleague) hm Narwhal was promoted to Room Voice by Hm Sableye.
+[2015-08-29T02:14:15.804Z] (hitmonleague) CMR was promoted to Room Voice by Hm Sableye.
+[2015-08-29T02:17:10.216Z] (hitmonleague) Hm Jasper was promoted to Room Moderator by Hm Sableye.
+[2015-08-29T02:17:54.126Z] (hitmonleague) Hm Zuuzifer declared Congrats To all new Gym leaders
+[2015-08-29T02:46:31.984Z] (hitmonleague) Alliance - Charen was promoted to Room Voice by Hm Zelda.
+[2015-08-29T03:03:27.517Z] (hitmonleague) Hm Jasper was changed to Gym Leader by Hm Sableye.
+[2015-08-29T03:06:59.473Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-08-29T03:29:47.978Z] (hitmonleague) Guard Darkrai was promoted to Room Voice by Hm Zuuzifer.
+[2015-08-29T03:58:13.688Z] (hitmonleague) Hm Specs was promoted to Room Moderator by Hm Sableye.
+[2015-08-29T03:58:34.903Z] (hitmonleague) Hm Specs was changed to Gym Leader by Hm Sableye.
+[2015-08-29T04:40:50.213Z] (hitmonleague) Finny - ⓈⓁⒺⒺⓅ was promoted to Room Driver by Hm Zuuzifer.
+[2015-08-29T04:42:16.867Z] (hitmonleague) Hm Silvergreen was promoted to Room Moderator by Hm Zuuzifer.
+[2015-08-29T04:44:51.358Z] (hitmonleague) Rayge was kicked from the room by Hm Sableye.
+[2015-08-29T05:38:55.823Z] (hitmonleague) Rayge was promoted to Room Voice by Hm Zuuzifer.
+[2015-08-29T11:22:54.868Z] (hitmonleague) Hm H¡tmonlee was promoted to Room Voice by Hm Jasper.
+[2015-08-29T11:23:22.423Z] (hitmonleague) (Hm H¡tmonlee was demoted to Room regular user by Hm Jasper.)
+[2015-08-29T11:31:43.773Z] (hitmonleague) Hm Zuuz¡fer was muted by Hm Jasper for 7 minutes.
+[2015-08-29T11:31:43.774Z] (hitmonleague) (Hm Zuuz¡fer's ac account: elitechampghetsis)
+[2015-08-29T13:44:08.289Z] (hitmonleague) Safety Shark was kicked from the room by Hm Zuuzifer.
+[2015-08-29T16:37:09.455Z] (hitmonleague) Enriique was promoted to Room Voice by hm zelda.
+[2015-08-29T17:35:47.673Z] (hitmonleague) hm zelda - ⓚⓘⓒⓚⓔⓓ was promoted to Room Leader by Hm Sableye.
+[2015-08-29T17:36:18.173Z] (hitmonleague) hm zelda - ⓗⓐⓟⓟⓨ was changed to Elite by Hm Sableye.
+[2015-08-29T17:43:14.929Z] (hitmonleague) Hm Zantier was changed to Gym Leader by Hm Sableye.
+[2015-08-29T18:01:15.036Z] (hitmonleague) hm zelda declared zantier try for e4 i know you can do it - zelda
+[2015-08-29T21:52:29.044Z] (hitmonleague) the Suspect was promoted to Room Leader by Hm Sableye.
+[2015-08-29T21:55:04.112Z] (hitmonleague) (the Suspect changed the roomintro.)
+[2015-08-29T21:55:26.146Z] (hitmonleague) (the Suspect was demoted to Room Voice by Hm Sableye.)
+[2015-08-30T00:43:11.544Z] (hitmonleague) Hm Narwhal was promoted to Room Driver by Hm Zuuzifer.
+[2015-08-30T00:46:19.525Z] (hitmonleague) Hm MandL was promoted to Room Driver by Hm Zuuzifer.
+[2015-08-30T02:30:06.487Z] (hitmonleague) Inferno Venom was banned from room hitmonleague by Hm Sableye.
+[2015-08-30T03:30:17.837Z] (hitmonleague) Void Wiley was promoted to Room Voice by Hm Sableye.
+[2015-08-30T09:06:50.032Z] (hitmonleague) SL Enigma was promoted to Room Voice by Hm Zelda - ⓖⓞⓓ.
+[2015-08-30T15:06:48.902Z] (hitmonleague) Raіn Kuro was promoted to Room Leader by Hm Sableye.
+[2015-08-30T15:08:38.538Z] (hitmonleague) (Raіn Kuro changed the roomintro.)
+[2015-08-30T15:09:59.761Z] (hitmonleague) (Raіn Kuro was demoted to Room Voice by Hm Sableye.)
+[2015-08-30T17:33:29.954Z] (hitmonleague) Hm the doctor was promoted to Room Moderator by Hm Zuuzifer.
+[2015-08-30T17:42:49.933Z] (hitmonleague) SWL Nocturne was kicked from the room by Hm Zuuzifer.
+[2015-08-30T20:33:14.063Z] (hitmonleague) Hm kingllouis was promoted to Room Moderator by Hm Sableye.
+[2015-08-30T22:58:21.611Z] (hitmonleague) Hm pmp15 was promoted to Room Moderator by Hm Zelda.
+[2015-08-30T23:28:18.417Z] (hitmonleague) Emg E4 Zap was promoted to Room Voice by Hm Sableye.
+[2015-08-31T00:34:35.694Z] (hitmonleague) Hm Zera was promoted to Room Voice by Hm Sableye.
+[2015-08-31T00:35:53.470Z] (hitmonleague) (Hm Zuuzifer created a tournament in gen2randombattle format.)
+[2015-08-31T01:07:37.428Z] (hitmonleague) Hm Coyote was promoted to Room Voice by Hm Sableye.
+[2015-08-31T01:28:32.627Z] (hitmonleague) Hm Coyote was changed to Gym Trainer by Hm Sableye.
+[2015-08-31T01:29:05.758Z] (hitmonleague) Hm Coyote was promoted to Room Driver by Hm Sableye.
+[2015-08-31T01:29:12.886Z] (hitmonleague) Hm Zera was promoted to Room Moderator by Hm Sableye.
+[2015-08-31T01:30:29.535Z] (hitmonleague) Hm Zera was changed to Gym Leader by Hm Sableye.
+[2015-08-31T01:31:10.190Z] (hitmonleague) (hm mandl was changed to regular user by Hm Sableye.)
+[2015-08-31T02:36:01.472Z] (hitmonleague) V Elite V was banned from room hitmonleague by Hm Sableye.
+[2015-08-31T03:38:31.815Z] (hitmonleague) Hm Breloomsweep was promoted to Room Moderator by Hm Sableye.
+[2015-08-31T21:11:56.738Z] (hitmonleague) V Ralker was banned from room hitmonleague by Hm Zera.
+[2015-08-31T21:19:25.563Z] (hitmonleague) velitev was unbanned from room hitmonleague by Hm Zera.
+[2015-09-01T00:12:23.078Z] (hitmonleague) inferno sasuke was banned from room hitmonleague by Hm Sableye.
+[2015-09-01T00:17:35.192Z] (hitmonleague) infernosasuke was unbanned from room hitmonleague by Hm Zantier.
+[2015-09-01T00:20:17.979Z] (hitmonleague) inferno sasuke was banned from room hitmonleague by Hm Sableye.
+[2015-09-01T00:26:43.816Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-09-01T01:23:17.633Z] (hitmonleague) Hm Finesse was promoted to Room Driver by Hm Zuuzifer.
+[2015-09-01T01:28:14.455Z] (hitmonleague) Hm Nightmare was promoted to Room Driver by Hm Zuuzifer.
+[2015-09-01T03:19:35.239Z] (hitmonleague) Hm Narwhal was promoted to Room Moderator by Hm Zuuzifer.
+[2015-09-01T05:52:08.665Z] (hitmonleague) Hm Enrich was promoted to Room Moderator by Hm Zuuzifer.
+[2015-09-01T13:06:08.007Z] (hitmonleague) Hm Wokabok was promoted to Room Moderator by Hm Zuuzifer.
+[2015-09-01T13:37:23.696Z] (hitmonleague) swagman7834 was promoted to Room Voice by Hm Zuuzifer.
+[2015-09-01T15:04:22.382Z] (hitmonleague) (Hm Zuuzifer created a tournament in gen2randombattle format.)
+[2015-09-01T15:06:29.305Z] (hitmonleague) (HM Zelda forcibly ended a tournament.)
+[2015-09-01T15:08:55.219Z] (hitmonleague) (HM Zelda created a tournament in monotype format.)
+[2015-09-01T15:20:23.933Z] (hitmonleague) (deathdeed was disqualified from the tournament by HM Zelda)
+[2015-09-01T15:26:31.763Z] (hitmonleague) (Hm Zantier was disqualified from the tournament by HM Zelda)
+[2015-09-01T15:33:49.616Z] (hitmonleague) HM Zelda set modchat to &
+[2015-09-01T15:33:57.604Z] (hitmonleague) HM Zelda set modchat to false
+[2015-09-01T16:26:48.992Z] (hitmonleague) SL Neimenko was kicked from the room by Hm Zelda - ⓗⓦⓘⓝⓖ.
+[2015-09-01T17:36:39.684Z] (hitmonleague) (HM zelda created a tournament in monotype format.)
+[2015-09-02T00:53:49.707Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-09-02T01:12:34.703Z] (hitmonleague) SLGoomy was kicked from the room by Hm Zuuzifer.
+[2015-09-02T01:24:37.468Z] (hitmonleague) Hm Zantier was promoted to Room Leader by Hm Sableye.
+[2015-09-02T01:26:34.922Z] (hitmonleague) iXZAR was promoted to Room Voice by Hm Zuuzifer.
+[2015-09-02T01:34:08.160Z] (hitmonleague) HM SSBU was muted by Hm Sableye for 7 minutes.
+[2015-09-02T01:34:24.739Z] (hitmonleague) HM SSBU was unmuted by Hm Sableye.
+[2015-09-02T01:40:50.230Z] (hitmonleague) (Hm Zuuzifer created a tournament in gen4randombattle format.)
+[2015-09-02T01:41:03.683Z] (hitmonleague) (Hm Sableye forcibly ended a tournament.)
+[2015-09-02T01:41:21.924Z] (hitmonleague) (Hm Sableye created a tournament in battlefactory format.)
+[2015-09-02T03:10:52.967Z] (hitmonleague) (hm hitmonlee was demoted to Room regular user by Hm Sableye.)
+[2015-09-02T03:35:57.790Z] (hitmonleague) xDolphin was kicked from the room by Hm Zuuzifer.
+[2015-09-02T03:43:44.751Z] (hitmonleague) Hm Finesse was kicked from the room by Hm Zuuzifer.
+[2015-09-02T18:43:09.823Z] (hitmonleague) (hmssbu was demoted to Room Voice by Hm Sableye.)
+[2015-09-02T20:35:44.588Z] (hitmonleague) Wolf Itachi -  -  was banned from room hitmonleague by Hm Sableye.
+[2015-09-03T00:52:41.728Z] (hitmonleague) Hm TripleB was promoted to Room Moderator by Hm Zantier.
+[2015-09-03T01:05:15.946Z] (hitmonleague) (Hm Zuuzifer created a tournament in battlefactory format.)
+[2015-09-03T01:05:33.813Z] (hitmonleague) (Hm sableye forcibly ended a tournament.)
+[2015-09-03T02:06:40.214Z] (hitmonleague) PrinnyPaladin was promoted to Room Voice by Hm sableye.
+[2015-09-03T08:45:44.363Z] (hitmonleague) Primal Theta - ⓦⓣⓕ was kicked from the room by Hm Zelda - ⓔⓐⓣⓘⓝⓖ.
+[2015-09-03T11:17:45.666Z] (hitmonleague) IS Albtraum was promoted to Room Voice by HM Vodoom.

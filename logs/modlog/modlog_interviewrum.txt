@@ -1,0 +1,64 @@
+[2015-07-28T23:14:45.105Z] (interviewrum) SWL Falls was muted by xLaxuy for 7 minutes.
+[2015-07-28T23:23:29.224Z] (interviewrum) SWL Falls was muted by xLaxuy for 7 minutes.
+[2015-07-28T23:23:47.662Z] (interviewrum) SWL Falls was unmuted by xLaxuy.
+[2015-07-28T23:23:49.903Z] (interviewrum) SWL Falls was muted by xLaxuy for 7 minutes.
+[2015-07-28T23:23:51.916Z] (interviewrum) SWL Falls was unmuted by xLaxuy.
+[2015-07-28T23:23:54.135Z] (interviewrum) SWL Falls was muted by xLaxuy for 7 minutes.
+[2015-07-28T23:25:41.773Z] (interviewrum) SWL Falls was unmuted by xCellz.
+[2015-08-03T21:25:35.692Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-03T21:26:04.976Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-03T21:26:57.254Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-03T21:27:36.854Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-03T21:28:16.315Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-03T21:29:03.129Z] (interviewrum) Alliance - Carn0X was promoted to Room Voice by Kammi.
+[2015-08-05T16:59:02.885Z] (interviewrum) Aerlyst was promoted to Room Moderator by Kammi.
+[2015-08-05T16:59:33.622Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-05T16:59:54.034Z] (interviewrum) suiryu was promoted to Room Driver by Kammi.
+[2015-08-06T04:54:02.823Z] (interviewrum) Ridley was promoted to Room Moderator by Kammi.
+[2015-08-06T05:06:23.196Z] (interviewrum) (Ridley was demoted to Room Voice by sabella.)
+[2015-08-06T05:06:48.005Z] (interviewrum) Ridley was promoted to Room Moderator by sabella.
+[2015-08-10T21:15:09.498Z] (interviewrum) ed1111 was promoted to Room Voice by Kammi.
+[2015-08-10T21:15:25.085Z] (interviewrum) iGlack was promoted to Room Moderator by Kammi.
+[2015-08-10T21:16:24.046Z] (interviewrum) (iGlack notes: what type is he testing for?)
+[2015-08-10T21:18:00.110Z] (interviewrum) (Kammi notes: wyv will be excited)
+[2015-08-10T21:18:06.624Z] (interviewrum) (Kammi notes: hes the type to get hyped over another bug person)
+[2015-08-10T21:18:47.004Z] (interviewrum) (iGlack notes: sigh)
+[2015-08-10T21:30:48.274Z] (interviewrum) (iGlack notes: kekkles)
+[2015-08-10T21:39:06.907Z] (interviewrum) marriage was promoted to Room Voice by iGlack.
+[2015-08-10T21:55:43.610Z] (interviewrum) (ed1111 was demoted to Room regular user by iGlack.)
+[2015-08-10T21:55:47.410Z] (interviewrum) edjim was kicked from the room by iGlack.
+[2015-08-13T23:17:47.110Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:17:54.751Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:26:28.839Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:27:01.928Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:27:30.598Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:28:44.914Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:29:21.667Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:29:41.389Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-13T23:32:23.037Z] (interviewrum) (Kammi changed the roomintro.)
+[2015-08-16T03:17:04.068Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:17:22.856Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:18:16.582Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:21:18.168Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:24:52.364Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:27:02.441Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:28:51.272Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:29:46.374Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:30:52.446Z] (interviewrum) (Ashaury changed the roomintro.)
+[2015-08-16T03:37:59.813Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:38:26.808Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:38:36.053Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:39:09.854Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:39:24.948Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:40:03.105Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:40:17.499Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:40:33.794Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:41:17.375Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:41:37.900Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:42:23.828Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:42:33.615Z] (interviewrum) (ashaury changed the roomintro.)
+[2015-08-16T03:47:44.221Z] (interviewrum) piiiiichu was promoted to Room Moderator by ashaury.
+[2015-08-16T04:00:07.647Z] (interviewrum) xdjak2 was promoted to Room Moderator by ashaury.
+[2015-08-16T05:24:54.228Z] (interviewrum) mega p!ka was promoted to Room Moderator by Ashaury.
+[2015-08-20T03:17:50.201Z] (interviewrum) Ticken was promoted to Room Moderator by ashaury.
+[2015-08-30T15:50:20.624Z] (interviewrum) (Kammi changed the roomintro.)
