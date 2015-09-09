@@ -1,6 +1,7 @@
+
 var color = require('../config/color');
-var moment = require('moment');
 var fs = require('fs');
+var moment = require('moment');
 
 var BR = '<br>';
 var SPACE = '&nbsp;';
@@ -14,7 +15,6 @@ var trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
  * @param {Object|String} user - if isOnline then Object else String
  * @param {String} image
  */
-
 function Profile(isOnline, user, image) {
 	this.isOnline = isOnline || false;
 	this.user = user || null;
@@ -35,7 +35,6 @@ function Profile(isOnline, user, image) {
  * @param {String} text
  * @return {String}
  */
-
 function bold(text) {
 	return '<b>' + text + '</b>';
 }
@@ -51,7 +50,6 @@ function bold(text) {
  * @param {String} text
  * @return {String}
  */
-
 function font(color, text) {
 	return '<font color="' + color + '">' + text + '</font>';
 }
@@ -66,7 +64,6 @@ function font(color, text) {
  * @param {String} link
  * @return {String}
  */
-
 function img(link) {
 	return '<img src="' + link + '" height="80" width="80" align="left">';
 }
@@ -83,7 +80,6 @@ function img(link) {
  * @param {String} text
  * @return {String}
  */
-
 function label(text) {
 	return bold(font(profileColor, text + ':')) + SPACE;
 }
@@ -132,37 +128,21 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
-Profile.prototype.vip = function() { 
-    if (typeof this.user === 'string') return '';
-    if (this.user && !this.user.can('vip')) return '';
-    if (this.user && this.user.can('vip')) return '(<font color=#6390F0><b>VIP User</b></font>)';
-    return '';
-}
-
 Profile.prototype.show = function (callback) {
-	var _this = this;
-
 	var userid = toId(this.username);
 
-	Database.read('money', userid, function (err, money) {
-		if (err) throw err;
-		if (!money) money = 0;
-
-		return callback(this.avatar() +
-				SPACE + this.name() + BR +
-				SPACE + this.group() + SPACE + this.vip() + BR +
-				SPACE + this.money(money) + BR +
-				SPACE + this.seen(Seen[userid]) +
-				'<br clear="all">');
-	}.bind(this));
+	return callback(this.avatar() +
+									SPACE + this.name() + BR +
+									SPACE + this.group() + BR +
+									SPACE + this.money(Db('money')[userid] || 0) + BR +
+									SPACE + this.seen(Db('seen')[userid]) +
+									'<br clear="all">');
 };
 
 exports.commands = {
 	profile: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-
-
 		var targetUser = this.targetUserOrSelf(target);
 		var profile;
 		if (!targetUser) {
@@ -175,7 +155,5 @@ exports.commands = {
 			room.update();
 		}.bind(this));
 	},
-
 	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."]
 };
-
