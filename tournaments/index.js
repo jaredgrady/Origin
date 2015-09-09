@@ -1,15 +1,7 @@
 const BRACKET_MINIMUM_UPDATE_INTERVAL = 2 * 1000;
 const AUTO_DISQUALIFY_WARNING_TIMEOUT = 30 * 1000;
 const AUTO_START_MINIMUM_TIMEOUT = 30 * 1000;
-
-var colors = {
-    Mythic: '#E3E2AF',
-    Legendary: '#FF851B',
-    Epic: 'purple',
-    Rare: '#0074D9',
-    Uncommon: 'gray',
-    Common: 'black'
-};
+const MAX_REASON_LENGTH = 300;
 
 var TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
@@ -232,7 +224,7 @@ Tournament = (function () {
 	Tournament.prototype.purgeGhostUsers = function () {
 		// "Ghost" users sometimes end up in the tournament because they've merged with another user.
 		// This function is to remove those ghost users from the tournament.
-		this.generator.getUsers().forEach(function (user) {
+		this.generator.getUsers(true).forEach(function (user) {
 			var realUser = Users.getExact(user.userid);
 			if (!realUser || realUser !== user) {
 				// The two following functions are called without their second argument,
@@ -444,7 +436,7 @@ Tournament = (function () {
 		};
 	};
 
-	Tournament.prototype.disqualifyUser = function (user, output) {
+	Tournament.prototype.disqualifyUser = function (user, output, reason) {
 		var error = this.generator.disqualifyUser(user);
 		if (error) {
 			output.sendReply('|tournament|error|' + error);
@@ -494,6 +486,7 @@ Tournament = (function () {
 
 		this.room.add('|tournament|disqualify|' + user.name);
 		user.sendTo(this.room, '|tournament|update|{"isJoined":false}');
+		user.popup("|modal|You have been disqualified from the tournament in " + this.room.title + (reason ? ":\n\n" + reason : "."));
 		this.isBracketInvalidated = true;
 		this.isAvailableMatchesInvalidated = true;
 
@@ -562,7 +555,7 @@ Tournament = (function () {
 			if (pendingChallenge && pendingChallenge.to) return;
 
 			if (Date.now() > time + this.autoDisqualifyTimeout && this.isAutoDisqualifyWarned.get(user)) {
-				this.disqualifyUser(user, output);
+				this.disqualifyUser(user, output, "You failed to make or accept the challenge in time.");
 				this.room.update();
 			} else if (Date.now() > time + this.autoDisqualifyTimeout - AUTO_DISQUALIFY_WARNING_TIMEOUT && !this.isAutoDisqualifyWarned.get(user)) {
 				var remainingTime = this.autoDisqualifyTimeout - Date.now() + time;
@@ -768,32 +761,16 @@ Tournament = (function () {
 			var firstMoney = Math.round(tourSize / 4);
 			var secondMoney = Math.round(firstMoney / 2);
 
-			Database.read('money', wid, function (err, amount) {
-				if (err) throw err;
-				if (!amount) amount = 0;
-				Database.write('money', amount + firstMoney, wid, function (err) {
-					if (err) throw err;
-				});
-			});
+			Db('money')[wid] = (Db('money')[wid] || 0) + firstMoney;
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has won " + "<font color='" + color + "'>" + firstMoney + "</font>" + currencyName(firstMoney) + " for winning the tournament!</b>");
 
 			if (runnerUp) {
-				Database.read('money', rid, function (err, amount) {
-					if (err) throw err;
-					if (!amount) amount = 0;
-					Database.write('money', amount + secondMoney, rid, function (err) {
-						if (err) throw err;
-					});
-				});
+				Db('money')[rid] = (Db('money')[rid] || 0) + secondMoney;
 				this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(runnerUp) + "</font> has won " +  "<font color='" + color + "'>" + secondMoney + "</font>" + currencyName(secondMoney) + " for winning the tournament!</b>");
 			}
-		}
-		
-		if (this.room.isOfficial && tourSize >= 4) {
-            		var tourRarity = tourCard(tourSize, toId(winner));
-			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + colors[tourRarity[0]] + ">" + tourRarity[0] + "</font> card: <button name='send' value='/card " + tourRarity[1] + "'>" + tourRarity[2] + "</button> from the tournament.");
-		}
 
+			Db.save();
+		}
 	};
 
 	return Tournament;
@@ -875,8 +852,13 @@ var commands = {
 			if (!targetUser) {
 				return this.sendReply("User " + params[0] + " not found.");
 			}
-			if (tournament.disqualifyUser(targetUser, this)) {
-				this.privateModCommand("(" + targetUser.name + " was disqualified from the tournament by " + user.name + ")");
+			var reason = '';
+			if (params[1]) {
+				reason = params[1].trim();
+				if (reason.length > MAX_REASON_LENGTH) return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
+			}
+			if (tournament.disqualifyUser(targetUser, this, reason)) {
+				this.privateModCommand("(" + targetUser.name + " was disqualified from the tournament by " + user.name + (reason ? " (" + reason + ")" : "") + ")");
 			}
 		},
 		autostart: 'setautostart',
@@ -904,25 +886,6 @@ var commands = {
 		runautodq: function (tournament) {
 			tournament.runAutoDisqualify(this);
 		},
-		remind: function (tournament, user) {
-			var users = tournament.generator.getAvailableMatches().toString().split(',');
-			var offlineUsers = [];
-			for (var u in users) {
-				var targetUser = Users.get(users[u]);
-				if (!targetUser) {
-					offlineUsers.push(users[u]);
-					continue;
-				} else if (!targetUser.connected) {
-					offlineUsers.push(targetUser.userid);
-					continue;
-				} else {
-					targetUser.popup('You have a tournament battle in the room "' + tournament.room.title + '". If you do not start soon you may be disqualified.');
-				}
-			}
-			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
-			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
-		},
-		
 		end: 'delete',
 		stop: 'delete',
 		delete: function (tournament, user) {
