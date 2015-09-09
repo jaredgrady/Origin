@@ -70,7 +70,7 @@ exports.commands = {
 				if (params.length < 1) return this.sendReply('Usage: /leagueshop buy [item name]');
 				var item = params.shift();
 				if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "'+item+'" not found.');
-				Database.read('money', toId(user), function (err, money) {
+			Db('money', [toId[user]], function (err, money) {
 					if (err) money = 0;
 					if (isNaN(money)) {
 						money = 0;
