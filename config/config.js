@@ -259,7 +259,6 @@ exports.grouplist = [
                 name: "Room Owner",
                 inherit: '&',
                 jurisdiction: 'u',
-                roomleader: true,
                 roommod: true,
                 roomdriver: true,
                 declare: true,
@@ -269,37 +268,23 @@ exports.grouplist = [
 		roomop: true
         },
 	{
+	{
 		symbol: '&',
 		id: "leader",
 		name: "Leader",
 		inherit: '@',
 		jurisdiction: '@u',
 		promote: 'u',
+		forcewin: true,
 		declare: true,
 		modchatall: true,
-		roommod: true,
-		roomdriver: true,
-		tournamentsmanagement: true,
+		rangeban: true,
+		potd: true,
+		disableladder: true,
+		globalonly: true,
+		tournamentsmanagement: true
 		roomop: true,
 		seniorstaff: true
-	},
-	{
-	        symbol: '\u00BF',
-	        id: "developer",
-	        name: "Developer",
-		inherit: "@",
-		jurisdiction: '@u',
-		promote: 'u',
-		declare: true,
-		modchatall: true,
-		roommod: true,
-		roomdriver: true,
-		rangeban: true,
-		forcewin: true,
-		roomop: true,
-		hotpatch: true,
-		globalonly: true,
-		tournamentsmanagement: true,
 	},
 	{
 		symbol: '\u2605',
@@ -360,16 +345,6 @@ exports.grouplist = [
 		mute: true,
 		tournaments: true,
 		tournamentsmoderation: true
-	},
-	{
-		symbol: '=',
-		id: "contributor",
-		name: "Contributor",
-		inherit: '+',
-		jurisdiction: 'u',
-		tournaments: true,
-		tournamentsmoderation: true,
-		globalonly: true
 	},
 	{
 		symbol: '+',
