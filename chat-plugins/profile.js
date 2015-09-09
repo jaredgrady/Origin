@@ -128,12 +128,19 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
+Profile.prototype.vip = function() { 
+    if (typeof this.user === 'string') return '';
+    if (this.user && !this.user.can('vip')) return '';
+    if (this.user && this.user.can('vip')) return '(<font color=#6390F0><b>VIP User</b></font>)';
+    return '';
+};
+
 Profile.prototype.show = function (callback) {
 	var userid = toId(this.username);
 
 	return callback(this.avatar() +
 									SPACE + this.name() + BR +
-									SPACE + this.group() + BR +
+									SPACE + this.group() + SPACE + this.vip() + BR +
 									SPACE + this.money(Db('money')[userid] || 0) + BR +
 									SPACE + this.seen(Db('seen')[userid]) +
 									'<br clear="all">');
