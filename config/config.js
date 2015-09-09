@@ -282,7 +282,7 @@ exports.grouplist = [
 		potd: true,
 		disableladder: true,
 		globalonly: true,
-		tournamentsmanagement: true
+		tournamentsmanagement: true,
 		roomop: true,
 		seniorstaff: true
 	},
