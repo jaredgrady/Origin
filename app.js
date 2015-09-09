@@ -326,15 +326,7 @@ Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.Tells = require('./tells.js');
 
-global.Database = require('./database.js')(Config.database);
-
-try {
-	global.Seen = JSON.parse(fs.readFileSync('config/seen.json', 'utf8'));
-} catch (e) {
-	if (e instanceof SyntaxError) e.message = 'Malformed JSON in seen.json: \n' + e.message;
-	if (e.code !== 'ENOENT') throw e;
-	global.Seen = {};
-}
+global.Db = require('eosdb')('config/eosdb');
 
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
@@ -405,17 +397,4 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
  * Start up the REPL server
  *********************************************************/
 
-require('./repl.js').start('app', function (cmd) { return eval(cmd); }); 
-
-/*********************************************************
- * Start up EOS modules
- *********************************************************/
- 
-try {
-	global.Watchlist = require('./watchlist.js');
-	global.League = require('./lvl/league.js'); 
-	global.Clans = require('./lvl/clans.js'); 
-	global.War = require('./lvl/war.js');
-} catch (e) {
-	throw e;
-}
+require('./repl.js').start('app', function (cmd) { return eval(cmd); });
