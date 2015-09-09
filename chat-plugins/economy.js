@@ -413,7 +413,11 @@ exports.commands = {
 
 	picklottery: function (target, room, user) {
 		if (!this.can('picklottery')) return false;
-		var chance = Math.round(Math.random());
+		if (target === 'forcewin') {
+			var chance = Math.floor(Math.random()) === 0;
+		} else {
+			var chance = Math.round(Math.random()) === 1;
+		}
 		var keys = Object.keys(Db('lottery'));
 		var msg = "<center><h2>Lottery!</h2>Nobody has won the lottery. Good luck to everyone next time!</center>";
 		keys.splice(keys.indexOf('pot'), 1);
