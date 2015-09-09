@@ -268,7 +268,6 @@ exports.grouplist = [
 		roomop: true
         },
 	{
-	{
 		symbol: '&',
 		id: "leader",
 		name: "Leader",
@@ -278,10 +277,6 @@ exports.grouplist = [
 		forcewin: true,
 		declare: true,
 		modchatall: true,
-		rangeban: true,
-		potd: true,
-		disableladder: true,
-		globalonly: true,
 		tournamentsmanagement: true,
 		roomop: true,
 		seniorstaff: true
