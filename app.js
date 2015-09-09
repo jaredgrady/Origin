@@ -42,11 +42,6 @@
  *
  * @license MIT license
  */
- 
- /* ----------------Data-Directory------------*/
-global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/';
-global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA_DIR + 'logs/') : './logs/';
-/* ------------------------------------------*/
 
 /*********************************************************
  * Make sure we have everything set up correctly
@@ -139,7 +134,13 @@ global.ResourceMonitor = {
 	log: function (text) {
 		console.log(text);
 		if (Rooms.get('staff')) {
-			Rooms.get('staff').add('||' + text).update();
+			Rooms.get('staff').add('|c|~|' + text).update();
+		}
+	},
+	adminlog: function (text) {
+		console.log(text);
+		if (Rooms.get('upperstaff')) {
+			Rooms.get('upperstaff').add('|c|~|' + text).update();
 		}
 	},
 	logHTML: function (text) {
@@ -154,18 +155,14 @@ global.ResourceMonitor = {
 		name = (name ? ': ' + name : '');
 		if (ip in this.connections && duration < 30 * 60 * 1000) {
 			this.connections[ip]++;
-			if (this.connections[ip] < 500 && duration < 5 * 60 * 1000 && this.connections[ip] % 60 === 0) {
-				this.log('[ResourceMonitor] IP ' + ip + ' has connected ' + this.connections[ip] + ' times in the last ' + duration.duration() + name);
-			} else if (this.connections[ip] < 500 && this.connections[ip] % 120 === 0) {
-				this.log('[ResourceMonitor] IP ' + ip + ' has connected ' + this.connections[ip] + ' times in the last ' + duration.duration() + name);
-			} else if (this.connections[ip] === 500) {
-				this.log('[ResourceMonitor] IP ' + ip + ' has been banned for connection flooding (' + this.connections[ip] + ' times in the last ' + duration.duration() + name + ')');
+			if (this.connections[ip] === 500) {
+				this.adminlog('[ResourceMonitor] IP ' + ip + ' has been banned for connection flooding (' + this.connections[ip] + ' times in the last ' + duration.duration() + name + ')');
 				return true;
 			} else if (this.connections[ip] > 500) {
 				if (this.connections[ip] % 500 === 0) {
 					var c = this.connections[ip] / 500;
 					if (c < 5 || c % 2 === 0 && c < 10 || c % 5 === 0) {
-						this.log('[ResourceMonitor] Banned IP ' + ip + ' has connected ' + this.connections[ip] + ' times in the last ' + duration.duration() + name);
+						this.adminlog('[ResourceMonitor] Banned IP ' + ip + ' has connected ' + this.connections[ip] + ' times in the last ' + duration.duration() + name);
 					}
 				}
 				return true;
@@ -325,13 +322,9 @@ global.Users = require('./users.js');
 
 global.Rooms = require('./rooms.js');
 
-global.Ladders = require('./ladders-remote.js');
+Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.Tells = require('./tells.js');
-
-global.Marketdb = require('./marketdb.js')('lowdb');
-
-Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.Database = require('./database.js')(Config.database);
 
@@ -412,7 +405,7 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
  * Start up the REPL server
  *********************************************************/
 
-require('./repl.js').start('app', function (cmd) { return eval(cmd); });
+require('./repl.js').start('app', function (cmd) { return eval(cmd); }); });
 
 /*********************************************************
  * Start up EOS modules
