@@ -27,7 +27,7 @@ var shopDisplay = getShopDisplay(shop);
  * @param {Number} amount
  * @returns {String}
  */
-global.currencyName = function(amount) {
+function currencyName(amount) {
 	var name = " buck";
 	return amount === 1 ? name : name + "s";
 }
@@ -38,8 +38,7 @@ global.currencyName = function(amount) {
  * @param {String} money
  * @return {String|Number}
  */
-
-global.isMoney = function(money) {
+function isMoney(money) {
 	var numMoney = Number(money);
 	if (isNaN(money)) return "Must be a number.";
 	if (String(money).includes('.')) return "Cannot contain a decimal.";
@@ -52,8 +51,7 @@ global.isMoney = function(money) {
  *
  * @param {String} message
  */
-
-global.logMoney = function(message) {
+function logMoney(message) {
 	if (!message) return;
 	var file = path.join(__dirname, '../logs/money.txt');
 	var date = "[" + new Date().toUTCString() + "] ";
@@ -67,7 +65,6 @@ global.logMoney = function(message) {
  * @param {Array} shop
  * @return {String} display
  */
-
 function getShopDisplay(shop) {
 	var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
 					"<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
@@ -122,13 +119,11 @@ function handleBoughtItem(item, user, cost) {
 		this.sendReply("You have purchased a custom symbol. You can use /customsymbol to get your custom symbol.");
 		this.sendReply("You will have this until you log off for more than an hour.");
 		this.sendReply("If you do not want your custom symbol anymore, you may use /resetsymbol to go back to your old symbol.");
-
 	} else if (item === 'ticket') {
 		var _this = this;
 		Database.get('pot', function (err, pot) {
 			if (err) throw err;
 			if (!pot) pot = 0;
-
 			Database.set('pot', pot + cost,  function (err, pot) {
 				if (err) throw err;
 				Database.read('tickets', user.userid, function (err, tickets) {
@@ -138,7 +133,6 @@ function handleBoughtItem(item, user, cost) {
 					tickets.push(ticket);
 					Database.write('tickets', tickets, user.userid, function (err) {
 						if (err) throw err;
-
 						_this.sendReply("Your ticket has this id: " + ticket + ". The jackpot is currently worth " + pot + currencyName(pot) + ". Use /tickets to view your ticket(s).");
 					});
 				});
@@ -167,12 +161,7 @@ function rng() {
 
 exports.commands = {
 	atm: 'wallet',
-	bal: 'wallet',
-	balance: 'wallet',
-	bank: 'wallet',
-	vault: 'wallet',
 	purse: 'wallet',
-	fannypack: 'wallet',
 	wallet: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!target) target = user.name;
@@ -189,7 +178,7 @@ exports.commands = {
 	givebuck: 'givemoney',
 	givebucks: 'givemoney',
 	givemoney: function (target, room, user) {
-		if (!user.can('declare')) return this.sendReply("/givebucks - Access denied.");
+		if (!this.can('forcewin')) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help givemoney');
 
 		var parts = target.split(',');
@@ -217,7 +206,7 @@ exports.commands = {
 	takebuck: 'takemoney',
 	takebucks: 'takemoney',
 	takemoney: function (target, room, user) {
-		if (!user.can('declare')) return this.errorReply("/takebucks - Access denied.");
+		if (!this.can('forcewin')) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help takemoney');
 
 		var parts = target.split(',');
@@ -230,12 +219,11 @@ exports.commands = {
 		Database.read('money', toId(username), function (err, initial) {
 			if (err) throw err;
 			if (!initial) initial = 0;
-			if (amount > initial) return _this.errorReply("The user cannot have negative bucks");
 			Database.write('money', initial - amount, toId(username), function (err, total) {
 				if (err) throw err;
 				amount = amount + currencyName(amount);
 				total = total + currencyName(total);
-				_this.sendReply(username + " lost " + amount + ". " + username + " now has " + total + ".");
+				_this.sendReply(username + " losted " + amount + ". " + username + " now has " + total + ".");
 				if (Users.get(username)) Users.get(username).popup(user.name + " has taken " + amount + " from you. You now have " + total + ".");
 				logMoney(username + " had " + amount + " taken away by " + user.name + ".");
 			});
@@ -246,7 +234,7 @@ exports.commands = {
 	resetbuck: 'resetmoney',
 	resetbucks: 'resetmoney',
 	resetmoney: function (target, room, user) {
-		if (!this.can('declare')) return false;
+		if (!this.can('forcewin')) return false;
 		Database.write('money', 0, toId(target), function (err, total) {
 			if (err) throw err;
 			this.sendReply(target + " now has " + total + currencyName(total) + ".");
@@ -301,36 +289,28 @@ exports.commands = {
 
 	buy: function (target, room, user) {
 		if (!target) return this.parse('/help buy');
-		if (this.can('declare')) {
-			if (target.toLowerCase() === 'ticket') return this.sendReply("To prevent generated bucks going into the pot, you can not purchase a ticket.");
-		}
-		
 		var _this = this;
-			Database.read('tickets', user.userid, function (err, tickets) {
+		Database.read('money', user.userid, function (err, amount) {
 			if (err) throw err;
-			if (target.toLowerCase() === 'ticket' && tickets && tickets.length > 24) return _this.sendReply("|raw|Too many tickets. Calm down and play <a href='ninjakiwi.com/Games/Action/Play/SAS-Zombie-Assault-4.html'>SAS 4.</a>");
-			Database.read('money', user.userid, function (err, amount) {
+			if (!amount) amount = 0;
+			var cost = findItem.call(_this, target, amount);
+			if (!cost) return room.update();
+			Database.write('money', amount - cost, user.userid, function (err, total) {
 				if (err) throw err;
-				if (!amount) amount = 0;
-				var cost = findItem.call(_this, target, amount);
-				if (!cost) return room.update();
-				Database.write('money', amount - cost, user.userid, function (err, total) {
-					if (err) throw err;
-					_this.sendReply("You have bought " + target + " for " + cost +  currencyName(cost) + ". You now have " + total + currencyName(total) + " left.");
-					room.addRaw(user.name + " has bought <b>" + target + "</b> from the shop.");
-					logMoney(user.name + " has bought " + target + " from the shop. This user now have " + total + currencyName(total) + ".");
-					handleBoughtItem.call(_this, target.toLowerCase(), user, cost);
-					room.update();
-				});
+				_this.sendReply("You have bought " + target + " for " + cost +  currencyName(cost) + ". You now have " + total + currencyName(total) + " left.");
+				room.addRaw(user.name + " has bought <b>" + target + "</b> from the shop.");
+				logMoney(user.name + " has bought " + target + " from the shop. This user now has " + total + currencyName(total) + ".");
+				handleBoughtItem.call(_this, target.toLowerCase(), user, cost);
+				room.update();
 			});
 		});
 	},
 	buyhelp: ["/buy [command] - Buys an item from the shop."],
 
 	customsymbol: function (target, room, user) {
-		if (!user.canCustomSymbol && !user.can('vip') && user.id !== user.userid) return this.sendReply("You need to buy this item from the shop.");
+		if (!user.canCustomSymbol && user.id !== user.userid) return this.sendReply("You need to buy this item from the shop.");
 		if (!target || target.length > 1) return this.parse('/help customsymbol');
-		if (target.match(/[A-Za-z\d]+/g) || '|?!+$%@\u2605=&~#\u03c4\u00a3\u03dd\u03b2\u039e\u203D\u03a9\u0398\u03a3\u00a9\u00BF'.indexOf(target) >= 0) {
+		if (target.match(/[A-Za-z\d]+/g) || '|?!+$%@\u2605=&~#\u03c4\u00a3\u03dd\u03b2\u039e\u03a9\u0398\u03a3\u00a9'.indexOf(target) >= 0) {
 			return this.sendReply("Sorry, but you cannot change your symbol to this for safety/stability reasons.");
 		}
 		user.customSymbol = target;
@@ -379,12 +359,9 @@ exports.commands = {
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		var targetnum = target;
-		if (!target || isNaN(target)) targetnum = 10;
-		if (target > 25) targetnum = 25;
 		var _this = this;
 		var display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
-		Database.sortDesc('money', targetnum, function (err, users) {
+		Database.sortDesc('money', 10, function (err, users) {
 			if (err) throw err;
 			if (!users.length) {
 				_this.sendReplyBox("Money ladder is empty.");
@@ -398,62 +375,37 @@ exports.commands = {
 			room.update();
 		});
 	},
-	
-        registershop: function (target, room, user) {
-    		if (!user.can('declare')) return this.sendReply('/registershop - Access Denied you silly goose!');
-    		if (!target) return this.sendReply('Please specify a room you silly goose!');
-    		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
-    		var targetRoom = Rooms(toId(target));
-    		targetRoom.add('|raw|<div class="broadcast-green"><b>'+user.name+' has just added a league shop to this room.</b></div>');
-	 				targetRoom.update();
-	 			if (!targetRoom.shop) {
-	 				targetRoom.shop = new Object();
-	 				targetRoom.shopList = new Array();
-					targetRoom.chatRoomData.shop = targetRoom.shop;
-					targetRoom.chatRoomData.shopList = targetRoom.shopList;
-	 			}
-				if (!targetRoom.hasShop) targetRoom.hasShop = targetRoom.chatRoomData.hasShop = true;
-					Rooms.global.writeChatRoomData();
-    },
 
 	dicegame: 'startdice',
 	dicestart: 'startdice',
 	startdice: function (target, room, user) {
+		if (!this.can('broadcast', null, room)) return false;
 		if (!target) return this.parse('/help startdice');
-		if (!this.canTalk()) return this.sendReply("You can not start dice games while unable to speak.");
-		if (room.id !== 'casino') {
-			if (!this.can('broadcast', null, room)) return this.sendReply("You must be at least a voice to start a dice outside of the casino.");
-			if (room.id === 'lobby') return this.sendReply("Bitch, do you want to get demoted?");
-			if (target > 20) return this.sendReply("Due to recent issues on the server, dice above 20 bucks can only be started in the casino.");
-		} else if (room.id === 'casino' && target > 500) return this.sendReply("Dice can only be started for amounts less than 500 bucks.");
+		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
 
 		var amount = isMoney(target);
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (!room.dice) room.dice = {};
-		if (room.dice.started) return this.sendReply("A dice game has already started in this room.");
+		if (room.dice.started) return this.errorReply("A dice game has already started in this room.");
 
 		room.dice.started = true;
 		room.dice.bet = amount;
 		// Prevent ending a dice game too early.
 		room.dice.startTime = Date.now();
-		room.dice.startUser = user.name;
-
 
 		room.addRaw("<div class='infobox'><h2><center><font color=#24678d>" + user.name + " has started a dice game for </font><font color=red>" + amount + "</font><font color=#24678d>" + currencyName(amount) + ".</font><br><button name='send' value='/joindice'>Click to join.</button></center></h2></div>");
 	},
 	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
 
 	joindice: function (target, room, user) {
-		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.sendReply("There is no dice game in it's signup phase in this room.");
-		if (!this.canTalk()) return this.sendReply("You may not join dice games while unable to speak.");
-		if (room.dice.p1 === user.userid) return this.sendReply("You already joined this dice game.");
-
+		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.errorReply("There is no dice game in it's signup phase in this room.");
+		if (!this.canTalk()) return this.errorReply("You may not join dice games while unable to speak.");
+		if (room.dice.p1 === user.userid) return this.errorReply("You already entered this dice game.");
 		var _this = this;
 		Database.read('money', user.userid, function (err, userMoney) {
 			if (err) throw err;
 			if (!userMoney) userMoney = 0;
-
 			if (userMoney < room.dice.bet) return _this.errorReply("You don't have enough bucks to join this game.");
 			Database.write('money', userMoney - room.dice.bet, user.userid, function (err) {
 				if (err) throw err;
@@ -492,12 +444,10 @@ exports.commands = {
 	},
 
 	enddice: function (target, room, user) {
-		if (!room.dice) return this.sendReply("There is no dice game in this room.");
-		if ((Date.now() - room.dice.startTime) < 15000) {
-			if (!user.can('broadcast', null, room) && room.dice.startUser !== user.name)  return this.sendReply("Regular users may not end a dice game within the first fifteen seconds of it starting.");
-		}
-		if (room.dice.p2) return this.sendReply("Dice game has already started.");
-
+		if (!user.can('broadcast', null, room)) return false;
+		if (!room.dice) return this.errorReply("There is no dice game in this room.");
+		if ((Date.now() - room.dice.startTime) < 15000 && !user.can('broadcast', null, room)) return this.errorReply("Regular users may not end a dice game within the first minute of it starting.");
+		if (room.dice.p2) return this.errorReply("Dice game has already started.");
 		var dice = room.dice;
 		if (dice.p1) {
 			Database.read('money', dice.p1, function (err, total) {
@@ -525,25 +475,10 @@ exports.commands = {
 				room.update();
 			}.bind(this));
 	},
-	
-	jackpot: 'pot',
-	pot: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		Database.get('pot', function (err, pot) {
-			if (err) throw err;
-			if (!pot) pot = 0;
-			this.sendReplyBox("The current jackpot is " + pot + currencyName(pot) + ".");
-		}.bind(this));
-	},
 
 	picklottery: function (target, room, user) {
-		if (!user.can('hotpatch')) return false;
-		if (target === 'forcewin') {
-			var chance = Math.floor(Math.random()) === 0;
-		} else {
-			var chance = Math.round(Math.random()) === 1;
-		}
-
+		if (!this.can('picklottery')) return false;
+		var chance = Math.round(Math.random());
 		var _this = this;
 		Database.users(function (err, users) {
 			if (err) throw err;
@@ -554,7 +489,6 @@ exports.commands = {
 				var msg = "<center><h2>Lottery!</h2>Nobody has won the lottery. Good luck to everyone next time!</center>";
 				_this.parse('/gdeclare ' + msg);
 				_this.parse('/pmall /html ' + msg);
-
 				room.update();
 				return users.forEach(function (user) {
 					Database.write('tickets', null, user.username, function (err) {
@@ -564,7 +498,6 @@ exports.commands = {
 			}
 			var tickets = [];
 			users.forEach(function (user) {
-
 				if (!Array.isArray(user.tickets)) user.tickets = user.tickets.split(', ');
 				user.tickets.forEach(function (ticket) {
 					tickets.push({username: user.username, ticket: ticket});
@@ -574,8 +507,7 @@ exports.commands = {
 			var winner = tickets[winningIndex];
 			Database.get('pot', function (err, pot) {
 				if (err) throw err;
-				var winnings = Math.floor(pot * .8);
-
+				var winnings = Math.floor(pot * 3 / 4);
 				if (!winner) return _this.sendReply("No one has bought tickets.");
 				Database.read('money', winner.username, function (err, amount) {
 					if (err) throw err;
@@ -585,10 +517,8 @@ exports.commands = {
 						var msg = "<center><h2>Lottery!</h2><h4><font color='red'><b>" + winner.username + "</b></font> has won the lottery with the ticket id of " + winner.ticket + "! This user has gained " + winnings + currencyName(winnings) + " and now has a total of " + total + currencyName(total) + ".</h4></center>";
 						_this.parse('/gdeclare ' + msg);
 						_this.parse('/pmall /html ' + msg);
-
 						room.update();
-						Database.set('pot', 500, function (err) {
-
+						Database.set('pot', 0, function (err) {
 							if (err) throw err;
 							users.forEach(function (user) {
 								Database.write('tickets', null, user.username, function (err) {
@@ -602,8 +532,17 @@ exports.commands = {
 		});
 	},
 
+	jackpot: 'pot',
+	pot: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		Database.get('pot', function (err, pot) {
+			if (err) throw err;
+			if (!pot) pot = 0;
+			this.sendReplyBox("The current jackpot is " + pot + currencyName(pot) + ".");
+		}.bind(this));
+	},
+
 	bucks: 'economystats',
-	dollars: 'economystats',
 	economystats: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var _this = this;
