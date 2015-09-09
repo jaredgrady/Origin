@@ -405,7 +405,7 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
  * Start up the REPL server
  *********************************************************/
 
-require('./repl.js').start('app', function (cmd) { return eval(cmd); }); });
+require('./repl.js').start('app', function (cmd) { return eval(cmd); }); 
 
 /*********************************************************
  * Start up EOS modules
