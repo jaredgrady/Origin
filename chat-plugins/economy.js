@@ -179,6 +179,8 @@ exports.commands = {
 		var total = (Db('money')[uid] || 0) + amount;
 		Db('money')[uid] = total;
 		Db.save();
+		amount = amount + currencyName(amount);
+		total = total + currencyName(total);
 		this.sendReply(username + " was given " + amount + ". " + username + " now has " + total + ".");
 		if (Users.get(username)) Users.get(username).popup(user.name + " has given you " + amount + ". You now have " + total + ".");
 		logMoney(username + " was given " + amount + " by " + user.name + ".");
@@ -201,7 +203,9 @@ exports.commands = {
 		var total = (Db('money')[uid] || 0) - amount;
 		Db('money')[uid] = total;
 		Db.save();
-		this.sendReply(username + " losted " + amount + ". " + username + " now has " + total + ".");
+		amount = amount + currencyName(amount);
+		total = total + currencyName(total);
+		this.sendReply(username + " lost " + amount + ". " + username + " now has " + total + ".");
 		if (Users.get(username)) Users.get(username).popup(user.name + " has taken " + amount + " from you. You now have " + total + ".");
 		logMoney(username + " had " + amount + " taken away by " + user.name + ".");
 	},
