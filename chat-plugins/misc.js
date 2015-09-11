@@ -1,6 +1,10 @@
 /**
  * Miscellaneous commands
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/eosdb
 var fs = require('fs');
 var moment = require('moment');
 var request = require('request');
@@ -21,6 +25,7 @@ var messages = [
 ];
 
 exports.commands = {
+<<<<<<< HEAD
 
     cmds: 'serverhelp',
     eoshelp: 'serverhelp',
@@ -480,6 +485,8 @@ exports.commands = {
 	},
 	customgdeclarehelp: ["/customgdeclare [event name], [room], [tier], [buck reward], [runner-up buck reward] - Preset gdeclare which anonymously announces a message to every room on the server. Requires: ~"],
 	
+=======
+>>>>>>> upstream/eosdb
 	stafflist: 'authority',
 	auth: 'authority',
 	authlist: 'authority',
@@ -508,8 +515,12 @@ exports.commands = {
 	},
 
 	clearall: function (target, room, user) {
+<<<<<<< HEAD
 		if (!this.can('declare', null, room)) return false;
 		if (room.isOfficial && !this.can('bypassall')) return this.sendReply('You need to be an admin to clear an official room.');
+=======
+		if (!this.can('declare')) return false;
+>>>>>>> upstream/eosdb
 		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
 
 		var len = room.log.length;
@@ -529,7 +540,10 @@ exports.commands = {
 		}, 1000);
 	},
 
+<<<<<<< HEAD
     	hideauth: 'hide',
+=======
+>>>>>>> upstream/eosdb
 	hide: function (target, room, user) {
 		if (!this.can('lock')) return false;
 		user.hiding = true;
@@ -537,7 +551,11 @@ exports.commands = {
 		this.sendReply("You have hidden your staff symbol.");
 	},
 
+<<<<<<< HEAD
 	k: 'kick',
+=======
+	rk: 'kick',
+>>>>>>> upstream/eosdb
 	roomkick: 'kick',
 	kick: function (target, room, user) {
 		if (!target) return this.parse('/help kick');
@@ -548,9 +566,12 @@ exports.commands = {
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		if (!targetUser || !targetUser.connected) return this.sendReply("User \"" + this.targetUsername + "\" not found.");
+<<<<<<< HEAD
 		if (!(targetUser in room.users)) {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
+=======
+>>>>>>> upstream/eosdb
 		if (!this.can('mute', targetUser, room)) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");
@@ -560,7 +581,10 @@ exports.commands = {
 	kickhelp: ["/kick - Kick a user out of a room. Requires: % @ # & ~"],
 
 	masspm: 'pmall',
+<<<<<<< HEAD
 	serverpm: 'pmall',
+=======
+>>>>>>> upstream/eosdb
 	pmall: function (target, room, user) {
 		if (!this.can('pmall')) return false;
 		if (!target) return this.parse('/help pmall');
@@ -577,7 +601,11 @@ exports.commands = {
 	staffpm: 'pmallstaff',
 	pmstaff: 'pmallstaff',
 	pmallstaff: function (target, room, user) {
+<<<<<<< HEAD
 		if (!this.can('hotpatch')) return false;
+=======
+		if (!this.can('forcewin')) return false;
+>>>>>>> upstream/eosdb
 		if (!target) return this.parse('/help pmallstaff');
 
 		var pmName = ' Staff PM [Do not reply]';
@@ -589,6 +617,7 @@ exports.commands = {
 		}
 	},
 	pmallstaffhelp: ["/pmallstaff [message] - Sends a PM to every staff member online."],
+<<<<<<< HEAD
 	
     pmroom: 'rmall',
     roompm: 'rmall',
@@ -604,6 +633,8 @@ exports.commands = {
             room.users[i].send(message);
         }
     },
+=======
+>>>>>>> upstream/eosdb
 
 	d: 'poof',
 	cpoof: 'poof',
@@ -641,6 +672,7 @@ exports.commands = {
 	},
 	poofoffhelp: ["/poofoff - Disable the use of the /poof command."],
 
+<<<<<<< HEAD
 	shart: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help shart');
 
@@ -759,6 +791,9 @@ exports.commands = {
 	},
 
 regdate: function (target, room, user) {
+=======
+	regdate: function (target, room, user) {
+>>>>>>> upstream/eosdb
 		if (!this.canBroadcast()) return;
 		if (!target || target === "0") target = toId(user.userid);
 		if (!target || target === "." || target === "," || target === "'") return this.parse('/help regdate');

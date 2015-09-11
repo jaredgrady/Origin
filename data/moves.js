@@ -7010,6 +7010,7 @@ exports.BattleMovedex = {
 			}
 		},
 		secondary: false,
+		pressureTarget: "foeSide",
 		target: "self",
 		type: "Psychic"
 	},
@@ -10511,10 +10512,6 @@ exports.BattleMovedex = {
 			},
 			onTryHitPriority: 4,
 			onTryHit: function (target, source, effect) {
-				if (effect.breaksProtect) {
-					target.side.removeSideCondition('quickguard');
-					return;
-				}
 				// Quick Guard blocks moves with positive priority, even those given increased priority by Prankster or Gale Wings.
 				// (e.g. it blocks 0 priority moves boosted by Prankster or Gale Wings)
 				if (effect && (effect.id === 'feint' || effect.priority <= 0 || effect.target === 'self')) {
@@ -12296,6 +12293,10 @@ exports.BattleMovedex = {
 		},
 		effect: {
 			duration: 2,
+			onStart: function () {
+				this.effectData.source.removeVolatile('followme');
+				this.effectData.source.removeVolatile('ragepowder');
+			},
 			onAnyDragOut: function (pokemon) {
 				if (pokemon === this.effectData.target || pokemon === this.effectData.source) return false;
 			},
@@ -12703,6 +12704,7 @@ exports.BattleMovedex = {
 			}
 		},
 		secondary: false,
+		pressureTarget: "foeSide",
 		target: "self",
 		type: "Dark"
 	},
@@ -15290,10 +15292,6 @@ exports.BattleMovedex = {
 			},
 			onTryHitPriority: 4,
 			onTryHit: function (target, source, effect) {
-				if (effect.breaksProtect) {
-					target.side.removeSideCondition('wideguard');
-					return;
-				}
 				// Wide Guard blocks damaging spread moves
 				if (effect && (effect.category === 'Status' || (effect.target !== 'allAdjacent' && effect.target !== 'allAdjacentFoes'))) {
 					return;

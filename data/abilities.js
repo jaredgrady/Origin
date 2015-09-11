@@ -2350,9 +2350,11 @@ exports.BattleAbilities = {
 	},
 	"shielddust": {
 		shortDesc: "This Pokemon is not affected by the secondary effect of another Pokemon's attack.",
-		onTrySecondaryHit: function () {
+		onModifySecondaries: function (secondaries) {
 			this.debug('Shield Dust prevent secondary');
-			return null;
+			return secondaries.filter(function (effect) {
+				return !!effect.self;
+			});
 		},
 		id: "shielddust",
 		name: "Shield Dust",
@@ -3171,7 +3173,6 @@ exports.BattleAbilities = {
 			}
 		},
 		onEnd: function (pokemon) {
-
 			if (!pokemon.volatiles['zenmode'] || !pokemon.hp) return;
 			pokemon.transformed = false;
 			delete pokemon.volatiles['zenmode'];

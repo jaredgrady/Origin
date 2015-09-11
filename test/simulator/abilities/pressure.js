@@ -13,7 +13,11 @@ describe('Pressure', function () {
 			{species: "Talonflame", ability: 'galewings', moves: ['peck']}
 		]);
 		battle.join('p2', 'Guest 2', 1, [
+<<<<<<< HEAD
 			{species: "Giratina", ability: 'pressure', moves: ['rest']},
+=======
+			{species: "Giratina", ability: 'defiant', moves: ['rest']},
+>>>>>>> upstream/eosdb
 			{species: "Talonflame", ability: 'galewings', moves: ['peck']}
 		]);
 		battle.commitDecisions(); // Team Preview
@@ -45,7 +49,11 @@ describe('Pressure', function () {
 	it('should deduct PP even if the move fails or misses', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Giratina", ability: 'pressure', item: 'laggingtail', moves: ['mistyterrain', 'shadowforce']}]);
+<<<<<<< HEAD
 		battle.join('p2', 'Guest 2', 1, [{species: "Smeargle", ability: 'owntempo', moves: ['doubleedge', 'spore', 'moonblast']}]);
+=======
+		battle.join('p2', 'Guest 2', 1, [{species: "Smeargle", ability: 'desolateland', moves: ['doubleedge', 'spore', 'moonblast', 'surf']}]);
+>>>>>>> upstream/eosdb
 		battle.commitDecisions();
 		assert.strictEqual(battle.p2.active[0].getMoveData(Tools.getMove('doubleedge')).pp, 22);
 		battle.choose('p1', 'move 2');
@@ -77,6 +85,27 @@ describe('Pressure', function () {
 		assert.strictEqual(battle.p2.active[1].getMoveData(Tools.getMove('spikes')).pp, 28);
 		assert.strictEqual(battle.p2.active[2].getMoveData(Tools.getMove('rockslide')).pp, 13);
 	});
+<<<<<<< HEAD
+=======
+
+	it('should deduct PP for each opposing Pressure Pokemon when Snatch of Imprison are used', function () {
+		battle = BattleEngine.Battle.construct('battle-pressure-snatch', 'triplescustomgame');
+		battle.join('p1', 'Guest 1', 1, [
+			{species: "Giratina", ability: 'pressure', moves: ['rest']},
+			{species: "Palkia", ability: 'pressure', moves: ['rest']},
+			{species: "Dialga", ability: 'pressure', moves: ['rest']}
+		]);
+		battle.join('p2', 'Guest 2', 1, [
+			{species: "Kyurem", ability: 'pressure', moves: ['snatch']},
+			{species: "Zekrom", ability: 'teravolt', moves: ['imprison']},
+			{species: "Reshiram", ability: 'turboblaze', moves: ['rest']}
+		]);
+		battle.commitDecisions(); // Team Preview
+		battle.commitDecisions();
+		assert.strictEqual(battle.p2.active[0].getMoveData(Tools.getMove('snatch')).pp, 12);
+		assert.strictEqual(battle.p2.active[1].getMoveData(Tools.getMove('imprison')).pp, 12);
+	});
+>>>>>>> upstream/eosdb
 });
 
 describe('Pressure [Gen 4]', function () {
@@ -111,7 +140,10 @@ describe('Pressure [Gen 4]', function () {
 			{species: "Clefable", ability: 'magicguard', moves: ['followme']},
 			{species: "Ho-Oh", ability: 'pressure', moves: ['peck']}
 		]);
+<<<<<<< HEAD
 		battle.commitDecisions(); // Team Preview
+=======
+>>>>>>> upstream/eosdb
 		battle.choose('p1', 'move 1, move 1 2');
 		battle.choose('p2', 'move 1, move 1 2');
 		var move = Tools.getMove('peck');

@@ -1,6 +1,12 @@
 exports.BattleScripts = {
+<<<<<<< HEAD
 	gen: 3,
 		init: function () {
+=======
+	inherit: 'gen5',
+	gen: 3,
+	init: function () {
+>>>>>>> upstream/eosdb
 		for (var i in this.data.Pokedex) {
 			delete this.data.Pokedex[i].abilities['H'];
 		}
@@ -13,6 +19,7 @@ exports.BattleScripts = {
 				this.modData('Movedex', i).category = newCategory;
 			}
 		}
+<<<<<<< HEAD
 	},
 	randomSet: function (template, slot) {
 		if (slot === undefined) slot = 1;
@@ -931,5 +938,7 @@ exports.BattleScripts = {
 			}
 		}
 		return pokemon;
+=======
+>>>>>>> upstream/eosdb
 	}
 };

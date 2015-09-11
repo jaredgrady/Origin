@@ -45,7 +45,10 @@ describe('Intimidate', function () {
 		assert.strictEqual(battle.p1.active[2].boosts['atk'], 0);
 	});
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/eosdb
 	it('should wait until all simultaneous switch ins at the beginning of a battle have completed before activating', function () {
 		battle = BattleEngine.Battle.construct('battle-intimidate-order1', 'customgame');
 		battle.join('p1', 'Guest 1', 1, [{species: "Arcanine", ability: 'intimidate', moves: ['morningsun']}]);

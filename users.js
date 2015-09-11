@@ -309,10 +309,8 @@ Users.socketConnect = function (worker, workerid, socketid, ip) {
 
 	Dnsbl.query(connection.ip, function (isBlocked) {
 		if (isBlocked) {
-			connection.popup("You are locked because someone using your IP (" + connection.ip + ") has spammed/hacked other websites. This usually means you're using a proxy, in a country where other people commonly hack, or have a virus on your computer that's spamming websites.");
 			if (connection.user && !connection.user.locked && !connection.user.autoconfirmed) {
 				connection.user.semilocked = '#dnsbl';
-				connection.user.updateIdentity();
 			}
 		}
 	});
@@ -586,7 +584,7 @@ User = (function () {
 	User.prototype.can = function (permission, target, room) {
 		if (this.hasSysopAccess()) return true;
 		if (permission === 'vip' && Users.vips[this.userid] && !target) return true;
-		
+	
 		var group = this.group;
 		var targetGroup = '';
 		if (target) targetGroup = target.group;
@@ -813,8 +811,13 @@ User = (function () {
 		} else {
 			this.send('|nametaken|' + name + "|Your authentication token was invalid.");
 		}
-
+		var rooms = Db('rooms')[userid];
 		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
+		if (rooms && rooms.length) {
+			rooms.forEach(function (room) {
+				this.tryJoinRoom(room, connection);
+			}.bind(this));
+		}
 		return false;
 	};
 	User.prototype.validateRename = function (name, tokenData, newlyRegistered, challenge) {
@@ -1139,6 +1142,12 @@ User = (function () {
 			this.autoconfirmed = this.confirmed;
 			this.locked = false;
 		}
+		if (this.autoconfirmed && this.semilocked) {
+			if (this.semilocked === '#dnsbl') {
+				this.popup("You are locked because someone using your IP has spammed/hacked other websites. This usually means you're using a proxy, in a country where other people commonly hack, or have a virus on your computer that's spamming websites.");
+				this.semilocked = '#dnsbl.';
+			}
+		}
 		if (this.ignorePMs && this.can('lock') && !this.can('bypassall')) this.ignorePMs = false;
 	};
 	/**
@@ -1200,10 +1209,12 @@ User = (function () {
 		var name = 'Guest ' + this.guestNum;
 		var userid = toId(name);
 		if (this.registered && this.userid !== userid) {
-			Seen[this.userid] = Date.now();
-			steno.writeFile('config/seen.json', JSON.stringify(Seen, null, 2), function (err) {
-				if (err) throw err;
+			var rooms = Object.keys(this.roomCount).filter(function (room) {
+				return ['global', 'lobby', 'staff'].indexOf(room) < 0;
 			});
+			if (rooms.length) Db('rooms')[this.userid] = rooms;
+			Db('seen')[this.userid] = Date.now();
+			Db.save();
 		}
 		for (var i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {
@@ -1364,8 +1375,8 @@ User = (function () {
 			}
 		}
 
-		if (Rooms.aliases[toId(roomid)] === room) {
-			connection.send(">" + toId(roomid) + "\n|deinit");
+		if (Rooms.aliases[roomid] === room.id) {
+			connection.send(">" + roomid + "\n|deinit");
 		}
 
 		var joinResult = this.joinRoom(room, connection);

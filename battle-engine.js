@@ -541,6 +541,17 @@ BattlePokemon = (function () {
 				target = this.battle.runEvent('RedirectTarget', this, this, move, target);
 			}
 			targets = [target];
+			// Resolve apparent targets for Pressure.
+			if (move.pressureTarget) {
+				// At the moment, this is the only supported target.
+				if (move.pressureTarget === 'foeSide') {
+					for (var i = 0; i < this.side.foe.active.length; i++) {
+						if (this.side.foe.active[i] && !this.side.foe.active[i].fainted) {
+							targets.push(this.side.foe.active[i]);
+						}
+					}
+				}
+			}
 		}
 		return targets;
 	};
@@ -617,7 +628,6 @@ BattlePokemon = (function () {
 				continue;
 			}
 			if (this.disabledMoves[move.id] && (!restrictData || !this.disabledMoves[move.id].isHidden) || move.pp <= 0 && (this.battle.gen !== 1 || !this.volatiles['partialtrappinglock'])) {
-
 				move.disabled = !restrictData && this.disabledMoves[move.id] && this.disabledMoves[move.id].isHidden ? 'hidden' : true;
 			} else if (!move.disabled || move.disabled === 'hidden' && restrictData) {
 				hasValidMove = true;
@@ -1118,7 +1128,6 @@ BattlePokemon = (function () {
 	BattlePokemon.prototype.setItem = function (item, source, effect) {
 		if (!this.hp || !this.isActive) return false;
 		item = this.battle.getItem(item);
-
 		if (item.id === 'leppaberry') {
 			this.isStale = 2;
 			this.isStaleSource = 'getleppa';
@@ -1577,11 +1586,9 @@ BattleSide = (function () {
 			var willPass = canSwitchOut.splice(Math.min(canSwitchOut.length, canSwitchIn.length));
 			for (var i = 0; i < canSwitchOut.length; i++) {
 				decisions.push({
-
 					choice: 'instaswitch',
 					pokemon: this.active[canSwitchOut[i]],
 					target: this.pokemon[canSwitchIn[i]]
-
 				});
 			}
 			for (var i = 0; i < willPass.length; i++) {
@@ -2315,11 +2322,11 @@ Battle = (function () {
 					ModifyAtk: 1, ModifyDef: 1, ModifySpA: 1, ModifySpD: 1, ModifySpe: 1,
 					ModifyBoost: 1,
 					ModifyDamage: 1,
+					ModifySecondaries: 1,
 					ModifyWeight: 1,
 					TryHit: 1,
 					TryHitSide: 1,
 					TryMove: 1,
-					TrySecondaryHit: 1,
 					Hit: 1,
 					Boost: 1,
 					DragOut: 1
@@ -2925,7 +2932,6 @@ Battle = (function () {
 				if (pokemon.fainted) continue;
 				if (pokemon.isStale < 2) {
 					if (pokemon.isStaleCon >= 2) {
-
 						if (pokemon.hp >= pokemon.isStaleHP - pokemon.maxhp / 100) {
 							pokemon.isStale++;
 							if (this.firstStaleWarned && pokemon.isStale < 2) {
@@ -2945,7 +2951,6 @@ Battle = (function () {
 						pokemon.isStaleCon = 0;
 						pokemon.isStalePPTurns = 0;
 						pokemon.isStaleHP = pokemon.hp;
-
 					}
 					if (pokemon.isStalePPTurns >= 5) {
 						if (pokemon.hp >= pokemon.isStaleHP - pokemon.maxhp / 100) {
@@ -2964,7 +2969,6 @@ Battle = (function () {
 					pokemon.isStaleCon++;
 					pokemon.isStaleSource = 'struggle';
 				}
-
 				if (pokemon.isStale < 2) {
 					allStale = false;
 				} else if (pokemon.isStale && !pokemon.staleWarned) {
@@ -2984,7 +2988,6 @@ Battle = (function () {
 		}
 		var banlistTable = this.getFormat().banlistTable;
 		if (banlistTable && 'Rule:endlessbattleclause' in banlistTable) {
-
 			if (oneStale) {
 				var activationWarning = '<br />If all active Pok&eacute;mon go in an endless loop, Endless Battle Clause will activate.';
 				if (allStale) activationWarning = '';
@@ -3020,7 +3023,6 @@ Battle = (function () {
 				this.add('message', "All active Pok\u00e9mon are in an endless loop. Endless Battle Clause activated!");
 				var leppaPokemon = null;
 				for (var i = 0; i < this.sides.length; i++) {
-
 					for (var j = 0; j < this.sides[i].pokemon.length; j++) {
 						var pokemon = this.sides[i].pokemon[j];
 						if (toId(pokemon.set.item) === 'leppaberry') {
@@ -3478,7 +3480,6 @@ Battle = (function () {
 		// weather modifier (TODO: relocate here)
 		// crit
 		if (move.crit) {
-			if (!suppressMessages) this.add('-crit', target);
 			baseDamage = this.modify(baseDamage, move.critModifier || (this.gen >= 6 ? 1.5 : 2));
 		}
 
@@ -3512,7 +3513,6 @@ Battle = (function () {
 				baseDamage = Math.floor(baseDamage / 2);
 			}
 		}
-
 		if (pokemon.status === 'brn' && basePower && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
 			if (this.gen < 6 || move.id !== 'facade') {
 				baseDamage = this.modify(baseDamage, 0.5);
@@ -3969,6 +3969,7 @@ Battle = (function () {
 		case 'shift':
 			if (!decision.pokemon.isActive) return false;
 			if (decision.pokemon.fainted) return false;
+			decision.pokemon.activeTurns--;
 			this.swapPosition(decision.pokemon, 1);
 			var foeActive = decision.pokemon.side.foe.active;
 			for (var i = 0; i < foeActive.length; i++) {

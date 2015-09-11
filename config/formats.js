@@ -6,11 +6,30 @@ exports.Formats = [
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
 	/*{       name: "Random OU",
 		section: 'ORAS Singles',
 	        team: "randomOU",
 	        ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
 	},*/
+=======
+	{
+		name: "Random Battle",
+		section: "ORAS Singles",
+
+		team: 'random',
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "Unrated Random Battle",
+		section: "ORAS Singles",
+
+		team: 'random',
+		challengeShow: false,
+		rated: false,
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+>>>>>>> upstream/eosdb
 	{
 		name: "OU",
 		desc: [
@@ -51,7 +70,11 @@ exports.Formats = [
 	{
 		name: "UU",
 		desc: [
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3542640/\">np: UU Stage 3.2</a>",
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3546077/\">np: UU Stage 4</a>",
+>>>>>>> upstream/eosdb
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/uu/\">UU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3541343/\">UU Viability Ranking</a>"
 		],
@@ -63,19 +86,39 @@ exports.Formats = [
 	{
 		name: "RU",
 		desc: [
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538971/\">np: RU Stage 10</a>",
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3549031/\">np: RU Stage 11</a>",
+>>>>>>> upstream/eosdb
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/ru/\">RU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538036/\">RU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
 
+<<<<<<< HEAD
+=======
+		searchShow: false,
+		ruleset: ['UU'],
+		banlist: ['UU', 'BL2']
+	},
+	{
+		name: "RU (suspect test)",
+		section: "ORAS Singles",
+
+		challengeShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['UU'],
 		banlist: ['UU', 'BL2']
 	},
 	{
 		name: "NU",
 		desc: [
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3542109/\">np: NU Stage 7</a>",
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545983/\">np: NU Stage 8</a>",
+>>>>>>> upstream/eosdb
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/nu/\">NU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523692/\">NU Viability Ranking</a>"
 		],
@@ -93,11 +136,27 @@ exports.Formats = [
 		],
 		section: "ORAS Singles",
 
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		maxLevel: 5,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
 		banlist: ['LC Uber', 'Gligar', 'Misdreavus', 'Scyther', 'Sneasel', 'Tangela', 'Dragon Rage', 'Sonic Boom', 'Swagger']
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "LC (suspect test)",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3547829/\">LC Suspect</a>"],
+		section: "ORAS Singles",
+
+		challengeShow: false,
+		maxLevel: 5,
+		ruleset: ['LC']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "Anything Goes",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523229/\">Anything Goes</a>",
@@ -111,6 +170,10 @@ exports.Formats = [
 	/*{
 		name: "CAP Naviathan Playtest",
 		section: "ORAS Singles",
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/eosdb
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Allow CAP', 'Syclant', 'Revenankh', 'Pyroak', 'Fidgit', 'Stratagem', 'Arghonaut', 'Kitsunoh', 'Cyclohm', 'Colossoil', 'Krilowatt', 'Voodoom',
 			'Tomohawk', 'Necturna', 'Mollux', 'Aurumoth', 'Malaconda', 'Cawmodore', 'Volkraken', 'Plasmanta',
@@ -143,6 +206,10 @@ exports.Formats = [
 		name: "Custom Game",
 		section: "ORAS Singles",
 
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -155,6 +222,17 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
+=======
+		name: "Random Doubles Battle",
+		section: "ORAS Doubles",
+
+		gameType: 'doubles',
+		team: 'randomDoubles',
+		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "Doubles OU",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545903/\">np: Doubles OU Stage 3</a>",
@@ -202,6 +280,10 @@ exports.Formats = [
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Doubles UU'],
 		banlist: ['Snorlax', 'Machamp', 'Lopunny', 'Galvantula', 'Mienshao', 'Infernape', 'Aromatisse', 'Clawitzer', 'Kyurem', 'Flygon',
 			'Lucario', 'Alakazam', 'Gastrodon', 'Bronzong', 'Chandelure', 'Dragalge', 'Mamoswine', 'Genesect', 'Arcanine', 'Volcarona',
@@ -261,11 +343,17 @@ exports.Formats = [
 		}
 	},
 	{
+<<<<<<< HEAD
 		name: "Pikachu Cup",
+=======
+		name: "Primal Battle",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3548886/\">Primal Battle</a>"],
+>>>>>>> upstream/eosdb
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
 		maxForcedLevel: 50,
+<<<<<<< HEAD
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview VGC'],
 		banlist: ['Arceus', 'Raikou', 'Thundurus', 'Thundurus-Therian', 'Zapdos', 'Zekrom'],
 		onValidateTeam: function (team, format) {
@@ -274,6 +362,17 @@ exports.Formats = [
 				var template = this.getTemplate(team[i].species);
 				if (!template.types || template.types.indexOf('Electric') < 0) return ["Only Electric-type Pok\u00e9mon are allowed."];
 			}
+=======
+		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Team Preview VGC', 'Cancel Mod'],
+		banlist: ['Unreleased', 'Illegal', 'Soul Dew',
+			'Mewtwo', 'Mew', 'Lugia', 'Ho-Oh', 'Celebi', 'Rayquaza', 'Jirachi', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga',
+			'Palkia', 'Giratina', 'Giratina-Origin', 'Phione', 'Manaphy', 'Darkrai', 'Shaymin', 'Shaymin-Sky', 'Arceus', 'Victini', 'Reshiram', 'Zekrom',
+			'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Keldeo', 'Meloetta', 'Genesect', 'Xerneas', 'Yveltal', 'Zygarde', 'Diancie', 'Hoopa', 'Hoopa-Unbound'
+		],
+		requirePentagon: true,
+		onValidateTeam: function (team, format) {
+			if (team.length < 4) return ['You must bring at least four Pok\u00e9mon.'];
+>>>>>>> upstream/eosdb
 		},
 		onBegin: function () {
 			this.debug('cutting down to 4');
@@ -284,10 +383,26 @@ exports.Formats = [
 		}
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Doubles Hackmons Cup",
+		section: "ORAS Doubles",
+
+		gameType: 'doubles',
+		team: 'randomHC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "Doubles Custom Game",
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		maxLevel: 9999,
 		defaultLevel: 100,
@@ -300,6 +415,21 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
+=======
+		name: "Random Triples Battle",
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3511522/\">Smogon Triples</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3540390/\">Smogon Triples Viability Ranking</a>"
+		],
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		team: 'randomDoubles',
+		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "Smogon Triples",
 		section: "ORAS Triples",
 
@@ -324,10 +454,26 @@ exports.Formats = [
 		}
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Triples Hackmons Cup",
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		team: 'randomHC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "Triples Custom Game",
 		section: "ORAS Triples",
 
 		gameType: 'triples',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		maxLevel: 9999,
 		defaultLevel: 100,
@@ -340,6 +486,7 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
 		name: "No Status",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3542555/\">No Status</a>"],
 		section: "OM of the Month",
@@ -376,6 +523,34 @@ exports.Formats = [
 			set.evs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 			set.ivs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 			set.nature = '';
+=======
+		name: "Sketchmons",
+		desc: [
+			"Pok&eacute;mon gain access to one Sketch'd move.",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545826/\">Sketchmons</a>"
+		],
+		section: "OM of the Month",
+		column: 2,
+
+		ruleset: ['OU'],
+		banlist: ['Allow One Sketch', 'Gothitelle']
+	},
+	{
+		name: "Hackmons 1v1",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/oras-1v1-3v3-team-preview.3496773/#post-5121864\">Hackmons 1v1</a>"],
+		section: "OM of the Month",
+
+		ruleset: ['Pokemon', 'OHKO Clause', 'Endless Battle Clause', 'Team Preview 1v1', 'HP Percentage Mod', 'Cancel Mod'],
+		banlist: ['Wonder Guard', 'Heal Pulse'],
+		onValidateTeam: function (team, format) {
+			if (team.length > 3) return ['You may only bring up to three Pok\u00e9mon.'];
+		},
+		onBegin: function () {
+			this.p1.pokemon = this.p1.pokemon.slice(0, 1);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 1);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+>>>>>>> upstream/eosdb
 		}
 	},
 	{
@@ -636,6 +811,7 @@ exports.Formats = [
 		banlist: ['Allow CAP']
 	},
 	{
+<<<<<<< HEAD
 	        name: "[Gen 5] CAP",
         	section: "Other Metagames",
 
@@ -670,12 +846,38 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
+=======
+		name: "Battle Factory",
+		section: "Other Metagames",
+
+		team: 'randomFactory',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Mega Rayquaza Clause']
+	},
+	{
+		name: "Challenge Cup 1v1",
+		section: "Other Metagames",
+
+		team: 'randomCC',
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview 1v1'],
+		onBegin: function () {
+			this.debug('Cutting down to 1');
+			this.p1.pokemon = this.p1.pokemon.slice(0, 1);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 1);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+		}
+	},
+>>>>>>> upstream/eosdb
 	{
 		name: "Balanced Hackmons",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3489849/\">Balanced Hackmons</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3515725/\">Balanced Hackmons Suspect Discussion</a>",
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3525676/\">Balanced Hackmons Viability Ranking</a>"
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3547823/\">Balanced Hackmons Viability Ranking</a>"
+>>>>>>> upstream/eosdb
 		],
 		section: "Other Metagames",
 
@@ -803,7 +1005,11 @@ exports.Formats = [
 		desc: [
 			"Pok&eacute;mon gain access to either Attacking moves or Status moves of their typing, but not both at the same time.",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3547279/\">STABmons</a>",
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3512215/\">STABmons Viability Ranking</a>"
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3548559/\">STABmons Viability Ranking</a>"
+>>>>>>> upstream/eosdb
 		],
 		section: "Other Metagames",
 
@@ -840,6 +1046,16 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Hackmons Cup",
+		section: "Other Metagames",
+
+		team: 'randomHC',
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "2v2 Doubles",
 		desc: [
 			"Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.",
@@ -848,6 +1064,10 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Doubles OU'],
 		banlist: ['Perish Song'],
 		onValidateTeam: function (team, format) {
@@ -868,6 +1088,10 @@ exports.Formats = [
 		],
 		section: "Other Metagames",
 
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		mod: 'averagemons',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Sableye + Prankster', 'Shedinja', 'Smeargle', 'Venomoth',
@@ -883,6 +1107,10 @@ exports.Formats = [
 		],
 		section: "Other Metagames",
 
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		mod: 'hiddentype',
 		ruleset: ['OU']
 	},
@@ -892,6 +1120,10 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		mod: 'theorymon',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['OU']
 	},
 	{
@@ -899,10 +1131,15 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		mod: 'gennext',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Pokemon', 'Standard NEXT', 'Team Preview'],
 		banlist: ['Uber']
 	},
 	{
+<<<<<<< HEAD
 		name: "Mega Tier",
 		section: "EOS Metagames",
 		column: 2,
@@ -1042,23 +1279,45 @@ exports.Formats = [
 	},
 	
 	
+=======
+		name: "Monotype Random Battle",
+		section: "Other Metagames",
+
+		team: 'randomMonotype',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+
+>>>>>>> upstream/eosdb
 	// BW2 Singles
 	///////////////////////////////////////////////////////////////////
 
 	{
 		name: "[Gen 5] OU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 		column: 3,
 
 		mod: 'gen5',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+<<<<<<< HEAD
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+=======
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Sand Stream ++ Sand Rush', 'Soul Dew']
+>>>>>>> upstream/eosdb
 	},
 	{
 		name: "[Gen 5] Ubers",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		ruleset: ['Pokemon', 'Team Preview', 'Standard Ubers'],
@@ -1067,7 +1326,11 @@ exports.Formats = [
 	{
 		name: "[Gen 5] UU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		ruleset: ['[Gen 5] OU'],
@@ -1076,7 +1339,11 @@ exports.Formats = [
 	{
 		name: "[Gen 5] RU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		ruleset: ['[Gen 5] UU'],
@@ -1085,7 +1352,11 @@ exports.Formats = [
 	{
 		name: "[Gen 5] NU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		ruleset: ['[Gen 5] RU'],
@@ -1094,7 +1365,11 @@ exports.Formats = [
 	{
 		name: "[Gen 5] LC",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
+<<<<<<< HEAD
 		section: "BW2",
+=======
+		section: "BW2 Singles",
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		maxLevel: 5,
@@ -1103,9 +1378,16 @@ exports.Formats = [
 	},
 	{
 		name: "[Gen 5] GBU Singles",
+<<<<<<< HEAD
 		section: "BW2",
 
 		mod: 'gen5',
+=======
+		section: "BW2 Singles",
+
+		mod: 'gen5',
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		maxForcedLevel: 50,
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview GBU'],
 		banlist: ['Dark Void', 'Sky Drop'],
@@ -1119,9 +1401,16 @@ exports.Formats = [
 	},
 	{
 		name: "[Gen 5] Custom Game",
+<<<<<<< HEAD
 		section: "BW2",
 
 		mod: 'gen5',
+=======
+		section: "BW2 Singles",
+
+		mod: 'gen5',
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1135,7 +1424,12 @@ exports.Formats = [
 
 	{
 		name: "[Gen 5] Doubles OU",
+<<<<<<< HEAD
 		section: 'BW2',
+=======
+		section: 'BW2 Doubles',
+		column: 3,
+>>>>>>> upstream/eosdb
 
 		mod: 'gen5',
 		gameType: 'doubles',
@@ -1145,6 +1439,7 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
 		name: "VGC 13",
 		section: "BW2",
 
@@ -1170,6 +1465,14 @@ exports.Formats = [
 
 		mod: 'gen5',
 		gameType: 'doubles',
+=======
+		name: "[Gen 5] GBU Doubles",
+		section: 'BW2 Doubles',
+
+		mod: 'gen5',
+		gameType: 'doubles',
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		maxForcedLevel: 50,
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview VGC'],
 		banlist: ['Dark Void', 'Sky Drop'],
@@ -1183,10 +1486,18 @@ exports.Formats = [
 	},
 	{
 		name: "[Gen 5] Doubles Custom Game",
+<<<<<<< HEAD
 		section: 'BW2',
 
 		mod: 'gen5',
 		gameType: 'doubles',
+=======
+		section: 'BW2 Doubles',
+
+		mod: 'gen5',
+		gameType: 'doubles',
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1241,6 +1552,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen4',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1254,6 +1569,10 @@ exports.Formats = [
 
 		mod: 'gen4',
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1284,6 +1603,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen3',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -1305,10 +1628,26 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard']
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "[Gen 2] Random Battle",
+		section: "Past Generations",
+
+		mod: 'gen2',
+		searchShow: false,
+		team: 'random',
+		ruleset: ['Pokemon', 'Standard']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "[Gen 2] Custom Game",
 		section: "Past Generations",
 
 		mod: 'gen2',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -1326,6 +1665,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Pokemon', 'Standard'],
 		banlist: []
 	},
@@ -1334,6 +1677,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Uber', 'Unreleased', 'Illegal',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -1341,10 +1688,34 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "[Gen 1] Random Battle",
+		section: "Past Generations",
+
+		mod: 'gen1',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "[Gen 1] Challenge Cup",
+		section: "Past Generations",
+
+		mod: 'gen1',
+		team: 'randomCC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/eosdb
 		name: "[Gen 1] Stadium",
 		section: "Past Generations",
 
 		mod: 'stadium',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/eosdb
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -1356,6 +1727,7 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -2098,4 +2470,10 @@ exports.Formats = [
 			}
 		}
 	}*/
+=======
+		searchShow: false,
+		debug: true,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	}
+>>>>>>> upstream/eosdb
 ];

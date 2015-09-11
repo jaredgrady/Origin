@@ -1,5 +1,6 @@
 {
   "name": "Pokemon-Showdown",
+<<<<<<< HEAD
   "version": "0.10.0",
   "dependencies": {
     "cheerio": "^0.19.0",
@@ -33,6 +34,25 @@
   "optionalDependencies": {
     "nodemailer": "1.3.1",
     "http-proxy": "0.10.0"
+=======
+  "version": "0.10.1",
+  "dependencies": {
+    "cloud-env": "0.1.0",
+    "eosdb": "^1.1.0",
+    "es6-shim": "0.27.1",
+    "moment": "^2.10.3",
+    "node-static": "0.7.6",
+    "request": "^2.58.0",
+    "sockjs": "0.3.15",
+    "sugar": "1.4.1"
+  },
+  "optionalDependencies": {
+    "cloud-env": "0.1.1",
+    "es6-shim": "0.32.2",
+    "http-proxy": "0.10.0",
+    "nodemailer": "1.4.0",
+    "node-static": "0.7.7"
+>>>>>>> upstream/eosdb
   },
   "nonDefaultDependencies": {
     "ofe": "0.1.2"
@@ -75,6 +95,7 @@
     "gulp": "~3.9.0",
     "gulp-cache": "~0.2.10",
     "gulp-jshint": "~1.11.2",
+<<<<<<< HEAD
     "gulp-jscs": "~1.6.0",
     "gulp-replace": "~0.5.3",
     "jshint-stylish": "~2.0.1",
@@ -82,5 +103,14 @@
     "lazypipe": "~0.2.4",
     "merge-stream": "~0.1.8",
     "jscs": "~1.13.1"
+=======
+    "gulp-jscs": "~2.0.0",
+    "gulp-replace": "~0.5.3",
+    "jshint-stylish": "~2.0.1",
+    "mocha": "~2.2.5",
+    "lazypipe": "~1.0.1",
+    "merge-stream": "~0.1.8",
+    "jscs": "~2.0.0"
+>>>>>>> upstream/eosdb
   }
 }
