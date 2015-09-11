@@ -690,6 +690,7 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
+    	{
 		name: "Battle Factory",
 		section: "Other Metagames",
 
