@@ -21,11 +21,6 @@ describe('Magic Guard', function () {
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
 	});
-
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/eosdb
 	it('should not be suppressed by Mold Breaker', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [
