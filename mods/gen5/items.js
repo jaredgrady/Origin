@@ -402,8 +402,6 @@ exports.BattleItems = {
 			type: "Poison"
 		}
 	},
-<<<<<<< HEAD
-=======
 	rabutaberry: {
 		inherit: true,
 		naturalGift: {
@@ -411,7 +409,6 @@ exports.BattleItems = {
 			type: "Ghost"
 		}
 	},
->>>>>>> upstream/eosdb
 	rawstberry: {
 		inherit: true,
 		naturalGift: {
