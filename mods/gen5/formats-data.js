@@ -3442,11 +3442,7 @@ exports.BattleFormatsData = {
 	},
 	excadrill: {
 		randomBattleMoves: ["swordsdance","rapidspin","earthquake","rockslide","ironhead"],
-<<<<<<< HEAD
-		tier: "Uber"
-=======
 		tier: "OU"
->>>>>>> upstream/eosdb
 	},
 	audino: {
 		randomBattleMoves: ["wish","protect","healbell","toxic","thunderwave","reflect","lightscreen","return"],
