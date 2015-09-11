@@ -284,18 +284,6 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		name: "Random Triples Battle",
-		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3511522/\">Smogon Triples</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3540390/\">Smogon Triples Viability Ranking</a>"
-		],
-		section: "ORAS Triples",
-
-		gameType: 'triples',
-		team: 'randomDoubles',
-		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
 		name: "Smogon Triples",
 		section: "ORAS Triples",
 
