@@ -27,7 +27,7 @@ var shopDisplay = getShopDisplay(shop);
  * @param {Number} amount
  * @returns {String}
  */
-function currencyName(amount) {
+global.currencyName = function(amount) {
 	var name = " buck";
 	return amount === 1 ? name : name + "s";
 }
@@ -38,7 +38,7 @@ function currencyName(amount) {
  * @param {String} money
  * @return {String|Number}
  */
-function isMoney(money) {
+global.isMoney = function(money) {
 	var numMoney = Number(money);
 	if (isNaN(money)) return "Must be a number.";
 	if (String(money).includes('.')) return "Cannot contain a decimal.";
@@ -51,7 +51,7 @@ function isMoney(money) {
  *
  * @param {String} message
  */
-function logMoney(message) {
+global.logMoney = function(message) {
 	if (!message) return;
 	var file = path.join(__dirname, '../logs/money.txt');
 	var date = "[" + new Date().toUTCString() + "] ";
