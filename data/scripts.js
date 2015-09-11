@@ -2814,7 +2814,6 @@ exports.BattleScripts = {
 				rejectAbility = !hasMove['raindance'];
 			} else if (ability === 'Unburden') {
 				rejectAbility = template.baseStats.spe > 120 || (template.id === 'slurpuff' && !counter.setupType);
->>>>>>> upstream/eosdb
 			}
 
 			if (rejectAbility) {
@@ -2837,8 +2836,6 @@ exports.BattleScripts = {
 			if (abilities.indexOf('Swift Swim') >= 0 && hasMove['raindance']) {
 				ability = 'Swift Swim';
 			}
-
->>>>>>> upstream/eosdb
 			if (template.id === 'ambipom' && !counter['technician']) {
 				// If it doesn't qualify for Technician, Skill Link is useless on it
 				// Might as well give it Pickup just in case
