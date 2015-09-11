@@ -1317,15 +1317,6 @@ exports.Formats = [
 		]
 	},
 	{
-		name: "[Gen 1] Challenge Cup",
-		section: "Past Generations",
-
-		mod: 'gen1',
-		team: 'randomCC',
-		searchShow: false,
-		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
 		name: "[Gen 1] Stadium",
 		section: "Past Generations",
 
