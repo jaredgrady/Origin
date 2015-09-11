@@ -1086,6 +1086,7 @@ exports.Formats = [
 			}
 		}
 	},
+	{
 		name: "Monotype Random Battle",
 		section: "Other Metagames",
 
