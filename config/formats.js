@@ -153,14 +153,6 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		name: "Random Doubles Battle",
-		section: "ORAS Doubles",
-
-		gameType: 'doubles',
-		team: 'randomDoubles',
-		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
 		name: "Doubles OU",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545903/\">np: Doubles OU Stage 3</a>",
