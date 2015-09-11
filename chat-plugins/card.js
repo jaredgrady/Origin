@@ -1015,16 +1015,12 @@ function addCard(name, card) {
     newCard.name = cards[card].name;
     newCard.rarity = cards[card].rarity;
     newCard.points = cards[card].points;
-    Database.add('cards', newCard, toId(name), function(err) {
-        if (err) throw err;
-        Database.read('points', toId(name), function(err, currentPoints) {
-            if (err || isNaN(currentPoints)) currentPoints = 0;
-            var totalPoints = newCard.points + currentPoints;
-            Database.write('points', totalPoints, toId(name), function(err) {
-                if (err) throw err;
-            });
-        });
-    });
+    if (!Array.isArray(Db('cards')[toId(name)])) Db('cards')[user.userid] = [];
+    Db('cards')[toId(name)].push(newCard);
+    Db.save();
+    var total = (Db('points')[toId(name)] || 0) + newCard.points;
+    Db('points')[toId(name)] = total;
+    Db.save();
 }
 
 function getShopDisplay (shop) {
@@ -1070,25 +1066,21 @@ exports.commands = {
         if (cleanShop.indexOf(packId) < 0) return self.sendReply('This is not a valid pack. Use /packshop to see all packs.');
         var shopIndex = cleanShop.indexOf(toId(target));
         if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
-        Database.read('money', user.userid, function (err, money) {
-            if (err) throw err;
-            if (!money) money = 0;
-            var cost = shop[shopIndex][2];
-            if (cost > money) return self.sendReply('You need ' + (cost - money) + ' more bucks to buy this card.');
-            Database.write('money', money - cost, user.userid, function (err, total) {
-                if (err) throw err;
-                var pack = toId(target);
-                var cost = shop[shopIndex][2];
-                self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
-                    ' bucks. Use <button name="send" value="/openpack ' +
-                    pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
-                self.sendReply('You have until the server restarts to open your pack.');
-                if (!userPacks[user.userid]) userPacks[user.userid] = [];
-                userPacks[user.userid].push(pack);
-                if (room.id !== 'lobby') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
-                room.update();
-            });
-        });
+        if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
+        var cost = shop[shopIndex][2];
+        if (cost > money) return self.sendReply('You need ' + (cost - Db('money')[user.userid]) + ' more bucks to buy this card.');
+        var total = Db('money')[user.userid] - cost;
+	Db('money')[user.userid] = total;
+	Db.save();
+	var pack = toId(target);
+	self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
+                       ' bucks. Use <button name="send" value="/openpack ' +
+                    	pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
+        self.sendReply('You have until the server restarts to open your pack.');
+        if (!userPacks[user.userid]) userPacks[user.userid] = [];
+        userPacks[user.userid].push(pack);
+        if (room.id !== 'lobby') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
+        room.update();
     },
     
     packshop: function(target, room, user) {
