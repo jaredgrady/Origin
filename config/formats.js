@@ -663,13 +663,6 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
-    	{
-		name: "Battle Factory",
-		section: "Other Metagames",
-
-		team: 'randomFactory',
-		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Mega Rayquaza Clause']
-	},
 	{
 		name: "Challenge Cup 1v1",
 		section: "Other Metagames",
