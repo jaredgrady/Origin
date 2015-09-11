@@ -1178,19 +1178,18 @@ exports.commands = {
     }
     var self = this;
     if (!Users.get(targetU)) return self.sendReply('User ' + targetU + ' not found.');
-    Database.read('cards', toId(targetU), function(err, cards) {
-        if (err || !cards) return self.sendReply('This user has no cards');
-        var display = '';
-        for (i = (page - 1) * 10; i < page * 10; i++) {
-            if (cards[i] && cards[i].hasOwnProperty('card')) {
-                display +=  '<button name="send" value="/card ' + cards[i].title + '"><img src="' + cards[i].card + '" width="50" title="' + cards[i].name +'"></button>';
-            } else {
-                break;
-            }
-        }
-        display += '<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
-        self.sendReplyBox(display);
-        });
+    var cards = Db('cards')[targetU];
+    var points = Db('points')[targetU];
+		var display = '';
+		for (i = (page - 1) * 10; i < page * 10; i++) {
+			if (cards[i] && cards[i].hasOwnProperty('card')) {
+				display +=  '<button name="send" value="/card ' + cards[i].title + '"><img src="' + cards[i].card + '" width="50" title="' + cards[i].name +'"></button>';
+			} else {
+				break;
+			}
+		}
+		display += '<br><br>' + targetU + ' has ' + points + 'points.<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
+		self.sendReplyBox(display);
     },
     
         card: function(target, room, user) {
@@ -1209,28 +1208,25 @@ exports.commands = {
         <font color="#AAA"><i>Found in Packs:</i></font><br>' + 
                 card.collection.join(', ') + '</center><br clear="all">';
         this.sendReplyBox(html);
-    }, 
+    },
+
         cardsladder: 'cardladder',
-    cardladder: function (target, room, user) {
+        cardladder: function (target, room, user) {
         if (!this.canBroadcast()) return;
         var _this = this;
         var targetnum = target;
         if (!target || isNaN(target)) targetnum = 10;
         if (target > 25) targetnum = 25
-        var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
-        Database.sortDesc('points', targetnum, function (err, users) {
-            if (err) throw err;
-            if (!users.length) {
-                _this.sendReplyBox("Card ladder is empty.");
-            } else {
-                users.forEach(function (user, index) {
-                    display += "<tr><td>" + (index + 1) + "</td><td>" + user.username + "</td><td>" + user.points + "</td></tr>";
-                });
-                display += "</tbody></table>";
-                _this.sendReply("|raw|" + display);
-            }
-            room.update();
-        });
+        var keys = Object.keys(Db('points'));
+		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
+		keys.sort(function (a, b) {
+			return b - a;
+		});
+		keys.slice(0, targetnum).forEach(function (user, index) {
+			display += "<tr><td>" + (index + 1) + "</td><td>" + user + "</td><td>" + Db('points')[user] + "</td></tr>";
+		});
+		display += "</tbody></table>";
+		this.sendReply("|raw|" + display);
      },
 /*     transfercard: function (target, room, user) {
     var parts = target.split(',');
