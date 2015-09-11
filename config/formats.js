@@ -259,15 +259,6 @@ exports.Formats = [
 		}
 	},
 	{
-		name: "Doubles Hackmons Cup",
-		section: "ORAS Doubles",
-
-		gameType: 'doubles',
-		team: 'randomHC',
-		searchShow: false,
-		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
 		name: "Doubles Custom Game",
 		section: "ORAS Doubles",
 
@@ -306,15 +297,6 @@ exports.Formats = [
 		onValidateTeam: function (team, format) {
 			if (team.length < 6) return ['You must have six Pok\u00e9mon.'];
 		}
-	},
-	{
-		name: "Triples Hackmons Cup",
-		section: "ORAS Triples",
-
-		gameType: 'triples',
-		team: 'randomHC',
-		searchShow: false,
-		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
 	{
 		name: "Triples Custom Game",
@@ -831,13 +813,6 @@ exports.Formats = [
 			'Shellder', 'Snivy', 'Snubbull', 'Spritzee', 'Staryu', 'Stunky', 'Surskit', 'Timburr', 'Tirtouga', 'Vullaby',
 			'Shell Smash', 'Corphish', 'Pancham', 'Vulpix', 'Zigzagoon'
 		]
-	},
-	{
-		name: "Hackmons Cup",
-		section: "Other Metagames",
-
-		team: 'randomHC',
-		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
 	{
 		name: "2v2 Doubles",
