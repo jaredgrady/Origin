@@ -1013,14 +1013,6 @@ exports.Formats = [
 			}
 		}
 	},
-	{
-		name: "Monotype Random Battle",
-		section: "Other Metagames",
-
-		team: 'randomMonotype',
-		searchShow: false,
-		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-	},
 
 	// BW2 Singles
 	///////////////////////////////////////////////////////////////////
