@@ -975,14 +975,14 @@ roomintro: function (target, room, user) {
 		}
 
 		if (targetUser.confirmed) {
-			if (cmd === 'forceban') {
+			/*if (cmd === 'forceban') {*/
 				var from = targetUser.deconfirm();
 				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
-			} else {
+			/*} else {
 				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
 			}
 		} else if (cmd === 'forceban') {
-			return this.sendReply("Use /ban; " + targetUser.name + " is not a confirmed user.");
+			return this.sendReply("Use /ban; " + targetUser.name + " is not a confirmed user.");*/
 		}
 
 		targetUser.popup("|modal|" + user.name + " has banned you." + (target ? "\n\nReason: " + target : "") + (Config.appealurl ? "\n\nIf you feel that your ban was unjustified, you can appeal:\n" + Config.appealurl : "") + "\n\nYour ban will expire in a few days.");
