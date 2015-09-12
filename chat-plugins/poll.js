@@ -132,6 +132,12 @@ exports.commands = {
 		if (!this.can('broadcast', null, room)) return false;
 		this.parse('/poll Tier for the next tournament?, Random Battles, Double Random Battles, Triple Random Battles, Gen [5] Random Battles, Gen [5] Double Random Battles, Gen [4] Random Battles, Gen [4] Double Random Battles, Gen [4] Triple Random Battles, Gen [3] Random Battles, Gen [3] Double Random Battles, Gen [3] Triple Random Battles, Gen [2] Random Battles, Gen [1] Random Battles, Challenge Cup 1v1, 1v1, Hackmons Cup, Battle Factory, Seasonal, Monotype Random Battle');
 	},
+	randomtour: 'randtour',
+	randtour: function (target, room, user) {
+		var rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
+		if (!this.can('broadcast', null, room)) return;
+		this.parse('/tour new ' + rand + ', elimination');
+	},
 	fpoll: 'formatpoll',
 	formatspoll: 'formatpoll',
 	formatpoll: function (target, room, user) {
