@@ -50,7 +50,6 @@ var emotes = {
 	'noface': 'http://i.imgur.com/H744eRE.png',
 	'Obama': 'http://i.imgur.com/rBA9M7A.png',
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
-	'PJSalt': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-18be1a297459453f-36x30.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
@@ -153,7 +152,7 @@ function create_table() {
 		}
 	}
 
-	return "<center><b><u>List of Emoticons</u></b></center>" + "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table>";
+	return "<center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div>";
 }
 
 var emotes_table = create_table();
