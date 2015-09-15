@@ -11,10 +11,7 @@ exports.BattleFormats = {
 			}
 		}
 	},
-		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Team Preview'],
-		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Sand Stream ++ Sand Rush', 'Soul Dew']
-	},
-		pokemon: {
+	pokemon: {
 		effectType: 'Banlist',
 		onValidateTeam: function (team, format) {
 			var problems = [];
