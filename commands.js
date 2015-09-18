@@ -311,17 +311,19 @@ var commands = exports.commands = {
 
 	hideroom: 'privateroom',
 	hiddenroom: 'privateroom',
+	secretroom: 'privateroom',
 	privateroom: function (target, room, user, connection, cmd) {
 		var setting;
 		switch (cmd) {
 		case 'privateroom':
-			if (!this.can('hotpatch')) return;
+		case 'secretroom':
+			if (!this.can('makeroom')) return;
 			setting = true;
 			break;
 		default:
-			if (!this.can('privateroom', null, room) || !this.can('declare', null, room)) return;
-			if (room.isPrivate === true) {
-				return this.sendReply("This room is a secret room. Use /privateroom to toggle instead.");
+			if (!this.can('privateroom', null, room)) return;
+			if (room.isPrivate === true && target !== 'force') {
+				return this.sendReply("This room is a secret room. Use /privateroom to toggle, or /hiddenroom force to force hidden.");
 			}
 			setting = 'hidden';
 			break;
@@ -335,6 +337,9 @@ var commands = exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 		} else {
+			if (room.isPrivate === setting) {
+				return this.errorReply("This room is already " + (setting === true ? 'secret' : setting) + ".");
+			}
 			room.isPrivate = setting;
 			this.addModCommand("" + user.name + " made this room " + (setting === true ? 'secret' : setting) + ".");
 			if (room.chatRoomData) {
