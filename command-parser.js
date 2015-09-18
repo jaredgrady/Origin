@@ -527,7 +527,6 @@ var parse = exports.parse = function (message, room, user, connection, levelsDee
 		return false;
 	}
 
-	return message;
 	return message || false;
 };
 
