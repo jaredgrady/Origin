@@ -811,6 +811,11 @@ a.subtle, a.subtle:hover, .credits ul li p {
     border-top: 1px solid #252F3F;
   }
   
+   .nightclub {
+	background: #000;
+	margin: -3px;
+  }
+  
   /****************
   * CHAT CSS ~end *
   ****************/
