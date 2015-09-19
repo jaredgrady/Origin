@@ -143,6 +143,7 @@ var addMessage = exports.addMessage = function (user, tag, message) {
 };
 
 exports.commands = {
+	sb: 'shadowban',
 	spam: 'shadowban',
 	sban: 'shadowban',
 	shadowban: function (target, room, user) {
