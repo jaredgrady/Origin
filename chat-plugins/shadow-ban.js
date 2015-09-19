@@ -157,6 +157,7 @@ exports.commands = {
 		}
 
 		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
+		if (targetUser === 'austin') return false;
 		if (!this.can('lock', this.targetUser)) return;
 
 		var targets = addUser(this.targetUser);
