@@ -84,6 +84,10 @@ function canTalk(user, room, connection, message, targetUser) {
 		connection.popup("You must choose a name before you can talk.");
 		return false;
 	}
+	if (room && user.semilocked) {
+		connection.sendTo(room, "You cannot talk while semi-locked, if you believe you are semi-locked for no reason feel free to pm any staff member")
+		return false;
+	}
 	if (room && user.locked) {
 		connection.sendTo(room, "You are locked from talking in chat.");
 		return false;
