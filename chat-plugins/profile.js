@@ -1,9 +1,10 @@
-
 var color = require('../config/color');
 var fs = require('fs');
 var moment = require('moment');
+var geoip = require('geoip-ultralight');
+geoip.startWatchingDataUpdate();
 
-var BR = '<br>';
+var BR = '<br />';
 var SPACE = '&nbsp;';
 var profileColor = '#24678d';
 var trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
@@ -119,7 +120,19 @@ Profile.prototype.money = function (amount) {
 };
 
 Profile.prototype.name = function () {
-	return label('Name') + bold(font(color(toId(this.username)), this.username));
+	function getFlag () {
+		if (!Users(this.username)) return false;
+		if (Users(this.username)) {
+			var geo = geoip.lookupCountry(Users(this.username).latestIp);
+			if (!geo) {
+				return false;
+			} else {
+				return ' <img src="https://github.com/kevogod/cachechu/blob/master/flags/' + geo.toLowerCase() + '.png?raw=true" height=10 title="' + geo + '">';
+			}
+		}
+	}
+	if (!getFlag()) return label('Name') + bold(font(color(toId(this.username)), this.username));
+	if (getFlag()) return label('Name') + bold(font(color(toId(this.username)), this.username)) + getFlag();
 };
 
 Profile.prototype.seen = function (timeAgo) {
