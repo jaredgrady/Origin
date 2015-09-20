@@ -121,9 +121,9 @@ Profile.prototype.money = function (amount) {
 
 Profile.prototype.name = function () {
 	function getFlag () {
-		if (!Users(this.username)) return false;
-		if (Users(this.username)) {
-			var geo = geoip.lookupCountry(Users(this.username).latestIp);
+		if (!this.isOnline) return false;
+		if (this.isOnline) {
+			var geo = geoip.lookupCountry(this.user.latestIp);
 			if (!geo) {
 				return false;
 			} else {
@@ -131,8 +131,8 @@ Profile.prototype.name = function () {
 			}
 		}
 	}
-	if (!getFlag()) return label('Name') + bold(font(color(toId(this.username)), this.username));
-	if (getFlag()) return label('Name') + bold(font(color(toId(this.username)), this.username)) + getFlag();
+	if (!getFlag.call(this))return label('Name') + bold(font(color(toId(this.username)), this.username));
+	if (getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username)) + ' ' + getFlag.call(this);
 };
 
 Profile.prototype.seen = function (timeAgo) {
