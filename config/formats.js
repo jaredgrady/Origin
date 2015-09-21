@@ -337,6 +337,24 @@ exports.Formats = [
 		}
 	},
 	{
+        name: "Move Equality",
+        section: "Other Metagames",
+        ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
+        banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
+        onModifyMove: function (move, pokemon) {
+            //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
+            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
+            if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100; 
+            if (!move.priority && move.multihit) {
+                if (typeof(move.multihit) === 'number') {
+                    move.basePower = 100/move.multihit;
+                } else {
+                    move.basePower = 100/move.multihit[1];
+                }
+            }
+        }
+	},
+	{
 		name: "MonsJustMons",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3514696/\">MonsJustMons</a>"],
 		section: "OM of the Month",
