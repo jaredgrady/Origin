@@ -3,6 +3,15 @@ const AUTO_DISQUALIFY_WARNING_TIMEOUT = 30 * 1000;
 const AUTO_START_MINIMUM_TIMEOUT = 30 * 1000;
 const MAX_REASON_LENGTH = 300;
 
+var colors = {
+    Mythic: '#E3E2AF',
+    Legendary: '#FF851B',
+    Epic: 'purple',
+    Rare: '#0074D9',
+    Uncommon: 'gray',
+    Common: 'black'
+};
+
 var TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
 	elimination: require('./generator-elimination.js').Elimination
@@ -770,6 +779,10 @@ Tournament = (function () {
 			}
 
 			Db.save();
+		}
+		if (this.room.isOfficial && tourSize >= 4) {
+            		var tourRarity = tourCard(tourSize, toId(winner));
+			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + colors[tourRarity[0]] + ">" + tourRarity[0] + "</font> card: <button name='send' value='/card " + tourRarity[1] + "'>" + tourRarity[2] + "</button> from the tournament.");
 		}
 	};
 
