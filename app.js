@@ -334,8 +334,8 @@ global.Verifier = require('./verifier.js');
 global.CommandParser = require('./command-parser.js');
 
 try {
-	cacheCards();
 	cachePacks();
+	cacheRarity();
 } catch (e) {
 	CommandParser.uncacheTree('./command-parser.js');
 	throw (e);
