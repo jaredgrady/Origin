@@ -978,8 +978,6 @@ function cachePacks() {
 
 global.cachePacks = cachePacks;
 
-cachePacks();
-
 function cacheRarity() {
     for (var i = 0; i < cardRarity.length; i++) {
         rareCache.push(new Array());
@@ -995,7 +993,7 @@ function cacheRarity() {
     }
 }
 
-cacheRarity();
+global.cacheRarity = cacheRarity;
 
 global.tourCard = function(tourSize, userid) {
     if (tourSize > 32) tourSize = 32;
