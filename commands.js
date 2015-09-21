@@ -206,9 +206,9 @@ var commands = exports.commands = {
 			} else if (toId(target).indexOf('psim' || 'tinyurl') > -1) {
 			       if (target.indexOf('eos.psim' || 'pokemonshowdown' || 'smogtours') > -1){
 			           targetUser.send(message);
-			}
 			} else {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
+			}
 			} else {
 				targetUser.send(message);
 			}
