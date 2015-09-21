@@ -1181,7 +1181,7 @@ exports.commands = {
 					break;
 				}
 			}
-			display += '<br><br>' + targetU + ' has ' + points + 'points.<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
+			display += '<br><br>' + targetU + ' has ' + points + ' points.<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
 		} else {
 			display = targetU + ' has no cards.'
 		}
