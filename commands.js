@@ -206,12 +206,9 @@ var commands = exports.commands = {
 			} else if (toId(target).indexOf('psim' || 'tinyurl') > -1) {
 			       if (target.indexOf('eos.psim' || 'pokemonshowdown' || 'smogtours') > -1){
 			           targetUser.send(message);
+			}
 			} else {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
-			}
-			} else if (Watchlist.isWatchlisted(user)) {
-				Watchlist.room.add('|c|' + user.getIdentity() + "|__(Private to " + targetUser.getIdentity() + ")__ " + target);
-				targetUser.send(message);
 			} else {
 				targetUser.send(message);
 			}
