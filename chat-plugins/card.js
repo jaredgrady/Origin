@@ -1209,7 +1209,7 @@ exports.commands = {
 	cardrank: 'cardladder',
 	cardladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
+		var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
 		var keys = Object.keys(Db('points')).map(function(name) {
 			return {name: name, points: Db('points')[name]};
 		});
