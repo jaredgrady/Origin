@@ -1068,7 +1068,7 @@ exports.commands = {
         if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
         if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
         var cost = shop[shopIndex][2];
-        if (cost > money) return self.sendReply('You need ' + (cost - Db('money')[user.userid]) + ' more bucks to buy this card.');
+        if (cost > Db('money')[user.userid]) return self.sendReply('You need ' + (cost - Db('money')[user.userid]) + ' more bucks to buy this card.');
         var total = Db('money')[user.userid] - cost;
 	Db('money')[user.userid] = total;
 	Db.save();
@@ -1173,14 +1173,18 @@ exports.commands = {
     var cards = Db('cards')[targetU];
     var points = Db('points')[targetU];
 		var display = '';
-		for (i = (page - 1) * 10; i < page * 10; i++) {
-			if (cards[i] && cards[i].hasOwnProperty('card')) {
+		if (cards) {
+			for (i = (page - 1) * 10; i < page * 10; i++) {
+				if (cards[i] && cards[i].hasOwnProperty('card')) {
 				display +=  '<button name="send" value="/card ' + cards[i].title + '"><img src="' + cards[i].card + '" width="50" title="' + cards[i].name +'"></button>';
-			} else {
-				break;
+				} else {
+					break;
+				}
 			}
+			display += '<br><br>' + targetU + ' has ' + points + 'points.<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
+		} else {
+			display = targetU + ' has no cards.'
 		}
-		display += '<br><br>' + targetU + ' has ' + points + 'points.<br><br><b>Showing cards: ' + ((page - 1) * 10) + ' through ' + (page * 10) + ' of ' + cards.length + '</b>';
 		self.sendReplyBox(display);
     },
     
