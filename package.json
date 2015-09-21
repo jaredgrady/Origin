@@ -9,6 +9,7 @@
     "eosdb": "^1.1.0",
     "es6-shim": "0.27.1",
     "forever": "0.15.1",
+    "geoip-ultralight": "0.1.1",
     "moment": "^2.10.2",
     "lowdb": "^0.10.1",
     "node-static": "0.7.6",
