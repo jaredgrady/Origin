@@ -12,6 +12,8 @@ var scavengers = {
 	answers: null,
 	participants: {},
 	finished: [],
+	buyin: false,
+	official: 'off',
 	result: null
 };
 
@@ -40,6 +42,7 @@ exports.commands = {
 		}
 		if (cmd === 'startofficialhunt') {
 			if (!this.can('ban', null, room)) return false;
+			scavengers.official = 'on'; 
 			scavengers.blitz = setTimeout(function () {
 				scavengers.blitz = null;
 			}, 60000);
@@ -54,8 +57,17 @@ exports.commands = {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
 		if (scavengers.status !== 'on') return this.sendReply('There is no active scavenger hunt.');
 		if (user.userid in scavengers.participants) return this.sendReply('You are already participating in the current scavenger hunt.');
+		if (scavengers.buyin) { 
+		var total = (Db('money')[user.userid] || 0);
+		if (total < 1) { return this.sendReply('You do not have enough bucks to pay the buy-in to play.') }
+		Db('money')[user.userid] = total - 1;
+		Db.save();
+		scavengers.participants[user.userid] = {room: 0};
+		this.sendReply('You joined the scavenger hunt and have paid a 1 buck buy-in to play! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
+		} else {
 		scavengers.participants[user.userid] = {room: 0};
 		this.sendReply('You joined the scavenger hunt! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
+		}
 	},
 	scavenge: function (target, room, user) {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
@@ -104,6 +116,19 @@ exports.commands = {
 			if (second) msg += ' Second place: <em>' + Tools.escapeHTML(second) + '</em>.';
 			if (third) msg += ' Third place: <em>' + Tools.escapeHTML(third) + '</em>.';
 			if (consolation) msg += ' Consolation prize to: ' + Tools.escapeHTML(consolation) + '.';
+			if (scavengers.official === 'on') {
+			var prize1 = (Db('money')[winner] || 0) + 15;
+			var consolation1 = (Db('money')[second] || 0) + 10;
+			Db('money')[winner] = prize1;
+			Db('money')[second] = consolation1;
+			Db.save();
+		} else { 
+			var prize2 = (Db('money')[winner] || 0) + 5;
+			var consolation2 = (Db('money')[second] || 0) + 3;
+			Db('money')[winner] = prize2;
+			Db('money')[second] = consolation2;
+			Db.save();
+			}
 		} else {
 			msg += 'No user has completed the hunt.';
 		}
@@ -120,6 +145,7 @@ exports.commands = {
 		scavengers.blitz = null;
 		scavengers.hints = null;
 		scavengers.answers = null;
+		scavengers.official = 'off';
 		scavengers.participants = {};
 		scavengers.finished = [];
 		if (scavengers.result) {
@@ -128,6 +154,17 @@ exports.commands = {
 			Rooms.rooms.scavengers.addRaw('<div class="broadcast-blue"><strong>The Scavenger Hunt was reset by <em>' + Tools.escapeHTML(user.name) + '</em>.</strong></div>');
 		}
 		scavengers.result = null;
+	},
+	scavengersbuyin: function (target, room, user) {
+		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
+		if (!this.can('hotpatch')) return false;
+		if (target === 'off') {
+		scavengers.buyin = false;
+		this.sendReply('Scavenger buy-ins have been disabled');
+		} else {
+		scavengers.buyin = true;
+		this.sendReply('Scavenger buy-ins have been enabled');
+		}
 	},
 	scavengershelp: 'scavengerhelp',
 	scavengerhelp: function (target, room, user) {
