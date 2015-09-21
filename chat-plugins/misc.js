@@ -739,41 +739,6 @@ exports.commands = {
   
 	},
         renamechatroomhelp: ["/renamechatroom [room name], [new room name] - Renames a room."],
-	
-	watch: 'watchlist',
-	watchlist: function (target, room, user) {
-		if (!target) return this.sendReply("Please specify a user.");
-		this.splitTarget(target);
-
-		if (!this.targetUser) {
-			return this.sendReply("The user '" + this.targetUsername + "' does not exist.");
-		}
-		if (!this.can('hotpatch', this.targetUser)) {
-			return false;
-		}
-
-		var targets = Watchlist.addUser(this.targetUser);
-		if (targets.length === 0) {
-			return this.sendReply("That user's messages are already being redirected to the watchlist.");
-		}
-		this.privateModCommand("(" + user.name + " has added to the watchlist user list: " + targets.join(", ") + ")");
-	},
-
-	unwatch: 'unwatchlist',
-	unwatchlist: function (target, room, user) {
-		if (!target) return this.sendReply("Please specify a user.");
-		this.splitTarget(target);
-
-		if (!this.can('hotpatch', this.targetUser)) {
-			return false;
-		}
-
-		var targets = Watchlist.removeUser(this.targetUser || this.targetUsername);
-		if (targets.length === 0) {
-			return this.sendReply("That user is not in the watchlist.");
-		}
-		this.privateModCommand("(" + user.name + " has removed from the watchlist user list: " + targets.join(", ") + ")");
-	},
 
 	regdate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
