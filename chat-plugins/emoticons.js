@@ -94,6 +94,9 @@ function parseEmoticons(message, room, user, pm) {
 	}
 
 	if (!match) return false;
+	
+	//shadowbanroom message
+	sbanmsg = message;
 
 	// escape HTML
 	message = Tools.escapeHTML(message);
@@ -117,9 +120,11 @@ function parseEmoticons(message, room, user, pm) {
 
 	message = "<div class='chat'>" + "<small>" + group + "</small>" + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>" + "<b><font color='" + color(user.userid) + "'>" + user.name + ":</font></b>" + "</button><em class='mine'>" + message + "</em></div>";
 	if (pm) return message;
-
-	room.addRaw(message);
-
+	if (Users.ShadowBan.checkBanned(user)) {
+		user.sendTo(room, '|html|' + message);
+		Users.ShadowBan.addMessage(user, "To " + room, sbanmsg);
+	}
+	if (!Users.ShadowBan.checkBanned(user)) room.addRaw(message);
 	return true;
 }
 
