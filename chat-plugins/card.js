@@ -1015,7 +1015,7 @@ function addCard(name, card) {
     newCard.name = cards[card].name;
     newCard.rarity = cards[card].rarity;
     newCard.points = cards[card].points;
-    if (!Array.isArray(Db('cards')[toId(name)])) Db('cards')[user.userid] = [];
+    if (!Array.isArray(Db('cards')[toId(name)])) Db('cards')[toId(name)] = [];
     Db('cards')[toId(name)].push(newCard);
     Db.save();
     var total = (Db('points')[toId(name)] || 0) + newCard.points;
