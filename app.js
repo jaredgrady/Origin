@@ -333,6 +333,14 @@ global.Verifier = require('./verifier.js');
 
 global.CommandParser = require('./command-parser.js');
 
+try {
+	cacheCards();
+	cachePacks();
+} catch (e) {
+	CommandParser.uncacheTree('./command-parser.js');
+	throw (e);
+}
+
 global.Simulator = require('./simulator.js');
 
 global.Tournaments = require('./tournaments');
