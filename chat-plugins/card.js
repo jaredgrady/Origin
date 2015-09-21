@@ -1206,24 +1206,23 @@ exports.commands = {
         this.sendReplyBox(html);
     },
 
-        cardsladder: 'cardladder',
-        cardladder: function (target, room, user) {
-        if (!this.canBroadcast()) return;
-        var _this = this;
-        var targetnum = target;
-        if (!target || isNaN(target)) targetnum = 10;
-        if (target > 25) targetnum = 25
-        var keys = Object.keys(Db('points'));
-		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
-		keys.sort(function (a, b) {
-			return b - a;
+	cardrank: 'cardladder',
+	cardladder: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
+		var keys = Object.keys(Db('points')).map(function(name) {
+			return {name: name, points: Db('points')[name]};
 		});
-		keys.slice(0, targetnum).forEach(function (user, index) {
-			display += "<tr><td>" + (index + 1) + "</td><td>" + user + "</td><td>" + Db('points')[user] + "</td></tr>";
+		if (!keys.length) return this.sendReplyBox("Cardladder is empty.");
+		keys.sort(function (a, b) {
+			return b.points - a.points;
+		});
+		keys.slice(0, 10).forEach(function (user, index) {
+			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.points + "</td></tr>";
 		});
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
-     },
+	},
 /*     transfercard: function (target, room, user) {
     var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
