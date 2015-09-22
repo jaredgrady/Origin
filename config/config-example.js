@@ -84,11 +84,27 @@ exports.reportbattles = true;
 //   Note that the feature of turning this off is deprecated.
 exports.reportbattlejoins = true;
 
+<<<<<<< HEAD
 // moderated chat - prevent unvoiced users from speaking
 //   This should only be enabled in special situations, such as temporarily
 //   when you're dealing with huge influxes of spammy users.
 exports.chatmodchat = false;
 exports.battlemodchat = false;
+=======
+// whitelist - prevent users below a certain group from doing things
+//   For the modchat settings, false will allow any user to participate, while a string
+//   with a group symbol will restrict it to that group and above. The string
+//   'autoconfirmed' is also supported for chatmodchat and battlemodchat, to restrict
+//   chat to autoconfirmed users.
+//   This is usually intended to be used as a whitelist feature - set these to '+' and
+//   voice every user you want whitelisted on the server.
+
+// chat modchat - default minimum group for speaking in chatrooms; changeable with /modchat
+exports.chatmodchat = false;
+// battle modchat - default minimum group for speaking in battles; changeable with /modchat
+exports.battlemodchat = false;
+// pm modchat - minimum group for PMing other users, challenging other users, and laddering
+>>>>>>> upstream/master
 exports.pmmodchat = false;
 
 // forced timer - force the timer on for all battles
@@ -155,6 +171,20 @@ exports.tellsexpiryage = 1000 * 60 * 60 * 24 * 7;
 // to send offline messages.
 exports.tellrank = '+';
 
+<<<<<<< HEAD
+=======
+// database use to store user's money, tickets, etc.
+exports.database = 'lowdb';
+
+// mysql configuration to create the connection to the database.
+exports.mysql = {
+	host: 'localhost',
+	user: 'me',
+	password: 'secret',
+	database: 'my_db'
+};
+
+>>>>>>> upstream/master
 // Custom avatars.
 // This allows you to specify custom avatar images for users on your server.
 // Place custom avatar files under the /config/avatars/ directory.
@@ -167,6 +197,12 @@ exports.customavatars = {
 	//'userid': 'customavatar.png'
 };
 
+<<<<<<< HEAD
+=======
+// custom avatars appear in profile by specifiying server url.
+exports.avatarurl = '';
+
+>>>>>>> upstream/master
 // Tournament announcements
 // When tournaments are created in rooms listed below, they will be announced in
 // the server's main tournament room (either the specified tourroom or by default
@@ -231,7 +267,10 @@ exports.replsocketmode = 0600;
 //     - tournaments: creating tournaments (/tour new, settype etc.)
 //     - tournamentsmoderation: /tour dq, autodq, end etc.
 //     - tournamentsmanagement: enable/disable tournaments.
+<<<<<<< HEAD
 //     - eztc: /eztc commands.
+=======
+>>>>>>> upstream/master
 exports.grouplist = [
 	{
 		symbol: '~',
@@ -254,8 +293,11 @@ exports.grouplist = [
 		potd: true,
 		disableladder: true,
 		globalonly: true,
+<<<<<<< HEAD
 		tournamentsmanagement: true,
 		eztc: true
+=======
+>>>>>>> upstream/master
 		tournamentsmanagement: true
 	},
 	{
@@ -330,6 +372,7 @@ exports.grouplist = [
 		alts: 's'
 	}
 ];
+<<<<<<< HEAD
 
 // Maximum number of concurrent connections a single ip may have
 exports.maxConnections = 5;
@@ -339,3 +382,5 @@ exports.connectionWhitelist = {
 	'127.0.0.1': 20
 };
 
+=======
+>>>>>>> upstream/master

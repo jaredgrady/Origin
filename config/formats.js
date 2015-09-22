@@ -7,6 +7,16 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
+=======
+		name: "Random Battle",
+		section: "ORAS Singles",
+
+		team: 'random',
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "Unrated Random Battle",
 		section: "ORAS Singles",
 
@@ -72,6 +82,10 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538036/\">RU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 		searchShow: false,
 		ruleset: ['UU'],
 		banlist: ['UU', 'BL2']
@@ -104,6 +118,10 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3496013/\">LC Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 		maxLevel: 5,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
 		banlist: ['LC Uber', 'Gligar', 'Misdreavus', 'Scyther', 'Sneasel', 'Tangela', 'Dragon Rage', 'Sonic Boom', 'Swagger']
@@ -112,15 +130,59 @@ exports.Formats = [
 		name: "Anything Goes",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523229/\">Anything Goes</a>",
+<<<<<<< HEAD
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3535064/\">Anything Goes Viability Ranking</a>"
+=======
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3548945/\">Anything Goes Resources</a>"
+>>>>>>> upstream/master
 		],
 		section: "ORAS Singles",
 
 		ruleset: ['Pokemon', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 		banlist: ['Unreleased', 'Illegal']
 	},
+<<<<<<< HEAD
 	{
 		name: "Battle Spot Singles",
+=======
+	/*{
+		name: "CAP Naviathan Playtest",
+		section: "ORAS Singles",
+
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
+		banlist: ['Allow CAP', 'Syclant', 'Revenankh', 'Pyroak', 'Fidgit', 'Stratagem', 'Arghonaut', 'Kitsunoh', 'Cyclohm', 'Colossoil', 'Krilowatt', 'Voodoom',
+			'Tomohawk', 'Necturna', 'Mollux', 'Aurumoth', 'Malaconda', 'Cawmodore', 'Volkraken', 'Plasmanta',
+			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Genesect',
+			'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia',
+			'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
+		]
+	},*/
+	{
+		name: "Battle Spot Singles",
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3527960/\">Battle Spot Singles Metagame Discussion</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3528947/\">Battle Spot Singles Viability Ranking</a>"
+		],
+		section: "ORAS Singles",
+
+		maxForcedLevel: 50,
+		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview GBU'],
+		banlist: [],
+		onValidateTeam: function (team, format) {
+			if (team.length < 3) return ['You must bring at least three Pok\u00e9mon.'];
+		},
+		onBegin: function () {
+			this.debug('cutting down to 3');
+			this.p1.pokemon = this.p1.pokemon.slice(0, 3);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 3);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+		}
+	},
+	{
+		name: "Battle Spot Special 12",
+>>>>>>> upstream/master
 		section: "ORAS Singles",
 
 		maxForcedLevel: 50,
@@ -141,6 +203,11 @@ exports.Formats = [
 	{
 		name: "Custom Game",
 		section: "ORAS Singles",
+<<<<<<< HEAD
+=======
+
+		searchShow: false,
+>>>>>>> upstream/master
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -153,6 +220,17 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
+=======
+		name: "Random Doubles Battle",
+		section: "ORAS Doubles",
+
+		gameType: 'doubles',
+		team: 'randomDoubles',
+		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "Doubles OU",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545903/\">np: Doubles OU Stage 3</a>",
@@ -200,6 +278,10 @@ exports.Formats = [
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Doubles UU'],
 		banlist: ['Snorlax', 'Machamp', 'Lopunny', 'Galvantula', 'Mienshao', 'Infernape', 'Aromatisse', 'Clawitzer', 'Kyurem', 'Flygon',
 			'Lucario', 'Alakazam', 'Gastrodon', 'Bronzong', 'Chandelure', 'Dragalge', 'Mamoswine', 'Genesect', 'Arcanine', 'Volcarona',
@@ -210,7 +292,11 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
 		name: "Battle Spot Doubles (VGC 2015)",
+=======
+		name: "VGC 2015",
+>>>>>>> upstream/master
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3524352/\">VGC 2015 Rules</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3530547/\">VGC 2015 Viability Ranking</a>",
@@ -236,15 +322,47 @@ exports.Formats = [
 		}
 	},
 	{
+<<<<<<< HEAD
 		name: "Battle Spot Special 11",
+=======
+		name: "Battle Spot Doubles",
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
 		maxForcedLevel: 50,
+		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview VGC'],
+		banlist: [],
+		onValidateTeam: function (team, format) {
+			if (team.length < 4) return ['You must bring at least four Pok\u00e9mon.'];
+		},
+		onBegin: function () {
+			this.debug('cutting down to 4');
+			this.p1.pokemon = this.p1.pokemon.slice(0, 4);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 4);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+		}
+	},
+	{
+		name: "Primal Battle",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3548886/\">Primal Battle</a>"],
+>>>>>>> upstream/master
+		section: "ORAS Doubles",
+
+		gameType: 'doubles',
+		maxForcedLevel: 50,
+<<<<<<< HEAD
 		ruleset: ['Battle Spot Doubles (VGC 2015)'],
 		banlist: ['Charizard', 'Gengar', 'Kangaskhan', 'Tyranitar', 'Gardevoir', 'Mawile', 'Salamence', 'Garchomp', 'Rotom',
 			'Rotom-Heat', 'Rotom-Wash', 'Rotom-Frost', 'Rotom-Fan', 'Rotom-Mow', 'Heatran', 'Cresselia', 'Amoonguss', 'Bisharp',
 			'Terrakion', 'Thundurus', 'Thundurus-Therian', 'Landorus', 'Landorus-Therian', 'Greninja', 'Talonflame', 'Aegislash', 'Sylveon'
+=======
+		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Team Preview VGC', 'Cancel Mod'],
+		banlist: ['Unreleased', 'Illegal', 'Soul Dew',
+			'Mewtwo', 'Mew', 'Lugia', 'Ho-Oh', 'Celebi', 'Rayquaza', 'Jirachi', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga',
+			'Palkia', 'Giratina', 'Giratina-Origin', 'Phione', 'Manaphy', 'Darkrai', 'Shaymin', 'Shaymin-Sky', 'Arceus', 'Victini', 'Reshiram', 'Zekrom',
+			'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Keldeo', 'Meloetta', 'Genesect', 'Xerneas', 'Yveltal', 'Zygarde', 'Diancie', 'Hoopa', 'Hoopa-Unbound'
+>>>>>>> upstream/master
 		],
 		requirePentagon: true,
 		onValidateTeam: function (team, format) {
@@ -259,10 +377,26 @@ exports.Formats = [
 		}
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Doubles Hackmons Cup",
+		section: "ORAS Doubles",
+
+		gameType: 'doubles',
+		team: 'randomHC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "Doubles Custom Game",
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		canUseRandomTeam: true,
 		maxLevel: 9999,
 		defaultLevel: 100,
@@ -275,7 +409,23 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
 		name: "Smogon Triples",
+=======
+		name: "Random Triples Battle",
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		team: 'randomDoubles',
+		ruleset: ['PotD', 'Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "Smogon Triples",
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3511522/\">Smogon Triples</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3540390/\">Smogon Triples Viability Ranking</a>"
+		],
+>>>>>>> upstream/master
 		section: "ORAS Triples",
 
 		gameType: 'triples',
@@ -287,22 +437,49 @@ exports.Formats = [
 	},
 	{
 		name: "Battle Spot Triples",
+<<<<<<< HEAD
+=======
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3533914/\">Battle Spot Triples Metagame Discussion</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3549201/\">Battle Spot Triples Viability Ranking</a>"
+		],
+>>>>>>> upstream/master
 		section: "ORAS Triples",
 
 		gameType: 'triples',
 		maxForcedLevel: 50,
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
+<<<<<<< HEAD
 		banlist: ['Tornadus + Defiant', 'Thundurus + Defiant', 'Landorus + Sheer Force'],
 		requirePentagon: true,
+=======
+		banlist: [],
+>>>>>>> upstream/master
 		onValidateTeam: function (team, format) {
 			if (team.length < 6) return ['You must have six Pok\u00e9mon.'];
 		}
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Triples Hackmons Cup",
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		team: 'randomHC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "Triples Custom Game",
 		section: "ORAS Triples",
 
 		gameType: 'triples',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		canUseRandomTeam: true,
 		maxLevel: 9999,
 		defaultLevel: 100,
@@ -315,6 +492,7 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+<<<<<<< HEAD
 		name: "No Status",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3542555/\">No Status</a>"],
 		section: "OM of the Month",
@@ -369,6 +547,43 @@ exports.Formats = [
 			set.evs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 			set.ivs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 			set.nature = '';
+=======
+		name: "Sketchmons",
+		desc: [
+			"Pok&eacute;mon gain access to one Sketch'd move.",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545826/\">Sketchmons</a>"
+		],
+		section: "OM of the Month",
+		column: 2,
+
+		ruleset: ['OU'],
+		banlist: ['Allow One Sketch', "King's Rock", 'Pinsirite', 'Razor Fang', 'Shadow Tag'],
+		onValidateTeam: function (team) {
+			var sketchedMoves = {};
+			for (var i = 0; i < team.length; i++) {
+				var move = team[i].sketchmonsMove;
+				if (!move) continue;
+				if (move in sketchedMoves) return ["You are limited to sketching one of each move by Move Clause.", "(You have sketched " + this.getMove(move).name + " more than once)"];
+				sketchedMoves[move] = (team[i].name || team[i].species);
+			}
+		}
+	},
+	{
+		name: "Hackmons 1v1",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/oras-1v1-3v3-team-preview.3496773/#post-5121864\">Hackmons 1v1</a>"],
+		section: "OM of the Month",
+
+		ruleset: ['Pokemon', 'OHKO Clause', 'Endless Battle Clause', 'Team Preview 1v1', 'HP Percentage Mod', 'Cancel Mod'],
+		banlist: ['Wonder Guard', 'Heal Pulse'],
+		onValidateTeam: function (team, format) {
+			if (team.length > 3) return ['You may only bring up to three Pok\u00e9mon.'];
+		},
+		onBegin: function () {
+			this.p1.pokemon = this.p1.pokemon.slice(0, 1);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 1);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+>>>>>>> upstream/master
 		}
 	},
 	{
@@ -629,6 +844,7 @@ exports.Formats = [
 		banlist: ['Allow CAP']
 	},
 	{
+<<<<<<< HEAD
 	        name: "[Gen 5] CAP",
         	section: "Other Metagames",
 
@@ -663,6 +879,28 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
+=======
+		name: "Battle Factory",
+		section: "Other Metagames",
+
+		team: 'randomFactory',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Mega Rayquaza Clause']
+	},
+	{
+		name: "Challenge Cup 1v1",
+		section: "Other Metagames",
+
+		team: 'randomCC',
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview 1v1'],
+		onBegin: function () {
+			this.debug('Cutting down to 1');
+			this.p1.pokemon = this.p1.pokemon.slice(0, 1);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0, 1);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+		}
+	},
+>>>>>>> upstream/master
 	{
 		name: "Balanced Hackmons",
 		desc: [
@@ -833,6 +1071,16 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "Hackmons Cup",
+		section: "Other Metagames",
+
+		team: 'randomHC',
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "2v2 Doubles",
 		desc: [
 			"Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.",
@@ -841,6 +1089,10 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Doubles OU'],
 		banlist: ['Perish Song'],
 		onValidateTeam: function (team, format) {
@@ -860,6 +1112,11 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3526481/\">Averagemons</a>"
 		],
 		section: "Other Metagames",
+<<<<<<< HEAD
+=======
+
+		searchShow: false,
+>>>>>>> upstream/master
 		mod: 'averagemons',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Sableye + Prankster', 'Shedinja', 'Smeargle', 'Venomoth',
@@ -874,6 +1131,11 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3516349/\">Hidden Type</a>"
 		],
 		section: "Other Metagames",
+<<<<<<< HEAD
+=======
+
+		searchShow: false,
+>>>>>>> upstream/master
 		mod: 'hiddentype',
 		ruleset: ['OU']
 	},
@@ -883,6 +1145,10 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		mod: 'theorymon',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['OU']
 	},
 	{
@@ -890,10 +1156,15 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		mod: 'gennext',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Pokemon', 'Standard NEXT', 'Team Preview'],
 		banlist: ['Uber']
 	},
 	{
+<<<<<<< HEAD
 		name: "Mega Tier",
 		section: "EOS Metagames",
 		column: 2,
@@ -1030,6 +1301,14 @@ exports.Formats = [
 				this.add('-end', pokemon, oMegaTemplate.requiredItem || oMegaTemplate.requiredMove, '[silent]');
 			}
 		}
+=======
+		name: "Monotype Random Battle",
+		section: "Other Metagames",
+
+		team: 'randomMonotype',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+>>>>>>> upstream/master
 	},
 
 	// BW2 Singles
@@ -1138,6 +1417,7 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
 		name: "VGC 13",
 		section: "BW2",
 
@@ -1163,6 +1443,14 @@ exports.Formats = [
 
 		mod: 'gen5',
 		gameType: 'doubles',
+=======
+		name: "[Gen 5] GBU Doubles",
+		section: 'BW2 Doubles',
+
+		mod: 'gen5',
+		gameType: 'doubles',
+		searchShow: false,
+>>>>>>> upstream/master
 		maxForcedLevel: 50,
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview VGC'],
 		banlist: ['Dark Void', 'Sky Drop'],
@@ -1235,6 +1523,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen4',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1248,6 +1540,10 @@ exports.Formats = [
 
 		mod: 'gen4',
 		gameType: 'doubles',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		canUseRandomTeam: true,
 		debug: true,
 		maxLevel: 9999,
@@ -1278,6 +1574,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen3',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -1299,10 +1599,26 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard']
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "[Gen 2] Random Battle",
+		section: "Past Generations",
+
+		mod: 'gen2',
+		searchShow: false,
+		team: 'random',
+		ruleset: ['Pokemon', 'Standard']
+	},
+	{
+>>>>>>> upstream/master
 		name: "[Gen 2] Custom Game",
 		section: "Past Generations",
 
 		mod: 'gen2',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -1320,6 +1636,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Pokemon', 'Standard'],
 		banlist: []
 	},
@@ -1328,6 +1648,10 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Uber', 'Unreleased', 'Illegal',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -1335,10 +1659,34 @@ exports.Formats = [
 		]
 	},
 	{
+<<<<<<< HEAD
+=======
+		name: "[Gen 1] Random Battle",
+		section: "Past Generations",
+
+		mod: 'gen1',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "[Gen 1] Challenge Cup",
+		section: "Past Generations",
+
+		mod: 'gen1',
+		team: 'randomCC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'Freeze Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+>>>>>>> upstream/master
 		name: "[Gen 1] Stadium",
 		section: "Past Generations",
 
 		mod: 'stadium',
+<<<<<<< HEAD
+=======
+		searchShow: false,
+>>>>>>> upstream/master
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
@@ -1350,6 +1698,7 @@ exports.Formats = [
 		section: "Past Generations",
 
 		mod: 'gen1',
+<<<<<<< HEAD
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
@@ -2092,4 +2441,10 @@ exports.Formats = [
 			}
 		}
 	}*/
+=======
+		searchShow: false,
+		debug: true,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	}
+>>>>>>> upstream/master
 ];

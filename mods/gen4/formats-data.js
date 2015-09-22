@@ -2931,56 +2931,100 @@ exports.BattleFormatsData = {
 	syclant: {
 		randomBattleMoves: ["bugbuzz","icebeam","blizzard","earthpower","spikes","superpower","tailglow","uturn","focusblast"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	revenankh: {
 		randomBattleMoves: ["bulkup","shadowsneak","drainpunch","moonlight","powerwhip","icepunch"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	pyroak: {
 		randomBattleMoves: ["leechseed","lavaplume","substitute","protect"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	fidgit: {
 		randomBattleMoves: ["spikes","stealthrock","toxicspikes","wish","rapidspin","encore","uturn","sludgebomb"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	stratagem: {
 		randomBattleMoves: ["paleowave","earthpower","fireblast","gigadrain","calmmind"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	arghonaut: {
 		randomBattleMoves: ["recover","bulkup","waterfall","crosschop","stoneedge","thunderpunch"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	kitsunoh: {
 		randomBattleMoves: ["shadowstrike","superpower","meteormash","uturn","icepunch","thunderpunch","trick","willowisp"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	cyclohm: {
 		randomBattleMoves: ["slackoff","dracometeor","dragonpulse","fireblast","thunderbolt","hydropump"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	colossoil: {
 		randomBattleMoves: ["earthquake","crunch","suckerpunch","uturn","rapidspin","encore","pursuit"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	krilowatt: {
 		randomBattleMoves: ["surf","thunderbolt","icebeam","counter","mirrorcoat","earthquake"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	},
 	voodoom: {
 		randomBattleMoves: ["aurasphere","darkpulse","taunt","painsplit"],
 		isNonstandard: true,
+<<<<<<< HEAD
 		tier: "CAP"
+=======
+		tier: "G4CAP"
+>>>>>>> upstream/master
 	}
 };

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 var request = require('request');
 
+=======
+>>>>>>> upstream/master
 var Poll = {
 	reset: function (roomId) {
 		Poll[roomId] = {
@@ -113,6 +116,16 @@ exports.commands = {
 		this.parse('/tour new ' + target + ', roundrobin');
 	},
 
+<<<<<<< HEAD
+=======
+	randomtour: 'randtour',
+	randtour: function (target, room, user) {
+		var rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
+		if (!this.can('broadcast', null, room)) return;
+		this.parse('/tour new ' + rand + ', elimination');
+	},
+
+>>>>>>> upstream/master
 	pr: 'pollremind',
 	pollremind: function (target, room, user) {
 		if (!Poll[room.id]) Poll.reset(room.id);
@@ -120,10 +133,16 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(Poll[room.id].display);
 	},
+<<<<<<< HEAD
+=======
+
+	formatpoll: 'tierpoll',
+>>>>>>> upstream/master
 	tpoll: 'tierpoll',
 	tierspoll: 'tierpoll',
 	tierpoll: function (target, room, user) {
 		if (!this.can('broadcast', null, room)) return false;
+<<<<<<< HEAD
 		this.parse('/poll Tier for the next tournament?, Random Battles, Double Random Battles, Triple Random Battles, Gen [5] Random Battles, Gen [5] Double Random Battles, Gen [5] Random Triple Battles, Gen [4] Random Battles, Gen [4] Double Random Battles, Gen [4] Triple Random Battles, Gen [3] Random Battles, Gen [3] Double Random Battles, Gen [3] Triple Random Battles, Gen [2] Random Battles, Gen [1] Random Battles, Challenge Cup 1v1, 1v1, Hackmons Cup, Battle Factory, Seasonal, Monotype Random Battle, Ubers, OU, UU, RU, NU, PU, LC, AG, Doubles OU, No Status, MonsJustMons, Tier Shift, Monotype');
 	},
 	rpoll: 'randompoll',
@@ -143,6 +162,9 @@ exports.commands = {
 	formatpoll: function (target, room, user) {
 		if (!this.can('broadcast', null, room)) return false;
 		this.parse('/poll Tier for the next tournament?,' + Object.values(Tools.data.Formats).filter(function (f) { return f.effectType === 'Format' && f.tournamentShow; }).map('name').join(", "));
+=======
+		this.parse("/poll Tournament tier?," + "Random Battle, OU, Ubers, UU, RU, NU, LC, Anything Goes, Battle Spot Singles, Custom Game, Random Doubles Battle, Doubles OU, Battle Spot Doubles (VGC 2015), Doubles Custom Game, Random Triples Battle, Smogon Triples, Triples Custom Game, CAP, Battle Factory, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Tier Shift, PU, Inverse Battle, Monotype Random Battle");
+>>>>>>> upstream/master
 	},
 
 	vote: function (target, room, user) {

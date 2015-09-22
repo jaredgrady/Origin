@@ -493,7 +493,10 @@ exports.BattleFormats = {
 	endlessbattleclause: {
 		effectType: 'Banlist',
 		name: 'Endless Battle Clause',
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 		// implemented in battle-engine.js
 
 		// A Pokémon has a confinement counter, which starts at 0:
