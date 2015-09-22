@@ -193,7 +193,7 @@ exports.commands = {
 	toggleemote: 'toggleemoticons',
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
-		if (!this.can('roomleader', null, room) && !this.can('declare')) return false;
+		if (!this.can('roomleader', null, room) || !this.can('declare')) return false;
 		room.disableEmoticons = !room.disableEmoticons;
 		this.sendReply("Disallowing emoticons is set to " + room.disableEmoticons + " in this room.");
 		if (room.disableEmoticons) {
