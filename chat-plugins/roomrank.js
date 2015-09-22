@@ -9,6 +9,7 @@ exports.commands = {
         var targetUser = this.targetUser;
         if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
         if (!this.can('declare')) return false;
+	if (room.isPersonal) return this.sendReply("You can\'t do this in personal rooms.");
         if (!room.auth) room.auth = room.chatRoomData.auth = {};
         if (!room.leagueauth) room.leagueauth = room.chatRoomData.leagueauth = {};
         var name = targetUser.name;
@@ -29,6 +30,7 @@ exports.commands = {
         var targetUser = this.targetUser;
         var name = this.targetUsername;
         var userid = toId(name);
+	if (room.isPersonal) return this.sendReply("You can\'t do this in personal rooms.");
         if (!userid || userid === '') return this.sendReply("User '" + name + "' does not exist.");
 
         if (room.auth[userid] !== '#') return this.sendReply("User '" + name + "' is not a room founder.");

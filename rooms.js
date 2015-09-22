@@ -655,19 +655,51 @@ var GlobalRoom = (function () {
 		if (rooms.lobby) return rooms.lobby.addRaw(message);
 		return this;
 	};
-	GlobalRoom.prototype.addChatRoom = function (title) {
+	GlobalRoom.prototype.addChatRoom = function (title, personal) {
 		var id = toId(title);
 		if (rooms[id]) return false;
 
 		var chatRoomData = {
 			title: title
 		};
+		if (personal) chatRoomData.isPersonal = true;
 		var room = Rooms.createChatRoom(id, title, chatRoomData);
-		this.chatRoomData.push(chatRoomData);
+		// Only add room to chatRoomData if it is not a personal room, those aren't saved.
+		if (!personal) this.chatRoomData.push(chatRoomData);
 		this.chatRooms.push(room);
 		this.writeChatRoomData();
 		return true;
-	};
+	};function ChatRoom(roomid, title, options) {
+		Room.call(this, roomid, title);
+		if (options) {
+			this.chatRoomData = options;
+			Object.merge(this, options);
+		}
+
+		this.logTimes = true;
+		this.logFile = null;
+		this.logFilename = '';
+		this.destroyingLog = false;
+		if (!this.modchat) this.modchat = (Config.chatmodchat || false);
+
+		// Log only rooms that aren't personal.
+		if (Config.logchat && !this.isPersonal) {
+			this.rollLogFile(true);
+			this.logEntry = function (entry, date) {
+				var timestamp = (new Date()).format('{HH}:{mm}:{ss} ');
+				this.logFile.write(timestamp + entry + '\n');
+			};
+			this.logEntry('NEW CHATROOM: ' + this.id);
+			if (Config.loguserstats) {
+				setInterval(this.logUserStats.bind(this), Config.loguserstats);
+			}
+		}
+
+		if (Config.reportjoinsperiod) {
+			this.userList = this.getUserList();
+			this.reportJoinsQueue = [];
+		}
+	}
 	GlobalRoom.prototype.deregisterChatRoom = function (id) {
 		id = toId(id);
 		var room = rooms[id];
@@ -1426,7 +1458,8 @@ var ChatRoom = (function () {
 		this.destroyingLog = false;
 		if (!this.modchat) this.modchat = (Config.chatmodchat || false);
 
-		if (Config.logchat) {
+		// Log only rooms that aren't personal.
+		if (Config.logchat && !this.isPersonal) {
 			this.rollLogFile(true);
 			this.logEntry = function (entry, date) {
 				var timestamp = (new Date()).format('{HH}:{mm}:{ss} ');
@@ -1673,6 +1706,12 @@ var ChatRoom = (function () {
 		} else if (user.named) {
 			var entry = '|L|' + user.getIdentity(this.id);
 			this.reportJoin(entry);
+		}
+
+		// If it's a personal room, it gets destroyed when there are 0 users on it.
+		if (this.isPersonal && this.userCount === 0) {
+			if (this.auth[user.userid] && this.auth[user.userid] === '#') user.personalRooms--;
+			this.destroy();
 		}
 	};
 	ChatRoom.prototype.destroy = function () {

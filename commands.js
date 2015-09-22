@@ -289,6 +289,49 @@ var commands = exports.commands = {
 		return this.sendReply("An error occurred while trying to create the room '" + target + "'.");
 	},
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: ~"],
+	
+	personalroom: function (target, room, user) {
+		// First and foremost, check the number of personal rooms owned by the user.
+		if (user.personalRooms && user.personalRooms > 4) return this.sendReply("You can't own more than 5 personal rooms.");
+
+		// Chosen name have the same limitations as regular rooms.
+		if (target.includes(',') || target.includes('|') || target.includes('[') || target.includes('-')) {
+			return this.sendReply("Room titles can't contain any of: ,|[-");
+		}
+
+		// Check if the custom part of the room title is empty. It needs a title.
+		var id = toId(target);
+		// If there isn't any, we roll our own random number title.
+		if (!id) {
+			target = Math.floor(Math.random() * 10000);
+		}
+
+		// Create the name of the room using user's ID and the chosen name.
+		var roomName = "groupchat-" + user.userid + "-" + target;
+		id = toId(roomName);
+
+		// Personal rooms can always be created, but the name must still be unique.
+		if (Rooms.search(id)) return this.sendReply("The room '" + roomName + "' already exists.");
+		if (Rooms.global.addChatRoom(roomName, true)) {
+			var targetRoom = Rooms.search(roomName);
+			// Make the room private, as it can't be public.
+			targetRoom.isPrivate = true;
+			targetRoom.chatRoomData.isPrivate = true;
+			// The room is modjoin by default. This shouldn't be changed.
+			targetRoom.modjoin = true;
+			targetRoom.chatRoomData.modjoin = true;
+			// Make the personal room creator its owner.
+			targetRoom.auth = targetRoom.chatRoomData.auth = {};
+			targetRoom.auth[user.userid] = '#';
+			// Finally, make the user join the room instantly.
+			if (!user.personalRooms) user.personalRooms = 0;
+			user.personalRooms++;
+			user.joinRoom(targetRoom.id);
+			return this.sendReply("The personal chat room '" + roomName + "' was created.");
+		}
+		return this.sendReply("An error occurred while trying to create the room '" + roomName + "'.");
+	},
+	personalroomhelp: ["/personalroom [roomname] - Creates a personal room named [roomname]. Always private, invite-only."],
 
 	deregisterchatroom: function (target, room, user) {
 		if (!this.can('hotpatch')) return;
@@ -310,6 +353,7 @@ var commands = exports.commands = {
 	hiddenroom: 'privateroom',
 	secretroom: 'privateroom',
 	privateroom: function (target, room, user, connection, cmd) {
+		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
 		var setting;
 		switch (cmd) {
 		case 'privateroom':
@@ -350,6 +394,7 @@ var commands = exports.commands = {
 
 	modjoin: function (target, room, user) {
 		if (!this.can('privateroom', null, room)) return;
+		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
 		if (target === 'off' || target === 'false') {
 			delete room.modjoin;
 			this.addModCommand("" + user.name + " turned off modjoin.");
@@ -380,6 +425,7 @@ var commands = exports.commands = {
 	officialchatroom: 'officialroom',
 	officialroom: function (target, room, user) {
 		if (!this.can('makeroom')) return;
+		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
 		if (!room.chatRoomData) {
 			return this.sendReply("/officialroom - This room can't be made official");
 		}
@@ -405,6 +451,7 @@ var commands = exports.commands = {
 			return;
 		}
 		if (!this.can('roomleader', null, room)) return false;
+		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
 		if (target.length > 80) return this.sendReply("Error: Room description is too long (must be at most 80 characters).");
 		var normalizedTarget = ' ' + target.toLowerCase().replace('[^a-zA-Z0-9]+', ' ').trim() + ' ';
 
@@ -432,6 +479,7 @@ roomintro: function (target, room, user) {
             return;
         }
         if (!this.can('declare', null, room)) return false;
+		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
         if (!this.canHTML(target)) return;
         if ((target).indexOf('|j|' || '|c|') > -1) return this.sendReply("Roomintros may not include |j| or |c| buttons."); 
         if (!/</.test(target)) {
@@ -464,6 +512,7 @@ roomintro: function (target, room, user) {
 		var alias = toId(target);
 		if (!alias.length) return this.sendReply("Only alphanumeric characters are valid in an alias.");
 		if (Rooms.get(alias) || Rooms.aliases[alias]) return this.sendReply("You cannot set an alias to an existing room or alias.");
+		if (room.isPersonal) return this.sendReply("Personal rooms can't have aliases.");
 
 		this.privateModCommand("(" + user.name + " added the room alias '" + target + "'.)");
 
@@ -502,6 +551,8 @@ roomintro: function (target, room, user) {
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
 
 		if (!this.can('makeroom', targetUser, room)) return false;
+		
+		if (room.isPersonal) return this.errorReply("Personal rooms can only have one room owner.");
 
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
 
@@ -528,6 +579,7 @@ roomintro: function (target, room, user) {
 
 		if (room.auth[userid] !== '#') return this.sendReply("User '" + name + "' is not a room owner.");
 		if (!this.can('makeroom', null, room)) return false;
+		if (room.isPersonal) return this.errorReply("Personal rooms ownership can't be changed.");
 
 		delete room.auth[userid];
 		this.sendReply("(" + name + " is no longer Room Owner.)");
@@ -603,7 +655,7 @@ roomintro: function (target, room, user) {
 		}
 
 		if (targetUser) targetUser.updateIdentity(room.id);
-		if (room.chatRoomData) Rooms.global.writeChatRoomData();
+		if (room.chatRoomData && !room.isPersonal) Rooms.global.writeChatRoomData();
 	},
 	roompromotehelp: ["/roompromote OR /roomdemote [username], [group symbol] - Promotes/demotes the user to the specified room rank. Requires: @ # & ~",
 		"/room[group] [username] - Promotes/demotes the user to the specified room rank. Requires: @ # & ~",
@@ -810,6 +862,7 @@ roomintro: function (target, room, user) {
 			return this.sendReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.sendReply("Users cannot be redirected to the global room.");
+		if (targetRoom.isPersonal) return this.sendReply("Users cannot be redirected to a personal room.");
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.sendReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
@@ -1243,7 +1296,7 @@ roomintro: function (target, room, user) {
 		}
 		this.logModCommand(user.name + " set modchat to " + room.modchat);
 
-		if (room.chatRoomData) {
+		if (room.chatRoomData && !room.isPersonal) {
 			room.chatRoomData.modchat = room.modchat;
 			Rooms.global.writeChatRoomData();
 		}
