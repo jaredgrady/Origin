@@ -3989,3 +3989,6 @@
 [2015-09-03T09:41:14.709Z] (tournaments) (Lotus Unexpected was disqualified from the tournament by hm zelda)
 [2015-09-03T11:54:41.084Z] (tournaments) (Alliance Char created a tournament in ubers format.)
 [2015-09-03T12:52:48.492Z] (tournaments) (sandman619 forcibly ended a tournament.)
+[2015-09-22T06:01:08.025Z] (tournaments) (Frozen Despair was disqualified from the tournament by Master Float)
+[2015-09-22T06:01:18.444Z] (tournaments) (Frontier♅Haunter was disqualified from the tournament by Master Float)
+[2015-09-22T06:01:38.754Z] (tournaments) (Guest 6 was disqualified from the tournament by Master Float)
