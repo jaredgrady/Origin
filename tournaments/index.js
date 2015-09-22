@@ -910,6 +910,24 @@ var commands = {
 		runautodq: function (tournament) {
 			tournament.runAutoDisqualify(this);
 		},
+		remind: function (tournament, user) {
+			var users = tournament.generator.getAvailableMatches().toString().split(',');
+			var offlineUsers = [];
+			for (var u in users) {
+				var targetUser = Users.get(users[u]);
+				if (!targetUser) {
+					offlineUsers.push(users[u]);
+					continue;
+				} else if (!targetUser.connected) {
+					offlineUsers.push(targetUser.userid);
+					continue;
+				} else {
+					targetUser.popup('You have a tournament battle in the room "' + tournament.room.title + '". If you do not start soon you may be disqualified.');
+				}
+			}
+			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
+			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
+		},
 		scout: 'setscouting',
 		scouting: 'setscouting',
 		setscout: 'setscouting',
@@ -988,6 +1006,9 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		}
 		return this.sendReply("Tournaments disabled.");
 	} else if (cmd === 'create' || cmd === 'new') {
+		if (room.isPersonal) {
+			return this.sendReply("Tournaments may not be started in personal rooms");
+		}
 		if (room.toursEnabled) {
 			if (!this.can('tournaments', null, room)) return;
 		} else {
