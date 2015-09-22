@@ -137,7 +137,6 @@ function hashColor(e) {
 	var r = parseInt(t.substr(0, 4), 16) % 50 + 50;
 	var i = parseInt(t.substr(8, 4), 16) % 20 + 25;
 	var s = hslToRgb(n, r, i);
-<<<<<<< HEAD
 	switch (toId(e)) {
 		case 'panpawn':
 			return colorCache[e] = '#DA9D01';
@@ -146,8 +145,4 @@ function hashColor(e) {
 			colorCache[e] = "#" + rgbToHex(s.r, s.g, s.b);
 			return colorCache[e];
 	}
-=======
-	colorCache[e] = "#" + rgbToHex(s.r, s.g, s.b);
-	return colorCache[e];
->>>>>>> upstream/master
 }

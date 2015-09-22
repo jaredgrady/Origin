@@ -3,15 +3,11 @@ var color = require('../config/color');
 exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
-<<<<<<< HEAD
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
-=======
->>>>>>> upstream/master
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
-<<<<<<< HEAD
 	'feelscri': 'http://i.imgur.com/QAuUW7u.jpg?1',
 	'feelsdd': 'http://i.imgur.com/fXtdLtV.png',
 	'feelsdoge': 'http://i.imgur.com/GklYWvi.png',
@@ -51,35 +47,12 @@ var emotes = {
 	'hypnotoad': 'http://i.imgur.com/lJtbSfl.gif',
 	'Kappa': 'http://i.imgur.com/ZxRU4z3.png?1',
 	'meGusta': 'http://cdn.overclock.net/3/36/50x50px-ZC-369517fd_me-gusta-me-gusta-s.png',
-=======
-	'feelsdd': 'http://i.imgur.com/fXtdLtV.png',
-	'feelsdoge': 'http://i.imgur.com/GklYWvi.png',
-	'feelsgd': 'http://i.imgur.com/Jf0n4BL.png',
-	'feelsgn': 'http://i.imgur.com/juJQh0J.png',
-	'feelshp': 'http://i.imgur.com/1W19BDG.png',
-	'feelsmd': 'http://i.imgur.com/DJHMdSw.png',
-	'feelsnv': 'http://i.imgur.com/XF6kIdJ.png',
-	'feelsok': 'http://i.imgur.com/gu3Osve.png',
-	'feelspika': 'http://i.imgur.com/mBq3BAW.png',
-	'feelspink': 'http://i.imgur.com/jqfB8Di.png',
-	'feelspn': 'http://i.imgur.com/wSSM6Zk.png',
-	'feelspr': 'http://i.imgur.com/3VtkKfJ.png',
-	'feelsrg': 'http://i.imgur.com/DsRQCsI.png',
-	'feelsrs': 'http://i.imgur.com/qGEot0R.png',
-	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
-	'fukya': 'http://i.imgur.com/ampqCZi.gif',
-	'funnylol': 'http://i.imgur.com/SlzCghq.png',
-	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
->>>>>>> upstream/master
 	'noface': 'http://i.imgur.com/H744eRE.png',
 	'Obama': 'http://i.imgur.com/rBA9M7A.png',
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
-<<<<<<< HEAD
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
-=======
->>>>>>> upstream/master
 	'wtfman': 'http://i.imgur.com/kwR8Re9.png',
 	'xaa': 'http://i.imgur.com/V728AvL.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
@@ -121,12 +94,9 @@ function parseEmoticons(message, room, user, pm) {
 	}
 
 	if (!match) return false;
-<<<<<<< HEAD
 	
 	//shadowbanroom message
 	sbanmsg = message;
-=======
->>>>>>> upstream/master
 
 	// escape HTML
 	message = Tools.escapeHTML(message);
@@ -150,17 +120,11 @@ function parseEmoticons(message, room, user, pm) {
 
 	message = "<div class='chat'>" + "<small>" + group + "</small>" + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>" + "<b><font color='" + color(user.userid) + "'>" + user.name + ":</font></b>" + "</button><em class='mine'>" + message + "</em></div>";
 	if (pm) return message;
-<<<<<<< HEAD
 	if (Users.ShadowBan.checkBanned(user)) {
 		user.sendTo(room, '|html|' + message);
 		Users.ShadowBan.addMessage(user, "To " + room, sbanmsg);
 	}
 	if (!Users.ShadowBan.checkBanned(user)) room.addRaw(message);
-=======
-
-	room.addRaw(message);
-
->>>>>>> upstream/master
 	return true;
 }
 
@@ -177,11 +141,7 @@ function create_table() {
 
 	for (var i = 0; i < len; i++) {
 		emotes_list.push("<td>" +
-<<<<<<< HEAD
 			"<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "'>" +
-=======
-			"<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "' height='50' width='50' />" +
->>>>>>> upstream/master
 			emotes_name[i] + "</td>");
 	}
 
@@ -197,11 +157,7 @@ function create_table() {
 		}
 	}
 
-<<<<<<< HEAD
 	return "<center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div>";
-=======
-	return "<div class='infobox'><center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div></div>";
->>>>>>> upstream/master
 }
 
 var emotes_table = create_table();
@@ -237,11 +193,7 @@ exports.commands = {
 	toggleemote: 'toggleemoticons',
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
-<<<<<<< HEAD
 		if (!this.can('roomleader', null, room) && !this.can('declare')) return false;
-=======
-		if (!this.can('declare', null, room)) return false;
->>>>>>> upstream/master
 		room.disableEmoticons = !room.disableEmoticons;
 		this.sendReply("Disallowing emoticons is set to " + room.disableEmoticons + " in this room.");
 		if (room.disableEmoticons) {
@@ -250,18 +202,5 @@ exports.commands = {
 			this.add("|raw|<div class=\"broadcast-blue\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
 		}
 	},
-<<<<<<< HEAD
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."]
-=======
-	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
-
-	rande: 'randemote',
-	randemote: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		var rng = Math.floor(Math.random() * emotesKeys.length);
-		var randomEmote = emotesKeys[rng];
-		this.sendReplyBox("<img src='" + emotes[randomEmote] + "' title='" + randomEmote + "' height='50' width='50' />");
-	},
-	randemotehelp: ["/randemote - Get a random emote."]
->>>>>>> upstream/master
 };

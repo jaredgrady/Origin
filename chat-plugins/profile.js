@@ -1,15 +1,10 @@
 var color = require('../config/color');
 var fs = require('fs');
 var moment = require('moment');
-<<<<<<< HEAD
 var geoip = require('geoip-ultralight');
 geoip.startWatchingDataUpdate();
 
 var BR = '<br />';
-=======
-
-var BR = '<br>';
->>>>>>> upstream/master
 var SPACE = '&nbsp;';
 var profileColor = '#24678d';
 var trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
@@ -71,11 +66,7 @@ function font(color, text) {
  * @return {String}
  */
 function img(link) {
-<<<<<<< HEAD
 	return '<img src="' + link + '" height="80" width="80" align="left">';
-=======
-	return '<img src="' + link + '" height="80" width="80">';
->>>>>>> upstream/master
 }
 
 /**
@@ -106,25 +97,13 @@ Profile.prototype.avatar = function () {
 	}
 	for (var name in Config.customAvatars) {
 		if (this.username === name) {
-<<<<<<< HEAD
 			return img(this.url + '/avatars/' + Config.customAvatars[name]);
-=======
-			return img(this.url + ':' + Config.port + '/avatars/' + Config.customAvatars[name]);
->>>>>>> upstream/master
 		}
 	}
 	var selectedSprite = trainersprites[Math.floor(Math.random() * trainersprites.length)];
 	return img('http://play.pokemonshowdown.com/sprites/trainers/' + selectedSprite + '.png');
 };
 
-<<<<<<< HEAD
-=======
-Profile.prototype.buttonAvatar = function () {
-	var css = 'border:none;background:none;padding:0;float:left;';
-	return '<button style="' + css + '" name="parseCommand" value="/user ' + this.username + '">' + this.avatar() + "</button>";
-};
-
->>>>>>> upstream/master
 Profile.prototype.group = function () {
 	if (this.isOnline && this.user.group === ' ') return label('Group') + 'Regular User';
 	if (this.isOnline) return label('Group') + Config.groups[this.user.group].name;
@@ -141,7 +120,6 @@ Profile.prototype.money = function (amount) {
 };
 
 Profile.prototype.name = function () {
-<<<<<<< HEAD
 	function getFlag () {
 		if (!this.isOnline) return false;
 		if (this.isOnline) {
@@ -155,9 +133,6 @@ Profile.prototype.name = function () {
 	}
 	if (!getFlag.call(this))return label('Name') + bold(font(color(toId(this.username)), this.username));
 	if (getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username)) + ' ' + getFlag.call(this);
-=======
-	return label('Name') + bold(font(color(toId(this.username)), this.username));
->>>>>>> upstream/master
 };
 
 Profile.prototype.seen = function (timeAgo) {
@@ -166,7 +141,6 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
-<<<<<<< HEAD
 Profile.prototype.vip = function() { 
     if (typeof this.user === 'string') return '';
     if (this.user && !this.user.can('vip')) return '';
@@ -183,21 +157,6 @@ Profile.prototype.show = function (callback) {
 									SPACE + this.money(Db('money')[userid] || 0) + BR +
 									SPACE + this.seen(Db('seen')[userid]) +
 									'<br clear="all">');
-=======
-Profile.prototype.show = function (callback) {
-	var userid = toId(this.username);
-
-	Database.read('money', userid, function (err, money) {
-		if (err) throw err;
-		if (!money) money = 0;
-		return callback(this.buttonAvatar() +
-										SPACE + this.name() + BR +
-										SPACE + this.group() + BR +
-										SPACE + this.money(money) + BR +
-										SPACE + this.seen(Seen[userid]) +
-										'<br clear="all">');
-	}.bind(this));
->>>>>>> upstream/master
 };
 
 exports.commands = {

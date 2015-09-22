@@ -105,11 +105,7 @@ if (!process.send) {
 
 	if (Config.crashguard) {
 		process.on('uncaughtException', function (err) {
-<<<<<<< HEAD
 			require('./crashlogger.js')(err, 'A team validator process');
-=======
-			require('./crashlogger.js')(err, 'A team validator process', true);
->>>>>>> upstream/master
 		});
 	}
 
@@ -334,14 +330,8 @@ Validator = (function () {
 			return ['"' + set.item + "' is an invalid item."];
 		}
 		ability = tools.getAbility(set.ability);
-		if (ability.id && !ability.exists) {
-			if (tools.gen < 3) {
-				// gen 1-2 don't have abilities, just silently remove
-				ability = tools.getAbility('');
-				set.ability = '';
-			} else {
-				return ['"' + set.ability + "' is an invalid ability."];
-			}
+		if (tools.gen >= 3 && !ability.exists) {
+			return ['"' + set.ability + "' is an invalid ability."];
 		}
 
 		var banlistTable = tools.getBanlistTable(format);
@@ -420,11 +410,8 @@ Validator = (function () {
 			// The usual limit of 4 moves is handled elsewhere - currently
 			// in the cartridge-compliant set validator: rulesets.js:pokemon
 			set.moves = set.moves.slice(0, 24);
-<<<<<<< HEAD
 			// Sketchmons hack
 			var sketched = false;
-=======
->>>>>>> upstream/master
 
 			for (var i = 0; i < set.moves.length; i++) {
 				if (!set.moves[i]) continue;
@@ -445,14 +432,8 @@ Validator = (function () {
 				if (banlistTable['illegal']) {
 					var problem = this.checkLearnset(move, template, lsetData);
 					if (problem) {
-<<<<<<< HEAD
 						if (banlistTable['allowonesketch'] && !sketched && move.id !== 'chatter') {
 							sketched = true;
-=======
-						// Sketchmons hack
-						if (banlistTable['allowonesketch'] && !set.sketchmonsMove && !move.noSketch) {
-							set.sketchmonsMove = move.id;
->>>>>>> upstream/master
 							continue;
 						}
 						var problemString = name + " can't learn " + move.name;
@@ -647,18 +628,12 @@ Validator = (function () {
 					sometimesPossible = true;
 					var lset = template.learnset[move];
 					if (!lset || template.speciesid === 'smeargle') {
-<<<<<<< HEAD
 						lset = template.learnset['sketch'];
 						sketch = true;
 						// Chatter, Struggle and Magikarp's Revenge cannot be sketched
 						if (move in {'chatter':1, 'struggle':1, 'magikarpsrevenge':1}) return true;
 						// In Gen 2, there is no way for Sketch to copy these moves
 						if (tools.gen === 2 && move in {'explosion':1, 'metronome':1, 'mimic':1, 'mirrormove':1, 'selfdestruct':1, 'sleeptalk':1, 'transform':1}) return true;
-=======
-						if (tools.getMove(move).noSketch) return true;
-						lset = template.learnset['sketch'];
-						sketch = true;
->>>>>>> upstream/master
 					}
 					if (typeof lset === 'string') lset = [lset];
 

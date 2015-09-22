@@ -1277,9 +1277,17 @@ exports.BattleItems = {
 			basePower: 100,
 			type: "Bug"
 		},
-		onHit: function (target, source, move) {
+		onSourceModifyDamage: function (damage, source, target, move) {
 			if (move && move.typeMod > 0) {
-				target.eatItem();
+				target.addVolatile('enigmaberry');
+			}
+		},
+		effect: {
+			duration: 1,
+			onUpdate: function (target) {
+				if (target.eatItem()) {
+					target.removeVolatile('enigmaberry');
+				}
 			}
 		},
 		onEatItem: function (item, pokemon) {

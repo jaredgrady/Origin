@@ -609,21 +609,7 @@ exports.BattleMovedex = {
 	stockpile: {
 		inherit: true,
 		pp: 10,
-		effect: {
-			onStart: function (target) {
-				this.effectData.layers = 1;
-				this.add('-start', target, 'stockpile' + this.effectData.layers);
-			},
-			onRestart: function (target) {
-				if (this.effectData.layers >= 3) return false;
-				this.effectData.layers++;
-				this.add('-start', target, 'stockpile' + this.effectData.layers);
-			},
-			onEnd: function (target) {
-				this.effectData.layers = 0;
-				this.add('-end', target, 'Stockpile');
-			}
-		}
+		boosts: false
 	},
 	struggle: {
 		inherit: true,

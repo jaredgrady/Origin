@@ -302,7 +302,7 @@ var GlobalRoom = (function () {
 
 		this.chatRoomData = [];
 		try {
-			this.chatRoomData = require('./config/chatrooms.json');
+			this.chatRoomData = JSON.parse(fs.readFileSync('config/chatrooms.json'));
 			if (!Array.isArray(this.chatRoomData)) this.chatRoomData = [];
 		} catch (e) {} // file doesn't exist [yet]
 
@@ -554,8 +554,9 @@ var GlobalRoom = (function () {
 		});
 	};
 	GlobalRoom.prototype.matchmakingOK = function (search1, search2, user1, user2, formatid) {
-		// This should never happen. TODO: cover any edge cases that could make this happen.
-		if (!user1 || !user2) return void require('./crashlogger.js')(new Error("Matched user " + (user1 ? search2.userid : search1.userid) + " not found"), "The main process");
+		// users must exist
+		// TODO: ACTUALLY REMOVE THESE USERS FROM THE SEARCH LIST
+		if (!user1 || !user2) return false;
 
 		// users must be different
 		if (user1 === user2) return false;
@@ -1521,11 +1522,7 @@ var ChatRoom = (function () {
 			if (!user.named) {
 				++guests;
 			}
-			if (this.auth && this.auth[user.userid] && this.auth[user.userid] in groups) {
-				++groups[this.auth[user.userid]];
-			} else {
-				++groups[user.group];
-			}
+			++groups[user.group];
 		}
 		var entry = '|userstats|total:' + total + '|guests:' + guests;
 		for (var i in groups) {

@@ -84,13 +84,10 @@ function canTalk(user, room, connection, message, targetUser) {
 		connection.popup("You must choose a name before you can talk.");
 		return false;
 	}
-<<<<<<< HEAD
 	if (room && user.semilocked) {
 		connection.sendTo(room, "You cannot talk while semi-locked, if you believe you are semi-locked for no reason feel free to pm any staff member")
 		return false;
 	}
-=======
->>>>>>> upstream/master
 	if (room && user.locked) {
 		connection.sendTo(room, "You are locked from talking in chat.");
 		return false;
@@ -528,14 +525,11 @@ var parse = exports.parse = function (message, room, user, connection, levelsDee
 	message = canTalk.call(context, user, room, connection, message);
 
 	if (parseEmoticons(message, room, user)) return;
-<<<<<<< HEAD
 	
 	if (nightclub[room.id]) {
 		room.addRaw('<div class="nightclub"><font size="3"><small>' + nightclubify((room.auth ? (room.auth[user.userid] || user.group) : user.group)) + "</small><b>" + nightclubify(Tools.escapeHTML(user.name) + ":") + "</b> " + nightclubify((message)) + '</font></div>');
 		return false;
 	}
-=======
->>>>>>> upstream/master
 
 	return message || false;
 };

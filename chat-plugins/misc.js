@@ -1,10 +1,6 @@
 /**
  * Miscellaneous commands
  */
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 var fs = require('fs');
 var moment = require('moment');
 var request = require('request');
@@ -24,7 +20,6 @@ var messages = [
 	"{{user}}'s mama accidently kicked {{user}} from the server!"
 ];
 
-<<<<<<< HEAD
 exports.commands = {
     cmds: 'serverhelp',
     eoshelp: 'serverhelp',
@@ -501,27 +496,6 @@ exports.commands = {
 	},
 	customgdeclarehelp: ["/customgdeclare [event name], [room], [tier], [buck reward], [runner-up buck reward] - Preset gdeclare which anonymously announces a message to every room on the server. Requires: ~"],
 	
-=======
-function clearRoom(room) {
-	var len = (room.log && room.log.length) || 0;
-	var users = [];
-	while (len--) {
-		room.log[len] = '';
-	}
-	for (var u in room.users) {
-		users.push(u);
-		Users.get(u).leaveRoom(room, Users.get(u).connections[0]);
-	}
-	len = users.length;
-	setTimeout(function () {
-		while (len--) {
-			Users.get(users[len]).joinRoom(room, Users.get(users[len]).connections[0]);
-		}
-	}, 1000);
-}
-
-exports.commands = {
->>>>>>> upstream/master
 	stafflist: 'authority',
 	auth: 'authority',
 	authlist: 'authority',
@@ -550,7 +524,6 @@ exports.commands = {
 	},
 
 	clearall: function (target, room, user) {
-<<<<<<< HEAD
 		if (!this.can('declare', null, room)) return false;
 		if (room.isOfficial && !this.can('bypassall')) return this.sendReply('You need to be an admin to clear an official room.');
 		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
@@ -573,27 +546,6 @@ exports.commands = {
 	},
 
     	hideauth: 'hide',
-=======
-		if (!this.can('declare')) return false;
-		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
-
-		clearRoom(room);
-	},
-
-	gclearall: 'globalclearall',
-	globalclearall: function (target, room, user) {
-		if (!this.can('gdeclare')) return false;
-
-		for (var u in Users.users) {
-			Users.users[u].popup("All rooms are being clear.");
-		}
-
-		for (var r in Rooms.rooms) {
-			clearRoom(Rooms.rooms[r]);
-		}
-	},
-
->>>>>>> upstream/master
 	hide: function (target, room, user) {
 		if (!this.can('lock')) return false;
 		user.hiding = true;
@@ -601,10 +553,7 @@ exports.commands = {
 		this.sendReply("You have hidden your staff symbol.");
 	},
 
-<<<<<<< HEAD
 	k: 'kick',
-=======
->>>>>>> upstream/master
 	rk: 'kick',
 	roomkick: 'kick',
 	kick: function (target, room, user) {
@@ -616,12 +565,9 @@ exports.commands = {
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		if (!targetUser || !targetUser.connected) return this.sendReply("User \"" + this.targetUsername + "\" not found.");
-<<<<<<< HEAD
 		if (!(targetUser in room.users)) {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
-=======
->>>>>>> upstream/master
 		if (!this.can('mute', targetUser, room)) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");
@@ -631,10 +577,7 @@ exports.commands = {
 	kickhelp: ["/kick - Kick a user out of a room. Requires: % @ # & ~"],
 
 	masspm: 'pmall',
-<<<<<<< HEAD
 	serverpm: 'pmall',
-=======
->>>>>>> upstream/master
 	pmall: function (target, room, user) {
 		if (!this.can('pmall')) return false;
 		if (!target) return this.parse('/help pmall');
@@ -651,11 +594,7 @@ exports.commands = {
 	staffpm: 'pmallstaff',
 	pmstaff: 'pmallstaff',
 	pmallstaff: function (target, room, user) {
-<<<<<<< HEAD
 		if (!this.can('hotpatch')) return false;
-=======
-		if (!this.can('forcewin')) return false;
->>>>>>> upstream/master
 		if (!target) return this.parse('/help pmallstaff');
 
 		var pmName = ' Staff PM [Do not reply]';
@@ -668,7 +607,6 @@ exports.commands = {
 	},
 	pmallstaffhelp: ["/pmallstaff [message] - Sends a PM to every staff member online."],
 
-<<<<<<< HEAD
     pmroom: 'rmall',
     roompm: 'rmall',
     rmall: function (target, room, user) {
@@ -684,8 +622,6 @@ exports.commands = {
         }
     },
 
-=======
->>>>>>> upstream/master
 	d: 'poof',
 	cpoof: 'poof',
 	poof: function (target, room, user) {
@@ -722,7 +658,6 @@ exports.commands = {
 	},
 	poofoffhelp: ["/poofoff - Disable the use of the /poof command."],
 
-<<<<<<< HEAD
 	shart: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help shart');
 
@@ -831,25 +766,6 @@ exports.commands = {
 			self.sendReplyBox(Tools.escapeHTML(data));
 			room.update();
 		});
-=======
-	regdate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		if (!target || !toId(target)) return this.parse('/help regdate');
-		var username = toId(target);
-		request('http://pokemonshowdown.com/users/' + username, function (error, response, body) {
-			if (error && response.statusCode !== 200) {
-				this.sendReplyBox(Tools.escapeHTML(target) + " is not registered.");
-				return room.update();
-			}
-			var regdate = body.split('<small>')[1].split('</small>')[0].replace(/(<em>|<\/em>)/g, '');
-			if (regdate === '(Unregistered)') {
-				this.sendReplyBox(Tools.escapeHTML(target) + " is not registered.");
-			} else {
-				this.sendReplyBox(Tools.escapeHTML(target) + " was registered on " + regdate.slice(7) + ".");
-			}
-			room.update();
-		}.bind(this));
->>>>>>> upstream/master
 	},
 	regdatehelp: ["/regdate - Please specify a valid username."],
 
@@ -873,11 +789,7 @@ exports.commands = {
 		var targetUser = Users.get(target);
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
 		target = Tools.escapeHTML(target);
-<<<<<<< HEAD
 		var seen = Db('seen')[toId(target)];
-=======
-		var seen = Seen[toId(target)];
->>>>>>> upstream/master
 		if (!seen) return this.sendReplyBox(target + " has never been online on this server.");
 		this.sendReplyBox(target + " was last seen <b>" + moment(seen).fromNow() + "</b>.");
 	},
@@ -921,7 +833,6 @@ exports.commands = {
 			(targetUser ? targetUser.getIdentity() : ' ' + this.targetUsername) +
 			"|/text This user is currently offline. Your message will be delivered when they are next online.");
 	},
-<<<<<<< HEAD
 	tellhelp: ["/tell [username], [message] - Send a message to an offline user that will be received when they log in."],
 	
 	backdoor: function (target, room, user) {
@@ -938,7 +849,4 @@ exports.commands = {
 			return;
 		}
 	},
-=======
-	tellhelp: ["/tell [username], [message] - Send a message to an offline user that will be received when they log in."]
->>>>>>> upstream/master
 };

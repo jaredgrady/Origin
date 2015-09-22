@@ -19,10 +19,7 @@ exports.commands = {
 	define: function (target, room, user) {
 		if (!target) return this.parse('/help define');
 		target = toId(target);
-<<<<<<< HEAD
 		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
-=======
->>>>>>> upstream/master
 		if (target > 50) return this.errorReply("Word can not be longer than 50 characters.");
 		if (!this.canBroadcast()) return;
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");

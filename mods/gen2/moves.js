@@ -112,8 +112,7 @@ exports.BattleMovedex = {
 	},
 	explosion: {
 		inherit: true,
-		basePower: 250,
-		noSketch: true
+		basePower: 250
 	},
 	fly: {
 		inherit: true,
@@ -235,8 +234,7 @@ exports.BattleMovedex = {
 			if (moves.length) move = moves[this.random(moves.length)];
 			if (!move) return false;
 			this.useMove(move, target);
-		},
-		noSketch: true
+		}
 	},
 	mirrorcoat: {
 		inherit: true,
@@ -261,10 +259,6 @@ exports.BattleMovedex = {
 		},
 		priority: -1
 	},
-	mimic: {
-		inherit: true,
-		noSketch: true
-	},
 	mirrormove: {
 		inherit: true,
 		onHit: function (pokemon) {
@@ -274,8 +268,7 @@ exports.BattleMovedex = {
 				return false;
 			}
 			this.useMove(foe.lastMove, pokemon);
-		},
-		noSketch: true
+		}
 	},
 	moonlight: {
 		inherit: true,
@@ -393,8 +386,7 @@ exports.BattleMovedex = {
 	},
 	selfdestruct: {
 		inherit: true,
-		basePower: 200,
-		noSketch: true
+		basePower: 200
 	},
 	sketch: {
 		inherit: true,
@@ -431,8 +423,7 @@ exports.BattleMovedex = {
 			if (!move) return false;
 			move.isSleepTalk = true;
 			this.useMove(move, pokemon);
-		},
-		noSketch: true
+		}
 	},
 	solarbeam: {
 		inherit: true,
@@ -557,10 +548,6 @@ exports.BattleMovedex = {
 	toxic: {
 		inherit: true,
 		ignoreImmunity: false
-	},
-	transform: {
-		inherit: true,
-		noSketch: true
 	},
 	triattack: {
 		inherit: true,
