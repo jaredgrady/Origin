@@ -1746,9 +1746,8 @@ roomintro: function (target, room, user) {
 	},
 
 	updateserver: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
-			return this.sendReply("/updateserver - Access denied.");
-		}
+	if (user.userid !== 'fender') return this.sendReply("/updateserver - Access denied.");
+		
 
 		if (CommandParser.updateServerLock) {
 			return this.sendReply("/updateserver - Another update is already in progress.");
@@ -1795,7 +1794,6 @@ roomintro: function (target, room, user) {
 			});
 		});
 	},
-
 	crashfixed: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.sendReply('/crashfixed - There is no active crash.');
