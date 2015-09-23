@@ -221,7 +221,7 @@ exports.commands = {
 		logMoney(user.name + " reset the money of " + target + ".");
 	},
 	resetmoneyhelp: ["/resetmoney [user] - Reset user's money to zero."],
-
+/*
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
@@ -252,7 +252,7 @@ exports.commands = {
 		logMoney(user.name + " transferred " + amount + " to " + username + ". " + user.name + " now has " + userTotal + " and " + username + " now has " + targetTotal + ".");
 	},
 	transfermoneyhelp: ["/transfer [user], [amount] - Transfer a certain amount of money to a user."],
-
+*/
 	store: 'shop',
 	shop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
