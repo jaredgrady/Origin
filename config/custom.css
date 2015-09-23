@@ -672,23 +672,23 @@ a.subtle, a.subtle:hover, .credits ul li p {
 }
 */
 
-  /**************
+/**************
   * GENERAL CSS *
   **************/
-  
+ 
   body {
     background: #EEE url("http://i254.photobucket.com/albums/hh108/naten2006/_wallpaper__generation_3_by_arkeis_pokemon-d85oq7r_zpswbdxahdz.jpg~original") no-repeat left top;
   }
-
+ 
   .ps-room.ps-room-light {
     background: rgba(0, 0, 0, 0);
     border-color: #252F3F;
   }
-
+ 
   .ps-room.ps-room-light.scrollable {
     background: url("http://i.imgur.com/AQ6vsTu.png?1") right top no-repeat rgba(178, 223, 247, 0.7);
   }
-  
+ 
   .astext{
     border: none;
     background: none;
@@ -698,7 +698,7 @@ a.subtle, a.subtle:hover, .credits ul li p {
     font-size: 12px;
     cursor: pointer;
   }
-  
+ 
   .broadcast-blue {
     background-color: #B3E6FF;
     border: 1px solid #0B1361;
@@ -709,11 +709,11 @@ a.subtle, a.subtle:hover, .credits ul li p {
     margin: 5px;
     text-shadow: 0px -1px 0px #D7F2FF;
   }
-
+ 
   .broadcast-blue a {
     color: #0B1361;
   }
-
+ 
   .broadcast-red {
     background-color: #FFB3B3;
     border: 1px solid #610B0B;
@@ -724,11 +724,11 @@ a.subtle, a.subtle:hover, .credits ul li p {
     margin: 5px;
     text-shadow: 0px -1px 0px #FFD7D7;
   }
-
+ 
   .broadcast-red a {
     color: #610B0B;
   }
-
+ 
   .broadcast-green {
     background-color: #C3FFB3;
     border: 1px solid #19610B;
@@ -739,315 +739,323 @@ a.subtle, a.subtle:hover, .credits ul li p {
     margin: 5px;
     text-shadow: 0px -1px 0px #D8FFD7;
   }
-
+ 
   .broadcast-green a {
     color: #19610B;
   }
-  
+ 
   .textbox, .textbox:hover, .textbox:focus {
     border: 1px solid #252F3F;
     box-shadow: none !important;
   }
-  
+ 
   .closebutton, .minimizebutton {
     color: #413B45;
   }
-  
+ 
   .closebutton:hover, .minimizebutton:hover {
     color: #000;
   }
-  
+ 
   button {
     background-color: #EEE;
     border: 1px solid #AAA;
   }
-
+ 
   button:hover {
     border: 1px solid #777;
   }
-  
+ 
   /*******************
   * GENERAL CSS ~end *
   *******************/
-  
+ 
   /***********
   * CHAT CSS *
   ***********/
-
+ 
   .infobox {
     border: 1px solid #0B1361;
     padding: 6px 6px;
     background: rgba(255, 255, 255, 0.3);
   }
-
+ 
   .chat-log a, .pm-log a {
     color: #0500A5;
   }
-
+ 
   .chat-log a:visited, .pm-log a:visited {
     color: #162055;
   }
-
+ 
   .userlist {
     background: rgba(178, 223, 247, 0.45);
     border-right: 1px solid #252F3F;
   }
-
+ 
   .userlist li {
     background-color: rgba(244, 244, 244, 0.8);
     border-bottom-color: #AAA;
   }
-
+ 
   .userlist li em.group {
     color: #252F3F;
   }
-
+ 
   .chat-log {
     background: url("http://i.imgur.com/magDZKw.png") top right no-repeat rgba(235, 235, 235, 0.785);
   }
-
+ 
   .chat-log-add {
     background: rgba(178, 223, 247, 0.45);
     border-top: 1px solid #252F3F;
   }
-  
-   .nightclub {
-	background: #000;
-	margin: -3px;
-  }
-  
+ 
   /****************
   * CHAT CSS ~end *
   ****************/
-  
+ 
   /*************
   * HEADER CSS *
   *************/
-
+ 
   .header {
     height: 50px;
     background: rgba(178, 223, 247, 0.85) url("http://i.imgur.com/0VAXpy9.png") no-repeat;
   }
-
+ 
   .header .logo {
     opacity: 0;
   }
-  
+ 
   .maintabbarbottom {
     background: #E08082;
     border: 1px solid #413B45;
   }
-
+ 
   .tabbar a.button.notifying {
     background: #00E2DB;
     border-color: #2D3459;
     color: #2D3459;
     text-shadow: none;
   }
-
+ 
   .tabbar a.button.notifying:hover {
     background: #00DAD2;
     border-color: #2D3459;
     color: #2D3459;
   }
-
+ 
   .tabbar a.button.cur, .tabbar a.button.cur:hover {
     background: #E08082;
     border: 1px solid #413B45;
     color: #413B45;
     text-shadow: none;
   }
-
+ 
   .tabbar a.button {
     border: 1px solid #413B45;
     background: #ECB3B4;
     color: #413B45;
     text-shadow: none;
   }
-
+ 
   .tabbar a.button:hover {
     border: 1px solid #413B45;
     background: #FABCBC;
     color: #413B45;
     text-shadow: none;
   }
-  
+ 
   .tabbar a.button.subtle-notifying {
     color: #336E4E;
   }
-
+ 
   .tabbar a.button.subtle-notifying:hover {
     border-color: #336E4E;
   }
-  
+ 
   .userbar button.icon {
     background: #EEE;
     border: 1px solid #AAA;
     padding: 0px 4px 2px 4px;
   }
-
+ 
   .userbar button.icon:hover {
     background: #EEE;
     border: 1px solid #777;
   }
-  
+ 
   /******************
   * HEADER CSS ~end *
   ******************/
-  
+ 
   /***************
   * ROOMLIST CSS *
   ***************/
-
+ 
   .rooms-officialchatrooms, .rooms-chatrooms {
     color: #252F3F;
   }
-
+ 
   .roomlist a.ilink {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.8);
     color: #CEEAFA;
     text-shadow:  0px -1px 0px #000;
   }
-
+ 
   .roomlist a.ilink:hover {
     border: 1px solid #191D30;
     background: rgba(45, 52, 89, 0.95);
     color: #CEEAFA;
     text-shadow:  0px -1px 0px #000;
   }
-
+ 
   .roomcounters button {
     border: 1px solid #191D30;
     background: rgba(147, 196, 225, 0.45);
     color: #191D30;
     text-shadow: 0px -1px #B2DFF7;
   }
-
+ 
   .roomcounters button:hover {
     border: 1px solid #191D30;
     background: rgba(147, 196, 225, 0.8);
     color: #191D30;
     text-shadow: 0px -1px #B2DFF7;
   }
-  
+ 
   /********************
   * ROOMLIST CSS ~end *
   ********************/
-
+ 
   /************
   * POPUP CSS *
   ************/
-  
+ 
   .ps-popup {
     background: #DDD;
     border: 1px solid #AAA;
   }
-  
+ 
   .credits h2 {
     color: #2D3459;
   }
-  
+ 
   a.subtle, .credits ul li p, .credits ul {
     color: #37348E;
   }
-  
+ 
   .popupmenu h3 {
     color: #1E2C28;
   }
-
+ 
   .ps-popup a, .ps-popup a.ilink {
     color: #37348E;
   }
-
+ 
   .ps-popup a.ilink:hover {
     color: #433FB9;
   }
-  
+ 
   .avatarlist button {
     border: 1px solid #777;
   }
-
+ 
   .avatarlist button:hover {
     border: 1px solid #444;
     background-color: rgba(0, 0, 0, 0.4);
   }
-
+ 
   .ps-overlay {
     background: rgba(0, 0, 0, 0.5);
   }
-  
+ 
   .ps-popup .buttonbar button {
     background: #EEE;
     border: 1px solid #AAA;
     padding: 2px 4px;
   }
-  
+ 
   .ps-popup .buttonbar button:hover {
     background: #EEE;
     border: 1px solid #777;
   }
-  
+ 
   /*****************
   * POPUP CSS ~end *
   *****************/
-  
+ 
   /**********************
   * MAINMENUWRAPPER CSS *
   **********************/
-
+ 
   /* PMs */
+  .pm-window h3.pm-notifying {
+    background: #00E2DB;
+    border-color: #2D3459;
+    color: #2D3459;
+    text-shadow: none;
+  }
+ 
+  .pm-window h3.pm-notifying:hover {
+    background: #00DAD2;
+    border-color: #2D3459;
+    color: #2D3459;
+  }
+ 
   .pm-window h3, .pm-log-add {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.8);
     color: #CEEAFA;
     text-shadow:  0px -1px 0px #000;
   }
-
+ 
   .pm-window h3:hover {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.8);
     color: #B2DFF7;
     text-shadow:  0px -1px 0px #000;
   }
-
+ 
   .pm-window.focused h3, .pm-window.focused h3:hover, .pm-window.focused .pm-log-add {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.9);
     color: #CEEAFA;
     text-shadow:  0px -1px 0px #000;
   }
-
+ 
   .pm-window h3 small {
     color: #F1F08F;
   }
-
+ 
   .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
     color: #DDD;
   }
-
+ 
   .pm-window h3 .closebutton:hover {
     color: #FABCBC;
     border: none;
   }
-
+ 
   .pm-window h3 .minimizebutton:hover {
     color: #F1F08F;
     border: none;
   }
-
+ 
   .challenge {
     border: 1px solid #E08082;
     background: #FABCBC;
     color: #403A44;
   }
-
+ 
   .message-pm {
     color: #00A0A0;
     padding: 0px 25px 0px 0px;
     background: url("http://www.blastyak.net/img/mail.png") top right no-repeat;
   }
-
+ 
   .challenge .select {
     background: #E08082;
     border: 1px solid #413B45;
@@ -1055,15 +1063,15 @@ a.subtle, a.subtle:hover, .credits ul li p {
     text-shadow: none;
     box-shadow: none !important;
   }
-
+ 
   .challenge .select:hover {
     background: #CB7373;
   }
-
+ 
   .challenge .select:disabled {
     background: rgba(224, 128, 130, 0.6);
   }
-
+ 
   .challenge .battleform .buttonbar button {
     background: #E08082;
     border: 1px solid #413B45;
@@ -1073,102 +1081,102 @@ a.subtle, a.subtle:hover, .credits ul li p {
     padding-top: 2px;
     padding-bottom: 2px;
   }
-
+ 
   .challenge .battleform .buttonbar button:hover {
     background: #CB7373;
   }
-  
+ 
   /* PMs ~end */
-  
+ 
   /* Menugroup */
-
+ 
   .menugroup {
     background-color: rgba(244, 244, 244, 0.5);
     border: 1px solid #AAA;
     color: #333;
     text-shadow: none;
   }
-
+ 
   .mainmenu .menugroup:nth-child(1) .button {
     background: url("http://i.imgur.com/ZZqrXOl.png?2");
     border: 1px solid #AE445D;
   }
-
+ 
   .mainmenu .menugroup:nth-child(1) .button:hover {
     border: 1px solid #943A4F;
     background: url("http://i.imgur.com/Kk6RpNs.png?2");
   }
-
+ 
   .mainmenu .menugroup:nth-child(2) p:nth-child(3) .button {
     background: url("http://i.imgur.com/pRCl23k.png?2");
     border-color: #356E4E;
   }
-
+ 
   .mainmenu .menugroup:nth-child(2) p:nth-child(3) .button:hover {
     background: url("http://i.imgur.com/JHbTRpk.png?2");
     border-color: #254E37;
   }
-
+ 
   .mainmenu .menugroup:nth-child(3) p:nth-child(1) .button {
     background: url("http://i.imgur.com/HFwsKS2.png?2");
     border-color: #4B6EB3;
   }
-
+ 
   .mainmenu .menugroup:nth-child(3) p:nth-child(1) .button:hover {
     background: url("http://i.imgur.com/JMSSimD.png?1");
     border-color: #3D5991;
   }
-  
+ 
   /* Menugroup ~end */
-  
+ 
   .mainmenufooter {
     color: #131D50;
     text-shadow: 1px 1px 1px #BEE4F7, -1px -1px 1px  #BEE4F7;
   }
-  
+ 
   .mainmenufooter a {
     color: #131D50;
     text-shadow: none;
     font-weight: bold;
     text-shadow: 1px 1px 1px #BEE4F7, -1px -1px 1px  #BEE4F7;
   }
-  
+ 
   .mainmenufooter a:hover {
     color: #000832;
   }
-  
+ 
   /***************************
   * MAINMENUWRAPPER CSS ~end *
   ***************************/
-
+ 
   /*************
   * BATTLE CSS *
   *************/
-
+ 
   .ps-room.ps-room-opaque {
     background: rgba(178, 223, 247, 0.7);
   }
-
+ 
   .ps-room .battle-controls {
     background: rgba(0, 0, 0, 0);
   }
-
+ 
   .battle-log {
     background: url("http://i.imgur.com/vIYclIh.png");
     border-color: #413B45;
   }
-
+ 
   .message-error {
     border: 1px solid #413B45;
     background: #ECB3B4;
     color: #413B45;
     margin-bottom: 1px;
   }
-
+ 
   .battle-log .chat {
     padding: 3px 1px;
   }
-
+ 
   .battle-log h2 {
     text-align: right;
     font-style: italic;
@@ -1176,251 +1184,251 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: #FABCBC;
     color: #413B45;
   }
-
+ 
   .battle-log-add {
     background: #FABCBC;
     border: 1px solid #413B45;
     color: #413B45;
   }
-
+ 
   .battle {
     border-color: #413B45;
   }
-
+ 
   .battle-log .rated strong {
     background: #2D3459;
   }
-
+ 
   .battle-log .chat strong {
     color: #2D3459;
   }
-
+ 
   .rightbar, .leftbar {
     border-color: #413B45;    
     background: rgba(206, 234, 250, 0.5);
   }
-
+ 
   .trainer strong {
     color: #413B45;
   }
-
+ 
   .trainer div {
     opacity: 1;
   }
-
+ 
   .turnstatus-protect {
-    background:url(http://i.imgur.com/RVxCoHz.png); 
+    background:url(http://i.imgur.com/RVxCoHz.png);
     opacity:1!important;
     height:103px!important;
     width:150px!important;
-    border-radius:0; 
-    border-width:0; 
+    border-radius:0;
+    border-width:0;
     box-shadow:none;
     opacity:0.9;
   }
-
+ 
   .sidecondition-safeguard {
-    background:url(http://i.imgur.com/FrCoWCW.png); 
+    background:url(http://i.imgur.com/FrCoWCW.png);
     opacity:0.6!important;
     height:90px!important;
     width:130px!important;
-    border-radius:0; 
+    border-radius:0;
     opacity:0.9;
-    border-width:0; 
-    box-shadow:none; 
+    border-width:0;
+    box-shadow:none;
   }
-
+ 
   .sidecondition-reflect {
-    background:url(http://i.imgur.com/X1XDxVB.png); 
+    background:url(http://i.imgur.com/X1XDxVB.png);
     opacity:0.7!important;
     height:90px!important;
     width:130px!important;
-    border-radius:0; 
-    border-width:0; 
+    border-radius:0;
+    border-width:0;
     opacity:0.9;
     box-shadow:none;
   }
-
+ 
   .sidecondition-lightscreen {
-    background:url(http://i.imgur.com/8eLftNA.png); 
+    background:url(http://i.imgur.com/8eLftNA.png);
     opacity:0.6!important;
     height:90px!important;
     width:130px!important;
     opacity:0.9;
-    border-radius:0; 
-    border-width:0; 
-    box-shadow:none; 
+    border-radius:0;
+    border-width:0;
+    box-shadow:none;
   }
-  
+ 
   /*******************
   * BATTLES CSS ~end *
   *******************/
-  
+ 
   /*************
   * LADDER CSS *
   *************/
-  
+ 
   .ladder table, .ladder td, .ladder th {
     border: 1px solid #2D3459;
   }
-  
+ 
   .ladder th {
     background: rgba(45, 52, 89, 0.8);
     color: #CEEAFA;
     text-shadow:  0px -1px 0px #000;
   }
-  
+ 
   .ladder td {
     background: rgba(255, 255, 255, 0.4);
   }
-  
+ 
   /******************
   * LADDER CSS ~end *
   ******************/
-  
+ 
   /******************
   * Teambuilder css *
   ******************/
-  
+ 
   .team {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.8);
     color: #CEEAFA;
   }
-  
+ 
   .team:hover {
     border: 1px solid #191D30;
     background: rgba(45, 52, 89, 0.95);
     color: #CEEAFA;
   }
-
+ 
   .teambuilder-results {
     background: rgba(255, 255, 255, 0.55);
   }
-
+ 
   .teamchartbox {
     background: url("http://i.imgur.com/ILidCvo.jpg");
     text-shadow: none;
     border-top: 1px solid #0B1361;
   }
-
+ 
   .setchart {
     border: 1px solid #0B1361;
     background: url("http://i.imgur.com/qEW2a8L.png?2");
   }
-
+ 
   .setchart-nickname {
     border: 1px solid #0B1361;
     background: url("http://i.imgur.com/0jJJ5wL.png?1");
   }
-
+ 
   .setchart label, .setchart-nickname label {
     color: #FFF;
     text-shadow: 0px -1px 0px #0F1923;
   }
-
+ 
   .setchart input, .setchart-nickname input, .statform input.inputform, .setdetails, .setstats {
     border: 1px solid #0B1361;
     background: #F9F9F9;
   }
-
+ 
   .setchart input:hover, .setchart-nickname input:hover, .statform input.inputform:hover, .setdetails:hover, .setstats:hover {
     border: 1px solid #0B1361;
     background: #FFF;
   }
-
+ 
   .setchart .setdetails label, .setchart .setstats label {
     color: #000;
     text-shadow: none;
   }
-
+ 
   .teambuilder-results h3, .teambuilder-results .utilichart h3 {
     background: url("http://i.imgur.com/wlJoJrT.png?1");
     border-color: #0B1361;
     color: #FFF;
     text-shadow: 0px -1px 0px #0F1923;
   }
-
+ 
   .setmenu button:hover {
     border-color: #0B1361;
   }
-
+ 
   .teambar button {
     border-color: #0B1361;
     font-family: sans-serif;
   }
-
+ 
   .teambar button:hover {
     border-color: #0B1361;
   }
-
+ 
   .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
     color: #000;
     background: rgba(240, 240, 240, 0.7);
     border-color: #0B1361;
     opacity: 1;
   }
-
+ 
   .utilichart {
     text-shadow: none;
   }
-
+ 
   .utilichart .movenamecol, .utilichart .pokemonnamecol, .utilichart .namecol {
     font-style: italic;
     color: #000;
   }
-
+ 
   .utilichart .statcol em, .utilichart .bstcol em, .utilichart .numcol, .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em {
     color: #777;
   }
-
+ 
   .utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol {
     color: #555;
   }
-
+ 
   .utilichart .abilitycol, .utilichart .statcol, .utilichart .col {
     color: #222;
   }
-
+ 
   .utilichart .typecol img {
     opacity: 0.75;
   }
-
+ 
   .utilichart b {
     color: #0B1361;
   }
-
+ 
   .teambuilder-results .firstresult a, .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
     border-color: #0B1361;
   }
-
+ 
   .teambuilder-clipboard-container {
     border-color: #0B1361;
   }
-
+ 
   .teambuilder-clipboard-data, .teambuilder-clipboard-data:hover {
     background: url("http://i.imgur.com/jt4bXeo.png?1");
     border-color: #0B1361;
     color: #FFF;
     text-shadow: 0px -1px 0px #0F1923;
   }
-
+ 
   .teambuilder-clipboard-button-right, .teambuilder-clipboard-button-left, .majorbutton {
     background: url("http://i.imgur.com/jt4bXeo.png?1");
     border: 1px solid #0B1361;
     color: #FFF;
     text-shadow: 0px -1px 0px #0F1923;
   }
-
+ 
   .teambuilder-clipboard-button-right:hover, .teambuilder-clipboard-button-left:hover, .majorbutton:hover {
     background: #1F4367;
   }
-
+ 
   .statform, .detailsform {
     text-shadow: none;
     color: #000;
   }
-  
+ 
   /***********************
   * TEAMBUILDER CSS ~end *
   ***********************/
