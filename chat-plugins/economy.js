@@ -221,7 +221,7 @@ exports.commands = {
 		logMoney(user.name + " reset the money of " + target + ".");
 	},
 	resetmoneyhelp: ["/resetmoney [user] - Reset user's money to zero."],
-/*
+
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
@@ -236,7 +236,7 @@ exports.commands = {
 		if (toId(username) === user.userid) return this.sendReply("You cannot transfer to yourself.");
 		if (username.length > 19) return this.sendReply("Username cannot be longer than 19 characters.");
 		if (typeof amount === 'string') return this.sendReply(amount);
-		if (Db('money')[user.userid] = 0) return this.sendReply("You cannot transfer money when you have none.");
+		if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
 		if (amount > Db('money')[user.userid]) return this.sendReply("You cannot transfer more money than what you have.");
 
 		var userTotal = (Db('money')[user.userid] || 0) - amount;
@@ -252,7 +252,7 @@ exports.commands = {
 		logMoney(user.name + " transferred " + amount + " to " + username + ". " + user.name + " now has " + userTotal + " and " + username + " now has " + targetTotal + ".");
 	},
 	transfermoneyhelp: ["/transfer [user], [amount] - Transfer a certain amount of money to a user."],
-*/
+
 	store: 'shop',
 	shop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
