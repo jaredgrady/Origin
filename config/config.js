@@ -173,7 +173,7 @@ exports.customavatars = {
 // the server's main tournament room (either the specified tourroom or by default
 // the room 'tournaments')
 exports.tourroom = 'lobby';
-exports.tourannouncements = ['tournaments','randomtiers','1v1','monotype','othertiers','smogontiers','artshop'];
+exports.tourannouncements = ['tournaments','randomtiers','1v1','monotype','othertiers','smogontiers','artshop','ce'];
 
 // appealurl - specify a URL containing information on how users can appeal
 // disciplinary actions on your section. You can also leave this blank, in
