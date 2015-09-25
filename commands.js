@@ -290,48 +290,86 @@ var commands = exports.commands = {
 	},
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: ~"],
 	
-	personalroom: function (target, room, user) {
-		// First and foremost, check the number of personal rooms owned by the user.
-		if (user.personalRooms && user.personalRooms > 4) return this.sendReply("You can't own more than 5 personal rooms.");
+	makegroupchat: function (target, room, user, connection, cmd) {
+		if (!user.autoconfirmed) {
+			return this.errorReply("You don't have permission to make a group chat right now.");
+		}
+		if (target.length > 64) return this.errorReply("Title must be under 32 characters long.");
+		var targets = target.split(',', 2);
 
-		// Chosen name have the same limitations as regular rooms.
-		if (target.includes(',') || target.includes('|') || target.includes('[') || target.includes('-')) {
-			return this.sendReply("Room titles can't contain any of: ,|[-");
+		// Title defaults to a random 8-digit number.
+		var title = targets[0].trim();
+		if (title.length >= 32) {
+			return this.errorReply("Title must be under 32 characters long.");
+		} else if (!title) {
+			title = ('' + Math.floor(Math.random() * 100000000));
+		} else if (Config.chatfilter) {
+			var filterResult = Config.chatfilter.call(this, title, user, null, connection);
+			if (!filterResult) return;
+			if (title !== filterResult) {
+				return this.errorReply("Invalid title.");
+			}
+		}
+		// `,` is a delimiter used by a lot of /commands
+		// `|` and `[` are delimiters used by the protocol
+		// `-` has special meaning in roomids
+		if (title.includes(',') || title.includes('|') || title.includes('[') || title.includes('-')) {
+			return this.errorReply("Room titles can't contain any of: ,|[-");
 		}
 
-		// Check if the custom part of the room title is empty. It needs a title.
-		var id = toId(target);
-		// If there isn't any, we roll our own random number title.
-		if (!id) {
-			target = Math.floor(Math.random() * 10000);
+		// Even though they're different namespaces, to cut down on confusion, you
+		// can't share names with registered chatrooms.
+		var existingRoom = Rooms.search(toId(title));
+		if (existingRoom && !existingRoom.modjoin) return this.errorReply("The room '" + title + "' already exists.");
+		// Room IDs for groupchats are groupchat-TITLEID
+		var roomid = 'groupchat-' + toId(title);
+		if (!toId(title)) {
+			roomid = 'groupchat-' + Math.floor(Math.random() * 100000000);
+		}
+		// Titles must be unique.
+		if (Rooms.search(roomid)) return this.errorReply("A group chat named '" + title + "' already exists.");
+		// Tab title is prefixed with '[G]' to distinguish groupchats from
+		// registered chatrooms
+		title = title;
+
+		if (ResourceMonitor.countGroupChat(connection.ip)) {
+			this.errorReply("Due to high load, you are limited to creating 4 group chats every hour.");
+			return;
 		}
 
-		// Create the name of the room using user's ID and the chosen name.
-		var roomName = "groupchat-" + user.userid + "-" + target;
-		id = toId(roomName);
+		// Privacy settings, default to hidden.
+		var privacy = toId(targets[1]) || 'hidden';
+		var privacySettings = {private: true, hidden: 'hidden', public: false};
+		if (!(privacy in privacySettings)) privacy = 'hidden';
 
-		// Personal rooms can always be created, but the name must still be unique.
-		if (Rooms.search(id)) return this.sendReply("The room '" + roomName + "' already exists.");
-		if (Rooms.global.addChatRoom(roomName, true)) {
-			var targetRoom = Rooms.search(roomName);
-			// Make the room private, as it can't be public.
-			targetRoom.isPrivate = true;
-			targetRoom.chatRoomData.isPrivate = true;
-			// The room is modjoin by default. This shouldn't be changed.
-			targetRoom.modjoin = true;
-			targetRoom.chatRoomData.modjoin = true;
-			// Make the personal room creator its owner.
-			targetRoom.auth = targetRoom.chatRoomData.auth = {};
+		var groupChatLink = '<code>&lt;&lt;' + roomid + '>></code>';
+		var groupChatURL = '';
+		if (Config.serverid) {
+			groupChatURL = 'http://' + (Config.serverid === 'showdown' ? 'psim.us' : Config.serverid + '.psim.us') + '/' + roomid;
+			groupChatLink = '<a href="' + groupChatURL + '">' + groupChatLink + '</a>';
+		}
+		var titleHTML = '';
+		if (/^[0-9]+$/.test(title)) {
+			titleHTML = groupChatLink;
+		} else {
+			titleHTML = Tools.escapeHTML(title) + ' <small style="font-weight:normal;font-size:9pt">' + groupChatLink + '</small>';
+		}
+		var targetRoom = Rooms.createChatRoom(roomid, '[G] ' + title, {
+			isPersonal: true,
+			isPrivate: privacySettings[privacy],
+			auth: {},
+			introMessage: '<h2 style="margin-top:0">' + titleHTML + '</h2><p>There are several ways to invite people:<br />- in this chat: <code>/invite USERNAME</code><br />- anywhere in PS: link to <code>&lt;&lt;' + roomid + '>></code>' + (groupChatURL ? '<br />- outside of PS: link to <a href="' + groupChatURL + '">' + groupChatURL + '</a>' : '') + '</p><p>This room will expire after 40 minutes of inactivity or when the server is restarted.</p><p style="margin-bottom:0"><button name="send" value="/roomhelp">Room management</button>'
+		});
+		if (targetRoom) {
+			// The creator is RO.
 			targetRoom.auth[user.userid] = '#';
-			// Finally, make the user join the room instantly.
-			if (!user.personalRooms) user.personalRooms = 0;
-			user.personalRooms++;
+			// Join after creating room. No other response is given.
 			user.joinRoom(targetRoom.id);
-			return this.sendReply("The personal chat room '" + roomName + "' was created.");
+			return;
 		}
-		return this.sendReply("An error occurred while trying to create the room '" + roomName + "'.");
+		return this.errorReply("An unknown error occurred while trying to create the room '" + title + "'.");
 	},
-	personalroomhelp: ["/personalroom [roomname] - Creates a personal room named [roomname]. Always private, invite-only."],
+	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden."],
 
 	deregisterchatroom: function (target, room, user) {
 		if (!this.can('hotpatch')) return;
