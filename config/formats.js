@@ -663,6 +663,7 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
+    	{
     		name: "C&E",
 		section: "Other Metagames",
 		
