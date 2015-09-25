@@ -42,6 +42,7 @@ This boilerplate is brought to you and maintained by the following people:
 # License
 
 [MIT](LICENSE)
+
 # Showdown-Boilerplate
 
 [![Build Status](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate.svg)](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate)
@@ -64,12 +65,17 @@ For more information on Pokémon Showdown, visit the main
 If you would like to use the old version of Showdown-Boilerplate, go to this
 [commit](https://github.com/CreaturePhil/Showdown-Boilerplate/tree/79ede733015af70047fef1f5ea53011f6d5368df).
 
+Check out the [EosDB](https://github.com/CreaturePhil/Showdown-Boilerplate/tree/eosdb)
+alternative that has all of the features below except it only uses `EosDB` instead of
+the other databases.
+
 ## Features
 
 - Numerous *cool* commands such as /urbandefine or /poof
 - Emoticons in chat and private messages
 - Polls, Hangman, Profile, and Tells
-- Economy (bucks system, shop, tournament winnings)
+- Economy (bucks system, shop, tournament winnings, lottery)
+- Lowdb and MySql database support
 
 ## Quick Start
 
