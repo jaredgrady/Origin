@@ -4,7 +4,7 @@ exports.port = 8000;
 // proxyip - proxy IPs with trusted X-Forwarded-For headers
 //   This can be either false (meaning not to trust any proxies) or an array
 //   of strings. Each string should be either an IP address or a subnet given
-//   in CIDR notation. You should usually leave this as `false` unless you
+//   in CIDR notation. You should usually leave this as `false` unless youfender: we are making blackjack
 //   know what you are doing.
 exports.proxyip = false;
 
@@ -84,13 +84,6 @@ exports.reportbattles = true;
 //   Note that the feature of turning this off is deprecated.
 exports.reportbattlejoins = true;
 
-<<<<<<< HEAD
-// moderated chat - prevent unvoiced users from speaking
-//   This should only be enabled in special situations, such as temporarily
-//   when you're dealing with huge influxes of spammy users.
-exports.chatmodchat = false;
-exports.battlemodchat = false;
-=======
 // whitelist - prevent users below a certain group from doing things
 //   For the modchat settings, false will allow any user to participate, while a string
 //   with a group symbol will restrict it to that group and above. The string
@@ -104,7 +97,6 @@ exports.chatmodchat = false;
 // battle modchat - default minimum group for speaking in battles; changeable with /modchat
 exports.battlemodchat = false;
 // pm modchat - minimum group for PMing other users, challenging other users, and laddering
->>>>>>> upstream/master
 exports.pmmodchat = false;
 
 // forced timer - force the timer on for all battles
