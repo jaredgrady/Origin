@@ -909,7 +909,6 @@ exports.BattleMovedex = {
 			}
 			this.directDamage(target.maxhp / 2);
 			this.boost({atk: 12}, target);
-			this.add('-setboost', target, 'atk', target.boosts['atk'], '[from] move: Belly Drum');
 		},
 		secondary: false,
 		target: "self",
@@ -1724,6 +1723,7 @@ exports.BattleMovedex = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, distance: 1, authentic: 1},
+		noSketch: true,
 		secondary: {
 			chance: 100,
 			volatileStatus: 'confusion'
@@ -6677,7 +6677,7 @@ exports.BattleMovedex = {
 		basePower: 100,
 		category: "Physical",
 		desc: "Lowers the user's Defense by 1 stage. This move cannot be used successfully unless the user is a Hoopa in its Unbound forme. If this move is successful, it breaks through the target's Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally.",
-		shortDesc: "Lowers user's Defense by 1. Breaks protection.",
+		shortDesc: "Hoopa-U: Lowers user's Def. by 1; breaks protection.",
 		id: "hyperspacefury",
 		isViable: true,
 		name: "Hyperspace Fury",
@@ -6689,6 +6689,7 @@ exports.BattleMovedex = {
 			if (pokemon.species === 'Hoopa-Unbound' && pokemon.baseTemplate.species === pokemon.species) {
 				return;
 			}
+			this.add('-hint', "Only a Hoopa in its Unbound forme can use this move.");
 			if (pokemon.baseTemplate.species === 'Hoopa') {
 				this.add('-fail', pokemon, 'move: Hyperspace Fury', '[forme]');
 				return null;
@@ -6997,13 +6998,14 @@ exports.BattleMovedex = {
 			onFoeDisableMove: function (pokemon) {
 				var foeMoves = this.effectData.source.moveset;
 				for (var f = 0; f < foeMoves.length; f++) {
+					if (foeMoves[f].id === 'struggle') continue;
 					pokemon.disableMove(foeMoves[f].id, true);
 				}
 				pokemon.maybeDisabled = true;
 			},
 			onFoeBeforeMovePriority: 4,
 			onFoeBeforeMove: function (attacker, defender, move) {
-				if (this.effectData.source.hasMove(move.id)) {
+				if (move.id !== 'struggle' && this.effectData.source.hasMove(move.id)) {
 					this.add('cant', attacker, 'move: Imprison', move);
 					return false;
 				}
@@ -8073,27 +8075,30 @@ exports.BattleMovedex = {
 		onModifyMove: function (move, pokemon) {
 			var i = this.random(100);
 			if (i < 5) {
-				this.add('-activate', pokemon, 'move: Magnitude', 4);
+				move.magnitude = 4;
 				move.basePower = 10;
 			} else if (i < 15) {
-				this.add('-activate', pokemon, 'move: Magnitude', 5);
+				move.magnitude = 5;
 				move.basePower = 30;
 			} else if (i < 35) {
-				this.add('-activate', pokemon, 'move: Magnitude', 6);
+				move.magnitude = 6;
 				move.basePower = 50;
 			} else if (i < 65) {
-				this.add('-activate', pokemon, 'move: Magnitude', 7);
+				move.magnitude = 7;
 				move.basePower = 70;
 			} else if (i < 85) {
-				this.add('-activate', pokemon, 'move: Magnitude', 8);
+				move.magnitude = 8;
 				move.basePower = 90;
 			} else if (i < 95) {
-				this.add('-activate', pokemon, 'move: Magnitude', 9);
+				move.magnitude = 9;
 				move.basePower = 110;
 			} else {
-				this.add('-activate', pokemon, 'move: Magnitude', 10);
+				move.magnitude = 10;
 				move.basePower = 150;
 			}
+		},
+		onUseMoveMessage: function (pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Magnitude', move.magnitude);
 		},
 		secondary: false,
 		target: "allAdjacent",
@@ -13355,6 +13360,7 @@ exports.BattleMovedex = {
 		noPPBoosts: true,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
+		noSketch: true,
 		onModifyMove: function (move, pokemon, target) {
 			move.type = '???';
 			this.add('-activate', pokemon, 'move: Struggle');
@@ -15706,6 +15712,7 @@ exports.BattleMovedex = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+		noSketch: true,
 		drain: [1, 2],
 		onTry: function (pokemon) {
 			if (pokemon.template.name !== 'Magikarp') {

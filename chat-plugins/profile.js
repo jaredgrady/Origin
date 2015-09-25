@@ -4,7 +4,7 @@ var moment = require('moment');
 var geoip = require('geoip-ultralight');
 geoip.startWatchingDataUpdate();
 
-var BR = '<br />';
+var BR = '<br>';
 var SPACE = '&nbsp;';
 var profileColor = '#24678d';
 var trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
@@ -102,6 +102,11 @@ Profile.prototype.avatar = function () {
 	}
 	var selectedSprite = trainersprites[Math.floor(Math.random() * trainersprites.length)];
 	return img('http://play.pokemonshowdown.com/sprites/trainers/' + selectedSprite + '.png');
+};
+
+Profile.prototype.buttonAvatar = function () {
+	var css = 'border:none;background:none;padding:0;float:left;';
+	return '<button style="' + css + '" name="parseCommand" value="/user ' + this.username + '">' + this.avatar() + "</button>";
 };
 
 Profile.prototype.group = function () {

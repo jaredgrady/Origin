@@ -302,7 +302,7 @@ var GlobalRoom = (function () {
 
 		this.chatRoomData = [];
 		try {
-			this.chatRoomData = JSON.parse(fs.readFileSync('config/chatrooms.json'));
+			this.chatRoomData = require('./config/chatrooms.json');
 			if (!Array.isArray(this.chatRoomData)) this.chatRoomData = [];
 		} catch (e) {} // file doesn't exist [yet]
 
@@ -440,7 +440,7 @@ var GlobalRoom = (function () {
 	};
 
 	GlobalRoom.prototype.getFormatListText = function () {
-		var formatListText = '|formats';
+		var formatListText = '|formats' + (Ladders.formatsListPrefix || '');
 		var curSection = '';
 		for (var i in Tools.data.Formats) {
 			var format = Tools.data.Formats[i];
@@ -537,26 +537,27 @@ var GlobalRoom = (function () {
 		// tell the user they've started searching
 		user.send('|updatesearch|' + JSON.stringify({searching: Object.keys(user.searching).concat(formatid)}));
 
-		// get the user's rating before actually starting to search
 		var newSearch = {
-			userid: user.userid,
+			userid: '',
 			team: user.team,
 			rating: 1000,
 			time: new Date().getTime()
 		};
 		var self = this;
+
+		// Get the user's rating before actually starting to search.
 		Ladders(formatid).getRating(user.userid).then(function (rating) {
 			newSearch.rating = rating;
+			newSearch.userid = user.userid;
 			self.addSearch(newSearch, user, formatid);
 		}, function (error) {
-			// The promise only rejects if the user changed names before the search
-			// could start; the search simply doesn't happen in this case.
+			// Rejects iff we retrieved the rating but the user had changed their name;
+			// the search simply doesn't happen in this case.
 		});
 	};
 	GlobalRoom.prototype.matchmakingOK = function (search1, search2, user1, user2, formatid) {
-		// users must exist
-		// TODO: ACTUALLY REMOVE THESE USERS FROM THE SEARCH LIST
-		if (!user1 || !user2) return false;
+		// This should never happen.
+		if (!user1 || !user2) return void require('./crashlogger.js')(new Error("Matched user " + (user1 ? search2.userid : search1.userid) + " not found"), "The main process");
 
 		// users must be different
 		if (user1 === user2) return false;
@@ -655,51 +656,19 @@ var GlobalRoom = (function () {
 		if (rooms.lobby) return rooms.lobby.addRaw(message);
 		return this;
 	};
-	GlobalRoom.prototype.addChatRoom = function (title, personal) {
+	GlobalRoom.prototype.addChatRoom = function (title) {
 		var id = toId(title);
 		if (rooms[id]) return false;
 
 		var chatRoomData = {
 			title: title
 		};
-		if (personal) chatRoomData.isPersonal = true;
 		var room = Rooms.createChatRoom(id, title, chatRoomData);
 		// Only add room to chatRoomData if it is not a personal room, those aren't saved.
-		if (!personal) this.chatRoomData.push(chatRoomData);
 		this.chatRooms.push(room);
 		this.writeChatRoomData();
 		return true;
-	};function ChatRoom(roomid, title, options) {
-		Room.call(this, roomid, title);
-		if (options) {
-			this.chatRoomData = options;
-			Object.merge(this, options);
-		}
-
-		this.logTimes = true;
-		this.logFile = null;
-		this.logFilename = '';
-		this.destroyingLog = false;
-		if (!this.modchat) this.modchat = (Config.chatmodchat || false);
-
-		// Log only rooms that aren't personal.
-		if (Config.logchat && !this.isPersonal) {
-			this.rollLogFile(true);
-			this.logEntry = function (entry, date) {
-				var timestamp = (new Date()).format('{HH}:{mm}:{ss} ');
-				this.logFile.write(timestamp + entry + '\n');
-			};
-			this.logEntry('NEW CHATROOM: ' + this.id);
-			if (Config.loguserstats) {
-				setInterval(this.logUserStats.bind(this), Config.loguserstats);
-			}
-		}
-
-		if (Config.reportjoinsperiod) {
-			this.userList = this.getUserList();
-			this.reportJoinsQueue = [];
-		}
-	}
+	};
 	GlobalRoom.prototype.deregisterChatRoom = function (id) {
 		id = toId(id);
 		var room = rooms[id];
@@ -1555,7 +1524,11 @@ var ChatRoom = (function () {
 			if (!user.named) {
 				++guests;
 			}
-			++groups[user.group];
+			if (this.auth && this.auth[user.userid] && this.auth[user.userid] in groups) {
+				++groups[this.auth[user.userid]];
+			} else {
+				++groups[user.group];
+			}
 		}
 		var entry = '|userstats|total:' + total + '|guests:' + guests;
 		for (var i in groups) {
@@ -1607,11 +1580,20 @@ var ChatRoom = (function () {
 		}
 		this.lastUpdate = this.log.length;
 
+		// Set up expire timer to clean up inactive personal rooms.
+		if (this.isPersonal) {
+			if (this.expireTimer) clearTimeout(this.expireTimer);
+			this.expireTimer = setTimeout(this.tryExpire.bind(this), TIMEOUT_INACTIVE_DEALLOCATE);
+		}
+
 		this.send(update);
+	};
+	ChatRoom.prototype.tryExpire = function () {
+		this.destroy();
 	};
 	ChatRoom.prototype.getIntroMessage = function () {
 		if (this.modchat && this.introMessage) {
-			return '\n|raw|<div class="infobox">' + this.introMessage + '</div>' +
+			return '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div>' +
 				'<br />' +
 				'<div class="broadcast-red">' +
 				'Must be rank ' + this.modchat + ' or higher to talk right now.' +
@@ -1710,7 +1692,6 @@ var ChatRoom = (function () {
 
 		// If it's a personal room, it gets destroyed when there are 0 users on it.
 		if (this.isPersonal && this.userCount === 0) {
-			if (this.auth[user.userid] && this.auth[user.userid] === '#') user.personalRooms--;
 			this.destroy();
 		}
 	};

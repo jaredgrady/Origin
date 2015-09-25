@@ -117,6 +117,11 @@ exports.BattleScripts = {
 			return true;
 		}
 
+<<<<<<< HEAD
+=======
+		this.singleEvent('UseMoveMessage', move, null, pokemon, target, move);
+
+>>>>>>> upstream/master
 		if (move.ignoreImmunity === undefined) {
 			move.ignoreImmunity = (move.category === 'Status');
 		}
@@ -973,7 +978,11 @@ exports.BattleScripts = {
 		};
 		// Moves that shouldn't be the only STAB moves:
 		var NoStab = {
+<<<<<<< HEAD
 			aquajet:1, bounce:1, fakeout:1, flamecharge:1, quickattack:1, skyattack:1
+=======
+			aquajet:1, bounce:1, eruption:1, fakeout:1, flamecharge:1, quickattack:1, skyattack:1, waterspout:1
+>>>>>>> upstream/master
 		};
 
 		// Iterate through all moves we've chosen so far and keep track of what they do:
@@ -1253,7 +1262,11 @@ exports.BattleScripts = {
 					if (counter.setupType || !!counter['speedsetup'] || hasMove['rest'] || teamDetails.stealthRock >= 1) rejected = true;
 					break;
 				case 'switcheroo': case 'trick':
+<<<<<<< HEAD
 					if (counter.setupType || counter.Physical + counter.Special < 2) rejected = true;
+=======
+					if (counter.Physical + counter.Special < 3) rejected = true;
+>>>>>>> upstream/master
 					if (hasMove['acrobatics'] || hasMove['lightscreen'] || hasMove['reflect'] || hasMove['trickroom']) rejected = true;
 					break;
 				case 'trickroom':
@@ -1298,6 +1311,12 @@ exports.BattleScripts = {
 				case 'thunderbolt':
 					if (hasMove['discharge'] || (hasMove['thunder'] && hasMove['raindance']) || (hasMove['voltswitch'] && hasMove['wildcharge'])) rejected = true;
 					break;
+<<<<<<< HEAD
+=======
+				case 'dazzlinggleam':
+					if (hasMove['playrough'] && counter.setupType !== 'Special') rejected = true;
+					break;
+>>>>>>> upstream/master
 				case 'drainingkiss':
 					if (hasMove['dazzlinggleam'] || counter.setupType !== 'Special') rejected = true;
 					break;
@@ -1838,7 +1857,11 @@ exports.BattleScripts = {
 			item = (!!counter['ate'] || (hasMove['suckerpunch'] && !hasType['Dark'])) ? 'Life Orb' : 'Expert Belt';
 		} else if (counter.Physical + counter.Special >= 3 && !!counter['speedsetup'] && template.baseStats.hp + template.baseStats.def + template.baseStats.spd >= 300) {
 			item = 'Weakness Policy';
+<<<<<<< HEAD
 		} else if (counter.Physical + counter.Special >= 3 && ability !== 'Sturdy' && !hasMove['dragontail']) {
+=======
+		} else if (counter.Physical + counter.Special >= 3 && ability !== 'Sturdy' && !hasMove['dragontail'] && !hasMove['rapidspin']) {
+>>>>>>> upstream/master
 			item = (template.baseStats.hp + template.baseStats.def + template.baseStats.spd < 285 || !!counter['speedsetup'] || hasMove['trickroom']) ? 'Life Orb' : 'Leftovers';
 		} else if (template.species === 'Palkia' && (hasMove['dracometeor'] || hasMove['spacialrend']) && hasMove['hydropump']) {
 			item = 'Lustrous Orb';
@@ -1852,6 +1875,11 @@ exports.BattleScripts = {
 			item = 'Custap Berry';
 		} else if (hasType['Poison']) {
 			item = 'Black Sludge';
+<<<<<<< HEAD
+=======
+		} else if (ability === 'Gale Wings' && hasMove['bravebird']) {
+			item = 'Sharp Beak';
+>>>>>>> upstream/master
 		} else if (this.getEffectiveness('Rock', template) >= 1 || hasMove['dragontail']) {
 			item = 'Leftovers';
 		} else if (this.getImmunity('Ground', template) && this.getEffectiveness('Ground', template) >= 1 && ability !== 'Levitate' && ability !== 'Solid Rock' && !hasMove['magnetrise'] && !hasMove['sleeptalk']) {
@@ -2823,7 +2851,10 @@ exports.BattleScripts = {
 					ability = ability1.name;
 				}
 			}
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 			if (abilities.indexOf('Chlorophyll') >= 0 && ability !== 'Solar Power') {
 				ability = 'Chlorophyll';
 			}
@@ -2836,6 +2867,10 @@ exports.BattleScripts = {
 			if (abilities.indexOf('Swift Swim') >= 0 && hasMove['raindance']) {
 				ability = 'Swift Swim';
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 			if (template.id === 'ambipom' && !counter['technician']) {
 				// If it doesn't qualify for Technician, Skill Link is useless on it
 				// Might as well give it Pickup just in case
@@ -3244,6 +3279,7 @@ exports.BattleScripts = {
 		}
 		return pokemon;
 	},
+<<<<<<< HEAD
 	randomRainbowTeam: function () {
 		var pokemonLeft = 0;
 		var pokemon = [];
@@ -3399,6 +3435,8 @@ exports.BattleScripts = {
 		return pokemon;
 	},
 
+=======
+>>>>>>> upstream/master
 	randomFactorySets: require('./factory-sets.json'),
 	randomFactorySet: function (template, slot, teamData, tier) {
 		var speciesId = toId(template.species);

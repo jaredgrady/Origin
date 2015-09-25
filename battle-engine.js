@@ -18,13 +18,12 @@ global.Config = require('./config/config.js');
 if (Config.crashguard) {
 	// graceful crash - allow current battles to finish before restarting
 	process.on('uncaughtException', function (err) {
-		require('./crashlogger.js')(err, 'A simulator process');
+		require('./crashlogger.js')(err, 'A simulator process', true);
 		/* var stack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
 		if (Rooms.lobby) {
 			Rooms.lobby.addRaw('<div><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
 			Rooms.lobby.addRaw('<div>You will not be able to talk in the lobby or start new battles until the server restarts.</div>');
 		}
-		Config.modchat = 'crash';
 		Rooms.global.lockdown = true; */
 	});
 }
@@ -541,6 +540,7 @@ BattlePokemon = (function () {
 				target = this.battle.runEvent('RedirectTarget', this, this, move, target);
 			}
 			targets = [target];
+
 			// Resolve apparent targets for Pressure.
 			if (move.pressureTarget) {
 				// At the moment, this is the only supported target.
@@ -744,7 +744,7 @@ BattlePokemon = (function () {
 			this.battle.singleEvent('Copy', this.getVolatile(i), this.volatiles[i], this);
 		}
 	};
-	BattlePokemon.prototype.transformInto = function (pokemon, user) {
+	BattlePokemon.prototype.transformInto = function (pokemon, user, effect) {
 		var template = pokemon.template;
 		if (pokemon.fainted || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5)) {
 			return false;
@@ -793,7 +793,11 @@ BattlePokemon = (function () {
 		for (var j in pokemon.boosts) {
 			this.boosts[j] = pokemon.boosts[j];
 		}
-		this.battle.add('-transform', this, pokemon);
+		if (effect) {
+			this.battle.add('-transform', this, pokemon, '[from] ' + effect);
+		} else {
+			this.battle.add('-transform', this, pokemon);
+		}
 		this.setAbility(pokemon.ability);
 		this.update();
 		return true;
@@ -1586,7 +1590,7 @@ BattleSide = (function () {
 			var willPass = canSwitchOut.splice(Math.min(canSwitchOut.length, canSwitchIn.length));
 			for (var i = 0; i < canSwitchOut.length; i++) {
 				decisions.push({
-					choice: 'instaswitch',
+					choice: this.foe.currentRequest === 'switch' ? 'instaswitch' : 'switch',
 					pokemon: this.active[canSwitchOut[i]],
 					target: this.pokemon[canSwitchIn[i]]
 				});
@@ -3145,7 +3149,11 @@ Battle = (function () {
 				}
 				switch (effect.id) {
 				case 'bellydrum':
-					// No message
+					this.add('-setboost', target, 'atk', target.boosts['atk'], '[from] move: Belly Drum');
+					break;
+				case 'bellydrum2':
+					this.add(msg, target, i, boost[i], '[silent]');
+					this.add('-hint', "In Gen 2, Belly Drum boosts by 2 when it fails.");
 					break;
 				case 'intimidate': case 'gooey':
 					this.add(msg, target, i, boost[i]);
@@ -3477,15 +3485,16 @@ Battle = (function () {
 			baseDamage = this.modify(baseDamage, spreadModifier);
 		}
 
-		// weather modifier (TODO: relocate here)
+		// weather modifier
+		baseDamage = this.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
+
 		// crit
 		if (move.crit) {
 			baseDamage = this.modify(baseDamage, move.critModifier || (this.gen >= 6 ? 1.5 : 2));
 		}
 
-		// randomizer
 		// this is not a modifier
-		baseDamage = Math.floor(baseDamage * (100 - this.random(16)) / 100);
+		baseDamage = this.randomizer(baseDamage);
 
 		// STAB
 		if (move.hasSTAB || type !== '???' && pokemon.hasType(type)) {
@@ -3513,6 +3522,8 @@ Battle = (function () {
 				baseDamage = Math.floor(baseDamage / 2);
 			}
 		}
+		if (move.crit && !suppressMessages) this.add('-crit', target);
+
 		if (pokemon.status === 'brn' && basePower && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
 			if (this.gen < 6 || move.id !== 'facade') {
 				baseDamage = this.modify(baseDamage, 0.5);
@@ -3532,6 +3543,9 @@ Battle = (function () {
 		}
 
 		return Math.floor(baseDamage);
+	};
+	Battle.prototype.randomizer = function (baseDamage) {
+		return Math.floor(baseDamage * (100 - this.random(16)) / 100);
 	};
 	/**
 	 * Returns whether a proposed target for a move is valid.

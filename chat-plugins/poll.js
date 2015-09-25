@@ -1,5 +1,4 @@
 var request = require('request');
-
 var Poll = {
 	reset: function (roomId) {
 		Poll[roomId] = {
@@ -112,6 +111,12 @@ exports.commands = {
 		if (!this.can('broadcast', null, room)) return;
 		this.parse('/tour new ' + target + ', roundrobin');
 	},
+	randomtour: 'randtour',
+	randtour: function (target, room, user) {
+		var rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
+		if (!this.can('broadcast', null, room)) return;
+		this.parse('/tour new ' + rand + ', elimination');
+	},
 
 	pr: 'pollremind',
 	pollremind: function (target, room, user) {
@@ -120,6 +125,8 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(Poll[room.id].display);
 	},
+
+	formatpoll: 'tierpoll',
 	tpoll: 'tierpoll',
 	tierspoll: 'tierpoll',
 	tierpoll: function (target, room, user) {

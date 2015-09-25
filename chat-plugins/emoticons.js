@@ -94,7 +94,7 @@ function parseEmoticons(message, room, user, pm) {
 	}
 
 	if (!match) return false;
-	
+		
 	//shadowbanroom message
 	sbanmsg = message;
 
@@ -141,7 +141,7 @@ function create_table() {
 
 	for (var i = 0; i < len; i++) {
 		emotes_list.push("<td>" +
-			"<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "'>" +
+			"<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "' height='50' width='50' />" +
 			emotes_name[i] + "</td>");
 	}
 
@@ -156,8 +156,7 @@ function create_table() {
 			emotes_group_list.push("<tr>" + emote1 + "</tr>");
 		}
 	}
-
-	return "<center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div>";
+	return "<div class='infobox'><center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div></div>";
 }
 
 var emotes_table = create_table();
@@ -202,5 +201,14 @@ exports.commands = {
 			this.add("|raw|<div class=\"broadcast-blue\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
 		}
 	},
-	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."]
+	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
+
+	rande: 'randemote',
+	randemote: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		var rng = Math.floor(Math.random() * emotesKeys.length);
+		var randomEmote = emotesKeys[rng];
+		this.sendReplyBox("<img src='" + emotes[randomEmote] + "' title='" + randomEmote + "' height='50' width='50' />");
+	},
+	randemotehelp: ["/randemote - Get a random emote."]
 };

@@ -65,11 +65,10 @@ function createTournament(room, format, generator, playerCap, isRated, args, out
 	}
 	return (exports.tournaments[room.id] = new Tournament(room, format, createTournamentGenerator(generator, args, output), playerCap, isRated));
 }
-function deleteTournament(name, output) {
-	var id = toId(name);
+function deleteTournament(id, output) {
 	var tournament = exports.tournaments[id];
 	if (!tournament) {
-		output.sendReply(name + " doesn't exist.");
+		output.sendReply(id + " doesn't exist.");
 		return false;
 	}
 	tournament.forceEnd(output);
@@ -928,6 +927,7 @@ var commands = {
 			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
 			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
 		},
+		
 		scout: 'setscouting',
 		scouting: 'setscouting',
 		setscout: 'setscouting',
@@ -1009,6 +1009,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		if (room.isPersonal) {
 			return this.sendReply("Tournaments may not be started in personal rooms");
 		}
+
 		if (room.toursEnabled) {
 			if (!this.can('tournaments', null, room)) return;
 		} else {

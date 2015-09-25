@@ -5,6 +5,24 @@ var fs = require('fs');
 var moment = require('moment');
 var request = require('request');
 
+function clearRoom(room) {
+	var len = (room.log && room.log.length) || 0;
+	var users = [];
+	while (len--) {
+		room.log[len] = '';
+	}
+	for (var u in room.users) {
+		users.push(u);
+		Users.get(u).leaveRoom(room, Users.get(u).connections[0]);
+	}
+	len = users.length;
+	setTimeout(function () {
+		while (len--) {
+			Users.get(users[len]).joinRoom(room, Users.get(users[len]).connections[0]);
+		}
+	}, 1000);
+}
+
 var messages = [
 	"has vanished into nothingness!",
 	"used Explosion!",
@@ -495,7 +513,7 @@ exports.commands = {
 	this.logModCommand(user.name + " globally custom declared " + target);
 	},
 	customgdeclarehelp: ["/customgdeclare [event name], [room], [tier], [buck reward], [runner-up buck reward] - Preset gdeclare which anonymously announces a message to every room on the server. Requires: ~"],
-	
+
 	stafflist: 'authority',
 	auth: 'authority',
 	authlist: 'authority',
@@ -524,28 +542,25 @@ exports.commands = {
 	},
 
 	clearall: function (target, room, user) {
-		if (!this.can('declare', null, room)) return false;
-		if (room.isOfficial && !this.can('bypassall')) return this.sendReply('You need to be an admin to clear an official room.');
+		if (!this.can('declare')) return false;
 		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
 
-		var len = room.log.length;
-		var users = [];
-		while (len--) {
-			room.log[len] = '';
-		}
-		for (var u in room.users) {
-			users.push(u);
-			Users.get(u).leaveRoom(room, Users.get(u).connections[0]);
-		}
-		len = users.length;
-		setTimeout(function () {
-			while (len--) {
-				Users.get(users[len]).joinRoom(room, Users.get(users[len]).connections[0]);
-			}
-		}, 1000);
+		clearRoom(room);
 	},
 
-    	hideauth: 'hide',
+	gclearall: 'globalclearall',
+	globalclearall: function (target, room, user) {
+		if (!this.can('gdeclare')) return false;
+
+		for (var u in Users.users) {
+			Users.users[u].popup("All rooms are being clear.");
+		}
+
+		for (var r in Rooms.rooms) {
+			clearRoom(Rooms.rooms[r]);
+		}
+	},
+
 	hide: function (target, room, user) {
 		if (!this.can('lock')) return false;
 		user.hiding = true;
@@ -553,7 +568,6 @@ exports.commands = {
 		this.sendReply("You have hidden your staff symbol.");
 	},
 
-	k: 'kick',
 	rk: 'kick',
 	roomkick: 'kick',
 	kick: function (target, room, user) {
@@ -568,6 +582,7 @@ exports.commands = {
 		if (!(targetUser in room.users)) {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
+
 		if (!this.can('mute', targetUser, room)) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");

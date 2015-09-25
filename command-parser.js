@@ -84,10 +84,7 @@ function canTalk(user, room, connection, message, targetUser) {
 		connection.popup("You must choose a name before you can talk.");
 		return false;
 	}
-	if (room && user.semilocked) {
-		connection.sendTo(room, "You cannot talk while semi-locked, if you believe you are semi-locked for no reason feel free to pm any staff member")
-		return false;
-	}
+
 	if (room && user.locked) {
 		connection.sendTo(room, "You are locked from talking in chat.");
 		return false;
@@ -225,6 +222,7 @@ var Context = exports.Context = (function () {
 	};
 	Context.prototype.logModCommand = function (text) {
 		var roomid = (this.room.battle ? 'battle' : this.room.id);
+		if (this.room.isPersonal) roomid = 'groupchat';
 		writeModlog(roomid, '(' + this.room.id + ') ' + text);
 	};
 	Context.prototype.globalModlog = function (action, user, text) {
@@ -271,11 +269,11 @@ var Context = exports.Context = (function () {
 		}
 		return true;
 	};
-	Context.prototype.parse = function (message, inNamespace) {
+	Context.prototype.parse = function (message, inNamespace, room) {
 		if (inNamespace && this.cmdToken) {
 			message = this.cmdToken + this.namespaces.concat(message.slice(1)).join(" ");
 		}
-		return CommandParser.parse(message, this.room, this.user, this.connection, this.levelsDeep + 1);
+		return CommandParser.parse(message, room || this.room, this.user, this.connection, this.levelsDeep + 1);
 	};
 	Context.prototype.run = function (targetCmd, inNamespace) {
 		var commandHandler;
