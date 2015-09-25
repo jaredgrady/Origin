@@ -16,6 +16,7 @@
 var crypto = require('crypto');
 var fs = require('fs');
 var parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
+var developers = ['panpawn', 'fender', 'nineage']; //sys developers
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
@@ -1529,7 +1530,7 @@ roomintro: function (target, room, user) {
 
 	hotpatch: function (target, room, user) {
 		if (!target) return this.parse('/help hotpatch');
-		if (!this.can('hotpatch')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		this.logEntry(user.name + " used /hotpatch " + target);
 
@@ -1780,8 +1781,7 @@ roomintro: function (target, room, user) {
 	},
 
 	updateserver: function (target, room, user, connection) {
-	if (user.userid !== 'fender') return this.sendReply("/updateserver - Access denied.");
-		
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		if (CommandParser.updateServerLock) {
 			return this.sendReply("/updateserver - Another update is already in progress.");
