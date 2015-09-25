@@ -663,6 +663,13 @@ exports.Formats = [
         	ruleset: ['Monotype'],
         	banlist: ['Allow CAP']
     	},
+    		name: "C&E",
+		section: "Other Metagames",
+		
+		searchShow: false,
+		maxForcedLevel: 100,
+		ruleset: ['Team Preview', 'Cancel Mod']
+	},
 	{
 		name: "Balanced Hackmons",
 		desc: [
