@@ -173,6 +173,8 @@ exports.commands = {
 		var uid = toId(parts[0]);
 		var amount = isMoney(parts[1]);
 
+		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 bucks at a time.");
+
 		if (typeof amount === 'string') return this.sendReply(amount);
 
 		var total = (Db('money')[uid] || 0) + amount;
@@ -186,6 +188,7 @@ exports.commands = {
 	},
 	givemoneyhelp: ["/givemoney [user], [amount] - Give a user a certain amount of money."],
 
+	removebucks: 'takemoney',
 	takebuck: 'takemoney',
 	takebucks: 'takemoney',
 	takemoney: function (target, room, user) {
@@ -196,6 +199,8 @@ exports.commands = {
 		var username = parts[0];
 		var uid = toId(parts[0]);
 		var amount = isMoney(parts[1]);
+
+		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
