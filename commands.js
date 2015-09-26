@@ -1857,8 +1857,9 @@ roomintro: function (target, room, user) {
 	},
 
 	bash: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-
+		if (!user.hasConsoleAccess(connection)) {
+			return this.sendReply("/bash - Access denied.");
+		}
 		var exec = require('child_process').exec;
 		exec(target, function (error, stdout, stderr) {
 			connection.sendTo(room, ("" + stdout + stderr));
@@ -1866,7 +1867,9 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!user.hasConsoleAccess(connection)) {
+			return this.sendReply("/eval - Access denied.");
+		}
 		if (!this.canBroadcast()) return;
 
 		if (!this.broadcasting) this.sendReply('||>> ' + target);
