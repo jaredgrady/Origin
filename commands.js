@@ -1631,7 +1631,7 @@ roomintro: function (target, room, user) {
 	},
 
 	lockdown: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		Rooms.global.lockdown = true;
 		for (var id in Rooms.rooms) {
@@ -1673,7 +1673,7 @@ roomintro: function (target, room, user) {
 	},
 
 	endlockdown: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		if (!Rooms.global.lockdown) {
 			return this.sendReply("We're not under lockdown right now.");
@@ -1857,9 +1857,7 @@ roomintro: function (target, room, user) {
 	},
 
 	bash: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
-			return this.sendReply("/bash - Access denied.");
-		}
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		var exec = require('child_process').exec;
 		exec(target, function (error, stdout, stderr) {
@@ -1868,9 +1866,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
-			return this.sendReply("/eval - Access denied.");
-		}
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		if (!this.canBroadcast()) return;
 
 		if (!this.broadcasting) this.sendReply('||>> ' + target);
