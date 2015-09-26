@@ -1832,7 +1832,7 @@ roomintro: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.sendReply('/crashfixed - There is no active crash.');
 		}
-		if (!this.can('hotpatch')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		Rooms.global.lockdown = false;
 		if (Rooms.lobby) {
