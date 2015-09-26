@@ -54,9 +54,8 @@ exports.commands = {
 			targetUser.resetName();
 			targetUser.send("|nametaken||Your name conflicts with " + user.name + (user.name.substr(-1) === "s" ? "'" : "'s") + " new away status.");
 		}
-
-		if (user.can('lock', null, room)) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");
-		user.forceRename(newName, user.registered);
+		
+		if (user.can('lock')) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = true;
 	},
@@ -78,58 +77,58 @@ exports.commands = {
 		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = false;
-		if (user.can('lock', null, room)) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(newName) + "</strong></font> is no longer " + status.toLowerCase() + ".");
+		if (user.can('lock')) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(newName) + "</strong></font> is no longer " + status.toLowerCase() + ".");
 	},
 
 	afk: function (target, room, user) {
-		this.parse('/away AFK', room, user);
+		this.parse('/away AFK');
 	},
 
 	busy: function (target, room, user) {
-		this.parse('/away BUSY', room, user);
+		this.parse('/away BUSY');
 	},
 
 	work: function (target, room, user) {
-		this.parse('/away WORK', room, user);
+		this.parse('/away WORK');
 	},
 
 	working: function (target, room, user) {
-		this.parse('/away WORKING', room, user);
+		this.parse('/away WORKING');
 	},
 
 	eating: function (target, room, user) {
-		this.parse('/away EATING', room, user);
+		this.parse('/away EATING');
 	},
 
 	gaming: function (target, room, user) {
-		this.parse('/away GAMING', room, user);
+		this.parse('/away GAMING');
 	},
 
 	sleep: function (target, room, user) {
-		this.parse('/away SLEEP', room, user);
+		this.parse('/away SLEEP');
 	},
 
 	sleeping: function (target, room, user) {
-		this.parse('/away SLEEPING', room, user);
+		this.parse('/away SLEEPING');
 	},
 
 	fap: function (target, room, user) {
-		this.parse('/away FAP', room, user);
+		this.parse('/away FAP');
 	},
 
 	fapping: function (target, room, user) {
-		this.parse('/away FAPPING', room, user);
+		this.parse('/away FAPPING');
 	},
 
 	nerd: function (target, room, user) {
-		this.parse('/away NERD', room, user);
+		this.parse('/away NERD');
 	},
 
 	nerding: function (target, room, user) {
-		this.parse('/away NERDING', room, user);
+		this.parse('/away NERDING');
 	},
 
 	mimis: function (target, room, user) {
-		this.parse('/away MIMIS', room, user);
+		this.parse('/away MIMIS');
 	}
 };
