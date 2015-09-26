@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 exports.commands = {
 	meme:'memes',
 	memes: function(target, room, user) {
@@ -70,5 +72,10 @@ exports.commands = {
 			}
         	}
 		this.sendReplyBox(image);
+	},
+	crashlogs: function (target, room, user) {
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-100).join('\n');
+		user.send('|popup|' + crashes);
 	}
 };
