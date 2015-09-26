@@ -1381,7 +1381,7 @@ roomintro: function (target, room, user) {
 
 		for (var id in Rooms.rooms) {
 			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>' + target + '</b></div>');
-			Rooms.rooms[id].update();		
+			if (id !== 'global') Rooms.rooms[id].update();
 		}
 		this.logModCommand(user.name + " globally declared (chat level) " + target);
 	},
