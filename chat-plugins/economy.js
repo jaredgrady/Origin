@@ -473,6 +473,22 @@ exports.commands = {
 		var pot = Db('lottery').pot || 0;
 		this.sendReplyBox("The current jackpot is " + pot + currencyName(pot) + ".");
 	},
+	registershop: function (target, room, user) {
+    		if (!user.can('declare')) return this.sendReply('/registershop - Access Denied you silly goose!');
+    		if (!target) return this.sendReply('Please specify a room you silly goose!');
+    		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
+    		var targetRoom = Rooms(toId(target));
+    		targetRoom.add('|raw|<div class="broadcast-green"><b>'+user.name+' has just added a league shop to this room.</b></div>');
+	 		targetRoom.update();
+	 	if (!targetRoom.shop) {
+	 		targetRoom.shop = new Object();
+	 		targetRoom.shopList = new Array();
+			targetRoom.chatRoomData.shop = targetRoom.shop;
+			targetRoom.chatRoomData.shopList = targetRoom.shopList;
+		}
+		if (!targetRoom.hasShop) targetRoom.hasShop = targetRoom.chatRoomData.hasShop = true;
+			Rooms.global.writeChatRoomData();
+    },
 
 	bucks: 'economystats',
 	economystats: function (target, room, user) {
