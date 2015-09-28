@@ -475,3 +475,24 @@
 [2015-09-03T02:46:50.890Z] (staff) LOCK: [apexquilluminati] by Imp Fallen Blood: pm harrassment
 [2015-09-03T02:47:08.171Z] (staff) LOCK: [yaboimlgshrek] by Imp Fallen Blood
 [2015-09-03T02:59:52.856Z] (japanslair) UNLOCK: [apexquilluminati] by Void Neo
+[2015-09-27T00:59:06.237Z] (theelementalcaf) BAN: [gggu] by L Chevy 12
+[2015-09-27T01:16:23.651Z] (staff) BAN: [allegiantgryphon] by Void QueenHigh
+[2015-09-27T01:16:34.434Z] (staff) UNBAN: [allegiantgryphon] by Void QueenHigh
+[2015-09-27T01:16:44.088Z] (staff) UNLOCK: [allegiantgryphon] by Void QueenHigh
+[2015-09-27T01:45:01.517Z] (staff) BAN: [allegiantgryphon] by Irraquated: please visit nimbus.psim.us thx
+[2015-09-27T01:45:12.627Z] (staff) UNBAN: [allegiantgryphon] by Irraquated
+[2015-09-27T01:45:23.007Z] (staff) UNLOCK: [allegiantgryphon] by Irraquated
+[2015-09-27T09:57:17.223Z] (lobby) LOCK: [lotusaranacana] by Master Float: warned you
+[2015-09-27T10:01:31.596Z] (lobby) LOCK: [lotusarana] by Dream Eater Gengar: evading
+[2015-09-27T15:03:03.036Z] (staff) UNLOCK: [lt6zbush] by Imp Fallen Blood
+[2015-09-27T15:21:42.967Z] (theallianceleague) BAN: [chleg] by Thimo
+[2015-09-27T15:22:49.641Z] (staff) UNBAN: [chleg] by Dream Eater Gengar
+[2015-09-27T15:22:56.022Z] (staff) UNLOCK: [chleg] by Master Float
+[2015-09-27T17:45:59.381Z] (staff) LOCK: [itatsumi] by Erica*07
+[2015-09-27T20:22:25.668Z] (staff) LOCK: [unlockedargus] by Carnie Chime
+[2015-09-27T20:24:08.977Z] (staff) UNLOCK: [aeriox] by Carnie Chime
+[2015-09-27T21:03:58.635Z] (staff) BAN: [ritafarrita] by Velveteen Rabbit: you're bad http://i.imgur.com/jfGWE3t.png
+[2015-09-27T21:33:21.784Z] (japanslair) LOCK: [bandi] by panpawn: @bandi: i will @bandi: ddos eos
+[2015-09-27T21:34:15.606Z] (japanslair) UNLOCK: [bandi] by panpawn
+[2015-09-27T23:04:53.015Z] (staff) LOCK: [mystbronze] by L Chevy 12: shadow ban evasion
+[2015-09-28T02:14:21.345Z] (lobby) LOCK: [xjownage] by L Chevy 12 - ⒶⓌⒶⓎ

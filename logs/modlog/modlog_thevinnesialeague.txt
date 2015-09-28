@@ -76,3 +76,4 @@
 [2015-09-01T05:42:25.356Z] (thevinnesialeague) (Vin Pyre notes: #BODIED)
 [2015-09-01T06:03:15.055Z] (thevinnesialeague) (Vin Pyre notes: #BODIED)
 [2015-09-03T04:59:48.394Z] (thevinnesialeague) Searching 4 Booty was kicked from the room by Vin Pyre.
+[2015-09-26T21:24:11.258Z] (thevinnesialeague) (Vin E4 Sarkany changed the roomdesc to: "Bug, Electric, Steel, Water, and all GT spots are open. Come test today!".)

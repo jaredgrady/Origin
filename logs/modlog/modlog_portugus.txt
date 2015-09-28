@@ -3119,3 +3119,18 @@
 [2015-09-02T23:42:44.144Z] (portugus) (deus super sayajin created a tournament in ou format.)
 [2015-09-02T23:59:06.439Z] (portugus) (deus super sayajin created a tournament in ou format.)
 [2015-09-03T00:18:43.826Z] (portugus) (deus super sayajin was disqualified from the tournament by deus super sayajin)
+[2015-09-27T02:50:40.781Z] (portugus) bulbasaur mega was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-09-27T10:06:42.403Z] (portugus) deus super sayajin was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-09-27T13:49:59.093Z] (portugus) (Safety Shark notes: nightoflife was added to the blacklist by #Chesnaught-mega.,NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT)
+[2015-09-27T13:55:14.115Z] (portugus) (Safety Shark notes: ziull99 was added to the blacklist by #Chesnaught-mega.,NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT)
+[2015-09-27T14:23:20.162Z] (portugus) (respeitodovasco was demoted to Room Voice by TTgames14.)
+[2015-09-27T14:23:42.433Z] (portugus) (Respeito do Vasco was demoted to Room regular user by TTgames14.)
+[2015-09-27T14:24:01.365Z] (portugus) Zaranha was promoted to Room Driver by TTgames14.
+[2015-09-27T20:26:33.980Z] (portugus) jordean was promoted to Room Leader by Grafite.
+[2015-09-27T20:27:01.735Z] (portugus) (mortal jordean was demoted to Room regular user by Grafite.)
+[2015-09-28T02:57:48.341Z] (portugus) Cristiano ronalldo was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-09-28T02:58:09.837Z] (portugus) Cristiano ronalldo was banned from room portugus by jordean.
+[2015-09-28T02:58:09.839Z] (portugus) (Cristiano ronalldo's roombanned alts: Night_Of_Light)
+[2015-09-28T03:02:06.646Z] (portugus) (Safety Shark notes: nightoflight was added to the blacklist by #Grafite.,NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT)
+[2015-09-28T03:02:07.247Z] (portugus) Night_Of_Light was banned from room portugus by Safety Shark. (Usuário na lista negra)
+[2015-09-28T03:02:07.249Z] (portugus) (Night_Of_Light's roombanned alts: Night_Of_Souls)

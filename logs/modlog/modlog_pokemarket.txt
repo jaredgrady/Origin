@@ -88,3 +88,10 @@
 [2015-08-25T17:32:14.221Z] (pokemarket) (niisama changed the roomintro.)
 [2015-08-26T09:58:45.009Z] (pokemarket) (Nii sama changed the roomdesc to: "We sell pokemon for ORAS!".)
 [2015-08-29T12:57:19.624Z] (pokemarket) (singlex was demoted to Room regular user by Alpha Ninja.)
+[2015-09-27T08:49:44.063Z] (pokemarket) (niisama changed the roomintro.)
+[2015-09-27T08:59:32.210Z] (pokemarket) Big Brother BotT declared Last 5 purchases: <br> 1. 	theonlytruehaxrs has bought 'Battle Ready Team' from the shop! on 2015:09:23:01:25:00<br>2. 	Dark Byzantium has bought 'Shiny Battle Ready pokemon' from the shop! on 2015:09:22:01:32:43<br>3. 	Crystal Bronze has bought 'Battle Ready Team' from the shop! on 2015:09:20:21:54:29<br>4. 	Nii sama has bought 'Shiny Battle Ready pokemon' from the shop! on 2015:09:18:18:37:05<br>5. 	Nii sama has bought 'Shiny Battle Ready pokemon' from the shop! on 2015:09:18:18:17:58<br>
+[2015-09-27T09:05:00.451Z] (pokemarket) (niisama changed the roomintro.)
+[2015-09-27T09:05:04.702Z] (pokemarket) Big Brother BotT declared niisama has bought 'Battle Item' from the shop! (added to shop history)
+[2015-09-27T17:47:15.895Z] (pokemarket) (Alpha Ninja changed the roomintro.)
+[2015-09-27T17:47:49.117Z] (pokemarket) (Alpha Ninja changed the roomintro.)
+[2015-09-27T21:37:08.611Z] (pokemarket) Big Brother BotT declared Last 5 purchases: <br> 1. 	niisama has bought 'Battle Item' from the shop! on 2015:09:27:09:05:03<br>2. 	theonlytruehaxrs has bought 'Battle Ready Team' from the shop! on 2015:09:23:01:25:00<br>3. 	Dark Byzantium has bought 'Shiny Battle Ready pokemon' from the shop! on 2015:09:22:01:32:43<br>4. 	Crystal Bronze has bought 'Battle Ready Team' from the shop! on 2015:09:20:21:54:29<br>5. 	Nii sama has bought 'Shiny Battle Ready pokemon' from the shop! on 2015:09:18:18:37:05<br>

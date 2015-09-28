@@ -359,3 +359,119 @@
 [2015-08-26T20:29:57.709Z] (theaccord) (DJ Harley was demoted to Room regular user by Infertei7.)
 [2015-08-26T20:30:07.203Z] (theaccord) DJ Harley was promoted to Room Voice by Infertei7.
 [2015-08-26T23:35:09.775Z] (theaccord) (Infertei7 changed the roomintro.)
+[2015-09-26T22:36:03.001Z] (theaccord) yunG Sensory - ⓐⓨⓨ was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T06:42:20.215Z] (theaccord) Safety Shark was kicked from the room by Entro.
+[2015-09-27T12:09:47.318Z] (theaccord) Mew of Mews was kicked from the room by Chaos Abra.
+[2015-09-27T18:30:44.033Z] (theaccord) Guildmaster Wiggly was appointed Room Owner by Infertei7.
+[2015-09-27T18:30:47.390Z] (theaccord) Superdois was appointed Room Owner by Infertei7.
+[2015-09-27T18:30:49.787Z] (theaccord) Byobell was appointed Room Owner by Infertei7.
+[2015-09-27T18:30:52.758Z] (theaccord) Chaos Abra was appointed Room Owner by Infertei7.
+[2015-09-27T18:30:56.008Z] (theaccord) Joefriends was appointed Room Owner by Infertei7.
+[2015-09-27T18:33:24.148Z] (theaccord) yunG Sensory was promoted to Room Leader by Chaos Abra.
+[2015-09-27T18:34:09.513Z] (theaccord) Safety Shark was promoted to Room Leader by Chaos Abra.
+[2015-09-27T18:34:15.281Z] (theaccord) HmCmpBeasto was promoted to Room Leader by TrunksHalfSSJ.
+[2015-09-27T18:35:02.668Z] (theaccord) Gaara of the Funk2 was appointed Room Owner by Infertei7.
+[2015-09-27T18:35:53.751Z] (theaccord) l0rdmudkip was promoted to Room Leader by TrunksHalfSSJ.
+[2015-09-27T18:37:37.028Z] (theaccord) PrimalZard was promoted to Room Leader by Chaos Abra.
+[2015-09-27T18:39:59.324Z] (theaccord) Alliance - Contort was promoted to Room Leader by Chaos Abra.
+[2015-09-27T18:40:07.892Z] (theaccord) pk roam was banned from room theaccord by Alliance - Contort.
+[2015-09-27T18:40:45.114Z] (theaccord) pkroam was unbanned from room theaccord by Alliance - Contort.
+[2015-09-27T18:41:01.769Z] (theaccord) Alliance - Contort set modchat to #
+[2015-09-27T18:41:03.412Z] (theaccord) (yunG Sensory changed the roomdesc to: "Roast yunG Sensory".)
+[2015-09-27T18:41:09.595Z] (theaccord) Alliance - Contort set modchat to false
+[2015-09-27T18:41:11.148Z] (theaccord) yunG Sensory was appointed Room Owner by Infertei7.
+[2015-09-27T18:41:15.298Z] (theaccord) Alliance - Contort was appointed Room Owner by Infertei7.
+[2015-09-27T18:41:18.334Z] (theaccord) HmCmpBeasto was appointed Room Owner by Infertei7.
+[2015-09-27T18:41:21.631Z] (theaccord) PrimalZard was appointed Room Owner by Infertei7.
+[2015-09-27T18:41:25.135Z] (theaccord) hypershaymin was promoted to Room Leader by TrunksHalfSSJ.
+[2015-09-27T18:41:26.987Z] (theaccord) Safety Shark was appointed Room Owner by Infertei7.
+[2015-09-27T18:41:28.083Z] (theaccord) hypershaymin was appointed Room Owner by Infertei7.
+[2015-09-27T18:42:00.356Z] (theaccord) (yunG Sensory changed the roomdesc to: "FREE RO :]".)
+[2015-09-27T18:42:07.231Z] (theaccord) (Guildmaster Wiggly changed the roomdesc to: ":D".)
+[2015-09-27T18:42:07.549Z] (theaccord) (Joefriends changed the roomdesc to: "LOL".)
+[2015-09-27T18:42:13.424Z] (theaccord) (Infertei7 changed the roomdesc to: "Giofbfdb".)
+[2015-09-27T18:42:17.655Z] (theaccord) (Alliance - Contort changed the roomdesc to: "DEEZ NUTS".)
+[2015-09-27T18:42:23.529Z] (theaccord) (Gaara of the Funk2 changed the roomdesc to: "Disbanding ".)
+[2015-09-27T18:42:36.991Z] (theaccord) (Joefriends changed the roomdesc to: "PARTY FTW, Infertei7 why ;-;".)
+[2015-09-27T18:42:53.532Z] (theaccord) (Guildmaster Wiggly changed the roomintro.)
+[2015-09-27T18:43:21.765Z] (theaccord) (hypershaymin changed the roomdesc to: "join for yungs roast session!".)
+[2015-09-27T18:44:07.798Z] (theaccord) Superdois was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:44:25.183Z] (theaccord) yunG Sensory was banned from room theaccord by Alliance - Contort.
+[2015-09-27T18:44:38.272Z] (theaccord) Infertei7 was appointed Room Owner by Infertei7.
+[2015-09-27T18:44:46.337Z] (theaccord) yungsensory was unbanned from room theaccord by Infertei7.
+[2015-09-27T18:45:16.430Z] (theaccord) Safety Shark was promoted to Room Moderator by Infertei7.
+[2015-09-27T18:45:24.750Z] (theaccord) (Safety Shark was demoted to Room Voice by Infertei7.)
+[2015-09-27T18:45:35.532Z] (theaccord) Safety Shark was appointed Room Owner by Infertei7.
+[2015-09-27T18:45:57.120Z] (theaccord) Safety Shark was promoted to Room Moderator by Infertei7.
+[2015-09-27T18:46:39.131Z] (theaccord) Chaos Abra was appointed Room Owner by Infertei7.
+[2015-09-27T18:48:02.567Z] (theaccord) Chaos Abra declared DOIS STFU
+[2015-09-27T18:48:52.806Z] (theaccord) Chaos Abra declared LISTEN MAGGOTS I'M IN CHARGE NOW AND I WON'T TAKE SHIT FROM ANYONE
+[2015-09-27T18:49:13.370Z] (theaccord) Chaos Abra declared I
+[2015-09-27T18:49:54.091Z] (theaccord) Guildmaster Wiggly was appointed Room Owner by Infertei7.
+[2015-09-27T18:50:54.640Z] (theaccord) Joefriends was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:51:13.043Z] (theaccord) Guildmaster Wiggly declared Nobody cares Shaymin
+[2015-09-27T18:51:14.285Z] (theaccord) hypershaymin was warned by Infertei7. (carnie isnt worthy of our cancer)
+[2015-09-27T18:51:26.069Z] (theaccord) hypershaymin was warned by Chaos Abra. (no)
+[2015-09-27T18:51:48.352Z] (theaccord) hypershaymin was muted by Infertei7 for 1 hour. (you can try)
+[2015-09-27T18:51:51.382Z] (theaccord) hypershaymin was kicked from the room by Chaos Abra.
+[2015-09-27T18:52:22.568Z] (theaccord) Chaos Abra declared RIP
+[2015-09-27T18:52:28.706Z] (theaccord) Guildmaster Wiggly declared RIP
+[2015-09-27T18:52:36.150Z] (theaccord) Chaos Abra declared red RIP
+[2015-09-27T18:54:07.180Z] (theaccord) TrunksHalfSSJ was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:55:50.966Z] (theaccord) Chaos Abra declared JOEFRIENDS SUGGESTS PORN
+[2015-09-27T18:56:48.286Z] (theaccord) Guildmaster Wiggly declared Join the League League. Its pretty much the best league since Alliance!
+[2015-09-27T18:59:09.778Z] (theaccord) hypershaymin was unmuted by Infertei7.
+[2015-09-27T19:00:10.552Z] (theaccord) hypershaymin was banned from room theaccord by Infertei7.
+[2015-09-27T19:00:53.329Z] (theaccord) hypershaymin was unbanned from room theaccord by Chaos Abra.
+[2015-09-27T19:01:02.791Z] (theaccord) hypershaymin was banned from room theaccord by Chaos Abra. (gg scrub)
+[2015-09-27T19:07:44.747Z] (theaccord) Rain ☆ Devin was promoted to Room Voice by Chaos Abra.
+[2015-09-27T19:09:04.567Z] (theaccord) Chaos Abra declared Wiggly Your up
+[2015-09-27T19:09:23.446Z] (theaccord) Chaos Abra declared Devin VS Wiggly
+[2015-09-27T19:11:57.250Z] (theaccord) TrunksHalfSSJ was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T19:12:05.584Z] (theaccord) Chaos Abra declared TEI VS RAIN DEVIN
+[2015-09-27T19:15:31.302Z] (theaccord) Chaos Abra declared I'm going last dinner ~Abra
+[2015-09-27T19:18:20.822Z] (theaccord) Guildmaster Wiggly declared 1-0 to rain league
+[2015-09-27T19:18:27.305Z] (theaccord) Guildmaster Wiggly declared PS Tei sucks
+[2015-09-27T19:20:00.549Z] (theaccord) TrunksHalfSSJ was appointed Room Owner by Infertei7.
+[2015-09-27T19:20:04.789Z] (theaccord) Superdois was promoted to Room Moderator by Infertei7.
+[2015-09-27T19:20:08.228Z] (theaccord) Byobell was promoted to Room Driver by Infertei7.
+[2015-09-27T19:20:23.999Z] (theaccord) Joefriends was promoted to Room Driver by Infertei7.
+[2015-09-27T19:20:29.675Z] (theaccord) Gaara of the Funk2 was promoted to Room Driver by Infertei7.
+[2015-09-27T19:26:20.493Z] (theaccord) Guildmaster Wiggly declared 2-0 Pain league
+[2015-09-27T19:30:49.580Z] (theaccord) (Safety Shark was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:30:51.650Z] (theaccord) (Superdois was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:30:53.275Z] (theaccord) (Byobell was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:30:57.453Z] (theaccord) (Gaara of the Funk2 was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:31:00.024Z] (theaccord) (Joefriends was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:31:59.946Z] (theaccord) Guildmaster Wiggly was appointed Room Owner by Infertei7.
+[2015-09-27T19:32:51.975Z] (theaccord) TrunksHalfSSJ was warned by Guildmaster Wiggly. (How about you?)
+[2015-09-27T19:34:29.421Z] (theaccord) Infertei7 set modchat to +
+[2015-09-27T19:36:00.286Z] (theaccord) TrunksHalfSSJ was appointed Room Owner by Infertei7.
+[2015-09-27T19:38:24.165Z] (theaccord) Gaara of the Funk2 was appointed Room Owner by Infertei7.
+[2015-09-27T19:38:27.201Z] (theaccord) Chaos Abra was promoted to Room Driver by Infertei7.
+[2015-09-27T19:38:30.613Z] (theaccord) Joefriends was promoted to Room Driver by Infertei7.
+[2015-09-27T19:38:33.841Z] (theaccord) Entro was promoted to Room Leader by Infertei7.
+[2015-09-27T19:38:39.034Z] (theaccord) Byobell was promoted to Room Driver by Infertei7.
+[2015-09-27T19:39:00.571Z] (theaccord) Scyzirtron was promoted to Room Driver by Infertei7.
+[2015-09-27T19:39:49.288Z] (theaccord) Superdois was promoted to Room Driver by Infertei7.
+[2015-09-27T19:39:56.092Z] (theaccord) Infertei7 set modchat to false
+[2015-09-27T19:40:12.499Z] (theaccord) (Scyzirtron was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:40:37.722Z] (theaccord) Infertei7 was muted by Chaos Abra for 7 minutes.
+[2015-09-27T19:40:49.224Z] (theaccord) Infertei7 was appointed Room Owner by Infertei7.
+[2015-09-27T19:40:52.671Z] (theaccord) Guildmaster Wiggly was appointed to Room Founder by L Chevy 12.
+[2015-09-27T19:40:57.677Z] (theaccord) Chaos Abra was kicked from the room by Infertei7.
+[2015-09-27T19:41:46.177Z] (theaccord) need a unmute -p was unmuted by TrunksHalfSSJ.
+[2015-09-27T19:42:04.863Z] (theaccord) HmCmpBeasto was promoted to Room Voice by Infertei7.
+[2015-09-27T19:43:16.460Z] (theaccord) (Entro was demoted to Room regular user by Infertei7.)
+[2015-09-27T19:43:22.773Z] (theaccord) (Guildmaster Wiggly changed the roomintro.)
+[2015-09-27T19:43:24.629Z] (theaccord) Entro was promoted to Room Voice by Infertei7.
+[2015-09-27T19:43:51.393Z] (theaccord) Entro was kicked from the room by TrunksHalfSSJ.
+[2015-09-27T19:50:05.033Z] (theaccord) (l0rdmudkip was demoted to Room Driver by Infertei7.)
+[2015-09-27T19:50:37.770Z] (theaccord) Dragon Gallade was promoted to Room Driver by Infertei7.
+[2015-09-27T19:51:53.184Z] (theaccord) Byobell was promoted to Room Moderator by Infertei7.
+[2015-09-27T19:51:55.231Z] (theaccord) Superdois was promoted to Room Moderator by Infertei7.
+[2015-09-27T19:51:59.187Z] (theaccord) Wеvrm (Latios) was appointed Room Owner by Guildmaster Wiggly.
+[2015-09-27T19:57:34.124Z] (theaccord) Infertei7 was promoted to Room Voice by Guildmaster Wiggly.
+[2015-09-27T22:46:14.135Z] (theaccord) SL Daisy123 was promoted to Room Voice by TrunksHalfSSJ.
+[2015-09-28T00:32:43.936Z] (theaccord) StarWelf declared <img src=http://i.imgur.com/g6Loe9N.png> Admins r meanies confirm 
+[2015-09-28T01:52:26.995Z] (theaccord) Wеvrm (Latios) declared FIGHT ME IN CUSTOM

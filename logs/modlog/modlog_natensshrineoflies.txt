@@ -189,3 +189,8 @@
 [2015-08-26T09:17:11.527Z] (natensshrineoflies) (Resourceful was demoted to regular user by Master Float.)
 [2015-08-26T09:21:40.143Z] (natensshrineoflies) Master Float made this room secret.
 [2015-08-26T09:23:51.733Z] (natensshrineoflies) Resourceful was promoted to Administrator by Master Float.
+[2015-09-27T06:30:42.668Z] (natensshrineoflies) (Master Float changed the roomintro.)
+[2015-09-27T06:33:01.745Z] (natensshrineoflies) (Master Float changed the roomintro.)
+[2015-09-27T06:33:15.563Z] (natensshrineoflies) (Master Float changed the roomintro.)
+[2015-09-27T06:33:29.360Z] (natensshrineoflies) (Master Float changed the roomintro.)
+[2015-09-27T06:34:19.410Z] (natensshrineoflies) (Master Float changed the roomintro.)

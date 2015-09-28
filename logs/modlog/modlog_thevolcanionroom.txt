@@ -240,3 +240,4 @@
 [2015-09-01T20:26:25.813Z] (thevolcanionroom) Twizz was banned from room thevolcanionroom by EMG GL Volco.
 [2015-09-02T19:27:57.565Z] (thevolcanionroom) UnownMaN was banned from room thevolcanionroom by EMG GL Volco. (spam)
 [2015-09-02T19:33:45.996Z] (thevolcanionroom) Emg GL Naru - ⓓⓔⓓ was muted by EMG GL Volco for 7 minutes. (no fucking shrking m8)
+[2015-09-27T14:12:52.874Z] (thevolcanionroom) Twizz was muted by Safety Shark for 7 minutes. (Automated response: flooding)

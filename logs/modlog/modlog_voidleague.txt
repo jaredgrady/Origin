@@ -1258,3 +1258,43 @@
 [2015-09-03T04:12:55.663Z] (voidleague) (Void Neo changed the roomdesc to: "Primal Weedles: U guys r gonna cteam wow".)
 [2015-09-03T05:46:55.574Z] (voidleague) Arjunb was warned by Safety Shark. (Automated response: stretching)
 [2015-09-03T12:08:51.215Z] (voidleague) Arjunb was warned by Safety Shark. (Automated response: stretching)
+[2015-09-26T23:32:21.232Z] (voidleague) yunG Sensory - ⓐⓨⓨ was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T23:32:49.079Z] (voidleague) yunG Sensory - ⓐⓨⓨ was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-26T23:33:11.904Z] (voidleague) yunG Sensory - ⓐⓨⓨ was unmuted by Void Gorve.
+[2015-09-26T23:46:24.640Z] (voidleague) (Voidchrono - ⓖⓞⓓ created a tournament in monotype format.)
+[2015-09-27T00:00:15.262Z] (voidleague) (Royal Luded was demoted to Room regular user by Voidchrono - ⓖⓞⓓ.)
+[2015-09-27T00:01:41.784Z] (voidleague) Royal Luded was kicked from the room by Neo Soul.
+[2015-09-27T00:03:39.302Z] (voidleague) Royal Luded was kicked from the room by Void Peng.
+[2015-09-27T00:31:14.463Z] (voidleague) (Void Gorve changed the roomdesc to: "★Void Trent: i always knew i was shit".)
+[2015-09-27T00:31:58.020Z] (voidleague) (Void Gorve - ⑥ⓖⓞⓓ was disqualified from the tournament by Sam Crowe)
+[2015-09-27T00:37:00.997Z] (voidleague) Neo Soul was kicked from the room by Void Gorve - ⑥ⓖⓞⓓ.
+[2015-09-27T00:49:16.526Z] (voidleague) (Allegiant Gryphon was disqualified from the tournament by Void Trent)
+[2015-09-27T01:16:39.114Z] (voidleague) Void Peng was muted by Void Trent for 7 minutes.
+[2015-09-27T01:16:51.481Z] (voidleague) Void Peng was unmuted by Void Trent.
+[2015-09-27T01:25:06.723Z] (voidleague) Void Peng was muted by Void KGBeast for 7 minutes.
+[2015-09-27T01:25:08.545Z] (voidleague) Void Peng was unmuted by Void KGBeast.
+[2015-09-27T02:45:34.767Z] (voidleague) iKray was promoted to Room Voice by Void KGBeast.
+[2015-09-27T05:04:08.947Z] (voidleague) Void Ronman5 was promoted to Room Voice by Sam Crowe.
+[2015-09-27T18:05:41.485Z] (voidleague) (Void Cryptis changed the roomintro.)
+[2015-09-27T18:34:43.218Z] (voidleague) (Void Chrono created a tournament in nu format.)
+[2015-09-27T18:47:36.224Z] (voidleague) (Void Cryptis was disqualified from the tournament by Void Cryptis)
+[2015-09-27T19:01:39.015Z] (voidleague) (Void Trent changed the roomintro.)
+[2015-09-27T19:07:17.218Z] (voidleague) (Void QueenHigh was disqualified from the tournament by Void QueenHigh)
+[2015-09-27T20:41:39.650Z] (voidleague) Luds - Ⓙⓐⓟⓐⓝ was promoted to Room Voice by Void Chrono.
+[2015-09-27T20:51:35.439Z] (voidleague) (Luds was demoted to Room regular user by Neo Soul.)
+[2015-09-27T21:24:32.711Z] (voidleague) Neo Soul globally declared Its all about those monothreats in the <button name=send value="/join Monotype">Monotype</button> room. the second monothreat of the day is Ice. 30/15 prize
+[2015-09-27T21:25:20.696Z] (voidleague) Void Cryptis declared PM Cryptis for CGTNathan's ghost!11!
+[2015-09-27T21:49:47.145Z] (voidleague) yunG Sensory was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T21:50:52.737Z] (voidleague) Void KGBeast was kicked from the room by Void Gorve - ⑥ⓖⓞⓓ.
+[2015-09-27T23:18:28.855Z] (voidleague) Phoebella was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T23:22:08.463Z] (voidleague) Phoebella was banned from room voidleague by Void Daemon. (racist fuck)
+[2015-09-27T23:54:14.380Z] (voidleague) paralyzation was muted by Void Chrono for 7 minutes. (no)
+[2015-09-28T00:20:56.068Z] (voidleague) Void Julius was kicked from the room by Void Lonely.
+[2015-09-28T00:47:32.986Z] (voidleague) Luds was promoted to Room Voice by Void Gorve - ⑥ⓖⓞⓓ.
+[2015-09-28T00:50:16.578Z] (voidleague) (Luds was demoted to Room regular user by Neo Soul.)
+[2015-09-28T00:50:51.421Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: stretching)
+[2015-09-28T01:34:11.319Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: stretching)
+[2015-09-28T01:55:05.597Z] (voidleague) cyrull was warned by Safety Shark. (Automated response: stretching)
+[2015-09-28T02:00:53.212Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: stretching)
+[2015-09-28T02:02:08.279Z] (voidleague) Alliance - Ralker was warned by Safety Shark. (Automated response: stretching)
+[2015-09-28T04:20:41.397Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: caps)

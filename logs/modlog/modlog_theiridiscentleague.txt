@@ -226,3 +226,10 @@
 [2015-09-03T11:35:58.682Z] (theiridiscentleague) (Dragotic changed the roomintro.)
 [2015-09-03T13:01:11.070Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
 [2015-09-03T13:03:58.317Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-09-27T08:57:00.683Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-09-27T08:58:16.110Z] (theiridiscentleague) (Dragotic changed the roomintro.)
+[2015-09-27T09:39:45.353Z] (theiridiscentleague) Siiilver was promoted to Room Moderator by Dragotic.
+[2015-09-27T09:40:10.065Z] (theiridiscentleague) Siiilver was promoted to Room Leader by ashyudhajit.
+[2015-09-27T09:42:00.303Z] (theiridiscentleague) (Siiilver was demoted to Room Operator by ashyudhajit.)
+[2015-09-27T09:42:41.079Z] (theiridiscentleague) Siiilver was promoted to Room Leader by Dragotic.
+[2015-09-27T16:40:33.264Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)

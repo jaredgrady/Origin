@@ -2248,3 +2248,60 @@
 [2015-09-03T10:58:09.390Z] (femalehq) Imp Zard was appointed Room Owner by FHQ Nyxia.
 [2015-09-03T10:58:57.106Z] (femalehq) Imp Zard was promoted to Room Voice by FHQ Nyxia.
 [2015-09-03T10:59:31.826Z] (femalehq) Chaos Abra was promoted to Room Voice by FHQ Nyxia.
+[2015-09-26T21:52:22.632Z] (femalehq) Void Icarus was promoted to Room Leader by 00Nyxa.
+[2015-09-26T21:52:23.934Z] (femalehq) Void Icarus declared <video src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3B3B3B ; background-color: #00000a" target="_blank" /></center>
+[2015-09-26T21:52:34.853Z] (femalehq) (Void Icarus was demoted to Room Driver by 00Nyxa.)
+[2015-09-26T22:03:21.766Z] (femalehq) yunG Sensory - ⓐⓨⓨ was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-26T23:15:41.978Z] (femalehq) Void Icarus was warned by Iris(Eevee). (wrongplacewrongtime)
+[2015-09-26T23:23:12.074Z] (femalehq) Steelchar was warned by Sunny Charizard.
+[2015-09-27T00:09:18.464Z] (femalehq) The Pyrope was promoted to Room Voice by 00Nyxa.
+[2015-09-27T00:09:46.164Z] (femalehq) Steelchar was promoted to Room Leader by 00Nyxa.
+[2015-09-27T00:09:55.942Z] (femalehq) yunG Sensory - ⓐⓨⓨ was promoted to Room Driver by 00Nyxa.
+[2015-09-27T00:10:18.850Z] (femalehq) (rebel bt was demoted to Room regular user by 00Nyxa.)
+[2015-09-27T00:10:25.525Z] (femalehq) BT Cant Get Burns was promoted to Room Operator by 00Nyxa.
+[2015-09-27T00:10:37.784Z] (femalehq) The Pyrope was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-27T00:10:46.291Z] (femalehq) (The Pyrope was demoted to Room regular user by 00Nyxa.)
+[2015-09-27T01:14:56.125Z] (femalehq) Rain ☆ GuardianLux was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-27T01:25:35.559Z] (femalehq) LightOfAKnowing was warned by Sunny Charizard. (Automated response: stretching)
+[2015-09-27T01:55:46.657Z] (femalehq) Safety Shark was banned from room femalehq by Rain☆Pikeldeo. (gtfo)
+[2015-09-27T01:57:27.895Z] (femalehq) safetyshark was unbanned from room femalehq by 00Shadow.
+[2015-09-27T02:16:45.800Z] (femalehq) (Steelchar notes: its a joke)
+[2015-09-27T02:32:59.087Z] (femalehq) Champion Darkrai was kicked from the room by 00Shadow.
+[2015-09-27T02:34:10.666Z] (femalehq) Champion Darkrai was kicked from the room by 00Shadow.
+[2015-09-27T02:34:49.439Z] (femalehq) ashbloodthief was kicked from the room by 00Shadow.
+[2015-09-27T02:36:08.017Z] (femalehq) ashbloodthief was warned by 00Nyxa.
+[2015-09-27T02:54:37.377Z] (femalehq) Rain sinatra - ⓞⓣⓢ was warned by Sunny Charizard. (Automated response: stretching)
+[2015-09-27T02:59:43.733Z] (femalehq) hypershaymin was muted by Iris(Eevee) for 1 hour.
+[2015-09-27T03:22:42.106Z] (femalehq) Rain☆Pikeldeo declared <b>Emoticons are enabled!</b><br>Emoticons will work now.
+[2015-09-27T03:59:37.747Z] (femalehq) Gym Leader Hyper was promoted to Room Operator by Best'd.
+[2015-09-27T04:10:43.169Z] (femalehq) (hypershaymin was demoted to Room regular user by 00Nyxa.)
+[2015-09-27T04:15:15.307Z] (femalehq) hypershaymin was promoted to Room Operator by 00Nyxa.
+[2015-09-27T04:16:07.797Z] (femalehq) (hypershaymin was demoted to Room regular user by 00Nyxa.)
+[2015-09-27T04:55:33.196Z] (femalehq) Rain ☆ GuardianLux was warned by Sunny Charizard. (Automated response: stretching)
+[2015-09-27T05:16:28.622Z] (femalehq) ashbloodthief was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-27T05:16:45.518Z] (femalehq) ashbloodthief was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-09-27T15:27:07.644Z] (femalehq) SteelAnti was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-27T15:28:11.201Z] (femalehq) SteelAnti was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-09-27T15:28:46.084Z] (femalehq) S-Matrix was warned by 00Nyxa.
+[2015-09-27T15:35:47.771Z] (femalehq) SteelAnti was muted by 00Nyxa for 7 minutes.
+[2015-09-27T15:36:26.872Z] (femalehq) Void Quilluminati was warned by 00Shadow. (quit it)
+[2015-09-27T15:40:44.073Z] (femalehq) Void Quilluminati was kicked from the room by 00Nyxa.
+[2015-09-27T17:12:35.383Z] (femalehq) hypershaymin was warned by Iris(Eevee). (getting ready for something else)
+[2015-09-27T17:15:22.588Z] (femalehq) (gymleaderhyper was demoted to Room regular user by 00Shadow - ⓞⓢⓤ.)
+[2015-09-27T17:15:50.306Z] (femalehq) hypershaymin was promoted to Room Operator by 00Shadow - ⓞⓢⓤ.
+[2015-09-27T17:20:29.382Z] (femalehq) Iris(Eevee) declared Nubs
+[2015-09-27T17:26:15.739Z] (femalehq) PrimalZard was muted by Sunny Charizard for 7 minutes. (Automated response: flooding)
+[2015-09-27T17:27:21.040Z] (femalehq) PrimalZard was warned by Rain ☆ Pats. (stop flooding)
+[2015-09-27T17:27:25.293Z] (femalehq) PrimalZard was unmuted by Rain ☆ Pats.
+[2015-09-27T17:32:05.429Z] (femalehq) Rain ☆ Pats was muted by SteelChar for 7 minutes.
+[2015-09-27T17:33:30.978Z] (femalehq) Anything Goes was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-09-27T17:37:10.005Z] (femalehq) Rain ☆ Pats was unmuted by SteelChar.
+[2015-09-27T17:39:33.522Z] (femalehq) The Pyrope was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-09-27T17:40:12.632Z] (femalehq) The Pyrope was unmuted by 00Shadow - ⓞⓢⓤ.
+[2015-09-27T23:41:54.109Z] (femalehq) hypershaymin was warned by Sunny Charizard. (Automated response: stretching)
+[2015-09-27T23:42:02.788Z] (femalehq) hypershaymin was muted by SteelChar - ⓒⓞⓛⓓ for 1 hour.
+[2015-09-27T23:42:17.148Z] (femalehq) hypershaymin was unmuted by Best'd.
+[2015-09-27T23:48:26.831Z] (femalehq) Myst Light was warned by Sunny Charizard. (Automated response: caps)
+[2015-09-28T00:21:23.590Z] (femalehq) Tyler's Bot was warned by Sunny Charizard. (Automated response: stretching)
+[2015-09-28T00:21:30.157Z] (femalehq) Tyler's Bot was kicked from the room by Best'd.
+[2015-09-28T00:22:36.208Z] (femalehq) (Tyler's Bot would be muted by hypershaymin but was already offline.)

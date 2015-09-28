@@ -30,3 +30,6 @@
 [2015-08-22T19:47:33.252Z] (pinkpurple) (The tournament auto start timeout was set to 3 by Dream Eater Gengar)
 [2015-08-22T19:56:24.778Z] (pinkpurple) (The tournament auto disqualify timeout was set to 7 by L Chevy 12)
 [2015-08-22T20:02:33.371Z] (pinkpurple) (Emg_DemZii was disqualified from the tournament by L Chevy 12)
+[2015-09-27T20:16:51.417Z] (pinkpurple) Carnie Chime was appointed to Room Founder by Neo Soul.
+[2015-09-27T20:41:09.609Z] (pinkpurple) L Chevy 12 was appointed to Room Founder by L Chevy 12.
+[2015-09-27T20:41:38.338Z] (pinkpurple) Carnie Chime was appointed to Room Founder by L Chevy 12.

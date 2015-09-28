@@ -171,3 +171,6 @@
 [2015-09-02T23:21:36.966Z] (shadowbanroom) Imp Fallen Blood was promoted to Room Moderator by Austin.
 [2015-09-02T23:21:46.979Z] (shadowbanroom) (vanitas was demoted to Room regular user by Austin.)
 [2015-09-02T23:24:38.426Z] (shadowbanroom) SL Cactus was locked from talking by L Chevy 12 - ⒶⓌⒶⓎ. (Advertising)
+[2015-09-27T21:12:49.163Z] (shadowbanroom) (Neo Soul has unshadow banned: allianceanti, saceanti, steelanti)
+[2015-09-27T21:15:32.745Z] (shadowbanroom) (Neo Soul has unshadow banned: antiexe)
+[2015-09-28T02:28:23.654Z] (shadowbanroom) (L Chevy 12 has shadow banned: enable, tyralabanks)

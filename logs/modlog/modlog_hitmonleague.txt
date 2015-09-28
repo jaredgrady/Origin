@@ -142,3 +142,56 @@
 [2015-09-03T02:06:40.214Z] (hitmonleague) PrinnyPaladin was promoted to Room Voice by Hm sableye.
 [2015-09-03T08:45:44.363Z] (hitmonleague) Primal Theta - ⓦⓣⓕ was kicked from the room by Hm Zelda - ⓔⓐⓣⓘⓝⓖ.
 [2015-09-03T11:17:45.666Z] (hitmonleague) IS Albtraum was promoted to Room Voice by HM Vodoom.
+[2015-09-27T02:27:20.832Z] (hitmonleague) hm unownman was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-09-27T02:30:20.956Z] (hitmonleague) hm unownman was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T03:38:02.764Z] (hitmonleague) Hm Cheezus was promoted to Room Voice by Hm Zap.
+[2015-09-27T04:02:06.324Z] (hitmonleague) (Hm Zap created a tournament in monotype format.)
+[2015-09-27T04:31:48.477Z] (hitmonleague) SL Lelouch was promoted to Room Leader by Hm Zap.
+[2015-09-27T04:32:13.005Z] (hitmonleague) (SL Lelouch was demoted to Room Voice by Hm Zap.)
+[2015-09-27T04:59:59.334Z] (hitmonleague) (Hm Zap created a tournament in pu format.)
+[2015-09-27T06:33:08.460Z] (hitmonleague) Dylightful was promoted to Room Voice by Hm Zuuzifer.
+[2015-09-27T12:26:43.757Z] (hitmonleague) (HM Vodoom was disqualified from the tournament by GTX♅Kirito)
+[2015-09-27T13:14:12.687Z] (hitmonleague) Link Fabio - ⓓⓔⓓ was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T13:14:26.356Z] (hitmonleague) Link Fabio - ⓓⓔⓓ was unmuted by HM Vodoom.
+[2015-09-27T14:02:36.177Z] (hitmonleague) hm unownman was muted by Hm AnobH for 7 minutes.
+[2015-09-27T14:03:20.905Z] (hitmonleague) hm unownman was unmuted by Hm zugu royale.
+[2015-09-27T14:03:50.662Z] (hitmonleague) hm unownman was muted by Hm AnobH for 7 minutes.
+[2015-09-27T14:05:17.650Z] (hitmonleague) hm unownman was unmuted by Hm zugu royale.
+[2015-09-27T14:05:24.609Z] (hitmonleague) hm unownman was muted by Hm AnobH for 7 minutes.
+[2015-09-27T14:07:25.818Z] (hitmonleague) hm unownman was unmuted by Hm AnobH.
+[2015-09-27T14:26:45.875Z] (hitmonleague) GTX♅Kirito - ⓐⓝⓘⓜⓤ was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T15:04:45.707Z] (hitmonleague) KazeNoBaka was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T15:06:20.469Z] (hitmonleague) Hm Zantier was promoted to Room Leader by Hm Sableye.
+[2015-09-27T15:12:59.570Z] (hitmonleague) Myst Bronze was muted by Hm Zantier for 7 minutes.
+[2015-09-27T15:13:27.608Z] (hitmonleague) Myst Bronze was unmuted by Hm Zantier.
+[2015-09-27T15:13:54.239Z] (hitmonleague) Hm Sableye declared who wants to be in this lvl
+[2015-09-27T15:16:31.145Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-09-27T15:19:04.344Z] (hitmonleague) Hm Sableye declared everyone do //tour leave
+[2015-09-27T15:19:13.810Z] (hitmonleague) hm zelda was promoted to Room Voice by Hm Sableye.
+[2015-09-27T15:19:29.837Z] (hitmonleague) (Hm Eder was disqualified from the tournament by Hm Sableye)
+[2015-09-27T15:19:36.585Z] (hitmonleague) (Hm Zantier was disqualified from the tournament by Hm Sableye)
+[2015-09-27T15:19:46.084Z] (hitmonleague) (Hm Kaze was disqualified from the tournament by hm zelda)
+[2015-09-27T15:19:51.568Z] (hitmonleague) (Hm Bugy was disqualified from the tournament by hm zelda)
+[2015-09-27T15:19:55.511Z] (hitmonleague) (HM Sobi was disqualified from the tournament by Hm Sableye)
+[2015-09-27T15:20:01.077Z] (hitmonleague) (HM Vodoom was disqualified from the tournament by Hm Sableye)
+[2015-09-27T15:20:06.784Z] (hitmonleague) (hm zelda was disqualified from the tournament by GTX♅Kirito - ⓐⓝⓘⓜⓤ)
+[2015-09-27T15:20:32.632Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-09-27T15:20:42.413Z] (hitmonleague) Hm Sableye declared if you start my tour i will demote
+[2015-09-27T15:21:26.681Z] (hitmonleague) Hm Sableye declared 1
+[2015-09-27T15:21:33.580Z] (hitmonleague) Hm Sableye declared 2
+[2015-09-27T15:21:39.321Z] (hitmonleague) Hm Sableye declared start
+[2015-09-27T15:21:51.527Z] (hitmonleague) (The tournament auto disqualify timeout was set to 2 by hm zelda)
+[2015-09-27T15:22:26.449Z] (hitmonleague) (The tournament was set to disallow scouting by GTX♅Kirito - ⓐⓝⓘⓜⓤ)
+[2015-09-27T15:25:21.139Z] (hitmonleague) (HM Sobi was demoted to Room regular user by Hm AnobH.)
+[2015-09-27T15:56:57.452Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-09-27T16:18:16.304Z] (hitmonleague) RayquazaOfDoom was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T16:26:50.366Z] (hitmonleague) HM RayquazaOfDoom was kicked from the room by Hm Kaze.
+[2015-09-27T16:30:32.733Z] (hitmonleague) (Hm Sableye was disqualified from the tournament by hm zelda)
+[2015-09-27T17:02:28.616Z] (hitmonleague) Hm b3Rt was promoted to Room Operator by Hm Zuuzifer.
+[2015-09-27T19:24:05.533Z] (hitmonleague) (HmCmpBeasto created a tournament in monotype format.)
+[2015-09-27T20:33:16.080Z] (hitmonleague) (Hm Finesse was disqualified from the tournament by HmCmpBeasto)
+[2015-09-27T20:33:29.179Z] (hitmonleague) (Hm NineTales was disqualified from the tournament by HmCmpBeasto)
+[2015-09-27T21:36:51.091Z] (hitmonleague) Hm UnownMaN was warned by Safety Shark. (Automated response: caps)
+[2015-09-28T00:29:59.054Z] (hitmonleague) (Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ created a tournament in monotype format.)
+[2015-09-28T00:52:47.616Z] (hitmonleague) Alliance Ampy was kicked from the room by Hm Volco.
+[2015-09-28T01:11:19.798Z] (hitmonleague) renegadeitsme was unbanned from room hitmonleague by Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ.

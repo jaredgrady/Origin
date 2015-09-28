@@ -44,3 +44,4 @@
 [2015-08-22T20:30:20.802Z] (yellowbrown) (The tournament auto disqualify timeout was set to off by Dream Eater Gengar)
 [2015-08-22T20:30:25.075Z] (yellowbrown) (Inferno Jit was disqualified from the tournament by Dream Eater Gengar)
 [2015-08-22T20:30:30.431Z] (yellowbrown) (Inferno Sableye was disqualified from the tournament by Dream Eater Gengar)
+[2015-09-27T20:17:24.078Z] (yellowbrown) Carnie Chime was appointed to Room Founder by Neo Soul.

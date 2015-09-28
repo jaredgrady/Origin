@@ -5556,3 +5556,114 @@
 [2015-09-03T09:08:42.900Z] (battle-1v1-94078) Y0n set modchat to +
 [2015-09-03T09:11:23.522Z] (battle-1v1-94078) Y0n set modchat to false
 [2015-09-03T10:37:54.593Z] (battle-monotyperandombattle-94116) samsamblaze set modchat to +
+[2015-09-26T21:34:58.441Z] (battle-monotype-101439) 1 True Choco turned on modjoin.
+[2015-09-26T21:34:58.441Z] (battle-monotype-101439) 1 True Choco set modchat to +
+[2015-09-26T21:34:58.442Z] (battle-monotype-101439) 1 True Choco made this room hidden.
+[2015-09-26T21:37:09.981Z] (battle-monotype-101449) zhin turned on modjoin.
+[2015-09-26T21:37:09.984Z] (battle-monotype-101449) zhin set modchat to +
+[2015-09-26T21:37:09.985Z] (battle-monotype-101449) zhin made this room hidden.
+[2015-09-26T21:37:15.084Z] (battle-monotype-101449) Void Trent turned off modjoin.
+[2015-09-26T21:43:08.187Z] (battle-monotype-101428) Alliance Ampy set modchat to +
+[2015-09-26T21:48:07.222Z] (battle-monotype-101470) Frontier♅EnZo turned off modjoin.
+[2015-09-26T21:48:10.267Z] (battle-monotype-101470) Frontier♅EnZo turned on modjoin.
+[2015-09-26T21:48:10.267Z] (battle-monotype-101470) Frontier♅EnZo set modchat to +
+[2015-09-26T21:48:10.268Z] (battle-monotype-101470) Frontier♅EnZo made this room hidden.
+[2015-09-26T21:49:45.011Z] (battle-monotype-101428) Alliance Ampy set modchat to false
+[2015-09-26T22:14:22.090Z] (battle-monotype-101505) WolfNinja314 was promoted to Player by wolf blitzel.
+[2015-09-26T22:31:56.487Z] (battle-monotype-101544) Alliance-Kairyu set modchat to +
+[2015-09-26T22:34:26.350Z] (battle-monotype-101544) Alliance-Kairyu set modchat to false
+[2015-09-26T23:07:39.580Z] (battle-ou-101589) firelogz2 was promoted to Player by Johnnylogic.
+[2015-09-26T23:09:47.381Z] (battle-ou-101593) firelogz2 was promoted to Player by Johnnylogic.
+[2015-09-26T23:18:09.607Z] (battle-monotype-101609) ioj set modchat to +
+[2015-09-26T23:48:49.500Z] (battle-challengecup1v1-101672) ChariDiteX was promoted to Player by supergokubolt.
+[2015-09-27T00:03:23.487Z] (battle-monotype-101711) Japan turned on modjoin.
+[2015-09-27T00:03:23.544Z] (battle-monotype-101711) Japan set modchat to +
+[2015-09-27T00:03:23.544Z] (battle-monotype-101711) Japan made this room hidden.
+[2015-09-27T00:10:42.788Z] (battle-monotype-101707) Alliance Ampy set modchat to +
+[2015-09-27T01:31:25.395Z] (battle-monotype-101851) DemonicScizor turned on modjoin.
+[2015-09-27T01:31:25.399Z] (battle-monotype-101851) DemonicScizor set modchat to +
+[2015-09-27T01:31:25.400Z] (battle-monotype-101851) DemonicScizor made this room hidden.
+[2015-09-27T01:38:28.168Z] (battle-monotype-101862) King Shuckleton set modchat to +
+[2015-09-27T01:38:45.105Z] (battle-monotype-101862) Nefertum was promoted to Room Voice by SL Lelouch.
+[2015-09-27T02:44:58.560Z] (battle-monotype-101964) Sky ϟ Ragnarok turned on modjoin.
+[2015-09-27T02:44:58.561Z] (battle-monotype-101964) Sky ϟ Ragnarok set modchat to +
+[2015-09-27T02:44:58.561Z] (battle-monotype-101964) Sky ϟ Ragnarok made this room hidden.
+[2015-09-27T04:01:29.842Z] (battle-monotype-102091) Carnie Starfox made this room hidden.
+[2015-09-27T04:06:58.766Z] (battle-monotype-102098) Carnie Starfox made this room hidden.
+[2015-09-27T06:46:38.464Z] (battle-monotyperandombattle-102240) Dylightful turned on modjoin.
+[2015-09-27T06:46:38.464Z] (battle-monotyperandombattle-102240) Dylightful set modchat to +
+[2015-09-27T06:46:38.464Z] (battle-monotyperandombattle-102240) Dylightful made this room hidden.
+[2015-09-27T06:50:08.234Z] (battle-monotyperandombattle-102240) Dylightful turned off modjoin.
+[2015-09-27T12:10:12.454Z] (battle-hackmonscup-102336) GTX♅Kirito set modchat to +
+[2015-09-27T12:10:17.128Z] (battle-hackmonscup-102336) GTX♅Kirito set modchat to roomplayer
+[2015-09-27T12:10:28.104Z] (battle-hackmonscup-102336) zugubu royale was promoted to Room Voice by GTX♅Kirito.
+[2015-09-27T12:10:44.826Z] (battle-hackmonscup-102336) GTX♅Kirito set modchat to false
+[2015-09-27T12:10:48.208Z] (battle-hackmonscup-102336) GTX♅Kirito set modchat to roomplayer
+[2015-09-27T12:45:31.640Z] (battle-megatier-102352) Myst Boo was promoted to Player by GTX♅Kirito.
+[2015-09-27T13:28:30.694Z] (battle-monotype-102385) love's escort turned on modjoin.
+[2015-09-27T13:28:30.695Z] (battle-monotype-102385) love's escort set modchat to +
+[2015-09-27T13:28:30.695Z] (battle-monotype-102385) love's escort made this room hidden.
+[2015-09-27T14:07:22.282Z] (battle-ou-102418) Pazza was promoted to Room Voice by mfc_42.
+[2015-09-27T14:07:25.091Z] (battle-ou-102416) randomhero12 was promoted to Room Voice by mfc_42.
+[2015-09-27T14:07:48.401Z] (battle-ou-102417) mfc_42 was promoted to Room Voice by randomhero12.
+[2015-09-27T14:28:50.551Z] (battle-ou-102450) Pazza was promoted to Room Voice by mfc_42.
+[2015-09-27T14:42:56.950Z] (battle-monotype-102461) Myst Bronze turned on modjoin.
+[2015-09-27T14:42:56.951Z] (battle-monotype-102461) Myst Bronze set modchat to +
+[2015-09-27T14:42:56.951Z] (battle-monotype-102461) Myst Bronze made this room hidden.
+[2015-09-27T15:06:30.631Z] (battle-monotype-102499) HM Sobi set modchat to +
+[2015-09-27T16:21:11.550Z] (battle-monotype-102777) love's escort turned on modjoin.
+[2015-09-27T16:21:11.551Z] (battle-monotype-102777) love's escort set modchat to +
+[2015-09-27T16:21:11.551Z] (battle-monotype-102777) love's escort made this room hidden.
+[2015-09-27T16:28:09.416Z] (battle-monotype-102785) Zenji turned on modjoin.
+[2015-09-27T16:28:09.416Z] (battle-monotype-102785) Zenji set modchat to +
+[2015-09-27T16:28:09.416Z] (battle-monotype-102785) Zenji made this room hidden.
+[2015-09-27T18:12:35.194Z] (battle-ou-102912) AshBloodThief set modchat to +
+[2015-09-27T18:25:43.840Z] (battle-monotype-102939) Void Peng turned on modjoin.
+[2015-09-27T18:25:43.841Z] (battle-monotype-102939) Void Peng set modchat to +
+[2015-09-27T18:25:43.841Z] (battle-monotype-102939) Void Peng made this room hidden.
+[2015-09-27T18:43:08.823Z] (battle-monotype-102970) love's escort turned on modjoin.
+[2015-09-27T18:43:08.823Z] (battle-monotype-102970) love's escort set modchat to +
+[2015-09-27T18:43:08.824Z] (battle-monotype-102970) love's escort made this room hidden.
+[2015-09-27T18:47:37.105Z] (battle-battlefactory-103000) Ticken made this room hidden.
+[2015-09-27T19:01:22.252Z] (battle-battlefactory-103028) Ticken made this room hidden.
+[2015-09-27T19:25:42.949Z] (battle-monotype-103074) Myst Mewtwo turned on modjoin.
+[2015-09-27T19:25:42.949Z] (battle-monotype-103074) Myst Mewtwo set modchat to +
+[2015-09-27T19:25:42.950Z] (battle-monotype-103074) Myst Mewtwo made this room hidden.
+[2015-09-27T19:25:55.117Z] (battle-randombattle-103092) Ticken made this room hidden.
+[2015-09-27T19:47:58.556Z] (battle-monotype-103160) love's escort turned on modjoin.
+[2015-09-27T19:47:58.556Z] (battle-monotype-103160) love's escort set modchat to +
+[2015-09-27T19:47:58.557Z] (battle-monotype-103160) love's escort made this room hidden.
+[2015-09-27T19:54:37.247Z] (battle-monotype-103174) Allegiant Panda turned on modjoin.
+[2015-09-27T19:54:37.247Z] (battle-monotype-103174) Allegiant Panda set modchat to +
+[2015-09-27T19:54:37.248Z] (battle-monotype-103174) Allegiant Panda made this room hidden.
+[2015-09-27T20:25:16.337Z] (battle-monotype-103226) Allegiant Panda turned on modjoin.
+[2015-09-27T20:25:16.337Z] (battle-monotype-103226) Allegiant Panda set modchat to +
+[2015-09-27T20:25:16.337Z] (battle-monotype-103226) Allegiant Panda made this room hidden.
+[2015-09-27T21:14:05.017Z] (battle-ou-103349) YaBoiMlgShrek was promoted to Room Voice by Alpha Ninja.
+[2015-09-27T21:20:08.540Z] (battle-ou-103379) Rain Carn0Х turned on modjoin.
+[2015-09-27T21:20:08.541Z] (battle-ou-103379) Rain Carn0Х set modchat to +
+[2015-09-27T21:20:08.541Z] (battle-ou-103379) Rain Carn0Х made this room hidden.
+[2015-09-27T21:21:31.057Z] (battle-ou-103385) Rain Carn0Х turned on modjoin.
+[2015-09-27T21:21:31.058Z] (battle-ou-103385) Rain Carn0Х set modchat to +
+[2015-09-27T21:21:31.058Z] (battle-ou-103385) Rain Carn0Х made this room hidden.
+[2015-09-27T21:25:19.203Z] (battle-monotype-103400) Ticken made this room hidden.
+[2015-09-27T21:27:12.977Z] (battle-monotype-103406) Allegiant Panda turned on modjoin.
+[2015-09-27T21:27:12.977Z] (battle-monotype-103406) Allegiant Panda set modchat to +
+[2015-09-27T21:27:12.977Z] (battle-monotype-103406) Allegiant Panda made this room hidden.
+[2015-09-27T21:33:23.950Z] (battle-monotype-103423) Allegiant Panda turned on modjoin.
+[2015-09-27T21:33:23.950Z] (battle-monotype-103423) Allegiant Panda set modchat to +
+[2015-09-27T21:33:23.950Z] (battle-monotype-103423) Allegiant Panda made this room hidden.
+[2015-09-27T21:41:57.470Z] (battle-monotype-103438) Hm Volco set modchat to +
+[2015-09-27T22:07:43.692Z] (battle-ou-103513) Alliance - Ralker turned on modjoin.
+[2015-09-27T22:07:43.693Z] (battle-ou-103513) Alliance - Ralker set modchat to +
+[2015-09-27T22:07:43.693Z] (battle-ou-103513) Alliance - Ralker made this room hidden.
+[2015-09-27T22:58:37.138Z] (battle-monotype-103603) Myst Bronze set modchat to +
+[2015-09-27T22:58:55.256Z] (battle-monotype-103603) Alliance - Ghast was promoted to Room Voice by Ticken.
+[2015-09-27T22:59:50.381Z] (battle-monotype-103603) SWL Eric was promoted to Room Voice by Ticken.
+[2015-09-28T00:22:04.916Z] (battle-monotype-103712) Alliance - Ghast set modchat to +
+[2015-09-28T00:53:58.066Z] (battle-monotype-103785) Brеezеy Itsme turned on modjoin.
+[2015-09-28T00:53:58.069Z] (battle-monotype-103785) Brеezеy Itsme set modchat to +
+[2015-09-28T00:53:58.069Z] (battle-monotype-103785) Brеezеy Itsme made this room hidden.
+[2015-09-28T00:55:40.986Z] (battle-monotype-103785) Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ was promoted to Room Voice by Brеezеy Itsme.
+[2015-09-28T02:55:38.647Z] (battle-randombattle-103983) GTX Cursed was promoted to Room Voice by GamingNoah.
+[2015-09-28T03:07:11.833Z] (battle-ou-103987) Neo Soul forced a win for lodbot.

@@ -16,3 +16,6 @@
 [2015-09-02T22:05:19.645Z] (teslaslab) Lt. Tesla declared <div style="background-image:url(http://i.imgur.com/bqzCm6f.png); black; no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;><table border=" 10 width="420" height="203
 [2015-09-02T22:08:53.814Z] (teslaslab) Lt. Tesla removed the trainer card nightmares
 [2015-09-02T22:09:01.370Z] (teslaslab) Lt. Tesla added the trainer card nightmares
+[2015-09-27T19:28:33.794Z] (teslaslab) (Lt. Tesla changed the roomintro.)
+[2015-09-27T19:29:05.481Z] (teslaslab) (Lt. Tesla changed the roomintro.)
+[2015-09-27T19:54:36.908Z] (teslaslab) Lt. Tesla declared Are you an electric trainer or interested in learning the type? Then Check out the new room Sunyshore city <button name="send" value="/join suny">Join</button>

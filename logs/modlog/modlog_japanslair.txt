@@ -2005,3 +2005,858 @@
 [2015-09-03T12:15:50.552Z] (japanslair) Dragotic's BoTTT declared <audio src="http://music.huoxing.com/upload/20130327/1364362887245_9758.mp3 " title=" You're My Zing - Hotel Transylvania" type="audio/mp3" controls="" style="width: 100% ;"></audio>
 [2015-09-03T12:16:00.708Z] (japanslair) Dragotic's BoTTT declared <audio src="http://sound2mp3.com/a/cache/Let%20It%20Go%20-%20Demi%20Lovato%20-%20Let%20It%20Go%20(Frozen)%20Let%20It%20Go%20-%20Demi%20Lovato%201.mp3 " title=" Let It Go - Demi Lovato" type="audio/mp3" controls="" style="width: 100% ;"></audio>
 [2015-09-03T12:23:46.575Z] (japanslair) D Man 546 was promoted to Room Voice by Safety Shark.
+[2015-09-26T21:14:42.768Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Anything Goes<br /></i></font size>test</b></div>
+[2015-09-26T21:14:49.648Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Royal Luded<br /></i></font size>lol stop</b></div>
+[2015-09-26T21:14:56.164Z] (japanslair) Luds Minion was unmuted by Royal Luded.
+[2015-09-26T21:17:01.023Z] (japanslair) Rain Slash1234 was muted by Luds Minion for 7 minutes. (Automated moderation: Excessive capitalization)
+[2015-09-26T21:18:08.226Z] (japanslair) Royal Luded declared Next !randp gets a mute
+[2015-09-26T21:18:12.354Z] (japanslair) Royal Luded declared Next !randp gets a mute
+[2015-09-26T21:18:35.430Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain Pikeldeo<br /></i></font size>roams like big, thick, long, juicy sausages</b></div>
+[2015-09-26T21:18:58.348Z] (japanslair) GTX Stantler was promoted to Room Operator by Royal Luded.
+[2015-09-26T21:19:14.342Z] (japanslair) Rain Pikeldeo was warned by Royal Luded.
+[2015-09-26T21:20:18.852Z] (japanslair) Rain Slash1234 was unmuted by Anything Goes.
+[2015-09-26T21:25:34.700Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/vwxbtr.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:25:42.779Z] (japanslair) 99sobiYT was muted by Delta for 7 minutes. (used "a")
+[2015-09-26T21:26:24.575Z] (japanslair) Foh was muted by Alpha Ninja for 7 minutes. (okay #drivering)
+[2015-09-26T21:26:24.577Z] (japanslair) (Foh's ac account: neowulf)
+[2015-09-26T21:26:30.594Z] (japanslair) Arrow Bot was promoted to Room Driver by Delta.
+[2015-09-26T21:26:36.438Z] (japanslair) 99sobiYT was unmuted by Arrow Bot.
+[2015-09-26T21:26:41.690Z] (japanslair) (Arrow Bot was demoted to Room Voice by Delta.)
+[2015-09-26T21:26:52.845Z] (japanslair) Foh was promoted to Room Driver by Royal Luded.
+[2015-09-26T21:27:17.078Z] (japanslair) 99sobiYT was promoted to Room Driver by Delta.
+[2015-09-26T21:27:17.681Z] (japanslair) (99sobiYT was demoted to Room Voice by Delta.)
+[2015-09-26T21:27:45.993Z] (japanslair) Lycurgus was promoted to Room Moderator by Royal Luded.
+[2015-09-26T21:28:31.619Z] (japanslair) Royal Luded declared Ninja had roomwoner b4 anyon else in the room
+[2015-09-26T21:28:36.110Z] (japanslair) hypershaymin declared yes we can
+[2015-09-26T21:28:42.695Z] (japanslair) Royal Luded declared when it was a private room he had roomowner
+[2015-09-26T21:28:51.100Z] (japanslair) Royal Luded declared and it was deleted so he had to reclaim it
+[2015-09-26T21:31:43.174Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/umrckj.webm" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:32:58.410Z] (japanslair) Tim❤thy was promoted to Room Leader by Delta.
+[2015-09-26T21:33:01.752Z] (japanslair) Rain Slash1234 was banned from room japanslair by Luds Minion. (Automated moderation: Possible spammer detected)
+[2015-09-26T21:33:17.412Z] (japanslair) rainslash1234 was unbanned from room japanslair by Alpha Ninja.
+[2015-09-26T21:35:08.910Z] (japanslair) ashbloodthief was banned from room japanslair by Luds Minion. (Automated moderation: Excessive capitalization (zero tolerance))
+[2015-09-26T21:35:17.989Z] (japanslair) ashbloodthief was unbanned from room japanslair by Royal Luded.
+[2015-09-26T21:35:58.401Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/yooxgc.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:36:59.648Z] (japanslair) Voidchrono - ⓐⓡⓣ was promoted to Room Leader by Alpha Ninja.
+[2015-09-26T21:37:07.858Z] (japanslair) (Voidchrono - ⓐⓡⓣ was demoted to Room Operator by Royal Luded.)
+[2015-09-26T21:37:36.640Z] (japanslair) Voidchrono - ⓐⓡⓣ was promoted to Room Leader by Alpha Ninja.
+[2015-09-26T21:37:40.526Z] (japanslair) (Voidchrono - ⓐⓡⓣ was demoted to Room Operator by Royal Luded.)
+[2015-09-26T21:40:54.514Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/ynjumt.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:43:48.669Z] (japanslair) Safety Shark was unmuted by Voidchrono - ⓖⓞⓓ.
+[2015-09-26T21:44:00.633Z] (japanslair) Void Icarus declared technical difficulties
+[2015-09-26T21:44:07.981Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-26T21:44:13.662Z] (japanslair) Void Icarus declared technical difficulties
+[2015-09-26T21:44:21.300Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-26T21:44:24.426Z] (japanslair) Void Icarus declared technical difficulties
+[2015-09-26T21:44:40.316Z] (japanslair) Luds Minion was muted by Void Icarus for 7 minutes.
+[2015-09-26T21:44:46.401Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-26T21:44:49.769Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/ecptcw.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:45:07.170Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/ka67IHw.jpg" Height="400" Width="400"
+[2015-09-26T21:45:52.908Z] (japanslair) Void Icarus declared <img src="http://i.imgur.com/KHHtZFe.jpg" height="350" width="370
+[2015-09-26T21:46:22.105Z] (japanslair) Foh was promoted to Room Moderator by Royal Luded.
+[2015-09-26T21:46:28.373Z] (japanslair) (Foh was demoted to Room Driver by Royal Luded.)
+[2015-09-26T21:46:29.619Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T21:46:38.255Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T21:46:42.614Z] (japanslair) Alpha Ninja declared <video src="https://ptpb.pw/iRlY.webm" height="500" controls="" target="_blank"></video>
+[2015-09-26T21:47:09.845Z] (japanslair) Void Icarus declared <video src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3B3B3B ; background-color: #00000a" target="_blank" /></center>
+[2015-09-26T21:47:15.863Z] (japanslair) Voidchrono - ⓖⓞⓓ was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T21:47:56.418Z] (japanslair) Void Icarus declared technical difficulties 
+[2015-09-26T21:47:58.399Z] (japanslair) Void Icarus declared <video src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3B3B3B ; background-color: #00000a" target="_blank" /></center>
+[2015-09-26T21:48:28.992Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-09-26T21:48:33.324Z] (japanslair) Royal Luded declared <div class="broadcast-red" target="_blank"><b target="_blank"><video src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3b3b3b ; background-color: #00000a" target="_blank"></video></b></div>
+[2015-09-26T21:48:34.930Z] (japanslair) macrarazy was unmuted by Voidchrono - ⓖⓞⓓ.
+[2015-09-26T21:48:46.159Z] (japanslair) Void Icarus declared technical difficulties 
+[2015-09-26T21:48:47.251Z] (japanslair) Void Icarus declared <video src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3B3B3B ; background-color: #00000a" target="_blank" /></center>
+[2015-09-26T21:49:14.123Z] (japanslair) Void Icarus declared <center><img src="http://1.bp.blogspot.com/_DE8lATvzoGE/TUngM25jxfI/AAAAAAAAAPE/Y2m72Ge4F7g/s1600/063-Abra.jpg" height="500" width="400"></center>
+[2015-09-26T21:49:53.015Z] (japanslair) goblin was promoted to Room Moderator by Royal Luded.
+[2015-09-26T21:50:04.502Z] (japanslair) Void Icarus declared <center><img src="http://i165.photobucket.com/albums/u68/Meidream/Anohana%20GIF/tumblr_llidt25ah51qa63cio1_500.gif" Height="400" Width="475"
+[2015-09-26T21:51:00.051Z] (japanslair) ashbloodthief was warned by Void Icarus.
+[2015-09-26T21:51:12.166Z] (japanslair) ashbloodthief was warned by Void Icarus.
+[2015-09-26T21:51:45.003Z] (japanslair) (Royal Luded has disabled broadcasting trainer cards in this room.)
+[2015-09-26T21:51:55.135Z] (japanslair) (Royal Luded has enabled broadcasting trainer cards in this room.)
+[2015-09-26T21:52:20.916Z] (japanslair) Royal Luded declared <img src=http://s.mvsdn.com/img/users/avatar/a4/a4FCjvP7L_big.gif width=500 height=500>
+[2015-09-26T21:52:33.639Z] (japanslair) Royal Luded declared <img src=http://s.mvsdn.com/img/users/avatar/a4/a4FCjvP7L_big.gif width=900 height=500>
+[2015-09-26T21:52:58.164Z] (japanslair) YaBoiMlgShrek was kicked from the room by Royal Luded.
+[2015-09-26T21:53:46.954Z] (japanslair) Royal Luded declared <img src=http://s.mvsdn.com/img/users/avatar/a4/a4FCjvP7L_big.gif width=1000 height=1000>
+[2015-09-26T21:58:07.298Z] (japanslair) KatheyIsme123 was promoted to Room Leader by hypershaymin.
+[2015-09-26T21:58:19.298Z] (japanslair) (KatheyIsme123 was demoted to Room Moderator by Royal Luded.)
+[2015-09-26T22:03:30.870Z] (japanslair) hypershaymin declared kathey i love you
+[2015-09-26T22:03:46.657Z] (japanslair) hypershaymin declared wash the dishes and make me food now u slut
+[2015-09-26T22:05:38.297Z] (japanslair) hypershaymin declared kathey would u cyber a ps user
+[2015-09-26T22:10:10.269Z] (japanslair) Legacy Wisp was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:10:24.287Z] (japanslair) Memes be dreams was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:11:18.780Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-26T22:11:37.172Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:11:40.740Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:11:48.920Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:11:58.084Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:12:04.089Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:14:03.361Z] (japanslair) Edges was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:15:12.063Z] (japanslair) Darkrai165196 was kicked from the room by hypershaymin.
+[2015-09-26T22:16:31.064Z] (japanslair) Kalvin Clein was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-26T22:16:31.110Z] (japanslair) Kalvin Clein was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T22:16:45.703Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-26T22:19:03.441Z] (japanslair) ashbloodthief was promoted to Room Leader by hypershaymin.
+[2015-09-26T22:19:14.803Z] (japanslair) (ashbloodthief was demoted to Room Driver by hypershaymin.)
+[2015-09-26T22:19:15.864Z] (japanslair) (ashbloodthief was demoted to Room Voice by Royal Luded.)
+[2015-09-26T22:19:38.979Z] (japanslair) ashbloodthief was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-09-26T22:20:35.987Z] (japanslair) Yurnt was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:21:07.929Z] (japanslair) Japan - ⓑⓡⓑ declared just wanna say we real af for having a stable 40 and plus user for 2 hours 7u7
+[2015-09-26T22:23:59.464Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:24:01.667Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:24:03.024Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:24:07.405Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "Hypershaymin the type of nigga to date his little cousin.".)
+[2015-09-26T22:24:30.452Z] (japanslair) hypershaymin was promoted to Room Leader by Japan - ⓑⓡⓑ.
+[2015-09-26T22:27:33.430Z] (japanslair) (hypershaymin changed the roomdesc to: "hypershaymin comin in hard on vulpix".)
+[2015-09-26T22:28:45.493Z] (japanslair) Royal Nuded was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-26T22:28:45.503Z] (japanslair) Royal Nuded was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T22:29:45.776Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "Roams the type of nigga that cries during, before, and after sex".)
+[2015-09-26T22:30:00.967Z] (japanslair) Royal Nuded was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-26T22:30:00.968Z] (japanslair) (Royal Nuded's ac account: voidquilluminati)
+[2015-09-26T22:30:06.225Z] (japanslair) Royal Nuded was unmuted by Anything Goes.
+[2015-09-26T22:31:12.566Z] (japanslair) (hypershaymin changed the roomdesc to: "roams the type of nigga who is scared of his own dick".)
+[2015-09-26T22:32:03.419Z] (japanslair) (Royal Luded changed the roomdesc to: "Shaymin the type of nigga to cry after sucking dick".)
+[2015-09-26T22:32:36.100Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "Deez Nutz".)
+[2015-09-26T22:33:18.654Z] (japanslair) (Royal Luded changed the roomdesc to: "Jay Swift - ⒶⒻⓀ is the type of nigga who wears condoms during phone sex".)
+[2015-09-26T22:33:42.934Z] (japanslair) macrarazy was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-26T22:33:42.947Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-26T22:33:50.098Z] (japanslair) macrarazy was unmuted by ashbloodthief.
+[2015-09-26T22:34:01.475Z] (japanslair) AG-Kun was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:34:47.734Z] (japanslair) Royal Luded declared Yall the type of niggas to say the type of nigga repeadtly 
+[2015-09-26T22:35:08.450Z] (japanslair) YaBoiMlgShrek was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-26T22:35:08.473Z] (japanslair) YaBoiMlgShrek was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T22:35:49.304Z] (japanslair) Royal Luded declared rain slash1234 the type of nigga to track down niggas irl cause he raided there home in minecraft <br> Ashbloodthief for top meme
+[2015-09-26T22:35:55.795Z] (japanslair) Abyssinian was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:38:23.861Z] (japanslair) AG-Kun was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T22:38:24.531Z] (japanslair) Wandering was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-09-26T22:38:40.661Z] (japanslair) Rain Slash1234 was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-26T22:38:45.734Z] (japanslair) macrarazy was muted by Luds Minion for 1 hour. (Automated moderation: Flooding)
+[2015-09-26T22:38:45.749Z] (japanslair) macrarazy would be muted by Safety Shark but was already muted. (Automated response: flooding)
+[2015-09-26T22:38:58.063Z] (japanslair) Rain Slash1234 was unmuted by Japan - ⓑⓡⓑ.
+[2015-09-26T22:39:16.918Z] (japanslair) macrarazy was unmuted by Japan - ⓑⓡⓑ.
+[2015-09-26T22:39:26.052Z] (japanslair) Luds Minion was muted by Japan - ⓑⓡⓑ for 1 hour.
+[2015-09-26T22:39:33.032Z] (japanslair) Safety Shark was muted by Japan - ⓑⓡⓑ for 1 hour.
+[2015-09-26T22:40:50.751Z] (japanslair) Hazey was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-26T22:41:43.649Z] (japanslair) hypershaymin declared yungs roast session in progress
+[2015-09-26T22:41:56.610Z] (japanslair) (hypershaymin changed the roomdesc to: "yungs roast session come and roast him!".)
+[2015-09-26T22:44:17.474Z] (japanslair) Japan - ⓑⓡⓑ declared [17:43:37] %Champion Darkrai: Roams the type of nigga to get rejected by shadow glaceon 
+[2015-09-26T22:44:17.695Z] (japanslair) Void Icarus declared <img src="http://i.imgur.com/KHHtZFe.jpg" height="350" width="370
+[2015-09-26T22:46:37.074Z] (japanslair) Carnie Starfox was muted by Japan for 7 minutes.
+[2015-09-26T22:46:45.424Z] (japanslair) (Carnie Starfox was demoted to Room Driver by Japan.)
+[2015-09-26T22:49:35.597Z] (japanslair) Champion Darkrai was warned by Japan. (no spam)
+[2015-09-26T22:50:16.952Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:17.553Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:18.629Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:23.212Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:23.842Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:24.532Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:24.532Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:25.283Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:25.974Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:26.145Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:33.015Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:50:44.014Z] (japanslair) Void Icarus declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-26T22:51:08.846Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-26T22:51:41.180Z] (japanslair) macrarazy was kicked from the room by Void Icarus.
+[2015-09-26T22:53:24.186Z] (japanslair) Void Icarus declared can ya'll stahp circle jerking eachothers rage
+[2015-09-26T22:55:40.906Z] (japanslair) (Royal Luded changed the roomdesc to: "Darkrai's roast session come roast him".)
+[2015-09-26T22:56:08.514Z] (japanslair) Void Icarus declared if its a roast session can we easily do it better than JB's?
+[2015-09-26T22:56:10.600Z] (japanslair) Void Icarus declared <img src="http://i.imgur.com/KHHtZFe.jpg" height="350" width="370
+[2015-09-26T22:56:29.820Z] (japanslair) SE0 was promoted to Room Voice by Japan.
+[2015-09-26T22:56:46.933Z] (japanslair) SE0 was muted by Carnie Starfox for 7 minutes. (no spam)
+[2015-09-26T22:56:50.784Z] (japanslair) SE0 was unmuted by Carnie Starfox.
+[2015-09-26T22:57:20.243Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T22:57:30.678Z] (japanslair) Void Icarus set modchat to false
+[2015-09-26T22:57:31.872Z] (japanslair) Royal Luded declared room is shut down
+[2015-09-26T22:57:33.477Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T22:57:35.239Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T22:57:48.016Z] (japanslair) Void Icarus declared <img src="http://i.imgur.com/KHHtZFe.jpg" height="350" width="370
+[2015-09-26T22:58:41.231Z] (japanslair) SE0 was muted by Carnie Starfox for 7 minutes.
+[2015-09-26T22:58:53.141Z] (japanslair) SE0 was warned by Japan. (no spam tho)
+[2015-09-26T22:59:11.488Z] (japanslair) (Royal Luded has disabled broadcasting trainer cards in this room.)
+[2015-09-26T22:59:16.911Z] (japanslair) (Royal Luded has enabled broadcasting trainer cards in this room.)
+[2015-09-26T22:59:26.595Z] (japanslair) Void Icarus declared Japan's Lair, the type of room where everyone shits on eachother then is cool the next day
+[2015-09-26T22:59:39.570Z] (japanslair) Void Icarus declared Japan's Lair, the type of room where everyone shits on eachother then is cool the next day
+[2015-09-26T23:00:25.226Z] (japanslair) SE0 was unmuted by Anything Goes.
+[2015-09-26T23:00:40.639Z] (japanslair) SE0 was muted by Carnie Starfox for 7 minutes. (you aint done yet)
+[2015-09-26T23:00:48.353Z] (japanslair) SE0 was unmuted by Anything Goes.
+[2015-09-26T23:00:55.420Z] (japanslair) edjim was banned from room japanslair by TheAce22.
+[2015-09-26T23:01:01.211Z] (japanslair) edjim was unbanned from room japanslair by Royal Luded.
+[2015-09-26T23:01:05.052Z] (japanslair) TheAce22 was banned from room japanslair by Royal Luded.
+[2015-09-26T23:01:07.407Z] (japanslair) edjim was muted by Carnie Starfox for 1 hour.
+[2015-09-26T23:01:14.385Z] (japanslair) theace22 was unbanned from room japanslair by Royal Luded.
+[2015-09-26T23:02:01.093Z] (japanslair) edjim was unmuted by Anything Goes.
+[2015-09-26T23:02:34.457Z] (japanslair) edjim was muted by Wandering for 7 minutes.
+[2015-09-26T23:02:37.779Z] (japanslair) edjim was muted by macrarazy for 1 hour.
+[2015-09-26T23:02:39.211Z] (japanslair) edjim was kicked from the room by Carnie Starfox.
+[2015-09-26T23:03:04.737Z] (japanslair) edjim was unmuted by Wandering.
+[2015-09-26T23:03:34.822Z] (japanslair) edjim was promoted to Room Moderator by Royal Luded.
+[2015-09-26T23:03:46.792Z] (japanslair) Carnie Starfox was banned from room japanslair by edjim. (fuck u nigga)
+[2015-09-26T23:03:55.237Z] (japanslair) edjim was promoted to Room Leader by Royal Luded.
+[2015-09-26T23:03:56.462Z] (japanslair) carniestarfox was unbanned from room japanslair by Anything Goes.
+[2015-09-26T23:04:01.777Z] (japanslair) (edjim was demoted to Room Driver by Royal Luded.)
+[2015-09-26T23:04:08.873Z] (japanslair) (edjim was demoted to Room Voice by Japan.)
+[2015-09-26T23:04:21.684Z] (japanslair) edjim was kicked from the room by macrarazy.
+[2015-09-26T23:04:25.760Z] (japanslair) macrarazy was kicked from the room by Anything Goes.
+[2015-09-26T23:04:27.277Z] (japanslair) Royal Luded declared Japan if u could roast one person who would it be
+[2015-09-26T23:04:29.548Z] (japanslair) Not Sykes was promoted to Room Voice by Japan.
+[2015-09-26T23:04:32.370Z] (japanslair) Royal Luded declared Shaymin
+[2015-09-26T23:04:41.352Z] (japanslair) Royal Luded declared 👌👀👌👀👌👀👌👀👌👀 good shit go౦ԁ sHit👌 thats ✔ some good👌👌shit right👌👌there👌👌👌 right✔there ✔✔if i do ƽaү so my self 💯 i say so 💯 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ)
+[2015-09-26T23:04:42.904Z] (japanslair) edjim was kicked from the room by Wandering.
+[2015-09-26T23:04:43.987Z] (japanslair) Sl Aby was kicked from the room by Champion Darkrai.
+[2015-09-26T23:05:03.123Z] (japanslair) Sl Aby was kicked from the room by Wandering.
+[2015-09-26T23:05:06.688Z] (japanslair) SE0 was warned by Carnie Starfox. (no spam)
+[2015-09-26T23:05:13.179Z] (japanslair) SE0 was muted by Carnie Starfox for 1 hour.
+[2015-09-26T23:05:14.081Z] (japanslair) SE0 was kicked from the room by Wandering.
+[2015-09-26T23:05:17.777Z] (japanslair) (SE0 would be muted by macrarazy but was already muted.)
+[2015-09-26T23:05:17.887Z] (japanslair) SE0 was unmuted by theace22.
+[2015-09-26T23:05:21.587Z] (japanslair) SE0 was muted by macrarazy for 1 hour.
+[2015-09-26T23:05:25.796Z] (japanslair) (SE0 would be muted by Japan but was already muted.)
+[2015-09-26T23:05:34.722Z] (japanslair) SE0 was unmuted by Japan.
+[2015-09-26T23:05:35.742Z] (japanslair) Luds Minion was unmuted by Royal Luded.
+[2015-09-26T23:05:38.863Z] (japanslair) SE0 was muted by Japan for 7 minutes.
+[2015-09-26T23:05:38.902Z] (japanslair) SE0 was banned from room japanslair by Luds Minion. (Blacklisted user)
+[2015-09-26T23:05:48.916Z] (japanslair) Sl Aby was kicked from the room by Wandering.
+[2015-09-26T23:05:50.117Z] (japanslair) Sl Aby was banned from room japanslair by Luds Minion. (Blacklisted user)
+[2015-09-26T23:05:50.717Z] (japanslair) (Luds Minion notes: User(s) "slaby" added to blacklist successfully.  | By: #Royal Luded)
+[2015-09-26T23:05:56.914Z] (japanslair) (Sl Aby was demoted to Room regular user by Japan.)
+[2015-09-26T23:06:13.924Z] (japanslair) theace22 was kicked from the room by Royal Luded.
+[2015-09-26T23:06:18.753Z] (japanslair) ashbloodthief was kicked from the room by Royal Luded.
+[2015-09-26T23:06:21.185Z] (japanslair) Japan set modchat to #
+[2015-09-26T23:06:54.918Z] (japanslair) Japan set modchat to false
+[2015-09-26T23:07:02.248Z] (japanslair) theace22 was banned from room japanslair by Luds Minion. (Blacklisted user)
+[2015-09-26T23:07:03.136Z] (japanslair) (Luds Minion notes: User(s) "theace22" added to blacklist successfully.  | By: #Royal Luded)
+[2015-09-26T23:07:24.125Z] (japanslair) (Rain Slash1234 was demoted to Room regular user by Japan.)
+[2015-09-26T23:07:29.510Z] (japanslair) Void Icarus set modchat to #
+[2015-09-26T23:07:39.929Z] (japanslair) Void Icarus set modchat to false
+[2015-09-26T23:07:41.421Z] (japanslair) theace22 was unbanned from room japanslair by Luds Minion.
+[2015-09-26T23:07:51.381Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:08:00.115Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:08:30.067Z] (japanslair) Carnie Starfox was promoted to Room Moderator by Royal Luded.
+[2015-09-26T23:08:43.238Z] (japanslair) Rain Slash1234 was promoted to Room Voice by Japan.
+[2015-09-26T23:08:46.549Z] (japanslair) (Carnie Starfox was demoted to Room Driver by Royal Luded.)
+[2015-09-26T23:09:06.253Z] (japanslair) (csf was demoted to Room Driver by Royal Luded.)
+[2015-09-26T23:09:13.856Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:09:26.408Z] (japanslair) Void Icarus declared anal
+[2015-09-26T23:09:34.200Z] (japanslair) macrarazy was promoted to Room Driver by Royal Luded.
+[2015-09-26T23:09:35.224Z] (japanslair) Void Icarus declared <img src="http://i.imgur.com/KHHtZFe.jpg" height="350" width="370
+[2015-09-26T23:09:52.322Z] (japanslair) Void Icarus declared Japan's Lair, the type of room where everyone shits on eachother then is cool the next day
+[2015-09-26T23:09:52.526Z] (japanslair) (macrarazy was demoted to Room Operator by Japan.)
+[2015-09-26T23:09:54.881Z] (japanslair) Champion Darkrai was promoted to Room Leader by Royal Luded.
+[2015-09-26T23:09:59.878Z] (japanslair) (Champion Darkrai was demoted to Room Driver by Royal Luded.)
+[2015-09-26T23:10:01.886Z] (japanslair) Vin sUsPeNsE was warned by theace22. (can i talk)
+[2015-09-26T23:10:07.567Z] (japanslair) Japan set modchat to false
+[2015-09-26T23:10:11.664Z] (japanslair) (Void Icarus notes: anal)
+[2015-09-26T23:10:16.825Z] (japanslair) theace22 was kicked from the room by Royal Luded.
+[2015-09-26T23:10:24.092Z] (japanslair) theace22 was kicked from the room by Royal Luded.
+[2015-09-26T23:10:47.899Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:10:49.291Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:11:11.167Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:11:12.367Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:11:24.214Z] (japanslair) Japan set modchat to #
+[2015-09-26T23:11:24.402Z] (japanslair) (theace22 created a tournament in 1v1 format.)
+[2015-09-26T23:11:25.882Z] (japanslair) Alliance - Llama was warned by Carnie Starfox. (over)
+[2015-09-26T23:11:39.623Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:11:45.290Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:11:46.491Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:11:50.853Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:12:10.480Z] (japanslair) (theace22 notes: inb4 i dice)
+[2015-09-26T23:12:21.594Z] (japanslair) Japan set modchat to false
+[2015-09-26T23:12:23.488Z] (japanslair) (theace22 notes: JAPAN FUCKING SAY THIS IS FRO 15 DOLLARS)
+[2015-09-26T23:12:43.752Z] (japanslair) theace22 was promoted to Room Leader by Royal Luded.
+[2015-09-26T23:12:47.305Z] (japanslair) (theace22 was demoted to Room Moderator by Royal Luded.)
+[2015-09-26T23:12:57.595Z] (japanslair) (The tournament was set to disallow scouting by Foh - ⒶⓌⒶⓎ)
+[2015-09-26T23:13:09.980Z] (japanslair) Royal Luded was promoted to Room Leader by Japan.
+[2015-09-26T23:14:39.018Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan)
+[2015-09-26T23:15:26.592Z] (japanslair) theace22 was kicked from the room by Void Icarus.
+[2015-09-26T23:15:42.483Z] (japanslair) Royal Luded set modchat to &
+[2015-09-26T23:15:43.676Z] (japanslair) Steel Anti was promoted to Room Voice by Japan.
+[2015-09-26T23:15:47.499Z] (japanslair) Royal Luded set modchat to false
+[2015-09-26T23:15:52.711Z] (japanslair) Royal Luded set modchat to &
+[2015-09-26T23:16:01.901Z] (japanslair) theace22 was warned by Japan.
+[2015-09-26T23:16:07.022Z] (japanslair) Japan set modchat to false
+[2015-09-26T23:16:17.267Z] (japanslair) Champion Darkrai was warned by Japan.
+[2015-09-26T23:16:27.595Z] (japanslair) Rain Slash1234 was warned by Carnie Starfox. (minimod)
+[2015-09-26T23:16:34.669Z] (japanslair) Champion Darkrai was warned by Japan.
+[2015-09-26T23:16:39.607Z] (japanslair) Champion Darkrai was warned by Japan.
+[2015-09-26T23:17:34.001Z] (japanslair) Champion Darkrai was banned from room japanslair by Royal Luded.
+[2015-09-26T23:17:55.532Z] (japanslair) Steel Anti was banned from room japanslair by Royal Luded.
+[2015-09-26T23:18:13.861Z] (japanslair) steelanti was unbanned from room japanslair by Japan.
+[2015-09-26T23:18:21.644Z] (japanslair) Steel Anti was muted by Carnie Starfox for 1 hour.
+[2015-09-26T23:18:34.053Z] (japanslair) championdarkrai was unbanned from room japanslair by Japan.
+[2015-09-26T23:20:11.490Z] (japanslair) (edjim was demoted to Room regular user by Japan.)
+[2015-09-26T23:20:25.947Z] (japanslair) Steel Anti was unmuted by Japan.
+[2015-09-26T23:20:36.257Z] (japanslair) Champion Darkrai was warned by Japan.
+[2015-09-26T23:20:43.564Z] (japanslair) Safety Shark was unmuted by Void Quilluminati.
+[2015-09-26T23:23:18.587Z] (japanslair) edjim was kicked from the room by Carnie Starfox.
+[2015-09-26T23:23:38.977Z] (japanslair) edjim was warned by Foh - ⓐⓦⓔⓢⓞⓜⓔ. (carnie is awesome foh)
+[2015-09-26T23:23:56.812Z] (japanslair) edjim was kicked from the room by Foh - ⓐⓦⓔⓢⓞⓜⓔ.
+[2015-09-26T23:24:00.534Z] (japanslair) Foh - ⓐⓦⓔⓢⓞⓜⓔ was kicked from the room by Royal Luded.
+[2015-09-26T23:24:10.235Z] (japanslair) Royal Luded was kicked from the room by Void Icarus.
+[2015-09-26T23:26:17.840Z] (japanslair) Royal Luded declared <button name="send" value="/roomowner Royal Luded" style="border: 1px solid #000 ; background: #b8457f ; box-shadow: 0px 1px 1px rgba(255 , 255 , 255 , 0.3) inset ; color: #fff ; border-radius: 4px ; margin: 3px ; padding: 2px 4px" target="_blank"> <b target="_blank">Test. </b> </button>
+[2015-09-26T23:28:07.299Z] (japanslair) Void Icarus declared <button name="send" value="/kick Royal Luded">Click Me!</button>
+[2015-09-26T23:28:10.382Z] (japanslair) Royal Luded was kicked from the room by Japan.
+[2015-09-26T23:28:17.088Z] (japanslair) Royal Luded was kicked from the room by Japan.
+[2015-09-26T23:28:39.597Z] (japanslair) Royal Luded was kicked from the room by Void Icarus.
+[2015-09-26T23:29:47.628Z] (japanslair) Rain Slash1234 was warned by Luds Minion. (Automated moderation: Stretching)
+[2015-09-26T23:29:47.640Z] (japanslair) Rain Slash1234 was warned by Safety Shark. (Automated response: stretching)
+[2015-09-26T23:30:26.729Z] (japanslair) ashbloodthief was muted by theace22 for 7 minutes.
+[2015-09-26T23:31:17.121Z] (japanslair) ashbloodthief was unmuted by Japan.
+[2015-09-26T23:37:55.444Z] (japanslair) Void Icarus declared <button name="send" value="/kick Royal Luded">Click Me!</button>
+[2015-09-26T23:37:57.869Z] (japanslair) Royal Luded was kicked from the room by Japan.
+[2015-09-26T23:38:02.977Z] (japanslair) Royal Luded was kicked from the room by Void Icarus.
+[2015-09-26T23:38:25.586Z] (japanslair) Royal Luded was appointed Room Owner by Japan.
+[2015-09-26T23:38:32.659Z] (japanslair) Royal Luded set modchat to #
+[2015-09-26T23:38:40.294Z] (japanslair) Japan set modchat to false
+[2015-09-26T23:38:49.486Z] (japanslair) ashbloodthief was muted by Void Icarus for 7 minutes.
+[2015-09-26T23:39:17.927Z] (japanslair) ashbloodthief was unmuted by Japan.
+[2015-09-26T23:39:29.623Z] (japanslair) Royal Luded declared Congrats to the 34 users who stayed for 3 hours
+[2015-09-26T23:42:20.979Z] (japanslair) (Japan changed the roomdesc to: "Join ".)
+[2015-09-26T23:47:02.192Z] (japanslair) Myst Latios83 was promoted to Room Voice by Japan.
+[2015-09-26T23:47:21.809Z] (japanslair) edjim was promoted to Room Voice by Japan.
+[2015-09-26T23:47:39.305Z] (japanslair) L Chevy 12 declared <button name="send" value="/w Royal Luded, gibe me munny or git gud">Click Me!</button>
+[2015-09-26T23:49:12.929Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-26T23:59:12.984Z] (japanslair) ashbloodthief was muted by Royal Luded for 7 minutes. (warned repeadetly)
+[2015-09-27T00:37:49.382Z] (japanslair) YaBoiMglShrek was warned by Foh - ⓘⓜ⑤. (imposter)
+[2015-09-27T00:43:00.458Z] (japanslair) YaBoiMlgShrek was muted by Luds Minion for 7 minutes. (Automated moderation: Flooding)
+[2015-09-27T00:43:00.467Z] (japanslair) YaBoiMlgShrek would be muted by Safety Shark but was already muted. (Automated response: flooding)
+[2015-09-27T00:43:09.488Z] (japanslair) YaBoiMglShrek was kicked from the room by Royal Luded.
+[2015-09-27T00:43:17.481Z] (japanslair) YaBoiMglShrek was muted by Royal Luded for 7 minutes.
+[2015-09-27T00:43:36.749Z] (japanslair) YaBoiMlgShrek was unmuted by Japan.
+[2015-09-27T00:44:00.193Z] (japanslair) Japan declared <button name="send" value="/roomdeowner Royal Luded">Click Me!</button>
+[2015-09-27T00:44:09.710Z] (japanslair) Japan declared <button name="send" value="/roomleader Royal Luded">Click Me!</button>
+[2015-09-27T00:44:11.474Z] (japanslair) Royal Luded was promoted to Room Leader by Japan.
+[2015-09-27T00:44:48.852Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:45:19.887Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:45:23.024Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:45:23.919Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:45:23.923Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:46:01.994Z] (japanslair) Royal Luded declared <button name="send" value="/transferbucks royal luded, 1">Click Me!</button>
+[2015-09-27T00:46:36.007Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 1000">Click Me!</button>
+[2015-09-27T00:46:36.606Z] (japanslair) Japan declared <button name="send" value="/lock japan">Click Me!</button>
+[2015-09-27T00:48:26.539Z] (japanslair) Japan declared <button name="send" value="/lock japan">Click Me!</button>
+[2015-09-27T00:48:27.139Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 200">Click Me!</button>
+[2015-09-27T00:50:27.688Z] (japanslair) Royal Luded declared <button name="send" value="/givemoney Japan, 15">Click Me!</button>
+[2015-09-27T00:50:53.563Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 150">Click Me!</button>
+[2015-09-27T00:52:24.576Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 30">Click Me!</button>
+[2015-09-27T00:52:54.484Z] (japanslair) YaBoiMglShrek was banned from room japanslair by Royal Luded.
+[2015-09-27T00:53:14.145Z] (japanslair) Japan declared <button name="send" value="/lock japan">Click Me!</button>
+[2015-09-27T00:53:14.745Z] (japanslair) Japan declared <button name="send" value="/transferbucks japan, 30">Click Me!</button>
+[2015-09-27T00:53:57.043Z] (japanslair) Champion Darkrai was kicked from the room by Royal Luded.
+[2015-09-27T00:54:16.447Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><b>just testing if html works in mod declares :x</b></div>
+[2015-09-27T00:54:28.862Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><b><blink>it does yy</b></div>
+[2015-09-27T00:54:31.056Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><b><blink>it does yey</b></div>
+[2015-09-27T00:56:45.555Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><button name="send"value="/transfer Rain☆Pikeldeo, 5">Click dis 4 cookiez feelsgd</button></b></div>
+[2015-09-27T00:58:48.855Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><button name="send"value="/transfer Rain☆Pikeldeo, 0">Click dis 4 cookiez feelsgd</button></b></div>
+[2015-09-27T00:59:55.953Z] (japanslair) (Japan changed the roomintro.)
+[2015-09-27T01:00:16.536Z] (japanslair) (Japan changed the roomintro.)
+[2015-09-27T01:01:22.772Z] (japanslair) (Royal Luded was demoted to Room Moderator by Japan.)
+[2015-09-27T01:01:53.799Z] (japanslair) ashbloodthief was banned from room japanslair by Royal Luded.
+[2015-09-27T01:03:15.228Z] (japanslair) (Royal Luded was demoted to Room Driver by Japan.)
+[2015-09-27T01:03:55.284Z] (japanslair) (Royal Luded was demoted to Room Operator by Japan.)
+[2015-09-27T01:04:14.271Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:04:26.296Z] (japanslair) Royal Luded was banned from room japanslair by hypershaymin.
+[2015-09-27T01:04:34.855Z] (japanslair) ashbloodthief was unbanned from room japanslair by hypershaymin.
+[2015-09-27T01:04:39.741Z] (japanslair) royalluded was unbanned from room japanslair by hypershaymin.
+[2015-09-27T01:04:56.073Z] (japanslair) (Royal Luded was demoted to Room Voice by Japan.)
+[2015-09-27T01:05:04.967Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:05:18.131Z] (japanslair) Royal Luded was warned by ashbloodthief. (fgt)
+[2015-09-27T01:05:24.231Z] (japanslair) Royal Luded was appointed Room Owner by L Chevy 12.
+[2015-09-27T01:05:45.713Z] (japanslair) Royal Luded was muted by Japan for 7 minutes.
+[2015-09-27T01:05:54.516Z] (japanslair) Royal Luded was unmuted by Carnie Starfox.
+[2015-09-27T01:05:56.883Z] (japanslair) Royal Luded was kicked from the room by ashbloodthief.
+[2015-09-27T01:06:09.883Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:06:19.820Z] (japanslair) Royal Luded was muted by Japan for 1 hour.
+[2015-09-27T01:06:20.242Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:06:28.440Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:06:28.825Z] (japanslair) Royal Luded was banned from room japanslair by hypershaymin.
+[2015-09-27T01:06:40.888Z] (japanslair) royalluded was unbanned from room japanslair by hypershaymin.
+[2015-09-27T01:06:47.381Z] (japanslair) Royal Luded was kicked from the room by Champion Darkrai.
+[2015-09-27T01:06:54.079Z] (japanslair) Royal Luded was promoted to Room Moderator by Japan.
+[2015-09-27T01:07:00.040Z] (japanslair) Champion Darkrai was kicked from the room by Japan.
+[2015-09-27T01:07:01.867Z] (japanslair) Royal Luded was unmuted by L Chevy 12.
+[2015-09-27T01:07:07.938Z] (japanslair) (Champion Darkrai was demoted to Room Operator by Japan.)
+[2015-09-27T01:07:13.579Z] (japanslair) Royal Luded was redirected to room C&E by hypershaymin.
+[2015-09-27T01:07:28.405Z] (japanslair) Champion Darkrai was banned from room japanslair by Royal Luded.
+[2015-09-27T01:07:32.726Z] (japanslair) Royal Luded was redirected to room Female HQ by hypershaymin.
+[2015-09-27T01:08:37.854Z] (japanslair) Royal Luded was banned from room japanslair by hypershaymin.
+[2015-09-27T01:08:43.437Z] (japanslair) royalluded was unbanned from room japanslair by hypershaymin.
+[2015-09-27T01:08:45.797Z] (japanslair) Royal Luded was muted by Void Quilluminati for 1 hour. (shit user)
+[2015-09-27T01:09:01.493Z] (japanslair) Royal Luded was unmuted by Carnie Starfox.
+[2015-09-27T01:09:18.265Z] (japanslair) championdarkrai was unbanned from room japanslair by hypershaymin.
+[2015-09-27T01:09:28.357Z] (japanslair) Royal Luded was appointed Room Owner by Japan.
+[2015-09-27T01:09:31.176Z] (japanslair) Japan set modchat to #
+[2015-09-27T01:09:48.359Z] (japanslair) hypershaymin was kicked from the room by Japan.
+[2015-09-27T01:10:36.314Z] (japanslair) (hypershaymin notes: xaa)
+[2015-09-27T01:10:44.160Z] (japanslair) (Carnie Starfox notes: >zarel)
+[2015-09-27T01:10:46.892Z] (japanslair) Japan set modchat to false
+[2015-09-27T01:12:34.100Z] (japanslair) ashbloodthief was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T01:13:37.258Z] (japanslair) ashbloodthief was kicked from the room by Void Quilluminati.
+[2015-09-27T01:14:13.613Z] (japanslair) Void Icarus set modchat to #
+[2015-09-27T01:15:16.620Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:15:42.342Z] (japanslair) Void Icarus set modchat to #
+[2015-09-27T01:16:03.536Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:04.740Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:16:06.147Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:10.877Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:16:11.677Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:13.298Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:16:13.871Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:20.205Z] (japanslair) Void Icarus set modchat to #
+[2015-09-27T01:16:25.393Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:25.559Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:16:33.439Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:16:36.327Z] (japanslair) ashbloodthief was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T01:16:36.592Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:16:37.142Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:17:26.122Z] (japanslair) Void Icarus set modchat to &
+[2015-09-27T01:19:24.135Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:21:15.037Z] (japanslair) ashbloodthief was unmuted by Dylan654.
+[2015-09-27T01:26:58.877Z] (japanslair) Royal Luded set modchat to #
+[2015-09-27T01:27:16.837Z] (japanslair) Royal Luded set modchat to false
+[2015-09-27T01:27:31.109Z] (japanslair) Champion Darkrai was promoted to Room Driver by Royal Luded.
+[2015-09-27T01:51:22.299Z] (japanslair) emboar11 - Ⓨⓞⓤⓣⓤⓑⓔ was promoted to Room Voice by Japan.
+[2015-09-27T02:09:46.784Z] (japanslair) (L Chevy 12 was demoted to Room Voice by L Chevy 12.)
+[2015-09-27T02:09:58.907Z] (japanslair) L Chevy 12 was banned from room japanslair by captain eve.
+[2015-09-27T02:10:23.787Z] (japanslair) L Chevy 12 was warned by Carnie Starfox. (test)
+[2015-09-27T02:10:37.018Z] (japanslair) (L Chevy 12 was demoted to Room regular user by L Chevy 12.)
+[2015-09-27T02:12:37.403Z] (japanslair) Silent Emily was kicked from the room by captain eve.
+[2015-09-27T02:15:36.385Z] (japanslair) YaBoiMlgShrek was kicked from the room by royal luded.
+[2015-09-27T02:18:14.817Z] (japanslair) YaBoiMlgShrek was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T02:18:15.077Z] (japanslair) YaBoiMlgShrek was muted by Luds Minion for 7 minutes. (Multiple infraction: Caps, Stretching)
+[2015-09-27T02:18:16.206Z] (japanslair) YaBoiMlgShrek was warned by Japan.
+[2015-09-27T02:18:25.005Z] (japanslair) YaBoiMlgShrek was unmuted by Japan.
+[2015-09-27T02:18:40.709Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-27T02:18:44.282Z] (japanslair) ashbloodthief was banned from room japanslair by Luds Minion. (Automated moderation: Spamming links (zero tolerance))
+[2015-09-27T02:20:57.636Z] (japanslair) YaBoiMlgShrek was banned from room japanslair by Luds Minion. (Automated moderation: Possible spammer detected)
+[2015-09-27T02:21:09.150Z] (japanslair) yaboimlgshrek was unbanned from room japanslair by Japan.
+[2015-09-27T02:21:51.833Z] (japanslair) (Luds Minion was demoted to Room Driver by royal luded.)
+[2015-09-27T02:22:52.728Z] (japanslair) ashbloodthief was unbanned from room japanslair by Japan.
+[2015-09-27T02:23:03.988Z] (japanslair) Luds Minion was banned from room japanslair by royal luded.
+[2015-09-27T02:26:34.719Z] (japanslair) royal luded was kicked from the room by Japan.
+[2015-09-27T02:26:43.116Z] (japanslair) royal luded was kicked from the room by ashbloodthief.
+[2015-09-27T02:26:43.245Z] (japanslair) royal luded was appointed Room Owner by Japan.
+[2015-09-27T02:26:55.180Z] (japanslair) ashbloodthief was kicked from the room by royal luded.
+[2015-09-27T02:27:27.546Z] (japanslair) YaBoiMlgShrek was banned from room japanslair by captain eve.
+[2015-09-27T02:27:39.716Z] (japanslair) yaboimlgshrek was unbanned from room japanslair by Japan.
+[2015-09-27T02:27:45.790Z] (japanslair) Champion Darkrai was kicked from the room by captain eve.
+[2015-09-27T02:28:45.470Z] (japanslair) Silent Emily was kicked from the room by Champion Darkrai.
+[2015-09-27T02:29:04.119Z] (japanslair) 00Shadow was kicked from the room by Champion Darkrai.
+[2015-09-27T02:29:47.038Z] (japanslair) YaBoiMlgShrek was kicked from the room by Champion Darkrai.
+[2015-09-27T02:31:10.844Z] (japanslair) 00Shadow was kicked from the room by Champion Darkrai.
+[2015-09-27T02:31:56.865Z] (japanslair) 00Shadow was kicked from the room by Champion Darkrai.
+[2015-09-27T02:32:16.203Z] (japanslair) 00Shadow was warned by ashbloodthief. (GET OF HERE FGT, *KICKS YOU INTO WALL* GET DESTROYED* DIE NOW, NOOB! RAAAAAAAAAAAWWWWWWWWWWWWWWR!!! *TURNS SUPER SAIYAN IXIXIIXIX* *CHARGES ULTIMATE HYPER BEAM* TAKE THIS! AHHHHHHHH!!!!!! *LAUGHS AT UR DEAD BODY*)
+[2015-09-27T02:33:20.240Z] (japanslair) Rain sinatra - ⓞⓣⓢ was promoted to Room Driver by royal luded.
+[2015-09-27T02:33:26.352Z] (japanslair) (Rain sinatra - ⓞⓣⓢ was demoted to Room Voice by royal luded.)
+[2015-09-27T02:33:42.547Z] (japanslair) 00Shadow was kicked from the room by Champion Darkrai.
+[2015-09-27T02:34:01.559Z] (japanslair) 00Shadow was kicked from the room by ashbloodthief.
+[2015-09-27T02:34:55.863Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-27T02:36:39.708Z] (japanslair) YaBoiMlgShrek was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T02:36:45.531Z] (japanslair) Pseudoku was promoted to Room Voice by Japan.
+[2015-09-27T02:37:12.063Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-27T02:40:29.997Z] (japanslair) YaBoiMlgShrek was promoted to Room Driver by Japan.
+[2015-09-27T02:42:18.895Z] (japanslair) Void Icarus declared <img src="http://static.tumblr.com/f4bc7c13c7f0319de2c316bde6cac692/j4qvxna/kSGnbhkgp/tumblr_static_2ofk39gvb8ao44kocg80gwkw4.gif"
+[2015-09-27T02:43:06.813Z] (japanslair) Champion Darkrai was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-09-27T02:43:32.007Z] (japanslair) Safety Shrek was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-09-27T02:43:33.307Z] (japanslair) (YaBoiMlgShrek notes: do /u kg)
+[2015-09-27T02:44:03.888Z] (japanslair) Safety Shrek was muted by Safety Shark for 7 minutes. (Please do not abuse emoticons. (5 [10]))
+[2015-09-27T02:44:03.889Z] (japanslair) (Safety Shrek's ac account: voidkgbeast)
+[2015-09-27T02:44:21.976Z] (japanslair) ashbloodthief was kicked from the room by Champion Darkrai.
+[2015-09-27T02:46:45.486Z] (japanslair) Void KGBeast was unmuted by royal luded.
+[2015-09-27T02:47:01.998Z] (japanslair) Void KGBeast was appointed Room Owner by Japan.
+[2015-09-27T02:48:29.027Z] (japanslair) Rain sinatra - ⓞⓣⓢ was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T02:48:40.769Z] (japanslair) Champion Darkrai was muted by L Chevy 12 for 7 minutes. (Please no.)
+[2015-09-27T02:48:46.058Z] (japanslair) Champion Darkrai was unmuted by L Chevy 12.
+[2015-09-27T02:49:00.432Z] (japanslair) Void Quilluminati was appointed Room Owner by Japan.
+[2015-09-27T02:49:11.386Z] (japanslair) royal luded was promoted to Room Leader by Void Icarus - ⓚⓜⓢ.
+[2015-09-27T02:51:49.146Z] (japanslair) YaBoiMlgShrek was kicked from the room by Void Icarus - ⓚⓜⓢ.
+[2015-09-27T02:51:53.264Z] (japanslair) Champion Darkrai was kicked from the room by Void Icarus - ⓚⓜⓢ.
+[2015-09-27T02:57:51.475Z] (japanslair) Champion Darkrai was warned by Japan.
+[2015-09-27T03:15:56.813Z] (japanslair) Arrow Bot was muted by Rain☆Pikeldeo for 1 hour. (kys)
+[2015-09-27T03:45:42.834Z] (japanslair) YaBoiMlgShrek was warned by Japan.
+[2015-09-27T03:52:47.620Z] (japanslair) Japan declared bitch please u afraid to go on the mic
+[2015-09-27T04:12:17.505Z] (japanslair) Steel Anti was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T04:12:25.251Z] (japanslair) Steel Anti was unmuted by Champion Darkrai.
+[2015-09-27T04:21:20.138Z] (japanslair) Nineage added the trainer card uwot
+[2015-09-27T04:22:12.474Z] (japanslair) ashbloodthief was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T04:22:38.301Z] (japanslair) (Nineage was demoted to regular user by Nineage.)
+[2015-09-27T04:24:20.022Z] (japanslair) ashbloodthief was unmuted by Champion Darkrai.
+[2015-09-27T04:24:51.353Z] (japanslair) ashbloodthief was kicked from the room by Champion Darkrai.
+[2015-09-27T04:25:35.165Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-27T09:40:22.168Z] (japanslair) 99sobiYT was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T10:14:39.903Z] (japanslair) Allegiant Gryphon was banned from room japanslair by Alpha Ninja. (hit & run)
+[2015-09-27T10:14:52.346Z] (japanslair) allegiantgryphon was unbanned from room japanslair by Alpha Ninja.
+[2015-09-27T10:24:30.297Z] (japanslair) 99sobiYT would be muted by macrarazy but was already offline. (troll)
+[2015-09-27T12:07:35.163Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/vwxbtr.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T13:53:29.694Z] (japanslair) Darkrai165196 was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-09-27T13:53:30.334Z] (japanslair) Darkrai165196 was muted by Safety Shark for 7 minutes. (Please do not abuse emoticons. (6 [11]))
+[2015-09-27T13:53:45.364Z] (japanslair) Darkrai165196 was unmuted by Japan.
+[2015-09-27T13:53:52.034Z] (japanslair) Safety Shark was muted by Japan for 1 hour.
+[2015-09-27T14:31:43.245Z] (japanslair) Japan declared this vid is actually Panpawn idk who made it
+[2015-09-27T14:41:34.444Z] (japanslair) Japan declared steelchar saying m3 japan ain't relevant go on lobby and roast his ass if real
+[2015-09-27T14:42:12.172Z] (japanslair) Exiled Shadows was promoted to Room Voice by Japan.
+[2015-09-27T14:46:02.269Z] (japanslair) delta declared Quill tried to hit us with that reverse psychology, Who is the shittiest, who is the shittiest, who is the least shittiest. ~ Delta
+[2015-09-27T14:48:00.155Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/silyex.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T14:49:09.315Z] (japanslair) HM Sobi was promoted to Room Voice by delta.
+[2015-09-27T14:51:20.540Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/hrcahn.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T14:52:30.645Z] (japanslair) Royal Luded (≖︿≖✿) was kicked from the room by Captain Eve (≖︿≖✿).
+[2015-09-27T14:53:35.670Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/umrckj.webm" height="500" controls="" target="_blank"></video>
+[2015-09-27T14:54:00.303Z] (japanslair) Chaos Abra was promoted to Room Voice by Japan.
+[2015-09-27T14:55:39.493Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/izwpta.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T14:55:45.649Z] (japanslair) Chief Sokka was banned from room japanslair by Captain Eve (≖︿≖✿).
+[2015-09-27T14:55:55.052Z] (japanslair) chiefsokka was unbanned from room japanslair by Royal Luded (≖︿≖✿).
+[2015-09-27T14:56:14.524Z] (japanslair) Anything Goes was kicked from the room by Captain Eve (≖︿≖✿).
+[2015-09-27T14:57:59.363Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/inaosm.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T14:58:09.442Z] (japanslair) (Royal Luded (≖︿≖✿) was demoted to Room Moderator by Void Icarus - ⓕⓞⓞⓓ.)
+[2015-09-27T14:58:39.895Z] (japanslair) (delta notes: Reason for demotion?)
+[2015-09-27T14:59:50.385Z] (japanslair) (delta notes: Icarus, Alpha Ninja is the one declaring the videos http://prntscr.com/8l21ql)
+[2015-09-27T15:00:11.217Z] (japanslair) (Alpha Ninja notes: anything wrong with it?)
+[2015-09-27T15:02:01.740Z] (japanslair) (delta notes: I don't see anything wrong with it, Alpha, since we're already spamming polls, it's just that Luded was demoted for something he didn't do.)
+[2015-09-27T15:02:47.104Z] (japanslair) (Alpha Ninja notes: why did he get banned delta)
+[2015-09-27T15:02:52.044Z] (japanslair) (Alpha Ninja notes: i mean)
+[2015-09-27T15:02:55.198Z] (japanslair) (Alpha Ninja notes: demoted)
+[2015-09-27T15:03:18.235Z] (japanslair) (Carnie Starfox notes: modnote)
+[2015-09-27T15:03:25.113Z] (japanslair) (Carnie Starfox notes: xaa)
+[2015-09-27T15:03:32.017Z] (japanslair) (delta notes: Icarus said he was spamming the videos, then I told him you were the one declaring them, and then yea... here we are.)
+[2015-09-27T15:11:50.242Z] (japanslair) Austin was promoted to Room Leader by Japan.
+[2015-09-27T15:11:57.861Z] (japanslair) Austin was appointed Room Owner by Japan.
+[2015-09-27T15:12:39.650Z] (japanslair) MilkshakeHero was promoted to Room Voice by Japan.
+[2015-09-27T15:12:48.006Z] (japanslair) PrincessGardevoir was promoted to Room Voice by Japan.
+[2015-09-27T15:13:36.932Z] (japanslair) PrincessGardevoir was kicked from the room by Captain Eve (≖︿≖✿).
+[2015-09-27T15:13:37.979Z] (japanslair) Royal Luded (≖︿≖✿) was appointed Room Owner by Japan.
+[2015-09-27T15:15:49.518Z] (japanslair) BreakLight was promoted to Room Voice by Japan.
+[2015-09-27T15:16:55.770Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-27T15:17:45.637Z] (japanslair) LumaSoul was promoted to Room Voice by Japan.
+[2015-09-27T15:17:56.369Z] (japanslair) S-Matrix was promoted to Room Voice by Japan.
+[2015-09-27T15:18:03.907Z] (japanslair) (Austin has set autorank to "+" in this room.)
+[2015-09-27T15:18:14.239Z] (japanslair) YaBoiMlgShrek was warned by Japan. (spam)
+[2015-09-27T15:18:46.132Z] (japanslair) Rain Slash1234 was warned by Japan. (stretching)
+[2015-09-27T15:20:11.606Z] (japanslair) Raіn Kuro was promoted to Room Voice by Royal Luded (≖︿≖✿).
+[2015-09-27T15:21:42.972Z] (japanslair) Japan declared next to speak likes to dickride shz
+[2015-09-27T15:21:50.280Z] (japanslair) MilkshakeHero was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T15:22:31.239Z] (japanslair) Royal Luded (≖︿≖✿) declared the most active voice is <br> waiiit for it..... <br> Arrow bot
+[2015-09-27T15:24:36.762Z] (japanslair) MilkshakeHero was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T15:28:27.339Z] (japanslair) YaBoiMlgShrek was kicked from the room by Japan.
+[2015-09-27T15:30:31.863Z] (japanslair) Darkrai165196 was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T15:30:51.004Z] (japanslair) Safety Shark was muted by Japan for 1 hour.
+[2015-09-27T15:41:50.698Z] (japanslair) Darkrai165196 was banned from room japanslair by Captain Eve (≖︿≖✿).
+[2015-09-27T15:42:17.446Z] (japanslair) darkrai165196 was unbanned from room japanslair by Anything Goes.
+[2015-09-27T15:48:51.188Z] (japanslair) SWL Panda was promoted to Room Voice by Anything Goes.
+[2015-09-27T15:48:55.168Z] (japanslair) SteelAnti (≖︿≖✿) was banned from room japanslair by Captain Eve (≖︿≖✿).
+[2015-09-27T15:49:00.075Z] (japanslair) steelanti was unbanned from room japanslair by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T15:51:02.803Z] (japanslair) ludsminion was unbanned from room japanslair by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T15:51:28.702Z] (japanslair) SteelAnti (≖︿≖✿) was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T15:51:37.253Z] (japanslair) SteelAnti (≖︿≖✿) was unmuted by Anything Goes.
+[2015-09-27T15:51:55.871Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was muted by Anything Goes for 7 minutes.
+[2015-09-27T15:52:07.667Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was unmuted by Captain Eve (≖︿≖✿).
+[2015-09-27T15:53:05.667Z] (japanslair) SteelAnti (≖︿≖✿) was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T15:53:15.711Z] (japanslair) SteelAnti (≖︿≖✿) was unmuted by Captain Eve (≖︿≖✿).
+[2015-09-27T15:56:35.261Z] (japanslair) Rain Slash1234 was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T15:56:42.800Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T15:57:00.423Z] (japanslair) PrimalZard was warned by Luds Minion. (Automated moderation: Stretching)
+[2015-09-27T15:57:12.237Z] (japanslair) Anything Goes was banned from room japanslair by Captain Eve (≖︿≖✿).
+[2015-09-27T15:57:37.916Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was unmuted by Captain Eve (≖︿≖✿).
+[2015-09-27T15:57:38.089Z] (japanslair) anythinggoes was unbanned from room japanslair by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T15:58:37.429Z] (japanslair) (YaBoiMlgShrek was demoted to Room Operator by Japan - Ⓢⓚⓨⓟⓔ.)
+[2015-09-27T15:58:55.741Z] (japanslair) Captain Eve (≖︿≖✿) was promoted to Room Leader by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T16:02:25.661Z] (japanslair) YaBoiMlgShrek was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T16:02:31.195Z] (japanslair) YaBoiMlgShrek was unmuted by Anything Goes.
+[2015-09-27T16:05:35.561Z] (japanslair) Rain Slash1234 was unmuted by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T16:07:11.048Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was redirected to room Casino by Anything Goes.
+[2015-09-27T16:08:09.503Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was redirected to room Other Tiers by Anything Goes.
+[2015-09-27T16:08:16.418Z] (japanslair) Anything Goes was redirected to room The Asylum League by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T16:08:30.429Z] (japanslair) Anything Goes was redirected to room The Royal League by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T16:09:44.279Z] (japanslair) Anything Goes was redirected to room Hackmons by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T16:17:40.227Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was muted by Luds Minion for 7 minutes. (Automated moderation: Excessive capitalization)
+[2015-09-27T16:18:11.709Z] (japanslair) Queen Emma ᶘ ᵒᴥᵒᶅ was unmuted by Wandering.
+[2015-09-27T16:27:09.995Z] (japanslair) Steel Anti was promoted to Room Operator by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T16:28:36.428Z] (japanslair) Luds Minion was promoted to Room Leader by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T16:28:55.387Z] (japanslair) Darkrai165196 was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-27T16:37:04.336Z] (japanslair) Soprano Meiko was promoted to Room Leader by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T17:00:56.587Z] (japanslair) (Soprano Meiko - ⓗⓦ was demoted to Room Moderator by Japan - Ⓢⓚⓨⓟⓔ.)
+[2015-09-27T17:12:09.141Z] (japanslair) Neowulf was muted by Foh for 1 hour. (fuck me)
+[2015-09-27T17:12:13.893Z] (japanslair) Neowulf was unmuted by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T17:14:46.950Z] (japanslair) Foh was promoted to Room Moderator by Royal ᶘ ᵒᴥᵒᶅ Luded.
+[2015-09-27T17:27:10.799Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T17:29:02.426Z] (japanslair) AntiDarkrai was muted by Luds Minion for 1 hour. (Automated moderation: Possible spammer detected)
+[2015-09-27T17:29:12.336Z] (japanslair) AntiDarkrai was warned by Carnie Starfox. (no spam)
+[2015-09-27T17:29:22.012Z] (japanslair) AntiDarkrai was unmuted by ChampionDarkrai.
+[2015-09-27T17:31:06.447Z] (japanslair) AntiDarkrai was muted by Luds Minion for 7 minutes. (Automated moderation: Stretching)
+[2015-09-27T17:31:06.457Z] (japanslair) AntiDarkrai was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T17:31:18.274Z] (japanslair) AntiDarkrai was unmuted by ChampionDarkrai.
+[2015-09-27T17:50:52.765Z] (japanslair) Delta Đаŗķŗаі declared <center><video src="http://puu.sh/kp64V.mp4" height="200" controls="" target="_blank"></video><p><b>Directioners react to Zayn leaving 1D</b></p></center>
+[2015-09-27T17:51:30.263Z] (japanslair) luds was promoted to Room Leader by Delta Đаŗķŗаі.
+[2015-09-27T17:56:12.136Z] (japanslair) macrarazy was banned from room japanslair by Captain Eve (≖︿≖✿).
+[2015-09-27T17:56:28.044Z] (japanslair) macrarazy was unbanned from room japanslair by Anything Goes.
+[2015-09-27T18:02:05.031Z] (japanslair) (hypershaymin - ⓑⓡⓑ changed the roomdesc to: "[13:01] @Twizzy ᶘ ᵒᴥᵒᶅ: i dream about big dicks all the time too".)
+[2015-09-27T18:02:09.755Z] (japanslair) Luds was appointed Room Owner by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T18:03:12.976Z] (japanslair) macrarazy was warned by Luds.
+[2015-09-27T18:04:34.234Z] (japanslair) hypershaymin - ⓑⓡⓑ declared lets do that feelsseis spam
+[2015-09-27T18:04:59.271Z] (japanslair) macrarazy was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-27T18:04:59.282Z] (japanslair) macrarazy was banned from room japanslair by Safety Shark. (Automated response: zero tolerance user)
+[2015-09-27T18:05:09.377Z] (japanslair) macrarazy was muted by Carnie Starfox for 7 minutes.
+[2015-09-27T18:05:16.238Z] (japanslair) macrarazy was unmuted by AshBloodThief.
+[2015-09-27T18:05:19.177Z] (japanslair) macrarazy was unbanned from room japanslair by Luds.
+[2015-09-27T18:05:33.912Z] (japanslair) macrarazy was muted by Carnie Starfox for 7 minutes.
+[2015-09-27T18:05:41.846Z] (japanslair) Twizzy ᶘ ᵒᴥᵒᶅ was warned by Luds.
+[2015-09-27T18:07:16.700Z] (japanslair) hypershaymin - ⓑⓡⓑ was muted by Luds for 7 minutes.
+[2015-09-27T18:07:23.305Z] (japanslair) AshBloodThief was muted by Luds for 7 minutes.
+[2015-09-27T18:08:10.530Z] (japanslair) (hypershaymin - ⓑⓡⓑ changed the roomdesc to: "roams the type of nigga to bend than suck".)
+[2015-09-27T18:08:37.753Z] (japanslair) PrimalZard was warned by Luds Minion. (Automated moderation: Excessive capitalization)
+[2015-09-27T18:08:37.769Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:09:13.120Z] (japanslair) (Luds created a tournament in ou format.)
+[2015-09-27T18:09:54.730Z] (japanslair) Luds Minion was banned from room japanslair by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T18:10:25.821Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan - Ⓢⓚⓨⓟⓔ)
+[2015-09-27T18:18:17.937Z] (japanslair) Neowulf was promoted to Room Operator by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.
+[2015-09-27T18:18:44.944Z] (japanslair) Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ was kicked from the room by hypershaymin - ⓑⓡⓑ.
+[2015-09-27T18:18:58.460Z] (japanslair) hypershaymin - ⓐⓕⓚ was kicked from the room by Luds.
+[2015-09-27T18:19:04.236Z] (japanslair) (Neowulf was demoted to Room regular user by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.)
+[2015-09-27T18:19:14.562Z] (japanslair) Neowulf was promoted to Room Voice by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.
+[2015-09-27T18:19:23.566Z] (japanslair) Neowulf was kicked from the room by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.
+[2015-09-27T18:19:34.124Z] (japanslair) Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ was kicked from the room by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:19:40.385Z] (japanslair) Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ was promoted to Room Leader by Luds.
+[2015-09-27T18:19:47.441Z] (japanslair) (Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ was demoted to Room Moderator by Luds.)
+[2015-09-27T18:20:33.996Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:40.218Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:20:43.423Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:44.704Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:20:46.343Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:46.917Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:20:47.640Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:53.430Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:20:54.448Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:56.659Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:20:57.917Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:20:59.532Z] (japanslair) lchevy12 was unbanned from room japanslair by L Chevy 12.
+[2015-09-27T18:21:09.436Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:21:13.826Z] (japanslair) Rain Slash1234 was promoted to Room Operator by hypershaymin - ⓐⓕⓚ.
+[2015-09-27T18:21:33.566Z] (japanslair) (Rain Slash1234 was demoted to Room Voice by Luds.)
+[2015-09-27T18:23:52.573Z] (japanslair) Luds declared Promotions will now be handled by Japan only.
+[2015-09-27T18:23:57.979Z] (japanslair) Luds declared -Luds
+[2015-09-27T18:34:02.913Z] (japanslair) hypershaymin - ⓐⓕⓚ declared free blowjobs from courtesy of luds small mouth
+[2015-09-27T18:35:43.813Z] (japanslair) macrarazy was banned from room japanslair by Safety Shark. (Automated response: zero tolerance user)
+[2015-09-27T18:36:15.534Z] (japanslair) macrarazy was unbanned from room japanslair by Anything Goes.
+[2015-09-27T18:36:51.720Z] (japanslair) Luds set modchat to #
+[2015-09-27T18:37:15.559Z] (japanslair) (hypershaymin - ⓐⓕⓚ notes: leaders cant clearall no more)
+[2015-09-27T18:37:28.851Z] (japanslair) (Soprano Meiko notes: looll)
+[2015-09-27T18:37:32.652Z] (japanslair) Luds set modchat to false
+[2015-09-27T18:39:46.359Z] (japanslair) (hypershaymin changed the roomdesc to: "feel free to drop ideas for luds mixtape diss".)
+[2015-09-27T18:41:31.303Z] (japanslair) Grafite was promoted to Room Voice by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.
+[2015-09-27T18:41:53.823Z] (japanslair) Myst Bronze was promoted to Room Voice by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ.
+[2015-09-27T18:47:11.511Z] (japanslair) SteelAnti was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:47:33.325Z] (japanslair) Zenji was warned by Japan - Ⓢⓚⓨⓟⓔ.
+[2015-09-27T18:48:15.058Z] (japanslair) SteelAnti was kicked from the room by hypershaymin.
+[2015-09-27T18:48:21.995Z] (japanslair) (hypershaymin was demoted to Room Moderator by Japan - Ⓢⓚⓨⓟⓔ.)
+[2015-09-27T18:50:14.635Z] (japanslair) Zenji was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T18:50:21.111Z] (japanslair) (Japan - Ⓢⓚⓨⓟⓔ created a tournament in ou format.)
+[2015-09-27T18:51:39.372Z] (japanslair) (Grafite was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:51:44.565Z] (japanslair) (Japan was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:51:48.713Z] (japanslair) (LinkCodeX was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:51:53.146Z] (japanslair) (Myst Bronze was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:52:08.924Z] (japanslair) (The tournament auto disqualify timeout was set to 0.5 by AshBloodThief)
+[2015-09-27T18:52:14.198Z] (japanslair) (Rain Slash1234 was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:52:17.283Z] (japanslair) (Alliance - Llama was disqualified from the tournament by AshBloodThief)
+[2015-09-27T18:52:20.459Z] (japanslair) (AshBloodThief was demoted to Room regular user by Japan.)
+[2015-09-27T18:52:22.393Z] (japanslair) AshBloodThief was muted by Luds for 7 minutes.
+[2015-09-27T18:52:54.345Z] (japanslair) (AshBloodThief was disqualified from the tournament by Myst Bronze)
+[2015-09-27T18:54:13.390Z] (japanslair) L Chevy 12 was appointed Room Owner by L Chevy 12.
+[2015-09-27T18:54:18.276Z] (japanslair) (L Chevy 12 was demoted to Room regular user by L Chevy 12.)
+[2015-09-27T18:56:59.718Z] (japanslair) Japan declared it's a bug or something cuz i made and tried tot end a tour in another room just now and it says that room doesn't exist either.
+[2015-09-27T18:57:13.071Z] (japanslair) Japan declared -Japan
+[2015-09-27T18:57:48.041Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan)
+[2015-09-27T18:57:55.870Z] (japanslair) (The tournament was set to disallow scouting by Foh - ⓜⓐⓚⓘⓝⓖⓜⓞⓝⓔⓨ)
+[2015-09-27T18:58:18.719Z] (japanslair) Delеtе Μу Ƒaсе declared He's lying we're all gonna die
+[2015-09-27T18:58:25.355Z] (japanslair) Delеtе Μу Ƒaсе declared -Donald Trump
+[2015-09-27T18:58:33.950Z] (japanslair) Alpha Ninja declared what is this room?
+[2015-09-27T18:59:05.024Z] (japanslair) BT Cant Get Burns declared okay...
+[2015-09-27T19:00:00.136Z] (japanslair) Arrow Bot was muted by macrarazy for 7 minutes. (dumb af)
+[2015-09-27T19:00:35.515Z] (japanslair) Arrow Bot was unmuted by BT Cant Get Burns.
+[2015-09-27T19:05:04.509Z] (japanslair) YaBoiMlgShrek was banned from room japanslair by paralyzation.
+[2015-09-27T19:05:13.584Z] (japanslair) yaboimlgshrek was unbanned from room japanslair by paralyzation.
+[2015-09-27T19:07:05.608Z] (japanslair) Mecha Emboar was promoted to Room Operator by Foh.
+[2015-09-27T19:07:17.774Z] (japanslair) ludsminion was unbanned from room japanslair by Luds.
+[2015-09-27T19:07:44.701Z] (japanslair) Doctor Emboar11 was promoted to Room Driver by Japan.
+[2015-09-27T19:08:11.725Z] (japanslair) Japan declared everyone roast Ashbloodthief for losing voice
+[2015-09-27T19:10:22.360Z] (japanslair) le dank meme face was promoted to Room Voice by Japan.
+[2015-09-27T19:14:05.085Z] (japanslair) Apex✦control was promoted to Room Voice by Foh.
+[2015-09-27T19:31:42.514Z] (japanslair) (Japan created a tournament in monotype format.)
+[2015-09-27T19:33:00.123Z] (japanslair) Japan declared Scouting is allowed, no Team Changing 
+[2015-09-27T19:33:01.554Z] (japanslair) (Luds Minion was demoted to Room Driver by Luds.)
+[2015-09-27T19:33:30.160Z] (japanslair) (The tournament was set to disallow scouting by Foh)
+[2015-09-27T19:34:07.048Z] (japanslair) (The tournament was set to allow scouting by Foh)
+[2015-09-27T19:34:13.567Z] (japanslair) (Foh was demoted to Room regular user by Luds.)
+[2015-09-27T19:34:48.932Z] (japanslair) Japan declared we begin tour at 30 or more
+[2015-09-27T19:35:12.191Z] (japanslair) Japan set modchat to %
+[2015-09-27T19:35:54.922Z] (japanslair) Japan declared yes scouting is allowed, no team changing. We begin tour at 30 users or more.
+[2015-09-27T19:35:59.253Z] (japanslair) Japan set modchat to false
+[2015-09-27T19:37:01.524Z] (japanslair) Japan declared Shoutout to our sponsor GTX Stantler 
+[2015-09-27T19:37:29.238Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan)
+[2015-09-27T19:39:55.297Z] (japanslair) (Minnie M Walker was disqualified from the tournament by Japan)
+[2015-09-27T19:40:34.377Z] (japanslair) Japan declared after this we can have a mini tour for 20 bucks lol
+[2015-09-27T19:40:44.436Z] (japanslair) Japan declared -Japan
+[2015-09-27T19:43:55.166Z] (japanslair) (Luds Minion was demoted to Room Voice by Luds.)
+[2015-09-27T19:43:59.471Z] (japanslair) (Luds was disqualified from the tournament by Luds Minion)
+[2015-09-27T19:47:13.840Z] (japanslair) Wolf☯Itachi was promoted to Room Voice by Japan.
+[2015-09-27T19:50:01.031Z] (japanslair) Nefertum was muted by Pokepat - ⒶⓌⒶⓎ for 7 minutes. (wrath)
+[2015-09-27T19:50:05.959Z] (japanslair) Nefertum was unmuted by Rain☆Pikeldeo.
+[2015-09-27T19:50:29.523Z] (japanslair) AshBloodThief was muted by Pokepat - ⒶⓌⒶⓎ for 7 minutes.
+[2015-09-27T19:50:31.435Z] (japanslair) AshBloodThief was unmuted by Luds.
+[2015-09-27T19:53:19.141Z] (japanslair) Imp Spunky! was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T19:53:24.508Z] (japanslair) Ludеs declared Im thinking of a number 1-10 who'ever gets the correct number gets 3 bucks <br> 3 <br> 2 <br> 1 <br> go
+[2015-09-27T19:53:33.656Z] (japanslair) AshBloodThief was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T19:54:05.058Z] (japanslair) AuraStormLucario was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T19:55:08.576Z] (japanslair) AshBloodThief was unmuted by Japan - ⓑⓡⓑ.
+[2015-09-27T20:09:19.064Z] (japanslair) Luds Minion was promoted to Room Moderator by Luds.
+[2015-09-27T20:11:36.577Z] (japanslair) Safety Shark declared <video src="https://my.mixtape.moe/ltiffg.mp4" height="200" controls="" target="_blank"></video>
+[2015-09-27T20:11:44.304Z] (japanslair) Foh was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-09-27T20:15:24.277Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan - ⓑⓡⓑ)
+[2015-09-27T20:16:02.728Z] (japanslair) (Rain Slash1234 was demoted to Room regular user by Japan - ⓑⓡⓑ.)
+[2015-09-27T20:16:56.554Z] (japanslair) Alliance ♋ akaFila was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T20:19:50.472Z] (japanslair) Japan - ⓑⓡⓑ declared after this there is a mini tour challenge cup 1v1 lol 15/5
+[2015-09-27T20:25:15.361Z] (japanslair) Japan - ⓑⓡⓑ declared i lied about the money
+[2015-09-27T20:25:23.547Z] (japanslair) Japan - ⓑⓡⓑ declared jk lol hold on
+[2015-09-27T20:26:11.243Z] (japanslair) Japan - ⓑⓡⓑ declared time for our mini 15/5 cc1v1 tour
+[2015-09-27T20:26:31.731Z] (japanslair) (Japan - ⓑⓡⓑ created a tournament in challengecup1v1 format.)
+[2015-09-27T20:26:51.407Z] (japanslair) Rain Slash1234 was promoted to Room Voice by Foh.
+[2015-09-27T20:27:09.418Z] (japanslair) Rain ☆ Devin was promoted to Room Voice by Foh.
+[2015-09-27T20:27:18.232Z] (japanslair) Bootyful was promoted to Room Voice by Foh.
+[2015-09-27T20:27:29.629Z] (japanslair) Apex✦Emil - ⓗⓜⓔⓦⓡⓚ was promoted to Room Voice by Foh.
+[2015-09-27T20:27:53.255Z] (japanslair) Minnie M Walker was promoted to Room Voice by Foh.
+[2015-09-27T20:29:54.921Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan - ⓑⓡⓑ)
+[2015-09-27T20:30:20.897Z] (japanslair) TheAce22 was kicked from the room by Japan - ⓑⓡⓑ.
+[2015-09-27T20:34:18.707Z] (japanslair) Luds - Ⓙⓐⓟⓐⓝ declared Who wants to join the Sace League
+[2015-09-27T20:36:10.653Z] (japanslair) mahdavi was banned from room japanslair by Luds Minion. (Automated moderation: Spamming)
+[2015-09-27T20:47:02.075Z] (japanslair) ashbloodthief was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T20:47:57.415Z] (japanslair) MilkshakeHero was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-09-27T21:01:39.361Z] (japanslair) Myst Anti was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T21:01:47.881Z] (japanslair) Lotus Axl was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T21:09:23.288Z] (japanslair) SWL Reck was warned by MilkshakeHero.
+[2015-09-27T21:11:19.653Z] (japanslair) killerjays was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-09-27T21:12:41.017Z] (japanslair) Japan - ⓑⓡⓑ declared Brb -Japan.
+[2015-09-27T21:13:05.873Z] (japanslair) SWL Reck was muted by MilkshakeHero for 7 minutes.
+[2015-09-27T21:13:15.094Z] (japanslair) SWL Reck was unmuted by MilkshakeHero.
+[2015-09-27T21:19:41.001Z] (japanslair) MilkshakeHero was banned from room japanslair by bandi.
+[2015-09-27T21:19:41.663Z] (japanslair) ashbloodthief was kicked from the room by Japan.
+[2015-09-27T21:19:47.306Z] (japanslair) milkshakehero was unbanned from room japanslair by bandi.
+[2015-09-27T21:22:05.661Z] (japanslair) ashbloodthief was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T21:22:05.690Z] (japanslair) ashbloodthief was banned from room japanslair by Luds Minion. (Automated moderation: Excessive capitalization (zero tolerance))
+[2015-09-27T21:22:31.400Z] (japanslair) ashbloodthief was unbanned from room japanslair by Anything Goes.
+[2015-09-27T21:22:44.888Z] (japanslair) (Luds Minion was demoted to Room Voice by Luds.)
+[2015-09-27T21:23:28.905Z] (japanslair) (SWL Reck was demoted to Room regular user by hypershaymin.)
+[2015-09-27T21:23:32.645Z] (japanslair) SWL Reck was promoted to Room Voice by hypershaymin.
+[2015-09-27T21:28:23.627Z] (japanslair) Alpha Ninja declared <video src="https://my.mixtape.moe/vwxbtr.mp4" height="500" controls="" target="_blank"></video>
+[2015-09-27T21:33:21.782Z] (japanslair) bandi was locked from talking by panpawn. (@bandi: i will @bandi: ddos eos)
+[2015-09-27T21:34:15.606Z] (japanslair) bandi was unlocked by panpawn.
+[2015-09-27T21:34:20.129Z] (japanslair) bandi was promoted to Room Moderator by Luds.
+[2015-09-27T21:39:06.356Z] (japanslair) Luds declared CELEBRATE
+[2015-09-27T21:42:02.368Z] (japanslair) (ashbloodthief created a tournament in 1v1 format.)
+[2015-09-27T21:43:43.807Z] (japanslair) ashbloodthief was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T21:46:19.093Z] (japanslair) (ashbloodthief created a tournament in 1v1 format.)
+[2015-09-27T21:46:47.387Z] (japanslair) Japan - ⓔⓐⓣⓘⓝⓖ declared this isn't a buck tour 
+[2015-09-27T21:48:55.196Z] (japanslair) Japan - ⓔⓐⓣⓘⓝⓖ declared remember we had 60 users here today 7u7
+[2015-09-27T21:50:47.632Z] (japanslair) (ashbloodthief created a tournament in 1v1 format.)
+[2015-09-27T21:51:12.440Z] (japanslair) ashbloodthief was warned by Japan - ⓔⓐⓣⓘⓝⓖ.
+[2015-09-27T21:52:30.948Z] (japanslair) SWL Reck was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T21:54:35.635Z] (japanslair) (Japan - ⓔⓐⓣⓘⓝⓖ changed the roomdesc to: "pokepat the type of nigga to cry in the rain.".)
+[2015-09-27T21:59:53.794Z] (japanslair) Japan - ⓔⓐⓣⓘⓝⓖ declared erica only got leader cuz roomleader wouldn't disable emotes.
+[2015-09-27T22:00:23.010Z] (japanslair) Champion Darkrai was banned from room japanslair by bandi.
+[2015-09-27T22:00:29.927Z] (japanslair) Alliance - Llama was banned from room japanslair by bandi.
+[2015-09-27T22:00:35.324Z] (japanslair) alliancellama was unbanned from room japanslair by bandi.
+[2015-09-27T22:02:29.737Z] (japanslair) SL Paldi was promoted to Room Voice by Japan - ⓔⓐⓣⓘⓝⓖ.
+[2015-09-27T22:06:21.934Z] (japanslair) (Luds created a tournament in ou format.)
+[2015-09-27T22:06:30.319Z] (japanslair) Japan - ⓐⓕⓚ declared I'll be back,  behave -Japan.
+[2015-09-27T22:07:40.496Z] (japanslair) championdarkrai was unbanned from room japanslair by Foh.
+[2015-09-27T22:15:18.435Z] (japanslair) (Anything U Goes was forced to choose a new name by L Chevy 12)
+[2015-09-27T22:23:20.625Z] (japanslair) hypershaymin was warned by Luds. (inap)
+[2015-09-27T22:31:09.021Z] (japanslair) (The tournament auto disqualify timeout was set to .5 by hypershaymin)
+[2015-09-27T22:38:59.127Z] (japanslair) SL Paldi was banned from room japanslair by bandi. (stfu bitchass nigga)
+[2015-09-27T22:39:06.116Z] (japanslair) slpaldi was unbanned from room japanslair by bandi.
+[2015-09-27T22:39:35.324Z] (japanslair) (bandi was demoted to Room Voice by Delta.)
+[2015-09-27T22:39:44.955Z] (japanslair) bandi was kicked from the room by Champion Darkrai.
+[2015-09-27T22:39:47.775Z] (japanslair) bandi was promoted to Room Moderator by Delta.
+[2015-09-27T22:40:00.607Z] (japanslair) Champion Darkrai was banned from room japanslair by bandi.
+[2015-09-27T22:40:06.122Z] (japanslair) championdarkrai was unbanned from room japanslair by bandi.
+[2015-09-27T22:40:44.180Z] (japanslair) ashbloodthief was banned from room japanslair by bandi. (wtf u say bitchass nigga talk wit a ban in ur ass)
+[2015-09-27T22:40:48.999Z] (japanslair) ashbloodthief was unbanned from room japanslair by bandi.
+[2015-09-27T22:42:48.031Z] (japanslair) (bandi was demoted to Room Voice by Japan - ⓐⓕⓚ.)
+[2015-09-27T22:42:52.561Z] (japanslair) bandi was kicked from the room by Japan - ⓐⓕⓚ.
+[2015-09-27T22:42:56.217Z] (japanslair) bandi was kicked from the room by Champion Darkrai.
+[2015-09-27T22:43:06.957Z] (japanslair) bandi was kicked from the room by Champion Darkrai.
+[2015-09-27T22:43:10.794Z] (japanslair) SL Paldi was promoted to Room Driver by Japan - ⓐⓕⓚ.
+[2015-09-27T22:43:24.960Z] (japanslair) bandi was banned from room japanslair by Japan - ⓐⓕⓚ.
+[2015-09-27T22:46:50.109Z] (japanslair) Japan - ⓐⓕⓚ declared FemaleHQ finally died LOL
+[2015-09-27T22:48:28.274Z] (japanslair) (The tournament auto disqualify timeout was set to 1 by Japan - ⓐⓕⓚ)
+[2015-09-27T22:48:53.831Z] (japanslair) Japan - ⓐⓕⓚ declared No one here unban bandi or you get banned along with him.
+[2015-09-27T22:49:41.607Z] (japanslair) Luds set modchat to #
+[2015-09-27T22:49:49.560Z] (japanslair) Japan - ⓐⓕⓚ set modchat to false
+[2015-09-27T22:50:59.909Z] (japanslair) ashbloodthief was muted by Japan - ⓐⓕⓚ for 7 minutes.
+[2015-09-27T22:55:36.289Z] (japanslair) Rain☆Pikeldeo was warned by Japan - ⓐⓕⓚ.
+[2015-09-27T22:57:19.473Z] (japanslair) (Luds - ⓂⒺⓂⒺⓈ changed the roomdesc to: "Darkrai the type of nigga to fuck his cat and say he gets pussy".)
+[2015-09-27T22:57:31.833Z] (japanslair) (Japan - ⓐⓕⓚ changed the roomdesc to: "Join".)
+[2015-09-27T22:58:06.507Z] (japanslair) SL Fritta was promoted to Room Voice by Japan - ⓐⓕⓚ.
+[2015-09-27T22:58:35.978Z] (japanslair) (Champion Darkrai was demoted to Room Operator by Japan - ⓐⓕⓚ.)
+[2015-09-27T23:00:33.060Z] (japanslair) Japan - ⓐⓕⓚ declared brb -Japan 
+[2015-09-27T23:03:17.858Z] (japanslair) (Delta changed the roomintro.)
+[2015-09-27T23:19:01.552Z] (japanslair) Luds declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/GhxSbCg.jpg&quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="Test" target="_blank"><b target="_blank">Testing this new code :]</b></button>
+[2015-09-27T23:19:32.123Z] (japanslair) ashbloodthief was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T23:19:54.458Z] (japanslair) ashbloodthief was unmuted by Foh - ⓢⓛⓔⓔⓟⓘⓝⓖ.
+[2015-09-27T23:21:48.469Z] (japanslair) Luds declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/TCYaGeZh.jpgquot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="Test" target="_blank"><b target="_blank">Testing this new code :]</b></button>
+[2015-09-27T23:22:02.505Z] (japanslair) Luds declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="Test" target="_blank"><b target="_blank">Testing this new code :]</b></button>
+[2015-09-27T23:22:21.598Z] (japanslair) Luds declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/GhxSbCg.jpg&quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="Test" target="_blank"><b target="_blank">Testing this new code :]</b></button>
+[2015-09-27T23:22:32.590Z] (japanslair) L Chevy 12 declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/TCYaGeZh.jpgquot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/kick luds" target="_blank"><b target="_blank">Testing this new code :]</b></button>
+[2015-09-27T23:24:18.230Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Rain☆Pikeldeo<br /></i></font size><button name="send"value="/me licks hypershaymin">Testing this new code B)</button></b></div>
+[2015-09-27T23:27:54.029Z] (japanslair) ashbloodthief was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T23:28:21.833Z] (japanslair) ashbloodthief was unmuted by Foh - ⓢⓛⓔⓔⓟⓘⓝⓖ.
+[2015-09-27T23:34:57.613Z] (japanslair) Rain☆Pikeldeo was kicked from the room by hypershaymin.
+[2015-09-27T23:46:42.347Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-27T23:46:46.047Z] (japanslair) Safety Shark declared <center><img src="http://i.imgur.com/Zz2WrQf.jpg" Height="200" Width="200"></center>
+[2015-09-27T23:49:31.069Z] (japanslair) (Foh - Ⓓⓐⓡⓚⓡⓐⓘ notes: xD)
+[2015-09-27T23:49:51.549Z] (japanslair) ashbloodthief was banned from room japanslair by Safety Shark. (Automated response: zero tolerance user)
+[2015-09-27T23:50:14.035Z] (japanslair) ashbloodthief was unbanned from room japanslair by Foh - Ⓓⓐⓡⓚⓡⓐⓘ.
+[2015-09-27T23:53:57.061Z] (japanslair) Champion Darkrai was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T23:54:14.362Z] (japanslair) Champion Darkrai was unmuted by Foh - Ⓓⓐⓡⓚⓡⓐⓘ.
+[2015-09-27T23:54:18.348Z] (japanslair) Champion Darkrai was kicked from the room by hypershaymin.
+[2015-09-27T23:55:20.399Z] (japanslair) Myst Mewtwo was promoted to Room Operator by Japan - ⓐⓕⓚ.
+[2015-09-27T23:59:04.845Z] (japanslair) (Foh - Ⓓⓐⓡⓚⓡⓐⓘ notes: say i if u see this)
+[2015-09-27T23:59:35.775Z] (japanslair) (Foh - Ⓓⓐⓡⓚⓡⓐⓘ notes: congrats u look crazy to the voices)
+[2015-09-28T00:13:31.314Z] (japanslair) Champion Darkrai was muted by Carnie Starfox for 7 minutes. (spam)
+[2015-09-28T00:14:03.530Z] (japanslair) Champion Darkrai was banned from room japanslair by hypershaymin. (shit user who suk dick)
+[2015-09-28T00:14:18.464Z] (japanslair) championdarkrai was unbanned from room japanslair by hypershaymin.
+[2015-09-28T00:14:38.995Z] (japanslair) Myst Bronze was warned by hypershaymin. (why r u locked)
+[2015-09-28T00:20:26.044Z] (japanslair) (Luds has disabled broadcasting trainer cards in this room.)
+[2015-09-28T00:20:28.413Z] (japanslair) (Luds has enabled broadcasting trainer cards in this room.)
+[2015-09-28T00:25:06.228Z] (japanslair) ballinwolf was banned from room japanslair by hypershaymin.
+[2015-09-28T00:25:20.409Z] (japanslair) ballinwolf was unbanned from room japanslair by Luds.
+[2015-09-28T00:27:35.840Z] (japanslair) Myst Bronze was banned from room japanslair by hypershaymin.
+[2015-09-28T00:27:38.700Z] (japanslair) mystbronze was unbanned from room japanslair by Luds.
+[2015-09-28T00:29:44.951Z] (japanslair) OH HELL NO MOFOS was banned from room japanslair by hypershaymin.
+[2015-09-28T00:30:04.384Z] (japanslair) ohhellnomofos was unbanned from room japanslair by hypershaymin.
+[2015-09-28T00:30:50.614Z] (japanslair) Void Julius was promoted to Room Voice by Foh - ⓖⓘⓜⓜⓔⓓⓐⓣⓐⓢⓢ.
+[2015-09-28T00:34:21.200Z] (japanslair) hypershaymin was banned from room japanslair by Delta.
+[2015-09-28T00:34:21.814Z] (japanslair) hypershaymin was unbanned from room japanslair by Delta.
+[2015-09-28T00:38:47.722Z] (japanslair) Champion Darkrai was banned from room japanslair by Delta.
+[2015-09-28T00:38:48.322Z] (japanslair) championdarkrai was unbanned from room japanslair by Delta.
+[2015-09-28T00:45:59.302Z] (japanslair) Void Gorve - ⑥ⓖⓞⓓ was promoted to Room Moderator by Luds.
+[2015-09-28T00:49:41.223Z] (japanslair) Champion Darkrai was warned by Safety Shark. (Automated response: caps)
+[2015-09-28T00:56:22.816Z] (japanslair) Champion Darkrai was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-28T00:56:42.741Z] (japanslair) Champion Darkrai was unmuted by Foh.
+[2015-09-28T00:57:50.382Z] (japanslair) Psystrike Mewtwo was promoted to Room Voice by Anythingϗϟϯ˩ծGoes♫.
+[2015-09-28T00:59:57.892Z] (japanslair) Psystrike Mewtwo was promoted to Room Driver by Luds.
+[2015-09-28T01:04:39.125Z] (japanslair) SWL Reck was promoted to Room Leader by Luds.
+[2015-09-28T01:04:41.660Z] (japanslair) (SWL Reck was demoted to Room Voice by Luds.)
+[2015-09-28T01:05:36.861Z] (japanslair) SWL Reck was promoted to Room Operator by Luds.
+[2015-09-28T01:17:59.878Z] (japanslair) Allegiant Mewtwo was promoted to Room Driver by Luds.
+[2015-09-28T01:18:05.388Z] (japanslair) (psystrike mewtwo was demoted to Room regular user by Luds.)
+[2015-09-28T01:18:09.960Z] (japanslair) (myst mewtwo was demoted to Room regular user by Luds.)
+[2015-09-28T01:18:15.865Z] (japanslair) (goblin was demoted to Room regular user by Luds.)
+[2015-09-28T01:18:19.970Z] (japanslair) (lycurgus was demoted to Room regular user by Luds.)
+[2015-09-28T01:18:36.058Z] (japanslair) (starfoxfan was demoted to Room regular user by Luds.)
+[2015-09-28T01:18:38.232Z] (japanslair) (csf was demoted to Room regular user by Luds.)
+[2015-09-28T02:10:43.030Z] (japanslair) (Void Gorve - ⑥ⓖⓞⓓ was demoted to Room Voice by Japan.)
+[2015-09-28T02:11:00.886Z] (japanslair) Myst Mewtwo was promoted to Room Operator by Japan.
+[2015-09-28T02:13:12.060Z] (japanslair) bandi was unbanned from room japanslair by Japan.
+[2015-09-28T02:14:48.629Z] (japanslair) Void Gorve - ⑥ⓖⓞⓓ was promoted to Room Operator by Japan.
+[2015-09-28T02:29:11.997Z] (japanslair) Japan declared so the staff just gets fishy when we have more than 25 people and Erica and neo always join in, chevy is usually here tho.
+[2015-09-28T02:44:44.159Z] (japanslair) Cute Pichu was promoted to Room Voice by Japan.
+[2015-09-28T03:07:25.468Z] (japanslair) (Japan changed the roomdesc to: "Atleast we aren't catfish".)
+[2015-09-28T04:32:47.375Z] (japanslair) DuckSoup was promoted to Room Voice by Japan - ⓢⓛⓔⓔⓟⓘⓝⓖ.

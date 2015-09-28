@@ -73,3 +73,12 @@
 [2015-08-30T20:16:59.371Z] (tickensroom) Piiiiichu was promoted to Room Leader by SWL Eric.
 [2015-09-02T03:26:37.370Z] (tickensroom) (Ticken changed the roomintro.)
 [2015-09-02T15:41:49.630Z] (tickensroom) SE0 was promoted to Room Moderator by xDolphin.
+[2015-09-27T18:25:41.805Z] (tickensroom) dugtott was promoted to Room Voice by Ticken.
+[2015-09-27T18:26:25.440Z] (tickensroom) AITZ was promoted to Room Voice by Ticken.
+[2015-09-27T18:27:02.946Z] (tickensroom) (Ticken created a tournament in battlefactory format.)
+[2015-09-27T18:29:06.875Z] (tickensroom) DanielCr was promoted to Room Voice by Ticken.
+[2015-09-27T18:31:59.890Z] (tickensroom) DanielCr was promoted to Room Moderator by Ticken.
+[2015-09-27T18:44:59.909Z] (tickensroom) Serephina was promoted to Room Voice by DanielCr.
+[2015-09-27T19:13:34.453Z] (tickensroom) (Ticken created a tournament in randombattle format.)
+[2015-09-27T19:16:29.478Z] (tickensroom) DanielCr was appointed Room Owner by Tken.
+[2015-09-27T19:48:42.886Z] (tickensroom) DanielCr declared I love Lotad

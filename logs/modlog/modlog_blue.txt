@@ -27,3 +27,4 @@
 [2015-08-22T18:43:50.532Z] (blue) (Dream Eater Gengar created a tournament in ou format.)
 [2015-08-22T19:47:30.001Z] (blue) (The tournament auto start timeout was set to 3 by Dream Eater Gengar)
 [2015-08-22T19:56:06.419Z] (blue) (The tournament auto disqualify timeout was set to 3 by Dream Eater Gengar)
+[2015-09-27T20:17:15.820Z] (blue) Carnie Chime was appointed to Room Founder by Neo Soul.

@@ -312,3 +312,58 @@
 [2015-08-30T21:54:48.491Z] (alliancecup) Primal Theta was kicked from the room by Alliance - Contort.
 [2015-08-30T21:55:04.466Z] (alliancecup) SWL Eric was redirected to room The Alliance League by Alliance - Contort.
 [2015-08-30T21:55:32.620Z] (alliancecup) SWL Lemon was redirected to room The Alliance League by Alliance - Contort.
+[2015-09-26T21:15:28.792Z] (alliancecup) Alliance - Ghast set modchat to false
+[2015-09-26T21:19:43.580Z] (alliancecup) Alliance - Ghast declared BUCKS TOUR
+[2015-09-26T21:19:50.749Z] (alliancecup) Alliance - Ghast declared 70/20
+[2015-09-26T21:21:02.953Z] (alliancecup) (a Gryphon was demoted to Room Voice by Alliance - Ghast.)
+[2015-09-26T21:21:13.240Z] (alliancecup) (Imp Fallen Blood was demoted to Room Voice by Alliance - Ghast.)
+[2015-09-26T21:22:54.920Z] (alliancecup) Imp Fallen Blood was promoted to Room Driver by Alliance - Ghast.
+[2015-09-26T21:23:05.977Z] (alliancecup) (Imp Fallen Blood was demoted to Room regular user by Alliance - Ghast.)
+[2015-09-26T21:23:13.626Z] (alliancecup) a Gryphon was kicked from the room by Imp Fallen Blood.
+[2015-09-26T21:23:58.908Z] (alliancecup) Alliance - Ghast declared I WILL START At xx:33
+[2015-09-26T21:26:19.664Z] (alliancecup) Alliance - Ghast set modchat to #
+[2015-09-26T21:28:25.742Z] (alliancecup) Alliance - Ghast set modchat to false
+[2015-09-26T21:28:54.819Z] (alliancecup) Alliance - Ghast declared FIRST FEATURED PLAYER
+[2015-09-26T21:29:01.249Z] (alliancecup) Alliance - Ghast declared A LEGENDARY GRASS USER
+[2015-09-26T21:29:16.741Z] (alliancecup) Alliance - Ghast declared He's none other than
+[2015-09-26T21:29:18.853Z] (alliancecup) Alliance - Ghast declared TICKEN
+[2015-09-26T21:29:44.296Z] (alliancecup) Alliance - Ghast declared 2nd featured player!! A previous alliance cup champion ;)
+[2015-09-26T21:29:49.890Z] (alliancecup) Alliance - Ghast declared He loves ghosties
+[2015-09-26T21:29:55.417Z] (alliancecup) Alliance - Ghast declared SWL LEMON
+[2015-09-26T21:30:16.879Z] (alliancecup) Alliance - Ghast declared 3rd featued player!
+[2015-09-26T21:30:44.517Z] (alliancecup) Alliance - Ghast declared Previous E4 of Alliance
+[2015-09-26T21:30:51.292Z] (alliancecup) Alliance - Ghast declared He resides in RAIN league now
+[2015-09-26T21:30:57.614Z] (alliancecup) Alliance - Ghast declared RAIN Carn0x
+[2015-09-26T21:31:27.116Z] (alliancecup) Alliance - Ghast declared 4th featured player! he uses ebola 
+[2015-09-26T21:31:32.071Z] (alliancecup) Alliance - Ghast declared in fact he is ebola
+[2015-09-26T21:31:35.937Z] (alliancecup) Alliance - Ghast declared THIMO
+[2015-09-26T21:31:58.376Z] (alliancecup) Alliance - Ghast declared LAST FEATURED PLAYER! The person you all have to beat today!
+[2015-09-26T21:32:08.759Z] (alliancecup) Alliance - Ghast declared The current Alliance Cup Champion with Grass
+[2015-09-26T21:32:15.295Z] (alliancecup) Alliance - Ghast declared SARRIIIIIIIIIIIIIIII
+[2015-09-26T21:33:10.420Z] (alliancecup) Alliance - Ghast declared No modjoining, No Scouting, No team switching
+[2015-09-26T21:33:38.956Z] (alliancecup) (The tournament was set to allow scouting by Alliance - Ghast)
+[2015-09-26T21:33:43.332Z] (alliancecup) (The tournament was set to disallow scouting by Alliance - Ghast)
+[2015-09-26T21:34:54.040Z] (alliancecup) (The tournament was set to disallow scouting by Alliance - Ghast)
+[2015-09-26T21:34:57.679Z] (alliancecup) (The tournament was set to disallow scouting by Alliance - Ghast)
+[2015-09-26T21:35:03.161Z] (alliancecup) Alliance - Ghast declared OK SINCE YOU NIGGAS ARE COMPLIANING
+[2015-09-26T21:35:06.386Z] (alliancecup) Alliance - Ghast declared SCOUT ALL YOU WANT
+[2015-09-26T21:35:11.007Z] (alliancecup) (The tournament was set to allow scouting by Allegiant Gryphon)
+[2015-09-26T21:35:14.387Z] (alliancecup) Alliance - Ghast declared JUST DONT COMPLAIN THAT PEOPLE ARE CHEATING
+[2015-09-26T21:35:54.845Z] (alliancecup) Alliance - Ghast declared FEATURED PLAYER
+[2015-09-26T21:35:57.595Z] (alliancecup) Alliance - Ghast declared TICKEN
+[2015-09-26T21:36:26.925Z] (alliancecup) Alliance - Ghast declared FEATURED PLAYER
+[2015-09-26T21:36:30.216Z] (alliancecup) Alliance - Ghast declared SWL LEMON
+[2015-09-26T21:38:23.088Z] (alliancecup) Alliance - Ghast declared FEATURED PLAYER 
+[2015-09-26T21:38:26.924Z] (alliancecup) Alliance - Ghast declared SArriiii
+[2015-09-26T21:38:32.365Z] (alliancecup) Choompers was muted by Alliance - Ghast for 7 minutes.
+[2015-09-26T21:39:48.787Z] (alliancecup) Alliance - Ghast declared FEATURED PLAYER EBOLA THIMO
+[2015-09-26T21:40:36.526Z] (alliancecup) Alliance - Ghast declared SCOUTING IS ALLOWED
+[2015-09-26T21:41:14.960Z] (alliancecup) Alliance - Ghast declared NO SWITCHING TEAMS
+[2015-09-26T21:41:33.159Z] (alliancecup) Alliance - Ghast declared NO SWITHCHNG TEAMS, NO MODJOINING, SCOUTING ALLOWED
+[2015-09-26T21:58:19.467Z] (alliancecup) (The tournament auto disqualify timeout was set to 1 by Alliance - Ghast)
+[2015-09-26T22:08:25.938Z] (alliancecup) Alliance - Ghast declared FEATURED MATCH
+[2015-09-26T22:08:29.687Z] (alliancecup) Alliance - Ghast declared SARII
+[2015-09-26T22:10:57.977Z] (alliancecup) Rain Carn0Х was kicked from the room by Imp Fallen Blood.
+[2015-09-26T22:30:45.267Z] (alliancecup) Alliance - Ghast declared FINAL MATCH 
+[2015-09-26T22:38:59.767Z] (alliancecup) Alliance - Ghast declared Congrats To Scrub Lord Hingo
+[2015-09-26T22:39:08.886Z] (alliancecup) Alliance - Ghast set modchat to #

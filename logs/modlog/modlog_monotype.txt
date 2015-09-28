@@ -4110,3 +4110,217 @@
 [2015-09-03T11:58:07.469Z] (monotype) (Twizzy was disqualified from the tournament by Raіn Kuro)
 [2015-09-03T12:04:50.920Z] (monotype) (Raіn Kuro created a tournament in monotyperandombattle format.)
 [2015-09-03T12:19:47.093Z] (monotype) (The tournament auto disqualify timeout was set to 1 by Alliance - Asurax)
+[2015-09-26T21:48:36.652Z] (monotype) (Raiteri was disqualified from the tournament by SWL Eric)
+[2015-09-26T21:49:17.296Z] (monotype) (The tournament auto disqualify timeout was set to 0.5 by SWL Eric)
+[2015-09-26T22:07:17.547Z] (monotype) (Vin Pyre created a tournament in monotype format.)
+[2015-09-26T22:29:18.762Z] (monotype) (The tournament auto start timeout was set to 2 by Sam Crowe)
+[2015-09-26T22:34:04.690Z] (monotype) (The tournament auto disqualify timeout was set to 1.3 by Sam Crowe)
+[2015-09-26T22:34:25.417Z] (monotype) (LightOfAKnowing was disqualified from the tournament by Sam Crowe)
+[2015-09-26T23:07:21.493Z] (monotype) (Vin Pyre created a tournament in monotype format.)
+[2015-09-27T01:43:59.653Z] (monotype) (jackker was disqualified from the tournament by SWL Eric)
+[2015-09-27T01:44:02.467Z] (monotype) (The tournament auto disqualify timeout was set to 1 by SWL Eric)
+[2015-09-27T01:52:09.181Z] (monotype) (hm unownman was disqualified from the tournament by SWL Eric)
+[2015-09-27T03:01:05.556Z] (monotype) (Rayge created a tournament in monotype format.)
+[2015-09-27T03:32:16.673Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Rayge)
+[2015-09-27T03:49:29.924Z] (monotype) (Rayge - ⓓⓘⓝⓝⓔⓡ created a tournament in monotype format.)
+[2015-09-27T03:51:55.532Z] (monotype) (The tournament auto disqualify timeout was set to 1 by Vin Pyre)
+[2015-09-27T04:16:31.137Z] (monotype) (Rayge created a tournament in monotype format.)
+[2015-09-27T04:31:21.460Z] (monotype) (GL ♅ JGT was disqualified from the tournament by Rayge)
+[2015-09-27T04:38:04.533Z] (monotype) (Hm Sableye was disqualified from the tournament by lab8 moth)
+[2015-09-27T04:47:20.021Z] (monotype) (Rayge created a tournament in monotyperandombattle format.)
+[2015-09-27T05:27:18.443Z] (monotype) (Rayge created a tournament in monotype format.)
+[2015-09-27T06:02:51.785Z] (monotype) (The tournament auto disqualify timeout was set to 0.5 by SWL Eric)
+[2015-09-27T06:04:54.367Z] (monotype) (SWL Eric was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T06:05:07.718Z] (monotype) (Raіn Kuro created a tournament in monotyperandombattle format.)
+[2015-09-27T06:46:22.858Z] (monotype) (Guest 18106 was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T06:53:03.777Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Raіn Kuro)
+[2015-09-27T07:01:42.351Z] (monotype) (Rayge created a tournament in monotype format.)
+[2015-09-27T08:46:46.417Z] (monotype) (Vin Pyre was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T08:46:53.785Z] (monotype) (GTX♅SwiftKingdra was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T08:46:57.363Z] (monotype) (missglamorazzi was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T08:47:21.102Z] (monotype) (Raіn Kuro created a tournament in monotyperandombattle format.)
+[2015-09-27T11:26:37.742Z] (monotype) lab8 moth declared <img src= http://i.imgur.com/r0FFPk4.png width="110" height="110">
+[2015-09-27T11:27:09.696Z] (monotype) lab8 moth declared <img src= http://i.imgur.com/r0FFPk4.png width="300" height="135">
+[2015-09-27T11:27:24.671Z] (monotype) lab8 moth declared <img src= http://i.imgur.com/r0FFPk4.png width="400" height="135">
+[2015-09-27T11:27:38.857Z] (monotype) lab8 moth declared <img src= http://i.imgur.com/r0FFPk4.png width="500" height="135">
+[2015-09-27T11:28:19.485Z] (monotype) lab8 moth declared !declare <img src= http://i.imgur.com/r0FFPk4.png width="500" height="130">
+[2015-09-27T11:42:59.025Z] (monotype) (GL Dedede was disqualified from the tournament by lab8 moth)
+[2015-09-27T11:43:04.711Z] (monotype) (Rain Izaya was disqualified from the tournament by lab8 moth)
+[2015-09-27T11:48:20.803Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Raіn Kuro)
+[2015-09-27T12:00:56.741Z] (monotype) (Twizzy was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T12:23:47.492Z] (monotype) (Raіn Kuro created a tournament in monotyperandombattle format.)
+[2015-09-27T12:50:27.086Z] (monotype) (lab8 moth changed the roomintro.)
+[2015-09-27T12:57:44.662Z] (monotype) (lab8 moth changed the roomintro.)
+[2015-09-27T13:33:13.423Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Raіn Kuro)
+[2015-09-27T13:33:40.719Z] (monotype) (Wolf-Ditex was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T13:33:47.733Z] (monotype) (Wolf☯ Gogeta was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T13:41:14.154Z] (monotype) (lab8 moth was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T13:41:44.178Z] (monotype) (Void Quilluminati was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T14:03:20.473Z] (monotype) (TridentSmash was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T14:09:26.635Z] (monotype) (Royal Poke was disqualified from the tournament by Raіn Kuro)
+[2015-09-27T14:20:51.240Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-09-27T14:34:21.033Z] (monotype) (The tournament auto start timeout was set to 2 by Sam Crowe)
+[2015-09-27T14:39:21.604Z] (monotype) (CrystalBozz was disqualified from the tournament by Alpha Ninja)
+[2015-09-27T14:39:25.507Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Alpha Ninja)
+[2015-09-27T14:47:40.632Z] (monotype) (The tournament auto disqualify timeout was set to 1 by lab8 moth)
+[2015-09-27T15:07:48.015Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-09-27T15:08:50.935Z] (monotype) (The tournament auto start timeout was set to 3 by Sam Crowe)
+[2015-09-27T15:12:14.571Z] (monotype) (The tournament auto disqualify timeout was set to 1.3 by Sam Crowe)
+[2015-09-27T15:41:16.242Z] (monotype) (Raіn Kuro created a tournament in monotype format.)
+[2015-09-27T15:46:23.961Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Raіn Kuro)
+[2015-09-27T16:10:03.057Z] (monotype) (Vin Pyre created a tournament in monotype format.)
+[2015-09-27T16:21:21.993Z] (monotype) (alliance skyrim was demoted to Room regular user by Vin Pyre.)
+[2015-09-27T16:29:50.150Z] (monotype) (Vin Pyre was disqualified from the tournament by Ticken)
+[2015-09-27T16:39:40.792Z] (monotype) (Starpower Nyan was disqualified from the tournament by Ticken)
+[2015-09-27T16:50:28.322Z] (monotype) (Ticken created a tournament in monotype format.)
+[2015-09-27T17:50:52.721Z] (monotype) CarnieChime - ⓜⓐⓘⓝ was banned from room monotype by lab8 moth.
+[2015-09-27T17:50:52.724Z] (monotype) (CarnieChime - ⓜⓐⓘⓝ's roombanned alts: Chimechoo)
+[2015-09-27T17:51:36.762Z] (monotype) carniechime was unbanned from room monotype by lab8 moth.
+[2015-09-27T18:13:24.293Z] (monotype) (The tournament auto disqualify timeout was set to 2 by xDolphin)
+[2015-09-27T18:42:02.769Z] (monotype) (Arectaris was disqualified from the tournament by xDolphin)
+[2015-09-27T18:47:25.897Z] (monotype) (xDolphin created a tournament in monotype format.)
+[2015-09-27T18:47:29.899Z] (monotype) xDolphin declared DO NOT START TOUR
+[2015-09-27T18:47:35.844Z] (monotype) xDolphin declared THIS IS A EOS MC TOUR
+[2015-09-27T18:59:11.636Z] (monotype) xDolphin declared this is an eosmc qualifier tour. NO SCOUTING, NO EAM SWITCHING, NO MODJOIN. or u dolph will find u. and dolph will kill u. with a bidoof
+[2015-09-27T19:00:52.673Z] (monotype) xDolphin declared tell me what to do again and dolph will find, and dolph will kill u. in a slow and sexual way
+[2015-09-27T19:01:21.147Z] (monotype) xDolphin declared this is EOS MC Qualifier 
+[2015-09-27T19:04:05.419Z] (monotype) Alliance - Contort was kicked from the room by xDolphin.
+[2015-09-27T19:05:44.520Z] (monotype) xDolphin declared tour will start in 3 minutes
+[2015-09-27T19:05:58.442Z] (monotype) xDolphin declared until then! Featured players
+[2015-09-27T19:06:04.128Z] (monotype) xDolphin declared WELCOME TO DENSITY
+[2015-09-27T19:06:23.875Z] (monotype) xDolphin declared THIS IS WHERE LEAGUE OF LEGENDS IS MADE
+[2015-09-27T19:06:47.138Z] (monotype) xDolphin declared YOUR CHANCE FOR GORY MAIM
+[2015-09-27T19:06:58.018Z] (monotype) xDolphin declared #1
+[2015-09-27T19:07:07.918Z] (monotype) xDolphin declared a bitch that thinks he can ask me questions
+[2015-09-27T19:07:14.089Z] (monotype) xDolphin declared alliance cuntort
+[2015-09-27T19:07:31.632Z] (monotype) Royal Poke was warned by Choompers. (chill on the caps)
+[2015-09-27T19:07:34.154Z] (monotype) xDolphin declared #2
+[2015-09-27T19:07:50.949Z] (monotype) xDolphin declared Chleg, cuz he has a dick. probs.
+[2015-09-27T19:08:24.979Z] (monotype) xDolphin declared TOUR START TIME
+[2015-09-27T19:08:35.704Z] (monotype) xDolphin declared NO TEAMSWITCHING NO SCOUTING NO MODJOIN
+[2015-09-27T19:08:43.722Z] (monotype) (The tournament was set to disallow scouting by xDolphin)
+[2015-09-27T19:08:52.512Z] (monotype) (The tournament auto disqualify timeout was set to 10000000000000 by Alliance - Contort)
+[2015-09-27T19:08:59.754Z] (monotype) (The tournament auto disqualify timeout was set to 2 by xDolphin)
+[2015-09-27T19:09:07.777Z] (monotype) Alliance - Contort was warned by Imp Fallen Blood. (stop messing around)
+[2015-09-27T19:13:56.757Z] (monotype) xDolphin declared who let ace win
+[2015-09-27T19:13:59.440Z] (monotype) xDolphin declared i will cut u
+[2015-09-27T19:17:37.755Z] (monotype) Void QueenHigh declared dolph hacking
+[2015-09-27T19:18:06.856Z] (monotype) (Choompers notes: bro stop declaring unnecessary stuff )
+[2015-09-27T19:18:16.322Z] (monotype) (Void QueenHigh notes: yeah bro)
+[2015-09-27T19:22:28.591Z] (monotype) (Hm Bit was disqualified from the tournament by TheAce22)
+[2015-09-27T19:25:20.486Z] (monotype) xDolphin declared ewwww, dolph has to play alliance cuntort
+[2015-09-27T19:27:14.198Z] (monotype) Vin Pyre declared an he loves it
+[2015-09-27T20:05:28.772Z] (monotype) xDolphin declared Congrats to xDolphin to winning and qualifying for his own tour!!
+[2015-09-27T20:17:56.465Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-09-27T20:18:27.133Z] (monotype) Sam Crowe declared this is steel monothreat
+[2015-09-27T20:32:29.697Z] (monotype) xDolphin declared this is a steel monothreat
+[2015-09-27T20:35:58.518Z] (monotype) mahdavi was banned from room monotype by xDolphin.
+[2015-09-27T20:38:45.887Z] (monotype) (The tournament was set to disallow scouting by Sam Crowe)
+[2015-09-27T20:40:11.259Z] (monotype) (The tournament auto start timeout was set to 2 by Sam Crowe)
+[2015-09-27T20:40:23.590Z] (monotype) Sace Poke was warned by SWL Eric. (caaaaps)
+[2015-09-27T20:40:51.745Z] (monotype) Sam Crowe declared  no scouting... no switch teams... no modjoin
+[2015-09-27T20:42:01.623Z] (monotype) Sam Crowe declared remember this is steel monothreat ... there will be 2 more after this so even if u lose.. u may win the next one
+[2015-09-27T20:43:44.810Z] (monotype) (The tournament auto disqualify timeout was set to 10 by Void KGBeast)
+[2015-09-27T20:44:18.936Z] (monotype) (Breeze Shark was disqualified from the tournament by Sam Crowe)
+[2015-09-27T20:44:52.402Z] (monotype) (SWL Eric notes: what is the type)
+[2015-09-27T20:45:10.596Z] (monotype) (SWL Eric notes: next tour)
+[2015-09-27T20:52:27.307Z] (monotype) (Rain Izaya was disqualified from the tournament by SWL Eric)
+[2015-09-27T20:58:05.829Z] (monotype) (ballinwolf was disqualified from the tournament by SWL Eric)
+[2015-09-27T20:59:51.798Z] (monotype) (SamHershy23 was disqualified from the tournament by SWL Eric)
+[2015-09-27T21:00:24.445Z] (monotype) (The tournament auto disqualify timeout was set to 2 by SWL Eric)
+[2015-09-27T21:02:43.389Z] (monotype) (THE MEGA MINUN was disqualified from the tournament by SWL Eric)
+[2015-09-27T21:27:02.842Z] (monotype) (SWL Eric created a tournament in monotype format.)
+[2015-09-27T21:31:04.455Z] (monotype) warlic was warned by SWL Eric. (talking down to other staff :[)
+[2015-09-27T21:36:04.887Z] (monotype) Sam Crowe declared remember this tour is mono threat ice... no scouting.. no team switches... no modjoin
+[2015-09-27T21:36:15.833Z] (monotype) (The tournament auto start timeout was set to 4 by Sam Crowe)
+[2015-09-27T21:40:15.457Z] (monotype) warlic was kicked from the room by SWL Eric.
+[2015-09-27T21:41:35.340Z] (monotype) (The tournament auto disqualify timeout was set to 5 by Void KGBeast)
+[2015-09-27T22:09:43.693Z] (monotype) (SWL Eric created a tournament in monotype format.)
+[2015-09-27T22:16:44.046Z] (monotype) (The tournament auto start timeout was set to 4 by Sam Crowe)
+[2015-09-27T22:18:57.661Z] (monotype) Sam Crowe declared remember this is monothreat fairy... no scouting...no modjoin.. no teamswitching
+[2015-09-27T22:25:27.720Z] (monotype) (The tournament auto disqualify timeout was set to 4 by SWL Eric)
+[2015-09-27T22:27:39.242Z] (monotype) warlic was kicked from the room by SWL Eric.
+[2015-09-27T22:28:19.910Z] (monotype) (jackker was disqualified from the tournament by SWL Eric)
+[2015-09-27T22:28:28.209Z] (monotype) jackker was warned by SWL Eric. (retard clause fairy monothreat)
+[2015-09-27T22:28:29.036Z] (monotype) (The tournament auto disqualify timeout was set to 6 by Sam Crowe)
+[2015-09-27T22:29:53.125Z] (monotype) (Karlpower was disqualified from the tournament by SWL Eric)
+[2015-09-27T22:41:28.976Z] (monotype) (Carnie Starfox was disqualified from the tournament by SWL Eric)
+[2015-09-27T23:07:49.152Z] (monotype) (warlic created a tournament in monotype format.)
+[2015-09-27T23:13:08.244Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
+[2015-09-27T23:31:24.343Z] (monotype) warlic was banned from room monotype by SWL Eric. ([19:28:49] warlic:(Private to $Void Chrono) I am not intelligent.)
+[2015-09-27T23:31:24.347Z] (monotype) (warlic's roombanned alts: lobby dweller)
+[2015-09-27T23:31:40.749Z] (monotype) warlic was unbanned from room monotype by L Chevy 12.
+[2015-09-27T23:42:53.234Z] (monotype) (Rain ☆ Jane was disqualified from the tournament by SWL Eric)
+[2015-09-27T23:46:24.548Z] (monotype) (SWL Eric created a tournament in monotype format.)
+[2015-09-27T23:52:12.312Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
+[2015-09-28T00:30:15.275Z] (monotype) (xDolphin created a tournament in monotype format.)
+[2015-09-28T00:53:40.490Z] (monotype) (The tournament auto disqualify timeout was set to 2 by xDolphin)
+[2015-09-28T01:19:57.148Z] (monotype) (warlic created a tournament in monotype format.)
+[2015-09-28T01:21:46.087Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
+[2015-09-28T01:25:42.104Z] (monotype) xDolphin declared AFTER THIS TOUR WE WILL HAVE ANOTHER EOSMC QUALIFICATION TOUR
+[2015-09-28T01:27:12.125Z] (monotype) xDolphin declared Signups for the eosmc qualification tour will begin after the current tour.
+[2015-09-28T01:28:37.363Z] (monotype) xDolphin declared Current EOSMC Winners: Rain Jane: Fairy, Heartless Nobody: Dark, xDolphin (ME BITCHES): Psychic
+[2015-09-28T01:30:16.643Z] (monotype) xDolphin declared /declare Signups for the eosmc qualification tour will begin after the current tour.
+[2015-09-28T01:30:28.638Z] (monotype) xDolphin declared Signups for the eosmc qualification tour will begin after the current tour.
+[2015-09-28T01:30:49.055Z] (monotype) Crystаl Ѕalt was kicked from the room by xDolphin.
+[2015-09-28T01:34:51.809Z] (monotype) (iAlice was disqualified from the tournament by xDolphin)
+[2015-09-28T01:34:56.910Z] (monotype) (Sage.13 was disqualified from the tournament by xDolphin)
+[2015-09-28T01:35:02.449Z] (monotype) (xDolphin created a tournament in monotype format.)
+[2015-09-28T01:35:08.773Z] (monotype) xDolphin declared EOSMC TOUR NOW
+[2015-09-28T01:35:32.705Z] (monotype) xDolphin declared if anyone advertises and gets at least 5 people to join ill give them 5 bucks
+[2015-09-28T01:37:01.566Z] (monotype) xDolphin declared u get like 20-25 bucks +1 however much u win
+[2015-09-28T01:37:41.019Z] (monotype) xDolphin declared and I WILL ONCE AGAIN BE DOING FEATURED PLAYERS AND MOCKING THE ALLIANCE CUP
+[2015-09-28T01:37:47.601Z] (monotype) xDolphin declared LIKE ALWAYS
+[2015-09-28T01:39:44.887Z] (monotype) xDolphin declared current qualifiers: Rain Jane, Heartless Nobody, and Xdolphin
+[2015-09-28T01:41:28.597Z] (monotype) xDolphin declared tour will start in 5 min. GET A LOT OF BITCHES TO JOIN OR ILL FUCKING MURDER U ALL
+[2015-09-28T01:42:05.039Z] (monotype) xDolphin declared time for features!!
+[2015-09-28T01:42:21.873Z] (monotype) xDolphin declared WELCOME TO DENSITY
+[2015-09-28T01:42:48.619Z] (monotype) xDolphin declared YOUR OPPORTUNITY TO GAIN FAMINE
+[2015-09-28T01:42:52.109Z] (monotype) xDolphin declared AND GORY
+[2015-09-28T01:43:18.142Z] (monotype) xDolphin declared FUCK U EZRA
+[2015-09-28T01:43:26.595Z] (monotype) xDolphin declared FEATURE #1
+[2015-09-28T01:44:26.373Z] (monotype) xDolphin declared A person who insists on not capitalizing the letters of his name cuz he is a odd/autistic ass prick 
+[2015-09-28T01:44:30.170Z] (monotype) xDolphin declared Warlic!!!
+[2015-09-28T01:44:40.925Z] (monotype) xDolphin declared Feature #2!!!
+[2015-09-28T01:44:53.100Z] (monotype) xDolphin declared that^
+[2015-09-28T01:45:01.724Z] (monotype) xDolphin declared feature #3!
+[2015-09-28T01:45:06.373Z] (monotype) xDolphin declared FUCK U GHAST
+[2015-09-28T01:45:09.119Z] (monotype) xDolphin declared FOR LEAVING
+[2015-09-28T01:45:19.283Z] (monotype) xDolphin declared feature #4!
+[2015-09-28T01:45:38.770Z] (monotype) xDolphin declared an actual terrorist
+[2015-09-28T01:45:46.316Z] (monotype) xDolphin declared Air Jak 9/11!!
+[2015-09-28T01:46:06.241Z] (monotype) xDolphin declared feature #5
+[2015-09-28T01:46:28.170Z] (monotype) xDolphin declared someone who is always prepared and has condoms in his pockets
+[2015-09-28T01:46:33.877Z] (monotype) xDolphin declared Ready2go!!
+[2015-09-28T01:46:45.853Z] (monotype) xDolphin declared feature #6
+[2015-09-28T01:47:01.657Z] (monotype) xDolphin declared SOMEONE WHO IS ABSOLUTE ASS AT BATTLING AND WILL FOREVER BE THAT WAY
+[2015-09-28T01:47:05.718Z] (monotype) xDolphin declared HINGO!!!
+[2015-09-28T01:47:21.643Z] (monotype) xDolphin declared ok enough features
+[2015-09-28T01:47:32.993Z] (monotype) xDolphin declared NO SCOUTING, NO TEAM SWITCHING NO MODJOIN
+[2015-09-28T01:47:44.434Z] (monotype) xDolphin declared NO BITCHING ALSO
+[2015-09-28T01:47:59.815Z] (monotype) xDolphin declared AND ONE FEATURE IS ALREADY DOWN
+[2015-09-28T01:48:09.895Z] (monotype) xDolphin declared Warlic is the first featured player to drop
+[2015-09-28T01:49:27.208Z] (monotype) (The tournament was set to disallow scouting by xDolphin)
+[2015-09-28T01:49:44.701Z] (monotype) xDolphin declared DONT TAKE HINGO'S ADVICE
+[2015-09-28T01:49:48.922Z] (monotype) xDolphin declared HE SUCKS
+[2015-09-28T01:50:48.025Z] (monotype) xDolphin declared I REPEAT
+[2015-09-28T01:50:59.248Z] (monotype) xDolphin declared THERE IS A WEAKNESS POLICY BRONZONG IN THE GAME
+[2015-09-28T01:51:08.606Z] (monotype) xDolphin declared ALL YALL ARE FUCKED
+[2015-09-28T01:56:16.510Z] (monotype) xDolphin declared Jak is ass cuz he didnt get the 7-0
+[2015-09-28T01:56:34.433Z] (monotype) xDolphin declared wtf was that alice?
+[2015-09-28T01:59:07.275Z] (monotype) xDolphin declared donut got a 6-0 :O
+[2015-09-28T01:59:18.241Z] (monotype) xDolphin declared DAMNIT WOLF PATCH
+[2015-09-28T01:59:21.974Z] (monotype) xDolphin declared U LET HINGO WIN
+[2015-09-28T02:00:10.100Z] (monotype) (The tournament auto disqualify timeout was set to 2 by xDolphin)
+[2015-09-28T02:04:29.092Z] (monotype) xDolphin declared rules NO TEAM SWITCHING NO SCOUTING NO MODJOIN
+[2015-09-28T02:04:36.080Z] (monotype) xDolphin declared READ THE RULES HINGO
+[2015-09-28T02:04:38.756Z] (monotype) xDolphin declared U SUCK
+[2015-09-28T02:05:01.904Z] (monotype) xDolphin declared DONT SAY WHAT UR OPPONENT USED IN THE CHAT
+[2015-09-28T02:07:15.049Z] (monotype) (The tournament was set to disallow scouting by AllianceAsurax - Ⓢ)
+[2015-09-28T02:07:49.756Z] (monotype) AllianceAsurax - Ⓢ was kicked from the room by xDolphin.
+[2015-09-28T02:17:17.819Z] (monotype) xDolphin declared JAK IS IN THE FINALS!!!
+[2015-09-28T02:43:57.134Z] (monotype) (warlic created a tournament in monotype format.)
+[2015-09-28T02:45:56.567Z] (monotype) xDolphin declared I MISSED THE FINALS
+[2015-09-28T02:46:00.578Z] (monotype) xDolphin declared WHO WON
+[2015-09-28T02:49:44.167Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
+[2015-09-28T03:24:07.224Z] (monotype) (xDolphin created a tournament in monotype format.)

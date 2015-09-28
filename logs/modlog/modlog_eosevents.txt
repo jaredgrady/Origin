@@ -426,3 +426,4 @@
 [2015-08-29T22:41:19.339Z] (eosevents) L Chevy 12 declared Scouting is fine, Team Changing and modjoin are not allowed
 [2015-08-29T23:21:01.239Z] (eosevents) Rain Devin was promoted to Room Voice by L Chevy 12.
 [2015-08-29T23:34:06.036Z] (eosevents) (L Chevy 12 notes: Winner of BotL 8/29/15: Rain Devin)
+[2015-09-26T21:13:57.235Z] (eosevents) Erica*07 declared Congratulations to Rain ☆ Pats for winning Battle of the Leagues! We'll see you next week!

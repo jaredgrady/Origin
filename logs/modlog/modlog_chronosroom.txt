@@ -97,3 +97,4 @@
 [2015-08-26T23:56:54.381Z] (chronosroom) (V o i dc h r o n o changed the roomintro.)
 [2015-09-01T23:02:39.582Z] (chronosroom) Void Chrono declared <audio src="https://dl.pushbulletusercontent.com/QOUAEIwDaxUIobp8rRxi4e98DKuK7OOn/Kamex%20-%20Defy%20the%20Legends%20DnB.mp3" controls="" style="width: 100% ; border: 2px solid #ff9900 ; background-color: #00000a" target="_blank"></audio>
 [2015-09-02T19:46:48.030Z] (chronosroom) (Void Chrono - ⒷⓊⓈⓎ changed the roomintro.)
+[2015-09-26T21:46:14.246Z] (chronosroom) Voidchrono - ⓖⓞⓓ declared <video  src="https://dl.pushbulletusercontent.com/nLWZYYTikjCKueyRbWpRHLlnyKcqvJm5/slowpoke%20clip%20video.mp4" controls="" style="width: 100% ; border: 1px solid #3B3B3B ; background-color: #00000a" target="_blank" /></center>

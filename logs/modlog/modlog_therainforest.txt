@@ -6730,3 +6730,61 @@
 [2015-09-03T07:17:36.203Z] (therainforest) ashbloodthief was warned by EosBot. (Automated response: stretching)
 [2015-09-03T07:56:44.842Z] (therainforest) Se0 was warned by Safety Shark. (Automated response: caps)
 [2015-09-03T07:56:44.843Z] (therainforest) Se0 was warned by EosBot. (Automated response: caps)
+[2015-09-26T21:13:45.135Z] (therainforest) (Rain Shade created a tournament in monotype format.)
+[2015-09-26T21:15:43.657Z] (therainforest) (The tournament auto start timeout was set to 2 by Rain Shade)
+[2015-09-26T21:49:01.173Z] (therainforest) luded was unbanned from room therainforest by rain devin.
+[2015-09-26T21:58:05.485Z] (therainforest) edjim was promoted to Room Operator by rain devin.
+[2015-09-26T22:09:39.093Z] (therainforest) Royal Luded was promoted to Room Operator by Rain Slash1234.
+[2015-09-26T22:11:08.994Z] (therainforest) (luded was demoted to Room regular user by rain devin.)
+[2015-09-26T22:39:21.582Z] (therainforest) Rain ☆ Hingo was warned by Rain Carn0Х. (Congrats)
+[2015-09-26T22:50:52.362Z] (therainforest) Rain Carn0Х declared Congratulate Hingo (~O.o)~
+[2015-09-26T23:08:56.095Z] (therainforest) Rain ☆ Hingo was warned by Rain Carn0Х. (GOOD JOB >:D)
+[2015-09-26T23:08:56.696Z] (therainforest) sarii was warned by Rain Carn0Х. (GOOD JOB <3)
+[2015-09-27T04:53:57.402Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T04:54:14.794Z] (therainforest) Rain ☆ GuardianLux was muted by Alliance - Lee for 7 minutes.
+[2015-09-27T04:54:19.520Z] (therainforest) Rain ☆ GuardianLux was unmuted by Alliance - Lee.
+[2015-09-27T04:54:29.361Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T04:57:20.302Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T04:58:58.175Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T05:05:08.794Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T05:05:43.589Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T05:06:36.627Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:06:41.825Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T05:06:47.666Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Zenji.
+[2015-09-27T05:06:52.250Z] (therainforest) Rain ☆ GuardianLux was warned by rain devin. (chill)
+[2015-09-27T05:07:04.329Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by rain devin.
+[2015-09-27T05:07:15.044Z] (therainforest) Rain ☆ GuardianLux was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:13:17.690Z] (therainforest) Rain Sykes was banned from room therainforest by Rain Spunkyyyy.
+[2015-09-27T05:13:17.695Z] (therainforest) (Rain Sykes's  ac account: notsykes, roombanned alts: Imp Spunky!, Rain Spunkyyyy)
+[2015-09-27T05:14:00.938Z] (therainforest) rainsykes was unbanned from room therainforest by rain devin.
+[2015-09-27T05:20:30.793Z] (therainforest) AM_Gavin203 was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:21:05.533Z] (therainforest) AM_SPUNKYYYY was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:21:11.905Z] (therainforest) AM_SPUNKYYYY was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:22:54.914Z] (therainforest) Ishtaria was promoted to Room Voice by Rain Spunkyyyy.
+[2015-09-27T05:23:17.840Z] (therainforest) AM_SPUNKYYYY was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T05:23:27.435Z] (therainforest) Ishtaria was promoted to Room Operator by Rain Spunkyyyy.
+[2015-09-27T05:23:37.514Z] (therainforest) AM_SPUNKYYYY was kicked from the room by Ishtaria.
+[2015-09-27T05:27:47.728Z] (therainforest) AM_SPUNKYYYY was kicked from the room by Rain Spunkyyyy.
+[2015-09-27T17:44:44.537Z] (therainforest) (rain reshi was demoted to Room regular user by Rain ☆ Devin.)
+[2015-09-27T17:45:12.312Z] (therainforest) Sky Reshi was promoted to Room Voice by Rain ☆ Devin.
+[2015-09-27T18:09:33.569Z] (therainforest) (royal luded was demoted to Room regular user by Rain ♓ Feral.)
+[2015-09-27T18:10:20.601Z] (therainforest) Luds was promoted to Room Operator by Rain ♓ Feral.
+[2015-09-27T18:54:07.959Z] (therainforest) Neo Soul globally declared Come to the <button name=send value="/join monotype">Monotype</button> for the next EOSMC Qualifier Tour! Come and battle for the title of EOS Monotype Champion and 500 bucks! Afterwards the first monothreat of the day will start! <a href=http://pastebin.com/GunZAd7Z><button>Read here for details</button></a>
+[2015-09-27T19:31:48.355Z] (therainforest) (Rain Carn0Х created a tournament in monotype format.)
+[2015-09-27T19:43:13.305Z] (therainforest) (Rain Mistral notes: Guys, its been chill, but I think I'm out of here. So like, good luck, no hard feelings or anything. I'll probably still hang around, long as that's cool. Sora, you can deauth me whenever.)
+[2015-09-27T22:38:01.773Z] (therainforest) SWL Reck was warned by RAiN HinGO. (get yo ass back to swl room)
+[2015-09-27T22:39:14.027Z] (therainforest) RAiN HinGO was warned by rainspunkyyyy. (abuse)
+[2015-09-27T22:39:33.498Z] (therainforest) RAiN HinGO was kicked from the room by Rain ☆ Devin.
+[2015-09-27T23:37:13.524Z] (therainforest) Imp xSaito was kicked from the room by Not Sykes.
+[2015-09-27T23:41:05.635Z] (therainforest) hypershaymin was warned by Rain ☆ Devin.
+[2015-09-27T23:49:53.397Z] (therainforest) ashbloodthief was warned by Rain ☆ Devin.
+[2015-09-27T23:49:54.956Z] (therainforest) ashbloodthief was warned by Rain Hingo.
+[2015-09-27T23:50:29.518Z] (therainforest) The Inferno was warned by Rain Hingo.
+[2015-09-27T23:51:06.928Z] (therainforest) Rain Hingo was muted by Rain ☆ Devin for 7 minutes.
+[2015-09-27T23:51:21.321Z] (therainforest) Rain Hingo was unmuted by Rain ☆ Devin.
+[2015-09-28T00:11:45.026Z] (therainforest) Rain ☆ Devy was muted by Rain Hingo for 7 minutes. (for muting me earlier)
+[2015-09-28T00:11:45.028Z] (therainforest) (Rain ☆ Devy's ac account: raindevin)
+[2015-09-28T00:11:53.547Z] (therainforest) Rain ☆ Devy was unmuted by Rain ☆ Breaker.
+[2015-09-28T00:14:11.285Z] (therainforest) Rain Hingo was banned from room therainforest by Rain ☆ Devin. (oops)
+[2015-09-28T00:14:33.803Z] (therainforest) rainhingo was unbanned from room therainforest by Rain ☆ Devin.
+[2015-09-28T01:45:04.189Z] (therainforest) (Void Naten has shadow banned: laxuy)

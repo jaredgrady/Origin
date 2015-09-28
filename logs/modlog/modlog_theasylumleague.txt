@@ -3703,3 +3703,31 @@
 [2015-09-03T02:41:22.679Z] (theasylumleague) (Primal Theta - ⓑⓡⓑ was demoted to Room regular user by Director Beast.)
 [2015-09-03T02:43:04.421Z] (theasylumleague) (Primal Weedles was demoted to Room regular user by Director Beast.)
 [2015-09-03T02:43:10.303Z] (theasylumleague) (primalvergi1 was demoted to Room regular user by Director Beast.)
+[2015-09-27T00:04:41.409Z] (theasylumleague) Guard Cyklone was promoted to Room Driver by Director Beast.
+[2015-09-27T00:06:10.038Z] (theasylumleague) (Guard Cyklone was demoted to Room regular user by Director Beast.)
+[2015-09-27T00:06:13.853Z] (theasylumleague) (guardmonarch was demoted to Room regular user by Director Beast.)
+[2015-09-27T00:06:41.054Z] (theasylumleague) AkCyklone was promoted to Room Driver by Director Beast.
+[2015-09-27T03:03:09.312Z] (theasylumleague) Safety Shark was banned from room theasylumleague by Mecha Emboar. (Blacklisted user)
+[2015-09-27T03:03:09.988Z] (theasylumleague) (Mecha Emboar notes: safetyshark was added to the blacklist by +Steelchar.)
+[2015-09-27T03:04:28.717Z] (theasylumleague) (Mecha Emboar notes: hit was added to the blacklist by @Doctor Emboar11.)
+[2015-09-27T03:06:11.671Z] (theasylumleague) safetyshark was unbanned from room theasylumleague by Mecha Emboar.
+[2015-09-27T03:14:06.573Z] (theasylumleague) Rayge was banned from room theasylumleague by Mecha Emboar. (♥ ^_^ ♥)
+[2015-09-27T03:14:07.247Z] (theasylumleague) rayge was unbanned from room theasylumleague by Mecha Emboar.
+[2015-09-27T03:14:07.923Z] (theasylumleague) (Mecha Emboar notes: rayge was rk'd by @Doctor Emboar11)
+[2015-09-27T03:20:23.515Z] (theasylumleague) Void KGBeast was promoted to Room Moderator by Director Beast.
+[2015-09-27T03:41:37.446Z] (theasylumleague) (Director Beast created a tournament in challengecup1v1 format.)
+[2015-09-27T03:46:03.216Z] (theasylumleague) (Director Beast created a tournament in challengecup1v1 format.)
+[2015-09-27T03:46:24.554Z] (theasylumleague) (The tournament auto start timeout was set to 2 by Doctor Emboar11)
+[2015-09-27T04:01:05.487Z] (theasylumleague) Rayge - ⓓⓘⓝⓝⓔⓡ was warned by Doctor Emboar11. (eating dinner so goddamn late)
+[2015-09-27T18:15:09.654Z] (theasylumleague) (royal luded was demoted to Room regular user by Chief Sokka - ⒶⒻⓀ.)
+[2015-09-27T18:15:17.058Z] (theasylumleague) Luds was promoted to Room Moderator by Chief Sokka - ⒶⒻⓀ.
+[2015-09-27T23:30:26.210Z] (theasylumleague) Asz1ran was muted by Mecha Emboar for 7 minutes. (Automated response: flooding)
+[2015-09-27T23:30:34.746Z] (theasylumleague) Asz1ran was unmuted by Doctor Emboar11.
+[2015-09-27T23:34:03.225Z] (theasylumleague) Void Peng - ⓛⓐⓓⓓⓡ was warned by Mecha Emboar. (Automated response: caps)
+[2015-09-28T00:34:03.425Z] (theasylumleague) Voidchrono was promoted to Room Leader by Chief Sokka.
+[2015-09-28T00:34:12.398Z] (theasylumleague) Void Peng was muted by Voidchrono for 7 minutes.
+[2015-09-28T00:34:24.467Z] (theasylumleague) (Voidchrono was demoted to Room Voice by Chief Sokka.)
+[2015-09-28T00:36:34.519Z] (theasylumleague) (Voidchrono was demoted to Room regular user by Void KGBeast.)
+[2015-09-28T00:36:58.352Z] (theasylumleague) Void Peng was unmuted by Voidchrono.
+[2015-09-28T00:38:17.713Z] (theasylumleague) Foh - ⓖⓘⓜⓜⓔⓓⓐⓣⓐⓢⓢ was warned by Voidchrono. (no)
+[2015-09-28T03:20:10.566Z] (theasylumleague) ntgs bank was promoted to Room Voice by Director Beast.

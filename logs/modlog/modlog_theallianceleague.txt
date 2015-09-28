@@ -1540,3 +1540,162 @@
 [2015-09-03T05:37:03.684Z] (theallianceleague) Alliance - Ghast declared AHH HE HAS ARRIVED
 [2015-09-03T05:37:36.671Z] (theallianceleague) Alliance - Ghast declared everyone welcome our FINAL ROYAL GUARD!! ASURA
 [2015-09-03T08:21:18.680Z] (theallianceleague) Alliance Kray was promoted to Room Moderator by Alliance - Ghast.
+[2015-09-26T21:14:30.151Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-09-26T21:14:39.413Z] (theallianceleague) (Alliance - Keahi notes: I wish It got Swords Dance)
+[2015-09-26T21:14:44.896Z] (theallianceleague) (Alliance - Keahi notes: No Not yet)
+[2015-09-26T21:14:53.437Z] (theallianceleague) (Alliance - Keahi notes: Not the Cup)
+[2015-09-26T21:16:55.042Z] (theallianceleague) Alliance - Ghast declared JOIN THE ALLIAnce CUP roOM
+[2015-09-26T21:24:08.301Z] (theallianceleague) (Alliance - Keahi notes: Ghast. I'm sorry for all the shit I've given you)
+[2015-09-26T22:08:06.112Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-09-26T22:34:20.988Z] (theallianceleague) Memes be dreams was muted by Alliance - Keahi for 1 hour.
+[2015-09-26T22:34:29.128Z] (theallianceleague) Memes be dreams was unmuted by Alliance - Keahi.
+[2015-09-26T22:39:41.878Z] (theallianceleague) Alliance - Keahi was muted by Alliance - Dreams for 1 hour. (Warned previously about abusing)
+[2015-09-26T22:42:55.397Z] (theallianceleague) (sarii was demoted to Room regular user by Alliance - Ghast.)
+[2015-09-26T22:43:25.859Z] (theallianceleague) Dethroner* was promoted to Room Leader by Alliance - Ghast.
+[2015-09-26T22:43:33.525Z] (theallianceleague) (Dethroner* was demoted to Room Moderator by Alliance - Ghast.)
+[2015-09-26T22:48:33.265Z] (theallianceleague) Rain ☆ Hingo was promoted to Room Voice by Alliance - Ghast.
+[2015-09-26T22:56:42.938Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-26T23:01:07.756Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-26T23:09:08.656Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-26T23:10:54.138Z] (theallianceleague) Alliance - Ghast declared IOJ rock test
+[2015-09-26T23:11:47.128Z] (theallianceleague) Alliance - Ghast declared Cats (Bug), Destiny (Water), Dreams (Dark)
+[2015-09-26T23:12:32.169Z] (theallianceleague) (Alliance - Char was demoted to Room regular user by Alliance - Ghast.)
+[2015-09-26T23:14:48.497Z] (theallianceleague) Alliance - Ghast declared CATS VS IOJ
+[2015-09-26T23:20:33.848Z] (theallianceleague) Challenger Linket was warned by Safety Shark. (Automated response: caps)
+[2015-09-26T23:34:13.281Z] (theallianceleague) Alliance - Ghast declared also if you're doing league challenge matches, post them in the chat
+[2015-09-26T23:41:57.090Z] (theallianceleague) Alliance - Ghast declared Ampy (Flying), Dreams (Dark), Destiny (Water)
+[2015-09-26T23:42:09.181Z] (theallianceleague) Alliance - Ghast declared Calculu vs Amp!
+[2015-09-26T23:54:18.173Z] (theallianceleague) Alliance - Ghast declared Cheezus Rock Trials 
+[2015-09-26T23:54:37.329Z] (theallianceleague) Alliance - Ghast declared Dreams (Dark), Destiny (Water),  Guy (flying)
+[2015-09-27T01:02:16.236Z] (theallianceleague) Alliance - Nimbus was appointed Room Owner by Alliance - Ghast.
+[2015-09-27T01:05:28.396Z] (theallianceleague) (Alliance - Ghast created a tournament in monotype format.)
+[2015-09-27T01:06:50.651Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance - Dreams)
+[2015-09-27T01:24:25.067Z] (theallianceleague) Alliance - XYZ was promoted to Room Driver by Alliance - Ghast.
+[2015-09-27T01:42:51.567Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-09-27T01:43:05.368Z] (theallianceleague) (Alliance Ampy notes: uhh, rude)
+[2015-09-27T01:43:14.138Z] (theallianceleague) (Alliance Ampy notes: 6 months is new)
+[2015-09-27T01:43:16.594Z] (theallianceleague) (Alliаnce CаtsMеow notes: so like, hi)
+[2015-09-27T01:43:18.896Z] (theallianceleague) (Alliance Ampy notes: ok)
+[2015-09-27T01:43:20.429Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-09-27T01:43:20.533Z] (theallianceleague) (Alliance ♥ Gamma~ notes: hi)
+[2015-09-27T01:43:42.799Z] (theallianceleague) Alliance - Dreams was kicked from the room by Alliance - Ghast.
+[2015-09-27T01:43:44.222Z] (theallianceleague) (Alliance ♥ Gamma~ notes: am i the only dark fl)
+[2015-09-27T01:43:50.727Z] (theallianceleague) (Alliance ♥ Gamma~ notes: gl)
+[2015-09-27T01:44:18.503Z] (theallianceleague) (Alliаnce CаtsMеow notes: what about venus v)
+[2015-09-27T01:44:35.673Z] (theallianceleague) (Alliance ♥ Gamma~ notes: oooh)
+[2015-09-27T01:45:34.143Z] (theallianceleague) Alliance Ampy was promoted to Room Moderator by Alliance - Ghast.
+[2015-09-27T01:45:45.285Z] (theallianceleague) Alliance- Jzb was promoted to Room Moderator by Alliance - Ghast.
+[2015-09-27T01:56:37.954Z] (theallianceleague) AllianceAsurax - Ⓢ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-09-27T01:59:22.564Z] (theallianceleague) AllianceAsurax - Ⓢ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-09-27T02:10:16.585Z] (theallianceleague) Ghast's Vagina was warned by Alliance ♥ Gamma~. (you're too tasty)
+[2015-09-27T02:10:24.066Z] (theallianceleague) Ghast's Vagina was kicked from the room by AllianceAsurax - Ⓢ.
+[2015-09-27T02:12:00.808Z] (theallianceleague) Alliance - XYZ was promoted to Room Moderator by Alliance - Ghast.
+[2015-09-27T02:12:02.294Z] (theallianceleague) AllianceAsurax - Ⓢ declared !!!
+[2015-09-27T02:12:09.043Z] (theallianceleague) (Alliance - XYZ was demoted to Room Driver by Alliance - Ghast.)
+[2015-09-27T02:12:29.166Z] (theallianceleague) edjim was promoted to Room Voice by Alliance - Dreams.
+[2015-09-27T02:12:33.199Z] (theallianceleague) AllianceAsurax - Ⓢ declared can someone explain how this topic was brought about? lmao
+[2015-09-27T02:12:35.279Z] (theallianceleague) (edjim was demoted to Room regular user by Alliance - Dreams.)
+[2015-09-27T02:12:45.104Z] (theallianceleague) edjim was promoted to Room Voice by Alliance - Dreams.
+[2015-09-27T02:12:45.708Z] (theallianceleague) (edjim was demoted to Room regular user by Alliance - Dreams.)
+[2015-09-27T02:14:53.633Z] (theallianceleague) BB of Alliance was warned by Alliance - xWish. (Inhale my dong enragement child)
+[2015-09-27T02:19:08.543Z] (theallianceleague) edjim was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T02:20:16.952Z] (theallianceleague) Imp xSaito was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T02:20:49.076Z] (theallianceleague) edjim was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-09-27T02:20:58.609Z] (theallianceleague) edjim was unmuted by Alliаnce CаtsMеow.
+[2015-09-27T02:21:02.758Z] (theallianceleague) edjim was muted by Alliance - Dreams for 7 minutes.
+[2015-09-27T02:21:07.739Z] (theallianceleague) edjim was unmuted by Alliаnce CаtsMеow.
+[2015-09-27T02:21:40.362Z] (theallianceleague) AllianceAsurax - Ⓢ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-09-27T02:23:25.081Z] (theallianceleague) (Alliance - xWish notes: BTW BB of Alliance is me)
+[2015-09-27T02:23:33.039Z] (theallianceleague) (Alliance - Ghast notes: LOL)
+[2015-09-27T02:23:39.794Z] (theallianceleague) (Alliance - Ghast notes: whyyyyy LOL)
+[2015-09-27T02:24:01.204Z] (theallianceleague) (Alliance - Dreams notes: He's trying to get banned so he doesn't have to smell your stingy fanny Ghast)
+[2015-09-27T02:24:06.008Z] (theallianceleague) (Alliance - Llama notes: herp)
+[2015-09-27T02:24:06.270Z] (theallianceleague) (Alliance - xWish notes: cuz wynaut :P)
+[2015-09-27T02:25:46.384Z] (theallianceleague) (Alliance - xWish changed the roomdesc to: "I want u guys 2 give ur meat a good ol rub".)
+[2015-09-27T02:29:50.010Z] (theallianceleague) Alliance - Charen set modchat to &
+[2015-09-27T02:29:59.743Z] (theallianceleague) Alliance - Charen set modchat to false
+[2015-09-27T02:30:23.730Z] (theallianceleague) Alliаnce CаtsMеow set modchat to +
+[2015-09-27T02:30:55.054Z] (theallianceleague) AllianceAsurax - Ⓢ set modchat to autoconfirmed
+[2015-09-27T02:37:50.323Z] (theallianceleague) Alliance - xWish was kicked from the room by AllianceAsurax - Ⓢ.
+[2015-09-27T02:39:22.401Z] (theallianceleague) (Alliance - Keahi created a tournament in monotype format.)
+[2015-09-27T02:39:58.439Z] (theallianceleague) Alliance - xWish declared YOU'LL NEVER TAKE ME ALIVE!
+[2015-09-27T03:33:09.759Z] (theallianceleague) Alliance Brisson was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T03:40:48.393Z] (theallianceleague) AllianceAsurax - Ⓢ set modchat to false
+[2015-09-27T04:06:57.906Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T04:08:21.711Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T04:08:49.876Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T04:11:10.890Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T04:11:44.902Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T04:12:11.825Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T05:26:15.801Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T05:39:38.329Z] (theallianceleague) (Alliance - Ghast changed the roomintro.)
+[2015-09-27T05:44:33.510Z] (theallianceleague) CheezusBleezus was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T05:45:24.378Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "%Alliance - Llama: I felt like i was being defiled by shz".)
+[2015-09-27T05:45:33.397Z] (theallianceleague) (Alliance ~ Emma was demoted to Room regular user by Alliance - Ghast.)
+[2015-09-27T05:52:20.507Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-09-27T05:52:32.753Z] (theallianceleague) (Alliance-pezmango notes: :s)
+[2015-09-27T05:52:36.073Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-09-27T05:52:38.586Z] (theallianceleague) (Alliance - Lee notes: :D)
+[2015-09-27T05:52:40.211Z] (theallianceleague) (Alliance - Gamma~ notes: :P)
+[2015-09-27T05:52:48.381Z] (theallianceleague) (Alliance - Gamma~ notes: i tried)
+[2015-09-27T05:52:54.844Z] (theallianceleague) (Alliance - Lee notes: lol)
+[2015-09-27T05:54:02.778Z] (theallianceleague) Alliance - Chez was promoted to Room Driver by Alliance - Ghast.
+[2015-09-27T06:12:37.671Z] (theallianceleague) (Soma was demoted to Room regular user by Alliance - Ghast.)
+[2015-09-27T13:58:44.103Z] (theallianceleague) AllianceAsurax - Ⓢ declared DED
+[2015-09-27T14:02:04.338Z] (theallianceleague) (Alliance - Dreams created a tournament in ou format.)
+[2015-09-27T15:05:32.169Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T15:09:14.929Z] (theallianceleague) Thimo was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T15:09:46.632Z] (theallianceleague) Thimo was unmuted by Alliance TheThorn.
+[2015-09-27T15:20:15.429Z] (theallianceleague) HM Sobi was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T15:20:42.987Z] (theallianceleague) Chleg was banned from room theallianceleague by Dream Eater Gengar.
+[2015-09-27T15:20:49.103Z] (theallianceleague) chleg was unbanned from room theallianceleague by Dream Eater Gengar.
+[2015-09-27T15:21:32.511Z] (theallianceleague) Thimo was promoted to Moderator by Dream Eater Gengar.
+[2015-09-27T15:21:40.417Z] (theallianceleague) Chleg was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T15:21:42.667Z] (theallianceleague) Chleg was banned by Thimo. (92.12.35.100)
+[2015-09-27T15:22:34.360Z] (theallianceleague) Anttya was promoted to Room Voice by Thimo.
+[2015-09-27T15:23:08.105Z] (theallianceleague) Gratitude was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T16:15:52.236Z] (theallianceleague) 9 Tails Jinchuriki was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T16:21:26.696Z] (theallianceleague) (Erica*07 has shadow banned: 9tailsjinchuriki)
+[2015-09-27T16:29:35.962Z] (theallianceleague) Rain Jinchuriki was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T16:45:52.756Z] (theallianceleague) Rain Jinchuriki was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-09-27T16:48:48.866Z] (theallianceleague) NeonElectron was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T16:54:19.084Z] (theallianceleague) Rain Jinchuriki was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T17:44:26.158Z] (theallianceleague) 9 Tails Jinchuriki was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T17:45:27.126Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T17:49:27.957Z] (theallianceleague) 9 Tails Jinchuriki was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T17:58:39.677Z] (theallianceleague) SeviperM was warned by Safety Shark. (Automated response: stretching)
+[2015-09-27T18:37:30.097Z] (theallianceleague) Alliance - Contort declared Who wants to lvl
+[2015-09-27T18:37:36.256Z] (theallianceleague) Alliance - Contort declared say /me in
+[2015-09-27T18:56:22.659Z] (theallianceleague) (Alliance Ampy created a tournament in monotype format.)
+[2015-09-27T19:28:26.828Z] (theallianceleague) (Alliance Ampy created a tournament in uu format.)
+[2015-09-27T19:33:26.816Z] (theallianceleague) Chleg was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T19:33:38.526Z] (theallianceleague) Chleg was unmuted by Alliance - Ghast.
+[2015-09-27T20:35:08.187Z] (theallianceleague) mahdavi was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-27T20:35:16.842Z] (theallianceleague) mahdavi was muted by Alliance - Llama for 1 hour.
+[2015-09-27T20:36:18.677Z] (theallianceleague) mahdavi was banned from room theallianceleague by Alliance - Ghast.
+[2015-09-27T21:13:15.629Z] (theallianceleague) (Alliance - POLISH created a tournament in monotype format.)
+[2015-09-27T21:57:54.169Z] (theallianceleague) (Alliance Keahi created a tournament in monotype format.)
+[2015-09-27T22:50:26.103Z] (theallianceleague) (Alliance Keahi created a tournament in monotype format.)
+[2015-09-27T23:10:31.813Z] (theallianceleague) Ticken was promoted to Room Voice by Alliance - Ghast.
+[2015-09-27T23:41:03.796Z] (theallianceleague) Primal Dylan was warned by Safety Shark. (Automated response: caps)
+[2015-09-27T23:47:14.269Z] (theallianceleague) Primal Dylan was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-09-27T23:47:14.270Z] (theallianceleague) (Primal Dylan's ac account: breezelinket)
+[2015-09-27T23:47:21.105Z] (theallianceleague) Primal Dylan was unmuted by Alliance Dreams.
+[2015-09-28T00:27:02.543Z] (theallianceleague) Breeze Linket was warned by Safety Shark. (Automated response: caps)
+[2015-09-28T00:52:24.638Z] (theallianceleague) RockPaperScizorz was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-09-28T00:52:30.388Z] (theallianceleague) RockPaperScizorz was banned from room theallianceleague by Alliance - Ghast.
+[2015-09-28T01:31:06.375Z] (theallianceleague) (AllianceGhast - ⓐ created a tournament in monotype format.)
+[2015-09-28T01:51:50.233Z] (theallianceleague) Linket The Ass was warned by Safety Shark. (Automated response: caps)
+[2015-09-28T02:38:24.680Z] (theallianceleague) (Alliance Keahi created a tournament in monotype format.)
+[2015-09-28T02:42:38.196Z] (theallianceleague) (The tournament was set to allow scouting by Alliance Keahi)
+[2015-09-28T02:42:41.395Z] (theallianceleague) (The tournament was set to disallow scouting by Alliance Keahi)
+[2015-09-28T02:42:55.305Z] (theallianceleague) (The tournament was set to disallow scouting by AllianceAsurax - Ⓢ)
+[2015-09-28T02:42:56.525Z] (theallianceleague) (The tournament was set to disallow scouting by AllianceAsurax - Ⓢ)
+[2015-09-28T02:42:57.436Z] (theallianceleague) (The tournament was set to disallow scouting by AllianceAsurax - Ⓢ)
+[2015-09-28T02:52:16.570Z] (theallianceleague) AllianceAsurax - Ⓢ declared no
+[2015-09-28T02:52:37.656Z] (theallianceleague) AllianceAsurax - Ⓢ declared wut u want m8
+[2015-09-28T02:52:57.861Z] (theallianceleague) AllianceAsurax - Ⓢ declared did u register on the website?
+[2015-09-28T02:53:20.843Z] (theallianceleague) AllianceAsurax - Ⓢ declared ..
+[2015-09-28T03:24:12.970Z] (theallianceleague) (Derek (Gallade) was disqualified from the tournament by Alliance Keahi)
+[2015-09-28T03:27:50.587Z] (theallianceleague) (Megalinket was disqualified from the tournament by Alliance Keahi)
+[2015-09-28T03:28:32.686Z] (theallianceleague) (Alliance Keahi created a tournament in monotype format.)
