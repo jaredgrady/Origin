@@ -584,6 +584,7 @@ User = (function () {
 	User.prototype.can = function (permission, target, room) {
 		if (this.hasSysopAccess()) return true;
 		if (permission === 'vip' && Users.vips[this.userid] && !target) return true;
+		if (permission === 'dev' && ~developers.indexOf(this.userid)) return true;
 
 		var group = this.group;
 		var targetGroup = '';
