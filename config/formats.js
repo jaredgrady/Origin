@@ -628,15 +628,15 @@ exports.Formats = [
 		ruleset: ['OU'],
 		banlist: ['Allow CAP']
 	},
-	{
-	        name: "[Gen 5] CAP",
+        {
+        	name: "[Gen 5] CAP",
         	section: "Other Metagames",
 
         	mod: 'gen5',
         	searchShow: false,
-        	ruleset: ['[Gen 5] OU'],
-        	banlist: ['Allow CAP', 'Cawmodore', 'Volkraken', 'Plasmanta', 'Naviathan']
-    	},
+        	ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+        	banlist: ['Uber', 'Excadrill', 'Drizzle ++ Swift Swim', 'Soul Dew', 'Allow CAP', 'Cawmodore', 'Volkraken', 'Plasmanta', 'Naviathan']
+	},
 	{
         	name: "[Gen 4] CAP",
         	section: "Other Metagames",
