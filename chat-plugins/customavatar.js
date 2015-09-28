@@ -153,6 +153,9 @@ exports.commands = {
 			if (!this.can('hotpatch')) return false;
 			reloadCustomAvatars();
 			Rooms.get('staff').add(Tools.escapeHTML(user.name) + " has reloaded all custom avatars.");
+			for (var u in Users.users) {
+				if (Config.customavatars[u]) Users.users[u].avatar = Config.customavatars[u];
+			}
 			this.sendReply("You have reloaded all custom avatars on the server.");
 			break;
 
