@@ -149,8 +149,15 @@ Profile.prototype.seen = function (timeAgo) {
 Profile.prototype.vip = function() { 
     if (typeof this.user === 'string') return '';
     if (this.user && !this.user.can('vip')) return '';
-    if (this.user && this.user.can('vip')) return '(<font color=#6390F0><b>VIP User</b></font>)';
+    if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
     return '';
+};
+
+Profile.prototype.dev = function() {
+	if (typeof this.user === 'string') return '';
+	if (this.user && !this.user.can('dev')) return '';
+	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>EOS Dev</b></font>)';
+	return '';
 };
 
 Profile.prototype.show = function (callback) {
@@ -158,27 +165,8 @@ Profile.prototype.show = function (callback) {
 
 	return callback(this.avatar() +
 									SPACE + this.name() + BR +
-									SPACE + this.group() + SPACE + this.vip() + BR +
+									SPACE + this.group() + this.vip() + this.dev() + BR +
 									SPACE + this.money(Db('money')[userid] || 0) + BR +
 									SPACE + this.seen(Db('seen')[userid]) +
 									'<br clear="all">');
-};
-
-exports.commands = {
-	profile: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		var targetUser = this.targetUserOrSelf(target);
-		var profile;
-		if (!targetUser) {
-			profile = new Profile(false, target);
-		} else {
-			profile = new Profile(true, targetUser, targetUser.avatar);
-		}
-		profile.show(function (display) {
-			this.sendReplyBox(display);
-			room.update();
-		}.bind(this));
-	},
-	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."]
 };
