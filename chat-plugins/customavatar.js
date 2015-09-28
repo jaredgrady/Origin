@@ -149,6 +149,13 @@ exports.commands = {
 			}.bind(this));
 			break;
 
+		case 'reload':
+			if (!this.can('hotpatch')) return false;
+			reloadCustomAvatars();
+			Rooms.get('staff').add(Tools.escapeHTML(user.name) + " has reloaded all custom avatars.");
+			this.sendReply("You have reloaded all custom avatars on the server.");
+			break;
+
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customavatar set, user, avatar` and `/customavatar delete, user`.");
 		}
