@@ -163,7 +163,7 @@ exports.commands = {
 		if (targets.length === 0) {
 			return this.sendReply('||' + this.targetUsername + " is already shadow banned or isn't named.");
 		}
-		this.globalModlog("SBAN", targetUser, " by " + user.name + (reason ? ": " + reason : ""));
+		this.globalModlog("SBAN", targets, " by " + user.name + (reason ? ": " + reason : ""));
 		this.privateModCommand("(" + user.name + " has shadow banned: " + targets.join(", ") + (reason ? " (" + reason + ")" : "") + ")");
 
 		//return this.parse('/' + action + ' ' + toId(this.targetUser) + ',' + reason);
@@ -181,7 +181,7 @@ exports.commands = {
 		if (targets.length === 0) {
 			return this.sendReply('||' + this.targetUsername + " is not shadow banned.");
 		}
-		this.globalModlog("UN-SBAN", targetUser, " by " + user.name + (target ? ": " + target : ""));
+		this.globalModlog("UN-SBAN", targets, " by " + user.name + (target ? ": " + target : ""));
 		this.privateModCommand("(" + user.name + " has unshadow banned: " + targets.join(", ") + ")");
 	},
 	
