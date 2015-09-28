@@ -4324,3 +4324,5 @@
 [2015-09-28T02:46:00.578Z] (monotype) xDolphin declared WHO WON
 [2015-09-28T02:49:44.167Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
 [2015-09-28T03:24:07.224Z] (monotype) (xDolphin created a tournament in monotype format.)
+[2015-09-28T16:59:50.926Z] (monotype) (ritik was disqualified from the tournament by lab8 moth)
+[2015-09-28T17:00:00.660Z] (monotype) (The tournament auto disqualify timeout was set to 3.234235235235 by lab8 moth)
