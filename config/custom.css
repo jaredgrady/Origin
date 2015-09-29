@@ -1463,6 +1463,14 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/fS4c1hi.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-hvsora, #theheavenleague-userlist-user-hvsora, #thealliance-userlist-user-hvsora, #staff-userlist-user-hvsora {
+    background: rgba(244, 244, 244, 0.8) url("http://forums.tppc.info/images/pokemon/144.gif") right no-repeat;  
+  }
+  
+  #femalehq-userlist-user-steelchar, #lobby-userlist-user-steelchar, #othertiers-userlist-user-steelchar, #staff-userlist-user-steelchar, #arcadia-userlist-user-steelchar, #tournament-userlist-user-steelchar {
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokemon/gen4/overworld/shiny_front/006.png") right no-repeat; 
+  }
+  
   #lobby-userlist-user-a, #tournaments-userlist-user-a, #theheavenleague-userlist-user-a, #therainforest-userlist-user-a, #monotype-userlist-user-a #japanslair-userlis-user-a {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/VfgNEc2.png") right no-repeat;
   } 
