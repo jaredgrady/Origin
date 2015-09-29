@@ -149,8 +149,15 @@ Profile.prototype.seen = function (timeAgo) {
 Profile.prototype.vip = function() { 
     if (typeof this.user === 'string') return '';
     if (this.user && !this.user.can('vip')) return '';
-    if (this.user && this.user.can('vip')) return '(<font color=#6390F0><b>VIP User</b></font>)';
+    if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
     return '';
+};
+
+Profile.prototype.dev = function() {
+	if (typeof this.user === 'string') return '';
+	if (this.user && !this.user.can('dev')) return '';
+	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>EOS Dev</b></font>)';
+	return '';
 };
 
 Profile.prototype.show = function (callback) {
@@ -158,7 +165,7 @@ Profile.prototype.show = function (callback) {
 
 	return callback(this.avatar() +
 									SPACE + this.name() + BR +
-									SPACE + this.group() + SPACE + this.vip() + BR +
+									SPACE + this.group() + this.vip() + this.dev() + BR +
 									SPACE + this.money(Db('money')[userid] || 0) + BR +
 									SPACE + this.seen(Db('seen')[userid]) +
 									'<br clear="all">');
