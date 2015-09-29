@@ -1857,7 +1857,7 @@ roomintro: function (target, room, user) {
 		this.sendReply("Main process. RSS: " + results[0] + ". Heap: " + results[1] + " / " + results[2] + ".");
 	},
 
-	bash: function (target, room, user, connection) {
+	bashtwo: function (target, room, user, connection) {
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
 		var exec = require('child_process').exec;
 		exec(target, function (error, stdout, stderr) {
@@ -1865,11 +1865,14 @@ roomintro: function (target, room, user) {
 		});
 	},
 
-	eval: function (target, room, user, connection) {
+	bash: function (target, room, user, connection) {
+		return this.errorReply("Access denied.");	
+	},
+
+	consoletwo: function (target, room, user, connection) {
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
 		if (!this.canBroadcast()) return;
 
-		if (!this.broadcasting) this.sendReply('||>> ' + target);
 		try {
 			var battle = room.battle;
 			var me = user;
@@ -1879,6 +1882,10 @@ roomintro: function (target, room, user) {
 			var stack = '||' + ('' + e.stack).replace(/\n/g, '\n||');
 			connection.sendTo(room, stack);
 		}
+	},
+
+	eval: function (target, room, user, connection) {
+		return this.errorReply("Access denied.");
 	},
 
 	evalbattle: function (target, room, user, connection) {
