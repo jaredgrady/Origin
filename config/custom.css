@@ -1511,6 +1511,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
         background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/202.png") right no-repeat;  
   }
   
+  #lobby-userlist-user-steelchar, #staff-userlist-user-steelchar, #tournaments-userlist-user-steelchar, #femalehq-userlist-user-steelchar, #othertiers-userlist-user-steelchar {
+        background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokemon/gen4/overworld/shiny_front/006.png") right no-repeat;  
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
