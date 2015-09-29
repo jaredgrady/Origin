@@ -1507,6 +1507,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
         background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
   }
   
+  #lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
+        background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/202.png") right no-repeat;  
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
