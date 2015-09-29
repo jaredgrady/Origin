@@ -1455,6 +1455,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
   }
   
+  #lobby-userlist-user-irraquated, #staff-userlist-user-irraquated, #theheavenleague-userlist-user-irraquated {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/f0No64T.gif") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
