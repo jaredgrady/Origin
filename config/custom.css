@@ -1432,9 +1432,9 @@ a.subtle, a.subtle:hover, .credits ul li p {
   /***********************
   * TEAMBUILDER CSS ~end *
   ***********************/
- /***********************
+ /******************
   * Userlist Icons *
-  ***********************/
+  *****************/
   /* So the basic idea here is really cool: We can give users an icon of a pokemon next to their name in the lobby or any room. 
   Format is as follows 
   
@@ -1442,3 +1442,15 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("") right no-repeat;
   }
   */
+  
+  #staff-userlist-user-fender {
+    background: rgba(244, 244, 244, 0.8) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+  }
+  
+  /**********************
+  * Userlist Icons ~end *
+  **********************/
