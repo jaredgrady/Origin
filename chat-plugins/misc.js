@@ -864,4 +864,21 @@ exports.commands = {
 			return;
 		}
 	},
+	
+	iconcss: function (target, room, user) {
+		if (!this.can('mute')) return false;
+		if (!this.canBroadcast()) return;
+
+		var args = target.split(',');
+		if (args.length < 3) return this.parse('/help iconcss');
+		var username = toId(args.shift());
+		var imageurl = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
+		var selectors = '#' + toId(args.shift()) + '-userlist-user-' + username;
+		args.forEach(function (room) {
+			selectors += ', #' + toId(room) + '-userlist-user-' + username;
+		});
+		selectors += ' {';
+		this.sendReplyBox(selectors + '<br />&nbsp;&nbsp;&nbsp;&nbsp;' + imageurl + '<br />}');
+	},
+	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."]
 };
