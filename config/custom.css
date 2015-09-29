@@ -1495,6 +1495,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/719-mega.png") right no-repeat;
   }
   
+  #lobby-userlist-user-voidcryptis, #staff-userlist-user-voidcryptis, #thevoidleague-userlist-user-voidcryptis, #theheavenleague-userlist-user-voidcryptis {
+    background: rgba(244, 244, 244, 0.8) url("http://suta-raito.com/images/Mewicon.gif") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
