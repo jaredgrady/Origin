@@ -1531,10 +1531,6 @@ a.subtle, a.subtle:hover, .credits ul li p {
         background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/257-m.png") right no-repeat;  
   }
   
-  #lobby-userlist-user-carniechime, #staff-userlist-user-carniechime, #theheavenleague-userlist-user-carniechime, #carnieleague-userlist-user-carniechime {
-    background: rgba(244, 244, 244, 0.8) url("http://vignette1.wikia.nocookie.net/es.pokemon/images/5/50/Mega-Gardevoir_icon.png/revision/latest?cb=20131013223904") right no-repeat;
-  }
-  
   #lobby-userlist-user-stevoduhhero, #casino-userlist-user-stevoduhhero, #heavensleague-userlist-user-stevoduhhero {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/317.gif") right no-repeat;
   }
