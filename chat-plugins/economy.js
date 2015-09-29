@@ -10,7 +10,8 @@ var shop = [
     ['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 50],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 85],
-    ['Room', 'Buys a chatroom for you to own.  (Can be deleted if it goes inactive for too long.Within reason, can be refused)', 150]
+    ['Room', 'Buys a chatroom for you to own.  (Can be deleted if it goes inactive for too long.Within reason, can be refused)', 150],
+    ['Icon', 'Buys a userlist icon that will show in 3 rooms.  (We will not change the rooms even if a fix is purchased. Will take time to appear as cache must reset for it to show)', 500]
 ];
 
 var shopDisplay = getShopDisplay(shop);
