@@ -1463,6 +1463,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/SJVIImn.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-zarel, #staff-userlist-user-zarel {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/GHqu2Z0.png") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
