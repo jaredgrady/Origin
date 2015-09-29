@@ -1432,3 +1432,13 @@ a.subtle, a.subtle:hover, .credits ul li p {
   /***********************
   * TEAMBUILDER CSS ~end *
   ***********************/
+ /***********************
+  * Userlist Icons *
+  ***********************/
+  /* So the basic idea here is really cool: We can give users an icon of a pokemon next to their name in the lobby or any room. 
+  Format is as follows 
+  
+  #room-userlist-user-user {
+    background: rgba(244, 244, 244, 0.8) url("") right no-repeat;
+  }
+  */
