@@ -797,6 +797,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background-color: rgba(244, 244, 244, 0.8);
     border-bottom-color: #AAA;
   }
+  
+  .userlist li button:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
  
   .userlist li em.group {
     color: #252F3F;
