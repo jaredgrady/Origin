@@ -1479,6 +1479,14 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/O3p90Uk.png") right no-repeat;
   }
   
+  #lobby-userlist-user-safetyshark, #staff-userlist-user-safetyshark {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/O3p90Uk.png") right no-repeat;
+  }
+  
+  #theasylumleague-userlist-user-chiefsokka, #carnieleague-userlist-user-chiefsokka, #lobby-userlist-user-chiefsokka {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/29D9erV.gif") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
