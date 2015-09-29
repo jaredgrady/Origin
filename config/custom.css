@@ -1463,6 +1463,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/fS4c1hi.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-hvbulba, #theheavenleague-userlist-user-hvbulba, #sky-userlist-user-hvbulba {
+    background: rgba(244, 244, 244, 0.8) url("http://pokedream.com/pokedex/images/mini/001.gif") right no-repeat;
+  }
+  
   #lobby-userlist-user-hvsora, #theheavenleague-userlist-user-hvsora, #theallianceleauge-userlist-user-hvsora, #staff-userlist-user-hvsora {
     background: rgba(244, 244, 244, 0.8) url("http://forums.tppc.info/images/pokemon/144.gif") right no-repeat;  
   }
