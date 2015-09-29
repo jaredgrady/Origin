@@ -1541,7 +1541,6 @@ roomintro: function (target, room, user) {
 				delete require.cache[require.resolve('./commands.js')];
 				delete require.cache[require.resolve('./chat-plugins/info.js')];
 				global.CommandParser = require('./command-parser.js');
-				users = require('./users.js');
 
 				var runningTournaments = Tournaments.tournaments;
 				CommandParser.uncacheTree('./tournaments');
