@@ -993,7 +993,7 @@ roomintro: function (target, room, user) {
 		if (targetUser.confirmed) {
 			if (cmd === 'forcelock') {
 				var from = targetUser.deconfirm();
-				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was locked by " + user.name + " and demoted from " + from.join(", ") + ".");
+				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was locked by " + user.name + " and demoted from " + from.join(", ") + "." + (target ? "\n\nReason: " + target : ""));
 			} else {
 				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to lock them use /forcelock.");
 			}
@@ -1066,7 +1066,7 @@ roomintro: function (target, room, user) {
 		if (targetUser.confirmed) {
 			/*if (cmd === 'forceban') {*/
 				var from = targetUser.deconfirm();
-				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + "." + (target ? "\n\nReason: " + target : ""));
 			/*} else {
 				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
 			}
