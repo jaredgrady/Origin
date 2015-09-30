@@ -80,7 +80,7 @@ var patternRegex = new RegExp(patterns.join('|'), 'g');
  * @returns {Boolean|String}
  */
 function parseEmoticons(message, room, user, pm) {
-	if (typeof message !== 'string' || (!pm && room.disableEmoticons)) return false;
+	if (typeof message !== 'string' || (!pm && room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
 
 	var match = false;
 	var len = emotesKeys.length;
