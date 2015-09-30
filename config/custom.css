@@ -1566,7 +1566,11 @@ a.subtle, a.subtle:hover, .credits ul li p {
   #lobby-userlist-user-panpawn, #staff-userlist-user-panpawn, #tournaments-userlist-user-panpawn, #casino-userlist-user-panpawn {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/sWEmDLc.gif") right no-repeat;
   }
-  
+
+  #lobby-userlist-user-impfallenblood, #staff-userlist-user-impfallenblood, #theallianceleague-userlist-user-impfallenblood {
+    background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
+  }
+
   #lobby-userlist-user-samcrowe, #staff-userlist-user-samcrowe, #voidleague-userlist-user-samcrowe {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/JkkNSvc.png") right no-repeat;
   }
