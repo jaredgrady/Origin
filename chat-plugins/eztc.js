@@ -81,6 +81,13 @@ exports.commands = {
 				this.privateModCommand("(" + user.name + " has enabled broadcasting trainer cards in this room.)");
 				break;
 
+			case 'reload':
+				if (!this.can('hotpatch')) return false;
+				return this.sendReply("Trainer cards have been reloaded.");
+				Rooms.get('staff').add(Tools.escapeHTML(user.name) + " has reloaded all trainer cards.");
+				loadTrainerCards();
+				break;
+
 			default:
 			case 'info':
 			case 'help':
