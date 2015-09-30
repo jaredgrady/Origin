@@ -75,8 +75,7 @@ function deleteTournament(id, output) {
 	delete exports.tournaments[id];
 	return true;
 }
-function getTournament(name, output) {
-	var id = toId(name);
+function getTournament(id, output) {
 	if (exports.tournaments[id]) {
 		return exports.tournaments[id];
 	}
@@ -830,7 +829,7 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.sendReply("User " + params[0] + " not found.");
+				return this.errorReply("User " + params[0] + " not found.");
 			}
 			tournament.challenge(user, targetUser, this);
 		},
@@ -873,12 +872,12 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.sendReply("User " + params[0] + " not found.");
+				return this.errorReply("User " + params[0] + " not found.");
 			}
 			var reason = '';
 			if (params[1]) {
 				reason = params[1].trim();
-				if (reason.length > MAX_REASON_LENGTH) return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
+				if (reason.length > MAX_REASON_LENGTH) return this.errorReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
 			}
 			if (tournament.disqualifyUser(targetUser, this, reason)) {
 				this.privateModCommand("(" + targetUser.name + " was disqualified from the tournament by " + user.name + (reason ? " (" + reason + ")" : "") + ")");
@@ -927,7 +926,6 @@ var commands = {
 			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
 			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
 		},
-		
 		scout: 'setscouting',
 		scouting: 'setscouting',
 		setscout: 'setscouting',
@@ -956,7 +954,7 @@ var commands = {
 		end: 'delete',
 		stop: 'delete',
 		delete: function (tournament, user) {
-			if (deleteTournament(tournament.room.title, this)) {
+			if (deleteTournament(tournament.room.id, this)) {
 				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
 			}
 		}
@@ -976,7 +974,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReply('|tournaments|info|' + JSON.stringify(Object.keys(exports.tournaments).filter(function (tournament) {
 			tournament = exports.tournaments[tournament];
-			return !tournament.room.isPrivate && !tournament.room.staffRoom;
+			return !tournament.room.isPrivate && !tournament.room.isPersonal && !tournament.room.staffRoom;
 		}).map(function (tournament) {
 			tournament = exports.tournaments[tournament];
 			return {room: tournament.room.title, format: tournament.format, generator: tournament.generator.name, isStarted: tournament.isTournamentStarted};
@@ -1006,10 +1004,6 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		}
 		return this.sendReply("Tournaments disabled.");
 	} else if (cmd === 'create' || cmd === 'new') {
-		if (room.isPersonal) {
-			return this.sendReply("Tournaments may not be started in personal rooms");
-		}
-
 		if (room.toursEnabled) {
 			if (!this.can('tournaments', null, room)) return;
 		} else {
@@ -1030,7 +1024,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 			}
 		}
 	} else {
-		var tournament = getTournament(room.title);
+		var tournament = getTournament(room.id);
 		if (!tournament) {
 			return this.sendReply("There is currently no tournament running in this room.");
 		}

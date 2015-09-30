@@ -797,6 +797,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background-color: rgba(244, 244, 244, 0.8);
     border-bottom-color: #AAA;
   }
+  
+  .userlist li button:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
  
   .userlist li em.group {
     color: #252F3F;
@@ -1432,3 +1436,141 @@ a.subtle, a.subtle:hover, .credits ul li p {
   /***********************
   * TEAMBUILDER CSS ~end *
   ***********************/
+ /******************
+  * Userlist Icons *
+  *****************/
+  /* So the basic idea here is really cool: We can give users an icon of a pokemon next to their name in the lobby or any room. 
+  Format is as follows 
+  
+  #room-userlist-user-user {
+    background: rgba(244, 244, 244, 0.8) url("") right no-repeat;
+  }
+  */
+  
+  #lobby-userlist-user-fender, #staff-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender  {
+    background: rgba(244, 244, 244, 0.8) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+  }
+  
+  #theheavenleague-userlist-user-hvferno, #lobby-userlist-user-hvferno, #theallianceleague-userlist-user-hvferno {
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/490.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #randomtiers-userlist-user-masterfloat {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-irraquated, #staff-userlist-user-irraquated, #theheavenleague-userlist-user-irraquated {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/f0No64T.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-wyngate, #thexleague-userlist-user-wyngate, #theheavenleague-userlist-user-wyngate, #monotype-userlist-user-wyngate {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/fS4c1hi.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-hvbulba, #theheavenleague-userlist-user-hvbulba, #sky-userlist-user-hvbulba {
+    background: rgba(244, 244, 244, 0.8) url("http://pokedream.com/pokedex/images/mini/001.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-hvsora, #theheavenleague-userlist-user-hvsora, #theallianceleauge-userlist-user-hvsora, #staff-userlist-user-hvsora {
+    background: rgba(244, 244, 244, 0.8) url("http://forums.tppc.info/images/pokemon/144.gif") right no-repeat;  
+  }
+  
+  #lobby-userlist-user-a, #tournaments-userlist-user-a, #theheavenleague-userlist-user-a, #therainforest-userlist-user-a, #monotype-userlist-user-a #japanslair-userlis-user-a {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/VfgNEc2.png") right no-repeat;
+  } 
+  
+  #lobby-userlist-user-creaturephil, #staff-userlist-user-creaturephil, #theheavenleague-userlist-user-creaturephil {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/SJVIImn.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-zarel, #staff-userlist-user-zarel {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/GHqu2Z0.png") right no-repeat;
+  }
+  
+  #staff-userlist-user-notorangejuice {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/SsKsNCk.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-voidnaten, #staff-userlist-user-voidnaten, #voidleague-userlist-user-voidnaten {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/80ToFOg.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-safetyshark, #staff-userlist-user-safetyshark {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/O3p90Uk.png") right no-repeat;
+  }
+  
+  #theasylumleague-userlist-user-chiefsokka, #carnieleague-userlist-user-chiefsokka, #lobby-userlist-user-chiefsokka {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/29D9erV.gif") bottom right no-repeat;
+  }
+  
+  #lobby-userlist-user-rubyd, #staff-userlist-user-rubyd, #oras-userlist-user-rubyd, #casino-userlist-user-rubyd {
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/719-mega.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-voidcryptis, #staff-userlist-user-voidcryptis, #thevoidleague-userlist-user-voidcryptis, #theheavenleague-userlist-user-voidcryptis {
+    background: rgba(244, 244, 244, 0.8) url("http://www.gifs.net/Animation11/Creatures_and_Cartoons/Pokemon/Pokemon_licks.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-alphaninja, #staff-userlist-user-alphaninja, #othertiers-userlist-user-alphaninja, #randomtiers-userlist-user-alphaninja, #japanslair-userlist-user-alphaninja {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/wcHF4bC.png") right no-repeat;
+  }
+  
+  #tournaments-userlist-user-resourceful, #randomtiers-userlist-user-resourceful {
+        background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
+  }
+  
+  #lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
+        background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/202.png") right no-repeat;  
+  }
+  
+  #lobby-userlist-user-steelchar, #staff-userlist-user-steelchar, #tournaments-userlist-user-steelchar, #femalehq-userlist-user-steelchar, #othertiers-userlist-user-steelchar {
+        background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokemon/gen4/overworld/shiny_front/006.png") right no-repeat;  
+  }
+  
+  #lobby-userlist-user-princesshigh, #staff-userlist-user-princesshigh, #voidleague-userlist-user-princesshigh, #randomtiers-userlist-user-princesshigh {
+        background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/QGVr19c.png") right no-repeat;  
+  }
+
+  #lobby-userlist-user-sopranomeiko, #artshop-userlist-user-sopranomeiko, #femalehq-userlist-user-sopranomeiko, #japanslair-userlist-user-sopranomeiko, #monotype-userlist-user-sopranomeiko, #othertiers-userlist-user-sopranomeiko, #stantlersfunroom-userlist-user-sopranomeiko, #casino-userlist-user-sopranomeiko, #tournaments-userlist-user-sopranomeiko {
+        background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/257-m.png") right no-repeat;  
+  }
+  
+  #lobby-userlist-user-stevoduhhero, #casino-userlist-user-stevoduhhero, #heavensleague-userlist-user-stevoduhhero {
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/317.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-allegiantgryph, #staff-userlist-user-allegiantgryph, #theallegiantleague-userlist-user-allegiantgryph, #theheavenleague-userlist-user-allegiantgryph {
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/397.gif") right no-repeat;
+  }
+
+  #stantlersfunroom-userlist-user-gtxstantler, #thelotusleague-userlist-user-gtxstantler, #lobby-userlist-user-gtxstantler {
+    background: rgba(244, 244, 244, 0.8) url("http://www.poke-amph.com/black-2-white-2/sprites/small/612.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-velveteenrabbit, #staff-userlist-user-velveteenrabbit, #japanslair-userlist-user-velveteenrabbit, #therainforest-userlist-user-velveteenrabbit {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/iPop5Qr.png?1") right no-repeat;
+  }
+  
+  #lobby-userlist-user-lchevy12, #staff-userlist-user-lchevy12, #japanslair-userlist-user-lchevy12 {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/4Udh2rB.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-dreameatergengar, #staff-userlist-user-dreameatergengar, #theheavenleague-userlist-user-dreameatergengar, #theallianceleague-userlist-user-dreameatergengar {
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/094.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-panpawn, #staff-userlist-user-panpawn, #tournaments-userlist-user-panpawn, #casino-userlist-user-panpawn {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/sWEmDLc.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-samcrowe, #staff-userlist-user-samcrowe, #voidleague-userlist-user-samcrowe {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/JkkNSvc.png") right no-repeat;
+  }
+  
+  /**********************
+  * Userlist Icons ~end *
+  **********************/
