@@ -1538,8 +1538,13 @@ a.subtle, a.subtle:hover, .credits ul li p {
   #lobby-userlist-user-allegiantgryph, #staff-userlist-user-allegiantgryph, #theallegiantleague-userlist-user-allegiantgryph, #theheavenleague-userlist-user-allegiantgryph {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/396.gif") right no-repeat;
   }
+
   #stantlersfunroom-userlist-user-gtxstantler, #thelotusleague-userlist-user-gtxstantler, #lobby-userlist-user-gtxstantler {
     background: rgba(244, 244, 244, 0.8) url("http://www.poke-amph.com/black-2-white-2/sprites/small/612.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
+    background: rgba(244, 244, 244, 0.8) url("http://vignette3.wikia.nocookie.net/pixelmon/images/4/40/Raichu_Icon.png") right no-repeat;
   }
   
   /**********************
