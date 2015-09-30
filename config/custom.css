@@ -1563,6 +1563,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/094.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-panpawn, #staff-userlist-user-panpawn, #tournaments-userlist-user-panpawn, #casino-userlist-user-panpawn {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/sWEmDLc.gif") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
