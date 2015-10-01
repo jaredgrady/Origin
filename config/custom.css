@@ -1447,10 +1447,9 @@ a.subtle, a.subtle:hover, .credits ul li p {
   }
   */
   
-  #lobby-userlist-user-fender, #staff-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender  {
-    background: rgba(244, 244, 244, 0.8) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+  li[id$='-userlist-user-fender'] {
+    background: rgba(0, 0, 0, 0) url(http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png) right no-repeat;
   }
-  
   #theheavenleague-userlist-user-hvferno, #lobby-userlist-user-hvferno, #theallianceleague-userlist-user-hvferno {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/490.gif") right no-repeat;
   }
