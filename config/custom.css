@@ -1448,7 +1448,7 @@ a.subtle, a.subtle:hover, .credits ul li p {
   */
   
   li[id$='-userlist-user-fender'] {
-    background: rgba(0, 0, 0, 0) url(http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png) right no-repeat;
+    background: rgba(244, 244, 244, 0.8) url(http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png) right no-repeat;
   }
   #theheavenleague-userlist-user-hvferno, #lobby-userlist-user-hvferno, #theallianceleague-userlist-user-hvferno {
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/490.gif") right no-repeat;
@@ -1458,7 +1458,7 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
   }
   
-  #lobby-userlist-user-irraquated, #staff-userlist-user-irraquated, #theheavenleague-userlist-user-irraquated {
+  li[id$='-userlist-user-fender'] {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/f0No64T.gif") right no-repeat;
   }
   
