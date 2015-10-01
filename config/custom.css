@@ -1458,8 +1458,8 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
   }
   
-  li[id$='-userlist-user-fender'] {
-    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/f0No64T.gif") right no-repeat;
+  #staff-userlist-user-masterfloat em.group, #lobby-userlist-user-masterfloat em.group, #tournaments-userlist-user-masterfloat em.group, #randomtiers-userlist-user-masterfloat em.group {
+    color: #F00;
   }
   
   #lobby-userlist-user-wyngate, #thexleague-userlist-user-wyngate, #theheavenleague-userlist-user-wyngate, #monotype-userlist-user-wyngate {
