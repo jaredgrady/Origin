@@ -910,7 +910,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Team Preview', 'Mega Rayquaza Clause', 'Swagger Clause', 'Baton Pass Clause', 'Endless Battle Clause', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Moody Clause', 'Evasion Moves Clause', 'Endless Battle Clause',  'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Illegal', 'Rayquaza-Mega', 'Groudon-Primal', 'Kyogre-Primal', 'Red Orb', 'Blue Orb', 'Lucario-Mega', 'Lucarionite', 'CAP', 'Unreleased', 'Soul Dew']
 	},
-	
+	/*
 	{
 		name: "Mix and Mega",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3540979/\">Mix and Mega</a>"],
@@ -1039,7 +1039,7 @@ exports.Formats = [
 			}
 		}
 	},
-
+*/
 	// BW2 Singles
 	///////////////////////////////////////////////////////////////////
 
