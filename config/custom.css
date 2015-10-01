@@ -1575,6 +1575,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/JkkNSvc.png") right no-repeat;
   }
   
+  #lobby-userlist-user-shmurder, #theheavenleague-userlist-user-shmurder, #monotype-userlist-user-shmurder {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/Rkw70I3.png?1") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
