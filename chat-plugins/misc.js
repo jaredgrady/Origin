@@ -629,12 +629,13 @@ exports.commands = {
         if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
         if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
 
-        var pmName = '~Room PM [Do not reply]';
+        var pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
 
         for (var i in room.users) {
-            var message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '|' + target;
+            var message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + Tools.escapeHTML(target);
             room.users[i].send(message);
         }
+        this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + Tools.escapeHTML(target) + ')');
     },
 
 	d: 'poof',
