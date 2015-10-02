@@ -1459,7 +1459,8 @@ a.subtle, a.subtle:hover, .credits ul li p {
   }
   
   #staff-userlist-user-masterfloat em.group, #lobby-userlist-user-masterfloat em.group, #tournaments-userlist-user-masterfloat em.group, #randomtiers-userlist-user-masterfloat em.group {
-    color: #A20000;
+    color: #1EA88C;
+    font-weight: bold;
   }
   
   #lobby-userlist-user-wyngate, #thexleague-userlist-user-wyngate, #theheavenleague-userlist-user-wyngate, #monotype-userlist-user-wyngate {
