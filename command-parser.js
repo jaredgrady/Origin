@@ -84,7 +84,6 @@ function canTalk(user, room, connection, message, targetUser) {
 		connection.popup("You must choose a name before you can talk.");
 		return false;
 	}
-
 	if (room && user.locked) {
 		connection.sendTo(room, "You are locked from talking in chat.");
 		return false;
@@ -528,7 +527,6 @@ var parse = exports.parse = function (message, room, user, connection, levelsDee
 		room.addRaw('<div class="nightclub"><font size="3"><small>' + nightclubify((room.auth ? (room.auth[user.userid] || user.group) : user.group)) + "</small><b>" + nightclubify(Tools.escapeHTML(user.name) + ":") + "</b> " + nightclubify((message)) + '</font></div>');
 		return false;
 	}
-
 	return message || false;
 };
 

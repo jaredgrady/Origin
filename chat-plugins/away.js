@@ -54,8 +54,8 @@ exports.commands = {
 			targetUser.resetName();
 			targetUser.send("|nametaken||Your name conflicts with " + user.name + (user.name.substr(-1) === "s" ? "'" : "'s") + " new away status.");
 		}
-		
-		if (user.can('lock')) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");		user.forceRename(newName, user.registered);
+		if (user.can('lock')) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");
+		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = true;
 	},

@@ -180,7 +180,7 @@ var Room = (function () {
 
 		var timeUntilExpire = this.muteQueue[0].time - Date.now();
 		if (timeUntilExpire <= 0) {
-			this.unmute(this.muteQueue[0].userid, true);
+			this.unmute(this.muteQueue[0].userid, "Your mute in '" + this.title + "' has expired.");
 			//runMuteTimer() is called again in unmute() so this function instance should be closed
 			return;
 		}
@@ -246,7 +246,7 @@ var Room = (function () {
 		user.updateIdentity(this.id);
 		return userid;
 	};
-	Room.prototype.unmute = function (userid, sendPopup) {
+	Room.prototype.unmute = function (userid, notifyText) {
 		var successUserid = false;
 		var user = Users(userid);
 		if (!user) {
@@ -275,9 +275,9 @@ var Room = (function () {
 			}
 		}
 
-		if (user.connected && successUserid) {
+		if (successUserid && user in this.users) {
 			user.updateIdentity(this.id);
-			if (sendPopup) user.popup("Your mute in " + this.title + " has expired.");
+			if (notifyText) user.popup(notifyText);
 		}
 		return successUserid;
 	};
@@ -664,7 +664,7 @@ var GlobalRoom = (function () {
 			title: title
 		};
 		var room = Rooms.createChatRoom(id, title, chatRoomData);
-		this.chatRoomData.push(chatRoomData);
+		// Only add room to chatRoomData if it is not a personal room, those aren't saved.
 		this.chatRooms.push(room);
 		this.writeChatRoomData();
 		return true;
@@ -1417,8 +1417,8 @@ var ChatRoom = (function () {
 	function ChatRoom(roomid, title, options) {
 		Room.call(this, roomid, title);
 		if (options) {
-			this.chatRoomData = options;
 			Object.merge(this, options);
+			if (!this.isPersonal) this.chatRoomData = options;
 		}
 
 		this.logTimes = true;
@@ -1427,8 +1427,7 @@ var ChatRoom = (function () {
 		this.destroyingLog = false;
 		if (!this.modchat) this.modchat = (Config.chatmodchat || false);
 
-		// Log only rooms that aren't personal.
-		if (Config.logchat && !this.isPersonal) {
+		if (Config.logchat) {
 			this.rollLogFile(true);
 			this.logEntry = function (entry, date) {
 				var timestamp = (new Date()).format('{HH}:{mm}:{ss} ');

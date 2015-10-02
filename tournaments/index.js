@@ -748,7 +748,6 @@ Tournament = (function () {
 			bracketData: this.getBracketData()
 		}));
 		this.isEnded = true;
-		delete exports.tournaments[toId(this.room.id)];
 
 		//
 		// Tournament Winnings
@@ -829,7 +828,7 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.errorReply("User " + params[0] + " not found.");
+				return this.sendReply("User " + params[0] + " not found.");
 			}
 			tournament.challenge(user, targetUser, this);
 		},
@@ -872,7 +871,7 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.errorReply("User " + params[0] + " not found.");
+				return this.sendReply("User " + params[0] + " not found.");
 			}
 			var reason = '';
 			if (params[1]) {
@@ -926,6 +925,7 @@ var commands = {
 			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
 			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
 		},
+
 		scout: 'setscouting',
 		scouting: 'setscouting',
 		setscout: 'setscouting',

@@ -915,7 +915,6 @@ exports.Formats = [
 		name: "Mix and Mega",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3540979/\">Mix and Mega</a>"],
 		section: "EOS Metagames",
-
 		mod: 'mixandmega',
 		ruleset: ['Ubers', 'Baton Pass Clause'],
 		banlist: ['Gengarite', 'Shadow Tag', 'Dynamic Punch', 'Zap Cannon'],
@@ -1001,7 +1000,6 @@ exports.Formats = [
 					var template = this.getMixedTemplate(pokemon.originalSpecies, item.id === 'redorb' ? 'Groudon-Primal' : 'Kyogre-Primal');
 					pokemon.formeChange(template);
 					pokemon.baseTemplate = template;
-
 					// Do we have a proper sprite for it?
 					if (pokemon.originalSpecies === (item.id === 'redorb' ? 'Groudon' : 'Kyogre')) {
 						pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');

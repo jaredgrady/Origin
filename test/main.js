@@ -4,7 +4,6 @@ var path = require('path');
 var net = require('net');
 var fs = require('fs');
 var noop = function () {};
- 
 var testPort;
 function getPort(callback) {
 	var port = testPort;

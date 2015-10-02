@@ -125,7 +125,6 @@ var commands = exports.commands = {
 	},
 	hosthelp: ["/host [ip] - Gets the host for a given IP. Requires: & ~"],
 
-
 	searchip: 'ipsearch',
 	ipsearchall: 'ipsearch',
 	hostsearch: 'ipsearch',
@@ -690,7 +689,7 @@ var commands = exports.commands = {
 			results = results.randomize().slice(0, randomOutput);
 		}
 
-		var resultsStr = this.broadcasting ? "" : ("<font color=#999999>" + message + ":</font><br>");
+		var resultsStr = this.broadcasting ? "" : ("<font color=#999999>" + Tools.escapeHTML(message) + ":</font><br>");
 		if (results.length > 1) {
 			if (showAll || results.length <= RESULTS_MAX_LENGTH + 5) {
 				results.sort();
@@ -1074,7 +1073,7 @@ var commands = exports.commands = {
 		if (targetMon) {
 			resultsStr += "<font color=#999999>Matching moves found in learnset for</font> " + targetMon + ":<br>";
 		} else {
-			resultsStr += this.broadcasting ? "" : ("<font color=#999999>" + message + ":</font><br>");
+			resultsStr += this.broadcasting ? "" : ("<font color=#999999>" + Tools.escapeHTML(message) + ":</font><br>");
 		}
 		if (results.length > 0) {
 			if (showAll || results.length <= RESULTS_MAX_LENGTH + 5) {
@@ -1306,7 +1305,7 @@ var commands = exports.commands = {
 			}
 		}
 
-		var resultsStr = this.broadcasting ? "" : ("<font color=#999999>" + message + ":</font><br>");
+		var resultsStr = this.broadcasting ? "" : ("<font color=#999999>" + Tools.escapeHTML(message) + ":</font><br>");
 		if (foundItems.length > 0) {
 			if (showAll || foundItems.length <= RESULTS_MAX_LENGTH + 5) {
 				foundItems.sort();
@@ -2197,6 +2196,14 @@ var commands = exports.commands = {
 			"- !showimage <em>[url], [width], [height]</em>: shows an image to the room<br />" +
 			"<br />" +
 			"More detailed help can be found in the <a href=\"https://www.smogon.com/sim/roomauth_guide\">roomauth guide</a><br />" +
+			"<br />" +
+			"Tournament Help:<br />" +
+			"- /tour create <em>format</em>, elimination: Creates a new single elimination tournament in the current room.<br />" +
+			"- /tour create <em>format</em>, roundrobin: Creates a new round robin tournament in the current room.<br />" +
+			"- /tour end: Forcibly ends the tournament in the current room<br />" +
+			"- /tour start: Starts the tournament in the current room<br />" +
+			"<br />" +
+			"More detailed help can be found <a href=\"https://gist.github.com/verbiage/0846a552595349032fbe\">here</a><br />" +
 			"</div>"
 		);
 	},
@@ -2482,7 +2489,7 @@ var commands = exports.commands = {
 
 	register: function () {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('You will be prompted to register upon winning a rated battle. Alternatively, there is a register button in the <button name="openOptions"><i class="icon-cog"></i> Options</button> menu in the upper right.');
+		this.sendReplyBox('You will be prompted to register upon winning a rated battle. Alternatively, there is a register button in the <button name="openOptions"><i class="fa fa-cog"></i> Options</button> menu in the upper right.');
 	},
 
 	/*********************************************************

@@ -975,7 +975,7 @@ exports.BattleScripts = {
 		};
 		// Moves that shouldn't be the only STAB moves:
 		var NoStab = {
-			aquajet:1, bounce:1, eruption:1, fakeout:1, flamecharge:1, quickattack:1, skyattack:1, waterspout:1
+			aquajet:1, bounce:1, eruption:1, fakeout:1, flamecharge:1, quickattack:1, shadowsneak:1, skyattack:1, waterspout:1
 		};
 
 		// Iterate through all moves we've chosen so far and keep track of what they do:
@@ -2830,7 +2830,6 @@ exports.BattleScripts = {
 					ability = ability1.name;
 				}
 			}
-
 			if (abilities.indexOf('Chlorophyll') >= 0 && ability !== 'Solar Power') {
 				ability = 'Chlorophyll';
 			}
@@ -2843,7 +2842,6 @@ exports.BattleScripts = {
 			if (abilities.indexOf('Swift Swim') >= 0 && hasMove['raindance']) {
 				ability = 'Swift Swim';
 			}
-			
 			if (template.id === 'ambipom' && !counter['technician']) {
 				// If it doesn't qualify for Technician, Skill Link is useless on it
 				// Might as well give it Pickup just in case

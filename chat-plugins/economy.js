@@ -505,5 +505,4 @@ exports.commands = {
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
 	}
-
 };
