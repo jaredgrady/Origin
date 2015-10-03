@@ -2444,7 +2444,7 @@ roomintro: function (target, room, user) {
 	},
 
 	a: function (target, room, user) {
-		if (!this.can('rawpacket')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 		// secret sysop command
 		room.add(target);
 	},
