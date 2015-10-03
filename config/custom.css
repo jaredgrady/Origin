@@ -1598,6 +1598,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/681-b.png") right no-repeat;
   }
   
+  #lobby-userlist-user-hvhingoat, #themystleague-userlist-user-hvhingoat, #theheavenleague-userlist-user-hvhingoat {
+    background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/598.png") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
