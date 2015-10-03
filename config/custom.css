@@ -1593,7 +1593,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
   #lobby-userlist-user-allianceghast, #theallianceleague-userlist-user-allianceghast, #theshadowhills-userlist-user-allianceghast {
     background: rgba(244, 244, 244, 0.8) url("http://www.pokestadium.com/assets/img/sprites/misc/icons/aegislash.png") right no-repeat;
   }
-
+  
+  #themystleague-userlist-user-divluds, #theallianceleague-userlist-user-divluds, #monotype-userlist-user-divluds, #lobby-userlist-user-divluds {
+    background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/681-b.png") right no-repeat;
+  }
   
   /**********************
   * Userlist Icons ~end *
