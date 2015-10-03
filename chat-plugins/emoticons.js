@@ -5,6 +5,8 @@ exports.parseEmoticons = parseEmoticons;
 var emotes = {
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
+	'FacePalm': 'http://i.imgur.com/lv3GmpM.png',
+	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
