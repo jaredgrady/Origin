@@ -1,4 +1,5 @@
 var fs = require('fs');
+var color = require('../config/color');
 
 function reloadCustomAvatars() {
 	var path = require('path');
@@ -93,6 +94,7 @@ exports.commands = {
 				this.sendReply("If you want to continue, use: /customavatar forceset, " + hash);
 				return;
 			}
+			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom avatar from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + avatar + '" width="80" height="80">');
 
 		/* falls through */
 		case 'forceset':
