@@ -1602,6 +1602,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/598.png") right no-repeat;
   }
   
+  #lobby-userlist-user-wolfrabinov, #gryphonsroost-userlist-user-wolfrabinov, #thewolfpackleague-userlist-user-wolfrabinov {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/DAI5aAO.png") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
