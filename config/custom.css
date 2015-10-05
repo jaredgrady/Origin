@@ -1614,6 +1614,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://www.serebii.net/pokedex-xy/icon/418.png") right no-repeat;
   }
   
+  #lobby-userlist-user-voidchrono, #voidleague-userlist-user-voidchrono, #artshop-userlist-user-voidchrono, #1v1-userlist-user-voidchrono, #monotype-userlist-user-voidchrono {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/3lCbPLh.png") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
