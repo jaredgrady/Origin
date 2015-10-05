@@ -755,7 +755,7 @@ var cmds = {
 	},
 }; 
 
-for (var i in cmds) CommandParser.commands[i] = cmds[i];
+//for (var i in cmds) CommandParser.commands[i] = cmds[i];
 
 /*********************************************************
  * Events
