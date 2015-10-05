@@ -153,6 +153,10 @@ global.Tells = require('./tells.js');
 
 global.Db = require('eosdb')('config/eosdb');
 
+global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/'; 
+
+global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA_DIR + 'logs/') : './logs/';
+
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
 
@@ -229,5 +233,14 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
 /*********************************************************
  * Start up the REPL server
  *********************************************************/
-
 require('./repl.js').start('app', function (cmd) { return eval(cmd); });
+/*********************************************************
+ * Start up the REPL server
+ *********************************************************/
+ try {
+	global.League = require('./lvl/league.js'); 
+	global.Clans = require('./lvl/clans.js'); 
+	global.War = require('./lvl/war.js');
+} catch (e) {
+	throw e;
+}
