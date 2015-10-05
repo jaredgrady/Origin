@@ -235,7 +235,7 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
  *********************************************************/
 require('./repl.js').start('app', function (cmd) { return eval(cmd); });
 /*********************************************************
- * Start up the REPL server
+ * Try LvL globals
  *********************************************************/
  try {
 	global.League = require('./lvl/league.js'); 
