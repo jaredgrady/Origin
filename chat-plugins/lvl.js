@@ -1,5 +1,3 @@
-var War = require('../lvl/war.js').War;
-
 exports.commands = { 
 	guerra: 'lvl',
 	war: 'lvl',
@@ -236,3 +234,4 @@ exports.commands = {
 		}
 	},
 }; 
+
