@@ -1863,6 +1863,7 @@ roomintro: function (target, room, user) {
 				if (error.code === 1) {
 					// The working directory or index have local changes.
 					cmd = 'git add --all && git commit -m "Server backup via VPS" && ' + cmd + ' && git push -f master';
+					// if (error.code === 1) return this.sendreply ('Merge conflict has occurred, please fix this locally.');
 				} else {
 					// The most likely case here is that the user does not have
 					// `git` on the PATH (which would be error.code === 127).
