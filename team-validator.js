@@ -6,7 +6,6 @@
  *
  * @license MIT license
  */
-if (Config.emergency && Monitor.countCmd(connection.ip, user.name)) return false;
 var Validator;
 
 if (!process.send) {
