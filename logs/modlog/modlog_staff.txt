@@ -845,3 +845,23 @@
 [2015-09-28T04:45:49.418Z] (staff) Irraquated was muted by Void Naten for 7 minutes.
 [2015-09-28T04:45:52.322Z] (staff) Irraquated was warned by L Chevy 12. (lb)
 [2015-09-28T04:45:52.386Z] (staff) Irraquated was banned from room staff by Nineage - ⒶⒻⓀ.
+[2015-10-05T01:08:21.979Z] (staff) panpawn dev declared Restart time~
+[2015-10-05T01:08:43.341Z] (staff) panpawn used /restart
+[2015-10-05T01:10:21.903Z] (staff) (voidqueenhigh was demoted to regular user by fender.)
+[2015-10-05T01:17:24.804Z] (staff) (panpawn was demoted to regular user by fender.)
+[2015-10-05T01:17:29.496Z] (staff) panpawn was promoted to Leader by fender.
+[2015-10-05T02:58:58.838Z] (staff) Erica*07 globally declared <center><button style="background-color:#000000; -moz-border-radius:29px; -webkit-border-radius:100px; border-radius:100px; border:1px solid #FFFFF; color:#ffffff; font-family:Verdana; font-size:10px; opacity:0.8; padding:5px 10px;" name="send" value="/join Gryphonsroost">Gryphon's Roost</button> <br/>50/25 Doubles OU Bucks Tour!</center>
+[2015-10-05T03:04:58.626Z] (staff) BurningBlazer was promoted to Voice by L Chevy 12.
+[2015-10-05T03:05:11.085Z] (staff) (L Chevy 12 has given VIP status to BurningBlazer)
+[2015-10-05T05:03:10.319Z] (staff) (fender changed the roomintro.)
+[2015-10-05T05:05:31.799Z] (staff) (Erica*07 changed the roomintro.)
+[2015-10-05T05:05:38.941Z] (staff) (Erica*07 changed the roomintro.)
+[2015-10-05T05:05:56.964Z] (staff) (Nineage changed the roomintro.)
+[2015-10-05T05:06:31.603Z] (staff) fender declared <div style="background-image: url('http://orig14.deviantart.net/25d2/f/2014/011/c/c/xerneas_by_e_tane-d71qrh3.jpg'); background-size: cover; background-position: center; border: 6px dashed #07B1AE"><br><br><center><img src="http://i.imgur.com/RKBpyZb.png"; width="300" height="70"></center><br><br><br><br><br><br><br><br><br><br><br><center><a href="http://eosforum.noip.us/"><button style="background: linear-gradient(rgb(212, 160, 155), rgb(182, 92, 83)); background-position: initial;border: 1px solid rgb(182, 92, 83); border-radius: 19px; padding: 5px 15px; color: #000000">Forums</button></a>&nbsp;&nbsp;&nbsp;<a href="http://eosforum.noip.us/forumdisplay.php?fid=20"><button style="background: linear-gradient(rgb(212, 184, 155), rgb(182, 133, 83)); background-position: initial; border: 1px solid rgb(182, 133, 83); border-radius: 19px; padding: 5px 15px; color: #000000">Bug Reports</button></a>&nbsp;&nbsp;&nbsp;<a href="http://eosforum.noip.us/forumdisplay.php?fid=23"><button style="background: linear-gradient(rgb(212, 212, 155), rgb(182, 182, 83)); background-position: initial; border: 1px solid rgb(182, 182, 83); border-radius: 19px; padding: 5px 15px; color: #000000">Suggestions</button></a>&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/document/d/1f6Zx86YE5LyXCkw9MinjZO4dc-8Lu-dLIMu43WrM4A8/edit"><button style="background: linear-gradient(rgb(155, 212, 165), rgb(83, 182, 100)); background-position: initial; border: 1px solid rgb(83, 182, 100); border-radius: 19px; padding: 5px 15px; color: #000000">VIP Benefits</button></a>&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/document/d/1tNxd4JS_YXwW15da0vH6ErQBH2MxLFcOum1WBfRKedg/edit?pli=1"><button style="background: linear-gradient(rgb(155, 184, 212), rgb(83, 133, 182)); border: 1px solid rgb(83, 133, 182); border-radius: 19px; padding: 5px 15px; color: #000000">Donate</button></a></center><br><br></div>
+[2015-10-05T05:07:58.301Z] (staff) (Erica*07 changed the roomintro.)
+[2015-10-05T11:13:50.797Z] (staff) Piers Nivans was promoted to Driver by Master Float.
+[2015-10-05T11:31:07.865Z] (staff) Chimechoo was promoted to Driver by Master Float - ⒶⒻⓀ.
+[2015-10-05T13:28:40.848Z] (staff) Erica*07 removed the trainer card safetyshark
+[2015-10-05T13:32:22.044Z] (staff) Erica*07 added the trainer card safetyshark
+[2015-10-05T13:32:58.203Z] (staff) Erica*07 removed the trainer card safetyshark
+[2015-10-05T13:33:09.641Z] (staff) Erica*07 added the trainer card safetyshark

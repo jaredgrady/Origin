@@ -1964,3 +1964,26 @@
 [2015-09-03T03:02:48.274Z] (djleague) The Pyrope was kicked from the room by Alliance Jester.
 [2015-09-03T03:07:32.762Z] (djleague) Cloyy was warned by DJ Glare. (advertising)
 [2015-09-03T03:07:53.816Z] (djleague) DJ GIBLE was promoted to Room Leader by DJ Glare.
+[2015-10-05T03:04:56.074Z] (djleague) Cloyy was kicked from the room by DJLuna⌐■_■.
+[2015-10-05T03:09:11.448Z] (djleague) DJLuna⌐■_■ set modchat to ~
+[2015-10-05T03:09:20.189Z] (djleague) DJLuna⌐■_■ set modchat to false
+[2015-10-05T03:09:51.170Z] (djleague) DJ Tokyo was banned from room djleague by Mr. Leijon. (Automated moderation: Spamming)
+[2015-10-05T03:10:05.158Z] (djleague) djtokyo was unbanned from room djleague by DJLuna⌐■_■.
+[2015-10-05T03:11:50.394Z] (djleague) Cloyy was appointed Room Owner by DJLuna⌐■_■.
+[2015-10-05T03:13:21.437Z] (djleague) Cloyy was appointed Room Owner by DJLuna⌐■_■.
+[2015-10-05T03:13:49.560Z] (djleague) Cloyy declared i am a heron. i haev a long neck and i pick fish out of the water w/ my beak. if you dont repost this comment on 10 other pages i will fly into your kitchen tonight and make a mess of your pots and pans
+[2015-10-05T03:14:50.804Z] (djleague) Carnie Discord was appointed Room Owner by DJLuna⌐■_■.
+[2015-10-05T03:18:09.050Z] (djleague) Latias Hentai was banned from room djleague by Mr. Leijon. (Automated moderation: Spamming)
+[2015-10-05T03:18:09.054Z] (djleague) (Latias Hentai's  ac account: queennovax, roombanned alts: DJ Tokyo)
+[2015-10-05T03:18:32.211Z] (djleague) Cloyy declared FIRST THING AS NEW CHAMP
+[2015-10-05T03:18:32.812Z] (djleague) Mr. Leijon was banned from room djleague by Cloyy.
+[2015-10-05T03:18:32.814Z] (djleague) (Mr. Leijon's roombanned alts: ThePyrope)
+[2015-10-05T03:18:58.940Z] (djleague) latiashentai was unbanned from room djleague by Cloyy.
+[2015-10-05T03:20:12.934Z] (djleague) Cloyy was kicked from the room by DJ Luna.
+[2015-10-05T03:20:42.866Z] (djleague) Cloyy was promoted to Room Voice by DJ Luna.
+[2015-10-05T03:24:31.467Z] (djleague) DJ Tokyo was appointed Room Owner by DJ Luna.
+[2015-10-05T03:26:21.891Z] (djleague) mrleijon was unbanned from room djleague by DJ Luna.
+[2015-10-05T03:34:47.348Z] (djleague) Myst Bronze2.0 was kicked from the room by DJ Luna.
+[2015-10-05T04:01:02.986Z] (djleague) Breeze Poke was muted by Maura for 1 hour.
+[2015-10-05T04:14:58.840Z] (djleague) Myst Bronze2.0 was kicked from the room by Maura.
+[2015-10-05T04:16:54.905Z] (djleague) Lotus Champ Torpid was kicked from the room by Maura.

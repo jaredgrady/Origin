@@ -233,3 +233,5 @@
 [2015-09-27T09:42:00.303Z] (theiridiscentleague) (Siiilver was demoted to Room Operator by ashyudhajit.)
 [2015-09-27T09:42:41.079Z] (theiridiscentleague) Siiilver was promoted to Room Leader by Dragotic.
 [2015-09-27T16:40:33.264Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-10-05T11:47:50.271Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-10-05T11:49:31.373Z] (theiridiscentleague) lab8 moth was appointed Room Owner by ashyudhajit.

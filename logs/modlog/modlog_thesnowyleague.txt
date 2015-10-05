@@ -3022,3 +3022,6 @@
 [2015-09-27T23:26:18.004Z] (thesnowyleague) Safety Shark was muted by SL Daisy123 for 1 hour.
 [2015-09-27T23:30:23.264Z] (thesnowyleague) Safety Shark was unmuted by SL Fritta.
 [2015-09-27T23:53:38.796Z] (thesnowyleague) SL Charmed was promoted to Room Driver by SL Prof James.
+[2015-10-05T03:11:13.336Z] (thesnowyleague) (Surf Latias changed the roomdesc to: "Ground, Water, Electric, Grass, Bug, Ghost, Steel, and Flying GL spots open!".)
+[2015-10-05T03:15:16.809Z] (thesnowyleague) (SL Little was demoted to Room regular user by Surf Latias.)
+[2015-10-05T03:15:30.817Z] (thesnowyleague) (Surf Latias changed the roomdesc to: "Ground, Water,Electric,Grass,Fairy Bug, Ghost, Steel, and Flying GL spots open!".)

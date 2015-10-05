@@ -313,3 +313,43 @@
 [2015-09-01T15:39:14.127Z] (jurassicworld) Nexus ⚡ Simbian was promoted to Room Voice by Nexus ⚡ Adro.
 [2015-09-01T16:03:05.192Z] (jurassicworld) Nexus ⚡ Simbian was promoted to Room Leader by Nexus ⚡ Adro.
 [2015-09-01T17:18:50.399Z] (jurassicworld) (Nexus ⚡ Adro notes: Primal Ritik)
+[2015-10-05T09:32:34.927Z] (jurassicworld) Hydrostatics set modchat to false
+[2015-10-05T09:32:52.537Z] (jurassicworld) IS Hawk set modchat to autoconfirmed
+[2015-10-05T09:33:02.623Z] (jurassicworld) Hydrostatics set modchat to false
+[2015-10-05T09:33:35.880Z] (jurassicworld) IS Hawk set modchat to autoconfirmed
+[2015-10-05T09:34:14.113Z] (jurassicworld) Legacy - Blushing was promoted to Room Voice by IS Hawk.
+[2015-10-05T09:37:24.240Z] (jurassicworld) IS Hawk declared We all know that lol
+[2015-10-05T09:58:05.607Z] (jurassicworld) IS Hawk declared 6!= ???
+[2015-10-05T10:02:52.280Z] (jurassicworld) Tyrantrum Bot was kicked from the room by IS Hawk.
+[2015-10-05T10:08:01.971Z] (jurassicworld) Hydrostatics was appointed Room Owner by Hydrostatics.
+[2015-10-05T10:10:48.891Z] (jurassicworld) IS Hawk was promoted to Room Leader by Hydrostatics.
+[2015-10-05T10:11:32.367Z] (jurassicworld) (ashyudhajit was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:11:37.911Z] (jurassicworld) (allianceemma was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:11:44.758Z] (jurassicworld) (gamingnoah was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:11:50.414Z] (jurassicworld) (Josqua was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:11:54.531Z] (jurassicworld) (mssih was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:12:19.090Z] (jurassicworld) (princeofgods was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:12:33.937Z] (jurassicworld) (unexpectedjazz was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:12:52.712Z] (jurassicworld) (rainpikeldeo was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:13:09.939Z] (jurassicworld) (noahyt was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:13:44.341Z] (jurassicworld) (mrnyannyanz was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:13:49.326Z] (jurassicworld) (kecleonmarket was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:15.737Z] (jurassicworld) (aeril8 was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:26.441Z] (jurassicworld) (alliancebrisson was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:33.537Z] (jurassicworld) (coldgenisis was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:39.058Z] (jurassicworld) (djzelda was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:45.231Z] (jurassicworld) (dragotic was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:53.929Z] (jurassicworld) (dragoticsbottt was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:14:57.257Z] (jurassicworld) (ducktown was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:15:05.631Z] (jurassicworld) (Kre8noyz was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:15:15.999Z] (jurassicworld) (mystmeliodas was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:15:27.304Z] (jurassicworld) (nibt was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:15:34.437Z] (jurassicworld) (pikapig123 was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:15:42.946Z] (jurassicworld) (tsarceus was demoted to Room regular user by Hydrostatics.)
+[2015-10-05T10:20:45.598Z] (jurassicworld) Hydrostatics was promoted to Room Voice by Chris Makise.
+[2015-10-05T10:49:35.257Z] (jurassicworld) IS Hawk declared What is the second largest city in Japan?
+[2015-10-05T10:51:21.762Z] (jurassicworld) IS Hawk declared Yokohama
+[2015-10-05T10:52:58.334Z] (jurassicworld) Hydrostatics was warned by Tyrantrum Bot. (Automated moderation: Stretching)
+[2015-10-05T10:55:37.114Z] (jurassicworld) IS Hawk declared Of what material are Wolverine's claws made of?
+[2015-10-05T10:55:55.246Z] (jurassicworld) IS Hawk declared Adamantium
+[2015-10-05T12:49:44.661Z] (jurassicworld) IS Hawk declared Which is an example of the commutative property?  A.8 + (13) = 13 + (8)  B.(22 + 1) = 22 + (1)  C.11 + (14 + 5) = (11 + (14)) + 5  D.16 + (16) = 0

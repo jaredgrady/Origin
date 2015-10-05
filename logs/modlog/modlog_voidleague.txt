@@ -1298,3 +1298,9 @@
 [2015-09-28T02:00:53.212Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: stretching)
 [2015-09-28T02:02:08.279Z] (voidleague) Alliance - Ralker was warned by Safety Shark. (Automated response: stretching)
 [2015-09-28T04:20:41.397Z] (voidleague) IAMPHOTON was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T00:45:19.805Z] (voidleague) Void KGBeast was promoted to Room Leader by vOIdChROnO.
+[2015-10-05T02:02:21.681Z] (voidleague) Void Wiley was banned from room voidleague by Void SYB3R.
+[2015-10-05T02:02:33.305Z] (voidleague) voidwiley was unbanned from room voidleague by Void SYB3R.
+[2015-10-05T02:04:53.400Z] (voidleague) Jay_Swift was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T13:07:19.735Z] (voidleague) Void Julius was muted by Void SYB3R for 7 minutes.
+[2015-10-05T13:07:42.384Z] (voidleague) Void Julius was unmuted by Void SYB3R.

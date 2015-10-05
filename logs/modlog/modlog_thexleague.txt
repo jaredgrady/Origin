@@ -4447,3 +4447,9 @@
 [2015-08-31T05:35:32.933Z] (thexleague) (ashaury changed the roomdesc to: "★Pookies: ASSAULT VEST COMING THROUGH".)
 [2015-09-03T01:02:48.361Z] (thexleague) Safety Shark was banned from room thexleague by Air Jak 11.
 [2015-09-03T01:02:55.575Z] (thexleague) safetyshark was unbanned from room thexleague by Air Jak 11.
+[2015-10-05T02:27:55.553Z] (thexleague) laxuy was promoted to Room Moderator by sabella.
+[2015-10-05T02:28:00.226Z] (thexleague) Gratitude was promoted to Room Moderator by sabella.
+[2015-10-05T02:28:15.474Z] (thexleague) sabella set modchat to false
+[2015-10-05T02:28:34.409Z] (thexleague) ashaury was promoted to Room Moderator by sabella.
+[2015-10-05T02:29:21.192Z] (thexleague) Dak Prescott was promoted to Room Voice by Gratitude.
+[2015-10-05T02:29:22.812Z] (thexleague) Air Jak 11 was promoted to Room Voice by Gratitude.

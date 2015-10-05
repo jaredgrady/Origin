@@ -5224,3 +5224,37 @@
 [2015-09-28T04:03:55.339Z] (lobby) (Master Float created a tournament in challengecup1v1 format.)
 [2015-09-28T04:20:21.224Z] (lobby) L Chevy 12 globally declared <center><h2>Lottery!</h2><h4><font color='red'><b>luds</b></font> has won the lottery with the ticket id of 801123533! This user has gained 97 bucks and now has a total of 2442 bucks.</h4></center>
 [2015-09-28T04:28:26.019Z] (lobby) (The tournament auto disqualify timeout was set to 2 by Master Float)
+[2015-10-05T01:10:45.819Z] (lobby) panpawn set modchat to false
+[2015-10-05T01:13:09.354Z] (lobby) Allegiant Gryph was promoted to Driver by Erica*07.
+[2015-10-05T01:13:21.403Z] (lobby) (Allegiant Gryphon was demoted to regular user by Erica*07.)
+[2015-10-05T01:39:34.071Z] (lobby) (L Chevy 12 notes: lol)
+[2015-10-05T01:40:33.230Z] (lobby) Cloyy 8========D was warned by Safety Shark. (Automated response: stretching)
+[2015-10-05T01:40:42.942Z] (lobby) (Cloyy 8========D was forced to choose a new name by Erica*07)
+[2015-10-05T01:42:19.289Z] (lobby) (L Chevy 12 notes: FacePalm)
+[2015-10-05T01:42:59.373Z] (lobby) (Erica*07 notes: Dylightful really does need to check his attitude.)
+[2015-10-05T02:35:44.213Z] (lobby) theamazingjando was warned by L Chevy 12. (no.)
+[2015-10-05T02:59:00.293Z] (lobby) Cloyy was warned by L Chevy 12.
+[2015-10-05T02:59:03.480Z] (lobby) Best'd was warned by L Chevy 12.
+[2015-10-05T02:59:05.438Z] (lobby) iQuill was warned by L Chevy 12.
+[2015-10-05T03:03:13.857Z] (lobby) HV Pikel was warned by L Chevy 12.
+[2015-10-05T03:22:04.706Z] (lobby) Cloyy would be muted by L Chevy 12 but was already offline. (sorry dude)
+[2015-10-05T03:47:44.390Z] (lobby) (Master Float created a tournament in monotype format.)
+[2015-10-05T03:48:32.556Z] (lobby) (The tournament auto start timeout was set to 3 by Master Float)
+[2015-10-05T03:52:47.235Z] (lobby) (The tournament auto disqualify timeout was set to 2 by Master Float)
+[2015-10-05T08:55:27.396Z] (lobby) (Ruby D created a tournament in challengecup1v1 format.)
+[2015-10-05T09:05:30.753Z] (lobby) (The tournament auto start timeout was set to 3 by Ruby D)
+[2015-10-05T09:12:18.188Z] (lobby) (The tournament auto disqualify timeout was set to 2 by Ruby D)
+[2015-10-05T09:28:41.514Z] (lobby) (Ruby D created a tournament in monotype format.)
+[2015-10-05T09:40:00.214Z] (lobby) (The tournament auto start timeout was set to 3 by Ruby D)
+[2015-10-05T09:47:42.506Z] (lobby) (The tournament auto disqualify timeout was set to 2 by Ruby D)
+[2015-10-05T09:47:47.865Z] (lobby) (HV Zinnia was disqualified from the tournament by Ruby D)
+[2015-10-05T11:03:11.590Z] (lobby) (Ruby D created a tournament in monotype format.)
+[2015-10-05T11:34:41.260Z] (lobby) ghy5rthjnteht was warned by ruby D. (I am silently rioting)
+[2015-10-05T11:35:22.876Z] (lobby) (The tournament auto start timeout was set to 3 by ruby D)
+[2015-10-05T11:35:55.082Z] (lobby) ghy5rthjnteht was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-05T11:40:39.856Z] (lobby) (The tournament auto disqualify timeout was set to 2 by ruby D)
+[2015-10-05T11:55:18.367Z] (lobby) TridentSmash! was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T12:45:18.725Z] (lobby) chris makise was warned by ruby D. (drop it)
+[2015-10-05T12:45:21.255Z] (lobby) lab8 moth - ⒷⓊⓈⓎ was warned by ruby D. (drop it)
+[2015-10-05T12:45:31.220Z] (lobby) chris makise was muted by ruby D for 7 minutes.
+[2015-10-05T13:26:55.140Z] (lobby) Barista Fancii was warned by Safety Shark. (Automated response: stretching)

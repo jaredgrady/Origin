@@ -5667,3 +5667,12 @@
 [2015-09-28T00:55:40.986Z] (battle-monotype-103785) Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ was promoted to Room Voice by Brеezеy Itsme.
 [2015-09-28T02:55:38.647Z] (battle-randombattle-103983) GTX Cursed was promoted to Room Voice by GamingNoah.
 [2015-09-28T03:07:11.833Z] (battle-ou-103987) Neo Soul forced a win for lodbot.
+[2015-10-05T01:27:37.455Z] (battle-ou-113871) Void SYB3R set modchat to +
+[2015-10-05T01:32:04.103Z] (battle-ou-113871) Void SYB3R set modchat to false
+[2015-10-05T02:08:17.198Z] (battle-monotype-113959) Ronah set modchat to +
+[2015-10-05T02:41:18.243Z] (battle-monotype-114014) Alliance - Ghast set modchat to +
+[2015-10-05T03:03:57.450Z] (battle-doublesou-114049) Allegiant Gryph set modchat to +
+[2015-10-05T03:13:42.264Z] (battle-doublesou-114063) GTX♅Stantler set modchat to +
+[2015-10-05T03:13:52.535Z] (battle-doublesou-114063) GTX ABT set modchat to false
+[2015-10-05T11:42:45.651Z] (battle-monotype-114330) GTX♅Humper was promoted to Player by Alliance Meta.
+[2015-10-05T12:08:07.344Z] (battle-monotype-114343) DB728 was promoted to Player by ashyudhajit.

@@ -1699,3 +1699,27 @@
 [2015-09-28T03:24:12.970Z] (theallianceleague) (Derek (Gallade) was disqualified from the tournament by Alliance Keahi)
 [2015-09-28T03:27:50.587Z] (theallianceleague) (Megalinket was disqualified from the tournament by Alliance Keahi)
 [2015-09-28T03:28:32.686Z] (theallianceleague) (Alliance Keahi created a tournament in monotype format.)
+[2015-10-05T00:37:50.939Z] (theallianceleague) Alliance - Keahi was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T00:42:32.923Z] (theallianceleague) Alliance - Contort declared Fire Trials for Keahi
+[2015-10-05T00:43:12.487Z] (theallianceleague) Alliance - Contort declared Donut, Destiny, Pez
+[2015-10-05T00:45:49.555Z] (theallianceleague) Alliance - Contort declared Donut vs Keahi
+[2015-10-05T01:34:49.093Z] (theallianceleague) (Alliаnce CаtsMеow created a tournament in monotype format.)
+[2015-10-05T02:07:39.436Z] (theallianceleague) (Alliance - Keahi was disqualified from the tournament by Alliаnce CаtsMеow)
+[2015-10-05T03:20:09.679Z] (theallianceleague) (AllianceAsurax - Ⓢ created a tournament in megatier format.)
+[2015-10-05T03:42:41.629Z] (theallianceleague) Alliance~Cordelia was warned by Alliancе - Elite V. (please do not use an Alliance - Alt if not in Alliance)
+[2015-10-05T03:43:34.990Z] (theallianceleague) AllianceAsurax - Ⓢ declared Cordelia's Trial: Kant (fire), Elite V (Dragon), PezMango (fairy)
+[2015-10-05T03:46:10.414Z] (theallianceleague) Allіance - Vеnus was warned by Alliancе - Elite V.
+[2015-10-05T03:46:45.591Z] (theallianceleague) AllianceAsurax - Ⓢ declared Cordelia's Ice Trial: Kant (fire), Elite V (Dragon), PezMango (fairy)
+[2015-10-05T03:53:14.773Z] (theallianceleague) AllianceAsurax - Ⓢ declared stahp it
+[2015-10-05T03:55:03.100Z] (theallianceleague) AllianceAsurax - Ⓢ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-05T03:57:45.425Z] (theallianceleague) AllianceAsurax - Ⓢ declared 4/6
+[2015-10-05T03:57:47.678Z] (theallianceleague) Kevin-sama was warned by Safety Shark. (Automated response: stretching)
+[2015-10-05T03:59:00.766Z] (theallianceleague) (Alliance - Keahi created a tournament in monotype format.)
+[2015-10-05T04:12:49.697Z] (theallianceleague) AllianceAsurax - Ⓢ declared 7/12
+[2015-10-05T04:12:56.454Z] (theallianceleague) AllianceAsurax - Ⓢ declared need to defeat 5 for fire
+[2015-10-05T04:12:59.936Z] (theallianceleague) AllianceAsurax - Ⓢ declared oshet
+[2015-10-05T04:24:56.036Z] (theallianceleague) (Alliance - Llama was disqualified from the tournament by Alliance - Keahi)
+[2015-10-05T10:43:18.312Z] (theallianceleague) Alliance -Sapphire was warned by Safety Shark. (Automated response: stretching)
+[2015-10-05T11:38:03.623Z] (theallianceleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-05T13:30:09.586Z] (theallianceleague) (Alliance Meta forcibly ended a tournament.)
+[2015-10-05T13:30:16.643Z] (theallianceleague) (Alliance Meta created a tournament in monotype format.)

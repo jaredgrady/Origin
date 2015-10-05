@@ -1254,3 +1254,5 @@
 [2015-09-28T02:32:22.275Z] (carnieleague) Echos of Life was banned from room carnieleague by Carnie Moe Sedah.
 [2015-09-28T02:32:22.278Z] (carnieleague) (Echos of Life's roombanned alts: ThermalSuicide3.0)
 [2015-09-28T02:33:53.991Z] (carnieleague) Carnie Moe Sedah set modchat to +
+[2015-10-05T03:23:46.513Z] (carnieleague) Kevin-sama was muted by Carnie Moe Sedah for 7 minutes.
+[2015-10-05T03:24:18.141Z] (carnieleague) Kevin-sama was unmuted by Carnie Moe Sedah.

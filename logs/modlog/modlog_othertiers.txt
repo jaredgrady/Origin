@@ -1532,3 +1532,13 @@
 [2015-09-28T03:30:47.100Z] (othertiers) (The tournament auto disqualify timeout was set to 2 by warlic)
 [2015-09-28T04:41:25.494Z] (othertiers) (NTGs was disqualified from the tournament by Void Naten)
 [2015-09-28T04:43:41.142Z] (othertiers) (Steelchar was disqualified from the tournament by Void Naten)
+[2015-10-05T01:48:20.783Z] (othertiers) EeveeBoo was kicked from the room by MazAmbo.
+[2015-10-05T01:54:43.347Z] (othertiers) (Steelchar created a tournament in challengecup1v1 format.)
+[2015-10-05T02:02:48.495Z] (othertiers) GTX♅RainManaphy was muted by Steelchar for 1 hour. (done)
+[2015-10-05T02:04:20.965Z] (othertiers) (The tournament auto disqualify timeout was set to 1 by MazAmbo)
+[2015-10-05T02:38:40.991Z] (othertiers) (The tournament auto disqualify timeout was set to 1.5 by Steelchar - ⓐⓢⓟⓗ)
+[2015-10-05T02:38:47.612Z] (othertiers) (goast - ⓗⓦ was disqualified from the tournament by Steelchar - ⓐⓢⓟⓗ)
+[2015-10-05T04:37:27.341Z] (othertiers) (Steelchar created a tournament in 1v1 format.)
+[2015-10-05T05:11:58.795Z] (othertiers) s h m u r d e r ~ was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-05T05:13:52.655Z] (othertiers) wyngate' - ⓞⓛⓣ was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-05T07:38:53.035Z] (othertiers) (Natm - ⓁⓞⓁⓄⒸⒺ forcibly ended a tournament.)

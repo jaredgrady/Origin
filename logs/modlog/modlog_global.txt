@@ -496,3 +496,4 @@
 [2015-09-27T21:34:15.606Z] (japanslair) UNLOCK: [bandi] by panpawn
 [2015-09-27T23:04:53.015Z] (staff) LOCK: [mystbronze] by L Chevy 12: shadow ban evasion
 [2015-09-28T02:14:21.345Z] (lobby) LOCK: [xjownage] by L Chevy 12 - ⒶⓌⒶⓎ
+[2015-10-05T03:12:32.461Z] (groupchat-fuckboi33333-5844304) LOCK: [fuckboi33333] ac:[pasta5] by L Chevy 12: http://prntscr.com/8nutqp

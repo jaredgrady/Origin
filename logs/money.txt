@@ -18619,3 +18619,46 @@
 [Mon, 28 Sep 2015 04:18:27 GMT] Imp xSaito has bought Ticket from the shop. This user now has 25 bucks.
 [Mon, 28 Sep 2015 04:19:10 GMT] arrem transferred 25 bucks to stormshadow7. arrem now has 0 bucks and stormshadow7 now has 25 bucks.
 [Mon, 28 Sep 2015 04:21:19 GMT] stormshadow7 has bought Avatar from the shop. This user now has 0 bucks.
+[Mon, 05 Oct 2015 00:55:59 GMT] Grateful transferred 50 bucks to HV Feral. Grateful now has 6750 bucks and HV Feral now has 50 bucks.
+[Mon, 05 Oct 2015 00:56:13 GMT] Grateful transferred 25 bucks to HM Bit. Grateful now has 6725 bucks and HM Bit now has 107 bucks.
+[Mon, 05 Oct 2015 01:05:34 GMT] Insane Icon transferred 10 bucks to HV Icon. Insane Icon now has 10 bucks and HV Icon now has 10 bucks.
+[Mon, 05 Oct 2015 01:07:05 GMT] Hv Icon has bought Fix from the shop. This user now has 0 bucks.
+[Mon, 05 Oct 2015 01:27:03 GMT] Supanova transferred 5 bucks to Arcadias bank. Supanova now has 0 bucks and Arcadias bank now has 805 bucks.
+[Mon, 05 Oct 2015 01:56:42 GMT] TuroFTW transferred 3 bucks to ftw bank. TuroFTW now has 0 bucks and ftw bank now has 3 bucks.
+[Mon, 05 Oct 2015 02:02:38 GMT] 00Shadow transferred 1 buck to steelchar. 00Shadow now has 8 bucks and steelchar now has 1 buck.
+[Mon, 05 Oct 2015 02:24:18 GMT] Crystal Marth transferred 1 buck to crystalrebornatm. Crystal Marth now has 290 bucks and crystalrebornatm now has 466 bucks.
+[Mon, 05 Oct 2015 02:24:34 GMT] Steelchar - ⓐⓢⓟⓗ transferred 1 buck to crystalrebornatm. Steelchar - ⓐⓢⓟⓗ now has 0 bucks and crystalrebornatm now has 467 bucks.
+[Mon, 05 Oct 2015 03:07:00 GMT] TruBlaze transferred 1 buck to blazebank. TruBlaze now has 0 bucks and blazebank now has 3 bucks.
+[Mon, 05 Oct 2015 03:28:48 GMT] Myst Applejack transferred 1 buck to Loli Bronze. Myst Applejack now has 1 buck and Loli Bronze now has 1 buck.
+[Mon, 05 Oct 2015 03:28:51 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 275 bucks and Loli Bronze now has 2 bucks.
+[Mon, 05 Oct 2015 03:28:52 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 274 bucks and Loli Bronze now has 3 bucks.
+[Mon, 05 Oct 2015 03:28:52 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 273 bucks and Loli Bronze now has 4 bucks.
+[Mon, 05 Oct 2015 03:28:53 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 272 bucks and Loli Bronze now has 5 bucks.
+[Mon, 05 Oct 2015 03:28:55 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 271 bucks and Loli Bronze now has 6 bucks.
+[Mon, 05 Oct 2015 03:28:57 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 270 bucks and Loli Bronze now has 7 bucks.
+[Mon, 05 Oct 2015 03:28:57 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 269 bucks and Loli Bronze now has 8 bucks.
+[Mon, 05 Oct 2015 03:28:57 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 268 bucks and Loli Bronze now has 9 bucks.
+[Mon, 05 Oct 2015 03:28:58 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 267 bucks and Loli Bronze now has 10 bucks.
+[Mon, 05 Oct 2015 03:28:59 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 266 bucks and Loli Bronze now has 11 bucks.
+[Mon, 05 Oct 2015 03:28:59 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 265 bucks and Loli Bronze now has 12 bucks.
+[Mon, 05 Oct 2015 03:29:00 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 264 bucks and Loli Bronze now has 13 bucks.
+[Mon, 05 Oct 2015 03:29:01 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 263 bucks and Loli Bronze now has 14 bucks.
+[Mon, 05 Oct 2015 03:29:01 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 262 bucks and Loli Bronze now has 15 bucks.
+[Mon, 05 Oct 2015 03:29:02 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 261 bucks and Loli Bronze now has 16 bucks.
+[Mon, 05 Oct 2015 03:29:03 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 260 bucks and Loli Bronze now has 17 bucks.
+[Mon, 05 Oct 2015 03:29:04 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 259 bucks and Loli Bronze now has 18 bucks.
+[Mon, 05 Oct 2015 03:29:05 GMT] Myst Bronze transferred 1 buck to Loli Bronze. Myst Bronze now has 258 bucks and Loli Bronze now has 19 bucks.
+[Mon, 05 Oct 2015 03:29:51 GMT] loli bronze transferred 19 bucks to mystbronze. loli bronze now has 0 bucks and mystbronze now has 277 bucks.
+[Mon, 05 Oct 2015 03:30:00 GMT] GTX♅Stantler was given 50 bucks by Erica*07.
+[Mon, 05 Oct 2015 03:30:08 GMT] GTX♅Stantler transferred 50 bucks to Allegiant Gryph. GTX♅Stantler now has 0 bucks and Allegiant Gryph now has 50 bucks.
+[Mon, 05 Oct 2015 03:30:13 GMT] Alliance - Llama was given 25 bucks by Erica*07.
+[Mon, 05 Oct 2015 04:09:16 GMT] Myst Bronze transferred 10 bucks to mystbank. Myst Bronze now has 267 bucks and mystbank now has 11 bucks.
+[Mon, 05 Oct 2015 04:10:11 GMT] Mystbank transferred 10 bucks to mystbronze. Mystbank now has 1 buck and mystbronze now has 277 bucks.
+[Mon, 05 Oct 2015 04:10:34 GMT] Mystbank transferred 1 buck to mystbronze. Mystbank now has 0 bucks and mystbronze now has 278 bucks.
+[Mon, 05 Oct 2015 04:28:22 GMT] Fucking Pointless transferred 2 bucks to Hv Tana. Fucking Pointless now has 0 bucks and Hv Tana now has 236 bucks.
+[Mon, 05 Oct 2015 10:25:28 GMT] Hm zugu royale transferred 100 bucks to Zugus Bank. Hm zugu royale now has 0 bucks and Zugus Bank now has 331 bucks.
+[Mon, 05 Oct 2015 10:39:45 GMT] PlasmaOfDoom transferred 1 buck to Apex Bank. PlasmaOfDoom now has 12 bucks and Apex Bank now has 239 bucks.
+[Mon, 05 Oct 2015 10:39:46 GMT] PlasmaOfDoom transferred 1 buck to Apex Bank. PlasmaOfDoom now has 11 bucks and Apex Bank now has 240 bucks.
+[Mon, 05 Oct 2015 10:39:46 GMT] PlasmaOfDoom transferred 1 buck to Apex Bank. PlasmaOfDoom now has 10 bucks and Apex Bank now has 241 bucks.
+[Mon, 05 Oct 2015 11:35:15 GMT] Barista Fancii transferred 1 buck to megas4ever. Barista Fancii now has 18 bucks and megas4ever now has 1 buck.
+[Mon, 05 Oct 2015 11:35:45 GMT] megas4ever transferred 1 buck to barista fancii. megas4ever now has 0 bucks and barista fancii now has 19 bucks.

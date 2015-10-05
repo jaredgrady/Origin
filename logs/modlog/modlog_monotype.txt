@@ -4326,3 +4326,28 @@
 [2015-09-28T03:24:07.224Z] (monotype) (xDolphin created a tournament in monotype format.)
 [2015-09-28T16:59:50.926Z] (monotype) (ritik was disqualified from the tournament by lab8 moth)
 [2015-09-28T17:00:00.660Z] (monotype) (The tournament auto disqualify timeout was set to 3.234235235235 by lab8 moth)
+[2015-10-05T00:53:08.212Z] (monotype) xDolphin declared congrats to Mullin!!!!
+[2015-10-05T00:53:55.817Z] (monotype) xDolphin declared WE ARE HALF WAY DONE THE EOSMC QUALIFIER TOURS
+[2015-10-05T00:54:56.677Z] (monotype) xDolphin declared In Pool #1 there is Jane, Dolphin, Keahi, and Zinnia. In Pool #2 is Heartless Nobody, Jak, Fallen Blood, and Mullin!!
+[2015-10-05T01:11:45.708Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-10-05T01:39:29.754Z] (monotype) (sophie(s.sylveon) was disqualified from the tournament by Sam Crowe)
+[2015-10-05T01:39:53.518Z] (monotype) (The tournament auto disqualify timeout was set to 1.3 by Sam Crowe)
+[2015-10-05T01:50:01.934Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-10-05T01:57:12.575Z] (monotype) (The tournament auto start timeout was set to 2 by Sam Crowe)
+[2015-10-05T03:26:51.190Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-10-05T03:48:44.734Z] (monotype) (theamazingjando was disqualified from the tournament by Vin Pyre)
+[2015-10-05T03:48:48.141Z] (monotype) (The tournament auto disqualify timeout was set to 1 by Vin Pyre)
+[2015-10-05T07:31:07.180Z] (monotype) (lab8 moth created a tournament in monotype format.)
+[2015-10-05T09:29:50.992Z] (monotype) (The tournament auto disqualify timeout was set to 2 by Raіn Kuro)
+[2015-10-05T10:12:05.543Z] (monotype) (Alpha Ninja created a tournament in monotype format.)
+[2015-10-05T11:44:20.317Z] (monotype) (GreyWulf - ⒶⓌⒶⓎ was disqualified from the tournament by lab8 moth)
+[2015-10-05T11:44:24.937Z] (monotype) (TruBlaze was disqualified from the tournament by lab8 moth)
+[2015-10-05T11:44:31.667Z] (monotype) (The tournament auto disqualify timeout was set to 2 by lab8 moth)
+[2015-10-05T11:44:49.852Z] (monotype) Piers Nivans was banned from room monotype by lab8 moth. (not liking beer)
+[2015-10-05T11:44:53.527Z] (monotype) piersnivans was unbanned from room monotype by lab8 moth.
+[2015-10-05T11:52:18.268Z] (monotype) ashyudhajit was promoted to Room Voice by lab8 moth.
+[2015-10-05T12:32:25.053Z] (monotype) (AllianceAsurax - Ⓢ created a tournament in monotype format.)
+[2015-10-05T12:58:03.750Z] (monotype) (lab8 moth - ⒷⓊⓈⓎ created a tournament in monotype format.)
+[2015-10-05T13:15:02.222Z] (monotype) (GL♅Devils was disqualified from the tournament by lab8 moth)
+[2015-10-05T13:15:04.080Z] (monotype) (The tournament auto disqualify timeout was set to 2 by lab8 moth)
+[2015-10-05T13:41:25.200Z] (monotype) (Raіn Kuro created a tournament in monotyperandombattle format.)

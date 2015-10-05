@@ -2305,3 +2305,50 @@
 [2015-09-28T00:21:23.590Z] (femalehq) Tyler's Bot was warned by Sunny Charizard. (Automated response: stretching)
 [2015-09-28T00:21:30.157Z] (femalehq) Tyler's Bot was kicked from the room by Best'd.
 [2015-09-28T00:22:36.208Z] (femalehq) (Tyler's Bot would be muted by hypershaymin but was already offline.)
+[2015-10-05T01:12:03.776Z] (femalehq) SteelChar declared Hey guys its Steelchar of FHQ. I want to say the restart script worked so now we can have easy restarts without disconnecting.
+[2015-10-05T01:12:49.506Z] (femalehq) Best :D declared Hey guys its Best'd of FHQ. I want to say the meme script worked so now we can have easy memes without disconmeming.
+[2015-10-05T01:13:50.679Z] (femalehq) Iris(Eevee) declared Hey peeps, it's that one girl in FHQ telling you that AUTO CONNECTING IS STUPID. Go bang and scream at Sundar's front door and start a riot. That is all.
+[2015-10-05T01:13:58.876Z] (femalehq) Cloyy was banned from room femalehq by Sunny Charizard. (Blacklisted user)
+[2015-10-05T01:14:21.221Z] (femalehq) cloyy was unbanned from room femalehq by Sunny Charizard.
+[2015-10-05T01:34:44.307Z] (femalehq) iQuill™🔥 was warned by FHQ Nyxia.
+[2015-10-05T01:37:36.034Z] (femalehq) Cloyy 8========D was banned from room femalehq by 00Shadow.
+[2015-10-05T01:37:36.036Z] (femalehq) (Cloyy 8========D's ac account: cloyy)
+[2015-10-05T01:39:06.548Z] (femalehq) Big Boss Lady Nyx was appointed Room Owner by 00Nyxa.
+[2015-10-05T01:41:08.661Z] (femalehq) iQuill was warned by Sunny Charizard. (Automated response: stretching)
+[2015-10-05T01:41:38.669Z] (femalehq) iQuill was muted by Sunny Charizard for 7 minutes. (Automated response: stretching)
+[2015-10-05T01:43:10.647Z] (femalehq) iQuill was muted by HVPikel for 1 hour.
+[2015-10-05T01:43:11.693Z] (femalehq) ArchAngel Nyx was appointed Room Owner by 00Nyxa.
+[2015-10-05T01:43:19.202Z] (femalehq) iQuill was banned from room femalehq by Steelchar. (bad presence)
+[2015-10-05T01:47:22.342Z] (femalehq) iquill was unbanned from room femalehq by Best'd.
+[2015-10-05T01:47:38.272Z] (femalehq) (iQuill would be muted by Best'd but was already muted.)
+[2015-10-05T01:50:17.281Z] (femalehq) (Steelchar created a tournament in monotype format.)
+[2015-10-05T01:51:05.275Z] (femalehq) (Sunny Charizard was disqualified from the tournament by Steelchar)
+[2015-10-05T02:53:20.125Z] (femalehq) Best'd Junior was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-05T02:53:35.479Z] (femalehq) Burning Blazer was kicked from the room by Best'd.
+[2015-10-05T02:54:07.206Z] (femalehq) Safety Shark was banned from room femalehq by Best'd.
+[2015-10-05T02:54:10.536Z] (femalehq) (Sunny Charizard notes: safetyshark was added to the blacklist by #Best'd.)
+[2015-10-05T03:02:33.184Z] (femalehq) Mr. Leijon was warned by Best'd. (abuse)
+[2015-10-05T03:03:48.703Z] (femalehq) HV Sinatra was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-05T03:04:57.203Z] (femalehq) HV Sinatra was unmuted by UltimateSenpai.
+[2015-10-05T03:05:07.855Z] (femalehq) BurningBlazer was promoted to Room Operator by Sunny Charizard.
+[2015-10-05T03:05:40.259Z] (femalehq) (BurningBlazer was demoted to Room regular user by Best'd.)
+[2015-10-05T03:06:47.251Z] (femalehq) BurningBlazer was promoted to Room Operator by Sunny Charizard.
+[2015-10-05T03:06:58.459Z] (femalehq) (BurningBlazer was demoted to Room regular user by Best'd.)
+[2015-10-05T03:07:01.052Z] (femalehq) BurningBlazer was promoted to Room Operator by Sunny Charizard.
+[2015-10-05T03:07:03.658Z] (femalehq) (BurningBlazer was demoted to Room regular user by Best'd.)
+[2015-10-05T03:07:05.254Z] (femalehq) BurningBlazer was promoted to Room Operator by Sunny Charizard.
+[2015-10-05T03:07:37.654Z] (femalehq) (BurningBlazer was demoted to Room regular user by Best'd.)
+[2015-10-05T03:07:58.910Z] (femalehq) (L Chevy 12 notes: test: steelchar is buns)
+[2015-10-05T03:08:44.946Z] (femalehq) (L Chevy 12 notes: test: steelchar is still buns)
+[2015-10-05T03:08:52.043Z] (femalehq) (Best'd notes: steel char is still ass)
+[2015-10-05T03:09:03.605Z] (femalehq) (Best'd notes: so bad)
+[2015-10-05T03:09:11.616Z] (femalehq) (Best'd notes: we should reg char  tbh)
+[2015-10-05T03:09:29.347Z] (femalehq) (Best'd notes: if i copy paste this into chat im ga)
+[2015-10-05T03:09:35.378Z] (femalehq) (Best'd notes: if i copy paste this into chat im gay)
+[2015-10-05T03:11:27.158Z] (femalehq) BurningBlazer was muted by Best'd for 1 hour. (slander)
+[2015-10-05T03:11:48.979Z] (femalehq) BurningBlazer was unmuted by Best'd.
+[2015-10-05T10:09:21.462Z] (femalehq) (yunG Sensory was demoted to Room Operator by Best'd.)
+[2015-10-05T10:11:06.880Z] (femalehq) yunG Sensory was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-05T10:15:10.890Z] (femalehq) (yunG Sensory was demoted to Room Voice by Best'd.)
+[2015-10-05T10:16:07.072Z] (femalehq) (00Nyxa changed the roomdesc to: "A Place of Happiness. Welcome Home. 10 Days Remaining.".)
+[2015-10-05T12:41:36.819Z] (femalehq) (Sunny Charizard notes: yungsensory was added to the blacklist by +BurningBlazer.)

@@ -195,3 +195,7 @@
 [2015-09-28T00:29:59.054Z] (hitmonleague) (Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ created a tournament in monotype format.)
 [2015-09-28T00:52:47.616Z] (hitmonleague) Alliance Ampy was kicked from the room by Hm Volco.
 [2015-09-28T01:11:19.798Z] (hitmonleague) renegadeitsme was unbanned from room hitmonleague by Hm Zap - ⓕⓞⓞⓓⓘⓝⓖ.
+[2015-10-05T02:59:30.747Z] (hitmonleague) Hm comrade was warned by Safety Shark. (Automated response: stretching)
+[2015-10-05T04:10:54.049Z] (hitmonleague) (Hm Zap created a tournament in monotype format.)
+[2015-10-05T04:41:33.296Z] (hitmonleague) Void Peng was warned by Hm Kaze. (nigga don't fuckin push me)
+[2015-10-05T05:18:13.466Z] (hitmonleague) (Hm Zap forcibly ended a tournament.)

@@ -3373,3 +3373,8 @@
 [2015-09-27T21:39:00.730Z] (arcadia) (renegadeitsme was demoted to Room Voice by Supanova.)
 [2015-09-27T22:52:09.199Z] (arcadia) KillerOrcas was warned by Sunny Charizard. (Automated response: caps)
 [2015-09-28T00:13:18.375Z] (arcadia) Brеezеy Itsme was promoted to Room Voice by Supanova.
+[2015-10-05T01:24:16.469Z] (arcadia) (Supanova created a tournament in hackmonscup format.)
+[2015-10-05T01:35:46.467Z] (arcadia) prestonsnipez was promoted to Room Voice by Sunny Charizard.
+[2015-10-05T01:58:47.377Z] (arcadia) (Odd Cytoplasm was disqualified from the tournament by Odd Cytoplasm)
+[2015-10-05T02:02:37.176Z] (arcadia) (TruBlaze was disqualified from the tournament by Odd Cytoplasm)
+[2015-10-05T05:05:51.977Z] (arcadia) Lizardon EX was promoted to Room Voice by Sunny Charizard.
