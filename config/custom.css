@@ -1,4 +1,4 @@
-/**************
+ /**************
 * General CSS *
 **************/
 /*oldcss 
@@ -905,14 +905,14 @@ a.subtle, a.subtle:hover, .credits ul li p {
   .roomlist a.ilink {
     border: 1px solid #2D3459;
     background: rgba(45, 52, 89, 0.8);
-    color: #CEEAFA;
+    color: #E7F6FF;
     text-shadow:  0px -1px 0px #000;
   }
  
   .roomlist a.ilink:hover {
     border: 1px solid #191D30;
     background: rgba(45, 52, 89, 0.95);
-    color: #CEEAFA;
+    color: #E7F6FF;
     text-shadow:  0px -1px 0px #000;
   }
  
@@ -985,6 +985,15 @@ a.subtle, a.subtle:hover, .credits ul li p {
   .ps-popup .buttonbar button:hover {
     background: #EEE;
     border: 1px solid #777;
+  }
+        
+  .ps-popup .roomlist a.ilink {
+    background: #EEE;
+    text-shadow: none;
+  }
+        
+  .ps-popup .roomlist a.ilink:hover {
+    background: #FDFDFD;
   }
  
   /*****************
@@ -1459,7 +1468,7 @@ a.subtle, a.subtle:hover, .credits ul li p {
   }
   
   #staff-userlist-user-masterfloat em.group, #lobby-userlist-user-masterfloat em.group, #tournaments-userlist-user-masterfloat em.group, #randomtiers-userlist-user-masterfloat em.group {
-    color: #000;
+    color: #F00;
   }
   
   #lobby-userlist-user-wyngate, #thexleague-userlist-user-wyngate, #theheavenleague-userlist-user-wyngate, #monotype-userlist-user-wyngate {
