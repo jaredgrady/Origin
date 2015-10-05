@@ -54,7 +54,7 @@ exports.commands = {
 		room.addRaw('<div class="nightclub"><font size=6>' + nightclubify('LETS GET FITZY!! nightclub mode: ON!!!') + '</font><font size="2"> started by: ' + user.userid + '</font></div>');
 	},
 	dayclub: function(target, room, user, connection) {
-		if (!this.can('roommod', null, room)) return false;
+		if (!this.can('declare', null, room)) return false;
 		if (!nightclub[room.id]) return this.sendReply('This room is already in broad daylight.');
 		delete nightclub[room.id];
 		room.addRaw('<div class="nightclub"><font size=6>' + nightclubify('sizzle down now... nightclub mode: off.') + '</font><font size="2"> ended by: ' + user.userid + '</font></font>');
