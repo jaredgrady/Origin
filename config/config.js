@@ -370,4 +370,4 @@ exports.tellrank = ' ';
 exports.avatarurl = 'http://158.69.1.126:7000';
 
 //Filters the unicode reverse character from users names when they try to use it.
-//exports.namefilter = name.replace(/^[^\u202e]+/g, '');
+exports.namefilter = (/^[^\u202e]+/g, '');
