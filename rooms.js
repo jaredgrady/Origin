@@ -84,7 +84,6 @@ var Room = (function () {
 		// parseCommand(), which in turn often calls Simulator.prototype.sendFor().
 		// Sometimes the call to sendFor is done indirectly, by calling
 		// room.decision(), where room.constructor === BattleRoom.
-		
 		message = CommandParser.parse(message, this, user, connection);
 
 		if (message && message !== true) {
@@ -664,7 +663,7 @@ var GlobalRoom = (function () {
 			title: title
 		};
 		var room = Rooms.createChatRoom(id, title, chatRoomData);
-		// Only add room to chatRoomData if it is not a personal room, those aren't saved.
+		this.chatRoomData.push(chatRoomData);
 		this.chatRooms.push(room);
 		this.writeChatRoomData();
 		return true;
@@ -1622,7 +1621,7 @@ var ChatRoom = (function () {
 
 		if (!merging) {
 			var userList = this.userList ? this.userList : this.getUserList();
-			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage());
+			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
 
 			if (global.Tournaments && Tournaments.get(this.id)) {
 				Tournaments.get(this.id).updateFor(user, connection);
@@ -1688,11 +1687,6 @@ var ChatRoom = (function () {
 			var entry = '|L|' + user.getIdentity(this.id);
 			this.reportJoin(entry);
 		}
-
-		// If it's a personal room, it gets destroyed when there are 0 users on it.
-		if (this.isPersonal && this.userCount === 0) {
-			this.destroy();
-		}
 	};
 	ChatRoom.prototype.destroy = function () {
 		// deallocate ourself
@@ -1712,6 +1706,8 @@ var ChatRoom = (function () {
 				delete aliases[this.aliases[i]];
 			}
 		}
+		// remove active mute timer if any
+		if (this.muteTimer) clearTimeout(this.muteTimer);
 
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
@@ -1739,8 +1735,8 @@ Rooms.createBattle = function (roomid, format, p1, p2, options) {
 	if (!roomid) roomid = 'default';
 	if (!rooms[roomid]) {
 		// console.log("NEW BATTLE ROOM: " + roomid);
-		ResourceMonitor.countBattle(p1.latestIp, p1.name);
-		ResourceMonitor.countBattle(p2.latestIp, p2.name);
+		Monitor.countBattle(p1.latestIp, p1.name);
+		Monitor.countBattle(p2.latestIp, p2.name);
 		rooms[roomid] = new BattleRoom(roomid, format, p1, p2, options);
 	}
 	return rooms[roomid];

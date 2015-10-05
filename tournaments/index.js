@@ -90,7 +90,7 @@ Tournament = (function () {
 		this.playerCap = parseInt(playerCap) || Config.tournamentDefaultPlayerCap || 0;
 		this.scouting = true;
 		if (Config.tournamentDefaultPlayerCap && this.playerCap > Config.tournamentDefaultPlayerCap) {
-			ResourceMonitor.log('[ResourceMonitor] Room ' + room.id + ' starting a tour over default cap (' + this.playerCap + ')');
+			Monitor.log('[TourMonitor] Room ' + room.id + ' starting a tour over default cap (' + this.playerCap + ')');
 		}
 
 		this.isBracketInvalidated = true;
@@ -829,7 +829,7 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.sendReply("User " + params[0] + " not found.");
+				return this.errorReply("User " + params[0] + " not found.");
 			}
 			tournament.challenge(user, targetUser, this);
 		},
@@ -851,7 +851,7 @@ var commands = {
 				if (playerCap && playerCap >= 2) {
 					tournament.playerCap = playerCap;
 					if (Config.tournamentDefaultPlayerCap && tournament.playerCap > Config.tournamentDefaultPlayerCap) {
-						ResourceMonitor.log('[ResourceMonitor] Room ' + tournament.room.id + ' starting a tour over default cap (' + tournament.playerCap + ')');
+						Monitor.log('[TourMonitor] Room ' + tournament.room.id + ' starting a tour over default cap (' + tournament.playerCap + ')');
 					}
 				}
 				this.sendReply("Tournament set to " + generator.name + (playerCap ? " with a player cap of " + tournament.playerCap : "") + ".");
@@ -872,7 +872,7 @@ var commands = {
 			}
 			var targetUser = Users.get(params[0]);
 			if (!targetUser) {
-				return this.sendReply("User " + params[0] + " not found.");
+				return this.errorReply("User " + params[0] + " not found.");
 			}
 			var reason = '';
 			if (params[1]) {
@@ -926,7 +926,6 @@ var commands = {
 			tournament.room.addRaw('<b>Players have been reminded of their tournament battles by ' + user.name + '.</b>');
 			if (offlineUsers.length > 0 && offlineUsers !== '') tournament.room.addRaw('<b>The following users are currently offline: ' + offlineUsers + '.</b>');
 		},
-
 		scout: 'setscouting',
 		scouting: 'setscouting',
 		setscout: 'setscouting',
