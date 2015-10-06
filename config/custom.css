@@ -1231,46 +1231,46 @@ a.subtle, a.subtle:hover, .credits ul li p {
  
   .turnstatus-protect {
     background:url(http://i.imgur.com/RVxCoHz.png);
-    opacity:1!important;
-    height:103px!important;
-    width:150px!important;
-    border-radius:0;
-    border-width:0;
-    box-shadow:none;
-    opacity:0.9;
+    opacity: 1 !important;
+    height: 103px !important;
+    width: 150px !important;
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+    opacity: 0.9;
   }
  
   .sidecondition-safeguard {
-    background:url(http://i.imgur.com/FrCoWCW.png);
-    opacity:0.6!important;
-    height:90px!important;
-    width:130px!important;
-    border-radius:0;
-    opacity:0.9;
-    border-width:0;
-    box-shadow:none;
+    background: url(http://i.imgur.com/FrCoWCW.png);
+    opacity: 0.6 !important;
+    height: 90px !important;
+    width: 130px !important;
+    border-radius: 0;
+    opacity: 0.9;
+    border-width: 0;
+    box-shadow: none;
   }
  
   .sidecondition-reflect {
-    background:url(http://i.imgur.com/X1XDxVB.png);
-    opacity:0.7!important;
-    height:90px!important;
-    width:130px!important;
-    border-radius:0;
-    border-width:0;
-    opacity:0.9;
-    box-shadow:none;
+    background: url(http://i.imgur.com/X1XDxVB.png);
+    opacity: 0.7 !important;
+    height: 90px !important;
+    width: 130px !important;
+    border-radius: 0;
+    border-width: 0;
+    opacity: 0.9;
+    box-shadow: none;
   }
  
   .sidecondition-lightscreen {
-    background:url(http://i.imgur.com/8eLftNA.png);
-    opacity:0.6!important;
-    height:90px!important;
-    width:130px!important;
-    opacity:0.9;
-    border-radius:0;
-    border-width:0;
-    box-shadow:none;
+    background: url(http://i.imgur.com/8eLftNA.png);
+    opacity: 0.6 !important;
+    height: 90px !important;
+    width: 130px !important;
+    opacity: 0.9;
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
   }
  
   /*******************
@@ -1634,3 +1634,16 @@ a.subtle, a.subtle:hover, .credits ul li p {
   /**********************
   * Userlist Icons ~end *
   **********************/
+  
+  /********************
+  * Roomintro Classes *
+  ********************/
+  
+  .sans-div {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  /*************************
+  * Roomintro Classes ~end *
+  *************************/
