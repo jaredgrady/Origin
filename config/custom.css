@@ -1627,6 +1627,10 @@ a.subtle, a.subtle:hover, .credits ul li p {
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/3lCbPLh.png") right no-repeat;
   }
   
+  #lobby-userlist-user-syalla, #persistentleague-userlist-user-syalla {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/ZYQN6pt.gif") right no-repeat;
+  }
+  
   /**********************
   * Userlist Icons ~end *
   **********************/
