@@ -1324,3 +1324,11 @@
 [2015-10-06T20:17:21.519Z] (voidleague) (Sam Crowe changed the roomintro.)
 [2015-10-06T20:18:04.367Z] (voidleague) (voidprate was demoted to Room regular user by Void Chrono.)
 [2015-10-07T16:48:48.645Z] (voidleague) Arjunb was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T16:53:55.767Z] (voidleague) Arjunb was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-07T16:54:02.523Z] (voidleague) Arjunb was unmuted by Void Julius.
+[2015-10-07T17:01:04.094Z] (voidleague) Arjunb was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-07T17:01:09.822Z] (voidleague) Arjunb was unmuted by Void Julius.
+[2015-10-07T17:09:28.282Z] (voidleague) 1 True Lycan was muted by Void Chrono for 7 minutes.
+[2015-10-07T17:09:31.997Z] (voidleague) 1 True Lycan was unmuted by Void Chrono.
+[2015-10-07T17:17:03.444Z] (voidleague) Commander☬Pheonix۞ was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T17:17:36.435Z] (voidleague) Commander☬Pheonix۞ was muted by Safety Shark for 7 minutes. (Automated response: stretching)

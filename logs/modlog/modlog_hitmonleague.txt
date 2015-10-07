@@ -341,3 +341,5 @@
 [2015-10-06T21:11:15.823Z] (hitmonleague) (The tournament auto disqualify timeout was set to 1 by Hm Bugy)
 [2015-10-06T21:17:46.741Z] (hitmonleague) Anob was promoted to Room Voice by Hm Reapz.
 [2015-10-07T16:49:02.658Z] (hitmonleague) (hm zelda was demoted to Room regular user by HmCmpBeasto.)
+[2015-10-07T16:58:46.403Z] (hitmonleague) hm unownman was promoted to Room Driver by Hm Sableye.
+[2015-10-07T16:59:00.789Z] (hitmonleague) Hm comrade was promoted to Room Driver by Hm Sableye.

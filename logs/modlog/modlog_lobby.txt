@@ -5379,3 +5379,4 @@
 [2015-10-06T20:46:57.055Z] (lobby) (Alpha Ninja created a tournament in monotype format.)
 [2015-10-06T20:54:23.032Z] (lobby) cloyy was warned by Safety Shark. (Automated response: caps)
 [2015-10-06T21:27:46.926Z] (lobby) (The tournament auto start timeout was set to 2 by Sam Crowe)
+[2015-10-07T16:58:44.097Z] (lobby) (sandman619 created a tournament in ou format.)

@@ -3679,3 +3679,7 @@
 [2015-10-06T19:03:26.042Z] (thelotusleague) (Emperor⚔Lu Bu♘ created a tournament in monotype format.)
 [2015-10-06T20:26:14.008Z] (thelotusleague) DJItsme was muted by Safety Shark for 7 minutes. (Automated response: flooding)
 [2015-10-06T20:27:32.837Z] (thelotusleague) DJItsme was unmuted by LotusChamp Torpid.
+[2015-10-07T17:03:55.677Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T17:06:29.631Z] (thelotusleague) GTX♅Humper was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-07T17:06:45.213Z] (thelotusleague) GTX♅Humper was unmuted by Commander☬Pheonix۞.
+[2015-10-07T17:07:33.226Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)

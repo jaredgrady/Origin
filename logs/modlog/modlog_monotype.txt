@@ -4428,3 +4428,7 @@
 [2015-10-06T20:41:14.510Z] (monotype) (xDolphin created a tournament in monotype format.)
 [2015-10-06T20:52:37.609Z] (monotype) (The tournament auto disqualify timeout was set to 2 by warlic)
 [2015-10-06T21:10:08.363Z] (monotype) (Sam Crowe created a tournament in monotype format.)
+[2015-10-07T16:59:00.474Z] (monotype) (Void Lonely was disqualified from the tournament by sandman619)
+[2015-10-07T16:59:09.082Z] (monotype) (The tournament auto disqualify timeout was set to 1 by sandman619)
+[2015-10-07T17:07:14.156Z] (monotype) (ashyudhajit was disqualified from the tournament by Sam Crowe - ⒶⓌⒶⓎ)
+[2015-10-07T17:07:51.974Z] (monotype) (Sam Crowe - ⒶⓌⒶⓎ created a tournament in monotype format.)

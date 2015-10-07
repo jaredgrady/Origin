@@ -18848,3 +18848,4 @@
 [Wed, 07 Oct 2015 16:07:55 GMT] Soma transferred 5 bucks to allianceghast. Soma now has 32 bucks and allianceghast now has 260 bucks.
 [Wed, 07 Oct 2015 16:08:00 GMT] Soma transferred 15 bucks to allianceghast. Soma now has 17 bucks and allianceghast now has 275 bucks.
 [Wed, 07 Oct 2015 16:08:10 GMT] Soma transferred 5 bucks to allianceghast. Soma now has 12 bucks and allianceghast now has 280 bucks.
+[Wed, 07 Oct 2015 17:00:54 GMT] hm lelouch was given 50 bucks by fender.

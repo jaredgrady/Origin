@@ -1830,3 +1830,6 @@
 [2015-10-06T21:18:06.239Z] (theallianceleague) Alliance raimon was warned by Safety Shark. (Automated response: stretching)
 [2015-10-06T21:19:56.239Z] (theallianceleague) Alliance raimon was muted by Safety Shark for 7 minutes. (Automated response: caps)
 [2015-10-06T21:20:05.969Z] (theallianceleague) Alliance raimon was unmuted by Alliance - Εlite V.
+[2015-10-07T16:56:03.816Z] (theallianceleague) (Dream Eater Gengar changed the roomdesc to: "Deg is love, Deg is life".)
+[2015-10-07T16:56:29.318Z] (theallianceleague) (Dream Eater Gengar changed the roomdesc to: "DEG is love, DEG is life. Ghast sucks >~<!".)
+[2015-10-07T16:56:43.868Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
