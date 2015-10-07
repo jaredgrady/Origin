@@ -77,3 +77,6 @@
 [2015-09-01T06:03:15.055Z] (thevinnesialeague) (Vin Pyre notes: #BODIED)
 [2015-09-03T04:59:48.394Z] (thevinnesialeague) Searching 4 Booty was kicked from the room by Vin Pyre.
 [2015-09-26T21:24:11.258Z] (thevinnesialeague) (Vin E4 Sarkany changed the roomdesc to: "Bug, Electric, Steel, Water, and all GT spots are open. Come test today!".)
+[2015-10-06T17:07:34.675Z] (thevinnesialeague) Vin Sundar was promoted to Room Moderator by Vin Pyre.
+[2015-10-06T17:58:29.733Z] (thevinnesialeague) (Vin Pyre changed the roomdesc to: "Electric and Water GLs + all GTs except Fairy and Steel. Come test today!".)
+[2015-10-06T20:17:59.591Z] (thevinnesialeague) Vin E4 Bossman was appointed Room Owner by Vin Pyre.

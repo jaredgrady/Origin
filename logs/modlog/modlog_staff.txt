@@ -865,3 +865,32 @@
 [2015-10-05T13:32:22.044Z] (staff) Erica*07 added the trainer card safetyshark
 [2015-10-05T13:32:58.203Z] (staff) Erica*07 removed the trainer card safetyshark
 [2015-10-05T13:33:09.641Z] (staff) Erica*07 added the trainer card safetyshark
+[2015-10-05T14:51:04.881Z] (staff) panpawn added the trainer card suks
+[2015-10-05T15:40:18.847Z] (staff) (fender created a tournament in randombattle format.)
+[2015-10-05T15:40:25.872Z] (staff) fender declared Staff Hunger Games!
+[2015-10-05T15:41:00.524Z] (staff) fender declared If you lose you get demoted. If you win you get promoted. 
+[2015-10-05T15:41:07.338Z] (staff) fender declared Its per battle
+[2015-10-05T17:09:01.842Z] (staff) Neo Soul declared <h2>There is a buck tour in the room The Iridiscent League. Winner gets 15 while runnersup gets 10. Tier-Monotype{as usual}</button>&nbsp;|&nbsp;<button name="send" value="/join theiridiscentleague" style="background-color:rgba(255,125,152,0.3);"><font color="white"><b>join The Iridiscent League</b>
+[2015-10-05T17:09:09.864Z] (staff) Neo Soul globally declared <h2>There is a buck tour in the room The Iridiscent League. Winner gets 15 while runnersup gets 10. Tier-Monotype{as usual}</button>&nbsp;|&nbsp;<button name="send" value="/join theiridiscentleague" style="background-color:rgba(255,125,152,0.3);"><font color="white"><b>join The Iridiscent League</b>
+[2015-10-05T17:18:58.113Z] (staff) Neo Soul - ⒶⒻⓀ globally declared <h2>There is a buck tour in the room The Iridiscent League. Winner gets 15 while runnersup gets 10. Tier-Monotype{as usual}</button>&nbsp;|&nbsp;<button name="send" value="/join theiridiscentleague" style="background-color:rgba(255,125,152,0.3);"><font color="white"><b>join The Iridiscent League</b>
+[2015-10-05T18:29:47.119Z] (staff) YaBoiMglShrek was locked from talking by ruby D. (Hit and run; bad user; flaming users in pms)
+[2015-10-05T18:30:31.507Z] (staff) Champ Vicky was locked from talking by ruby D. (alt of yaboimglshrek)
+[2015-10-05T18:30:31.508Z] (staff) (Champ Vicky's locked alts: YaBoiMglShrek)
+[2015-10-05T21:45:47.806Z] (staff) Trickster's Bro was locked from talking by L Chevy 12 - ⒶⓌⒶⓎ. (hit and run spam)
+[2015-10-05T22:31:59.551Z] (staff) Erica*07 globally declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/r9qOfRe.jpgquot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistentleague" target="_blank"><b target="_blank">Join!</b></button> 50/25 Monotype Tour
+[2015-10-05T22:33:13.381Z] (staff) Erica*07 globally declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/r9qOfRe.jpgquot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistentleague" target="_blank"><b target="_blank">Join!</b></button> 50/25 Monotype Tour
+[2015-10-05T22:37:10.050Z] (staff) Erica*07 globally declared <button style="cursor: , auto ; box-shadow: 0px 10px 15px -7px #848484 ; background: url(&quot;http://i.imgur.com/r9qOfRe.jpgquot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistentleague" target="_blank"><b target="_blank">Join!</b></button> 50/25 Monotype Tour
+[2015-10-05T23:52:49.197Z] (staff) ballinwolf was locked from talking by L Chevy 12 - ⒶⓌⒶⓎ. (abuse of members via kick and mute)
+[2015-10-06T02:29:21.749Z] (staff) (L Chevy 12 - ⒶⓌⒶⓎ has given VIP status to Starfoxfan)
+[2015-10-06T02:59:16.927Z] (staff) Linksage was promoted to Operator by L Chevy 12 - ⒶⓌⒶⓎ.
+[2015-10-06T03:00:00.400Z] (staff) (rain link was demoted to regular user by L Chevy 12 - ⒶⓌⒶⓎ.)
+[2015-10-06T04:32:47.620Z] (staff) Le Leviathan was locked from talking by Neo Soul. (intentionally spamming)
+[2015-10-06T04:49:36.166Z] (staff) Guest 3889 was locked from talking by Neo Soul.
+[2015-10-06T04:49:46.977Z] (staff) Guest 3889 was banned by Neo Soul. (146.185.28.61)
+[2015-10-06T04:54:39.695Z] (staff) princess mudkip 15 was locked from talking by Steelchar. (spamming fhq)
+[2015-10-06T16:39:49.626Z] (staff) Champ Vicky was locked from talking by Void Cryptis.
+[2015-10-06T16:51:35.079Z] (staff) Champ Vicky was locked from talking by SteelChar. (evading a lock)
+[2015-10-06T19:01:45.972Z] (staff) (Pizza Deliverer was forced to choose a new name by panpawn)
+[2015-10-06T19:18:50.513Z] (staff) (Chimechoo has shadow banned: 67weeks, champvicky, chem8, chubscrubop, gynam, hvgynam, hvlab55, hvllama, jevvy8, lab55, llamaran, naymacasino, pasta5, wolfsands, yaboimglshrek, yayden5 (Constantly annoying and PMing staff to try and get unlocked.))
+[2015-10-06T20:39:45.452Z] (staff) fender added the trainer card lelouch
+[2015-10-06T20:40:10.462Z] (staff) fender added the trainer card mustang

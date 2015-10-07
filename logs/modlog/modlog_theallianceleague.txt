@@ -1723,3 +1723,110 @@
 [2015-10-05T11:38:03.623Z] (theallianceleague) (Alliance Meta created a tournament in monotype format.)
 [2015-10-05T13:30:09.586Z] (theallianceleague) (Alliance Meta forcibly ended a tournament.)
 [2015-10-05T13:30:16.643Z] (theallianceleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-05T14:37:44.924Z] (theallianceleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-05T14:50:09.051Z] (theallianceleague) (Alliance - Charen forcibly ended a tournament.)
+[2015-10-05T14:52:34.433Z] (theallianceleague) Alliance - Crown was promoted to Room Voice by Alliance - Charen.
+[2015-10-05T15:05:37.529Z] (theallianceleague) Alliance -Platinum was promoted to Room Voice by Alliance - Charen.
+[2015-10-05T18:30:03.474Z] (theallianceleague) Chleg was promoted to Room Voice by Alliance TheThorn.
+[2015-10-05T19:55:31.300Z] (theallianceleague) Mach0 Mach0 Man was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T19:56:37.514Z] (theallianceleague) Mach0 Mach0 Man was muted by Void Chrono for 1 hour.
+[2015-10-05T19:56:37.514Z] (theallianceleague) (Mach0 Mach0 Man's ac account: richietheswampert)
+[2015-10-05T21:30:15.269Z] (theallianceleague) Battle Test Guy was banned from room theallianceleague by Alliance TheThorn.
+[2015-10-05T21:48:38.006Z] (theallianceleague) Exhaust was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T23:23:04.758Z] (theallianceleague) Alliance - Astral was warned by Alliance - Εlite V. (please do not use an alliance alt without being a member of alliance. If this is one of your other alts, please get it voiced)
+[2015-10-06T00:01:04.190Z] (theallianceleague) Stunfisk The Great was promoted to Room Voice by Alliancе - Elite V.
+[2015-10-06T00:18:41.414Z] (theallianceleague) Alliance - Diag was appointed Room Owner by Alliance - Ghast.
+[2015-10-06T00:19:30.233Z] (theallianceleague) Alliance - Diag was appointed to Room Founder by Erica*07.
+[2015-10-06T00:19:42.284Z] (theallianceleague) Alliance - Guy was promoted to Room Moderator by Alliance - Ghast.
+[2015-10-06T00:20:04.941Z] (theallianceleague) Alliance - Jirachi was promoted to Room Moderator by Alliance - Ghast.
+[2015-10-06T00:23:28.284Z] (theallianceleague) (i'm sora was demoted to Room Voice by Alliance - Ghast.)
+[2015-10-06T00:23:33.153Z] (theallianceleague) (Sam Crowe was demoted to Room Voice by Alliance - Ghast.)
+[2015-10-06T00:23:36.219Z] (theallianceleague) (SteelChar was demoted to Room Voice by Alliance - Ghast.)
+[2015-10-06T00:23:56.335Z] (theallianceleague) (i'm sora was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T00:24:02.158Z] (theallianceleague) (Sam Crowe was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T00:24:06.798Z] (theallianceleague) (SteelChar was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T00:26:12.610Z] (theallianceleague) Mach0 Mach0 Man was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T00:26:42.276Z] (theallianceleague) Mach0 Mach0 Man was muted by Alliance - Apples for 7 minutes.
+[2015-10-06T00:27:30.985Z] (theallianceleague) Mach0 Mach0 Man was unmuted by Alliancе - Elite V.
+[2015-10-06T00:29:43.663Z] (theallianceleague) (Erica*07 was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T00:38:49.442Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-10-06T00:39:12.542Z] (theallianceleague) (Alliancе - Elite V notes: This gets tiring to do)
+[2015-10-06T00:39:33.898Z] (theallianceleague) (Alliance - Llama notes: sips apple sauce)
+[2015-10-06T00:39:38.412Z] (theallianceleague) (Alliancе - Elite V notes: Ghast, I think Stun didn't account for the voting pool)
+[2015-10-06T00:39:42.904Z] (theallianceleague) (Alliance - Apples notes: you can sip my sauce ;))
+[2015-10-06T00:40:09.918Z] (theallianceleague) (Alliance - Apples notes: i did ;)
+[2015-10-06T00:40:43.639Z] (theallianceleague) (Alliancе - Elite V notes: Ghast, accounting as such does not show proof. And if unanimous, that will increase belifs of rig)
+[2015-10-06T00:41:14.111Z] (theallianceleague) (Alliance - Guy notes: there was a poll i thought)
+[2015-10-06T00:41:22.817Z] (theallianceleague) (Alliancе - Elite V notes: Ghast, I doubt that vote)
+[2015-10-06T00:41:28.112Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-10-06T00:43:54.371Z] (theallianceleague) SWL Eric was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T00:44:01.385Z] (theallianceleague) SWL Eric was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-06T00:44:39.368Z] (theallianceleague) SWL Eric was unmuted by AllianceAsurax - Ⓢ.
+[2015-10-06T00:45:34.673Z] (theallianceleague) Mach0 Mach0 Man was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T00:47:39.592Z] (theallianceleague) Alliancе - Elite V set modchat to +
+[2015-10-06T00:48:30.097Z] (theallianceleague) Alliance - Ghast set modchat to &
+[2015-10-06T00:48:47.583Z] (theallianceleague) (Alliance - Llama notes: Chill)
+[2015-10-06T00:48:57.137Z] (theallianceleague) (Alliancе - Elite V notes: This proves nothing)
+[2015-10-06T00:49:12.565Z] (theallianceleague) (Alliancе - Elite V notes: Nither for or against, but this does nothing to help)
+[2015-10-06T00:49:16.097Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-10-06T00:50:32.443Z] (theallianceleague) Mach0 Mach0 Man was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-06T00:50:40.061Z] (theallianceleague) Mach0 Mach0 Man was banned from room theallianceleague by Alliance - Apples.
+[2015-10-06T00:50:53.752Z] (theallianceleague) Mach0 Mach0 Man would be muted by Void Chrono but was already muted. (pls)
+[2015-10-06T00:52:22.663Z] (theallianceleague) Demo Candore was warned by Void Chrono. (pls)
+[2015-10-06T00:54:55.884Z] (theallianceleague) Argus2Spooky was kicked from the room by Alliancе - Elite V.
+[2015-10-06T00:56:49.874Z] (theallianceleague) AllianceAsurax - Ⓢ declared Phirmell would like to test for poison trainer
+[2015-10-06T00:57:23.127Z] (theallianceleague) AllianceAsurax - Ⓢ declared anyone have types for poison?
+[2015-10-06T00:59:05.480Z] (theallianceleague) AllianceAsurax - Ⓢ declared Phirmell's Poison Trial: Fila (ground), blu (grass), elite v (neutral)
+[2015-10-06T01:00:56.127Z] (theallianceleague) AllianceAsurax - Ⓢ declared Phirmell's Poison Trial: Fila (ground), blu (grass), Fruit (neutral)
+[2015-10-06T01:06:29.191Z] (theallianceleague) AllianceAsurax - Ⓢ declared Phirmell's Poison Trial: blu (grass), Fruit (neutral) - result 4/6 currently
+[2015-10-06T01:07:40.471Z] (theallianceleague) (Stunfisk The Great was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T01:09:45.972Z] (theallianceleague) Alliance - Ghast was appointed to Room Founder by Neo Soul.
+[2015-10-06T01:09:53.435Z] (theallianceleague) mach0mach0man was unbanned from room theallianceleague by Alliance - Diag.
+[2015-10-06T01:10:22.307Z] (theallianceleague) Mach0 Mach0 Man was banned from room theallianceleague by Alliance - Apples.
+[2015-10-06T01:37:38.472Z] (theallianceleague) (Alliance - Flowers was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-06T01:37:42.467Z] (theallianceleague) Alliance - Swift was promoted to Room Voice by Alliance - Ghast.
+[2015-10-06T01:44:31.654Z] (theallianceleague) Alliance - Ralker declared YOUR BOY RALKER IS 3-0
+[2015-10-06T01:47:02.335Z] (theallianceleague) Alliance - Ralker declared AND YOUR BOY GUY IS 0-3
+[2015-10-06T02:06:29.411Z] (theallianceleague) Grateful was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T02:15:04.410Z] (theallianceleague) Alliance - Ralker declared Ralker for god status
+[2015-10-06T02:41:11.055Z] (theallianceleague) Linksage was promoted to Room Voice by Alliance - Ghast.
+[2015-10-06T03:01:07.135Z] (theallianceleague) AllianceAsurax - Ⓢ declared Drink her ;)
+[2015-10-06T03:17:01.444Z] (theallianceleague) (Alliance - Ghast created a tournament in monotype format.)
+[2015-10-06T03:18:04.575Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance - Ghast)
+[2015-10-06T03:25:52.260Z] (theallianceleague) jiggle was promoted to Room Voice by Alliance - Lee.
+[2015-10-06T03:26:00.148Z] (theallianceleague) (jiggle was demoted to Room regular user by Alliance - Lee.)
+[2015-10-06T03:33:05.250Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "+Dethroner*: i like my women like i like my pizza +Dethroner*: thin".)
+[2015-10-06T03:33:33.227Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "+Dethroner*: i like my women like i like my pizza, thin.".)
+[2015-10-06T03:41:57.495Z] (theallianceleague) DethronerSenpai was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T03:44:06.367Z] (theallianceleague) Avirra was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T03:57:34.940Z] (theallianceleague) Avirra was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-06T03:57:34.943Z] (theallianceleague) (Avirra's ac account: zenji)
+[2015-10-06T03:57:37.290Z] (theallianceleague) OkamiNine was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T04:07:23.681Z] (theallianceleague) (Alliance - Lee created a tournament in monotype format.)
+[2015-10-06T04:49:37.501Z] (theallianceleague) Alliance-xFRZ was promoted to Room Voice by ALliance - Charen.
+[2015-10-06T10:01:48.329Z] (theallianceleague) (Alliance - Orange created a tournament in hackmonscup format.)
+[2015-10-06T15:58:48.158Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "TheThorn is awesome".)
+[2015-10-06T16:30:47.631Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-10-06T16:31:49.250Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-10-06T17:19:09.034Z] (theallianceleague) Alliance - Charen was muted by Alliance - Ghast for 7 minutes.
+[2015-10-06T17:34:51.719Z] (theallianceleague) Chesnaught-mega was muted by Alliance Meta for 7 minutes.
+[2015-10-06T17:35:55.480Z] (theallianceleague) Chesnaught-mega was unmuted by Alliance - Dreams.
+[2015-10-06T17:53:07.937Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "Ghast is Love, Ghast is Life".)
+[2015-10-06T18:35:36.895Z] (theallianceleague) Dethroner* was banned from room theallianceleague by Alliance TheThorn.
+[2015-10-06T18:45:10.048Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T18:46:17.599Z] (theallianceleague) grassbreak was warned by Alliance - Ghast. (let's be real and stop being rude)
+[2015-10-06T18:46:53.571Z] (theallianceleague) Chleg was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-06T18:47:15.501Z] (theallianceleague) Chleg was unmuted by Alliance TheThorn.
+[2015-10-06T18:47:39.789Z] (theallianceleague) Safety Shark was promoted to Room Leader by Alliance - Ghast.
+[2015-10-06T18:53:14.425Z] (theallianceleague) Alliance - Ghast set modchat to #
+[2015-10-06T18:53:30.065Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-10-06T18:53:30.191Z] (theallianceleague) (Alliance - Llama notes: I think I pooped my panties)
+[2015-10-06T18:53:59.647Z] (theallianceleague) grassbreak was muted by Alliance - Ghast for 7 minutes. (rude)
+[2015-10-06T18:54:15.426Z] (theallianceleague) (Safety Shark was demoted to Room Driver by Alliance - Ghast.)
+[2015-10-06T18:54:24.293Z] (theallianceleague) grassbreak was unmuted by Alliance - Dreams.
+[2015-10-06T19:31:14.679Z] (theallianceleague) dethroner was unbanned from room theallianceleague by Alliance - Diag.
+[2015-10-06T19:32:35.201Z] (theallianceleague) Dethroner* was banned from room theallianceleague by Alliance TheThorn.
+[2015-10-06T19:39:24.503Z] (theallianceleague) Royalty - Chills was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T21:18:06.239Z] (theallianceleague) Alliance raimon was warned by Safety Shark. (Automated response: stretching)
+[2015-10-06T21:19:56.239Z] (theallianceleague) Alliance raimon was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-06T21:20:05.969Z] (theallianceleague) Alliance raimon was unmuted by Alliance - Εlite V.

@@ -183,3 +183,7 @@
 [2015-08-23T20:24:44.993Z] (hingostraphouse) ready2go202 was kicked from the room by Rain Hingo.
 [2015-08-23T20:40:39.019Z] (hingostraphouse) ready2go202 was kicked from the room by Rain Hingo.
 [2015-08-23T20:40:44.918Z] (hingostraphouse) Rain Ferno - ⓑⓞⓡⓔⓓ was kicked from the room by Rain Hingo.
+[2015-10-05T20:34:52.095Z] (hingostraphouse) (hv ferno changed the roomintro.)
+[2015-10-05T20:35:07.353Z] (hingostraphouse) (hv ferno changed the roomintro.)
+[2015-10-05T20:59:52.330Z] (hingostraphouse) (hv ferno changed the roomintro.)
+[2015-10-05T21:00:01.752Z] (hingostraphouse) (hv ferno changed the roomintro.)

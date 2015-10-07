@@ -177,3 +177,12 @@
 [2015-10-05T12:50:12.235Z] (shadowbanroom) BurningBlazer was kicked from the room by ruby D.
 [2015-10-05T12:56:08.821Z] (shadowbanroom) (ruby D notes: do you read this?)
 [2015-10-05T12:56:19.750Z] (shadowbanroom) (ruby D notes: BurningBlazer sucks rofl)
+[2015-10-05T22:36:31.381Z] (shadowbanroom) (austin was demoted to Room regular user by L Chevy 12 - ⒶⓌⒶⓎ.)
+[2015-10-05T22:36:36.306Z] (shadowbanroom) (nerd.js was demoted to Room regular user by L Chevy 12 - ⒶⓌⒶⓎ.)
+[2015-10-05T22:36:55.496Z] (shadowbanroom) L Chevy 12 - ⒶⓌⒶⓎ was appointed Room Owner by L Chevy 12 - ⒶⓌⒶⓎ.
+[2015-10-06T01:28:53.034Z] (shadowbanroom) (Neo Soul has shadow banned: mach0mach0man)
+[2015-10-06T03:34:55.274Z] (shadowbanroom) (Erica*07 - Ⓡⓔⓢⓣⓘⓝⓖ has shadow banned: flamenza, legacycerys)
+[2015-10-06T03:59:45.070Z] (shadowbanroom) (Erica*07 - Ⓡⓔⓢⓣⓘⓝⓖ has shadow banned: legacyrevy)
+[2015-10-06T04:55:00.398Z] (shadowbanroom) Neo Soul temporarily banned the IP: 206.190.158.72
+[2015-10-06T05:29:40.854Z] (shadowbanroom) (Neo Soul has shadow banned: imtylr)
+[2015-10-06T19:22:39.353Z] (shadowbanroom) (Chimechoo has shadow banned: hvlamppost, lamppostweek (same as the other alts))

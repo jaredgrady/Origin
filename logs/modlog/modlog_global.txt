@@ -497,3 +497,23 @@
 [2015-09-27T23:04:53.015Z] (staff) LOCK: [mystbronze] by L Chevy 12: shadow ban evasion
 [2015-09-28T02:14:21.345Z] (lobby) LOCK: [xjownage] by L Chevy 12 - ⒶⓌⒶⓎ
 [2015-10-05T03:12:32.461Z] (groupchat-fuckboi33333-5844304) LOCK: [fuckboi33333] ac:[pasta5] by L Chevy 12: http://prntscr.com/8nutqp
+[2015-10-05T15:25:25.792Z] (lobby) LOCK: [lesronins] by Dream Eater Gengar: shit presence trolling casino after getting muted in lobby
+[2015-10-05T16:02:07.246Z] (lobby) UNLOCK: [champvicky] by Dream Eater Gengar
+[2015-10-05T18:29:47.122Z] (staff) LOCK: [yaboimglshrek] by ruby D: Hit and run; bad user; flaming users in pms
+[2015-10-05T18:30:31.509Z] (staff) LOCK: [champvicky] by ruby D: alt of yaboimglshrek
+[2015-10-05T21:45:47.808Z] (staff) LOCK: [trickstersbro] by L Chevy 12 - ⒶⓌⒶⓎ: hit and run spam
+[2015-10-05T21:48:58.097Z] (lobby) LOCK: [wolfborix] by Erica*07: Hit and run advertisement.
+[2015-10-05T23:52:49.199Z] (staff) LOCK: [ballinwolf] by L Chevy 12 - ⒶⓌⒶⓎ: abuse of members via kick and mute
+[2015-10-06T01:15:00.442Z] (themystleague) LOCK: [wolfpatch] by i'm sora: extremely offensive comments towards a ro
+[2015-10-06T02:33:52.309Z] (lobby) LOCK: [cumblr] by L Chevy 12 - ⒶⓌⒶⓎ
+[2015-10-06T02:33:55.394Z] (lobby) LOCK: [melcakes] by L Chevy 12 - ⒶⓌⒶⓎ
+[2015-10-06T03:59:56.510Z] (femalehq) LOCK: [memes2stronk] by L Chevy 12 - ⒶⓌⒶⓎ
+[2015-10-06T04:05:34.517Z] (femalehq) LOCK: [miracley] by Steelchar
+[2015-10-06T04:32:47.623Z] (staff) LOCK: [leleviathan] by Neo Soul: intentionally spamming
+[2015-10-06T04:49:36.169Z] (staff) LOCK: [megaxsharpedo] by Neo Soul
+[2015-10-06T04:49:46.980Z] (staff) BAN: [megaxsharpedo] by Neo Soul
+[2015-10-06T04:54:39.698Z] (staff) LOCK: [princessmudkip15] by Steelchar: spamming fhq
+[2015-10-06T04:59:13.923Z] (femalehq) BAN: [xau] by Neo Soul
+[2015-10-06T14:55:57.914Z] (thewolfpackleague) LOCK: [patchee] ac:[hamiltucky] by Not Orangejuice: evading... sorry m8 :/
+[2015-10-06T16:39:49.631Z] (staff) LOCK: [champvicky] by Void Cryptis
+[2015-10-06T16:51:35.080Z] (staff) LOCK: [champvicky] by SteelChar: evading a lock

@@ -3134,3 +3134,23 @@
 [2015-09-28T03:02:06.646Z] (portugus) (Safety Shark notes: nightoflight was added to the blacklist by #Grafite.,NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT)
 [2015-09-28T03:02:07.247Z] (portugus) Night_Of_Light was banned from room portugus by Safety Shark. (Usuário na lista negra)
 [2015-09-28T03:02:07.249Z] (portugus) (Night_Of_Light's roombanned alts: Night_Of_Souls)
+[2015-10-05T18:14:04.458Z] (portugus) Night_Of_Light was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-05T18:47:14.165Z] (portugus) (Safety Shark notes: ney was added to the blacklist by #jordean.,NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT)
+[2015-10-05T19:52:54.608Z] (portugus) zephenix was appointed Room Owner by Chesnaught-mega.
+[2015-10-05T20:00:28.727Z] (portugus) Chesnaught-mega declared extra extra zep fala a fala do jord:[16:59:56] #zephenix: ué
+[2015-10-05T20:02:22.171Z] (portugus) dsilva1510 was warned by Chesnaught-mega. (link broken -q)
+[2015-10-05T20:59:32.748Z] (portugus) (Chesnaught-mega changed the roomintro.)
+[2015-10-05T20:59:47.543Z] (portugus) (Chesnaught-mega changed the roomintro.)
+[2015-10-05T21:06:58.704Z] (portugus) (Chesnaught-mega changed the roomintro.)
+[2015-10-05T21:24:48.327Z] (portugus) Chesnaught-mega set modchat to false
+[2015-10-06T17:15:32.239Z] (portugus) kunoshi ochhna was muted by Chesnaught-mega for 7 minutes. (seu holandês;-;)
+[2015-10-06T17:15:36.671Z] (portugus) kunoshi ochhna was unmuted by Chesnaught-mega.
+[2015-10-06T17:29:24.160Z] (portugus) Guest 5017 was muted by Chesnaught-mega for 7 minutes. (humilhando...-q)
+[2015-10-06T17:29:24.161Z] (portugus) (Guest 5017's ac account: zephenix)
+[2015-10-06T17:29:30.198Z] (portugus) Guest 5017 was unmuted by Chesnaught-mega.
+[2015-10-06T17:30:00.239Z] (portugus) SG Thunder was appointed Room Owner by Chesnaught-mega.
+[2015-10-06T17:46:35.819Z] (portugus) (Chesnaught-mega changed the roomintro.)
+[2015-10-06T17:46:52.467Z] (portugus) (Chesnaught-mega changed the roomintro.)
+[2015-10-06T17:49:34.935Z] (portugus) Safety Shark was warned by Chesnaught-mega. (+meme)
+[2015-10-06T18:30:33.208Z] (portugus) (Chesnaught-mega created a tournament in ce format.)
+[2015-10-06T18:31:13.886Z] (portugus) (Chesnaught-mega forcibly ended a tournament.)

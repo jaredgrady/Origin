@@ -256,3 +256,4 @@
 [2015-09-27T17:56:39.834Z] (smashbros) Superdois was muted by Eliwood_Emblem for 1 hour.
 [2015-09-27T20:06:09.607Z] (smashbros) Joefriends was warned by Chaos Abra. (no u)
 [2015-09-27T20:21:19.534Z] (smashbros) Guildmaster Wiggly was warned by Safety Shark. (Automated response: stretching)
+[2015-10-06T21:55:26.600Z] (smashbros) (Eliwood_Emblem changed the roomintro.)

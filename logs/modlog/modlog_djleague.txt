@@ -1987,3 +1987,28 @@
 [2015-10-05T04:01:02.986Z] (djleague) Breeze Poke was muted by Maura for 1 hour.
 [2015-10-05T04:14:58.840Z] (djleague) Myst Bronze2.0 was kicked from the room by Maura.
 [2015-10-05T04:16:54.905Z] (djleague) Lotus Champ Torpid was kicked from the room by Maura.
+[2015-10-05T16:42:35.386Z] (djleague) thepyrope was promoted to Room Driver by DJ Pyrope.
+[2015-10-05T16:45:48.871Z] (djleague) (thepyrope was demoted to Room Voice by DJ Pyrope.)
+[2015-10-05T16:45:51.595Z] (djleague) (thepyrope was demoted to Room regular user by DJ Pyrope.)
+[2015-10-05T16:45:58.717Z] (djleague) The Pyrope was promoted to Room Voice by Mr. Leijon.
+[2015-10-05T23:04:41.358Z] (djleague) (DJ Gible created a tournament in monotyperandombattle format.)
+[2015-10-05T23:16:10.179Z] (djleague) (LotusChamp Torpid created a tournament in monotyperandombattle format.)
+[2015-10-06T01:29:58.437Z] (djleague) Breeze Poke was promoted to Room Voice by DJ Luna.
+[2015-10-06T01:59:01.053Z] (djleague) DJ 18-Volt was promoted to Room Leader by DJ Luna.
+[2015-10-06T02:03:25.230Z] (djleague) (DJ 18-Volt notes: so what makes lotus scum now)
+[2015-10-06T02:05:40.181Z] (djleague) (DJ Luna notes: do you even want to know?)
+[2015-10-06T02:06:33.237Z] (djleague) (DJ 18-Volt notes: yeah might as well)
+[2015-10-06T02:15:59.313Z] (djleague) DJ Stormcaller was promoted to Room Moderator by DJ Luna.
+[2015-10-06T02:22:58.618Z] (djleague) DJItsme was kicked from the room by DJ Luna.
+[2015-10-06T02:23:35.271Z] (djleague) DJItsme was kicked from the room by DJ Luna.
+[2015-10-06T02:24:46.213Z] (djleague) DJItsme was kicked from the room by DJ Luna.
+[2015-10-06T02:29:13.405Z] (djleague) Breeze Poke was kicked from the room by DJItsme.
+[2015-10-06T03:08:16.475Z] (djleague) GL♅Incursio was kicked from the room by DJItsme.
+[2015-10-06T03:15:49.100Z] (djleague) GL♅Incursio was warned by DJItsme.
+[2015-10-06T03:15:49.702Z] (djleague) GL♅Incursio was warned by DJItsme.
+[2015-10-06T03:15:49.942Z] (djleague) GL♅Incursio was warned by DJItsme.
+[2015-10-06T03:15:54.189Z] (djleague) GL♅Incursio was warned by DJItsme. (better?)
+[2015-10-06T03:15:55.749Z] (djleague) GL♅Incursio was warned by DJItsme. (better?)
+[2015-10-06T03:49:11.015Z] (djleague) Pythоn was kicked from the room by DJItsme.
+[2015-10-06T03:51:27.895Z] (djleague) Pythоn was kicked from the room by DJItsme.
+[2015-10-06T07:58:04.999Z] (djleague) Safety Shark was banned from room djleague by Mr. Leijon.

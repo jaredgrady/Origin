@@ -5676,3 +5676,31 @@
 [2015-10-05T03:13:52.535Z] (battle-doublesou-114063) GTX ABT set modchat to false
 [2015-10-05T11:42:45.651Z] (battle-monotype-114330) GTX♅Humper was promoted to Player by Alliance Meta.
 [2015-10-05T12:08:07.344Z] (battle-monotype-114343) DB728 was promoted to Player by ashyudhajit.
+[2015-10-05T14:13:33.936Z] (battle-randombattle-114405) Hm Mower was promoted to Room Voice by GTX♅Kirito.
+[2015-10-05T18:48:36.716Z] (battle-balancedhackmons-114650) Metallica was promoted to Player by jjay554.
+[2015-10-05T22:31:30.505Z] (battle-monotype-114907) GTX♅Stygian set modchat to +
+[2015-10-06T03:45:29.448Z] (battle-ou-115322) Void SYB3R was kicked from the room by Neo Soul.
+[2015-10-06T18:51:20.573Z] (battle-anythinggoes-115785) Wolf♥Gin was promoted to Player by Wolf Erade.
+[2015-10-06T19:09:55.590Z] (battle-hackmonscup-115808) TheAce22 set modchat to +
+[2015-10-06T19:10:54.755Z] (battle-hackmonscup-115808) yunG Sensory set modchat to false
+[2015-10-06T19:11:49.656Z] (battle-hackmonscup-115808) TheAce22 set modchat to +
+[2015-10-06T19:12:04.056Z] (battle-hackmonscup-115808) yunG Sensory set modchat to false
+[2015-10-06T19:13:16.146Z] (battle-hackmonscup-115808) TheAce22 set modchat to +
+[2015-10-06T19:13:28.503Z] (battle-hackmonscup-115808) yunG Sensory set modchat to false
+[2015-10-06T19:14:47.450Z] (battle-hackmonscup-115808) Gentleman Tech was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:14:56.909Z] (battle-hackmonscup-115808) Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:16:21.609Z] (battle-hackmonscup-115808) (Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was demoted to Room regular user by TheAce22.)
+[2015-10-06T19:16:26.261Z] (battle-hackmonscup-115808) TheAce22 set modchat to +
+[2015-10-06T19:16:30.687Z] (battle-hackmonscup-115808) Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:16:32.974Z] (battle-hackmonscup-115808) (Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was demoted to Room regular user by TheAce22.)
+[2015-10-06T19:16:41.499Z] (battle-hackmonscup-115808) Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:16:42.792Z] (battle-hackmonscup-115808) (Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was demoted to Room regular user by TheAce22.)
+[2015-10-06T19:16:50.354Z] (battle-hackmonscup-115808) yunG Sensory set modchat to false
+[2015-10-06T19:16:51.603Z] (battle-hackmonscup-115808) TheAce22 set modchat to +
+[2015-10-06T19:18:15.043Z] (battle-hackmonscup-115808) Alliance - Dreams was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:19:49.839Z] (battle-hackmonscup-115808) Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was promoted to Room Voice by yunG Sensory.
+[2015-10-06T19:19:55.175Z] (battle-hackmonscup-115808) (Grateful - Ⓜⓔⓔⓣⓘⓝⓖ was demoted to Room regular user by TheAce22.)
+[2015-10-06T20:01:02.633Z] (battle-monotype-115866) Hm Volco set modchat to +
+[2015-10-06T21:05:59.316Z] (battle-ou-115939) Hm Zantier set modchat to +
+[2015-10-06T21:06:08.681Z] (battle-ou-115939) cloyy set modchat to false
+[2015-10-06T21:06:33.105Z] (battle-ubers-115932) SL Prof James was promoted to Player by SuRf LatIaS.

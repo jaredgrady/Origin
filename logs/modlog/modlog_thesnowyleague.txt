@@ -3025,3 +3025,7 @@
 [2015-10-05T03:11:13.336Z] (thesnowyleague) (Surf Latias changed the roomdesc to: "Ground, Water, Electric, Grass, Bug, Ghost, Steel, and Flying GL spots open!".)
 [2015-10-05T03:15:16.809Z] (thesnowyleague) (SL Little was demoted to Room regular user by Surf Latias.)
 [2015-10-05T03:15:30.817Z] (thesnowyleague) (Surf Latias changed the roomdesc to: "Ground, Water,Electric,Grass,Fairy Bug, Ghost, Steel, and Flying GL spots open!".)
+[2015-10-05T18:44:20.661Z] (thesnowyleague) Neimenko was promoted to Room Operator by swagman7834.
+[2015-10-05T18:44:26.147Z] (thesnowyleague) (SL neimenko was demoted to Room regular user by swagman7834.)
+[2015-10-05T20:16:59.702Z] (thesnowyleague) (swagman7834 changed the roomdesc to: "Normal,Psychic,Ground,Water,Electric,Grass,Fairy,Bug,Ghost,Steel,and Flying open".)
+[2015-10-06T00:24:01.653Z] (thesnowyleague) (Safety Shark was demoted to Room Voice by SL Code.)

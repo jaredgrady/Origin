@@ -46,3 +46,44 @@
 [2015-09-01T02:15:14.372Z] (sariisworld) Rain ☆ Hingo was banned from room sariisworld by Rain Ferno.
 [2015-09-01T02:15:14.375Z] (sariisworld) (Rain ☆ Hingo's roombanned alts: hingo)
 [2015-09-01T03:34:34.206Z] (sariisworld) rainhingo was unbanned from room sariisworld by Rain Ferno.
+[2015-10-05T18:43:14.108Z] (sariisworld) Chleg - ⓕⓤⓒⓚⓢⓐⓡⓘⓘ was promoted to Room Voice by Rain Roselia.
+[2015-10-05T18:44:48.495Z] (sariisworld) HV HinGOAT was promoted to Room Voice by Rain Roselia.
+[2015-10-05T18:49:16.384Z] (sariisworld) Sariisaur was appointed Room Owner by Rain Roselia.
+[2015-10-05T18:58:16.267Z] (sariisworld) HV HinGOAT was promoted to Room Moderator by Sariisaur.
+[2015-10-05T18:58:43.724Z] (sariisworld) (HV HinGOAT notes: does chleg not know about what u told me the other day xD)
+[2015-10-05T18:58:58.560Z] (sariisworld) (Sariisaur notes: ?????)
+[2015-10-05T18:59:31.606Z] (sariisworld) (HV HinGOAT notes: nvm)
+[2015-10-05T18:59:38.809Z] (sariisworld) (Sariisaur notes: and why not talking on skype lol)
+[2015-10-05T18:59:49.262Z] (sariisworld) (HV HinGOAT was demoted to Room regular user by Sariisaur.)
+[2015-10-05T18:59:54.066Z] (sariisworld) HV HinGOAT was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:32:31.657Z] (sariisworld) hv ferno was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:35:51.241Z] (sariisworld) hv ferno was promoted to Room Leader by Sariisaur.
+[2015-10-05T19:38:16.794Z] (sariisworld) HV Tana - ⓦⓐⓣⓓⓞ was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:39:11.533Z] (sariisworld) HV Devin - ⒶⓌⒶⓎ was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:39:32.741Z] (sariisworld) HV Breaker was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:39:41.373Z] (sariisworld) Hv sinatra - ⓢⓐⓓ was promoted to Room Voice by Sariisaur.
+[2015-10-05T19:53:21.655Z] (sariisworld) Chleg was warned by hv ferno. (never suggest kaiba again)
+[2015-10-05T20:13:57.367Z] (sariisworld) Not Sykes was promoted to Room Voice by Sariisaur.
+[2015-10-05T20:15:42.071Z] (sariisworld) (Hingo notes: if he says one stupid shit about me im kicking him)
+[2015-10-05T20:19:15.834Z] (sariisworld) Hingo set modchat to false
+[2015-10-05T20:22:10.433Z] (sariisworld) Myst Kaori was promoted to Room Voice by Hingo.
+[2015-10-05T20:25:58.719Z] (sariisworld) Chleg was promoted to Room Leader by Sariisaur.
+[2015-10-05T20:29:25.254Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T20:37:23.579Z] (sariisworld) jiggle was promoted to Room Voice by Hingo.
+[2015-10-05T20:44:54.130Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T20:45:51.101Z] (sariisworld) (hv ferno changed the roomintro.)
+[2015-10-05T20:50:01.637Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T20:53:11.318Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T20:53:37.158Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T20:54:56.609Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T21:01:05.938Z] (sariisworld) (Chleg changed the roomintro.)
+[2015-10-05T21:04:52.559Z] (sariisworld) (Sariisaur changed the roomintro.)
+[2015-10-05T21:30:52.140Z] (sariisworld) jiggle was warned by hv ferno. (bold)
+[2015-10-05T21:31:12.910Z] (sariisworld) jiggle was warned by hv ferno. (bold)
+[2015-10-05T21:31:19.931Z] (sariisworld) jiggle was warned by Chleg. (bold)
+[2015-10-05T21:31:44.698Z] (sariisworld) jiggle was muted by Chleg for 7 minutes. (m8)
+[2015-10-05T21:31:52.903Z] (sariisworld) jiggle was unmuted by Chleg.
+[2015-10-05T21:32:33.601Z] (sariisworld) jiggle was muted by hv ferno for 7 minutes. (bold)
+[2015-10-05T21:59:15.292Z] (sariisworld) HV Carn0X was promoted to Room Voice by Sariisaur - ⓦⓞⓡⓚ.
+[2015-10-05T22:03:48.444Z] (sariisworld) Carn0X was promoted to Room Voice by Sariisaur - ⓦⓞⓡⓚ.
+[2015-10-05T22:21:58.733Z] (sariisworld) Carn0X was kicked from the room by Sariisaur - ⓦⓞⓡⓚ.

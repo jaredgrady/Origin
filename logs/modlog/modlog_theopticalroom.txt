@@ -1281,3 +1281,4 @@
 [2015-09-03T00:41:11.069Z] (theopticalroom) (Opticl - ⓎⓉ changed the roomintro.)
 [2015-09-03T00:41:17.268Z] (theopticalroom) Opticl - ⓎⓉ declared this is optical
 [2015-09-03T00:41:20.693Z] (theopticalroom) Opticl - ⓎⓉ declared SIGNING OUT
+[2015-10-05T21:14:32.636Z] (theopticalroom) Champ Vicky was promoted to Room Driver by Charitwo.

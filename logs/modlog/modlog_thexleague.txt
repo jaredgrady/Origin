@@ -4453,3 +4453,4 @@
 [2015-10-05T02:28:34.409Z] (thexleague) ashaury was promoted to Room Moderator by sabella.
 [2015-10-05T02:29:21.192Z] (thexleague) Dak Prescott was promoted to Room Voice by Gratitude.
 [2015-10-05T02:29:22.812Z] (thexleague) Air Jak 11 was promoted to Room Voice by Gratitude.
+[2015-10-06T11:54:40.974Z] (thexleague) wyngate' set modchat to +

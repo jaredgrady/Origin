@@ -836,3 +836,17 @@
 [2015-09-27T23:02:33.574Z] (artshop) wolf blitzel was warned by Sunny Charizard. (Automated response: caps)
 [2015-09-27T23:03:24.018Z] (artshop) (L Chevy 12 has shadow banned: lchevy12)
 [2015-09-27T23:04:08.975Z] (artshop) (L Chevy 12 has unshadow banned: lchevy12)
+[2015-10-06T03:52:01.172Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/X6nnA6i.png"
+[2015-10-06T17:03:13.653Z] (artshop) (SteelChar changed the roomintro.)
+[2015-10-06T20:00:16.685Z] (artshop) SteelChar declared RIP CONNORRR 2015
+[2015-10-06T20:22:17.484Z] (artshop) Ultimate Zygarde was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-06T20:22:30.170Z] (artshop) Ultimate Zygarde was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-10-06T20:22:30.171Z] (artshop) (Ultimate Zygarde's ac account: steelchar)
+[2015-10-06T20:22:51.351Z] (artshop) SteelChar was unmuted by Karlpower.
+[2015-10-06T20:22:53.665Z] (artshop) (SteelChar notes: .)
+[2015-10-06T20:23:12.653Z] (artshop) (Karlpower notes: ;])
+[2015-10-06T20:24:21.126Z] (artshop) (Sigma Fancii notes: Voodoom is bad )
+[2015-10-06T20:59:10.978Z] (artshop) Harvest God was promoted to Room Moderator by Connorrr.
+[2015-10-06T21:01:47.708Z] (artshop) (karlpower was demoted to Room regular user by Connorrr.)
+[2015-10-06T21:02:58.086Z] (artshop) Barista Fancii was promoted to Room Moderator by Connorrr.
+[2015-10-06T21:03:09.375Z] (artshop) (sigma fancii was demoted to Room regular user by Connorrr.)

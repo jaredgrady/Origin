@@ -1304,3 +1304,23 @@
 [2015-10-05T02:04:53.400Z] (voidleague) Jay_Swift was warned by Safety Shark. (Automated response: caps)
 [2015-10-05T13:07:19.735Z] (voidleague) Void Julius was muted by Void SYB3R for 7 minutes.
 [2015-10-05T13:07:42.384Z] (voidleague) Void Julius was unmuted by Void SYB3R.
+[2015-10-05T19:06:16.711Z] (voidleague) Void Lonely was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-05T19:06:25.839Z] (voidleague) Void Lonely was unmuted by Sam Crowe.
+[2015-10-06T00:00:12.087Z] (voidleague) Exiled Shadows was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-06T00:01:17.074Z] (voidleague) Exiled Shadows was unmuted by Void Ventus.
+[2015-10-06T02:20:20.820Z] (voidleague) Void Peng was muted by Void SYB3R for 7 minutes. (hes mine get ur own bbc)
+[2015-10-06T02:20:31.367Z] (voidleague) Void Peng was unmuted by Void SYB3R.
+[2015-10-06T02:40:14.420Z] (voidleague) Void Who was muted by Void SYB3R for 7 minutes.
+[2015-10-06T02:40:49.625Z] (voidleague) Guest 3049 was unmuted by Void SYB3R.
+[2015-10-06T02:50:09.992Z] (voidleague) Grateful was warned by Safety Shark. (Automated response: stretching)
+[2015-10-06T02:52:10.797Z] (voidleague) Grateful was kicked from the room by Void Who.
+[2015-10-06T02:52:37.984Z] (voidleague) Void Who was kicked from the room by Void SYB3R.
+[2015-10-06T03:46:50.643Z] (voidleague) (Safety Shark notes: voidsyb3r was added to the blacklist by #Void SYB3R - ⓗⓐⓧ.)
+[2015-10-06T03:46:59.733Z] (voidleague) Void SYB3R - ⓗⓐⓧ was banned from room voidleague by Safety Shark. (Blacklisted user)
+[2015-10-06T03:47:17.815Z] (voidleague) voidsyb3r was unbanned from room voidleague by Void Trent - ⒶⓌⒶⓎ.
+[2015-10-06T03:47:22.582Z] (voidleague) Void SYB3R - ⓗⓐⓧ was appointed Room Owner by Void Trent - ⒶⓌⒶⓎ.
+[2015-10-06T20:17:13.419Z] (voidleague) (voidquilluminati was demoted to Room regular user by Void Chrono.)
+[2015-10-06T20:17:20.494Z] (voidleague) (void pyrate was demoted to Room regular user by Void Chrono.)
+[2015-10-06T20:17:21.519Z] (voidleague) (Sam Crowe changed the roomintro.)
+[2015-10-06T20:18:04.367Z] (voidleague) (voidprate was demoted to Room regular user by Void Chrono.)
+[2015-10-07T16:48:48.645Z] (voidleague) Arjunb was warned by Safety Shark. (Automated response: caps)

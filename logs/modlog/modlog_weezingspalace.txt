@@ -187,3 +187,5 @@
 [2015-09-27T14:44:35.194Z] (weezingspalace) Starpower Ochi was promoted to Room Driver by TheWeezingBro.
 [2015-09-27T14:51:41.809Z] (weezingspalace) Clara Uchiha was promoted to Room Driver by TheWeezingBro.
 [2015-09-27T15:04:05.230Z] (weezingspalace) Twizz was muted by TheWeezingBro for 7 minutes.
+[2015-10-05T23:53:03.082Z] (weezingspalace) Champ Vicky was appointed Room Owner by TheWeezingBro.
+[2015-10-05T23:59:19.799Z] (weezingspalace) Safety Shark was promoted to Room Leader by Champ Vicky.

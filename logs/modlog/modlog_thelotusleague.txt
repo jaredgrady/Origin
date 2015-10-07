@@ -3550,3 +3550,132 @@
 [2015-10-05T13:19:11.431Z] (thelotusleague) GTX♅CruiseGawd was promoted to Room Voice by HeadRecruiter♅Dvd.
 [2015-10-05T13:28:57.714Z] (thelotusleague) (The tournament was set to allow scouting by GTX♅Humper)
 [2015-10-05T13:38:26.997Z] (thelotusleague) (GL♅dawgk created a tournament in monotype format.)
+[2015-10-05T14:05:17.186Z] (thelotusleague) (HM Vodoom was disqualified from the tournament by gl aron)
+[2015-10-05T14:11:30.127Z] (thelotusleague) (GTX♅Humper was disqualified from the tournament by GTX♅Humper)
+[2015-10-05T14:16:09.110Z] (thelotusleague) (GL♅dawgk was disqualified from the tournament by Commander☬Pheonix۞)
+[2015-10-05T14:31:50.525Z] (thelotusleague) (GL♅ Zero was disqualified from the tournament by GL♅Aron)
+[2015-10-05T14:34:02.380Z] (thelotusleague) Firespice was promoted to Room Voice by Commander☬Pheonix۞.
+[2015-10-05T14:36:28.468Z] (thelotusleague) (Safety Shark created a tournament in customgame format.)
+[2015-10-05T14:38:16.274Z] (thelotusleague) (GL♅Aron forcibly ended a tournament.)
+[2015-10-05T14:38:25.973Z] (thelotusleague) (GL♅Aron created a tournament in monotype format.)
+[2015-10-05T14:41:07.991Z] (thelotusleague) (The tournament auto start timeout was set to 2.23456787654321345676543234567 by GTX♅Kirito)
+[2015-10-05T14:42:21.090Z] (thelotusleague) (The tournament auto start timeout was set to 0.5234565322345676543 by GTX♅Kirito)
+[2015-10-05T14:42:44.981Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: stretching)
+[2015-10-05T14:45:33.485Z] (thelotusleague) Firespice was promoted to Room Driver by Commander☬Pheonix۞.
+[2015-10-05T14:46:23.136Z] (thelotusleague) Alliance Meta was promoted to Room Voice by Commander☬Pheonix۞.
+[2015-10-05T14:46:49.580Z] (thelotusleague) (The tournament auto disqualify timeout was set to 2 by Alliance Meta)
+[2015-10-05T15:05:01.584Z] (thelotusleague) GTX♅Humper was warned by GL♅Aron. (dont)
+[2015-10-05T15:25:43.360Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-05T15:35:34.704Z] (thelotusleague) (professorjay was demoted to Room regular user by Lotus Champ Torpid.)
+[2015-10-05T16:10:16.920Z] (thelotusleague) (Alliance Meta forcibly ended a tournament.)
+[2015-10-05T16:12:45.600Z] (thelotusleague) (GTX♅Humper created a tournament in monotype format.)
+[2015-10-05T16:22:00.339Z] (thelotusleague) (The tournament auto start timeout was set to 1 by GTX♅Kirito - ⒶⓌⒶⓎ)
+[2015-10-05T16:28:10.423Z] (thelotusleague) Ria888 was warned by HeadRecruiter♅Dvd. (stop)
+[2015-10-05T16:37:18.155Z] (thelotusleague) (The tournament was set to disallow scouting by GTX♅Humper)
+[2015-10-05T16:48:56.494Z] (thelotusleague) (The tournament was set to disallow scouting by GTX♅Kirito)
+[2015-10-05T16:52:43.820Z] (thelotusleague) Ria888 was warned by HeadRecruiter♅Dvd. (thank you captain obvious)
+[2015-10-05T16:57:35.435Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T16:57:43.571Z] (thelotusleague) HV Izaya was kicked from the room by GL%Grimsley.
+[2015-10-05T16:57:46.469Z] (thelotusleague) Alliance Meta was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-05T16:58:05.016Z] (thelotusleague) Alliance Meta was unmuted by HeadRecruiter♅Dvd.
+[2015-10-05T17:04:36.156Z] (thelotusleague) (The tournament auto disqualify timeout was set to 0.5 by Alliance Meta)
+[2015-10-05T17:04:58.494Z] (thelotusleague) (The tournament auto disqualify timeout was set to 0.5234567654323456754321345678654324567 by GTX♅Kirito)
+[2015-10-05T17:05:08.689Z] (thelotusleague) (The tournament auto disqualify timeout was set to 1 by HeadRecruiter♅Dvd)
+[2015-10-05T17:05:26.930Z] (thelotusleague) (The tournament auto disqualify timeout was set to 10000001010010101010 by Alliance Meta)
+[2015-10-05T17:06:22.624Z] (thelotusleague) (The tournament auto disqualify timeout was set to 99999999999999999999999 by GTX♅Humper)
+[2015-10-05T17:06:47.255Z] (thelotusleague) (The tournament auto disqualify timeout was set to off by GTX♅Kirito)
+[2015-10-05T17:18:27.051Z] (thelotusleague) (HM Vodoom was disqualified from the tournament by GTX♅Humper)
+[2015-10-05T17:22:12.240Z] (thelotusleague) GTX♅Humper was warned by GL♅Aron. (dont)
+[2015-10-05T17:23:53.532Z] (thelotusleague) GTX♅Humper was warned by GL♅Aron. (dont)
+[2015-10-05T17:24:50.437Z] (thelotusleague) (GL♅Aron was demoted to Room Voice by HeadRecruiter♅Dvd.)
+[2015-10-05T17:32:09.762Z] (thelotusleague) GL♅Aron was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T17:36:57.053Z] (thelotusleague) GL♅Aron was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-05T17:50:38.498Z] (thelotusleague) GL♅Aron was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T17:54:19.134Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T17:54:30.818Z] (thelotusleague) GL♅Aron was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-05T18:22:14.955Z] (thelotusleague) GTX Kirito was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T20:47:16.505Z] (thelotusleague) (dusk blooper was demoted to Room regular user by lotus wincon.)
+[2015-10-05T20:47:45.821Z] (thelotusleague) (emgcmpbeasto was demoted to Room regular user by lotus wincon.)
+[2015-10-05T20:49:16.444Z] (thelotusleague) (lunarrings was demoted to Room regular user by lotus wincon.)
+[2015-10-05T20:49:33.843Z] (thelotusleague) (skymond was demoted to Room regular user by lotus wincon.)
+[2015-10-05T20:49:55.421Z] (thelotusleague) (tsuyaha was demoted to Room regular user by lotus wincon.)
+[2015-10-05T20:51:38.261Z] (thelotusleague) (taichiyaegashi was demoted to Room regular user by lotus wincon.)
+[2015-10-05T21:07:44.318Z] (thelotusleague) Hm Volco was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T21:09:32.865Z] (thelotusleague) (GL♅Incursio was demoted to Room Operator by lotus wincon.)
+[2015-10-05T21:09:44.135Z] (thelotusleague) GL♅Incursio was promoted to Room Driver by lotus wincon.
+[2015-10-05T21:11:02.909Z] (thelotusleague) Super Saiyan Volco was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T21:12:46.593Z] (thelotusleague) Super Saiyan Volco was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-05T21:12:46.594Z] (thelotusleague) (Super Saiyan Volco's ac account: emgglvolco)
+[2015-10-05T21:13:16.891Z] (thelotusleague) Super Saiyan Volco was unmuted by lotus wincon.
+[2015-10-05T21:13:32.399Z] (thelotusleague) Safety Shark was muted by lotus wincon for 1 hour.
+[2015-10-05T21:16:35.517Z] (thelotusleague) Safety Shark was unmuted by Prof ۩ Memphis.
+[2015-10-05T21:23:05.772Z] (thelotusleague) GL♅Aron was warned by Safety Shark. (Automated response: caps)
+[2015-10-05T21:27:06.151Z] (thelotusleague) (Hm Sableye created a tournament in monotype format.)
+[2015-10-05T21:51:35.105Z] (thelotusleague) GL♅Aron was promoted to Room Operator by Catalystic.
+[2015-10-05T22:04:43.653Z] (thelotusleague) GL♅Aron was promoted to Room Driver by lotus wincon.
+[2015-10-05T22:22:39.430Z] (thelotusleague) Lotus Faptastic was banned from room thelotusleague by lotus wincon.
+[2015-10-05T22:22:58.783Z] (thelotusleague) lotusfaptastic was unbanned from room thelotusleague by lotus wincon.
+[2015-10-05T22:25:10.319Z] (thelotusleague) (Lotus Axl was disqualified from the tournament by LotusChamp Torpid)
+[2015-10-05T22:25:16.979Z] (thelotusleague) (Safety Shark created a tournament in monotype format.)
+[2015-10-05T22:55:03.479Z] (thelotusleague) (The tournament auto disqualify timeout was set to 2 by GTX Stantler)
+[2015-10-05T23:15:16.671Z] (thelotusleague) lotus wincon declared if u wanna lvl say Sanic
+[2015-10-05T23:20:38.773Z] (thelotusleague) lotus wincon declared who wants to lvl
+[2015-10-05T23:21:50.668Z] (thelotusleague) lotus wincon declared lvl vs HM League
+[2015-10-05T23:22:02.339Z] (thelotusleague) lotus wincon declared Klaka vs Bit game 1
+[2015-10-05T23:27:28.986Z] (thelotusleague) lotus wincon declared Lotus-0 HM-1
+[2015-10-05T23:37:09.337Z] (thelotusleague) lotus wincon declared Lotus-1 HM-1
+[2015-10-05T23:42:43.120Z] (thelotusleague) lotus wincon declared Lotus-2 HM-1
+[2015-10-05T23:42:49.553Z] (thelotusleague) lotus wincon declared We win 
+[2015-10-06T00:21:24.186Z] (thelotusleague) cloyy was unbanned from room thelotusleague by lotus wincon.
+[2015-10-06T00:34:03.812Z] (thelotusleague) (GTX♅CruiseGawd created a tournament in monotype format.)
+[2015-10-06T00:44:59.346Z] (thelotusleague) GTX Klaka was kicked from the room by Lotus Faptastic.
+[2015-10-06T00:45:11.092Z] (thelotusleague) Lotus Faptastic was warned by Professor Panders. (abuse. and being rude.)
+[2015-10-06T01:14:27.332Z] (thelotusleague) Emperor⚔Lu Bu♘ declared .
+[2015-10-06T02:05:31.036Z] (thelotusleague) GL QueBien was muted by lotus wincon for 1 hour.
+[2015-10-06T02:05:39.916Z] (thelotusleague) GL QueBien was unmuted by lotus wincon.
+[2015-10-06T02:07:46.371Z] (thelotusleague) (Hm Sableye created a tournament in monotype format.)
+[2015-10-06T02:18:07.049Z] (thelotusleague) GL QueBien was kicked from the room by Lotus Glare.
+[2015-10-06T02:18:23.454Z] (thelotusleague) (Lotus Glare forcibly ended a tournament.)
+[2015-10-06T02:19:59.727Z] (thelotusleague) GL QueBien was banned from room thelotusleague by Lotus Glare.
+[2015-10-06T02:23:51.665Z] (thelotusleague) glquebien was unbanned from room thelotusleague by Lotus Glare.
+[2015-10-06T02:25:32.032Z] (thelotusleague) Hm Reapz was banned from room thelotusleague by Lotus Glare.
+[2015-10-06T02:33:24.929Z] (thelotusleague) GL QueBien was muted by Lotus Glare for 7 minutes.
+[2015-10-06T02:35:46.871Z] (thelotusleague) GL%Grimsley was kicked from the room by Lotus Glare.
+[2015-10-06T02:37:57.248Z] (thelotusleague) Lotus Glare was kicked from the room by Lotus Champ Torpid.
+[2015-10-06T03:08:38.249Z] (thelotusleague) DJItsme was kicked from the room by GL♅Incursio.
+[2015-10-06T03:13:58.571Z] (thelotusleague) DJItsme was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T03:14:56.346Z] (thelotusleague) DJItsme was muted by GL%Grimsley for 7 minutes.
+[2015-10-06T03:17:10.671Z] (thelotusleague) DJItsme was unmuted by GL♅Incursio.
+[2015-10-06T03:45:40.803Z] (thelotusleague) DJItsme was promoted to Room Voice by Lotus Champ Torpid.
+[2015-10-06T12:51:25.455Z] (thelotusleague) GTX♅UndeadHumper was promoted to Room Voice by HeadRecruiter♅Dvd.
+[2015-10-06T12:52:02.120Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:03:37.972Z] (thelotusleague) (GL♅Devils notes: wut??)
+[2015-10-06T13:08:05.224Z] (thelotusleague) (GL♅Devils notes: how strange it is to say humper)
+[2015-10-06T13:20:22.530Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-06T13:21:23.577Z] (thelotusleague) (GL♅Devils was disqualified from the tournament by Alliance Meta)
+[2015-10-06T13:27:36.472Z] (thelotusleague) HeadRecruiter♅Dvd declared cute ghost
+[2015-10-06T13:27:45.696Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:48:34.140Z] (thelotusleague) (GTX♅Kirito created a tournament in gen2ubers format.)
+[2015-10-06T13:48:40.199Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:49:52.192Z] (thelotusleague) GTX♅UndeadHumper was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:49:56.627Z] (thelotusleague) (Alliance Meta forcibly ended a tournament.)
+[2015-10-06T13:52:02.978Z] (thelotusleague) Myst Boo was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:53:59.916Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-06T13:57:35.945Z] (thelotusleague) Myst Boo was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-06T13:57:46.609Z] (thelotusleague) Myst Boo was unmuted by GLDawgk.
+[2015-10-06T14:03:47.080Z] (thelotusleague) Alliance Meta was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-06T14:06:02.518Z] (thelotusleague) Wolf ☯ Suicune was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-06T14:06:13.369Z] (thelotusleague) Wolf ☯ Suicune was unmuted by GLDawgk.
+[2015-10-06T14:10:12.258Z] (thelotusleague) (GTX♅Kirito created a tournament in ce format.)
+[2015-10-06T14:10:18.459Z] (thelotusleague) (The tournament auto start timeout was set to 0.5 by GTX♅Kirito)
+[2015-10-06T14:19:11.337Z] (thelotusleague) (Wolf ☯ Suicune forcibly ended a tournament.)
+[2015-10-06T15:37:59.356Z] (thelotusleague) Professor Tenza was kicked from the room by Emperor⚔Lu Bu♘.
+[2015-10-06T17:42:50.938Z] (thelotusleague) (GTX♅Humper created a tournament in monotype format.)
+[2015-10-06T18:12:22.954Z] (thelotusleague) gtx kirito - ⒶⓌⒶⓎ was warned by Lotus Wincon. (u hate on ria and well all hate on you >:o)
+[2015-10-06T18:20:38.286Z] (thelotusleague) (The tournament auto disqualify timeout was set to 5 by GTX♅Humper)
+[2015-10-06T18:52:48.969Z] (thelotusleague) Hm Volco was warned by Emperor⚔Lu Bu♘.
+[2015-10-06T18:56:18.818Z] (thelotusleague) GTX Corruption was promoted to Room Voice by Emperor⚔Lu Bu♘.
+[2015-10-06T19:03:11.190Z] (thelotusleague) (Emperor⚔Lu Bu♘ forcibly ended a tournament.)
+[2015-10-06T19:03:26.042Z] (thelotusleague) (Emperor⚔Lu Bu♘ created a tournament in monotype format.)
+[2015-10-06T20:26:14.008Z] (thelotusleague) DJItsme was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-06T20:27:32.837Z] (thelotusleague) DJItsme was unmuted by LotusChamp Torpid.
