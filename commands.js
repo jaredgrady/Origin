@@ -1215,7 +1215,7 @@ roomintro: function (target, room, user) {
 		}
 		this.addModCommand("All " + count + " roomvoices have been cleared by " + user.name + ".");
 	},
-	deroomvoiceallhelp: ["/deroomvoiceall - Devoice all roomvoiced users. Requires: # & ~"],
+	deroomvoiceallhelp: ["/deroomvoiceall - Devoice all roomvoiced users. Requires: ~"],
 
 	banip: function (target, room, user) {
 		target = target.trim();
