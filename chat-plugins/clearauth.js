@@ -8,8 +8,7 @@ exports.commands = {
 			this.errorReply("You must specify a roomauth group you want to clear.");
 			return;
 		}
-		switch (target) {
-
+	switch (target) {
 		case 'voice':
 			var count = 0;
 			for (var userid in room.auth) {
@@ -36,10 +35,10 @@ exports.commands = {
 				}
 			}
 			if (!count) {
-			return this.sendReply("(This room has zero drivers)");
+				return this.sendReply("(This room has zero drivers)");
 			}
 			if (room.chatRoomData) {
-			Rooms.global.writeChatRoomData();
+				Rooms.global.writeChatRoomData();
 			}
 			this.addModCommand("All " + count + " drivers have been cleared by " + user.name + ".");
 			break;
@@ -48,16 +47,16 @@ exports.commands = {
 			break;
 			var count = 0;
 			for (var userid in room.auth) {
-			if (room.auth[userid] === '@') {
-				delete room.auth[userid];
-				count++;
+				if (room.auth[userid] === '@') {
+					delete room.auth[userid];
+					count++;
 			}
 		}
 			if (!count) {
-			return this.sendReply("(This room has zero mods)");
+				return this.sendReply("(This room has zero mods)");
 			}
 			if (room.chatRoomData) {
-			Rooms.global.writeChatRoomData();
+				Rooms.global.writeChatRoomData();
 		}
 			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
 		    break;
@@ -65,9 +64,9 @@ exports.commands = {
 			case 'roomowner':
 			var count = 0;
 			for (var userid in room.auth) {
-			if (room.auth[userid] === '#') {
-				delete room.auth[userid];
-				count++;
+				if (room.auth[userid] === '#') {
+					delete room.auth[userid];
+					count++;
 			}
 		}
 		if (!count) {
