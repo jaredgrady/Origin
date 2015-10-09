@@ -1332,3 +1332,72 @@
 [2015-10-07T17:09:31.997Z] (voidleague) 1 True Lycan was unmuted by Void Chrono.
 [2015-10-07T17:17:03.444Z] (voidleague) Commander☬Pheonix۞ was warned by Safety Shark. (Automated response: stretching)
 [2015-10-07T17:17:36.435Z] (voidleague) Commander☬Pheonix۞ was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-07T17:55:56.769Z] (voidleague) Void Trent was appointed Room Owner by Void Trent.
+[2015-10-07T18:34:51.354Z] (voidleague) Void Trent was appointed Room Owner by Void Trent.
+[2015-10-07T18:34:58.909Z] (voidleague) Void Deadpool was promoted to Room Driver by Void Trent.
+[2015-10-07T19:32:20.988Z] (voidleague) (Sam Crowe changed the roomintro.)
+[2015-10-07T21:46:58.216Z] (voidleague) Void Trent - ⒶⓌⒶⓎ was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T22:48:40.274Z] (voidleague) cyrull was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T00:07:34.044Z] (voidleague) iRoams was promoted to Room Voice by Sam Crowe.
+[2015-10-08T00:14:34.331Z] (voidleague) Megalinket was muted by Void SYB3R for 7 minutes.
+[2015-10-08T00:14:34.332Z] (voidleague) (Megalinket's ac account: breezelinket)
+[2015-10-08T00:14:42.839Z] (voidleague) Megalinket was unmuted by Void SYB3R.
+[2015-10-08T00:18:19.274Z] (voidleague) (Void Who created a tournament in monotype format.)
+[2015-10-08T00:34:37.563Z] (voidleague) Void Trent was banned from room voidleague by Void Gorve.
+[2015-10-08T00:35:33.612Z] (voidleague) voidtrent was unbanned from room voidleague by Sam Crowe.
+[2015-10-08T00:37:18.372Z] (voidleague) Void Trent was appointed Room Owner by Void Trent.
+[2015-10-08T00:38:42.704Z] (voidleague) Void Gorve was banned from room voidleague by Void Trent.
+[2015-10-08T00:44:54.016Z] (voidleague) voidgorve was unbanned from room voidleague by Sam Crowe.
+[2015-10-08T01:35:36.996Z] (voidleague) Void Gorve was appointed Room Owner by Nineage.
+[2015-10-08T01:36:13.339Z] (voidleague) zamuil was promoted to Room Voice by Void SYB3R.
+[2015-10-08T01:36:29.685Z] (voidleague) Void P!rate was promoted to Room Driver by Void SYB3R.
+[2015-10-08T01:37:48.383Z] (voidleague) (Void P!rate was demoted to Room Voice by Void SYB3R.)
+[2015-10-08T01:38:52.685Z] (voidleague) (Void P!rate was demoted to Room regular user by Void SYB3R.)
+[2015-10-08T01:50:13.509Z] (voidleague) gorve gorve was promoted to Room Voice by Void Gorve.
+[2015-10-08T01:51:24.718Z] (voidleague) G0rve G0rve was promoted to Room Voice by Void Gorve.
+[2015-10-08T01:56:26.993Z] (voidleague) Pir@te was promoted to Room Voice by Void Gorve.
+[2015-10-08T02:20:08.452Z] (voidleague) Void Gorve was appointed to Room Founder by Neo Soul.
+[2015-10-08T04:46:22.640Z] (voidleague) Void Trent was promoted to Room Leader by Void Gorve.
+[2015-10-08T04:46:30.318Z] (voidleague) (Void Trent changed the roomintro.)
+[2015-10-08T09:43:45.732Z] (voidleague) Arjunb was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T09:43:56.116Z] (voidleague) Arjunb was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T09:43:57.877Z] (voidleague) iRoams was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T09:51:36.327Z] (voidleague) Soprano Meiko was kicked from the room by Void Peng.
+[2015-10-08T09:58:40.330Z] (voidleague) Void Peng was muted by Void Chrono for 7 minutes.
+[2015-10-08T10:00:26.795Z] (voidleague) Soprano Meiko was kicked from the room by Void Chrono.
+[2015-10-08T10:02:00.376Z] (voidleague) Arjunb was kicked from the room by Void Peng.
+[2015-10-08T10:02:15.717Z] (voidleague) Void Peng was muted by Void Chrono for 7 minutes. (abuse)
+[2015-10-08T10:03:14.587Z] (voidleague) Void Peng was unmuted by Void Chrono.
+[2015-10-08T10:03:20.870Z] (voidleague) (Void Peng notes: im screen shotting all this, lol)
+[2015-10-08T10:04:36.237Z] (voidleague) Jay Swift - ⓈⓁⒺⒺⓅ was muted by Void Chrono for 7 minutes.
+[2015-10-08T10:07:25.446Z] (voidleague) Soprano Meiko was muted by Void Chrono for 7 minutes. (#BlameRoams)
+[2015-10-08T12:37:02.724Z] (voidleague) hooters was kicked from the room by Sam Crowe.
+[2015-10-08T16:20:35.919Z] (voidleague) (Void Cryptis changed the roomintro.)
+[2015-10-08T16:34:05.088Z] (voidleague) Void Lonely was appointed Room Owner by Void Gorve.
+[2015-10-08T16:34:20.513Z] (voidleague) Void Lonely was promoted to Room Voice by Void Gorve.
+[2015-10-08T17:56:02.098Z] (voidleague) Void Lonely was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T19:17:13.706Z] (voidleague) Void Peng was muted by Void SYB3R for 7 minutes.
+[2015-10-08T19:17:47.428Z] (voidleague) Void Peng - ⓐⓑⓤⓢⓔ was unmuted by Void SYB3R.
+[2015-10-08T20:52:52.904Z] (voidleague) Void Peng was appointed Room Owner by Void Gorve.
+[2015-10-08T20:53:07.707Z] (voidleague) Void Peng was promoted to Room Driver by Void Gorve.
+[2015-10-08T20:54:03.781Z] (voidleague) Void Julius was appointed Room Owner by Void Gorve.
+[2015-10-08T20:54:14.962Z] (voidleague) Void Julius was promoted to Room Driver by Void Gorve.
+[2015-10-08T20:57:48.730Z] (voidleague) yunG Sensory was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T21:17:47.046Z] (voidleague) Simon Sciences was promoted to Room Voice by Void Gorve.
+[2015-10-08T22:40:45.730Z] (voidleague) Void Stunfisk was kicked from the room by Sam Crowe.
+[2015-10-08T23:04:06.194Z] (voidleague) Alliance - Ralker was warned by Void SYB3R. (flood and being a nerd)
+[2015-10-09T00:13:43.151Z] (voidleague) void Jk was promoted to Room Voice by Void Cryptis.
+[2015-10-09T00:24:25.880Z] (voidleague) Void Lonely was banned from room voidleague by Void Daemon.
+[2015-10-09T00:24:29.307Z] (voidleague) Void Who was banned from room voidleague by Void Daemon.
+[2015-10-09T00:25:25.216Z] (voidleague) Void Daemon was banned from room voidleague by Void Chrono. (git rekt)
+[2015-10-09T00:25:30.742Z] (voidleague) voidlonely was unbanned from room voidleague by Void Chrono.
+[2015-10-09T00:25:31.859Z] (voidleague) voidwho was unbanned from room voidleague by Void Cryptis.
+[2015-10-09T00:25:56.489Z] (voidleague) voiddaemon was unbanned from room voidleague by Void Chrono.
+[2015-10-09T01:05:26.058Z] (voidleague) Void Peng was muted by Void SYB3R for 1 hour. (luv u too)
+[2015-10-09T01:06:27.974Z] (voidleague) Void Peng was unmuted by Sam Crowe.
+[2015-10-09T02:06:37.368Z] (voidleague) (Void Lonely created a tournament in monotype format.)
+[2015-10-09T02:07:25.158Z] (voidleague) (Void Lonely forcibly ended a tournament.)
+[2015-10-09T02:16:30.177Z] (voidleague) Void Lonely was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T02:16:55.476Z] (voidleague) Void Lonely was unmuted by Void Peng.
+[2015-10-09T02:17:34.875Z] (voidleague) Void Lonely was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-09T02:17:47.781Z] (voidleague) Void Lonely was unmuted by Void Peng.

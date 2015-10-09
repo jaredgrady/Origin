@@ -1833,3 +1833,90 @@
 [2015-10-07T16:56:03.816Z] (theallianceleague) (Dream Eater Gengar changed the roomdesc to: "Deg is love, Deg is life".)
 [2015-10-07T16:56:29.318Z] (theallianceleague) (Dream Eater Gengar changed the roomdesc to: "DEG is love, DEG is life. Ghast sucks >~<!".)
 [2015-10-07T16:56:43.868Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T17:24:10.480Z] (theallianceleague) Chleg was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-07T17:24:15.244Z] (theallianceleague) Chleg was unmuted by Dream Eater Gengar.
+[2015-10-07T19:19:26.485Z] (theallianceleague) air jak 11 was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-07T19:19:41.400Z] (theallianceleague) air jak 11 was unmuted by Alliance TheThorn.
+[2015-10-07T19:32:10.224Z] (theallianceleague) TheAce22 was kicked from the room by Alliance)Fila.
+[2015-10-07T20:00:02.960Z] (theallianceleague) Lacking Luster was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-07T20:00:08.831Z] (theallianceleague) Lacking Luster was banned from room theallianceleague by Alliance~Destiny.
+[2015-10-07T20:00:08.834Z] (theallianceleague) (Lacking Luster's roombanned alts: air jak 11)
+[2015-10-07T20:03:33.717Z] (theallianceleague) lackingluster was unbanned from room theallianceleague by Alliance - Diag.
+[2015-10-07T20:24:00.610Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T20:27:56.847Z] (theallianceleague) Graced Destiny was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T20:29:50.904Z] (theallianceleague) Chleg was warned by Grateful. (inap)
+[2015-10-07T20:42:22.342Z] (theallianceleague) Alliance - Sakis was promoted to Room Driver by Alliance - Ghast.
+[2015-10-07T20:43:19.510Z] (theallianceleague) Alliance - Ghast declared WELCOME LEE
+[2015-10-07T20:43:58.774Z] (theallianceleague) Chleg was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T23:43:00.575Z] (theallianceleague) Alliance - Diag declared Congrats on Soma for reaching Rank 2, it will take a bit to top Prosaic but keep up the good work and don't stop your relentlessness.
+[2015-10-08T00:03:58.114Z] (theallianceleague) iRoams was promoted to Room Operator by Alliance - Lee.
+[2015-10-08T00:04:03.381Z] (theallianceleague) (Grateful was demoted to Room regular user by Alliance - Lee.)
+[2015-10-08T00:07:26.303Z] (theallianceleague) (not luds was demoted to Room regular user by Alliance - Contort.)
+[2015-10-08T00:07:29.992Z] (theallianceleague) (div luds was demoted to Room regular user by Alliance - Contort.)
+[2015-10-08T00:29:00.861Z] (theallianceleague) Alliance - Ghast declared welcome our newest trainer
+[2015-10-08T00:29:06.328Z] (theallianceleague) Alliance - Ghast declared Venonat!
+[2015-10-08T00:30:14.186Z] (theallianceleague) Alliance - Soma was promoted to Room Moderator by Alliance - Ghast.
+[2015-10-08T00:58:01.104Z] (theallianceleague) (Alliance - Ghast created a tournament in monotype format.)
+[2015-10-08T01:00:20.763Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance - Ghast)
+[2015-10-08T01:02:23.450Z] (theallianceleague) Gratitude was promoted to Room Voice by Alliance - Ghast.
+[2015-10-08T01:12:05.443Z] (theallianceleague) Robin Jump City was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T01:12:13.763Z] (theallianceleague) Robin Jump City was banned from room theallianceleague by AllianceAsurax - Ⓢ.
+[2015-10-08T01:14:38.042Z] (theallianceleague) A Lynched Niggger was banned by L Chevy 12. (No.) (70.193.33.179)
+[2015-10-08T01:15:43.684Z] (theallianceleague) (L Chevy 12 notes: There's an evading troll on the lose, as you can tell. Keeping /mute or /roomban on copy paste or on hand would be a decent idea if you want to getem quicker)
+[2015-10-08T01:21:02.676Z] (theallianceleague) Alliance - Xever was banned by L Chevy 12. (You're still on the same range, try again) (70.193.7.82)
+[2015-10-08T01:23:57.786Z] (theallianceleague) Deez nuts haha was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T01:24:04.916Z] (theallianceleague) Deez nuts haha was banned from room theallianceleague by Alliance - Lee.
+[2015-10-08T01:24:17.406Z] (theallianceleague) AllianceAsurax - Ⓢ set modchat to autoconfirmed
+[2015-10-08T01:58:50.541Z] (theallianceleague) Alliance-Pezmango was muted by Alliance - Charen for 1 hour. (hi ^.^)
+[2015-10-08T01:58:57.869Z] (theallianceleague) Alliance-Pezmango was unmuted by Alliance - Charen.
+[2015-10-08T02:06:19.577Z] (theallianceleague) (LoD)Naskourge was demoted to Room regular user by Alliance - Ghast.)
+[2015-10-08T02:06:56.507Z] (theallianceleague) (Alliance - Ghast changed the roomdesc to: "Ghast is Love, Ghast is Life".)
+[2015-10-08T02:07:17.896Z] (theallianceleague) Gratitude was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T02:07:23.499Z] (theallianceleague) Gratitude was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T02:07:31.639Z] (theallianceleague) Gratitude was unmuted by AllianceAsurax - Ⓢ.
+[2015-10-08T02:16:10.637Z] (theallianceleague) Suspense's Return was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T02:16:17.210Z] (theallianceleague) (Alliance - Charen created a tournament in monotype format.)
+[2015-10-08T02:23:07.672Z] (theallianceleague) Alliance - Ghast set modchat to false
+[2015-10-08T02:48:20.375Z] (theallianceleague) (Alliаnce CаtsMеow created a tournament in monotype format.)
+[2015-10-08T03:14:50.384Z] (theallianceleague) (Alliance - Orange was disqualified from the tournament by Alliаnce CаtsMеow)
+[2015-10-08T03:23:43.373Z] (theallianceleague) (Allіance - Vеnus was disqualified from the tournament by Alliance - Ghast)
+[2015-10-08T04:43:25.866Z] (theallianceleague) knigkt was banned from room theallianceleague by Alliance - Ghast. (ikr)
+[2015-10-08T07:20:15.356Z] (theallianceleague) RayquazaOfDoom was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T17:42:12.329Z] (theallianceleague) Soprano Meiko was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T17:44:42.305Z] (theallianceleague) Soprano Meiko was unmuted by Alliance - Diag.
+[2015-10-08T17:49:01.482Z] (theallianceleague) Saur Chleg was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T19:05:41.504Z] (theallianceleague) (Alliance - Dreams created a tournament in ou format.)
+[2015-10-08T19:05:45.462Z] (theallianceleague) Saur Chleg was promoted to Room Voice by Alliance TheThorn.
+[2015-10-08T19:06:04.728Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance - Dreams)
+[2015-10-08T19:29:28.460Z] (theallianceleague) iRoams - Ⓚⓘⓣⓣⓔⓝ was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T19:30:09.081Z] (theallianceleague) Saur Hingo was kicked from the room by iRoams - Ⓚⓘⓣⓣⓔⓝ.
+[2015-10-08T19:50:38.808Z] (theallianceleague) Alliance TheThorn was appointed to Room Founder by Lt. Tesla.
+[2015-10-08T19:50:55.519Z] (theallianceleague) iRoams - Ⓚⓘⓣⓣⓔⓝ was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-08T19:51:01.517Z] (theallianceleague) iRoams - Ⓚⓘⓣⓣⓔⓝ was unmuted by Alliance - Dreams.
+[2015-10-08T19:51:09.231Z] (theallianceleague) (Alliance - Ghast was demoted to Room regular user by Lt. Tesla.)
+[2015-10-08T19:51:18.265Z] (theallianceleague) iRoams - Ⓚⓘⓣⓣⓔⓝ was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T19:51:22.967Z] (theallianceleague) iRoams - Ⓚⓘⓣⓣⓔⓝ was unmuted by Alliance - Dreams.
+[2015-10-08T19:51:56.516Z] (theallianceleague) Safety Shark was kicked from the room by Alliance - Contort.
+[2015-10-08T19:58:16.760Z] (theallianceleague) Alliance - Ghast was promoted to Room Voice by Alliance - Diag.
+[2015-10-08T20:06:11.650Z] (theallianceleague) iRoams was muted by Alliance - Contort for 7 minutes.
+[2015-10-08T20:06:17.313Z] (theallianceleague) iRoams was unmuted by Alliance - Contort.
+[2015-10-08T20:06:42.609Z] (theallianceleague) yunG Sensory was banned from room theallianceleague by Alliance - Contort.
+[2015-10-08T20:06:48.474Z] (theallianceleague) yungsensory was unbanned from room theallianceleague by Alliance - Contort.
+[2015-10-08T20:12:56.902Z] (theallianceleague) Diagnostic was muted by Alliance - Diag for 7 minutes.
+[2015-10-08T20:14:35.720Z] (theallianceleague) Query was promoted to Room Leader by Alliance - Diag.
+[2015-10-08T20:18:57.599Z] (theallianceleague) (Alliance - Soma was demoted to Room Driver by Alliance TheThorn.)
+[2015-10-08T22:14:41.089Z] (theallianceleague) (Allіance - Vеnus created a tournament in monotype format.)
+[2015-10-08T22:14:48.184Z] (theallianceleague) Alliance - Contort declared This is the E4 tour
+[2015-10-08T22:14:53.899Z] (theallianceleague) Alliance - Contort declared Sike
+[2015-10-08T22:28:33.385Z] (theallianceleague) (Allіance - Vеnus was disqualified from the tournament by Allіance - Vеnus)
+[2015-10-08T22:58:36.302Z] (theallianceleague) (Alliance - Contort changed the roomintro.)
+[2015-10-08T23:11:02.814Z] (theallianceleague) Alliance - Contort declared Dragon Trials for CrashingDraco
+[2015-10-08T23:12:00.171Z] (theallianceleague) Alliance - Contort declared Ground trials for CrashingDraco
+[2015-10-08T23:12:25.583Z] (theallianceleague) Alliance - Contort declared Soma (Neutral), Lee (Weakness), Sakis (Flying)
+[2015-10-08T23:14:14.950Z] (theallianceleague) Alliance - Contort declared Soma vs CrashingDraco
+[2015-10-09T00:20:00.696Z] (theallianceleague) Alliance-Zey was promoted to Room Voice by Alliance - Lee.
+[2015-10-09T00:42:21.004Z] (theallianceleague) Diagnostic was warned by Alliance - Guy. (dont be crazy fam, we all know im the hero)
+[2015-10-09T00:42:43.186Z] (theallianceleague) Alliance ~ Girl was promoted to Room Voice by Alliance - Lee.
+[2015-10-09T00:55:33.954Z] (theallianceleague) Alliance Crashy was warned by Alliance - Soma.
+[2015-10-09T00:57:19.243Z] (theallianceleague) Crashy u lord was muted by Alliance - Soma for 7 minutes.
+[2015-10-09T00:57:19.244Z] (theallianceleague) (Crashy u lord's ac account: vinsuspense)

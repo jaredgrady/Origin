@@ -186,3 +186,9 @@
 [2015-10-06T04:55:00.398Z] (shadowbanroom) Neo Soul temporarily banned the IP: 206.190.158.72
 [2015-10-06T05:29:40.854Z] (shadowbanroom) (Neo Soul has shadow banned: imtylr)
 [2015-10-06T19:22:39.353Z] (shadowbanroom) (Chimechoo has shadow banned: hvlamppost, lamppostweek (same as the other alts))
+[2015-10-08T02:21:32.160Z] (shadowbanroom) (Neo Soul has shadow banned: mormonmalaria)
+[2015-10-08T02:24:07.128Z] (shadowbanroom) (Neo Soul has unshadow banned: mormonmalaria)
+[2015-10-08T03:23:17.798Z] (shadowbanroom) (Neo Soul has unshadow banned: suspense)
+[2015-10-08T19:54:57.713Z] (shadowbanroom) (fender has unshadow banned: suspensesreturn, vinsuspense)
+[2015-10-09T04:24:58.955Z] (shadowbanroom) (Neo Soul has shadow banned: hooters)
+[2015-10-09T05:05:00.236Z] (shadowbanroom) hooters was banned by Neo Soul. (167.114.144.245)

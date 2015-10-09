@@ -517,3 +517,14 @@
 [2015-10-06T14:55:57.914Z] (thewolfpackleague) LOCK: [patchee] ac:[hamiltucky] by Not Orangejuice: evading... sorry m8 :/
 [2015-10-06T16:39:49.631Z] (staff) LOCK: [champvicky] by Void Cryptis
 [2015-10-06T16:51:35.080Z] (staff) LOCK: [champvicky] by SteelChar: evading a lock
+[2015-10-07T20:02:04.425Z] (staff) BAN: [lackingluster] by L Chevy 12: Back again for more spam
+[2015-10-08T01:09:54.992Z] (1v1) BAN: [whitecmahn] by L Chevy 12
+[2015-10-08T01:12:10.310Z] (japanslair) BAN: [robinjumpcity] by L Chevy 12: get out of here you buttfuck
+[2015-10-08T01:14:38.046Z] (theallianceleague) BAN: [alynchedniggger] by L Chevy 12: No.
+[2015-10-08T01:21:02.681Z] (theallianceleague) BAN: [alliancexever] by L Chevy 12: You're still on the same range, try again
+[2015-10-08T01:24:43.146Z] (thesaurleague) LOCK: [deeznutshaha] by Dream Eater Gengar
+[2015-10-08T01:25:57.784Z] (japanslair) BAN: [deeznutshaha] by L Chevy 12
+[2015-10-08T01:28:08.475Z] (thesaurleague) BAN: [thickdickdanny] by Dream Eater Gengar
+[2015-10-08T01:32:27.263Z] (japanslair) BAN: [mlgshrekisdreck] by Nineage
+[2015-10-08T06:07:13.867Z] (thelotusleague) LOCK: [pikpokpok] by i'm sora: harassment
+[2015-10-09T05:05:00.345Z] (shadowbanroom) BAN: [hooters] by Neo Soul

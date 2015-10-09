@@ -365,3 +365,9 @@
 [2015-10-06T17:58:30.686Z] (jurassicworld) IS Hawk set modchat to false
 [2015-10-06T18:30:46.998Z] (jurassicworld) (IS Hawk changed the roomintro.)
 [2015-10-06T18:57:05.294Z] (jurassicworld) IS Hawk set modchat to autoconfirmed
+[2015-10-08T01:47:12.076Z] (jurassicworld) (IS Hawk changed the roomintro.)
+[2015-10-08T02:06:16.401Z] (jurassicworld) (IS Hawk changed the roomintro.)
+[2015-10-08T02:07:02.728Z] (jurassicworld) (IS Hawk changed the roomintro.)
+[2015-10-08T04:41:34.681Z] (jurassicworld) Crystal Bogan was promoted to Room Voice by Tyrantrum Bot.
+[2015-10-08T06:13:33.638Z] (jurassicworld) Josqua was promoted to Room Voice by Tyrantrum Bot.
+[2015-10-08T08:45:55.053Z] (jurassicworld) Wolf Hawk was promoted to Room Voice by Tyrantrum Bot.

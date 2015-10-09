@@ -5704,3 +5704,18 @@
 [2015-10-06T21:05:59.316Z] (battle-ou-115939) Hm Zantier set modchat to +
 [2015-10-06T21:06:08.681Z] (battle-ou-115939) cloyy set modchat to false
 [2015-10-06T21:06:33.105Z] (battle-ubers-115932) SL Prof James was promoted to Player by SuRf LatIaS.
+[2015-10-07T21:11:20.796Z] (battle-almostanyability-116952) Hm ◕‿◕ Red - ⓩⓩⓩ was promoted to Player by HM Shade.
+[2015-10-07T21:23:20.247Z] (battle-almostanyability-116952) Zayano was promoted to Player by HM Shade.
+[2015-10-07T22:45:23.847Z] (battle-ou-117126) warlic set modchat to +
+[2015-10-07T22:59:26.681Z] (battle-customgame-117145) Wandering was promoted to Player by Anything Goes.
+[2015-10-08T02:13:10.432Z] (battle-monotype-117410) Hm Kaze set modchat to +
+[2015-10-08T02:13:48.222Z] (battle-monotype-117410) Saur Reshi was promoted to Room Voice by Hm Kaze.
+[2015-10-08T02:13:55.304Z] (battle-monotype-117410) Cloyy was promoted to Room Voice by Hm Kaze.
+[2015-10-08T16:01:09.262Z] (battle-monotype-117906) Surf Latias was promoted to Player by Phallus Eater.
+[2015-10-08T18:14:35.110Z] (battle-ou-118005) Vin Maverick was promoted to Room Voice by Vin Sythraxx.
+[2015-10-08T18:15:54.089Z] (battle-ou-118005) Vin Maverick was promoted to Player by Vin Sythraxx.
+[2015-10-08T19:55:18.167Z] (battle-monotype-118121) HM Lelouch set modchat to +
+[2015-10-08T20:38:46.087Z] (battle-monotype-118161) Crуѕtаl★Zеrо0 was promoted to Room Voice by Crystal Bogan.
+[2015-10-09T00:52:22.253Z] (battle-monotype-118474) Hm Bugy was promoted to Player by Hm Volco.
+[2015-10-09T01:17:50.692Z] (battle-ou-118520) Doctor Emboar11 set modchat to +
+[2015-10-09T01:18:01.997Z] (battle-ou-118520) Lotus Wincon was promoted to Room Voice by Cloyy - ⓦⓐⓡⓛⓘⓒ.

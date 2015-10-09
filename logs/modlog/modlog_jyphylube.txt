@@ -72,3 +72,25 @@
 [2015-08-29T07:00:46.875Z] (jyphylube) ashaury was promoted to Room Leader by SWL Jyph.
 [2015-08-30T20:44:38.681Z] (jyphylube) Imp Chompers was kicked from the room by SWL Panda.
 [2015-09-02T04:20:56.137Z] (jyphylube) Rain Hingo was promoted to Room Moderator by SWL Jyph.
+[2015-10-09T03:04:21.348Z] (jyphylube) hooters was kicked from the room by SWL Jyph.
+[2015-10-09T03:05:41.743Z] (jyphylube) Lt. Tesla made this room hidden.
+[2015-10-09T03:06:09.723Z] (jyphylube) Lt. Tesla turned on modjoin.
+[2015-10-09T03:06:09.738Z] (jyphylube) Lt. Tesla set modchat to +
+[2015-10-09T03:07:39.349Z] (jyphylube) Gongshow was promoted to Room Voice by SWL Jyph.
+[2015-10-09T03:11:44.408Z] (jyphylube) SWL Mullin was promoted to Room Moderator by SWL Jyph.
+[2015-10-09T03:12:56.257Z] (jyphylube) (ashaury was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:13:03.478Z] (jyphylube) (swlgryphon was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:13:20.685Z] (jyphylube) (swllordchoco was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:13:34.128Z] (jyphylube) (swl dawnmidst was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:14:21.977Z] (jyphylube) (dawnmidst was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:14:54.439Z] (jyphylube) (swl panda was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:15:01.161Z] (jyphylube) (swlvale was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:15:13.898Z] (jyphylube) (swlseo was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:15:56.820Z] (jyphylube) (impbarida was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:16:03.016Z] (jyphylube) (imppsiker was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:16:38.028Z] (jyphylube) (vxrecklessxv was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:16:50.449Z] (jyphylube) (impgrandcetus was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:17:09.402Z] (jyphylube) (impkaiba was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:17:25.566Z] (jyphylube) (ren00 was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:17:33.619Z] (jyphylube) (rainhingo was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T03:17:46.367Z] (jyphylube) (lotusrowboatjo was demoted to Room regular user by SWL Jyph.)

@@ -147,3 +147,16 @@
 [2015-10-05T21:00:56.675Z] (chronosroom) Hm Sableye was promoted to Room Voice by Void Chrono.
 [2015-10-05T21:08:26.477Z] (chronosroom) (Hm Sableye was demoted to Room regular user by Void Chrono.)
 [2015-10-05T21:08:30.164Z] (chronosroom) Hm Sableye was kicked from the room by Void Chrono.
+[2015-10-08T22:06:25.830Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:09:06.153Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:09:21.087Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:10:37.363Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:11:01.448Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:12:23.793Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:13:00.240Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:13:49.203Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:14:41.388Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:14:57.483Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:15:03.603Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:15:14.139Z] (chronosroom) (Void Chrono changed the roomintro.)
+[2015-10-08T22:15:22.727Z] (chronosroom) (Void Chrono changed the roomintro.)

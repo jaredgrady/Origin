@@ -257,3 +257,6 @@
 [2015-09-27T20:06:09.607Z] (smashbros) Joefriends was warned by Chaos Abra. (no u)
 [2015-09-27T20:21:19.534Z] (smashbros) Guildmaster Wiggly was warned by Safety Shark. (Automated response: stretching)
 [2015-10-06T21:55:26.600Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-07T21:49:01.954Z] (smashbros) Superdois was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T22:57:39.067Z] (smashbros) Superdois was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-08T17:27:47.944Z] (smashbros) (Eliwood_Emblem changed the roomintro.)

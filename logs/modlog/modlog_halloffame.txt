@@ -84,3 +84,6 @@
 [2015-10-06T19:30:31.919Z] (halloffame) i'm sora was promoted to Room Moderator by Dethroner*.
 [2015-10-06T20:36:40.893Z] (halloffame) Royalty⚡Diamond was promoted to Room Moderator by Dethroner*.
 [2015-10-06T20:37:55.078Z] (halloffame) Evil Kpike was promoted to Room Moderator by Dethroner*.
+[2015-10-07T23:30:56.114Z] (halloffame) Bushtush was promoted to Room Voice by Dethroner*.
+[2015-10-07T23:31:17.900Z] (halloffame) Bushtush was promoted to Room Moderator by Dethroner*.
+[2015-10-07T23:32:15.154Z] (halloffame) (Bushtush was demoted to Room regular user by Dethroner*.)

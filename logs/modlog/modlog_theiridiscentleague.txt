@@ -263,3 +263,16 @@
 [2015-10-06T12:15:06.372Z] (theiridiscentleague) Myst Boo was appointed Room Owner by Ashyudhajit.
 [2015-10-06T12:15:26.535Z] (theiridiscentleague) Myst Boo was promoted to Room Operator by Ashyudhajit.
 [2015-10-06T12:25:09.489Z] (theiridiscentleague) Sigma Fancii was promoted to Room Operator by Ashyudhajit - ⓛⓤⓒⓚ.
+[2015-10-08T12:13:30.868Z] (theiridiscentleague) Myst Boo was promoted to Room Driver by ashyudhajit.
+[2015-10-08T12:13:43.192Z] (theiridiscentleague) hooters was promoted to Room Operator by ashyudhajit.
+[2015-10-08T12:32:26.307Z] (theiridiscentleague) Safety Shark was muted by ashyudhajit for 7 minutes.
+[2015-10-08T12:34:31.731Z] (theiridiscentleague) Safety Shark was unmuted by ashyudhajit - ⓛⓤⓒⓚ.
+[2015-10-08T12:34:40.163Z] (theiridiscentleague) Safety Shark was muted by ashyudhajit - ⓛⓤⓒⓚ for 7 minutes.
+[2015-10-08T15:36:29.880Z] (theiridiscentleague) Safety Shark was muted by ashyudhajit for 1 hour.
+[2015-10-08T15:37:29.322Z] (theiridiscentleague) Safety Shark was kicked from the room by Irraquated.
+[2015-10-08T15:50:48.893Z] (theiridiscentleague) (Yudha-s Bot created a tournament in monotype format.)
+[2015-10-08T15:51:23.905Z] (theiridiscentleague) (ashyudhajit - ⒶⒻⓀ forcibly ended a tournament.)
+[2015-10-08T16:26:31.601Z] (theiridiscentleague) (Yudha-s Bot created a tournament in ou format.)
+[2015-10-08T16:42:27.172Z] (theiridiscentleague) (ashyudhajit forcibly ended a tournament.)
+[2015-10-08T17:32:00.740Z] (theiridiscentleague) (Yudha-s Bot created a tournament in ou format.)
+[2015-10-08T17:32:27.164Z] (theiridiscentleague) (ashyudhajit - ⓛⓤⓒⓚ forcibly ended a tournament.)

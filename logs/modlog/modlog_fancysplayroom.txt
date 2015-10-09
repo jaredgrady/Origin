@@ -444,3 +444,31 @@
 [2015-10-07T17:06:14.186Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
 [2015-10-07T17:08:03.787Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
 [2015-10-07T17:08:57.067Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T17:26:43.426Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T17:30:27.365Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T17:30:58.617Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T17:42:16.088Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T17:46:09.449Z] (fancysplayroom) Barista Fancii was appointed to Room Founder by Master Float.
+[2015-10-07T17:54:12.509Z] (fancysplayroom) Barista Fancii was appointed Room Owner by Barista Fancii.
+[2015-10-07T17:55:32.922Z] (fancysplayroom) Barista Fancii was appointed Room Owner by Barista Fancii.
+[2015-10-07T17:56:40.020Z] (fancysplayroom) Gentleman Tech was appointed Room Owner by Barista Fancii.
+[2015-10-07T18:31:39.678Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T18:54:03.153Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T18:55:20.754Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T18:56:48.185Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T18:57:16.677Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T19:09:25.412Z] (fancysplayroom) Barista Fancii declared KILO TECH
+[2015-10-07T19:42:02.404Z] (fancysplayroom) Barista Fancii was promoted to Room Operator by Phantom Theta.
+[2015-10-07T19:43:34.264Z] (fancysplayroom) (Barista Fancii was demoted to Room regular user by Gentleman Tech.)
+[2015-10-07T20:36:04.749Z] (fancysplayroom) Barista Fancii was appointed Room Owner by Barista Fancii.
+[2015-10-07T22:01:30.834Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-07T22:10:04.090Z] (fancysplayroom) (Gentleman Tech changed the roomintro.)
+[2015-10-07T22:39:47.463Z] (fancysplayroom) (Phantom Theta was demoted to Room Driver by Gentleman Tech.)
+[2015-10-07T22:39:52.373Z] (fancysplayroom) Phantom Theta was promoted to Room Moderator by Gentleman Tech.
+[2015-10-07T22:45:59.868Z] (fancysplayroom) Phantom Thet@ was muted by Phantom Theta for 1 hour.
+[2015-10-07T22:45:59.869Z] (fancysplayroom) (Phantom Thet@'s ac account: baristafancii)
+[2015-10-07T22:46:14.996Z] (fancysplayroom) Phantom Thet@ was unmuted by Phantom Theta.
+[2015-10-08T17:52:46.587Z] (fancysplayroom) hooters was kicked from the room by Gentleman Tech.
+[2015-10-08T20:50:12.867Z] (fancysplayroom) HM Vodoom was promoted to Room Moderator by Gentleman Tech.
+[2015-10-08T20:50:32.822Z] (fancysplayroom) HM Vodoom was promoted to Room Leader by Barista Fancii.
+[2015-10-08T20:50:45.133Z] (fancysplayroom) (HM Vodoom was demoted to Room Voice by Barista Fancii.)

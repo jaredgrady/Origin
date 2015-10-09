@@ -3154,3 +3154,25 @@
 [2015-10-06T17:49:34.935Z] (portugus) Safety Shark was warned by Chesnaught-mega. (+meme)
 [2015-10-06T18:30:33.208Z] (portugus) (Chesnaught-mega created a tournament in ce format.)
 [2015-10-06T18:31:13.886Z] (portugus) (Chesnaught-mega forcibly ended a tournament.)
+[2015-10-07T17:20:55.673Z] (portugus) (Safety Shark notes: leticiamartini was added to the blacklist by #Chesnaught-mega.)
+[2015-10-07T18:29:53.853Z] (portugus) Grafite set modchat to ~
+[2015-10-07T18:29:59.425Z] (portugus) ChEsNaUgHT-mEga set modchat to false
+[2015-10-07T18:30:09.890Z] (portugus) Grafite set modchat to autoconfirmed
+[2015-10-07T18:50:37.383Z] (portugus) (Grafite mass PMd: assim?)
+[2015-10-07T18:58:16.103Z] (portugus) Safety Shark was appointed Room Owner by Chesnaught-mega.
+[2015-10-07T18:58:26.557Z] (portugus) Cremosin was banned from room portugus by Safety Shark. (♥ ^_^ ♥)
+[2015-10-07T18:58:26.560Z] (portugus) (Cremosin's ac account: grafite)
+[2015-10-07T18:58:27.186Z] (portugus) cremosin was unbanned from room portugus by Safety Shark.
+[2015-10-07T18:58:27.863Z] (portugus) (Safety Shark notes: cremosin was rk'd by #Chesnaught-mega)
+[2015-10-07T21:24:46.346Z] (portugus) leticia martini was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-07T21:24:46.350Z] (portugus) (leticia martini's ac account: wolfsilva)
+[2015-10-07T22:27:43.719Z] (portugus) Grafite was appointed Room Owner by Chesnaught-mega.
+[2015-10-07T22:28:55.302Z] (portugus) Safety Shark was promoted to Room Moderator by Grafite.
+[2015-10-08T16:33:55.756Z] (portugus) hooters was banned from room portugus by Safety Shark. (♥ ^_^ ♥)
+[2015-10-08T16:33:56.431Z] (portugus) hooters was unbanned from room portugus by Safety Shark.
+[2015-10-08T16:33:57.107Z] (portugus) (Safety Shark notes: hooters was rk'd by #Chesnaught-mega)
+[2015-10-08T18:10:51.352Z] (portugus) (Chesnaught-mega created a tournament in ou format.)
+[2015-10-08T18:24:46.339Z] (portugus) (Chesnaught-mega forcibly ended a tournament.)
+[2015-10-08T18:24:55.207Z] (portugus) (Chesnaught-mega created a tournament in randombattle format.)
+[2015-10-08T18:31:41.985Z] (portugus) (The tournament auto disqualify timeout was set to 1 by Chesnaught-mega)
+[2015-10-08T18:40:14.764Z] (portugus) (Hgzenni.exe was disqualified from the tournament by Chesnaught-mega)

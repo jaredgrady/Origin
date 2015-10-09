@@ -2162,3 +2162,23 @@
 [2015-10-06T21:25:24.780Z] (casino) Grateful was warned by Karlpower. (Reasoning: threatening users. ([17:24:25] +Grateful: join or i ban u from Japans lair))
 [2015-10-06T21:31:31.042Z] (casino) (karlpower was demoted to Room regular user by L Chevy 12.)
 [2015-10-06T21:31:37.931Z] (casino) Harvest God was promoted to Room Driver by L Chevy 12.
+[2015-10-07T20:30:26.629Z] (casino) GTX♅RainManaphy was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T20:35:18.763Z] (casino) Dylightful was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T20:37:02.274Z] (casino) GTX♅RainManaphy was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-07T20:37:06.649Z] (casino) GTX♅RainManaphy was unmuted by Harvest God.
+[2015-10-08T12:21:38.849Z] (casino) hooters was kicked from the room by rubyD.
+[2015-10-08T12:35:59.419Z] (casino) FuzzBot was kicked from the room by Irraquated.
+[2015-10-08T17:30:09.382Z] (casino) (Crystal Gray - ⒶⒻⓀ notes: http://pastebin.com/gkhYhj6X)
+[2015-10-08T21:31:16.410Z] (casino) Knight Starfox~ was promoted to Room Operator by Anything Goes.
+[2015-10-08T22:15:09.013Z] (casino) iRoams was promoted to Room Voice by Anything Goes.
+[2015-10-08T22:15:22.392Z] (casino) (grateful was demoted to Room regular user by Anything Goes.)
+[2015-10-08T22:53:36.603Z] (casino) Mercury Boss was promoted to Room Voice by Anything Goes.
+[2015-10-08T22:53:41.573Z] (casino) (bossbitch was demoted to Room regular user by Anything Goes.)
+[2015-10-08T22:55:10.849Z] (casino) (starfoxfan was demoted to Room regular user by Crystal Gray.)
+[2015-10-09T01:35:53.032Z] (casino) juleocesar was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T02:48:46.989Z] (casino) Lotus Wincon was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T02:59:31.195Z] (casino) Lags was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T02:59:51.366Z] (casino) Lags was warned by Director Beast. (stop lags)
+[2015-10-09T03:00:10.913Z] (casino) Catalystic was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T03:01:27.765Z] (casino) Lags was warned by GTX♅Stantler.
+[2015-10-09T03:01:57.799Z] (casino) Pk Roam was warned by GTX♅Stantler.

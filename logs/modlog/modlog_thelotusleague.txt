@@ -3683,3 +3683,436 @@
 [2015-10-07T17:06:29.631Z] (thelotusleague) GTX♅Humper was muted by Safety Shark for 7 minutes. (Automated response: stretching)
 [2015-10-07T17:06:45.213Z] (thelotusleague) GTX♅Humper was unmuted by Commander☬Pheonix۞.
 [2015-10-07T17:07:33.226Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-07T17:43:56.915Z] (thelotusleague) (Asz1ran was disqualified from the tournament by Commander Pheonix)
+[2015-10-07T17:50:29.995Z] (thelotusleague) gtx geta is nub was kicked from the room by Commander Pheonix.
+[2015-10-07T17:50:37.634Z] (thelotusleague) Gtx Blue8 was kicked from the room by Commander Pheonix.
+[2015-10-07T17:55:33.543Z] (thelotusleague) gtx kirito was warned by Commander Pheonix.
+[2015-10-07T17:55:49.531Z] (thelotusleague) GTX ♅ Blue8 was promoted to Room Voice by HeadRecruiter♅Dvd.
+[2015-10-07T17:55:51.361Z] (thelotusleague) (gtx kirito was demoted to Room regular user by Commander Pheonix.)
+[2015-10-07T17:55:58.464Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to +
+[2015-10-07T17:56:21.316Z] (thelotusleague) Commander Pheonix declared WELCOME BLUE 
+[2015-10-07T17:58:54.775Z] (thelotusleague) (GTX♅Humper was demoted to Room regular user by Commander Pheonix.)
+[2015-10-07T17:59:21.424Z] (thelotusleague) Commander Pheonix set modchat to false
+[2015-10-07T17:59:39.584Z] (thelotusleague) GTX♅Humper was promoted to Room Voice by Prof Blooper.
+[2015-10-07T18:05:17.404Z] (thelotusleague) (Commander Pheonix created a tournament in monotype format.)
+[2015-10-07T18:05:47.593Z] (thelotusleague) GTX Kirito was promoted to Room Voice by Commander Pheonix.
+[2015-10-07T18:07:25.669Z] (thelotusleague) (Commander Pheonix forcibly ended a tournament.)
+[2015-10-07T18:07:31.198Z] (thelotusleague) (Commander Pheonix created a tournament in monotype format.)
+[2015-10-07T18:25:58.803Z] (thelotusleague) (Cloyy was disqualified from the tournament by GTX♅Humper)
+[2015-10-07T18:26:05.505Z] (thelotusleague) (GTX♅Humper was disqualified from the tournament by GTX♅Humper)
+[2015-10-07T18:26:53.958Z] (thelotusleague) (Commander Pheonix forcibly ended a tournament.)
+[2015-10-07T18:27:13.818Z] (thelotusleague) (Commander Pheonix created a tournament in monotype format.)
+[2015-10-07T18:54:53.728Z] (thelotusleague) Frontier♅Shredder was promoted to Room Voice by Commander Pheonix.
+[2015-10-07T19:15:40.320Z] (thelotusleague) (HeadRecruiter♅Dvd forcibly ended a tournament.)
+[2015-10-07T19:51:47.882Z] (thelotusleague) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-07T20:14:57.206Z] (thelotusleague) (Safety Shark created a tournament in monotype format.)
+[2015-10-07T20:26:48.780Z] (thelotusleague) GTX♅Royal was promoted to Room Voice by Professor Panders.
+[2015-10-07T20:57:56.893Z] (thelotusleague) GTX♅RainManaphy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-07T20:58:42.661Z] (thelotusleague) GTX♅RainManaphy was unmuted by Lotus Wincon.
+[2015-10-07T21:19:26.570Z] (thelotusleague) (Lotus Axl created a tournament in megatier format.)
+[2015-10-07T21:19:37.883Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-07T21:27:07.947Z] (thelotusleague) GTX♅Shocake was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T21:28:28.759Z] (thelotusleague) Hm Volco was warned by Safety Shark. (Automated response: stretching)
+[2015-10-07T21:40:29.591Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T21:50:16.603Z] (thelotusleague) GTX♅Humper was kicked from the room by Lotus Glare.
+[2015-10-07T21:50:27.348Z] (thelotusleague) Lotus Glare was kicked from the room by LotusChamp Torpid.
+[2015-10-07T21:52:43.309Z] (thelotusleague) cellgoondude was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T22:46:54.677Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T22:49:22.925Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-07T22:58:52.720Z] (thelotusleague) (GTX♅Humper was disqualified from the tournament by GTX♅Humper)
+[2015-10-07T23:19:45.103Z] (thelotusleague) (Catalystic was demoted to Room Moderator by Commander☬Pheonix۞.)
+[2015-10-07T23:21:59.993Z] (thelotusleague) Cloyy was promoted to Room Operator by Catalystic.
+[2015-10-07T23:22:03.589Z] (thelotusleague) (Cloyy was demoted to Room regular user by Catalystic.)
+[2015-10-07T23:29:31.858Z] (thelotusleague) GTX♅Bic Boi was promoted to Room Voice by Commander☬Pheonix۞.
+[2015-10-07T23:29:45.202Z] (thelotusleague) GTX♅Bic Boi was banned from room thelotusleague by Commander☬Pheonix۞.
+[2015-10-07T23:29:45.205Z] (thelotusleague) (GTX♅Bic Boi's ac account: glquebien)
+[2015-10-07T23:30:11.418Z] (thelotusleague) GTX♅Humper was warned by gl aron. (i hate you saying that you keep hling me for no reason)
+[2015-10-07T23:30:21.987Z] (thelotusleague) GTX♅Humper was warned by gl aron. (i hate you saying that you keep hling me for no reason)
+[2015-10-07T23:30:28.906Z] (thelotusleague) gtxbicboi was unbanned from room thelotusleague by Commander☬Pheonix۞.
+[2015-10-07T23:30:53.100Z] (thelotusleague) GTX♅Humper was kicked from the room by gl aron.
+[2015-10-07T23:31:39.131Z] (thelotusleague) (gl aron was demoted to Room Voice by Commander☬Pheonix۞.)
+[2015-10-07T23:31:46.283Z] (thelotusleague) gl aron was muted by Professor Panders for 7 minutes.
+[2015-10-07T23:31:56.162Z] (thelotusleague) gl aron was unmuted by Professor Panders.
+[2015-10-07T23:32:26.684Z] (thelotusleague) gl aron was promoted to Room Driver by Commander☬Pheonix۞.
+[2015-10-07T23:40:35.727Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-07T23:52:39.093Z] (thelotusleague) DJ Gible was banned from room thelotusleague by Lotus Glare.
+[2015-10-07T23:54:54.108Z] (thelotusleague) Pythоn was kicked from the room by Lotus Glare.
+[2015-10-07T23:56:34.984Z] (thelotusleague) djgible was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-07T23:57:18.284Z] (thelotusleague) Lotus Glare was kicked from the room by LotusChamp Torpid.
+[2015-10-08T00:01:47.249Z] (thelotusleague) (Safety Shark created a tournament in monotype format.)
+[2015-10-08T00:05:51.291Z] (thelotusleague) Pythоn was kicked from the room by Lotus Glare.
+[2015-10-08T00:06:29.359Z] (thelotusleague) Lotus Glare was kicked from the room by LotusChamp Torpid.
+[2015-10-08T00:07:58.320Z] (thelotusleague) GTX♅Bzumzum was muted by Lotus Glare for 7 minutes.
+[2015-10-08T00:08:02.756Z] (thelotusleague) Commander☬Pheonix۞ set modchat to @
+[2015-10-08T00:08:25.014Z] (thelotusleague) Commander☬Pheonix۞ set modchat to false
+[2015-10-08T00:08:36.843Z] (thelotusleague) GTX♅Bzumzum was unmuted by LotusChamp Torpid.
+[2015-10-08T00:08:45.418Z] (thelotusleague) Pythоn was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T00:08:55.916Z] (thelotusleague) GTX♅Bzumzum was muted by Lotus Glare for 7 minutes.
+[2015-10-08T00:09:08.044Z] (thelotusleague) GTX♅Bzumzum was unmuted by LotusChamp Torpid.
+[2015-10-08T00:30:38.346Z] (thelotusleague) BicFatBoi123 was warned by Commander☬Pheonix۞.
+[2015-10-08T00:30:56.741Z] (thelotusleague) BicFatBoi123 was muted by Commander☬Pheonix۞ for 7 minutes.
+[2015-10-08T00:31:11.764Z] (thelotusleague) GL QueBien was banned from room thelotusleague by Lotus Glare.
+[2015-10-08T00:31:28.570Z] (thelotusleague) BicFatBoi123 was unmuted by Lotus Glare.
+[2015-10-08T00:33:04.815Z] (thelotusleague) GTX♅BicFatBoi was promoted to Room Voice by Lotus Glare.
+[2015-10-08T00:33:19.825Z] (thelotusleague) Commander☬Pheonix۞ declared WELCOME BOI
+[2015-10-08T00:36:40.443Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-08T00:36:48.417Z] (thelotusleague) (GTX♅Humper forcibly ended a tournament.)
+[2015-10-08T00:37:37.174Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-08T00:37:39.982Z] (thelotusleague) (Lotus Glare forcibly ended a tournament.)
+[2015-10-08T00:37:56.234Z] (thelotusleague) Lotus Glare was kicked from the room by Commander☬Pheonix۞.
+[2015-10-08T00:38:50.075Z] (thelotusleague) (Lotus Glare was demoted to Room Voice by Commander☬Pheonix۞.)
+[2015-10-08T00:39:15.347Z] (thelotusleague) lotusglare was promoted to Room Moderator by Commander☬Pheonix۞.
+[2015-10-08T00:51:52.924Z] (thelotusleague) DJ☢Itsme was kicked from the room by Commander☬Pheonix۞.
+[2015-10-08T00:53:04.903Z] (thelotusleague) DJ☢Itsme was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T01:01:55.299Z] (thelotusleague) Frontier♅EnZo was kicked from the room by Lotus Wincon.
+[2015-10-08T01:28:25.035Z] (thelotusleague) (DJ☢Itsme - ⓢⓣⓤⓕⓕ was demoted to Room regular user by Lotus Glare.)
+[2015-10-08T01:29:35.337Z] (thelotusleague) DJ☢Itsme - ⓢⓣⓤⓕⓕ was kicked from the room by Lotus Glare.
+[2015-10-08T01:31:27.181Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Commander☬Pheonix۞.
+[2015-10-08T01:31:58.347Z] (thelotusleague) (Erica*07 was demoted to Room Voice by Lotus Maura.)
+[2015-10-08T01:35:53.354Z] (thelotusleague) Lotus DJLuna was promoted to Room Leader by Lotus Maura.
+[2015-10-08T01:37:29.624Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T01:42:45.430Z] (thelotusleague) GTX♅Humper was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T01:43:28.242Z] (thelotusleague) GTX♅Humper was unmuted by LotusChamp Torpid.
+[2015-10-08T01:44:04.580Z] (thelotusleague) Lotus Maura set modchat to @
+[2015-10-08T01:45:36.305Z] (thelotusleague) Lotus Maura set modchat to false
+[2015-10-08T01:57:07.612Z] (thelotusleague) Lotus Itsme was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T01:59:16.761Z] (thelotusleague) Breeze Poke was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T01:59:34.027Z] (thelotusleague) Breeze Poke was muted by Lotus Maura for 7 minutes.
+[2015-10-08T02:00:53.394Z] (thelotusleague) Lotus Itsme was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-08T02:01:50.709Z] (thelotusleague) Its Me DEEZ NUTS was kicked from the room by Lotus Maura.
+[2015-10-08T02:02:31.080Z] (thelotusleague) Its Me DEEZ NUTS was muted by Lotus Maura for 7 minutes.
+[2015-10-08T02:02:31.081Z] (thelotusleague) (Its Me DEEZ NUTS's ac account: gtxrainmanaphy)
+[2015-10-08T02:04:33.928Z] (thelotusleague) Breeze Poke was unmuted by LotusChamp Torpid.
+[2015-10-08T02:04:38.981Z] (thelotusleague) GTX♅RainManaphy was unmuted by LotusChamp Torpid.
+[2015-10-08T02:06:50.481Z] (thelotusleague) Professor Gible was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-08T02:07:10.768Z] (thelotusleague) Lotus Itsme was promoted to Room Driver by LotusChamp Torpid.
+[2015-10-08T02:11:38.961Z] (thelotusleague) LotusChamp Torpid set modchat to #
+[2015-10-08T02:15:03.573Z] (thelotusleague) LotusChamp Torpid set modchat to false
+[2015-10-08T02:17:48.228Z] (thelotusleague) Prof NHHS set modchat to &
+[2015-10-08T02:19:39.254Z] (thelotusleague) Prof NHHS set modchat to false
+[2015-10-08T02:22:41.144Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-08T02:24:56.179Z] (thelotusleague) Pythоn was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T02:31:50.044Z] (thelotusleague) Lotus DJLuna was appointed Room Owner by Commander☬Pheonix۞.
+[2015-10-08T02:32:33.259Z] (thelotusleague) GL♅Grimsley was muted by Lotus Maura for 7 minutes.
+[2015-10-08T02:32:38.654Z] (thelotusleague) GL♅Grimsley was unmuted by Catalystic.
+[2015-10-08T02:32:58.581Z] (thelotusleague) Prof NHHS set modchat to &
+[2015-10-08T02:33:56.214Z] (thelotusleague) Prof NHHS set modchat to false
+[2015-10-08T02:38:52.975Z] (thelotusleague) Catalystic was promoted to Room Leader by Lotus Wincon.
+[2015-10-08T02:40:47.504Z] (thelotusleague) glquebien was unbanned from room thelotusleague by Lotus Wincon.
+[2015-10-08T02:42:49.770Z] (thelotusleague) Lotus Wincon set modchat to #
+[2015-10-08T02:42:52.403Z] (thelotusleague) Catalystic set modchat to ~
+[2015-10-08T02:43:00.458Z] (thelotusleague) Lotus Wincon set modchat to #
+[2015-10-08T02:43:04.481Z] (thelotusleague) (GL♅QueBien notes: not gtxbicfatboi)
+[2015-10-08T02:43:07.087Z] (thelotusleague) (Prof Blooper notes: rip )
+[2015-10-08T02:43:15.407Z] (thelotusleague) (Catalystic notes: yeah i recruited gtxbicfatboi)
+[2015-10-08T02:43:21.538Z] (thelotusleague) (GL♅QueBien notes: WOW GETA BANNED ME FOR NO REASON)
+[2015-10-08T02:43:27.663Z] (thelotusleague) (GL♅QueBien notes: SMFH)
+[2015-10-08T02:43:38.264Z] (thelotusleague) (GL♅QueBien notes: lmao)
+[2015-10-08T02:43:43.507Z] (thelotusleague) Catalystic set modchat to %
+[2015-10-08T02:43:45.109Z] (thelotusleague) (Prof Blooper notes: OU if for scrubs)
+[2015-10-08T02:44:01.484Z] (thelotusleague) Lotus Wincon set modchat to false
+[2015-10-08T02:49:08.333Z] (thelotusleague) Pythоn - Ⓣⓞⓡⓟⓘⓓ was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T02:49:10.533Z] (thelotusleague) Catalystic declared League Policy, all DJ members have to retest - Cat (correct)
+[2015-10-08T02:49:39.356Z] (thelotusleague) Pythоn - Ⓣⓞⓡⓟⓘⓓ was unmuted by Prof Blooper.
+[2015-10-08T02:57:03.697Z] (thelotusleague) (Lotus Maura was demoted to Room regular user by Catalystic.)
+[2015-10-08T02:57:11.359Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Catalystic.
+[2015-10-08T03:02:55.904Z] (thelotusleague) (Professor Gible created a tournament in 1v1 format.)
+[2015-10-08T03:04:32.643Z] (thelotusleague) Lotus Python was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-08T03:05:16.002Z] (thelotusleague) GTX ♅ Blue8 was warned by Lotus Maura.
+[2015-10-08T03:07:14.221Z] (thelotusleague) GTX♅Koala was promoted to Room Voice by Lotus Wincon.
+[2015-10-08T03:07:22.398Z] (thelotusleague) Lotus Wincon declared everyone welcome koala :D
+[2015-10-08T03:07:49.935Z] (thelotusleague) LotusChamp Torpid declared Don't welcome python cuz he's a tool
+[2015-10-08T03:12:54.723Z] (thelotusleague) (Safety Shark created a tournament in 1v1 format.)
+[2015-10-08T03:21:43.430Z] (thelotusleague) Waszap was warned by Professor Panders. (Just no.)
+[2015-10-08T03:23:39.689Z] (thelotusleague) (Lotus Maura created a tournament in monotyperandombattle format.)
+[2015-10-08T03:24:52.911Z] (thelotusleague) (Lotus Maura forcibly ended a tournament.)
+[2015-10-08T03:25:04.008Z] (thelotusleague) (Lotus Maura created a tournament in monotyperandombattle format.)
+[2015-10-08T03:29:24.903Z] (thelotusleague) LotusChamp Torpid declared Press 1 for 8s after this tour
+[2015-10-08T03:30:29.806Z] (thelotusleague) Lotus Wincon declared if u wanna do 8s say Sanic
+[2015-10-08T03:48:14.772Z] (thelotusleague) Waszap was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T03:48:44.143Z] (thelotusleague) Waszap was unmuted by GL♅QueBien.
+[2015-10-08T03:51:12.200Z] (thelotusleague) Waszap was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-08T03:54:07.796Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 1 hour. (dont have auth over you my ass)
+[2015-10-08T03:54:25.214Z] (thelotusleague) Professor Panders was unmuted by Lotus Wincon.
+[2015-10-08T03:54:39.683Z] (thelotusleague) Professor Panders was banned from room thelotusleague by Lotus Maura.
+[2015-10-08T03:54:48.973Z] (thelotusleague) professorpanders was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T03:54:55.646Z] (thelotusleague) Professor Panders was banned from room thelotusleague by Lotus Maura.
+[2015-10-08T03:55:03.179Z] (thelotusleague) professorpanders was unbanned from room thelotusleague by Lotus Wincon.
+[2015-10-08T03:56:12.338Z] (thelotusleague) Waszap was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T03:56:17.243Z] (thelotusleague) Waszap was unmuted by GL♅QueBien.
+[2015-10-08T04:06:18.668Z] (thelotusleague) Professor Panders was banned from room thelotusleague by Lotus Maura.
+[2015-10-08T04:06:26.335Z] (thelotusleague) professorpanders was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T04:09:57.186Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:06.367Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:06.984Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:08.015Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:08.618Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:09.146Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:09.592Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:09.881Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:11.686Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:12.153Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:12.286Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:12.462Z] (thelotusleague) Professor Panders was banned from room thelotusleague by Lotus Maura.
+[2015-10-08T04:10:26.738Z] (thelotusleague) Lotus Maura was kicked from the room by LotusChamp Torpid.
+[2015-10-08T04:10:27.339Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:47.559Z] (thelotusleague) professorpanders was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T04:10:53.892Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:10:58.026Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:10:58.875Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes.
+[2015-10-08T04:11:11.449Z] (thelotusleague) Lotus Maura was banned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T04:11:20.377Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:11:59.119Z] (thelotusleague) lotusmaura was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T04:15:40.041Z] (thelotusleague) Professor Panders was muted by Lotus Maura for 7 minutes. (gg)
+[2015-10-08T04:15:49.069Z] (thelotusleague) (Lotus Maura was demoted to Room Voice by LotusChamp Torpid.)
+[2015-10-08T04:16:12.169Z] (thelotusleague) Professor Panders was unmuted by LotusChamp Torpid.
+[2015-10-08T04:18:20.108Z] (thelotusleague) Lotus Maura was promoted to Room Leader by LotusChamp Torpid.
+[2015-10-08T04:19:28.231Z] (thelotusleague) (Hm Zuuzifer created a tournament in monotype format.)
+[2015-10-08T04:19:44.505Z] (thelotusleague) (Lotus Maura forcibly ended a tournament.)
+[2015-10-08T04:19:46.201Z] (thelotusleague) (Lotus Maura created a tournament in monotyperandombattle format.)
+[2015-10-08T04:23:28.687Z] (thelotusleague) Catalystic declared what happened to 8s
+[2015-10-08T04:25:39.588Z] (thelotusleague) Mr.Potatoes12 was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T04:28:38.902Z] (thelotusleague) Mr.Potatoes12 was banned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T04:28:45.834Z] (thelotusleague) GTX♅Koala was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T04:28:59.710Z] (thelotusleague) mrpotatoes12 was unbanned from room thelotusleague by Lotus Wincon.
+[2015-10-08T04:30:10.954Z] (thelotusleague) Mr.Potatoes12 was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-08T04:30:33.854Z] (thelotusleague) Mr.Potatoes12 was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T04:30:57.473Z] (thelotusleague) Mr.Potatoes12 was unmuted by LotusChamp Torpid.
+[2015-10-08T04:31:01.952Z] (thelotusleague) Mr.Potatoes12 was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T04:31:31.487Z] (thelotusleague) Guest 9855 was warned by Lotus Python. (being muted)
+[2015-10-08T04:31:37.335Z] (thelotusleague) Guest 9855 was unmuted by LotusChamp Torpid.
+[2015-10-08T04:33:01.824Z] (thelotusleague) Mr Potatoes Evades was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T04:33:14.290Z] (thelotusleague) Mr Potatoes Evades was muted by Professor Panders for 7 minutes. (cause I can)
+[2015-10-08T04:34:04.700Z] (thelotusleague) Guest 9868 was unmuted by Lotus Wincon.
+[2015-10-08T04:35:01.275Z] (thelotusleague) POTATOE EVADES X2 was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T04:35:11.717Z] (thelotusleague) POTATOE EVADES X2 was muted by Professor Panders for 7 minutes. (evade that)
+[2015-10-08T04:38:47.386Z] (thelotusleague) EVADE BANS was muted by Lotus Python for 7 minutes. (GET FUCKED)
+[2015-10-08T04:38:47.417Z] (thelotusleague) EVADE BANS was banned from room thelotusleague by Professor Panders. (gg)
+[2015-10-08T04:38:47.419Z] (thelotusleague) (EVADE BANS's roombanned alts: Guest 9855, Guest 9868, Guest 9869)
+[2015-10-08T04:55:08.139Z] (thelotusleague) (GTX♅Stantler created a tournament in 2v2doubles format.)
+[2015-10-08T04:55:26.450Z] (thelotusleague) (Lotus Maura forcibly ended a tournament.)
+[2015-10-08T04:55:31.373Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:55:38.612Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-08T04:55:41.575Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:55:45.768Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-08T04:55:46.728Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:55:51.059Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-08T04:55:51.179Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:55:53.720Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-08T04:55:54.518Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:55:55.965Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-08T04:55:56.475Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-08T04:56:41.634Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:56:50.312Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:57:11.812Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:57:23.370Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:57:26.597Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:57:38.520Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:57:42.561Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:57:45.182Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:57:53.551Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:57:55.316Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:58:05.244Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:58:06.620Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:58:11.344Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:58:12.351Z] (thelotusleague) (Lotus Maura created a tournament in gen1randombattle format.)
+[2015-10-08T04:58:13.122Z] (thelotusleague) (Lotus Maura was demoted to Room regular user by LotusChamp Torpid.)
+[2015-10-08T04:58:16.505Z] (thelotusleague) (GTX♅Stantler forcibly ended a tournament.)
+[2015-10-08T04:58:17.406Z] (thelotusleague) (GTX♅Stantler created a tournament in doublesou format.)
+[2015-10-08T04:58:42.423Z] (thelotusleague) Lotus Maura was promoted to Room Leader by LotusChamp Torpid.
+[2015-10-08T04:59:50.011Z] (thelotusleague) (Lotus Maura forcibly ended a tournament.)
+[2015-10-08T04:59:55.975Z] (thelotusleague) (GTX♅Stantler created a tournament in doublesou format.)
+[2015-10-08T04:59:57.301Z] (thelotusleague) (Lotus Maura was demoted to Room regular user by LotusChamp Torpid.)
+[2015-10-08T05:02:42.060Z] (thelotusleague) (Myst Bronze forcibly ended a tournament.)
+[2015-10-08T05:02:47.578Z] (thelotusleague) (GTX♅Stantler created a tournament in doublesou format.)
+[2015-10-08T05:02:51.174Z] (thelotusleague) Professor Panders was promoted to Room Leader by LotusChamp Torpid.
+[2015-10-08T05:03:00.802Z] (thelotusleague) (Myst Bronze was demoted to Room regular user by Lotus ۩ Magnezone.)
+[2015-10-08T05:08:08.006Z] (thelotusleague) (MaxLos forcibly ended a tournament.)
+[2015-10-08T05:08:30.298Z] (thelotusleague) LotusChamp Torpid declared stop ending these tours, seriously
+[2015-10-08T05:08:36.587Z] (thelotusleague) (GTX♅Stantler created a tournament in doublesou format.)
+[2015-10-08T05:10:10.252Z] (thelotusleague) Lotus Maura was warned by Lotus Python. (Imust take this opportunity to warn because #YOLOSWAGGLESMOTHERFUCKERTEAMMEMETEAM)
+[2015-10-08T05:11:28.302Z] (thelotusleague) (LotusCapt Torpid changed the roomintro.)
+[2015-10-08T05:11:33.849Z] (thelotusleague) (Waszap was demoted to Room regular user by Lotus ۩ Magnezone.)
+[2015-10-08T05:13:38.425Z] (thelotusleague) (LotusCapt Torpid changed the roomintro.)
+[2015-10-08T05:13:45.075Z] (thelotusleague) (hm zap forcibly ended a tournament.)
+[2015-10-08T05:14:01.033Z] (thelotusleague) (hm zap was demoted to Room regular user by LotusChamp Torpid.)
+[2015-10-08T05:16:18.595Z] (thelotusleague) Myst Bronze was warned by Lotus Python. (Same)
+[2015-10-08T05:19:50.395Z] (thelotusleague) Myst Bronze was banned from room thelotusleague by Professor Panders.
+[2015-10-08T05:20:35.496Z] (thelotusleague) mystbronze was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-08T05:25:24.059Z] (thelotusleague) Gtxx Bronze was kicked from the room by Lotus Wincon.
+[2015-10-08T05:26:07.010Z] (thelotusleague) E4 Bronzee was kicked from the room by maxlos.
+[2015-10-08T05:26:32.250Z] (thelotusleague) E4 Bronzee was kicked from the room by Lotus Wincon.
+[2015-10-08T05:26:39.265Z] (thelotusleague) Lotus Maura was promoted to Room Leader by LotusChamp Torpid.
+[2015-10-08T05:26:52.825Z] (thelotusleague) E4 Bronzee was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T05:38:29.227Z] (thelotusleague) Myst Bronze was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T06:06:57.867Z] (thelotusleague) (HeadRecruiter♅Dvd notes: can we do anything against him?)
+[2015-10-08T06:07:11.956Z] (thelotusleague) pikpokpok was muted by HeadRecruiter♅Dvd for 7 minutes.
+[2015-10-08T06:07:12.942Z] (thelotusleague) (LotusChamp Torpid notes: like beat him?  or ban him?)
+[2015-10-08T06:07:13.025Z] (thelotusleague) pikpokpok was warned by Lotus ۩ Magnezone.
+[2015-10-08T06:07:13.860Z] (thelotusleague) pikpokpok was locked from talking by i'm sora. (harassment)
+[2015-10-08T06:11:15.062Z] (thelotusleague) (GTX♅Stantler created a tournament in megatier format.)
+[2015-10-08T06:12:04.443Z] (thelotusleague) Frontier♅Blueray was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-08T06:12:21.496Z] (thelotusleague) LotusChamp Torpid set modchat to &
+[2015-10-08T06:12:30.772Z] (thelotusleague) LotusChamp Torpid set modchat to false
+[2015-10-08T08:04:38.909Z] (thelotusleague) cellgoondude was warned by HeadRecruiter♅Dvd. (be hyped)
+[2015-10-08T09:21:56.129Z] (thelotusleague) Frontier♅Shredder was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T09:36:51.264Z] (thelotusleague) GTX Gasai was muted by GL♅Devils for 7 minutes.
+[2015-10-08T09:36:51.266Z] (thelotusleague) (GTX Gasai's ac account: mystbronze)
+[2015-10-08T09:37:04.034Z] (thelotusleague) GTX Gasai was unmuted by Lotus Aranacana.
+[2015-10-08T11:39:13.200Z] (thelotusleague) Homeless Robo was promoted to Room Leader by HeadRecruiter♅Dvd.
+[2015-10-08T11:43:19.885Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T11:44:46.694Z] (thelotusleague) GTXDvd was promoted to Room Voice by Homeless Robo.
+[2015-10-08T11:54:27.387Z] (thelotusleague) GTXDvd was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T11:54:58.063Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T11:55:20.857Z] (thelotusleague) Wolf Suicune was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T11:55:36.606Z] (thelotusleague) GTXDvd was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T11:55:36.606Z] (thelotusleague) (GTXDvd's ac account: headrecruiterdvd)
+[2015-10-08T11:57:00.041Z] (thelotusleague) HeadRecruiter♅Dvd was unmuted by Homeless Robo.
+[2015-10-08T11:57:36.984Z] (thelotusleague) GTX♅Humper was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T11:58:56.553Z] (thelotusleague) GTX♅Humper was unmuted by HeadRecruiter♅Dvd.
+[2015-10-08T12:04:51.958Z] (thelotusleague) Frontier♅Shredder was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T12:24:47.702Z] (thelotusleague) Wolf Suicune was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T12:24:49.862Z] (thelotusleague) Myst Boo was warned by HeadRecruiter♅Dvd. (i said end of story)
+[2015-10-08T12:26:25.764Z] (thelotusleague) GL♅ThunderHumper was promoted to Room Driver by HeadRecruiter♅Dvd.
+[2015-10-08T12:26:51.858Z] (thelotusleague) (GL♅ThunderHumper was demoted to Room regular user by HeadRecruiter♅Dvd.)
+[2015-10-08T12:27:14.990Z] (thelotusleague) GTX♅ThunderHumper was promoted to Room Voice by HeadRecruiter♅Dvd.
+[2015-10-08T12:44:39.844Z] (thelotusleague) Wolf Suicune was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-08T12:45:11.468Z] (thelotusleague) Wolf Suicune was unmuted by Prof Blooper.
+[2015-10-08T12:52:26.351Z] (thelotusleague) Myst Bronze was muted by HeadRecruiter♅Dvd for 7 minutes.
+[2015-10-08T13:01:00.618Z] (thelotusleague) Myst Bronze - ⓒⓗⓐⓝ was muted by HeadRecruiter♅Dvd for 7 minutes. (you want salt with that?)
+[2015-10-08T16:01:43.860Z] (thelotusleague) (Emperor⚔Lu Bu♘ created a tournament in monotype format.)
+[2015-10-08T16:23:31.220Z] (thelotusleague) Corny Doge - ⒶⒻⓀ was muted by Safety Shark for 1 hour. (Please do not spam emoticons. (5 [110]))
+[2015-10-08T16:24:12.365Z] (thelotusleague) LAWLESS IS KING was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-10-08T16:24:13.028Z] (thelotusleague) LAWLESS IS KING was muted by Safety Shark for 7 minutes. (Please do not abuse emoticons. (6 [11]))
+[2015-10-08T16:24:37.402Z] (thelotusleague) jjay554 was muted by HeadRecruiter♅Dvd for 7 minutes.
+[2015-10-08T16:25:05.029Z] (thelotusleague) Lawelss Spu was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-10-08T16:25:07.234Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to +
+[2015-10-08T17:49:52.808Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T18:00:48.391Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-08T18:01:05.577Z] (thelotusleague) GTX♅Echoes was promoted to Room Voice by Commander☬Pheonix۞.
+[2015-10-08T18:01:10.186Z] (thelotusleague) Commander☬Pheonix۞ declared WELCOME ECHOES!
+[2015-10-08T18:04:37.087Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T18:21:52.089Z] (thelotusleague) LotusChamp Torpid set modchat to false
+[2015-10-08T18:29:16.556Z] (thelotusleague) Frontier♅Shredder was muted by LotusChamp Torpid for 7 minutes. (talk normally please)
+[2015-10-08T18:32:31.195Z] (thelotusleague) Hm Zuuzifer was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T18:35:30.478Z] (thelotusleague) Frontier♅Shredder was unmuted by LotusChamp Torpid.
+[2015-10-08T18:46:44.772Z] (thelotusleague) LotusChamp Torpid declared press 1 if you wanna lvl
+[2015-10-08T19:19:17.531Z] (thelotusleague) (Frontier♅EnZo forcibly ended a tournament.)
+[2015-10-08T19:41:26.925Z] (thelotusleague) GTX ♅ Blue8 was kicked from the room by lotus wincon.
+[2015-10-08T21:44:19.550Z] (thelotusleague) Commander☬Pheonix۞ declared #
+[2015-10-08T21:44:23.951Z] (thelotusleague) Commander☬Pheonix۞ set modchat to #
+[2015-10-08T21:45:04.288Z] (thelotusleague) (Commander☬Pheonix۞ created a tournament in monotype format.)
+[2015-10-08T21:45:08.974Z] (thelotusleague) Commander☬Pheonix۞ set modchat to false
+[2015-10-08T21:46:28.712Z] (thelotusleague) Commander☬Pheonix۞ declared WHO WANTS TO LVL SAY Mother of GOD
+[2015-10-08T21:54:25.350Z] (thelotusleague) Lotus Faptastic was kicked from the room by Lotus ۩ Magnezone.
+[2015-10-08T22:07:21.153Z] (thelotusleague) GTX♅Wincondition was warned by Lotus Python. (really?)
+[2015-10-08T22:26:37.829Z] (thelotusleague) gtxbicfatboi was warned by Safety Shark. (Automated response: stretching)
+[2015-10-08T22:27:47.453Z] (thelotusleague) (GL♅QueBien forcibly ended a tournament.)
+[2015-10-08T22:29:39.392Z] (thelotusleague) cellgoondude was kicked from the room by gl aron.
+[2015-10-08T22:30:10.536Z] (thelotusleague) aron is bad af was warned by Lotus Itsme.
+[2015-10-08T22:30:13.151Z] (thelotusleague) aron is bad af was kicked from the room by Lotus Itsme.
+[2015-10-08T22:35:55.408Z] (thelotusleague) dont even battle was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T23:02:49.474Z] (thelotusleague) GTX♅RainManaphy was kicked from the room by Lotus Itsme.
+[2015-10-08T23:08:23.906Z] (thelotusleague) Lotus Wincon declared ok lets stop the urban dictionary spam
+[2015-10-08T23:10:39.963Z] (thelotusleague) (Professor Panders was demoted to Room regular user by Catalystic.)
+[2015-10-08T23:10:52.268Z] (thelotusleague) Professor Panders was promoted to Room Leader by Catalystic.
+[2015-10-08T23:11:08.168Z] (thelotusleague) Professor Panders was changed to Champion by Lotus Wincon.
+[2015-10-08T23:12:35.200Z] (thelotusleague) GTX♅AJF was changed to Ace by Lotus Wincon.
+[2015-10-08T23:16:28.923Z] (thelotusleague) Cloyy - ⓦⓐⓡⓛⓘⓒ was kicked from the room by Lotus Faptastic.
+[2015-10-08T23:17:41.227Z] (thelotusleague) Forgivemesenpai was kicked from the room by GL♅QueBien.
+[2015-10-08T23:21:33.527Z] (thelotusleague) Lotus Faptastic was promoted to Room Leader by Lotus Wincon.
+[2015-10-08T23:22:06.660Z] (thelotusleague) Lotus Faptastic set modchat to &
+[2015-10-08T23:22:27.393Z] (thelotusleague) Lotus Faptastic was banned from room thelotusleague by Lotus Wincon.
+[2015-10-08T23:22:34.180Z] (thelotusleague) Lotus Wincon set modchat to false
+[2015-10-08T23:22:40.963Z] (thelotusleague) lotusfaptastic was unbanned from room thelotusleague by Lotus Wincon.
+[2015-10-08T23:22:48.871Z] (thelotusleague) (Lotus Faptastic was demoted to Room Driver by Lotus Wincon.)
+[2015-10-08T23:24:24.757Z] (thelotusleague) (GL♅QueBien notes: no)
+[2015-10-08T23:24:31.544Z] (thelotusleague) Cloyy - ⓦⓐⓡⓛⓘⓒ was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-08T23:24:43.488Z] (thelotusleague) Cloyy - ⓦⓐⓡⓛⓘⓒ was unmuted by GL♅QueBien.
+[2015-10-08T23:24:49.591Z] (thelotusleague) Cloyy - ⓦⓐⓡⓛⓘⓒ was warned by GL♅QueBien. (don't flood again)
+[2015-10-08T23:25:20.617Z] (thelotusleague) Cloyy - ⓦⓐⓡⓛⓘⓒ was warned by Lotus Itsme - ⓓⓔⓓ. (the call me the link breaker)
+[2015-10-08T23:26:37.908Z] (thelotusleague) GTX♅RainManaphy was muted by Frontier♅EnZo for 7 minutes. (stfu with ur inappropriate comments!)
+[2015-10-08T23:26:44.570Z] (thelotusleague) GTX♅RainManaphy was kicked from the room by Lotus Itsme - ⓓⓔⓓ.
+[2015-10-08T23:27:00.743Z] (thelotusleague) GTX♅RainManaphy was unmuted by Lotus Wincon.
+[2015-10-08T23:27:19.556Z] (thelotusleague) GL♅QueBien was warned by Lotus Wincon. (8=D)
+[2015-10-08T23:28:29.708Z] (thelotusleague) GTX♅RainManaphy was warned by Frontier♅EnZo. (faptastic sounds weird)
+[2015-10-08T23:28:55.439Z] (thelotusleague) Frontier♅EnZo was warned by Lotus Wincon. (lets do a practice uu vs ou battle)
+[2015-10-08T23:29:03.891Z] (thelotusleague) Frontier♅EnZo was warned by Lotus Wincon. (challenge me noob)
+[2015-10-08T23:32:43.515Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-08T23:32:52.193Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-08T23:33:21.554Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-08T23:36:49.860Z] (thelotusleague) (Prof NHHS was disqualified from the tournament by GTX♅RainManaphy)
+[2015-10-08T23:37:06.951Z] (thelotusleague) GTX♅RainManaphy was muted by GL♅QueBien for 7 minutes.
+[2015-10-08T23:37:28.017Z] (thelotusleague) (GTX♅RainManaphy was disqualified from the tournament by GL♅QueBien)
+[2015-10-08T23:38:28.856Z] (thelotusleague) (Lotus Itsme - ⓓⓔⓓ created a tournament in monotyperandombattle format.)
+[2015-10-08T23:49:25.826Z] (thelotusleague) (Lotus Itsme - ⓓⓔⓓ created a tournament in monotyperandombattle format.)
+[2015-10-08T23:51:04.113Z] (thelotusleague) GL♅QueBien was warned by Lotus Python. (PUT THE GUN DOWN OR I WILL SHOOT)
+[2015-10-08T23:55:36.854Z] (thelotusleague) BitTrippy was warned by Safety Shark. (Automated response: caps)
+[2015-10-08T23:56:28.186Z] (thelotusleague) BitTrippy was warned by Lotus Python. (Nigga)
+[2015-10-08T23:56:37.765Z] (thelotusleague) BitTrippy was warned by Lotus Itsme - ⓓⓔⓓ. (i wanna warn him too)
+[2015-10-09T00:14:15.691Z] (thelotusleague) GTX♅RainManaphy was muted by Frontier♅EnZo for 7 minutes. (stfu with stupid poll)
+[2015-10-09T00:14:43.916Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was warned by Lotus Python. (MINE?)
+[2015-10-09T00:15:40.173Z] (thelotusleague) Lotus Python was warned by Prof NHHS. (that was too gud)
+[2015-10-09T00:16:10.158Z] (thelotusleague) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-09T00:16:39.254Z] (thelotusleague) GTX♅RainManaphy was unmuted by Prof NHHS.
+[2015-10-09T00:16:45.135Z] (thelotusleague) GTX♅RainManaphy was muted by GL♅QueBien for 7 minutes.
+[2015-10-09T00:20:35.751Z] (thelotusleague) (GTX♅RainManaphy was disqualified from the tournament by Lotus Itsme - ⓓⓔⓓ)
+[2015-10-09T00:20:43.650Z] (thelotusleague) (Lotus Itsme - ⓓⓔⓓ was disqualified from the tournament by GTX♅RainManaphy)
+[2015-10-09T00:20:56.677Z] (thelotusleague) GTX♅RainManaphy was kicked from the room by GL♅QueBien.
+[2015-10-09T00:21:43.705Z] (thelotusleague) (Catalystic created a tournament in ou format.)
+[2015-10-09T00:22:32.382Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was warned by Prof NHHS. (chill dawg no need to start shit)
+[2015-10-09T00:22:34.123Z] (thelotusleague) GTX♅RainManaphy was muted by GL♅QueBien for 1 hour.
+[2015-10-09T00:22:41.844Z] (thelotusleague) (GTX♅RainManaphy would be muted by GL♅QueBien but was already muted.)
+[2015-10-09T00:22:53.615Z] (thelotusleague) GTX♅RainManaphy was unmuted by Prof NHHS.
+[2015-10-09T00:23:04.448Z] (thelotusleague) GL♅QueBien was warned by Prof NHHS. (really?)
+[2015-10-09T00:29:52.552Z] (thelotusleague) (The tournament was set to disallow scouting by GTX♅RainManaphy)
+[2015-10-09T00:30:33.246Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was muted by Frontier♅EnZo for 7 minutes.
+[2015-10-09T00:31:29.010Z] (thelotusleague) GTX♅RainManaphy was kicked from the room by Lotus Itsme - ⓓⓔⓓ.
+[2015-10-09T00:31:54.803Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was unmuted by GL♅QueBien.
+[2015-10-09T00:34:32.532Z] (thelotusleague) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-09T01:54:41.076Z] (thelotusleague) Lotus Itsme was muted by Lotus Python for 7 minutes. (YOUR WELCOME, + Its getting old)
+[2015-10-09T02:10:06.766Z] (thelotusleague) (glaron created a tournament in monotype format.)
+[2015-10-09T02:35:40.699Z] (thelotusleague) GTX♅Koala was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T02:36:45.479Z] (thelotusleague) GTX♅Koala was unmuted by Frontier♅Super.
+[2015-10-09T02:49:58.912Z] (thelotusleague) (Prof NHHS - ⓗⓦ created a tournament in monotype format.)
+[2015-10-09T02:54:05.429Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-09T02:54:32.530Z] (thelotusleague) (Professor Panders created a tournament in ou format.)
+[2015-10-09T03:02:21.182Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-09T03:02:53.665Z] (thelotusleague) (Professor Panders created a tournament in anythinggoes format.)
+[2015-10-09T03:26:57.086Z] (thelotusleague) (Professor Panders was demoted to Room Voice by Lotus Maura.)
+[2015-10-09T03:27:16.512Z] (thelotusleague) Professor Panders was promoted to Room Leader by Lotus Maura.
+[2015-10-09T03:27:26.403Z] (thelotusleague) (Lotus Maura was demoted to Room Voice by Professor Panders.)
+[2015-10-09T03:27:58.942Z] (thelotusleague) Lotus Maura was promoted to Room Operator by Catalystic.
+[2015-10-09T03:29:39.656Z] (thelotusleague) Lotus Maura was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T03:30:14.968Z] (thelotusleague) Catalystic set modchat to %
+[2015-10-09T03:31:09.154Z] (thelotusleague) Catalystic set modchat to false
+[2015-10-09T03:31:21.823Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Catalystic.
+[2015-10-09T03:33:34.365Z] (thelotusleague) (Catalystic was disqualified from the tournament by Frontier♅Super)
+[2015-10-09T03:40:35.544Z] (thelotusleague) (Cloyy - ⓦⓐⓡⓛⓘⓒ was disqualified from the tournament by GTXBICFATBOI)
+[2015-10-09T03:46:00.125Z] (thelotusleague) (Professor Panders was demoted to Room Voice by Lotus Maura.)
+[2015-10-09T03:46:18.542Z] (thelotusleague) Lotus Maura set modchat to %
+[2015-10-09T03:48:51.675Z] (thelotusleague) Lotus DJLuna set modchat to false
+[2015-10-09T03:52:25.026Z] (thelotusleague) Professor Panders was promoted to Room Leader by lotus wincon.
+[2015-10-09T03:53:09.614Z] (thelotusleague) (Lotus Maura created a tournament in monotyperandombattle format.)
+[2015-10-09T03:53:15.132Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-09T03:53:40.558Z] (thelotusleague) (Professor Panders created a tournament in anythinggoes format.)
+[2015-10-09T03:53:42.352Z] (thelotusleague) GTXBICFATBOI was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T03:53:56.044Z] (thelotusleague) (GTXBICFATBOI forcibly ended a tournament.)
+[2015-10-09T03:53:56.161Z] (thelotusleague) GTXBICFATBOI was unmuted by Lotus Maura.
+[2015-10-09T04:15:57.117Z] (thelotusleague) Gtx abt was kicked from the room by Lotus Itsme.
+[2015-10-09T04:33:50.734Z] (thelotusleague) Lotus Maura declared Why didn't C date B
+[2015-10-09T04:34:06.784Z] (thelotusleague) Lotus Maura declared Because she only dates guy that go after her
+[2015-10-09T04:34:15.931Z] (thelotusleague) Lotus Maura declared SHE WANTS THE D!!
+[2015-10-09T04:34:18.507Z] (thelotusleague) Homeless Robo declared We can't do any tests because we're confused
+[2015-10-09T04:34:33.249Z] (thelotusleague) lotus wincon declared is torpid back
+[2015-10-09T04:34:39.910Z] (thelotusleague) lotus wincon declared oh it was maura
+[2015-10-09T04:35:38.650Z] (thelotusleague) (Lotus Maura was demoted to Room Voice by Professor Panders.)
+[2015-10-09T04:42:47.567Z] (thelotusleague) Pink Insanity was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T04:44:08.639Z] (thelotusleague) Pink Insanity was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-09T04:44:18.952Z] (thelotusleague) Pink Insanity was unmuted by lotus wincon.
+[2015-10-09T04:46:27.212Z] (thelotusleague) lotus wincon set modchat to #
+[2015-10-09T04:48:09.430Z] (thelotusleague) (Homeless Robo notes: damn skippy right)
+[2015-10-09T04:48:20.398Z] (thelotusleague) lotus wincon set modchat to false
+[2015-10-09T04:53:29.458Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-09T04:53:52.775Z] (thelotusleague) (lotus wincon forcibly ended a tournament.)
+[2015-10-09T04:53:58.017Z] (thelotusleague) (Safety Shark created a tournament in ou format.)

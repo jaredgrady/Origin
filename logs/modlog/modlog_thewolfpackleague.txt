@@ -152,3 +152,43 @@
 [2015-10-06T19:45:29.246Z] (thewolfpackleague) (Wolf♥Gin created a tournament in anythinggoes format.)
 [2015-10-06T19:47:56.599Z] (thewolfpackleague) (Wolf♥Gin forcibly ended a tournament.)
 [2015-10-06T20:29:10.383Z] (thewolfpackleague) (wolf silva created a tournament in monotype format.)
+[2015-10-07T20:50:14.840Z] (thewolfpackleague) (cute gamer girl 19 created a tournament in monotype format.)
+[2015-10-07T22:27:49.186Z] (thewolfpackleague) GTX♅Humper was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-07T22:34:55.774Z] (thewolfpackleague) GTX♅Humper was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-10-07T22:35:22.345Z] (thewolfpackleague) GTX♅Humper was unmuted by Wolf Laharl.
+[2015-10-08T00:25:44.398Z] (thewolfpackleague) (Wolf Patch created a tournament in monotype format.)
+[2015-10-08T01:15:02.309Z] (thewolfpackleague) SlashDiteX was kicked from the room by Wolf Laharl.
+[2015-10-08T09:11:26.439Z] (thewolfpackleague) Wolf Hawk was promoted to Room Moderator by Wolf☯Itachi.
+[2015-10-08T12:32:13.525Z] (thewolfpackleague) Sunny Charizard was promoted to Room Leader by GreyWulf.
+[2015-10-08T14:29:58.909Z] (thewolfpackleague) Wolf Hawk set modchat to autoconfirmed
+[2015-10-08T14:57:29.107Z] (thewolfpackleague) sruujan kumar- 006 was promoted to Room Voice by Wolf Suicune.
+[2015-10-08T16:33:11.973Z] (thewolfpackleague) (Sunny Charizard was demoted to Room Moderator by GreyWulf.)
+[2015-10-08T17:34:05.226Z] (thewolfpackleague) fiend wolf was promoted to Room Moderator by Wolf♥Gin.
+[2015-10-08T17:36:00.051Z] (thewolfpackleague) Wolf♥Gin declared plz welcome our new lc frontier fiend wolf
+[2015-10-08T17:55:44.268Z] (thewolfpackleague) Wolf Hawk set modchat to false
+[2015-10-08T17:56:17.078Z] (thewolfpackleague) Wolf Maximus was promoted to Room Moderator by Wolf♥Gin.
+[2015-10-08T17:58:10.530Z] (thewolfpackleague) (Sunny Charizard was demoted to Room Voice by Wolf♥Gin.)
+[2015-10-08T18:51:27.168Z] (thewolfpackleague) (Wolf Hawk created a tournament in monotype format.)
+[2015-10-08T18:52:17.646Z] (thewolfpackleague) (Wolf Hawk forcibly ended a tournament.)
+[2015-10-08T18:52:35.777Z] (thewolfpackleague) (Wolf Maximus created a tournament in monotype format.)
+[2015-10-08T18:53:06.640Z] (thewolfpackleague) (The tournament auto disqualify timeout was set to 1.5 by Wolf Maximus)
+[2015-10-08T18:53:49.559Z] (thewolfpackleague) (The tournament was set to disallow scouting by Wolf Hawk)
+[2015-10-08T18:53:54.673Z] (thewolfpackleague) (The tournament was set to allow scouting by Wolf Hawk)
+[2015-10-08T19:04:40.424Z] (thewolfpackleague) Hm Red was promoted to Room Voice by Wolf♥Gin.
+[2015-10-08T19:17:40.596Z] (thewolfpackleague) Crуѕtаl★Zеrо0 was promoted to Room Voice by Wolf Hawk.
+[2015-10-08T19:19:11.610Z] (thewolfpackleague) (Wolf Maximus created a tournament in monotype format.)
+[2015-10-08T19:20:45.020Z] (thewolfpackleague) (The tournament auto disqualify timeout was set to 1.5 by Wolf Maximus)
+[2015-10-08T20:59:38.784Z] (thewolfpackleague) (Wolf Hawk was demoted to Room regular user by Wolf♥Gin.)
+[2015-10-08T21:20:50.969Z] (thewolfpackleague) (Wolf Maximus created a tournament in monotype format.)
+[2015-10-08T21:21:22.132Z] (thewolfpackleague) (The tournament auto disqualify timeout was set to 1.5 by Wolf Maximus)
+[2015-10-08T21:21:51.811Z] (thewolfpackleague) (Wolf Maximus forcibly ended a tournament.)
+[2015-10-08T21:21:59.074Z] (thewolfpackleague) (Wolf Maximus created a tournament in monotype format.)
+[2015-10-08T21:24:00.190Z] (thewolfpackleague) (Wolf Maximus forcibly ended a tournament.)
+[2015-10-08T21:28:52.136Z] (thewolfpackleague) Crystal Bogan was promoted to Room Voice by Wolf Maximus.
+[2015-10-08T21:39:49.212Z] (thewolfpackleague) Wolf Ambassador was promoted to Room Voice by CBWolf.
+[2015-10-08T21:40:33.531Z] (thewolfpackleague) Wolf Ambassador was promoted to Room Driver by Wolf♥Gin.
+[2015-10-08T22:39:22.412Z] (thewolfpackleague) Wolf♥Gin - ⓓⓔⓐⓓ declared DEAD FUCKING CHAT
+[2015-10-08T23:13:05.589Z] (thewolfpackleague) Thunder Ochi was banned from room thewolfpackleague by cute gamer girl 19.
+[2015-10-08T23:13:51.149Z] (thewolfpackleague) thunderochi was unbanned from room thewolfpackleague by Wolf♥Gin - ⓓⓔⓐⓓ.
+[2015-10-09T00:12:00.457Z] (thewolfpackleague) gemstone pink was appointed Room Owner by Champion Blackwolf.
+[2015-10-09T00:42:59.506Z] (thewolfpackleague) Servings was warned by Wolf Maximus. (Automated moderation: Excessive capitalization)

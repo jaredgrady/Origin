@@ -3029,3 +3029,15 @@
 [2015-10-05T18:44:26.147Z] (thesnowyleague) (SL neimenko was demoted to Room regular user by swagman7834.)
 [2015-10-05T20:16:59.702Z] (thesnowyleague) (swagman7834 changed the roomdesc to: "Normal,Psychic,Ground,Water,Electric,Grass,Fairy,Bug,Ghost,Steel,and Flying open".)
 [2015-10-06T00:24:01.653Z] (thesnowyleague) (Safety Shark was demoted to Room Voice by SL Code.)
+[2015-10-07T20:45:42.772Z] (thesnowyleague) Phallus Eater was muted by Surf Latias for 1 hour.
+[2015-10-07T20:45:42.773Z] (thesnowyleague) (Phallus Eater's ac account: swagman7834)
+[2015-10-07T20:45:54.127Z] (thesnowyleague) Phallus Eater was unmuted by Surf Latias.
+[2015-10-07T20:59:21.078Z] (thesnowyleague) Phallus Eater was kicked from the room by Darkrai165196.
+[2015-10-07T20:59:54.213Z] (thesnowyleague) Phallus Eater was kicked from the room by SL Prof James.
+[2015-10-07T21:01:45.390Z] (thesnowyleague) swagman7834 was kicked from the room by Snowy Meteor.
+[2015-10-07T21:02:07.462Z] (thesnowyleague) swagman7834 was appointed Room Owner by Snowy Meteor.
+[2015-10-08T15:54:37.671Z] (thesnowyleague) (SL Kalaiu created a tournament in monotype format.)
+[2015-10-08T16:02:52.251Z] (thesnowyleague) (Surf Latias forcibly ended a tournament.)
+[2015-10-08T19:42:49.007Z] (thesnowyleague) Obee Wang was muted by Darkrai165196 for 7 minutes. (ur a twat honedge machete)
+[2015-10-08T19:42:49.008Z] (thesnowyleague) (Obee Wang's ac account: slobitomkenobi)
+[2015-10-08T19:42:54.042Z] (thesnowyleague) Obee Wang was unmuted by Darkrai165196.

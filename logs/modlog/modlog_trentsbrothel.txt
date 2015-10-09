@@ -17,3 +17,5 @@
 [2015-08-16T02:48:03.747Z] (trentsbrothel) Void Gorve was promoted to Room Voice by Void Trent.
 [2015-08-16T03:37:05.225Z] (trentsbrothel) (Void Gorve was demoted to Room regular user by Void Trent.)
 [2015-08-16T03:37:09.338Z] (trentsbrothel) Void Gorve was kicked from the room by Void Trent.
+[2015-10-07T18:02:27.325Z] (trentsbrothel) Void Julius was promoted to Room Voice by Void Trent.
+[2015-10-07T18:17:35.610Z] (trentsbrothel) Void Luca was promoted to Room Voice by Void Trent.

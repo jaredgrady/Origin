@@ -3391,3 +3391,46 @@
 [2015-10-06T02:07:33.982Z] (arcadia) DJItsme was muted by FuzzBot for 1 hour. (Automated moderation: Your message contained a banned phrase)
 [2015-10-06T02:07:52.185Z] (arcadia) DJItsme was unmuted by TruBlaze.
 [2015-10-06T03:26:16.666Z] (arcadia) CCFl5 Latias was promoted to Room Voice by Sunny Charizard.
+[2015-10-07T23:17:10.689Z] (arcadia) Supanova - ⓗⓦ declared If you guys have any questions, pm me while I'm here. -#Supa
+[2015-10-07T23:48:41.452Z] (arcadia) ASL VGC was promoted to Room Voice by Sunny Charizard.
+[2015-10-07T23:54:21.812Z] (arcadia) Supanova - ⓗⓦ declared Like I said before, if you have any questions, go ahead and ask while I'm here cause I won't be on much at all until Columbus Day. #-Supa
+[2015-10-08T00:16:33.605Z] (arcadia) Supanova - ⓗⓦ declared Just a warning to you guys: I expect more out of this staff and I'm going to be cutting down on staff member soon. There will be some surprising demotions coming soon, so try to undo your wrongs even if you don't think you've done anything wrong.
+[2015-10-08T00:34:01.891Z] (arcadia) Safety Shark was kicked from the room by Missingno2.0.
+[2015-10-08T01:32:10.272Z] (arcadia) VData was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T02:03:13.790Z] (arcadia) Lotus Itsme was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T03:17:39.765Z] (arcadia) Lotus Python was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T07:05:19.179Z] (arcadia) hooters was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T20:46:31.381Z] (arcadia) hooters was banned from room arcadia by SteelChar.
+[2015-10-08T21:14:14.325Z] (arcadia) SergioRules was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T21:22:35.035Z] (arcadia) Pink Insanity was promoted to Room Voice by Sunny Charizard.
+[2015-10-08T23:26:03.195Z] (arcadia) Gallant Discord was promoted to Room Voice by Sunny Charizard.
+[2015-10-09T00:54:55.723Z] (arcadia) Prof NHHS - ⓗⓦ was promoted to Room Voice by Sunny Charizard.
+[2015-10-09T01:48:27.891Z] (arcadia) Supanova declared Tomorrow night will be The Great Arcadia Purge
+[2015-10-09T01:51:26.814Z] (arcadia) (carnieblaze was demoted to Room Voice by Supanova.)
+[2015-10-09T01:51:48.916Z] (arcadia) (impemelio was demoted to Room Moderator by Supanova.)
+[2015-10-09T01:51:52.432Z] (arcadia) (kops was demoted to Room Voice by Supanova.)
+[2015-10-09T01:52:24.603Z] (arcadia) (carniepine was demoted to Room Operator by Supanova.)
+[2015-10-09T01:52:29.394Z] (arcadia) (carniecalvink was demoted to Room Driver by Supanova.)
+[2015-10-09T01:52:58.869Z] (arcadia) (chiefsokka was demoted to Room Operator by Supanova.)
+[2015-10-09T01:53:06.341Z] (arcadia) (jdbro2020 was demoted to Room Voice by Supanova.)
+[2015-10-09T01:53:10.703Z] (arcadia) (reddo161 was demoted to Room Operator by Supanova.)
+[2015-10-09T01:53:24.295Z] (arcadia) (breezyitsme was demoted to Room Voice by Supanova.)
+[2015-10-09T01:53:40.844Z] (arcadia) (chansey88 was demoted to Room Voice by Supanova.)
+[2015-10-09T01:53:47.741Z] (arcadia) (diamondjax was demoted to Room Voice by Supanova.)
+[2015-10-09T01:53:50.771Z] (arcadia) chiefsokka was promoted to Room Driver by Supanova.
+[2015-10-09T01:54:03.569Z] (arcadia) (uniongmwiggly was demoted to Room Voice by Supanova.)
+[2015-10-09T01:54:07.391Z] (arcadia) (Void Chrono was demoted to Room Voice by Supanova.)
+[2015-10-09T01:54:15.988Z] (arcadia) (burningblazer was demoted to Room Voice by Supanova.)
+[2015-10-09T01:54:48.877Z] (arcadia) (ntgs was demoted to Room Voice by Supanova.)
+[2015-10-09T01:55:36.270Z] (arcadia) (FuzzBot was demoted to Room Moderator by Supanova.)
+[2015-10-09T01:55:39.631Z] (arcadia) (Sunny Charizard was demoted to Room Moderator by Supanova.)
+[2015-10-09T01:56:30.578Z] (arcadia) (toonytyrunt was demoted to Room Moderator by Supanova.)
+[2015-10-09T01:56:33.493Z] (arcadia) Odd Cytoplasm was promoted to Room Leader by Supanova.
+[2015-10-09T01:59:21.870Z] (arcadia) crystalwebs was promoted to Room Driver by Supanova.
+[2015-10-09T01:59:47.351Z] (arcadia) betadoomshade was promoted to Room Moderator by Supanova.
+[2015-10-09T02:00:15.023Z] (arcadia) gentlemantech was promoted to Room Moderator by Supanova.
+[2015-10-09T02:10:07.241Z] (arcadia) Sota Higurashi was promoted to Room Voice by Sunny Charizard.
+[2015-10-09T02:25:31.412Z] (arcadia) glaron was muted by FuzzBot for 7 minutes. (Automated moderation: Your message contained a banned phrase)
+[2015-10-09T02:26:22.114Z] (arcadia) glaron was unmuted by TruBlaze.
+[2015-10-09T02:26:43.328Z] (arcadia) TruBlaze declared Please refrain from "!u"
+[2015-10-09T02:31:34.704Z] (arcadia) Knight ~ Starfox was promoted to Room Voice by Sunny Charizard.
