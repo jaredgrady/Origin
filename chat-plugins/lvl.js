@@ -1,4 +1,4 @@
-exports.commands = { 
+/* exports.commands = { 
 	guerra: 'lvl',
 	war: 'lvl',
 	lvl: function(target, room, user, connection) {
@@ -230,8 +230,8 @@ exports.commands = {
 				if (!this.canBroadcast()) return false;
 				return this.sendReply('|raw|' + War.viewTourStatus(roomId));
 			default:
-				this.sendReply('The command was not recognized. Try using /lvl help if you are confused.');
+				this.sendReply('The command was not recognized. Try using /lvl help if you are confused.'); 
 		}
 	},
-}; 
+}; */
 
