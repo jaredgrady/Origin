@@ -17,7 +17,7 @@ var crypto = require('crypto');
 var fs = require('fs');
 var parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
 global.developers = ['fender', 'nineage', 'voidnaten', 'irraquated', 'masterfloat']; //sys developers
-var developersIPs = ['76.19.156.193'];
+var developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
