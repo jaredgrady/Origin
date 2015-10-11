@@ -3330,3 +3330,489 @@
 [2015-10-09T03:25:17.998Z] (japanslair) iQuill declared last but not least 
 [2015-10-09T03:25:27.542Z] (japanslair) iQuill declared FHQ's finest
 [2015-10-09T03:25:46.679Z] (japanslair) iQuill declared Hypershaymin!!!
+[2015-10-09T05:31:07.664Z] (japanslair) panpawn was appointed Room Owner by Japan - ⓑⓡⓑ.
+[2015-10-09T05:34:16.036Z] (japanslair) hooters was unlocked by Neo Soul.
+[2015-10-09T10:53:19.589Z] (japanslair) Starizardz was muted by iQuill for 1 hour.
+[2015-10-09T10:53:27.043Z] (japanslair) hooters was muted by iQuill for 1 hour.
+[2015-10-09T10:53:37.958Z] (japanslair) ashbloodthief was muted by iQuill for 1 hour.
+[2015-10-09T10:54:30.744Z] (japanslair) Starizardz was unmuted by iQuill.
+[2015-10-09T10:54:34.993Z] (japanslair) hooters was unmuted by iQuill.
+[2015-10-09T10:54:41.686Z] (japanslair) ashbloodthief was unmuted by iQuill.
+[2015-10-09T11:15:08.809Z] (japanslair) Doctor Mental1st was promoted to Room Voice by Dylan654.
+[2015-10-09T16:51:25.497Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T16:54:57.594Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T16:58:49.290Z] (japanslair) PrimalZard was kicked from the room by ExiledShadows.
+[2015-10-09T16:59:20.370Z] (japanslair) ExiledShadows was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T16:59:28.509Z] (japanslair) ExiledShadows was unmuted by Legacy Enervate.
+[2015-10-09T16:59:41.027Z] (japanslair) Ravonne was promoted to Room Voice by Legacy Enervate.
+[2015-10-09T16:59:59.021Z] (japanslair) Ravonne was promoted to Room Operator by Legacy Enervate.
+[2015-10-09T17:12:39.102Z] (japanslair) hooters was kicked from the room by Legacy Enervate.
+[2015-10-09T18:32:35.257Z] (japanslair) macrarazy was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T19:43:41.023Z] (japanslair) up n down luck was promoted to Room Voice by Foh.
+[2015-10-09T20:02:59.270Z] (japanslair) Catostrophic was promoted to Room Voice by Foh.
+[2015-10-09T20:03:09.113Z] (japanslair) Royal dinite was promoted to Room Voice by Foh.
+[2015-10-09T20:03:16.145Z] (japanslair) Superdois was promoted to Room Voice by Foh.
+[2015-10-09T20:26:37.164Z] (japanslair) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-09T20:27:20.641Z] (japanslair) Ravonne was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T20:27:35.537Z] (japanslair) GTX♅RainManaphy was muted by Anything Goes for 7 minutes.
+[2015-10-09T20:46:14.968Z] (japanslair) Darkrai165196 was kicked from the room by Knight~Starfox~~☆.
+[2015-10-09T20:48:25.090Z] (japanslair) (GTX♅RainManaphy created a tournament in challengecup1v1 format.)
+[2015-10-09T21:53:39.100Z] (japanslair) Darkrai165196 was banned from room japanslair by Legacy Enervate.
+[2015-10-09T21:53:46.165Z] (japanslair) darkrai165196 was unbanned from room japanslair by Legacy Enervate.
+[2015-10-09T21:54:02.149Z] (japanslair) Darkrai165196 was kicked from the room by Legacy Enervate.
+[2015-10-09T21:56:33.300Z] (japanslair) Darkrai165196 was banned from room japanslair by Legacy Enervate.
+[2015-10-09T21:56:51.518Z] (japanslair) darkrai165196 was unbanned from room japanslair by Legacy Enervate.
+[2015-10-09T21:57:46.920Z] (japanslair) Darkrai165196 was muted by Legacy Enervate for 1 hour. (kys)
+[2015-10-09T21:57:57.461Z] (japanslair) Darkrai165196 was kicked from the room by Alliance - Llama.
+[2015-10-09T21:59:02.403Z] (japanslair) Darkrai165196 was unmuted by Knight~Starfox~~☆.
+[2015-10-09T21:59:11.078Z] (japanslair) Growlly was promoted to Room Voice by Knight~Starfox~~☆.
+[2015-10-09T21:59:57.304Z] (japanslair) Darkrai165196 was redirected to room Casino by Knight~Starfox~~☆.
+[2015-10-09T22:00:18.548Z] (japanslair) QNC was promoted to Room Moderator by iRoams.
+[2015-10-09T22:00:42.229Z] (japanslair) macrarazy was promoted to Room Operator by Knight~Starfox~~☆.
+[2015-10-09T22:01:17.738Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T22:01:29.289Z] (japanslair) macrarazy was unmuted by Alliance - Llama.
+[2015-10-09T22:02:06.929Z] (japanslair) Cloyy was muted by Knight~Starfox~~☆ for 7 minutes.
+[2015-10-09T22:02:11.791Z] (japanslair) Cloyy was muted by Alliance - Llama for 1 hour.
+[2015-10-09T22:02:12.417Z] (japanslair) Cloyy would be muted by Legacy Enervate but was already muted. (skrab)
+[2015-10-09T22:02:22.639Z] (japanslair) Cloyy was banned from room japanslair by Legacy Enervate.
+[2015-10-09T22:02:30.440Z] (japanslair) cloyy was unbanned from room japanslair by Knight~Starfox~~☆.
+[2015-10-09T22:02:44.547Z] (japanslair) Cloyy was unmuted by Knight~Starfox~~☆.
+[2015-10-09T22:02:45.146Z] (japanslair) Cloyy was muted by Knight~Starfox~~☆ for 7 minutes. (just fixing it)
+[2015-10-09T22:03:04.193Z] (japanslair) Cloyy was unmuted by Alliance - Llama.
+[2015-10-09T22:03:47.167Z] (japanslair) Cloyy was kicked from the room by macrarazy.
+[2015-10-09T22:04:08.708Z] (japanslair) Cloyy was promoted to Room Moderator by iRoams.
+[2015-10-09T22:07:32.621Z] (japanslair) Vvvs was promoted to Room Voice by Foh - ⓒⓣⓔⓐⓜⓘⓝⓖ.
+[2015-10-09T22:15:48.941Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-09T22:16:07.571Z] (japanslair) macrarazy was unmuted by Alliance - Llama.
+[2015-10-09T22:18:12.481Z] (japanslair) Safety Shark was muted by Foh - ⓒⓣⓔⓐⓜⓘⓝⓖ for 1 hour.
+[2015-10-09T22:29:57.953Z] (japanslair) Alliance - Dreams was kicked from the room by Alliance - Llama.
+[2015-10-09T22:33:13.871Z] (japanslair) Safety Shark was unmuted by Cloyy.
+[2015-10-09T22:55:54.618Z] (japanslair) Cancer God was promoted to Room Voice by Dylan654 - ⒶⓌⒶⓎ.
+[2015-10-09T23:07:33.622Z] (japanslair) bandi was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T23:07:51.887Z] (japanslair) bandi was unmuted by Exiled Shadows.
+[2015-10-09T23:08:06.396Z] (japanslair) Safety Shark was muted by foh for 1 hour.
+[2015-10-09T23:10:56.207Z] (japanslair) MonsterHigh was kicked from the room by Exiled Shadows.
+[2015-10-09T23:11:20.579Z] (japanslair) Exiled Shadows was warned by KatheyIsme123. (excuse me?)
+[2015-10-09T23:16:58.806Z] (japanslair) Exiled Shadows was muted by Anything Goes for 7 minutes. (memed)
+[2015-10-09T23:17:09.634Z] (japanslair) Exiled Shadows was unmuted by foh.
+[2015-10-09T23:17:13.242Z] (japanslair) Safety Shark was unmuted by Anything Goes.
+[2015-10-09T23:17:21.545Z] (japanslair) Exiled Shadows was muted by Soprano Meiko for 7 minutes. (stay memed)
+[2015-10-09T23:17:30.506Z] (japanslair) Exiled Shadows was unmuted by Void KGBeast.
+[2015-10-09T23:17:58.050Z] (japanslair) Exiled Shadows was muted by Anything Goes for 7 minutes. (memed AGain)
+[2015-10-09T23:18:03.908Z] (japanslair) Exiled Shadows was unmuted by foh.
+[2015-10-09T23:18:25.812Z] (japanslair) Alliance - Dreams was muted by Void KGBeast for 1 hour. (no more bad memes pls)
+[2015-10-09T23:19:05.187Z] (japanslair) Exiled Shadows was muted by Soprano Meiko for 7 minutes. (See? It's fun. MEMED)
+[2015-10-09T23:19:29.917Z] (japanslair) Exiled Shadows was unmuted by Anything Goes.
+[2015-10-09T23:19:42.328Z] (japanslair) Alliance - Dreams was unmuted by Void KGBeast.
+[2015-10-09T23:19:52.040Z] (japanslair) Alliance - Dreams was muted by Anything Goes for 7 minutes. (memed)
+[2015-10-09T23:20:18.050Z] (japanslair) Alliance - Dreams was warned by foh. (double meme)
+[2015-10-09T23:20:25.125Z] (japanslair) Exiled Shadows was muted by Soprano Meiko for 1 hour. (>:L)
+[2015-10-09T23:21:36.958Z] (japanslair) Alliance - Dreams was unmuted by Anything Goes.
+[2015-10-09T23:47:08.452Z] (japanslair) hooters was kicked from the room by Void KGBeast.
+[2015-10-09T23:54:41.499Z] (japanslair) sparkychild was appointed to Room Founder by sparkychild.
+[2015-10-09T23:54:43.849Z] (japanslair) Knight Starfox was promoted to Room Moderator by sparkychild.
+[2015-10-10T00:01:51.347Z] (japanslair) Steelchar was promoted to Room Driver by iRoams.
+[2015-10-10T02:34:15.008Z] (japanslair) Japan was appointed to Room Founder by Neo Soul.
+[2015-10-10T02:35:07.437Z] (japanslair) Japan declared [21:34:47] Japan: Neo fixed it
+[2015-10-10T02:35:38.180Z] (japanslair) Japan declared [21:34:47] Japan: Neo fixed itl[21:34:48] Japan: Nvml[21:34:50] fender: kkk 
+[2015-10-10T02:35:48.065Z] (japanslair) Japan declared white power? Oshet
+[2015-10-10T02:40:11.544Z] (japanslair) Calamity Angel was promoted to Room Voice by Japan.
+[2015-10-10T02:43:57.554Z] (japanslair) Legacy Kyra was promoted to Room Voice by Knight Starfox.
+[2015-10-10T02:54:20.465Z] (japanslair) GTX♅RainManaphy was kicked from the room by CLOYY.
+[2015-10-10T02:57:36.388Z] (japanslair) GTX♅RainManaphy was kicked from the room by CLOYY.
+[2015-10-10T02:58:13.967Z] (japanslair) GTX♅RainManaphy was muted by CLOYY for 7 minutes. (no u)
+[2015-10-10T02:58:28.860Z] (japanslair) GTX♅RainManaphy was unmuted by Japan.
+[2015-10-10T02:59:11.576Z] (japanslair) (CLOYY notes: japan)
+[2015-10-10T02:59:12.175Z] (japanslair) (CLOYY notes: this guy legit scares me)
+[2015-10-10T03:02:08.486Z] (japanslair) GTX♅RainManaphy was muted by CLOYY for 7 minutes.
+[2015-10-10T03:06:13.635Z] (japanslair) GTX♅RainManaphy was unmuted by Japan.
+[2015-10-10T03:09:11.418Z] (japanslair) CLOYY was warned by Japan. (don't use that term)
+[2015-10-10T03:16:45.956Z] (japanslair) Japan declared <center><b><font color="#0080FF" size="5">#blamekammi</font></b><br /><br />Are you tired of mistakes happening on your server? Hate the crashes? Well, congratulations, because now you can blame someone that has nothing to do with the issue to make yourself feel better! Blaming Kammi is the perfect solution to any argument, problem, or mistake. Try it today!<br /><hr><button name="send" value="#blamekammi"><b><font size="3">Solve your problems</b></font></button><hr></center>
+[2015-10-10T03:20:45.577Z] (japanslair) Safety Shark was muted by Japan for 7 minutes.
+[2015-10-10T03:20:52.829Z] (japanslair) Cloyy was warned by Japan. (q spam)
+[2015-10-10T03:35:01.934Z] (japanslair) (Japan changed the roomdesc to: "6 dayz inb4 "I'm pregnant"".)
+[2015-10-10T03:47:34.742Z] (japanslair) Doctor Emboar11 was banned from room japanslair by Cloyy. (the fuck are you)
+[2015-10-10T03:47:44.334Z] (japanslair) doctoremboar11 was unbanned from room japanslair by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T03:47:57.502Z] (japanslair) (Cloyy was demoted to Room Driver by Japan - ⓢⓛⓔⓔⓟ.)
+[2015-10-10T04:02:08.419Z] (japanslair) Lotus Itsme was kicked from the room by Cloyy.
+[2015-10-10T06:49:08.958Z] (japanslair) GTX♅RainManaphy was warned by Cloyy. (caps and spaz)
+[2015-10-10T06:49:30.990Z] (japanslair) GTX♅RainManaphy was kicked from the room by macrarazy.
+[2015-10-10T06:57:31.248Z] (japanslair) GTX♅RainManaphy was muted by Cloyy for 1 hour.
+[2015-10-10T07:05:49.578Z] (japanslair) GTX♅RainManaphy was unmuted by Cloyy.
+[2015-10-10T07:05:51.607Z] (japanslair) GTX♅RainManaphy was muted by Cloyy for 1 hour.
+[2015-10-10T07:26:38.503Z] (japanslair) Elite Dance Studio was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T08:06:30.680Z] (japanslair) Lotus Aranacana was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T08:07:09.183Z] (japanslair) Lotus Aranacana was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T08:13:38.660Z] (japanslair) Elite Dance Studio would be muted by macrarazy but was already offline. (ascii faggot)
+[2015-10-10T08:13:52.540Z] (japanslair) Lotus Aranacana was unmuted by macrarazy.
+[2015-10-10T11:57:05.494Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T11:57:23.702Z] (japanslair) macrarazy was unmuted by Dylan654 😓.
+[2015-10-10T13:41:15.379Z] (japanslair) warlic was unbanned from room japanslair by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T14:16:56.321Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T14:17:28.311Z] (japanslair) macrarazy was unmuted by Knight Starfox~.
+[2015-10-10T14:24:36.909Z] (japanslair) macrarazy was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-10T14:24:44.498Z] (japanslair) macrarazy was unmuted by Alliance - Llama.
+[2015-10-10T14:31:13.823Z] (japanslair) Ruby D was promoted to Room Moderator by iRoams.
+[2015-10-10T14:33:55.688Z] (japanslair) Queen Emma was kicked from the room by iLlama.
+[2015-10-10T14:34:58.271Z] (japanslair) iLlama was promoted to Room Leader by iRoams.
+[2015-10-10T14:37:31.093Z] (japanslair) macrarazy was banned from room japanslair by Safety Shark. (Automated response: zero tolerance user)
+[2015-10-10T14:37:38.307Z] (japanslair) macrarazy was unbanned from room japanslair by Knight Starfox~.
+[2015-10-10T14:37:45.451Z] (japanslair) macrarazy was banned from room japanslair by Safety Shark. (Blacklisted user)
+[2015-10-10T14:37:46.065Z] (japanslair) (Safety Shark notes: macrarazy was added to the blacklist by #Alpha Ninja.)
+[2015-10-10T14:37:48.358Z] (japanslair) Safety Shark was banned from room japanslair by iRoams.
+[2015-10-10T14:37:48.367Z] (japanslair) (Safety Shark's roombanned alts: ChuChu-BoTTT~)
+[2015-10-10T14:37:58.989Z] (japanslair) macrarazy was unbanned from room japanslair by Alpha Ninja.
+[2015-10-10T14:38:04.797Z] (japanslair) safetyshark was unbanned from room japanslair by Alpha Ninja.
+[2015-10-10T14:39:02.067Z] (japanslair) Alpha Ninja was muted by Japan - ⓢⓛⓔⓔⓟ for 7 minutes.
+[2015-10-10T14:39:05.538Z] (japanslair) iRoams was muted by Japan - ⓢⓛⓔⓔⓟ for 7 minutes.
+[2015-10-10T14:39:10.409Z] (japanslair) Alpha Ninja was appointed Room Owner by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T14:39:14.403Z] (japanslair) iRoams was appointed Room Owner by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T14:41:16.772Z] (japanslair) Alpha Ninja was unmuted by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T14:41:23.667Z] (japanslair) iRoams was unmuted by Japan - ⓢⓛⓔⓔⓟ.
+[2015-10-10T15:39:38.251Z] (japanslair) macrarazy was warned by Japan - ⓑⓡⓑ.
+[2015-10-10T15:44:25.621Z] (japanslair) Sky Jones was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T15:44:44.816Z] (japanslair) PVN was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T15:45:21.895Z] (japanslair) (pvn was demoted to Room regular user by iRoams.)
+[2015-10-10T15:48:36.992Z] (japanslair) Japan - ⓑⓡⓑ declared when she horny but you trying to play some mons
+[2015-10-10T15:49:43.199Z] (japanslair) Japan - ⓑⓡⓑ declared when she horny but you trying to play some mons.
+[2015-10-10T15:52:10.772Z] (japanslair) Sky Jones was muted by iLlama for 1 hour. (kys)
+[2015-10-10T15:52:12.192Z] (japanslair) Sky Jones was warned by iRoams. (lb)
+[2015-10-10T15:52:20.512Z] (japanslair) Sky Jones was warned by Japan - ⓑⓡⓑ.
+[2015-10-10T15:55:42.693Z] (japanslair) Sky Jones was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T16:00:09.344Z] (japanslair) Japan - ⓑⓡⓑ declared omg i found it xaa
+[2015-10-10T16:01:45.698Z] (japanslair) Foh was kicked from the room by iRoams.
+[2015-10-10T16:05:55.083Z] (japanslair) TruBlaze was warned by Knight Starfox~.
+[2015-10-10T16:06:12.179Z] (japanslair) ashbloodthief was banned from room japanslair by Foh.
+[2015-10-10T16:06:22.961Z] (japanslair) (Foh was demoted to Room Moderator by Japan - ⓑⓡⓑ.)
+[2015-10-10T16:06:26.398Z] (japanslair) ashbloodthief was unbanned from room japanslair by Japan - ⓑⓡⓑ.
+[2015-10-10T16:10:57.648Z] (japanslair) Japan - ⓑⓡⓑ declared this is when Japan's lair was private 
+[2015-10-10T16:12:11.238Z] (japanslair) PrimalZard was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-10-10T16:12:34.070Z] (japanslair) Sky Jones was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:14:10.284Z] (japanslair) Safety Shark was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-10T16:14:21.410Z] (japanslair) Japan - ⓑⓡⓑ set modchat to #
+[2015-10-10T16:14:29.645Z] (japanslair) (Legacy Enervate notes: hi fuckers)
+[2015-10-10T16:14:59.675Z] (japanslair) (Foh notes: rip)
+[2015-10-10T16:15:10.926Z] (japanslair) (Legacy Enervate notes: o)
+[2015-10-10T16:15:22.102Z] (japanslair) Japan - ⓑⓡⓑ set modchat to false
+[2015-10-10T16:15:34.866Z] (japanslair) Safety Shark was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T16:16:37.705Z] (japanslair) Japan - ⓑⓡⓑ declared bitter soul x neo soil Amirite 
+[2015-10-10T16:16:51.726Z] (japanslair) Japan - ⓑⓡⓑ declared *soul
+[2015-10-10T16:16:54.799Z] (japanslair) Darkrai165196 was redirected to room Doge Room by Knight Starfox~.
+[2015-10-10T16:18:21.789Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:18:40.219Z] (japanslair) Bitter Soul was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-10-10T16:18:47.496Z] (japanslair) ashbloodthief was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-10-10T16:19:47.138Z] (japanslair) Japan - ⓑⓡⓑ declared u can now challenge ither people in here for their auth
+[2015-10-10T16:21:37.312Z] (japanslair) WATRMELONSPEK was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:21:41.369Z] (japanslair) WATRMELONSPEK was kicked from the room by Darkrai165196.
+[2015-10-10T16:22:18.906Z] (japanslair) Darkrai165196 was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-10-10T16:23:06.931Z] (japanslair) Japan - ⓑⓡⓑ declared imo lets pretend we're a league and meme challenge alliance 
+[2015-10-10T16:23:14.856Z] (japanslair) iRoams declared Everyone get a JL Alt
+[2015-10-10T16:24:04.286Z] (japanslair) Japan - ⓑⓡⓑ declared u don't have to change your name lmao
+[2015-10-10T16:24:10.734Z] (japanslair) iRoams declared its better Japan
+[2015-10-10T16:24:13.674Z] (japanslair) iRoams declared feelsbn
+[2015-10-10T16:24:28.692Z] (japanslair) Japan - ⓑⓡⓑ declared go back to your original alts lol
+[2015-10-10T16:26:25.839Z] (japanslair) Japan - ⓑⓡⓑ declared lets all cyber big jl orgy
+[2015-10-10T16:28:24.971Z] (japanslair) iRoams declared the final promotion :]] feelsgd 
+[2015-10-10T16:28:25.798Z] (japanslair) Bitter Soul was promoted to Room Driver by iRoams.
+[2015-10-10T16:29:01.662Z] (japanslair) (Bitter Soul was demoted to Room Operator by Japan - ⓑⓡⓑ.)
+[2015-10-10T16:30:04.811Z] (japanslair) macrarazy was kicked from the room by Darkrai165196.
+[2015-10-10T16:30:11.980Z] (japanslair) Darkrai165196 was kicked from the room by iRoams.
+[2015-10-10T16:32:38.285Z] (japanslair) Pikapig123 was promoted to Room Voice by Foh.
+[2015-10-10T16:34:14.482Z] (japanslair) Japan - ⓑⓡⓑ declared eos = ejaculation of semen. -Japan 
+[2015-10-10T16:34:58.478Z] (japanslair) BT Cant Get Burns declared ashbloodthief how dafuq am i shitty 
+[2015-10-10T16:35:17.154Z] (japanslair) BT Cant Get Burns declared thats Me BT but k 
+[2015-10-10T16:35:42.042Z] (japanslair) BT Cant Get Burns declared yup
+[2015-10-10T16:36:32.498Z] (japanslair) BT Cant Get Burns declared yeah i am 
+[2015-10-10T16:37:33.319Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:37:54.383Z] (japanslair) (Safety Shark was demoted to Room Driver by iRoams.)
+[2015-10-10T16:38:28.375Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from iRoams<br /></i></font size>no operators y/n</b></div>
+[2015-10-10T16:39:19.846Z] (japanslair) Sky Jones was warned by Japan - ⓑⓡⓑ.
+[2015-10-10T16:39:25.931Z] (japanslair) (Soprano Meiko notes: eh, maybe roams)
+[2015-10-10T16:41:37.905Z] (japanslair) Sky Jones was muted by Japan - ⓑⓡⓑ for 7 minutes. (Poop fetish)
+[2015-10-10T16:49:02.953Z] (japanslair) Japan - ⓑⓡⓑ declared rather get hit by a car of ron Jeremy's dicks?, Car, Ron
+[2015-10-10T16:50:43.705Z] (japanslair) Sky Jones was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-10T16:51:03.155Z] (japanslair) Sky Jones was muted by Japan - ⓑⓡⓑ for 1 hour.
+[2015-10-10T16:52:30.849Z] (japanslair) Sky Jones was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T16:54:27.034Z] (japanslair) PrimalZard was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T16:55:31.890Z] (japanslair) macrarazy was kicked from the room by Soprano Meiko.
+[2015-10-10T16:56:27.550Z] (japanslair) Japan - ⓑⓡⓑ declared the pick chooses person for leader
+[2015-10-10T16:57:14.012Z] (japanslair) Japan - ⓑⓡⓑ declared i'll do it againa and include all mods
+[2015-10-10T16:57:35.278Z] (japanslair) KatheyIsme123 was promoted to Room Leader by Japan - ⓑⓡⓑ.
+[2015-10-10T16:58:55.927Z] (japanslair) Sky Jones was warned by macrarazy. (lb)
+[2015-10-10T16:59:18.667Z] (japanslair) Japan - ⓑⓡⓑ set modchat to #
+[2015-10-10T16:59:26.742Z] (japanslair) (ruby D - ⓜⓐⓕⓘⓐ notes: wtfman)
+[2015-10-10T16:59:28.510Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:29.569Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:30.172Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:30.335Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:30.936Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:31.139Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:31.739Z] (japanslair) (Theace22 notes: k)
+[2015-10-10T16:59:33.187Z] (japanslair) (Soprano Meiko notes: ace is bad)
+[2015-10-10T16:59:37.004Z] (japanslair) (Theace22 notes: ace 4 leader)
+[2015-10-10T16:59:39.911Z] (japanslair) Theace22 was muted by iRoams for 7 minutes. (spam/flood)
+[2015-10-10T17:00:02.353Z] (japanslair) Japan - ⓑⓡⓑ set modchat to false
+[2015-10-10T17:00:41.220Z] (japanslair) Theace22 was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T17:01:48.192Z] (japanslair) Japan - ⓑⓡⓑ declared example joined help
+[2015-10-10T17:03:18.900Z] (japanslair) macrarazy was promoted to Room Driver by Japan - ⓑⓡⓑ.
+[2015-10-10T17:03:50.407Z] (japanslair) (Soprano Meiko notes: now you can join the modnotes xaa)
+[2015-10-10T17:04:33.913Z] (japanslair) Legacy Enervate was muted by Soprano Meiko for 7 minutes. (calm the fuck down, man)
+[2015-10-10T17:04:40.936Z] (japanslair) Legacy Enervate was unmuted by Knight~Starfox~~☆.
+[2015-10-10T17:06:24.573Z] (japanslair) Japan - ⓑⓡⓑ set modchat to &
+[2015-10-10T17:06:35.347Z] (japanslair) (Theace22 notes: meanies)
+[2015-10-10T17:06:36.244Z] (japanslair) (ruby D - ⓜⓐⓕⓘⓐ notes: v)
+[2015-10-10T17:06:38.615Z] (japanslair) (Theace22 notes: v)
+[2015-10-10T17:06:41.358Z] (japanslair) (Knight~Starfox~~☆ notes: ;;)
+[2015-10-10T17:06:41.995Z] (japanslair) (Theace22 notes: xaaaaa)
+[2015-10-10T17:06:47.281Z] (japanslair) Japan - ⓑⓡⓑ set modchat to ~
+[2015-10-10T17:06:49.151Z] (japanslair) (Foh notes: o.o)
+[2015-10-10T17:06:49.524Z] (japanslair) (Theace22 notes: what is this modchat)
+[2015-10-10T17:06:53.773Z] (japanslair) (Theace22 notes: neo!)
+[2015-10-10T17:06:54.073Z] (japanslair) (macrarazy notes: LOL)
+[2015-10-10T17:06:56.403Z] (japanslair) (Knight~Starfox~~☆ notes: oshet)
+[2015-10-10T17:06:56.901Z] (japanslair) (iLlama notes: feelsbd)
+[2015-10-10T17:06:57.098Z] (japanslair) (ruby D - ⓜⓐⓕⓘⓐ notes: rofl)
+[2015-10-10T17:06:57.142Z] (japanslair) (Soprano Meiko notes: NEO RUINED IT)
+[2015-10-10T17:06:57.654Z] (japanslair) (Theace22 notes: :])
+[2015-10-10T17:06:58.204Z] (japanslair) (KatheyIsme123 notes: Neo Promote us to room admin)
+[2015-10-10T17:07:01.234Z] (japanslair) (Theace22 notes: NEOOOOOOOO)
+[2015-10-10T17:07:04.507Z] (japanslair) (Knight~Starfox~~☆ notes: lmao)
+[2015-10-10T17:07:04.613Z] (japanslair) (Theace22 notes: memes)
+[2015-10-10T17:07:08.294Z] (japanslair) (Soprano Meiko notes: RIP)
+[2015-10-10T17:07:10.318Z] (japanslair) (Theace22 notes: LOL)
+[2015-10-10T17:07:17.950Z] (japanslair) (Theace22 notes: man)
+[2015-10-10T17:07:21.931Z] (japanslair) (Theace22 notes: modchat is useless)
+[2015-10-10T17:07:23.190Z] (japanslair) (Legacy Enervate notes: FUCK THE MODS)
+[2015-10-10T17:07:24.762Z] (japanslair) (Soprano Meiko notes: MEIKO4ROOMADMIN)
+[2015-10-10T17:07:25.890Z] (japanslair) (Legacy Enervate notes: LTMBIRKBTMVTORUib )
+[2015-10-10T17:07:27.455Z] (japanslair) (Japan - ⓑⓡⓑ notes: I AM THE CAPTAIN NOW)
+[2015-10-10T17:07:32.034Z] (japanslair) (Theace22 notes: JAPAN SUCKS)
+[2015-10-10T17:07:34.303Z] (japanslair) (Neo Soul notes: Neo for mod imo)
+[2015-10-10T17:07:34.473Z] (japanslair) (iLlama notes: neo likes reading the plebs beg for forgiveness)
+[2015-10-10T17:07:35.372Z] (japanslair) (Theace22 notes: flee)
+[2015-10-10T17:07:38.064Z] (japanslair) (Anything Goes notes: ITS BEEN MORE THEN TEN SECONDS JAPANS)
+[2015-10-10T17:07:39.475Z] (japanslair) (Legacy Enervate notes: I agree with ace)
+[2015-10-10T17:07:41.803Z] (japanslair) (Theace22 notes: neo for mod)
+[2015-10-10T17:07:41.833Z] (japanslair) (Anything Goes notes: ?>>>)
+[2015-10-10T17:07:41.877Z] (japanslair) Japan - ⓑⓡⓑ set modchat to false
+[2015-10-10T17:07:59.342Z] (japanslair) PrimalZard was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T17:08:05.933Z] (japanslair) PrimalZard was unmuted by macrarazy.
+[2015-10-10T17:08:17.488Z] (japanslair) Sky Jones was warned by iRoams. (ln)
+[2015-10-10T17:08:18.860Z] (japanslair) (Queen Emma was demoted to Room Voice by Legacy Enervate.)
+[2015-10-10T17:08:29.094Z] (japanslair) Queen Emma was promoted to Room Operator by Soprano Meiko.
+[2015-10-10T17:08:42.972Z] (japanslair) (Queen Emma was demoted to Room Voice by Legacy Enervate.)
+[2015-10-10T17:08:44.990Z] (japanslair) Queen Emma was promoted to Room Operator by Legacy Enervate.
+[2015-10-10T17:08:50.912Z] (japanslair) (Legacy Enervate was demoted to Room Driver by iRoams.)
+[2015-10-10T17:09:09.719Z] (japanslair) Queen Emma was kicked from the room by Legacy Enervate.
+[2015-10-10T17:09:15.989Z] (japanslair) Queen Emma was promoted to Room Driver by iRoams.
+[2015-10-10T17:09:22.889Z] (japanslair) Legacy Enervate was muted by Anything Goes for 7 minutes.
+[2015-10-10T17:09:42.082Z] (japanslair) Queen Emma was appointed Room Owner by Japan - ⓑⓡⓑ.
+[2015-10-10T17:09:46.844Z] (japanslair) Japan - ⓑⓡⓑ declared misslcick
+[2015-10-10T17:10:03.820Z] (japanslair) Queen Emma was promoted to Room Operator by Soprano Meiko.
+[2015-10-10T17:10:21.903Z] (japanslair) Legacy Enervate was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T17:10:53.782Z] (japanslair) Sky Jones was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T17:11:09.393Z] (japanslair) PrimalZard was warned by macrarazy. (xaa)
+[2015-10-10T17:11:16.911Z] (japanslair) Theace22 was appointed Room Owner by Japan - ⓑⓡⓑ.
+[2015-10-10T17:11:28.894Z] (japanslair) Theace22 was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-10-10T17:11:42.255Z] (japanslair) Legacy Enervate was kicked from the room by Knight~Starfox~~☆.
+[2015-10-10T17:12:36.877Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Legacy Enervate<br /></i></font size><center><button name="send"value="JAPAN IS A POOPYHEAD">I like trains</button></center></b></div>
+[2015-10-10T17:12:52.532Z] (japanslair) (Soprano Meiko notes: TRAINS)
+[2015-10-10T17:12:55.637Z] (japanslair) PrimalZard was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T17:13:00.565Z] (japanslair) PrimalZard was unmuted by Darkrai165196.
+[2015-10-10T17:13:11.229Z] (japanslair) Safety Shark was muted by Anything Goes for 7 minutes.
+[2015-10-10T17:13:21.528Z] (japanslair) Safety Shark was unmuted by iLlama.
+[2015-10-10T17:13:41.768Z] (japanslair) Captain eve was appointed Room Owner by Japan - ⓑⓡⓑ.
+[2015-10-10T17:14:01.691Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Legacy Enervate<br /></i></font size><center><button name="send"value="/hourmute starizardz">I like trains</button></center></b></div>
+[2015-10-10T17:14:04.278Z] (japanslair) Starizardz was muted by Theace22 for 1 hour.
+[2015-10-10T17:14:22.596Z] (japanslair) Queen Emma was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T17:14:28.637Z] (japanslair) Starizardz was unmuted by Theace22.
+[2015-10-10T17:14:39.827Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from macrarazy<br /></i></font size>Japan - ⓑⓡⓑ wants to fuck Captain eve</b></div>
+[2015-10-10T17:14:57.096Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from macrarazy<br /></i></font size>it's in the quotelist</b></div>
+[2015-10-10T17:15:00.695Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Legacy Enervate<br /></i></font size><center><button name="send"value="/transfer legacyenervate, 1">I like trains</button></center></b></div>
+[2015-10-10T17:15:27.339Z] (japanslair) Legacy Enervate was warned by Soprano Meiko. (you like trains. we get it)
+[2015-10-10T17:15:44.988Z] (japanslair) Japan - ⓑⓡⓑ set modchat to #
+[2015-10-10T17:15:48.719Z] (japanslair) Legacy Enervate was banned from room japanslair by Theace22.
+[2015-10-10T17:15:48.723Z] (japanslair) (Legacy Enervate's roombanned alts: Pikeldeo)
+[2015-10-10T17:16:08.633Z] (japanslair) legacyenervate was unbanned from room japanslair by Japan - ⓑⓡⓑ.
+[2015-10-10T17:16:36.149Z] (japanslair) Japan - ⓑⓡⓑ set modchat to false
+[2015-10-10T17:16:37.199Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from macrarazy<br /></i></font size>Japan's thinking about this rn</b></div>
+[2015-10-10T17:17:29.604Z] (japanslair) Sky Jones was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T17:17:32.029Z] (japanslair) (Sky Jones would be muted by Anything Goes but was already muted.)
+[2015-10-10T17:17:38.000Z] (japanslair) Sky Jones was kicked from the room by Knight~Starfox~~☆.
+[2015-10-10T17:17:50.043Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "Macrarazy the type of nigga to swallow his own cum after masturbating ".)
+[2015-10-10T17:17:55.770Z] (japanslair) Sky Jones was kicked from the room by Exiled Shadows.
+[2015-10-10T17:18:03.734Z] (japanslair) Sky Jones was kicked from the room by Exiled Shadows.
+[2015-10-10T17:18:03.763Z] (japanslair) Sky Jones was muted by iLlama for 1 hour.
+[2015-10-10T17:18:09.719Z] (japanslair) Sky Jones was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-10T17:20:02.234Z] (japanslair) macrarazy was warned by Darkrai165196.
+[2015-10-10T17:20:48.978Z] (japanslair) ruby D - ⓜⓐⓕⓘⓐ was promoted to Room Leader by iRoams.
+[2015-10-10T17:20:51.054Z] (japanslair) (ruby D - ⓜⓐⓕⓘⓐ was demoted to Room Moderator by iRoams.)
+[2015-10-10T17:21:37.744Z] (japanslair) macrarazy was warned by Darkrai165196. (Not appreciated here.)
+[2015-10-10T17:23:15.768Z] (japanslair) Queen Emma was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T17:23:20.581Z] (japanslair) Queen Emma was unmuted by Darkrai165196.
+[2015-10-10T17:31:03.616Z] (japanslair) PrimalZard was warned by macrarazy. (enuff said)
+[2015-10-10T17:34:38.365Z] (japanslair) iRoams declared i'm gonna be making custom avatars for 5 bucks.
+[2015-10-10T17:34:41.310Z] (japanslair) iRoams declared -roams
+[2015-10-10T17:34:46.796Z] (japanslair) PrimalZard was warned by Darkrai165196.
+[2015-10-10T17:34:50.806Z] (japanslair) PrimalZard was muted by Darkrai165196 for 7 minutes.
+[2015-10-10T17:34:52.545Z] (japanslair) PrimalZard was kicked from the room by Darkrai165196.
+[2015-10-10T17:35:00.864Z] (japanslair) PrimalZard was unmuted by Darkrai165196.
+[2015-10-10T17:36:09.765Z] (japanslair) iRoams declared I love you  <br> You Love me <br> Zard Is Ugly <br> And Ruby has a little d
+[2015-10-10T17:37:07.008Z] (japanslair) Safety Shark was promoted to Room Leader by iRoams.
+[2015-10-10T17:37:08.311Z] (japanslair) Safety Shark declared I love you  <br> You Love me <br> Zard Is Ugly <br> And Ruby has a little d
+[2015-10-10T17:38:47.027Z] (japanslair) Safety Shark declared Charmander is red <br> MetaPod is green <br> You're good in bed <br> and you look like a bean
+[2015-10-10T17:53:41.898Z] (japanslair) MAH 6 SEXY NIPPLES was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T17:55:36.683Z] (japanslair) WATRMLNSPEEKER was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T18:12:49.302Z] (japanslair) ashbloodthief was kicked from the room by iRoams.
+[2015-10-10T18:37:58.050Z] (japanslair) Safety Shark declared I love you  <br> You Love me <br> Zard Is Ugly <br> And Ruby has a little d
+[2015-10-10T18:38:13.315Z] (japanslair) Safety Shark declared Charmander is red <br> MetaPod is green <br> You're good in bed <br> and you look like a bean
+[2015-10-10T18:38:34.838Z] (japanslair) macrarazy was kicked from the room by Darkrai165196.
+[2015-10-10T18:41:13.933Z] (japanslair) PrimalZard was warned by macrarazy. (cant touch THIS, nigga,,,)
+[2015-10-10T18:42:49.658Z] (japanslair) Ravonne was warned by macrarazy. (^)
+[2015-10-10T18:45:31.484Z] (japanslair) Safety Shark declared I love you  <br> You Love me <br> Zard Is Ugly <br> And Ruby has a little d
+[2015-10-10T18:49:57.311Z] (japanslair) (delta changed the roomintro.)
+[2015-10-10T18:50:48.633Z] (japanslair) Harvest God was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T18:55:38.535Z] (japanslair) Dark Djiin Wolf was kicked from the room by Darkrai165196.
+[2015-10-10T19:00:14.796Z] (japanslair) Ravonne was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T19:00:35.503Z] (japanslair) Ravonne was unmuted by Japan.
+[2015-10-10T19:01:18.856Z] (japanslair) Dark Djiin Wolf was muted by Ravonne for 7 minutes.
+[2015-10-10T19:01:27.252Z] (japanslair) Dark Djiin Wolf was unmuted by Ravonne.
+[2015-10-10T19:01:36.155Z] (japanslair) Ravonne was warned by iLlama. (stop)
+[2015-10-10T19:03:36.616Z] (japanslair) Ravonne was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-10T19:03:41.324Z] (japanslair) Ravonne was unmuted by Darkrai165196.
+[2015-10-10T19:03:43.597Z] (japanslair) Ravonne was kicked from the room by iLlama.
+[2015-10-10T19:05:58.893Z] (japanslair) Japan set modchat to #
+[2015-10-10T19:06:15.319Z] (japanslair) (iLlama notes: served)
+[2015-10-10T19:06:16.582Z] (japanslair) (Legacy Enervate notes: penis)
+[2015-10-10T19:06:17.908Z] (japanslair) Japan set modchat to false
+[2015-10-10T19:07:15.050Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Legacy Enervate<br /></i></font size><button name="send"value="/transfer legacyenervate, 4">Hi here's a button</button></b></div>
+[2015-10-10T19:10:56.124Z] (japanslair) Legacy Enervate was warned by iLlama. (don't flood)
+[2015-10-10T19:11:11.331Z] (japanslair) iLlama was warned by Alpha Ninja. (don't moderate)
+[2015-10-10T19:29:15.389Z] (japanslair) Dark Djiin Wolf was kicked from the room by macrarazy.
+[2015-10-10T19:33:14.122Z] (japanslair) Prise was promoted to Room Voice by FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ.
+[2015-10-10T19:33:14.649Z] (japanslair) Prise was appointed Room Owner by Japan - ⓑⓡⓑ.
+[2015-10-10T19:33:51.260Z] (japanslair) iRoams was promoted to Room Voice by FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ.
+[2015-10-10T19:41:44.480Z] (japanslair) Dark Djiin Wolf was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T19:57:24.771Z] (japanslair) macrarazy was kicked from the room by Prise.
+[2015-10-10T19:58:10.385Z] (japanslair) (macrarazy notes: swag it up 'G)
+[2015-10-10T20:13:08.017Z] (japanslair) Guard Wulf was kicked from the room by FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ.
+[2015-10-10T20:16:03.158Z] (japanslair) Guard Wulf was promoted to Room Operator by FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ.
+[2015-10-10T20:43:37.726Z] (japanslair) Sky Jones was warned by Harvest God. (spam ty for reminding me AG bby <3)
+[2015-10-10T20:45:01.129Z] (japanslair) Sky Jones was muted by ashbloodthief for 7 minutes.
+[2015-10-10T20:46:08.508Z] (japanslair) Sky Jones was muted by Alliance - Llama for 1 hour. (spamming is a global offense)
+[2015-10-10T20:48:14.196Z] (japanslair) Prof. KGBeast was promoted to Room Voice by FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ.
+[2015-10-10T20:56:54.115Z] (japanslair) ashbloodthief was kicked from the room by FOH.
+[2015-10-10T20:56:58.775Z] (japanslair) Myst Anti was kicked from the room by FOH.
+[2015-10-10T21:13:30.807Z] (japanslair) Japan - ⓑⓡⓑ declared if real go holler at random user "iulia"
+[2015-10-10T21:15:43.327Z] (japanslair) Champ Vicky was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T21:15:49.196Z] (japanslair) jordean was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T21:19:31.681Z] (japanslair) Jake1079 was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T21:23:34.631Z] (japanslair) Cloyy was promoted to Room Moderator by Prise.
+[2015-10-10T21:26:41.298Z] (japanslair) Bitch Of The Dices was promoted to Room Voice by FOH.
+[2015-10-10T21:28:10.909Z] (japanslair) (Neowulf was demoted to Room regular user by FOH.)
+[2015-10-10T21:28:23.355Z] (japanslair) Neowulf was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T21:28:29.025Z] (japanslair) (FOH was demoted to Room Driver by Japan - ⓑⓡⓑ.)
+[2015-10-10T21:28:58.615Z] (japanslair) FOH was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-10-10T21:29:18.656Z] (japanslair) Aranacana was promoted to Room Voice by FOH.
+[2015-10-10T21:34:59.259Z] (japanslair) (Cloyy notes: ok guys)
+[2015-10-10T21:35:08.064Z] (japanslair) (Cloyy notes: we gonna get delta some pussy)
+[2015-10-10T21:35:16.469Z] (japanslair) (Cloyy notes: hes sad)
+[2015-10-10T21:35:20.381Z] (japanslair) (Cloyy notes: :[)
+[2015-10-10T21:35:22.892Z] (japanslair) (Anything Goes notes: who's pussy)
+[2015-10-10T21:35:26.842Z] (japanslair) (Anything Goes notes: jw)
+[2015-10-10T21:35:30.771Z] (japanslair) (Cloyy notes: im thinking emma)
+[2015-10-10T21:36:25.807Z] (japanslair) (Anything Goes notes: cloyy give him yours since you and YaBoiMlgShrek had a kid)
+[2015-10-10T21:54:49.538Z] (japanslair) TruBlaze was kicked from the room by Cloyy.
+[2015-10-10T22:05:01.256Z] (japanslair) Recruiter Arana was promoted to Room Voice by FOH - ⓒⓐⓝⓒⓔⓡⓞⓤⓢ.
+[2015-10-10T22:09:25.813Z] (japanslair) Gambler Gambler was promoted to Room Voice by FOH - ⓒⓐⓝⓒⓔⓡⓞⓤⓢ.
+[2015-10-10T22:11:37.794Z] (japanslair) Cyllage was promoted to Room Voice by Anything Goes.
+[2015-10-10T22:45:41.654Z] (japanslair) iRoams was promoted to Room Leader by Prise.
+[2015-10-10T22:56:05.486Z] (japanslair) (iRoams was demoted to Room Voice by Master Kira.)
+[2015-10-10T23:04:09.695Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "Jd the type of nigga to rape a fetus".)
+[2015-10-10T23:13:30.769Z] (japanslair) (Japan - ⓑⓡⓑ changed the roomdesc to: "[18:12:16] $ashbloodthief: "gettin bodied by a singin nigga"".)
+[2015-10-10T23:21:11.669Z] (japanslair) Edooreo was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-10T23:29:39.165Z] (japanslair) Safety Shark was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-10T23:47:42.087Z] (japanslair) Pink Ιnѕanіty was promoted to Room Voice by FOH - ⓒⓐⓝⓒⓔⓡⓞⓤⓢ.
+[2015-10-10T23:53:59.712Z] (japanslair) Delta declared <center><p>When you need a shoulder to cry on.</p><p><audio src="http://puu.sh/kFHV1.mp3" controls="" style="width: 50% ; border: 2px solid #8A0808 ; background-color: #000000" target="_blank"></audio></p></center>
+[2015-10-11T00:07:23.441Z] (japanslair) BT Cant Get Burns declared kk
+[2015-10-11T00:07:45.239Z] (japanslair) ready2go202 was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T00:07:54.352Z] (japanslair) BT Cant Get Burns declared shadowbanned do #FreeYourBoiiBT in lobby
+[2015-10-11T00:07:57.157Z] (japanslair) BT Cant Get Burns declared jk
+[2015-10-11T00:08:32.715Z] (japanslair) BT Cant Get Burns declared chuchubott isnt on eeos 
+[2015-10-11T00:08:42.552Z] (japanslair) BT Cant Get Burns declared and i doubt ill get unbanned from that 
+[2015-10-11T00:08:50.166Z] (japanslair) BT Cant Get Burns declared that would jst make it worse for me 
+[2015-10-11T00:11:15.988Z] (japanslair) (Delta changed the roomintro.)
+[2015-10-11T00:42:29.754Z] (japanslair) Japan - ⓑⓡⓑ declared he can't go on kain cuz he locked on main too lmao -Japan
+[2015-10-11T00:43:45.114Z] (japanslair) |raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from Legacy Enervate<br /></i></font size><button name="send"value="Spongebob is the best anime since Bleach tbhjs">I like trains</button></b></div>
+[2015-10-11T00:51:36.098Z] (japanslair) Dylightful was banned from room japanslair by Cloyy. (go away skymond)
+[2015-10-11T00:51:44.636Z] (japanslair) dylightful was unbanned from room japanslair by Star_Fox_Fan.
+[2015-10-11T00:55:20.490Z] (japanslair) Dylightful was banned from room japanslair by Cloyy. (go away skymond)
+[2015-10-11T00:56:42.050Z] (japanslair) crashY was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-11T00:59:03.737Z] (japanslair) Guard Wulf was kicked from the room by TheAce22.
+[2015-10-11T01:01:00.780Z] (japanslair) (Star_Fox_Fan was demoted to Room regular user by Japan - ⓑⓡⓑ.)
+[2015-10-11T01:01:08.862Z] (japanslair) Safety Shark was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-11T01:01:39.307Z] (japanslair) (Cloyy was demoted to Room Driver by Japan - ⓑⓡⓑ.)
+[2015-10-11T01:01:48.178Z] (japanslair) Safety Shark was unmuted by Anything Goes.
+[2015-10-11T01:15:10.037Z] (japanslair) Star_Fox_Fan was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-10-11T01:20:18.241Z] (japanslair) BT Cant Get Burns declared thnx japan
+[2015-10-11T01:20:31.129Z] (japanslair) BT Cant Get Burns declared probs.
+[2015-10-11T01:28:08.584Z] (japanslair) YaBoiMlgShrek was muted by Japan - ⓑⓡⓑ for 7 minutes. (had enough of your bad memes)
+[2015-10-11T01:28:54.934Z] (japanslair) ashbloodthief was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T01:32:29.346Z] (japanslair) BT Cant Get Burns declared 1738
+[2015-10-11T01:32:30.902Z] (japanslair) BT Cant Get Burns declared aye
+[2015-10-11T01:32:36.654Z] (japanslair) BT Cant Get Burns declared im like hey whats up hello
+[2015-10-11T01:39:01.060Z] (japanslair) Dark Djiin Wolf was promoted to Room Operator by Japan - ⓑⓡⓑ.
+[2015-10-11T01:39:23.832Z] (japanslair) Wandering was muted by Anything Goes for 7 minutes.
+[2015-10-11T01:39:32.775Z] (japanslair) Wandering was unmuted by Anything Goes.
+[2015-10-11T01:39:41.539Z] (japanslair) iMasterball was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-11T01:40:45.445Z] (japanslair) Wanderina was warned by Dark Djiin Wolf.
+[2015-10-11T01:41:08.671Z] (japanslair) Dark Djiin Wolf was warned by Anything Goes. (yeah..TESTING)
+[2015-10-11T01:41:21.079Z] (japanslair) ashbloodthief was muted by Soprano Meiko for 7 minutes. (wander's my bro. so calm the fuck down)
+[2015-10-11T01:42:57.140Z] (japanslair) ashbloodthief was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-11T01:43:02.163Z] (japanslair) Japan - ⓑⓡⓑ set modchat to #
+[2015-10-11T01:43:07.364Z] (japanslair) (Legacy Enervate notes: penis)
+[2015-10-11T01:43:13.948Z] (japanslair) (Cloyy notes: wut)
+[2015-10-11T01:43:21.903Z] (japanslair) (Soprano Meiko notes: Pikel, don't start.)
+[2015-10-11T01:43:22.020Z] (japanslair) (Cloyy notes: im lost)
+[2015-10-11T01:43:31.263Z] (japanslair) (Cloyy notes: someone fill me in)
+[2015-10-11T01:43:35.736Z] (japanslair) Japan - ⓑⓡⓑ set modchat to false
+[2015-10-11T01:43:36.282Z] (japanslair) (Cloyy notes: that's what she said)
+[2015-10-11T01:43:48.495Z] (japanslair) (Legacy Enervate notes: sel you're only the boss of me in art shop, don't tell me what to do >:c)
+[2015-10-11T01:50:22.082Z] (japanslair) Cloyy was promoted to Room Moderator by Japan - ⓑⓡⓑ.
+[2015-10-11T01:57:26.423Z] (japanslair) Japan - ⓑⓡⓑ declared dont spam +q to find a quote just do +quotelist 
+[2015-10-11T01:57:32.837Z] (japanslair) Japan - ⓑⓡⓑ declared ty.
+[2015-10-11T02:01:39.343Z] (japanslair) Arrow Bot was warned by Foh. (dick riding)
+[2015-10-11T02:04:40.591Z] (japanslair) Cloyy was warned by Japan - ⓑⓡⓑ. (don't use that term btw.)
+[2015-10-11T02:05:18.901Z] (japanslair) (Cloyy notes: so hows getting delta pussy going)
+[2015-10-11T02:07:15.914Z] (japanslair) Alliance - Dreams was promoted to Room Driver by Japan - ⓑⓡⓑ.
+[2015-10-11T02:20:03.823Z] (japanslair) (Alliance - Dreams was demoted to Room Operator by Japan - ⓑⓡⓑ.)
+[2015-10-11T02:33:57.781Z] (japanslair) Delta declared <center><p>For Champion Darkrai, when he finds out he cybered with a man (Lexi Lynn).</p><p><audio src="http://puu.sh/kFHV1.mp3" controls="" style="width: 50% ; border: 2px solid #8A0808 ; background-color: #000000" target="_blank"></audio></p></center>
+[2015-10-11T02:41:55.997Z] (japanslair) Champion Darkrai was warned by Japan - ⓑⓡⓑ. (late but don't use that term)
+[2015-10-11T03:04:14.898Z] (japanslair) Lotus Faptastic was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T03:04:38.561Z] (japanslair) ashbloodthief was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T03:04:42.888Z] (japanslair) ashbloodthief was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-11T03:08:09.969Z] (japanslair) ashbloodthief was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-11T03:12:20.546Z] (japanslair) Lotus Faptastic was muted by Dark Djiin Wolf for 7 minutes. (srry testing something)
+[2015-10-11T03:12:22.370Z] (japanslair) Lotus Faptastic was unmuted by Dark Djiin Wolf.
+[2015-10-11T03:22:07.777Z] (japanslair) Validus Wonder was promoted to Room Voice by Japan - ⓑⓡⓑ.
+[2015-10-11T03:22:39.702Z] (japanslair) Alliance - Dreams was muted by Magic - ⒼⒶⓂⒾⓃⒼ for 1 hour. (can u not)
+[2015-10-11T03:23:04.659Z] (japanslair) Alliance - Dreams was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-11T03:25:34.577Z] (japanslair) Dark Djiin Wolf was kicked from the room by Legacy Enervate.
+[2015-10-11T03:25:38.422Z] (japanslair) Alliance - Dreams was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-11T03:26:11.387Z] (japanslair) Alliance - Dreams was unmuted by Japan - ⓑⓡⓑ.
+[2015-10-11T03:26:26.544Z] (japanslair) Legacy Enervate was muted by Japan - ⓑⓡⓑ for 7 minutes.
+[2015-10-11T03:57:35.045Z] (japanslair) Avirra was promoted to Room Voice by Starfox~fan~~☆.
+[2015-10-11T04:08:38.518Z] (japanslair) Champion Darkrai was warned by Japan - ⓑⓡⓑ.
+[2015-10-11T05:07:38.297Z] (japanslair) Champion Darkrai was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T12:59:59.358Z] (japanslair) ExiledShadows was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T13:02:34.002Z] (japanslair) ExiledShadows was unmuted by Japan - ⓢⓛⓔⓔⓟⓘⓝⓖ.
+[2015-10-11T13:02:35.552Z] (japanslair) FreeExiled2015 was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T13:02:53.249Z] (japanslair) FreeExiled2015 was unmuted by Japan - ⓢⓛⓔⓔⓟⓘⓝⓖ.
+[2015-10-11T13:18:49.213Z] (japanslair) theace22 bank was promoted to Room Voice by Starfox~fan.
+[2015-10-11T13:25:02.833Z] (japanslair) ExiledShadows was muted by Darkrai165196 for 7 minutes. (NO U)
+[2015-10-11T13:25:05.202Z] (japanslair) ExiledShadows was unmuted by Darkrai165196.
+[2015-10-11T14:25:04.413Z] (japanslair) Legacy Enervate was kicked from the room by Darkrai165196.
+[2015-10-11T14:49:55.499Z] (japanslair) TruΒlαze was promoted to Room Voice by Darkrai165196.
+[2015-10-11T16:53:49.741Z] (japanslair) Xionico180 was banned from room japanslair by Darkrai165196.
+[2015-10-11T17:35:56.739Z] (japanslair) (Safety Shark notes: xionico180 was added to the blacklist by #Alpha Ninja.)
+[2015-10-11T18:45:36.028Z] (japanslair) Alliance - Dreams was kicked from the room by macrarazy.

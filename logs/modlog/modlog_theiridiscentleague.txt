@@ -276,3 +276,19 @@
 [2015-10-08T16:42:27.172Z] (theiridiscentleague) (ashyudhajit forcibly ended a tournament.)
 [2015-10-08T17:32:00.740Z] (theiridiscentleague) (Yudha-s Bot created a tournament in ou format.)
 [2015-10-08T17:32:27.164Z] (theiridiscentleague) (ashyudhajit - ⓛⓤⓒⓚ forcibly ended a tournament.)
+[2015-10-10T12:10:47.507Z] (theiridiscentleague) Safety Shark was appointed Room Owner by ashyudhajit.
+[2015-10-10T12:10:55.995Z] (theiridiscentleague) hooters was promoted to Room Driver by ashyudhajit.
+[2015-10-10T12:11:34.466Z] (theiridiscentleague) Safety Shark was promoted to Room Leader by ashyudhajit.
+[2015-10-10T12:11:45.024Z] (theiridiscentleague) hooters was promoted to Room Leader by ashyudhajit.
+[2015-10-10T13:47:05.185Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-10-10T13:48:34.399Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-10-10T16:39:29.356Z] (theiridiscentleague) (ashyudhajit changed the roomintro.)
+[2015-10-10T16:58:13.267Z] (theiridiscentleague) Neo Soul declared The Iridiscent League has organised a 30 bucks tour co sponsored by void league.<button>value=/join theiridiscentleague>join the room!
+[2015-10-10T17:02:19.800Z] (theiridiscentleague) Neo Soul declared The Iridiscent League has organised a 30 bucks tour co sponsored by void league. <button name="send" value="/join theiridiscentleague">Join Room</button>
+[2015-10-10T17:08:33.848Z] (theiridiscentleague) (ashyudhajit created a tournament in monotype format.)
+[2015-10-10T17:13:31.031Z] (theiridiscentleague) iRoams was appointed Room Owner by ashyudhajit.
+[2015-10-10T17:18:08.983Z] (theiridiscentleague) (The tournament auto start timeout was set to 0.5 by ashyudhajit)
+[2015-10-10T17:18:50.137Z] (theiridiscentleague) (ashyudhajit was disqualified from the tournament by ashyudhajit)
+[2015-10-10T17:19:00.217Z] (theiridiscentleague) (The tournament auto disqualify timeout was set to 0.5 by ashyudhajit)
+[2015-10-10T17:20:06.298Z] (theiridiscentleague) iRoams declared Scouting = Yes <br> Switching = No 
+[2015-10-10T17:45:13.941Z] (theiridiscentleague) ashyudhajit declared pm iroams for tourney prize!

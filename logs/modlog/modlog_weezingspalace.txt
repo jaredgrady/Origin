@@ -189,3 +189,12 @@
 [2015-09-27T15:04:05.230Z] (weezingspalace) Twizz was muted by TheWeezingBro for 7 minutes.
 [2015-10-05T23:53:03.082Z] (weezingspalace) Champ Vicky was appointed Room Owner by TheWeezingBro.
 [2015-10-05T23:59:19.799Z] (weezingspalace) Safety Shark was promoted to Room Leader by Champ Vicky.
+[2015-10-11T02:51:16.767Z] (weezingspalace) ImmortalMaddie was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T02:52:25.850Z] (weezingspalace) ImmortalMaddie was unmuted by Champ Vicky.
+[2015-10-11T02:54:39.873Z] (weezingspalace) Dark Djiin Wolf was promoted to Room Voice by Champ Vicky.
+[2015-10-11T02:54:50.837Z] (weezingspalace) Lexi_Lynn was promoted to Room Driver by Champ Vicky.
+[2015-10-11T02:54:58.599Z] (weezingspalace) Sunny Charizard was promoted to Room Voice by Champ Vicky.
+[2015-10-11T02:59:45.689Z] (weezingspalace) (Champ Vicky created a tournament in randombattle format.)
+[2015-10-11T03:00:03.098Z] (weezingspalace) Champ Vicky declared Prize is 10 bucks on the sister server: Gold!
+[2015-10-11T03:04:48.171Z] (weezingspalace) (Dark Djiin Wolf was demoted to Room regular user by Champ Vicky.)
+[2015-10-11T03:05:04.917Z] (weezingspalace) Lexi_Lynn was promoted to Room Moderator by Champ Vicky.

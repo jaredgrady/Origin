@@ -760,3 +760,10 @@
 [2015-10-08T15:11:48.705Z] (theavengersmansion) Phantom Theta was unmuted by Queen Emma.
 [2015-10-08T15:46:11.052Z] (theavengersmansion) Phantom Theta was promoted to Room Voice by Queen Emma.
 [2015-10-08T18:10:01.701Z] (theavengersmansion) Phantom Theta was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T06:37:44.028Z] (theavengersmansion) (Queen Emma changed the roomdesc to: "we usually give out cookies for free".)
+[2015-10-09T15:50:07.228Z] (theavengersmansion) Legacy Enervate was promoted to Room Driver by Queen Emma.
+[2015-10-09T15:50:16.577Z] (theavengersmansion) (rain pikeldeo was demoted to Room regular user by Queen Emma.)
+[2015-10-09T15:50:32.329Z] (theavengersmansion) (hvpikel was demoted to Room regular user by Queen Emma.)
+[2015-10-10T16:40:24.305Z] (theavengersmansion) DemonicScizor was appointed Room Owner by Queen Emma.
+[2015-10-10T16:40:36.240Z] (theavengersmansion) GTX Enrique was promoted to Room Leader by Queen Emma.
+[2015-10-10T16:46:19.729Z] (theavengersmansion) Alliance Aegis - ⓐ was promoted to Room Moderator by Queen Emma.

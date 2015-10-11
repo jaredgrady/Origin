@@ -472,3 +472,16 @@
 [2015-10-08T20:50:12.867Z] (fancysplayroom) HM Vodoom was promoted to Room Moderator by Gentleman Tech.
 [2015-10-08T20:50:32.822Z] (fancysplayroom) HM Vodoom was promoted to Room Leader by Barista Fancii.
 [2015-10-08T20:50:45.133Z] (fancysplayroom) (HM Vodoom was demoted to Room Voice by Barista Fancii.)
+[2015-10-09T15:00:05.588Z] (fancysplayroom) Soprano Meiko - ⓡⓟ was kicked from the room by Gentleman Tech.
+[2015-10-09T15:04:45.572Z] (fancysplayroom) Metallica was promoted to Room Operator by Phantom Theta.
+[2015-10-09T15:04:54.057Z] (fancysplayroom) (Metallica was demoted to Room regular user by Phantom Theta.)
+[2015-10-09T15:08:38.078Z] (fancysplayroom) Doctor Mental1st was promoted to Room Voice by Gentleman Tech.
+[2015-10-09T15:37:28.049Z] (fancysplayroom) hooters was kicked from the room by Gentleman Tech.
+[2015-10-09T15:39:53.133Z] (fancysplayroom) Raіn Kuro was warned by Phantom Theta. (pm me theta)
+[2015-10-09T15:40:33.749Z] (fancysplayroom) Phantom Theta was warned by Gentleman Tech. (dun warn for that scrab)
+[2015-10-09T16:18:00.295Z] (fancysplayroom) Phantom Theta was redirected to room Illusion Forest by Barista Fancii.
+[2015-10-09T16:19:17.115Z] (fancysplayroom) (Phantom Theta was demoted to Room Voice by Barista Fancii.)
+[2015-10-09T16:19:23.934Z] (fancysplayroom) (hmsableye was demoted to Room Voice by Barista Fancii.)
+[2015-10-09T16:22:59.466Z] (fancysplayroom) (Barista Fancii changed the roomintro.)
+[2015-10-09T21:16:40.017Z] (fancysplayroom) hooters was kicked from the room by Gentleman Tech.
+[2015-10-10T19:35:50.648Z] (fancysplayroom) (Hm Mower was demoted to Room Voice by Gentleman Tech.)

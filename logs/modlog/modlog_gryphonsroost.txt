@@ -197,3 +197,26 @@
 [2015-10-06T00:06:16.033Z] (gryphonsroost) Piers Nivans was appointed Room Owner by Allegiant Gryph.
 [2015-10-07T22:27:47.204Z] (gryphonsroost) (Allegiant Gryph notes: twill be 50/25 because i'm broke)
 [2015-10-07T22:28:32.679Z] (gryphonsroost) (Piers Nivans notes: kknp)
+[2015-10-09T07:36:22.785Z] (gryphonsroost) BreezeOmega was banned from room gryphonsroost by Piers Nivans.
+[2015-10-09T09:27:51.184Z] (gryphonsroost) hooters was kicked from the room by Piers Nivans.
+[2015-10-10T00:26:55.811Z] (gryphonsroost) sparkychild globally declared <center><button style="background-color:#000000; -moz-border-radius:29px; -webkit-border-radius:100px; border-radius:100px; border:1px solid #FFFFF; color:#ffffff; font-family:Verdana; font-size:10px; opacity:0.8; padding:5px 10px;" name="send" value="/join gryphonsroost">Gryphon's Roost!</button><br/>50/25 Monotype Tour!</center>
+[2015-10-10T00:27:07.426Z] (gryphonsroost) (Allegiant Gryph created a tournament in monotype format.)
+[2015-10-10T00:31:18.355Z] (gryphonsroost) (The tournament auto start timeout was set to 3 by Allegiant Gryph)
+[2015-10-10T00:31:32.147Z] (gryphonsroost) (luds was demoted to Room regular user by Allegiant Gryph.)
+[2015-10-10T00:31:34.086Z] (gryphonsroost) (notluds was demoted to Room regular user by Allegiant Gryph.)
+[2015-10-10T00:32:36.872Z] (gryphonsroost) (skymandl was demoted to Room regular user by Allegiant Gryph.)
+[2015-10-10T00:32:42.806Z] (gryphonsroost) MandL27 was promoted to Room Voice by Allegiant Gryph.
+[2015-10-10T00:34:20.601Z] (gryphonsroost) Allegiant Gryph declared Team Switching and Scouting allowed, no modjoin.
+[2015-10-10T00:35:14.006Z] (gryphonsroost) Pink Insanity was promoted to Room Moderator by Allegiant Gryph.
+[2015-10-10T00:35:23.187Z] (gryphonsroost) (Anarchist E was demoted to Room regular user by Allegiant Gryph.)
+[2015-10-10T00:36:25.214Z] (gryphonsroost) (The tournament auto disqualify timeout was set to 5 by Allegiant Gryph)
+[2015-10-10T00:38:45.928Z] (gryphonsroost) SWL Eric was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T00:39:11.620Z] (gryphonsroost) (Allegiant Gryph changed the roomintro.)
+[2015-10-10T00:46:57.849Z] (gryphonsroost) Pink Ιnѕanіty was promoted to Room Moderator by Allegiant Gryph.
+[2015-10-10T00:47:01.625Z] (gryphonsroost) (pinkinsanity was demoted to Room regular user by Allegiant Gryph.)
+[2015-10-10T01:03:05.357Z] (gryphonsroost) (The tournament auto disqualify timeout was set to 1 by Allegiant Gryph)
+[2015-10-10T01:04:15.017Z] (gryphonsroost) (Crystal★Marth was disqualified from the tournament by Pink Ιnѕanіty)
+[2015-10-10T01:42:06.477Z] (gryphonsroost) Allegiant Panda was promoted to Room Operator by Allegiant Gryph.
+[2015-10-10T09:59:26.098Z] (gryphonsroost) Allegiant Choco was promoted to Room Driver by Allegiant Gryph.
+[2015-10-10T22:54:01.593Z] (gryphonsroost) SWL Eric was banned from room gryphonsroost by Allegiant Gryph.
+[2015-10-11T04:51:53.518Z] (gryphonsroost) (Allegiant Gryph created a tournament in monotype format.)

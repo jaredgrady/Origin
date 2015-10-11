@@ -2552,3 +2552,53 @@
 [2015-10-08T21:17:12.908Z] (femalehq) starizardz was unbanned from room femalehq by SteelChar.
 [2015-10-09T00:48:30.794Z] (femalehq) Void Who was warned by Sunny Charizard. (Automated response: caps)
 [2015-10-09T00:58:43.376Z] (femalehq) hooters was kicked from the room by Best'd.
+[2015-10-09T05:57:47.427Z] (femalehq) (00Nyxa changed the roomdesc to: "A Place of Happiness. Welcome Home. ~*6*~ Days Remaining.".)
+[2015-10-09T10:58:56.013Z] (femalehq) BreezeOmega was kicked from the room by 00Shadow.
+[2015-10-09T11:24:51.053Z] (femalehq) Elite Academy was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-09T11:35:55.672Z] (femalehq) Elite Academy was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-10-09T11:48:25.502Z] (femalehq) Elite Academy was muted by Sunny Charizard for 7 minutes. (Automated response: caps)
+[2015-10-09T11:48:45.619Z] (femalehq) Elite Academy was unmuted by 00Nyxa.
+[2015-10-09T12:44:22.212Z] (femalehq) Avirra was promoted to Room Voice by 00Nyxa.
+[2015-10-09T12:44:33.286Z] (femalehq) (hvzenji was demoted to Room regular user by 00Nyxa.)
+[2015-10-09T16:49:32.552Z] (femalehq) PrimalZard was warned by Sunny Charizard. (Automated response: caps)
+[2015-10-09T18:35:35.756Z] (femalehq) Void Who was kicked from the room by Legacy Enervate.
+[2015-10-09T19:20:12.705Z] (femalehq) tacosgorawr was promoted to Room Moderator by SteelChar.
+[2015-10-09T21:39:12.855Z] (femalehq) Legacy Enervate was promoted to Room Leader by SteelChar.
+[2015-10-09T21:40:44.328Z] (femalehq) Vvva was promoted to Room Driver by SteelChar.
+[2015-10-09T21:42:19.642Z] (femalehq) (Vvva was demoted to Room Voice by SteelChar.)
+[2015-10-09T21:42:24.759Z] (femalehq) (Legacy Enervate was demoted to Room Driver by SteelChar.)
+[2015-10-09T22:02:22.266Z] (femalehq) (Legacy Enervate was demoted to Room Voice by 00Shadow.)
+[2015-10-09T22:16:16.395Z] (femalehq) Lags was warned by 00Nyxa - ⓑⓤⓢⓨ. (final warning, stop)
+[2015-10-09T23:16:01.898Z] (femalehq) Rongetio A. Sylvis was warned by Sunny Charizard. (Automated response: stretching)
+[2015-10-10T04:34:40.834Z] (femalehq) hooters was kicked from the room by Best'd.
+[2015-10-10T05:09:15.185Z] (femalehq) hooters was banned from room femalehq by Best'd.
+[2015-10-10T05:46:53.353Z] (femalehq) Avirra was warned by Sunny Charizard. (Automated response: stretching)
+[2015-10-10T14:21:34.837Z] (femalehq) Starizardz was promoted to Room Leader by SteelChar.
+[2015-10-10T16:05:53.302Z] (femalehq) (00Shadow changed the roomdesc to: "A Place of Happiness. Welcome Home. ~*5*~ Days Remaining".)
+[2015-10-10T16:13:58.285Z] (femalehq) ashbloodthief was warned by 00Shadow. (no)
+[2015-10-10T16:16:36.335Z] (femalehq) macrarazy was muted by 00Shadow for 7 minutes.
+[2015-10-11T02:22:36.031Z] (femalehq) Steelchar set modchat to $
+[2015-10-11T02:25:14.416Z] (femalehq) Best'd set modchat to false
+[2015-10-11T04:15:07.874Z] (femalehq) Legacy Enervate was muted by Iris(Eevee) for 7 minutes.
+[2015-10-11T05:03:31.544Z] (femalehq) (00Shadow changed the roomdesc to: "A Place of Happiness. Welcome Home. ~*4*~ Days Remaining".)
+[2015-10-11T05:15:59.311Z] (femalehq) (Sunny Charizard notes: hooters was added to the blacklist by #Best'd.)
+[2015-10-11T12:53:54.074Z] (femalehq) Elite Dance Studio was banned from room femalehq by 00Shadow.
+[2015-10-11T14:36:15.622Z] (femalehq) 00Shadow set modchat to +
+[2015-10-11T14:36:50.329Z] (femalehq) Legacy Enervate was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T14:36:57.481Z] (femalehq) Legacy Enervate was unmuted by Alpha Ninja.
+[2015-10-11T14:36:57.482Z] (femalehq) Axair was banned from room femalehq by 00Shadow.
+[2015-10-11T14:36:57.484Z] (femalehq) (Axair's roombanned alts: Alliance Axair)
+[2015-10-11T14:37:34.223Z] (femalehq) twіn was banned from room femalehq by 00Shadow.
+[2015-10-11T14:38:11.796Z] (femalehq) Legacy Enervate was muted by Sunny Charizard for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T14:38:16.601Z] (femalehq) Legacy Enervate was unmuted by Alpha Ninja.
+[2015-10-11T14:38:44.309Z] (femalehq) (Sunny Charizard notes: axair was added to the blacklist by #00Shadow.)
+[2015-10-11T14:39:06.910Z] (femalehq) (Sunny Charizard notes: twn was added to the blacklist by #00Shadow.)
+[2015-10-11T14:41:50.149Z] (femalehq) twn was unbanned from room femalehq by Sunny Charizard.
+[2015-10-11T14:57:48.233Z] (femalehq) 00Shadow - ⓢⓛⓔⓔⓟ set modchat to false
+[2015-10-11T14:58:12.181Z] (femalehq) DemonicScizor was warned by Sunny Charizard. (Automated response: stretching)
+[2015-10-11T17:36:34.249Z] (femalehq) Legacy Enervate was warned by Best'd. (abusive warn for kitties everywhere)
+[2015-10-11T17:40:09.977Z] (femalehq) Starizardz - ⓓⓔⓓ was banned from room femalehq by Best'd.
+[2015-10-11T17:41:00.514Z] (femalehq) Sunny Charizard was banned from room femalehq by Best'd.
+[2015-10-11T17:41:26.848Z] (femalehq) sunnycharizard was unbanned from room femalehq by Best'd.
+[2015-10-11T17:57:10.551Z] (femalehq) LostXanadu was warned by Mewth. (control yourself)
+[2015-10-11T17:57:19.283Z] (femalehq) LostXanadu was muted by SteelChar for 7 minutes. (trool)

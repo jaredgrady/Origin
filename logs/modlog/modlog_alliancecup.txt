@@ -367,3 +367,6 @@
 [2015-09-26T22:30:45.267Z] (alliancecup) Alliance - Ghast declared FINAL MATCH 
 [2015-09-26T22:38:59.767Z] (alliancecup) Alliance - Ghast declared Congrats To Scrub Lord Hingo
 [2015-09-26T22:39:08.886Z] (alliancecup) Alliance - Ghast set modchat to #
+[2015-10-10T18:44:28.029Z] (alliancecup) Alliance TheThorn was appointed to Room Founder by Lt. Tesla.
+[2015-10-10T18:45:13.228Z] (alliancecup) Alliance - Lee was appointed Room Owner by Alliance TheThorn.
+[2015-10-10T18:46:07.653Z] (alliancecup) (alliancejoz was demoted to Room regular user by Alliance TheThorn.)

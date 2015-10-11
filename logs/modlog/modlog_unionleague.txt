@@ -159,3 +159,10 @@
 [2015-09-03T00:53:26.795Z] (unionleague) Union Enthalpy was warned by Safety Shark. (Automated response: caps)
 [2015-09-03T00:55:29.278Z] (unionleague) Union Enthalpy was kicked from the room by Union Bardock.
 [2015-09-03T09:55:00.814Z] (unionleague) Union Joe declared Im the ruler of this bitch, Chaos Abra for ######### y/y
+[2015-10-10T17:39:27.307Z] (unionleague) (union gm wiggly was demoted to Room regular user by Union Tei.)
+[2015-10-10T17:39:29.666Z] (unionleague) (union dois was demoted to Room regular user by Union Tei.)
+[2015-10-10T17:40:03.642Z] (unionleague) (Union Tei changed the roomintro.)
+[2015-10-10T17:40:51.768Z] (unionleague) Safety Shark was promoted to Room Moderator by Union Tei.
+[2015-10-10T18:03:03.398Z] (unionleague) Union Trash was appointed Room Owner by Union Tei.
+[2015-10-10T18:28:32.748Z] (unionleague) Union Has Berries was appointed to Room Founder by Erica*07.
+[2015-10-11T09:42:51.352Z] (unionleague) U Darren was appointed to Room Founder by Master Float.

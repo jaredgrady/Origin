@@ -4454,3 +4454,8 @@
 [2015-10-05T02:29:21.192Z] (thexleague) Dak Prescott was promoted to Room Voice by Gratitude.
 [2015-10-05T02:29:22.812Z] (thexleague) Air Jak 11 was promoted to Room Voice by Gratitude.
 [2015-10-06T11:54:40.974Z] (thexleague) wyngate' set modchat to +
+[2015-10-10T03:11:04.644Z] (thexleague) Sereana was muted by s h m u r d e r ~ for 7 minutes.
+[2015-10-10T03:11:07.736Z] (thexleague) Sereana was unmuted by s h m u r d e r ~.
+[2015-10-10T03:11:59.171Z] (thexleague) s h m u r d e r ~ was muted by wyngate' for 7 minutes.
+[2015-10-10T03:12:03.461Z] (thexleague) s h m u r d e r ~ was unmuted by wyngate'.
+[2015-10-10T03:21:00.383Z] (thexleague) Sereana was promoted to Room Driver by sabella.

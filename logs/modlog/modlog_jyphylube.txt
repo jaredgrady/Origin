@@ -94,3 +94,7 @@
 [2015-10-09T03:17:25.566Z] (jyphylube) (ren00 was demoted to Room regular user by SWL Jyph.)
 [2015-10-09T03:17:33.619Z] (jyphylube) (rainhingo was demoted to Room regular user by SWL Jyph.)
 [2015-10-09T03:17:46.367Z] (jyphylube) (lotusrowboatjo was demoted to Room regular user by SWL Jyph.)
+[2015-10-09T18:41:58.824Z] (jyphylube) (swlroy was demoted to Room regular user by SWL Jyph.)
+[2015-10-10T06:19:03.736Z] (jyphylube) Pulse Drive was promoted to Room Voice by SWL Jyph.
+[2015-10-10T06:21:04.061Z] (jyphylube) Allegiant Gryph was kicked from the room by SWL Jyph.
+[2015-10-10T06:21:12.216Z] (jyphylube) Allegiant Gryph was kicked from the room by SWL Jyph.

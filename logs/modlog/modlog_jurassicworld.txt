@@ -371,3 +371,34 @@
 [2015-10-08T04:41:34.681Z] (jurassicworld) Crystal Bogan was promoted to Room Voice by Tyrantrum Bot.
 [2015-10-08T06:13:33.638Z] (jurassicworld) Josqua was promoted to Room Voice by Tyrantrum Bot.
 [2015-10-08T08:45:55.053Z] (jurassicworld) Wolf Hawk was promoted to Room Voice by Tyrantrum Bot.
+[2015-10-09T09:58:59.962Z] (jurassicworld) Cuticles was promoted to Room Voice by Hydrostatics.
+[2015-10-09T10:03:25.980Z] (jurassicworld) Crystal Bogan was promoted to Room Leader by Hydrostatics.
+[2015-10-09T13:18:22.123Z] (jurassicworld) Dragon Salamence! was promoted to Room Voice by Crystal Bogan.
+[2015-10-09T13:27:43.770Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T13:29:44.207Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:00:00.988Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:01:05.764Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:02:22.151Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:16:25.531Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:16:34.355Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:20:27.280Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:21:10.109Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:21:32.479Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:21:55.251Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:22:10.468Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:22:25.995Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:22:43.422Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:22:47.358Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-09T14:25:46.295Z] (jurassicworld) (Crystal Bogan changed the roomintro.)
+[2015-10-10T12:22:55.370Z] (jurassicworld) ashyudhajit was promoted to Room Leader by Hydrostatics.
+[2015-10-10T12:24:19.944Z] (jurassicworld) Arjunb was promoted to Room Moderator by Hydrostatics.
+[2015-10-10T12:24:25.196Z] (jurassicworld) sakurai 77 was promoted to Room Voice by Hydrostatics.
+[2015-10-10T12:32:56.623Z] (jurassicworld) Yudha-s Bot was promoted to Room Voice by Crystal Bogan.
+[2015-10-10T12:33:47.091Z] (jurassicworld) Crystal Bogan was appointed Room Owner by Hydrostatics.
+[2015-10-10T12:34:08.912Z] (jurassicworld) Dragon Bottt was promoted to Room Moderator by Crystal Bogan.
+[2015-10-10T12:44:10.453Z] (jurassicworld) (Tyrantrum Bot was demoted to Room regular user by Crystal Bogan.)
+[2015-10-10T12:48:27.136Z] (jurassicworld) (Dragon Bottt created a tournament in monotype format.)
+[2015-10-10T12:48:57.938Z] (jurassicworld) (The tournament auto disqualify timeout was set to 1 by Dragon Bottt)
+[2015-10-10T12:49:18.369Z] (jurassicworld) (Crystal Bogan forcibly ended a tournament.)
+[2015-10-11T12:43:24.827Z] (jurassicworld) Tyrantrum Bot was promoted to Room Voice by Crystal Bogan.
+[2015-10-11T12:44:38.128Z] (jurassicworld) Crystal Bogan declared :D

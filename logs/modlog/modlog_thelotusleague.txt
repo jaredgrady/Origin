@@ -4116,3 +4116,888 @@
 [2015-10-09T04:53:29.458Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
 [2015-10-09T04:53:52.775Z] (thelotusleague) (lotus wincon forcibly ended a tournament.)
 [2015-10-09T04:53:58.017Z] (thelotusleague) (Safety Shark created a tournament in ou format.)
+[2015-10-09T06:13:17.902Z] (thelotusleague) HeadRecruiter♅Dvd declared i said HI
+[2015-10-09T06:28:14.820Z] (thelotusleague) HeadRecruiter♅Dvd declared blame torpid
+[2015-10-09T07:26:32.721Z] (thelotusleague) Frontier♅Hades was promoted to Room Moderator by Champion Skolas.
+[2015-10-09T07:27:38.145Z] (thelotusleague) hmreapz was unbanned from room thelotusleague by Champion Skolas.
+[2015-10-09T07:42:06.326Z] (thelotusleague) Ria88 was promoted to Room Voice by Frontier♅Hades.
+[2015-10-09T11:00:12.123Z] (thelotusleague) HeadRecruiter♅Dvd declared i said HI
+[2015-10-09T11:23:10.454Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T11:25:35.543Z] (thelotusleague) HeadRecruiter♅Dvd declared i am
+[2015-10-09T11:27:00.806Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T11:27:36.211Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to #
+[2015-10-09T11:27:42.965Z] (thelotusleague) (Prof Blooper notes: rip)
+[2015-10-09T11:27:48.476Z] (thelotusleague) (GL♅Devils notes: Lol)
+[2015-10-09T11:28:04.196Z] (thelotusleague) (GL♅Devils notes: wut)
+[2015-10-09T11:28:06.511Z] (thelotusleague) Prof Blooper set modchat to +
+[2015-10-09T11:28:11.264Z] (thelotusleague) (Frontier♅Hades notes: come on set it to @)
+[2015-10-09T11:28:22.289Z] (thelotusleague) Prof Blooper set modchat to false
+[2015-10-09T11:29:08.977Z] (thelotusleague) Elite Academy was warned by HeadRecruiter♅Dvd. (interpunction)
+[2015-10-09T11:36:31.811Z] (thelotusleague) HeadRecruiter♅Dvd declared anarchy
+[2015-10-09T11:41:35.041Z] (thelotusleague) Elite Academy was kicked from the room by HeadRecruiter♅Dvd.
+[2015-10-09T11:46:29.157Z] (thelotusleague) Elite Academy was banned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-09T11:57:36.598Z] (thelotusleague) Frontier♅Hades was muted by HeadRecruiter♅Dvd for 7 minutes.
+[2015-10-09T11:57:39.964Z] (thelotusleague) Frontier♅Hades was unmuted by HeadRecruiter♅Dvd.
+[2015-10-09T11:58:48.836Z] (thelotusleague) Prof Blooper was banned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-09T11:58:56.249Z] (thelotusleague) profblooper was unbanned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-09T12:03:12.205Z] (thelotusleague) Frontier♅Hades was banned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-09T12:03:16.853Z] (thelotusleague) frontierhades was unbanned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-09T12:12:24.986Z] (thelotusleague) GL♅Devils was muted by HeadRecruiter♅Dvd for 1 hour. (ok)
+[2015-10-09T12:12:47.019Z] (thelotusleague) GL♅Devils was unmuted by HeadRecruiter♅Dvd.
+[2015-10-09T12:12:54.398Z] (thelotusleague) (GL♅Devils notes: Gg)
+[2015-10-09T12:20:17.507Z] (thelotusleague) (GL♅dawgk notes: and it died)
+[2015-10-09T12:20:29.050Z] (thelotusleague) (Frontier♅Hades notes: mhm)
+[2015-10-09T12:40:59.096Z] (thelotusleague) maura was promoted to Room Leader by Lotus Serperior.
+[2015-10-09T12:41:17.465Z] (thelotusleague) (maura was demoted to Room regular user by Lotus Serperior.)
+[2015-10-09T12:41:22.234Z] (thelotusleague) (Lotus Maura was demoted to Room regular user by Lotus Serperior.)
+[2015-10-09T12:41:34.570Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Lotus Serperior.
+[2015-10-09T12:41:49.673Z] (thelotusleague) Wolf ☯ Suicune was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T12:44:16.301Z] (thelotusleague) (professorpanders was demoted to Room Voice by Lotus Maura.)
+[2015-10-09T12:44:46.434Z] (thelotusleague) professorpanders was promoted to Room Leader by Lotus Serperior.
+[2015-10-09T12:45:04.020Z] (thelotusleague) (professorpanders was demoted to Room Voice by Lotus Maura.)
+[2015-10-09T12:45:17.477Z] (thelotusleague) professorpanders was promoted to Room Leader by Lotus Serperior.
+[2015-10-09T16:38:15.006Z] (thelotusleague) GTX♅Humper was muted by Lotus Python for 7 minutes. (Shhhhhhhh)
+[2015-10-09T16:38:21.283Z] (thelotusleague) GTX♅Humper was unmuted by Lotus Python.
+[2015-10-09T16:43:30.357Z] (thelotusleague) GTX♅Humper was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T16:43:46.359Z] (thelotusleague) GTX♅Humper was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-09T16:44:11.063Z] (thelotusleague) GTX♅Humper was warned by Lotus Python. (YOU WILL EMBRACE THE EJECT BUTTON HIPPO JESUS)
+[2015-10-09T16:44:22.669Z] (thelotusleague) GTX♅Humper was unmuted by Lotus Python.
+[2015-10-09T17:04:55.332Z] (thelotusleague) Faplord Geta - ⒻⒶⓅ was promoted to Room Voice by Lotus Python.
+[2015-10-09T17:05:31.134Z] (thelotusleague) CancerousFap - ⓕⓐⓟ was kicked from the room by Lotus Python.
+[2015-10-09T17:13:43.254Z] (thelotusleague) GTX♅Humper was warned by Lotus Python. (+meme)
+[2015-10-09T17:16:42.976Z] (thelotusleague) GTX♅Humper was banned from room thelotusleague by Safety Shark. (Automated response: zero tolerance user)
+[2015-10-09T17:16:42.979Z] (thelotusleague) (GTX♅Humper's roombanned alts: GTX♅FudgeBomb, GTXRayquaza292)
+[2015-10-09T17:17:00.122Z] (thelotusleague) gtxhumper was unbanned from room thelotusleague by Lotus Python.
+[2015-10-09T17:19:37.623Z] (thelotusleague) Safety Shark declared (arg)
+[2015-10-09T17:20:06.423Z] (thelotusleague) Safety Shark declared (arg)
+[2015-10-09T17:20:32.649Z] (thelotusleague) Safety Shark declared (arg)
+[2015-10-09T17:21:36.438Z] (thelotusleague) Safety Shark declared Ass
+[2015-10-09T17:22:33.786Z] (thelotusleague) Safety Shark declared (arg1)
+[2015-10-09T17:22:49.031Z] (thelotusleague) Safety Shark declared TORPID HALP
+[2015-10-09T17:22:50.404Z] (thelotusleague) Safety Shark declared TORPID HALP
+[2015-10-09T17:22:51.079Z] (thelotusleague) Safety Shark declared TORPID HALP
+[2015-10-09T17:35:14.974Z] (thelotusleague) Corny Doge was muted by Safety Shark for 1 hour. (Please do not spam emoticons. (5 [135]))
+[2015-10-09T17:35:51.961Z] (thelotusleague) Corny Doge was banned from room thelotusleague by Lotus Python.
+[2015-10-09T17:35:51.964Z] (thelotusleague) (Corny Doge's roombanned alts: Lotus League Girl)
+[2015-10-09T17:36:17.527Z] (thelotusleague) (Safety Shark notes: cornydoge was added to the blacklist by #LotusChamp Torpid.)
+[2015-10-09T17:36:49.172Z] (thelotusleague) Doge Spammer was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-10-09T17:36:49.900Z] (thelotusleague) Doge Spammer was muted by Safety Shark for 7 minutes. (Please do not abuse emoticons. (6 [11]))
+[2015-10-09T17:37:15.021Z] (thelotusleague) Guest 14295 was banned from room thelotusleague by Safety Shark. (Blacklisted user)
+[2015-10-09T17:37:15.697Z] (thelotusleague) (Safety Shark notes: dogespammer was added to the blacklist by #LotusChamp Torpid.)
+[2015-10-09T17:38:11.463Z] (thelotusleague) Lotus Python set modchat to +
+[2015-10-09T17:39:08.010Z] (thelotusleague) (Safety Shark notes: guest14295 was added to the blacklist by #LotusChamp Torpid.)
+[2015-10-09T17:59:23.636Z] (thelotusleague) GTX♅Humper was banned from room thelotusleague by Safety Shark. (Automated response: zero tolerance user)
+[2015-10-09T17:59:23.639Z] (thelotusleague) (GTX♅Humper's roombanned alts: GTX♅FudgeBomb)
+[2015-10-09T18:00:02.851Z] (thelotusleague) gtxhumper was unbanned from room thelotusleague by Lotus Python.
+[2015-10-09T18:02:09.947Z] (thelotusleague) LotusChamp Torpid declared Press 1 for LVL
+[2015-10-09T18:17:09.780Z] (thelotusleague) LotusChamp Torpid set modchat to false
+[2015-10-09T18:27:53.002Z] (thelotusleague) LunaBoy50 was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T18:28:05.680Z] (thelotusleague) LunaBoy50 was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-09T18:28:12.617Z] (thelotusleague) LunaBoy50 was kicked from the room by Lotus Python.
+[2015-10-09T19:23:28.437Z] (thelotusleague) Frontier♅Shredder was warned by Professor Panders. (cause.. the 1's are odd.)
+[2015-10-09T19:23:28.921Z] (thelotusleague) Frontier♅Shredder was warned by LotusChamp Torpid. (english please)
+[2015-10-09T19:43:48.046Z] (thelotusleague) GTX♅Humper was banned from room thelotusleague by Safety Shark. (Automated response: zero tolerance user)
+[2015-10-09T19:45:34.278Z] (thelotusleague) gtxhumper was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-09T19:46:51.747Z] (thelotusleague) Frontier♅Shredder was warned by LotusChamp Torpid. (english please)
+[2015-10-09T19:50:04.576Z] (thelotusleague) GTX♅Humper was banned from room thelotusleague by Safety Shark. (Automated response: zero tolerance user)
+[2015-10-09T19:50:45.164Z] (thelotusleague) gtxhumper was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-09T19:52:17.682Z] (thelotusleague) Frontier♅Shredder was muted by Professor Panders for 7 minutes. (you've been warned how many times..?)
+[2015-10-09T19:55:22.800Z] (thelotusleague) Frontier♅Shredder was banned from room thelotusleague by LotusChamp Torpid.
+[2015-10-09T20:25:54.848Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-09T20:27:58.820Z] (thelotusleague) (The tournament auto disqualify timeout was set to .8 by Prof NHHS)
+[2015-10-09T20:30:21.757Z] (thelotusleague) (Hm Sableye was disqualified from the tournament by Prof NHHS)
+[2015-10-09T20:54:42.584Z] (thelotusleague) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-09T20:56:29.787Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T20:58:43.555Z] (thelotusleague) Homeless Robo declared Who dafug is in this MONOTYPE lvl say why
+[2015-10-09T20:59:31.583Z] (thelotusleague) Homeless Robo declared Seriously whose in the lvl say U
+[2015-10-09T21:03:26.792Z] (thelotusleague) Waszap - ⓑⓡⓑ was kicked from the room by Lotus Itsme.
+[2015-10-09T21:03:36.219Z] (thelotusleague) Lotus Itsme was kicked from the room by LotusChamp Torpid.
+[2015-10-09T21:05:39.394Z] (thelotusleague) Auntie Snixx was kicked from the room by LotusChamp Torpid.
+[2015-10-09T21:07:15.925Z] (thelotusleague) LotusChamp Torpid declared Press 1 for lvl
+[2015-10-09T21:09:34.642Z] (thelotusleague) LotusChamp Torpid declared 1 more for lvl
+[2015-10-09T21:23:39.184Z] (thelotusleague) GTX♅PTyranitar was promoted to Room Voice by Lotus ۩ WinCon.
+[2015-10-09T21:24:00.960Z] (thelotusleague) Lotus ۩ WinCon declared everyone welcome Ttar back to the league! :D
+[2015-10-09T21:34:17.332Z] (thelotusleague) Cloyy was warned by Lotus♅Python. (Sup)
+[2015-10-09T21:40:48.469Z] (thelotusleague) Auntie Snixx was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-09T21:58:32.492Z] (thelotusleague) Frontier Python was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-09T21:58:41.421Z] (thelotusleague) Professor Gible was promoted to Room Leader by LotusChamp Torpid.
+[2015-10-09T22:00:06.992Z] (thelotusleague) (Prof NHHS - ⒶⓌⒶⓎ was demoted to Room Voice by Professor Panders.)
+[2015-10-09T22:00:25.172Z] (thelotusleague) (Safety Shark was demoted to Room Moderator by Lotus ۩ WinCon.)
+[2015-10-09T22:00:35.300Z] (thelotusleague) Prof NHHS - ⒶⓌⒶⓎ was promoted to Room Leader by Lotus ۩ WinCon.
+[2015-10-09T22:05:16.340Z] (thelotusleague) (Safety Shark created a tournament in monotype format.)
+[2015-10-09T22:06:15.136Z] (thelotusleague) Cloyy was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T22:06:51.437Z] (thelotusleague) (Safety Shark was demoted to Room regular user by LotusChamp Torpid.)
+[2015-10-09T22:12:01.860Z] (thelotusleague) Cloyy was warned by Lotus ۩ WinCon. (stfu bitch t tar is the annihilator of worlds :D)
+[2015-10-09T22:37:49.038Z] (thelotusleague) Lotus Itsme - ⒽⓎⓅⒺ was warned by Frontier♅Python. (calm)
+[2015-10-09T22:39:39.899Z] (thelotusleague) Cloyy was kicked from the room by Lotus Itsme - ⒽⓎⓅⒺ.
+[2015-10-09T22:39:57.717Z] (thelotusleague) Lotus Itsme - ⒽⓎⓅⒺ was kicked from the room by Frontier♅Python.
+[2015-10-09T22:40:50.627Z] (thelotusleague) LotusChamp Torpid declared Press 1 for lvl
+[2015-10-09T22:44:52.093Z] (thelotusleague) LotusChamp Torpid declared Press 1 for 8s
+[2015-10-09T22:53:16.038Z] (thelotusleague) CLOYY was kicked from the room by Auntie Snixx.
+[2015-10-09T22:58:48.265Z] (thelotusleague) Lotus Itsme was warned by Frontier♅Python. (calm yo tits)
+[2015-10-09T23:00:18.614Z] (thelotusleague) Safety Shark was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-09T23:02:29.154Z] (thelotusleague) GTX♅Stantler was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T23:06:18.852Z] (thelotusleague) Lotus Wincon set modchat to #
+[2015-10-09T23:06:52.369Z] (thelotusleague) Lotus Wincon set modchat to false
+[2015-10-09T23:06:56.806Z] (thelotusleague) (Frontier♅Python notes: 1 buck)
+[2015-10-09T23:07:00.285Z] (thelotusleague) (Frontier♅Python notes: ewww)
+[2015-10-09T23:07:24.302Z] (thelotusleague) (Frontier♅Python notes: imnot even going to like it)
+[2015-10-09T23:07:27.931Z] (thelotusleague) (Frontier♅Python notes: lol)
+[2015-10-09T23:07:51.902Z] (thelotusleague) (Frontier♅Python notes: BECAUSE I HAVE TAKENN THE OATH OF POVERTY)
+[2015-10-09T23:08:02.295Z] (thelotusleague) (LotusChamp Torpid notes: LMAO)
+[2015-10-09T23:09:28.809Z] (thelotusleague) (Auntie Snixx notes: i drank bleach)
+[2015-10-09T23:26:57.008Z] (thelotusleague) (Lotus Wincon changed the roomdesc to: "OPEN TYPES: Electric, Fighting, Fairy Water and an E4 Spot".)
+[2015-10-09T23:27:05.173Z] (thelotusleague) (Lotus Wincon changed the roomdesc to: "OPEN TYPES: Electric, Fighting, Fairy, Water and an E4 Spot".)
+[2015-10-09T23:27:38.819Z] (thelotusleague) (Lotus Wincon changed the roomdesc to: "OPEN TYPES: Electric, Fairy Water and an E4 Spot".)
+[2015-10-09T23:27:46.940Z] (thelotusleague) (Lotus Wincon changed the roomdesc to: "OPEN TYPES: Electric, Fairy, Water and an E4 Spot".)
+[2015-10-09T23:29:30.906Z] (thelotusleague) Lotus Itsme - ⓟⓜ was kicked from the room by Frontier♅Python.
+[2015-10-09T23:31:57.650Z] (thelotusleague) Professor Panders declared Torpid pick
+[2015-10-09T23:43:39.030Z] (thelotusleague) LotusChamp Torpid declared Who here wants to play in an OU lvl?
+[2015-10-09T23:47:53.295Z] (thelotusleague) Myst Incursio was kicked from the room by GL♅Incursio.
+[2015-10-09T23:48:39.963Z] (thelotusleague) CLOYY was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T23:48:51.134Z] (thelotusleague) Myst Incursio was banned from room thelotusleague by LotusChamp Torpid.
+[2015-10-09T23:48:51.137Z] (thelotusleague) (Myst Incursio's ac account: lotusaranacana)
+[2015-10-09T23:49:33.201Z] (thelotusleague) mystincursio was unbanned from room thelotusleague by Lotus Maura.
+[2015-10-09T23:49:42.775Z] (thelotusleague) LotusChamp Torpid declared Press 1 to be a part of the OU LVL
+[2015-10-09T23:50:10.356Z] (thelotusleague) CLOYY was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-09T23:50:28.221Z] (thelotusleague) CLOYY was unmuted by Professor Panders.
+[2015-10-09T23:51:29.970Z] (thelotusleague) Lotus Aranacana was kicked from the room by Frontier♅Python.
+[2015-10-09T23:52:07.764Z] (thelotusleague) Myst Bronze was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T23:54:48.494Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T23:58:34.346Z] (thelotusleague) Lotus Aranacana was muted by Frontier♅EnZo for 7 minutes. (stawp)
+[2015-10-09T23:59:00.409Z] (thelotusleague) CLOYY was banned from room thelotusleague by Professor Panders.
+[2015-10-09T23:59:11.181Z] (thelotusleague) cloyy was unbanned from room thelotusleague by Lotus Maura.
+[2015-10-10T00:08:46.616Z] (thelotusleague) CLOYY was warned by Professor Panders. (pay up or get your knees busted.)
+[2015-10-10T00:12:23.667Z] (thelotusleague) iRoams was promoted to Room Driver by Lotus Wincon.
+[2015-10-10T00:15:56.433Z] (thelotusleague) CLOYY was warned by Professor Panders. (i actually listned, so shut up you broke dick)
+[2015-10-10T01:06:18.813Z] (thelotusleague) CLOYY was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T01:28:59.949Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier♅Python.
+[2015-10-10T01:29:46.433Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier♅Python.
+[2015-10-10T01:31:28.381Z] (thelotusleague) Frontier♅Python was kicked from the room by Lotus DJLuna.
+[2015-10-10T01:39:01.074Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier♅Python.
+[2015-10-10T01:39:24.069Z] (thelotusleague) Pink Ιnѕanіty was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T01:40:02.186Z] (thelotusleague) CLOYY was kicked from the room by Frontier♅Python.
+[2015-10-10T01:42:46.783Z] (thelotusleague) GTX♅Shocake was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-10-10T01:42:47.458Z] (thelotusleague) GTX♅Shocake was muted by Safety Shark for 7 minutes. (Please do not abuse emoticons. (6 [11]))
+[2015-10-10T01:43:04.338Z] (thelotusleague) GTX♅Shocake was unmuted by Frontier♅Python.
+[2015-10-10T01:43:40.432Z] (thelotusleague) CLOYY was muted by Frontier♅Python for 7 minutes.
+[2015-10-10T01:44:00.948Z] (thelotusleague) CLOYY was unmuted by Frontier♅Python.
+[2015-10-10T01:44:10.874Z] (thelotusleague) CLOYY was warned by Safety Shark. (Please use emoticons in moderation. (5 [5]))
+[2015-10-10T02:01:13.276Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier♅Python.
+[2015-10-10T03:08:19.302Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-10T03:08:25.637Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-10T03:37:05.421Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-10T03:39:10.454Z] (thelotusleague) (GL%Grimsley was disqualified from the tournament by Prof NHHS)
+[2015-10-10T04:20:49.377Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:50.305Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:51.306Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:51.907Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:52.067Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:52.667Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:53.268Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:53.869Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:54.471Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:55.073Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:55.675Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:20:56.276Z] (thelotusleague) Commander☬Pheonix۞ declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-10T04:28:50.165Z] (thelotusleague) frontiershredder was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-10T04:43:56.912Z] (thelotusleague) Commander☬Pheonix۞ declared SPECIAL ANNOUNCEMENT: JERB IS GOING TO HAVE SCRUBLET!!!!!!
+[2015-10-10T04:44:07.064Z] (thelotusleague) Commander☬Pheonix۞ declared A SCRUBLET***
+[2015-10-10T04:44:12.387Z] (thelotusleague) Commander☬Pheonix۞ declared YES
+[2015-10-10T04:44:25.856Z] (thelotusleague) Commander☬Pheonix۞ declared IDK if he wanted yall to Know but YEAH
+[2015-10-10T04:44:32.825Z] (thelotusleague) Commander☬Pheonix۞ declared Lol
+[2015-10-10T04:46:48.307Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T04:53:38.408Z] (thelotusleague) GL♅FatBoi was promoted to Room Driver by Commander☬Pheonix۞.
+[2015-10-10T04:53:57.159Z] (thelotusleague) Commander☬Pheonix۞ declared CONGRATS FATBOI YOU EBOLA FUCK xD
+[2015-10-10T04:57:46.950Z] (thelotusleague) (Commander☬Pheonix۞ changed the roomdesc to: "OPEN TYPES: Electric, Fairy,".)
+[2015-10-10T04:58:04.635Z] (thelotusleague) (Commander☬Pheonix۞ changed the roomdesc to: "OPEN TYPES: Electric, Fairy and 1 E4 Spot".)
+[2015-10-10T05:19:44.591Z] (thelotusleague) (Lotus Maura created a tournament in 1v1 format.)
+[2015-10-10T05:19:54.262Z] (thelotusleague) (Lotus Maura forcibly ended a tournament.)
+[2015-10-10T06:02:46.098Z] (thelotusleague) Myst Boo was kicked from the room by Lotus Maura.
+[2015-10-10T06:03:11.467Z] (thelotusleague) Scrublord Jerb was promoted to Room Leader by Lotus Maura.
+[2015-10-10T06:03:29.300Z] (thelotusleague) (Lotus ۩ Magnezone was demoted to Room Voice by Lotus Maura.)
+[2015-10-10T06:03:36.790Z] (thelotusleague) Lotus ۩ Magnezone was kicked from the room by Lotus Maura.
+[2015-10-10T06:03:46.896Z] (thelotusleague) Lotus ۩ Magnezone was promoted to Room Leader by Lotus Maura.
+[2015-10-10T06:03:56.127Z] (thelotusleague) (Lotus Maura was demoted to Room Voice by Lotus ۩ Magnezone.)
+[2015-10-10T06:04:08.272Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T06:04:19.000Z] (thelotusleague) Lotus Maura was kicked from the room by Lotus ۩ Magnezone.
+[2015-10-10T06:04:36.631Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Lotus ۩ Magnezone.
+[2015-10-10T06:08:10.790Z] (thelotusleague) Cloyy was kicked from the room by Lotus Maura.
+[2015-10-10T06:09:55.156Z] (thelotusleague) Lotus Maura declared <marquee> BOOTY IS LYFE <marquee>
+[2015-10-10T06:10:40.942Z] (thelotusleague) GTX♅RainManaphy was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T06:11:27.091Z] (thelotusleague) GTX♅RainManaphy was unmuted by PROF NHHS.
+[2015-10-10T06:12:41.617Z] (thelotusleague) GTX♅RainManaphy was muted by Scrublord Jerb for 7 minutes.
+[2015-10-10T06:13:13.714Z] (thelotusleague) GTX♅RainManaphy was muted by Lotus ۩ Magnezone for 1 hour.
+[2015-10-10T06:13:43.431Z] (thelotusleague) GTX♅RainManaphy was unmuted by Lotus Aranacana.
+[2015-10-10T06:13:47.787Z] (thelotusleague) GTX♅RainManaphy was muted by Lotus ۩ Magnezone for 1 hour.
+[2015-10-10T06:13:52.482Z] (thelotusleague) GTX♅RainManaphy was unmuted by Lotus Aranacana.
+[2015-10-10T06:13:59.560Z] (thelotusleague) GTX♅RainManaphy was kicked from the room by Lotus Maura.
+[2015-10-10T06:14:11.372Z] (thelotusleague) GTX♅RainManaphy was banned from room thelotusleague by Lotus Maura.
+[2015-10-10T06:14:18.386Z] (thelotusleague) Lotus Aranacana was kicked from the room by Lotus ۩ Magnezone.
+[2015-10-10T06:14:32.662Z] (thelotusleague) Lotus Aranacana was kicked from the room by Lotus ۩ Magnezone.
+[2015-10-10T06:14:43.837Z] (thelotusleague) gtxrainmanaphy was unbanned from room thelotusleague by PROF NHHS.
+[2015-10-10T06:14:59.648Z] (thelotusleague) GTX♅RainManaphy was muted by Lotus ۩ Magnezone for 1 hour.
+[2015-10-10T06:15:06.008Z] (thelotusleague) GTX♅RainManaphy was unmuted by Lotus Aranacana.
+[2015-10-10T06:17:26.514Z] (thelotusleague) PROF NHHS set modchat to &
+[2015-10-10T06:17:38.553Z] (thelotusleague) (Lotus Aranacana notes: deez nuts)
+[2015-10-10T06:18:03.425Z] (thelotusleague) (GL♅Devils notes: ty whom ever set nod chat, every1 needs to calm tf down)
+[2015-10-10T06:18:03.556Z] (thelotusleague) (Lotus Maura was demoted to Room Voice by Lotus ۩ Magnezone.)
+[2015-10-10T06:18:12.239Z] (thelotusleague) Lotus Maura was muted by Lotus ۩ Magnezone for 7 minutes.
+[2015-10-10T06:18:13.827Z] (thelotusleague) (Lotus Aranacana notes: its time. To d d d d d d d d d deez nuts)
+[2015-10-10T06:18:14.168Z] (thelotusleague) Lotus Maura would be muted by Scrublord Jerb but was already muted. (ily)
+[2015-10-10T06:18:18.359Z] (thelotusleague) Lotus Maura was unmuted by Scrublord Jerb.
+[2015-10-10T06:19:13.949Z] (thelotusleague) PROF NHHS set modchat to false
+[2015-10-10T06:19:19.661Z] (thelotusleague) Lotus Maura was promoted to Room Leader by Lotus ۩ Magnezone.
+[2015-10-10T06:19:20.016Z] (thelotusleague) (Lotus Aranacana notes: followed by an unmute)
+[2015-10-10T06:19:26.918Z] (thelotusleague) (Lotus Aranacana notes: i men what)
+[2015-10-10T06:20:31.095Z] (thelotusleague) Elite Dance Studio was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T06:21:01.522Z] (thelotusleague) Elite Dance Studio was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-10T06:21:50.235Z] (thelotusleague) PROF NHHS set modchat to &
+[2015-10-10T06:22:24.188Z] (thelotusleague) (GL♅Devils notes: Its cancer bc some peps can't control themselves)
+[2015-10-10T06:23:18.054Z] (thelotusleague) Lotus Maura set modchat to false
+[2015-10-10T06:25:09.787Z] (thelotusleague) Jerbing was muted by Scrublord Jerb for 1 hour.
+[2015-10-10T06:25:09.905Z] (thelotusleague) (Jerbing's ac account: gtxrainmanaphy)
+[2015-10-10T06:25:31.293Z] (thelotusleague) Guest 14633 was unmuted by Lotus Aranacana.
+[2015-10-10T06:27:18.969Z] (thelotusleague) GTX♅RainManaphy was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T06:27:19.645Z] (thelotusleague) Cloyy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T06:27:46.327Z] (thelotusleague) (Prof Blooper notes: I was confused for a minute)
+[2015-10-10T06:27:54.155Z] (thelotusleague) (Prof Blooper notes: then I realized I have cloyy on ignore)
+[2015-10-10T06:28:00.112Z] (thelotusleague) (Prof Blooper notes: :X)
+[2015-10-10T06:28:18.254Z] (thelotusleague) (Scrublord Jerb notes: lmao)
+[2015-10-10T06:31:03.353Z] (thelotusleague) Elite Dance Studio was warned by Lotus Maura.
+[2015-10-10T06:31:45.975Z] (thelotusleague) Elite Dance Studio was muted by Lotus Maura for 7 minutes. (I said stop)
+[2015-10-10T06:31:52.579Z] (thelotusleague) Myst Boo was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T06:31:56.807Z] (thelotusleague) Cloyy was muted by Lotus Maura for 7 minutes. (you too)
+[2015-10-10T06:33:20.320Z] (thelotusleague) GTX♅RainManaphy was unmuted by PROF NHHS.
+[2015-10-10T06:35:24.893Z] (thelotusleague) Cloyy was unmuted by PROF NHHS.
+[2015-10-10T06:35:37.405Z] (thelotusleague) Elite Dance Studio was unmuted by PROF NHHS.
+[2015-10-10T06:36:17.944Z] (thelotusleague) Lotus Aranacana was warned by PROF NHHS. (chill)
+[2015-10-10T06:38:00.634Z] (thelotusleague) PROF NHHS set modchat to &
+[2015-10-10T06:38:15.765Z] (thelotusleague) GTX♅RainManaphy was promoted to Room Leader by Lotus Maura.
+[2015-10-10T06:38:20.226Z] (thelotusleague) (GL♅Devils notes: yes)
+[2015-10-10T06:38:26.604Z] (thelotusleague) (GL♅Devils notes: more rugby)
+[2015-10-10T06:39:09.166Z] (thelotusleague) (GL♅Devils notes: lol maura, don't worry bruh)
+[2015-10-10T06:39:28.995Z] (thelotusleague) (Lotus Aranacana notes: if he was steong he wouldnt drink and be shit)
+[2015-10-10T06:39:53.611Z] (thelotusleague) PROF NHHS set modchat to false
+[2015-10-10T06:40:53.618Z] (thelotusleague) (GTX♅RainManaphy was demoted to Room Voice by Lotus Maura.)
+[2015-10-10T06:42:19.699Z] (thelotusleague) Lotus Aranacana was warned by Lotus ۩ Magnezone.
+[2015-10-10T06:44:12.223Z] (thelotusleague) Lotus Aranacana was muted by Lotus Maura for 7 minutes.
+[2015-10-10T06:44:24.559Z] (thelotusleague) Lotus Maura set modchat to &
+[2015-10-10T06:46:04.289Z] (thelotusleague) Lotus Maura set modchat to $
+[2015-10-10T06:46:59.655Z] (thelotusleague) Lotus Maura set modchat to false
+[2015-10-10T06:47:43.566Z] (thelotusleague) GTX♅RainManaphy was muted by Lotus Maura for 7 minutes.
+[2015-10-10T06:47:53.946Z] (thelotusleague) macrarazy was muted by Lotus Maura for 7 minutes.
+[2015-10-10T06:47:54.587Z] (thelotusleague) GTX♅RainManaphy was warned by PROF NHHS. (really)
+[2015-10-10T06:48:02.481Z] (thelotusleague) macrarazy was banned from room thelotusleague by Scrublord Jerb. (k)
+[2015-10-10T06:48:51.894Z] (thelotusleague) GTX♅RainManaphy was muted by PROF NHHS for 1 hour.
+[2015-10-10T06:49:07.963Z] (thelotusleague) macrarazy was unbanned from room thelotusleague by Lotus Maura.
+[2015-10-10T06:49:09.995Z] (thelotusleague) macrarazy was banned from room thelotusleague by Lotus Maura.
+[2015-10-10T06:50:44.966Z] (thelotusleague) Lotus Aranacana was unmuted by PROF NHHS.
+[2015-10-10T06:53:01.219Z] (thelotusleague) Cloyy was promoted to Room Voice by Lotus Maura.
+[2015-10-10T07:02:31.057Z] (thelotusleague) Saur Boo was muted by Lotus Maura for 1 hour.
+[2015-10-10T07:02:31.059Z] (thelotusleague) (Saur Boo's ac account: lotusaranacana)
+[2015-10-10T07:02:59.624Z] (thelotusleague) Lotus Maura set modchat to +
+[2015-10-10T07:05:14.752Z] (thelotusleague) Lotus Maura set modchat to &
+[2015-10-10T07:05:34.658Z] (thelotusleague) (Lotus Wincon notes: which he did once b4)
+[2015-10-10T07:05:43.934Z] (thelotusleague) (Lotus Wincon notes: nods)
+[2015-10-10T07:05:44.657Z] (thelotusleague) Saur Boo was banned from room thelotusleague by PROF NHHS.
+[2015-10-10T07:05:44.660Z] (thelotusleague) (Saur Boo's ac account: lotusaranacana)
+[2015-10-10T07:06:09.895Z] (thelotusleague) (GL♅Devils notes: Hey guys back)
+[2015-10-10T07:06:16.159Z] (thelotusleague) Lotus Maura set modchat to %
+[2015-10-10T07:09:13.821Z] (thelotusleague) saurboo was unbanned from room thelotusleague by Scrublord Jerb.
+[2015-10-10T07:11:03.815Z] (thelotusleague) Lotus Aranacana was unmuted by PROF NHHS.
+[2015-10-10T07:11:46.577Z] (thelotusleague) Lotus Aranacana was banned from room thelotusleague by Lotus Maura.
+[2015-10-10T07:12:19.745Z] (thelotusleague) GTX♅RainManaphy was unmuted by PROF NHHS.
+[2015-10-10T07:13:22.055Z] (thelotusleague) PROF NHHS set modchat to false
+[2015-10-10T07:13:43.177Z] (thelotusleague) GTX♅RainManaphy was banned from room thelotusleague by Lotus Maura.
+[2015-10-10T07:14:03.032Z] (thelotusleague) gtxrainmanaphy was unbanned from room thelotusleague by Lotus Maura.
+[2015-10-10T07:14:50.270Z] (thelotusleague) i'm sora was banned from room thelotusleague by Lotus Maura.
+[2015-10-10T07:14:50.273Z] (thelotusleague) (i'm sora's roombanned alts: Vvvs)
+[2015-10-10T07:15:14.750Z] (thelotusleague) imsora was unbanned from room thelotusleague by Lotus Maura.
+[2015-10-10T07:18:04.166Z] (thelotusleague) Elite Dance Studio was warned by Lotus Maura.
+[2015-10-10T07:18:15.680Z] (thelotusleague) PROF NHHS set modchat to %
+[2015-10-10T07:20:28.905Z] (thelotusleague) PROF NHHS set modchat to false
+[2015-10-10T07:21:19.115Z] (thelotusleague) squide was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T07:21:22.734Z] (thelotusleague) squide was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-10T07:21:26.149Z] (thelotusleague) squide was banned from room thelotusleague by LotusChamp Torpid.
+[2015-10-10T07:21:34.091Z] (thelotusleague) Elite Dance Studio was banned from room thelotusleague by HeadProf Jerb.
+[2015-10-10T07:22:03.716Z] (thelotusleague) dantelion was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T07:22:21.034Z] (thelotusleague) dantelion was banned from room thelotusleague by Safety Shark. (Blacklisted user)
+[2015-10-10T07:22:21.710Z] (thelotusleague) (Safety Shark notes: dantelion was added to the blacklist by #LotusChamp Torpid.)
+[2015-10-10T07:22:32.141Z] (thelotusleague) PROF NHHS set modchat to &
+[2015-10-10T07:22:45.027Z] (thelotusleague) (GL♅Devils notes: pls make driver lel)
+[2015-10-10T07:22:55.212Z] (thelotusleague) (GL♅Devils notes: or voice)
+[2015-10-10T07:23:13.853Z] (thelotusleague) (GL♅Devils notes: so all mems can talk)
+[2015-10-10T07:23:24.133Z] (thelotusleague) PROF NHHS set modchat to +
+[2015-10-10T07:23:50.611Z] (thelotusleague) PROF NHHS set modchat to false
+[2015-10-10T07:37:01.429Z] (thelotusleague) XiouShock was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T07:37:08.017Z] (thelotusleague) XiouShock was banned from room thelotusleague by Prof Blooper.
+[2015-10-10T07:37:10.594Z] (thelotusleague) (XiouShock would be muted by HeadProf Jerb but was already muted.)
+[2015-10-10T07:40:57.612Z] (thelotusleague) (Safety Shark notes: xioushock was added to the blacklist by #LotusChamp Torpid.)
+[2015-10-10T07:56:36.401Z] (thelotusleague) Danklord Jerb was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T07:59:32.455Z] (thelotusleague) HeadProf Jerb set modchat to %
+[2015-10-10T08:00:05.215Z] (thelotusleague) HeadProf Jerb set modchat to false
+[2015-10-10T08:03:23.397Z] (thelotusleague) (Lotus Aranacana was demoted to Room regular user by HeadProf Jerb.)
+[2015-10-10T08:03:23.997Z] (thelotusleague) (lotusarana was demoted to Room regular user by HeadProf Jerb.)
+[2015-10-10T08:05:48.718Z] (thelotusleague) GTX♅RainManaphy was muted by LotusChamp Torpid for 7 minutes. (you had plenty of warnings)
+[2015-10-10T08:20:41.275Z] (thelotusleague) GTX♅RainManaphy was muted by HeadProf Jerb for 7 minutes.
+[2015-10-10T08:24:43.576Z] (thelotusleague) (HeadProf Jerb changed the roomdesc to: "OPEN TYPES: Electric, Fairy, Poison and 1 E4 Spot".)
+[2015-10-10T08:48:39.282Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T11:08:55.233Z] (thelotusleague) (GTX♅PTyranitar created a tournament in monotype format.)
+[2015-10-10T11:09:07.891Z] (thelotusleague) (gtx kirito forcibly ended a tournament.)
+[2015-10-10T11:09:14.973Z] (thelotusleague) (gtx kirito created a tournament in monotype format.)
+[2015-10-10T11:09:40.628Z] (thelotusleague) (The tournament auto start timeout was set to 2 by gtx kirito)
+[2015-10-10T11:17:28.799Z] (thelotusleague) (The tournament was set to disallow scouting by gtx kirito)
+[2015-10-10T11:18:28.511Z] (thelotusleague) (The tournament auto disqualify timeout was set to 1 by gtx kirito)
+[2015-10-10T12:54:22.138Z] (thelotusleague) (GTX♅PTyranitar created a tournament in monotype format.)
+[2015-10-10T12:54:45.102Z] (thelotusleague) (Frontier♅EnZo forcibly ended a tournament.)
+[2015-10-10T13:19:18.762Z] (thelotusleague) (GTX♅Shocake created a tournament in monotype format.)
+[2015-10-10T13:19:36.438Z] (thelotusleague) (Wolf ☯ Suicune forcibly ended a tournament.)
+[2015-10-10T13:19:45.854Z] (thelotusleague) (Wolf ☯ Suicune created a tournament in monotype format.)
+[2015-10-10T13:29:41.765Z] (thelotusleague) (Frontier♅Haunter forcibly ended a tournament.)
+[2015-10-10T13:29:52.802Z] (thelotusleague) (Frontier♅Python created a tournament in monotype format.)
+[2015-10-10T13:43:50.839Z] (thelotusleague) (gtx kirito - ⓒⓡⓘ was disqualified from the tournament by Wolf ☯ Suicune)
+[2015-10-10T13:44:02.457Z] (thelotusleague) (Firespice was disqualified from the tournament by Wolf ☯ Suicune)
+[2015-10-10T14:02:41.465Z] (thelotusleague) RestlessVenusaur was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T14:03:04.630Z] (thelotusleague) RestlessVenusaur was muted by Frontier♅EnZo for 7 minutes.
+[2015-10-10T14:03:04.635Z] (thelotusleague) (RestlessVenusaur's ac account: cheezusbleezus)
+[2015-10-10T14:03:12.539Z] (thelotusleague) RestlessVenusaur was unmuted by Frontier♅EnZo.
+[2015-10-10T14:05:00.630Z] (thelotusleague) GTX♅Rest was promoted to Room Voice by Frontier♅EnZo.
+[2015-10-10T14:12:57.063Z] (thelotusleague) GTX♅Shocake was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T14:20:50.932Z] (thelotusleague) LotusChampJig was muted by Frontier♅EnZo for 7 minutes. (nope)
+[2015-10-10T14:20:50.933Z] (thelotusleague) (LotusChampJig's ac account: gtxkirito)
+[2015-10-10T14:23:10.838Z] (thelotusleague) Frontier Feelsjig was kicked from the room by Frontier♅EnZo.
+[2015-10-10T14:41:34.348Z] (thelotusleague) Wolf Suicune was kicked from the room by Frontier♅Python.
+[2015-10-10T14:46:30.609Z] (thelotusleague) iRoams was warned by Frontier♅Python. (don't start shit)
+[2015-10-10T14:48:23.851Z] (thelotusleague) iRoams was muted by Frontier♅Python for 7 minutes. (If your entire league doesn't have proof of being any better than an other one, don't say another one is shit. OK? OK/)
+[2015-10-10T14:48:54.591Z] (thelotusleague) Frontier♅Python was warned by Professor Panders. (give a warning.)
+[2015-10-10T15:54:28.081Z] (thelotusleague) Alliance Meta was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:00:12.414Z] (thelotusleague) devinp0 was muted by Frontier♅Python for 7 minutes. (say wut)
+[2015-10-10T16:00:17.980Z] (thelotusleague) devinp0 was unmuted by Frontier♅Python.
+[2015-10-10T16:13:35.638Z] (thelotusleague) (Lotus Axl created a tournament in monotype format.)
+[2015-10-10T16:18:13.160Z] (thelotusleague) Faplord Geta was banned from room thelotusleague by Frontier♅Python.
+[2015-10-10T16:18:13.164Z] (thelotusleague) (Faplord Geta's ac account: lotuschamptorpid)
+[2015-10-10T16:18:23.085Z] (thelotusleague) faplordgeta was unbanned from room thelotusleague by Frontier♅Python.
+[2015-10-10T16:41:02.787Z] (thelotusleague) (The tournament auto disqualify timeout was set to 1 by GTX Enrique)
+[2015-10-10T16:45:03.355Z] (thelotusleague) Lotus Itsme was kicked from the room by Lotus DJLuna.
+[2015-10-10T16:46:01.775Z] (thelotusleague) devinp0 was kicked from the room by Lotus Itsme.
+[2015-10-10T16:46:22.875Z] (thelotusleague) devinp0 was promoted to Room Moderator by LotusChamp Torpid.
+[2015-10-10T16:46:55.707Z] (thelotusleague) (devinp0 was demoted to Room Voice by LotusChamp Torpid.)
+[2015-10-10T16:47:21.983Z] (thelotusleague) devinp0 was promoted to Room Driver by Lotus DJLuna.
+[2015-10-10T16:52:23.805Z] (thelotusleague) (Alliance Meta was disqualified from the tournament by GTX Enrique)
+[2015-10-10T16:52:35.141Z] (thelotusleague) Vvvs was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T17:10:31.212Z] (thelotusleague) Auntie Snixx was kicked from the room by LotusChamp Torpid.
+[2015-10-10T17:10:40.441Z] (thelotusleague) (GTX Enrique created a tournament in monotype format.)
+[2015-10-10T17:19:30.890Z] (thelotusleague) (GTX Enrique was disqualified from the tournament by Alliance Meta)
+[2015-10-10T17:56:11.851Z] (thelotusleague) GTX♅Extocan was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-10T17:56:26.830Z] (thelotusleague) LotusChamp Torpid declared Welcome Extocan
+[2015-10-10T18:37:34.860Z] (thelotusleague) evadebans was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-10T19:15:46.685Z] (thelotusleague) (Dj 18-Volt notes: only scrubs make lists with stupid reasons)
+[2015-10-10T19:16:58.751Z] (thelotusleague) (Lotus DJLuna notes: meme)
+[2015-10-10T19:17:07.822Z] (thelotusleague) (Frontier Python notes: Luna is a meme)
+[2015-10-10T19:17:18.638Z] (thelotusleague) (Frontier Python notes: confurmed)
+[2015-10-10T19:23:05.179Z] (thelotusleague) GTX♅RainManaphy was warned by Professor Panders. (that poll is irrelevant, and second thats not a yes or no question. Use english properly please.)
+[2015-10-10T19:32:59.133Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was muted by Frontier♅EnZo for 7 minutes. (inappropriate language)
+[2015-10-10T20:01:37.919Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was muted by Frontier Python for 7 minutes. (Bing Imo)
+[2015-10-10T20:01:38.519Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was unmuted by Frontier Python.
+[2015-10-10T20:10:32.689Z] (thelotusleague) LotusChamp Torpid declared Grimsley Faptastic Axl for BotL
+[2015-10-10T20:14:16.330Z] (thelotusleague) GTX♅RainManaphy was warned by LotusChamp Torpid. (seriously calm down)
+[2015-10-10T20:27:38.803Z] (thelotusleague) GTX♅RainManaphy was muted by GL%Grimsley for 7 minutes. (quit insulting me over dumb things)
+[2015-10-10T20:51:40.703Z] (thelotusleague) Myst Bronze was kicked from the room by Lotus Wincon.
+[2015-10-10T20:58:33.049Z] (thelotusleague) GTX♅Humper was warned by Lotus Itsme - ⓐⓦ. (naughty)
+[2015-10-10T21:26:22.196Z] (thelotusleague) lotusaranacana was unbanned from room thelotusleague by HeadRecruiter♅Dvd.
+[2015-10-10T21:27:29.240Z] (thelotusleague) HeadRecruiter♅Dvd declared story time
+[2015-10-10T21:28:10.658Z] (thelotusleague) Frontier♅EnZo set modchat to +
+[2015-10-10T21:28:16.836Z] (thelotusleague) ashbloodthief was kicked from the room by HeadRecruiter♅Dvd.
+[2015-10-10T21:31:31.823Z] (thelotusleague) Professor Panders declared Arana, this is your last chance. Now let's drop this all. Okay?
+[2015-10-10T21:33:33.273Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to #
+[2015-10-10T21:33:52.413Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to +
+[2015-10-10T21:34:17.462Z] (thelotusleague) HeadRecruiter♅Dvd declared AM I CLEAR?
+[2015-10-10T21:35:05.182Z] (thelotusleague) Lotus Wincon set modchat to #
+[2015-10-10T21:35:21.198Z] (thelotusleague) (Frontier Python notes: Maura isn't permabanned)
+[2015-10-10T21:35:38.707Z] (thelotusleague) (Frontier Python notes: hes gonna be back in like 3 days i think)
+[2015-10-10T21:35:38.946Z] (thelotusleague) Lotus Wincon set modchat to false
+[2015-10-10T21:37:17.517Z] (thelotusleague) Lotus Aranacana was promoted to Room Voice by Frontier♅EnZo.
+[2015-10-10T21:42:22.321Z] (thelotusleague) Frontier Python was muted by Professor Panders for 7 minutes.
+[2015-10-10T21:42:26.407Z] (thelotusleague) Frontier Python was unmuted by Professor Panders.
+[2015-10-10T21:44:08.368Z] (thelotusleague) Lotus Aranacana was kicked from the room by GL♅Incursio.
+[2015-10-10T21:44:19.279Z] (thelotusleague) GL♅Incursio was warned by Professor Panders. (that was not neccesary.)
+[2015-10-10T21:44:44.814Z] (thelotusleague) GTX♅Humper was warned by Frontier Python. (please stop bolding xaa)
+[2015-10-10T21:45:07.097Z] (thelotusleague) GL♅Incursio was muted by Professor Panders for 7 minutes.
+[2015-10-10T21:45:10.326Z] (thelotusleague) Lotus Aranacana was muted by Professor Panders for 7 minutes.
+[2015-10-10T21:49:23.624Z] (thelotusleague) GL♅Incursio was unmuted by Professor Panders.
+[2015-10-10T21:50:21.522Z] (thelotusleague) Lotus Aranacana was unmuted by GL%Grimsley.
+[2015-10-10T21:50:27.682Z] (thelotusleague) Lotus Aranacana was muted by GL%Grimsley for 1 hour.
+[2015-10-10T21:54:14.218Z] (thelotusleague) Frontier Python was warned by Lotus Wincon. (ur such a fucking grammar nazi >:l)
+[2015-10-10T21:57:31.943Z] (thelotusleague) Lotus Aranacana was unmuted by Professor Panders.
+[2015-10-10T21:59:23.416Z] (thelotusleague) Lotus Arana was promoted to Room Voice by Professor Panders.
+[2015-10-10T22:00:32.722Z] (thelotusleague) Recruiter Arana was warned by HeadRecruiter♅Dvd. (drop that alt)
+[2015-10-10T22:04:24.725Z] (thelotusleague) HeadRecruiter♅Dvd declared everyone who wants to be a recruiter, pm me
+[2015-10-10T22:09:00.346Z] (thelotusleague) Recruiter♅Humper was promoted to Room Driver by HeadRecruiter♅Dvd.
+[2015-10-10T22:13:20.088Z] (thelotusleague) Cloyy was kicked from the room by Lotus Itsme - ⓐⓦ.
+[2015-10-10T22:13:27.952Z] (thelotusleague) Lotus Itsme - ⓐⓦ was kicked from the room by Frontier Python.
+[2015-10-10T22:20:26.493Z] (thelotusleague) Maura was warned by Prof NHHS. (chill)
+[2015-10-10T22:21:21.993Z] (thelotusleague) Prise was promoted to Room Driver by Lotus Wincon.
+[2015-10-10T22:23:07.191Z] (thelotusleague) GTX♅Parkour was promoted to Room Voice by HeadRecruiter♅Dvd.
+[2015-10-10T22:25:28.713Z] (thelotusleague) Prof NHHS set modchat to &
+[2015-10-10T22:25:47.767Z] (thelotusleague) Lotus Maura set modchat to false
+[2015-10-10T22:29:35.985Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-10T22:37:33.581Z] (thelotusleague) Maura \ was promoted to Room Voice by Frontier Python.
+[2015-10-10T22:50:13.969Z] (thelotusleague) (Maura \ created a tournament in ubers format.)
+[2015-10-10T22:50:19.561Z] (thelotusleague) (Recruiter♅Humper forcibly ended a tournament.)
+[2015-10-10T22:50:24.385Z] (thelotusleague) (Maura \ created a tournament in ubers format.)
+[2015-10-10T22:50:27.116Z] (thelotusleague) (Recruiter♅Humper forcibly ended a tournament.)
+[2015-10-10T22:50:37.607Z] (thelotusleague) (Maura \ created a tournament in ubers format.)
+[2015-10-10T22:50:40.213Z] (thelotusleague) (Recruiter♅Humper forcibly ended a tournament.)
+[2015-10-10T22:50:58.629Z] (thelotusleague) (Lotus Maura created a tournament in ubers format.)
+[2015-10-10T22:53:55.873Z] (thelotusleague) Lotus Aranacana was promoted to Room Driver by Lotus DJ Luna.
+[2015-10-10T22:54:49.235Z] (thelotusleague) (Lotus Aranacana was demoted to Room Voice by LotusChamp Torpid.)
+[2015-10-10T23:02:00.896Z] (thelotusleague) Lotus Aranacana was muted by Professor Panders for 7 minutes.
+[2015-10-10T23:02:00.900Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-10T23:05:05.696Z] (thelotusleague) Lotus Aranacana was unmuted by LotusChamp Torpid.
+[2015-10-10T23:05:47.337Z] (thelotusleague) (LotusChamp Torpid changed the roomdesc to: "OPEN TYPES: Electric, Fairy, and 1 E4 Spot".)
+[2015-10-10T23:11:18.905Z] (thelotusleague) GTX♅Itachi was promoted to Room Voice by FrontierBlueray.
+[2015-10-10T23:11:52.110Z] (thelotusleague) (Lotus Maura was disqualified from the tournament by Lotus Maura)
+[2015-10-10T23:20:41.551Z] (thelotusleague) LotusChamp Torpid declared Torpid, 2 min.  Go
+[2015-10-10T23:26:37.165Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T23:32:58.107Z] (thelotusleague) HeadRecruiter♅Dvd declared SILENCE
+[2015-10-10T23:33:40.775Z] (thelotusleague) HeadRecruiter♅Dvd declared meeting starts now
+[2015-10-10T23:35:04.675Z] (thelotusleague) HeadRecruiter♅Dvd declared topic 1
+[2015-10-10T23:35:32.876Z] (thelotusleague) (Recruiter♅Humper created a tournament in monotype format.)
+[2015-10-10T23:35:39.119Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-10T23:36:33.109Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to +
+[2015-10-10T23:37:15.922Z] (thelotusleague) Lotus Serperior declared Our gym leader topic is continuing from last weeks
+[2015-10-10T23:38:05.064Z] (thelotusleague) Lotus Serperior declared this time its the structure
+[2015-10-10T23:38:41.242Z] (thelotusleague) Lotus Serperior declared The structure is like 3 resists 1 neutral etc.
+[2015-10-10T23:39:44.338Z] (thelotusleague) Lotus Serperior declared Dvd speak now
+[2015-10-10T23:39:58.656Z] (thelotusleague) HeadRecruiter♅Dvd set modchat to #
+[2015-10-10T23:40:44.636Z] (thelotusleague) Lotus Serperior declared go on with it :{
+[2015-10-10T23:42:11.738Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-10T23:42:16.273Z] (thelotusleague) Professor Panders declared Humper you're up
+[2015-10-10T23:42:19.694Z] (thelotusleague) Lotus Serperior declared anyone else want to speak
+[2015-10-10T23:42:31.109Z] (thelotusleague) (Frontier Python notes: Dank Meme)
+[2015-10-10T23:42:42.305Z] (thelotusleague) Lotus Serperior declared humper go
+[2015-10-10T23:42:42.680Z] (thelotusleague) (Lotus DJ Luna notes: memerage )
+[2015-10-10T23:42:53.548Z] (thelotusleague) Lotus Serperior set modchat to %
+[2015-10-10T23:43:04.660Z] (thelotusleague) Lotus Serperior declared 2 mins
+[2015-10-10T23:44:11.374Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-10T23:44:19.364Z] (thelotusleague) Lotus Serperior declared anyone else want to talk b4 i do
+[2015-10-10T23:44:40.135Z] (thelotusleague) (Frontier Python notes: http://prntscr.com/8pzj9o)
+[2015-10-10T23:44:41.876Z] (thelotusleague) Lotus Serperior declared wants to talk say i
+[2015-10-10T23:45:26.314Z] (thelotusleague) Lotus Serperior declared rainmanaphy go
+[2015-10-10T23:45:36.623Z] (thelotusleague) (Frontier Python notes: luna are you drunk again?)
+[2015-10-10T23:45:45.211Z] (thelotusleague) (Lotus DJ Luna notes: always bby ;))
+[2015-10-10T23:46:42.160Z] (thelotusleague) (HeadRecruiter♅Dvd notes: anyoneelse tired?)
+[2015-10-10T23:46:46.987Z] (thelotusleague) Professor Panders was muted by HeadRecruiter♅Dvd for 7 minutes.
+[2015-10-10T23:46:50.209Z] (thelotusleague) (Lotus DJ Luna notes: yup )
+[2015-10-10T23:47:09.134Z] (thelotusleague) Lotus Serperior declared go on
+[2015-10-10T23:48:00.762Z] (thelotusleague) (Frontier Python notes: I just woke up from being awake for five years)
+[2015-10-10T23:48:22.438Z] (thelotusleague) (Recruiter♅Humper notes: loophole?)
+[2015-10-10T23:48:37.527Z] (thelotusleague) (Frontier Python notes: OMFG HUMPER KNOWS HOW TO MODNOTE?)
+[2015-10-10T23:48:42.342Z] (thelotusleague) (Recruiter♅Humper notes: XD)
+[2015-10-10T23:48:45.358Z] (thelotusleague) (Frontier Python notes: FUUUUUU)
+[2015-10-10T23:49:42.196Z] (thelotusleague) Lotus Serperior declared myself say something
+[2015-10-10T23:49:45.847Z] (thelotusleague) Lotus Serperior set modchat to #
+[2015-10-10T23:52:17.153Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-10T23:52:34.641Z] (thelotusleague) Lotus Serperior declared luna u wanna go
+[2015-10-10T23:52:48.766Z] (thelotusleague) Lotus Serperior declared i mean talk
+[2015-10-10T23:52:53.549Z] (thelotusleague) Lotus Serperior declared no fite xD
+[2015-10-10T23:53:32.762Z] (thelotusleague) Lotus Serperior declared cause ou is way different from mono
+[2015-10-10T23:54:11.950Z] (thelotusleague) Lotus Serperior set modchat to @
+[2015-10-10T23:54:14.978Z] (thelotusleague) Recruiter♅Humper was warned by HeadRecruiter♅Dvd.
+[2015-10-10T23:55:13.977Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-10T23:55:25.506Z] (thelotusleague) Lotus Serperior declared anyone else want to talk now?
+[2015-10-10T23:55:38.470Z] (thelotusleague) Lotus Serperior set modchat to &
+[2015-10-10T23:55:43.273Z] (thelotusleague) Lotus Serperior declared go panda
+[2015-10-10T23:56:58.261Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-10T23:57:05.263Z] (thelotusleague) Lotus Serperior declared python ur up
+[2015-10-10T23:57:07.735Z] (thelotusleague) Lotus Serperior set modchat to @
+[2015-10-10T23:57:10.685Z] (thelotusleague) Lotus Serperior declared go
+[2015-10-11T00:00:54.180Z] (thelotusleague) Lotus Serperior set modchat to +
+[2015-10-11T00:00:57.309Z] (thelotusleague) Lotus Serperior declared is that all?
+[2015-10-11T00:01:22.665Z] (thelotusleague) Lotus Serperior declared anyone else want to speal
+[2015-10-11T00:02:58.862Z] (thelotusleague) Lotus Serperior declared vote up
+[2015-10-11T00:04:00.480Z] (thelotusleague) Lotus Serperior declared gogogogo
+[2015-10-11T00:06:25.886Z] (thelotusleague) Lotus Serperior declared PEOPLE NOT ATLEAST A GTX IN THIS LEAGUE PLEASE DO NOT VOTE
+[2015-10-11T00:06:36.647Z] (thelotusleague) Lotus Serperior declared As this wont affect you at all
+[2015-10-11T00:06:45.535Z] (thelotusleague) Lotus Serperior declared like u guys gaf
+[2015-10-11T00:07:47.735Z] (thelotusleague) HeadRecruiter♅Dvd declared i'm going to bed
+[2015-10-11T00:13:32.064Z] (thelotusleague) Lotus Serperior declared So we have decided to go with OU tests but it wont affect your chance of getting your GL Spot
+[2015-10-11T00:14:19.999Z] (thelotusleague) Professor Panders declared the next topic involves abuse, its about the amounts of warns it should take, for their to be mutes, exceptions, etc
+[2015-10-11T00:15:13.242Z] (thelotusleague) Professor Panders declared Super, go.
+[2015-10-11T00:17:16.542Z] (thelotusleague) Professor Panders declared Arana go
+[2015-10-11T00:18:43.531Z] (thelotusleague) Professor Panders declared Manaphy, you go
+[2015-10-11T00:20:07.556Z] (thelotusleague) Professor Panders declared Skipping Manaphy I guess, Humper, 2mins, go
+[2015-10-11T00:20:39.429Z] (thelotusleague) Professor Panders declared Humper go
+[2015-10-11T00:23:16.321Z] (thelotusleague) Lotus Serperior declared RainManaphy go
+[2015-10-11T00:24:20.308Z] (thelotusleague) Lotus Aranacana was muted by Lotus Serperior for 7 minutes.
+[2015-10-11T00:24:20.309Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T00:26:43.916Z] (thelotusleague) Professor Panders declared Robo, you wanna go?
+[2015-10-11T00:27:22.408Z] (thelotusleague) Professor Panders declared Robo go.
+[2015-10-11T00:27:30.633Z] (thelotusleague) Lotus Aranacana was unmuted by Lotus Serperior.
+[2015-10-11T00:30:03.820Z] (thelotusleague) Professor Panders declared Tori go
+[2015-10-11T00:32:06.254Z] (thelotusleague) Professor Panders declared Anyone else want to go?
+[2015-10-11T00:32:58.576Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T00:34:26.886Z] (thelotusleague) Lotus Serperior declared imma talk rn
+[2015-10-11T00:37:33.989Z] (thelotusleague) Lotus Serperior declared Gym Leaders will be monitered when it comes to abuse
+[2015-10-11T00:38:01.347Z] (thelotusleague) Lotus Serperior declared We are now done with the main topics, anyone want to state a League related discussion
+[2015-10-11T00:38:15.338Z] (thelotusleague) Lotus Serperior declared or a topic of their own
+[2015-10-11T00:40:10.935Z] (thelotusleague) Lotus Serperior declared anyone?
+[2015-10-11T00:41:15.709Z] (thelotusleague) Lotus Wincon set modchat to #
+[2015-10-11T00:45:03.078Z] (thelotusleague) Lotus Wincon set modchat to false
+[2015-10-11T00:45:21.889Z] (thelotusleague) Professor Panders declared Tori wants to speak about that..
+[2015-10-11T00:52:01.588Z] (thelotusleague) Professor Panders declared Last Topic, its about Arana
+[2015-10-11T00:53:15.972Z] (thelotusleague) Professor Panders declared Are we gonna discuss the arna issue, or move on?
+[2015-10-11T00:54:15.228Z] (thelotusleague) GTX♅RainManaphy was warned by Recruiter♅Humper. (You missed your turn)
+[2015-10-11T00:54:40.463Z] (thelotusleague) Professor Panders declared this meeting is done
+[2015-10-11T00:55:20.118Z] (thelotusleague) Professor Panders declared The meeting is over, its time for the tournament~
+[2015-10-11T00:55:48.872Z] (thelotusleague) Lotus Aranacana was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T00:58:34.401Z] (thelotusleague) (Professor Panders created a tournament in ou format.)
+[2015-10-11T01:02:01.334Z] (thelotusleague) (Professor Panders forcibly ended a tournament.)
+[2015-10-11T01:02:22.966Z] (thelotusleague) (Professor Panders created a tournament in ubers format.)
+[2015-10-11T01:02:30.526Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-11T01:02:44.514Z] (thelotusleague) GTX♅RainManaphy was warned by Professor Panders. (Can you not?)
+[2015-10-11T01:02:48.224Z] (thelotusleague) (Professor Panders created a tournament in ubers format.)
+[2015-10-11T01:15:58.285Z] (thelotusleague) Professor Panders declared Okay, if someone is using a poke that is not on the list. tell me :O
+[2015-10-11T01:51:32.226Z] (thelotusleague) Professor Panders declared Congrats to Frontier Python for winning the tour. ~ He wins 8bucks yay him..
+[2015-10-11T02:05:56.257Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T02:06:50.367Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T02:24:06.146Z] (thelotusleague) Hm Sableye was warned by Dylightful.
+[2015-10-11T02:25:51.388Z] (thelotusleague) Lotus Wincon declared story time
+[2015-10-11T02:34:36.448Z] (thelotusleague) Professor Panders declared all lotus members join the Digital League room
+[2015-10-11T02:39:34.840Z] (thelotusleague) Cloyy was kicked from the room by Dylightful.
+[2015-10-11T02:39:39.844Z] (thelotusleague) Wolf ☯ Suicune was kicked from the room by Dylightful.
+[2015-10-11T02:39:48.292Z] (thelotusleague) Myst Boo was kicked from the room by Dylightful.
+[2015-10-11T02:40:23.162Z] (thelotusleague) Wolf ☯ Suicune was kicked from the room by Dylightful.
+[2015-10-11T02:41:11.787Z] (thelotusleague) Wolf ☯ Suicune was kicked from the room by Dylightful.
+[2015-10-11T02:41:20.128Z] (thelotusleague) Wolf ☯ Suicune was kicked from the room by Dylightful.
+[2015-10-11T02:42:03.544Z] (thelotusleague) Wolf ☯ Suicune was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T02:43:53.057Z] (thelotusleague) Wolf ☯ Suicune was muted by Dylightful for 7 minutes. (Shark warned you)
+[2015-10-11T02:44:23.845Z] (thelotusleague) Wolf ☯ Suicune was unmuted by Lotus ۩ Magnezone.
+[2015-10-11T02:47:03.162Z] (thelotusleague) Lotus Aranacana was muted by Professor Panders for 7 minutes.
+[2015-10-11T02:47:03.163Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T02:47:12.150Z] (thelotusleague) Lotus Aranacana was unmuted by Professor Panders.
+[2015-10-11T02:48:16.761Z] (thelotusleague) Neo Soul made this room hidden.
+[2015-10-11T02:48:21.790Z] (thelotusleague) Neo Soul made this room secret.
+[2015-10-11T02:50:40.062Z] (thelotusleague) Cloyy was kicked from the room by Dylightful.
+[2015-10-11T02:50:47.195Z] (thelotusleague) Alliance Axair was kicked from the room by Dylightful.
+[2015-10-11T02:50:51.594Z] (thelotusleague) Myst Boo was kicked from the room by Dylightful.
+[2015-10-11T02:51:04.419Z] (thelotusleague) Cloyy was kicked from the room by Dylightful.
+[2015-10-11T02:51:21.638Z] (thelotusleague) GTX shavi was promoted to Room Voice by Lotus ۩ Magnezone.
+[2015-10-11T02:51:22.745Z] (thelotusleague) Neo Soul set modjoin to +.
+[2015-10-11T02:51:22.770Z] (thelotusleague) Neo Soul set modchat to +
+[2015-10-11T02:52:55.323Z] (thelotusleague) GTX shavi was kicked from the room by Professor Panders.
+[2015-10-11T02:53:38.114Z] (thelotusleague) Professor Panders set modchat to &
+[2015-10-11T02:54:18.719Z] (thelotusleague) Professor Panders set modchat to +
+[2015-10-11T02:54:44.423Z] (thelotusleague) Cloyy was muted by Dylightful for 7 minutes. (enough)
+[2015-10-11T02:54:48.323Z] (thelotusleague) Cloyy was unmuted by Lotus Faptastic.
+[2015-10-11T02:55:44.956Z] (thelotusleague) Professor Panders set modchat to &
+[2015-10-11T02:55:53.005Z] (thelotusleague) (devinp0 notes: uh)
+[2015-10-11T02:56:02.200Z] (thelotusleague) (devinp0 notes: just mute him)
+[2015-10-11T02:56:15.862Z] (thelotusleague) (Dylightful notes: Lord... This is not what I wanted. It went so smoothly with Torpid setting the first meeting)
+[2015-10-11T02:56:39.997Z] (thelotusleague) (Frontier Python notes: we could've just done it in modnotes the entire time)
+[2015-10-11T02:56:46.639Z] (thelotusleague) Professor Panders set modchat to +
+[2015-10-11T02:56:55.083Z] (thelotusleague) (Frontier Python notes: no one outside lotus is driver or above)
+[2015-10-11T02:57:20.652Z] (thelotusleague) (Lotus Aranacana was demoted to Room regular user by HeadProf♅ Jerb.)
+[2015-10-11T03:01:04.811Z] (thelotusleague) Professor Panders declared ALL LOTUS MEMBERS MUST JOIN THE GROUPCHAT DYLIGHTFUL POSTD
+[2015-10-11T03:01:27.765Z] (thelotusleague) Professor Panders declared ONLY LOTUS MEMBERS MAY JOIN, all Join right now.
+[2015-10-11T03:05:15.752Z] (thelotusleague) (Dylightful was demoted to Room regular user by HeadProf♅ Jerb.)
+[2015-10-11T03:11:17.912Z] (thelotusleague) Neo Soul turned off modjoin.
+[2015-10-11T03:11:25.633Z] (thelotusleague) Neo Soul made this room public.
+[2015-10-11T03:11:30.251Z] (thelotusleague) Neo Soul made this room public.
+[2015-10-11T03:14:42.733Z] (thelotusleague) Lotus Aranacana was promoted to Room Voice by Frontier Okamu.
+[2015-10-11T03:15:09.613Z] (thelotusleague) Dylightful was promoted to Room Voice by Frontier Okamu.
+[2015-10-11T03:15:22.436Z] (thelotusleague) (Lotus Aranacana was demoted to Room regular user by HeadProf♅ Jerb.)
+[2015-10-11T03:17:27.877Z] (thelotusleague) Lotus Aranacana was promoted to Room Voice by Frontier Okamu.
+[2015-10-11T03:17:37.473Z] (thelotusleague) Frontier Okamu set modchat to false
+[2015-10-11T03:20:08.957Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T03:21:51.137Z] (thelotusleague) Dylightful was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T03:22:28.038Z] (thelotusleague) Professor Panders set modchat to &
+[2015-10-11T03:23:09.414Z] (thelotusleague) (Frontier Python notes: Okay ive been here 3 days)
+[2015-10-11T03:23:20.465Z] (thelotusleague) (Frontier Python notes: and ive seen more cancer than i did in dj)
+[2015-10-11T03:23:26.864Z] (thelotusleague) (Frontier Python notes: stahp)
+[2015-10-11T03:23:58.909Z] (thelotusleague) (Frontier Python notes: Its a game)
+[2015-10-11T03:24:15.784Z] (thelotusleague) (GL♅dawgk notes: test)
+[2015-10-11T03:24:18.898Z] (thelotusleague) (Frontier Python notes: panderps)
+[2015-10-11T03:24:22.255Z] (thelotusleague) (Frontier Python notes: pms)
+[2015-10-11T03:24:24.724Z] (thelotusleague) (Frontier Python notes: XD)
+[2015-10-11T03:24:26.477Z] (thelotusleague) Professor Panders set modchat to false
+[2015-10-11T03:24:27.059Z] (thelotusleague) (GL♅dawgk notes: yayay i can talk)
+[2015-10-11T03:25:39.806Z] (thelotusleague) Se0 was banned from room thelotusleague by Frontier♅EnZo.
+[2015-10-11T03:25:56.063Z] (thelotusleague) Frontier Python set modchat to +
+[2015-10-11T03:27:37.996Z] (thelotusleague) Lotus ۩ Magnezone set modchat to %
+[2015-10-11T03:27:53.793Z] (thelotusleague) (Lotus ۩ Magnezone notes: your welcome)
+[2015-10-11T03:28:01.517Z] (thelotusleague) (Frontier Python notes: Deez nuts)
+[2015-10-11T03:28:40.284Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-11T03:28:49.443Z] (thelotusleague) (Wolf Suicune forcibly ended a tournament.)
+[2015-10-11T03:28:54.299Z] (thelotusleague) Professor Panders declared The Meeing is urgent.. and lotus members are required to join.
+[2015-10-11T03:31:44.456Z] (thelotusleague) Lotus ۩ Magnezone set modchat to +
+[2015-10-11T03:35:04.436Z] (thelotusleague) Cloyy was muted by Frontier Python for 7 minutes. (stop)
+[2015-10-11T03:35:46.350Z] (thelotusleague) Cloyy was unmuted by Lotus Faptastic.
+[2015-10-11T03:37:05.804Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-11T03:37:11.029Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:14.035Z] (thelotusleague) (Wolf Suicune forcibly ended a tournament.)
+[2015-10-11T03:37:15.905Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:16.506Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:17.106Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:17.707Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:18.309Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:18.910Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:19.562Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:20.163Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:37:24.300Z] (thelotusleague) Alliance Meta was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T03:38:07.853Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-11T03:38:50.461Z] (thelotusleague) Commander Pheonix declared #
+[2015-10-11T03:38:54.101Z] (thelotusleague) Commander Pheonix set modchat to #
+[2015-10-11T03:38:59.876Z] (thelotusleague) (GL QueBien notes: no u)
+[2015-10-11T03:39:05.162Z] (thelotusleague) (Frontier Okamu forcibly ended a tournament.)
+[2015-10-11T03:39:07.183Z] (thelotusleague) (GL♅FatBoi notes: Geta explain what happpened)
+[2015-10-11T03:39:23.592Z] (thelotusleague) (GL♅FatBoi notes: what stuff is ridiculus)
+[2015-10-11T03:39:52.311Z] (thelotusleague) (Frontier Python notes: GLFatbou, do you not notice that people are LEAVING because of this drama?)
+[2015-10-11T03:40:03.199Z] (thelotusleague) (GL♅FatBoi notes: idek what's happening)
+[2015-10-11T03:40:12.671Z] (thelotusleague) (GL QueBien notes: ^)
+[2015-10-11T03:40:14.000Z] (thelotusleague) (GL♅FatBoi notes: idk who left and what drama)
+[2015-10-11T03:40:24.969Z] (thelotusleague) (GL QueBien notes: i just got here :I)
+[2015-10-11T03:40:29.294Z] (thelotusleague) (GL♅FatBoi notes: me too)
+[2015-10-11T03:40:31.260Z] (thelotusleague) (Frontier Python notes: if you were here you would know)
+[2015-10-11T03:40:43.487Z] (thelotusleague) (GL♅FatBoi notes: somebody that was here should enlighten us)
+[2015-10-11T03:40:48.207Z] (thelotusleague) (Frontier Python notes: ugh)
+[2015-10-11T03:41:01.070Z] (thelotusleague) Lotus ۩ Magnezone was appointed Room Owner by Commander Pheonix.
+[2015-10-11T03:41:19.031Z] (thelotusleague) (GL QueBien notes: i'm confoozed)
+[2015-10-11T03:41:28.839Z] (thelotusleague) (Frontier Python notes: okay basically everyone here started talkin about arana doing something, and then the chat blew up)
+[2015-10-11T03:41:29.440Z] (thelotusleague) (Frontier Python notes: i don't know all the details)
+[2015-10-11T03:41:41.937Z] (thelotusleague) (GL QueBien notes: of course, it had to be arana)
+[2015-10-11T03:42:00.936Z] (thelotusleague) (GL♅FatBoi notes: a long long time ago)
+[2015-10-11T03:42:07.288Z] (thelotusleague) (GL QueBien notes: xaa)
+[2015-10-11T03:42:49.396Z] (thelotusleague) (GL QueBien notes: wot)
+[2015-10-11T03:42:59.119Z] (thelotusleague) (Frontier Python notes: did i say i wasn't really paying attention?)
+[2015-10-11T03:43:17.469Z] (thelotusleague) (Frontier Python notes: nice arrow)
+[2015-10-11T03:43:26.123Z] (thelotusleague) (Frontier Python notes: pointing to a modnote)
+[2015-10-11T03:43:26.641Z] (thelotusleague) (GL QueBien notes: i still don't understand ~_~)
+[2015-10-11T03:43:43.265Z] (thelotusleague) (GL♅FatBoi notes: quebien is the only GL without the lotus symbol rn)
+[2015-10-11T03:43:49.434Z] (thelotusleague) (GL QueBien notes: oshet)
+[2015-10-11T03:44:00.502Z] (thelotusleague) Professor Panders was appointed Room Owner by Commander Pheonix.
+[2015-10-11T03:44:06.441Z] (thelotusleague) (GL♅QueBien notes: u wot)
+[2015-10-11T03:44:35.015Z] (thelotusleague) (Frontier Python notes: OOH)
+[2015-10-11T03:44:41.372Z] (thelotusleague) (Frontier Python notes: That's what started this)
+[2015-10-11T03:44:56.106Z] (thelotusleague) (Frontier Python notes: because he started kicking people out of the room)
+[2015-10-11T03:45:11.070Z] (thelotusleague) (GL♅QueBien notes: no u)
+[2015-10-11T03:45:22.257Z] (thelotusleague) (Frontier Python notes: Cloyy got all riled up)
+[2015-10-11T03:45:24.150Z] (thelotusleague) (GL♅QueBien notes: what frickin drama)
+[2015-10-11T03:45:50.699Z] (thelotusleague) (Frontier Python notes: then suicune. basically churning up anger and hostility)
+[2015-10-11T03:45:56.880Z] (thelotusleague) Lotus Faptastic was appointed Room Owner by Commander Pheonix.
+[2015-10-11T03:46:34.854Z] (thelotusleague) (Frontier Python notes: panda, i may have only been here for 3 days, but all im doing is trying to help diffuse the situation. i may be a cancer, but that doesn't mean i don't care, ok?)
+[2015-10-11T03:46:39.280Z] (thelotusleague) (GL♅QueBien notes: drama about what jesus christ)
+[2015-10-11T03:46:54.123Z] (thelotusleague) (Frontier Python notes: que stop)
+[2015-10-11T03:47:08.313Z] (thelotusleague) (GL♅QueBien notes: oh)
+[2015-10-11T03:48:28.891Z] (thelotusleague) (GL♅QueBien notes: ok, i think i understand, but what about this dylightful and skymond thing?)
+[2015-10-11T03:49:52.270Z] (thelotusleague) (GL♅QueBien notes: feelsbd)
+[2015-10-11T03:51:19.389Z] (thelotusleague) Commander Pheonix declared <h3> NO MORE TALKING OF THIS. The Next person to talk about it is Muted. Thanks. What has Happend Happend its Done.
+[2015-10-11T03:51:37.329Z] (thelotusleague) Commander Pheonix declared DO I MAKE MYSELF CLEAR
+[2015-10-11T03:51:41.229Z] (thelotusleague) Commander Pheonix declared DO I MAKE MYSELF CLEAR
+[2015-10-11T03:51:46.589Z] (thelotusleague) Commander Pheonix set modchat to false
+[2015-10-11T03:52:30.349Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:30.950Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:31.097Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:31.698Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:31.708Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:32.308Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:32.309Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:32.909Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:33.511Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:34.111Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T03:52:47.263Z] (thelotusleague) (Commander Pheonix created a tournament in monotype format.)
+[2015-10-11T03:53:04.390Z] (thelotusleague) Professor Panders was promoted to Room Leader by Commander Pheonix.
+[2015-10-11T03:53:37.449Z] (thelotusleague) Lotus ۩ Magnezone was promoted to Room Leader by Commander Pheonix.
+[2015-10-11T03:54:21.648Z] (thelotusleague) Elite4Pop was appointed Room Owner by Commander Pheonix.
+[2015-10-11T03:56:19.483Z] (thelotusleague) lotus faptastic was promoted to Room Moderator by Commander Pheonix.
+[2015-10-11T03:56:31.146Z] (thelotusleague) (lotus faptastic was demoted to Room Driver by Commander Pheonix.)
+[2015-10-11T04:02:02.028Z] (thelotusleague) Neo Soul made this room hidden.
+[2015-10-11T04:02:07.143Z] (thelotusleague) Neo Soul made this room public.
+[2015-10-11T04:02:10.137Z] (thelotusleague) Neo Soul turned off modjoin.
+[2015-10-11T04:02:26.392Z] (thelotusleague) Neo Soul made this room public.
+[2015-10-11T04:02:31.470Z] (thelotusleague) Neo Soul turned off modjoin.
+[2015-10-11T04:09:55.856Z] (thelotusleague) The Jerb was appointed Room Owner by Commander Pheonix.
+[2015-10-11T04:11:25.791Z] (thelotusleague) Lotus Aranacana was muted by The Jerb for 7 minutes.
+[2015-10-11T04:11:25.792Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T04:13:23.609Z] (thelotusleague) Firespice was promoted to Room Moderator by Commander Pheonix.
+[2015-10-11T04:13:27.030Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T04:19:38.280Z] (thelotusleague) (homeless robo was demoted to Room regular user by Lotus Serperior.)
+[2015-10-11T04:25:14.387Z] (thelotusleague) Dylightful was promoted to Room Driver by Commander Pheonix.
+[2015-10-11T04:26:31.061Z] (thelotusleague) (Dylightful was demoted to Room Voice by Commander Pheonix.)
+[2015-10-11T04:26:59.980Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T04:28:02.053Z] (thelotusleague) (Commander Pheonix created a tournament in monotype format.)
+[2015-10-11T04:31:01.611Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T04:43:52.628Z] (thelotusleague) (Frontier Okamu changed the roomintro.)
+[2015-10-11T04:53:25.037Z] (thelotusleague) (Commander Pheonix created a tournament in ou format.)
+[2015-10-11T04:53:48.395Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T04:54:26.836Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T04:58:20.732Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was kicked from the room by Frontier Python.
+[2015-10-11T05:16:46.487Z] (thelotusleague) Cloyy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T05:21:34.166Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was warned by Commander Pheonix.
+[2015-10-11T05:22:39.391Z] (thelotusleague) (Professor Panders was demoted to Room Driver by Commander Pheonix.)
+[2015-10-11T05:24:20.004Z] (thelotusleague) Professor Panders was promoted to Room Leader by Commander Pheonix.
+[2015-10-11T05:36:06.076Z] (thelotusleague) (Lotus Itsme - ⓓⓔⓓ was demoted to Room Operator by Commander Pheonix.)
+[2015-10-11T05:39:19.951Z] (thelotusleague) Cloyy was kicked from the room by Lotus Itsme - ⓓⓔⓓ.
+[2015-10-11T05:39:24.078Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T05:39:59.694Z] (thelotusleague) Lotus Itsme - ⓓⓔⓓ was promoted to Room Driver by The Jerb.
+[2015-10-11T05:42:59.439Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:43:00.067Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:43:00.860Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:44:58.796Z] (thelotusleague) LotusCapt Torpid set modchat to +
+[2015-10-11T05:45:06.331Z] (thelotusleague) LotusCapt Torpid set modchat to false
+[2015-10-11T05:45:33.193Z] (thelotusleague) HmCmpBeasto was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:48:47.998Z] (thelotusleague) Cloyy was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:49:39.386Z] (thelotusleague) HmCmpBeasto was promoted to Room Leader by Lotus ۩ Magnezone.
+[2015-10-11T05:49:59.897Z] (thelotusleague) Lotus ۩ Magnezone set modchat to ~
+[2015-10-11T05:50:04.890Z] (thelotusleague) Lotus ۩ Magnezone set modchat to false
+[2015-10-11T05:50:06.661Z] (thelotusleague) GTX♅RainManaphy was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:50:20.256Z] (thelotusleague) Cloyy was promoted to Room Leader by Professor Panders.
+[2015-10-11T05:50:26.549Z] (thelotusleague) (Cloyy was demoted to Room Voice by Professor Panders.)
+[2015-10-11T05:51:51.919Z] (thelotusleague) GTX♅RainManaphy was promoted to Room Voice by Commander Pheonix.
+[2015-10-11T05:52:04.763Z] (thelotusleague) devinp0 was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:52:56.304Z] (thelotusleague) GL♅Incursio was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:53:05.126Z] (thelotusleague) devinp0 was promoted to Room Driver by Commander Pheonix.
+[2015-10-11T05:54:43.730Z] (thelotusleague) edjim was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:54:59.991Z] (thelotusleague) GL♅Incursio was promoted to Room Driver by LotusChamp Torpid.
+[2015-10-11T05:55:09.710Z] (thelotusleague) Professor Panders was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:55:48.039Z] (thelotusleague) Professor Panders was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T05:56:01.183Z] (thelotusleague) Professor Panders was promoted to Room Leader by Commander Pheonix.
+[2015-10-11T05:57:31.397Z] (thelotusleague) (HmCmpBeasto was demoted to Room Voice by Commander Pheonix.)
+[2015-10-11T05:57:42.195Z] (thelotusleague) Aranacana was appointed Room Owner by Commander Pheonix.
+[2015-10-11T05:58:07.202Z] (thelotusleague) GL♅Incursio was banned from room thelotusleague by Aranacana.
+[2015-10-11T05:58:20.555Z] (thelotusleague) Professor Panders was banned from room thelotusleague by Aranacana.
+[2015-10-11T05:58:35.576Z] (thelotusleague) glincursio was unbanned from room thelotusleague by Commander Pheonix.
+[2015-10-11T05:58:36.238Z] (thelotusleague) professorpanders was unbanned from room thelotusleague by LotusChamp Torpid.
+[2015-10-11T05:58:53.469Z] (thelotusleague) Aranacana was kicked from the room by GL♅Incursio.
+[2015-10-11T05:59:23.776Z] (thelotusleague) HmCmpBeasto was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T05:59:46.477Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:47.079Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:47.360Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:47.991Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:48.002Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:48.603Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:48.921Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:49.520Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T05:59:52.841Z] (thelotusleague) Commander Pheonix declared </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[2015-10-11T06:00:54.700Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T06:00:56.440Z] (thelotusleague) Commander Pheonix set modchat to &
+[2015-10-11T06:02:10.154Z] (thelotusleague) Commander Pheonix set modchat to false
+[2015-10-11T06:09:03.845Z] (thelotusleague) Aranacana was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-11T06:09:05.419Z] (thelotusleague) (lotusmaura was demoted to Room Voice by Commander Pheonix.)
+[2015-10-11T06:10:55.108Z] (thelotusleague) Prof NHHS set modchat to &
+[2015-10-11T06:12:52.038Z] (thelotusleague) Prof NHHS set modchat to false
+[2015-10-11T06:13:29.366Z] (thelotusleague) Cloyy - ⓑⓔⓔⓡ was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T06:13:47.895Z] (thelotusleague) Cloyy - ⓑⓔⓔⓡ was unmuted by Prof NHHS.
+[2015-10-11T06:14:34.314Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-11T06:16:24.693Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-11T06:16:41.596Z] (thelotusleague) (GTX♅RainManaphy created a tournament in 1v1 format.)
+[2015-10-11T06:17:02.114Z] (thelotusleague) GTX♅RainManaphy was muted by Prof NHHS for 7 minutes.
+[2015-10-11T06:17:08.630Z] (thelotusleague) (Prof NHHS forcibly ended a tournament.)
+[2015-10-11T06:17:15.613Z] (thelotusleague) (Prof NHHS created a tournament in monotype format.)
+[2015-10-11T06:22:20.789Z] (thelotusleague) HmCmpBeasto was banned from room thelotusleague by Professor Panders.
+[2015-10-11T06:22:20.793Z] (thelotusleague) (HmCmpBeasto's roombanned alts: beasto)
+[2015-10-11T06:22:27.771Z] (thelotusleague) hmcmpbeasto was unbanned from room thelotusleague by Professor Panders.
+[2015-10-11T06:30:24.259Z] (thelotusleague) GTX♅RainManaphy was warned by Lotus ۩ Magnezone.
+[2015-10-11T06:30:41.915Z] (thelotusleague) GTX♅RainManaphy was warned by Lotus ۩ Magnezone.
+[2015-10-11T06:32:27.055Z] (thelotusleague) (GTX♅RainManaphy was disqualified from the tournament by Cloyy - ⓑⓔⓔⓡ)
+[2015-10-11T06:32:42.278Z] (thelotusleague) (Cloyy - ⓑⓔⓔⓡ was disqualified from the tournament by GTX♅RainManaphy)
+[2015-10-11T06:47:04.968Z] (thelotusleague) GTX♅RainManaphy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T07:05:56.014Z] (thelotusleague) (Alliance Meta created a tournament in monotype format.)
+[2015-10-11T07:09:05.994Z] (thelotusleague) (GTX♅RainManaphy forcibly ended a tournament.)
+[2015-10-11T07:10:54.616Z] (thelotusleague) HmCmpBeasto was promoted to Room Operator by LotusChamp Torpid.
+[2015-10-11T07:11:11.183Z] (thelotusleague) HmCmpBeasto was promoted to Room Driver by LotusChamp Torpid.
+[2015-10-11T07:21:37.403Z] (thelotusleague) Waszap was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-11T07:27:11.025Z] (thelotusleague) Frontier♅Haunter was warned by LotusChamp Torpid. (i said beasto fam is good with electric feelsgn)
+[2015-10-11T08:00:21.714Z] (thelotusleague) Lotus Aranacana was muted by HeadProf Jerb for 7 minutes.
+[2015-10-11T08:00:21.714Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T08:05:22.565Z] (thelotusleague) GTX♅Doomsquach was promoted to Room Voice by LotusChamp Torpid.
+[2015-10-11T08:25:30.466Z] (thelotusleague) Lotus Aranacana was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T08:25:30.466Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T08:54:18.648Z] (thelotusleague) Lotus Aranacana was muted by LotusChamp Torpid for 7 minutes. (patience expired)
+[2015-10-11T08:54:18.649Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T09:00:02.033Z] (thelotusleague) Frontier ♅ Aura was kicked from the room by HeadProf Jerb.
+[2015-10-11T09:00:08.173Z] (thelotusleague) Frontier♅Riolucas was kicked from the room by HeadProf Jerb.
+[2015-10-11T09:00:15.513Z] (thelotusleague) Riolucas was kicked from the room by HeadProf Jerb.
+[2015-10-11T09:00:20.628Z] (thelotusleague) GTX♅Riolucas was kicked from the room by HeadProf Jerb.
+[2015-10-11T09:08:31.813Z] (thelotusleague) Lotus Aranacana was muted by HeadProf Jerb for 1 hour.
+[2015-10-11T09:08:31.815Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T09:09:41.271Z] (thelotusleague) (GTX Shavi was demoted to Room regular user by HeadProf Jerb.)
+[2015-10-11T09:46:23.954Z] (thelotusleague) Lotus Aranacana was banned from room thelotusleague by HeadProf Jerb.
+[2015-10-11T09:46:23.962Z] (thelotusleague) (Lotus Aranacana's ac account: recruiterarana)
+[2015-10-11T09:51:02.769Z] (thelotusleague) (lotusaranacana was demoted to Room regular user by HeadProf Jerb.)
+[2015-10-11T10:27:09.896Z] (thelotusleague) lotusaranacana was unbanned from room thelotusleague by HeadProf Jerb.
+[2015-10-11T12:11:26.835Z] (thelotusleague) GTX♅Shocake was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T13:55:39.817Z] (thelotusleague) Validus Wonder was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T14:15:23.430Z] (thelotusleague) Recruiter♅Humper was warned by Frontier Python. (No)
+[2015-10-11T14:18:10.726Z] (thelotusleague) Recruiter♅Humper was muted by Frontier Python for 7 minutes. (stay rekt)
+[2015-10-11T14:18:45.161Z] (thelotusleague) Recruiter♅Humper was unmuted by Frontier Python.
+[2015-10-11T14:19:27.153Z] (thelotusleague) (Recruiter♅Humper notes: prepare)
+[2015-10-11T14:19:36.012Z] (thelotusleague) (Recruiter♅Humper notes: for I)
+[2015-10-11T14:19:46.945Z] (thelotusleague) (Recruiter♅Humper notes: am rekt)
+[2015-10-11T14:24:41.361Z] (thelotusleague) (Recruiter♅Humper notes: I cry everytime)
+[2015-10-11T14:25:41.279Z] (thelotusleague) (Frontier Python notes: Nice)
+[2015-10-11T14:25:55.750Z] (thelotusleague) (Frontier Python notes: I remember when people could kick themselves)
+[2015-10-11T14:26:04.524Z] (thelotusleague) (Frontier Python notes: that was fun tiems)
+[2015-10-11T14:26:38.858Z] (thelotusleague) (Recruiter♅Humper notes: that would be great)
+[2015-10-11T14:29:12.912Z] (thelotusleague) GTX♅FudgeBomb was muted by Recruiter♅Humper for 7 minutes. (test)
+[2015-10-11T14:29:21.681Z] (thelotusleague) GTX♅FudgeBomb was unmuted by Recruiter♅Humper.
+[2015-10-11T14:34:13.503Z] (thelotusleague) Axair was warned by Frontier Python. (stop with the emotes)
+[2015-10-11T14:34:46.952Z] (thelotusleague) Axair was warned by Recruiter♅Humper. (Bruh Last Warning)
+[2015-10-11T14:35:02.186Z] (thelotusleague) Axair was muted by Recruiter♅Humper for 7 minutes.
+[2015-10-11T14:58:26.169Z] (thelotusleague) Recruiter♅Humper was kicked from the room by Frontier Python.
+[2015-10-11T14:58:49.966Z] (thelotusleague) break ground was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T15:00:31.248Z] (thelotusleague) Validus Wonder was warned by Professor Panders. (you know why)
+[2015-10-11T15:00:41.550Z] (thelotusleague) Validus Wonder was muted by Professor Panders for 7 minutes. (you know why.)
+[2015-10-11T15:00:41.551Z] (thelotusleague) (Validus Wonder's ac account: lotusfaptastic)
+[2015-10-11T15:04:18.072Z] (thelotusleague) break ground was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-11T15:07:36.246Z] (thelotusleague) Recruiter Physical was promoted to Room Voice by Frontier Python.
+[2015-10-11T15:08:08.881Z] (thelotusleague) break ground was muted by Recruiter♅Humper for 7 minutes. (what was that about your fist up my ass)
+[2015-10-11T15:08:29.269Z] (thelotusleague) break ground was unmuted by Professor Panders.
+[2015-10-11T15:12:47.678Z] (thelotusleague) Panda girl 248 was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T15:16:45.463Z] (thelotusleague) Enriique was promoted to Room Voice by Lotus ۩ Magnezone.
+[2015-10-11T15:17:22.547Z] (thelotusleague) (Enriique was demoted to Room regular user by Professor Panders.)
+[2015-10-11T15:18:39.174Z] (thelotusleague) Validus Wonder was warned by Professor Panders. (you know why.)
+[2015-10-11T15:19:01.275Z] (thelotusleague) (Lotus ۩ Magnezone was demoted to Room Voice by Professor Panders.)
+[2015-10-11T15:19:15.611Z] (thelotusleague) (Professor Panders was demoted to Room regular user by HeadRecruiter♅Dvd.)
+[2015-10-11T15:21:29.619Z] (thelotusleague) Professor Panders was promoted to Room Voice by Frontier Python.
+[2015-10-11T15:24:57.188Z] (thelotusleague) Professor Panders was muted by Recruiter♅Humper for 7 minutes. (PLS FORGIVE ME SENPAI, 1)
+[2015-10-11T15:25:10.643Z] (thelotusleague) Professor Panders was unmuted by Recruiter♅Humper.
+[2015-10-11T15:26:31.743Z] (thelotusleague) Professor Panders was muted by lotus faptastic for 7 minutes. (payback)
+[2015-10-11T15:26:44.465Z] (thelotusleague) Professor Panders was unmuted by Recruiter♅Humper.
+[2015-10-11T15:27:59.730Z] (thelotusleague) Lotus ۩ Magnezone was promoted to Room Leader by HeadRecruiter♅Dvd.
+[2015-10-11T15:28:11.635Z] (thelotusleague) Professor Panders was promoted to Room Leader by Lotus ۩ Magnezone.
+[2015-10-11T15:38:34.071Z] (thelotusleague) GL♅Shinigami was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T15:43:14.161Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier Python.
+[2015-10-11T15:44:11.722Z] (thelotusleague) GL♅Shinigami was promoted to Room Driver by HeadRecruiter♅Dvd.
+[2015-10-11T15:53:35.330Z] (thelotusleague) lotus faptastic was muted by Professor Panders for 7 minutes.
+[2015-10-11T15:53:42.542Z] (thelotusleague) lotus faptastic was unmuted by Professor Panders.
+[2015-10-11T15:55:45.875Z] (thelotusleague) break ground was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T16:08:22.260Z] (thelotusleague) Lotus Faptastic was kicked from the room by Frontier Python.
+[2015-10-11T16:09:51.502Z] (thelotusleague) Rhydonmycawk was promoted to Room Voice by Professor Panders.
+[2015-10-11T16:10:17.118Z] (thelotusleague) Rhydonmycawk was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T16:18:32.632Z] (thelotusleague) Alliance Axair was warned by Frontier Python. (stop)
+[2015-10-11T16:20:20.529Z] (thelotusleague) gl aron was warned by Professor Panders. (for trying to warn me)
+[2015-10-11T16:26:42.121Z] (thelotusleague) E4 Wonder was promoted to Room Leader by Professor Panders.
+[2015-10-11T16:26:58.222Z] (thelotusleague) (E4 Wonder was demoted to Room regular user by Professor Panders.)
+[2015-10-11T16:31:28.768Z] (thelotusleague) Lotus Itsme was kicked from the room by Frontier Python.
+[2015-10-11T17:36:39.957Z] (thelotusleague) gtx♅glaceon was promoted to Room Voice by Frontier Python.
+[2015-10-11T17:39:06.436Z] (thelotusleague) gtx♅glaceon was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T17:44:14.449Z] (thelotusleague) GTX♅Tsuna was kicked from the room by Lotus DJLuna.
+[2015-10-11T17:46:56.573Z] (thelotusleague) (Safety Shark created a tournament in monotype format.)
+[2015-10-11T17:57:27.212Z] (thelotusleague) (GTX♅Tsuna was disqualified from the tournament by DJ 18-Volt)
+[2015-10-11T18:06:06.323Z] (thelotusleague) (DJ 18-Volt notes: why make a fuss about it i doubt they'll pass first try )
+[2015-10-11T18:06:20.562Z] (thelotusleague) (Lotus DJLuna notes: meme)
+[2015-10-11T18:07:35.648Z] (thelotusleague) (Frontier Python notes: im js that you cant exploit a loophole just to test)
+[2015-10-11T18:07:36.248Z] (thelotusleague) (Frontier Python notes: i didn't make the rules for lotus, i just have to enforce them when i have to)
+[2015-10-11T18:08:08.027Z] (thelotusleague) (DJ 18-Volt notes: they used to change the rules every week it was super annoying)
+[2015-10-11T18:08:17.258Z] (thelotusleague) (Frontier Python notes: really?)
+[2015-10-11T18:08:29.044Z] (thelotusleague) (DJ 18-Volt notes: yeah)
+[2015-10-11T18:08:50.631Z] (thelotusleague) (Frontier Python notes: oh well, ive only been here 4 days, but i know that the timer starts when you join, not when you reg the alt)
+[2015-10-11T18:08:59.062Z] (thelotusleague) (Lotus Itsme notes: Doge)
+[2015-10-11T18:09:04.793Z] (thelotusleague) (Lotus Itsme notes: dammit)
+[2015-10-11T18:09:10.787Z] (thelotusleague) (Frontier Python notes: that's all im tryin to get through to glace)
+[2015-10-11T18:10:38.318Z] (thelotusleague) Axair was warned by Frontier Python.
+[2015-10-11T18:13:51.929Z] (thelotusleague) Axair was muted by GL♅aron for 7 minutes. (the only joker is you and your face)
+[2015-10-11T18:19:29.215Z] (thelotusleague) (Cloyy was disqualified from the tournament by Alliance Meta)
+[2015-10-11T18:40:39.498Z] (thelotusleague) Cloyy was warned by Safety Shark. (Automated response: caps)

@@ -19031,3 +19031,416 @@
 [Fri, 09 Oct 2015 04:10:19 GMT] hayleysworld has bought ticket from the shop. This user now has 80 bucks.
 [Fri, 09 Oct 2015 04:10:52 GMT] lotus bank has bought Ticket from the shop. This user now has 1262 bucks.
 [Fri, 09 Oct 2015 04:16:05 GMT] washibon transferred 2 bucks to trash. washibon now has 0 bucks and trash now has 4 bucks.
+[Fri, 09 Oct 2015 10:20:37 GMT] Hydrostatics has bought Fix from the shop. This user now has 212 bucks.
+[Fri, 09 Oct 2015 11:07:00 GMT] Hm red transferred 7 bucks to Hm vodoom. Hm red now has 0 bucks and Hm vodoom now has 614 bucks.
+[Fri, 09 Oct 2015 11:55:57 GMT] PrimalZard transferred 114 bucks to Arrem. PrimalZard now has 113 bucks and Arrem now has 439 bucks.
+[Fri, 09 Oct 2015 11:58:36 GMT] PrimalZard transferred 113 bucks to 00Nyxa. PrimalZard now has 0 bucks and 00Nyxa now has 174 bucks.
+[Fri, 09 Oct 2015 11:59:51 GMT] a bootyhunter transferred 1 buck to knight Izzy. a bootyhunter now has 0 bucks and knight Izzy now has 1 buck.
+[Fri, 09 Oct 2015 12:01:39 GMT] Metallica transferred 1 buck to a bootyhunter. Metallica now has 22 bucks and a bootyhunter now has 1 buck.
+[Fri, 09 Oct 2015 12:19:52 GMT] Arrem transferred 39 bucks to saur sarii. Arrem now has 400 bucks and saur sarii now has 39 bucks.
+[Fri, 09 Oct 2015 12:21:54 GMT] beast pikachu transferred 2 bucks to hm vodoom. beast pikachu now has 0 bucks and hm vodoom now has 616 bucks.
+[Fri, 09 Oct 2015 13:01:07 GMT] Void Who transferred 2 bucks to apexemil. Void Who now has 38 bucks and apexemil now has 21 bucks.
+[Fri, 09 Oct 2015 13:26:24 GMT] Gentleman Tech transferred 4 bucks to doctor mentalist. Gentleman Tech now has 340 bucks and doctor mentalist now has 4 bucks.
+[Fri, 09 Oct 2015 13:36:56 GMT] Gentleman Tech transferred 5 bucks to youslakingbro. Gentleman Tech now has 335 bucks and youslakingbro now has 5 bucks.
+[Fri, 09 Oct 2015 13:54:16 GMT] Wolf ☯ Suicune transferred 1 buck to champion blackwolf. Wolf ☯ Suicune now has 3 bucks and champion blackwolf now has 1 buck.
+[Fri, 09 Oct 2015 13:54:46 GMT] Wolf ☯ Suicune transferred 3 bucks to champion blackwolf. Wolf ☯ Suicune now has 0 bucks and champion blackwolf now has 4 bucks.
+[Fri, 09 Oct 2015 13:55:37 GMT] Queen Emma transferred 25 bucks to legacyenervate. Queen Emma now has 86 bucks and legacyenervate now has 25 bucks.
+[Fri, 09 Oct 2015 13:58:30 GMT] Champion Blackwolf transferred 4 bucks to WolfVault. Champion Blackwolf now has 0 bucks and WolfVault now has 20 bucks.
+[Fri, 09 Oct 2015 13:58:49 GMT] Legacy Enervate has bought Avatar from the shop. This user now has 0 bucks.
+[Fri, 09 Oct 2015 14:07:51 GMT] Apex✦CelestialPsy transferred 5 bucks to Apex Emil. Apex✦CelestialPsy now has 46 bucks and Apex Emil now has 28 bucks.
+[Fri, 09 Oct 2015 14:10:22 GMT] WolfNinja314 transferred 1 buck to wolfvault. WolfNinja314 now has 0 bucks and wolfvault now has 21 bucks.
+[Fri, 09 Oct 2015 14:27:30 GMT] zugus bank transferred 25 bucks to hm zuuzifer. zugus bank now has 306 bucks and hm zuuzifer now has 25 bucks.
+[Fri, 09 Oct 2015 15:08:57 GMT] Metallica transferred 15 bucks to megan magna. Metallica now has 7 bucks and megan magna now has 15 bucks.
+[Fri, 09 Oct 2015 15:14:16 GMT] Megan Magna has bought Global Declare from the shop. This user now has 0 bucks.
+[Fri, 09 Oct 2015 15:20:16 GMT] Megan Magna was given 15 bucks by Master Float.
+[Fri, 09 Oct 2015 15:21:10 GMT] Raіn Kuro transferred 5 bucks to Gentleman Tech. Raіn Kuro now has 5 bucks and Gentleman Tech now has 340 bucks.
+[Fri, 09 Oct 2015 16:00:58 GMT] Hm Zuuzifer transferred 25 bucks to Hm kaze. Hm Zuuzifer now has 0 bucks and Hm kaze now has 25 bucks.
+[Fri, 09 Oct 2015 16:02:03 GMT] Hm Kaze transferred 25 bucks to Hm zuuzifer. Hm Kaze now has 0 bucks and Hm zuuzifer now has 25 bucks.
+[Fri, 09 Oct 2015 16:15:11 GMT] Gentleman Tech transferred 5 bucks to barista fancii. Gentleman Tech now has 338 bucks and barista fancii now has 25 bucks.
+[Fri, 09 Oct 2015 16:29:05 GMT] Hm Zuuzifer transferred 1 buck to grafite. Hm Zuuzifer now has 46 bucks and grafite now has 1 buck.
+[Fri, 09 Oct 2015 16:30:37 GMT] Megan Magna transferred 15 bucks to gentleman tech. Megan Magna now has 0 bucks and gentleman tech now has 353 bucks.
+[Fri, 09 Oct 2015 16:31:27 GMT] Hm Zuuzifer transferred 25 bucks to hmzuguroyale. Hm Zuuzifer now has 21 bucks and hmzuguroyale now has 47 bucks.
+[Fri, 09 Oct 2015 16:31:52 GMT] Apex✦CelestialPsy transferred 7 bucks to Apex Emil. Apex✦CelestialPsy now has 40 bucks and Apex Emil now has 35 bucks.
+[Fri, 09 Oct 2015 16:36:04 GMT] Gentleman Tech transferred 1 buck to soprano meiko. Gentleman Tech now has 352 bucks and soprano meiko now has 5 bucks.
+[Fri, 09 Oct 2015 16:37:23 GMT] Soprano Meiko transferred 1 buck to artshopbank. Soprano Meiko now has 4 bucks and artshopbank now has 617 bucks.
+[Fri, 09 Oct 2015 16:51:42 GMT] Hm zugu royale transferred 20 bucks to lags. Hm zugu royale now has 12 bucks and lags now has 20 bucks.
+[Fri, 09 Oct 2015 17:12:18 GMT] Metallica transferred 1 buck to corny doge. Metallica now has 6 bucks and corny doge now has 1 buck.
+[Fri, 09 Oct 2015 17:25:58 GMT] Hm Zuuzifer transferred 5 bucks to hmred. Hm Zuuzifer now has 54 bucks and hmred now has 5 bucks.
+[Fri, 09 Oct 2015 17:26:38 GMT] Hm Red - ⒶⒻⓁ transferred 5 bucks to Link Fabio. Hm Red - ⒶⒻⓁ now has 0 bucks and Link Fabio now has 5 bucks.
+[Fri, 09 Oct 2015 17:40:16 GMT] ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ transferred 25 bucks to Alliance - Charen. ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ now has 12 bucks and Alliance - Charen now has 55 bucks.
+[Fri, 09 Oct 2015 17:40:46 GMT] ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ transferred 10 bucks to Ravonne. ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ now has 2 bucks and Ravonne now has 10 bucks.
+[Fri, 09 Oct 2015 17:59:06 GMT] Hm Zuuzifer transferred 1 buck to hmred. Hm Zuuzifer now has 24 bucks and hmred now has 1 buck.
+[Fri, 09 Oct 2015 17:59:22 GMT] ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ transferred 2 bucks to Hm zugu royale. ApexEmil - ⒷⒾⓉⒽⒹⒶⓎ now has 0 bucks and Hm zugu royale now has 14 bucks.
+[Fri, 09 Oct 2015 17:59:29 GMT] Hm Red transferred 2 bucks to link fabio. Hm Red now has 0 bucks and link fabio now has 7 bucks.
+[Fri, 09 Oct 2015 18:17:00 GMT] agent66 transferred 1 buck to EternalWind. agent66 now has 569 bucks and EternalWind now has 1 buck.
+[Fri, 09 Oct 2015 18:18:39 GMT] agent66 transferred 8 bucks to  Hm Zuuzifer. agent66 now has 650 bucks and  Hm Zuuzifer now has 8 bucks.
+[Fri, 09 Oct 2015 18:19:20 GMT] agent66 transferred 10 bucks to EternalWind. agent66 now has 640 bucks and EternalWind now has 10 bucks.
+[Fri, 09 Oct 2015 18:20:57 GMT] agent66 transferred 25 bucks to EternalWind. agent66 now has 615 bucks and EternalWind now has 25 bucks.
+[Fri, 09 Oct 2015 18:22:04 GMT] agent66 transferred 15 bucks to Crystal gray. agent66 now has 600 bucks and Crystal gray now has 15 bucks.
+[Fri, 09 Oct 2015 19:03:56 GMT] iRoams has bought ticket from the shop. This user now has 7809 bucks.
+[Fri, 09 Oct 2015 19:03:57 GMT] iRoams has bought ticket from the shop. This user now has 7804 bucks.
+[Fri, 09 Oct 2015 19:03:58 GMT] iRoams has bought ticket from the shop. This user now has 7799 bucks.
+[Fri, 09 Oct 2015 19:03:58 GMT] iRoams has bought ticket from the shop. This user now has 7794 bucks.
+[Fri, 09 Oct 2015 19:03:59 GMT] iRoams has bought ticket from the shop. This user now has 7789 bucks.
+[Fri, 09 Oct 2015 19:04:00 GMT] iRoams has bought ticket from the shop. This user now has 7784 bucks.
+[Fri, 09 Oct 2015 19:04:01 GMT] iRoams has bought ticket from the shop. This user now has 7779 bucks.
+[Fri, 09 Oct 2015 19:04:01 GMT] iRoams has bought ticket from the shop. This user now has 7774 bucks.
+[Fri, 09 Oct 2015 19:04:02 GMT] iRoams has bought ticket from the shop. This user now has 7769 bucks.
+[Fri, 09 Oct 2015 19:04:02 GMT] iRoams has bought ticket from the shop. This user now has 7764 bucks.
+[Fri, 09 Oct 2015 19:04:03 GMT] iRoams has bought ticket from the shop. This user now has 7759 bucks.
+[Fri, 09 Oct 2015 19:04:04 GMT] iRoams has bought ticket from the shop. This user now has 7754 bucks.
+[Fri, 09 Oct 2015 19:04:05 GMT] iRoams has bought ticket from the shop. This user now has 7749 bucks.
+[Fri, 09 Oct 2015 19:04:05 GMT] iRoams has bought ticket from the shop. This user now has 7744 bucks.
+[Fri, 09 Oct 2015 19:04:06 GMT] iRoams has bought ticket from the shop. This user now has 7739 bucks.
+[Fri, 09 Oct 2015 19:04:07 GMT] iRoams has bought ticket from the shop. This user now has 7734 bucks.
+[Fri, 09 Oct 2015 19:04:07 GMT] iRoams has bought ticket from the shop. This user now has 7729 bucks.
+[Fri, 09 Oct 2015 19:04:08 GMT] iRoams has bought ticket from the shop. This user now has 7724 bucks.
+[Fri, 09 Oct 2015 19:04:09 GMT] iRoams has bought ticket from the shop. This user now has 7719 bucks.
+[Fri, 09 Oct 2015 19:04:09 GMT] iRoams has bought ticket from the shop. This user now has 7714 bucks.
+[Fri, 09 Oct 2015 19:04:10 GMT] iRoams has bought ticket from the shop. This user now has 7709 bucks.
+[Fri, 09 Oct 2015 19:04:11 GMT] iRoams has bought ticket from the shop. This user now has 7704 bucks.
+[Fri, 09 Oct 2015 19:04:11 GMT] iRoams has bought ticket from the shop. This user now has 7699 bucks.
+[Fri, 09 Oct 2015 19:04:12 GMT] iRoams has bought ticket from the shop. This user now has 7694 bucks.
+[Fri, 09 Oct 2015 19:04:13 GMT] iRoams has bought ticket from the shop. This user now has 7689 bucks.
+[Fri, 09 Oct 2015 19:19:16 GMT] iRoams transferred 15 bucks to royal dinite. iRoams now has 7675 bucks and royal dinite now has 31 bucks.
+[Fri, 09 Oct 2015 19:36:52 GMT] Sam Crowe transferred 10 bucks to theace22. Sam Crowe now has 297 bucks and theace22 now has 10 bucks.
+[Fri, 09 Oct 2015 19:37:35 GMT] TheAce22 transferred 10 bucks to up n down luck. TheAce22 now has 0 bucks and up n down luck now has 10 bucks.
+[Fri, 09 Oct 2015 19:44:40 GMT] Royal dinite has bought Ticket from the shop. This user now has 22 bucks.
+[Fri, 09 Oct 2015 20:01:50 GMT] iRoams has bought Fix from the shop. This user now has 7718 bucks.
+[Fri, 09 Oct 2015 20:25:06 GMT] Fancy Bot 20 transferred 120 bucks to Barista Fancii. Fancy Bot 20 now has 50 bucks and Barista Fancii now has 145 bucks.
+[Fri, 09 Oct 2015 20:26:40 GMT] Hm AnobH transferred 1 buck to hmsableye. Hm AnobH now has 9 bucks and hmsableye now has 69 bucks.
+[Fri, 09 Oct 2015 20:30:05 GMT] Hm Sableye transferred 25 bucks to hm reapz. Hm Sableye now has 38 bucks and hm reapz now has 25 bucks.
+[Fri, 09 Oct 2015 21:01:15 GMT] Crystal Gray - ⒶⒻⓀ transferred 15 bucks to iRoams. Crystal Gray - ⒶⒻⓀ now has 15 bucks and iRoams now has 7785 bucks.
+[Fri, 09 Oct 2015 21:05:00 GMT] LotusCapt Torpid transferred 15 bucks to auntie snixx. LotusCapt Torpid now has 19 bucks and auntie snixx now has 15 bucks.
+[Fri, 09 Oct 2015 21:05:02 GMT] Royal dinite has bought Symbol from the shop. This user now has 17 bucks.
+[Fri, 09 Oct 2015 21:08:43 GMT] Auntie Snixx transferred 1 buck to mystbank. Auntie Snixx now has 14 bucks and mystbank now has 20 bucks.
+[Fri, 09 Oct 2015 21:13:33 GMT] LotusChamp Torpid transferred 1 buck to auntie snixx. LotusChamp Torpid now has 1 buck and auntie snixx now has 15 bucks.
+[Fri, 09 Oct 2015 21:28:50 GMT] Barista Fancii transferred 1 buck to Chleg. Barista Fancii now has 111 bucks and Chleg now has 1 buck.
+[Fri, 09 Oct 2015 22:04:10 GMT] Hm Reapz has bought Avatar from the shop. This user now has 0 bucks.
+[Fri, 09 Oct 2015 22:12:05 GMT] Wolf♥Gin transferred 1 buck to servings. Wolf♥Gin now has 8 bucks and servings now has 1 buck.
+[Fri, 09 Oct 2015 22:12:18 GMT] Servings transferred 1 buck to SuperDuperShape. Servings now has 0 bucks and SuperDuperShape now has 21 bucks.
+[Fri, 09 Oct 2015 22:27:50 GMT] iRoams transferred 200 bucks to Pk Roam. iRoams now has 7490 bucks and Pk Roam now has 200 bucks.
+[Fri, 09 Oct 2015 22:34:14 GMT] Sunny Charizard transferred 3 bucks to steelchar. Sunny Charizard now has 0 bucks and steelchar now has 3 bucks.
+[Fri, 09 Oct 2015 22:36:05 GMT] hm unownman has bought symbol from the shop. This user now has 0 bucks.
+[Fri, 09 Oct 2015 22:36:35 GMT] Pk Roam transferred 314 bucks to iRoams. Pk Roam now has 0 bucks and iRoams now has 7804 bucks.
+[Fri, 09 Oct 2015 22:39:05 GMT] Void Cryptis was given 850 bucks by L Chevy 12 - ⒶⓌⒶⓎ.
+[Fri, 09 Oct 2015 22:41:54 GMT] iRoams has bought Global Declare from the shop. This user now has 7789 bucks.
+[Fri, 09 Oct 2015 22:46:22 GMT] iRoams transferred 39 bucks to Chleg. iRoams now has 8600 bucks and Chleg now has 39 bucks.
+[Fri, 09 Oct 2015 22:51:55 GMT] MonsterHigh transferred 5 bucks to bandi. MonsterHigh now has 15 bucks and bandi now has 5 bucks.
+[Fri, 09 Oct 2015 22:57:53 GMT] iRoams transferred 500 bucks to Prise. iRoams now has 8100 bucks and Prise now has 500 bucks.
+[Fri, 09 Oct 2015 23:02:04 GMT] Prise transferred 350 bucks to iRoams. Prise now has 0 bucks and iRoams now has 8450 bucks.
+[Fri, 09 Oct 2015 23:07:26 GMT] Exiled Shadows transferred 1 buck to Alliance - Dreams. Exiled Shadows now has 9 bucks and Alliance - Dreams now has 1 buck.
+[Fri, 09 Oct 2015 23:49:38 GMT] iRoams transferred 50 bucks to Alliance - Fila. iRoams now has 8780 bucks and Alliance - Fila now has 52 bucks.
+[Fri, 09 Oct 2015 23:49:49 GMT] iRoams transferred 25 bucks to juleocesar. iRoams now has 8755 bucks and juleocesar now has 27 bucks.
+[Fri, 09 Oct 2015 23:51:11 GMT] Supanova transferred 5 bucks to arcadias bank. Supanova now has 1 buck and arcadias bank now has 810 bucks.
+[Fri, 09 Oct 2015 23:57:54 GMT] Alliance Char transferred 10 bucks to steelchar. Alliance Char now has 0 bucks and steelchar now has 10 bucks.
+[Fri, 09 Oct 2015 23:58:26 GMT] juleocesar transferred 3 bucks to steelchar. juleocesar now has 24 bucks and steelchar now has 10 bucks.
+[Sat, 10 Oct 2015 00:11:18 GMT] iRoams transferred 100 bucks to lotus wincon. iRoams now has 8665 bucks and lotus wincon now has 100 bucks.
+[Sat, 10 Oct 2015 00:13:09 GMT] Lotus Wincon transferred 100 bucks to lotus bank. Lotus Wincon now has 0 bucks and lotus bank now has 1362 bucks.
+[Sat, 10 Oct 2015 00:17:06 GMT] vvva has bought fix from the shop. This user now has 3 bucks.
+[Sat, 10 Oct 2015 00:23:11 GMT] Allegiant Gryph was given 75 bucks by sparkychild.
+[Sat, 10 Oct 2015 00:38:40 GMT] SWL Eric transferred 1 buck to Allegiant Gryphon. SWL Eric now has 0 bucks and Allegiant Gryphon now has 1 buck.
+[Sat, 10 Oct 2015 00:46:25 GMT] goast - ⓢⓟⓞⓞⓟⓨ transferred 3 bucks to Supanova. goast - ⓢⓟⓞⓞⓟⓨ now has 0 bucks and Supanova now has 4 bucks.
+[Sat, 10 Oct 2015 00:57:15 GMT] Infinitereasons transferred 25 bucks to Apex spirit. Infinitereasons now has 41 bucks and Apex spirit now has 45 bucks.
+[Sat, 10 Oct 2015 00:58:01 GMT] Infinitereasons transferred 15 bucks to Apex salamence. Infinitereasons now has 26 bucks and Apex salamence now has 18 bucks.
+[Sat, 10 Oct 2015 01:04:58 GMT] Apex✦Spirit has bought Avatar from the shop. This user now has 20 bucks.
+[Sat, 10 Oct 2015 01:14:56 GMT] goast - ⓢⓟⓞⓞⓟⓨ transferred 2 bucks to supanova. goast - ⓢⓟⓞⓞⓟⓨ now has 0 bucks and supanova now has 6 bucks.
+[Sat, 10 Oct 2015 01:15:05 GMT] Supanova transferred 5 bucks to arcadias bank. Supanova now has 1 buck and arcadias bank now has 815 bucks.
+[Sat, 10 Oct 2015 01:15:08 GMT] Allegiant Gryph transferred 50 bucks to GTX♅Tsuna1. Allegiant Gryph now has 25 bucks and GTX♅Tsuna1 now has 50 bucks.
+[Sat, 10 Oct 2015 01:15:12 GMT] Allegiant Gryph transferred 25 bucks to Pink Ιnѕanіty. Allegiant Gryph now has 0 bucks and Pink Ιnѕanіty now has 25 bucks.
+[Sat, 10 Oct 2015 01:15:19 GMT] Pink Ιnѕanіty has bought avatar from the shop. This user now has 0 bucks.
+[Sat, 10 Oct 2015 01:18:26 GMT] steelchar was given 150 bucks by Neo Soul.
+[Sat, 10 Oct 2015 01:18:47 GMT] gtxtsuna1 transferred 50 bucks to gtxtsuna. gtxtsuna1 now has 0 bucks and gtxtsuna now has 54 bucks.
+[Sat, 10 Oct 2015 01:33:32 GMT] GTX♅Tsuna transferred 30 bucks to artshopbank. GTX♅Tsuna now has 24 bucks and artshopbank now has 647 bucks.
+[Sat, 10 Oct 2015 01:33:36 GMT] GTX♅Stantler transferred 2 bucks to Argus2Spooky. GTX♅Stantler now has 0 bucks and Argus2Spooky now has 4 bucks.
+[Sat, 10 Oct 2015 02:25:33 GMT] Steelchar transferred 100 bucks to argus2spooky. Steelchar now has 50 bucks and argus2spooky now has 111 bucks.
+[Sat, 10 Oct 2015 02:25:41 GMT] Steelchar transferred 50 bucks to amy leater. Steelchar now has 0 bucks and amy leater now has 50 bucks.
+[Sat, 10 Oct 2015 02:28:16 GMT] Amy Leater has bought Symbol from the shop. This user now has 45 bucks.
+[Sat, 10 Oct 2015 02:32:26 GMT] GTX♅RainManaphy transferred 5 bucks to Lotus Itsme. GTX♅RainManaphy now has 70 bucks and Lotus Itsme now has 7 bucks.
+[Sat, 10 Oct 2015 02:37:00 GMT] Ranbank transferred 10 bucks to Ransei. Ranbank now has 174 bucks and Ransei now has 10 bucks.
+[Sat, 10 Oct 2015 02:37:45 GMT] Ransei has bought Fix from the shop. This user now has 0 bucks.
+[Sat, 10 Oct 2015 02:38:56 GMT] Lotus Wincon was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 02:40:33 GMT] ReuniclusSlime was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 02:40:52 GMT] Supanova was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 02:42:03 GMT] Crystal Rubae was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 02:44:54 GMT] GTX♅RainManaphy was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 02:49:31 GMT] Charitwo transferred 2 bucks to ReuniclusSlime. Charitwo now has 8 bucks and ReuniclusSlime now has 3 bucks.
+[Sat, 10 Oct 2015 02:59:22 GMT] ReuniclusSlime transferred 3 bucks to bigbrotherbott. ReuniclusSlime now has 0 bucks and bigbrotherbott now has 3 bucks.
+[Sat, 10 Oct 2015 02:59:23 GMT] Big Brother BotT transferred 3 bucks to niisama. Big Brother BotT now has 0 bucks and niisama now has 187 bucks.
+[Sat, 10 Oct 2015 03:00:08 GMT] Alliance - Keahi was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 03:08:28 GMT] Supanova transferred 5 bucks to arcadias bank. Supanova now has 0 bucks and arcadias bank now has 820 bucks.
+[Sat, 10 Oct 2015 03:20:18 GMT] Alliance - Keahi transferred 1 buck to allegiantatm. Alliance - Keahi now has 3 bucks and allegiantatm now has 184 bucks.
+[Sat, 10 Oct 2015 03:20:20 GMT] Alliance - Keahi transferred 3 bucks to allegiantatm. Alliance - Keahi now has 0 bucks and allegiantatm now has 187 bucks.
+[Sat, 10 Oct 2015 04:29:47 GMT] Argus2Spooky transferred 111 bucks to argussbank. Argus2Spooky now has 0 bucks and argussbank now has 111 bucks.
+[Sat, 10 Oct 2015 07:27:39 GMT] Mairy transferred 3 bucks to allegiantatm. Mairy now has 9 bucks and allegiantatm now has 190 bucks.
+[Sat, 10 Oct 2015 07:31:21 GMT] Mairy transferred 3 bucks to allegiantatm. Mairy now has 6 bucks and allegiantatm now has 193 bucks.
+[Sat, 10 Oct 2015 07:31:22 GMT] Mairy transferred 3 bucks to allegiantatm. Mairy now has 3 bucks and allegiantatm now has 196 bucks.
+[Sat, 10 Oct 2015 07:31:25 GMT] Mairy transferred 3 bucks to allegiantatm. Mairy now has 0 bucks and allegiantatm now has 199 bucks.
+[Sat, 10 Oct 2015 09:33:29 GMT] GTX Kirito - ⓛⓤⓝⓒⓗ transferred 1 buck to narus bank. GTX Kirito - ⓛⓤⓝⓒⓗ now has 0 bucks and narus bank now has 40 bucks.
+[Sat, 10 Oct 2015 10:24:46 GMT] Breeze Kaz transferred 2 bucks to Breeze Georgefhs. Breeze Kaz now has 0 bucks and Breeze Georgefhs now has 3 bucks.
+[Sat, 10 Oct 2015 10:39:46 GMT] Skittyrox has bought ticket from the shop. This user now has 919 bucks.
+[Sat, 10 Oct 2015 12:07:30 GMT] gtx kirito transferred 3 bucks to narus bank. gtx kirito now has 0 bucks and narus bank now has 70 bucks.
+[Sat, 10 Oct 2015 13:59:21 GMT] artshopbank transferred 30 bucks to Nefertum. artshopbank now has 617 bucks and Nefertum now has 64 bucks.
+[Sat, 10 Oct 2015 14:07:33 GMT] Corny Doge - ⒶⒻⓀ transferred 1 buck to Jynx Nuggets. Corny Doge - ⒶⒻⓀ now has 3 bucks and Jynx Nuggets now has 1 buck.
+[Sat, 10 Oct 2015 14:07:59 GMT] iRoams transferred 50 bucks to Katheyisme123. iRoams now has 8680 bucks and Katheyisme123 now has 50 bucks.
+[Sat, 10 Oct 2015 14:35:09 GMT] Wolf Erade transferred 1 buck to Syalla. Wolf Erade now has 0 bucks and Syalla now has 1 buck.
+[Sat, 10 Oct 2015 14:35:36 GMT] Syalla transferred 1 buck to wolf erade. Syalla now has 0 bucks and wolf erade now has 1 buck.
+[Sat, 10 Oct 2015 14:49:41 GMT] MonsterHigh transferred 4 bucks to Mercury Boss. MonsterHigh now has 10 bucks and Mercury Boss now has 4 bucks.
+[Sat, 10 Oct 2015 14:52:51 GMT] Mercury Boss transferred 1 buck to Harvest God. Mercury Boss now has 4 bucks and Harvest God now has 1 buck.
+[Sat, 10 Oct 2015 14:58:21 GMT] Harvest God transferred 2 bucks to Mercury Boss. Harvest God now has 2 bucks and Mercury Boss now has 2 bucks.
+[Sat, 10 Oct 2015 14:58:28 GMT] iRoams transferred 2 bucks to MonsterHigh. iRoams now has 8680 bucks and MonsterHigh now has 12 bucks.
+[Sat, 10 Oct 2015 15:00:23 GMT] Harvest God transferred 2 bucks to Evanescense. Harvest God now has 6 bucks and Evanescense now has 2 bucks.
+[Sat, 10 Oct 2015 15:02:54 GMT] MonsterHigh transferred 5 bucks to Angel Of Gambling. MonsterHigh now has 7 bucks and Angel Of Gambling now has 5 bucks.
+[Sat, 10 Oct 2015 15:25:10 GMT] MonsterHigh transferred 7 bucks to Angel Of Gambling. MonsterHigh now has 0 bucks and Angel Of Gambling now has 7 bucks.
+[Sat, 10 Oct 2015 16:33:02 GMT] Apex✦Cerebral transferred 1 buck to Apex Bank. Apex✦Cerebral now has 49 bucks and Apex Bank now has 246 bucks.
+[Sat, 10 Oct 2015 17:13:32 GMT] iRoams transferred 100 bucks to ashyudhajit. iRoams now has 8590 bucks and ashyudhajit now has 100 bucks.
+[Sat, 10 Oct 2015 17:13:50 GMT] ashyudhajit was given 60 bucks by Neo Soul.
+[Sat, 10 Oct 2015 17:15:03 GMT] Theace22 transferred 1 buck to legacyenervate. Theace22 now has 9 bucks and legacyenervate now has 1 buck.
+[Sat, 10 Oct 2015 17:20:47 GMT] Lance The Werewolf transferred 1 buck to Crystal Bogan. Lance The Werewolf now has 2 bucks and Crystal Bogan now has 1 buck.
+[Sat, 10 Oct 2015 17:20:50 GMT] ashyudhajit transferred 60 bucks to db728. ashyudhajit now has 100 bucks and db728 now has 60 bucks.
+[Sat, 10 Oct 2015 17:22:05 GMT] Lance The Werewolf transferred 2 bucks to Wolf Neon. Lance The Werewolf now has 0 bucks and Wolf Neon now has 2 bucks.
+[Sat, 10 Oct 2015 17:41:48 GMT] db728 had 60 bucks taken away by Neo Soul.
+[Sat, 10 Oct 2015 17:42:11 GMT] ashyudhajit was given 60 bucks by Neo Soul.
+[Sat, 10 Oct 2015 17:44:39 GMT] Alliance - Llama transferred 207 bucks to iRoams. Alliance - Llama now has 1337 bucks and iRoams now has 8580 bucks.
+[Sat, 10 Oct 2015 17:45:31 GMT] ashyudhajit transferred 60 bucks to iroams. ashyudhajit now has 100 bucks and iroams now has 8640 bucks.
+[Sat, 10 Oct 2015 17:53:20 GMT] Pikapig123 transferred 3 bucks to Angel Boss. Pikapig123 now has 5 bucks and Angel Boss now has 3 bucks.
+[Sat, 10 Oct 2015 18:05:31 GMT] ruby D transferred 50 bucks to rubyb. ruby D now has 0 bucks and rubyb now has 51 bucks.
+[Sat, 10 Oct 2015 18:06:40 GMT] iRoams transferred 40 bucks to Void Cryptis. iRoams now has 8600 bucks and Void Cryptis now has 40 bucks.
+[Sat, 10 Oct 2015 18:06:47 GMT] iRoams transferred 20 bucks to Allegiant Nirvana. iRoams now has 8580 bucks and Allegiant Nirvana now has 20 bucks.
+[Sat, 10 Oct 2015 18:21:17 GMT] Angel Boss transferred 2 bucks to Pikapig123. Angel Boss now has 4 bucks and Pikapig123 now has 2 bucks.
+[Sat, 10 Oct 2015 18:33:59 GMT] Saur Sarii was given 100 bucks by Master Float - ⒶⒻⓀ.
+[Sat, 10 Oct 2015 18:34:55 GMT] HM Vodoom was given 50 bucks by Master Float - ⒶⒻⓀ.
+[Sat, 10 Oct 2015 18:42:06 GMT] Arrem has bought Room from the shop. This user now has 250 bucks.
+[Sat, 10 Oct 2015 18:43:15 GMT] iRoams has bought Global Declare from the shop. This user now has 8565 bucks.
+[Sat, 10 Oct 2015 18:44:56 GMT] SteelChar was given 75 bucks by Erica*07.
+[Sat, 10 Oct 2015 18:48:25 GMT] iRoams has bought Global Declare from the shop. This user now has 8550 bucks.
+[Sat, 10 Oct 2015 18:55:24 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8545 bucks and voidchest now has 166 bucks.
+[Sat, 10 Oct 2015 18:55:25 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8540 bucks and voidchest now has 171 bucks.
+[Sat, 10 Oct 2015 18:55:27 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8535 bucks and voidchest now has 176 bucks.
+[Sat, 10 Oct 2015 18:55:28 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8530 bucks and voidchest now has 181 bucks.
+[Sat, 10 Oct 2015 18:55:29 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8525 bucks and voidchest now has 186 bucks.
+[Sat, 10 Oct 2015 18:55:30 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8520 bucks and voidchest now has 191 bucks.
+[Sat, 10 Oct 2015 18:55:32 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8515 bucks and voidchest now has 196 bucks.
+[Sat, 10 Oct 2015 18:55:33 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8510 bucks and voidchest now has 201 bucks.
+[Sat, 10 Oct 2015 18:55:35 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8505 bucks and voidchest now has 206 bucks.
+[Sat, 10 Oct 2015 18:55:36 GMT] iRoams transferred 5 bucks to voidchest. iRoams now has 8500 bucks and voidchest now has 211 bucks.
+[Sat, 10 Oct 2015 19:07:20 GMT] Ravonne transferred 4 bucks to legacyenervate. Ravonne now has 6 bucks and legacyenervate now has 5 bucks.
+[Sat, 10 Oct 2015 19:07:34 GMT] SteelChar transferred 75 bucks to alphaninja. SteelChar now has 0 bucks and alphaninja now has 246 bucks.
+[Sat, 10 Oct 2015 19:07:58 GMT] Legacy Enervate transferred 4 bucks to Ravonne. Legacy Enervate now has 1 buck and Ravonne now has 10 bucks.
+[Sat, 10 Oct 2015 19:08:23 GMT] Alpha Ninja transferred 4 bucks to legacyenervate. Alpha Ninja now has 242 bucks and legacyenervate now has 5 bucks.
+[Sat, 10 Oct 2015 19:08:56 GMT] Legacy Enervate transferred 4 bucks to Alpha Ninja. Legacy Enervate now has 1 buck and Alpha Ninja now has 246 bucks.
+[Sat, 10 Oct 2015 19:25:44 GMT] Zayano transferred 5 bucks to angelboss. Zayano now has 53 bucks and angelboss now has 5 bucks.
+[Sat, 10 Oct 2015 19:26:34 GMT] Angel Boss transferred 5 bucks to Zayano. Angel Boss now has 8 bucks and Zayano now has 58 bucks.
+[Sat, 10 Oct 2015 19:33:53 GMT] iRoams transferred 50 bucks to Alliance - Guy. iRoams now has 8450 bucks and Alliance - Guy now has 60 bucks.
+[Sat, 10 Oct 2015 19:33:59 GMT] iRoams transferred 25 bucks to chleg. iRoams now has 8425 bucks and chleg now has 25 bucks.
+[Sat, 10 Oct 2015 19:50:17 GMT] Lotus Wincon was given 50 bucks by sparkychild.
+[Sat, 10 Oct 2015 19:51:18 GMT] CrazyClown94 was given 25 bucks by sparkychild.
+[Sat, 10 Oct 2015 19:51:55 GMT] Lotus Wincon transferred 50 bucks to lotus bank. Lotus Wincon now has 6 bucks and lotus bank now has 1412 bucks.
+[Sat, 10 Oct 2015 20:08:30 GMT] FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ transferred 28 bucks to Neowulf. FOH - ⓣⓔⓐⓜⓑⓤⓘⓛⓓⓘⓝⓖ now has 0 bucks and Neowulf now has 28 bucks.
+[Sat, 10 Oct 2015 20:11:59 GMT] Neowulf transferred 28 bucks to foh. Neowulf now has 0 bucks and foh now has 28 bucks.
+[Sat, 10 Oct 2015 20:12:17 GMT] Guard Wulf transferred 2 bucks to foh. Guard Wulf now has 0 bucks and foh now has 30 bucks.
+[Sat, 10 Oct 2015 20:39:39 GMT] wolf blitzel transferred 5 bucks to wolf vault. wolf blitzel now has 0 bucks and wolf vault now has 26 bucks.
+[Sat, 10 Oct 2015 20:58:29 GMT] iRoams transferred 8335 bucks to Prise. iRoams now has 0 bucks and Prise now has 8335 bucks.
+[Sat, 10 Oct 2015 21:10:31 GMT] Prise transferred 5 bucks to Chleg. Prise now has 8330 bucks and Chleg now has 5 bucks.
+[Sat, 10 Oct 2015 21:16:41 GMT] Myst Applejack transferred 1 buck to carnie discord. Myst Applejack now has 0 bucks and carnie discord now has 1 buck.
+[Sat, 10 Oct 2015 21:16:46 GMT] Prof. KGBeast was given 75 bucks by Erica*07.
+[Sat, 10 Oct 2015 21:19:46 GMT] Prof. KGBeast transferred 75 bucks to voidkgbeast. Prof. KGBeast now has 0 bucks and voidkgbeast now has 75 bucks.
+[Sat, 10 Oct 2015 21:29:25 GMT] Alpha Ninja transferred 75 bucks to Naten. Alpha Ninja now has 171 bucks and Naten now has 75 bucks.
+[Sat, 10 Oct 2015 21:30:08 GMT] SWL Bank transferred 125 bucks to swl eric. SWL Bank now has 2014 bucks and swl eric now has 125 bucks.
+[Sat, 10 Oct 2015 21:39:42 GMT] WolfVault transferred 15 bucks to Eevee blitzel. WolfVault now has 11 bucks and Eevee blitzel now has 15 bucks.
+[Sat, 10 Oct 2015 21:41:04 GMT] Angel Boss transferred 4 bucks to KatheyIsme123. Angel Boss now has 20 bucks and KatheyIsme123 now has 4 bucks.
+[Sat, 10 Oct 2015 21:41:45 GMT] KatheyIsme123 transferred 4 bucks to Bitch Of The Dices. KatheyIsme123 now has 0 bucks and Bitch Of The Dices now has 4 bucks.
+[Sat, 10 Oct 2015 21:51:29 GMT] Eevee blitzel has bought League Room from the shop. This user now has 0 bucks.
+[Sat, 10 Oct 2015 22:00:43 GMT] Angel Boss transferred 5 bucks to Bitch Of The Dices. Angel Boss now has 30 bucks and Bitch Of The Dices now has 5 bucks.
+[Sat, 10 Oct 2015 22:05:46 GMT] Angel Boss transferred 5 bucks to Gambler Gambler. Angel Boss now has 30 bucks and Gambler Gambler now has 5 bucks.
+[Sat, 10 Oct 2015 22:11:24 GMT] Void Chrono was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:11:44 GMT] DeltaHoot was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:11:55 GMT] AllianceJZB was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:12:13 GMT] DesolateNightmare was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:12:24 GMT] Oreo Hunter was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:12:40 GMT] Pirte was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:12:55 GMT] UpstrokingTotodile was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:13:10 GMT] Void Cryptis was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:13:21 GMT] Alliance Ralker was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:14:32 GMT] MrCGTNathan was given 40 bucks by Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ.
+[Sat, 10 Oct 2015 22:17:49 GMT] Mr. CGTNathan transferred 40 bucks to VoidSimonScience. Mr. CGTNathan now has 203 bucks and VoidSimonScience now has 40 bucks.
+[Sat, 10 Oct 2015 22:22:45 GMT] Starkboy has bought Avatar from the shop. This user now has 1 buck.
+[Sat, 10 Oct 2015 22:25:19 GMT] Prise transferred 30 bucks to Royal Dinite. Prise now has 8315 bucks and Royal Dinite now has 30 bucks.
+[Sat, 10 Oct 2015 22:50:30 GMT] SWL Eric transferred 80 bucks to Imp Fallen Blood. SWL Eric now has 46 bucks and Imp Fallen Blood now has 80.25 bucks.
+[Sat, 10 Oct 2015 22:50:37 GMT] SWL Eric transferred 40 bucks to Zayano. SWL Eric now has 6 bucks and Zayano now has 113 bucks.
+[Sat, 10 Oct 2015 22:53:20 GMT] wolf itachi was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:53:28 GMT] Best'd was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:53:38 GMT] Gambler Gambler was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:54:03 GMT] Void KGBeast transferred 15 bucks to voidchrono. Void KGBeast now has 0 bucks and voidchrono now has 58 bucks.
+[Sat, 10 Oct 2015 22:54:20 GMT] Imp Fallen Blood was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:54:31 GMT] SWL Eric was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:56:16 GMT] TruBlaze was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:56:51 GMT] TruBlaze transferred 1 buck to blazebank. TruBlaze now has 0 bucks and blazebank now has 4 bucks.
+[Sat, 10 Oct 2015 22:57:01 GMT] Champ Vicky was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 22:58:14 GMT] Saur Sarii has bought Userlist Icon from the shop. This user now has 408 bucks.
+[Sat, 10 Oct 2015 23:03:23 GMT] SWL Falls transferred 207 bucks to swl bank. SWL Falls now has 0 bucks and swl bank now has 2221 bucks.
+[Sat, 10 Oct 2015 23:08:37 GMT] SWL Eric was given 30 bucks by Lt. Tesla.
+[Sat, 10 Oct 2015 23:08:51 GMT] Arrem transferred 3 bucks to saur sarii. Arrem now has 240 bucks and saur sarii now has 411 bucks.
+[Sat, 10 Oct 2015 23:09:35 GMT] Saur Sarii transferred 3 bucks to arrem. Saur Sarii now has 408 bucks and arrem now has 243 bucks.
+[Sat, 10 Oct 2015 23:13:04 GMT] Arrem transferred 2 bucks to saur sarii. Arrem now has 240 bucks and saur sarii now has 410 bucks.
+[Sat, 10 Oct 2015 23:13:39 GMT] Void Godot was given 1 buck by Lt. Tesla.
+[Sat, 10 Oct 2015 23:29:58 GMT] SWL Eric transferred 30 bucks to SWL SaNeski. SWL Eric now has 20 bucks and SWL SaNeski now has 30 bucks.
+[Sat, 10 Oct 2015 23:38:57 GMT] theace22 was given 100 bucks by Lt. Tesla.
+[Sat, 10 Oct 2015 23:42:20 GMT] TheAce22 transferred 1 buck to imperial latias. TheAce22 now has 99 bucks and imperial latias now has 1 buck.
+[Sat, 10 Oct 2015 23:49:17 GMT] Prise has bought Global Declare from the shop. This user now has 7505 bucks.
+[Sat, 10 Oct 2015 23:59:01 GMT] Nefertum transferred 4 bucks to Dylightful. Nefertum now has 60 bucks and Dylightful now has 4 bucks.
+[Sun, 11 Oct 2015 00:04:51 GMT] GTX♅Tsuna transferred 10 bucks to Legacy Enervate. GTX♅Tsuna now has 14 bucks and Legacy Enervate now has 11 bucks.
+[Sun, 11 Oct 2015 00:07:55 GMT] Prise transferred 50 bucks to agent66. Prise now has 8023 bucks and agent66 now has 50 bucks.
+[Sun, 11 Oct 2015 00:14:52 GMT] Legacy Enervate transferred 10 bucks to GTX♅Tsuna. Legacy Enervate now has 1 buck and GTX♅Tsuna now has 24 bucks.
+[Sun, 11 Oct 2015 00:17:38 GMT] Saur Sarii transferred 100 bucks to jiggle. Saur Sarii now has 310 bucks and jiggle now has 100 bucks.
+[Sun, 11 Oct 2015 00:18:54 GMT] GTX♅Tsuna has bought Avatar from the shop. This user now has 0 bucks.
+[Sun, 11 Oct 2015 00:22:16 GMT] agent66 transferred 50 bucks to Crystal gray. agent66 now has 0 bucks and Crystal gray now has 50 bucks.
+[Sun, 11 Oct 2015 00:22:32 GMT] prise had 300 bucks taken away by sparkychild.
+[Sun, 11 Oct 2015 00:22:37 GMT] Imp Fallen Blood was given 300 bucks by sparkychild.
+[Sun, 11 Oct 2015 00:31:57 GMT] GTX♅Tsuna transferred 1 buck to Legacy Enervate. GTX♅Tsuna now has 0 bucks and Legacy Enervate now has 2 bucks.
+[Sun, 11 Oct 2015 00:35:06 GMT] SWL SaNeski transferred 15 bucks to goast. SWL SaNeski now has 15 bucks and goast now has 21 bucks.
+[Sun, 11 Oct 2015 00:36:00 GMT] goast transferred 21 bucks to supanova. goast now has 0 bucks and supanova now has 25 bucks.
+[Sun, 11 Oct 2015 00:50:04 GMT] trash transferred 4 bucks to 9yo. trash now has 0 bucks and 9yo now has 4 bucks.
+[Sun, 11 Oct 2015 00:50:07 GMT] Imp Fallen Blood transferred 200 bucks to Saur Sarii. Imp Fallen Blood now has 181.25 bucks and Saur Sarii now has 510 bucks.
+[Sun, 11 Oct 2015 00:50:20 GMT] Imp Fallen Blood transferred 100 bucks to Hm Eien. Imp Fallen Blood now has 81.25 bucks and Hm Eien now has 100 bucks.
+[Sun, 11 Oct 2015 00:51:58 GMT] Hm Eien transferred 15 bucks to volco. Hm Eien now has 85 bucks and volco now has 15 bucks.
+[Sun, 11 Oct 2015 00:53:33 GMT] hmvolco was given 245 bucks by sparkychild.
+[Sun, 11 Oct 2015 00:58:20 GMT] ImperialLatias transferred 1 buck to theace22. ImperialLatias now has 2 bucks and theace22 now has 100 bucks.
+[Sun, 11 Oct 2015 01:48:59 GMT] Art Shop Bank transferred 27 bucks to Soprano Meiko. Art Shop Bank now has 590 bucks and Soprano Meiko now has 27 bucks.
+[Sun, 11 Oct 2015 01:57:48 GMT] Zayano transferred 108 bucks to zaybank. Zayano now has 20 bucks and zaybank now has 211 bucks.
+[Sun, 11 Oct 2015 01:58:30 GMT] Alliance)Fila transferred 1 buck to Aliance - Sakis. Alliance)Fila now has 51 bucks and Aliance - Sakis now has 1 buck.
+[Sun, 11 Oct 2015 02:01:24 GMT] Alliance)Fila transferred 1 buck to axair test. Alliance)Fila now has 50 bucks and axair test now has 1 buck.
+[Sun, 11 Oct 2015 02:15:03 GMT] iLlama transferred 2 bucks to Alliance - Llama. iLlama now has 2 bucks and Alliance - Llama now has 1342 bucks.
+[Sun, 11 Oct 2015 02:15:26 GMT] iLlama transferred 2 bucks to Alliance - Llama. iLlama now has 0 bucks and Alliance - Llama now has 1344 bucks.
+[Sun, 11 Oct 2015 02:35:04 GMT] Guard havarti2 transferred 35 bucks to bigbrotherbott. Guard havarti2 now has 868 bucks and bigbrotherbott now has 35 bucks.
+[Sun, 11 Oct 2015 02:57:44 GMT] Alliance - Ralker transferred 80 bucks to bucks ralker. Alliance - Ralker now has 0 bucks and bucks ralker now has 80 bucks.
+[Sun, 11 Oct 2015 03:01:05 GMT] Supanova transferred 25 bucks to arcadias bank. Supanova now has 2 bucks and arcadias bank now has 845 bucks.
+[Sun, 11 Oct 2015 03:31:38 GMT] ashbloodthief transferred 7 bucks to freakerz. ashbloodthief now has 0 bucks and freakerz now has 7 bucks.
+[Sun, 11 Oct 2015 03:36:16 GMT] freakerz transferred 7 bucks to ashbloodthief. freakerz now has 0 bucks and ashbloodthief now has 7 bucks.
+[Sun, 11 Oct 2015 05:41:46 GMT] Hm Red - ⓦⓞⓡⓚⓘⓝⓖ transferred 3 bucks to link fabio. Hm Red - ⓦⓞⓡⓚⓘⓝⓖ now has 0 bucks and link fabio now has 12 bucks.
+[Sun, 11 Oct 2015 05:43:03 GMT] link fabio transferred 12 bucks to Hm vodoom. link fabio now has 0 bucks and Hm vodoom now has 662 bucks.
+[Sun, 11 Oct 2015 06:32:53 GMT] Nirvana v.v transferred 3 bucks to allegiant nirvana. Nirvana v.v now has 0 bucks and allegiant nirvana now has 23 bucks.
+[Sun, 11 Oct 2015 06:55:59 GMT] Hm Eien transferred 2 bucks to Hm Vodoom. Hm Eien now has 83 bucks and Hm Vodoom now has 666 bucks.
+[Sun, 11 Oct 2015 06:57:59 GMT] Hm Eien has bought Avatar from the shop. This user now has 58 bucks.
+[Sun, 11 Oct 2015 07:10:50 GMT] link fabio transferred 1 buck to hm vodoom. link fabio now has 0 bucks and hm vodoom now has 667 bucks.
+[Sun, 11 Oct 2015 08:33:50 GMT] ashyudhajit - ⒶⒻⓀ transferred 10 bucks to champ vicky. ashyudhajit - ⒶⒻⓀ now has 92 bucks and champ vicky now has 11 bucks.
+[Sun, 11 Oct 2015 08:35:05 GMT] ashbloodthief transferred 5 bucks to freakerz. ashbloodthief now has 7 bucks and freakerz now has 5 bucks.
+[Sun, 11 Oct 2015 08:39:43 GMT] Piers Nivans has bought ticket from the shop. This user now has 219 bucks.
+[Sun, 11 Oct 2015 08:39:45 GMT] Piers Nivans has bought ticket from the shop. This user now has 214 bucks.
+[Sun, 11 Oct 2015 08:39:48 GMT] Piers Nivans has bought ticket from the shop. This user now has 209 bucks.
+[Sun, 11 Oct 2015 08:39:50 GMT] Piers Nivans has bought ticket from the shop. This user now has 204 bucks.
+[Sun, 11 Oct 2015 08:39:54 GMT] Piers Nivans has bought ticket from the shop. This user now has 199 bucks.
+[Sun, 11 Oct 2015 08:45:12 GMT] Piers Nivans transferred 19 bucks to rubyd. Piers Nivans now has 180 bucks and rubyd now has 19 bucks.
+[Sun, 11 Oct 2015 09:03:02 GMT] Legacy - Blushing transferred 1 buck to X Bank. Legacy - Blushing now has 2 bucks and X Bank now has 246 bucks.
+[Sun, 11 Oct 2015 09:15:22 GMT] Saur Sarii transferred 5 bucks to Legacy - Blushing. Saur Sarii now has 505 bucks and Legacy - Blushing now has 7 bucks.
+[Sun, 11 Oct 2015 09:24:49 GMT] ashbloodthief transferred 4 bucks to Legacy - Blushing. ashbloodthief now has 10 bucks and Legacy - Blushing now has 4 bucks.
+[Sun, 11 Oct 2015 09:32:06 GMT] ashbloodthief transferred 5 bucks to freakerz. ashbloodthief now has 5 bucks and freakerz now has 10 bucks.
+[Sun, 11 Oct 2015 09:32:07 GMT] Saur Sarii transferred 5 bucks to Legacy - Blushing. Saur Sarii now has 500 bucks and Legacy - Blushing now has 9 bucks.
+[Sun, 11 Oct 2015 09:38:09 GMT] freakerz transferred 15 bucks to ashbloodthief. freakerz now has 0 bucks and ashbloodthief now has 15 bucks.
+[Sun, 11 Oct 2015 09:39:48 GMT] Legacy - Blushing transferred 4 bucks to ashbloodthief. Legacy - Blushing now has 15 bucks and ashbloodthief now has 4 bucks.
+[Sun, 11 Oct 2015 09:48:16 GMT] Saur Sarii transferred 11 bucks to Legacy - Blushing. Saur Sarii now has 500 bucks and Legacy - Blushing now has 24 bucks.
+[Sun, 11 Oct 2015 09:55:36 GMT] Wolf NaOH transferred 2 bucks to WolfVault. Wolf NaOH now has 0 bucks and WolfVault now has 13 bucks.
+[Sun, 11 Oct 2015 09:59:57 GMT] Saur Sarii transferred 43 bucks to Chleg. Saur Sarii now has 450 bucks and Chleg now has 43 bucks.
+[Sun, 11 Oct 2015 10:17:01 GMT] Saur Sarii transferred 13 bucks to chleg. Saur Sarii now has 430 bucks and chleg now has 13 bucks.
+[Sun, 11 Oct 2015 10:37:14 GMT] Breeze Kaz transferred 1 buck to champ vicky. Breeze Kaz now has 0 bucks and champ vicky now has 1 buck.
+[Sun, 11 Oct 2015 10:40:57 GMT] Chleg transferred 7 bucks to saur sarii. Chleg now has 23 bucks and saur sarii now has 500 bucks.
+[Sun, 11 Oct 2015 11:02:20 GMT] Chleg has bought Ticket from the shop. This user now has 15 bucks.
+[Sun, 11 Oct 2015 11:46:34 GMT] TheAce22 transferred 50 bucks to theace22 bank. TheAce22 now has 13 bucks and theace22 bank now has 50 bucks.
+[Sun, 11 Oct 2015 11:46:42 GMT] TheAce22 transferred 13 bucks to up n down luck. TheAce22 now has 0 bucks and up n down luck now has 13 bucks.
+[Sun, 11 Oct 2015 12:32:07 GMT] Saur Sarii transferred 60 bucks to chleg. Saur Sarii now has 500 bucks and chleg now has 60 bucks.
+[Sun, 11 Oct 2015 13:01:53 GMT] up n down luck transferred 10 bucks to theace22 bank. up n down luck now has 13 bucks and theace22 bank now has 60 bucks.
+[Sun, 11 Oct 2015 13:08:00 GMT] up n down luck transferred 10 bucks to theace22 bank. up n down luck now has 12 bucks and theace22 bank now has 70 bucks.
+[Sun, 11 Oct 2015 13:31:13 GMT] Alliance - Guy transferred 15 bucks to artshopbank. Alliance - Guy now has 95 bucks and artshopbank now has 605 bucks.
+[Sun, 11 Oct 2015 13:36:35 GMT] Crystal Bogan transferred 1 buck to Lance the Werewolf. Crystal Bogan now has 0 bucks and Lance the Werewolf now has 1 buck.
+[Sun, 11 Oct 2015 14:27:40 GMT] Saur Sarii transferred 23 bucks to chleg. Saur Sarii now has 650 bucks and chleg now has 23 bucks.
+[Sun, 11 Oct 2015 14:40:34 GMT] Syalla transferred 2 bucks to wolf erade. Syalla now has 0 bucks and wolf erade now has 2 bucks.
+[Sun, 11 Oct 2015 14:49:34 GMT] Alliance - Guy has bought Fix from the shop. This user now has 85 bucks.
+[Sun, 11 Oct 2015 14:55:51 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 14:56:30 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 14:56:53 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 14:57:11 GMT] Chleg transferred 40 bucks to saursarii. Chleg now has 0 bucks and saursarii now has 677 bucks.
+[Sun, 11 Oct 2015 14:57:16 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 14:58:30 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 14:59:19 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 657 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:00:29 GMT] Saur Sarii transferred 4 bucks to Syalla. Saur Sarii now has 693 bucks and Syalla now has 4 bucks.
+[Sun, 11 Oct 2015 15:01:19 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:02:04 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:03:08 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:04:50 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:05:13 GMT] Saur Sarii transferred 500 bucks to Dream Eater Gengar. Saur Sarii now has 193 bucks and Dream Eater Gengar now has 500 bucks.
+[Sun, 11 Oct 2015 15:06:23 GMT] Allegiant Choco transferred 2 bucks to nirvana v.v. Allegiant Choco now has 105 bucks and nirvana v.v now has 2 bucks.
+[Sun, 11 Oct 2015 15:07:02 GMT] Dream Eater Gengar transferred 693 bucks to Saur Sarii. Dream Eater Gengar now has 0 bucks and Saur Sarii now has 693 bucks.
+[Sun, 11 Oct 2015 15:07:52 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:08:19 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:09:30 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:09:44 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 673 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:10:35 GMT] Nirvana v.v transferred 2 bucks to allegiant nirvana. Nirvana v.v now has 0 bucks and allegiant nirvana now has 25 bucks.
+[Sun, 11 Oct 2015 15:10:51 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 677 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:11:30 GMT] Allegiant Nirvana has bought Avatar from the shop. This user now has 0 bucks.
+[Sun, 11 Oct 2015 15:11:36 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 677 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:11:49 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 677 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:11:56 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 677 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:11:59 GMT] Wolf Erade transferred 1 buck to syalla. Wolf Erade now has 3 bucks and syalla now has 5 bucks.
+[Sun, 11 Oct 2015 15:12:27 GMT] Syalla has bought Symbol from the shop. This user now has 0 bucks.
+[Sun, 11 Oct 2015 15:13:50 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 727 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:14:28 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 747 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:17:22 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 742 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:18:11 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 742 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:18:42 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:18:49 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:19:07 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:19:51 GMT] HM Shade was given 100 bucks by Master Float.
+[Sun, 11 Oct 2015 15:23:37 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:23:59 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:24:13 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:24:39 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:24:51 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:25:29 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 737 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:26:58 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:27:09 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:27:18 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:27:33 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:27:47 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:27:54 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 757 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:29:43 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:29:50 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:30:03 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:30:21 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:30:30 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:30:49 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 758 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:31:50 GMT] Arrem transferred 4 bucks to saur sarii. Arrem now has 140 bucks and saur sarii now has 780 bucks.
+[Sun, 11 Oct 2015 15:32:14 GMT] Saur Sarii transferred 4 bucks to Arrem. Saur Sarii now has 776 bucks and Arrem now has 144 bucks.
+[Sun, 11 Oct 2015 15:32:19 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 756 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:32:27 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 756 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:33:03 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 756 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:33:17 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 756 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:33:57 GMT] Arrem transferred 4 bucks to saur sarii. Arrem now has 120 bucks and saur sarii now has 800 bucks.
+[Sun, 11 Oct 2015 15:34:12 GMT] Saur Sarii transferred 20 bucks to chleg. Saur Sarii now has 780 bucks and chleg now has 20 bucks.
+[Sun, 11 Oct 2015 15:34:53 GMT] Chleg transferred 220 bucks to saursarii. Chleg now has 100 bucks and saursarii now has 800 bucks.
+[Sun, 11 Oct 2015 15:39:32 GMT] Chleg transferred 10 bucks to saur sarii. Chleg now has 270 bucks and saur sarii now has 650 bucks.
+[Sun, 11 Oct 2015 15:44:15 GMT] Saur Sarii transferred 560 bucks to Saur Bank. Saur Sarii now has 0 bucks and Saur Bank now has 560 bucks.
+[Sun, 11 Oct 2015 15:48:09 GMT] Chleg transferred 360 bucks to saur bank. Chleg now has 0 bucks and saur bank now has 920 bucks.
+[Sun, 11 Oct 2015 15:49:34 GMT] Saur Bank has bought League Shop from the shop. This user now has 835 bucks.
+[Sun, 11 Oct 2015 15:58:17 GMT] Alliance TheThorn transferred 150 bucks to alliancelee. Alliance TheThorn now has 100 bucks and alliancelee now has 408 bucks.
+[Sun, 11 Oct 2015 16:09:15 GMT] Saur Bank transferred 100 bucks to chleg. Saur Bank now has 740 bucks and chleg now has 100 bucks.
+[Sun, 11 Oct 2015 16:09:37 GMT] Saur Bank transferred 100 bucks to saur sarii. Saur Bank now has 640 bucks and saur sarii now has 100 bucks.
+[Sun, 11 Oct 2015 16:10:37 GMT] Saur Sarii transferred 100 bucks to chleg. Saur Sarii now has 100 bucks and chleg now has 100 bucks.
+[Sun, 11 Oct 2015 16:12:23 GMT] Chleg transferred 100 bucks to saur sarii. Chleg now has 100 bucks and saur sarii now has 100 bucks.
+[Sun, 11 Oct 2015 16:19:01 GMT] Saur Sarii transferred 100 bucks to Chleg. Saur Sarii now has 100 bucks and Chleg now has 100 bucks.
+[Sun, 11 Oct 2015 16:20:23 GMT] Chleg transferred 100 bucks to saursarii. Chleg now has 100 bucks and saursarii now has 100 bucks.
+[Sun, 11 Oct 2015 16:22:10 GMT] Saur Sarii transferred 100 bucks to Chleg. Saur Sarii now has 100 bucks and Chleg now has 100 bucks.
+[Sun, 11 Oct 2015 16:23:21 GMT] Chleg transferred 100 bucks to saursarii. Chleg now has 100 bucks and saursarii now has 100 bucks.
+[Sun, 11 Oct 2015 16:42:52 GMT] scavengers aou transferred 40 bucks to rubyD. scavengers aou now has 450 bucks and rubyD now has 40 bucks.
+[Sun, 11 Oct 2015 16:52:48 GMT] steelchar was given 125 bucks by Neo Soul.
+[Sun, 11 Oct 2015 16:59:14 GMT] Chleg transferred 2 bucks to saurbank. Chleg now has 98 bucks and saurbank now has 640 bucks.
+[Sun, 11 Oct 2015 17:02:51 GMT] Wolf Erade transferred 1 buck to syalla. Wolf Erade now has 5 bucks and syalla now has 5 bucks.
+[Sun, 11 Oct 2015 17:06:55 GMT] Wolf Erade has bought Symbol from the shop. This user now has 0 bucks.
+[Sun, 11 Oct 2015 17:23:56 GMT] Auntie Snixx has bought League Room from the shop. This user now has 0 bucks.
+[Sun, 11 Oct 2015 17:37:57 GMT] SteelChar transferred 4 bucks to chleg. SteelChar now has 125 bucks and chleg now has 104 bucks.
+[Sun, 11 Oct 2015 18:01:19 GMT] SteelChar transferred 75 bucks to chleg. SteelChar now has 50 bucks and chleg now has 188 bucks.
+[Sun, 11 Oct 2015 18:01:34 GMT] SteelChar transferred 50 bucks to hm eien. SteelChar now has 0 bucks and hm eien now has 108 bucks.
+[Sun, 11 Oct 2015 18:01:47 GMT] Chleg transferred 80 bucks to saurbank. Chleg now has 108 bucks and saurbank now has 720 bucks.
+[Sun, 11 Oct 2015 18:12:05 GMT] Chleg transferred 10 bucks to saurbank. Chleg now has 190 bucks and saurbank now has 730 bucks.
+[Sun, 11 Oct 2015 18:12:36 GMT] Chleg transferred 10 bucks to saurbank. Chleg now has 190 bucks and saurbank now has 740 bucks.
+[Sun, 11 Oct 2015 18:21:35 GMT] Eliwood_Emblem transferred 1 buck to Joefriends. Eliwood_Emblem now has 54 bucks and Joefriends now has 11 bucks.
+[Sun, 11 Oct 2015 18:44:03 GMT] Chleg transferred 10 bucks to nefertum. Chleg now has 190 bucks and nefertum now has 71 bucks.

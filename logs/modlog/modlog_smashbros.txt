@@ -260,3 +260,77 @@
 [2015-10-07T21:49:01.954Z] (smashbros) Superdois was warned by Safety Shark. (Automated response: caps)
 [2015-10-07T22:57:39.067Z] (smashbros) Superdois was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
 [2015-10-08T17:27:47.944Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-09T19:03:04.469Z] (smashbros) Superdois was warned by Safety Shark. (Automated response: stretching)
+[2015-10-09T23:11:53.093Z] (smashbros) Byobell was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T23:18:09.180Z] (smashbros) Byobell was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-09T23:19:49.703Z] (smashbros) DemonicScizor was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-09T23:21:17.592Z] (smashbros) DemonicScizor was unmuted by Eliwood_Emblem.
+[2015-10-09T23:25:44.442Z] (smashbros) SWL Reck was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T16:35:42.035Z] (smashbros) Joefriends was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T16:35:50.098Z] (smashbros) Joefriends was unmuted by Palpitoad707.
+[2015-10-10T16:36:59.015Z] (smashbros) Robotstephen was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T16:37:15.866Z] (smashbros) Mogecuckoo was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T16:38:13.548Z] (smashbros) Mogecuckoo was unmuted by Eliwood_Emblem.
+[2015-10-10T16:39:41.057Z] (smashbros) Palpitoad707 was banned from room smashbros by Safety Shark. (♥ ^_^ ♥)
+[2015-10-10T16:39:41.732Z] (smashbros) palpitoad707 was unbanned from room smashbros by Safety Shark.
+[2015-10-10T16:39:42.445Z] (smashbros) (Safety Shark notes: palpitoad707 was rk'd by #Eliwood_Emblem)
+[2015-10-10T16:40:14.428Z] (smashbros) Yink was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T16:40:24.332Z] (smashbros) Yink was unmuted by Eliwood_Emblem.
+[2015-10-10T16:41:58.077Z] (smashbros) Yink was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T16:42:06.450Z] (smashbros) Yink was unmuted by Palpitoad707.
+[2015-10-10T17:01:16.018Z] (smashbros) Champion jonhy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T17:10:42.610Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-10T17:14:42.942Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-10T17:27:43.268Z] (smashbros) epicjelly1 was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T18:03:14.778Z] (smashbros) iKillzone was promoted to Room Driver by Eliwood_Emblem.
+[2015-10-10T18:03:48.070Z] (smashbros) Joefriends was promoted to Room Voice by Eliwood_Emblem.
+[2015-10-10T18:05:27.364Z] (smashbros) epicjelly1 was promoted to Room Voice by Eliwood_Emblem.
+[2015-10-10T18:06:06.625Z] (smashbros) epicjelly was promoted to Room Voice by Eliwood_Emblem.
+[2015-10-10T18:18:35.317Z] (smashbros) Union Tei was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T18:36:24.387Z] (smashbros) Cat8752 was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T18:57:06.468Z] (smashbros) epicjelly1 was promoted to Room Driver by Eliwood_Emblem.
+[2015-10-10T19:01:53.492Z] (smashbros) Joefriends was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T19:02:01.282Z] (smashbros) Joefriends was unmuted by Eliwood_Emblem.
+[2015-10-10T19:02:09.643Z] (smashbros) Robotstephen was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T19:02:29.548Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T19:03:13.896Z] (smashbros) iDitto was unmuted by epicjelly1.
+[2015-10-10T19:03:21.570Z] (smashbros) Robotstephen was unmuted by epicjelly1.
+[2015-10-10T19:03:42.272Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T19:03:55.265Z] (smashbros) DemonicScizor was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T19:05:27.061Z] (smashbros) iDitto was unmuted by epicjelly1.
+[2015-10-10T19:28:17.131Z] (smashbros) Robotstephen was warned by epicjelly1.
+[2015-10-10T19:30:38.534Z] (smashbros) Robotstephen was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-10T20:07:06.579Z] (smashbros) Darkninja236 was muted by Eliwood_Emblem for 7 minutes. (Said rip. Gets muted.)
+[2015-10-10T20:08:24.444Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-10T20:10:59.560Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-10T20:13:37.988Z] (smashbros) Robotstephen was warned by epicjelly1.
+[2015-10-10T20:50:23.459Z] (smashbros) hooters was kicked from the room by Eliwood_Emblem.
+[2015-10-10T21:03:00.660Z] (smashbros) Superdois was warned by epicjelly1.
+[2015-10-10T21:03:17.921Z] (smashbros) Superdois was warned by iKillzone.
+[2015-10-10T21:18:13.864Z] (smashbros) iDitto was muted by epicjelly1 for 1 hour.
+[2015-10-10T21:18:55.231Z] (smashbros) Darkninja236 was muted by epicjelly1 for 1 hour.
+[2015-10-10T21:19:04.168Z] (smashbros) Darkninja236 was unmuted by epicjelly1.
+[2015-10-10T21:24:08.881Z] (smashbros) iDitto was unmuted by iKillzone.
+[2015-10-10T21:24:13.900Z] (smashbros) iDitto was muted by iKillzone for 1 hour.
+[2015-10-10T21:28:00.601Z] (smashbros) Guest 18871 was unmuted by iKillzone.
+[2015-10-11T00:32:17.794Z] (smashbros) Superdois was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T00:39:11.943Z] (smashbros) Superdois was muted by Eliwood_Emblem for 1 hour.
+[2015-10-11T01:12:09.700Z] (smashbros) Alliance - Guy was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T15:58:54.504Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T15:59:24.661Z] (smashbros) Superdois was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T16:00:21.239Z] (smashbros) iDitto was unmuted by kal1978.
+[2015-10-11T16:00:38.884Z] (smashbros) StarWelf was muted by kal1978 for 1 hour.
+[2015-10-11T16:01:17.438Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T16:02:06.344Z] (smashbros) iDitto was warned by Chaos Abra. (Why are people dumb .-.)
+[2015-10-11T16:05:57.914Z] (smashbros) Superdois was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-11T16:15:54.899Z] (smashbros) iDitto was muted by Safety Shark for 1 hour. (Automated response: your message contained a banned phrase)
+[2015-10-11T16:17:47.758Z] (smashbros) iDitto was unmuted by epicjelly1.
+[2015-10-11T16:19:31.043Z] (smashbros) iDitto was banned from room smashbros by Safety Shark. (Automated response: your message contained a banned phrase)
+[2015-10-11T16:19:31.045Z] (smashbros) (iDitto's roombanned alts: DrePwnz)
+[2015-10-11T16:38:50.946Z] (smashbros) iditto was unbanned from room smashbros by kal1978.
+[2015-10-11T18:45:31.133Z] (smashbros) Superdois was warned by Eliwood_Emblem. (she won't be your's.)
+[2015-10-11T18:46:50.217Z] (smashbros) Champion Jonhy was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T18:49:11.367Z] (smashbros) Superdois was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T18:50:50.496Z] (smashbros) Superdois was banned from room smashbros by Eliwood_Emblem. (Time out.)
+[2015-10-11T18:50:50.501Z] (smashbros) (Superdois's roombanned alts: Byobell)
+[2015-10-11T18:50:56.735Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)

@@ -924,3 +924,74 @@
 [2015-10-09T02:56:22.369Z] (staff) (Erica*07 has shadow banned: wraithy)
 [2015-10-09T04:05:14.770Z] (staff) Sam Crowe was kicked from the room by panpawn.
 [2015-10-09T04:19:30.815Z] (staff) Sam Crowe was promoted to Driver by Neo Soul.
+[2015-10-09T05:08:46.959Z] (staff) (axews was demoted to Room regular user by Neo Soul.)
+[2015-10-09T05:09:21.997Z] (staff) (eoscivilservice was demoted to Room regular user by Neo Soul.)
+[2015-10-09T05:12:52.690Z] (staff) hooters was unbanned by Neo Soul.
+[2015-10-09T14:51:04.199Z] (staff) champ vicky was unlocked by fender.
+[2015-10-09T17:39:04.542Z] (staff) Guest 14295 was locked from talking by Master Float. (spam and evading.)
+[2015-10-09T20:25:31.881Z] (staff) (L Chevy 12 changed the roomintro.)
+[2015-10-09T21:58:51.614Z] (staff) Cloyy was unlocked by Piers Nivans.
+[2015-10-09T21:59:01.896Z] (staff) macrarazy was unlocked by Piers Nivans.
+[2015-10-09T22:37:31.141Z] (staff) (L Chevy 12 - ⒶⓌⒶⓎ has given VIP status to Void Cryptis)
+[2015-10-09T22:44:38.263Z] (staff) (Safety Shark was forced to choose a new name by sparkychild)
+[2015-10-09T23:47:30.565Z] (staff) sparkychild globally declared As one of our staff member's accounts were compromised, many users have gotten unintentionally shadowbanned.  Please say something in a room to get yourself unsbanned. If you have any questions, feel free to pm a global staff member
+[2015-10-09T23:51:00.430Z] (staff) Thunder Nyan was unlocked by SteelChar.
+[2015-10-09T23:51:04.604Z] (staff) ApexProf SmogOn was unlocked by SteelChar.
+[2015-10-09T23:51:06.897Z] (staff) Void Simon Science was unlocked by Allegiant Gryph.
+[2015-10-09T23:51:10.059Z] (staff) Knight Starfox was unlocked by SteelChar.
+[2015-10-09T23:51:10.321Z] (staff) (Sam Crowe was demoted to Voice by sparkychild.)
+[2015-10-09T23:51:15.701Z] (staff) (Sam Crowe was forced to choose a new name by Allegiant Gryph)
+[2015-10-09T23:51:24.615Z] (staff) Guest 14286 was kicked from the room by Imp Fallen Blood.
+[2015-10-09T23:52:34.433Z] (staff) sparkychild globally declared if you need to get unsbanned, pls check by pming ChuChu-BoTTT~ with +meme.   
+[2015-10-09T23:52:43.680Z] (staff) GTX♅Tsuna was unlocked by Allegiant Gryph.
+[2015-10-10T01:19:07.898Z] (staff) Neo Soul globally declared <center>There is a Mega Tier Event taking place in Other Tiers. Winner will recieve 100 bucks, while the runner-up recieves 50 bucks.<button name="joinRoom" value="othertiers">Click here to participate!</button></center>
+[2015-10-10T01:25:52.103Z] (staff) sparkychild globally declared <center>There is a Mega Tier Event taking place in Other Tiers. Winner will recieve 100 bucks, while the runner-up recieves 50 bucks. Here are the rules of the event: http://megatier.weebly.com/rules.html.<button name="joinRoom" value="othertiers">Click here to participate!</button></center> If not a lot of people participate in the tour, the tour prize will be decreased to a 50/25 buck tour Mega Tier event.
+[2015-10-10T02:38:37.311Z] (staff) Lt. Tesla globally declared pls pm tesla about your fb buck
+[2015-10-10T05:40:03.011Z] (staff) CreaturePhil was muted by Master Float for 7 minutes. (don't spam emotes :|)
+[2015-10-10T05:42:52.945Z] (staff) CreaturePhil was unmuted by Neo Soul.
+[2015-10-10T05:48:53.397Z] (staff) (Vileman was demoted to regular user by Nineage.)
+[2015-10-10T07:06:04.124Z] (staff) (Master Float has unshadow banned: etrayu, legacywisp)
+[2015-10-10T17:00:09.174Z] (staff) Erica*07 globally declared Also, to make up for last week the prize of this week's Battle of the Leagues will be higher. 75 bucks to the winner and 40 bucks to 10 people of their choice.
+[2015-10-10T18:13:30.998Z] (staff) Night_Of_Light was locked from talking by SteelChar. (evading lock)
+[2015-10-10T18:17:08.705Z] (staff) (royalguardchime was demoted to regular user by Erica*07.)
+[2015-10-10T18:17:14.341Z] (staff) Allegiant Chime was promoted to Driver by Erica*07.
+[2015-10-10T18:43:37.044Z] (staff) Erica*07 globally declared <button style=background: url(&quot;http://i.imgur.com/1KPB1FG.jpg.png&quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistent league" target="_blank"><b target="_blank">Join!</b></button>50/25 Monotype Tour
+[2015-10-10T18:44:47.716Z] (staff) Erica*07 globally declared <center>The Vote of 3 Event is now a UU Tour.Winner of the Vo3 event recieves 50 bucks, while runner-up recieves 25 bucks.<button name="joinRoom" value="othertiers">Click here to participate!</button></center>
+[2015-10-10T18:47:25.737Z] (staff) Erica*07 globally declared <center>We're hosting Battle of the Leagues today at <font color=red>4:00 PM EST!</font><br>To participate, PM either Void Cryptis or SteelChar your league's name and your reps and subs before then! Up to 3 reps and up to 2 subs!<br>75 bucks to the winner and 40 bucks to 10 people of their choice!</center>
+[2015-10-10T18:49:20.349Z] (staff) Erica*07 declared <button style=background: url(&quot;http://i.imgur.com/1KPB1FG.jpg.png&quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistent league" target="_blank"><b target="_blank">Join!</b></button>50/25 Monotype Tour
+[2015-10-10T18:53:24.212Z] (staff) Erica*07 globally declared <button style=background: url(&quot;http://i.imgur.com/1KPB1FG.jpg.png&quot;) no-repeat ; -moz-border-radius: 39px ; -webkit-border-radius: 39px ; border-radius: 0px ; border: 1px solid #000000 ; color: #d5dada ; text-shadow: -1px -1px 0 #000 , 1px -1px 0 #000 , -1px 1px 0 #000 , 1px 1px 0 #000 ; font-size: 10px ; padding: 8px 13px" name="send" value="/join persistent league" target="_blank"><b target="_blank">Join!</b></button>50/25 Monotype Tour
+[2015-10-10T19:18:54.948Z] (staff) Erica*07 globally declared <center>We're hosting Battle of the Leagues today at <font color=red>4:00 PM EST!</font><br>To participate, PM either Velveteen Rabbit or SteelChar your league's name and your reps and subs before then! Up to 3 reps and up to 2 subs!<br>75 bucks to the winner and 40 bucks to 10 people of their choice!</center>
+[2015-10-10T19:55:30.369Z] (staff) Naten was promoted to Administrator by Void Naten.
+[2015-10-10T19:55:36.744Z] (staff) (Void Naten was demoted to regular user by Void Naten.)
+[2015-10-10T21:20:50.181Z] (staff) (Erica*07 changed the roomintro.)
+[2015-10-10T21:29:34.144Z] (staff) panpawn was promoted to Driver by Erica*07.
+[2015-10-10T21:46:30.021Z] (staff) Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ globally declared <font size="3">SWL is hosting a 80-45 OU or Monotype Bucks Tour!! Click the Button to join the room~<div class="broadcast-blue"><b><button name="joinRoom" value="swl"><font color="Red">SWL Room </font></button><center> Join now to participate~
+[2015-10-10T21:51:54.409Z] (staff) Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ globally declared <font size="2">SWL is hosting a 80-45 OU Bucks Tour!! Click the Button to join the room~<div class="broadcast-blue"><b><button name="joinRoom" value="swl"><font color="Red">SWL Room </font></button><center> Join now to participate~
+[2015-10-10T22:11:24.080Z] (staff) Guest 18601 was locked from talking by Steelchar.
+[2015-10-10T22:11:24.083Z] (staff) (Guest 18601's locked alts: Eevee blitzel)
+[2015-10-10T22:21:48.180Z] (staff) (Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ changed the roomintro.)
+[2015-10-10T23:05:28.615Z] (staff) (Lt. Tesla has given VIP status to Saur Hingo)
+[2015-10-10T23:13:47.713Z] (staff) Lt. Tesla globally declared <font size="2">SWL is hosting a 35-15 UU Bucks Tour!! Click the Button to join the room~<div class="broadcast-blue"><b><button name="joinRoom" value="swl"><font color="Red">SWL Room </font></button><center> Join now to participate~
+[2015-10-11T00:10:39.441Z] (staff) Prise was locked from talking by Allegiant Chime. (being absolutly hideously rude to me in many places after a lock and mute.)
+[2015-10-11T00:21:26.158Z] (staff) Prise was banned by sparkychild. (abusing global staff with roombans) (73.219.61.49)
+[2015-10-11T00:21:26.162Z] (staff) (Prise's banned alts: luded)
+[2015-10-11T00:21:41.349Z] (staff) (sparkychild notes: Allegiant Gryph was banned from room persistentleague by Prise. Allegiant Chime was banned from room persistentleague by Prise.)
+[2015-10-11T00:30:25.844Z] (staff) (sparkychild notes: http://prntscr.com/8q0rns iRoams, Prise)
+[2015-10-11T02:10:50.291Z] (staff) (sparkychild changed the roomintro.)
+[2015-10-11T04:34:42.590Z] (staff) Phantom Idate was kicked from the room by fender.
+[2015-10-11T05:45:21.221Z] (staff) (Lt. Tesla has given VIP status to Cotonosi Miaas)
+[2015-10-11T06:12:00.077Z] (staff) Jack (~'v')~ was promoted to Moderator by Dream Eater Gengar.
+[2015-10-11T06:13:08.489Z] (staff) (irraquated was demoted to regular user by Erica*07.)
+[2015-10-11T06:14:46.988Z] (staff) (Jack (~'v')~ was demoted to Voice by Dream Eater Gengar.)
+[2015-10-11T06:14:59.063Z] (staff) Jack (~'v')~ was promoted to Moderator by Dream Eater Gengar.
+[2015-10-11T06:15:04.776Z] (staff) (Jack (~'v')~ was demoted to regular user by Dream Eater Gengar.)
+[2015-10-11T06:15:10.064Z] (staff) Jack (~'v')~ was promoted to Moderator by Dream Eater Gengar.
+[2015-10-11T09:52:13.330Z] (staff) (Master Float has shadow banned: champvicky)
+[2015-10-11T09:54:26.146Z] (staff) (Master Float notes: -----------------------------------------------)
+[2015-10-11T09:54:26.832Z] (staff) (Master Float notes: SBAN Reason: IP: 90.192.41.15 spammed and evaded punishments)
+[2015-10-11T09:54:27.446Z] (staff) (Master Float notes: Champ Vicky was on that account so I sbanned him/her.)
+[2015-10-11T09:54:28.340Z] (staff) (Master Float notes: -----------------------------------------------)
+[2015-10-11T10:04:30.504Z] (staff) (Ruby D notes: champ vicky is Araxadabe too.)
+[2015-10-11T12:39:52.293Z] (staff) kanker neger was locked from talking by Alpha Ninja. (pms harrassment/spam proof : http://prntscr.com/8q2hpc http://hastebin.com/vokaholiko.vbs http://prntscr.com/8q2huc)
+[2015-10-11T16:06:27.245Z] (staff) (Neo Soul has removed VIP status from imp fallen blood)
+[2015-10-11T17:37:47.194Z] (staff) NJNP was promoted to Voice by Master Float.

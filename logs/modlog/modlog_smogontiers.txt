@@ -503,3 +503,5 @@
 [2015-09-27T21:31:44.788Z] (smogontiers) (Charitwo created a tournament in ou format.)
 [2015-10-07T13:43:55.924Z] (smogontiers) Sam Crowe - ⒶⓌⒶⓎ was promoted to Room Moderator by Raіn Kuro.
 [2015-10-07T13:44:05.826Z] (smogontiers) Metallica was promoted to Room Voice by Raіn Kuro.
+[2015-10-11T06:12:44.498Z] (smogontiers) warlic was promoted to Room Driver by Raіn Kuro.
+[2015-10-11T06:13:22.693Z] (smogontiers) (warlic created a tournament in ou format.)

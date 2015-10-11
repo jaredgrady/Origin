@@ -21,3 +21,4 @@
 [2015-09-27T19:54:36.908Z] (teslaslab) Lt. Tesla declared Are you an electric trainer or interested in learning the type? Then Check out the new room Sunyshore city <button name="send" value="/join suny">Join</button>
 [2015-10-09T02:37:42.737Z] (teslaslab) Lt. Tesla declared Don’t forget to ike the EOS FB page <a href= https://www.facebook.com/EOS-Server-512769755555838/timeline/><button>Here </button></a> 
 [2015-10-09T02:38:25.864Z] (teslaslab) Lt. Tesla declared Don’t forget to __Like__ the EOS FB page <a href= https://www.facebook.com/EOS-Server-512769755555838/timeline/><button>Here </button></a> 
+[2015-10-10T02:36:24.388Z] (teslaslab) Lt. Tesla declared For the next hour Liking the EOS FB page will get you 1 buck! <a href= https://www.facebook.com/EOS-Server-512769755555838/timeline/><button> Here </button></a> 

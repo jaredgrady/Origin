@@ -56,3 +56,6 @@
 [2015-10-05T22:46:01.927Z] (glumaresgameroom) Void Pixelf declared hi
 [2015-10-05T22:46:07.731Z] (glumaresgameroom) Void Pixelf declared hi
 [2015-10-05T22:46:12.622Z] (glumaresgameroom) Void Pixelf declared hi
+[2015-10-10T00:00:17.269Z] (glumaresgameroom) hooters was promoted to Room Voice by Void Pixelf.
+[2015-10-10T16:08:51.103Z] (glumaresgameroom) hooters was kicked from the room by Void Pixelf.
+[2015-10-10T23:56:19.049Z] (glumaresgameroom) (hooters was demoted to Room regular user by Void Pixelf.)

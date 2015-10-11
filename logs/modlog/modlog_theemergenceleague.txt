@@ -1610,3 +1610,4 @@
 [2015-10-06T20:41:28.290Z] (theemergenceleague) Anob was promoted to Room Voice by EmgCmpTT.
 [2015-10-06T20:41:44.222Z] (theemergenceleague) cloyy was promoted to Room Voice by EmgCmpTT.
 [2015-10-06T20:50:44.548Z] (theemergenceleague) GTX Kirito - ⓢⓛⓔⓔⓟ was promoted to Room Voice by EmgCmpTT.
+[2015-10-10T21:06:51.438Z] (theemergenceleague) Volco (Infernape) was muted by EmgCmpTT for 7 minutes.

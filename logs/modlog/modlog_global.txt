@@ -528,3 +528,62 @@
 [2015-10-08T01:32:27.263Z] (japanslair) BAN: [mlgshrekisdreck] by Nineage
 [2015-10-08T06:07:13.867Z] (thelotusleague) LOCK: [pikpokpok] by i'm sora: harassment
 [2015-10-09T05:05:00.345Z] (shadowbanroom) BAN: [hooters] by Neo Soul
+[2015-10-09T05:12:52.691Z] (staff) UNBAN: [hooters] by Neo Soul
+[2015-10-09T05:34:16.036Z] (japanslair) UNLOCK: [hooters] by Neo Soul
+[2015-10-09T14:51:04.199Z] (staff) UNLOCK: [champvicky] by fender
+[2015-10-09T16:35:51.523Z] (lobby) BAN: [lonerguy] by Erica*07
+[2015-10-09T17:39:04.554Z] (staff) LOCK: [raidlotus] by Master Float: spam and evading.
+[2015-10-09T21:40:56.042Z] (theharem) LOCK: [lights] by i'm sora
+[2015-10-09T21:57:45.300Z] (lobby) LOCK: [macrarazy] by Piers Nivans
+[2015-10-09T21:57:59.171Z] (lobby) LOCK: [cloyy] by Piers Nivans
+[2015-10-09T21:58:51.614Z] (staff) UNLOCK: [cloyy] by Piers Nivans
+[2015-10-09T21:59:01.897Z] (staff) UNLOCK: [macrarazy] by Piers Nivans
+[2015-10-09T23:50:17.490Z] (illusionforest) LOCK: [myststormk1ller] ac:[stormk1ller6000] by Sam Crowe
+[2015-10-09T23:50:18.084Z] (illusionforest) LOCK: [starizardz] by Sam Crowe
+[2015-10-09T23:50:20.485Z] (illusionforest) LOCK: [impulseseven] by Sam Crowe
+[2015-10-09T23:50:21.086Z] (illusionforest) LOCK: [mystmeliodas] by Sam Crowe
+[2015-10-09T23:50:26.487Z] (illusionforest) LOCK: [allianceasruna] by Sam Crowe
+[2015-10-09T23:50:28.887Z] (illusionforest) LOCK: [gtxrainmanaphy] by Sam Crowe
+[2015-10-09T23:50:30.645Z] (illusionforest) LOCK: [allianceavenged] by Sam Crowe
+[2015-10-09T23:50:31.881Z] (illusionforest) LOCK: [avirra] by Sam Crowe
+[2015-10-09T23:50:34.850Z] (illusionforest) LOCK: [bushtush] by Sam Crowe
+[2015-10-09T23:50:47.575Z] (illusionforest) LOCK: [thundernyan] by Sam Crowe
+[2015-10-09T23:50:48.774Z] (illusionforest) LOCK: [apexprofsmogon] by Sam Crowe
+[2015-10-09T23:50:49.375Z] (illusionforest) LOCK: [knightstarfox] by Sam Crowe
+[2015-10-09T23:50:49.975Z] (illusionforest) LOCK: [voidsimonscience] by Sam Crowe
+[2015-10-09T23:50:54.547Z] (illusionforest) LOCK: [apext3kn0] by Sam Crowe
+[2015-10-09T23:50:56.995Z] (illusionforest) LOCK: [allianceglacia] by Sam Crowe
+[2015-10-09T23:50:58.766Z] (illusionforest) LOCK: [frozenaqua123] by Sam Crowe
+[2015-10-09T23:51:00.152Z] (illusionforest) LOCK: [allianceonom] by Sam Crowe
+[2015-10-09T23:51:00.430Z] (staff) UNLOCK: [thundernyan] by SteelChar
+[2015-10-09T23:51:01.795Z] (illusionforest) LOCK: [gtxtsuna] by Sam Crowe
+[2015-10-09T23:51:02.359Z] (illusionforest) LOCK: [hmeien] ac:[eienseiryuu] by Sam Crowe
+[2015-10-09T23:51:04.604Z] (staff) UNLOCK: [apexprofsmogon] by SteelChar
+[2015-10-09T23:51:06.897Z] (staff) UNLOCK: [voidsimonscience] by Allegiant Gryph
+[2015-10-09T23:51:10.059Z] (staff) UNLOCK: [knightstarfox] by SteelChar
+[2015-10-09T23:51:29.712Z] (theharem) UNLOCK: [avirra] by i'm sora
+[2015-10-09T23:52:39.011Z] (lobby) UNLOCK: [starizardz] by SteelChar
+[2015-10-09T23:52:42.340Z] (lobby) UNLOCK: [allianceasruna] by SteelChar
+[2015-10-09T23:52:43.680Z] (staff) UNLOCK: [gtxtsuna] by Allegiant Gryph
+[2015-10-09T23:52:43.893Z] (lobby) UNLOCK: [myststormk1ller] by i'm sora
+[2015-10-09T23:52:45.419Z] (lobby) UNLOCK: [allianceavenged] by SteelChar
+[2015-10-09T23:52:48.722Z] (lobby) UNLOCK: [allianceglacia] by SteelChar
+[2015-10-09T23:52:49.318Z] (lobby) UNLOCK: [hmeien] by i'm sora
+[2015-10-09T23:52:51.542Z] (lobby) UNLOCK: [bushtush] by SteelChar
+[2015-10-09T23:52:52.325Z] (lobby) UNLOCK: [mystmeliodas] by i'm sora
+[2015-10-09T23:52:57.009Z] (lobby) UNLOCK: [gtxrainmanaphy] by SteelChar
+[2015-10-09T23:52:57.705Z] (lobby) UNLOCK: [impulseseven] by i'm sora
+[2015-10-09T23:53:01.620Z] (lobby) UNLOCK: [allianceonom] by i'm sora
+[2015-10-09T23:53:09.501Z] (lobby) UNLOCK: [apext3kn0] by i'm sora
+[2015-10-10T00:03:21.924Z] (lobby) UNLOCK: [frozenaqua123] by sparkychild
+[2015-10-10T00:03:30.101Z] (lobby) UNLOCK: [wolfumbreon] by sparkychild
+[2015-10-10T08:01:05.150Z] (battle-ou-120205) LOCK: [xioushock] by Allegiant Gryph: spamming battles, trolling
+[2015-10-10T08:12:26.608Z] (lobby) LOCK: [bananabreadman] by Allegiant Gryph: evading
+[2015-10-10T18:00:07.777Z] (shadowbanroom) LOCK: [nightoflight] by ruby D: claimed to not advertise; kept on did so after the warning
+[2015-10-10T18:13:31.006Z] (staff) LOCK: [nightoflight] by SteelChar: evading lock
+[2015-10-10T20:55:06.234Z] (lobby) LOCK: [skyjonesfire] ac:[skyjones] by Erica*07
+[2015-10-10T22:11:24.084Z] (staff) LOCK: [championwitewolf] by Steelchar
+[2015-10-10T22:58:22.289Z] (casino) LOCK: [enemyspotted] by Steelchar
+[2015-10-11T00:10:39.524Z] (staff) LOCK: [prise] by Allegiant Chime: being absolutly hideously rude to me in many places after a lock and mute.
+[2015-10-11T00:21:26.366Z] (staff) BAN: [prise] by sparkychild: abusing global staff with roombans
+[2015-10-11T12:39:52.295Z] (staff) LOCK: [kankerneger] by Alpha Ninja: pms harrassment/spam proof : http://prntscr.com/8q2hpc http://hastebin.com/vokaholiko.vbs http://prntscr.com/8q2huc

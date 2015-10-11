@@ -486,3 +486,18 @@
 [2015-10-08T17:17:51.503Z] (theaccord) hooters was kicked from the room by Guildmaster Wiggly.
 [2015-10-08T23:45:36.773Z] (theaccord) Myst Shay was kicked from the room by Wеvrm (Latios).
 [2015-10-08T23:48:08.671Z] (theaccord) Myst Shay was kicked from the room by Pmtk Red.
+[2015-10-09T14:47:38.350Z] (theaccord) hooters was kicked from the room by Guildmaster Wiggly.
+[2015-10-09T15:09:30.674Z] (theaccord) hooters was kicked from the room by Guildmaster Wiggly.
+[2015-10-10T18:36:55.906Z] (theaccord) Union Has Berries was muted by Pmtk Red for 7 minutes.
+[2015-10-10T18:36:55.906Z] (theaccord) (Union Has Berries's ac account: uniontei)
+[2015-10-10T18:37:09.490Z] (theaccord) Union Trash was muted by Superdois for 7 minutes.
+[2015-10-10T18:37:09.490Z] (theaccord) (Union Trash's ac account: junkoenoshima3)
+[2015-10-10T18:37:17.138Z] (theaccord) Union Trash was unmuted by Superdois.
+[2015-10-10T18:38:17.666Z] (theaccord) Union Has Berries was unmuted by Pmtk Red.
+[2015-10-10T18:40:46.401Z] (theaccord) Union Has Berries was kicked from the room by Pmtk Red.
+[2015-10-10T18:42:03.437Z] (theaccord) Union Has Berries was muted by Pmtk Red for 1 hour.
+[2015-10-10T18:42:03.437Z] (theaccord) (Union Has Berries's ac account: uniontei)
+[2015-10-10T18:43:52.701Z] (theaccord) Union Has Berries was unmuted by Pmtk Red.
+[2015-10-10T19:49:59.335Z] (theaccord) (iMasterball would be muted by Pmtk Red but was already offline.)
+[2015-10-10T21:08:13.112Z] (theaccord) hooters was kicked from the room by Pmtk Red.
+[2015-10-11T00:01:31.218Z] (theaccord) iMasterball was promoted to Room Voice by Wеvrm (Latios).

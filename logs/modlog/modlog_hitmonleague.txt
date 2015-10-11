@@ -410,3 +410,117 @@
 [2015-10-09T00:17:51.857Z] (hitmonleague) (Hm Sableye forcibly ended a tournament.)
 [2015-10-09T01:21:40.024Z] (hitmonleague) HM Lelouch was warned by Hm Volco. (stop i dont find it funny i didnt have the time to finish that match nor do i now)
 [2015-10-09T01:29:15.418Z] (hitmonleague) Megalinket was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T09:48:50.721Z] (hitmonleague) Hm Shade was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T12:43:29.201Z] (hitmonleague) (Hm Zantier created a tournament in monotype format.)
+[2015-10-09T13:40:00.208Z] (hitmonleague) hm unownman was kicked from the room by hm red.
+[2015-10-09T13:43:37.181Z] (hitmonleague) (Hm Zantier created a tournament in 1v1 format.)
+[2015-10-09T13:49:16.833Z] (hitmonleague) (hm unownman created a tournament in monotype format.)
+[2015-10-09T14:02:44.303Z] (hitmonleague) (Hm zugu royale was disqualified from the tournament by hm red)
+[2015-10-09T16:17:45.365Z] (hitmonleague) (Hm Zantier created a tournament in ubers format.)
+[2015-10-09T18:08:19.781Z] (hitmonleague) Hm Eien was promoted to Room Voice by Hm Kaze.
+[2015-10-09T18:09:01.937Z] (hitmonleague) hooters was banned from room hitmonleague by Hm Kaze.
+[2015-10-09T19:29:17.119Z] (hitmonleague) Gentleman Tech was muted by hm unownman for 7 minutes.
+[2015-10-09T19:29:28.785Z] (hitmonleague) Gentleman Tech was unmuted by Hm zugu royale.
+[2015-10-09T20:35:47.274Z] (hitmonleague) grateful was unbanned from room hitmonleague by Hm Volco.
+[2015-10-09T21:12:41.421Z] (hitmonleague) HM Lelouch was warned by Hm Volco. (thats all you've been saying every time you type stop)
+[2015-10-09T21:14:37.698Z] (hitmonleague) LotusChamp Torpid was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T21:24:19.506Z] (hitmonleague) Waszap - ⓑⓡⓑ was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T21:33:13.439Z] (hitmonleague) Cloyy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-09T21:34:29.686Z] (hitmonleague) Cloyy was unmuted by Hm AnobH.
+[2015-10-09T22:05:58.465Z] (hitmonleague) Breeze Linket was promoted to Room Voice by Hm Volco.
+[2015-10-09T22:23:46.863Z] (hitmonleague) Hm Volco declared gg breeze 2-0
+[2015-10-09T22:53:32.699Z] (hitmonleague) Breeze Linket was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T22:55:37.958Z] (hitmonleague) CLOYY was muted by hm unownman for 7 minutes.
+[2015-10-09T22:56:12.960Z] (hitmonleague) CLOYY was unmuted by hm unownman.
+[2015-10-09T23:20:05.241Z] (hitmonleague) HM Shade was muted by hm unownman for 7 minutes.
+[2015-10-09T23:20:32.801Z] (hitmonleague) HM Shade was unmuted by Hm Volco - ⓓⓔⓐⓓ.
+[2015-10-10T02:34:03.497Z] (hitmonleague) HM MaxDerp was promoted to Room Moderator by Hm Sableye.
+[2015-10-10T04:07:56.837Z] (hitmonleague) Cloyy was kicked from the room by Hm Volco.
+[2015-10-10T04:17:20.609Z] (hitmonleague) Hm Kaze was muted by Hm Volco for 1 hour. (take it back)
+[2015-10-10T04:17:28.403Z] (hitmonleague) Hm Kaze was unmuted by Hm Volco.
+[2015-10-10T09:06:39.498Z] (hitmonleague) GTX Kirito - ⓛⓤⓝⓒⓗ was kicked from the room by Hm Red.
+[2015-10-10T09:15:38.907Z] (hitmonleague) GTX Kirito - ⓛⓤⓝⓒⓗ was banned from room hitmonleague by Hm Red.
+[2015-10-10T11:46:32.783Z] (hitmonleague) gtxkirito was unbanned from room hitmonleague by HM Vodoom.
+[2015-10-10T11:48:03.941Z] (hitmonleague) narus bank was muted by hm unownman for 7 minutes.
+[2015-10-10T11:48:03.942Z] (hitmonleague) (narus bank's ac account: gtxkirito)
+[2015-10-10T11:48:24.119Z] (hitmonleague) narus bank was unmuted by hm unownman.
+[2015-10-10T12:01:36.637Z] (hitmonleague) gtx kirito was muted by hm unownman for 7 minutes.
+[2015-10-10T12:01:50.226Z] (hitmonleague) gtx kirito was unmuted by hm unownman.
+[2015-10-10T15:33:44.314Z] (hitmonleague) Yatagarasu Misaki was warned by Hm Red. (advertisement)
+[2015-10-10T15:34:15.126Z] (hitmonleague) Yatagarasu Misaki was muted by hm unownman for 7 minutes.
+[2015-10-10T15:34:15.126Z] (hitmonleague) (Yatagarasu Misaki's ac account: gtxkirito)
+[2015-10-10T15:34:49.855Z] (hitmonleague) Yatagarasu Misaki was unmuted by hm unownman.
+[2015-10-10T15:57:44.662Z] (hitmonleague) (hm unownman created a tournament in monotype format.)
+[2015-10-10T17:27:36.358Z] (hitmonleague) HM Shade was promoted to Room Driver by Hm Sableye.
+[2015-10-10T21:16:12.703Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-10-10T21:23:40.858Z] (hitmonleague) (Cloyy was disqualified from the tournament by Hm UnownMan)
+[2015-10-10T22:20:30.225Z] (hitmonleague) Hm Sableye declared its bouta get real
+[2015-10-10T22:20:44.332Z] (hitmonleague) Hm Sableye declared then volco vs thetas psychic
+[2015-10-10T22:39:16.452Z] (hitmonleague) (Hm Zuuzifer created a tournament in ce format.)
+[2015-10-10T22:40:22.530Z] (hitmonleague) (Hm Reapz forcibly ended a tournament.)
+[2015-10-10T22:40:38.419Z] (hitmonleague) Hm Sableye declared theta volco beat you?
+[2015-10-10T22:43:20.076Z] (hitmonleague) Hm Quizzyy was promoted to Room Voice by Hm Reapz.
+[2015-10-10T22:44:24.556Z] (hitmonleague) (Hm Reapz created a tournament in monotype format.)
+[2015-10-10T22:47:27.934Z] (hitmonleague) Hm Quizz was promoted to Room Voice by Hm Volco.
+[2015-10-10T22:51:47.163Z] (hitmonleague) (Hm Sableye forcibly ended a tournament.)
+[2015-10-10T22:52:51.364Z] (hitmonleague) Hm Sableye declared who ever wants to play say me
+[2015-10-10T23:04:35.947Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-10-10T23:05:07.306Z] (hitmonleague) (Hm Sableye forcibly ended a tournament.)
+[2015-10-10T23:05:23.505Z] (hitmonleague) (Hm Sableye created a tournament in monotype format.)
+[2015-10-10T23:10:37.043Z] (hitmonleague) (Hm Quizz was disqualified from the tournament by Hm Sableye)
+[2015-10-10T23:20:25.088Z] (hitmonleague) (Hm Lelouch was disqualified from the tournament by Hm Sableye)
+[2015-10-10T23:42:10.910Z] (hitmonleague) (Hm Zuuzifer was demoted to Room Voice by Hm Zuuzifer.)
+[2015-10-10T23:53:11.590Z] (hitmonleague) Hm Quizz was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T00:21:38.574Z] (hitmonleague) Hm Eien was promoted to Room Moderator by Hm Sableye.
+[2015-10-11T01:01:49.172Z] (hitmonleague) HM Devin was promoted to Room Voice by Hm Sableye.
+[2015-10-11T01:03:08.473Z] (hitmonleague) SWL SaNeski was promoted to Room Voice by Hm Sableye.
+[2015-10-11T01:04:20.317Z] (hitmonleague) Myst Boo was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T01:04:40.440Z] (hitmonleague) Myst Boo was muted by HM MaxDerp for 7 minutes.
+[2015-10-11T01:05:49.521Z] (hitmonleague) Myst Boo was unmuted by HM MaxDerp.
+[2015-10-11T01:09:21.164Z] (hitmonleague) Swleric was muted by HM MaxDerp for 7 minutes. (get meme'd mate)
+[2015-10-11T01:09:28.736Z] (hitmonleague) Swleric was unmuted by HM MaxDerp.
+[2015-10-11T01:10:03.638Z] (hitmonleague) Swleric was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T01:20:28.132Z] (hitmonleague) Swleric was muted by hm unownman for 7 minutes.
+[2015-10-11T01:21:34.599Z] (hitmonleague) Swleric was unmuted by Hm AnobH.
+[2015-10-11T01:30:46.655Z] (hitmonleague) Hm Sableye declared reapz vs eric
+[2015-10-11T01:30:54.453Z] (hitmonleague) Hm Sableye declared 2-1 hm
+[2015-10-11T01:39:37.777Z] (hitmonleague) Cloyy was muted by hm unownman for 7 minutes. (gotta love abuse)
+[2015-10-11T01:39:47.753Z] (hitmonleague) Cloyy was unmuted by hm unownman.
+[2015-10-11T01:53:00.859Z] (hitmonleague) Hm Sableye set modchat to #
+[2015-10-11T01:53:26.056Z] (hitmonleague) Hm Sableye set modchat to false
+[2015-10-11T01:53:51.195Z] (hitmonleague) Hm Sableye set modchat to #
+[2015-10-11T01:54:18.093Z] (hitmonleague) Hm Sableye set modchat to false
+[2015-10-11T01:54:19.888Z] (hitmonleague) (Hm Volco notes: sableye disable the modchat i want to declare something)
+[2015-10-11T01:54:40.715Z] (hitmonleague) Hm Volco declared Who ever keeps arguing gets muted end of discussion
+[2015-10-11T02:25:09.211Z] (hitmonleague) (Hm Sableye changed the roomdesc to: "ashbloodthief: Dylightful, wrong place you need to go to femalehq.".)
+[2015-10-11T02:38:54.960Z] (hitmonleague) edjim was warned by hm unownman. (watch yo language hue)
+[2015-10-11T02:39:55.296Z] (hitmonleague) edjim was muted by hm unownman for 7 minutes.
+[2015-10-11T02:40:25.335Z] (hitmonleague) edjim was kicked from the room by hm unownman.
+[2015-10-11T02:41:26.347Z] (hitmonleague) edjim was unmuted by Hm Sableye.
+[2015-10-11T02:42:22.123Z] (hitmonleague) GTSilver was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T02:51:31.450Z] (hitmonleague) edjim was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T02:51:55.411Z] (hitmonleague) edjim was warned by hm unownman. (caps)
+[2015-10-11T02:55:19.789Z] (hitmonleague) Focus Blast Misses was kicked from the room by hm unownman.
+[2015-10-11T02:56:48.033Z] (hitmonleague) edjim was banned from room hitmonleague by Hm Sableye.
+[2015-10-11T02:59:04.983Z] (hitmonleague) Focus Blast Misses was kicked from the room by hm unownman.
+[2015-10-11T03:02:26.787Z] (hitmonleague) Hm jjoi1 was promoted to Room Voice by Hm Sableye.
+[2015-10-11T03:27:41.458Z] (hitmonleague) (Hm Red created a tournament in monotype format.)
+[2015-10-11T04:46:55.244Z] (hitmonleague) Guest 17467 was muted by Hm Volco for 1 hour.
+[2015-10-11T04:46:55.244Z] (hitmonleague) (Guest 17467's ac account: hmkaze)
+[2015-10-11T04:47:19.925Z] (hitmonleague) Hm Kaze was unmuted by Hm Sableye.
+[2015-10-11T07:04:52.087Z] (hitmonleague) (Hm Kaze created a tournament in ce format.)
+[2015-10-11T07:04:57.284Z] (hitmonleague) (link fabio forcibly ended a tournament.)
+[2015-10-11T09:15:00.736Z] (hitmonleague) (dylightful was demoted to Room regular user by HmCmpBeasto.)
+[2015-10-11T12:30:46.640Z] (hitmonleague) erica is a bitch was muted by HM Vodoom for 7 minutes.
+[2015-10-11T12:37:17.987Z] (hitmonleague) kanker neger was banned from room hitmonleague by HM Vodoom.
+[2015-10-11T13:55:19.667Z] (hitmonleague) (hm unownman - ①⑦③⑧ created a tournament in challengecup1v1 format.)
+[2015-10-11T13:57:14.055Z] (hitmonleague) (hm unownman - ①⑦③⑧ was disqualified from the tournament by Hm Red - Ⓑⓐⓑⓔ)
+[2015-10-11T13:57:30.768Z] (hitmonleague) (Hm Red - Ⓑⓐⓑⓔ was disqualified from the tournament by hm unownman - ①⑦③⑧)
+[2015-10-11T13:59:24.033Z] (hitmonleague) (Hm Red - Ⓑⓐⓑⓔ created a tournament in monotype format.)
+[2015-10-11T14:10:05.628Z] (hitmonleague) Yatagarasu Misaki was muted by Hm zugu royale for 7 minutes. (u mean bich)
+[2015-10-11T14:14:15.226Z] (hitmonleague) Yatagarasu Misaki was unmuted by Hm zugu royale.
+[2015-10-11T14:14:52.813Z] (hitmonleague) Yatagarasu Misaki was muted by hm unownman - ①⑦③⑧ for 7 minutes. (netflix and chill?)
+[2015-10-11T14:15:13.158Z] (hitmonleague) Yatagarasu Misaki was unmuted by hm unownman - ①⑦③⑧.
+[2015-10-11T14:15:45.442Z] (hitmonleague) hm unownman - ①⑦③⑧ was muted by Hm Red - Ⓑⓐⓑⓔ for 7 minutes. (dont abuse him and do that yourself)
+[2015-10-11T14:16:02.335Z] (hitmonleague) hm unownman - ①⑦③⑧ was unmuted by Hm Red - Ⓑⓐⓑⓔ.
+[2015-10-11T18:06:02.485Z] (hitmonleague) Hm Kirito was promoted to Room Voice by Hm zugu royale.

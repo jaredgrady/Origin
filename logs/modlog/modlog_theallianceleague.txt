@@ -1920,3 +1920,166 @@
 [2015-10-09T00:55:33.954Z] (theallianceleague) Alliance Crashy was warned by Alliance - Soma.
 [2015-10-09T00:57:19.243Z] (theallianceleague) Crashy u lord was muted by Alliance - Soma for 7 minutes.
 [2015-10-09T00:57:19.244Z] (theallianceleague) (Crashy u lord's ac account: vinsuspense)
+[2015-10-09T07:32:34.781Z] (theallianceleague) Japan - ⓑⓡⓑ was banned from room theallianceleague by Alliance - Charen.
+[2015-10-09T07:52:44.344Z] (theallianceleague) ashbloodthief was banned from room theallianceleague by Alliance - Charen.
+[2015-10-09T12:59:12.831Z] (theallianceleague) Alliance - Sakis was muted by Alliance - Charen for 1 hour. (for being a careless brother)
+[2015-10-09T12:59:44.299Z] (theallianceleague) Alliance - Sakis was unmuted by Alliance - Charen.
+[2015-10-09T13:20:46.010Z] (theallianceleague) Sereana was promoted to Room Voice by Alliance - Charen.
+[2015-10-09T13:23:39.801Z] (theallianceleague) Soprano Meiko was promoted to Room Voice by Alliance - Charen.
+[2015-10-09T13:24:48.452Z] (theallianceleague) Evil Kpike was promoted to Room Voice by Alliance - Charen.
+[2015-10-09T13:25:02.501Z] (theallianceleague) (Evil Kpike was demoted to Room regular user by Alliance - Charen.)
+[2015-10-09T17:18:56.587Z] (theallianceleague) (Alliance-Pezmango created a tournament in monotype format.)
+[2015-10-09T17:19:42.083Z] (theallianceleague) (The tournament was set to disallow scouting by Alliance Hypernova)
+[2015-10-09T17:21:18.239Z] (theallianceleague) (The tournament was set to allow scouting by Alliance - Dreams)
+[2015-10-09T17:28:10.298Z] (theallianceleague) (Breeze Shark was disqualified from the tournament by Alliance Hypernova)
+[2015-10-09T19:05:38.405Z] (theallianceleague) Alliance~Asruna was promoted to Room Voice by Alliance)Fila.
+[2015-10-09T22:55:20.657Z] (theallianceleague) ready2go202 was warned by Safety Shark. (Automated response: caps)
+[2015-10-09T23:02:32.469Z] (theallianceleague) I am Ghast was kicked from the room by alliance Ampy.
+[2015-10-09T23:10:05.519Z] (theallianceleague) alliance Ampy was warned by Alliance TheThorn.
+[2015-10-09T23:12:04.443Z] (theallianceleague) Supreme Ghast was warned by Alliance - Guy. (PLAY WITH ME GHAST OR DIE)
+[2015-10-09T23:22:00.478Z] (theallianceleague) (Alliance - Guy was demoted to Room Voice by Alliance TheThorn.)
+[2015-10-09T23:26:23.356Z] (theallianceleague) (Alliance - Orange created a tournament in hackmonscup format.)
+[2015-10-09T23:34:07.489Z] (theallianceleague) Alliance Ampy was muted by Alliance TheThorn for 1 hour.
+[2015-10-09T23:57:39.377Z] (theallianceleague) Alliance Ampy was unmuted by Alliance TheThorn.
+[2015-10-10T01:12:30.848Z] (theallianceleague) iRoams was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T01:12:48.027Z] (theallianceleague) iRoams was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T01:16:09.957Z] (theallianceleague) iRoams was unmuted by Query.
+[2015-10-10T01:34:58.790Z] (theallianceleague) Alliance - Contort declared Contort (Fighting), Lee (Normal), Ampy (Electric)
+[2015-10-10T01:37:09.863Z] (theallianceleague) Alliance - Contort declared Contort vs Jahkem
+[2015-10-10T01:41:58.445Z] (theallianceleague) (Alliance - Contort created a tournament in monotype format.)
+[2015-10-10T01:49:04.292Z] (theallianceleague) Whirl The Pede was promoted to Room Voice by Query.
+[2015-10-10T01:49:21.367Z] (theallianceleague) Alliance - Contort declared http://eos.psim.us/battle-monotype-119901
+[2015-10-10T01:53:20.972Z] (theallianceleague) (Alliance - Contort was disqualified from the tournament by Alliаnce CаtsMеow)
+[2015-10-10T01:54:09.846Z] (theallianceleague) Alliance - Contort declared 6/6, memes 2 stronk
+[2015-10-10T01:57:09.697Z] (theallianceleague) Alliance - Contort declared Sakis vs Jahkem
+[2015-10-10T01:57:51.755Z] (theallianceleague) Alliance - Contort declared Sakis vs Jahkem
+[2015-10-10T02:19:08.192Z] (theallianceleague) Alliance - Jahkem was promoted to Room Voice by Alliance - Lee.
+[2015-10-10T02:43:56.785Z] (theallianceleague) wyngate' was promoted to Room Voice by Dream Eater Gengar.
+[2015-10-10T02:53:13.981Z] (theallianceleague) Alliance - Axis was promoted to Room Voice by Alliance - Lee.
+[2015-10-10T02:53:41.500Z] (theallianceleague) wyngate' was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T03:00:15.362Z] (theallianceleague) wyngate' was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T03:30:18.630Z] (theallianceleague) wyngate' was kicked from the room by Alliance Ampy.
+[2015-10-10T03:31:49.787Z] (theallianceleague) (wyngate' was demoted to Room regular user by Allіance - Vеnus.)
+[2015-10-10T03:59:18.825Z] (theallianceleague) Alliance - Korra was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T05:20:07.467Z] (theallianceleague) Sereana was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T05:20:41.711Z] (theallianceleague) Sereana was unmuted by Alliance-Pezmango.
+[2015-10-10T07:28:23.477Z] (theallianceleague) Elite Dance Studio was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T12:22:26.549Z] (theallianceleague) Elite Dance Studio was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T12:29:56.134Z] (theallianceleague) Elite Dance Studio was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T13:04:27.865Z] (theallianceleague) Elite Dance Studio was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T13:04:37.857Z] (theallianceleague) Elite Dance Studio was unmuted by Alliance Ampy.
+[2015-10-10T13:30:34.674Z] (theallianceleague) (Alliance Ampy created a tournament in monotype format.)
+[2015-10-10T13:49:15.223Z] (theallianceleague) (Alliance Ampy created a tournament in ou format.)
+[2015-10-10T14:37:31.772Z] (theallianceleague) Gratitude was warned by Safety Shark. (Automated response: stretching)
+[2015-10-10T14:40:25.996Z] (theallianceleague) Arlaxeon was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T14:40:25.997Z] (theallianceleague) (Arlaxeon's ac account: alliancearlax)
+[2015-10-10T14:40:37.517Z] (theallianceleague) Arlaxeon was unmuted by Alliance Ampy.
+[2015-10-10T15:15:31.404Z] (theallianceleague) Alliance - korra was promoted to Room Driver by Alliance TheThorn.
+[2015-10-10T15:19:19.357Z] (theallianceleague) Alliance Hypernova was promoted to Room Moderator by Alliance TheThorn.
+[2015-10-10T16:37:04.453Z] (theallianceleague) (Alliance Ampy created a tournament in monotype format.)
+[2015-10-10T16:40:37.428Z] (theallianceleague) (The tournament auto disqualify timeout was set to 2 by Alliance Ampy)
+[2015-10-10T16:50:12.932Z] (theallianceleague) Alliance Aegis - ⓐ was promoted to Room Moderator by Alliance TheThorn.
+[2015-10-10T16:53:35.844Z] (theallianceleague) Alliance - Guy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T17:01:56.445Z] (theallianceleague) Alliance - Guy was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T17:02:04.089Z] (theallianceleague) Alliance - Guy was unmuted by Alliance TheThorn.
+[2015-10-10T17:18:43.577Z] (theallianceleague) Saur Hingo was promoted to Room Voice by Alliance TheThorn.
+[2015-10-10T18:45:54.632Z] (theallianceleague) Alliance - korra was warned by Alliancе - Elite V. (please don't do that in excess)
+[2015-10-10T18:45:55.340Z] (theallianceleague) Alliance - korra was warned by Alliance Aegis. (feelsrs)
+[2015-10-10T18:53:50.103Z] (theallianceleague) Cr@ckheadhobo was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T18:54:33.933Z] (theallianceleague) Cr@ckheadhobo was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T18:55:05.668Z] (theallianceleague) Cr@ckheadhobo was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T18:55:29.208Z] (theallianceleague) Cr@ckheadhobo would be muted by Alliance)Fila but was already muted. (hour)
+[2015-10-10T19:05:04.939Z] (theallianceleague) Cr@ckheadhobo was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-10T19:05:17.028Z] (theallianceleague) Cr@ckheadhobo was kicked from the room by Alliancе - Elite V.
+[2015-10-10T19:33:47.865Z] (theallianceleague) Alliance - Guy was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T19:38:38.129Z] (theallianceleague) Chleg was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-10T19:38:45.189Z] (theallianceleague) Chleg was unmuted by Alliancе - Elite V.
+[2015-10-10T19:56:59.290Z] (theallianceleague) Mega Super Bro Guy was muted by Alliancе - Elite V for 7 minutes.
+[2015-10-10T19:56:59.292Z] (theallianceleague) (Mega Super Bro Guy's ac account: battletestguy)
+[2015-10-10T19:57:10.817Z] (theallianceleague) Mega Super Bro Guy was unmuted by Alliance Ampy.
+[2015-10-10T20:03:02.947Z] (theallianceleague) Alliance - Wynot was warned by Alliancе - Elite V.
+[2015-10-10T20:03:18.419Z] (theallianceleague) Alliance - Wynot was warned by Alliancе - Elite V. (Please do not use an allinace alt without being a member)
+[2015-10-10T20:06:00.548Z] (theallianceleague) Alliance - Guy was kicked from the room by Alliance)Fila.
+[2015-10-10T20:06:09.041Z] (theallianceleague) Alliance - Guy was kicked from the room by Alliance Ampy.
+[2015-10-10T20:17:10.687Z] (theallianceleague) Mega Super Bro Guy was kicked from the room by Alliance)Fila.
+[2015-10-10T20:28:56.906Z] (theallianceleague) Chleg was muted by Alliance Ampy for 7 minutes. (alt check)
+[2015-10-10T20:28:59.898Z] (theallianceleague) Chleg was unmuted by Alliance Ampy.
+[2015-10-10T20:30:58.332Z] (theallianceleague) (Alliance - Ralker was demoted to Room regular user by Alliance TheThorn.)
+[2015-10-10T21:02:17.353Z] (theallianceleague) (iRoams was demoted to Room regular user by Alliance - Lee.)
+[2015-10-10T21:02:20.634Z] (theallianceleague) Prise was promoted to Room Operator by Alliance - Lee.
+[2015-10-10T21:18:52.988Z] (theallianceleague) Alliance Axair was promoted to Room Voice by Alliance TheThorn.
+[2015-10-10T21:30:18.940Z] (theallianceleague) Alliance - Guy was promoted to Room Driver by Alliance TheThorn.
+[2015-10-10T21:31:41.797Z] (theallianceleague) (Alliаnce CаtsMеow created a tournament in monotype format.)
+[2015-10-10T21:32:43.911Z] (theallianceleague) (Alliance TheThorn forcibly ended a tournament.)
+[2015-10-10T21:32:44.721Z] (theallianceleague) (Alliance TheThorn created a tournament in monotype format.)
+[2015-10-10T21:33:42.685Z] (theallianceleague) Alliance TheThorn declared This is not Alliance Cup!
+[2015-10-10T21:35:33.614Z] (theallianceleague) (Alliance - Soma was demoted to Room Voice by Alliance TheThorn.)
+[2015-10-10T21:36:13.388Z] (theallianceleague) (The tournament auto disqualify timeout was set to 2 by Alliance Ampy)
+[2015-10-10T21:36:27.231Z] (theallianceleague) (The tournament was set to disallow scouting by Alliance✨Tіtanіa)
+[2015-10-10T21:36:30.196Z] (theallianceleague) (The tournament was set to disallow scouting by Alliance TheThorn)
+[2015-10-10T21:38:11.709Z] (theallianceleague) Alliance - Yordi was promoted to Room Voice by Alliance TheThorn.
+[2015-10-10T21:44:51.300Z] (theallianceleague) (The tournament was set to disallow scouting by Alliance Ampy)
+[2015-10-10T21:58:42.613Z] (theallianceleague) (The tournament was set to allow scouting by Alliance Ampy)
+[2015-10-10T22:30:54.645Z] (theallianceleague) Suspense's Return was promoted to Room Voice by Alliance~Destiny.
+[2015-10-10T22:31:17.845Z] (theallianceleague) (Suspense's Return was demoted to Room regular user by Alliance~Destiny.)
+[2015-10-10T22:31:57.831Z] (theallianceleague) Suspense's Return was promoted to Room Voice by Alliance~Destiny.
+[2015-10-10T22:32:59.686Z] (theallianceleague) Alliance - Soma was warned by Alliance - Dreams. (Ok, stop starting drama like you normally do. Your superior has told you to stop and you respect that instead of making things worse for yourself.)
+[2015-10-10T22:34:06.026Z] (theallianceleague) Alliance - Soma was muted by Alliance - Dreams for 7 minutes. (And I am here telling you to stop, which you didn't. Time out)
+[2015-10-10T22:34:35.434Z] (theallianceleague) (Alliаnce CаtsMеow created a tournament in monotype format.)
+[2015-10-10T22:36:06.469Z] (theallianceleague) Alliance - Soma was unmuted by Alliance~Destiny.
+[2015-10-10T22:37:04.658Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance - Dreams)
+[2015-10-10T22:37:17.371Z] (theallianceleague) (The tournament was set to allow scouting by Alliance Ampy)
+[2015-10-10T22:58:16.769Z] (theallianceleague) ENEMY SPOTTED was muted by Alliance Ampy for 1 hour.
+[2015-10-10T22:58:20.000Z] (theallianceleague) ENEMY SPOTTED was banned from room theallianceleague by Alliance~Destiny.
+[2015-10-10T22:58:20.007Z] (theallianceleague) (ENEMY SPOTTED's roombanned alts: Dark Time)
+[2015-10-10T23:24:59.103Z] (theallianceleague) (Alliance - Dreams forcibly ended a tournament.)
+[2015-10-10T23:43:08.466Z] (theallianceleague) (Alliance)Fila created a tournament in monotype format.)
+[2015-10-10T23:54:15.362Z] (theallianceleague) Soma was muted by Alliance - Dreams for 7 minutes. (warned)
+[2015-10-11T00:05:47.149Z] (theallianceleague) Soma was muted by Alliance - Dreams for 1 hour. (I told you to stop creating drama. Leave it.)
+[2015-10-11T00:31:57.649Z] (theallianceleague) Liriel was unmuted by Alliance - Contort.
+[2015-10-11T00:49:27.306Z] (theallianceleague) Alliance Ampy was warned by Alliance - Contort.
+[2015-10-11T00:49:56.395Z] (theallianceleague) Alliance Ampy was kicked from the room by Alliance - Contort.
+[2015-10-11T00:53:34.905Z] (theallianceleague) lt7z balto was muted by Alliance Ampy for 7 minutes. (you wot m8)
+[2015-10-11T00:55:06.332Z] (theallianceleague) crashY was warned by Alliance - Dreams.
+[2015-10-11T00:55:27.830Z] (theallianceleague) crashY was kicked from the room by Alliance)Fila.
+[2015-10-11T00:55:54.396Z] (theallianceleague) Alliance Axair was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T00:57:54.693Z] (theallianceleague) crashY was muted by Alliance)Fila for 7 minutes.
+[2015-10-11T00:58:00.525Z] (theallianceleague) Alliance Ampy was muted by Alliance - Contort for 7 minutes.
+[2015-10-11T00:58:10.197Z] (theallianceleague) Alliance - Contort set modchat to +
+[2015-10-11T00:59:45.139Z] (theallianceleague) Alliance - Dreams set modchat to autoconfirmed
+[2015-10-11T01:03:56.023Z] (theallianceleague) Alliance - Contort set modchat to false
+[2015-10-11T01:04:06.973Z] (theallianceleague) Alliance - Contort declared Psychic test for Hope & Faith
+[2015-10-11T01:05:09.381Z] (theallianceleague) Alliance - Contort declared Elite (fighting), Sakis (Flying), Gnief (Bug)
+[2015-10-11T01:05:51.083Z] (theallianceleague) Alliance - Contort declared Elite vs Hope & Faith
+[2015-10-11T01:24:46.182Z] (theallianceleague) Alliance - Contort declared 5/6
+[2015-10-11T01:24:55.270Z] (theallianceleague) Alliance - Contort declared Contort vs Hope & Faith
+[2015-10-11T01:33:48.258Z] (theallianceleague) Alliance - Contort declared 6/6
+[2015-10-11T01:33:53.100Z] (theallianceleague) Alliance - Contort declared needs 4 for psy leader
+[2015-10-11T01:39:54.485Z] (theallianceleague) Alliance - Contort declared Dreams vs Hope
+[2015-10-11T02:05:03.561Z] (theallianceleague) Axair Test was warned by Alliance - Elite. (In other words... Stahp.)
+[2015-10-11T02:05:25.957Z] (theallianceleague) Axair Test was muted by Alliance - Elite for 7 minutes.
+[2015-10-11T02:05:34.946Z] (theallianceleague) Axair Test was unmuted by Alliance - Elite.
+[2015-10-11T02:11:31.870Z] (theallianceleague) (Dream Eater Gengar changed the roomdesc to: "Dreams is love, Dreams is life".)
+[2015-10-11T04:47:43.590Z] (theallianceleague) JENNERED was muted by Alliance - Gamma~ for 1 hour.
+[2015-10-11T06:09:35.042Z] (theallianceleague) north side was warned by Alliance - Gamma~. (rood)
+[2015-10-11T12:26:40.916Z] (theallianceleague) erica is a bitch was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T12:26:52.188Z] (theallianceleague) erica is a bitch was banned from room theallianceleague by Alliance TheThorn.
+[2015-10-11T13:56:47.813Z] (theallianceleague) Axair was kicked from the room by Alliance Ampy.
+[2015-10-11T13:57:45.250Z] (theallianceleague) Alliance - Guy was kicked from the room by Alliance Ampy.
+[2015-10-11T14:57:45.624Z] (theallianceleague) Axair was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T15:32:51.576Z] (theallianceleague) Alliance Axair was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T16:28:36.299Z] (theallianceleague) Alliance Axair was kicked from the room by Alliance Ampy.
+[2015-10-11T16:28:51.526Z] (theallianceleague) Soprano Meiko was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T16:35:01.156Z] (theallianceleague) Alliance Axair was warned by Alliance - Guy. (dont do that type of poll)
+[2015-10-11T16:37:15.930Z] (theallianceleague) Soprano Meiko was muted by Safety Shark for 7 minutes. (Automated response: caps)
+[2015-10-11T16:37:21.917Z] (theallianceleague) Soprano Meiko was unmuted by Void Chrono.
+[2015-10-11T16:37:49.481Z] (theallianceleague) Alliance Axair was muted by Alliance - Dreams for 7 minutes. (warned)
+[2015-10-11T16:37:49.482Z] (theallianceleague) (Alliance Axair's ac account: axair)
+[2015-10-11T16:45:51.577Z] (theallianceleague) Chleg was promoted to Room Operator by Alliance TheThorn.
+[2015-10-11T17:09:48.604Z] (theallianceleague) Alliance Axair was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T17:10:20.667Z] (theallianceleague) Alliance Ampy was warned by Alliance TheThorn. (can you stop?)
+[2015-10-11T18:30:12.120Z] (theallianceleague) Alliance Axair was muted by Alliance - Dreams for 7 minutes.
+[2015-10-11T18:30:12.121Z] (theallianceleague) (Alliance Axair's ac account: axair)
+[2015-10-11T18:41:11.835Z] (theallianceleague) Alliance Axair was muted by Alliance)Fila for 7 minutes.
+[2015-10-11T18:41:11.836Z] (theallianceleague) (Alliance Axair's ac account: axair)
+[2015-10-11T18:46:32.021Z] (theallianceleague) (Alliance - Dreams created a tournament in ou format.)

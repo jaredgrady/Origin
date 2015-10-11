@@ -3176,3 +3176,37 @@
 [2015-10-08T18:24:55.207Z] (portugus) (Chesnaught-mega created a tournament in randombattle format.)
 [2015-10-08T18:31:41.985Z] (portugus) (The tournament auto disqualify timeout was set to 1 by Chesnaught-mega)
 [2015-10-08T18:40:14.764Z] (portugus) (Hgzenni.exe was disqualified from the tournament by Chesnaught-mega)
+[2015-10-09T14:35:04.623Z] (portugus) testandoumacoisa was promoted to Room Driver by Grafite.
+[2015-10-09T14:38:53.086Z] (portugus) mortal jordean was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-09T14:38:53.088Z] (portugus) (mortal jordean's roombanned alts: Guest 13848)
+[2015-10-09T14:38:53.762Z] (portugus) (Safety Shark notes: mortaljordean was added to the blacklist by #Grafite.)
+[2015-10-09T14:39:07.621Z] (portugus) mortaljordean was unbanned from room portugus by Safety Shark.
+[2015-10-09T17:09:48.581Z] (portugus) (Grafite created a tournament in gen2randombattle format.)
+[2015-10-09T17:23:55.601Z] (portugus) (Grafite forcibly ended a tournament.)
+[2015-10-10T10:03:00.464Z] (portugus) hooters was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-10T10:03:01.140Z] (portugus) (Safety Shark notes: hooters was added to the blacklist by #Chesnaught-mega.)
+[2015-10-10T17:25:41.002Z] (portugus) (jordean created a tournament in challengecup1v1 format.)
+[2015-10-10T18:45:51.065Z] (portugus) (McMary forcibly ended a tournament.)
+[2015-10-10T20:34:48.943Z] (portugus) nay me abusa was muted by Nayuki for 7 minutes.
+[2015-10-10T20:34:48.944Z] (portugus) (nay me abusa's ac account: ludic0lo)
+[2015-10-10T20:34:54.655Z] (portugus) nay me abusa was unmuted by Nayuki.
+[2015-10-10T20:34:57.664Z] (portugus) nay me abusa was muted by Nayuki for 1 hour.
+[2015-10-10T20:34:57.665Z] (portugus) (nay me abusa's ac account: ludic0lo)
+[2015-10-10T20:35:01.802Z] (portugus) nay me abusa was unmuted by Nayuki.
+[2015-10-10T20:35:38.648Z] (portugus) nay me abusa was kicked from the room by Chesnaught-mega.
+[2015-10-10T20:37:56.361Z] (portugus) nay me abusa was promoted to Room Moderator by Chesnaught-mega.
+[2015-10-10T20:38:17.498Z] (portugus) (nay me abusa was demoted to Room regular user by Chesnaught-mega.)
+[2015-10-11T14:02:52.587Z] (portugus) Zaranha was muted by McMary - ⒸⓗⓔⓢⓅⓜ for 7 minutes. (respeito com o meu marido)
+[2015-10-11T17:02:18.126Z] (portugus) Zaranha was warned by Chesnaught-mega. (tua recompensa:mais um warn no modlog)
+[2015-10-11T17:02:50.943Z] (portugus) Chesnaught-mega was muted by Zaranha for 7 minutes.
+[2015-10-11T17:02:56.696Z] (portugus) Chesnaught-mega was appointed Room Owner by Chesnaught-mega.
+[2015-10-11T17:03:13.994Z] (portugus) Chesnaught-mega was unmuted by McMary.
+[2015-10-11T17:03:47.960Z] (portugus) Zaranha was muted by Chesnaught-mega for 7 minutes. (avoida disso=3)
+[2015-10-11T17:04:52.283Z] (portugus) Bobscreiboul was banned from room portugus by Chesnaught-mega. (¬¬)
+[2015-10-11T17:04:52.286Z] (portugus) (Bobscreiboul's roombanned alts: Guest 21555)
+[2015-10-11T17:04:58.238Z] (portugus) bobscreiboul was unbanned from room portugus by Chesnaught-mega.
+[2015-10-11T17:06:06.382Z] (portugus) bubudubu was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-11T17:06:06.384Z] (portugus) (bubudubu's  ac account: zaranha, roombanned alts: Bobscreiboul)
+[2015-10-11T17:06:07.057Z] (portugus) (Safety Shark notes: zaranha was added to the blacklist by #Chesnaught-mega.)
+[2015-10-11T17:08:33.270Z] (portugus) bubudubu was unbanned from room portugus by Safety Shark.
+[2015-10-11T17:09:49.638Z] (portugus) Zaranha was unmuted by Chesnaught-mega.

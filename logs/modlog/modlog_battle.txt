@@ -5719,3 +5719,68 @@
 [2015-10-09T00:52:22.253Z] (battle-monotype-118474) Hm Bugy was promoted to Player by Hm Volco.
 [2015-10-09T01:17:50.692Z] (battle-ou-118520) Doctor Emboar11 set modchat to +
 [2015-10-09T01:18:01.997Z] (battle-ou-118520) Lotus Wincon was promoted to Room Voice by Cloyy - ⓦⓐⓡⓛⓘⓒ.
+[2015-10-09T06:30:46.874Z] (battle-monotype-118835) Breeze Georgefhs set modchat to autoconfirmed
+[2015-10-09T11:45:14.612Z] (battle-randombattle-118898) Elite Academy set modchat to +
+[2015-10-09T17:03:13.588Z] (battle-monotype-119138) Arrem was promoted to Player by nerd k.
+[2015-10-09T19:52:15.533Z] (battle-monotype-119327) Hm Kaze set modchat to +
+[2015-10-09T21:20:59.386Z] (battle-monotype-119477) Hm Volco set modchat to +
+[2015-10-09T21:23:37.376Z] (battle-monotype-119477) Hm Reapz was promoted to Room Voice by Hm Volco.
+[2015-10-10T00:57:45.879Z] (battle-ou-119837) Frontier♅EnZo set modchat to +
+[2015-10-10T01:27:36.770Z] (battle-monotyperandombattle-119867) Barandis set modchat to +
+[2015-10-10T01:28:19.013Z] (battle-monotyperandombattle-119867) paralyzation was promoted to Room Voice by CLOYY.
+[2015-10-10T01:28:56.817Z] (battle-monotyperandombattle-119867) (paralyzation was demoted to Room regular user by Barandis.)
+[2015-10-10T01:30:07.488Z] (battle-monotyperandombattle-119867) Barandis set modchat to false
+[2015-10-10T07:14:40.369Z] (battle-monotype-120180) Gratitude set modchat to +
+[2015-10-10T07:14:47.417Z] (battle-monotype-120180) Saur Reshi was promoted to Room Voice by Saur Jane.
+[2015-10-10T07:14:51.189Z] (battle-monotype-120180) wyngate' was promoted to Room Voice by Gratitude.
+[2015-10-10T07:14:55.211Z] (battle-monotype-120180) Saur Seraph was promoted to Room Voice by Saur Jane.
+[2015-10-10T07:15:02.307Z] (battle-monotype-120180) Saur Hingo was promoted to Room Voice by Saur Jane.
+[2015-10-10T07:15:06.240Z] (battle-monotype-120180) Mentalist Swag was promoted to Room Voice by Gratitude.
+[2015-10-10T07:15:17.076Z] (battle-monotype-120180) Alliance - Calucha was promoted to Room Voice by Saur Jane.
+[2015-10-10T08:00:09.689Z] (battle-ou-120205) GTX Enrique set modchat to +
+[2015-10-10T08:01:05.149Z] (battle-ou-120205) XiouShock was locked from talking by Allegiant Gryph. (spamming battles, trolling)
+[2015-10-10T11:04:46.035Z] (battle-monotype-120294) Metallica was promoted to Player by Phantom Theta - .
+[2015-10-10T13:38:30.061Z] (battle-monotype-120450) gtx kirito - ⓒⓡⓘ set modchat to +
+[2015-10-10T14:59:24.275Z] (battle-monotype-120534) Abyssal Wolf set modchat to +
+[2015-10-10T14:59:34.958Z] (battle-monotype-120534) Wolf Maximus was promoted to Room Voice by Wolf♥Gin.
+[2015-10-10T15:49:27.713Z] (battle-monotype-120596) Wolf Obliteration set modchat to +
+[2015-10-10T15:50:16.411Z] (battle-monotype-120596) Hm Red was promoted to Room Voice by Wolf♥Gin.
+[2015-10-10T19:33:58.314Z] (battle-uu-121032) Lotad Guy set modchat to +
+[2015-10-10T19:34:08.627Z] (battle-uu-121032) Frontier♅EnZo was promoted to Room Voice by Lotus Wincon.
+[2015-10-10T19:34:17.513Z] (battle-uu-121032) Hm zugu royale was promoted to Room Voice by Lotus Wincon.
+[2015-10-10T20:38:04.063Z] (battle-monotype-121132) Lеgасу Pinkіѕh was promoted to Player by Legacy - Endonian.
+[2015-10-10T20:44:05.867Z] (battle-monotype-121153) Void SYB3R set modchat to +
+[2015-10-10T20:48:04.966Z] (battle-monotype-121158) Twizz set modchat to +
+[2015-10-10T20:52:01.000Z] (battle-monotype-121158) Starkboy was promoted to Room Voice by Twizz.
+[2015-10-10T20:56:14.892Z] (battle-monotype-121175) Void SYB3R set modchat to +
+[2015-10-10T21:57:59.845Z] (battle-monotype-121305) Hm Reapz was promoted to Player by Hm Volco.
+[2015-10-10T23:18:31.752Z] (battle-monotype-121447) Myst Tomato set modchat to +
+[2015-10-10T23:18:45.129Z] (battle-monotype-121447) Myst Bronze was promoted to Room Voice by Myst Applejack.
+[2015-10-11T00:33:23.171Z] (battle-monotype-121653) Dylightful set modchat to +
+[2015-10-11T00:33:32.429Z] (battle-monotype-121653) Saur Sarii set modchat to false
+[2015-10-11T00:33:36.071Z] (battle-monotype-121653) Dylightful set modchat to +
+[2015-10-11T00:54:09.876Z] (battle-monotype-121695) Myst Bronze set modchat to +
+[2015-10-11T00:55:08.892Z] (battle-monotype-121695) Myst Tomato set modchat to false
+[2015-10-11T01:26:16.402Z] (battle-gen3randomdoublesbattle-121764) hm unownman set modchat to +
+[2015-10-11T02:03:41.973Z] (battle-anythinggoes-121823) Wolf Gin was promoted to Room Voice by Wolf Maximus.
+[2015-10-11T02:33:12.223Z] (battle-monotyperandombattle-121863) TruBlaze - ⓂⒸ was promoted to Room Voice by Supanova.
+[2015-10-11T04:05:59.092Z] (battle-monotype-121996) Dylightful set modchat to +
+[2015-10-11T04:06:40.716Z] (battle-monotype-121996) Riolucas set modchat to false
+[2015-10-11T04:06:48.768Z] (battle-monotype-121996) Dylightful set modchat to +
+[2015-10-11T04:07:00.591Z] (battle-monotype-121996) Riolucas set modchat to false
+[2015-10-11T04:07:03.001Z] (battle-monotype-121996) Dylightful set modchat to +
+[2015-10-11T04:07:18.622Z] (battle-monotype-121996) Riolucas set modchat to false
+[2015-10-11T04:07:32.575Z] (battle-monotype-121996) Dylightful set modchat to +
+[2015-10-11T04:49:57.906Z] (battle-monotype-122034) Legacy Quartz was promoted to Player by xAsilon.
+[2015-10-11T06:23:24.805Z] (battle-monotype-122121) Cloyy - ⓑⓔⓔⓡ set modchat to +
+[2015-10-11T06:37:06.438Z] (battle-ubers-122127) link fabio was promoted to Room Voice by Hm Kaze.
+[2015-10-11T08:03:50.010Z] (battle-monotype-122181) HeadProf Jerb set modchat to +
+[2015-10-11T08:05:16.076Z] (battle-monotype-122181) LotusChamp Torpid was promoted to Room Voice by HeadProf Jerb.
+[2015-10-11T11:20:20.185Z] (battle-ou-122220) twizzy was promoted to Player by FreakiiBirdo.
+[2015-10-11T13:02:57.374Z] (battle-monotype-122233) Lance the Werewolf was promoted to Room Voice by Crystal Bogan.
+[2015-10-11T14:41:03.509Z] (battle-monotype-122301) Lance The Werewolf set modchat to +
+[2015-10-11T14:41:19.458Z] (battle-monotype-122301) Wolf Gin was promoted to Room Voice by Lance The Werewolf.
+[2015-10-11T15:15:27.090Z] (battle-monotype-122336) Recruiter Physical was promoted to Room Voice by break ground.
+[2015-10-11T18:10:03.457Z] (battle-monotype-122566) Hm Reapz set modchat to +
+[2015-10-11T18:50:57.843Z] (battle-monotype-122629) gtx♅glaceon set modchat to +
+[2015-10-11T18:51:19.207Z] (battle-monotype-122629) GL♅aron set modchat to false

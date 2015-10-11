@@ -427,3 +427,20 @@
 [2015-08-29T23:21:01.239Z] (eosevents) Rain Devin was promoted to Room Voice by L Chevy 12.
 [2015-08-29T23:34:06.036Z] (eosevents) (L Chevy 12 notes: Winner of BotL 8/29/15: Rain Devin)
 [2015-09-26T21:13:57.235Z] (eosevents) Erica*07 declared Congratulations to Rain ☆ Pats for winning Battle of the Leagues! We'll see you next week!
+[2015-10-10T20:14:41.630Z] (eosevents) (Erica*07 changed the roomintro.)
+[2015-10-10T20:17:10.681Z] (eosevents) Erica*07 globally declared <button name=send value="/join eosevents">Battle of the Leagues</button> is starting!<br>Participants please join the tournament. The tournament will start at 4:16, if you have any last minute joining that you want to do then pm Velveteen Rabbit or Ruby D!
+[2015-10-10T20:18:05.775Z] (eosevents) Velveteen Rabbit was promoted to Room Leader by Erica*07.
+[2015-10-10T20:18:21.027Z] (eosevents) Erica*07 set modchat to false
+[2015-10-10T20:18:25.461Z] (eosevents) Erica*07 set modchat to autoconfirmed
+[2015-10-10T20:19:19.794Z] (eosevents) Erica*07 globally declared *I meant start at 4:30
+[2015-10-10T20:20:48.039Z] (eosevents) (Erica*07 created a tournament in monotype format.)
+[2015-10-10T20:21:17.290Z] (eosevents) Erica*07 declared Any last minute updates to the roster?
+[2015-10-10T20:26:07.059Z] (eosevents) (Erica*07 changed the roomintro.)
+[2015-10-10T20:27:55.101Z] (eosevents) (Erica*07 changed the roomintro.)
+[2015-10-10T20:29:34.021Z] (eosevents) (Erica*07 changed the roomintro.)
+[2015-10-10T20:30:10.797Z] (eosevents) (Erica*07 changed the roomintro.)
+[2015-10-10T20:31:29.387Z] (eosevents) (The tournament was set to disallow scouting by Erica*07)
+[2015-10-10T20:33:09.956Z] (eosevents) Erica*07 globally declared <button name=send value="/join eosevents">Battle of the Leagues</button> has started!<br>Join now to watch! Good luck, players!
+[2015-10-10T20:33:13.744Z] (eosevents) (GTX♅RainManaphy was disqualified from the tournament by Erica*07)
+[2015-10-10T20:38:59.474Z] (eosevents) (Megan Magna was disqualified from the tournament by Erica*07)
+[2015-10-11T03:16:09.277Z] (eosevents) Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ set modchat to +

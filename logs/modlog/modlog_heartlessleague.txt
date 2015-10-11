@@ -584,3 +584,29 @@
 [2015-10-08T22:44:39.133Z] (heartlessleague) Bacon Power was kicked from the room by ImmortalMaddie.
 [2015-10-08T22:48:05.967Z] (heartlessleague) ReuniclusSlime was kicked from the room by ImmortalMaddie.
 [2015-10-09T02:42:09.885Z] (heartlessleague) Gallant Discord was promoted to Room Voice by PlasmaOfDoom - ⓌⓉ.
+[2015-10-10T00:14:51.491Z] (heartlessleague) Missingno2.0 was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T00:23:30.495Z] (heartlessleague) Derek (Gallade) was warned by Safety Shark. (Automated response: caps)
+[2015-10-10T03:02:38.029Z] (heartlessleague) ReuniclusSlime was muted by ImmortalMaddie for 7 minutes.
+[2015-10-10T03:02:47.383Z] (heartlessleague) ReuniclusSlime was unmuted by Amy Leater.
+[2015-10-10T13:28:00.352Z] (heartlessleague) Champ Vicky was promoted to Room Driver by King Shuckleton.
+[2015-10-10T14:59:53.246Z] (heartlessleague) (ChampVicky notes: i am sbanned)
+[2015-10-10T15:00:50.099Z] (heartlessleague) (ChampVicky notes: feelscri)
+[2015-10-10T15:20:32.085Z] (heartlessleague) Bacon Power was kicked from the room by King Shuckleton.
+[2015-10-10T16:55:33.198Z] (heartlessleague) (Champ Vicky notes: glam)
+[2015-10-10T16:55:53.175Z] (heartlessleague) (Champ Vicky notes: i cant pm. I am sbanned atm)
+[2015-10-10T17:02:23.069Z] (heartlessleague) (Champ Vicky notes: dw. Server restart should be today or tomorrow)
+[2015-10-10T17:06:41.771Z] (heartlessleague) (Champ Vicky notes: uptime is five days)
+[2015-10-10T17:09:58.921Z] (heartlessleague) (Bacon Power was demoted to Room Moderator by King Shuckleton.)
+[2015-10-10T17:10:26.966Z] (heartlessleague) Bacon Power was promoted to Room Leader by King Shuckleton.
+[2015-10-10T18:48:16.532Z] (heartlessleague) Cr@ckheadhobo was muted by missglamorazzi for 1 hour.
+[2015-10-10T22:51:55.203Z] (heartlessleague) Champ Vicky was warned by Bacon Power. (I said no.)
+[2015-10-10T22:57:40.406Z] (heartlessleague) Bacon Power was muted by King Shuckleton for 1 hour.
+[2015-10-10T23:02:33.282Z] (heartlessleague) Bacon Power was unmuted by ImmortalMaddie.
+[2015-10-11T00:48:40.582Z] (heartlessleague) (Champ Vicky created a tournament in randombattle format.)
+[2015-10-11T01:03:06.384Z] (heartlessleague) (The tournament auto disqualify timeout was set to 1 by PlasmaOfDoom)
+[2015-10-11T02:20:57.196Z] (heartlessleague) ReuniclusSlime was muted by ImmortalMaddie for 7 minutes.
+[2015-10-11T02:23:24.793Z] (heartlessleague) ReuniclusSlime was unmuted by PlasmaOfDoom.
+[2015-10-11T02:23:49.678Z] (heartlessleague) ReuniclusSlime was muted by ImmortalMaddie for 7 minutes.
+[2015-10-11T02:24:33.892Z] (heartlessleague) ReuniclusSlime was unmuted by ImmortalMaddie.
+[2015-10-11T02:30:08.761Z] (heartlessleague) DarkNightSkies was warned by Champ Vicky.
+[2015-10-11T16:53:45.373Z] (heartlessleague) DragonsOnBathSalts was promoted to Room Driver by King Shuckleton.
