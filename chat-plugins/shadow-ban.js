@@ -157,7 +157,7 @@ exports.commands = {
 		}
 
 		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
-		if (!this.can('lock', this.targetUser)) return;
+		if (!this.can('hotpatch', this.targetUser)) return;
 
 		var targets = addUser(this.targetUser);
 		if (targets.length === 0) {
@@ -174,7 +174,7 @@ exports.commands = {
 		if (!target) return this.sendReply("/unshadowban OR /unsban [username] - Undoes /shadowban (except the secondary command).");
 		this.splitTarget(target);
 
-		if (!this.can('lock')) return;
+		if (!this.can('hotpatch')) return;
 
 		var targets = removeUser(this.targetUser || this.targetUsername);
 		if (targets.length === 0) {
