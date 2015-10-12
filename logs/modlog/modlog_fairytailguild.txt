@@ -116,3 +116,9 @@
 [2015-08-31T00:59:39.012Z] (fairytailguild) SL Aby was promoted to Room Leader by Guard havarti2.
 [2015-09-02T14:33:53.278Z] (fairytailguild) Konan Yutaka was warned by Void Naten. (I can lock you for this?)
 [2015-10-08T17:24:42.838Z] (fairytailguild) Swiss Cheese Llama was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T21:55:19.903Z] (fairytailguild) Abyssinian ◕ ʖ̯ ◕ declared ``~~__**( ◕ ʖ̯ ◕ )**__~~``
+[2015-10-11T23:48:59.267Z] (fairytailguild) Swiss Cheese Llama was banned from room fairytailguild by Guard havarti2.
+[2015-10-11T23:48:59.270Z] (fairytailguild) (Swiss Cheese Llama's roombanned alts: Guard havarti2, Guard Llamas)
+[2015-10-11T23:53:15.629Z] (fairytailguild) Erica*07 was appointed to Room Founder by Erica*07.
+[2015-10-11T23:53:30.468Z] (fairytailguild) swisscheesellama was unbanned from room fairytailguild by Erica*07.
+[2015-10-11T23:53:46.894Z] (fairytailguild) Guard havarti2 was appointed to Room Founder by Erica*07.

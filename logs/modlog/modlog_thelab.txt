@@ -41,3 +41,4 @@
 [2015-08-26T23:54:45.621Z] (thelab) (Rain ☆ Tylаcto changed the roomintro.)
 [2015-08-29T16:17:24.579Z] (thelab) Void Freaky was appointed to Room Founder by Void Neo.
 [2015-08-29T18:11:47.257Z] (thelab) (Void Neo has shadow banned: arbyssds, chompychomp, choompers, illtellyou, impchompers, justaccept, keepgoing, lookatthenames, typhhasweave, withpokes)
+[2015-10-11T20:36:28.471Z] (thelab) Safety Shark declared <p>Team1: , , , <p><button name="send"value="/pick ,,,">Pick</button></br><p>Team2: , , , <p><button name="send"value="/pick ,,,">Pick</button>

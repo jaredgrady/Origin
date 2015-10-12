@@ -524,3 +524,20 @@
 [2015-10-11T14:15:45.442Z] (hitmonleague) hm unownman - ①⑦③⑧ was muted by Hm Red - Ⓑⓐⓑⓔ for 7 minutes. (dont abuse him and do that yourself)
 [2015-10-11T14:16:02.335Z] (hitmonleague) hm unownman - ①⑦③⑧ was unmuted by Hm Red - Ⓑⓐⓑⓔ.
 [2015-10-11T18:06:02.485Z] (hitmonleague) Hm Kirito was promoted to Room Voice by Hm zugu royale.
+[2015-10-11T18:59:17.377Z] (hitmonleague) Hm Reapz set modchat to &
+[2015-10-11T19:00:21.218Z] (hitmonleague) Hm Reapz set modchat to false
+[2015-10-11T19:05:37.964Z] (hitmonleague) (hm mamoswine was demoted to Room regular user by Hm Red.)
+[2015-10-11T20:01:10.253Z] (hitmonleague) (Hm Kaze created a tournament in monotype format.)
+[2015-10-11T20:09:35.882Z] (hitmonleague) hm unownman - ⓤⓜⓐⓝ was warned by Hm Red - ⓑⓤⓢⓨ. (you re not great.)
+[2015-10-11T20:12:33.741Z] (hitmonleague) Hm Hax was promoted to Room Voice by Hm Red - ⓑⓤⓢⓨ.
+[2015-10-11T21:39:26.566Z] (hitmonleague) Hm Zuuzifer was promoted to Room Leader by Hm Volco.
+[2015-10-11T23:46:07.250Z] (hitmonleague) Saur Sarii was promoted to Room Voice by Hm Volco.
+[2015-10-11T23:51:03.266Z] (hitmonleague) Hm Volco declared 1-0 hitmon
+[2015-10-11T23:52:00.886Z] (hitmonleague) Hm Volco declared shade your pick doesnt count gtfo fgt
+[2015-10-11T23:52:04.142Z] (hitmonleague) Hm Shade was kicked from the room by Hm Volco.
+[2015-10-11T23:53:02.881Z] (hitmonleague) Hm Volco declared only i will do the picks for hitmon any other picks dont count -Volco
+[2015-10-12T00:05:04.664Z] (hitmonleague) Hm Volco declared hitmon wins gdi i didnt get to roomban anyone
+[2015-10-12T00:05:20.936Z] (hitmonleague) Hm Volco declared hey bugy lets roomban all of the saur league feelsjig
+[2015-10-12T00:17:06.811Z] (hitmonleague) Hm Quizz was warned by Safety Shark. (Automated response: stretching)
+[2015-10-12T00:18:16.677Z] (hitmonleague) Hm Quizz was muted by HM MaxDerp for 7 minutes. (get shrekt)
+[2015-10-12T00:18:24.905Z] (hitmonleague) Hm Quizz was unmuted by Hm Volco.

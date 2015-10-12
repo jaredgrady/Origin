@@ -2083,3 +2083,24 @@
 [2015-10-11T18:41:11.835Z] (theallianceleague) Alliance Axair was muted by Alliance)Fila for 7 minutes.
 [2015-10-11T18:41:11.836Z] (theallianceleague) (Alliance Axair's ac account: axair)
 [2015-10-11T18:46:32.021Z] (theallianceleague) (Alliance - Dreams created a tournament in ou format.)
+[2015-10-11T19:49:38.291Z] (theallianceleague) (Alliance Ampy created a tournament in ou format.)
+[2015-10-11T19:55:38.943Z] (theallianceleague) (The tournament was set to allow scouting by Alliance Ampy)
+[2015-10-11T20:00:11.024Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance Ampy)
+[2015-10-11T20:03:35.087Z] (theallianceleague) (Guest 21553 was disqualified from the tournament by Alliance Ampy)
+[2015-10-11T20:09:46.949Z] (theallianceleague) (Alliance Ampy forcibly ended a tournament.)
+[2015-10-11T20:23:02.791Z] (theallianceleague) (Alliance - Contort changed the roomintro.)
+[2015-10-11T20:26:09.215Z] (theallianceleague) (Alliance - Contort changed the roomintro.)
+[2015-10-11T20:26:34.278Z] (theallianceleague) (Alliance Ampy created a tournament in gen1randombattle format.)
+[2015-10-11T20:34:57.353Z] (theallianceleague) (The tournament auto disqualify timeout was set to 1 by Alliance Ampy)
+[2015-10-11T20:35:12.041Z] (theallianceleague) (Denizen Pacifica was disqualified from the tournament by Alliance - Lee)
+[2015-10-11T20:53:05.541Z] (theallianceleague) Alliance Ampy set modchat to +
+[2015-10-11T20:57:56.532Z] (theallianceleague) (Alliance Ampy forcibly ended a tournament.)
+[2015-10-11T21:13:05.369Z] (theallianceleague) Alliance - Contort declared Go to Alliance Cup
+[2015-10-11T22:11:57.623Z] (theallianceleague) Saur Jane was promoted to Room Voice by Alliance - Lee.
+[2015-10-11T22:31:06.794Z] (theallianceleague) CrazyClown94 was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T22:32:19.207Z] (theallianceleague) Alliance Ampy set modchat to false
+[2015-10-11T22:32:30.429Z] (theallianceleague) Alliance Ampy set modchat to autoconfirmed
+[2015-10-11T23:18:42.483Z] (theallianceleague) edjim was warned by Alliance - Elite. (stahp)
+[2015-10-11T23:49:46.169Z] (theallianceleague) (Alliance - Elite created a tournament in uu format.)
+[2015-10-12T00:58:57.528Z] (theallianceleague) Alliance Ampy was muted by Alliance - Charen for 7 minutes. (you said that)
+[2015-10-12T00:59:11.311Z] (theallianceleague) Alliance Ampy was unmuted by Alliance - Charen.

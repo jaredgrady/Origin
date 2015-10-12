@@ -53,3 +53,6 @@
 [2015-10-06T15:10:59.956Z] (seppukusquadhq) Sinatra Lifestyle was promoted to Room Moderator by Not Sykes.
 [2015-10-09T05:48:29.615Z] (seppukusquadhq) Saaaaito was promoted to Room Leader by Not Sykes.
 [2015-10-09T20:51:54.599Z] (seppukusquadhq) Imp xSaito was kicked from the room by Not Sykes.
+[2015-10-11T22:10:24.423Z] (seppukusquadhq) Top Of The Keking? was promoted to Room Leader by Not Sykes.
+[2015-10-11T23:55:17.223Z] (seppukusquadhq) Meme Saito was promoted to Room Leader by Not Sykes.
+[2015-10-11T23:55:25.212Z] (seppukusquadhq) (top of the keking was demoted to Room regular user by Not Sykes.)

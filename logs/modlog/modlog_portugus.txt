@@ -3210,3 +3210,5 @@
 [2015-10-11T17:06:07.057Z] (portugus) (Safety Shark notes: zaranha was added to the blacklist by #Chesnaught-mega.)
 [2015-10-11T17:08:33.270Z] (portugus) bubudubu was unbanned from room portugus by Safety Shark.
 [2015-10-11T17:09:49.638Z] (portugus) Zaranha was unmuted by Chesnaught-mega.
+[2015-10-11T21:17:21.376Z] (portugus) Ziul07 was banned from room portugus by Safety Shark. (Blacklisted user)
+[2015-10-11T21:17:22.051Z] (portugus) (Safety Shark notes: ziul07 was added to the blacklist by #jordean.)

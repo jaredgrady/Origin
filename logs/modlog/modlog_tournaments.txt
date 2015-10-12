@@ -4528,3 +4528,29 @@
 [2015-10-11T17:59:29.602Z] (tournaments) (SteelChar created a tournament in challengecup1v1 format.)
 [2015-10-11T18:11:38.463Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
 [2015-10-11T18:40:44.861Z] (tournaments) (Harvest God created a tournament in randombattle format.)
+[2015-10-11T19:07:26.914Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T19:09:17.504Z] (tournaments) (Carisi was disqualified from the tournament by Harvest God - ⒶⒻⓀ)
+[2015-10-11T19:45:55.360Z] (tournaments) (Hm Red - ⓑⓤⓢⓨ created a tournament in uu format.)
+[2015-10-11T19:50:16.683Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T20:23:04.660Z] (tournaments) (Hm Red - ⓑⓤⓢⓨ created a tournament in lc format.)
+[2015-10-11T20:37:08.435Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T20:38:29.445Z] (tournaments) (Harvest God forcibly ended a tournament.)
+[2015-10-11T20:39:07.768Z] (tournaments) (Harvest God created a tournament in randombattle format.)
+[2015-10-11T21:30:04.397Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T21:30:12.036Z] (tournaments) (Abyssinian was disqualified from the tournament by Mazambo)
+[2015-10-11T21:30:23.712Z] (tournaments) (Palin 2016 was disqualified from the tournament by Mazambo)
+[2015-10-11T21:56:26.438Z] (tournaments) Abyssinian ◕ ʖ̯ ◕ was warned by Mazambo.
+[2015-10-11T21:58:41.040Z] (tournaments) TheAce22 was kicked from the room by Mazambo.
+[2015-10-11T22:00:10.722Z] (tournaments) Abyssinian ◕ ʖ̯ ◕ was muted by Mazambo for 7 minutes.
+[2015-10-11T22:08:49.210Z] (tournaments) Guest 22127 was banned from room tournaments by Mazambo.
+[2015-10-11T22:08:49.217Z] (tournaments) (Guest 22127's roombanned alts: Guest 22701)
+[2015-10-11T22:09:01.453Z] (tournaments) (Mazambo notes: hit and run spam )
+[2015-10-11T22:11:25.020Z] (tournaments) (Mazambo created a tournament in challengecup1v1 format.)
+[2015-10-11T22:20:53.214Z] (tournaments) paralyzation was promoted to Room Voice by Mazambo.
+[2015-10-11T22:21:00.145Z] (tournaments) (paralyzation was demoted to Room regular user by Mazambo.)
+[2015-10-11T22:22:22.551Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T22:28:15.036Z] (tournaments) ELC Maz was promoted to Room Voice by L Chevy 12.
+[2015-10-11T22:34:35.510Z] (tournaments) (ELC Maz created a tournament in 1v1 format.)
+[2015-10-11T23:11:43.121Z] (tournaments) (The tournament auto disqualify timeout was set to 2 by Resourceful)
+[2015-10-11T23:45:53.666Z] (tournaments) (McHack was disqualified from the tournament by Harvest God)
+[2015-10-12T01:09:39.852Z] (tournaments) (SteelChar created a tournament in challengecup1v1 format.)

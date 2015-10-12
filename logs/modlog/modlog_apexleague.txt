@@ -712,3 +712,12 @@
 [2015-10-11T00:49:13.369Z] (apexleague) jjay554 was warned by Safety Shark. (Automated response: caps)
 [2015-10-11T01:40:58.756Z] (apexleague) Apex✦clever was promoted to Room Voice by Apex=amb64.
 [2015-10-11T01:59:53.147Z] (apexleague) Apex✦clever was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T18:59:50.699Z] (apexleague) Alliance Arlax was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T19:18:41.308Z] (apexleague) (Apex✦Kre8noyz created a tournament in monotype format.)
+[2015-10-11T19:24:07.140Z] (apexleague) apex mehadns was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T21:46:49.543Z] (apexleague) Apex✦Plasbad was promoted to Room Leader by Apex✦Kre8noyz.
+[2015-10-11T21:48:57.562Z] (apexleague) controlc was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T21:49:15.926Z] (apexleague) Metalyte was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T21:49:58.371Z] (apexleague) controlc was unmuted by Apex✦Kre8noyz.
+[2015-10-11T21:50:05.825Z] (apexleague) Metalyte was unmuted by Apex✦Kre8noyz.
+[2015-10-12T00:55:32.131Z] (apexleague) (Apex✦Plasbad was demoted to Room regular user by PlasmaOfDoom.)

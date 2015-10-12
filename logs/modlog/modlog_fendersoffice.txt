@@ -14,3 +14,8 @@
 [2015-09-03T04:01:36.837Z] (fendersoffice) Safety Shark was promoted to Room Leader by Roams❤$❤‪.
 [2015-09-03T11:08:59.940Z] (fendersoffice) (Roams changed the roomintro.)
 [2015-09-03T11:09:43.803Z] (fendersoffice) (Roams changed the roomintro.)
+[2015-10-11T20:44:20.918Z] (fendersoffice) fender made this room secret.
+[2015-10-11T20:44:33.403Z] (fendersoffice) fender turned on modjoin.
+[2015-10-11T20:44:33.416Z] (fendersoffice) fender set modchat to +
+[2015-10-11T20:44:42.145Z] (fendersoffice) fender declared The Alliance Cup is starting soon! <button name="send" value="/join alliancecup"><b>Join here to play!!!</b></button>
+[2015-10-11T20:44:47.542Z] (fendersoffice) fender globally declared /gdeclare The Alliance Cup is starting soon! <button name="send" value="/join alliancecup"><b>Join here to play!!!</b></button>

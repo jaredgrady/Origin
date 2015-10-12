@@ -5778,3 +5778,31 @@
 [2015-10-11T16:01:06.037Z] (lobby) (The tournament auto disqualify timeout was set to 3 by Imp Latios)
 [2015-10-11T17:47:13.823Z] (lobby) (Chief Sokka created a tournament in monotyperandombattle format.)
 [2015-10-11T18:18:58.951Z] (lobby) (The tournament auto start timeout was set to 2 by Chief Sokka)
+[2015-10-11T19:06:25.210Z] (lobby) (HM Lelouch was disqualified from the tournament by Naten)
+[2015-10-11T19:06:34.370Z] (lobby) (Xionico180 was disqualified from the tournament by Naten)
+[2015-10-11T19:06:39.954Z] (lobby) (HM Vodoom was disqualified from the tournament by Naten)
+[2015-10-11T19:06:43.180Z] (lobby) (The tournament auto disqualify timeout was set to 2 by Naten)
+[2015-10-11T19:06:51.163Z] (lobby) (Killeraptor was disqualified from the tournament by Naten)
+[2015-10-11T19:06:54.905Z] (lobby) (Abyssinian was disqualified from the tournament by Naten)
+[2015-10-11T19:07:02.563Z] (lobby) (Cloyy was disqualified from the tournament by Naten)
+[2015-10-11T20:07:11.649Z] (lobby) (Imp Latios created a tournament in monotyperandombattle format.)
+[2015-10-11T20:27:25.186Z] (lobby) (The tournament auto disqualify timeout was set to 2 by fender)
+[2015-10-11T21:15:12.574Z] (lobby) (Allegiant Gryph created a tournament in lc format.)
+[2015-10-11T21:17:07.848Z] (lobby) Nineage globally declared 10 bucks to LC tour winner in lobby!
+[2015-10-11T21:19:51.297Z] (lobby) (The tournament auto disqualify timeout was set to 3 by Allegiant Gryph)
+[2015-10-11T21:45:47.655Z] (lobby) Infamy is Jesus was muted by Imp Fallen Blood for 7 minutes.
+[2015-10-11T21:47:06.399Z] (lobby) (Imp Fallen Blood has shadow banned: godhatesu, infamyisjesus)
+[2015-10-11T21:48:08.924Z] (lobby) (L Chevy 12 - ⒶⓌⒶⓎ notes: why'd u shadow ban them)
+[2015-10-11T22:02:25.551Z] (lobby) Phantom Blue Yarn was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T22:05:24.567Z] (lobby) Abyssinian ◕ ʖ̯ ◕ was warned by i'm sora.
+[2015-10-11T22:05:26.453Z] (lobby) GTX♅Itachi was warned by i'm sora.
+[2015-10-11T22:59:59.809Z] (lobby) (fender created a tournament in lc format.)
+[2015-10-11T23:12:13.915Z] (lobby) (The tournament auto disqualify timeout was set to 1.5 by sparkychild)
+[2015-10-12T00:21:11.204Z] (lobby) Amund was muted by sparkychild for 7 minutes.
+[2015-10-12T00:22:00.294Z] (lobby) Abyssinian was redirected to room Roleplaying by sparkychild.
+[2015-10-12T00:41:14.808Z] (lobby) Japan was warned by axews. (no)
+[2015-10-12T00:42:17.728Z] (lobby) Japan was muted by axews for 7 minutes. (nice 1)
+[2015-10-12T00:42:36.477Z] (lobby) Jugganort was warned by axews. (ok stop)
+[2015-10-12T00:43:00.900Z] (lobby) juleocesar was muted by axews for 1 hour.
+[2015-10-12T00:43:12.048Z] (lobby) juleocesar was unmuted by axews.
+[2015-10-12T00:43:17.918Z] (lobby) Guest 22968 was muted by axews for 1 hour.

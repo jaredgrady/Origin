@@ -5784,3 +5784,9 @@
 [2015-10-11T18:10:03.457Z] (battle-monotype-122566) Hm Reapz set modchat to +
 [2015-10-11T18:50:57.843Z] (battle-monotype-122629) gtx♅glaceon set modchat to +
 [2015-10-11T18:51:19.207Z] (battle-monotype-122629) GL♅aron set modchat to false
+[2015-10-11T19:31:40.983Z] (battle-monotype-122702) Hm Reapz set modchat to +
+[2015-10-11T19:31:50.205Z] (battle-monotype-122702) Hm Eien was promoted to Room Voice by Hm Kaze.
+[2015-10-11T19:32:00.214Z] (battle-monotype-122702) Hm Reapz set modchat to false
+[2015-10-11T20:23:54.520Z] (battle-hackmonscup-122789) Whirl The Pede set modchat to +
+[2015-10-11T22:05:59.677Z] (battle-monotype-123015) (Allegiant Gryph notes: mfw it actually is tylacto lmao)
+[2015-10-12T01:08:14.454Z] (battle-monotype-123335) GL%Grimsley was promoted to Room Voice by LotusChamp Torpid.

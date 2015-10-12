@@ -603,3 +603,4 @@
 [2015-10-10T08:05:05.721Z] (temporaltower) (Mewth created a tournament in hackmonscup format.)
 [2015-10-10T08:06:29.620Z] (temporaltower) (Mewth created a tournament in hackmonscup format.)
 [2015-10-10T08:10:03.492Z] (temporaltower) (Mewth forcibly ended a tournament.)
+[2015-10-12T00:38:50.163Z] (temporaltower) Arrow Bot was banned from room temporaltower by The Pyrope.

@@ -334,3 +334,10 @@
 [2015-10-11T18:50:50.496Z] (smashbros) Superdois was banned from room smashbros by Eliwood_Emblem. (Time out.)
 [2015-10-11T18:50:50.501Z] (smashbros) (Superdois's roombanned alts: Byobell)
 [2015-10-11T18:50:56.735Z] (smashbros) iDitto was muted by Safety Shark for 7 minutes. (Automated response: your message contained a banned phrase)
+[2015-10-11T18:52:36.708Z] (smashbros) iDitto was unmuted by Eliwood_Emblem.
+[2015-10-11T18:54:24.369Z] (smashbros) iDitto was warned by epicjelly1. (jam)
+[2015-10-11T18:54:45.275Z] (smashbros) (epicjelly1 was demoted to Room Voice by Eliwood_Emblem.)
+[2015-10-11T18:55:14.267Z] (smashbros) epicjelly1 was promoted to Room Driver by Eliwood_Emblem.
+[2015-10-11T19:12:45.728Z] (smashbros) (Eliwood_Emblem changed the roomintro.)
+[2015-10-11T19:13:14.057Z] (smashbros) superdois was unbanned from room smashbros by Eliwood_Emblem.
+[2015-10-11T20:07:49.227Z] (smashbros) Robotstephen was warned by Eliwood_Emblem. (I dare you to do !doge. We will see what happens.)

@@ -370,3 +370,29 @@
 [2015-10-10T18:44:28.029Z] (alliancecup) Alliance TheThorn was appointed to Room Founder by Lt. Tesla.
 [2015-10-10T18:45:13.228Z] (alliancecup) Alliance - Lee was appointed Room Owner by Alliance TheThorn.
 [2015-10-10T18:46:07.653Z] (alliancecup) (alliancejoz was demoted to Room regular user by Alliance TheThorn.)
+[2015-10-11T20:34:27.654Z] (alliancecup) Alliance - Contort was promoted to Room Leader by Alliance - Lee.
+[2015-10-11T20:45:22.864Z] (alliancecup) (Alliance - Contort created a tournament in monotype format.)
+[2015-10-11T20:46:57.100Z] (alliancecup) Alliance - Contort set modchat to &
+[2015-10-11T20:47:03.855Z] (alliancecup) Alliance - Contort declared Tour starts at xx:00
+[2015-10-11T20:48:21.682Z] (alliancecup) Alliance - Lee declared Scouting-YES, Team switching- NO
+[2015-10-11T20:48:58.228Z] (alliancecup) Alliance - Contort set modchat to false
+[2015-10-11T20:58:15.908Z] (alliancecup) Alliance - Contort declared Tour starts after MOTC ends
+[2015-10-11T21:02:24.345Z] (alliancecup) Alliance - Lee declared Starting at xx:10 if MOTC is still going on
+[2015-10-11T21:03:44.466Z] (alliancecup) Alliance - Contort set modchat to +
+[2015-10-11T21:04:09.914Z] (alliancecup) Alliance - Contort declared First featured player
+[2015-10-11T21:04:31.639Z] (alliancecup) Alliance - Contort declared Defending champion
+[2015-10-11T21:04:34.811Z] (alliancecup) Alliance - Contort declared Sakis!
+[2015-10-11T21:05:01.275Z] (alliancecup) Alliance - Contort declared Second:
+[2015-10-11T21:05:19.381Z] (alliancecup) Alliance - Contort declared One of the best Electric users
+[2015-10-11T21:05:30.030Z] (alliancecup) Alliance - Contort set modchat to false
+[2015-10-11T21:05:45.990Z] (alliancecup) Alliance - Contort declared Asz1ran!
+[2015-10-11T21:07:18.043Z] (alliancecup) Alliance - Contort declared Third featured player
+[2015-10-11T21:07:38.358Z] (alliancecup) Alliance - Contort declared juleocesar
+[2015-10-11T21:08:21.615Z] (alliancecup) Alliance - Contort declared Sorry, my finger slipped
+[2015-10-11T21:08:34.899Z] (alliancecup) Alliance - Contort declared Crashy is third featured player
+[2015-10-11T21:09:31.409Z] (alliancecup) Alliance - Contort declared Tour starts in 1 minute
+[2015-10-11T21:10:09.984Z] (alliancecup) Alliance - Contort declared 4. Alliance Ampy, 5. Alliance ASruna, 6. Alliance destiny, 7. alliance dreams, 8. alliance fila, 9. alliance jahkem, 10. alliance kant
+[2015-10-11T21:10:44.108Z] (alliancecup) (The tournament auto disqualify timeout was set to 3 by Alliance - Contort)
+[2015-10-11T21:11:09.311Z] (alliancecup) Alliance - Lee declared Scouting yes, team switching no
+[2015-10-11T22:24:08.558Z] (alliancecup) (Alliance - Lee forcibly ended a tournament.)
+[2015-10-11T22:28:06.114Z] (alliancecup) Alliance - Lee set modchat to #

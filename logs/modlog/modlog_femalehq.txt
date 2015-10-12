@@ -2602,3 +2602,7 @@
 [2015-10-11T17:41:26.848Z] (femalehq) sunnycharizard was unbanned from room femalehq by Best'd.
 [2015-10-11T17:57:10.551Z] (femalehq) LostXanadu was warned by Mewth. (control yourself)
 [2015-10-11T17:57:19.283Z] (femalehq) LostXanadu was muted by SteelChar for 7 minutes. (trool)
+[2015-10-11T19:06:19.165Z] (femalehq) starizardz was unbanned from room femalehq by SteelChar.
+[2015-10-11T19:11:18.455Z] (femalehq) Xаnadu was kicked from the room by Best'd.
+[2015-10-11T19:16:20.432Z] (femalehq) AshBloodThief was banned from room femalehq by 00Shadow.
+[2015-10-12T00:29:54.377Z] (femalehq) The Pyrope was warned by Mewth. (spam)

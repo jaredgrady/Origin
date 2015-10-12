@@ -178,3 +178,12 @@
 [2015-09-01T19:24:43.880Z] (swisscheeseleague) Swiss Vergi was kicked from the room by Doctor Edam.
 [2015-09-01T19:30:32.637Z] (swisscheeseleague) Swiss Cheese Llama declared WE HAVE MORE PEOPLE THAN ASYLUM!
 [2015-09-03T04:00:15.172Z] (swisscheeseleague) Director Beast was promoted to Room Voice by Swiss Cheese Llama.
+[2015-10-11T23:48:50.419Z] (swisscheeseleague) Guard havarti2 was muted by Swiss Cheese Llama for 7 minutes.
+[2015-10-11T23:49:44.873Z] (swisscheeseleague) Guard havarti2 was banned from room swisscheeseleague by Guard Llamas.
+[2015-10-11T23:49:44.875Z] (swisscheeseleague) (Guard havarti2's roombanned alts: Guard Llamas, Swiss Cheese Llama)
+[2015-10-11T23:58:05.235Z] (swisscheeseleague) sparkychild was appointed to Room Founder by sparkychild.
+[2015-10-11T23:58:13.594Z] (swisscheeseleague) guardhavarti2 was unbanned from room swisscheeseleague by sparkychild.
+[2015-10-11T23:58:21.478Z] (swisscheeseleague) sparkychild was appointed Room Owner by sparkychild.
+[2015-10-12T00:10:47.757Z] (swisscheeseleague) Guard havarti2 was promoted to Room Driver by Swiss Cheese Llama.
+[2015-10-12T00:17:49.684Z] (swisscheeseleague) Swiss Cheese Llama was appointed to Room Founder by sparkychild.
+[2015-10-12T00:18:09.093Z] (swisscheeseleague) Guard havarti2 was appointed Room Owner by Swiss Cheese Llama.

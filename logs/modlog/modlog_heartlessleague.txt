@@ -610,3 +610,9 @@
 [2015-10-11T02:24:33.892Z] (heartlessleague) ReuniclusSlime was unmuted by ImmortalMaddie.
 [2015-10-11T02:30:08.761Z] (heartlessleague) DarkNightSkies was warned by Champ Vicky.
 [2015-10-11T16:53:45.373Z] (heartlessleague) DragonsOnBathSalts was promoted to Room Driver by King Shuckleton.
+[2015-10-11T19:28:35.280Z] (heartlessleague) Awakeninq was appointed Room Owner by Heartless Nobody.
+[2015-10-12T00:13:31.618Z] (heartlessleague) Dark Djiin Wolf was promoted to Room Driver by King Shuckleton.
+[2015-10-12T00:22:01.424Z] (heartlessleague) (Dark Djiin Wolf was demoted to Room Voice by King Shuckleton.)
+[2015-10-12T00:29:01.935Z] (heartlessleague) King Shuckleton set modchat to #
+[2015-10-12T00:29:36.167Z] (heartlessleague) King Shuckleton set modchat to false
+[2015-10-12T00:42:56.326Z] (heartlessleague) King Shuckleton declared NEW TOPIC

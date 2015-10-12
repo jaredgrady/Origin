@@ -887,3 +887,18 @@
 [2015-10-11T01:23:25.490Z] (artshop) Guard havarti2 was promoted to Room Driver by Soprano Meiko.
 [2015-10-11T01:24:27.229Z] (artshop) Harvest God was warned by Soprano Meiko. (I thought we went over this, Karl)
 [2015-10-11T18:16:44.080Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/1eecR5m.png"
+[2015-10-11T20:01:54.735Z] (artshop) Legacy Enervate was muted by Imp Latios for 7 minutes.
+[2015-10-11T20:02:12.475Z] (artshop) Legacy Enervate was unmuted by Imp Latios.
+[2015-10-11T20:05:00.188Z] (artshop) Legacy Enervate was banned from room artshop by Imp Latios.
+[2015-10-11T20:05:10.316Z] (artshop) legacyenervate was unbanned from room artshop by Imp Latios.
+[2015-10-11T20:06:42.751Z] (artshop) Legacy Enervate was warned by Imp Latios.
+[2015-10-11T20:06:56.899Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/zfjfMUv.png"
+[2015-10-11T20:09:12.423Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/DzX7AU4.jpg"
+[2015-10-11T20:09:35.579Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/DzX7AU4.jpg?1"
+[2015-10-11T22:37:40.250Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/Kc4mZUm.png"
+[2015-10-11T23:41:32.942Z] (artshop) Sunny Charizard declared <img src="http://i.imgur.com/e6EVlFA.gif"
+[2015-10-11T23:43:47.204Z] (artshop) Sunny Charizard declared <button type="receive" value="|c|~Memes| Voidchrono is obv a meme">Meme</button>
+[2015-10-11T23:44:14.203Z] (artshop) Sunny Charizard declared <button name="receive" value="|c|~Memes| Voidchrono is obv a meme">Meme</button>
+[2015-10-11T23:47:23.756Z] (artshop) Sunny Charizard declared <button name="receive" value="|c|~Donald Trump| Apparently.... Legacy◕ʖ̯◕Enervate can't make a **comback**">Meme</button>
+[2015-10-11T23:52:23.180Z] (artshop) Sunny Charizard declared <button name="receive" value="|c|~Harvest God| Fine I'll do it.....">Sigh</button>
+[2015-10-12T00:13:54.455Z] (artshop) Voidchrono was warned by Soprano Meiko - ⓡⓟ. (quit trolling)

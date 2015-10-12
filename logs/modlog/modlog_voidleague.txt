@@ -1459,3 +1459,32 @@
 [2015-10-11T17:10:36.942Z] (voidleague) (Neo Soul changed the roomintro.)
 [2015-10-11T17:12:31.703Z] (voidleague) (Neo Soul changed the roomintro.)
 [2015-10-11T17:12:39.223Z] (voidleague) (Neo Soul changed the roomintro.)
+[2015-10-11T19:16:49.180Z] (voidleague) Harvest God - ⒶⒻⓀ was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T19:28:17.202Z] (voidleague) Ralker was promoted to Room Voice by Void KGBeast.
+[2015-10-11T19:28:21.017Z] (voidleague) (Void Ventus notes:  unregged ass nigga)
+[2015-10-11T19:29:01.081Z] (voidleague) (Void KGBeast notes: Wait)
+[2015-10-11T19:29:04.256Z] (voidleague) (Void KGBeast notes: he you're right)
+[2015-10-11T19:29:07.111Z] (voidleague) (Void KGBeast notes: >unregistered)
+[2015-10-11T19:37:44.506Z] (voidleague) Void Lonely was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T19:37:52.534Z] (voidleague) iKrewella was muted by Safety Shark for 7 minutes. (Automated response: flooding)
+[2015-10-11T19:37:52.536Z] (voidleague) (iKrewella's ac account: voidventus)
+[2015-10-11T19:39:11.258Z] (voidleague) iKrewella was unmuted by Void Julius.
+[2015-10-11T19:42:15.335Z] (voidleague) SWL Eric was warned by Safety Shark. (Automated response: caps)
+[2015-10-11T19:47:14.955Z] (voidleague) Void Emlix was promoted to Room Voice by Void KGBeast.
+[2015-10-11T19:52:12.118Z] (voidleague) Void Trent - ⒷⓊⓈⓎ set modchat to &
+[2015-10-11T19:53:04.930Z] (voidleague) Void Trent - ⒷⓊⓈⓎ set modchat to false
+[2015-10-11T19:53:12.127Z] (voidleague) Void Cryptis declared RIP SMOOTH ROCK
+[2015-10-11T19:53:24.184Z] (voidleague) Void Lonely was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T19:56:50.154Z] (voidleague) SWL Eric was kicked from the room by Void Peng.
+[2015-10-11T20:06:41.925Z] (voidleague) Void Peng was warned by Void KGBeast.
+[2015-10-11T20:29:55.100Z] (voidleague) Void Pixelf was kicked from the room by Void Peng.
+[2015-10-11T20:41:30.521Z] (voidleague) Void SYB3R declared ha fuck you
+[2015-10-11T20:44:13.497Z] (voidleague) Harvest God was promoted to Room Voice by Void KGBeast.
+[2015-10-11T20:44:32.879Z] (voidleague) (rubyD was demoted to Room regular user by Void KGBeast.)
+[2015-10-11T21:08:11.398Z] (voidleague) (Void Lonely created a tournament in monotype format.)
+[2015-10-11T21:14:15.847Z] (voidleague) Sam Crowe set modchat to &
+[2015-10-11T21:16:18.331Z] (voidleague) Void Gorve set modchat to false
+[2015-10-11T21:17:03.166Z] (voidleague) (Void Gorve changed the roomdesc to: "http://pastebin.com/B1RxMF2Z <------ Elite 4 Tour Rules".)
+[2015-10-11T21:17:19.363Z] (voidleague) (Void Gorve changed the roomdesc to: "http://pastebin.com/B1RxMF2Z  <------ Elite 4 Tour Rules".)
+[2015-10-11T21:19:08.605Z] (voidleague) (Sam Crowe changed the roomdesc to: "http://pastebin.com/B1RxMF2Z .. E4 tour rules".)
+[2015-10-11T21:25:07.983Z] (voidleague) (Void Gorve changed the roomdesc to: "http://pastebin.com/B1RxMF2Z .. E4 tour rules (Void Members only)".)

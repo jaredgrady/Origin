@@ -2316,3 +2316,9 @@
 [2015-10-11T15:41:50.500Z] (casino) Chleg was unmuted by Starfox~fan.
 [2015-10-11T18:37:16.044Z] (casino) Cloyy was muted by Starfox~fan for 7 minutes.
 [2015-10-11T18:37:20.844Z] (casino) Cloyy was unmuted by Harvest God.
+[2015-10-11T20:47:27.104Z] (casino) fender globally declared The Alliance Cup is about to begin! <button name="send" value="/join alliancecup"><b>Join here to play!!!</b></button> 100/50 Prize!!!
+[2015-10-11T20:48:50.060Z] (casino) Emg Gl Volco was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T21:15:11.258Z] (casino) Thunder Clashing was warned by Safety Shark. (Automated response: stretching)
+[2015-10-11T21:21:45.648Z] (casino) Thunder Clashing was muted by Safety Shark for 7 minutes. (Automated response: stretching)
+[2015-10-11T21:22:12.082Z] (casino) Thunder Clashing was unmuted by SteelChar.
+[2015-10-11T21:48:33.770Z] (casino) linksage was warned by Safety Shark. (Automated response: stretching)

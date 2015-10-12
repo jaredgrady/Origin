@@ -501,3 +501,4 @@
 [2015-10-10T19:49:59.335Z] (theaccord) (iMasterball would be muted by Pmtk Red but was already offline.)
 [2015-10-10T21:08:13.112Z] (theaccord) hooters was kicked from the room by Pmtk Red.
 [2015-10-11T00:01:31.218Z] (theaccord) iMasterball was promoted to Room Voice by Wеvrm (Latios).
+[2015-10-11T20:47:09.512Z] (theaccord) Wolf Laharl was promoted to Room Voice by Guildmaster Wiggly.

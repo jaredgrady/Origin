@@ -3755,3 +3755,17 @@
 [2015-10-11T04:06:04.826Z] (theasylumleague) CCNo5 Jhawk was kicked from the room by Director Beast.
 [2015-10-11T04:07:05.243Z] (theasylumleague) Doctor Emboar11 was kicked from the room by Director Beast.
 [2015-10-11T04:59:36.035Z] (theasylumleague) Doctor Emboar11 was kicked from the room by Director Beast.
+[2015-10-11T20:10:16.486Z] (theasylumleague) Void Pixelf was warned by Boston Buizels. (Spam)
+[2015-10-11T21:19:34.922Z] (theasylumleague) SteelChar was muted by Warden Staravia for 7 minutes.
+[2015-10-11T21:21:27.113Z] (theasylumleague) SteelChar was unmuted by Director Beast.
+[2015-10-11T21:52:33.007Z] (theasylumleague) Hm Zuuzifer was promoted to Room Voice by Director Phantom.
+[2015-10-11T23:13:34.707Z] (theasylumleague) Boston Buizels was kicked from the room by Director Beast.
+[2015-10-11T23:39:13.582Z] (theasylumleague) Swiss Cheese Llama was kicked from the room by Guard havarti2.
+[2015-10-11T23:42:12.219Z] (theasylumleague) Swiss Cheese Llama was muted by Guard havarti2 for 7 minutes. (60)
+[2015-10-11T23:42:24.275Z] (theasylumleague) Swiss Cheese Llama was unmuted by Guard havarti2.
+[2015-10-11T23:42:31.304Z] (theasylumleague) Swiss Cheese Llama was muted by Guard havarti2 for 1 hour.
+[2015-10-11T23:43:29.769Z] (theasylumleague) Guard Llamas was unmuted by Captain Eve (≖︿≖✿).
+[2015-10-11T23:47:18.241Z] (theasylumleague) Swiss Cheese Llama was muted by Guard havarti2 for 1 hour.
+[2015-10-11T23:47:55.536Z] (theasylumleague) Guard havarti2 was muted by Boston Buizels for 7 minutes. (Stop being bad)
+[2015-10-11T23:48:23.406Z] (theasylumleague) Swiss Cheese Llama was unmuted by Boston Buizels.
+[2015-10-11T23:48:49.730Z] (theasylumleague) Guard havarti2 was unmuted by Boston Buizels.

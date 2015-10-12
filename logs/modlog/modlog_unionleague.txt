@@ -166,3 +166,4 @@
 [2015-10-10T18:03:03.398Z] (unionleague) Union Trash was appointed Room Owner by Union Tei.
 [2015-10-10T18:28:32.748Z] (unionleague) Union Has Berries was appointed to Room Founder by Erica*07.
 [2015-10-11T09:42:51.352Z] (unionleague) U Darren was appointed to Room Founder by Master Float.
+[2015-10-11T20:14:46.678Z] (unionleague) (Union Trash changed the roomintro.)

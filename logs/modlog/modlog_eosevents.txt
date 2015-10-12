@@ -444,3 +444,22 @@
 [2015-10-10T20:33:13.744Z] (eosevents) (GTX♅RainManaphy was disqualified from the tournament by Erica*07)
 [2015-10-10T20:38:59.474Z] (eosevents) (Megan Magna was disqualified from the tournament by Erica*07)
 [2015-10-11T03:16:09.277Z] (eosevents) Erica*07 - Ⓦⓞⓡⓚⓘⓝⓖ set modchat to +
+[2015-10-11T19:56:18.904Z] (eosevents) Allegiant Chime was promoted to Room Moderator by L Chevy 12.
+[2015-10-11T19:56:23.250Z] (eosevents) Allegiant Gryph was promoted to Room Moderator by L Chevy 12.
+[2015-10-11T19:57:15.434Z] (eosevents) (Allegiant Gryph notes: ayy lmao)
+[2015-10-11T20:38:05.306Z] (eosevents) L Chevy 12 set modchat to false
+[2015-10-11T20:42:01.571Z] (eosevents) L Chevy 12 - ⒶⓌⒶⓎ declared The tournament will be in the OU tier
+[2015-10-11T20:42:31.632Z] (eosevents) L Chevy 12 - ⒶⓌⒶⓎ declared Shinies are banned.
+[2015-10-11T20:46:31.752Z] (eosevents) (fender created a tournament in ou format.)
+[2015-10-11T20:49:35.135Z] (eosevents) (The tournament auto start timeout was set to 3 by Allegiant Chime)
+[2015-10-11T20:54:36.669Z] (eosevents) (The tournament auto disqualify timeout was set to 5 by Allegiant Chime)
+[2015-10-11T20:56:26.756Z] (eosevents) (5avage was disqualified from the tournament by Allegiant Chime)
+[2015-10-11T21:01:07.530Z] (eosevents) (The tournament was set to disallow scouting by Allegiant Gryph)
+[2015-10-11T21:08:27.715Z] (eosevents) (The tournament auto disqualify timeout was set to 1 by Allegiant Chime)
+[2015-10-11T21:10:20.089Z] (eosevents) (The tournament auto disqualify timeout was set to 2 by Allegiant Chime)
+[2015-10-11T21:26:57.154Z] (eosevents) Allegiant Chime set modchat to +
+[2015-10-11T22:03:17.179Z] (eosevents) Allegiant Gryph set modchat to false
+[2015-10-11T22:12:43.192Z] (eosevents) L Chevy 12 - ⒶⓌⒶⓎ set modchat to +
+[2015-10-11T22:25:59.338Z] (eosevents) Allegiant Gryph set modchat to false
+[2015-10-11T23:38:51.321Z] (eosevents) Allegiant Gryph set modchat to +
+[2015-10-12T00:14:54.826Z] (eosevents) L Chevy 12 was appointed to Room Founder by L Chevy 12.

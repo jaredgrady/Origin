@@ -2315,3 +2315,4 @@
 [2015-10-11T15:07:56.724Z] (randomtiers) (Enriique created a tournament in tripleshackmonscup format.)
 [2015-10-11T17:08:53.408Z] (randomtiers) (The tournament auto start timeout was set to 1 by Alliance Aegis)
 [2015-10-11T17:41:05.686Z] (randomtiers) (The tournament auto disqualify timeout was set to 0.5 by Alpha Ninja)
+[2015-10-11T23:01:00.048Z] (randomtiers) (warlic created a tournament in randombattle format.)
