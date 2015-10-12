@@ -1,4 +1,19 @@
 exports.commands = {
+	
+	renamechatroom: function (target, room, user, connection, cmd) {
+		if (!this.can('declare')) return; 
+    		var parts = target.split(',');
+		if (parts.length !== 2) return this.parse('/help renamechatroom');
+                var targetRoom = Rooms.rooms[toId(parts[0])];
+                if (!targetRoom) return this.errorReply("This room does not exist.");
+				
+				targetRoom.chatRoomData.title = parts[1];
+				Rooms.global.writeChatRoomData();
+				return this.sendReply("The chat room '" + parts[0] + "' was renamed to '" + parts[1]);
+  
+	},
+        renamechatroomhelp: ["/renamechatroom [room name], [new room name] - Renames a room."],
+
 	clearroomauth: function (target, room, user, cmd) {
 		if (!this.can('hotpatch')) return false;
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
