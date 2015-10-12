@@ -16,8 +16,8 @@
 var crypto = require('crypto');
 var fs = require('fs');
 var parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'nineage', 'voidnaten', 'irraquated', 'masterfloat']; //sys developers
-var developersIPs = ['76.19.156.193'];
+global.developers = ['fender', 'nineage', 'naten', 'irraquated', 'masterfloat', 'pawnpawn']; //sys developers
+var developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
@@ -1891,7 +1891,7 @@ roomintro: function (target, room, user) {
 			if (error) {
 				if (error.code === 1) {
 					// The working directory or index have local changes.
-					cmd = 'git add --all && git commit -m "Server backup via VPS" && ' + cmd + ' && git push -f master';
+					cmd = 'git add --all && git commit -am "Server backup via VPS" && ' + cmd + ' && git push -f master';
 					// if (error.code === 1) return this.sendreply ('Merge conflict has occurred, please fix this locally.');
 				} else {
 					// The most likely case here is that the user does not have
