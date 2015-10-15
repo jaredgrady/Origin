@@ -367,7 +367,7 @@ exports.tellsexpiryage = 1000 * 60 * 60 * 24 * 7;
 exports.tellrank = ' ';
 
 //Custom avatars appear in profile by putting the server url here. 
-exports.avatarurl = 'http://158.69.205.118 :7000';
+exports.avatarurl = 'http://158.69.205.118:7000';
 
 //Filters the unicode reverse character from users names when they try to use it.
 exports.namefilter = (/^[^\u202e]+/g, '');
