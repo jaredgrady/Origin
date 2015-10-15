@@ -1,7 +1,0 @@
-[2015-08-15T07:00:01.464Z] (psgo) Sunny Charizard was promoted to Room Leader by Sundar18.
-[2015-08-15T07:00:09.489Z] (psgo) (EosBot was demoted to Room Voice by Sundar18.)
-[2015-08-15T07:00:14.345Z] (psgo) EosBot was banned from room psgo by Sunny Charizard. (Blacklisted user)
-[2015-08-15T07:00:14.945Z] (psgo) (Sunny Charizard notes: User(s) "eosbot" added to blacklist successfully.  | By: #Sundar18)
-[2015-08-15T23:17:38.140Z] (psgo) SteelChar was promoted to Room Moderator by Sunny Charizard.
-[2015-08-16T03:08:44.577Z] (psgo) Unexpected Jazz was appointed Room Owner by swl sandman.
-[2015-08-16T18:13:34.652Z] (psgo) Void Naten - ⓝⓞ made this room hidden.

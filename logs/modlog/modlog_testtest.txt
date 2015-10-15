@@ -1,3 +1,0 @@
-[2015-08-05T17:47:38.734Z] (testtest) ArkenCiel turned on modjoin.
-[2015-08-05T17:47:38.750Z] (testtest) ArkenCiel set modchat to +
-[2015-08-05T17:47:38.750Z] (testtest) ArkenCiel made this room hidden.

@@ -1,9 +1,0 @@
-[2015-07-29T19:32:52.502Z] (brainstorm) Neo Soul set modjoin to +.
-[2015-07-29T19:32:52.516Z] (brainstorm) Neo Soul set modchat to +
-[2015-07-29T19:32:52.516Z] (brainstorm) Neo Soul made this room hidden.
-[2015-07-29T19:33:37.334Z] (brainstorm) Neo Soul was appointed to Room Founder by Neo Soul.
-[2015-07-29T19:33:40.547Z] (brainstorm) Kammi was appointed Room Owner by Neo Soul.
-[2015-07-29T19:33:45.138Z] (brainstorm) Pk-Kaiser was appointed Room Owner by Neo Soul.
-[2015-07-29T20:17:51.286Z] (brainstorm) Kammi declared <font size=3>User Contests are back!</font><br /><br />You remember them from last year with categories such as Most Popular User, Funniest User, and Most Likely to be a 40 Year Old Man! New categories are included this year, so be sure to nominate and vote for your favorite users on PS! <a href="http://luster.no-ip.org/forum/forumdisplay.php?fid=17"><button><b>Nominations are now live!</b></button></a>
-[2015-07-29T20:30:27.971Z] (brainstorm) Neo Soul declared <font size=3>User Contests are back!</font><br /><br />You remember them from last year with categories such as Most Popular User, Funniest User, and Most Likely to be a 40 Year Old Man! New categories are included this year, so be sure to nominate and vote for your favorite users on PS! <a href="http://luster.no-ip.org/forum/forumdisplay.php?fid=17"><button><b>Nominations are now live!</b></button></a>
-[2015-07-29T20:30:36.678Z] (brainstorm) Neo Soul globally declared <font size=3>User Contests are back!</font><br /><br />You remember them from last year with categories such as Most Popular User, Funniest User, and Most Likely to be a 40 Year Old Man! New categories are included this year, so be sure to nominate and vote for your favorite users on PS! <a href="http://luster.no-ip.org/forum/forumdisplay.php?fid=17"><button><b>Nominations are now live!</b></button></a>

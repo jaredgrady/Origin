@@ -1,5 +1,0 @@
-[2015-08-19T21:54:49.333Z] (lvl2) Vanitas was promoted to Moderator by Nineage.
-[2015-08-19T21:55:17.070Z] (lvl2) (Vanitas was demoted to Driver by Nineage.)
-[2015-08-24T04:38:41.222Z] (lvl2) Nineage made this room secret.
-[2015-08-24T04:42:20.679Z] (lvl2) Nineage has started a Standard LvL between el and al in the Monotype format.
-[2015-08-24T04:42:38.029Z] (lvl2) Nineage has forcibly ended the LvL between el and al.

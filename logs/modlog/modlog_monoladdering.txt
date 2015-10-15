@@ -1,8 +1,0 @@
-[2015-08-04T04:36:59.780Z] (monoladdering) Actives was appointed to Room Founder by fender.
-[2015-08-04T07:23:19.757Z] (monoladdering) Safety Shark was promoted to Room Moderator by Actives.
-[2015-08-04T08:17:57.735Z] (monoladdering) VFP was appointed to Room Founder by Dream Eater Gengar.
-[2015-08-04T23:47:48.260Z] (monoladdering) Alliance Hoopa was promoted to Room Driver by VFP.
-[2015-08-05T15:23:44.484Z] (monoladdering) Chime3 was appointed Room Owner by VFP.
-[2015-08-05T16:36:49.210Z] (monoladdering) ArkenCiel set modjoin to ~.
-[2015-08-05T16:36:49.210Z] (monoladdering) ArkenCiel set modchat to +
-[2015-08-05T16:36:49.210Z] (monoladdering) ArkenCiel made this room hidden.

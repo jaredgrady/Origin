@@ -1,8 +1,0 @@
-[2015-08-02T22:43:29.261Z] (councilmeeting) Neo Soul set modjoin to +.
-[2015-08-02T22:43:29.375Z] (councilmeeting) Neo Soul set modchat to +
-[2015-08-02T22:43:29.375Z] (councilmeeting) Neo Soul made this room hidden.
-[2015-08-02T22:43:40.295Z] (councilmeeting) Void Trent was appointed to Room Founder by Neo Soul.
-[2015-08-02T22:44:26.029Z] (councilmeeting) Neo Soul was appointed Room Owner by Void Trent.
-[2015-08-02T22:51:59.438Z] (councilmeeting) Elite Fou✘ Bush -  was promoted to Room Moderator by Void Trent.
-[2015-08-02T22:52:17.554Z] (councilmeeting) Elite Fou Barida was promoted to Room Moderator by Void Trent.
-[2015-08-02T23:28:19.350Z] (councilmeeting) Champion Rida was promoted to Room Moderator by Neo Soul.

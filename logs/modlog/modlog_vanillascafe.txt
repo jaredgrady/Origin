@@ -1,4 +1,0 @@
-[2015-07-28T00:59:07.178Z] (vanillascafe) ArkenCiel set modjoin to ~.
-[2015-07-28T00:59:07.179Z] (vanillascafe) ArkenCiel set modchat to +
-[2015-07-28T00:59:07.179Z] (vanillascafe) ArkenCiel made this room hidden.
-[2015-07-28T00:59:21.447Z] (vanillascafe) nick151 - ⓢⓟⓡⓘⓣⓘⓝⓖ was kicked from the room by VanillaPuddingCake.

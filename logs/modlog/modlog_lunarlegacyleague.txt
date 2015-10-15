@@ -1,4 +1,0 @@
-[2015-08-22T20:08:25.511Z] (lunarlegacyleague) Skymond was appointed to Room Founder by ArkenCiel.
-[2015-08-22T20:08:41.158Z] (lunarlegacyleague) ArkenCiel set modjoin to ~.
-[2015-08-22T20:08:41.174Z] (lunarlegacyleague) ArkenCiel set modchat to +
-[2015-08-22T20:08:41.175Z] (lunarlegacyleague) ArkenCiel made this room hidden.
