@@ -45,7 +45,7 @@ exports.commands = {
         this.sendReplyBox('<center><img src= http://i.imgur.com/rs8x2KE.png"; width="400" height="300"><br />' +
             'Like this server and want to help out?<br />' +
             '<a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=BN-8Ofk9gOZZdJdFvK4fGTuj8PCUXomEPOr2_yYjVLSG4modStxRSBRDo7W&dispatch=5885d80a13c0db1f8e263663d3faee8d99e4111b56ef0eae45e68b8988f5b2dd"><img src="https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif" /></a><br />' +
-            '<b>Thanks for supporting eos!</b><br />' +
+            '<b>Thanks for supporting Origin!</b><br />' +
             '<b>Contact naten2006 after completing your donation</b>')
     },
 
