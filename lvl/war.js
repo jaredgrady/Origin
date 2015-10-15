@@ -553,7 +553,7 @@ var cmds = {
                                         '<li>/lvl auth, [Captain1], [Captain2] - Change team captains</li>' +
                                         '<li>/lvl reg, [P1], [P2]... - Command for captains to set lineups.</li>' +
                                         '<li>/lvl start - Start the lvl after lineups are registered.</li>' +
-										'<li>To see basic league commands, use /leaguehelp. All code written by Ecuacion, adapted by the Eos Coding Staff.</li>' +
+										'<li>To see basic league commands, use /leaguehelp. All code written by Ecuacion, adapted by the Origin Coding Staff.</li>' +
                                         '</ul>');
 				break;
 			case 'nuevo':
