@@ -26,7 +26,7 @@ exports.commands = {
 			"/leagueclose -  Prevents all users except league members and global staff from joining a league room. <font color = \"red\">Currently disabled.</font><br />" +
 			"/leagueopen - Reopens a league room to the public after using /leagueclose. <br /><br />" +
 			"<i>Use /leaguehelp ~ for admin-only commands.</i><br /><br />" +
-			"<b><u>League vs. League code by Ecuacion, adapted for use on EOS by the Eos coding staff.</b></u>"
+			"<b><u>League vs. League code by Ecuacion, adapted for use on Origin by the Origin coding staff.</b></u>"
 		);
 	},
 
@@ -53,7 +53,7 @@ exports.commands = {
 	clanes: 'leagues',
 	leagues: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
-		var clansTableTitle = "Eos Leagues:";
+		var clansTableTitle = "Origin Leagues:";
 		if (toId(target) === 'rank' || toId(target) === 'puntos' || toId(target) === 'prestigio' || toId(target) === 'puntuacion') {
 			target = "rank";
 			clansTableTitle = "List of leagues by ELO:";
