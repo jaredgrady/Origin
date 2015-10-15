@@ -937,7 +937,7 @@ exports.Formats = [
 	},
 	{
 		name: "Mega Tier",
-		section: "EOS Metagames",
+		section: "Origin Metagames",
 		column: 2,
 		
 		mod: 'megatier',
