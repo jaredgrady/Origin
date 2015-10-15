@@ -156,7 +156,7 @@ Profile.prototype.vip = function() {
 Profile.prototype.dev = function() {
 	if (typeof this.user === 'string') return '';
 	if (this.user && !this.user.can('dev')) return '';
-	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>EOS Dev</b></font>)';
+	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
 	return '';
 };
 
