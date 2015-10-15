@@ -214,7 +214,7 @@ var commands = exports.commands = {
 		if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else if (toId(target).indexOf('psim' || 'tinyurl') > -1) {
-			       if (target.indexOf('eos.psim' || 'pokemonshowdown' || 'smogtours') > -1){
+			       if (target.indexOf('origin.psim' || 'pokemonshowdown' || 'smogtours') > -1){
 			           targetUser.send(message);
 			} else {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
