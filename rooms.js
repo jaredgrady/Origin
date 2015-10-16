@@ -318,6 +318,7 @@ var GlobalRoom = (function () {
 	           	},  {
 				title: 'Upper Staff',
 				isPrivate: true,
+				staffRoom: true,
 				staffAutojoin: true
 			}
 			];
