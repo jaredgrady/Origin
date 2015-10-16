@@ -237,6 +237,7 @@ exports.grouplist = [
 		id: "admin",
 		name: "Administrator",
 		root: true,
+		upperstaff: true,
 		globalonly: true
 	},
 	{
@@ -258,6 +259,7 @@ exports.grouplist = [
 		potd: true,
 		disableladder: true,
 		globalonly: true,
+		upperstaff: true,
 		tournamentsmanagement: true
 	},
 	{
