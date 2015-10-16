@@ -932,6 +932,7 @@ roomintro: function (target, room, user) {
 	j: 'join',
 	join: function (target, room, user, connection) {
 		if (!target) return false;
+		if (toId(target) === 'upperstaff' && !this.can('upperstaff')) return false; 
 		if (user.tryJoinRoom(target, connection) === null) {
 			connection.sendTo(target, "|noinit|namerequired|The room '" + target + "' does not exist or requires a login to join.");
 		}
