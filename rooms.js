@@ -1406,6 +1406,10 @@ var BattleRoom = (function () {
 		}
 		this.expireTimer = null;
 
+		if (this.muteTimer) {
+			clearTimeout(this.muteTimer);
+		}
+		this.muteTimer = null;
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
 	};
@@ -1434,7 +1438,7 @@ var ChatRoom = (function () {
 			};
 			this.logEntry('NEW CHATROOM: ' + this.id);
 			if (Config.loguserstats) {
-				setInterval(this.logUserStats.bind(this), Config.loguserstats);
+				this.logUserStatsInterval = setInterval(this.logUserStats.bind(this), Config.loguserstats);
 			}
 		}
 
@@ -1589,25 +1593,21 @@ var ChatRoom = (function () {
 	ChatRoom.prototype.tryExpire = function () {
 		this.destroy();
 	};
-	ChatRoom.prototype.getIntroMessage = function () {
-		if (this.modchat && this.introMessage) {
-			return '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div>' +
-				'<br />' +
-				'<div class="broadcast-red">' +
-				'Must be rank ' + this.modchat + ' or higher to talk right now.' +
-				'</div></div>';
-		}
+	ChatRoom.prototype.getIntroMessage = function (user) {
+		var message = '';
+		if (this.introMessage) message += '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div>';
+		if (this.staffMessage && user.can('mute', null, this)) message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '(Staff intro:)<br /><div>' + this.staffMessage + '</div>';
 		if (this.modchat) {
-			return '\n|raw|<div class="infobox"><div class="broadcast-red">' +
+			message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '<div class="broadcast-red">' +
 				'Must be rank ' + this.modchat + ' or higher to talk right now.' +
-				'</div></div>';
+				'</div>';
 		}
-		if (this.introMessage) return '\n|raw|<div class="infobox">' + this.introMessage + '</div>';
-		return '';
+		if (message) message += '</div>';
+		return message;
 	};
 	ChatRoom.prototype.onJoinConnection = function (user, connection) {
 		var userList = this.userList ? this.userList : this.getUserList();
-		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-25).join('\n') + this.getIntroMessage());
+		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-25).join('\n') + this.getIntroMessage(user));
 		if (this.poll) this.poll.display(user, false);
 		if (global.Tournaments && Tournaments.get(this.id)) {
 			Tournaments.get(this.id).updateFor(user, connection);
@@ -1707,8 +1707,19 @@ var ChatRoom = (function () {
 				delete aliases[this.aliases[i]];
 			}
 		}
-		// remove active mute timer if any
-		if (this.muteTimer) clearTimeout(this.muteTimer);
+		// Clear any active timers for the room
+		if (this.muteTimer) {
+			clearTimeout(this.muteTimer);
+		}
+		this.muteTimer = null;
+		if (this.reportJoinsInterval) {
+			clearTimeout(this.reportJoinsInterval);
+		}
+		this.reportJoinsInterval = null;
+		if (this.logUserStatsInterval) {
+			clearTimeout(this.logUserStatsInterval);
+		}
+		this.logUserStatsInterval = null;
 
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
