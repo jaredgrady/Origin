@@ -315,7 +315,12 @@ var GlobalRoom = (function () {
 				isPrivate: true,
 				staffRoom: true,
 				staffAutojoin: true
-			}];
+	           	},  {
+				title: 'Upper Staff',
+				isPrivate: true,
+				staffAutojoin: true
+			}
+			];
 		}
 
 		this.chatRooms = [];
