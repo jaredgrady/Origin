@@ -525,7 +525,7 @@ var commands = exports.commands = {
 			this.sendReplyBox("The room description is: " + room.desc.replace(re, '<a href="$1">$1</a>'));
 			return;
 		}
-		if (!this.can('roomleader', null, room)) return false;
+		if (!this.can('declare', null, room)) return false;
 		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
 		if (target.length > 80) return this.sendReply("Error: Room description is too long (must be at most 80 characters).");
 		var normalizedTarget = ' ' + target.toLowerCase().replace('[^a-zA-Z0-9]+', ' ').trim() + ' ';
@@ -1872,10 +1872,12 @@ roomintro: function (target, room, user) {
 	},
 
 	updateserver: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid)) {
+			return this.errorReply("/updateserver - Access denied.");
+		}
 
 		if (CommandParser.updateServerLock) {
-			return this.sendReply("/updateserver - Another update is already in progress.");
+			return this.errorReply("/updateserver - Another update is already in progress.");
 		}
 
 		CommandParser.updateServerLock = true;
@@ -1891,8 +1893,7 @@ roomintro: function (target, room, user) {
 			if (error) {
 				if (error.code === 1) {
 					// The working directory or index have local changes.
-					cmd = 'git add --all && git commit -am "Server backup via VPS" && ' + cmd + ' && git push -f master';
-					// if (error.code === 1) return this.sendreply ('Merge conflict has occurred, please fix this locally.');
+					cmd = 'git stash && ' + cmd + ' && git stash pop';
 				} else {
 					// The most likely case here is that the user does not have
 					// `git` on the PATH (which would be error.code === 127).

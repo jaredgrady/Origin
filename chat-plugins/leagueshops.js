@@ -151,7 +151,7 @@ exports.commands = {
 	 },
 	
 	bankadd: function (target, room, user) { 
-        	if (!user.can('roomleader', null, room)) return this.sendReply('/bankadd - Access denied.');
+        	if (!user.can('declare', null, room)) return this.sendReply('/bankadd - Access denied.');
         	if (!target) return this.parse('/help bankadd');
         	if (!room.shopBank) return this.sendReply('Please /setbank before using this command.');
         	if (!room.bankwhitelist) {
@@ -165,7 +165,7 @@ exports.commands = {
 	},
 
 	bankdelete: function (target, room, user) { 
-        	if (!user.can('roomleader', null, room)) return this.sendReply('bankdelete - Access denied.');
+        	if (!user.can('declare', null, room)) return this.sendReply('bankdelete - Access denied.');
         	if (!target) return this.parse('/help bankdelete');
         	if (!room.bankwhitelist[toId(target)]) return this.sendReply('User is not whitelisted');
         	delete room.chatRoomData.bankwhitelist(toId(target)); 

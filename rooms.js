@@ -1608,6 +1608,7 @@ var ChatRoom = (function () {
 	ChatRoom.prototype.onJoinConnection = function (user, connection) {
 		var userList = this.userList ? this.userList : this.getUserList();
 		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-25).join('\n') + this.getIntroMessage());
+		if (this.poll) this.poll.display(user, false);
 		if (global.Tournaments && Tournaments.get(this.id)) {
 			Tournaments.get(this.id).updateFor(user, connection);
 		}
@@ -1622,7 +1623,7 @@ var ChatRoom = (function () {
 		if (!merging) {
 			var userList = this.userList ? this.userList : this.getUserList();
 			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
-
+			if (this.poll) this.poll.display(user, false);
 			if (global.Tournaments && Tournaments.get(this.id)) {
 				Tournaments.get(this.id).updateFor(user, connection);
 			}
