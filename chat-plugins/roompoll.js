@@ -111,7 +111,7 @@ var Poll = (function () {
 })();
 
 exports.commands = {
-	poll: {
+	roompoll: {
 		create: 'new',
 		new: function (target, room, user) {
 			if (target.length > 1024) return this.errorReply("Poll too long.");
@@ -192,7 +192,7 @@ exports.commands = {
 			this.parse('/help poll');
 		}
 	},
-	pollhelp: ["/poll allows rooms to run their own polls. These polls are limited to one poll at a time per room.",
+	roompollhelp: ["/poll allows rooms to run their own polls. These polls are limited to one poll at a time per room.",
 				"Accepts the following commands:",
 				"/poll create [question], [option1], [option2], [...] - Creates a poll. Requires: % @ # & ~",
 				"/poll vote [number] - Votes for option [number].",
