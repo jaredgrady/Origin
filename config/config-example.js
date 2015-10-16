@@ -4,7 +4,7 @@ exports.port = 8000;
 // proxyip - proxy IPs with trusted X-Forwarded-For headers
 //   This can be either false (meaning not to trust any proxies) or an array
 //   of strings. Each string should be either an IP address or a subnet given
-//   in CIDR notation. You should usually leave this as `false` unless youfender: we are making blackjack
+//   in CIDR notation. You should usually leave this as `false` unless you
 //   know what you are doing.
 exports.proxyip = false;
 
@@ -153,16 +153,6 @@ exports.simulatorprocesses = 1;
 // from the `users` array. The default is 1 hour.
 exports.inactiveuserthreshold = 1000 * 60 * 60;
 
-// tellsexpiryage - how long an offline message remains in existence before being removed.
-// By default, 7 days
-exports.tellsexpiryage = 1000 * 60 * 60 * 24 * 7;
-
-// tellrank - the rank that offline messaging is available to. By default, available to voices
-// and above. Set to ' ' to allow all users to use offline messaging and `false` to disable
-// offline messaging completely. Set to `'autoconfirmed'` to allow only autoconfirmed users
-// to send offline messages.
-exports.tellrank = '+';
-
 // Custom avatars.
 // This allows you to specify custom avatar images for users on your server.
 // Place custom avatar files under the /config/avatars/ directory.
@@ -174,9 +164,6 @@ exports.tellrank = '+';
 exports.customavatars = {
 	//'userid': 'customavatar.png'
 };
-
-// custom avatars appear in profile by specifiying server url.
-exports.avatarurl = '';
 
 // Tournament announcements
 // When tournaments are created in rooms listed below, they will be announced in
@@ -223,6 +210,8 @@ exports.replsocketmode = 0600;
 //     - promote: Promoting and demoting. Will only work if the target user's current
 //                  group and target group are both in jurisdiction.
 //     - room<rank>: /roompromote to <rank> (eg. roomvoice)
+//     - makeroom: Create/delete chatrooms, and set modjoin/roomdesc/privacy
+//     - editroom: Set modjoin/privacy only for battles/groupchats
 //     - ban: Banning and unbanning.
 //     - mute: Muting and unmuting.
 //     - lock: locking (ipmute) and unlocking.
@@ -242,8 +231,6 @@ exports.replsocketmode = 0600;
 //     - tournaments: creating tournaments (/tour new, settype etc.)
 //     - tournamentsmoderation: /tour dq, autodq, end etc.
 //     - tournamentsmanagement: enable/disable tournaments.
-//     - eztc: /eztc commands.
-
 exports.grouplist = [
 	{
 		symbol: '~',
@@ -259,15 +246,18 @@ exports.grouplist = [
 		inherit: '@',
 		jurisdiction: '@u',
 		promote: 'u',
+		roomowner: true,
+		roommod: true,
+		roomdriver: true,
 		forcewin: true,
 		declare: true,
 		modchatall: true,
 		rangeban: true,
+		makeroom: true,
+		editroom: true,
 		potd: true,
 		disableladder: true,
 		globalonly: true,
-		tournamentsmanagement: true,
-		eztc: true
 		tournamentsmanagement: true
 	},
 	{
@@ -278,6 +268,7 @@ exports.grouplist = [
 		jurisdiction: 'u',
 		roommod: true,
 		roomdriver: true,
+		editroom: true,
 		declare: true,
 		modchatall: true,
 		roomonly: true,
@@ -291,9 +282,8 @@ exports.grouplist = [
 		roomvoice: true,
 		modchat: true,
 		roomonly: true,
-		privateroom: true,
-		joinbattle: true,
-
+		editroom: true,
+		joinbattle: true
 	},
 	{
 		symbol: '@',
@@ -316,9 +306,9 @@ exports.grouplist = [
 		inherit: '+',
 		jurisdiction: 'u',
 		announce: true,
-		warn: true,
+		warn: '\u2605u',
 		kick: true,
-		mute: true,
+		mute: '\u2605u',
 		lock: true,
 		forcerename: true,
 		timer: true,
@@ -335,20 +325,13 @@ exports.grouplist = [
 		id: "voice",
 		name: "Voice",
 		inherit: ' ',
+		alts: 's',
 		broadcast: true
 	},
 	{
 		symbol: ' ',
-		ip: 's',
-		alts: 's'
+		ip: 's'
 	}
 ];
 
-// Maximum number of concurrent connections a single ip may have
-exports.maxConnections = 5;
-
-// Whitelist to bypass the maximum number of concurrent connections
-exports.connectionWhitelist = {
-	'127.0.0.1': 20
-};
 
