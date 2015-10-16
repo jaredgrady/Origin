@@ -16,7 +16,7 @@
 var crypto = require('crypto');
 var fs = require('fs');
 var parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'nineage', 'irraquated', 'masterfloat', 'pawnpawn']; //sys developers
+global.developers = ['fender', 'nineage', 'irraquated', 'masterfloat']; //sys developers
 var developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
@@ -1872,7 +1872,7 @@ roomintro: function (target, room, user) {
 	},
 
 	updateserver: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) {
+		if (!user.can('hotpatch')) {
 			return this.errorReply("/updateserver - Access denied.");
 		}
 
@@ -1921,7 +1921,7 @@ roomintro: function (target, room, user) {
 			});
 		});
 	},
-
+	
 	crashfixed: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.sendReply('/crashfixed - There is no active crash.');
