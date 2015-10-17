@@ -657,7 +657,7 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545628/\">CAP Viability Ranking</a>"
 		],
 		section: "Other Metagames",
-		column: 2,
+		column: 3,
 
 		ruleset: ['OU'],
 		banlist: ['Allow CAP']
@@ -937,9 +937,8 @@ exports.Formats = [
 	},
 	{
 		name: "Mega Tier",
-		section: "Origin Metagames",
-		column: 2,
-		
+		section: "Other Metagames",
+
 		mod: 'megatier',
 		ruleset: ['Pokemon', 'Team Preview', 'Mega Rayquaza Clause', 'Swagger Clause', 'Baton Pass Clause', 'Endless Battle Clause', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Moody Clause', 'Evasion Moves Clause', 'Endless Battle Clause',  'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Illegal', 'Rayquaza-Mega', 'Groudon-Primal', 'Kyogre-Primal', 'Red Orb', 'Blue Orb', 'Lucario-Mega', 'Lucarionite', 'CAP', 'Unreleased', 'Soul Dew']
@@ -1079,7 +1078,7 @@ exports.Formats = [
 		name: "[Gen 5] OU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
 		section: "BW2 Singles",
-		column: 3,
+		column: 2,
 
 		mod: 'gen5',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Team Preview'],
@@ -1259,6 +1258,15 @@ exports.Formats = [
 		mod: 'gen4',
 		ruleset: ['Pokemon', 'Standard'],
 		banlist: ['Uber', 'OU', 'BL']
+	},
+	{
+		name: "[Gen 3] LC",
+		section: "Past Generations",
+
+		mod: 'gen3',
+		maxLevel: 5,
+		ruleset: ['Pokemon', 'Standard', 'Little Cup'],
+		banlist: ['Scyther', 'Chansey', 'Wynaut', 'Zigzagoon', 'Omanyte', 'Agility + Baton Pass', 'Dragon Rage', 'Sonic boom']
 	},
 	{
 		name: "[Gen 4] LC",
