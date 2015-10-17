@@ -336,25 +336,7 @@ exports.Formats = [
 			return problems;
 		}
 	},
-	{
-        name: "Move Equality",
-        section: "Other Metagames",
-        ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
-        banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
-        onModifyMove: function (move, pokemon) {
-            //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
-            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
-            if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100; 
-            if (!move.priority && move.multihit) {
-                if (typeof(move.multihit) === 'number') {
-                    move.basePower = 100/move.multihit;
-                } else {
-                    move.basePower = 100/move.multihit[1];
-                }
-            }
-        }
-	},
-	{
+		{
 		name: "MonsJustMons",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3514696/\">MonsJustMons</a>"],
 		section: "OM of the Month",
@@ -404,6 +386,25 @@ exports.Formats = [
 			this.p2.pokemon = this.p2.pokemon.slice(0, 4);
 			this.p2.pokemonLeft = this.p2.pokemon.length;
 		}
+	},
+	{
+        name: "Move Equality",
+        section: "Other Metagames",
+        column: 2,
+        ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
+        banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
+        onModifyMove: function (move, pokemon) {
+            //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
+            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
+            if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100; 
+            if (!move.priority && move.multihit) {
+                if (typeof(move.multihit) === 'number') {
+                    move.basePower = 100/move.multihit;
+                } else {
+                    move.basePower = 100/move.multihit[1];
+                }
+            }
+        }
 	},
 	{
 		name: "[Seasonal] Rainbow Road",
@@ -657,8 +658,6 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545628/\">CAP Viability Ranking</a>"
 		],
 		section: "Other Metagames",
-		column: 3,
-
 		ruleset: ['OU'],
 		banlist: ['Allow CAP']
 	},
@@ -1260,15 +1259,6 @@ exports.Formats = [
 		banlist: ['Uber', 'OU', 'BL']
 	},
 	{
-		name: "[Gen 3] LC",
-		section: "Past Generations",
-
-		mod: 'gen3',
-		maxLevel: 5,
-		ruleset: ['Pokemon', 'Standard', 'Little Cup'],
-		banlist: ['Scyther', 'Chansey', 'Wynaut', 'Zigzagoon', 'Omanyte', 'Agility + Baton Pass', 'Dragon Rage', 'Sonic boom']
-	},
-	{
 		name: "[Gen 4] LC",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522692\">DPP Resources</a>"],
 		section: "Past Generations",
@@ -1337,6 +1327,15 @@ exports.Formats = [
 		mod: 'gen2',
 		ruleset: ['Pokemon', 'Standard'],
 		banlist: ['Uber']
+	},
+	{
+		name: "[Gen 3] LC",
+		section: "Past Generations",
+
+		mod: 'gen3',
+		maxLevel: 5,
+		ruleset: ['Pokemon', 'Standard', 'Little Cup'],
+		banlist: ['Scyther', 'Chansey', 'Wynaut', 'Zigzagoon', 'Omanyte', 'Agility + Baton Pass', 'Dragon Rage', 'Sonic boom']
 	},
 	{
 		name: "[Gen 2] Ubers",
