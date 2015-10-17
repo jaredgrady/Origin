@@ -300,8 +300,10 @@
   }
   
   .tournament-tools .select:disabled {
-    background: rgba(51, 98, 81, 0.45);
+    background: rgba(51, 98, 81, 0.45) !important;
     color: #11484F !important;
+    text-shadow: none !important;
+    border-color: #11484F !important;
   }
   
   .tournament-tools button {
