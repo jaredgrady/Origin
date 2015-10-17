@@ -315,18 +315,19 @@ var GlobalRoom = (function () {
 				isPrivate: true,
 				staffRoom: true,
 				staffAutojoin: true
-	           	},  {
+	        }, {
 				title: 'Upper Staff',
 				isPrivate: true,
-				staffAutojoin: true
-			}
-			];
+				upperstaffRoom: true,
+				upperstaffAutojoin: true
+			}];
 		}
 
 		this.chatRooms = [];
 
 		this.autojoin = []; // rooms that users autojoin upon connecting
 		this.staffAutojoin = []; // rooms that staff autojoin upon connecting
+		this.upperstaffAutojoin = []; // rooms that upper staff autojoin upon connecting
 		for (var i = 0; i < this.chatRoomData.length; i++) {
 			if (!this.chatRoomData[i] || !this.chatRoomData[i].title) {
 				console.log('ERROR: Room number ' + i + ' has no data.');
@@ -343,6 +344,7 @@ var GlobalRoom = (function () {
 			this.chatRooms.push(room);
 			if (room.autojoin) this.autojoin.push(id);
 			if (room.staffAutojoin) this.staffAutojoin.push(id);
+			if (room.upperstaffAutojoin) this.upperstaffAutojoin.push(id);
 		}
 
 		// this function is complex in order to avoid several race conditions
@@ -729,6 +731,20 @@ var GlobalRoom = (function () {
 					typeof room.staffAutojoin === 'string' && room.staffAutojoin.indexOf(user.group) >= 0) {
 				// if staffAutojoin is true: autojoin if isStaff
 				// if staffAutojoin is String: autojoin if user.group in staffAutojoin
+				user.joinRoom(room.id, connection);
+			}
+		}
+		for (var i = 0; i < this.upperstaffAutojoin.length; i++) {
+			var room = Rooms.get(this.upperstaffAutojoin[i]);
+			if (!room) {
+				this.upperstaffAutojoin.splice(i, 1);
+				i--;
+				continue;
+			}
+			if (room.upperstaffAutojoin === true && user.isUpperstaff ||
+					typeof room.upperstaffAutojoin === 'string' && room.upperstaffAutojoin.indexOf(user.group) >= 0) {
+				// if upperstaffAutojoin is true: autojoin if isUpperstaff
+				// if upperstaffAutojoin is String: autojoin if user.group in upperstaffAutojoin
 				user.joinRoom(room.id, connection);
 			}
 		}
