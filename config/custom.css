@@ -46,6 +46,50 @@
   .chat.mine {
     background: rgba(0, 0, 0, 0);
   }
+   .broadcast-blue {
+    background-color: #CD9FC4;
+    border: 1px solid #0B1361;
+    color: #0B1361;
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    text-shadow: 0px -1px 0px #D7F2FF;
+  }
+ 
+  .broadcast-blue a {
+    color: #CD9FC4;
+  }
+ 
+  .broadcast-red {
+    background-color: #FFB3B3;
+    border: 1px solid #610B0B;
+    color: #610B0B;
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    text-shadow: 0px -1px 0px #FFD7D7;
+  }
+ 
+  .broadcast-red a {
+    color: #610B0B;
+  }
+ 
+  .broadcast-green {
+    background-color: #C3FFB3;
+    border: 1px solid #19610B;
+    color: #19610B;
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    text-shadow: 0px -1px 0px #D8FFD7;
+  }
+ 
+  .broadcast-green a {
+    color: #19610B;
+  }
   
   /*******************
   * General CSS ~end *
