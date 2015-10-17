@@ -22,6 +22,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
   }
   
+  #lobby-userlist-user-notorangejuice, #staff-userlist-user-notorangejuice {
+    background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
+  }
+  
   /**************************
   * Userlist Icons CSS ~end *
   **************************/
