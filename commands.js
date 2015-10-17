@@ -278,7 +278,7 @@ var commands = exports.commands = {
 
 	makeprivatechatroom: 'makechatroom',
 	makechatroom: function (target, room, user, connection, cmd) {
-		if (!this.can('hotpatch')) return;
+		if (!this.can('upperstaff')) return;
 		// `,` is a delimiter used by a lot of /commands
 		// `|` and `[` are delimiters used by the protocol
 		// `-` has special meaning in roomids
