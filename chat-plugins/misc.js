@@ -833,7 +833,7 @@ exports.commands = {
 		if (!target) {
 			user.group = '~';
 			user.updateIdentity();
-		if (user.userid === 'fender')) {
+		if (user.userid === 'fender') {
 			return this.parse('/hide');
 		} else {
 			return;
