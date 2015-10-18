@@ -53,7 +53,8 @@
   }
   
   .ps-room.ps-room-light.scrollable p {
-    background: rgba(255, 255, 255, 0.4);
+    color: #031012;
+    text-shadow: 0px 0px 2px #96BFB8;
   }
   
   .ps-room.ps-room-light.scrollable .button {
