@@ -1,4 +1,4 @@
-/*********************
+  /*********************
   * Userlist Icons CSS *
   *********************/
   
@@ -45,6 +45,27 @@
   
   .ps-room.ps-room-light.scrollable {
     background: rgba(51, 98, 81, 0.6);
+  }
+  
+  .ps-room.ps-room-light.scrollable h3 {
+    color: #BBCCC9;
+    text-shadow: 0px 0px 2px #11484F;
+  }
+  
+  .ps-room.ps-room-light.scrollable p {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .ps-room.ps-room-light.scrollable .button {
+    background: #BBCCC9;    
+    border: 1px solid #11484F;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .ps-room.ps-room-light.scrollable .button:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
   }
   
   .chat.mine {
@@ -129,7 +150,7 @@
 	}
   
   .button.subtle-notifying {
-    color: #803C6F;
+    color: #1B524F;
 	}
 
 	.tabbar a.button.notifying:hover {
@@ -304,10 +325,8 @@
   }
   
   .tournament-tools .select:disabled {
-    background: rgba(51, 98, 81, 0.45) !important;
+    background: rgba(51, 98, 81, 0.45);
     color: #11484F !important;
-    text-shadow: none !important;
-    border-color: #11484F !important;
   }
   
   .tournament-tools button {
@@ -332,10 +351,6 @@
   /**********************
   * Mainmenuwrapper CSS *
   **********************/
-  
-  .menugroup .button {
-    
-  }
   
   .pm-window h3 {
     border-color: #336251;
@@ -504,6 +519,14 @@
     color: #173B40;
   }
   
+  .ps-popup a.ilink.yours {
+    color: #0B282C;
+  }
+  
+  .ps-popup a.ilink.yours:hover {
+    color: #04171A;
+  }
+  
   .ps-popup .buttonbar button {
     background: #17626E;
     border: 1px solid #11484F;
@@ -543,9 +566,233 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
   
+  .effect-volume em, .music-volume em {
+    color: #062529;
+  }
+  
+  .ps-popup hr {
+    border: none;
+    border-bottom: 1px solid #062529;
+  }
+  
   /*****************
   * Popup CSS ~end *
   *****************/
+  
+  /*************
+  * Ladder CSS *
+  *************/
+  
+  .ladder th {
+    background: #CD9FC4;
+    color: #803C6F;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+  
+  .ladder td {
+    background: rgba(255, 246, 250, 0.75);
+    color: #803C6F;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+  
+  .ladder td:hover {
+    background: rgba(255, 246, 250, 0.95);
+  }
+  
+  .ladder table, .ladder td, .ladder th {
+    border-color: #803C6F;
+  }
+  
+  /******************
+  * Ladder CSS ~end *
+  ******************/
+  
+  /******************
+  * Teambuilder CSS *
+  ******************/
+  
+  .teamchartbox {
+    border-color: #11484F;
+  }
+  
+  .teamlist .team {
+    background: #BBCCC9;    
+    border-color: #11484F;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .teamlist .team:hover {
+    background: #BBCCC9;    
+    border-color: #0E3339;
+    color: #0E3339;
+    text-shadow: none;
+  }
+  
+  .setchart {
+    border-color: #175964;
+    background: #447F69;
+  }
+  
+  .setchart-nickname {
+    background: #336251;
+    border-color: #11484F;
+  }
+ 
+  .setchart input, .setdetails, .setstats, .statform input.inputform {
+    border-color: #175964;
+  }
+  
+  .setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
+    border-color: #11424A;
+  }
+  
+  .setchart .setdetails label, .setchart .setstats label {
+    color: #11424A;
+    text-shadow: none;
+  }
+  
+  .setchart label {
+    text-shadow: 0px -1px 0px #175964;
+    color: #E6FFF7;
+  }
+  
+  .setchart-nickname label {
+    text-shadow: 0px -1px 0px #11484F;
+    color: #E6FFF7;
+  }
+  
+  .setchart-nickname input {
+    border-color: #11484F;
+  }
+  
+  .setchart-nickname input:hover {
+    border-color: #0A2B30;
+  }
+  
+  .setchart input.incomplete {
+    background: #FFF5FA;
+    color: #CE3FB6;
+    border-color: #CE3FB6;
+  }
+  
+  .teambuilder-results {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .teambuilder-results h3, .teambuilder-results .utilichart h3 {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+  }
+  
+  .teambuilder-results .firstresult a {
+    background: #BBCCC9;    
+    border-color: #11484F;
+  }
+  
+  .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
+  }
+  
+  .utilichart b {
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+    font-style: italic;
+  }
+  
+  .utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
+    color: #062529;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
+    color: #11484F;
+  }
+  
+  .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
+    color: #1B606B;
+  }
+  
+  .utilichart .numcol {
+    color: #5B274D;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+  
+  .utilichart .typecol img {
+    opacity: 0.75;
+  }
+  
+  .teambar button {
+    background: #BBCCC9;    
+    border-color: #11484F;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
+    background: #BBCCC9;    
+    border-color: #0E3339;
+    color: #0E3339;
+    text-shadow: none;
+  }
+  
+  .setmenu button {
+    color: #5B274D;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+  
+  .setmenu button:hover {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+  }
+  
+  .statform p.suggested button {
+    background: #BBCCC9;    
+    border: 1px solid #11484F;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+    padding: 2px 5px;
+  }
+  
+  .statform p.suggested button:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
+  }
+  
+  .statform p.suggested a {
+    color: #11484F;
+  }
+  
+  .statform .col div label, .statform .col div em, .detailsform label {
+    color: #062529;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .statform .col div b {
+    color: #031315;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  .jslider .jslider-label {
+    opacity: 1;
+    color: #062529;
+  }
+  
+  .jslider .jslider-value {
+    background: #CBE1DD;    
+    border: 1px solid #0C2D32;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+  }
+  
+  /***********************
+  * Teambuilder CSS ~end *
+  ***********************/
   
   /*************
   * Battle CSS *
@@ -680,34 +927,47 @@
   }
   
   .moveselect button, .switchselect button {
-    color: #BBCCC9;
-    text-shadow: 0px 0px 2px #11484F;
+    color: #BBCCC9 !important;
+    text-shadow: 0px 0px 2px #11484F !important;
   }
   
   .switchmenu button {
-    background: #BBCCC9;    
-    border-color: #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
+    background: #BBCCC9 !important;    
+    border-color: #11484F !important;
+    color: #11484F !important;
+    text-shadow: 0px 0px 2px #96BFB8 !important;
   }
   
   .switchmenu button:hover {
-    background: #BBCCC9;    
-    border-color: #0E3339;
-    color: #0E3339;
-    text-shadow: none;
+    background: #BBCCC9 !important;    
+    border-color: #0E3339 !important;
+    color: #0E3339 !important;
+    text-shadow: none !important;
   }
   
   .switchmenu button .hpbar {
     border-color: #0E3339;
   }
   
-  .switchmenu button.disabled, .switchmenu button:disabled, .movemenu button:disabled {
+  .switchmenu button.disabled, .switchmenu button:disabled {
     background: #9BB6B1 !important;    
     border: 2px solid #0E3339 !important;
     color: #0E3339 !important;
     font-weight: bold !important;
     text-shadow: none !important;
+  }
+  
+  .movemenu button:disabled {
+    background: #9BB6B1;    
+    border: 2px solid #0E3339;
+    color: #0E3339;
+    font-weight: bold;
+    text-shadow: none;
+  }
+  
+  .movemenu button:disabled .movemenu button small.pp, .movemenu button:disabled .movemenu button small.type {
+    text-shadow: none;
+    color: #164E57;
   }
   
   .movemenu button {
