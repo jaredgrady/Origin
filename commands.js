@@ -407,6 +407,7 @@ var commands = exports.commands = {
 		if (Rooms.global.deregisterChatRoom(id)) {
 			this.sendReply("The room '" + target + "' was deregistered.");
 			this.sendReply("It will be deleted as of the next server restart.");
+			this.addModCommand("The room" + target + "was deregistered by" + user)
 			return;
 		}
 		return this.errorReply("The room '" + target + "' isn't registered.");
