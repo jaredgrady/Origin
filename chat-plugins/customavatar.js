@@ -73,14 +73,14 @@ exports.commands = {
 			return this.sendReplyBox(message);
 		}
 
-		if (!this.can('declare') && !this.can('vip')) return false;
+		if (!this.can('ban') && !this.can('vip')) return false;
 
 		switch (cmd) {
 		case 'set':
 			var userid = toId(parts[1]);
 			var targetUser = Users.getExact(userid);
 			var avatar = parts.slice(2).join(',').trim();
-			if (!this.can('declare') && this.can('vip') && userid !== user.userid) return false;
+			if (!this.can('ban') && this.can('vip') && userid !== user.userid) return false;
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");
@@ -98,7 +98,7 @@ exports.commands = {
 
 		/* falls through */
 		case 'forceset':
-			if (user.avatarCooldown && !this.can('declare')) {
+			if (user.avatarCooldown && !this.can('ban')) {
 				var milliseconds = (Date.now() - user.avatarCooldown);
 				var seconds = ((milliseconds / 1000) % 60);
 				var minutes = ((seconds / 60) % 60);
@@ -133,7 +133,7 @@ exports.commands = {
 
 		case 'delete':
 			var userid = toId(parts[1]);
-			if (!this.can('declare') && this.can('vip') && userid !== user.userid) return false;
+			if (!this.can('ban') && this.can('vip') && userid !== user.userid) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
 			if (Config.customavatars[userid].toString().split('.').slice(0, -1).join('.') !== userid) {
