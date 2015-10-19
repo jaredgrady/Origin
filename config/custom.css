@@ -26,6 +26,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-lodvanitas, #thelegionofdoom-userlist-user-lodvanitas, #staff-userlist-user-lodvanitas {
+    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
+  }
+  
   /**************************
   * Userlist Icons CSS ~end *
   **************************/
