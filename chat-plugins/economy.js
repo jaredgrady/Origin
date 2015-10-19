@@ -2,16 +2,15 @@ var fs = require('fs');
 var path = require('path');
 
 var shop = [
-    ['Ticket', 'Buys a lottery ticket for a chance to win big money.', 5],
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
     ['Fix', 'Buys the ability to alter your current custom avatar or trainer card or rename your room. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 15],
-    ['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
-    ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 50],
+    ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
+    ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 50],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 85],
-    ['Room', 'Buys a chatroom for you to own.  (Can be deleted if it goes inactive for too long.Within reason, can be refused)', 150],
-    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms.  (We will not change the rooms even if a fix is purchased. Will take time to appear as cache must reset for it to show)', 500]
+    ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (command must start with feels and size must be 50x50)', 100],
+    ['Room', 'Buys a chatroom for you to own.  (Can be deleted if it goes inactive for too long.Within reason, can be refused)', 150]
 ];
 
 var shopDisplay = getShopDisplay(shop);
@@ -66,18 +65,18 @@ global.logMoney = function(message) {
  * @return {String} display
  */
 function getShopDisplay(shop) {
-	var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
-					"<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
+	var display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
+					'<tr><th color="#502243">Item</th><th color="#502243">Description</th><th color="#502243">Cost</th></tr>';
 	var start = 0;
 	while (start < shop.length) {
-		display += "<tr>" +
-						"<td align='center'><button name='send' value='/buy " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
-						"<td align='center'>" + shop[start][1] + "</td>" +
-						"<td align='center'>" + shop[start][2] + "</td>" +
-					"</tr>";
+		display += '<tr>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;"><button name="send" value="/buy ' + shop[start][0] + '" style="border: 1px solid #803C6F; background: #CD9FC4; color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-radius: 4px;">' + shop[start][0] + '</button>' + '</td>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;">' + shop[start][1] + '</td>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;">' + shop[start][2] + '</td>' +
+					'</tr>';
 		start++;
 	}
-	display += "</tbody></table><center>To buy an item from the shop, use /buy <em>command</em>.</center>";
+	display += '</table><div style="width: 100%; border: 1px solid #803C6F; border-top: none; background: rgba(205, 159, 196, 0.7); color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">To buy an item from the shop, use /buy command.</div>';
 	return display;
 }
 
