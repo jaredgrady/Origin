@@ -7,7 +7,7 @@
   }
   
   #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
-    background: rgba(255, 255, 255, 0.65) url(http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png) right no-repeat;
+    background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
   }
   
   #tournaments-userlist-user-resourceful {
@@ -76,49 +76,62 @@
   .chat.mine {
     background: rgba(0, 0, 0, 0);
   }
-   .broadcast-blue {
-    background-color: #CD9FC4;
+
+  .broadcast-blue {
+    background: #CD9FC4;
     border: 1px solid #0B1361;
     color: #0B1361;
-    font-family: sans-serif;
-    padding: 5px;
+    text-shadow: 0px 0px 2px #B287A9;
     text-align: center;
+    font-family: sans-serif;
+    padding: 8px;
     margin: 5px;
-    text-shadow: 0px -1px 0px #D7F2FF;
   }
- 
+
   .broadcast-blue a {
-    color: #CD9FC4;
+    color: #000F98;
   }
- 
+
+  .broadcast-blue button {
+    background: #A87C9F;
+    border: 1px solid #090F47;
+    color: #FFF9FF;
+    text-shadow: 0px 0px 2px #090F47;
+    padding: 2px 8px;
+  }
+
+  .broadcast-blue button:hover {
+    background: #9F7697;
+  }
+
   .broadcast-red {
-    background-color: #FFB3B3;
-    border: 1px solid #610B0B;
-    color: #610B0B;
-    font-family: sans-serif;
-    padding: 5px;
+    background: #FFEBF4;
+    border: 1px solid #B52C43;
+    color: #B52C43;
+    text-shadow: 0px 0px 2px #F2DBE5;
     text-align: center;
+    font-family: sans-serif;
+    padding: 8px;
     margin: 5px;
-    text-shadow: 0px -1px 0px #FFD7D7;
   }
- 
+
   .broadcast-red a {
-    color: #610B0B;
+    color: #B3001E;
   }
- 
+
   .broadcast-green {
-    background-color: #C3FFB3;
-    border: 1px solid #19610B;
-    color: #19610B;
-    font-family: sans-serif;
-    padding: 5px;
+    background: #B5D896;
+    border: 1px solid #20493B;
+    color: #20493B;
+    text-shadow: 0px 0px 2px #A4C786;
     text-align: center;
+    font-family: sans-serif;
+    padding: 8px;
     margin: 5px;
-    text-shadow: 0px -1px 0px #D8FFD7;
   }
- 
+
   .broadcast-green a {
-    color: #19610B;
+    color: #005C3E;
   }
   
   .ps-overlay {
@@ -329,9 +342,11 @@
     background: #3D735F;
   }
   
-  .tournament-tools .select:disabled {
+  .tournament-tools .select:disabled, .tournament-tools .select:disabled:hover {
     background: rgba(51, 98, 81, 0.45);
     color: #11484F !important;
+    text-shadow: none !important;
+    border-color: #11484F !important;
   }
   
   .tournament-tools button {
@@ -356,6 +371,37 @@
   /**********************
   * Mainmenuwrapper CSS *
   **********************/
+
+  .menugroup {
+    border: 1px solid #803C6F;
+    background: rgba(128, 60, 111, 0.25);
+    color: #FBE7F0;
+    text-shadow: 0px 0px 2px #803C6F;
+  }
+  
+  .menugroup .select, .menugroup .button {
+    background: #FFE0A7 !important;
+		border-color: #803C6F !important;
+		color: #803C6F !important;
+		text-shadow: none !important;
+		font-style: italic !important;
+  }
+  
+  .menugroup .select:hover, .menugroup .button:hover {
+    background: #F2CF99 !important;
+		border-color: #803C6F !important;
+		color: #803C6F !important;
+		text-shadow: none !important;
+		font-style: italic !important;
+  }
+  
+  .menugroup .select:disabled, .menugroup .select:disabled:hover {
+    background: rgba(255, 224, 167, 0.7) !important;
+		border-color: #803C6F !important;
+		color: #803C6F !important;
+		text-shadow: none !important;
+		font-style: italic !important;
+  }
   
   .pm-window h3 {
     border-color: #336251;
