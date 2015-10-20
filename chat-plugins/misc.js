@@ -563,7 +563,7 @@ exports.commands = {
 	
 	
 	glogs: 'globallogs',
-	globallogs: function (target, room, user, connection) {
+	globallogs: function (target, room, user) {
 		return this.parse('/modlog all, ' + target);
 	},
 
