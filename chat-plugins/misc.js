@@ -508,11 +508,11 @@ exports.commands = {
 	if (!this.can('gdeclare')) return false;
  
 	for (var id in Rooms.rooms) {
-	if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>We are hosting a <font color="#8B2424"><b>' + parts[0] + '</b></font> in <button name="send" value="/join ' + parts[1] + '" style="background: #89CFF2; border: 1px solid #080F47; border-radius: 3px; margin: 3px; padding: 2px 5px; font-weight: bold; font-style: italic; color: #080F47; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);">' + parts[1] + '</button> !<br />The tier is <font style="color: #8B2424; font-weight: bold;"><b>' + parts[2] + '</b></font>! Join up and have fun!<br /><br />The prize for the winner is <font style="color: #8B2424; font-weight: bold;"><b>' + parts[3] + '</b></font> bucks, while the runner-up will get <font style="color: #8B2424; font-weight: bold;"><b>' + parts[4] + '</b></font> bucks!<br /><small><i>~' + user.name + '</i></small></b></div>');
+	if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>We are hosting a <font color="#57194A"><b>' + parts[0] + '</b></font> in <button name="send" value="/join ' + parts[1] + '" style="border-radius: 3px; margin: 3px; padding: 2px 5px; font-weight: bold; font-style: italic; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35); color: #57194A; text-shadow: none;">' + parts[1] + '</button> !<br />The tier is <font style="color: #57194A; font-weight: bold;"><b>' + parts[2] + '</b></font>! Join up and have fun!<br /><br />The prize for the winner is <font style="color: #57194A; font-weight: bold;"><b>' + parts[3] + '</b></font> bucks, while the runner-up will get <font style="color: #57194A; font-weight: bold;"><b>' + parts[4] + '</b></font> bucks!<br /><small><i>~' + user.name + '</i></small></b></div>');
 	}
 	this.logModCommand(user.name + " globally custom declared " + target);
 	},
-	customgdeclarehelp: ["/customgdeclare [event name], [room], [tier], [buck reward], [runner-up buck reward] - Preset gdeclare which anonymously announces a message to every room on the server. Requires: ~"],
+	customgdeclarehelp: ["/customgdeclare [event name], [room], [tier], [buck reward], [runner-up buck reward] - Preset gdeclare which anonymously announces a message to every room on the server. Requires: &, ~"],
 
 	stafflist: 'authority',
 	auth: 'authority',
