@@ -1474,7 +1474,7 @@ roomintro: function (target, room, user) {
 			this.add("|raw|<div class=\"broadcast-blue\"><b>Moderated chat was disabled!</b><br />Anyone may talk now.</div>");
 		} else {
 			var modchat = Tools.escapeHTML(room.modchat);
-			this.add("|raw|<div class=\"broadcast-red\"><b>Moderated chat was set to " + modchat + "!</b><br />Only users of rank " + modchat + " and higher can talk.</div>");
+			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Moderated chat was set to " + modchat + "!</b><br />Only users of rank " + modchat + " and higher can talk.</div>");
 		}
 		this.logModCommand(user.name + " set modchat to " + room.modchat);
 
@@ -1814,12 +1814,12 @@ roomintro: function (target, room, user) {
 		for (var id in Rooms.rooms) {
 			if (id === 'global') continue;
 			var curRoom = Rooms.rooms[id];
-			curRoom.addRaw("<div class=\"broadcast-red\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
+			curRoom.addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
 			if (curRoom.requestKickInactive && !curRoom.battle.ended) {
 				curRoom.requestKickInactive(user, true);
 				if (curRoom.modchat !== '+') {
 					curRoom.modchat = '+';
-					curRoom.addRaw("<div class=\"broadcast-red\"><b>Moderated chat was set to +!</b><br />Only users of rank + and higher can talk.</div>");
+					curRoom.addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Moderated chat was set to +!</b><br />Only users of rank + and higher can talk.</div>");
 				}
 			}
 		}
@@ -1843,7 +1843,7 @@ roomintro: function (target, room, user) {
 			if (id === 'global') continue;
 			var curRoom = Rooms.rooms[id];
 			if (curRoom.battle) continue;
-			curRoom.addRaw("<div class=\"broadcast-red\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
+			curRoom.addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
 		}
 
 		this.logEntry(user.name + " used /slowlockdown");
@@ -1857,7 +1857,7 @@ roomintro: function (target, room, user) {
 		}
 		if (Rooms.global.lockdown === true) {
 			for (var id in Rooms.rooms) {
-				if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\"><b>The server shutdown was canceled.</b></div>");
+				if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\" style=\"border-radius: 5px;\"><b>The server shutdown was canceled.</b></div>");
 			}
 		} else {
 			this.sendReply("Preparation for the server shutdown was canceled.");
@@ -1875,7 +1875,7 @@ roomintro: function (target, room, user) {
 		}
 		Config.emergency = true;
 		for (var id in Rooms.rooms) {
-			if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-red\">The server has entered emergency mode. Some features might be disabled or limited.</div>");
+			if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\">The server has entered emergency mode. Some features might be disabled or limited.</div>");
 		}
 
 		this.logEntry(user.name + " used /emergency");
@@ -1889,7 +1889,7 @@ roomintro: function (target, room, user) {
 		}
 		Config.emergency = false;
 		for (var id in Rooms.rooms) {
-			if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\"><b>The server is no longer in emergency mode.</b></div>");
+			if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\" style=\"border-radius: 5px;\"><b>The server is no longer in emergency mode.</b></div>");
 		}
 
 		this.logEntry(user.name + " used /endemergency");
