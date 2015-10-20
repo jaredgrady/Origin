@@ -1,6 +1,8 @@
-  /*********************
-  * Userlist Icons CSS *
-  *********************/
+  /***********************
+  * Donation Benefit CSS *
+  ***********************/
+  
+  /* Icons */
   
   #lobby-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat {
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
@@ -30,9 +32,19 @@
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
   }
   
-  /**************************
-  * Userlist Icons CSS ~end *
-  **************************/
+  /* Icons ~end */
+  
+  /* Symbol Color */
+  
+  #monotype-userlist-user-shadeprise em.group, #priselair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
+    color: #0D00BF;
+  }
+  
+  /* Symbol color ~end */
+  
+  /****************************
+  * Donation Benefit CSS ~end *
+  ****************************/
   
   /**************
   * General CSS *
