@@ -172,22 +172,25 @@
   }
   
   .tabbar a.button.notifying {
-		background: #FFE0A7;
-		border-color: #803C6F;
-		color: #803C6F;
-		text-shadow: none;
-		font-style: italic;
-	}
-  
-  .button.subtle-notifying {
-    color: #1B524F;
-	}
+    background: #FFE0A7;
+    border-color: #803C6F;
+    color: #803C6F;
+    text-shadow: none;
+    font-style: italic;
+  }
 
-	.tabbar a.button.notifying:hover {
-		background: #F9D990;
-		border-color: #803C6F;
-		color: #803C6F;
-	}
+  .tabbar a.button.notifying:hover {
+    background: #F9D990;  
+    border-color: #803C6F;
+    color: #803C6F;
+  }
+  .tabbar a.button.subtle-notifying {
+    color: #1B524F;
+  }
+ 
+  .tabbar a.button.subtle-notifying:hover {
+    color: #1B524F;
+  } 
   
   .tabbar a.button.cur, .tabbar a.button.cur:hover {
     border-color: #803C6F;
