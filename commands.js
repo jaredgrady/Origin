@@ -1492,7 +1492,7 @@ roomintro: function (target, room, user) {
 		if (!this.canTalk()) return;
 
 		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare can not exceed 500 characters for stability reasons.');
-		this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
+		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
 	declarehelp: ["/declare [message] - Anonymously announces a message. Requires: # & ~"],
@@ -1503,7 +1503,7 @@ roomintro: function (target, room, user) {
 
 		if (!this.canTalk()) return;
 
-		this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
+		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
 	htmldeclarehelp: ["/htmldeclare [message] - Anonymously announces a message using safe HTML. Requires: ~"],
@@ -1514,7 +1514,7 @@ roomintro: function (target, room, user) {
 		if (!this.can('declare')) return false;
 
 		for (var id in Rooms.rooms) {
-			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>' + target + '</b></div>');
+			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		}
 		this.logModCommand(user.name + " globally declared " + target);
 	},
@@ -1526,7 +1526,7 @@ roomintro: function (target, room, user) {
 		if (!this.can('gdeclare')) return false;
 
 		for (var id in Rooms.rooms) {
-			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>' + target + '</b></div>');
+			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 			if (id !== 'global') Rooms.rooms[id].update();
 		}
 		this.logModCommand(user.name + " globally declared (chat level) " + target);
