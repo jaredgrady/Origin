@@ -1471,7 +1471,7 @@ roomintro: function (target, room, user) {
 			return this.errorReply("Modchat is already set to " + currentModchat + ".");
 		}
 		if (!room.modchat) {
-			this.add("|raw|<div class=\"broadcast-blue\"><b>Moderated chat was disabled!</b><br />Anyone may talk now.</div>");
+			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Moderated chat was disabled!</b><br />Anyone may talk now.</div>");
 		} else {
 			var modchat = Tools.escapeHTML(room.modchat);
 			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Moderated chat was set to " + modchat + "!</b><br />Only users of rank " + modchat + " and higher can talk.</div>");
