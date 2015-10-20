@@ -560,6 +560,12 @@ exports.commands = {
 			clearRoom(Rooms.rooms[r]);
 		}
 	},
+	
+	
+	glogs: 'globallogs',
+	globallogs: function (target, room, user, connection) {
+		return this.parse('/modlog all, ' + target);
+	},
 
 	hide: function (target, room, user) {
 		if (!this.can('lock')) return false;
