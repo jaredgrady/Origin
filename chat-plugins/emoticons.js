@@ -201,9 +201,9 @@ exports.commands = {
 		room.disableEmoticons = !room.disableEmoticons;
 		this.sendReply("Disallowing emoticons is set to " + room.disableEmoticons + " in this room.");
 		if (room.disableEmoticons) {
-			this.add("|raw|<div class=\"broadcast-red\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
 		} else {
-			this.add("|raw|<div class=\"broadcast-blue\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
 		}
 	},
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
