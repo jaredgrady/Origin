@@ -783,7 +783,9 @@ roomintro: function (target, room, user) {
 		}
 
 		var buffer = [];
-		buffer.push("Room Founder (#): \n" + targetRoom.founder);
+		if (targetRoom.founder) {
+			buffer.push("Room Founder (#): \n" + targetRoom.founder);
+		}
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Config.groups[b] || {rank:0}).rank - (Config.groups[a] || {rank:0}).rank;
 		}).forEach(function (r) {
