@@ -1,0 +1,26 @@
+var fs = require('fs');
+var selectors;
+
+function writeIconCSS() {
+	fs.appendFile('config/custom.css', selectors);
+}
+
+exports.commands = {
+	seticon: function (target, room, user) {
+		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!this.canBroadcast()) return;
+
+		var args = target.split(',');
+		if (args.length < 3) return this.parse('/help iconcss');
+		var username = toId(args.shift());
+		var image = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
+		selectors = '\n\n' + '  #' + toId(args.shift()) + '-userlist-user-' + username;
+		args.forEach(function (room) {
+			selectors += ', #' + toId(room) + '-userlist-user-' + username;
+		});
+		selectors += ' { \n' + '    ' + image +  '\n  }';
+
+		this.privateModCommand("(" + user.name + " has set an icon to " + username + ")");
+		writeIconCSS();
+	}
+};
