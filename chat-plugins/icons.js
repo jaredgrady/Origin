@@ -8,7 +8,6 @@ function writeIconCSS() {
 exports.commands = {
 	seticon: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		if (!this.canBroadcast()) return;
 
 		var args = target.split(',');
 		if (args.length < 3) return this.parse('/help seticon');
