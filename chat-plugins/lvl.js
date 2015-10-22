@@ -1,4 +1,4 @@
-/exports.commands = { 
+exports.commands = { 
 	guerra: 'lvl',
 	war: 'lvl',
 	lvl: function(target, room, user, connection) {
