@@ -1,6 +1,6 @@
 exports.commands = {
 	
-	renamechatroom: function (target, room, user, connection, cmd) {
+	/*renamechatroom: function (target, room, user, connection, cmd) {
 		if (!this.can('declare')) return; 
     		var parts = target.split(',');
 		if (parts.length !== 2) return this.parse('/help renamechatroom');
@@ -12,7 +12,7 @@ exports.commands = {
 				return this.sendReply("The chat room '" + parts[0] + "' was renamed to '" + parts[1]);
   
 	},
-        renamechatroomhelp: ["/renamechatroom [room name], [new room name] - Renames a room."],
+        renamechatroomhelp: ["/renamechatroom [room name], [new room name] - Renames a room."],*/
 
 	clearroomauth: function (target, room, user, cmd) {
 		if (!this.can('hotpatch')) return false;
