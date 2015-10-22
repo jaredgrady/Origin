@@ -11,7 +11,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 
 		var args = target.split(',');
-		if (args.length < 3) return this.parse('/help iconcss');
+		if (args.length < 3) return this.parse('/help seticon');
 		var username = toId(args.shift());
 		var image = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
 		selectors = '\n\n' + '  #' + toId(args.shift()) + '-userlist-user-' + username;
