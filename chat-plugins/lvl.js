@@ -1,4 +1,4 @@
-/* exports.commands = { 
+/exports.commands = { 
 	guerra: 'lvl',
 	war: 'lvl',
 	lvl: function(target, room, user, connection) {
@@ -233,5 +233,5 @@
 				this.sendReply('The command was not recognized. Try using /lvl help if you are confused.'); 
 		}
 	},
-}; */
+}; 
 
