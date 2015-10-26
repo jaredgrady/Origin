@@ -6,7 +6,7 @@ function writeIconCSS() {
 }
 
 exports.commands = {
-	seticon: function (target, room, user) {
+	/*seticon: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 
 		var args = target.split(',');
@@ -22,5 +22,5 @@ exports.commands = {
 		this.privateModCommand("(" + user.name + " has set an icon to " + username + ")");
 		writeIconCSS();
 	},
-	seticonhelp: ["/iconcss [username], [image], [room 1], [room 2], etc. - Sets an icon to a user in chosen rooms."]
+	seticonhelp: ["/iconcss [username], [image], [room 1], [room 2], etc. - Sets an icon to a user in chosen rooms."]*/
 };
