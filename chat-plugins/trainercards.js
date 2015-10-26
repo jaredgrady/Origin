@@ -163,7 +163,7 @@ exports.commands = {
     },
     rekt: function(target, room, user) {
         if (!this.canBroadcast()) return;
-        this.sendReplyBox('<center><img src="http://107.161.19.92:8000/TCs/rekt.gif"><br />')
+        this.sendReplyBox('<center><img src="http://i.imgur.com/C26ZRE6.gif" width="480" height="270" /></center>')
     },
     infusion: function(target, room, user) {
         if (!this.canBroadcast()) return;
