@@ -96,16 +96,14 @@ Tournament = (function () {
 		this.lastBracketUpdate = 0;
 		this.bracketUpdateTimer = null;
 		this.bracketCache = null;
-
 		this.isTournamentStarted = false;
 		this.availableMatches = null;
 		this.inProgressMatches = null;
-
 		this.isAvailableMatchesInvalidated = true;
 		this.availableMatchesCache = null;
-
 		this.pendingChallenges = null;
-
+		this.autoDisqualifyTimeout = Infinity;
+		this.autoDisqualifyTimer = null;
 		this.isEnded = false;
 
 		room.add('|tournament|create|' + this.format + '|' + generator.name + '|' + this.playerCap);
@@ -145,6 +143,7 @@ Tournament = (function () {
 
 	Tournament.prototype.forceEnd = function () {
 		if (this.isTournamentStarted) {
+			if (this.autoDisqualifyTimer) clearTimeout(this.autoDisqualifyTimer);
 			this.inProgressMatches.forEach(function (match) {
 				if (match) {
 					delete match.room.tour;
@@ -372,7 +371,7 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|NotEnoughUsers');
 			return false;
 		}
-
+		if (this.generator.generateBracket) this.generator.generateBracket();
 		this.generator.freezeBracket();
 
 		this.availableMatches = new Map();
@@ -391,7 +390,6 @@ Tournament = (function () {
 		}, this);
 
 		this.isTournamentStarted = true;
-		this.autoDisqualifyTimeout = Infinity;
 		if (this.autoStartTimeout) clearTimeout(this.autoStartTimeout);
 		this.isBracketInvalidated = true;
 		this.room.add('|tournament|start');
@@ -529,10 +527,6 @@ Tournament = (function () {
 	};
 
 	Tournament.prototype.setAutoDisqualifyTimeout = function (timeout, output) {
-		if (!this.isTournamentStarted) {
-			output.sendReply('|tournament|error|NotStarted');
-			return false;
-		}
 		if (timeout < AUTO_DISQUALIFY_WARNING_TIMEOUT || isNaN(timeout)) {
 			output.sendReply('|tournament|error|InvalidAutoDisqualifyTimeout');
 			return false;
@@ -544,8 +538,7 @@ Tournament = (function () {
 		} else {
 			this.room.add('|tournament|autodq|on|' + this.autoDisqualifyTimeout);
 		}
-
-		this.runAutoDisqualify();
+		if (this.isTournamentStarted) this.runAutoDisqualify();
 		return true;
 	};
 	Tournament.prototype.runAutoDisqualify = function (output) {
@@ -553,6 +546,7 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|NotStarted');
 			return false;
 		}
+		if (this.autoDisqualifyTimer) clearTimeout(this.autoDisqualifyTimer);
 		this.lastActionTimes.forEach(function (time, user) {
 			var availableMatches = false;
 			if (this.availableMatches.get(user).size) availableMatches = true;
@@ -577,6 +571,7 @@ Tournament = (function () {
 				this.isAutoDisqualifyWarned.set(user, false);
 			}
 		}, this);
+		if (this.autoDisqualifyTimeout !== Infinity && !this.isEnded) this.autoDisqualifyTimer = setTimeout(this.runAutoDisqualify.bind(this), this.autoDisqualifyTimeout);
 	};
 
 	Tournament.prototype.challenge = function (from, to, output) {
@@ -787,13 +782,9 @@ Tournament = (function () {
 
 			Db.save();
 		}
+		if (this.autoDisqualifyTimer) clearTimeout(this.autoDisqualifyTimer);
 		delete exports.tournaments[this.room.id];
-	//	if (this.room.isOfficial && tourSize >= 4) {
-        //  		var tourRarity = tourCard(tourSize, toId(winner));
-	//		this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + colors[tourRarity[0]] + ">" + tourRarity[0] + "</font> card: <button name='send' value='/card " + tourRarity[1] + "'>" + tourRarity[2] + "</button> from the tournament.");
-	//	}
 	};
-
 	return Tournament;
 })();
 

@@ -2931,56 +2931,56 @@ exports.BattleFormatsData = {
 	syclant: {
 		randomBattleMoves: ["bugbuzz","icebeam","blizzard","earthpower","spikes","superpower","tailglow","uturn","focusblast"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	revenankh: {
 		randomBattleMoves: ["bulkup","shadowsneak","drainpunch","moonlight","powerwhip","icepunch"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	pyroak: {
 		randomBattleMoves: ["leechseed","lavaplume","substitute","protect"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	fidgit: {
 		randomBattleMoves: ["spikes","stealthrock","toxicspikes","wish","rapidspin","encore","uturn","sludgebomb"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	stratagem: {
 		randomBattleMoves: ["paleowave","earthpower","fireblast","gigadrain","calmmind"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	arghonaut: {
 		randomBattleMoves: ["recover","bulkup","waterfall","crosschop","stoneedge","thunderpunch"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	kitsunoh: {
 		randomBattleMoves: ["shadowstrike","superpower","meteormash","uturn","icepunch","thunderpunch","trick","willowisp"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	cyclohm: {
 		randomBattleMoves: ["slackoff","dracometeor","dragonpulse","fireblast","thunderbolt","hydropump"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	colossoil: {
 		randomBattleMoves: ["earthquake","crunch","suckerpunch","uturn","rapidspin","encore","pursuit"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	krilowatt: {
 		randomBattleMoves: ["surf","thunderbolt","icebeam","counter","mirrorcoat","earthquake"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	},
 	voodoom: {
 		randomBattleMoves: ["aurasphere","darkpulse","taunt","painsplit"],
 		isNonstandard: true,
-		tier: "CAP"
+		tier: "G4CAP"
 	}
 };
