@@ -273,8 +273,12 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|' + error);
 			return;
 		}
-
+		
+		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
 		this.room.add('|tournament|join|' + user.name);
+		if (currentPlayers.length === 1) {
+		this.room.add(currentPlayers.length + " user is in this tournament.");
+		} else { this.room.add(currentPlayers.length + " users are in this tournament."); }
 		user.sendTo(this.room, '|tournament|update|{"isJoined":true}');
 		this.isBracketInvalidated = true;
 		this.update();
@@ -286,8 +290,11 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|' + error);
 			return;
 		}
-
+		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
 		this.room.add('|tournament|leave|' + user.name);
+		if (currentPlayers.length === 1) {
+		this.room.add(currentPlayers.length + " user is in this tournament.");
+		} else { this.room.add(currentPlayers.length + " users are in this tournament."); }
 		user.sendTo(this.room, '|tournament|update|{"isJoined":false}');
 		this.isBracketInvalidated = true;
 		this.update();
