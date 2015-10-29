@@ -275,10 +275,9 @@ Tournament = (function () {
 		}
 		
 		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
-		this.room.add('|tournament|join|' + user.name);
 		if (currentPlayers.length === 1) {
-		this.room.add(currentPlayers.length + " user is in this tournament.");
-		} else { this.room.add(currentPlayers.length + " users are in this tournament."); }
+		this.room.add(user.name + " joined the tournament. " + currentPlayers.length + " " + "user is in this tournament.");
+		} else { this.room.add(user.name + " joined the tournament. " + currentPlayers.length + " " + "users are in this tournament."); }
 		user.sendTo(this.room, '|tournament|update|{"isJoined":true}');
 		this.isBracketInvalidated = true;
 		this.update();
@@ -291,10 +290,9 @@ Tournament = (function () {
 			return;
 		}
 		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
-		this.room.add('|tournament|leave|' + user.name);
 		if (currentPlayers.length === 1) {
-		this.room.add(currentPlayers.length + " user is in this tournament.");
-		} else { this.room.add(currentPlayers.length + " users are in this tournament."); }
+		this.room.add(user.name + " left the tournament. " + currentPlayers.length + " " + "user is in this tournament.");
+		} else { this.room.add(user.name + " left the tournament. " + currentPlayers.length + " " + "users are in this tournament."); }
 		user.sendTo(this.room, '|tournament|update|{"isJoined":false}');
 		this.isBracketInvalidated = true;
 		this.update();
