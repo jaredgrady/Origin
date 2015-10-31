@@ -273,11 +273,8 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|' + error);
 			return;
 		}
-		
-		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
-		if (currentPlayers.length === 1) {
-		this.room.add(user.name + " joined the tournament. " + currentPlayers.length + " " + "user is in this tournament.");
-		} else { this.room.add(user.name + " joined the tournament. " + currentPlayers.length + " " + "users are in this tournament."); }
+
+		this.room.add('|tournament|join|' + user.name);
 		user.sendTo(this.room, '|tournament|update|{"isJoined":true}');
 		this.isBracketInvalidated = true;
 		this.update();
@@ -289,10 +286,8 @@ Tournament = (function () {
 			output.sendReply('|tournament|error|' + error);
 			return;
 		}
-		var currentPlayers = usersToNames(this.generator.getUsers(true).sort());
-		if (currentPlayers.length === 1) {
-		this.room.add(user.name + " left the tournament. " + currentPlayers.length + " " + "user is in this tournament.");
-		} else { this.room.add(user.name + " left the tournament. " + currentPlayers.length + " " + "users are in this tournament."); }
+
+		this.room.add('|tournament|leave|' + user.name);
 		user.sendTo(this.room, '|tournament|update|{"isJoined":false}');
 		this.isBracketInvalidated = true;
 		this.update();
@@ -313,7 +308,11 @@ Tournament = (function () {
 
 	Tournament.prototype.getBracketData = function () {
 		var data = this.generator.getBracketData();
-		if (data.type === 'tree' && data.rootNode) {
+		if (data.type === 'tree') {
+			if (!data.rootNode) {
+				data.users = usersToNames(this.generator.getUsers()).sort();
+				return data;
+			}
 			var queue = [data.rootNode];
 			while (queue.length > 0) {
 				var node = queue.shift();
