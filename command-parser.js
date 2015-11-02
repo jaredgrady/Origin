@@ -175,7 +175,7 @@ function canTalk(user, room, connection, message, targetUser) {
 					if (!serverexceptions[serverAd[i]]) {
 						if (!room && targetUser) {
 							connection.send('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + message);
-							Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM a ' + targetUser.getIdentity() + '__) -- ' + message);
+							Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM to ' + targetUser.getIdentity() + '__) -- ' + message);
 							Rooms('shadowbanroom').update();
 						} else if (room) {
 							connection.sendTo(room, '|c|' + user.getIdentity(room.id) + '|' + message);
