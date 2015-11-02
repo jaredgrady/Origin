@@ -55,6 +55,7 @@ var emotes = {
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
 	'hypnotoad': 'http://i.imgur.com/lJtbSfl.gif',
+	'jcena': 'http://i.imgur.com/hPz30Ol.jpg?2',
 	'Kappa': 'http://i.imgur.com/ZxRU4z3.png?1',
 	'Kreygasm': 'https://static-cdn.jtvnw.net/emoticons/v1/41/1.0',
 	'meGusta': 'http://cdn.overclock.net/3/36/50x50px-ZC-369517fd_me-gusta-me-gusta-s.png',
