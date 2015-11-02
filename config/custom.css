@@ -3,7 +3,7 @@
   **************/
   
   body {
-    background: url("http://i.imgur.com/XLxMTFt.jpg") bottom left;
+    background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
   }
   
   .ps-room.ps-room-light {
@@ -244,7 +244,7 @@
   }
   
   .chat-log {
-    background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/XQqaBOM.png?1") top right no-repeat;
+    background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
   }
   
   .chat-log .chat small {
@@ -383,14 +383,14 @@
   
   .pm-window h3 {
     border-color: #336251;
-    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/39TYOAo.png") bottom right no-repeat;
+    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
     background-position: 200px;
     color: #E5FFF6;
     text-shadow: 0px -1px 0px #336251;
   }
   
   .pm-window h3:hover {
-    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/39TYOAo.png") bottom right no-repeat;
+    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
     background-position: 200px;
     color: #CBEBE0;
   }
@@ -401,7 +401,7 @@
   
   .pm-window.focused h3, .pm-window.focused h3:hover {
     border-color: #336251;
-    background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/29OjC01.png") bottom right no-repeat;
+    background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
     background-position: 200px;
     color: #E5FFF6;
     text-shadow: 0px -1px 0px #336251;
@@ -1073,7 +1073,7 @@
 
   /* Symbol Color */
   
-  #alltiers-userlist-user-prise em.group, #japanslair-userlist-user-prise em.group, #thebotlab-userlist-user-prise em.group {
+  #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
     color: #0D00BF;
   }
   
@@ -1109,9 +1109,6 @@
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
   }
 
-  #lobby-userlist-user-aurastormlucario, #tournaments-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/azfj79a.png") right no-repeat;
-  }
 
   #upperstaff-userlist-user-masterfloat { 
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
