@@ -3,9 +3,13 @@ var color = require('../config/color');
 exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
-	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
+	'4Head': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0',
+	'DansGame': 'https://static-cdn.jtvnw.net/emoticons/v1/33/1.0',
+	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
+	'EleGiggle': 'https://static-cdn.jtvnw.net/emoticons/v1/4339/2.0',
 	'FacePalm': 'http://i.imgur.com/lv3GmpM.png',
+	'FailFish': 'https://static-cdn.jtvnw.net/emoticons/v1/360/1.0',
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
@@ -52,7 +56,9 @@ var emotes = {
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
 	'hypnotoad': 'http://i.imgur.com/lJtbSfl.gif',
 	'Kappa': 'http://i.imgur.com/ZxRU4z3.png?1',
+	'Kreygasm': 'https://static-cdn.jtvnw.net/emoticons/v1/41/1.0',
 	'meGusta': 'http://cdn.overclock.net/3/36/50x50px-ZC-369517fd_me-gusta-me-gusta-s.png',
+	'MingLee': 'https://static-cdn.jtvnw.net/emoticons/v1/68856/2.0',
 	'noface': 'http://i.imgur.com/H744eRE.png',
 	'Obama': 'http://i.imgur.com/rBA9M7A.png',
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
@@ -60,6 +66,7 @@ var emotes = {
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
 	'wtfman': 'http://i.imgur.com/kwR8Re9.png',
+	'WutFace': 'https://static-cdn.jtvnw.net/emoticons/v1/28087/2.0',
 	'xaa': 'http://i.imgur.com/V728AvL.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
