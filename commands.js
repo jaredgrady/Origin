@@ -217,19 +217,7 @@ var commands = exports.commands = {
 
 		var message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
 		user.send(message);
-		if (targetUser !== user) {
-		if (Users.ShadowBan.checkBanned(user)) {
-				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
-			} else if (toId(target).indexOf('psim' || 'tinyurl') > -1) {
-			       if (target.indexOf('origin.psim' || 'pokemonshowdown' || 'smogtours') > -1){
-			           targetUser.send(message);
-			} else {
-				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
-			}
-			} else {
-				targetUser.send(message);
-			}
-		}
+		if (targetUser !== user) targetUser.send(message);
 		targetUser.lastPM = user.userid;
 		user.lastPM = targetUser.userid;
 	},
