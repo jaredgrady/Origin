@@ -1109,7 +1109,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
   }
 
-
   #upperstaff-userlist-user-masterfloat { 
     background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+  }
+  
+  #lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel {
+    background: rgba(244, 244, 244, 0.8) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
   }
