@@ -273,8 +273,7 @@ var Room = (function () {
 				break;
 			}
 		}
-
-		if (successUserid && user in this.users) {
+		if (successUserid && user.userid in this.users) {
 			user.updateIdentity(this.id);
 			if (notifyText) user.popup(notifyText);
 		}
@@ -328,6 +327,7 @@ var GlobalRoom = (function () {
 		this.autojoin = []; // rooms that users autojoin upon connecting
 		this.staffAutojoin = []; // rooms that staff autojoin upon connecting
 		this.upperstaffAutojoin = []; // rooms that upper staff autojoin upon connecting
+
 		for (var i = 0; i < this.chatRoomData.length; i++) {
 			if (!this.chatRoomData[i] || !this.chatRoomData[i].title) {
 				console.log('ERROR: Room number ' + i + ' has no data.');
@@ -1431,6 +1431,7 @@ var BattleRoom = (function () {
 			clearTimeout(this.muteTimer);
 		}
 		this.muteTimer = null;
+
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
 	};
@@ -1591,7 +1592,7 @@ var ChatRoom = (function () {
 		if (this.log.length <= this.lastUpdate) return;
 		var entries = this.log.slice(this.lastUpdate);
 		if (this.reportJoinsQueue && this.reportJoinsQueue.length) {
-			clearTimeout(this.reportJoinsInterval);
+			clearInterval(this.reportJoinsInterval);
 			delete this.reportJoinsInterval;
 			Array.prototype.unshift.apply(entries, this.reportJoinsQueue);
 			this.reportJoinsQueue.length = 0;
@@ -1669,6 +1670,7 @@ var ChatRoom = (function () {
 			} else {
 				entry = '|J|' + user.getIdentity(this.id);
 			}
+			if (this.staffMessage && user.can('mute', null, this)) this.sendUser(user, '|raw|<div class="infobox">(Staff intro:)<br /><div>' + this.staffMessage + '</div></div>');
 		} else if (!user.named) {
 			entry = '|L| ' + oldid;
 		} else {
@@ -1734,11 +1736,11 @@ var ChatRoom = (function () {
 		}
 		this.muteTimer = null;
 		if (this.reportJoinsInterval) {
-			clearTimeout(this.reportJoinsInterval);
+			clearInterval(this.reportJoinsInterval);
 		}
 		this.reportJoinsInterval = null;
 		if (this.logUserStatsInterval) {
-			clearTimeout(this.logUserStatsInterval);
+			clearInterval(this.logUserStatsInterval);
 		}
 		this.logUserStatsInterval = null;
 

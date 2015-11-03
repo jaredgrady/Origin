@@ -401,5 +401,4 @@ var Elimination = (function () {
 
 	return Elimination;
 })();
-
 exports.Elimination = Elimination;

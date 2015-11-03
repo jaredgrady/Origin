@@ -794,7 +794,7 @@ BattlePokemon = (function () {
 			this.boosts[j] = pokemon.boosts[j];
 		}
 		if (effect) {
-			this.battle.add('-transform', this, pokemon, '[from] ' + effect);
+			this.battle.add('-transform', this, pokemon, '[from] ' + effect.fullname);
 		} else {
 			this.battle.add('-transform', this, pokemon);
 		}
@@ -1391,6 +1391,7 @@ BattleSide = (function () {
 		var sideScripts = battle.data.Scripts.side;
 		if (sideScripts) Object.merge(this, sideScripts);
 		this.getChoice = (this.getChoice || BattleSide.getChoice).bind(this);
+
 		this.battle = battle;
 		this.n = n;
 		this.name = name;
@@ -3082,6 +3083,7 @@ Battle = (function () {
 			if (center) this.add('-center');
 		}
 		this.add('turn', this.turn);
+
 		this.makeRequest('move');
 	};
 	Battle.prototype.start = function () {
