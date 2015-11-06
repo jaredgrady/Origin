@@ -225,6 +225,7 @@ var commands = exports.commands = {
 			targetUser.send(message);
 			targetUser.lastPM = user.userid;
 			user.lastPM = targetUser.userid;
+			}
 		}
 	},
 	msghelp: ["/msg OR /whisper OR /w [username], [message] - Send a private message."],
