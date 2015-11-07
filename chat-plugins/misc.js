@@ -367,7 +367,7 @@ exports.commands = {
 			let pokeAbility2 = ', ' + pokemon.slice(ability2Index1, ability2Index2);
 		}
 	}
-	let ability1Index2 = pokemon.indexOf('"', ability1Index1);
+	ability1Index2 = pokemon.indexOf('"', ability1Index1);
 	let pokeAbility1 = pokemon.slice(ability1Index1, ability1Index2);
 	let hpIndex1 = pokemon.indexOf('hp:') + 3; let hpIndex2 = pokemon.indexOf(',', hpIndex1);
 	let pokeHp = parseInt(pokemon.slice(hpIndex1, hpIndex2));

@@ -10,7 +10,7 @@ exports.commands = {
 	 	if (!room.founder) return this.sendReply('/leagueshop - league shops require a room founder.');
 	 	if (!room.hasShop) return this.sendReply('/leagueshop - this room does not have a leagueshop enabled.');
 	 	if (!room.shopList) room.shopList = [];
-	 	if (!target) let target = '';
+	 	if (!target) target = '';
 	 	let self = this;
  
 		let cmdParts = target.split(' ');
@@ -69,7 +69,7 @@ exports.commands = {
 				break;
 			case 'buy':
 				if (params.length < 1) return this.sendReply('Usage: /leagueshop buy [item name]');
-				let item = params.shift();
+				item = params.shift();
 				if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "'+item+'" not found.');
 				let money = (Db('money')[user] || 0)
 					if (money < room.shop[toId(item)].price) return self.sendReply('You don\'t have enough bucks to purchase a '+item+'. You need '+ ((money - room.shop[toId(item)].price) * -1) + ' more bucks.');
@@ -113,7 +113,7 @@ exports.commands = {
 			case 'log':
 			case 'viewlog':
 				if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
-				let target = params.shift();
+				target = params.shift();
 				let lines = 0;
 				if (!target.match('[^0-9]')) {
 					lines = parseInt(target || 15, 10);
