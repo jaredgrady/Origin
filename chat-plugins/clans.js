@@ -418,7 +418,6 @@ exports.commands = {
 	},
 	
 	leagueladder: function (target, room, user) {
-		if(!this.canBroadcast()) return;
 		this.parse("/leagues rank");
 	},
 	
