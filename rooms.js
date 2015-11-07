@@ -344,7 +344,6 @@ let GlobalRoom = (function () {
 			this.chatRooms.push(room);
 			if (room.autojoin) this.autojoin.push(id);
 			if (room.staffAutojoin) this.staffAutojoin.push(id);
-			if (room.upperstaffAutojoin) this.upperstaffAutojoin.push(id);
 		}
 
 		// this function is complex in order to avoid several race conditions

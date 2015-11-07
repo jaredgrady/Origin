@@ -36,7 +36,6 @@ const VALID_COMMAND_TOKENS = '/!';
 
 const BROADCAST_TOKEN = '!';
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
