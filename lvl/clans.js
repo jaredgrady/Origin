@@ -216,6 +216,7 @@ exports.createClan = function (name) {
 		lema: "Motto of the League",
 		sala: "none",
 		medals: {},
+		challenges: [],
 	};
 	writeClanData();
 
@@ -803,4 +804,6 @@ exports.resetWarLog = function () {
 	exports.warLog = warLog;
 	writeWarLogData();
 };
+
+
 

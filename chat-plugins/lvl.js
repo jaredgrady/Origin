@@ -33,7 +33,8 @@ exports.commands = {
                                         '<li>/lvl auth, [Captain1], [Captain2] - Change team captains</li>' +
                                         '<li>/lvl reg, [P1], [P2]... - Command for captains to set lineups.</li>' +
                                         '<li>/lvl start - Start the lvl after lineups are registered.</li>' +
-										'<li>To see basic league commands, use /leaguehelp. All code written by Ecuacion, adapted by the Eos Coding Staff.</li>' +
+					'<li>Please note that you need a <i>global staff member</i> in order to run a scripted LvL. Please do not contact admins to do this.</li>' +
+					'<li>To see basic league commands, use /leaguehelp. All code written by Ecuacion, adapted by the Origin Coding Staff.</li>' +
                                         '</ul>');
 				break;
 			case 'nuevo':
@@ -41,8 +42,7 @@ exports.commands = {
 			case 'create':
 				if (params.length < 6) return this.sendReply("Usage: /war new, [ffa/total/standard], [tier], [size], [leagueA], [leagueB]");
 				if (params[1] !== 'standard' && !this.can('hotpatch')) return false;
-				if (!this.can('ban', null, room)) return false;
-				if ((room.id !== 'lvl' || room.id !== 'leaguevsleague' || room.id !== 'lvl2') && !this.can('declare')) return this.sendReply("This command is only available in official rooms");
+				if (!this.can('lock')) return false;
 				if (War.getTourData(roomId)) return this.sendReply("There is an LvL already going on in this room.");
 				var size = parseInt(params[3]);
 				if (size < 3) return this.sendReply("The minimum size is 3.");
@@ -83,7 +83,7 @@ exports.commands = {
 			case 'end':
 			case 'fin':
 			case 'delete':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
 				this.logModCommand(user.name + " has forcibly ended the LvL between " + toId(tourData.teamA) + " and " + toId(tourData.teamB) + ".");
@@ -114,7 +114,7 @@ exports.commands = {
 				Rooms.rooms[room.id].addRaw('<b>' + user.name + '</b> has left the LvL. There are ' + freePlaces + ' spots remaining.');
 				break;
 			case 'auth':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				if (params.length < 3) return this.sendReply("Usage: /war auth, [Capitan1], [Capitan2]");
 				var targetClan;
 				var tourData = War.getTourData(roomId);
@@ -143,7 +143,7 @@ exports.commands = {
 			case 'empezar':
 			case 'begin':
 			case 'start':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
 				if (tourData.tourRound !== 0) return this.sendReply("The LvL has already started.");
@@ -154,7 +154,7 @@ exports.commands = {
 				Rooms.rooms[room.id].addRaw(War.viewTourStatus(roomId));
 				break;
 			case 'size':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war size, [size]");
 				var err = War.sizeTeamTour(roomId, params[1]);
 				if (err) return this.sendReply(err);
@@ -169,7 +169,7 @@ exports.commands = {
 				break;
 			case 'disqualify':
 			case 'dq':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war dq, [user]");
 				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
@@ -178,7 +178,7 @@ exports.commands = {
 				if (!inClanA && !inClanB) return this.sendReply("This user is not in the current LvL.");
 				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
-				if (!canReplace && !this.can('ban', null, room)) return false;
+				if (!canReplace && !this.can('lock')) return false;
 				if (!War.dqTeamTour(roomId, params[1], 'cmd')) return this.sendReply("The user could not be disqualified.");
 				var userk = Users.getExact(params[1]);
 				if (userk) userk = userk.name; else userk = toId(params[1]);
@@ -196,7 +196,7 @@ exports.commands = {
 				if (!inClanA && !inClanB) return this.sendReply("This user is not in the current LvL.");
 				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
-				if (!canReplace && !this.can('ban', null, room)) return false;
+				if (!canReplace && !this.can('lock')) return false;
 				if ((inClanA && War.isInClan(params[2], tourData.teamA)) || (inClanB && War.isInClan(params[2], tourData.teamA))) var clanReplace = true;
 				if (!clanReplace) return this.sendReply("The target user is not in the target league.");
 				var usera = Users.getExact(params[1]);
@@ -212,7 +212,7 @@ exports.commands = {
 				this.addModCommand(user.name + ': ' + usera + ' is replaced by ' + userb + ' in the LvL.');
 				break;
 			case 'invalidate':
-				if (!this.can('ban', null, room)) return false;
+				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war invalidate, [user]");
 				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no active LvL in this room.");
@@ -230,7 +230,7 @@ exports.commands = {
 				if (!this.canBroadcast()) return false;
 				return this.sendReply('|raw|' + War.viewTourStatus(roomId));
 			default:
-				this.sendReply('The command was not recognized. Try using /lvl help if you are confused.'); 
+				this.sendReply('The command was not recognized. Try using /lvl help if you are confused.');
 		}
 	},
 }; 
