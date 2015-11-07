@@ -33,10 +33,10 @@ exports.Formats = [
 
 		ruleset: ['OU'],
 		onBegin: function () {
-			for (var i = 0; i < this.p1.pokemon.length; i++) {
+			for (let i = 0; i < this.p1.pokemon.length; i++) {
 				this.p1.pokemon[i].canMegaEvo = false;
 			}
-			for (var i = 0; i < this.p2.pokemon.length; i++) {
+			for (let i = 0; i < this.p2.pokemon.length; i++) {
 				this.p2.pokemon[i].canMegaEvo = false;
 			}
 		}
@@ -357,10 +357,10 @@ exports.Formats = [
 			'Blazikenite', 'Gengarite', 'Griseous Orb', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
 		],
 		onValidateSet: function (set) {
-			var problems = [];
+			let problems = [];
 			if (set.moves) {
-				for (var i in set.moves) {
-					var move = this.getMove(set.moves[i]);
+				for (let i in set.moves) {
+					let move = this.getMove(set.moves[i]);
 					if (move.category === 'Status') problems.push(set.species + "'s move " + move.name + " is banned by No Status.");
 				}
 			}
@@ -398,14 +398,14 @@ exports.Formats = [
 			if (team.length < 4) return ['You must bring at least four Pok\u00e9mon.'];
 		},
 		onValidateSet: function (set) {
-			var allowedPokemon = {
+			let allowedPokemon = {
 				"Rattata":1, "Raticate":1, "Ekans":1, "Arbok":1, "Pikachu":1, "Zubat":1, "Golbat":1, "Paras":1, "Parasect":1, "Grimer":1, "Muk":1, "Gastly":1, "Haunter":1, "Gengar":1, "Cubone":1, "Marowak":1, "Koffing":1, "Weezing":1, "Tangela":1, "Mr. Mime":1, "Ditto":1, "Kabuto":1, "Kabutops":1, "Hoothoot":1, "Noctowl":1, "Spinarak":1, "Ariados":1, "Crobat":1, "Umbreon":1, "Murkrow":1, "Misdreavus":1, "Unown":1, "Gligar":1, "Granbull":1, "Sneasel":1, "Houndour":1, "Houndoom":1, "Mightyena":1, "Dustox":1, "Shiftry":1, "Shedinja":1, "Whismur":1, "Loudred":1, "Exploud":1, "Sableye":1, "Mawile":1, "Gulpin":1, "Swalot":1, "Carvanha":1, "Sharpedo":1, "Cacnea":1, "Cacturne":1, "Seviper":1, "Lunatone":1, "Baltoy":1, "Claydol":1, "Shuppet":1, "Banette":1, "Duskull":1, "Dusclops":1, "Absol":1, "Snorunt":1, "Glalie":1, "Drifloon":1, "Drifblim":1, "Mismagius":1, "Honchkrow":1, "Stunky":1, "Skuntank":1, "Spiritomb":1, "Skorupi":1, "Drapion":1, "Croagunk":1, "Toxicroak":1, "Weavile":1, "Tangrowth":1, "Gliscor":1, "Dusknoir":1, "Froslass":1, "Rotom":1, "Purrloin":1, "Liepard":1, "Woobat":1, "Swoobat":1, "Venipede":1, "Whirlipede":1, "Scolipede":1, "Basculin":1, "Krokorok":1, "Krookodile":1, "Sigilyph":1, "Yamask":1, "Cofagrigus":1, "Garbodor":1, "Zorua":1, "Zoroark":1, "Gothita":1, "Gothorita":1, "Gothitelle":1, "Frillish":1, "Jellicent":1, "Joltik":1, "Galvantula":1, "Elgyem":1, "Beheeyem":1, "Litwick":1, "Lampent":1, "Chandelure":1, "Golurk":1, "Zweilous":1, "Hydreigon":1, "Volcarona":1, "Espurr":1, "Meowstic":1, "Honedge":1, "Doublade":1, "Aegislash":1, "Malamar":1, "Phantump":1, "Trevenant":1, "Pumpkaboo":1, "Gourgeist":1, "Noibat":1, "Noivern":1
 			};
-			var pokemon = Tools.getTemplate(set.species).baseSpecies;
+			let pokemon = Tools.getTemplate(set.species).baseSpecies;
 			if (!(pokemon in allowedPokemon)) {
 				return [pokemon + " is not usable in Spooky Cup."];
 			}
-			var item = Tools.getItem(set.item);
+			let item = Tools.getItem(set.item);
 			if (item.megaStone) {
 				return ["Mega Stones are not permitted in Spooky Cup."];
 			}
@@ -426,7 +426,7 @@ exports.Formats = [
         banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
         onModifyMove: function (move, pokemon) {
             //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
-            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
+            let forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
             if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100; 
             if (!move.priority && move.multihit) {
                 if (typeof(move.multihit) === 'number') {
@@ -450,21 +450,21 @@ exports.Formats = [
 			this.add('-message', "Using a color move on a Pok\u00e9mon in the same color group is a neutral hit.");
 			this.add('-message', "Use /details [POKEMON] to check its Pok\u00e9dex color.");
 
-			var allPokemon = this.p1.pokemon.concat(this.p2.pokemon);
-			var physicalnames = {
+			let allPokemon = this.p1.pokemon.concat(this.p2.pokemon);
+			let physicalnames = {
 				'Red': 'Crimson Crash', 'Pink': 'Rose Rush', 'Yellow': 'Saffron Strike', 'Green': 'Viridian Slash',
 				'Blue': 'Blue Bombardment', 'Purple': 'Indigo Impact'
 			};
-			var specialnames = {
+			let specialnames = {
 				'Red': 'Scarlet Shine', 'Pink': 'Coral Catapult', 'Yellow': 'Golden Gleam', 'Green': 'Emerald Flash',
 				'Blue': 'Cerulean Surge', 'Purple': 'Violet Radiance'
 			};
-			for (var i = 0; i < allPokemon.length; i++) {
-				var pokemon = allPokemon[i];
-				var color = pokemon.template.color;
-				var category = (pokemon.stats.atk > pokemon.stats.spa ? 'Physical' : 'Special');
-				var last = pokemon.moves.length - 1;
-				var move = (category === 'Physical' ? physicalnames[color] : specialnames[color]);
+			for (let i = 0; i < allPokemon.length; i++) {
+				let pokemon = allPokemon[i];
+				let color = pokemon.template.color;
+				let category = (pokemon.stats.atk > pokemon.stats.spa ? 'Physical' : 'Special');
+				let last = pokemon.moves.length - 1;
+				let move = (category === 'Physical' ? physicalnames[color] : specialnames[color]);
 				if (pokemon.moves[last]) {
 					pokemon.moves[last] = toId(move);
 					pokemon.moveset[last].move = move;
@@ -473,11 +473,11 @@ exports.Formats = [
 			}
 		},
 		onBeforeTurn: function (pokemon) {
-			var side = pokemon.side;
+			let side = pokemon.side;
 			side.item = '';
 
-			var decisions = [];
-			var decision, i;
+			let decisions = [];
+			let decision, i;
 			if (side.hadItem || this.random(4) === 0) { // Can never get 2 consecutive turns of items
 				side.hadItem = false;
 				return;
@@ -564,7 +564,7 @@ exports.Formats = [
 		},
 		onAccuracy: function (accuracy, target, source, move) {
 			if (source.hasAbility('keeneye')) return;
-			var modifier = 1;
+			let modifier = 1;
 			if (source.side.item === 'blooper' && !source.hasAbility('clearbody')) {
 				modifier *= 0.4;
 			}
@@ -577,8 +577,8 @@ exports.Formats = [
 			// Enforce Choice Item locking on color moves
 			// Technically this glitches with Klutz, but Lopunny is Brown and will never appear :D
 			if (!pokemon.ignoringItem() && pokemon.getItem().isChoice && pokemon.lastMove === 'swift') {
-				var moves = pokemon.moveset;
-				for (var i = 0; i < moves.length; i++) {
+				let moves = pokemon.moveset;
+				for (let i = 0; i < moves.length; i++) {
 					if (moves[i].id !== 'swift') {
 						pokemon.disableMove(moves[i].id, false);
 					}
@@ -590,9 +590,9 @@ exports.Formats = [
 			if (move.id !== 'swift') return;
 			// Only calculate color effectiveness once
 			if (target.getTypes()[0] !== type) return 0;
-			var targetColor = target.template.color;
-			var sourceColor = this.activePokemon.template.color;
-			var effectiveness = {
+			let targetColor = target.template.color;
+			let sourceColor = this.activePokemon.template.color;
+			let effectiveness = {
 				'Red': {'Red': 0, 'Pink': 0, 'Yellow': 1, 'Green': 1, 'Blue': -1, 'Purple': -1},
 				'Pink': {'Red': 0, 'Pink': 0, 'Yellow': 1, 'Green': 1, 'Blue': -1, 'Purple': -1},
 				'Yellow': {'Red': -1, 'Pink': -1, 'Yellow': 0, 'Green': 0, 'Blue': 1, 'Purple': 1},
@@ -613,8 +613,8 @@ exports.Formats = [
 			}
 		},
 		onResidual: function (battle) {
-			var side;
-			for (var i = 0; i < battle.sides.length; i++) {
+			let side;
+			for (let i = 0; i < battle.sides.length; i++) {
 				side = battle.sides[i];
 				if (side.sideConditions['goldenmushroom'] && side.sideConditions['goldenmushroom'].duration === 1) {
 					this.add('-message', "The effect of " + side.name + "'s Golden Mushroom wore off.");
@@ -640,15 +640,15 @@ exports.Formats = [
 		},
 		onModifyMove: function (move, pokemon) {
 			if (move.id !== 'swift') return;
-			var physicalnames = {
+			let physicalnames = {
 				'Red': 'Crimson Crash', 'Pink': 'Rose Rush', 'Yellow': 'Saffron Strike', 'Green': 'Viridian Slash',
 				'Blue': 'Blue Bombardment', 'Purple': 'Indigo Impact'
 			};
-			var specialnames = {
+			let specialnames = {
 				'Red': 'Scarlet Shine', 'Pink': 'Coral Catapult', 'Yellow': 'Golden Gleam', 'Green': 'Emerald Flash',
 				'Blue': 'Cerulean Surge', 'Purple': 'Violet Radiance'
 			};
-			var color = pokemon.template.color;
+			let color = pokemon.template.color;
 			move.category = (pokemon.stats.atk > pokemon.stats.spa ? 'Physical' : 'Special');
 			move.name = (move.category === 'Physical' ? physicalnames[color] : specialnames[color]);
 			move.basePower = 100;
@@ -658,7 +658,7 @@ exports.Formats = [
 		},
 		onPrepareHit: function (pokemon, target, move) {
 			if (move.id !== 'swift') return;
-			var animations = {
+			let animations = {
 				'Crimson Crash': 'Flare Blitz', 'Scarlet Shine': 'Fusion Flare', 'Rose Rush': 'Play Rough',
 				'Coral Catapult': 'Moonblast', 'Saffron Strike': 'Bolt Strike',	'Golden Gleam': 'Charge Beam',
 				'Viridian Slash': 'Power Whip', 'Emerald Flash': 'Solarbeam', 'Blue Bombardment': 'Waterfall',
@@ -836,11 +836,11 @@ exports.Formats = [
 			'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew', 'Chatter'
 		],
 		onValidateSet: function (set) {
-			var bannedAbilities = {'Aerilate': 1, 'Arena Trap': 1, 'Contrary': 1, 'Fur Coat': 1, 'Huge Power': 1, 'Imposter': 1, 'Parental Bond': 1, 'Protean': 1, 'Pure Power': 1, 'Shadow Tag': 1, 'Simple':1, 'Speed Boost': 1, 'Wonder Guard': 1};
+			let bannedAbilities = {'Aerilate': 1, 'Arena Trap': 1, 'Contrary': 1, 'Fur Coat': 1, 'Huge Power': 1, 'Imposter': 1, 'Parental Bond': 1, 'Protean': 1, 'Pure Power': 1, 'Shadow Tag': 1, 'Simple':1, 'Speed Boost': 1, 'Wonder Guard': 1};
 			if (set.ability in bannedAbilities) {
-				var template = this.getTemplate(set.species || set.name);
-				var legalAbility = false;
-				for (var i in template.abilities) {
+				let template = this.getTemplate(set.species || set.name);
+				let legalAbility = false;
+				for (let i in template.abilities) {
 					if (set.ability === template.abilities[i]) legalAbility = true;
 				}
 				if (!legalAbility) return ['The ability ' + set.ability + ' is banned on Pok\u00e9mon that do not naturally have it.'];
@@ -859,16 +859,16 @@ exports.Formats = [
 		ruleset: ['OU'],
 		banlist: ['Diggersby', 'Keldeo', 'Porygon-Z', 'Sylveon', 'Aerodactylite', 'Altarianite', "King's Rock", 'Lopunnite', 'Metagrossite', 'Razor Fang'],
 		validateSet: function (set, teamHas) {
-			var statusProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Status':1}});
+			let statusProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Status':1}});
 			if (!statusProblems.length) return;
-			var attackProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Physical':1, 'Special':1}});
+			let attackProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Physical':1, 'Special':1}});
 			if (!attackProblems.length) return;
 
-			var problems = [];
-			for (var i = 0; i < statusProblems.length; i++) {
+			let problems = [];
+			for (let i = 0; i < statusProblems.length; i++) {
 				problems.push('(Status) ' + statusProblems[i]);
 			}
-			for (var i = 0; i < attackProblems.length; i++) {
+			for (let i = 0; i < attackProblems.length; i++) {
 				problems.push('(Attack) ' + attackProblems[i]);
 			}
 			return problems;
@@ -1299,7 +1299,7 @@ exports.Formats = [
 	},
 	{
 		name: "Challenge Cup 1v1",
-		section: "Other Metagames",
+		section: "Randoms",
 
 		team: 'randomCC',
 		teamLength: {
