@@ -1,3 +1,5 @@
+'use strict';
+
 exports.commands = {
     
     rf: 'roomfounder',
@@ -6,13 +8,13 @@ exports.commands = {
             return this.sendReply("/roomfounder - This room isn't designed for per-room moderation to be added.");
         }
         target = this.splitTarget(target, true);
-        var targetUser = this.targetUser;
+        let targetUser = this.targetUser;
         if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
         if (!this.can('declare')) return false;
         if (room.isPersonal) return this.sendReply("You can't do this in personal rooms.");
         if (!room.auth) room.auth = room.chatRoomData.auth = {};
         if (!room.leagueauth) room.leagueauth = room.chatRoomData.leagueauth = {};
-        var name = targetUser.name;
+        let name = targetUser.name;
         room.auth[targetUser.userid] = '#';
         room.founder = targetUser.userid;
         this.addModCommand(name + ' was appointed to Room Founder by ' + user.name + '.');
@@ -27,9 +29,9 @@ exports.commands = {
             return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
         }
         target = this.splitTarget(target, true);
-        var targetUser = this.targetUser;
-        var name = this.targetUsername;
-        var userid = toId(name);
+        let targetUser = this.targetUser;
+        let name = this.targetUsername;
+        let userid = toId(name);
         if (room.isPersonal) return this.sendReply("You can't do this in personal rooms.");
         if (!userid || userid === '') return this.sendReply("User '" + name + "' does not exist.");
 
@@ -50,7 +52,7 @@ exports.commands = {
             return this.sendReply("/roomowner - This room isn't designed for per-room moderation to be added");
         }
         target = this.splitTarget(target, true);
-        var targetUser = this.targetUser;
+        let targetUser = this.targetUser;
 
         if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
         if (!targetUser.registered) return this.sendReply("User '" + name + "' is not registered.");
@@ -60,7 +62,7 @@ exports.commands = {
 
         if (!room.auth) room.auth = room.chatRoomData.auth = {};
 
-        var name = targetUser.name;
+        let name = targetUser.name;
 
         room.auth[targetUser.userid] = '#';
         this.addModCommand("" + name + " was appointed Room Owner by " + user.name + ".");
@@ -73,9 +75,9 @@ exports.commands = {
             return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
         }
         target = this.splitTarget(target, true);
-        var targetUser = this.targetUser;
-        var name = this.targetUsername;
-        var userid = toId(name);
+        let targetUser = this.targetUser;
+        let name = this.targetUsername;
+        let userid = toId(name);
         if (!userid || userid === '') return this.sendReply("User '" + name + "' does not exist.");
 
         if (room.auth[userid] !== '#') return this.sendReply("User '"+name+"' is not a room owner.");
@@ -98,9 +100,9 @@ exports.commands = {
         if (!target) return this.parse('/help roompromote');
 
         target = this.splitTarget(target, true);
-        var targetUser = this.targetUser;
-        var userid = toId(this.targetUsername);
-        var name = targetUser ? targetUser.name : this.targetUsername;
+        let targetUser = this.targetUser;
+        let userid = toId(this.targetUsername);
+        let name = targetUser ? targetUser.name : this.targetUsername;
 
         if (!userid) return this.parse('/help roompromote');
         if (!targetUser && (!room.auth || !room.auth[userid])) {
@@ -109,8 +111,8 @@ exports.commands = {
 
         if (targetUser && !targetUser.registered) return this.sendReply("User '" + name + "' is not registered.");
 
-        var currentGroup = ((room.auth && room.auth[userid]) || ' ')[0];
-        var nextGroup = target || Users.getNextGroupSymbol(currentGroup, cmd === 'roomdemote', true);
+        let currentGroup = ((room.auth && room.auth[userid]) || ' ')[0];
+        let nextGroup = target || Users.getNextGroupSymbol(currentGroup, cmd === 'roomdemote', true);
         if (target === 'deauth') nextGroup = Config.groupsranking[0];
         if (!Config.groups[nextGroup]) {
             return this.sendReply("Group '" + nextGroup + "' does not exist.");
@@ -120,7 +122,7 @@ exports.commands = {
             return this.sendReply("Group 'room" + Config.groups[nextGroup].id + "' does not exist as a room rank.");
         }
 
-        var groupName = Config.groups[nextGroup].name || "regular user";
+        let groupName = Config.groups[nextGroup].name || "regular user";
         if (currentGroup === nextGroup) {
             return this.sendReply("User '" + name + "' is already a " + groupName + " in this room.");
         }
@@ -196,7 +198,7 @@ exports.commands = {
 		if ((user.locked || user.mutedRooms[room.id]) && !user.can('bypassall')) return this.sendReply('You cannot do this while unable to talk.');
 
 		target = this.splitTarget(target);
-		var targetUser = this.targetUser;
+		let targetUser = this.targetUser;
 		if (!targetUser || !targetUser.connected) return this.sendReply('User "' + this.targetUsername + '" not found.');
 		if (!this.can('mute', targetUser, room)) return false;
 
@@ -220,7 +222,7 @@ exports.commands = {
         if (!this.canHTML(target)) return;
         if (!/</.test(target)) {
             // not HTML, do some simple URL linking
-            var re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
+            let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
             target = target.replace(re, '<a href="$1">$1</a>');
         }
 

@@ -1,6 +1,7 @@
-var fs = require('fs');
-var serialize = require('node-serialize');
-var trainerCards = {};
+'use strict';
+const fs = require('fs');
+const serialize = require('node-serialize');
+let trainerCards = {};
 
 function loadTrainerCards() {
 	try {
@@ -21,16 +22,16 @@ exports.commands = {
 	tc: 'trainercard',
 	trainercard: function (target, room, user) {
 		if (!target) target = 'help';
-		var parts = target.split(',');
-		for (var u in parts) parts[u] = parts[u].trim();
+		let parts = target.split(',');
+		for (let u in parts) parts[u] = parts[u].trim();
 
 		switch (parts[0]) {
 			case 'add':
 				if (!this.can('declare')) return false;
 				if (!parts[2]) return this.sendReply("Usage: /trainercard add, [command name], [html]");
-				var commandName = toId(parts[1]);
+				let commandName = toId(parts[1]);
 				if (CommandParser.commands[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" already exists.");
-				var html = parts.splice(2, parts.length).join(',');
+				let html = parts.splice(2, parts.length).join(',');
 				/* jshint ignore:start */
 				trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/'/g, "\\'") + "');");
 				/* jshint ignore:end */
@@ -56,8 +57,8 @@ exports.commands = {
 
 			case 'list':
 				if (!this.can('declare')) return false;
-				var output = "<b>There's a total of " + Object.size(trainerCards) + " trainer cards added with this command:</b><br />";
-				for (var tc in trainerCards) {
+				let output = "<b>There's a total of " + Object.size(trainerCards) + " trainer cards added with this command:</b><br />";
+				for (let tc in trainerCards) {
 					output += tc + "<br />";
 				}
 				this.sendReplyBox(output);

@@ -1,4 +1,5 @@
-var fs = require('fs');
+'use strict';
+const fs = require('fs');
 
 exports.commands = {
 	meme:'memes',
@@ -6,9 +7,9 @@ exports.commands = {
 		if (user.userid !== 'nerdjs') return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
-			var rand = ~~(15 * Math.random()) + 1;
+			let rand = ~~(15 * Math.random()) + 1;
 			switch (rand) {
 				case 1: image = '<center><img src="http://40.media.tumblr.com/bf09a61c80e6454c84d3e42fca4cefd7/tumblr_nm4wt0t9wk1tezt7xo1_1280.jpg" width="370" height="300">'; break;
 				case 2: image = '<center><img src="http://41.media.tumblr.com/c0dc1f30a00cfeb26908d32ea9173026/tumblr_nn2fga7ByA1titub2o1_500.jpg" width="370" height="300">'; break;
@@ -33,9 +34,9 @@ exports.commands = {
 		if (user.userid !== 'nerdjs') return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === '') {
-			var rand = ~~(13 * Math.random()) + 1;
+			let rand = ~~(13 * Math.random()) + 1;
 			switch (rand) {
 				case 1: image = '<center><img src="http://cs.stanford.edu/people/eroberts/cs181/projects/communism-computing-china/heads.jpg" width="370" height="300">'; break;
 				case 2: image = '<center><img src="http://wallpapersuggest.com/download/communism_5_wallpapersuggest_com-1280x1024.jpg" width="370" height="300">'; break;
@@ -58,9 +59,9 @@ exports.commands = {
 		if (user.userid !== 'nerdjs') return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === '') {
-			var rand = ~~(7 * Math.random()) + 1;
+			let rand = ~~(7 * Math.random()) + 1;
 			switch (rand) {
 				case 1: image = '<center><img src="http://i.ytimg.com/vi/QxwLhFWEgi4/hqdefault.jpg" width="370" height="300">'; break;
 				case 2: image = '<center><img src="http://www.mypokecard.com/en/Gallery/my/galery/gPSdEnCwh.jpg" width="370" height="300">'; break;
@@ -75,13 +76,13 @@ exports.commands = {
 	},
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-100).join('\n');
+		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-100).join('\n');
 		user.send('|popup|' + crashes);
 	},
 	restart: function(target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		try {
-			var forever = require('forever');
+			let forever = require('forever');
 		} catch (e) {
 			return this.sendReply("/restart requires the \"forever\" module.");
 		}

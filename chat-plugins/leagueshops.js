@@ -1,5 +1,6 @@
-var Q = require('q');
-var fs = require('fs');
+'use strict';
+let Q = require('q');
+let fs = require('fs');
 
 exports.commands = {
 
@@ -9,12 +10,12 @@ exports.commands = {
 	 	if (!room.founder) return this.sendReply('/leagueshop - league shops require a room founder.');
 	 	if (!room.hasShop) return this.sendReply('/leagueshop - this room does not have a leagueshop enabled.');
 	 	if (!room.shopList) room.shopList = [];
-	 	if (!target) var target = '';
-	 	var self = this;
+	 	if (!target) let target = '';
+	 	let self = this;
  
-		var cmdParts = target.split(' ');
-		var cmd = cmdParts.shift().trim().toLowerCase();
-		var params = cmdParts.join(' ').split(',').map(function (param) { return param.trim(); });
+		let cmdParts = target.split(' ');
+		let cmd = cmdParts.shift().trim().toLowerCase();
+		let params = cmdParts.join(' ').split(',').map(function (param) { return param.trim(); });
  
 	 	switch (cmd) {
 	 		case 'list':
@@ -22,8 +23,8 @@ exports.commands = {
 	 		default:
 	 			if (!this.canBroadcast()) return;
 	 			if (room.shopList.length < 1) return this.sendReplyBox('<center><b><u>This shop has no items!</u></b></center>');
-	 			var output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2><table cellpadding="6" border="1"><table cellpadding="6" border="1"><tr><td align="center"><h3><u>Item</u></h3></td><td align="center"><h3><u>Description</u></h3></td><td align="center"><h3><u>Price</u></h3></td></tr>';
-	 			for (var u in room.shopList) {
+	 			let output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2><table cellpadding="6" border="1"><table cellpadding="6" border="1"><tr><td align="center"><h3><u>Item</u></h3></td><td align="center"><h3><u>Description</u></h3></td><td align="center"><h3><u>Price</u></h3></td></tr>';
+	 			for (let u in room.shopList) {
 					if (!room.shop[room.shopList[u]] || !room.shop[room.shopList[u]].name || !room.shop[room.shopList[u]].description || !room.shop[room.shopList[u]].price) continue;
 	 				output += '<tr><td align="center"><button name="send" value="/leagueshop buy ' + Tools.escapeHTML(room.shopList[u]) + '" ><b>' + Tools.escapeHTML(room.shop[room.shopList[u]].name) +
 	 				'</b></button></td><td align="center">' + Tools.escapeHTML(room.shop[room.shopList[u]].description.toString()) + '</td><td align="center">' + room.shop[room.shopList[u]].price + '</td></tr>';
@@ -35,11 +36,11 @@ exports.commands = {
 	 			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
 	 			if (params.length < 3) return this.sendReply('Usage: /leagueshop add [item name], [description], [price]');
 	 			if (!room.shopList) room.shopList = [];
-	 			var name = params.shift();
-	 			var description = params.shift();
-	 			var price = Number(params.shift());
+	 			let name = params.shift();
+	 			let description = params.shift();
+	 			let price = Number(params.shift());
 	 			if (isNaN(price)) return this.sendReply('Usage: /leagueshop add [item name], [description], [price]');
-	 			var bucks = 'bucks';
+	 			let bucks = 'bucks';
 	 			if (Number(price) < 2) bucks = 'buck';
 	 			room.shop[toId(name)] = new Object();
 	 			room.shop[toId(name)].name = name;
@@ -57,10 +58,10 @@ exports.commands = {
 	 		case 'delete':
 	 			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
 	 			if (params.length < 1) return this.sendReply('Usage: /leagueshop delete [item name]');
-	 			var item = params.shift();
+	 			let item = params.shift();
 	 			if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "'+item+'" not found.');
 	 			delete room.shop[toId(item)];
-	 			var index = room.shopList.indexOf(toId(item));
+	 			let index = room.shopList.indexOf(toId(item));
 				if (index > -1) {
 				    room.shopList.splice(index, 1);
 				}
@@ -68,11 +69,11 @@ exports.commands = {
 				break;
 			case 'buy':
 				if (params.length < 1) return this.sendReply('Usage: /leagueshop buy [item name]');
-				var item = params.shift();
+				let item = params.shift();
 				if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "'+item+'" not found.');
-				var money = (Db('money')[user] || 0)
+				let money = (Db('money')[user] || 0)
 					if (money < room.shop[toId(item)].price) return self.sendReply('You don\'t have enough bucks to purchase a '+item+'. You need '+ ((money - room.shop[toId(item)].price) * -1) + ' more bucks.');
-					var buck = 'buck';
+					let buck = 'buck';
 					if (room.shop[toId(item)].price > 1) buck = 'bucks';
 					if (!room.shopBank) room.shopBank = room.founder;
 					self.parse('/transferbucks '+room.shopBank+','+room.shop[toId(item)].price);
@@ -98,7 +99,7 @@ exports.commands = {
 			case 'bank':
 				if (user.userid !== room.founder && !user.can('seniorstaff')) return this.sendReply('/leagueshop - Access denied.');
 				if (params.length < 1) return this.sendReply('Usage: /leagueshop bank [username]');
-				var bank = params.shift();
+				let bank = params.shift();
 				room.shopBank = toId(bank);
 				room.chatRoomData.shopBank = room.shopBank;
 				if (!room.bankwhitelist) {
@@ -112,15 +113,15 @@ exports.commands = {
 			case 'log':
 			case 'viewlog':
 				if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
-				var target = params.shift();
-				var lines = 0;
+				let target = params.shift();
+				let lines = 0;
 				if (!target.match('[^0-9]')) {
 					lines = parseInt(target || 15, 10);
 					if (lines > 100) lines = 100;
 				}
-				var filename = 'logs/leagueshop_'+room.id+'.txt';
-				var command = 'tail -'+lines+' '+filename;
-				var grepLimit = 100;
+				let filename = 'logs/leagueshop_'+room.id+'.txt';
+				let command = 'tail -'+lines+' '+filename;
+				let grepLimit = 100;
 				if (!lines || lines < 0) { // searching for a word instead
 					if (target.match(/^["'].+["']$/)) target = target.substring(1,target.length-1);
 					command = "awk '{print NR,$0}' "+filename+" | sort -nr | cut -d' ' -f2- | grep -m"+grepLimit+" -i '"+target.replace(/\\/g,'\\\\\\\\').replace(/["'`]/g,'\'\\$&\'').replace(/[\{\}\[\]\(\)\$\^\.\?\+\-\*]/g,'[$&]')+"'";

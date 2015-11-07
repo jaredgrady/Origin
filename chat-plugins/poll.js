@@ -1,5 +1,6 @@
-var request = require('request');
-var Poll = {
+'use strict';
+const request = require('request');
+let Poll = {
 	reset: function (roomId) {
 		Poll[roomId] = {
 			question: undefined,
@@ -11,8 +12,8 @@ var Poll = {
 	},
 
 	splint: function (target) {
-		var parts = target.split(',');
-		var len = parts.length;
+		let parts = target.split(',');
+		let len = parts.length;
 		while (len--) {
 			parts[len] = parts[len].trim();
 		}
@@ -20,7 +21,7 @@ var Poll = {
 	}
 };
 
-for (var id in Rooms.rooms) {
+for (let id in Rooms.rooms) {
 	if (Rooms.rooms[id].type === 'chat' && !Poll[id]) {
 		Poll[id] = {};
 		Poll.reset(id);
@@ -34,18 +35,18 @@ exports.commands = {
 		if (Poll[room.id].question) return this.sendReply("There is currently a poll going on already.");
 		if (!this.canTalk()) return;
 
-		var options = Poll.splint(target);
+		let options = Poll.splint(target);
 		if (options.length < 3) return this.parse('/help poll');
 
-		var question = options.shift();
+		let question = options.shift();
 
 		options = options.join(',').toLowerCase().split(',');
 
 		Poll[room.id].question = question;
 		Poll[room.id].optionList = options;
 
-		var pollOptions = '';
-		var start = 0;
+		let pollOptions = '';
+		let start = 0;
 		while (start < Poll[room.id].optionList.length) {
 			pollOptions += '<button name="send" value="/vote ' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '">' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '</button>&nbsp;';
 			start++;
@@ -60,34 +61,34 @@ exports.commands = {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll to end in this room.");
 
-		var votes = Object.keys(Poll[room.id].options).length;
+		let votes = Object.keys(Poll[room.id].options).length;
 
 		if (votes === 0) {
 			Poll.reset(room.id);
 			return room.add('|raw|<h3>The poll was canceled because of lack of voters.</h3>');
 		}
 
-		var options = {};
+		let options = {};
 
-		for (var l in Poll[room.id].optionList) {
+		for (let l in Poll[room.id].optionList) {
 			options[Poll[room.id].optionList[l]] = 0;
 		}
 
-		for (var o in Poll[room.id].options) {
+		for (let o in Poll[room.id].options) {
 			options[Poll[room.id].options[o]]++;
 		}
 
-		var data = [];
-		for (var i in options) {
+		let data = [];
+		for (let i in options) {
 			data.push([i, options[i]]);
 		}
 		data.sort(function (a, b) {
 			return a[1] - b[1];
 		});
 
-		var results = '';
-		var len = data.length;
-		var topOption = data[len - 1][0];
+		let results = '';
+		let len = data.length;
+		let topOption = data[len - 1][0];
 		while (len--) {
 			if (data[len][1] > 0) {
 				results += '&bull; ' + data[len][0] + ' - ' + Math.floor(data[len][1] / votes * 100) + '% (' + data[len][1] + ')<br>';
@@ -113,7 +114,7 @@ exports.commands = {
 	},
 	randomtour: 'randtour',
 	randtour: function (target, room, user) {
-		var rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
+		let rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
 		if (!this.can('broadcast', null, room)) return;
 		this.parse('/tour new ' + rand + ', elimination');
 	},
@@ -141,7 +142,7 @@ exports.commands = {
 	},
 	randomtour: 'randtour',
 	randtour: function (target, room, user) {
-		var rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
+		let rand = ['ou', 'pu', 'randombattle', 'ubers', 'uu', 'ru', 'pu', '1v1', 'hackmonscup', 'monotype', 'challengecup1v1', 'ubers', 'lc'][Math.floor(Math.random() * 13)];
 		if (!this.can('broadcast', null, room)) return;
 		this.parse('/tour new ' + rand + ', elimination');
 	},
@@ -158,7 +159,7 @@ exports.commands = {
 		if (!target) return this.parse('/help vote');
 		if (Poll[room.id].optionList.indexOf(target.toLowerCase()) === -1) return this.sendReply("'" + target + "' is not an option for the current poll.");
 
-		var ips = JSON.stringify(user.ips);
+		let ips = JSON.stringify(user.ips);
 		Poll[room.id].options[ips] = target.toLowerCase();
 
 		return this.sendReply("You are now voting for " + target + ".");

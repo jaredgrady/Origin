@@ -1,4 +1,5 @@
-var hangedMan =
+'use strict';
+let hangedMan =
 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_______&nbsp;<br />" +
 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br/>" +
 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_)<br/>" +
@@ -13,9 +14,9 @@ exports.commands = {
 	hangman: function (target, room, user) {
 		if (!this.canTalk()) return this.sendReply("You are unable to talk in this room.");
 		if (!target) target = 'view';
-		var cmd = (~target.indexOf(',') ? target.substr(0, target.indexOf(',')) : target).trim();
-		var targetSplit = target.split(',');
-		for (var u in targetSplit) targetSplit[u] = targetSplit[u].trim();
+		let cmd = (~target.indexOf(',') ? target.substr(0, target.indexOf(',')) : target).trim();
+		let targetSplit = target.split(',');
+		for (let u in targetSplit) targetSplit[u] = targetSplit[u].trim();
 
 		switch (cmd) {
 		case 'help':
@@ -38,12 +39,12 @@ exports.commands = {
 			if (!user.can('broadcast', null, room)) return this.sendReply("/hangman create - Access denied.");
 			if (!room.hangmanEnabled) return this.sendReply("Hangman is disabled in this room.");
 			if (!targetSplit || !targetSplit[2]) return this.sendReply("Usage: /hangman [create], [word], [topic]");
-			var word = toId(targetSplit[1]);
+			let word = toId(targetSplit[1]);
 			if (!word || word.length < 2) return this.sendReply("Hangman must have more than 2 characters.");
 			word = word.replace(/[^a-z]+/g, '');
 			if (word.length > 10) return this.sendReply("Words may not be longer than 10 characters.");
 			targetSplit.splice(0, 2);
-			var topic = targetSplit.join(' ');
+			let topic = targetSplit.join(' ');
 			if (topic.length > 30) return this.sendReply("The topic may not be longer than 30 characters.");
 
 			room.hangman = {};
@@ -55,7 +56,7 @@ exports.commands = {
 			room.hangman.guessedWords = [];
 			room.hangman.guesses = 8;
 
-			for (var i = 0; i < word.length; i++) {
+			for (let i = 0; i < word.length; i++) {
 				room.hangman.guessWord.push('_');
 			}
 			room.add(
@@ -80,7 +81,7 @@ exports.commands = {
 			if (user.userid !== room.hangman.hangmaner) return this.sendReply("You can't change the topic if you're not running hangman.");
 			if (!targetSplit || !targetSplit[1]) return this.sendReply("Usage: /hangman [topic], [newtopic]");
 			targetSplit.splice(0, 1);
-			var topic = targetSplit.join(' ');
+			let topic = targetSplit.join(' ');
 			if (topic.length > 30) return this.sendReply("The topic may not be longer than 30 characters.");
 
 			room.hangman.topic = topic;
@@ -98,12 +99,12 @@ exports.commands = {
 			if (user.userid === room.hangman.hangmaner) return this.sendReply("You can't guess a letter because you're running hangman.");
 			if (!targetSplit || !targetSplit[1]) return this.sendReply("Usage: /hangman [guess], [letter]");
 			if (targetSplit[1].length > 1) return this.sendReply("Please specify a letter to guess. To guess the word use /hangman [guessword], [word]");
-			var letter = targetSplit[1];
+			let letter = targetSplit[1];
 			if (~room.hangman.guessedLetters.indexOf(letter)) return this.sendReply("Someone has already guessed that letter.");
-			var found = false;
+			let found = false;
 			room.hangman.guessedLetters.push(letter);
 
-			for (var u in room.hangman.word) {
+			for (let u in room.hangman.word) {
 				if (room.hangman.word[u] === letter) {
 					room.hangman.guessWord[u] = room.hangman.word[u];
 					found = true;
@@ -144,7 +145,7 @@ exports.commands = {
 			if (user.userid === room.hangman.hangmaner) return this.sendReply("You can't guess the word because you're running hangman.");
 			if (!targetSplit || !targetSplit[1]) return this.sendReply("Usage: /hangman [guessword], [word]");
 			if (targetSplit[1].length !== room.hangman.word.length) return this.sendReply("You can't guess a word that doesn't match the length of the hangman word.");
-			var word = targetSplit[1];
+			let word = targetSplit[1];
 			if (~room.hangman.guessedWords.indexOf(word.toLowerCase())) return this.sendReply("That word has already been guessed.");
 			room.hangman.guessedWords.push(word.toLowerCase());
 			room.hangman.guesses--;

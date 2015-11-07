@@ -1,4 +1,5 @@
-var fs = require('fs');
+'use strict';
+const fs = require('fs');
 
 function loadVips() {
 	try {
@@ -18,7 +19,7 @@ exports.commands = {
 		if (!this.can('givevip')) return false;
 		if (!target) return this.sendReply("Usage: /givevip [user]");
 		if (Users.vips[toId(target)]) return this.sendReply(target + " already has vip.");
-		var targetUser = Users(target);
+		let targetUser = Users(target);
 
 		if (!targetUser) return this.sendReply("User \"" + target + "\" not found.");
 		if (!targetUser.connected) return this.sendReply(targetUser.name + " is not online.");

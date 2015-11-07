@@ -1,14 +1,15 @@
 //Random animal generator by Audino Primal. Finished by fender with manual labor from Natsume, tex rex1, Sundar, and ntgs.//
+'use strict';
 
 exports.commands = {
 
 kitten: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
 	 		case 1: image = '<center><img src="http://dreamatico.com/data_images/kitten/kitten-3.jpg" width="370" height="300">'; break;
@@ -36,10 +37,10 @@ kitten: function(target, room, user) {
 puppy: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
 	 		case 1: image = '<center><img src="http://bebusinessed.com/wp-content/uploads/2014/03/734899052_13956580111.jpg" width="370" height="300">'; break;
@@ -67,10 +68,10 @@ puppy: function(target, room, user) {
 cow: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
 	 		case 1: image = '<center><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg" width="370" height="300">'; break;
@@ -98,10 +99,10 @@ cow: function(target, room, user) {
 frog: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
 			case 1: image = '<center><img src="http://www.ryanphotographic.com/imagesAgalychris%20callidryas%20head%20on.jpg" width="370" height="300">'; break;
@@ -129,10 +130,10 @@ frog: function(target, room, user) {
 zoo: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
             case 1: image = '<center><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Equus_quagga.jpg" width="370" height="300">'; break;
@@ -160,10 +161,10 @@ zoo: function(target, room, user) {
 otter: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
-		var matched = false;
+		let matched = false;
 		if (target === ''){
 
-		var rand = ~~(15 * Math.random()) + 1;
+		let rand = ~~(15 * Math.random()) + 1;
 
 		switch (rand) {
           case 1: image = '<center><img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Mother_sea_otter_with_rare_twin_baby_pups_(9139425522).jpg" width="370" height="300">'; break;
