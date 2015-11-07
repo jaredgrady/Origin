@@ -1172,6 +1172,15 @@ exports.Formats = [
 		banlist: ['Wobbuffet + Leftovers']
 	},
 	{
+		name: "[Gen 3] LC",
+		section: "Past Generations",
+
+		mod: 'gen3',
+		maxLevel: 5,
+		ruleset: ['Pokemon', 'Standard', 'Little Cup'],
+		banlist: ['Scyther', 'Chansey', 'Wynaut', 'Zigzagoon', 'Omanyte', 'Agility + Baton Pass', 'Dragon Rage', 'Sonic boom']
+	},
+	{
 		name: "[Gen 3] Custom Game",
 		section: "Past Generations",
 
@@ -1187,15 +1196,6 @@ exports.Formats = [
 		mod: 'gen2',
 		ruleset: ['Pokemon', 'Standard'],
 		banlist: ['Uber']
-	},
-	{
-		name: "[Gen 3] LC",
-		section: "Past Generations",
-
-		mod: 'gen3',
-		maxLevel: 5,
-		ruleset: ['Pokemon', 'Standard', 'Little Cup'],
-		banlist: ['Scyther', 'Chansey', 'Wynaut', 'Zigzagoon', 'Omanyte', 'Agility + Baton Pass', 'Dragon Rage', 'Sonic boom']
 	},
 	{
 		name: "[Gen 2] Ubers",
