@@ -33,7 +33,7 @@ exports.commands = {
                                         '<li>/lvl auth, [Captain1], [Captain2] - Change team captains</li>' +
                                         '<li>/lvl reg, [P1], [P2]... - Command for captains to set lineups.</li>' +
                                         '<li>/lvl start - Start the lvl after lineups are registered.</li>' +
-					'<li>Please note that you need a <i>global staff member</i> in order to run a scripted LvL. Please do not contact admins to do this.</li>'
+					'<li>Please note that you need a <i>global staff member</i> in order to run a scripted LvL. Please do not contact admins to do this.</li>' +
 					'<li>To see basic league commands, use /leaguehelp. All code written by Ecuacion, adapted by the Origin Coding Staff.</li>' +
                                         '</ul>');
 				break;
