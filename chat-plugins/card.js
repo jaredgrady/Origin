@@ -973,7 +973,7 @@ function cachePacks() {
             }
         }
     }
-    for (let i = 0; i < packShop.length; i++) {
+    for (i = 0; i < packShop.length; i++) {
         cleanShop.push(toId(packShop[i]));
     }
 }
@@ -990,7 +990,7 @@ function cacheRarity() {
             }
         }
     }
-    for (let i = 0; i < cardRarity.length; i++) {
+    for (i = 0; i < cardRarity.length; i++) {
         cleanCard.push(toId(cardRarity[i]));
     }
 }

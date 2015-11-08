@@ -1,5 +1,4 @@
 'use strict';
-
 const fs = require('fs');
 const color = require('../config/color');
 
@@ -109,11 +108,11 @@ exports.commands = {
 			}
 			user.avatarCooldown = Date.now();
 
-			hash = parts[1].trim();
+			let hash = parts[1].trim();
 			if (!pendingAdds[hash]) return this.sendReply("Invalid hash.");
 
-			userid = pendingAdds[hash].userid;
-			avatar = pendingAdds[hash].avatar;
+			let userid = pendingAdds[hash].userid;
+			let avatar = pendingAdds[hash].avatar;
 			delete pendingAdds[hash];
 
 			require('child_process').execFile('bash', ['-c', script, '-', avatar, './config/avatars/' + userid], function (e, out, err) {
@@ -134,7 +133,7 @@ exports.commands = {
 			break;
 
 		case 'delete':
-			userid = toId(parts[1]);
+			let userid = toId(parts[1]);
 			if (!this.can('ban') && this.can('vip') && userid !== user.userid) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
@@ -142,7 +141,7 @@ exports.commands = {
 				return this.sendReply(userid + "'s custom avatar (" + Config.customavatars[userid] + ") cannot be removed with this script.");
 			}
 
-			targetUser = Users.getExact(userid);
+			let targetUser = Users.getExact(userid);
 			if (targetUser) targetUser.avatar = 1;
 
 			fs.unlink('./config/avatars/' + Config.customavatars[userid], function (e) {
