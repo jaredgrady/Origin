@@ -1,7 +1,6 @@
-'use strict';
 //ranking is mostly arbitrary
-let Groupsranking = [' ', '\u03c4', '\u00a3', '\u03dd', '\u03b2', '\u039e', '\u03a9', '\u0398', '\u03a3', '\u00a9', ];
-let Groups = {
+var Groupsranking = [' ', '\u03c4', '\u00a3', '\u03dd', '\u03b2', '\u039e', '\u03a9', '\u0398', '\u03a3', '\u00a9', ];
+var Groups = {
 
         '\u00a9': {
                 id: "champion",
@@ -74,17 +73,17 @@ exports.commands = {
                 if (!this.can('roommod', null, room)) return false;
 
                 target = this.splitTarget(target, true);
-                let targetUser = this.targetUser;
-                let userid = toId(this.targetUsername);
-                let name = targetUser ? targetUser.name : this.targetUsername;
+                var targetUser = this.targetUser;
+                var userid = toId(this.targetUsername);
+                var name = targetUser ? targetUser.name : this.targetUsername;
 
                 if (!userid) return this.parse('/leagueauthhelp');
                 if (!targetUser && (!room.auth || !room.auth[userid])) {
                         return this.sendReply("User '" + name + "' is offline and unauthed, and so can't be promoted.");
                 }
 
-                let currentGroup = ((room.leagueauth&& room.leagueauth[userid]) || ' ')[0];
-                let nextGroup = target;
+                var currentGroup = ((room.leagueauth&& room.leagueauth[userid]) || ' ')[0];
+                var nextGroup = target;
                 if (target === 'leaguedeauth') nextGroup = Groupsranking[0];
                
                 if (cmd==='roomtrainer') {
@@ -117,7 +116,7 @@ exports.commands = {
                         return this.sendReply("Group '" + nextGroup + "' does not exist.");
                 }
 
-                let groupName = Groups[nextGroup].name || "regular user";
+                var groupName = Groups[nextGroup].name || "regular user";
                 if (currentGroup === nextGroup) {
                         return this.sendReply("User '" + name + "' is already a " + groupName + " in this room.");
                 }
@@ -139,18 +138,18 @@ exports.commands = {
                 if (room.chatRoomData) Rooms.global.writeChatRoomData();
         },
 	leagueauth: function (target, room, user, connection) {
-		let targetRoom = room;
+		var targetRoom = room;
 		if (target) targetRoom = Rooms.search(target);
 		if (!targetRoom || (targetRoom !== room && targetRoom.modjoin && !user.can('bypassall'))) return this.sendReply("The room '" + target + "' does not exist.");
 		if (!targetRoom.auth) return this.sendReply("/roomauth - The room '" + (targetRoom.title ? targetRoom.title : target) + "' isn't designed for per-room moderation and therefore has no auth list.");
 
-		let rankLists = {};
-		for (let u in targetRoom.leagueauth) {
+		var rankLists = {};
+		for (var u in targetRoom.leagueauth) {
 			if (!rankLists[targetRoom.leagueauth[u]]) rankLists[targetRoom.leagueauth[u]] = [];
 			rankLists[targetRoom.leagueauth[u]].push(u);
 		}
 
-		let buffer = [];
+		var buffer = [];
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Groups[b] || {rank:0}).rank - (Groups[a] || {rank:0}).rank;
 		}).forEach(function (r) {

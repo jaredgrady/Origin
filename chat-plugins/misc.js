@@ -1,18 +1,17 @@
-'use strict';
 /**
  * Miscellaneous commands
  */
-const fs = require('fs');
-const moment = require('moment');
-const request = require('request');
+var fs = require('fs');
+var moment = require('moment');
+var request = require('request');
 
 function clearRoom(room) {
-	let len = (room.log && room.log.length) || 0;
-	let users = [];
+	var len = (room.log && room.log.length) || 0;
+	var users = [];
 	while (len--) {
 		room.log[len] = '';
 	}
-	for (let u in room.users) {
+	for (var u in room.users) {
 		users.push(u);
 		Users.get(u).leaveRoom(room, Users.get(u).connections[0]);
 	}
@@ -24,7 +23,7 @@ function clearRoom(room) {
 	}, 1000);
 }
 
-let messages = [
+var messages = [
 	"has vanished into nothingness!",
 	"used Explosion!",
 	"fell into the void.",
@@ -133,7 +132,7 @@ exports.commands = {
     restart: function(target, room, user) {
 		if (!this.can('lockdown')) return false;
 		try {
-			let forever = require('forever');
+			var forever = require('forever');
 		} catch (e) {
 			return this.sendReply("/restart requires the \"forever\" module.");
 		}
@@ -154,9 +153,9 @@ exports.commands = {
 		if (room.isMuted(user) && !user.can('bypassall')) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
-		let name = this.targetUsername;
-		let userid = toId(name);
+		var targetUser = this.targetUser;
+		var name = this.targetUsername;
+		var userid = toId(name);
 
 		if (!userid || !targetUser) return this.sendReply("User '" + name + "' does not exist.");
 		if (!this.can('ban', targetUser, room)) return false;
@@ -172,11 +171,11 @@ exports.commands = {
 		}
 		
 		this.addModCommand("" + targetUser.name + " was sharted on in room " + room.id + " by " + user.name + "." + (target ? " (" + target + ")" : ""));
-		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
-		let alts = room.roomBan(targetUser);
+		var acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		var alts = room.roomBan(targetUser);
 		if (alts.length) {
 			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "roombanned alts: " + alts.join(", ") + ")");
-			for (let i = 0; i < alts.length; ++i) {
+			for (var i = 0; i < alts.length; ++i) {
 				this.add('|unlink|' + toId(alts[i]));
 			}
 		} else if (acAccount) {
@@ -190,8 +189,8 @@ exports.commands = {
 	magic8ball: 'm8b',
 	m8b: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		let random = Math.floor(20 * Math.random()) + 1;
-		let results = '';
+		var random = Math.floor(20 * Math.random()) + 1;
+		var results = '';
 		if (random == 1) {
 			results = 'Signs point to yes.';
 		}
@@ -282,14 +281,14 @@ exports.commands = {
 	roomlist: function (target, room, user) {
         if(!this.can('declare')) return;
  
-        let rooms = Object.keys(Rooms.rooms),
+        var rooms = Object.keys(Rooms.rooms),
             len = rooms.length,
             official = ['<b><font color="#1a5e00" size="2">Official chat rooms</font></b><br><br>'],
             nonOfficial = ['<hr><b><font color="#000b5e" size="2">Chat rooms</font></b><br><br>'],
             privateRoom = ['<hr><b><font color="#5e0019" size="2">Private chat rooms</font></b><br><br>'];
  
         while (len--) {
-            let _room = Rooms.rooms[rooms[(rooms.length - len) - 1]];
+            var _room = Rooms.rooms[rooms[(rooms.length - len) - 1]];
             if (_room.type === 'chat') {
                 if (_room.isOfficial) {
                     official.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
@@ -307,92 +306,92 @@ exports.commands = {
     },
     
 	randp: function (target, room, user) {
-	let fs = require('fs');
-	let fileName = "pokedex.js";
+	var fs = require('fs');
+	var fileName = "pokedex.js";
 	if (!this.canBroadcast()) return;
-	let shinyPoke = '';
-	let x = '';
+	var shinyPoke = '';
+	var x = '';
 	if (/shiny/i.test(target)) {
-		let shinyPoke = '-shiny';
+		var shinyPoke = '-shiny';
 	}
-	let kanto = false; let johto = false; let hoenn = false; let sinnoh = false; let kalos = false; let unova = false;
+	var kanto = false; var johto = false; var hoenn = false; var sinnoh = false; var kalos = false; var unova = false;
 	if (/kanto/i.test(target) || /gen 1/i.test(target)) {
-		let kalos = true;
-		let x = Math.floor(Math.random() * (174 - 1)) + 1;
+		var kalos = true;
+		var x = Math.floor(Math.random() * (174 - 1)) + 1;
 	} else if (/johto/i.test(target) || /gen 2/i.test(target)) {
-		let johto = true;
-		let x = Math.floor(Math.random() * (281 - 173)) + 173;
+		var johto = true;
+		var x = Math.floor(Math.random() * (281 - 173)) + 173;
 	} else if (/hoenn/i.test(target) || /gen 3/i.test(target)) {
-		let hoenn = true;
-		let x = Math.floor(Math.random() * (444 - 280)) + 280;
+		var hoenn = true;
+		var x = Math.floor(Math.random() * (444 - 280)) + 280;
 	} else if (/sinnoh/i.test(target) || /gen 4/i.test(target)) {
-		let sinnoh = true;
-		let x = Math.floor(Math.random() * (584 - 443)) + 443;
+		var sinnoh = true;
+		var x = Math.floor(Math.random() * (584 - 443)) + 443;
 	} else if (/kalos/i.test(target) || /gen 5/i.test(target)) {
-		let kalos = true;
-		let x = Math.floor(Math.random() * (755 - 583)) + 583;
+		var kalos = true;
+		var x = Math.floor(Math.random() * (755 - 583)) + 583;
 	} else if (/unova/i.test(target) || /gen 6/i.test(target)) {
-		let unova = true;
-		let x = Math.floor(Math.random() * (834 - 752)) + 752;
+		var unova = true;
+		var x = Math.floor(Math.random() * (834 - 752)) + 752;
 	}
 	if (kanto === false && johto === false && hoenn === false && sinnoh === false && kalos === false && unova === false) {
-		let x = Math.floor(Math.random() * (856 - 1)) + 1;
+		var x = Math.floor(Math.random() * (856 - 1)) + 1;
 	}
-	let randP = '';
-	let pokeNum = parseInt(x);
-	let pokedex = fs.readFileSync('./data/pokedex.js').toString().split("\n");
-	let pokemon = (pokedex[x]);
-	let speciesIndex1 = pokemon.indexOf('species:"') + 9; let speciesIndex2 = pokemon.indexOf('",', speciesIndex1);
-	let pokeName = pokemon.slice(speciesIndex1, speciesIndex2);
-	let type1Index1 = pokemon.indexOf(',types:["') + 9; let type1Index2 = pokemon.indexOf('"],', type1Index1);
-	let pokeType2 = '';
+	var randP = '';
+	var pokeNum = parseInt(x);
+	var pokedex = fs.readFileSync('./data/pokedex.js').toString().split("\n");
+	var pokemon = (pokedex[x]);
+	var speciesIndex1 = pokemon.indexOf('species:"') + 9; var speciesIndex2 = pokemon.indexOf('",', speciesIndex1);
+	var pokeName = pokemon.slice(speciesIndex1, speciesIndex2);
+	var type1Index1 = pokemon.indexOf(',types:["') + 9; var type1Index2 = pokemon.indexOf('"],', type1Index1);
+	var pokeType2 = '';
 	if (/,/.test(pokemon.slice(type1Index1, type1Index2))) {
-		let type1Index2 = pokemon.indexOf('","', type1Index1);
-		let type2Index1 = pokemon.indexOf('","', type1Index1) + 3; let type2Index2 = pokemon.indexOf('"],', type2Index1);
-		let pokeType2 = '<img src="http://play.pokemonshowdown.com/sprites/types/' + pokemon.slice(type2Index1, type2Index2) + '.png" width="32" height="14">';
+		var type1Index2 = pokemon.indexOf('","', type1Index1);
+		var type2Index1 = pokemon.indexOf('","', type1Index1) + 3; var type2Index2 = pokemon.indexOf('"],', type2Index1);
+		var pokeType2 = '<img src="http://play.pokemonshowdown.com/sprites/types/' + pokemon.slice(type2Index1, type2Index2) + '.png" width="32" height="14">';
 	}
-	let pokeType1 = '<img src="http://play.pokemonshowdown.com/sprites/types/' + pokemon.slice(type1Index1, type1Index2) + '.png" width="32" height="14">';
-	let ability1Index1 = pokemon.indexOf(',abilities:{0:"') + 15; let ability1Index2 = pokemon.indexOf('"},h', ability1Index1);
-	let pokeAbility2 = '';
-	let pokeAbility3 = '';
+	var pokeType1 = '<img src="http://play.pokemonshowdown.com/sprites/types/' + pokemon.slice(type1Index1, type1Index2) + '.png" width="32" height="14">';
+	var ability1Index1 = pokemon.indexOf(',abilities:{0:"') + 15; var ability1Index2 = pokemon.indexOf('"},h', ability1Index1);
+	var pokeAbility2 = '';
+	var pokeAbility3 = '';
 	if (/",/.test(pokemon.slice(ability1Index1, ability1Index2))) {
 		if (/",H:"/.test(pokemon.slice(ability1Index1, ability1Index2))) {
-			let ability1Index2 = pokemon.indexOf('",H:"', ability1Index1);
-			let ability3Index1 = pokemon.indexOf('",H:"', ability1Index1) + 5; let ability3Index2 = pokemon.indexOf('"', ability3Index1);
-			let pokeAbility3 = ', ' + pokemon.slice(ability3Index1, ability3Index2);
+			var ability1Index2 = pokemon.indexOf('",H:"', ability1Index1);
+			var ability3Index1 = pokemon.indexOf('",H:"', ability1Index1) + 5; var ability3Index2 = pokemon.indexOf('"', ability3Index1);
+			var pokeAbility3 = ', ' + pokemon.slice(ability3Index1, ability3Index2);
 		}
 		if (/",1:"/.test(pokemon.slice(ability1Index1, ability1Index2))) {
-			let ability1Index2 = pokemon.indexOf('",1:"', ability1Index1);
-			let ability2Index1 = pokemon.indexOf('",1:"', ability1Index1) + 5; let ability2Index2 = pokemon.indexOf('"', ability2Index1);
-			let pokeAbility2 = ', ' + pokemon.slice(ability2Index1, ability2Index2);
+			var ability1Index2 = pokemon.indexOf('",1:"', ability1Index1);
+			var ability2Index1 = pokemon.indexOf('",1:"', ability1Index1) + 5; var ability2Index2 = pokemon.indexOf('"', ability2Index1);
+			var pokeAbility2 = ', ' + pokemon.slice(ability2Index1, ability2Index2);
 		}
 	}
-	let ability1Index2 = pokemon.indexOf('"', ability1Index1);
-	let pokeAbility1 = pokemon.slice(ability1Index1, ability1Index2);
-	let hpIndex1 = pokemon.indexOf('hp:') + 3; let hpIndex2 = pokemon.indexOf(',', hpIndex1);
-	let pokeHp = parseInt(pokemon.slice(hpIndex1, hpIndex2));
-	let atkIndex1 = pokemon.indexOf('atk:') + 4; let atkIndex2 = pokemon.indexOf(',', atkIndex1);
-	let pokeAtk = parseInt(pokemon.slice(atkIndex1, atkIndex2));
-	let defIndex1 = pokemon.indexOf('def:') + 4; let defIndex2 = pokemon.indexOf(',', defIndex1);
-	let pokeDef = parseInt(pokemon.slice(defIndex1, defIndex2));
-	let spaIndex1 = pokemon.indexOf('spa:') + 4; let spaIndex2 = pokemon.indexOf(',', spaIndex1);
-	let pokeSpa = parseInt(pokemon.slice(spaIndex1, spaIndex2));
-	let spdIndex1 = pokemon.indexOf('spd:') + 4; let spdIndex2 = pokemon.indexOf(',', spdIndex1);
-	let pokeSpd = parseInt(pokemon.slice(spdIndex1, spdIndex2));
-	let speIndex1 = pokemon.indexOf('spe:') + 4; let speIndex2 = pokemon.indexOf('}', speIndex1);
-	let pokeSpe = parseInt(pokemon.slice(speIndex1, speIndex2));
-	let pokeBst = pokeHp + pokeAtk + pokeDef + pokeSpa + pokeSpd + pokeSpe;
-	let pokeStats = 'HP ' + pokeHp + ' / Atk ' + pokeAtk + ' / Def ' + pokeDef + ' / SpA ' + pokeSpa + ' / SpD ' + pokeSpd + ' / Spe ' + pokeSpe + ' / BST ' + pokeBst;
-	let colorIndex1 = pokemon.indexOf(',color:"') + 8; let colorIndex2 = pokemon.indexOf('",', colorIndex1);
-	let pokeColor = pokemon.slice(colorIndex1, colorIndex2);
-	let egg1Index1 = pokemon.indexOf(',eggGroups:["') + 13; let egg1Index2 = pokemon.indexOf('"]', egg1Index1);
-	let pokeEgg2 = "";
+	var ability1Index2 = pokemon.indexOf('"', ability1Index1);
+	var pokeAbility1 = pokemon.slice(ability1Index1, ability1Index2);
+	var hpIndex1 = pokemon.indexOf('hp:') + 3; var hpIndex2 = pokemon.indexOf(',', hpIndex1);
+	var pokeHp = parseInt(pokemon.slice(hpIndex1, hpIndex2));
+	var atkIndex1 = pokemon.indexOf('atk:') + 4; var atkIndex2 = pokemon.indexOf(',', atkIndex1);
+	var pokeAtk = parseInt(pokemon.slice(atkIndex1, atkIndex2));
+	var defIndex1 = pokemon.indexOf('def:') + 4; var defIndex2 = pokemon.indexOf(',', defIndex1);
+	var pokeDef = parseInt(pokemon.slice(defIndex1, defIndex2));
+	var spaIndex1 = pokemon.indexOf('spa:') + 4; var spaIndex2 = pokemon.indexOf(',', spaIndex1);
+	var pokeSpa = parseInt(pokemon.slice(spaIndex1, spaIndex2));
+	var spdIndex1 = pokemon.indexOf('spd:') + 4; var spdIndex2 = pokemon.indexOf(',', spdIndex1);
+	var pokeSpd = parseInt(pokemon.slice(spdIndex1, spdIndex2));
+	var speIndex1 = pokemon.indexOf('spe:') + 4; var speIndex2 = pokemon.indexOf('}', speIndex1);
+	var pokeSpe = parseInt(pokemon.slice(speIndex1, speIndex2));
+	var pokeBst = pokeHp + pokeAtk + pokeDef + pokeSpa + pokeSpd + pokeSpe;
+	var pokeStats = 'HP ' + pokeHp + ' / Atk ' + pokeAtk + ' / Def ' + pokeDef + ' / SpA ' + pokeSpa + ' / SpD ' + pokeSpd + ' / Spe ' + pokeSpe + ' / BST ' + pokeBst;
+	var colorIndex1 = pokemon.indexOf(',color:"') + 8; var colorIndex2 = pokemon.indexOf('",', colorIndex1);
+	var pokeColor = pokemon.slice(colorIndex1, colorIndex2);
+	var egg1Index1 = pokemon.indexOf(',eggGroups:["') + 13; var egg1Index2 = pokemon.indexOf('"]', egg1Index1);
+	var pokeEgg2 = "";
 	if (/,/.test(pokemon.slice(egg1Index1, egg1Index2))) {
-		let egg1Index2 = pokemon.indexOf('","', egg1Index1);
-		let egg2Index1 = pokemon.indexOf('","', egg1Index1) + 3; let egg2Index2 = pokemon.indexOf('"]', egg2Index1);
-		let pokeEgg2 = ", " + pokemon.slice(egg2Index1, egg2Index2);
+		var egg1Index2 = pokemon.indexOf('","', egg1Index1);
+		var egg2Index1 = pokemon.indexOf('","', egg1Index1) + 3; var egg2Index2 = pokemon.indexOf('"]', egg2Index1);
+		var pokeEgg2 = ", " + pokemon.slice(egg2Index1, egg2Index2);
 	}
-	let pokeEgg1 = pokemon.slice(egg1Index1, egg1Index2);
+	var pokeEgg1 = pokemon.slice(egg1Index1, egg1Index2);
 	if (pokeName === "Ho-Oh" || pokeName === "Nidoran-F" || pokeName === "Nidoran-M" || pokeName === "Farfetch'd" || pokeName === "Porygon-Z") {
 	randP = '<table><tr><td><img src="http://play.pokemonshowdown.com/sprites/bw' + shinyPoke + '/' + pokeName.toLowerCase().replace(/[-]+/g, '').replace(/[']+/g, '') + '.png" height="96" width="96"></td><td><b>Name: </b>' + pokeName + '<br/><b>Type(s): </b>' + pokeType1 + ' ' + pokeType2 + '<br/><b>Ability: </b>' + pokeAbility1 + pokeAbility2 + pokeAbility3 + '<br/><b>Stats: </b>' + pokeStats + '<br/><b>Color: </b><font color="' + pokeColor + '">' + pokeColor + '</font><br/><b>Egg Group(s): </b>' + pokeEgg1 + pokeEgg2 + '</td></tr></table>';
 	} else if (pokeName === "Basculin-Blue-Striped") {
@@ -402,7 +401,7 @@ exports.commands = {
 	} else if (pokeName === "Floette-Eternal-Flower") {
 		randP = '<table><tr><td><img src="http://play.pokemonshowdown.com/sprites/bw' + shinyPoke + '/floette-eternalflower.png" height="96" width="96"></td><td><b>Name: </b>' + pokeName + '<br/><b>Type(s): </b>' + pokeType1 + ' ' + pokeType2 + '<br/><b>Ability: </b>' + pokeAbility1 + pokeAbility2 + pokeAbility3 + '<br/><b>Stats: </b>' + pokeStats + '<br/><b>Color: </b><font color="' + pokeColor + '">' + pokeColor + '</font><br/><b>Egg Group(s): </b>' + pokeEgg1 + pokeEgg2 + '</td></tr></table>';
 	} else if (pokeName === "Missingno.") {
-		let y = Math.floor(Math.random() * (6 - 1)) + 1;
+		var y = Math.floor(Math.random() * (6 - 1)) + 1;
 		switch (y) {
 		case 1:
 			randP = '<table><tr><td><img src="http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png" height="96" width="96"></td><td><b>Name: </b>' + pokeName + '<br/><b>Type(s): </b>' + pokeType1 + ' ' + pokeType2 + '<br/><b>Ability: </b>None<br/><b>Stats: </b>' + pokeStats + '<br/><b>Color: </b><font color="' + pokeColor + '">' + pokeColor + '</font><br/><b>Egg Group(s): </b>' + pokeEgg1 + pokeEgg2 + '</td></tr></table>';
@@ -423,7 +422,7 @@ exports.commands = {
 			break;
 		}
 	} else if (pokeName === "Pikachu-Cosplay") {
-		let z = Math.floor(Math.random() * (6 - 1)) + 1;
+		var z = Math.floor(Math.random() * (6 - 1)) + 1;
 		switch (z) {
 		case 1:
 			randP = '<table><tr><td><img src="http://play.pokemonshowdown.com/sprites/bw' + shinyPoke + '/pikachu-rock-star.png" height="96" width="96"></td><td><b>Name: </b>' + pokeName + '<br/><b>Type(s): </b>' + pokeType1 + ' ' + pokeType2 + '<br/><b>Ability: </b>' + pokeAbility1 + pokeAbility2 + pokeAbility3 + '<br/><b>Stats: </b>' + pokeStats + '<br/><b>Color: </b><font color="' + pokeColor + '">' + pokeColor + '</font><br/><b>Egg Group(s): </b>' + pokeEgg1 + pokeEgg2 + '</td></tr></table>';
@@ -453,7 +452,7 @@ exports.commands = {
     forcejoin: function(target, room, user) {
         if (!user.can('mute')) return false;
         if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
-        let parts = target.split(',');
+        var parts = target.split(',');
         if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
         userid = toId(parts[0]);
         roomid = toId(parts[1]);
@@ -466,7 +465,7 @@ exports.commands = {
 	permabanlist: 'pbanlist',
 	pbanlist: function(target, room, user, connection) {
 		if (!this.canBroadcast() || !user.can('lock')) return this.sendReply('/pbanlist - Access Denied.');
-		let pban = fs.readFileSync('config/pbanlist.txt', 'utf8');
+		var pban = fs.readFileSync('config/pbanlist.txt', 'utf8');
 		return user.send('|popup|' + pban);
 	},
 */
@@ -486,12 +485,12 @@ exports.commands = {
 		if (!target) return this.sendReply('/permaban [username] - Permanently bans the user from the server. Bans placed by this command do not reset on server restarts. Requires: & ~');
 		if (!this.can('pban')) return false;
 		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
+		var targetUser = this.targetUser;
 		if (!targetUser) {
 			return this.sendReply('User ' + this.targetUsername + ' not found.');
 		}
 		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
-			let problem = " but was already banned";
+			var problem = " but was already banned";
 			return this.privateModCommand('(' + targetUser.name + " would be banned by " + user.name + problem + '.) (' + targetUser.latestIp + ')');
 		}
 		targetUser.popup(user.name + " has permanently banned you.");
@@ -503,12 +502,12 @@ exports.commands = {
 */	
 	cgdeclare: 'customgdeclare',
 	customgdeclare: function (target, room, user) {
-	let parts = target.split(',');
+	var parts = target.split(',');
 	if (!target) return this.parse('/help customgdeclare');
 	if (!parts[4]) return this.parse('/help customgdeclare');
 	if (!this.can('gdeclare')) return false;
  
-	for (let id in Rooms.rooms) {
+	for (var id in Rooms.rooms) {
 	if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>We are hosting a <font color="#57194A"><b>' + parts[0] + '</b></font> in <button name="send" value="/join ' + parts[1] + '" style="border-radius: 3px; margin: 3px; padding: 2px 5px; font-weight: bold; font-style: italic; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35); color: #57194A; text-shadow: none;">' + parts[1] + '</button> !<br />The tier is <font style="color: #57194A; font-weight: bold;"><b>' + parts[2] + '</b></font>! Join up and have fun!<br /><br />The prize for the winner is <font style="color: #57194A; font-weight: bold;"><b>' + parts[3] + '</b></font> bucks, while the runner-up will get <font style="color: #57194A; font-weight: bold;"><b>' + parts[4] + '</b></font> bucks!<br /><small><i>~' + user.name + '</i></small></b></div>');
 	}
 	this.logModCommand(user.name + " globally custom declared " + target);
@@ -519,19 +518,19 @@ exports.commands = {
 	auth: 'authority',
 	authlist: 'authority',
 	authority: function (target, room, user, connection) {
-		let rankLists = {};
-		let ranks = Object.keys(Config.groups);
-		for (let u in Users.usergroups) {
-			let rank = Users.usergroups[u].charAt(0);
+		var rankLists = {};
+		var ranks = Object.keys(Config.groups);
+		for (var u in Users.usergroups) {
+			var rank = Users.usergroups[u].charAt(0);
 			// In case the usergroups.csv file is not proper, we check for the server ranks.
 			if (ranks.indexOf(rank) > -1) {
-				let name = Users.usergroups[u].substr(1);
+				var name = Users.usergroups[u].substr(1);
 				if (!rankLists[rank]) rankLists[rank] = [];
 				if (name) rankLists[rank].push(((Users.getExact(name) && Users.getExact(name).connected) ? '**' + name + '**' : name));
 			}
 		}
 
-		let buffer = [];
+		var buffer = [];
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Config.groups[b] || {rank: 0}).rank - (Config.groups[a] || {rank: 0}).rank;
 		}).forEach(function (r) {
@@ -553,11 +552,11 @@ exports.commands = {
 	globalclearall: function (target, room, user) {
 		if (!this.can('gdeclare')) return false;
 
-		for (let u in Users.users) {
+		for (var u in Users.users) {
 			Users.users[u].popup("All rooms are being clear.");
 		}
 
-		for (let r in Rooms.rooms) {
+		for (var r in Rooms.rooms) {
 			clearRoom(Rooms.rooms[r]);
 		}
 	},
@@ -584,7 +583,7 @@ exports.commands = {
 		}
 
 		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
+		var targetUser = this.targetUser;
 		if (!targetUser || !targetUser.connected) return this.sendReply("User \"" + this.targetUsername + "\" not found.");
 		if (!(targetUser in room.users)) {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
@@ -604,10 +603,10 @@ exports.commands = {
 		if (!this.can('pmall')) return false;
 		if (!target) return this.parse('/help pmall');
 
-		let pmName = ' Server PM [Do not reply]';
+		var pmName = ' Server PM [Do not reply]';
 
-		for (let i in Users.users) {
-			let message = '|pm|' + pmName + '|' + Users.users[i].getIdentity() + '|' + target;
+		for (var i in Users.users) {
+			var message = '|pm|' + pmName + '|' + Users.users[i].getIdentity() + '|' + target;
 			Users.users[i].send(message);
 		}
 	},
@@ -619,9 +618,9 @@ exports.commands = {
 		if (!this.can('hotpatch')) return false;
 		if (!target) return this.parse('/help pmallstaff');
 
-		let pmName = ' Staff PM [Do not reply]';
+		var pmName = ' Staff PM [Do not reply]';
 
-		for (let i in Users.users) {
+		for (var i in Users.users) {
 			if (Users.users[i].isStaff) {
 				Users.users[i].send('|pm|' + pmName + '|' + Users.users[i].group + Users.users[i].name + '|' + target);
 			}
@@ -636,10 +635,10 @@ exports.commands = {
         if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
         if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
 
-        let pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
+        var pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
 
-        for (let i in room.users) {
-            let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + Tools.escapeHTML(target);
+        for (var i in room.users) {
+            var message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + Tools.escapeHTML(target);
             room.users[i].send(message);
         }
         this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + Tools.escapeHTML(target) + ')');
@@ -651,13 +650,13 @@ exports.commands = {
 		if (Config.poofOff) return this.sendReply("Poof is currently disabled.");
 		if (target && !this.can('broadcast')) return false;
 		if (room.id !== 'lobby') return false;
-		let message = target || messages[Math.floor(Math.random() * messages.length)];
+		var message = target || messages[Math.floor(Math.random() * messages.length)];
 		if (message.indexOf('{{user}}') < 0) message = '{{user}} ' + message;
 		message = message.replace(/{{user}}/g, user.name);
 		if (!this.canTalk(message)) return false;
 
-		let colour = '#' + [1, 1, 1].map(function () {
-			let part = Math.floor(Math.random() * 0xaa);
+		var colour = '#' + [1, 1, 1].map(function () {
+			var part = Math.floor(Math.random() * 0xaa);
 			return (part < 0x10 ? '0' : '') + part.toString(16);
 		}).join('');
 
@@ -685,7 +684,7 @@ exports.commands = {
 		if (!target) return this.parse('/help shart');
 
 		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
+		var targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' does not exist.");
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
@@ -693,13 +692,13 @@ exports.commands = {
 		if (!this.can('ban', targetUser)) return false;
 
 		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
-			let problem = " but was already banned";
+			var problem = " but was already banned";
 			return this.privateModCommand("(" + targetUser.name + " would be sharted on by " + user.name + problem + ".)");
 		}
 
 		if (targetUser.confirmed) {
 			if (cmd === 'forceshart') {
-				let from = targetUser.deconfirm();
+				var from = targetUser.deconfirm();
 				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
 			} else {
 				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
@@ -711,24 +710,24 @@ exports.commands = {
 		targetUser.popup("|modal|" + user.name + " has sharted on you.");
 
 		this.addModCommand("" + targetUser.name + " was sharted on by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
-		let alts = targetUser.getAlts();
-		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		var alts = targetUser.getAlts();
+		var acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
 		if (alts.length) {
-			let guests = 0;
+			var guests = 0;
 			alts = alts.filter(function (alt) {
 				if (alt.substr(0, 6) !== 'Guest ') return true;
 				guests++;
 				return false;
 			});
 			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
-			for (let i = 0; i < alts.length; ++i) {
+			for (var i = 0; i < alts.length; ++i) {
 				this.add('|unlink|' + toId(alts[i]));
 			}
 		} else if (acAccount) {
 			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 		}
 
-		let userid = this.getLastIdOf(targetUser);
+		var userid = this.getLastIdOf(targetUser);
 		this.add('|unlink|hide|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
 		targetUser.ban(false, userid);
@@ -752,13 +751,13 @@ exports.commands = {
 	regdate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!target || !toId(target)) return this.parse('/help regdate');
-		let username = toId(target);
+		var username = toId(target);
 		request('http://pokemonshowdown.com/users/' + username, function (error, response, body) {
 			if (error && response.statusCode !== 200) {
 				this.sendReplyBox(Tools.escapeHTML(target) + " is not registered.");
 				return room.update();
 			}
-			let regdate = body.split('<small>')[1].split('</small>')[0].replace(/(<em>|<\/em>)/g, '');
+			var regdate = body.split('<small>')[1].split('</small>')[0].replace(/(<em>|<\/em>)/g, '');
 			if (regdate === '(Unregistered)') {
 				this.sendReplyBox(Tools.escapeHTML(target) + " is not registered.");
 			} else {
@@ -786,10 +785,10 @@ exports.commands = {
 	seen: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!target) return this.parse('/help seen');
-		let targetUser = Users.get(target);
+		var targetUser = Users.get(target);
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
 		target = Tools.escapeHTML(target);
-		let seen = Db('seen')[toId(target)];
+		var seen = Db('seen')[toId(target)];
 		if (!seen) return this.sendReplyBox(target + " has never been online on this server.");
 		this.sendReplyBox(target + " was last seen <b>" + moment(seen).fromNow() + "</b>.");
 	},
@@ -798,7 +797,7 @@ exports.commands = {
 	tell: function (target, room, user, connection) {
 		if (!target) return this.parse('/help tell');
 		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
+		var targetUser = this.targetUser;
 		if (!target) {
 			this.sendReply("You forgot the comma.");
 			return this.parse('/help tell');
@@ -818,10 +817,10 @@ exports.commands = {
 				(!Config.tellrank ? "disabled" : "only available to users of rank " + Config.tellrank + " and above") + ".");
 		}
 
-		let userid = toId(this.targetUsername);
+		var userid = toId(this.targetUsername);
 		if (userid.length > 18) return this.popupReply("\"" + this.targetUsername + "\" is not a legal username.");
 
-		let sendSuccess = Tells.addTell(user, userid, target);
+		var sendSuccess = Tells.addTell(user, userid, target);
 		if (!sendSuccess) {
 			if (sendSuccess === false) {
 				return this.popupReply("User " + this.targetUsername + " has too many offline messages queued.");
@@ -859,11 +858,11 @@ exports.commands = {
 		if (!this.can('mute')) return false;
 		if (!this.canBroadcast()) return;
 
-		let args = target.split(',');
+		var args = target.split(',');
 		if (args.length < 3) return this.parse('/help iconcss');
-		let username = toId(args.shift());
-		let imageurl = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
-		let selectors = '#' + toId(args.shift()) + '-userlist-user-' + username;
+		var username = toId(args.shift());
+		var imageurl = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
+		var selectors = '#' + toId(args.shift()) + '-userlist-user-' + username;
 		args.forEach(function (room) {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username;
 		});

@@ -38,11 +38,9 @@ Full [For Pokemon with full background]
 All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
 */
 
-'use strict';
+var uuid = require('uuid');
 
-const uuid = require('uuid');
-
-let colors = {
+var colors = {
     Mythic: '#E3E2AF',
     Legendary: '#FF851B',
     Epic: 'purple',
@@ -51,7 +49,7 @@ let colors = {
     Common: 'black'
 };
 
-let shop = [ //Actual shop display
+var shop = [ //Actual shop display
     ['XY-Base', 'Get three cards from the first pack released in the Pokemon XY set.', 10],
     ['XY-Flashfire', 'Get three cards from the Flashfire pack released in the Pokemon XY set.', 10],
     ['XY-Furious Fists', 'Get three cards from the Furious Fists pack released in the Pokemon XY set.', 10],
@@ -61,18 +59,18 @@ let shop = [ //Actual shop display
    //['UU-Pack', 'Get three cards from the UU tier.', 10]
 ];
 //Shop used in cardCache to reduce RAM usage of card caching
-let packShop = ['XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'Double Crisis', 'Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack', 'Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6', 'Metal', 'Trainer', 'Supporter', 'Item', 'Stadium', 'EX-Pack', 'Legendary', 'Full', 'Event'];
-let tourCardRarity = ['No Card', 'Common', 'Uncommon', 'Rare', 'Epic', 'Epic', 'Legendary', 'Legendary', 'Mythic'];
-let cardRarity = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'];
+var packShop = ['XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'Double Crisis', 'Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack', 'Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6', 'Metal', 'Trainer', 'Supporter', 'Item', 'Stadium', 'EX-Pack', 'Legendary', 'Full', 'Event'];
+var tourCardRarity = ['No Card', 'Common', 'Uncommon', 'Rare', 'Epic', 'Epic', 'Legendary', 'Legendary', 'Mythic'];
+var cardRarity = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'];
 //System Command: you should prolly never put anything in here
-let cleanShop = [];
-let cleanCard = [];
+var cleanShop = [];
+var cleanCard = [];
 
-let rareCache = []; //Used to cache cards for tours
-let cardCache = []; //Used to cache cards in packs
-let userPacks = {}; //Used to store users unopened packs
+var rareCache = []; //Used to cache cards for tours
+var cardCache = []; //Used to cache cards in packs
+var userPacks = {}; //Used to store users unopened packs
 
-let cards = {
+var cards = {
         'absol': {title: 'absol', name: 'Absol', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_40.png', publicid: '359', rarity: 'Uncommon', collection: ['Darkness', 'UU-Pack', 'XY-Roaring Skies', 'Gen3'], points: 3},
         'accelgor': {title: 'accelgor', name: 'Accelgor', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_9.png', publicid: '617', rarity: 'Uncommon', collection: ['Grass', 'RU-Pack', 'XY-Furious Fists', 'Gen5'], points: 3},
         'acetrainer': {title: 'acetrainer', name: 'Ace Trainer', card: 'http://assets5.pokemon.com/assets/cms2/img/cards/web/XY7/XY7_EN_69.png', publicid: 'actrn', rarity: 'Uncommon', collection: ['Trainer','Supporter', 'XY-Ancient Origins'], points: 3},
@@ -964,11 +962,11 @@ let cards = {
 
 
 function cachePacks() {
-    for (let i = 0; i < packShop.length; i++) {
+    for (var i = 0; i < packShop.length; i++) {
         cardCache.push(new Array());
-        for (let key in cards) {
+        for (var key in cards) {
             if (cards.hasOwnProperty(key)) {
-                let obj = cards[key];
+                var obj = cards[key];
                 if (obj.hasOwnProperty('collection') && obj.collection.indexOf(packShop[i]) > -1) cardCache[i].push(key);
             }
         }
@@ -981,11 +979,11 @@ function cachePacks() {
 global.cachePacks = cachePacks;
 
 function cacheRarity() {
-    for (let i = 0; i < cardRarity.length; i++) {
+    for (var i = 0; i < cardRarity.length; i++) {
         rareCache.push(new Array());
-        for (let key in cards) {
+        for (var key in cards) {
             if (cards.hasOwnProperty(key)) {
-                let obj = cards[key];
+                var obj = cards[key];
                 if (obj.hasOwnProperty('rarity') && obj.rarity.indexOf(cardRarity[i]) > -1) rareCache[i].push(key);
             }
         }
@@ -999,16 +997,16 @@ global.cacheRarity = cacheRarity;
 
 global.tourCard = function(tourSize, userid) {
     if (tourSize > 32) tourSize = 32;
-    let tourRarity = tourCardRarity[Math.floor(tourSize / 4)];
-    let cacheValue = rareCache[cleanCard.indexOf(toId(tourRarity))];
-    let card = cacheValue[Math.round(Math.random() * (cacheValue.length - 1))];
+    var tourRarity = tourCardRarity[Math.floor(tourSize / 4)];
+    var cacheValue = rareCache[cleanCard.indexOf(toId(tourRarity))];
+    var card = cacheValue[Math.round(Math.random() * (cacheValue.length - 1))];
     if (tourRarity === 'No Card') return;
     addCard(userid, card);
     return [cards[card].rarity, cards[card].title, cards[card].name];
 }
 
 function addCard(name, card) {
-    let newCard = {};
+    var newCard = {};
     newCard.id = uuid.v1();
     newCard.title = cards[card].title;
     newCard.card = cards[card].card;
@@ -1018,15 +1016,15 @@ function addCard(name, card) {
     if (!Array.isArray(Db('cards')[toId(name)])) Db('cards')[toId(name)] = [];
     Db('cards')[toId(name)].push(newCard);
     Db.save();
-    let total = (Db('points')[toId(name)] || 0) + newCard.points;
+    var total = (Db('points')[toId(name)] || 0) + newCard.points;
     Db('points')[toId(name)] = total;
     Db.save();
 }
 
 function getShopDisplay (shop) {
-    let display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
+    var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
                     "<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
-    let start = 0;
+    var start = 0;
     while (start < shop.length) {
         display += "<tr>" +
                         "<td align='center'><button name='send' value='/buypack " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
@@ -1061,18 +1059,18 @@ exports.commands = {
     buypacks: 'buypack',
     buypack: function(target, room, user) {
         if (!target) return this.sendReply('/buypack - Buys a pack from the pack shop. Alias: /buypacks');
-        let self = this;
-        let packId = toId(target);
+        var self = this;
+        var packId = toId(target);
         if (cleanShop.indexOf(packId) < 0) return self.sendReply('This is not a valid pack. Use /packshop to see all packs.');
-        let shopIndex = cleanShop.indexOf(toId(target));
+        var shopIndex = cleanShop.indexOf(toId(target));
         if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
         if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
-        let cost = shop[shopIndex][2];
+        var cost = shop[shopIndex][2];
         if (cost > Db('money')[user.userid]) return self.sendReply('You need ' + (cost - Db('money')[user.userid]) + ' more bucks to buy this card.');
-        let total = Db('money')[user.userid] - cost;
+        var total = Db('money')[user.userid] - cost;
 	Db('money')[user.userid] = total;
 	Db.save();
-	let pack = toId(target);
+	var pack = toId(target);
 	self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
                        ' bucks. Use <button name="send" value="/openpack ' +
                     	pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
@@ -1100,28 +1098,28 @@ exports.commands = {
         if (!userPacks[user.userid] || userPacks[user.userid].length === 0) return this.sendReply('You have no packs.');
         if (userPacks[user.userid].indexOf(toId(target)) < 0) return this.sendReply('You do not have this pack.');
         for (i=0; i<3; i++) {
-            let pack = toId(target);
-            let cacheValue = cardCache[cleanShop.indexOf(toId(target))];
-            let card = cacheValue[Math.round(Math.random() * (cacheValue.length - 1))];
+            var pack = toId(target);
+            var cacheValue = cardCache[cleanShop.indexOf(toId(target))];
+            var card = cacheValue[Math.round(Math.random() * (cacheValue.length - 1))];
             addCard(user.userid, card);
-            let cardName = cards[card].name;
-            let packName = packShop[cleanShop.indexOf(toId(target))];
+            var cardName = cards[card].name;
+            var packName = packShop[cleanShop.indexOf(toId(target))];
             this.sendReplyBox(user.name + ' got <font color="' + colors[cards[card].rarity] + '">' + cards[card].rarity + '</font>\
             <button name="send" value="/card ' + card  + '"><b>' + cardName + '</b></button> from a \
             <button name="send" value="/buypack ' + packName + '">' + packName + ' Pack</button>.');
         }
-        let usrIndex = userPacks[user.userid].indexOf(pack);
+        var usrIndex = userPacks[user.userid].indexOf(pack);
         userPacks[user.userid].splice(usrIndex, 1);
 },
     givepacks: 'givepack',
     givepack: function(target, room, user) {
         if (!user.can('declare')) return this.sendReply('/givepack - Access denied.');
         if (!target) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
-        let parts = target.split(',');
+        var parts = target.split(',');
         this.splitTarget(parts[0]);
         if (!parts[1]) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
-        let pack = toId(parts[1]);
-        let userid = toId(this.targetUsername);
+        var pack = toId(parts[1]);
+        var userid = toId(this.targetUsername);
         if (cleanShop.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
         if (!this.targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
         if (!userPacks[userid]) userPacks[userid] = [];
@@ -1135,12 +1133,12 @@ exports.commands = {
     takepack: function(target, room, user) {
         if (!user.can('takepack')) return this.sendReply('/takepack - Access denied.');
         if (!target) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
-        let parts = target.split(',');
+        var parts = target.split(',');
         this.splitTarget(parts[0]);
         if (!parts[1]) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
-        let pack = toId(parts[1]);
-        let packIndex = userPacks[userid].indexOf(pack);
-        let userid = toId(this.targetUsername);
+        var pack = toId(parts[1]);
+        var packIndex = userPacks[userid].indexOf(pack);
+        var userid = toId(this.targetUsername);
         if (packsKeys.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
         if (!this.targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
         if (!userPacks[userid]) userPacks[userid] = [];
@@ -1168,11 +1166,11 @@ exports.commands = {
         targetU = parts[0];
         page = parts[1];
     }
-    let self = this;
+    var self = this;
     if (!Users.get(targetU)) return self.sendReply('User ' + targetU + ' not found.');
-    let cards = Db('cards')[targetU];
-    let points = Db('points')[targetU];
-		let display = '';
+    var cards = Db('cards')[targetU];
+    var points = Db('points')[targetU];
+		var display = '';
 		if (cards) {
 			for (i = (page - 1) * 10; i < page * 10; i++) {
 				if (cards[i] && cards[i].hasOwnProperty('card')) {
@@ -1191,10 +1189,10 @@ exports.commands = {
         card: function(target, room, user) {
         if (!target) return this.sendReply('/card [name] - Shows information about a card.');
         if (!this.canBroadcast()) return;
-        let cardName = toId(target);
+        var cardName = toId(target);
         if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ': card not found.');
-        let card = cards[cardName];
-        let html = '<img src="' + card.card + '" title="' + card.name + '" align="left">\
+        var card = cards[cardName];
+        var html = '<img src="' + card.card + '" title="' + card.name + '" align="left">\
                 <br><center><h1><u><b>' + card.name + '</b></u></h1>\
                 <br><br>\
                 <h2><font color="' + colors[card.rarity] + '">' + card.rarity + '</font></h2>\
@@ -1209,8 +1207,8 @@ exports.commands = {
 	cardrank: 'cardladder',
 	cardladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
-		let keys = Object.keys(Db('points')).map(function(name) {
+		var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
+		var keys = Object.keys(Db('points')).map(function(name) {
 			return {name: name, points: Db('points')[name]};
 		});
 		if (!keys.length) return this.sendReplyBox("Cardladder is empty.");
@@ -1224,11 +1222,11 @@ exports.commands = {
 		this.sendReply("|raw|" + display);
 	},
 /*     transfercard: function (target, room, user) {
-    let parts = target.split(',');
+    var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
     if (!Users.get(toId(parts[0]))) return this.sendReply('User ' + parts[0] + ' was not found.');
     if (parts[1].indexOf('-') === -1) return this.sendReply('This is not a valid card ID.');
-    let self = this;
+    var self = this;
     Database.findOne('cards', parts[1], user.userid, function (err, cardObj) {
         if (err || !cardObj) return self.sendReply('You don\'t have this card.'); 
         Database.remove('cards', parts[1], user.userid, function (err) {

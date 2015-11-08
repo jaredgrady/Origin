@@ -1,15 +1,14 @@
-'use strict';
 urlify = function(str) {return str.replace(/(https?\:\/\/[a-z0-9-.]+(\/([^\s]*[^\s?.,])?)?|[a-z0-9]([a-z0-9-\.]*[a-z0-9])?\.(com|org|net|edu|tk)((\/([^\s]*[^\s?.,])?)?|\b))/ig, '<a href="$1" target="_blank">$1</a>').replace(/<a href="([a-z]*[^a-z:])/g, '<a href="http://$1').replace(/(\bgoogle ?\[([^\]<]+)\])/ig, '<a href="http://www.google.com/search?ie=UTF-8&q=$2" target="_blank">$1</a>').replace(/(\bgl ?\[([^\]<]+)\])/ig, '<a href="http://www.google.com/search?ie=UTF-8&btnI&q=$2" target="_blank">$1</a>').replace(/(\bwiki ?\[([^\]<]+)\])/ig, '<a href="http://en.wikipedia.org/w/index.php?title=Special:Search&search=$2" target="_blank">$1</a>').replace(/\[\[([^< ]([^<`]*?[^< ])?)\]\]/ig, '<a href="http://www.google.com/search?ie=UTF-8&btnI&q=$1" target="_blank">$1</a>');}
 nightclub = new Object();
 
 function colorify(given_text){
 	//given_text = Tools.escapeHTML(given_text);
-	let sofar = "";
-	let splitting = given_text.split("");
-	let text_length = given_text.length;
-	let colorification = true;
-	let beginningofend = false;
-	for (let i in splitting) {
+	var sofar = "";
+	var splitting = given_text.split("");
+	var text_length = given_text.length;
+	var colorification = true;
+	var beginningofend = false;
+	for (var i in splitting) {
 		if (splitting[i] == "<" && splitting[i + 1] != "/") {
 			//open tag <>
 			//colorification = false;
@@ -23,9 +22,9 @@ function colorify(given_text){
 			//colorification = true;
 			//beginningofend = false;
 		}
-		let letters = 'ABCDE'.split('');
-		let color = "";
-		for (let f = 0; f < 6; f++) {
+		var letters = 'ABCDE'.split('');
+		var color = "";
+		for (var f = 0; f < 6; f++) {
 			color += letters[Math.floor(Math.random() * letters.length)];
 		}
 		if (colorification) {
@@ -37,11 +36,11 @@ function colorify(given_text){
 }
  
 function colorify_absolute(given_text){
-	let sofar = "";
-	let splitting = given_text.split("");
-	let text_length = given_text.length;
+	var sofar = "";
+	var splitting = given_text.split("");
+	var text_length = given_text.length;
 	for (i = 0; i < text_length; i++) {
-		let color = (Math.random()*(0xFFFFFF+1)<<0).toString(16);
+		var color = (Math.random()*(0xFFFFFF+1)<<0).toString(16);
 		if (splitting[i] == " ") sofar += " "; else sofar += "<font color='" + "#" + color + "'>" + splitting[i] + "</font>";
 	}
 	return sofar;

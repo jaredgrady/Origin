@@ -1,4 +1,3 @@
-'use strict';
 exports.commands = {
 	 autovoice: 'autorank',
 	 autodriver: 'autorank',
@@ -35,7 +34,7 @@ exports.commands = {
 	 		delete room.autorank;
 	 		delete room.chatRoomData.autorank;
 	 		Rooms.global.writeChatRoomData();
-	 		for (let u in room.users) Users.users[u].updateIdentity();
+	 		for (var u in room.users) Users.users[u].updateIdentity();
 	 		return this.privateModCommand("(" + user.name + " has disabled autorank in this room.)");
 	 	}
 	 	if (room.autorank && room.autorank === target) return this.sendReply("Autorank is already set to \"" + target + "\".");
@@ -45,7 +44,7 @@ exports.commands = {
 	 		room.autorank = target;
 	 		room.chatRoomData.autorank = target;
 	 		Rooms.global.writeChatRoomData();
-	 		for (let u in room.users) Users.users[u].updateIdentity();
+	 		for (var u in room.users) Users.users[u].updateIdentity();
 	 		return this.privateModCommand("(" + user.name + " has set autorank to \"" + target + "\" in this room.)");
 	 	}
 	 	return this.sendReply("Group \"" + target + "\" not found.");

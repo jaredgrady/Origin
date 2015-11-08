@@ -1,10 +1,9 @@
-'use strict';
 exports.commands = { 
 	guerra: 'lvl',
 	war: 'lvl',
 	lvl: function(target, room, user, connection) {
-		let roomId = room.id;
-		let params;
+		var roomId = room.id;
+		var params;
 		if (!target) {
 			params = ['round'];
 		} else {
@@ -45,9 +44,9 @@ exports.commands = {
 				if (params[1] !== 'standard' && !this.can('hotpatch')) return false;
 				if (!this.can('lock')) return false;
 				if (War.getTourData(roomId)) return this.sendReply("There is an LvL already going on in this room.");
-				let size = parseInt(params[3]);
+				var size = parseInt(params[3]);
 				if (size < 3) return this.sendReply("The minimum size is 3.");
-				let format = War.tourTiers[toId(params[2])];
+				var format = War.tourTiers[toId(params[2])];
 				if (!format) return this.sendReply("That format isn't valid.");
 				if (!Clans.getProfile(params[4]) || !Clans.getProfile(params[5])) return this.sendReply("A specified league does not exist");
 				if (War.findClan(params[4]) || War.findClan(params[5])) return this.sendReply("A specified league is at war.");
@@ -66,11 +65,11 @@ exports.commands = {
 						break;
 					case 'standard':
 						if (params.length < 8) return this.sendReply("Usage: /war new, standard, [tier], [size], [leagueA], [leagueB], [captainA], [captainB]");
-						let targetClan;
-						let userCapA = Users.getExact(params[6]);
+						var targetClan;
+						var userCapA = Users.getExact(params[6]);
 						if (!userCapA) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not online.");				
 						if (!War.isInClan(params[6], params[4])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
-						let userCapB = Users.getExact(params[7]);
+						var userCapB = Users.getExact(params[7]);
 						if (!userCapB) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not online.");
 						if (!War.isInClan(params[7], params[5])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
 						War.newTeamTour(room.id, 'lineups', format, size, Tools.escapeHTML(params[4]), Tools.escapeHTML(params[5]), userCapA.name, userCapB.name);
@@ -85,7 +84,7 @@ exports.commands = {
 			case 'fin':
 			case 'delete':
 				if (!this.can('lock')) return false;
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
 				this.logModCommand(user.name + " has forcibly ended the LvL between " + toId(tourData.teamA) + " and " + toId(tourData.teamB) + ".");
 				Rooms.rooms[room.id].addRaw('<hr /><center><h2><font color="green">' + user.name + ' forcibly ended the LvL between ' + tourData.teamA + " and " + tourData.teamB + '.</h2></font></center><hr />');
@@ -94,10 +93,10 @@ exports.commands = {
 			case 'j':
 			case 'unirse':
 			case 'join':
-				let err = War.joinTeamTour(roomId, user.name, Clans.findClanFromMember(user.name));
+				var err = War.joinTeamTour(roomId, user.name, Clans.findClanFromMember(user.name));
 				if (err) return this.sendReply(err);
-				let tourData = War.getTourData(roomId);
-				let freePlaces =  War.getFreePlaces(roomId); 
+				var tourData = War.getTourData(roomId);
+				var freePlaces =  War.getFreePlaces(roomId); 
 				if (freePlaces > 0) {
 					Rooms.rooms[room.id].addRaw('<b>' + user.name + '</b> has joined the LvL. There are ' + freePlaces + ' spots remaining.');
 				} else {
@@ -109,23 +108,23 @@ exports.commands = {
 			case 'l':
 			case 'salir':
 			case 'leave':
-				let err = War.leaveTeamTour(roomId, user.name);
+				var err = War.leaveTeamTour(roomId, user.name);
 				if (err) return this.sendReply(err);
-				let freePlaces =  War.getFreePlaces(roomId);
+				var freePlaces =  War.getFreePlaces(roomId);
 				Rooms.rooms[room.id].addRaw('<b>' + user.name + '</b> has left the LvL. There are ' + freePlaces + ' spots remaining.');
 				break;
 			case 'auth':
 				if (!this.can('lock')) return false;
 				if (params.length < 3) return this.sendReply("Usage: /war auth, [Capitan1], [Capitan2]");
-				let targetClan;
-				let tourData = War.getTourData(roomId);
-				let userCapA = Users.getExact(params[1]);
+				var targetClan;
+				var tourData = War.getTourData(roomId);
+				var userCapA = Users.getExact(params[1]);
 				if (!userCapA) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not online.");				
 				if (!War.isInClan(params[1], tourData.teamA)) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
-				let userCapB = Users.getExact(params[2]);
+				var userCapB = Users.getExact(params[2]);
 				if (!userCapB) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not online.");
 				if (!War.isInClan(params[2], tourData.teamB)) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not part of the target league.");
-				let err = War.setAuth(roomId, params[1], params[2]);
+				var err = War.setAuth(roomId, params[1], params[2]);
 				if (err) return this.sendReply(err);
 				this.privateModCommand('(' + user.name + ' has changed the captains for the current war.)');
 				break;
@@ -133,10 +132,10 @@ exports.commands = {
 			case 'alineacion':
 			case 'registrar':
 			case 'reg':
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
 				if (toId(user.name) !== toId(tourData.authA) && toId(user.name) !== toId(tourData.authB)) return this.sendReply("You are not the team captain!");
-				let err = War.regParticipants(roomId, user.name, target);
+				var err = War.regParticipants(roomId, user.name, target);
 				if (err) return this.sendReply(err);
 				if (toId(user.name) === toId(tourData.authA)) Rooms.rooms[room.id].addRaw(user.name + ' has entered the lineup for ' + tourData.teamA + '.');
 				if (toId(user.name) === toId(tourData.authB)) Rooms.rooms[room.id].addRaw(user.name + ' has entered the lineup for ' + tourData.teamB + '.');
@@ -145,11 +144,11 @@ exports.commands = {
 			case 'begin':
 			case 'start':
 				if (!this.can('lock')) return false;
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
 				if (tourData.tourRound !== 0) return this.sendReply("The LvL has already started.");
 
-				let freePlaces =  War.getFreePlaces(roomId);
+				var freePlaces =  War.getFreePlaces(roomId);
 				if (freePlaces > 0) return this.sendReply("One or both teams has not registered a lineup or has open spots.");
 				War.startTeamTour(roomId);
 				Rooms.rooms[room.id].addRaw(War.viewTourStatus(roomId));
@@ -157,9 +156,9 @@ exports.commands = {
 			case 'size':
 				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war size, [size]");
-				let err = War.sizeTeamTour(roomId, params[1]);
+				var err = War.sizeTeamTour(roomId, params[1]);
 				if (err) return this.sendReply(err);
-				let freePlaces =  War.getFreePlaces(roomId);
+				var freePlaces =  War.getFreePlaces(roomId);
 				if (freePlaces > 0) {
 					Rooms.rooms[room.id].addRaw('<b>' + user.name + '</b> has changed the LvL size to ' + parseInt(params[1]) + '. There are ' + freePlaces + ' places left.');
 				} else {
@@ -172,16 +171,16 @@ exports.commands = {
 			case 'dq':
 				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war dq, [user]");
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
-				let inClanA = War.isInClan(params[1], tourData.teamA);
-				let inClanB = War.isInClan(params[1], tourData.teamB);
+				var inClanA = War.isInClan(params[1], tourData.teamA);
+				var inClanB = War.isInClan(params[1], tourData.teamB);
 				if (!inClanA && !inClanB) return this.sendReply("This user is not in the current LvL.");
-				let canReplace = false;
+				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
 				if (!canReplace && !this.can('lock')) return false;
 				if (!War.dqTeamTour(roomId, params[1], 'cmd')) return this.sendReply("The user could not be disqualified.");
-				let userk = Users.getExact(params[1]);
+				var userk = Users.getExact(params[1]);
 				if (userk) userk = userk.name; else userk = toId(params[1]);
 				this.addModCommand(userk + ' was dq\'ed from the LvL by ' + user.name + '.');
 				if (War.isRoundEnded(roomId)) {
@@ -190,34 +189,34 @@ exports.commands = {
 				break;
 			case 'replace':
 				if (params.length < 3) return this.sendReply("Usage: /war replace, [userA], [userB]");
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
-				let inClanA = tourData.teamAMembers.hasOwnProperty(toId(params[1]));
-				let inClanB = tourData.teamBMembers.hasOwnProperty(toId(params[1]));
+				var inClanA = tourData.teamAMembers.hasOwnProperty(toId(params[1]));
+				var inClanB = tourData.teamBMembers.hasOwnProperty(toId(params[1]));
 				if (!inClanA && !inClanB) return this.sendReply("This user is not in the current LvL.");
-				let canReplace = false;
+				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
 				if (!canReplace && !this.can('lock')) return false;
-				if ((inClanA && War.isInClan(params[2], tourData.teamA)) || (inClanB && War.isInClan(params[2], tourData.teamA))) let clanReplace = true;
+				if ((inClanA && War.isInClan(params[2], tourData.teamA)) || (inClanB && War.isInClan(params[2], tourData.teamA))) var clanReplace = true;
 				if (!clanReplace) return this.sendReply("The target user is not in the target league.");
-				let usera = Users.getExact(params[1]);
+				var usera = Users.getExact(params[1]);
 				if (usera) usera = usera.name; else usera = toId(params[1]);
-				let userb = Users.getExact(params[2]);
+				var userb = Users.getExact(params[2]);
 				if (userb) {
 					userb = userb.name;
 				} else {
 					return this.sendReply("The target user is not currently online.");
 				}
-				let err = War.replaceParticipant(roomId, params[1], params[2]);
+				var err = War.replaceParticipant(roomId, params[1], params[2]);
 				if (err) return this.sendReply(err);
 				this.addModCommand(user.name + ': ' + usera + ' is replaced by ' + userb + ' in the LvL.');
 				break;
 			case 'invalidate':
 				if (!this.can('lock')) return false;
 				if (params.length < 2) return this.sendReply("Usage: /war invalidate, [user]");
-				let tourData = War.getTourData(roomId);
+				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no active LvL in this room.");
-				let matchupId = War.findMatchup(roomId, params[1]);
+				var matchupId = War.findMatchup(roomId, params[1]);
 				if (!War.invalidate(roomId, matchupId)) return this.sendReply("The match could not be invalidated. Could it still be running?");
 				this.addModCommand('The battle between ' + tourData.matchups[matchupId].from + ' and ' + tourData.matchups[matchupId].to + ' was invalidated by ' + user.name + '.');
 				break;

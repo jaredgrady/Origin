@@ -1,21 +1,20 @@
-'use strict';
-const fs = require('fs');
-const color = require('../config/color');
+var fs = require('fs');
+var color = require('../config/color');
 
 function reloadCustomAvatars() {
-	const path = require('path');
-	let newCustomAvatars = {};
+	var path = require('path');
+	var newCustomAvatars = {};
 	fs.readdirSync('./config/avatars').forEach(function (file) {
-		let ext = path.extname(file);
+		var ext = path.extname(file);
 		if (ext !== '.png' && ext !== '.gif') return;
 
-		let user = toId(path.basename(file, ext));
+		var user = toId(path.basename(file, ext));
 		newCustomAvatars[user] = file;
 		delete Config.customavatars[user];
 	});
 
 	// Make sure the manually entered avatars exist
-	for (let a in Config.customavatars) {
+	for (var a in Config.customavatars) {
 		if (typeof Config.customavatars[a] === 'number') {
 			newCustomAvatars[a] = Config.customavatars[a];
 		} else {
@@ -59,17 +58,17 @@ const script = function () {
 	*/
 }.toString().match(/[^]*\/\*([^]*)\*\//)[1];
 
-let pendingAdds = {};
+var pendingAdds = {};
 
 exports.commands = {
 	customavatars: 'customavatar',
 	customavatar: function (target, room, user) {
-		let parts = target.split(',');
-		let cmd = parts[0].trim().toLowerCase();
+		var parts = target.split(',');
+		var cmd = parts[0].trim().toLowerCase();
 
 		if (cmd in {'':1, show:1, view:1, display:1}) {
-			let message = "";
-			for (let a in Config.customavatars)
+			var message = "";
+			for (var a in Config.customavatars)
 				message += "<strong>" + Tools.escapeHTML(a) + ":</strong> " + Tools.escapeHTML(Config.customavatars[a]) + "<br />";
 			return this.sendReplyBox(message);
 		}
@@ -78,15 +77,15 @@ exports.commands = {
 
 		switch (cmd) {
 		case 'set':
-			let userid = toId(parts[1]);
-			let targetUser = Users.getExact(userid);
-			let avatar = parts.slice(2).join(',').trim();
+			var userid = toId(parts[1]);
+			var targetUser = Users.getExact(userid);
+			var avatar = parts.slice(2).join(',').trim();
 			if (!this.can('ban') && this.can('vip') && userid !== user.userid) return false;
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");
 
-			let hash = require('crypto').createHash('sha512').update(userid + '\u0000' + avatar).digest('hex').slice(0, 8);
+			var hash = require('crypto').createHash('sha512').update(userid + '\u0000' + avatar).digest('hex').slice(0, 8);
 			pendingAdds[hash] = {userid: userid, avatar: avatar};
 			parts[1] = hash;
 
@@ -100,19 +99,19 @@ exports.commands = {
 		/* falls through */
 		case 'forceset':
 			if (user.avatarCooldown && !this.can('ban')) {
-				let milliseconds = (Date.now() - user.avatarCooldown);
-				let seconds = ((milliseconds / 1000) % 60);
-				let minutes = ((seconds / 60) % 60);
-				let remainingTime = Math.round(seconds - (5 * 60));
+				var milliseconds = (Date.now() - user.avatarCooldown);
+				var seconds = ((milliseconds / 1000) % 60);
+				var minutes = ((seconds / 60) % 60);
+				var remainingTime = Math.round(seconds - (5 * 60));
 				if (((Date.now() - user.avatarCooldown) <= 5 * 60 * 1000)) return this.sendReply("You must wait " + (remainingTime - remainingTime * 2) + " seconds before setting another avatar.");
 			}
 			user.avatarCooldown = Date.now();
 
-			let hash = parts[1].trim();
+			var hash = parts[1].trim();
 			if (!pendingAdds[hash]) return this.sendReply("Invalid hash.");
 
-			let userid = pendingAdds[hash].userid;
-			let avatar = pendingAdds[hash].avatar;
+			var userid = pendingAdds[hash].userid;
+			var avatar = pendingAdds[hash].avatar;
 			delete pendingAdds[hash];
 
 			require('child_process').execFile('bash', ['-c', script, '-', avatar, './config/avatars/' + userid], function (e, out, err) {
@@ -124,7 +123,7 @@ exports.commands = {
 
 				reloadCustomAvatars();
 
-				let targetUser = Users.getExact(userid);
+				var targetUser = Users.getExact(userid);
 				if (targetUser) targetUser.avatar = Config.customavatars[userid];
 
 				this.sendReply(userid + "'s custom avatar has been set.");
@@ -133,7 +132,7 @@ exports.commands = {
 			break;
 
 		case 'delete':
-			let userid = toId(parts[1]);
+			var userid = toId(parts[1]);
 			if (!this.can('ban') && this.can('vip') && userid !== user.userid) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
@@ -141,7 +140,7 @@ exports.commands = {
 				return this.sendReply(userid + "'s custom avatar (" + Config.customavatars[userid] + ") cannot be removed with this script.");
 			}
 
-			let targetUser = Users.getExact(userid);
+			var targetUser = Users.getExact(userid);
 			if (targetUser) targetUser.avatar = 1;
 
 			fs.unlink('./config/avatars/' + Config.customavatars[userid], function (e) {
@@ -156,7 +155,7 @@ exports.commands = {
 			if (!this.can('hotpatch')) return false;
 			reloadCustomAvatars();
 			Rooms.get('staff').add(Tools.escapeHTML(user.name) + " has reloaded all custom avatars.");
-			for (let u in Users.users) {
+			for (var u in Users.users) {
 				if (Config.customavatars[u]) Users.users[u].avatar = Config.customavatars[u];
 			}
 			this.sendReply("You have reloaded all custom avatars on the server.");

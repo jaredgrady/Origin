@@ -3,11 +3,10 @@
 * By: jd                              *
 **************************************/
 
-'use strict';
-const fs = require('fs');
-const anagramWords = ['pokemon'];
+var fs = require('fs');
+var anagramWords = ['pokemon'];
 try {
-	let anagramWords = fs.readFileSync('config/wordlist.txt','utf8').split('\n');
+	anagramWords = fs.readFileSync('config/wordlist.txt','utf8').split('\n');
 } catch (e) {
 	request('http://pastebin.com/raw.php?i=5yQ8MLG2', function callback(error, response, body) {
 	    if (!error && response.statusCode === 200) {
@@ -25,13 +24,13 @@ exports.commands = {
 		if (!room.anagram) room.anagram = {};
 
 		target = toId(target);
-		let theme = '';
+		var theme = '';
 
 		switch (target) {
 			default:	
 			case 'pokemon':
 				theme = 'Pokemon';
-				let pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];
+				var pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];
 				room.anagram.word = pokemon.name;
 				while (pokemon.id.indexOf('mega') > -1 || pokemon.tier === 'CAP') {
 					pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];

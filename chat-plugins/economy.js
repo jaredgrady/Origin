@@ -1,8 +1,7 @@
-'use strict';
-const fs = require('fs');
-const path = require('path');
+var fs = require('fs');
+var path = require('path');
 
-const shop = [
+var shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
     ['Fix', 'Buys the ability to alter your current custom avatar or trainer card or rename your room. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
@@ -15,7 +14,7 @@ const shop = [
     ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Jack (~\'v\')~ or CreaturePhil once you bought one.)', 350]
 ];
 
-let shopDisplay = getShopDisplay(shop);
+var shopDisplay = getShopDisplay(shop);
 
 /**
  * Gets an amount and returns the amount with the name of the currency.
@@ -29,7 +28,7 @@ let shopDisplay = getShopDisplay(shop);
  * @returns {String}
  */
 global.currencyName = function(amount) {
-	let name = " buck";
+	var name = " buck";
 	return amount === 1 ? name : name + "s";
 }
 
@@ -40,7 +39,7 @@ global.currencyName = function(amount) {
  * @return {String|Number}
  */
 global.isMoney = function(money) {
-	let numMoney = Number(money);
+	var numMoney = Number(money);
 	if (isNaN(money)) return "Must be a number.";
 	if (String(money).includes('.')) return "Cannot contain a decimal.";
 	if (numMoney < 1) return "Cannot be less than one buck.";
@@ -54,9 +53,9 @@ global.isMoney = function(money) {
  */
 global.logMoney = function(message) {
 	if (!message) return;
-	let file = path.join(__dirname, '../logs/money.txt');
-	let date = "[" + new Date().toUTCString() + "] ";
-	let msg = message + "\n";
+	var file = path.join(__dirname, '../logs/money.txt');
+	var date = "[" + new Date().toUTCString() + "] ";
+	var msg = message + "\n";
 	fs.appendFile(file, date + msg);
 }
 
@@ -67,9 +66,9 @@ global.logMoney = function(message) {
  * @return {String} display
  */
 function getShopDisplay(shop) {
-	let display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
+	var display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
 					'<tr><th color="#502243">Item</th><th color="#502243">Description</th><th color="#502243">Cost</th></tr>';
-	let start = 0;
+	var start = 0;
 	while (start < shop.length) {
 		display += '<tr>' +
 						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;"><button name="send" value="/buy ' + shop[start][0] + '" style="border: 1px solid #803C6F; background: #CD9FC4; color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-radius: 4px;">' + shop[start][0] + '</button>' + '</td>' +
@@ -91,9 +90,9 @@ function getShopDisplay(shop) {
  * @return {Object}
  */
 function findItem(item, money) {
-	let len = shop.length;
-	let price = 0;
-	let amount = 0;
+	var len = shop.length;
+	var price = 0;
+	var amount = 0;
 	while (len--) {
 		if (item.toLowerCase() !== shop[len][0].toLowerCase()) continue;
 		price = shop[len][2];
@@ -121,18 +120,18 @@ function handleBoughtItem(item, user, cost) {
 		this.sendReply("You will have this until you log off for more than an hour.");
 		this.sendReply("If you do not want your custom symbol anymore, you may use /resetsymbol to go back to your old symbol.");
 	} else if (item === 'ticket') {
-		let pot = (Db('lottery').pot || 0) + cost;
-		let ticket = '' + rng() + rng() + rng();
+		var pot = (Db('lottery').pot || 0) + cost;
+		var ticket = '' + rng() + rng() + rng();
 		Db('lottery').pot = pot;
 		if (!Array.isArray(Db('lottery')[user.userid])) Db('lottery')[user.userid] = [];
 		Db('lottery')[user.userid].push(ticket);
 		Db.save();
 		this.sendReply("Your ticket has this id: " + ticket + ". The jackpot is currently worth " + pot + currencyName(pot) + ". Use /tickets to view your ticket(s).");
 	} else {
-		let msg = '**' + user.name + " has bought " + item + ".**";
+		var msg = '**' + user.name + " has bought " + item + ".**";
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (let i in Users.users) {
+		for (var i in Users.users) {
 			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
 				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
 			}
@@ -156,10 +155,10 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (!target) target = user.name;
 
-		let targetId = toId(target);
+		var targetId = toId(target);
 		if (!targetId) return this.parse('/help wallet');
 
-		let amount = Db('money')[targetId] || 0;
+		var amount = Db('money')[targetId] || 0;
 		this.sendReplyBox(Tools.escapeHTML(target) + " has " + amount + currencyName(amount) + ".");
 	},
 	wallethelp: ["/wallet [user] - Shows the amount of money a user has."],
@@ -170,16 +169,16 @@ exports.commands = {
 		if (!this.can('forcewin')) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help givemoney');
 
-		let parts = target.split(',');
-		let username = parts[0];
-		let uid = toId(parts[0]);
-		let amount = isMoney(parts[1]);
+		var parts = target.split(',');
+		var username = parts[0];
+		var uid = toId(parts[0]);
+		var amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 bucks at a time.");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
-		let total = (Db('money')[uid] || 0) + amount;
+		var total = (Db('money')[uid] || 0) + amount;
 		Db('money')[uid] = total;
 		Db.save();
 		amount = amount + currencyName(amount);
@@ -197,16 +196,16 @@ exports.commands = {
 		if (!this.can('forcewin')) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help takemoney');
 
-		let parts = target.split(',');
-		let username = parts[0];
-		let uid = toId(parts[0]);
-		let amount = isMoney(parts[1]);
+		var parts = target.split(',');
+		var username = parts[0];
+		var uid = toId(parts[0]);
+		var amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
-		let total = (Db('money')[uid] || 0) - amount;
+		var total = (Db('money')[uid] || 0) - amount;
 		Db('money')[uid] = total;
 		Db.save();
 		amount = amount + currencyName(amount);
@@ -234,10 +233,10 @@ exports.commands = {
 	transfermoney: function (target, room, user) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfermoney');
 
-		let parts = target.split(',');
-		let username = parts[0];
-		let uid = toId(parts[0]);
-		let amount = isMoney(parts[1]);
+		var parts = target.split(',');
+		var username = parts[0];
+		var uid = toId(parts[0]);
+		var amount = isMoney(parts[1]);
 
 		if (toId(username) === user.userid) return this.sendReply("You cannot transfer to yourself.");
 		if (username.length > 19) return this.sendReply("Username cannot be longer than 19 characters.");
@@ -245,8 +244,8 @@ exports.commands = {
 		if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
 		if (amount > Db('money')[user.userid]) return this.sendReply("You cannot transfer more money than what you have.");
 
-		let userTotal = (Db('money')[user.userid] || 0) - amount;
-		let targetTotal = (Db('money')[uid] || 0) + amount;
+		var userTotal = (Db('money')[user.userid] || 0) - amount;
+		var targetTotal = (Db('money')[uid] || 0) + amount;
 		Db('money')[user.userid] = userTotal;
 		Db('money')[uid] = targetTotal;
 		Db.save();
@@ -268,9 +267,9 @@ exports.commands = {
 
 	buy: function (target, room, user) {
 		if (!target) return this.parse('/help buy');
-		let cost = findItem.call(this, target, Db('money')[user.userid] || 0);
+		var cost = findItem.call(this, target, Db('money')[user.userid] || 0);
 		if (!cost) return;
-		let total = Db('money')[user.userid] - cost;
+		var total = Db('money')[user.userid] - cost;
 		Db('money')[user.userid] = total;
 		Db.save();
 		this.sendReply("You have bought " + target + " for " + cost +  currencyName(cost) + ". You now have " + total + currencyName(total) + " left.");
@@ -305,14 +304,14 @@ exports.commands = {
 
 	moneylog: function (target, room, user, connection) {
 		if (!this.can('modlog')) return;
-		let numLines = 15;
-		let matching = true;
+		var numLines = 15;
+		var matching = true;
 		if (target.match(/\d/g) && !isNaN(target)) {
 			numLines = Number(target);
 			matching = false;
 		}
-		let topMsg = "Displaying the last " + numLines + " lines of transactions:\n";
-		let file = path.join(__dirname, '../logs/money.txt');
+		var topMsg = "Displaying the last " + numLines + " lines of transactions:\n";
+		var file = path.join(__dirname, '../logs/money.txt');
 		fs.exists(file, function (exists) {
 			if (!exists) return connection.popup("No transactions.");
 			fs.readFile(file, 'utf8', function (err, data) {
@@ -332,8 +331,8 @@ exports.commands = {
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
-		let keys = Object.keys(Db('money')).map(function(name) {
+		var display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
+		var keys = Object.keys(Db('money')).map(function(name) {
 			return {name: name, money: Db('money')[name]};
 		});
 		if (!keys.length) return this.sendReplyBox("Money ladder is empty.");
@@ -358,7 +357,7 @@ exports.commands = {
 		} else if (room.id === 'casino' && target > 500) return this.sendReply("Dice can only be started for amounts less than 500 bucks.");
 		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
 
-		let amount = isMoney(target);
+		var amount = isMoney(target);
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (!room.dice) room.dice = {};
@@ -387,18 +386,18 @@ exports.commands = {
 		}
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
-		let p1Number = Math.floor(6 * Math.random()) + 1;
-		let p2Number = Math.floor(6 * Math.random()) + 1;
-		let output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
+		var p1Number = Math.floor(6 * Math.random()) + 1;
+		var p2Number = Math.floor(6 * Math.random()) + 1;
+		var output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		while (p1Number === p2Number) {
 			output += "Tie... rolling again.<br>";
 			p1Number = Math.floor(6 * Math.random()) + 1;
 			p2Number = Math.floor(6 * Math.random()) + 1;
 			output += room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		}
-		let winner = room.dice[p1Number > p2Number ? 'p1' : 'p2'];
-		let loser = room.dice[p1Number < p2Number ? 'p1' : 'p2'];
-		let bet = room.dice.bet;
+		var winner = room.dice[p1Number > p2Number ? 'p1' : 'p2'];
+		var loser = room.dice[p1Number < p2Number ? 'p1' : 'p2'];
+		var bet = room.dice.bet;
 		output += "<font color=#24678d><b>" + winner + "</b></font> has won <font color=#24678d><b>" + bet + "</b></font>" + currencyName(bet) + ".<br>Better luck next time " + loser + "!</div>";
 		room.addRaw(output);
 		delete room.dice;
@@ -411,7 +410,7 @@ exports.commands = {
 		if (!room.dice) return this.errorReply("There is no dice game in this room.");
 		if ((Date.now() - room.dice.startTime) < 15000 && !user.can('broadcast', null, room)) return this.errorReply("Regular users may not end a dice game within the first minute of it starting.");
 		if (room.dice.p2) return this.errorReply("Dice game has already started.");
-		let dice = room.dice;
+		var dice = room.dice;
 		if (dice.p1) {
 			Db('money')[dice.p1] += dice.bet;
 			Db.save();
@@ -424,19 +423,19 @@ exports.commands = {
 	tickets: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!Db('lottery')[user.userid] || !Db('lottery')[user.userid].length) return this.sendReplyBox("You have no tickets.");
-		let tickets = Db('lottery')[user.userid];
+		var tickets = Db('lottery')[user.userid];
 		this.sendReplyBox("You have a total of " + tickets.length + " ticket(s). These are your ticket's ids: " + tickets.join(", ") + ".");
 	},
 
 	picklottery: function (target, room, user) {
 		if (!this.can('picklottery')) return false;
 		if (target === 'forcewin') {
-			let chance = Math.floor(Math.random()) === 0;
+			var chance = Math.floor(Math.random()) === 0;
 		} else {
-			let chance = Math.round(Math.random()) === 1;
+			var chance = Math.round(Math.random()) === 1;
 		}
-		let keys = Object.keys(Db('lottery'));
-		let msg = "<center><h2>Lottery!</h2>Nobody has won the lottery. Good luck to everyone next time!</center>";
+		var keys = Object.keys(Db('lottery'));
+		var msg = "<center><h2>Lottery!</h2>Nobody has won the lottery. Good luck to everyone next time!</center>";
 		keys.splice(keys.indexOf('pot'), 1);
 		if (!chance) {
 			this.parse('/gdeclare ' + msg);
@@ -447,7 +446,7 @@ exports.commands = {
 			});
 			return Db.save();
 		}
-		let tickets = [];
+		var tickets = [];
 		keys.forEach(function (key) {
 			Db('lottery')[key].forEach(function (ticket) {
 				tickets.push({username: key, ticket: ticket});
@@ -456,11 +455,11 @@ exports.commands = {
 		keys.forEach(function (key) {
 			delete Db('lottery')[key];
 		});
-		let winningIndex = Math.floor(Math.random() * tickets.length);
-		let winner = tickets[winningIndex];
-		let winnings = Math.floor(Db('lottery').pot * 3 / 4);
+		var winningIndex = Math.floor(Math.random() * tickets.length);
+		var winner = tickets[winningIndex];
+		var winnings = Math.floor(Db('lottery').pot * 3 / 4);
 		if (!winner) return this.sendReply("No one has bought tickets.");
-		let total = (Db('money')[winner.username] || 0) + winnings;
+		var total = (Db('money')[winner.username] || 0) + winnings;
 		Db('money')[winner.username] = total;
 		Db('lottery').pot = 0;
 		Db.save();
@@ -472,14 +471,14 @@ exports.commands = {
 	jackpot: 'pot',
 	pot: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let pot = Db('lottery').pot || 0;
+		var pot = Db('lottery').pot || 0;
 		this.sendReplyBox("The current jackpot is " + pot + currencyName(pot) + ".");
 	},
 	registershop: function (target, room, user) {
     		if (!user.can('declare')) return this.sendReply('/registershop - Access Denied you silly goose!');
     		if (!target) return this.sendReply('Please specify a room you silly goose!');
     		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
-    		let targetRoom = Rooms(toId(target));
+    		var targetRoom = Rooms(toId(target));
     		targetRoom.add('|raw|<div class="broadcast-green"><b>'+user.name+' has just added a league shop to this room.</b></div>');
 	 		targetRoom.update();
 	 	if (!targetRoom.shop) {
@@ -495,14 +494,14 @@ exports.commands = {
 	bucks: 'economystats',
 	economystats: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let users = Object.keys(Db('money'));
-		let numUsers = users.length;
-		let total = 0;
+		var users = Object.keys(Db('money'));
+		var numUsers = users.length;
+		var total = 0;
 		users.forEach(function (key) {
 			total += Db('money')[key];
 		});
-		let average = Math.floor(total / numUsers);
-		let output = "There is " + total + currencyName(total) + " circulating in the economy. ";
+		var average = Math.floor(total / numUsers);
+		var output = "There is " + total + currencyName(total) + " circulating in the economy. ";
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
 	}

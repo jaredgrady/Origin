@@ -1,8 +1,7 @@
-'use strict';
-const fs = require('fs');
-const request = require('request');
+var fs = require('fs');
+var request = require('request');
 
-let urbanCache = 0;
+var urbanCache;
 try {
 	urbanCache = JSON.parse(fs.readFileSync('../config/udcache.json', 'utf8'));
 } catch (e) {
@@ -25,23 +24,23 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 
-		let options = {
+		var options = {
 			url: 'http://api.wordnik.com:80/v4/word.json/' + target + '/definitions?limit=3&sourceDictionaries=all' +
 			'&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5'
 		};
 
-		let self = this;
+		var self = this;
 
 		function callback(error, response, body) {
 			if (!error && response.statusCode === 200) {
-				let page = JSON.parse(body);
-				let output = "<font color=#24678d><b>Definitions for " + target + ":</b></font><br />";
+				var page = JSON.parse(body);
+				var output = "<font color=#24678d><b>Definitions for " + target + ":</b></font><br />";
 				if (!page[0]) {
 					self.sendReplyBox("No results for <b>\"" + target + "\"</b>.");
 					return room.update();
 				} else {
-					let count = 1;
-					for (let u in page) {
+					var count = 1;
+					for (var u in page) {
 						if (count > 3) break;
 						output += "(<b>" + count + "</b>) " + Tools.escapeHTML(page[u]['text']) + "<br />";
 						count++;
@@ -63,7 +62,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 
-		let options = {
+		var options = {
 			url: 'http://www.urbandictionary.com/iphone/search/define',
 			term: target,
 			headers: {
@@ -74,18 +73,18 @@ exports.commands = {
 			}
 		};
 
-		let milliseconds = ((44640 * 60) * 1000);
+		var milliseconds = ((44640 * 60) * 1000);
 
 		if (urbanCache[target.toLowerCase().replace(/ /g, '')] && Math.round(Math.abs((urbanCache[target.toLowerCase().replace(/ /g, '')].time - Date.now()) / (24 * 60 * 60 * 1000))) < 31) {
 			return this.sendReplyBox("<b>" + Tools.escapeHTML(target) + ":</b> " + urbanCache[target.toLowerCase().replace(/ /g, '')].definition.substr(0, 400));
 		}
 
-		let self = this;
+		var self = this;
 
 		function callback(error, response, body) {
 			if (!error && response.statusCode === 200) {
-				let page = JSON.parse(body);
-				let definitions = page['list'];
+				var page = JSON.parse(body);
+				var definitions = page['list'];
 				if (page['result_type'] === 'no_results') {
 					self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
 					return room.update();
@@ -94,7 +93,7 @@ exports.commands = {
 						self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
 						return room.update();
 					}
-					let output = "<b>" + Tools.escapeHTML(definitions[0]['word']) + ":</b> " + Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
+					var output = "<b>" + Tools.escapeHTML(definitions[0]['word']) + ":</b> " + Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
 					if (output.length > 400) output = output.slice(0, 400) + '...';
 					cacheUrbanWord(target, Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' '));
 					self.sendReplyBox(output);
