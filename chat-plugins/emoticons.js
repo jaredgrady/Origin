@@ -113,7 +113,7 @@ function parseEmoticons(message, room, user, pm) {
 	if (!match) return false;
 		
 	//shadowbanroom message
-	sbanmsg = message;
+	let sbanmsg = message;
 
 	// escape HTML
 	message = Tools.escapeHTML(message);
