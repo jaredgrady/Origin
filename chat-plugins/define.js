@@ -1,3 +1,5 @@
+'use strict';
+
 var fs = require('fs');
 var request = require('request');
 
@@ -19,6 +21,7 @@ exports.commands = {
 	define: function (target, room, user) {
 		if (!target) return this.parse('/help define');
 		target = toId(target);
+
 		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
 		if (target > 50) return this.errorReply("Word can not be longer than 50 characters.");
 		if (!this.canBroadcast()) return;
@@ -74,7 +77,6 @@ exports.commands = {
 		};
 
 		var milliseconds = ((44640 * 60) * 1000);
-
 		if (urbanCache[target.toLowerCase().replace(/ /g, '')] && Math.round(Math.abs((urbanCache[target.toLowerCase().replace(/ /g, '')].time - Date.now()) / (24 * 60 * 60 * 1000))) < 31) {
 			return this.sendReplyBox("<b>" + Tools.escapeHTML(target) + ":</b> " + urbanCache[target.toLowerCase().replace(/ /g, '')].definition.substr(0, 400));
 		}
