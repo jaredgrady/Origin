@@ -1120,3 +1120,7 @@
   #lobby-userlist-user-aurastormlucario, #tournaments-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario {
      background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/azfj79a.png") right no-repeat;
   }
+  
+  #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
+     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
+  }
