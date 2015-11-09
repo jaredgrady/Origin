@@ -29,13 +29,8 @@ const THROTTLE_DELAY = 600;
 const THROTTLE_BUFFER_LIMIT = 6;
 const THROTTLE_MULTILINE_WARN = 4;
 
-<<<<<<< HEAD
-let fs = require('fs');
-let steno = require('steno');
-=======
 const fs = require('fs');
 const steno = require('steno');
->>>>>>> upstream/master
 
 let Users = module.exports = getUser;
 
@@ -821,7 +816,6 @@ User = (function () {
 		} else {
 			this.send('|nametaken|' + name + "|Your authentication token was invalid.");
 		}
-<<<<<<< HEAD
 		var rooms = Db('rooms')[userid];
 		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
 		if (rooms && rooms.length) {
@@ -829,10 +823,6 @@ User = (function () {
 				this.tryJoinRoom(room, connection);
 			}.bind(this));
 		}
-=======
-
-		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
->>>>>>> upstream/master
 		return false;
 	};
 	User.prototype.validateRename = function (name, tokenData, newlyRegistered, challenge) {
@@ -1233,7 +1223,6 @@ User = (function () {
 		}
 	};
 	User.prototype.onDisconnect = function (connection) {
-<<<<<<< HEAD
 		let name = 'Guest ' + this.guestNum;
 		let userid = toId(name);
 		if (this.registered && this.userid !== userid) {
@@ -1243,15 +1232,6 @@ User = (function () {
 			if (rooms.length) Db('rooms')[this.userid] = rooms;
 			Db('seen')[this.userid] = Date.now();
 			Db.save();
-=======
-		var name = 'Guest ' + this.guestNum;
-		var userid = toId(name);
-		if (this.registered && this.userid !== userid) {
-			Seen[this.userid] = Date.now();
-			steno.writeFile('config/seen.json', JSON.stringify(Seen, null, 2), function (err) {
-				if (err) throw err;
-			});
->>>>>>> upstream/master
 		}
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {
