@@ -228,7 +228,7 @@ exports.commands = {
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
 	
 	togglewarlic: function (target, room, user) {
-		if (user.userid !== 'nineage' || user.userid !== 'fender') return this.errorReply("Access denied.");
+		if (!this.can('hotpatch')) return this.errorReply("Access denied.");
 		room.WarlicMode = !room.WarlicMode;
 		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
 		if (room.WarlicMode) {
