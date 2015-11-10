@@ -749,7 +749,7 @@ roomintro: function (target, room, user) {
 			}
 		}
 		if (room.auth[user.userid] === '&' && room.founder !== user.userid) {
-			if (currentGroup === '&' || currentGroup === '#') {
+			if (currentGroup === '&' || currentGroup === '#' || nextGroup === '&' || nextGroup === '#') {
 			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 		    }
 		}
