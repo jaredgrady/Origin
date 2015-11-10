@@ -35,11 +35,11 @@ exports.commands = {
 
 		if (userid === targetUser) return this.errorReply("You cannot add yourself as a friend.");
 		if (!userid || !targetUser) return this.errorReply("User '" + targetUser + "' is not online.");
-		if ((Db('friends')[userid]).length === 20) return this.sendReply("You cannot have more then 20 friends. Remove some if you wish to add more.");
 		if (!(Db('friends')[userid])) {
 			(Db('friends')[userid]) = []; 
 			Db.save();
 		}
+		if ((Db('friends')[userid]).length === 20) return this.sendReply("You cannot have more then 20 friends. Remove some if you wish to add more.");
 		if ((Db('friends')[userid]).indexOf(targetUser) > -1) return this.sendReply("This user is already your friend.");
 			(Db('friends')[userid]).push(targetUser);
 			Db.save();
