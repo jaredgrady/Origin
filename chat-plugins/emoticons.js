@@ -2,8 +2,6 @@
 
 var color = require('../config/color');
 
-var warlicexclaim = '!';
-
 exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
@@ -226,17 +224,6 @@ exports.commands = {
 		}
 	},
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
-	
-	togglewarlic: function (target, room, user) {
-		if (!this.can('hotpatch')) return this.errorReply("Access denied.");
-		room.WarlicMode = !room.WarlicMode;
-		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
-		if (room.WarlicMode) {
-			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Warlic Mode is now on!</b></div>");
-		} else {
-			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Warlic Mode is now off!</b></div>");
-		}
-	},
 
 	rande: 'randemote',
 	randemote: function (target, room, user) {
