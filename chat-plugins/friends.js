@@ -31,7 +31,7 @@ exports.commands = {
 		
 		var userid = user.userid;
 		var targetUser = toId(target);
-		var friendList = (Db('friends')[userid];
+		var friendList = (Db('friends')[userid]);
 		
 		if (userid === targetUser) return this.errorReply("You cannot add yourself as a friend.");
 		if (!userid || !targetUser) return this.errorReply("User '" + targetUser + "' is not online.");
