@@ -97,6 +97,10 @@ var patternRegex = new RegExp(patterns.join('|'), 'g');
  * @returns {Boolean|String}
  */
 function parseEmoticons(message, room, user, pm) {
+	if (room.WarlicMode && !pm) {
+		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|Salutations good sir or madam!');
+		return true;
+	}
 	if (typeof message !== 'string' || (!pm && room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
 
 	var match = false;
@@ -219,6 +223,17 @@ exports.commands = {
 		}
 	},
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],
+	
+	togglewarlic: function (target, room, user) {
+		if (!user.userid === 'nineage')) return this.errorReply("Access denied.");
+		room.WarlicMode = !room.WarlicMode;
+		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
+		if (room.WarlicMode) {
+			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Warlic Mode is off!</b></div>");
+		} else {
+			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Warlic Mode is on!</b></div>");
+		}
+	},
 
 	rande: 'randemote',
 	randemote: function (target, room, user) {
