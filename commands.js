@@ -753,6 +753,11 @@ roomintro: function (target, room, user) {
 			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 		    }
 		}
+		if (room.auth[user.userid] === '#' && room.founder !== user.userid) {
+			if (currentGroup === '#') {
+			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+		    }
+		}
 
 		if (nextGroup === ' ') {
 			delete room.auth[userid];
