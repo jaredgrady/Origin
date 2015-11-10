@@ -26,6 +26,7 @@ exports.commands = {
 		var display = getFriendList(user);
 		this.sendReplyBox(display);
 	},
+	addfriendhelp: ["/friendslist or /friends - Show's your friend list. Add users with /addfriend."],
 
 	addfriend: function (target, room, user) {
 		if (!target) return this.parse('/help addfriend');
