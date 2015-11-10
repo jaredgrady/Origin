@@ -1506,6 +1506,7 @@ exports.BattleScripts = {
 					// Reject Status or non-STAB
 					if (move.category === 'Status' || !hasType[move.type]) rejected = true;
 				}
+
 				// Remove rejected moves from the move list
 				if (rejected && (movePool.length - availableHP || availableHP && (move.id === 'hiddenpower' || !hasMove['hiddenpower']))) {
 					moves.splice(k, 1);
@@ -2925,6 +2926,7 @@ exports.BattleScripts = {
 			if (abilities.indexOf('Swift Swim') >= 0 && hasMove['raindance']) {
 				ability = 'Swift Swim';
 			}
+
 			if (template.id === 'ambipom' && !counter['technician']) {
 				// If it doesn't qualify for Technician, Skill Link is useless on it
 				// Might as well give it Pickup just in case
@@ -3232,9 +3234,8 @@ exports.BattleScripts = {
 			'Penguin': {species: 'empoleon', gender: 'M'}, 'Two-Face': {species: 'zweilous', gender: 'M'}, 'Mr. Freeze': {species: 'beartic', gender: 'M'}, 'Catwoman': {species: 'persian', gender: 'F'},
 			'Poison Ivy': {species: 'roserade', gender: 'F'}
 		};
-		var excludedTiers = {'LC':1, 'LC Uber':1, 'NFE':1};
-		var allowedNFE = {'Chansey':1, 'Doublade':1, 'Gligar':1, 'Porygon2':1, 'Scyther':1};
-		var excludedColors = {'Black':1, 'Brown':1, 'Gray':1, 'White':1};
+
+		if (!this.seasonal) this.seasonal = {};
 
 		let teamDetails = {megaCount: 1, stealthRock: 0, hazardClear: 0};
 		let sides = Object.keys(teams);
@@ -3243,6 +3244,7 @@ exports.BattleScripts = {
 			// You can't have both players have the same squad
 			side = this.sampleNoReplace(sides);
 		}
+		if (this.seasonal.side === undefined) this.seasonal.side = side;
 
 		let heroes = teams[side];
 		let pokemonTeam = [];
@@ -3258,102 +3260,22 @@ exports.BattleScripts = {
 
 			let pokemon = this.randomSet(template, i, teamDetails);
 
-			// Limit the number of Megas to one
-			var forme = template.otherFormes && this.getTemplate(template.otherFormes[0]);
-			var isMegaSet = this.getItem(set.item).megaStone || (forme && forme.isMega && forme.requiredMove && set.moves.indexOf(toId(forme.requiredMove)) >= 0);
-			if (isMegaSet && teamDetails.megaCount > 0) continue;
+			if (heroTemplate.ability) pokemon.ability = heroTemplate.ability;
+			if (heroTemplate.gender) pokemon.gender = heroTemplate.gender;
+			if (heroTemplate.item) pokemon.item = heroTemplate.item;
+			pokemon.species = pokemon.name;
+			pokemon.name = hero;
+			pokemon.shiny = !!heroTemplate.shiny;
 
-			// Okay, the set passes, add it to our team
-			if (template.species !== 'Ditto') set.moves.push('swift');
-			pokemon.push(set);
+			pokemonTeam.push(pokemon);
 
-			// Now that our Pokemon has passed all checks, we can increment our counters
-			pokemonLeft++;
-
-			// Increment type and color counters
-			for (var t = 0; t < types.length; t++) {
-				if (types[t] in typeCount) {
-					typeCount[types[t]]++;
-				} else {
-					typeCount[types[t]] = 1;
-				}
-			}
-			typeComboCount[typeCombo] = 1;
-			if (color in colorCount) {
-				colorCount[color]++;
-			} else {
-				colorCount[color] = 1;
-			}
-
-			// Increment Uber/NU counters
-			if (tier === 'Uber') {
-				uberCount++;
-			} else if (tier === 'PU') {
-				puCount++;
-			}
-
-			// Increment mega, stealthrock, and base species counters
-			if (isMegaSet) teamDetails.megaCount++;
-			if (set.moves.indexOf('stealthrock') >= 0) teamDetails.stealthRock++;
-			baseFormes[template.baseSpecies] = 1;
-		}
-		return pokemon;
-	},
-	randomSpoopyTeam: function () {
-		var pool = [
-			'ekans', 'arbok', 'golbat', 'parasect', 'muk', 'gengar', 'marowak', 'weezing', 'tangela', 'mr. mime', 'ditto',
-			'kabutops', 'noctowl', 'ariados', 'crobat', 'umbreon', 'murkrow', 'misdreavus', 'gligar', 'granbull', 'sneasel',
-			'houndoom', 'mightyena', 'dustox', 'shiftry', 'shedinja', 'exploud', 'sableye', 'mawile', 'swalot', 'carvanha',
-			'sharpedo', 'cacturne', 'seviper', 'lunatone', 'claydol', 'shuppet', 'banette', 'duskull', 'dusclops', 'absol',
-			'snorunt', 'glalie', 'drifloon', 'drifblim', 'mismagius', 'honchkrow', 'skuntank', 'spiritomb', 'drapion',
-			'toxicroak', 'weavile', 'tangrowth', 'gliscor', 'dusknoir', 'froslass', 'rotom', 'rotomwash', 'rotomheat',
-			'rotommow', 'purrloin', 'liepard', 'swoobat', 'whirlipede', 'scolipede', 'basculin', 'krookodile', 'sigilyph',
-			'yamask', 'cofagrigus', 'garbodor', 'zorua', 'zoroark', 'gothita', 'gothorita', 'gothitelle', 'frillish',
-			'jellicent', 'joltik', 'galvantula', 'elgyem', 'beheeyem', 'litwick', 'lampent', 'chandelure', 'golurk',
-			'zweilous', 'hydreigon', 'volcarona', 'espurr', 'meowstic', 'honedge', 'doublade', 'aegislash', 'malamar',
-			'phantump', 'trevenant', 'pumpkaboo', 'gourgeist', 'noibat', 'noivern', 'magikarp', 'farfetchd', 'machamp'
-		];
-		var team = [];
-
-		for (var i = 0; i < 6; i++) {
-			var mon = this.sampleNoReplace(pool);
-			var template = this.getTemplate(mon);
-			if (mon === 'pumpkaboo' || mon === 'gourgeist') {
-				var forme = this.random(4);
-				if (forme > 0) {
-					mon = template.otherFormes[forme - 1];
-					template = this.getTemplate(mon);
-				}
-			}
-			var set = this.randomSet(template, i, {megaCount: 1});
-			set.species = mon;
-			if (mon === 'magikarp') {
-				set.name = 'ayy lmao';
-				set.item = 'powerherb';
-				set.ability = 'primordialsea';
-				set.moves = ['hyperbeam', 'geomancy', 'originpulse', 'aquaring', 'trickortreat'];
-			} else {
-				if (mon === 'golurk') {
-					set.name = 'Spoopy Skilenton';
-				} else if (mon === 'farfetchd') {
-					set.name = 'Le Toucan of Luck';
-				} else if (mon === 'machamp') {
-					set.name = 'John Cena';
-				} else if (mon === 'espurr') {
-					set.name = 'Devourer of Souls';
-				}
-				set.moves[4] = 'trickortreat';
-				if (set.item === 'Assault Vest') {
-					set.item = 'Leftovers';
-				}
-				if (set.item === 'Choice Band' || set.item === 'Choice Specs') {
-					set.item = 'Life Orb';
-				}
-			}
-			team.push(set);
+			if (pokemon.ability === 'Snow Warning') teamDetails['hail'] = 1;
+			if (pokemon.ability === 'Drizzle' || pokemon.moves.indexOf('raindance') >= 0) teamDetails['rain'] = 1;
+			if (pokemon.moves.indexOf('stealthrock') >= 0) teamDetails.stealthRock++;
+			if (pokemon.moves.indexOf('defog') >= 0 || pokemon.moves.indexOf('rapidspin') >= 0) teamDetails.hazardClear++;
 		}
 
-		return team;
+		return pokemonTeam;
 	},
 	randomFactorySets: require('./factory-sets.json'),
 	randomFactorySet: function (template, slot, teamData, tier) {
@@ -3680,59 +3602,5 @@ exports.BattleScripts = {
 			baseFormes[template.baseSpecies] = 1;
 		}
 		return pokemon;
-	},
-	randomOUTeam: function (side) {
-		var pokemonLeft = 0;
-		var pokemon = [];
-		var excludedTiers = {'LC':1, 'LC Uber':1, 'NFE':1, 'PU':1, 'NU':1, 'RU':1, 'UU':1, 'Uber':1};
-		var typePool = Object.keys(this.data.TypeChart);
-		var type = typePool[this.random(typePool.length)];
-
-		var pokemonPool = [];
-		for (var id in this.data.FormatsData) {
-			var template = this.getTemplate(id);
-			var types = template.types;
-			if (template.baseSpecies === 'Castform') types = ['Normal'];
-			if (template.speciesid === 'meloettapirouette') types = ['Normal', 'Psychic'];
-			if (!excludedTiers[template.tier] && types.indexOf(type) >= 0 && !template.isMega && !template.isPrimal && !template.isNonstandard && template.randomBattleMoves) {
-				pokemonPool.push(id);
-			}
-		}
-
-		var megaCount = 0;
-
-		while (pokemonPool.length && pokemonLeft < 6) {
-			var template = this.getTemplate(this.sampleNoReplace(pokemonPool));
-			if (!template.exists) continue;
-
-			// Limit to one of each species (Species Clause)
-			if (baseFormes[template.baseSpecies]) continue;
-
-			var tier = template.tier;
-			switch (tier) {
-			case 'CAP':
-				// CAPs have 20% the normal rate
-				if (this.random(5) >= 1) continue;
-				break;
-
-			var set = this.randomSet(template, pokemon.length, megaCount);
-
-			// Illusion shouldn't be on the last pokemon of the team
-			if (set.ability === 'Illusion' && pokemonLeft > 4) continue;
-
-			// Limit the number of Megas to one
-			var forme = template.otherFormes && this.getTemplate(template.otherFormes[0]);
-			var isMegaSet = this.getItem(set.item).megaStone || (forme && forme.isMega && forme.requiredMove && set.moves.indexOf(toId(forme.requiredMove)) >= 0);
-			if (isMegaSet && megaCount > 0) continue;
-
-			// Okay, the set passes, add it to our team
-			pokemon.push(set);
-
-			// Increment mega and base species counters
-			if (isMegaSet) megaCount++;
-			baseFormes[template.baseSpecies] = 1;
-		}
-		return pokemon;
 	}
-}
 };
