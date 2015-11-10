@@ -1391,6 +1391,7 @@ BattleSide = (function () {
 	function BattleSide(name, battle, n, team) {
 		let sideScripts = battle.data.Scripts.side;
 		if (sideScripts) Object.merge(this, sideScripts);
+
 		this.getChoice = (this.getChoice || BattleSide.getChoice).bind(this);
 
 		this.battle = battle;
@@ -1421,10 +1422,12 @@ BattleSide = (function () {
 			this.pokemon[i].position = i;
 		}
 	}
+
 	BattleSide.getChoice = function (side) {
 		if (side !== this && side !== true) return '';
 		return this.choice;
 	};
+
 	BattleSide.prototype.isActive = false;
 	BattleSide.prototype.pokemonLeft = 0;
 	BattleSide.prototype.faintedLastTurn = false;
@@ -1549,7 +1552,7 @@ BattleSide = (function () {
 			if (this.decision === true) this.choice = '';
 			return;
 		}
-		
+
 		let decisions = [];
 
 		switch (this.currentRequest) {
@@ -1621,6 +1624,7 @@ BattleSide = (function () {
 				team: [0, 1, 2, 3, 4, 5].slice(0, this.pokemon.length)
 			});
 		}
+
 		this.choice = '';
 		this.decision = decisions;
 	};
@@ -3072,6 +3076,7 @@ Battle = (function () {
 				oneStale.staleWarned = true;
 			}
 		}
+
 		if (this.gameType === 'triples' && this.sides.map('pokemonLeft').count(1) === this.sides.length) {
 			// If both sides have one Pokemon left in triples and they are not adjacent, they are both moved to the center.
 			let center = false;
@@ -3086,6 +3091,7 @@ Battle = (function () {
 			}
 			if (center) this.add('-center');
 		}
+
 		this.add('turn', this.turn);
 
 		this.makeRequest('move');
@@ -3544,6 +3550,7 @@ Battle = (function () {
 				baseDamage = Math.floor(baseDamage / 2);
 			}
 		}
+
 		if (move.crit && !suppressMessages) this.add('-crit', target);
 
 		if (pokemon.status === 'brn' && basePower && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
@@ -3890,6 +3897,7 @@ Battle = (function () {
 				this.p2.pokemon = this.p2.pokemon.slice(0, format.teamLength.battle);
 				this.p2.pokemonLeft = this.p2.pokemon.length;
 			}
+
 			this.add('start');
 			for (let pos = 0; pos < this.p1.active.length; pos++) {
 				this.switchIn(this.p1.pokemon[pos], pos);
@@ -4158,10 +4166,12 @@ Battle = (function () {
 		if ((rqid !== undefined) && (parseInt(rqid, 10) !== this.rqid)) {
 			return;
 		}
+
 		if (side.decision && side.decision.finalDecision) {
 			this.debug("Can't override decision: the last pokemon could have been trapped or disabled");
 			return;
 		}
+
 		side.decision = this.parseChoice(choice.split(','), side);
 		side.choice = choice;
 
