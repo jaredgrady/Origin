@@ -438,6 +438,34 @@ exports.Formats = [
             }
         }
 	},
+	{
+        name: "Move Equality 1v1",
+        section: "Other Metagames",
+        ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
+        banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
+        onModifyMove: function (move, pokemon) {
+            //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
+            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce'];
+            if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100;
+            if (!move.priority && move.multihit) {
+                if (typeof(move.multihit) === 'number') {
+                    move.basePower = 100/move.multihit;
+                } else {
+                    move.basePower = 100/move.multihit[1];
+                }
+            }
+            if (move.type === 'Flying' && move.category !== 'Status') move.basePower = 100;
+        }
+        validateTeam: function (team, format) {
+            if (team.length > 3) return ['You may only bring up to three Pokémon.'];
+        },
+        onBegin: function () {
+            this.p1.pokemon = this.p1.pokemon.slice(0, 1);
+            this.p1.pokemonLeft = this.p1.pokemon.length;
+            this.p2.pokemon = this.p2.pokemon.slice(0, 1);
+            this.p2.pokemonLeft = this.p2.pokemon.length;
+        }
+    },
 /*	{
 		name: "[Seasonal] Rainbow Road",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3491902/\">Seasonal Ladder</a>"],
@@ -961,7 +989,7 @@ exports.Formats = [
 		name: "[Gen 5] OU",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3509218/#post-5522693\">BW Resources</a>"],
 		section: "BW2 Singles",
-		column: 2,
+		column: 3,
 
 		mod: 'gen5',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Team Preview'],
