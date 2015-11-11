@@ -455,7 +455,7 @@ exports.Formats = [
                 }
             }
             if (move.type === 'Flying' && move.category !== 'Status') move.basePower = 100;
-        }
+        },
         teamLength: {
 		validate: [1, 3],
 		battle: 1
