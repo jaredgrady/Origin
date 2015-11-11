@@ -463,9 +463,8 @@ exports.Formats = [
     },
 	{
 		name: "Stat Switch",
-		section: "OM of the Month",
-		column: 2,
-
+		section: "Other Metagames",
+		
 		mod: 'statswitch',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Arceus', 'Azumarill', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Speed', 'Dialga', 'Giratina', 'Giratina-Origin',
