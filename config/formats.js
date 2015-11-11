@@ -429,13 +429,13 @@ exports.Formats = [
             //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
             let forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce', 'bulldoze', 'surf', 'whirlpool', 'gust', 'twister', 'solarbeam'];
             if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100; 
-            if (!move.priority && move.multihit) {
-                if (typeof(move.multihit) === 'number') {
-                    move.basePower = 100/move.multihit;
-                } else {
-                    move.basePower = 100/move.multihit[1];
-                }
-            }
+	            if (!move.priority && move.multihit) {
+        	        if (typeof(move.multihit) === 'number') {
+                	    move.basePower = 100/move.multihit;
+                	} else {
+                	    move.basePower = 100/move.multihit[1];
+                	}
+            	}
         }
 	},
 	{
@@ -445,7 +445,7 @@ exports.Formats = [
         banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite', 'Metagrossite', 'Landorus', 'Mud Slap'],
         onModifyMove: function (move, pokemon) {
             //Account for all moves affected by minimize, terrains/weathers, or two-turn moves (besides earthquake and dragon rush as they're already 100 BP)
-            var forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce'];
+            let forbid = ['stomp', 'steamroller', 'bodyslam', 'flyingpress', 'phantomforce', 'shadowforce'];
             if (!move.priority && !move.basePowerCallback && !move.onBasePower && move.basePower && move.category !== 'Status' && forbid.indexOf(move.id) === -1) move.basePower = 100;
             if (!move.priority && move.multihit) {
                 if (typeof(move.multihit) === 'number') {
@@ -456,15 +456,10 @@ exports.Formats = [
             }
             if (move.type === 'Flying' && move.category !== 'Status') move.basePower = 100;
         }
-        validateTeam: function (team, format) {
-            if (team.length > 3) return ['You may only bring up to three Pokémon.'];
-        },
-        onBegin: function () {
-            this.p1.pokemon = this.p1.pokemon.slice(0, 1);
-            this.p1.pokemonLeft = this.p1.pokemon.length;
-            this.p2.pokemon = this.p2.pokemon.slice(0, 1);
-            this.p2.pokemonLeft = this.p2.pokemon.length;
-        }
+        teamLength: {
+		validate: [1, 3],
+		battle: 1
+	}
     },
 /*	{
 		name: "[Seasonal] Rainbow Road",
