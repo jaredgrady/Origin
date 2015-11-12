@@ -2046,7 +2046,7 @@ roomintro: function (target, room, user) {
 
 	'memusage': 'memoryusage',
 	memoryusage: function (target) {
-		if (!~developers.indexOf(user.userid)) return false;
+		if (!this.can('hotpatch')) return false;
 		let memUsage = process.memoryUsage();
 		let results = [memUsage.rss, memUsage.heapUsed, memUsage.heapTotal];
 		let units = ["B", "KiB", "MiB", "GiB", "TiB"];
