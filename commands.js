@@ -1471,10 +1471,6 @@ roomintro: function (target, room, user) {
 			target = '\u2605';
 			room.modchat = 'roomplayer';
 			break;
-		case 'developer':
-			target = '\u00BF';
-			room.modchat = 'developer';
-			break;
 		default:
 			if (!Config.groups[target]) {
 				return this.parse('/help modchat');
