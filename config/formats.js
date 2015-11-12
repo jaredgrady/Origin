@@ -763,7 +763,7 @@ exports.Formats = [
         	banlist: ['Allow CAP']
     	},
     	{
-    		name: "C&E",
+    		name: "C\u0026E",
 		section: "Other Metagames",
 		
 		searchShow: false,
