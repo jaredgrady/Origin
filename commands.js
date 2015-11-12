@@ -2095,7 +2095,7 @@ roomintro: function (target, room, user) {
 
 	ebat: 'editbattle',
 	editbattle: function (target, room, user) {
-		if (!this.can('forcewin') || !~developers.indexOf(user.userid)) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 		if (!target) return this.parse('/help editbattle');
 		if (!room.battle) {
 			this.errorReply("/editbattle - This is not a battle room.");
