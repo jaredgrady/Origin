@@ -141,6 +141,9 @@ function hashColor(e) {
 		case 'panpawn':
 			return colorCache[e] = '#DA9D01';
 			break;
+		case 'austin':
+			return colorCache[e] = '#0250C5';
+			break;
 		default:
 			colorCache[e] = "#" + rgbToHex(s.r, s.g, s.b);
 			return colorCache[e];
