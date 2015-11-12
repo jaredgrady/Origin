@@ -2068,7 +2068,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/eva - Access denied.");
 		if (!this.canBroadcast()) return;
 		try {
 			let battle = room.battle;
@@ -2082,7 +2082,7 @@ roomintro: function (target, room, user) {
 	},
 	
 	evalbattle: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {
+		if (!user.hasConsoleAccess(connection) || !~developers.indexOf(user.userid)) {
 			return this.errorReply("/evalbattle - Access denied.");
 		}
 		if (!this.canBroadcast()) return;
@@ -2095,7 +2095,7 @@ roomintro: function (target, room, user) {
 
 	ebat: 'editbattle',
 	editbattle: function (target, room, user) {
-		if (!this.can('forcewin')) return false;
+		if (!this.can('forcewin') || !~developers.indexOf(user.userid)) return false;
 		if (!target) return this.parse('/help editbattle');
 		if (!room.battle) {
 			this.errorReply("/editbattle - This is not a battle room.");
