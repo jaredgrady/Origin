@@ -8,13 +8,13 @@ function getFriendList(user) {
 	while (start < list.length) {
 		if (!Users.get(list[start])) {
 			display += '<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;"><button name="parseCommand" value="/user ' + list[start] + '" style="border: 1px solid #803C6F; background: #c4c4c4; color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-radius: 4px;">' + list[start] + '</button></td>'; 
-			if (list.length % 5 ===0) {
+			if (list[start] % 5 === 0) {
 				display += '</td><td>';
 			}
 			start++; 
 		} else {
 			display += '<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;"><button name="parseCommand" value="/user ' + list[start] + '" style="border: 1px solid #803C6F; background: #CD9FC4; color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-radius: 4px;">' + list[start] + '</button></td>'; 
-			if (list.length % 5 ===0) {
+			if (list[start] % 5 === 0) {
 				display += '</td><td>';
 			}
 			start++; 
