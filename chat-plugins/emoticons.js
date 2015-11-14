@@ -65,6 +65,7 @@ var emotes = {
 	'noface': 'http://i.imgur.com/H744eRE.png',
 	'Obama': 'http://i.imgur.com/rBA9M7A.png',
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
+	'PeoplesChamp': 'http://i.imgur.com/QMiMBKe.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
