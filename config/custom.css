@@ -1129,6 +1129,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qdut1qy.png") right no-repeat;
   }
   
+  #lobby-userlist-user-voidchrono, #1v1-userlist-user-voidchrono, #voidleague-userlist-user-voidchrono {
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
+  }
+  
   #lobby-userlist-user-theace22, #catchevolve-userlist-user-theace22, #othertiers-userlist-user-theace22 {
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat;
   }
