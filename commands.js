@@ -1723,7 +1723,7 @@ roomintro: function (target, room, user) {
 
 	hotpatch: function (target, room, user) {
 		if (!target) return this.parse('/help hotpatch');
-		if (!~developers.indexOf(user.userid)) return this.errorReply("/hotpatch - Access denied.");
+		if (!~developers.indexOf(user.userid) || !this.can('hotpatch')) return this.errorReply("/hotpatch - Access denied.");
 		this.logEntry(user.name + " used /hotpatch " + target);
 
 		if (target === 'chat' || target === 'commands') {
@@ -2064,7 +2064,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid) && !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/eval - Access denied.");
+		if (!~developers.indexOf(user.userid) || !this.can('hotpatch')) return this.errorReply("/eval - Access denied.");
 		if (!this.canBroadcast()) return;
 		try {
 			let battle = room.battle;
