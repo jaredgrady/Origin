@@ -2064,7 +2064,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/eval - Access denied.");
+		if (!~developers.indexOf(user.userid) && !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/eval - Access denied.");
 		if (!this.canBroadcast()) return;
 		try {
 			let battle = room.battle;
