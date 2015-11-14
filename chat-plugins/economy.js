@@ -140,6 +140,7 @@ function handleBoughtItem(item, user, cost) {
 			}
 		}
 	}
+	logMoney(user.name + ' has spent ' + cost + ' bucks on a ' + item);
 }
 
 /**
