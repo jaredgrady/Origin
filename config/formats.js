@@ -347,50 +347,6 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		name: "No Status",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3542555/\">No Status</a>"],
-		section: "OM of the Month",
-		column: 2,
-
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Aegislash', 'Arceus', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Greninja', 'Groudon', 'Ho-Oh',
-			'Kyogre', 'Kyurem-White', 'Landorus', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Blazikenite', 'Gengarite', 'Griseous Orb', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
-		],
-		banlist: ['Unreleased', 'Illegal', 'Assist'],
-		customBans: {
-			receiver: {
-				arceus:1, archeops:1, darkrai:1, deoxys:1, deoxysattack:1, deoxysspeed:1, dialga:1, giratina:1, giratinaorigin:1,
-				groudon:1, hooh:1, hoopaunbound:1, keldeo:1, kyogre:1, kyuremblack:1, kyuremwhite:1, lugia:1, mewtwo:1, palkia:1,
-				rayquaza:1, regigigas:1, reshiram:1, shayminsky:1, shedinja:1, slaking:1, xerneas:1, yveltal:1, zekrom:1
-			},
-			donor: {masquerain:1, sableye:1, smeargle:1},
-			inheritedAbilities: {arenatrap:1, galewings:1, hugepower:1, imposter:1, parentalbond:1, purepower:1, shadowtag:1, wonderguard:1},
-			items: {blazikenite:1, gengarite:1, kangaskhanite:1, mawilite:1, salamencite:1, souldew:1}
-		},
-		noChangeForme: true,
-		noChangeAbility: true,
-		abilityMap: (function () {
-			let Pokedex = require('./../tools.js').data.Pokedex;
-			if (!Pokedex) return null; // Process is data-unaware
-
-			let abilityMap = Object.create(null);
-			for (let speciesid in Pokedex) {
-				let pokemon = Pokedex[speciesid];
-				if (pokemon.num < 1 || pokemon.num > 720) continue;
-				for (let key in pokemon.abilities) {
-					let abilityId = toId(pokemon.abilities[key]);
-					if (abilityMap[abilityId]) {
-						abilityMap[abilityId][pokemon.evos ? 'push' : 'unshift'](speciesid);
-					} else {
-						abilityMap[abilityId] = [speciesid];
-					}
-				}
-			}
-			return problems;
-		}
-	},
-		{
 		name: "MonsJustMons",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3514696/\">MonsJustMons</a>"],
 		section: "OM of the Month",
