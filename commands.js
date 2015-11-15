@@ -1588,8 +1588,7 @@ roomintro: function (target, room, user) {
 
 	hidetext: function (target, room, user) {
 		if (!target) return this.parse('/help hidetext');
-
-		let reason = this.splitTarget(target);
+		this.splitTarget(target);
 		let targetUser = this.targetUser;
 		let name = this.targetUsername;
 		if (!targetUser) return this.errorReply("User '" + name + "' does not exist.");

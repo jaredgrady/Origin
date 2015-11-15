@@ -68,7 +68,7 @@ exports.Formats = [
 	{
 		name: "RU",
 		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3549031/\">np: RU Stage 11</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3555823/\">np: RU Stage 12</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/ru/\">RU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538036/\">RU Viability Ranking</a>"
 		],
@@ -80,7 +80,6 @@ exports.Formats = [
 	{
 		name: "RU (suspect test)",
 		section: "ORAS Singles",
-
 		challengeShow: false,
 		ruleset: ['UU'],
 		banlist: ['UU', 'BL2']
@@ -210,11 +209,12 @@ exports.Formats = [
 
 		gameType: 'doubles',
 		ruleset: ['Doubles OU'],
-		banlist: ['Abomasnow', 'Aegislash', 'Amoonguss', 'Azumarill', 'Bisharp', 'Breloom', 'Charizard', 'Conkeldurr', 'Cresselia',
-			'Diancie', 'Dragonite', 'Excadrill', 'Ferrothorn', 'Garchomp', 'Gardevoir', 'Gengar', 'Greninja', 'Gyarados', 'Heatran',
-			'Hitmontop', 'Hoopa', 'Hoopa-Unbound', 'Hydreigon', 'Jirachi', 'Kangaskhan', 'Keldeo', 'Kyurem-Black', 'Landorus', 'Landorus-Therian', 'Latios', 'Ludicolo',
-			'Metagross', 'Mew', 'Milotic', 'Ninetales', 'Politoed', 'Rotom-Wash', 'Sableye', 'Scizor', 'Scrafty', 'Serperior', 'Shaymin-Sky', 'Suicune',
-			'Sylveon', 'Talonflame', 'Terrakion', 'Thundurus', 'Thundurus-Therian', 'Togekiss', 'Tyranitar', 'Venusaur', 'Volcarona', 'Weavile', 'Whimsicott', 'Zapdos'
+		banlist: ['Aegislash', 'Amoonguss', 'Azumarill', 'Bisharp', 'Blaziken', 'Breloom', 'Chandelure', 'Charizard', 'Conkeldurr',
+			'Cresselia', 'Diancie', 'Dragonite', 'Excadrill', 'Ferrothorn', 'Garchomp', 'Gardevoir', 'Gengar', 'Greninja',
+			'Gyarados', 'Heatran', 'Hoopa-Unbound', 'Hydreigon', 'Jellicent', 'Jirachi', 'Kangaskhan', 'Keldeo', 'Kyurem-Black',
+			'Landorus', 'Landorus-Therian', 'Latios', 'Ludicolo', 'Mawile', 'Metagross', 'Politoed', 'Rotom-Wash', 'Sableye',
+			'Scizor', 'Scrafty', 'Shaymin-Sky', 'Suicune', 'Swampert', 'Sylveon', 'Talonflame', 'Terrakion',
+			'Thundurus', 'Togekiss', 'Tyranitar', 'Venusaur', 'Volcarona', 'Weavile', 'Whimsicott', 'Zapdos'
 		]
 	},
 	{
@@ -357,12 +357,34 @@ exports.Formats = [
 			'Kyogre', 'Kyurem-White', 'Landorus', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Blazikenite', 'Gengarite', 'Griseous Orb', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
 		],
-		onValidateSet: function (set) {
-			let problems = [];
-			if (set.moves) {
-				for (let i in set.moves) {
-					let move = this.getMove(set.moves[i]);
-					if (move.category === 'Status') problems.push(set.species + "'s move " + move.name + " is banned by No Status.");
+		banlist: ['Unreleased', 'Illegal', 'Assist'],
+		customBans: {
+			receiver: {
+				arceus:1, archeops:1, darkrai:1, deoxys:1, deoxysattack:1, deoxysspeed:1, dialga:1, giratina:1, giratinaorigin:1,
+				groudon:1, hooh:1, hoopaunbound:1, keldeo:1, kyogre:1, kyuremblack:1, kyuremwhite:1, lugia:1, mewtwo:1, palkia:1,
+				rayquaza:1, regigigas:1, reshiram:1, shayminsky:1, shedinja:1, slaking:1, xerneas:1, yveltal:1, zekrom:1
+			},
+			donor: {masquerain:1, sableye:1, smeargle:1},
+			inheritedAbilities: {arenatrap:1, galewings:1, hugepower:1, imposter:1, parentalbond:1, purepower:1, shadowtag:1, wonderguard:1},
+			items: {blazikenite:1, gengarite:1, kangaskhanite:1, mawilite:1, salamencite:1, souldew:1}
+		},
+		noChangeForme: true,
+		noChangeAbility: true,
+		abilityMap: (function () {
+			let Pokedex = require('./../tools.js').data.Pokedex;
+			if (!Pokedex) return null; // Process is data-unaware
+
+			let abilityMap = Object.create(null);
+			for (let speciesid in Pokedex) {
+				let pokemon = Pokedex[speciesid];
+				if (pokemon.num < 1 || pokemon.num > 720) continue;
+				for (let key in pokemon.abilities) {
+					let abilityId = toId(pokemon.abilities[key]);
+					if (abilityMap[abilityId]) {
+						abilityMap[abilityId][pokemon.evos ? 'push' : 'unshift'](speciesid);
+					} else {
+						abilityMap[abilityId] = [speciesid];
+					}
 				}
 			}
 			return problems;
@@ -506,37 +528,43 @@ exports.Formats = [
 					pokemon.baseMoveset[last].move = move;
 				}
 			}
-		},
-		onBeforeTurn: function (pokemon) {
-			let side = pokemon.side;
-			side.item = '';
 
-			let decisions = [];
-			let decision, i;
-			if (side.hadItem || this.random(4) === 0) { // Can never get 2 consecutive turns of items
-				side.hadItem = false;
-				return;
+			let name = set.name;
+
+			let abilityId = toId(set.ability);
+			if (!abilityId) return ["" + (set.name || set.species) + " must have an ability."];
+			let pokemonWithAbility = this.format.abilityMap[abilityId];
+			if (!pokemonWithAbility) return ["" + set.ability + " is an invalid ability."];
+			let isBaseAbility = Object.values(template.abilities).map(toId).indexOf(abilityId) >= 0;
+			if (!isBaseAbility && abilityId in this.format.customBans.inheritedAbilities) return ["" + set.ability + " is banned from being passed down."];
+
+			// Items must be fully validated here since we may pass a different item to the base set validator.
+			let item = this.tools.getItem(set.item);
+			if (item.id) {
+				if (!item.exists) return ["" + set.item + " is an invalid item."];
+				if (item.isUnreleased) return ["" + (set.name || set.species) + "'s item " + item.name + " is unreleased."];
+				if (item.id in this.format.customBans.items) return ["" + item.name + " is banned."];
 			}
-			switch (this.random(8)) {
-			case 0:
-				side.item = 'lightning';
-				side.hadItem = true;
-				this.add('message', "Lightning suddenly struck " + side.name + " and shrank their Pok\u00e9mon!");
-				this.add('-start', pokemon, 'shrunken', '[silent]');
-				break;
-			case 1:
-				side.item = 'blooper';
-				side.hadItem = true;
-				this.add('message', "A Blooper came down and splattered ink all over " + side.name + "'s screen!");
-				this.add('-start', pokemon, 'blinded', '[silent]');
-				break;
-			case 2:
-				if (pokemon.isGrounded()) {
-					side.item = 'banana';
-					side.hadItem = true;
-					this.add('message', side.name + " slipped on a banana peel!");
-					this.add('-start', pokemon, 'slipped', '[silent]');
-					pokemon.addVolatile('flinch');
+
+			let validSources = set.abilitySources = []; // evolutionary families
+			for (let i = 0; i < pokemonWithAbility.length; i++) {
+				let donorTemplate = this.tools.getTemplate(pokemonWithAbility[i]);
+				let evoFamily = this.format.getEvoFamily(donorTemplate);
+
+				if (validSources.indexOf(evoFamily) >= 0) {
+					// The existence of a legal set has already been established.
+					// We only keep iterating to find all legal donor families (Donor Clause).
+					// Skip this redundant iteration.
+					continue;
+				}
+
+				if (set.name === set.species) delete set.name;
+				if (donorTemplate.species !== set.species && toId(donorTemplate.species) in this.format.customBans.donor) {
+					problems = ["" + donorTemplate.species + " is banned from passing abilities down."];
+					continue;
+				} else if (donorTemplate.species !== set.species && abilityId in this.format.customBans.inheritedAbilities) {
+					problems = ["The ability " + this.tools.getAbility(abilityId).name + " is banned from being passed down."];
+					continue;
 				}
 				break;
 			case 3:

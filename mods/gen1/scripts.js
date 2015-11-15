@@ -1045,8 +1045,8 @@ exports.BattleScripts = {
 		let pokemon = [];
 
 		let handicapMons = {'magikarp':1, 'weedle':1, 'kakuna':1, 'caterpie':1, 'metapod':1, 'ditto':1};
-		let nuTiers = {'UU':1, 'BL':1, 'NFE':1, 'LC':1};
-		let uuTiers = {'NFE':1, 'UU':1, 'BL':1};
+		let nuTiers = {'UU':1, 'BL':1, 'NFE':1, 'LC':1, 'NU':1};
+		let uuTiers = {'NFE':1, 'UU':1, 'BL':1, 'NU':1};
 
 		let n = 1;
 		let pokemonPool = [];
@@ -1209,7 +1209,6 @@ exports.BattleScripts = {
 					if (moveid === template.essentialMove) continue;
 					let move = this.getMove(moveid);
 					let rejected = false;
-					if (hasMove[moveid]) rejected = true;
 					if (!template.essentialMove || moveid !== template.essentialMove) {
 						switch (moveid) {
 						// bad after setup
