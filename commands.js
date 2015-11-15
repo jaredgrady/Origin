@@ -1083,6 +1083,7 @@ roomintro: function (target, room, user) {
 	unmutehelp: ["/unmute [username] - Removes mute from user. Requires: % @ # & ~"],
 
 	forcelock: 'lock',
+	interrobang: 'lock',
 	l: 'lock',
 	ipmute: 'lock',
 	lock: function (target, room, user, connection, cmd) {
