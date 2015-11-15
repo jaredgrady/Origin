@@ -1823,7 +1823,7 @@ roomintro: function (target, room, user) {
 	},
 
 	lockdown: function (target, room, user) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/lockdown - Access denied.");
 		Rooms.global.lockdown = true;
 		for (let id in Rooms.rooms) {
 			if (id === 'global') continue;
@@ -1866,7 +1866,7 @@ roomintro: function (target, room, user) {
 	},
 
 	endlockdown: function (target, room, user) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/endlockdown - Access denied.");
 
 		if (!Rooms.global.lockdown) {
 			return this.errorReply("We're not under lockdown right now.");
@@ -1978,7 +1978,7 @@ roomintro: function (target, room, user) {
 
 	updateserver: function (target, room, user, connection) {
 		if (!~developers.indexOf(user.userid)) { 
-						return this.errorReply("Access denied.");
+						return this.errorReply("/updateserver - Access denied.");
 		}
 		if (CommandParser.updateServerLock) {
 			return this.errorReply("/updateserver - Another update is already in progress.");
@@ -2055,7 +2055,7 @@ roomintro: function (target, room, user) {
 
 	bash: function (target, room, user, connection) {
 
-		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/bash - Access denied.");
 		let exec = require('child_process').exec;
 
 		exec(target, function (error, stdout, stderr) {
