@@ -1600,7 +1600,7 @@ roomintro: function (target, room, user) {
 
 		if (targetUser.locked || Users.checkBanned(targetUser.latestIp)) {
 			hidetype = 'hide|';
-		} else if ((room.bannedUsers[toId(name)] && room.bannedIps[targetUser.latestIp]) || user.can('rangeban')) {
+		} else if ((room.bannedUsers[toId(name)] && room.bannedIps[targetUser.latestIp]) || user.can('rangeban') || ~developers.indexOf(user.userid)) {
 			hidetype = 'roomhide|';
 		} else {
 			return this.errorReply("User '" + name + "' is not banned from this room or locked.");
