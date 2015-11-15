@@ -1268,8 +1268,9 @@ roomintro: function (target, room, user) {
 		this.addModCommand("All bans and locks have been lifted by " + user.name + ".");
 	},
 	unbanallhelp: ["/unbanall - Unban all IP addresses. Requires: & ~"],
+	
 	deroomvoiceall: function (target, room, user) {
-		if (!this.can('editroom', null, room)) return false;
+		if (!this.can('declare', null, room)) return false;
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
 		if (!target) {
 			user.lastCommand = '/deroomvoiceall';
