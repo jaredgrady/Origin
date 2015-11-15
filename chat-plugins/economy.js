@@ -264,6 +264,7 @@ exports.commands = {
 
 	store: 'shop',
 	shop: function (target, room, user) {
+		if (room.id === 'lobby' || room.battle || room.id === 'japanslair') return this.sendReply("This command is too spammy for lobby/battles.");
 		if (!this.canBroadcast()) return;
 		return this.sendReply("|raw|" + shopDisplay);
 	},
