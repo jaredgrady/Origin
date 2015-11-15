@@ -67,6 +67,7 @@ var emotes = {
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'PeoplesChamp': 'http://i.imgur.com/QMiMBKe.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
+	'thumbsup': 'http://i.imgur.com/eWcFLLn.jpg',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
 	'wtfman': 'http://i.imgur.com/kwR8Re9.png',
