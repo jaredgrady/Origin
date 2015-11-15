@@ -49,7 +49,7 @@ puppy: function(target, room, user) {
  	 		case 5: image = '<center><img src="https://www.petfinder.com/wp-content/uploads/2012/11/dog-how-to-select-your-new-best-friend-thinkstock99062463.jpg">'; break;
  	 		case 6: image = '<center><img src="http://www.explosion.com/wp-content/uploads/2014/12/813.jpg" width="370" height="300">'; break;
  	 		case 7: image = '<center><img src="https://poolhouse.s3.amazonaws.com/blog-assets-two/2014/09/147083304-dogs-home-alone-all-day-632x475.jpg" width="450" height="302">'; break;
- 	 		case 8: image = '<center><img src="http://www.rankkin.com/files/media/739/72333fc9827105405a55396ff5f50a98.jpg">'; break;
+ 	 		case 8: image = '<center><img src="http://www.rankkin.com/files/media/739/72333fc9827105405a55396ff5f50a98.jpg" width="450" height="302">'; break;
  	 		case 9: image = '<center><img src="http://www.metrodogstop.com/cms/wp-content/uploads/2013/05/cute-dog.jpg" width="306" height="365">'; break;
  	 		case 10: image = '<center><img src="http://media1.santabanta.com/full1/Animals/Dogs/dogs-87a.jpg" width="236" height="314">'; break;
  	 		case 11: image = '<center><img src="https://thenypost.files.wordpress.com/2014/01/dogs1.jpg" width="300" height="240">'; break;
