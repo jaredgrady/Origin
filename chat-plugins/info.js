@@ -1977,7 +1977,7 @@ exports.commands = {
 
 	forums: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("<a href=\"https://www.smogon.com/forums/forums/pok%C3%A9mon-showdown.209\">Pok&eacute;mon Showdown Forums</a>");
+		this.sendReplyBox("<a href=\"http://originps.boards.net/\">Origin Forums</a>");
 	},
 
 	suggestions: function (target, room, user) {
