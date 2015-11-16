@@ -397,11 +397,13 @@ exports.commands = {
 			while (p1Number <= p2Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
+			}
 		}
 		if (room.dice.p2 === "duttyvybz") {
 			while (p2Number <= p1Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
+			}
 		}
 		var output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		while (p1Number === p2Number) {
