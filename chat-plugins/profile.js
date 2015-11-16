@@ -177,8 +177,8 @@ exports.commands = {
 	profile: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		if (targetUser.userid === 'austin') return false;
 		var targetUser = this.targetUserOrSelf(target);
+		if (targetUser.userid === 'austin') return this.sendReplyBox("You do not need to know this information");
 		var profile;
 		if (!targetUser) {
 			profile = new Profile(false, target);
