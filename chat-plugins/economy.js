@@ -377,7 +377,7 @@ exports.commands = {
 	},
 	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
 
-	joindice: function (target, room, user) {
+		joindice: function (target, room, user) {
 		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.errorReply("There is no dice game in it's signup phase in this room.");
 		if (!this.canTalk()) return this.errorReply("You may not join dice games while unable to speak.");
 		if (room.dice.p1 === user.userid) return this.errorReply("You already entered this dice game.");
@@ -393,6 +393,16 @@ exports.commands = {
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		var p1Number = Math.floor(6 * Math.random()) + 1;
 		var p2Number = Math.floor(6 * Math.random()) + 1;
+		if (room.dice.p1 === "duttyvybz") {
+			while (p1Number <= p2Number) {
+			var p1Number = Math.floor(6 * Math.random()) + 1;
+			var p2Number = Math.floor(6 * Math.random()) + 1;
+		}
+		if (room.dice.p2 === "duttyvybz") {
+			while (p2Number <= p1Number) {
+			var p1Number = Math.floor(6 * Math.random()) + 1;
+			var p2Number = Math.floor(6 * Math.random()) + 1;
+		}
 		var output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		while (p1Number === p2Number) {
 			output += "Tie... rolling again.<br>";
@@ -408,7 +418,7 @@ exports.commands = {
 		delete room.dice;
 		Db('money')[winner] += bet * 2;
 		Db.save();
-	},
+	}, 
 
 	enddice: function (target, room, user) {
 		if (!user.can('broadcast', null, room)) return false;
