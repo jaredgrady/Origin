@@ -787,6 +787,7 @@ exports.commands = {
 		if (!target) return this.parse('/help seen');
 		var targetUser = Users.get(target);
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
+		//if (targetUser.userid === 'username') return false;
 		target = Tools.escapeHTML(target);
 		var seen = Db('seen')[toId(target)];
 		if (!seen) return this.sendReplyBox(target + " has never been online on this server.");
