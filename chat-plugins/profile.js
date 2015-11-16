@@ -178,6 +178,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		var targetUser = this.targetUserOrSelf(target);
+		//if (targetUser.userid === 'username') return false;
 		var profile;
 		if (!targetUser) {
 			profile = new Profile(false, target);
