@@ -786,7 +786,6 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (!target) return this.parse('/help seen');
 		var targetUser = Users.get(target);
-		if (targetUser.userid === 'austin') return this.sendReplyBox("You do not need to know this information");
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
 		target = Tools.escapeHTML(target);
 		var seen = Db('seen')[toId(target)];
