@@ -377,7 +377,7 @@ exports.commands = {
 	},
 	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
 
-		joindice: function (target, room, user) {
+	joindice: function (target, room, user) {
 		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.errorReply("There is no dice game in it's signup phase in this room.");
 		if (!this.canTalk()) return this.errorReply("You may not join dice games while unable to speak.");
 		if (room.dice.p1 === user.userid) return this.errorReply("You already entered this dice game.");
