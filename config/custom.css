@@ -1144,3 +1144,7 @@
   #lobby-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #othertiers-userlist-user-traineralain {
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
   }
+
+  #lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
+    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
+  }
