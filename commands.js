@@ -720,7 +720,7 @@ roomintro: function (target, room, user) {
 			if (!targetUser.registered) {
 				return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
 			}
-			if (targetUser.locked) {
+			if (!room.isPrivate && targetUser.locked) {
 				return this.errorReply("User '" + name + "' is locked, and so can't be promoted.");
 			}
 		}
