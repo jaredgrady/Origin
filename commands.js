@@ -721,8 +721,8 @@ roomintro: function (target, room, user) {
 				return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
 			}
 			if (!room.isPrivate && targetUser.locked) {
-				return this.errorReply("User '" + name + "' is locked, and so can't be promoted.");
 				Monitor.log("[CrisisMonitor] " + user.name + " tried to promote locked user: " + targetUser.name + ".");
+				return this.errorReply("User '" + name + "' is locked, and so can't be promoted.");
 			}
 		}
 
