@@ -722,6 +722,7 @@ roomintro: function (target, room, user) {
 			}
 			if (!room.isPrivate && targetUser.locked) {
 				return this.errorReply("User '" + name + "' is locked, and so can't be promoted.");
+				Monitor.log("[CrisisMonitor] " + user.name + " tried to promote locked user: " + targetUser.name + ".");
 			}
 		}
 
