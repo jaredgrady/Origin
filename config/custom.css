@@ -1129,6 +1129,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qdut1qy.png") right no-repeat;
   }
   
+  #lobby-userlist-user-paulcentury, #theomegaleague-userlist-user-paulcentury, #thedefianceleague-userlist-user-paulcentury {
+    background: rgba(244, 244, 244, 0.8) url("http://pokemonshowdown.com/interstice?uri=http%3A%2F%2Fpldh.net%2Fmedia%2Fpokecons_action%2F080.gif") right no-repeat;
+  }
+  
   #lobby-userlist-user-voidchrono, #\1v1-userlist-user-voidchrono, #voidleague-userlist-user-voidchrono {
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
   }
