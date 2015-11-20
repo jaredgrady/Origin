@@ -38,6 +38,14 @@ Full [For Pokemon with full background]
 All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
 */
 
+try {
+	cachePacks();
+	cacheRarity();
+} 
+catch (e) {
+	console.log("Error patching cards: " + e);
+}
+
 var uuid = require('uuid');
 
 var colors = {
@@ -976,8 +984,6 @@ function cachePacks() {
     }
 }
 
-global.cachePacks = cachePacks;
-
 function cacheRarity() {
     for (var i = 0; i < cardRarity.length; i++) {
         rareCache.push(new Array());
@@ -992,8 +998,6 @@ function cacheRarity() {
         cleanCard.push(toId(cardRarity[i]));
     }
 }
-
-global.cacheRarity = cacheRarity;
 
 global.tourCard = function(tourSize, userid) {
     if (tourSize > 32) tourSize = 32;
