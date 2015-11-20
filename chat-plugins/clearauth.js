@@ -1,6 +1,6 @@
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
-		if (!this.can('hotpatch')) return false;
+		if (!this.can('bypassall')) return false;
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
 		var parts = target.split(',');
 		var cmd = parts[0].trim().toLowerCase();
@@ -47,7 +47,6 @@ exports.commands = {
 			break;
 
 		case 'mod':
-			break;
 			var count = 0;
 			for (var userid in room.auth) {
 			if (room.auth[userid] === '@') {
@@ -61,7 +60,7 @@ exports.commands = {
 			}
 			if (room.chatRoomData) {
 			Rooms.global.writeChatRoomData();
-		}
+			}
 			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
 		    break;
 	
