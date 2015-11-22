@@ -24,6 +24,7 @@ const developersIPs = [];
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
+const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
 
 let commands = exports.commands = {
 
@@ -1042,6 +1043,7 @@ roomintro: function (target, room, user) {
 		}
 
 		let muteDuration = ((cmd === 'hm' || cmd === 'hourmute') ? HOURMUTE_LENGTH : MUTE_LENGTH);
+		if (cmd === 'dm' || cmd === 'daymute') muteDuration = DAYMUTE_LENGTH;
 		if (!this.can('mute', targetUser, room)) return false;
 		let canBeMutedFurther = ((room.getMuteTime(targetUser) || 0) <= (muteDuration * 5 / 6));
 		if ((room.isMuted(targetUser) && !canBeMutedFurther) || targetUser.locked || !targetUser.connected) {
@@ -1067,6 +1069,13 @@ roomintro: function (target, room, user) {
 		this.run('mute');
 	},
 	hourmutehelp: ["/hourmute OR /hm [username], [reason] - Mutes a user with reason for an hour. Requires: % @ # & ~"],
+
+	dm: 'daymute',
+	daymute: function (target) {
+		if(!target) return this.parse('/help daymute')
+		this.run('mute');
+	},
+	daymutehelp: ["/daymute OR /dm [username], [reason] - Mutes a user with reason for a day. Requires: % @ # & ~"],
 
 	um: 'unmute',
 	unmute: function (target, room, user) {
