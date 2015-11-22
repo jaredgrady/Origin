@@ -6,7 +6,7 @@
  * to run. A lot of these are sent by the client.
  *
  * System commands should not be modified, added, or removed. If you'd
- * like to modify or add commands, add or edit files in chat-plugins/
+ * like to modify or add commands, add or edit files in chat-plugins
  *
  * For the API, see chat-plugins/COMMANDS.md
  *
@@ -1534,7 +1534,7 @@ roomintro: function (target, room, user) {
 		if (!this.can('declare')) return false;
 
 		for (let id in Rooms.rooms) {
-			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
+			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		}
 		this.logModCommand(user.name + " globally declared " + target);
 	},
