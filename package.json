@@ -67,7 +67,7 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "eslint": "~1.9.0",
+    "eslint": "1.10.1",
     "mocha": "~2.3.2"
   }
 }
