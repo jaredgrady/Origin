@@ -271,7 +271,7 @@ exports.commands = {
 	moddeclare: 'declaremod',
 	declaremod: function (target, room, user, connection) {
 		if (!target) return this.parse('/help declaremod');
-		if ((user.locked || room.isMuted(user)) && !user.can('bypassall')) return this.sendReply("You cannot do this while unable to talk.");
+		if (!this.canTalk()) return this.sendReply("You cannot do this while unable to talk.");
 		if (!this.can('receiveauthmessages', null, room)) return false;
 		return this.privateModCommand('|raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from ' + user.name + '<br /></i></font size>' + target + '</b></div>');
 	},
@@ -578,7 +578,7 @@ exports.commands = {
 	roomkick: 'kick',
 	kick: function (target, room, user) {
 		if (!target) return this.parse('/help kick');
-		if (user.locked && !user.can('bypassall')) {
+		if (!this.canTalk()) {
 			return this.sendReply("You cannot do this while unable to talk.");
 		}
 
