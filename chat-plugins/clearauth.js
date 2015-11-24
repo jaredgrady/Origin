@@ -28,6 +28,24 @@ exports.commands = {
 			this.addModCommand("All " + count + " roomvoices have been cleared by " + user.name + ".");
 			break;
 			
+		case 'roomplayer':
+			var count = 0;
+			for (var userid in room.auth) {
+			if (room.auth[userid] === '@') {
+				delete room.auth[userid];
+				count++;
+				if (userid in room.users) room.users[userid].updateIdentity(room.id);
+			}
+		}
+			if (!count) {
+			return this.sendReply("(This room has zero mods)");
+			}
+			if (room.chatRoomData) {
+			Rooms.global.writeChatRoomData();
+			}
+			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
+		    break;	
+			
 		case 'driver':
 			var count = 0;
 			for (var userid in room.auth) {
