@@ -1,6 +1,6 @@
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
-		if (!this.can('hotpatch') && room.founder !== user.userid) return this.errorReply("Access Denied");
+		if (!this.can('lock') && room.founder !== user.userid) return this.errorReply("Access Denied");
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
 		var parts = target.split(',');
 		var cmd = parts[0].trim().toLowerCase();
@@ -31,19 +31,19 @@ exports.commands = {
 		case 'roomplayer':
 			var count = 0;
 			for (var userid in room.auth) {
-			if (room.auth[userid] === '@') {
+			if (room.auth[userid] === '\u2605') {
 				delete room.auth[userid];
 				count++;
 				if (userid in room.users) room.users[userid].updateIdentity(room.id);
 			}
 		}
 			if (!count) {
-			return this.sendReply("(This room has zero mods)");
+			return this.sendReply("(This room has zero roomplayers)");
 			}
 			if (room.chatRoomData) {
 			Rooms.global.writeChatRoomData();
 			}
-			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
+			this.addModCommand("All " + count + " roomplayers have been cleared by " + user.name + ".");
 		    break;	
 			
 		case 'driver':
