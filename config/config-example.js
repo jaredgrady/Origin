@@ -309,7 +309,7 @@ exports.grouplist = [
 		inherit: '+',
 		roomvoice: true,
 		modchat: true,
-		roomonly: true,
+		battleonly: true,
 		editroom: true,
 		joinbattle: true
 	},
