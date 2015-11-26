@@ -1,6 +1,6 @@
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
-		if (!this.can('lock') && room.founder !== user.userid) return this.errorReply("Access Denied");
+		if (!this.can('hotpatch') && room.founder !== user.userid) return this.errorReply("Access Denied");
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
 		var parts = target.split(',');
 		var cmd = parts[0].trim().toLowerCase();
