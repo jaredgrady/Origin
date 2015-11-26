@@ -2,6 +2,8 @@
 
 var fs = require('fs');
 var path = require('path');
+var highRollers = ['fender', 'duttyvybz', 'nineage'];
+var toggleRolling = false;
 
 var shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
@@ -393,13 +395,13 @@ exports.commands = {
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		var p1Number = Math.floor(6 * Math.random()) + 1;
 		var p2Number = Math.floor(6 * Math.random()) + 1;
-		if (room.dice.p1 === "duttyvybz") {
+		if (highRollers.indexOf(room.dice.p1) && toggleRolling) {
 			while (p1Number <= p2Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
-		if (room.dice.p2 === "duttyvybz") {
+		if (highRollers.indexOf(room.dice.p1) && toggleRolling) {
 			while (p2Number <= p1Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
@@ -506,6 +508,28 @@ exports.commands = {
 		}
 		if (!targetRoom.hasShop) targetRoom.hasShop = targetRoom.chatRoomData.hasShop = true;
 			Rooms.global.writeChatRoomData();
+    },
+    
+    	togglerolling: function (target, room, user) {
+    		if (user.userid !== 'fender') return this.sendReply('Access Denied you silly goose!');
+    		if (!target) return this.sendReply('Either toggle it on or off.');
+	 		targetRoom.update();
+	 	if (target === 'on') {
+	 		if (toggleRolling === true) {
+	 			return this.sendReply('We are already rolling');
+	 		} else {
+	 			toggleRolling === true;	
+	 			return this.sendReply('We are now rolling!');
+	 		}
+	 	}
+	 	if (target === 'off') {
+	 		if (toggleRolling === false) {
+	 			return this.sendReply('We are not rolling right now.');
+	 		} else {
+	 			toggleRolling === false;
+	 			return this.sendReply('We are not rolling anymore.');
+	 		}
+	 	}
     },
 
 	bucks: 'economystats',
