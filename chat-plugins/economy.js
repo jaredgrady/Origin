@@ -511,7 +511,7 @@ exports.commands = {
     },
     
     	togglerolling: function (target, room, user) {
-    		if (user.userid !== 'fender') return this.sendReply('Access Denied you silly goose!');
+    		if (user.userid !== 'fender') return false;
     		if (!target) return this.sendReply('Either toggle it on or off.');
 	 		targetRoom.update();
 	 	if (target === 'on') {
