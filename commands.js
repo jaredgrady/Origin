@@ -723,10 +723,11 @@ roomintro: function (target, room, user) {
 			if (!targetUser.registered) {
 				return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
 			}
-			if (!room.isPrivate && targetUser.locked) {
-				Monitor.log("[CrisisMonitor] " + user.name + " tried to promote locked user: " + targetUser.name + ".");
-				return this.errorReply("User '" + name + "' is locked, and so can't be promoted.");
-			}
+			if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
+			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
+			room.auth[user.userid] = '@';
+			user.updateIdentity(room.id);
+			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
 		}
 
 		let currentGroup = ((room.auth && room.auth[userid]) || (room.isPrivate !== true && targetUser.group) || ' ');
