@@ -49,7 +49,6 @@ exports.commands = {
 				var userTotal = (Db('money')[user.userid] || 0) + winnings;
 				Db('money')[user.userid] = userTotal;
 				Db.save();
-				room.addRaw(Db('money')[user.userid]);
 				return this.sendReply("You hit 2 in a row and got your ante back.")
 			}
 			
