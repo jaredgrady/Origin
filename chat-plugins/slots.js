@@ -80,7 +80,6 @@ exports.commands = {
 				}
 			}
 			else {
-				room.addRaw(Db('money')[user.userid]);
 				return this.sendReply("Better luck next time!");
 			}
 			if (win) {
