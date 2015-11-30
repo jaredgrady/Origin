@@ -86,6 +86,8 @@ exports.commands = {
 				var userTotal = (Db('money')[user.userid] || 0) + winnings;
 				Db('money')[user.userid] = userTotal;
 				Db.save();
+				logMoney(user + " won " + winnings + " from the slots.");
+
 			}
 		},
 		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],
