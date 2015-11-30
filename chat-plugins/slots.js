@@ -43,6 +43,15 @@ exports.commands = {
 			var display = slotMachine(roll1, roll2, roll3);
 			this.sendReplyBox(display);
 			
+			if (roll1 === roll2 && roll2 !== roll3) {
+				var win = false; 
+				var winnings = ante;
+				var userTotal = (Db('money')[user.userid] || 0) + winnings;
+				Db('money')[user.userid] = userTotal;
+				Db.save();
+				return this.sendReply("You hit 2 in a row and got your ante back.")
+			}
+			
 			if (roll1 === roll2 && roll2 === roll3) {
 				if (roll1 === faces[0][0] || roll1 === faces[0][1]) {
 					var win = true;
