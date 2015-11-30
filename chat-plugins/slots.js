@@ -45,7 +45,17 @@ exports.commands = {
 			
 			if (roll1 === roll2 && roll2 !== roll3) {
 				var win = false; 
-				var winnings = ante;
+				var winnings = house.ante;
+				var userTotal = (Db('money')[user.userid] || 0) + winnings;
+				Db('money')[user.userid] = userTotal;
+				Db.save();
+				room.addRaw(Db('money')[user.userid]);
+				return this.sendReply("You hit 2 in a row and got your ante back.")
+			}
+			
+			if (roll1 !== roll2 && roll2 === roll3) {
+				var win = false; 
+				var winnings = house.ante;
 				var userTotal = (Db('money')[user.userid] || 0) + winnings;
 				Db('money')[user.userid] = userTotal;
 				Db.save();
@@ -55,22 +65,23 @@ exports.commands = {
 			if (roll1 === roll2 && roll2 === roll3) {
 				if (roll1 === faces[0][0] || roll1 === faces[0][1]) {
 					var win = true;
-					var winnings = 3- + ante;
+					var winnings = 30 + house.ante;
 					this.sendReply("You've hit the jackpot!");
-					room.addRaw('<h3> ' + user + 'has hit a Jackpot on the slots!</h3>');
+					room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
 				}
 			else if (roll1 === faces[1][0] || roll1 === faces[1][1]) {
 					var win = true;
-					var winnnings = 15 + ante;
-					this.sendReply("You've won the 15 Bucks!");
+					var winnings = 15 + house.ante;
+					this.sendReply("You've won 15 Bucks!");
 				}
 			else if (roll1 === faces[2][0] || roll1 === faces[2][1]) {
 					var win = true;
-					var winnnings = 10 + ante;
-					this.sendReply("You've won 5 Bucks!");
+					var winnings = 10 + house.ante;
+					this.sendReply("You've won 10 Bucks!");
 				}
 			}
 			else {
+				room.addRaw(Db('money')[user.userid]);
 				return this.sendReply("Better luck next time!");
 			}
 			if (win) {
@@ -100,7 +111,7 @@ exports.commands = {
 			if (!target) return this.parse('/help antehelp');
 			if (typeof target === 'string') return this.sendReply(target);
 			house.ante = target;
-			this.sendReply("The ante for playing slots has been set to " + ante + " .");
+			this.sendReply("The ante for playing slots has been set to " + house.ante + " .");
 		},
 		antehelp: ["Sets the ante for playing slots. Require ~."]
 	},
