@@ -31,6 +31,7 @@ exports.commands = {
 		start: 'roll',
 		roll: function (target, room, user) {
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
+			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
 			if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
 			if (house.ante > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
 			var newTotal = (Db('money')[user.userid] || 0) - house.ante;
@@ -45,17 +46,17 @@ exports.commands = {
 			if (roll1 === roll2 && roll2 === roll3) {
 				if (roll1 === faces[0][0] || roll1 === faces[0][1]) {
 					var win = true;
-					var winnings = 20 + ante;
+					var winnings = 3- + ante;
 					this.sendReply("You've won the grand prize!");
 				}
 			else if (roll1 === faces[1][0] || roll1 === faces[1][1]) {
 					var win = true;
-					var winnnings = 10 + ante;
+					var winnnings = 15 + ante;
 					this.sendReply("You've won the 15 Bucks!");
 				}
 			else if (roll1 === faces[2][0] || roll1 === faces[2][1]) {
 					var win = true;
-					var winnnings = 5 + ante;
+					var winnnings = 10 + ante;
 					this.sendReply("You've won 5 Bucks!");
 				}
 			}
