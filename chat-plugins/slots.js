@@ -71,7 +71,6 @@ exports.commands = {
 				}
 			}
 			else {
-				console.log("lose");
 				return this.sendReply("Better luck next time!");
 			}
 			if (win) {
