@@ -13,14 +13,14 @@ function slotMachine(roll1, roll2, roll3) {
 };
 
 function rollReels() { 
-	var rarity = Math.floor((Math.random() * 4))
-	if (rarity === 3) {
+	var rarity = Math.floor((Math.random() * 3))
+	if (rarity === 2) {
 		return faces[0][Math.floor(Math.random() * 2)];
 		}
-	else if (rarity === 2) {
+	else if (rarity === 1) {
 		return faces[1][Math.floor(Math.random() * 2)];
 		}
-	else if (rarity === 1) {
+	else if (rarity === 0) {
 		return faces[2][Math.floor(Math.random() * 2)];
 		}
 	};
