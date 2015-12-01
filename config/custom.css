@@ -552,6 +552,18 @@
     color: #FFB5BC;
     text-shadow: 0px 0px 2px #77010D;
   }
+
+  .ps-popup .roomlist a.ilink {
+    border-color: #235E6F;
+    color: #235E6F;
+    background: #F8FBFD;
+  }
+  
+  .ps-popup .roomlist a.ilink:hover {
+    border-color: #CC231E;
+    color: #CC231E;
+    background: #F8FBFD;
+  }
   
   .ps-popup a {
     color: #FFEBED;
