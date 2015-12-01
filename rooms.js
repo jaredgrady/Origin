@@ -178,11 +178,15 @@ let Room = (function () {
 		return true;
 	};
 	//mute handling
-	Room.prototype.runMuteTimer = function () {
+	Room.prototype.runMuteTimer = function (forceReschedule) {
+		if (forceReschedule && this.muteTimer) {
+			clearTimeout(this.muteTimer);
+			this.muteTimer = null;
+		}
 		if (this.muteTimer || this.muteQueue.length === 0) return;
 
 		let timeUntilExpire = this.muteQueue[0].time - Date.now();
-		if (timeUntilExpire <= 0) {
+		if (timeUntilExpire <= 1000) { // one second of leeway
 			this.unmute(this.muteQueue[0].userid, "Your mute in '" + this.title + "' has expired.");
 			//runMuteTimer() is called again in unmute() so this function instance should be closed
 			return;
@@ -190,7 +194,7 @@ let Room = (function () {
 		let self = this;
 		this.muteTimer = setTimeout(function () {
 			self.muteTimer = null;
-			self.runMuteTimer();
+			self.runMuteTimer(true);
 		}, timeUntilExpire);
 	};
 	Room.prototype.isMuted = function (user) {
@@ -266,10 +270,8 @@ let Room = (function () {
 				entry.guestNum === user.guestNum ||
 				(user.autoconfirmed && entry.autoconfirmed === user.autoconfirmed)) {
 				if (i === 0) {
-					clearTimeout(this.muteTimer);
-					this.muteTimer = null;
 					this.muteQueue.splice(0, 1);
-					this.runMuteTimer();
+					this.runMuteTimer(true);
 				} else {
 					this.muteQueue.splice(i, 1);
 				}
@@ -553,7 +555,7 @@ let GlobalRoom = (function () {
 		let self = this;
 
 		// Get the user's rating before actually starting to search.
-		Ladders.get(formatid).getRating(user.userid).then(function (rating) {
+		Ladders(formatid).getRating(user.userid).then(function (rating) {
 			newSearch.rating = rating;
 			newSearch.userid = user.userid;
 			self.addSearch(newSearch, user, formatid);
@@ -949,7 +951,7 @@ let BattleRoom = (function () {
 					this.sendUser(winner, '|askreg|' + winner.userid);
 				}
 				// update rankings
-				Ladders.get(rated.format).updateRating(p1name, p2name, p1score, this);
+				Ladders(rated.format).updateRating(p1name, p2name, p1score, this);
 			}
 		} else if (Config.logchallenges) {
 			// Log challenges if the challenge logging config is enabled.
@@ -1454,6 +1456,7 @@ let ChatRoom = (function () {
 			this.rollLogFile(true);
 			this.logEntry = function (entry, date) {
 				let timestamp = (new Date()).format('{HH}:{mm}:{ss} ');
+				entry = entry.replace(/<img[^>]* src="data:image\/png;base64,[^">]+"[^>]*>/g, '');
 				this.logFile.write(timestamp + entry + '\n');
 			};
 			this.logEntry('NEW CHATROOM: ' + this.id);

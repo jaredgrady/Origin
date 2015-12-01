@@ -81,8 +81,8 @@ let commands = exports.commands = {
 	avatar: function (target, room, user) {
 		if (!target) return this.parse('/avatars');
 		let parts = target.split(',');
-		let avatar = parseInt(parts[0]);
-		if (parts[0] === '#bw2elesa') {
+		let avatar = parseInt(parts[0], 10);
+		if (parts[0] === '#bw2elesa' || parts[0] === '#teamrocket') {
 			avatar = parts[0];
 		}
 		if (typeof avatar === 'number' && (!avatar || avatar > 294 || avatar < 1)) {
@@ -476,6 +476,7 @@ let commands = exports.commands = {
 		} else {
 			if (!this.can('makeroom')) return;
 		}
+		if (room.tour && !room.tour.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
 		if (target === 'off' || target === 'false') {
 			delete room.modjoin;
 			this.addModCommand("" + user.name + " turned off modjoin.");
@@ -2565,7 +2566,7 @@ roomintro: function (target, room, user) {
 			));
 		} else if (cmd === 'laddertop') {
 			if (!trustable) return false;
-			Ladders.get(target).getTop().then(function (result) {
+			Ladders(target).getTop().then(function (result) {
 				connection.send('|queryresponse|laddertop|' + JSON.stringify(result));
 			});
 		} else {

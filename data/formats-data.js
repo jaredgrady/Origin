@@ -3344,7 +3344,7 @@ exports.BattleFormatsData = {
 		tier: "PU"
 	},
 	infernape: {
-		randomBattleMoves: ["closecombat","fireblast","grassknot","machpunch","flareblitz","uturn","stealthrock","hiddenpowerice","thunderpunch","nastyplot","swordsdance"],
+		randomBattleMoves: ["stealthrock","uturn","swordsdance","closecombat","flareblitz","thunderpunch","machpunch","nastyplot","fireblast","vacuumwave","grassknot","hiddenpowerice"],
 		randomDoubleBattleMoves: ["fakeout","heatwave","closecombat","uturn","grassknot","stoneedge","machpunch","feint","taunt","flareblitz","hiddenpowerice","thunderpunch","protect"],
 		eventPokemon: [
 			{"generation":5,"level":100,"gender":"M","isHidden":false,"moves":["fireblast","closecombat","uturn","grassknot"],"pokeball":"cherishball"}
@@ -3900,7 +3900,7 @@ exports.BattleFormatsData = {
 		requiredItem: "Dread Plate"
 	},
 	arceusdragon: {
-		randomBattleMoves: ["swordsdance","outrage","extremespeed","earthquake","recover","calmmind","judgment","fireblast"],
+		randomBattleMoves: ["swordsdance","outrage","extremespeed","earthquake","recover","calmmind","judgment","fireblast","earthpower"],
 		randomDoubleBattleMoves: ["swordsdance","dragonclaw","extremespeed","earthquake","recover","protect"],
 		requiredItem: "Draco Plate"
 	},
@@ -4899,26 +4899,26 @@ exports.BattleFormatsData = {
 		tier: "Uber"
 	},
 	genesectburn: {
-		randomBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","shiftgear","extremespeed"],
-		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","shiftgear","extremespeed","blazekick","protect"],
+		randomBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","extremespeed"],
+		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","extremespeed","protect"],
 		dreamWorldPokeball: 'cherishball',
 		requiredItem: "Burn Drive"
 	},
 	genesectchill: {
-		randomBattleMoves: ["uturn","bugbuzz","technoblast","flamethrower","thunderbolt","ironhead","shiftgear","extremespeed","blazekick"],
-		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","shiftgear","extremespeed","blazekick","protect"],
+		randomBattleMoves: ["uturn","bugbuzz","technoblast","flamethrower","thunderbolt","ironhead","extremespeed"],
+		randomDoubleBattleMoves: ["uturn","bugbuzz","technoblast","flamethrower","thunderbolt","ironhead","extremespeed","protect"],
 		dreamWorldPokeball: 'cherishball',
 		requiredItem: "Chill Drive"
 	},
 	genesectdouse: {
-		randomBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","thunderbolt","technoblast","ironhead","shiftgear","extremespeed","blazekick"],
-		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","shiftgear","extremespeed","blazekick","protect"],
+		randomBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","thunderbolt","technoblast","ironhead","extremespeed"],
+		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","thunderbolt","technoblast","ironhead","extremespeed","protect"],
 		dreamWorldPokeball: 'cherishball',
 		requiredItem: "Douse Drive"
 	},
 	genesectshock: {
-		randomBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","technoblast","ironhead","shiftgear","extremespeed","blazekick"],
-		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","technoblast","thunderbolt","ironhead","shiftgear","extremespeed","blazekick","protect"],
+		randomBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","technoblast","ironhead","extremespeed"],
+		randomDoubleBattleMoves: ["uturn","bugbuzz","icebeam","flamethrower","technoblast","ironhead","extremespeed","protect"],
 		dreamWorldPokeball: 'cherishball',
 		requiredItem: "Shock Drive"
 	},
@@ -5205,7 +5205,7 @@ exports.BattleFormatsData = {
 		tier: "OU"
 	},
 	hawlucha: {
-		randomBattleMoves: ["swordsdance","highjumpkick","acrobatics","roost","thunderpunch","substitute"],
+		randomBattleMoves: ["substitute","swordsdance","highjumpkick","acrobatics","roost","stoneedge"],
 		randomDoubleBattleMoves: ["swordsdance","highjumpkick","uturn","stoneedge","skydrop","encore","protect"],
 		tier: "BL"
 	},
