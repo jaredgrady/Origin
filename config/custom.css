@@ -195,7 +195,7 @@
   .tabbar a.button {
     background: #F5624D;
     border-color: #CB0014;
-    color: #79000C;
+    color: #470007;
     text-shadow: none;
   }
   
@@ -204,11 +204,11 @@
   }
   
   .tabbar a.button.subtle-notifying {
-    color: #004A31;
+    color: #255E4B;
   }
  
   .tabbar a.button.subtle-notifying:hover {
-    color: #004A31;
+    color: #255E4B;
   } 
   
   .userbar button.icon {
