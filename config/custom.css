@@ -1,4 +1,4 @@
-  /************************
+    /************************
   * Roomintro Classes CSS *
   ************************/
   
@@ -177,7 +177,7 @@
     color: #1D5262;
   }
   
-  .tabbar a.button.cur, .tabbar a.button.cur:hover {
+  .tabbar a.button.cur, .tabbar a.button.cur:hover, .maintabbar .overflow .button {
     background: #AA0114;
     border-color: #CB0014;
     color: #EEFFF4;
