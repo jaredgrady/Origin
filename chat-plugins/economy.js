@@ -513,7 +513,6 @@ exports.commands = {
     	togglerolling: function (target, room, user) {
     		if (user.userid !== 'fender') return false;
     		if (!target) return this.sendReply('Either toggle it on or off.');
-	 		targetRoom.update();
 	 	if (target === 'on') {
 	 		if (toggleRolling === true) {
 	 			return this.sendReply('We are already rolling');
