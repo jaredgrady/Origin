@@ -357,11 +357,9 @@ exports.commands = {
 	dicestart: 'startdice',
 	startdice: function (target, room, user) {
 		if (!target) return this.parse('/help startdice');
-		if (room.id !== 'casino') {
-			if (!this.can('broadcast', null, room)) return this.sendReply("You must be at least a voice to start a dice outside of the casino.");
-			if (room.id === 'lobby') return this.sendReply("Bitch, do you want to get demoted?");
-			if (target > 20) return this.sendReply("Due to recent issues on the server, dice above 20 bucks can only be started in the casino.");
-		} else if (room.id === 'casino' && target > 500) return this.sendReply("Dice can only be started for amounts less than 500 bucks.");
+		if (room.id !== 'casino') return this.errorReply('dice games can only be used in Casino');
+		if (!this.can('broadcast', null, room)) return this.errorReply("You must be at least a voice to start a dice outside of the casino.");
+		if (room.id === 'casino' && target > 500) return this.sendReply("Dice can only be started for amounts less than 500 bucks.");
 		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
 
 		var amount = isMoney(target);
