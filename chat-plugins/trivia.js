@@ -593,7 +593,7 @@ let commands = {
 	},
 	starthelp: ["/trivia start - Begin the game once enough users have signed up. Requires: + % @ # & ~"],
 
-	triviakick: function (target, room, user) {
+	kick: function (target, room, user) {
 		if (room.id !== 'trivia') return this.errorReply('This command can only be used in Trivia.');
 		if (!this.can('mute', null, room) || !target) return false;
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
