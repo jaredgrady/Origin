@@ -1,21 +1,11 @@
 // Note: This is the list of formats
-// The rules that formats use are stored in data/rulesets.js
+// The rules that formats use are stored in data/rulesets.
 'use strict';
 
 exports.Formats = [
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
-
-	{
-		name: "Unrated Random Battle",
-		section: "ORAS Singles",
-
-		team: 'random',
-		challengeShow: false,
-		rated: false,
-		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-	},
 	{
 		name: "OU",
 		desc: [
@@ -1294,6 +1284,15 @@ exports.Formats = [
 		column: 4,
 
 		team: 'random',
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "Unrated Random Battle",
+		section: "Randoms",
+
+		team: 'random',
+		challengeShow: false,
+		rated: false,
 		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
 	},
 	{

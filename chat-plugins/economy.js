@@ -9,9 +9,9 @@ var shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
     ['Fix', 'Buys the ability to alter your current custom avatar or trainer card. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
-    ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 15],
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
+    ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
     ['Room Rename', 'Rename your chatroom to another name', 50],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
@@ -266,8 +266,8 @@ exports.commands = {
 
 	store: 'shop',
 	shop: function (target, room, user) {
-		if (room.id === 'lobby' || room.battle || room.id === 'japanslair') return this.sendReply("This command is too spammy for lobby/battles.");
 		if (!this.canBroadcast()) return;
+		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
 		return this.sendReply("|raw|" + shopDisplay);
 	},
 	shophelp: ["/shop - Display items you can buy with money."],
@@ -513,7 +513,6 @@ exports.commands = {
     	togglerolling: function (target, room, user) {
     		if (user.userid !== 'fender') return false;
     		if (!target) return this.sendReply('Either toggle it on or off.');
-	 		targetRoom.update();
 	 	if (target === 'on') {
 	 		if (toggleRolling === true) {
 	 			return this.sendReply('We are already rolling');
