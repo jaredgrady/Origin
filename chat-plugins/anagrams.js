@@ -32,7 +32,7 @@ exports.commands = {
 				theme = 'Pokemon';
 				var pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];
 				room.anagram.word = pokemon.name;
-				while (pokemon.id.indexOf('mega') > -1 || pokemon.tier === 'CAP') {
+				while (pokemon.template.isMega || pokemon.tier === 'CAP') {
 					pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];
 					room.anagram.word = pokemon.name;
 				}
