@@ -574,7 +574,7 @@ exports.commands = {
 		this.sendReply("You have hidden your staff symbol.");
 	},
 
-	rk: 'kick',
+	k: 'kick',
 	roomkick: 'kick',
 	kick: function (target, room, user) {
 		if (!target) return this.parse('/help kick');
