@@ -395,13 +395,13 @@ exports.commands = {
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		var p1Number = Math.floor(6 * Math.random()) + 1;
 		var p2Number = Math.floor(6 * Math.random()) + 1;
-		if (highRollers.indexOf(room.dice.p1) && toggleRolling) {
+		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
 			while (p1Number <= p2Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
-		if (highRollers.indexOf(room.dice.p2) && toggleRolling) {
+		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling) {
 			while (p2Number <= p1Number) {
 			var p1Number = Math.floor(6 * Math.random()) + 1;
 			var p2Number = Math.floor(6 * Math.random()) + 1;
