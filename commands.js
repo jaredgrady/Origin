@@ -1498,7 +1498,9 @@ roomintro: function (target, room, user) {
 			if (Config.groupsranking.indexOf(target) > 1 && !user.can('modchatall', null, room)) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
-			if (Config.groupsranking.indexOf(target) > Math.max(1, Config.groupsranking.indexOf(room.auth[user.userid])) && !user.can('makeroom')) {
+			var roomGroup = (room.auth && room.isPrivate === true ? ' ' : user.group);
+			if (user.userid in room.auth) roomGroup = room.auth[user.userid];
+			if (Config.groupsranking.indexOf(target) > Math.max(1, Config.groupsranking.indexOf(roomGroup)) && !user.can('makeroom')) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
 			room.modchat = target;
