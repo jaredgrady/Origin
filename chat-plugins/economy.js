@@ -363,9 +363,9 @@ exports.commands = {
 		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
 
 		var amount = isMoney(target);
-
+		
+		if (!Db('money')[user.userid] || (Db('money')[user.userid] < amount)) return this.errorReply("You don't have enough bucks to start that dice game.");
 		if (typeof amount === 'string') return this.sendReply(amount);
-		if (!Db('money')[user.userid] || (Db('money')[user.userid] < 0)) return this.errorReply("You don't have enough bucks to start a dice game.");
 		if (!room.dice) room.dice = {};
 		if (room.dice.started) return this.errorReply("A dice game has already started in this room.");
 
