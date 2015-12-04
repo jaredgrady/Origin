@@ -1958,11 +1958,9 @@ exports.commands = {
 	opensource: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"Pok&eacute;mon Showdown is open source:<br />" +
+			"Pokemon Showdown server Origin:<br />" +
 			"- Language: JavaScript (Node.js or io.js)<br />" +
-			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown/commits/master\">What's new?</a><br />" +
-			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown\">Server source code</a><br />" +
-			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown-Client\">Client source code</a>"
+			"- <a href=\"https://github.com/Origin-Devs/Origin-Source">Open Source Github</a><br />" +
 		);
 	},
 	opensourcehelp: ["/opensource - Links to PS's source code repository.",
