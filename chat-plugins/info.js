@@ -1958,9 +1958,9 @@ exports.commands = {
 	opensource: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"Pokemon Showdown server Origin:<br />" +
+			"Pok&eacute;mon Showdown server Origin:<br />" +
 			"- Language: JavaScript (Node.js or io.js)<br />" +
-			"- <a href=\"https://github.com/Origin-Devs/Origin-Source">Open Source Github</a><br />"
+			"- <a href=\"https://github.com/Origin-Devs/Origin-Source">Open Source Github</a>"
 		);
 	},
 	opensourcehelp: ["/opensource - Links to PS's source code repository.",
