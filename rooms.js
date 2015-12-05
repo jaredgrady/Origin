@@ -140,8 +140,8 @@ let Room = (function () {
 		}
 		this.bannedUsers[userid] = userid;
 		if (user.autoconfirmed) this.bannedUsers[user.autoconfirmed] = userid;
-		if (global.Tournaments && Tournaments.get(this.id)) {
-			Tournaments.get(this.id).removeBannedUser(user);
+		if (this.game && this.game.removeBannedUser) {
+			this.game.removeBannedUser(user);
 		}
 		for (let ip in user.ips) {
 			this.bannedIps[ip] = userid;
@@ -488,8 +488,8 @@ let GlobalRoom = (function () {
 			if (skipCount && skipCount--) continue;
 			let roomData = {};
 			if (room.active && room.battle) {
-				if (room.battle.players[0]) roomData.p1 = room.battle.players[0].getIdentity();
-				if (room.battle.players[1]) roomData.p2 = room.battle.players[1].getIdentity();
+				if (room.battle.p1) roomData.p1 = room.battle.p1.name;
+				if (room.battle.p2) roomData.p2 = room.battle.p2.name;
 			}
 			if (!roomData.p1 || !roomData.p2) continue;
 			roomList[room.id] = roomData;
@@ -808,7 +808,7 @@ let GlobalRoom = (function () {
 		//console.log('BATTLE START BETWEEN: ' + p1.userid + ' ' + p2.userid);
 		let i = this.lastBattle + 1;
 		let formaturlid = format.toLowerCase().replace(/[^a-z0-9]+/g, '');
-		while (rooms['battle-' + formaturlid + i]) {
+		while (rooms['battle-' + formaturlid + '-' + i]) {
 			i++;
 		}
 		this.lastBattle = i;
@@ -892,6 +892,7 @@ let BattleRoom = (function () {
 
 		this.rated = rated;
 		this.battle = Simulator.create(this.id, format, rated, this);
+		this.game = this.battle;
 
 		this.sideTicksLeft = [21, 21];
 		if (!rated && !this.tour) this.sideTicksLeft = [28, 28];
@@ -991,9 +992,9 @@ let BattleRoom = (function () {
 		return log;
 	};
 	BattleRoom.prototype.getLogForUser = function (user) {
-		let logNum = this.battle.getSlot(user) + 1;
-		if (logNum < 0) logNum = 0;
-		return this.getLog(logNum);
+		if (this.game.ended) return this.getLog(3);
+		if (!(user in this.game.players)) return this.getLog(0);
+		return this.getLog(this.game.players[user].slotNum);
 	};
 	BattleRoom.prototype.update = function (excludeUser) {
 		if (this.log.length <= this.lastUpdate) return;
@@ -1044,8 +1045,8 @@ let BattleRoom = (function () {
 		this.expire();
 	};
 	BattleRoom.prototype.getInactiveSide = function () {
-		if (this.battle.players[0] && !this.battle.players[1]) return 1;
-		if (this.battle.players[1] && !this.battle.players[0]) return 0;
+		if (this.battle.p1 && !this.battle.p2) return 1;
+		if (this.battle.p2 && !this.battle.p1) return 0;
 		return this.battle.inactiveSide;
 	};
 	BattleRoom.prototype.forfeit = function (user, message, side) {
@@ -1054,8 +1055,7 @@ let BattleRoom = (function () {
 		if (!message) message = ' forfeited.';
 
 		if (side === undefined) {
-			if (user && user.userid === this.battle.playerids[0]) side = 0;
-			if (user && user.userid === this.battle.playerids[1]) side = 1;
+			if (user in this.game.players) side = this.game.players[user].slotNum;
 		}
 		if (side === undefined) return false;
 
@@ -1078,9 +1078,12 @@ let BattleRoom = (function () {
 		return true;
 	};
 	BattleRoom.prototype.sendPlayer = function (num, message) {
-		let player = this.battle.getPlayer(num);
+		let player = this.getPlayer(num);
 		if (!player) return false;
-		this.sendUser(player, message);
+		player.sendRoom(message);
+	};
+	BattleRoom.prototype.getPlayer = function (num) {
+		return this.battle['p' + (num + 1)];
 	};
 	BattleRoom.prototype.kickInactive = function () {
 		clearTimeout(this.resetTimer);
@@ -1108,20 +1111,20 @@ let BattleRoom = (function () {
 			if (inactiveSide === 0 || inactiveSide === 1) {
 				// one side is inactive
 				let inactiveTicksLeft = ticksLeft[inactiveSide];
-				let inactiveUser = this.battle.getPlayer(inactiveSide);
+				let inactiveUser = this.getPlayer(inactiveSide);
 				if (inactiveTicksLeft % 3 === 0 || inactiveTicksLeft <= 4) {
 					this.send('|inactive|' + (inactiveUser ? inactiveUser.name : 'Player ' + (inactiveSide + 1)) + ' has ' + (inactiveTicksLeft * 10) + ' seconds left.');
 				}
 			} else {
 				// both sides are inactive
-				let inactiveUser0 = this.battle.getPlayer(0);
+				let inactiveUser0 = this.getPlayer(0);
 				if (inactiveUser0 && (ticksLeft[0] % 3 === 0 || ticksLeft[0] <= 4)) {
-					this.sendUser(inactiveUser0, '|inactive|' + inactiveUser0.name + ' has ' + (ticksLeft[0] * 10) + ' seconds left.');
+					inactiveUser0.sendRoom('|inactive|' + inactiveUser0.name + ' has ' + (ticksLeft[0] * 10) + ' seconds left.');
 				}
 
-				let inactiveUser1 = this.battle.getPlayer(1);
+				let inactiveUser1 = this.getPlayer(1);
 				if (inactiveUser1 && (ticksLeft[1] % 3 === 0 || ticksLeft[1] <= 4)) {
-					this.sendUser(inactiveUser1, '|inactive|' + inactiveUser1.name + ' has ' + (ticksLeft[1] * 10) + ' seconds left.');
+					inactiveUser1.sendRoom('|inactive|' + inactiveUser1.name + ' has ' + (ticksLeft[1] * 10) + ' seconds left.');
 				}
 			}
 			this.resetTimer = setTimeout(this.kickInactive.bind(this), 10 * 1000);
@@ -1136,7 +1139,7 @@ let BattleRoom = (function () {
 			}
 		}
 
-		this.forfeit(this.battle.getPlayer(inactiveSide), ' lost due to inactivity.', inactiveSide);
+		this.forfeit(this.getPlayer(inactiveSide), ' lost due to inactivity.', inactiveSide);
 		this.resetUser = '';
 	};
 	BattleRoom.prototype.requestKickInactive = function (user, force) {
@@ -1145,7 +1148,7 @@ let BattleRoom = (function () {
 			return false;
 		}
 		if (user) {
-			if (!force && this.battle.getSlot(user) < 0) return false;
+			if (!force && !(user in this.game.players)) return false;
 			this.resetUser = user.userid;
 			this.send('|inactive|Battle timer is now ON: inactive players will automatically lose when time\'s up. (requested by ' + user.name + ')');
 		} else if (user === false) {
@@ -1212,7 +1215,7 @@ let BattleRoom = (function () {
 
 			if ((!this.battle.p1 || !this.battle.p2) && !this.disconnectTickDiff[0] && !this.disconnectTickDiff[1]) {
 				if ((!this.battle.p1 && inactiveSide === 0) || (!this.battle.p2 && inactiveSide === 1)) {
-					let inactiveUser = this.battle.getPlayer(inactiveSide);
+					let inactiveUser = this.getPlayer(inactiveSide);
 
 					if (!this.battle.p1 && inactiveSide === 0 && this.sideTurnTicks[0] > 7) {
 						this.disconnectTickDiff[0] = this.sideTurnTicks[0] - 7;
@@ -1245,7 +1248,7 @@ let BattleRoom = (function () {
 				}
 
 				if (changed !== false) {
-					let user = this.battle.getPlayer(changed);
+					let user = this.getPlayer(changed);
 					this.send('|inactive|' + (user ? user.name : 'Player ' + (changed + 1)) + ' reconnected and has ' + (this.sideTurnTicks[changed] * 10) + ' seconds left!');
 					return true;
 				}
@@ -1273,103 +1276,72 @@ let BattleRoom = (function () {
 		}
 		this.update();
 	};
-	// This function is only called when the user is already in the room (with another connection).
-	// First-time join calls this.onJoin() below instead.
 	BattleRoom.prototype.onConnect = function (user, connection) {
 		this.sendUser(connection, '|init|battle\n|title|' + this.title + '\n' + this.getLogForUser(user).join('\n'));
-		// this handles joining a battle in which a user is a participant,
-		// where the user has already identified before attempting to join
-		// the battle
-		this.battle.resendRequest(connection);
+		if (this.game && this.game.onConnect) this.game.onConnect(user, connection);
 	};
 	BattleRoom.prototype.onJoin = function (user, connection) {
 		if (!user) return false;
 		if (this.users[user.userid]) return user;
 
 		if (user.named) {
-			this.add((this.reportJoins ? '|j|' : '|J|') + user.name);
-			this.update();
+			this.add((this.reportJoins ? '|j|' : '|J|') + user.name).update();
 		}
 
 		this.users[user.userid] = user;
 		this.userCount++;
 
+		if (this.game && this.game.onJoin) {
+			this.game.onJoin(user, connection);
+			rooms.global.battleCount += (this.battle.active ? 1 : 0) - (this.active ? 1 : 0);
+			this.active = this.battle.active;
+		}
 		return user;
 	};
 	BattleRoom.prototype.onRename = function (user, oldid, joining) {
 		if (joining) {
-			if (Config.reportbattlejoins) {
-				this.add('|join|' + user.name);
-			} else {
-				this.add('|J|' + user.name);
-			}
-		}
-		let resend = joining || !this.battle.playerTable[oldid];
-		if (this.battle.playerTable[oldid]) {
-			this.battle.rename();
-			if (this.rated) {
-				this.forfeit(user, " forfeited by changing their name.");
-				resend = false;
-			}
+			this.add((this.reportJoins ? '|j|' : '|J|') + user.name);
 		}
 		delete this.users[oldid];
 		this.users[user.userid] = user;
+		if (this.game && this.game.onRename) this.game.onRename(user, oldid, joining);
 		this.update();
-		if (resend) {
-			// this handles a named user renaming themselves into a user in the
-			// battle (i.e. by using /nick)
-			this.battle.resendRequest(user);
-		}
 		return user;
 	};
 	BattleRoom.prototype.onUpdateIdentity = function () {};
 	BattleRoom.prototype.onLeave = function (user) {
 		if (!user) return; // ...
-		if (user.battles[this.id]) {
-			this.battle.leave(user);
-			rooms.global.battleCount += (this.battle.active ? 1 : 0) - (this.active ? 1 : 0);
-			this.active = this.battle.active;
-		} else if (!user.named) {
+		if (!user.named) {
 			delete this.users[user.userid];
 			return;
 		}
 		delete this.users[user.userid];
 		this.userCount--;
-		if (Config.reportbattlejoins) {
-			this.add('|leave|' + user.name);
-		} else {
-			this.add('|L|' + user.name);
-		}
+		this.add((this.reportJoins ? '|l|' : '|L|') + user.name);
 
-		if (Object.isEmpty(this.users)) {
-			rooms.global.battleCount += 0 - (this.active ? 1 : 0);
-			this.active = false;
+		if (this.game && this.game.onLeave) {
+			this.game.onLeave(user);
+			rooms.global.battleCount += (this.battle.active ? 1 : 0) - (this.active ? 1 : 0);
+			this.active = this.battle.active;
 		}
-
 		this.update();
 		this.kickInactiveUpdate();
 	};
 	BattleRoom.prototype.joinBattle = function (user, team) {
-		let slot;
-		if (this.rated || this.tour) {
-			slot = this.battle.lastPlayers.indexOf(user.userid);
-			if (slot < 0) {
-				user.popup("This is a " + (this.tour ? "tournament" : "rated") + " battle; you must be either " + this.battle.lastPlayers.join(" or ") + " to join.");
-				return false;
-			}
-		}
-
-		if (this.battle.active) {
+		if (this.battle.playerCount >= 2) {
 			user.popup("This battle already has two players.");
 			return false;
 		}
 
+		if (!this.battle.addPlayer(user, team)) {
+			user.popup("Failed to join battle.");
+			return false;
+		}
 		this.auth[user.userid] = '\u2605';
-		this.battle.join(user, slot, team);
 		rooms.global.battleCount += (this.battle.active ? 1 : 0) - (this.active ? 1 : 0);
 		this.active = this.battle.active;
 		if (this.active) {
-			this.title = "" + this.battle.p1 + " vs. " + this.battle.p2;
+			this.title = "" + this.battle.p1.name + " vs. " + this.battle.p2.name;
 			this.send('|title|' + this.title);
 		}
 		this.update();
@@ -1377,9 +1349,12 @@ let BattleRoom = (function () {
 	};
 	BattleRoom.prototype.leaveBattle = function (user) {
 		if (!user) return false; // ...
-		if (user.battles[this.id]) {
-			this.battle.leave(user);
-		} else {
+		if (this.rated || this.tour) {
+			user.popup("Players can't be swapped out in a " + (this.tour ? "tournament" : "rated") + " battle.");
+			return false;
+		}
+		if (!this.battle.removePlayer(user)) {
+			user.popup("Failed to leave battle.");
 			return false;
 		}
 		this.auth[user.userid] = '+';
@@ -1404,10 +1379,14 @@ let BattleRoom = (function () {
 		this.users = null;
 
 		// deallocate children and get rid of references to them
-		if (this.battle) {
-			this.battle.destroy();
+		if (this.game) {
+			this.game.destroy();
 		}
 		this.battle = null;
+		this.game = null;
+
+		rooms.global.battleCount += 0 - (this.active ? 1 : 0);
+		this.active = false;
 
 		if (this.resetTimer) {
 			clearTimeout(this.resetTimer);
@@ -1466,13 +1445,11 @@ let ChatRoom = (function () {
 
 	ChatRoom.prototype.reportRecentJoins = function () {
 		delete this.reportJoinsInterval;
-		if (this.reportJoinsQueue.length === 0) {
+		if (!this.reportJoinsQueue || this.reportJoinsQueue.length === 0) {
 			// nothing to report
 			return;
 		}
-		if (Config.reportjoinsperiod) {
-			this.userList = this.getUserList();
-		}
+		this.userList = this.getUserList();
 		this.send(this.reportJoinsQueue.join('\n'));
 		this.reportJoinsQueue.length = 0;
 	};
@@ -1566,8 +1543,13 @@ let ChatRoom = (function () {
 		let msg = '|users|' + counter + buffer;
 		return msg;
 	};
-	ChatRoom.prototype.reportJoin = function (entry) {
-		if (Config.reportjoinsperiod) {
+	ChatRoom.prototype.reportJoin = function (type, entry) {
+		if (this.reportJoins) {
+			this.add('|' + type + '|' + entry).update();
+			return;
+		}
+		entry = '|' + type.toUpperCase() + '|' + entry;
+		if (this.reportJoinsQueue) {
 			if (!this.reportJoinsInterval) {
 				this.reportJoinsInterval = setTimeout(
 					this.reportRecentJoins.bind(this), Config.reportjoinsperiod
@@ -1623,54 +1605,37 @@ let ChatRoom = (function () {
 		let userList = this.userList ? this.userList : this.getUserList();
 		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
 		if (this.poll) this.poll.display(user, false);
-		if (global.Tournaments && Tournaments.get(this.id)) {
-			Tournaments.get(this.id).updateFor(user, connection);
-		}
+		if (this.game && this.game.onConnect) this.game.onConnect(user, connection);
 	};
 	ChatRoom.prototype.onJoin = function (user, connection) {
 		if (!user) return false; // ???
 		if (this.users[user.userid]) return user;
 
-		if (user.named && this.reportJoins) {
-			this.add('|j|' + user.getIdentity(this.id));
-			this.update();
-		} else if (user.named) {
-			let entry = '|J|' + user.getIdentity(this.id);
-			this.reportJoin(entry);
+		if (user.named) {
+			this.reportJoin('j', user.getIdentity(this.id));
 		}
 
 		this.users[user.userid] = user;
 		this.userCount++;
 
+		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
 		return user;
 	};
 	ChatRoom.prototype.onRename = function (user, oldid, joining) {
 		delete this.users[oldid];
 		this.users[user.userid] = user;
-		let entry;
 		if (joining) {
-			if (Config.reportjoins) {
-				entry = '|j|' + user.getIdentity(this.id);
-			} else {
-				entry = '|J|' + user.getIdentity(this.id);
-			}
+			this.reportJoin('j', user.getIdentity(this.id));
 			if (this.staffMessage && user.can('mute', null, this)) this.sendUser(user, '|raw|<div class="infobox">(Staff intro:)<br /><div>' + this.staffMessage + '</div></div>');
 		} else if (!user.named) {
-			entry = '|L| ' + oldid;
+			this.reportJoin('l', oldid);
 		} else {
-			entry = '|N|' + user.getIdentity(this.id) + '|' + oldid;
-		}
-		if (Config.reportjoins) {
-			this.add(entry);
-		} else {
-			this.reportJoin(entry);
+			this.reportJoin('n', user.getIdentity(this.id) + '|' + oldid);
 		}
 		if (!this.checkBanned(user, oldid)) {
 			return;
 		}
-		if (global.Tournaments && Tournaments.get(this.id)) {
-			Tournaments.get(this.id).updateFor(user);
-		}
+		if (this.game && this.game.onRename) this.game.onRename(user, oldid, joining);
 		return user;
 	};
 	/**
@@ -1679,8 +1644,7 @@ let ChatRoom = (function () {
 	ChatRoom.prototype.onUpdateIdentity = function (user) {
 		if (user && user.connected && user.named) {
 			if (!this.users[user.userid]) return false;
-			let entry = '|N|' + user.getIdentity(this.id) + '|' + user.userid;
-			this.reportJoin(entry);
+			this.reportJoin('n', user.getIdentity(this.id) + '|' + user.userid);
 		}
 	};
 	ChatRoom.prototype.onLeave = function (user) {
@@ -1689,12 +1653,10 @@ let ChatRoom = (function () {
 		delete this.users[user.userid];
 		this.userCount--;
 
-		if (user.named && Config.reportjoins) {
-			this.add('|l|' + user.getIdentity(this.id));
-		} else if (user.named) {
-			let entry = '|L|' + user.getIdentity(this.id);
-			this.reportJoin(entry);
+		if (user.named) {
+			this.reportJoin('l', user.getIdentity(this.id));
 		}
+		if (this.game && this.game.onLeave) this.game.onLeave(user);
 	};
 	ChatRoom.prototype.destroy = function () {
 		// deallocate ourself
@@ -1719,6 +1681,10 @@ let ChatRoom = (function () {
 			clearTimeout(this.muteTimer);
 		}
 		this.muteTimer = null;
+		if (this.expireTimer) {
+			clearTimeout(this.expireTimer);
+		}
+		this.expireTimer = null;
 		if (this.reportJoinsInterval) {
 			clearInterval(this.reportJoinsInterval);
 		}
@@ -1779,3 +1745,6 @@ Rooms.ChatRoom = ChatRoom;
 Rooms.global = rooms.global;
 Rooms.lobby = rooms.lobby;
 Rooms.aliases = aliases;
+
+Rooms.RoomGame = require('./room-game.js').RoomGame;
+Rooms.RoomGamePlayer = require('./room-game.js').RoomGamePlayer;

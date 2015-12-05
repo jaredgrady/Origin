@@ -39,9 +39,9 @@ exports.Formats = [
 		banlist: []
 	},
 	{
-		name: "UU",
+		name: "UU (suspect test)",
 		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3546077/\">np: UU Stage 4</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557948/\">np: UU Stage 6</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/uu/\">UU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3541343/\">UU Viability Ranking</a>"
 		],
@@ -63,16 +63,9 @@ exports.Formats = [
 		banlist: ['UU', 'BL2']
 	},
 	{
-		name: "RU (suspect test)",
-		section: "ORAS Singles",
-		challengeShow: false,
-		ruleset: ['UU'],
-		banlist: ['UU', 'BL2']
-	},
-	{
 		name: "NU",
 		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545983/\">np: NU Stage 8</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557854/\">np: NU Stage 10</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/nu/\">NU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523692/\">NU Viability Ranking</a>"
 		],
@@ -84,8 +77,8 @@ exports.Formats = [
 	{
 		name: "PU",
 		desc: [
-			"The offical tier below NU.",
-			"&bullet; <a href=\"https://www.smogon.com/forums/forums/pu.327/\">PU</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557849/\">np: PU Stage 5</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3528743/\">PU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
 
@@ -247,7 +240,14 @@ exports.Formats = [
 			battle: 4
 		},
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		banlist: []
+		banlist: ['Tornadus + Defiant', 'Thundurus + Defiant', 'Landorus + Sheer Force'],
+		requirePentagon: true,
+		onValidateSet: function (set) {
+			if (set.item) {
+				const item = this.getItem(set.item);
+				if (item.megaStone) return ["Mega Stones are not permitted."];
+			}
+		}
 	},
 	{
 		name: "Battle Spot Special 11",
@@ -313,7 +313,41 @@ exports.Formats = [
 			validate: [6, 6]
 		},
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		banlist: []
+		banlist: ['Tornadus + Defiant', 'Thundurus + Defiant', 'Landorus + Sheer Force'],
+		requirePentagon: true
+	},
+	{
+		name: "Festive Feud",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3556178/\">Festive Feud</a>"],
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		maxForcedLevel: 50,
+		teamLength: {
+			validate: [6, 6]
+		},
+		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
+		banlist: ['Tornadus + Defiant', 'Thundurus + Defiant', 'Landorus + Sheer Force'],
+		requirePentagon: true,
+		onValidateTeam: function (team) {
+			const problems = [];
+			for (let i = 0; i < team.length; i++) {
+				let template = this.getTemplate(team[i].species);
+				if (template.color !== 'Red' && template.color !== 'Green' && template.color !== 'White') {
+					problems.push(template.species);
+				}
+			}
+			if (problems.length) return ["Only red, green and white Pok\u00E9mon are permitted.", "(You have " + problems.join(', ') + ")"];
+		}
+	},
+	{
+		name: "Triples Hackmons Cup",
+		section: "ORAS Triples",
+
+		gameType: 'triples',
+		team: 'randomHC',
+		searchShow: false,
+		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
 	{
 		name: "Triples Custom Game",
@@ -435,256 +469,6 @@ exports.Formats = [
 			'Yveltal', 'Zekrom', 'Diancite', 'Gengarite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
 		]
 	},
-/*	{
-		name: "[Seasonal] Rainbow Road",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3491902/\">Seasonal Ladder</a>"],
-		section: "Other Metagames",
-
-		team: "randomRainbow",
-		ruleset: ['HP Percentage Mod', 'Sleep Clause Mod', 'Cancel Mod'],
-		onBegin: function () {
-			this.add('message', "The last attack on each Pok\u00e9mon is based on their Pok\u00e9dex color.");
-			this.add('-message', "Red/Pink beats Yellow/Green, which beats Blue/Purple, which beats Red/Pink.");
-			this.add('-message', "Using a color move on a Pok\u00e9mon in the same color group is a neutral hit.");
-			this.add('-message', "Use /details [POKEMON] to check its Pok\u00e9dex color.");
-
-			let allPokemon = this.p1.pokemon.concat(this.p2.pokemon);
-			let physicalnames = {
-				'Red': 'Crimson Crash', 'Pink': 'Rose Rush', 'Yellow': 'Saffron Strike', 'Green': 'Viridian Slash',
-				'Blue': 'Blue Bombardment', 'Purple': 'Indigo Impact'
-			};
-			let specialnames = {
-				'Red': 'Scarlet Shine', 'Pink': 'Coral Catapult', 'Yellow': 'Golden Gleam', 'Green': 'Emerald Flash',
-				'Blue': 'Cerulean Surge', 'Purple': 'Violet Radiance'
-			};
-			for (let i = 0; i < allPokemon.length; i++) {
-				let pokemon = allPokemon[i];
-				let color = pokemon.template.color;
-				let category = (pokemon.stats.atk > pokemon.stats.spa ? 'Physical' : 'Special');
-				let last = pokemon.moves.length - 1;
-				let move = (category === 'Physical' ? physicalnames[color] : specialnames[color]);
-				if (pokemon.moves[last]) {
-					pokemon.moves[last] = toId(move);
-					pokemon.moveset[last].move = move;
-					pokemon.baseMoveset[last].move = move;
-				}
-			}
-
-			let name = set.name;
-
-			let abilityId = toId(set.ability);
-			if (!abilityId) return ["" + (set.name || set.species) + " must have an ability."];
-			let pokemonWithAbility = this.format.abilityMap[abilityId];
-			if (!pokemonWithAbility) return ["" + set.ability + " is an invalid ability."];
-			let isBaseAbility = Object.values(template.abilities).map(toId).indexOf(abilityId) >= 0;
-			if (!isBaseAbility && abilityId in this.format.customBans.inheritedAbilities) return ["" + set.ability + " is banned from being passed down."];
-
-			// Items must be fully validated here since we may pass a different item to the base set validator.
-			let item = this.tools.getItem(set.item);
-			if (item.id) {
-				if (!item.exists) return ["" + set.item + " is an invalid item."];
-				if (item.isUnreleased) return ["" + (set.name || set.species) + "'s item " + item.name + " is unreleased."];
-				if (item.id in this.format.customBans.items) return ["" + item.name + " is banned."];
-			}
-
-			let validSources = set.abilitySources = []; // evolutionary families
-			for (let i = 0; i < pokemonWithAbility.length; i++) {
-				let donorTemplate = this.tools.getTemplate(pokemonWithAbility[i]);
-				let evoFamily = this.format.getEvoFamily(donorTemplate);
-
-				if (validSources.indexOf(evoFamily) >= 0) {
-					// The existence of a legal set has already been established.
-					// We only keep iterating to find all legal donor families (Donor Clause).
-					// Skip this redundant iteration.
-					continue;
-				}
-
-				if (set.name === set.species) delete set.name;
-				if (donorTemplate.species !== set.species && toId(donorTemplate.species) in this.format.customBans.donor) {
-					problems = ["" + donorTemplate.species + " is banned from passing abilities down."];
-					continue;
-				} else if (donorTemplate.species !== set.species && abilityId in this.format.customBans.inheritedAbilities) {
-					problems = ["The ability " + this.tools.getAbility(abilityId).name + " is banned from being passed down."];
-					continue;
-				}
-				break;
-			case 3:
-				if (!side.sideConditions['goldenmushroom']) {
-					side.item = 'goldmushroom';
-					side.hadItem = true;
-					this.add('message', side.name + " collected a Golden Mushroom, giving them a speed boost!");
-					this.add('-start', pokemon, 'goldenmushroom', '[silent]');
-					side.addSideCondition('goldenmushroom');
-					side.sideConditions['goldenmushroom'].duration = 3;
-					// Get all relevant decisions from the Pokemon and tweak speed.
-					for (i = 0; i < this.queue.length; i++) {
-						if (this.queue[i].pokemon === pokemon) {
-							decision = this.queue[i];
-							decision.speed = pokemon.getStat('spe');
-							decisions.push(decision);
-							// Cancel the decision
-							this.queue.splice(i, 1);
-							i--;
-						}
-					}
-					for (i = 0; i < decisions.length; i++) {
-						this.insertQueue(decisions[i]);
-					}
-				}
-				break;
-			case 4:
-			case 5:
-				if (!side.sideConditions['goldenmushroom']) {
-					side.item = 'mushroom';
-					side.hadItem = true;
-					this.add('message', side.name + " collected a Mushroom, giving them a quick speed boost!");
-					this.add('-start', pokemon, 'mushroom', '[silent]');
-					side.addSideCondition('mushroom');
-					side.sideConditions['mushroom'].duration = 1;
-					// Get all relevant decisions from the Pokemon and tweak speed.
-					for (i = 0; i < this.queue.length; i++) {
-						if (this.queue[i].pokemon === pokemon) {
-							decision = this.queue[i];
-							decision.speed = pokemon.getStat('spe');
-							decisions.push(decision);
-							// Cancel the decision
-							this.queue.splice(i, 1);
-							i--;
-						}
-					}
-					for (i = 0; i < decisions.length; i++) {
-						this.insertQueue(decisions[i]);
-					}
-				}
-				break;
-			default:
-				if (side.pokemonLeft - side.foe.pokemonLeft >= 2) {
-					side.item = 'blueshell';
-					side.hadItem = true;
-					this.add('message', "A Blue Spiny Shell flew over the horizon and crashed into " + side.name + "!");
-					this.damage(pokemon.maxhp / 2, pokemon, pokemon, this.getMove('judgment'), true);
-				}
-			}
-		},
-		onAccuracy: function (accuracy, target, source, move) {
-			if (source.hasAbility('keeneye')) return;
-			let modifier = 1;
-			if (source.side.item === 'blooper' && !source.hasAbility('clearbody')) {
-				modifier *= 0.4;
-			}
-			if (target.side.item === 'lightning') {
-				modifier *= 0.8;
-			}
-			return this.chainModify(modifier);
-		},
-		onDisableMove: function (pokemon) {
-			// Enforce Choice Item locking on color moves
-			// Technically this glitches with Klutz, but Lopunny is Brown and will never appear :D
-			if (!pokemon.ignoringItem() && pokemon.getItem().isChoice && pokemon.lastMove === 'swift') {
-				let moves = pokemon.moveset;
-				for (let i = 0; i < moves.length; i++) {
-					if (moves[i].id !== 'swift') {
-						pokemon.disableMove(moves[i].id, false);
-					}
-				}
-			}
-		},
-		onEffectivenessPriority: -5,
-		onEffectiveness: function (typeMod, target, type, move) {
-			if (move.id !== 'swift') return;
-			// Only calculate color effectiveness once
-			if (target.getTypes()[0] !== type) return 0;
-			let targetColor = target.template.color;
-			let sourceColor = this.activePokemon.template.color;
-			let effectiveness = {
-				'Red': {'Red': 0, 'Pink': 0, 'Yellow': 1, 'Green': 1, 'Blue': -1, 'Purple': -1},
-				'Pink': {'Red': 0, 'Pink': 0, 'Yellow': 1, 'Green': 1, 'Blue': -1, 'Purple': -1},
-				'Yellow': {'Red': -1, 'Pink': -1, 'Yellow': 0, 'Green': 0, 'Blue': 1, 'Purple': 1},
-				'Green': {'Red': -1, 'Pink': -1, 'Yellow': 0, 'Green': 0, 'Blue': 1, 'Purple': 1},
-				'Blue': {'Red': 1, 'Pink': 1, 'Yellow': -1, 'Green': -1, 'Blue': 0, 'Purple': 0},
-				'Purple': {'Red': 1, 'Pink': 1, 'Yellow': -1, 'Green': -1, 'Blue': 0, 'Purple': 0}
-			};
-			return effectiveness[sourceColor][targetColor];
-		},
-		onModifyDamage: function (damage, source, target, effect) {
-			if (source === target || effect.effectType !== 'Move') return;
-			if (target.side.item === 'lightning') return this.chainModify(2);
-			if (source.side.item === 'lightning') return this.chainModify(0.5);
-		},
-		onModifySpe: function (speMod, pokemon) {
-			if (pokemon.side.sideConditions['goldenmushroom'] || pokemon.side.sideConditions['mushroom']) {
-				return this.chainModify(1.75);
-			}
-		},
-		onResidual: function (battle) {
-			let side;
-			for (let i = 0; i < battle.sides.length; i++) {
-				side = battle.sides[i];
-				if (side.sideConditions['goldenmushroom'] && side.sideConditions['goldenmushroom'].duration === 1) {
-					this.add('-message', "The effect of " + side.name + "'s Golden Mushroom wore off.");
-					this.add('-end', side.active[0], 'goldenmushroom', '[silent]');
-					side.removeSideCondition('goldenmushroom');
-				}
-				switch (side.item) {
-				case 'lightning':
-					this.add('-end', side.active[0], 'shrunken', '[silent]');
-					break;
-				case 'blooper':
-					this.add('-end', side.active[0], 'blinded', '[silent]');
-					break;
-				case 'banana':
-					this.add('-end', side.active[0], 'slipped', '[silent]');
-					break;
-				case 'mushroom':
-					this.add('-end', side.active[0], 'mushroom', '[silent]');
-				}
-
-				side.item = '';
-			}
-		},
-		onModifyMove: function (move, pokemon) {
-			if (move.id !== 'swift') return;
-			let physicalnames = {
-				'Red': 'Crimson Crash', 'Pink': 'Rose Rush', 'Yellow': 'Saffron Strike', 'Green': 'Viridian Slash',
-				'Blue': 'Blue Bombardment', 'Purple': 'Indigo Impact'
-			};
-			let specialnames = {
-				'Red': 'Scarlet Shine', 'Pink': 'Coral Catapult', 'Yellow': 'Golden Gleam', 'Green': 'Emerald Flash',
-				'Blue': 'Cerulean Surge', 'Purple': 'Violet Radiance'
-			};
-			let color = pokemon.template.color;
-			move.category = (pokemon.stats.atk > pokemon.stats.spa ? 'Physical' : 'Special');
-			move.name = (move.category === 'Physical' ? physicalnames[color] : specialnames[color]);
-			move.basePower = 100;
-			move.accuracy = 100;
-			move.type = '???';
-			if (move.category === 'Physical') move.flags['contact'] = true;
-		},
-		onPrepareHit: function (pokemon, target, move) {
-			if (move.id !== 'swift') return;
-			let animations = {
-				'Crimson Crash': 'Flare Blitz', 'Scarlet Shine': 'Fusion Flare', 'Rose Rush': 'Play Rough',
-				'Coral Catapult': 'Moonblast', 'Saffron Strike': 'Bolt Strike',	'Golden Gleam': 'Charge Beam',
-				'Viridian Slash': 'Power Whip', 'Emerald Flash': 'Solarbeam', 'Blue Bombardment': 'Waterfall',
-				'Cerulean Surge': 'Hydro Pump', 'Indigo Impact': 'Poison Jab', 'Violet Radiance': 'Gunk Shot'
-			};
-			this.attrLastMove('[anim] ' + animations[move.name]);
-		},
-		onSwitchInPriority: -9,
-		onSwitchIn: function (pokemon) {
-			if (!pokemon.hp) return;
-			this.add('-start', pokemon, pokemon.template.color, '[silent]');
-			if (pokemon.side.item === 'lightning') {
-				this.add('-start', pokemon, 'shrunken', '[silent]');
-			}
-			if (pokemon.side.sideConditions['goldenmushroom']) {
-				this.add('-start', pokemon, 'goldenmushroom', '[silent]');
-			}
-		},
-		onSwitchOut: function (pokemon) {
-			this.add('-end', pokemon, pokemon.template.color, '[silent]');
-		}
-	},*/
 	{
 		name: "CAP",
 		desc: [

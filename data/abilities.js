@@ -1238,7 +1238,7 @@ exports.BattleAbilities = {
 			for (var i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
 				if (!activated) {
-					this.add('-ability', pokemon, 'Intimidate');
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
 					activated = true;
 				}
 				if (foeactive[i].volatiles['substitute']) {
@@ -1663,7 +1663,7 @@ exports.BattleAbilities = {
 			if (source && source !== target && move && move.flags['contact']) {
 				var oldAbility = source.setAbility('mummy', source, 'mummy', true);
 				if (oldAbility) {
-					this.add('-activate', target, 'ability: Mummy', oldAbility, '[of] ' + source);
+					this.add('-activate', target, 'ability: Mummy', this.getAbility(oldAbility).name, '[of] ' + source);
 				}
 			}
 		},
