@@ -1826,7 +1826,7 @@ roomintro: function (target, room, user) {
 	},
 
 	disableladder: function (target, room, user) {
-		if (!this.can('disableladder')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 		if (LoginServer.disabled) {
 			return this.errorReply("/disableladder - Ladder is already disabled.");
 		}
@@ -1836,7 +1836,7 @@ roomintro: function (target, room, user) {
 	},
 
 	enableladder: function (target, room, user) {
-		if (!this.can('disableladder')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 		if (!LoginServer.disabled) {
 			return this.errorReply("/enable - Ladder is already enabled.");
 		}
@@ -1868,14 +1868,14 @@ roomintro: function (target, room, user) {
 	lockdownhelp: ["/lockdown - locks down the server, which prevents new battles from starting so that the server can eventually be restarted. Requires: ~"],
 
 	prelockdown: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 		Rooms.global.lockdown = 'pre';
 		this.sendReply("Tournaments have been disabled in preparation for the server restart.");
 		this.logEntry(user.name + " used /prelockdown");
 	},
 
 	slowlockdown: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 
 		Rooms.global.lockdown = true;
 		for (let id in Rooms.rooms) {
@@ -1908,7 +1908,7 @@ roomintro: function (target, room, user) {
 	},
 
 	emergency: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 
 		if (Config.emergency) {
 			return this.errorReply("We're already in emergency mode.");
@@ -1923,7 +1923,7 @@ roomintro: function (target, room, user) {
 	},
 
 	endemergency: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+		if (!~developers.indexOf(user.userid)) return false;
 
 		if (!Config.emergency) {
 			return this.errorReply("We're not in emergency mode.");
@@ -2052,7 +2052,7 @@ roomintro: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.errorReply('/crashfixed - There is no active crash.');
 		}
-		if (!this.can('hotpatch')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/lockdown - Access denied.");
 
 		Rooms.global.lockdown = false;
 		if (Rooms.lobby) {
@@ -2087,7 +2087,7 @@ roomintro: function (target, room, user) {
 	},
 
 	eval: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid) || !this.can('hotpatch')) return this.errorReply("/eval - Access denied.");
+		if (!~developers.indexOf(user.userid) && !this.can('hotpatch')) return this.errorReply("/eval - Access denied.");
 		if (!this.canBroadcast()) return;
 		try {
 			let battle = room.battle;
