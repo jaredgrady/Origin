@@ -1960,7 +1960,7 @@ exports.commands = {
 		this.sendReplyBox(
 			"Pok&eacute;mon Showdown server Origin:<br />" +
 			"- Language: JavaScript (Node.js or io.js)<br />" +
-			"- <a href=\"https://github.com/Origin-Devs/Origin-Source">Open Source Github</a>"
+			"- <a href=\"https://github.com/Origin-Devs/Origin-Source\">Open Source Github</a>"
 		);
 	},
 	opensourcehelp: ["/opensource - Links to PS's source code repository.",
