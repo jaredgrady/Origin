@@ -249,8 +249,9 @@ class Battle {
 		this.onConnect(user, connection);
 	}
 	onRename(user, oldid) {
+		if (user.userid === oldid) return;
 		let player = this.players[oldid];
-		if (player && user.userid !== oldid) {
+		if (player) {
 			if (!this.allowRenames && user.userid !== oldid) {
 				this.room.forfeit(user, " forfeited by changing their name.");
 				return;
@@ -263,7 +264,7 @@ class Battle {
 				player.simSend('rename', user.name, user.avatar);
 			}
 		}
-		if (user in this.players) {
+		if (!player && user in this.players) {
 			// this handles a user renaming themselves into a user in the
 			// battle (e.g. by using /nick)
 			this.onConnect(user);
@@ -273,7 +274,7 @@ class Battle {
 		let player = this.players[user];
 		if (player && !player.active) {
 			player.active = true;
-			player.simSend('join', user.name);
+			player.simSend('join', user.name, user.avatar);
 		}
 	}
 	onLeave(user) {

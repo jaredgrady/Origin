@@ -2538,7 +2538,7 @@ roomintro: function (target, room, user) {
 				
 				let targetRoom = Rooms.get(i);
 				if (!targetRoom) continue; // shouldn't happen
-				if (targetRoom.isPrivate && (!targetRoom.battle || targetRoom.battle.lastPlayers.indexOf(user.userid) < 0)) continue;
+				if (targetRoom.isPrivate && !(i in user.games)) continue;
 				let roomData = {};
 
 				if (targetRoom.battle) {
