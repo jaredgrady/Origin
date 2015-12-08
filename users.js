@@ -591,7 +591,6 @@ User = (function () {
 	User.prototype.can = function (permission, target, room) {
 		if (this.hasSysopAccess()) return true;
 		if (permission === 'vip' && Users.vips[this.userid] && !target) return true;
-		if (permission === 'dev' && ~developers.indexOf(this.userid)) return true;
 
 		let group = this.group;
 		let targetGroup = '';
@@ -1385,7 +1384,7 @@ User = (function () {
 		}
 		if (room.modjoin) {
 			let userGroup = this.group;
-			if (room.auth && (!makeRoom || !dev)) {
+			if (room.auth && (!makeRoom)) {
 				if (room.isPrivate === true) {
 					userGroup = ' ';
 				}
