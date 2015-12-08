@@ -181,6 +181,7 @@ exports.commands = {
 		var amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 bucks at a time.");
+		if (user.userid === targetUser && !this.can('bypassall')) return this.errorReply("no");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
