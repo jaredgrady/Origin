@@ -75,7 +75,7 @@ exports.commands = {
 			return this.sendReplyBox(message);
 		}
 
-		if (!this.can('ban') && !this.can('vip')) return false;
+		if (!this.can('lock') && !this.can('vip')) return false;
 
 		switch (cmd) {
 		case 'set':
