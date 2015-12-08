@@ -38,6 +38,10 @@
     background: rgba(255, 255, 255, 0.5) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
   }
   
+  #lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
+    background: rgba(255, 255, 255, 0.5) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
+  }
+  
   #tournaments-userlist-user-resourceful {
     background: rgba(255, 255, 255, 0.5) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
   }
@@ -96,6 +100,10 @@
   
   #lobby-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #othertiers-userlist-user-traineralain {
     background: rgba(255, 255, 255, 0.5) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
+  }
+  
+  #lobby-userlist-user-btcantgetburns, #thelotusleague-userlist-user-btcantgetburns, #therebelleague-userlist-user-btcantgetburns {
+    background: rgba(255, 255, 255, 0.5) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
   }
 
   #lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
