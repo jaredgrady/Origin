@@ -13,23 +13,24 @@ function slotMachine(roll1, roll2, roll3) {
 };
 
 function rollReels() { 
-	var rarity = Math.floor((Math.random() * 3))
+	var rarity = Math.floor((Math.random() * 3));
 	if (rarity === 2) {
 		return faces[0][Math.floor(Math.random() * 2)];
-		}
+	}
 	else if (rarity === 1) {
 		return faces[1][Math.floor(Math.random() * 2)];
-		}
+	}
 	else if (rarity === 0) {
 		return faces[2][Math.floor(Math.random() * 2)];
-		}
-	};
+	}
+};
 		
 exports.commands = {
 	
 	slots: {
 		start: 'roll',
 		roll: function (target, room, user) {
+			var prob = Math.floor((Math.random() * 50));
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
 			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
 			if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
@@ -37,9 +38,33 @@ exports.commands = {
 			var newTotal = (Db('money')[user.userid] || 0) - house.ante;
 			Db('money')[user.userid] = newTotal;
 			Db.save();
-			var roll1 = rollReels();
-			var roll2 = rollReels();
-			var roll3 = rollReels();
+			var roll1;
+			var roll2;
+			var roll3;
+			if (prob < 1 && prob >= 0) {
+				roll1 = rollReels();
+				roll2 = roll1;
+				roll3 = roll1;
+			}
+			if (prob < 8 && prob >= 1) {
+				var sides = Math.floor((Math.random() * 2));
+				if (sides === 0) {
+					roll1 = rollReels();
+					roll2 = rollReels();
+					roll3 = roll2;
+				}
+				if (sides === 1) {
+					roll3 = rollReels();
+					roll2 = rollReels();
+					roll1 = roll2;
+				}
+			}
+			if (prob =< 49 && prob >= 8) {
+				roll1 = rollReels();
+				roll2 = rollReels();
+				roll3 = rollReels();
+			}
+			
 			var display = slotMachine(roll1, roll2, roll3);
 			this.sendReplyBox(display);
 			
