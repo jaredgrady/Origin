@@ -58,7 +58,6 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538036/\">RU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
-		searchShow: false,
 		ruleset: ['UU'],
 		banlist: ['UU', 'BL2']
 	},
