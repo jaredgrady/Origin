@@ -35,7 +35,7 @@ exports.commands = {
 		start: 'roll',
 		roll: function (target, room, user) {
 			var prob = Math.floor((Math.random() * 50));
-			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
+			if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply('Slots must be played in The Casino.');
 			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
 			if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
@@ -132,21 +132,21 @@ exports.commands = {
 		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],
 			
 		enable: function (target, room, user, cmd) {
-			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access Denied.');
+			if (!user.can('makechatroom') && room.founder !== user.userid) return this.errorReply('/slots enable - Access Denied.');
 			house.enabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 		enablehelp: ["Enable the playing of slots."],
 		
 		disable: function (target, room, user, cmd) {
-			if (!user.can('makechatroom')) return this.errorReply('/slots disable - Access Denied.');
+			if (!user.can('makechatroom') && room.founder !== user.userid) return this.errorReply('/slots disable - Access Denied.');
 			house.enabled = false;
 			this.sendReply("Slots has been disabled.");
 		},
 		disablehelp: ["Disable the playing of slots."],
 				
 		ante: function (target, room, user) {
-			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access Denied.');
+			if (!user.can('hotpatch') && !~developers.indexOf(user.userid)) return this.errorReply('/slots ante - Access Denied.');
 			if (!target) return this.parse('/help antehelp');
 			if (typeof target === 'string') return this.sendReply(target);
 			house.ante = target;
