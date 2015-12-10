@@ -12,7 +12,7 @@ var shop = [
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
-    ['Room Rename', 'Rename your chatroom to another name', 50],
+    ['Room Rename', 'Rename your chatroom to another name', 45],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (command must start with feels and size must be 50x50)', 100],
