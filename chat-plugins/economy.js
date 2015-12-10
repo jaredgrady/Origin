@@ -132,6 +132,14 @@ function handleBoughtItem(item, user, cost) {
 		Db('lottery')[user.userid].push(ticket);
 		Db.save();
 		this.sendReply("Your ticket has this id: " + ticket + ". The jackpot is currently worth " + pot + currencyName(pot) + ". Use /tickets to view your ticket(s).");
+	} else if (item === 'room' || item === 'leagueroom' || item === 'avatar') {
+		if (item === 'avatar') {
+			user.sendAvatar = true;
+			this.sendReply("You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.");
+		} else {
+			user.canSendRoomName = true; 
+			this.sendReply("You have purchased a room, use /sendroomname [room name you want] to let the staff know what your room name you want.");
+		}
 	} else {
 		var msg = '**' + user.name + " has bought " + item + ".**";
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
@@ -299,6 +307,36 @@ exports.commands = {
 		user.hasCustomSymbol = true;
 	},
 	customsymbolhelp: ["/customsymbol [symbol] - Get a custom symbol."],
+	
+	sendavatar: function (target, room, user) {
+		if (!user.sendAvatar ) return this.sendReply("You need to buy this item from the shop.");
+		if (!target) return this.parse('/help sendavatar');
+		var msg = '**' + user + " has purchased an avatar and wants " + target + " as the image."  + '**';
+		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
+		Rooms.rooms.staff.update();
+		for (var i in Users.users) {
+			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
+				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
+			}
+		}
+		user.sendAvatar = false;
+	},
+	sendavatarhelp: ["/sendavatar [avatar url] - If you have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want."],
+	
+	sendroomname: function (target, room, user) {
+		if (!user.canSendRoomName) return this.sendReply("You need to buy this item from the shop.");
+		if (!target) return this.parse('/help sendavatar');
+		var msg = '**' + user + " has purchased a room and wants " + target + " as the room name." + '**';
+		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
+		Rooms.rooms.staff.update();
+		for (var i in Users.users) {
+			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
+				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
+			}
+		}
+		user.canSendRoomName = false;
+	},
+	sendavatarhelp: ["/sendavatar [avatar url] - If you have purchased a customavatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want."],
 
 	resetcustomsymbol: 'resetsymbol',
 	resetsymbol: function (target, room, user) {
