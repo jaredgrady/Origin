@@ -295,7 +295,7 @@ exports.commands = {
 	store: 'shop',
 	shop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
+		if (room.id === 'lobby' && !user.can('bypassall') || room.battle && !user.can('bypassall')) return this.sendReply("This command is too spammy for lobby/battles.");
 		return this.sendReply("|raw|" + shopDisplay);
 	},
 	shophelp: ["/shop - Display items you can buy with money."],
