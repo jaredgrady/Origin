@@ -58,12 +58,11 @@ exports.commands = {
 	
 		var userid = user.userid;
 		var targetUser = toId(target);	
-		var friendList = Db('friends')[userid];
 		
-		if (friendList.indexOf(targetUser) > -1) {
-			for (fr = 0; fr < friendList.length; fr++) {
-				if (friendlist[fr] === targetUser) {
-					delete friendslist[fr];
+		if (Db('friends')[userid].indexOf(targetUser) > -1) {
+			for (fr = 0; fr < Db('friends')[userid].length; fr++) {
+				if (Db('friends')[userid][fr] === targetUser) {
+					delete Db('friends')[userid][fr];
 				}
 			}
 		} else {
