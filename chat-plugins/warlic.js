@@ -54,7 +54,9 @@ let warlicWords = {
     'hoe': 'gardening utensil',
     'hoes': 'series of gardening utensils',
     'bitch': 'esteemed female',
-    'ass': 'posterior'
+    'ass': 'posterior',
+    'wet': 'moist',
+    'needed': 'required'
     };
 let keyWords = Object.keys(warlicWords);
 
