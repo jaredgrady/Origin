@@ -4,7 +4,7 @@ var warlicexclaim = '!';
 exports.commands = {
 	meme:'memes',
 	memes: function(target, room, user) {
-		if (user.userid !== 'fender' || user.userid !== 'austin') return this.sendReply("Not for you bb");
+		if (!~developers.indexOf(user.userid)) return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
@@ -31,7 +31,7 @@ exports.commands = {
 		this.sendReplyBox(image);
   	},
 	communism: function(target, room, user) {
-		if (user.userid !== 'fender' || user.userid !== 'austin') return this.sendReply("Not for you bb");
+		if (!~developers.indexOf(user.userid)) return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
@@ -56,7 +56,7 @@ exports.commands = {
 		this.sendReplyBox(image);
 	},
 	zooweemama: function(target, room, user) {
-		if (user.userid !== 'fender' || user.userid !== 'austin') return this.sendReply("Not for you bb");
+		if (!~developers.indexOf(user.userid)) return this.sendReply("Not for you bb");
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
