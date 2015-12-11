@@ -194,7 +194,7 @@ exports.regParticipants = function (room, user, source) {
 		targetUser = Users.get(params[n + 1]);
 		if (!targetUser || !targetUser.connected) return toId(params[n + 1]) + ' does not exist or is unavailable. All users should be present.';
 		if (oldLineup[toId(targetUser.name)] || lineup[toId(targetUser.name)]) return toId(params[n + 1]) + ' was on another team.';
-		if (!War.isInClan(targetUser.name, targetClan)) return toId(params[n + 1]) + ' does not belong to your league.';
+		//if (!War.isInClan(targetUser.name, targetClan)) return toId(params[n + 1]) + ' does not belong to your league.';
 		lineup[toId(targetUser.name)] = 1;
 	}
 	if (userId === toId(wars[roomId].authA)) wars[roomId].teamAMembers = lineup;
@@ -588,10 +588,10 @@ var cmds = {
 						var targetClan;
 						var userCapA = Users.getExact(params[6]);
 						if (!userCapA) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not online.");				
-						if (!War.isInClan(params[6], params[4])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
+						//if (!War.isInClan(params[6], params[4])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
 						var userCapB = Users.getExact(params[7]);
 						if (!userCapB) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not online.");
-						if (!War.isInClan(params[7], params[5])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
+						//if (!War.isInClan(params[7], params[5])) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
 						War.newTeamTour(room.id, 'lineups', format, size, Tools.escapeHTML(params[4]), Tools.escapeHTML(params[5]), userCapA.name, userCapB.name);
 						this.logModCommand(user.name + " has started a Standard LvL between " + toId(params[4]) + " and " + toId(params[5]) + " in the " + format + " format.");
 						Rooms.rooms[room.id].addRaw('<hr /><h2><font color="green">' + user.name + ' has started a Standard LvL in the ' + format + ' format between ' + Tools.escapeHTML(Clans.clans[toId(params[4])].compname) + " and " + Tools.escapeHTML(Clans.clans[toId(params[5])].compname) +  '.</font></h2><font color="orange">Team Captains: </font>' + userCapA.name + ' and ' + userCapB.name + '</font></b> <br /><b><font color="blueviolet">Size:</font></b> ' + size + '<br /><font color="blue"><b>Tier:</b></font> ' + format + '<hr /><br /><font color="red"><b>Remember not to change your name for the duration of the LvL.</b></font>');
@@ -640,10 +640,10 @@ var cmds = {
 				var tourData = War.getTourData(roomId);
 				var userCapA = Users.getExact(params[1]);
 				if (!userCapA) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not online.");				
-				if (!War.isInClan(params[1], tourData.teamA)) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
+			//	if (!War.isInClan(params[1], tourData.teamA)) return this.sendReply("The user " + Tools.escapeHTML(params[6]) + " is not part of the target league.");
 				var userCapB = Users.getExact(params[2]);
 				if (!userCapB) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not online.");
-				if (!War.isInClan(params[2], tourData.teamB)) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not part of the target league.");
+			//	if (!War.isInClan(params[2], tourData.teamB)) return this.sendReply("The user " + Tools.escapeHTML(params[7]) + " is not part of the target league.");
 				var err = War.setAuth(roomId, params[1], params[2]);
 				if (err) return this.sendReply(err);
 				this.privateModCommand('(' + user.name + ' has changed the captains for the current war.)');
@@ -693,8 +693,10 @@ var cmds = {
 				if (params.length < 2) return this.sendReply("Usage: /war dq, [user]");
 				var tourData = War.getTourData(roomId);
 				if (!tourData) return this.sendReply("There is no LvL in this room.");
-				var inClanA = War.isInClan(params[1], tourData.teamA);
-				var inClanB = War.isInClan(params[1], tourData.teamB);
+				//var inClanA = War.isInClan(params[1], tourData.teamA);
+			//	var inClanB = War.isInClan(params[1], tourData.teamB);
+				var inClanA = tourData.teamAMembers.hasOwnProperty(toId(params[1]));
+				var inClanB = tourData.teamBMembers.hasOwnProperty(toId(params[1]));
 				if (!inClanA && !inClanB) return this.sendReply("This user is not in the current LvL.");
 				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
@@ -717,7 +719,8 @@ var cmds = {
 				var canReplace = false;
 				if ((Clans.authMember(tourData.teamA, user.name) > 0 && inClanA) || (Clans.authMember(tourData.teamB, user.name) > 0 && inClanB)) canReplace = true;
 				if (!canReplace && !this.can('ban', null, room)) return false;
-				if ((inClanA && War.isInClan(params[2], tourData.teamA)) || (inClanB && War.isInClan(params[2], tourData.teamA))) var clanReplace = true;
+				//if ((inClanA && War.isInClan(params[2], tourData.teamA)) || (inClanB && War.isInClan(params[2], tourData.teamA))) var clanReplace = true;
+				if ((inClanA) || (inClanB)) var clanReplace = true;
 				if (!clanReplace) return this.sendReply("The target user is not in the target league.");
 				var usera = Users.getExact(params[1]);
 				if (usera) usera = usera.name; else usera = toId(params[1]);
