@@ -65,6 +65,7 @@ exports.commands = {
 					delete Db('friends')[userid][fr];
 				}
 			}
+			return this.sendReply("You have succesfully removed " + targetUser " from your friendlist.")
 		} else {
 			return this.sendReply("This user is not on your friends list.");
 		}
