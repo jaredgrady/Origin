@@ -1,5 +1,4 @@
 var fs = require('fs');
-var warlicexclaim = '!';
 
 exports.commands = {
 	meme:'memes',
@@ -78,16 +77,6 @@ exports.commands = {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-100).join('\n');
 		user.send('|popup|' + crashes);
-	},
-	togglewarlic: function (target, room, user) {
-		if (!this.can('hotpatch')) return this.errorReply("Access denied.");
-		room.WarlicMode = !room.WarlicMode;
-		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
-		if (room.WarlicMode) {
-			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Warlic Mode is now on!</b></div>");
-		} else {
-			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Warlic Mode is now off!</b></div>");
-		}
 	},
 	restart: function(target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
