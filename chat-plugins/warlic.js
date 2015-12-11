@@ -49,7 +49,9 @@ let warlicWords = {
     'sry': 'my deepest regrets for any grief I may have caused',
     'ty': 'I am grateful for thine gracious act of kindness',
     'u': 'thou',
-    'why': 'for what reason'
+    'why': 'for what reason',
+    'warlic': 'warlic',
+    'hoe': 'gardening utensil'
     };
 let keyWords = Object.keys(warlicWords);
 
