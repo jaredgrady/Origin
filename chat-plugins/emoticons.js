@@ -103,8 +103,7 @@ var patternRegex = new RegExp(patterns.join('|'), 'g');
  */
 function parseEmoticons(message, room, user, pm) {
 	if (room.WarlicMode && !pm) {
-		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|Salutations good sir or madam' + warlicexclaim);
-		warlicexclaim = warlicexclaim + '!';
+		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|' + parseWarlic(message));
 		return true;
 	}
 	if (typeof message !== 'string' || (!pm && room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
