@@ -8,7 +8,7 @@ let warlicWords = {
     'girl': 'Madam',
     'woman': 'Madam',
     'pussy': 'Madam',
-    'nigga': 'mate',
+    'nigga': 'African American',
     'hello': 'My distinguished salutations',
     'hi': 'salutations',
     'hola': 'salutations',
@@ -16,7 +16,7 @@ let warlicWords = {
     'fucked': 'sodded',
     'fuck you': 'please proceed to have sexual intercourse with thyself',
     'shit': 'intellectual matter',
-    'cunt': 'Madam',
+    'cunt': 'Downton Abbey',
     'nigger': 'distinguished gentleman',
     'faggot': 'bundle of sticks',
     'fgt': 'bundle of sticks',
@@ -51,7 +51,10 @@ let warlicWords = {
     'u': 'thou',
     'why': 'for what reason',
     'warlic': 'warlic',
-    'hoe': 'gardening utensil'
+    'hoe': 'gardening utensil',
+    'hoes': 'series of gardening utensils',
+    'bitch': 'esteemed female',
+    'ass': 'posterior'
     };
 let keyWords = Object.keys(warlicWords);
 
