@@ -58,11 +58,14 @@ exports.commands = {
 	
 		var userid = user.userid;
 		var targetUser = toId(target);	
+		var friendList = Db('friends')[userid];
 		
-		if (Db('friends')[userid].indexOf(targetUser) > -1) {
-			Db('friends')[userid].splice(1, targetUser);
-			Db.save();
-			this.sendReply(targetUser + " has been removed from your friends list.");
+		if (friendList.indexOf(targetUser) > -1) {
+			for (fr = 0; fr < friendList.length; fr++) {
+				if (friendlist[fr] === targetUser) {
+					delete friendslist[fr];
+				}
+			}
 		} else {
 			return this.sendReply("This user is not on your friends list.");
 		}
