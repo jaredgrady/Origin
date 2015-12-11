@@ -70,6 +70,7 @@ global.logMoney = function(message) {
  * @param {Array} shop
  * @return {String} display
  */
+/*REGULAR SHOP DESIGN
 function getShopDisplay(shop) {
 	var display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
 					'<tr><th color="#502243">Item</th><th color="#502243">Description</th><th color="#502243">Cost</th></tr>';
@@ -83,6 +84,24 @@ function getShopDisplay(shop) {
 		start++;
 	}
 	display += '</table><div style="border: 1px solid #803C6F; border-top: none; background: rgba(205, 159, 196, 0.7); color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">To buy an item from the shop, use /buy command.</div>';
+	return display;
+}*/
+
+// Christmas Shop Design
+
+function getShopDisplay(shop) {
+	var display = '<table style="background: rgba(139, 245, 167, 0.8); width: 100%; border: 1px solid #CB0014; font-family: sans-serif; border-top-right-radius: 2px; border-top-left-radius: 2px;">' +
+					'<tr><th style="padding: 5px; text-shadow: 0px 0px 2px #8BF5A7;"><img src="http://i.imgur.com/nEcXeEX.gif" width="10" height="10" /><font color="#AA0114">Item</font><img src="http://i.imgur.com/UZDWXvX.gif" width="10" height="10" /></th><th style="padding: 5px; text-shadow: 0px 0px 2px #8BF5A7;"><img src="http://i.imgur.com/nEcXeEX.gif" width="10" height="10" /><font color="#AA0114">Description</font><img src="http://i.imgur.com/UZDWXvX.gif" width="10" height="10" /></th><th style="width: 75px; padding: 5px; text-shadow: 0px 0px 2px #8BF5A7;"><img src="http://i.imgur.com/nEcXeEX.gif" width="10" height="10" /><font color="#AA0114">Cost</font><img src="http://i.imgur.com/UZDWXvX.gif" width="10" height="10" /></th></tr>';
+	var start = 0;
+	while (start < shop.length) {
+		display += '<tr>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #F5624D; padding: 5px; border-radius: 2px; text-align: center;"><button name="send" value="/buy ' + shop[start][0] + '" style="background: rgba(74, 204, 110, 0.6); border: 1px solid #AA0114; border-radius: 3px; padding: 2px 7px; color: #AA0114; text-shadow: 0px 0px 2px #8BF5A7;"> ' + shop[start][0] + '</button></td>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #F5624D; padding: 5px; border-radius: 2px; text-align: center; color: #CB0014;">' + shop[start][1] + '</td>' +
+						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #F5624D; padding: 5px; border-radius: 2px; text-align: center; color: #CB0014;">' + shop[start][2] + '</td>' +
+					'</tr>';
+		start++;
+	}
+	display += '</table><div style="border: 1px solid #CB0014; border-top: none; background: rgba(74, 204, 110, 0.6) url(\'http://i.imgur.com/SOlzpCM.png\') no-repeat bottom right; color: #AA0114; text-shadow: 0px 0px 2px #8BF5A7; padding: 5px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px;">To buy an item from the shop, use the /buy command.</div>';
 	return display;
 }
 
