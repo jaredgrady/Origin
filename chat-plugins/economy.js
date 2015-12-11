@@ -366,6 +366,23 @@ exports.commands = {
 		this.sendReply("Your symbol has been reset.");
 	},
 	resetsymbolhelp: ["/resetsymbol - Resets your custom symbol."],
+	
+	takecustomsymbol: 'takesymbol', 
+	takesymbol: function (target, room, user) {
+		var targetUser = toId(target);
+		if (!this.can('lock')) return false;
+		if (!target) return this.parse('/help takesymbol');
+		if (!targetUser.hasCustomSymbol) return this.sendReply("This user does not have a custom symbol.");
+			
+		var targetSymbol = targetUser.customSymbol;
+		targetUser.customSymbol = null;
+		targetUser.updateIdentity();
+		targetUser.hasCustomSymbol = false;
+		targetUser.canCustomSymbol = false;
+		this.addModCommand(user.name + "has removed the custom symbol'" + targetSymbol + "' from the user " + targetUser);
+		targetUser.popup("Your custom symbol '" + targetSymbol + "' has been removed by " + user.name + ".");
+	},
+	takesymbolhelp: ["/takesymbol - Reset target user's custom symbol, (target user must buy new symbol)"],
 
 	moneylog: function (target, room, user, connection) {
 		if (!this.can('modlog')) return;
