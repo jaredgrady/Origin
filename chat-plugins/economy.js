@@ -419,6 +419,7 @@ exports.commands = {
 		if (!target || Number(target) <= 10) { // The command can only be broadcasted if there's no set number or if the number is smaller or equal to 10
 			if (!this.canBroadcast()) return;
 		}
+		if (Number(target) > 100) return this.errorReply("Richestusers is limited to the top 100 richest users.");
 		var display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
 		var keys = Object.keys(Db('money')).map(function(name) {
 			return {name: name, money: Db('money')[name]};
