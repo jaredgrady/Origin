@@ -379,8 +379,8 @@ exports.commands = {
 		targetUser.updateIdentity();
 		targetUser.hasCustomSymbol = false;
 		targetUser.canCustomSymbol = false;
-		this.addModCommand(user.name + "has removed the custom symbol'" + targetSymbol + "' from the user " + targetUser);
-		targetUser.popup("Your custom symbol '" + targetSymbol + "' has been removed by " + user.name + ".");
+		this.addModCommand(user.name + " has removed the custom symbol " + targetSymbol + " from the user " + targetUser);
+		targetUser.popup("Your custom symbol " + targetSymbol + " has been removed by " + user.name + ".");
 	},
 	takesymbolhelp: ["/takesymbol - Reset target user's custom symbol, (target user must buy new symbol)"],
 
