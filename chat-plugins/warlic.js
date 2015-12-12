@@ -59,7 +59,8 @@ let warlicWords = {
     'needed': 'required',
     'yes': 'yae',
     'no': 'nay',
-    'turn it off': 'may thou please turn thy warlic mode off'
+    'turn it off': 'may thou please turn thy warlic mode off',
+    'would': 'wouldst'
     };
 let keyWords = Object.keys(warlicWords);
 
