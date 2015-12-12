@@ -369,7 +369,7 @@ exports.commands = {
 	
 	takecustomsymbol: 'takesymbol', 
 	takesymbol: function (target, room, user) {
-		var targetUser = toId(target);
+		var targetUser = Users.get(toId(target));
 		if (!this.can('lock')) return this.errorReply("/takesymbol - Access Denied");
 		if (!target) return this.parse('/help takesymbol');
 		if (!targetUser.hasCustomSymbol) return this.errorReply("This user does not have a custom symbol.");
