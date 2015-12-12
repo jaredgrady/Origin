@@ -29,6 +29,7 @@ var emotes = {
 	'feelshigh': 'http://i.imgur.com/s9I2bxp.jpg?1',
 	'feelshlwn': 'http://i.imgur.com/OHMDVNJ.jpg',
 	'feelsho': 'http://i.imgur.com/J4oUHm2.png?1',
+	'feelsilum': 'http://i.imgur.com/CnyGTTD.png',
 	'feelsjig': 'http://i.imgur.com/hSzqy5z.png?1',
 	'feelsjpn': 'http://i.imgur.com/Zz2WrQf.jpg',
 	'feelsky': 'http://i.imgur.com/BtATPId.png?1',
@@ -69,6 +70,7 @@ var emotes = {
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'PeoplesChamp': 'http://i.imgur.com/QMiMBKe.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
+	'stevo': 'http://imgur.com/Gid6Zjy.png',
 	'thumbsup': 'http://i.imgur.com/eWcFLLn.jpg',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
 	'trumpW': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
@@ -77,9 +79,7 @@ var emotes = {
 	'xaa': 'http://i.imgur.com/V728AvL.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
-	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
-	'feelsilum': 'http://i.imgur.com/CnyGTTD.png',
-	'stevo': 'http://imgur.com/Gid6Zjy.png'
+	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg'
 };
 
 var emotesKeys = Object.keys(emotes);
