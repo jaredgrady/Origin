@@ -63,6 +63,7 @@ exports.commands = {
 			for (fr = 0; fr < Db('friends')[userid].length; fr++) {
 				if (Db('friends')[userid][fr] === targetUser) {
 					delete Db('friends')[userid][fr];
+					Db.save();
 				}
 			}
 			return this.sendReply("You have succesfully removed " + targetUser + " from your friendlist.");
