@@ -542,7 +542,7 @@ exports.commands = {
 	},
 
 	clearall: function (target, room, user) {
-		if (!this.can('declare')) return false;
+		if (!this.can('declare') && !~developers.indexOf(user.userid)) return false;
 		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
 
 		clearRoom(room);
