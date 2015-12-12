@@ -56,7 +56,10 @@ let warlicWords = {
     'bitch': 'esteemed female',
     'ass': 'posterior',
     'wet': 'moist',
-    'needed': 'required'
+    'needed': 'required',
+    'yes': 'yae',
+    'no': 'nay',
+    'turn it off': 'may thou please turn thy warlic mode off'
     };
 let keyWords = Object.keys(warlicWords);
 
