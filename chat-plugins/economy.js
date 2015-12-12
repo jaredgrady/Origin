@@ -413,7 +413,12 @@ exports.commands = {
 	richladder: 'richestuser',
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		function isNumber(targetVar) { // checks if targetVar is a number
+		  return !isNaN(parseFloat(targetVar)) && isFinite(targetVar);
+		}
+		if (!target || Number(target) <= 10) { // The command can only be broadcasted if there's no set number or if the number is smaller or equal to 10
+			if (!this.canBroadcast()) return;
+		}
 		var display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
 		var keys = Object.keys(Db('money')).map(function(name) {
 			return {name: name, money: Db('money')[name]};
@@ -422,7 +427,12 @@ exports.commands = {
 		keys.sort(function (a, b) {
 			return b.money - a.money;
 		});
-		keys.slice(0, 10).forEach(function (user, index) {
+		if (!target || !isNumber(target)) { //The default richestuser display
+			keys.slice(0, 10).forEach(function (user, index) {
+				display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
+			});
+		}
+		keys.slice(0, Number(target)).forEach(function (user, index) { // slices between 0 and the specified amount
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
 		});
 		display += "</tbody></table>";
