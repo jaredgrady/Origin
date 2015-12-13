@@ -278,7 +278,7 @@ let commands = exports.commands = {
 
 	makeprivatechatroom: 'makechatroom',
 	makechatroom: function (target, room, user, connection, cmd) {
-		if (!this.can('upperstaff')) return;
+		if (!this.can('declare')) return;
 		// `,` is a delimiter used by a lot of /commands
 		// `|` and `[` are delimiters used by the protocol
 		// `-` has special meaning in roomids
@@ -398,7 +398,7 @@ let commands = exports.commands = {
 	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden."],
 
 	deregisterchatroom: function (target, room, user) {
-		if (!this.can('makeroom')) return;
+		if (!this.can('declare')) return;
 		let id = toId(target);
 		if (!id) return this.parse('/help deregisterchatroom');
 		let targetRoom = Rooms.search(id);
@@ -2599,6 +2599,7 @@ roomintro: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return false;
 		// secret sysop command
 		room.add(target);
+		this.logModCommand(user.name + " used an admin command");
 	},
 
 	/*********************************************************
