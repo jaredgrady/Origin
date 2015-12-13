@@ -549,41 +549,42 @@ let commands = exports.commands = {
 			Rooms.global.writeChatRoomData();
 		}
 	},
+	
+	topic: 'roomintro',
+	roomintro: function (target, room, user) {
+		if (!target) {
+			if (!this.canBroadcast()) return;
+			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
+			this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
+			if (!this.broadcasting && user.can('declare', null, room)) {
+				this.sendReply('Source:');
+				this.sendReplyBox('<code>/roomintro ' + Tools.escapeHTML(room.introMessage) + '</code>');
+			}
+			return;
+		}
+		if (!this.can('declare', null, room)) return false;
+		target = this.canHTML(target);
+		if (!target) return;
+		if (!/</.test(target)) {
+			// not HTML, do some simple URL linking
+			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
+			target = target.replace(re, '<a href="$1">$1</a>');
+		}
+		if (target.substr(0, 11) === '/roomintro ') target = target.substr(11);
 
-topic: 'roomintro',
-roomintro: function (target, room, user) {
-        if (!target) {
-            if (!this.canBroadcast()) return;
-            if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-            this.sendReplyBox(room.introMessage);
-            if (!this.broadcasting && user.can('declare', null, room)) {
-                this.sendReply('Source:');
-                this.sendReplyBox('<code>' + Tools.escapeHTML(room.introMessage) + '</code>');
-            }
-            return;
-        }
-        if (!this.can('declare', null, room)) return false;
-		if (room.isPersonal) return this.errorReply("Personal rooms configuration can't be changed.");
-        if (!this.canHTML(target)) return;
-        if ((target).indexOf('|j|' || '|c|') > -1) return this.sendReply("Roomintros may not include |j| or |c| buttons."); 
-        if (!/</.test(target)) {
-            // not HTML, do some simple URL linking
-            let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
-            target = target.replace(re, '<a href="$1">$1</a>');
-        }
+		room.introMessage = target;
+		this.sendReply("(The room introduction has been changed to:)");
+		this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 
-        if (!target.trim()) target = '';
-        room.introMessage = target;
-        this.sendReply("(The room introduction has been changed to:)");
-        this.sendReplyBox(target);
+		this.privateModCommand("(" + user.name + " changed the roomintro.)");
+		this.logEntry(target);
 
-        this.privateModCommand("(" + user.name + " changed the roomintro.)");
+		if (room.chatRoomData) {
+			room.chatRoomData.introMessage = room.introMessage;
+			Rooms.global.writeChatRoomData();
+		}
+	},
 
-        if (room.chatRoomData) {
-            room.chatRoomData.introMessage = room.introMessage;
-            Rooms.global.writeChatRoomData();
-        }
-    },
 	stafftopic: 'staffintro',
 	staffintro: function (target, room, user) {
 		if (!target) {
@@ -597,8 +598,8 @@ roomintro: function (target, room, user) {
 			return;
 		}
 		if (!this.can('ban', null, room)) return false;
-		target = target.trim();
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 		if (!/</.test(target)) {
 			// not HTML, do some simple URL linking
 			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
@@ -1538,7 +1539,8 @@ roomintro: function (target, room, user) {
 		if (!target) return this.parse('/help htmldeclare');
 		if (!this.can('gdeclare', null, room)) return false;
 		if (!this.canTalk()) return;
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
@@ -1549,6 +1551,8 @@ roomintro: function (target, room, user) {
 	globaldeclare: function (target, room, user) {
 		if (!target) return this.parse('/help globaldeclare');
 		if (!this.can('declare')) return false;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		for (let id in Rooms.rooms) {
 			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
@@ -1561,7 +1565,8 @@ roomintro: function (target, room, user) {
 	chatdeclare: function (target, room, user) {
 		if (!target) return this.parse('/help chatdeclare');
 		if (!this.can('gdeclare')) return false;
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
