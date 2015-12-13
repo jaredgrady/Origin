@@ -331,7 +331,7 @@ exports.commands = {
 	sendavatar: function (target, room, user) {
 		if (!user.sendAvatar ) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
-		var msg = '**' + user + " has purchased an avatar and wants " + target + " as the image."  + '**';
+		var msg = '**' + user + " has purchased an avatar and wants " + target + " as their image." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
 		for (var i in Users.users) {
