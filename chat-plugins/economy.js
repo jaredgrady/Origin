@@ -286,7 +286,7 @@ exports.commands = {
 		amount = amount + currencyName(amount);
 		userTotal = userTotal + currencyName(userTotal);
 		targetTotal = targetTotal + currencyName(targetTotal);
-		this.sendReply("You have successfully transferred " + amount + ". You now have " + userTotal + ".");
+		this.sendReply("You have successfully transferred " + amount + " to " + username + ". You now have " + userTotal + ".");
 		if (Users.get(username)) Users.get(username).popup(user.name + " has transferred " + amount + ". You now have " + targetTotal + ".");
 		logMoney(user.name + " transferred " + amount + " to " + username + ". " + user.name + " now has " + userTotal + " and " + username + " now has " + targetTotal + ".");
 	},
@@ -294,8 +294,9 @@ exports.commands = {
 
 	store: 'shop',
 	shop: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		if (room.id === 'lobby' && !user.can('bypassall') || room.battle && !user.can('bypassall')) return this.sendReply("This command is too spammy for lobby/battles.");
+		if (room.id !== 'lobby' && !room.battle) {
+			if (!this.canBroadcast()) return;
+		}
 		return this.sendReply("|raw|" + shopDisplay);
 	},
 	shophelp: ["/shop - Display items you can buy with money."],
@@ -379,8 +380,8 @@ exports.commands = {
 		targetUser.updateIdentity();
 		targetUser.hasCustomSymbol = false;
 		targetUser.canCustomSymbol = false;
-		this.addModCommand(user.name + "has removed the custom symbol'" + targetSymbol + "' from the user " + targetUser);
-		targetUser.popup("Your custom symbol '" + targetSymbol + "' has been removed by " + user.name + ".");
+		this.addModCommand(user.name + " has removed the custom symbol " + targetSymbol + " from the user " + targetUser);
+		targetUser.popup("Your custom symbol " + targetSymbol + " has been removed by " + user.name + ".");
 	},
 	takesymbolhelp: ["/takesymbol - Reset target user's custom symbol, (target user must buy new symbol)"],
 
@@ -412,7 +413,13 @@ exports.commands = {
 	richladder: 'richestuser',
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		function isNumber(targetVar) { // checks if targetVar is a number
+		  return !isNaN(parseFloat(targetVar)) && isFinite(targetVar);
+		}
+		if (!target || Number(target) <= 10) { // The command can only be broadcasted if there's no set number or if the number is smaller or equal to 10
+			if (!this.canBroadcast()) return;
+		}
+		if (Number(target) > 100) return this.errorReply("Richestusers is limited to the top 100 richest users.");
 		var display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
 		var keys = Object.keys(Db('money')).map(function(name) {
 			return {name: name, money: Db('money')[name]};
@@ -421,7 +428,12 @@ exports.commands = {
 		keys.sort(function (a, b) {
 			return b.money - a.money;
 		});
-		keys.slice(0, 10).forEach(function (user, index) {
+		if (!target || !isNumber(target)) { //The default richestuser display
+			keys.slice(0, 10).forEach(function (user, index) {
+				display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
+			});
+		}
+		keys.slice(0, Number(target)).forEach(function (user, index) { // slices between 0 and the specified amount
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
 		});
 		display += "</tbody></table>";

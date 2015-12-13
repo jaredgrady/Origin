@@ -56,7 +56,11 @@ let warlicWords = {
     'bitch': 'esteemed female',
     'ass': 'posterior',
     'wet': 'moist',
-    'needed': 'required'
+    'needed': 'required',
+    'yes': 'yae',
+    'no': 'nay',
+    'turn it off': 'may thou please turn thy warlic mode off',
+    'would': 'wouldst'
     };
 let keyWords = Object.keys(warlicWords);
 
@@ -77,7 +81,7 @@ global.parseWarlic = parseWarlic;
 
 exports.commands = {
     togglewarlic: function (target, room, user) {
-		if (!this.can('hotpatch')) return this.errorReply("Access denied.");
+		if (!this.can('hotpatch') && !~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		room.WarlicMode = !room.WarlicMode;
 		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
 		if (room.WarlicMode) {

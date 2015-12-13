@@ -22,9 +22,10 @@ exports.commands = {
 		if (!target) return this.parse('/help define');
 		target = toId(target);
 
-		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
 		if (target > 50) return this.errorReply("Word can not be longer than 50 characters.");
-		if (!this.canBroadcast()) return;
+		if (room.id !== 'lobby' || !room.battle) {
+			if (!this.canBroadcast()) return;
+		}
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 
 		var options = {
