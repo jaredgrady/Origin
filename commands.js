@@ -312,7 +312,7 @@ let commands = exports.commands = {
 		}
 		return this.errorReply("An error occurred while trying to create the room '" + target + "'.");
 	},
-	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: ~"],
+	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: &, ~"],
 
 	makegroupchat: function (target, room, user, connection, cmd) {
 		if (!user.autoconfirmed) {
@@ -412,7 +412,7 @@ let commands = exports.commands = {
 		}
 		return this.errorReply("The room '" + target + "' isn't registered.");
 	},
-	deregisterchatroomhelp: ["/deregisterchatroom [roomname] - Deletes room [roomname] after the next server restart. Requires: ~"],
+	deregisterchatroomhelp: ["/deregisterchatroom [roomname] - Deletes room [roomname] after the next server restart. Requires: &, ~"],
 
 	hideroom: 'privateroom',
 	hiddenroom: 'privateroom',
