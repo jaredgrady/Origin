@@ -19,20 +19,20 @@ const Monitor = module.exports = { // eslint-disable-line no-unused-vars
 
 	log: function (text) {
 		this.notice(text);
-		if (Rooms.get('staff')) {
-			Rooms.get('staff').add('|c|~|' + text).update();
+		if (Rooms('staff')) {
+			Rooms('staff').add('|c|~|' + text).update();
 		}
 	},
 	adminlog: function (text) {
 		this.notice(text);
-		if (Rooms.get('upperstaff')) {
-			Rooms.get('upperstaff').add('|c|~|' + text).update();
+		if (Rooms('upperstaff')) {
+			Rooms('upperstaff').add('|c|~|' + text).update();
 		}
 	},
 	logHTML: function (text) {
 		this.notice(text);
-		if (Rooms.get('staff')) {
-			Rooms.get('staff').add('|html|' + text).update();
+		if (Rooms('staff')) {
+			Rooms('staff').add('|html|' + text).update();
 		}
 	},
 	debug: function (text) {
@@ -49,6 +49,17 @@ const Monitor = module.exports = { // eslint-disable-line no-unused-vars
 	 * Resource Monitor
 	 *********************************************************/
 
+	clean: function () {
+		Monitor.networkCount = {};
+		Monitor.networkUse = {};
+		Monitor.battlePrepTimes = {};
+		Monitor.battlePreps = {};
+		Monitor.battleTimes = {};
+		Monitor.battles = {};
+		Monitor.connectionTimes = {};
+		Monitor.connections = {};
+		Dnsbl.cache.clear();
+	},
 	connections: {},
 	connectionTimes: {},
 	battles: {},
@@ -224,3 +235,5 @@ const Monitor = module.exports = { // eslint-disable-line no-unused-vars
 		}
 	}
 };
+
+Monitor.cleanInterval = setInterval(Monitor.clean, 6 * 60 * 60 * 1000);

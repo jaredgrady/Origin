@@ -49,6 +49,7 @@ class RoomGame {
 	constructor(room) {
 		this.id = room.id;
 		this.room = room;
+		this.gameid = 'game';
 		this.title = 'Game';
 		this.allowRenames = false;
 		this.players = Object.create(null);
@@ -123,7 +124,7 @@ class RoomGame {
 	// need to handle the other events.
 
 	onUpdateConnection(user, connection) {
-		this.onConnect(user, connection);
+		if (this.onConnect) this.onConnect(user, connection);
 	}
 }
 

@@ -82,7 +82,7 @@ let commands = exports.commands = {
 		if (!target) return this.parse('/avatars');
 		let parts = target.split(',');
 		let avatar = parseInt(parts[0], 10);
-		if (parts[0] === '#bw2elesa' || parts[0] === '#teamrocket') {
+		if (parts[0] === '#bw2elesa' || parts[0] === '#teamrocket' || parts[0] === '#yellow') {
 			avatar = parts[0];
 		}
 		if (typeof avatar === 'number' && (!avatar || avatar > 294 || avatar < 1)) {
@@ -254,7 +254,7 @@ let commands = exports.commands = {
 	unblockpms: 'unignorepms',
 	unignorepm: 'unignorepms',
 	unignorepms: function (target, room, user) {
-		if (!user.ignorePMs) return this.sendReply("You are not blocking private messages! To block, use /blockpms");
+		if (!user.ignorePMs) return this.errorReply("You are not blocking private messages! To block, use /blockpms");
 		user.ignorePMs = false;
 		return this.sendReply("You are no longer blocking private messages.");
 	},
@@ -584,7 +584,6 @@ roomintro: function (target, room, user) {
             Rooms.global.writeChatRoomData();
         }
     },
-
 	stafftopic: 'staffintro',
 	staffintro: function (target, room, user) {
 		if (!target) {
@@ -612,6 +611,7 @@ roomintro: function (target, room, user) {
 		this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 
 		this.privateModCommand("(" + user.name + " changed the staffintro.)");
+		this.logEntry(target);
 
 		if (room.chatRoomData) {
 			room.chatRoomData.staffMessage = room.staffMessage;
@@ -1497,8 +1497,8 @@ roomintro: function (target, room, user) {
 			if (Config.groupsranking.indexOf(target) > 1 && !user.can('modchatall', null, room)) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
-			var roomGroup = (room.auth && room.isPrivate === true ? ' ' : user.group);
-			if (user.userid in room.auth) roomGroup = room.auth[user.userid];
+			let roomGroup = (room.auth && room.isPrivate === true ? ' ' : user.group);
+			if (room.auth && user.userid in room.auth) roomGroup = room.auth[user.userid];
 			if (Config.groupsranking.indexOf(target) > Math.max(1, Config.groupsranking.indexOf(roomGroup)) && !user.can('makeroom')) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
@@ -1526,7 +1526,6 @@ roomintro: function (target, room, user) {
 	declare: function (target, room, user) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
-
 		if (!this.canTalk()) return;
 
 		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare can not exceed 500 characters for stability reasons.');
@@ -1538,8 +1537,8 @@ roomintro: function (target, room, user) {
 	htmldeclare: function (target, room, user) {
 		if (!target) return this.parse('/help htmldeclare');
 		if (!this.can('gdeclare', null, room)) return false;
-
 		if (!this.canTalk()) return;
+		if (!this.canHTML(target)) return;
 
 		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
@@ -1562,6 +1561,7 @@ roomintro: function (target, room, user) {
 	chatdeclare: function (target, room, user) {
 		if (!target) return this.parse('/help chatdeclare');
 		if (!this.can('gdeclare')) return false;
+		if (!this.canHTML(target)) return;
 
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');

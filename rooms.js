@@ -65,11 +65,24 @@ let Room = (function () {
 	};
 	Room.prototype.add = function (message) {
 		if (typeof message !== 'string') throw new Error("Deprecated message type");
+		if (message.startsWith('|uhtmlchange|')) return this.uhtmlchange(message);
 		this.logEntry(message);
 		if (this.logTimes && message.substr(0, 3) === '|c|') {
 			message = '|c:|' + (~~(Date.now() / 1000)) + '|' + message.substr(3);
 		}
 		this.log.push(message);
+		return this;
+	};
+	Room.prototype.uhtmlchange = function (message) {
+		let thirdPipe = message.indexOf('|', 13);
+		let originalStart = '|uhtml|' + message.slice(13, thirdPipe + 1);
+		for (let i = 0; i < this.log.length; i++) {
+			if (this.log[i].startsWith(originalStart)) {
+				this.log[i] = originalStart + message.slice(thirdPipe + 1);
+				break;
+			}
+		}
+		this.send(message);
 		return this;
 	};
 	Room.prototype.logEntry = function () {};
@@ -126,17 +139,16 @@ let Room = (function () {
 		let alts;
 		if (!noRecurse) {
 			alts = [];
-			for (let i in Users.users) {
-				let otherUser = Users.users[i];
-				if (otherUser === user) continue;
+			Users.users.forEach(function (otherUser) {
+				if (otherUser === user) return;
 				for (let myIp in user.ips) {
 					if (myIp in otherUser.ips) {
 						alts.push(otherUser.name);
 						this.roomBan(otherUser, true, userid);
-						break;
+						return;
 					}
 				}
-			}
+			}, this);
 		}
 		this.bannedUsers[userid] = userid;
 		if (user.autoconfirmed) this.bannedUsers[user.autoconfirmed] = userid;
@@ -725,7 +737,7 @@ let GlobalRoom = (function () {
 	GlobalRoom.prototype.checkAutojoin = function (user, connection) {
 		if (!user.named) return;
 		for (let i = 0; i < this.staffAutojoin.length; i++) {
-			let room = Rooms.get(this.staffAutojoin[i]);
+			let room = Rooms(this.staffAutojoin[i]);
 			if (!room) {
 				this.staffAutojoin.splice(i, 1);
 				i--;
@@ -1045,8 +1057,10 @@ let BattleRoom = (function () {
 		this.expire();
 	};
 	BattleRoom.prototype.getInactiveSide = function () {
-		if (this.battle.p1 && !this.battle.p2) return 1;
-		if (this.battle.p2 && !this.battle.p1) return 0;
+		let p1active = this.battle.p1 && this.battle.p1.active;
+		let p2active = this.battle.p2 && this.battle.p2.active;
+		if (p1active && !p2active) return 1;
+		if (p2active && !p1active) return 0;
 		return this.battle.inactiveSide;
 	};
 	BattleRoom.prototype.forfeit = function (user, message, side) {
@@ -1159,7 +1173,7 @@ let BattleRoom = (function () {
 		// a tick is 10 seconds
 
 		let maxTicksLeft = 15; // 2 minutes 30 seconds
-		if (!this.battle.p1 || !this.battle.p2) {
+		if (!this.battle.p1 || !this.battle.p2 || !this.battle.p1.active || !this.battle.p2.active) {
 			// if a player has left, don't wait longer than 6 ticks (1 minute)
 			maxTicksLeft = 6;
 		}
@@ -1208,20 +1222,24 @@ let BattleRoom = (function () {
 		return false;
 	};
 	BattleRoom.prototype.kickInactiveUpdate = function () {
-		if (!this.rated && !this.tour) return false;
+		if (this.battle.allowRenames) return false;
+
+		let p1inactive = !this.battle.p1 || !this.battle.p1.active;
+		let p2inactive = !this.battle.p2 || !this.battle.p2.active;
+
 		if (this.resetTimer) {
 			let inactiveSide = this.getInactiveSide();
 			let changed = false;
 
-			if ((!this.battle.p1 || !this.battle.p2) && !this.disconnectTickDiff[0] && !this.disconnectTickDiff[1]) {
-				if ((!this.battle.p1 && inactiveSide === 0) || (!this.battle.p2 && inactiveSide === 1)) {
+			if ((p1inactive || p2inactive) && !this.disconnectTickDiff[0] && !this.disconnectTickDiff[1]) {
+				if ((p1inactive && inactiveSide === 0) || (p2inactive && inactiveSide === 1)) {
 					let inactiveUser = this.getPlayer(inactiveSide);
 
-					if (!this.battle.p1 && inactiveSide === 0 && this.sideTurnTicks[0] > 7) {
+					if (p1inactive && inactiveSide === 0 && this.sideTurnTicks[0] > 7) {
 						this.disconnectTickDiff[0] = this.sideTurnTicks[0] - 7;
 						this.sideTurnTicks[0] = 7;
 						changed = true;
-					} else if (!this.battle.p2 && inactiveSide === 1 && this.sideTurnTicks[1] > 7) {
+					} else if (p2inactive && inactiveSide === 1 && this.sideTurnTicks[1] > 7) {
 						this.disconnectTickDiff[1] = this.sideTurnTicks[1] - 7;
 						this.sideTurnTicks[1] = 7;
 						changed = true;
@@ -1232,7 +1250,7 @@ let BattleRoom = (function () {
 						return true;
 					}
 				}
-			} else if (this.battle.p1 && this.battle.p2) {
+			} else if (!p1inactive && !p2inactive) {
 				// Only one of the following conditions should happen, but do
 				// them both since you never know...
 				if (this.disconnectTickDiff[0]) {
