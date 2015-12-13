@@ -2597,9 +2597,8 @@ roomintro: function (target, room, user) {
 
 	a: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return false;
-		// secret sysop command
-		room.add(target);
 		this.logModCommand(user.name + " used an admin command");
+		room.add(target);
 	},
 
 	/*********************************************************
