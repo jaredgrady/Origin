@@ -1,9 +1,5 @@
 # Origin
 
-[![Build Status](https://travis-ci.com/TheFenderStory/Origin.svg?token=9q3GhyANxzEm2iwFp7D5&branch=master)](https://travis-ci.com/TheFenderStory/Origin)
-[![Dependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate)
-[![devDependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate/dev-status.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate#info=devDependencies)
-
 Origin is not a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
 private servers. ║ ಡ ͜ ʖ ಡ ║
 
