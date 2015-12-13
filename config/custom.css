@@ -114,6 +114,10 @@
     background: rgba(255, 255, 255, 0.5) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-selena, #casino-userlist-user-selena, #artshop-userlist-user-selena {
+    background: rgba(255, 255, 255, 0.5) url("http://i.imgur.com/UR0ldNE.gif") right no-repeat;
+  }
+  
   /* Icons ~end */
   
   /****************************
