@@ -40,7 +40,7 @@ var messages = [
 
 exports.commands = {
     cmds: 'serverhelp',
-    eoshelp: 'serverhelp',
+    originhelp: 'serverhelp',
     serverhelp: function(target, room, user, connection) {
         if (!this.canBroadcast()) return;
         if (user.isStaff) {
