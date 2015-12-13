@@ -247,25 +247,6 @@ exports.Formats = [
 		requirePentagon: true
 	},
 	{
-		name: "Battle Spot Doubles",
-		section: "ORAS Doubles",
-
-		gameType: 'doubles',
-		maxForcedLevel: 50,
-		teamLength: {
-			validate: [4, 6],
-			battle: 4
-		},
-		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		requirePentagon: true,
-		onValidateSet: function (set) {
-			if (set.item) {
-				const item = this.getItem(set.item);
-				if (item.megaStone) return ["Mega Stones are not permitted."];
-			}
-		}
-	},
-	{
 		name: "Battle Spot Special 11",
 		section: "ORAS Doubles",
 
