@@ -1377,8 +1377,8 @@ User = (function () {
 			}
 		}
 		let makeRoom = this.can('makeroom');
-		let dev = ~developers.indexOf(this.userid);
-		if (room.tour && (!makeRoom || !dev)) {
+		let isdev = ~developers.indexOf(this.userid);
+		if (room.tour && !makeRoom && !isdev)) {
 			let tour = room.tour.tour;
 			let errorMessage = tour.onBattleJoin(room, this);
 			if (errorMessage) {
@@ -1388,7 +1388,7 @@ User = (function () {
 		}
 		if (room.modjoin) {
 			let userGroup = this.group;
-			if (room.auth && (!makeRoom || !dev)) {
+			if (room.auth && !makeRoom && !isdev)) {
 				if (room.isPrivate === true) {
 					userGroup = ' ';
 				}
