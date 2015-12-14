@@ -57,6 +57,7 @@ var emotes = {
 	'feelstea': 'http://i.imgur.com/M0f2zgJ.jpg?1',
 	'feelstired': 'http://i.imgur.com/EgYViOs.jpg',
 	'feelsdrg': 'http://i.imgur.com/UZzWcA3.png',
+	'feelsvpn': 'http://i.imgur.com/ODTZISl.gif',
 	'fukya': 'http://i.imgur.com/ampqCZi.gif',
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
