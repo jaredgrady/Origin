@@ -1378,7 +1378,7 @@ User = (function () {
 		}
 		let makeRoom = this.can('makeroom');
 		let isdev = ~developers.indexOf(this.userid);
-		if (room.tour && !makeRoom && !isdev)) {
+		if (room.tour && !makeRoom && !isdev) {
 			let tour = room.tour.tour;
 			let errorMessage = tour.onBattleJoin(room, this);
 			if (errorMessage) {
