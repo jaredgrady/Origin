@@ -1388,7 +1388,7 @@ User = (function () {
 		}
 		if (room.modjoin) {
 			let userGroup = this.group;
-			if (room.auth && !makeRoom && !isdev)) {
+			if (room.auth && !makeRoom && !isdev) {
 				if (room.isPrivate === true) {
 					userGroup = ' ';
 				}
