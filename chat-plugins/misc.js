@@ -873,7 +873,7 @@ exports.commands = {
 	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."],
 	
 	protectroom: function(target, room, user) {
-		if (!this.can('pban')) return false;
+		if (!this.can('declare')) return false;
 		if (room.type !== 'chat' || room.isOfficial) return this.errorReply("This room is official or not a chatroom.");
 		if (target === 'off') {
 			if (!room.protect) return this.errorReply("This room is not unprotected.");
