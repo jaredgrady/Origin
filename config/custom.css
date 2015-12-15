@@ -688,6 +688,25 @@
     background: #6AE68B;
   }
   
+  .folderpane button {
+    background: #AA0114;
+    border: 1px solid #CB0014;
+    color: #EEFFF4;
+    text-shadow: 0px 0px 2px #77010D;
+  }
+  
+  .folderpane button:hover {
+    background: #C00518;
+  }
+  
+  .folderpane button:disabled, .folderpane button:disabled:hover {
+    background: #A82230;
+    border: 1px solid #9E0010;
+    color: #C5F5D6;
+    font-style: italic;
+    text-shadow: none;
+  }
+  
   .teamchartbox {
     border-color: #359C6C;
   }
