@@ -37,6 +37,7 @@ var emotes = {
 	'feelslot': 'http://i.imgur.com/tl88F7i.png?1',
 	'feelslu': 'http://i.imgur.com/REEBSOT.png?1',
 	'feelsmd': 'http://i.imgur.com/DJHMdSw.png',
+	'feelsmixtape': 'http://i.imgur.com/7lncwng.png',
 	'feelsnv': 'http://i.imgur.com/XF6kIdJ.png',
 	'feelsns': 'http://i.imgur.com/jYRFUYW.jpg?1',
 	'feelsok': 'http://i.imgur.com/gu3Osve.png',
