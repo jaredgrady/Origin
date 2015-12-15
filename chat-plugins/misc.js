@@ -872,6 +872,24 @@ exports.commands = {
 	},
 	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."],
 	
+	protectroom: function(target, room, user) {
+		if (!this.can('pban')) return false;
+		if (room.type !== 'chat' || room.isOfficial) return this.errorReply("This room is official or not a chatroom.");
+		if (target === 'off') {
+			if (!room.protect) return this.errorReply("This room is not unprotected.");
+			room.protect = false;
+			room.chatRoomData.protect = room.protect;
+			Rooms.global.writeChatRoomData();
+			this.privateModCommand("(" + user.name + " has disabled protection from this room.)");
+		} else {
+			if (room.protect) return this.errorReply("This room is protected.");
+			room.protect = true;
+			room.chatRoomData.protect = room.protect;
+			Rooms.global.writeChatRoomData();
+			this.privateModCommand("(" + user.name + " has protected this room from being automatically deleted.)");
+		}
+	},
+	
 	unlink: function (target, room, user) {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
