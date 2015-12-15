@@ -164,7 +164,7 @@ function handleBoughtItem(item, user, cost) {
 		var msg = '**' + user.name + " has bought " + item + ".**";
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (let user of Users.users) {
+		for (var user of Users.users) {
 			user = user[1];
 			if (user.group === '~' || user.group === '&') {
 				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
@@ -336,7 +336,7 @@ exports.commands = {
 		var msg = '**' + user + " has purchased an avatar and wants " + target + " as their image." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (let user of Users.users) {
+		for (var user of Users.users) {
 			user = user[1];
 			if (user.group === '~' || user.group === '&') {
 				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
@@ -352,7 +352,7 @@ exports.commands = {
 		var msg = '**' + user + " has purchased a room and wants " + target + " as the room name." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (let user of Users.users) {
+		for (var user of Users.users) {
 			user = user[1];
 			if (user.group === '~' || user.group === '&') {
 				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
