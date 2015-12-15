@@ -164,9 +164,9 @@ function handleBoughtItem(item, user, cost) {
 		var msg = '**' + user.name + " has bought " + item + ".**";
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (var i in Users.users) {
-			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
-				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
+		for (let user of Users.users) {
+			if (user.group === '~' || user.group === '&') {
+				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 			}
 		}
 	}
@@ -335,9 +335,9 @@ exports.commands = {
 		var msg = '**' + user + " has purchased an avatar and wants " + target + " as their image." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (var i in Users.users) {
-			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
-				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
+		for (let user of Users.users) {
+			if (user.group === '~' || user.group === '&') {
+				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 			}
 		}
 		user.sendAvatar = false;
@@ -350,9 +350,9 @@ exports.commands = {
 		var msg = '**' + user + " has purchased a room and wants " + target + " as the room name." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
-		for (var i in Users.users) {
-			if (Users.users[i].group === '~' || Users.users[i].group === '&') {
-				Users.users[i].send('|pm|~Shop Alert|' + Users.users[i].getIdentity() + '|' + msg);
+		for (let user of Users.users) {
+			if (user.group === '~' || user.group === '&') {
+				user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 			}
 		}
 		user.canSendRoomName = false;
