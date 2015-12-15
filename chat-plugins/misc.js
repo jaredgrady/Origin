@@ -870,5 +870,17 @@ exports.commands = {
 		selectors += ' {';
 		this.sendReplyBox(selectors + '<br />&nbsp;&nbsp;&nbsp;&nbsp;' + imageurl + '<br />}');
 	},
-	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."]
+	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."],
+	
+	unlink: function (target, room, user) {
+		if (!target || !this.can('mute')) return this.parse('/help unlink');
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
+
+		let targetUser = Users.get(target);
+
+		this.add('|unlink|' + this.getLastIdOf(targetUser));
+		this.addModCommand(targetUser.name + "'s links were unlinked by " + user.name);
+		targetUser.popup(user.name + " has unlinked all your previous messages.");
+	},
+	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"]
 };
