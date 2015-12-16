@@ -337,7 +337,7 @@ exports.BattleScripts = {
 			totalDamage = damage;
 		}
 
-		if (move.recoil) {
+		if (move.recoil && totalDamage) {
 			this.damage(this.clampIntRange(Math.round(totalDamage * move.recoil[0] / move.recoil[1]), 1), pokemon, target, 'recoil');
 		}
 
@@ -1096,7 +1096,7 @@ exports.BattleScripts = {
 			name = template.baseSpecies;
 		}
 		let battleForme = this.checkBattleForme(template);
-		if (battleForme && (battleForme.isMega ? !teamDetails.megaCount : this.random(2))) {
+		if (battleForme && battleForme.tier !== 'AG' && (battleForme.isMega ? !teamDetails.megaCount : this.random(2))) {
 			template = this.getTemplate(template.otherFormes.length >= 2 ? template.otherFormes[this.random(template.otherFormes.length)] : template.otherFormes[0]);
 		}
 
@@ -1642,14 +1642,12 @@ exports.BattleScripts = {
 				rejectAbility = !counter['inaccurate'];
 			} else if (ability === 'Defiant' || ability === 'Moxie') {
 				rejectAbility = !counter['Physical'] && !hasMove['batonpass'];
-			} else if (ability === 'Gluttony') {
+			} else if (ability === 'Gluttony' || ability === 'Moody') {
 				rejectAbility = true;
 			} else if (ability === 'Limber') {
 				rejectAbility = template.types.indexOf('Electric') >= 0;
 			} else if (ability === 'Lightning Rod') {
 				rejectAbility = template.types.indexOf('Ground') >= 0;
-			} else if (ability === 'Moody') {
-				rejectAbility = template.id !== 'bidoof';
 			} else if (ability === 'Overgrow') {
 				rejectAbility = !counter['Grass'];
 			} else if (ability === 'Poison Heal') {
@@ -1866,10 +1864,10 @@ exports.BattleScripts = {
 			item = 'Air Balloon';
 		} else if (hasMove['outrage'] && (counter.setupType || ability === 'Multiscale')) {
 			item = 'Lum Berry';
-		} else if (ability === 'Moody' || hasMove['clearsmog'] || hasMove['detect'] || hasMove['protect'] || hasMove['sleeptalk']) {
+		} else if (ability === 'Slow Start' || hasMove['clearsmog'] || hasMove['detect'] || hasMove['protect'] || hasMove['sleeptalk']) {
 			item = 'Leftovers';
 		} else if (hasMove['substitute']) {
-			item = !counter['drain'] ? 'Leftovers' : 'Life Orb';
+			item = !counter['drain'] || counter.damagingMoves.length < 2 ? 'Leftovers' : 'Life Orb';
 		} else if (hasMove['lightscreen'] || hasMove['reflect']) {
 			item = 'Light Clay';
 		} else if (ability === 'Iron Barbs' || ability === 'Rough Skin') {
@@ -1976,6 +1974,12 @@ exports.BattleScripts = {
 			}
 		}
 
+		// Minimize confusion damage
+		if (!counter['Physical'] && !hasMove['copycat'] && !hasMove['transform']) {
+			evs.atk = 0;
+			ivs.atk = hasMove['hiddenpower'] ? ivs.atk - 30 : 0;
+		}
+
 		return {
 			name: name,
 			moves: moves,
@@ -2033,8 +2037,6 @@ exports.BattleScripts = {
 
 			let tier = template.tier;
 			switch (tier) {
-			case 'AG':
-				continue;
 			case 'Uber':
 				// Ubers are limited to 2 but have a 20% chance of being added anyway.
 				if (uberCount > 1 && this.random(5) >= 1) continue;

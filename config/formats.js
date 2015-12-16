@@ -65,7 +65,7 @@ exports.Formats = [
 		banlist: ['RU', 'BL3']
 	},
 	{
-		name: "PU",
+		name: "PU (suspect test)",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557849/\">np: PU Stage 5</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3528743/\">PU Viability Ranking</a>"
@@ -202,6 +202,7 @@ exports.Formats = [
 	{
 		name: "VGC 2016",
 		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3558332/\">VGC 2016 Rules</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3500650/\">VGC Learning Resources</a>"
 		],
 		section: "ORAS Doubles",
@@ -232,7 +233,6 @@ exports.Formats = [
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3524352/\">VGC 2015 Rules</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3530547/\">VGC 2015 Viability Ranking</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3500650/\">VGC Learning Resources</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3526666/\">Sample Teams for VGC 2015</a>"
 		],
 		section: "ORAS Doubles",
@@ -313,29 +313,6 @@ exports.Formats = [
 		requirePentagon: true
 	},
 	{
-		name: "Festive Feud",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3556178/\">Festive Feud</a>"],
-		section: "ORAS Triples",
-
-		gameType: 'triples',
-		maxForcedLevel: 50,
-		teamLength: {
-			validate: [6, 6]
-		},
-		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		requirePentagon: true,
-		onValidateTeam: function (team) {
-			const problems = [];
-			for (let i = 0; i < team.length; i++) {
-				let template = this.getTemplate(team[i].species);
-				if (template.color !== 'Red' && template.color !== 'Green' && template.color !== 'White') {
-					problems.push(template.species);
-				}
-			}
-			if (problems.length) return ["Only red, green and white Pok\u00E9mon are permitted.", "(You have " + problems.join(', ') + ")"];
-		}
-	},
-	{
 		name: "Triples Custom Game",
 		section: "ORAS Triples",
 
@@ -369,37 +346,27 @@ exports.Formats = [
 		}
 	},
 	{
-	name: "Spooky Cup",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3551484/\">Spooky Cup</a>"],
-		section: "OM of the Month",
+		name: "Festive Feud",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3556178/\">Festive Feud</a>"],
+		section: "OM of The Month",
+		column: 2,
 
-		gameType: 'doubles',
+		gameType: 'triples',
 		maxForcedLevel: 50,
-		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Cancel Mod', 'Team Preview VGC'],
-		banlist: ['Illegal', 'Unreleased'],
+		teamLength: {
+			validate: [6, 6]
+		},
+		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
 		requirePentagon: true,
-		onValidateTeam: function (team, format) {
-			if (team.length < 4) return ['You must bring at least four Pok\u00e9mon.'];
-		},
-		onValidateSet: function (set) {
-			let allowedPokemon = {
-				"Rattata":1, "Raticate":1, "Ekans":1, "Arbok":1, "Pikachu":1, "Zubat":1, "Golbat":1, "Paras":1, "Parasect":1, "Grimer":1, "Muk":1, "Gastly":1, "Haunter":1, "Gengar":1, "Cubone":1, "Marowak":1, "Koffing":1, "Weezing":1, "Tangela":1, "Mr. Mime":1, "Ditto":1, "Kabuto":1, "Kabutops":1, "Hoothoot":1, "Noctowl":1, "Spinarak":1, "Ariados":1, "Crobat":1, "Umbreon":1, "Murkrow":1, "Misdreavus":1, "Unown":1, "Gligar":1, "Granbull":1, "Sneasel":1, "Houndour":1, "Houndoom":1, "Mightyena":1, "Dustox":1, "Shiftry":1, "Shedinja":1, "Whismur":1, "Loudred":1, "Exploud":1, "Sableye":1, "Mawile":1, "Gulpin":1, "Swalot":1, "Carvanha":1, "Sharpedo":1, "Cacnea":1, "Cacturne":1, "Seviper":1, "Lunatone":1, "Baltoy":1, "Claydol":1, "Shuppet":1, "Banette":1, "Duskull":1, "Dusclops":1, "Absol":1, "Snorunt":1, "Glalie":1, "Drifloon":1, "Drifblim":1, "Mismagius":1, "Honchkrow":1, "Stunky":1, "Skuntank":1, "Spiritomb":1, "Skorupi":1, "Drapion":1, "Croagunk":1, "Toxicroak":1, "Weavile":1, "Tangrowth":1, "Gliscor":1, "Dusknoir":1, "Froslass":1, "Rotom":1, "Purrloin":1, "Liepard":1, "Woobat":1, "Swoobat":1, "Venipede":1, "Whirlipede":1, "Scolipede":1, "Basculin":1, "Krokorok":1, "Krookodile":1, "Sigilyph":1, "Yamask":1, "Cofagrigus":1, "Garbodor":1, "Zorua":1, "Zoroark":1, "Gothita":1, "Gothorita":1, "Gothitelle":1, "Frillish":1, "Jellicent":1, "Joltik":1, "Galvantula":1, "Elgyem":1, "Beheeyem":1, "Litwick":1, "Lampent":1, "Chandelure":1, "Golurk":1, "Zweilous":1, "Hydreigon":1, "Volcarona":1, "Espurr":1, "Meowstic":1, "Honedge":1, "Doublade":1, "Aegislash":1, "Malamar":1, "Phantump":1, "Trevenant":1, "Pumpkaboo":1, "Gourgeist":1, "Noibat":1, "Noivern":1
-			};
-			let pokemon = Tools.getTemplate(set.species).baseSpecies;
-			if (!(pokemon in allowedPokemon)) {
-				return [pokemon + " is not usable in Spooky Cup."];
+		onValidateTeam: function (team) {
+			const problems = [];
+			for (let i = 0; i < team.length; i++) {
+				let template = this.getTemplate(team[i].species);
+				if (template.color !== 'Red' && template.color !== 'Green' && template.color !== 'White') {
+					problems.push(template.species);
+				}
 			}
-			let item = Tools.getItem(set.item);
-			if (item.megaStone) {
-				return ["Mega Stones are not permitted in Spooky Cup."];
-			}
-		},
-		onBegin: function () {
-			this.debug('cutting down to 4');
-			this.p1.pokemon = this.p1.pokemon.slice(0, 4);
-			this.p1.pokemonLeft = this.p1.pokemon.length;
-			this.p2.pokemon = this.p2.pokemon.slice(0, 4);
-			this.p2.pokemonLeft = this.p2.pokemon.length;
+			if (problems.length) return ["Only red, green and white Pok\u00E9mon are permitted.", "(You have " + problems.join(', ') + ")"];
 		}
 	},
 	{

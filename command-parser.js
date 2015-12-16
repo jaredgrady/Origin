@@ -389,6 +389,7 @@ let Context = exports.Context = (function () {
 			'blogspot.com': 1,
 			'imageshack.us': 1,
 			'deviantart.net': 1,
+			'd.pr': 1,
 			'pokefans.net': 1
 		};
 		if (domain in approvedDomains) {
@@ -403,23 +404,28 @@ let Context = exports.Context = (function () {
 	Context.prototype.canHTML = function (html) {
 		html = ('' + (html || '')).trim();
 		if (!html) return '';
-		let images = html.match(/<img\b[^<>]*/ig);
-		if (images) {
+		let images = /<img\b[^<>]*/ig;
+		let match;
+		while ((match = images.exec(html))) {
 			if (this.room.isPersonal && !this.user.can('announce')) {
 				this.errorReply("Images are not allowed in personal rooms.");
 				return false;
 			}
-			for (let i = 0; i < images.length; i++) {
-				if (!/width=([0-9]+|"[0-9]+")/i.test(images[i]) || !/height=([0-9]+|"[0-9]+")/i.test(images[i])) {
-					this.errorReply('All images must have a width and height attribute');
-					return false;
-				}
-				let match = /src\w*\=\w*"?([^ "]+)(\w*")?/i.exec(images[i]);
-				if (match) {
-					let uri = this.canEmbedURI(match[1], true);
-					if (!uri) return false;
-					html = html.slice(0, match.index) + 'src="' + uri + '"' + html.slice(match.index + match[0].length);
-				}
+			if (!/width=([0-9]+|"[0-9]+")/i.test(match[0]) || !/height=([0-9]+|"[0-9]+")/i.test(match[0])) {
+				// Width and height are required because most browsers insert the
+				// <img> element before width and height are known, and when the
+				// image is loaded, this changes the height of the chat area, which
+				// messes up autoscrolling.
+				this.errorReply('All images must have a width and height attribute');
+				return false;
+			}
+			let srcMatch = /src\w*\=\w*"?([^ "]+)(\w*")?/i.exec(match[0]);
+			if (srcMatch) {
+				let uri = this.canEmbedURI(srcMatch[1], true);
+				if (!uri) return false;
+				html = html.slice(0, match.index + srcMatch.index) + 'src="' + uri + '"' + html.slice(match.index + srcMatch.index + srcMatch[0].length);
+				// lastIndex is inaccurate since html was changed
+				images.lastIndex = match.index + 11;
 			}
 		}
 		if (/>here.?</i.test(html) || /click here/i.test(html)) {
