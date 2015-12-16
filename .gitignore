@@ -3,6 +3,7 @@
 /node_modules
 /eslint-cache
 /chat-plugins/private.js
+/chat-plugins/trainercards.js
 npm-debug.log
 db.json
 
