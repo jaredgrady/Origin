@@ -38,6 +38,10 @@
     background: rgba(255, 255, 255, 0.5) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
   }
   
+  #lobby-userlist-user-phoenixsacred, #casino-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred {
+    background: rgba(255, 255, 255, 0.5) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+  }
+  
   #lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
     background: rgba(255, 255, 255, 0.5) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
   }
