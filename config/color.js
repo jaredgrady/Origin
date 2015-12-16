@@ -149,3 +149,180 @@ function hashColor(e) {
 			return colorCache[e];
 	}
 }
+function unescapeHTML(str) {
+		str = (str?''+str:'');
+		return str.replace(/&quot;/g, '"').replace(/&gt;/g, '>').
+			replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+}
+var colors = [{name: 'red', value: 'red'}, {name: 'blue', value: 'blue'}, {name: 'green', value: 'green'}, {name: 'orange', value: 'orange'}, {name: 'yellow', value: '#D4DF01'}, {name:'pink', value: '#f556ff'}]
+
+colors.forEach(function (color) {
+  var r = new RegExp("\b"+color.name+"?\[([^\]<]+)\]", "ig")
+  message = message.replace(r, '<font color="'+color.value+'">$1</font>')
+})
+
+function parseMessage(message) {
+	message = message.replace(/\`\`([^< ](?:[^<`]*?[^< ])?)\`\`/g,'<code>$1</code>'); // ``text``
+	message = message.replace(/\~\~([^< ](?:[^<]*?[^< ])?)\~\~/g, '<s>$1</s>'); // ~~text~~
+	message = message.replace(/\_\_([^< ](?:[^<]*?[^< ])?)\_\_(?![^<]*?<\/a)/g, '<i>$1</i>'); // __text__
+	message = message.replace(/\*\*([^< ](?:[^<]*?[^< ])?)\*\*/g, '<b>$1</b>'); // **text**
+	message = message.replace(/\bred?\[([^\]<]+)\]/ig,'<font color="red">$1</font>'); // red[text]
+	message = message.replace(/\bblue?\[([^\]<]+)\]/ig,'<font color="blue">$1</font>'); // blue[text]
+	message = message.replace(/\bgreen?\[([^\]<]+)\]/ig,'<font color="green">$1</font>'); // green[text]
+	message = message.replace(/\borange?\[([^\]<]+)\]/ig,'<font color="orange">$1</font>'); // orange[text]
+	message = message.replace(/\bpink?\[([^\]<]+)\]/ig,'<font color="#f556ff">$1</font>'); // pink[text]
+	message = message.replace(/\byellow?\[([^\]<]+)\]/ig,'<font color="#D4DF01">$1</font>'); // yellow[text]
+	message = message.replace(/\broom?\[([^\]<]+)\]/ig, function(p0, p1) {
+		return '<button class="astext" name="joinRoom" value="' + toId(p1) + '"><font color="blue"><u>' + p1 + '</u></font></button>';
+	}); // room[text]
+	message = message.replace(/\brainbow?\[([^\]<]+)\]/ig, function(p0, p1) {
+		return rainbowText(p1);
+	}); // rainbow[text]
+	message = message.replace(/\bfelicolors?\[([^\]<]+)\]/ig, function(p0, p1) {
+		return feliColors(p1);
+	}); // felicolors[text]
+
+
+	var spoilerIndex = message.toLowerCase().indexOf('spoiler:');
+	if (spoilerIndex < 0) spoilerIndex = message.toLowerCase().indexOf('spoilers:');
+	if (spoilerIndex >= 0) {
+		var offset = spoilerIndex+8;
+		if (message.charAt(offset) === ':') offset++;
+		if (message.charAt(offset) === ' ') offset++;
+		message = message.substr(0, offset)+'<span class="spoiler">'+message.substr(offset)+'</span>';
+	}
+
+	// google [blah]
+	// google[blah]
+	//   Google search for 'blah'
+	message = message.replace(/\bgoogle ?\[([^\]<]+)\]/ig, function(p0, p1) {
+		p1 = Tools.escapeHTML(encodeURIComponent(unescapeHTML(p1)));
+		return '<a href="http://www.google.com/search?ie=UTF-8&q=' + p1 +
+			'" target="_blank">' + p0 + '</a>';
+	});
+	// gl [blah]
+	// gl[blah]
+	//   Google search for 'blah' and visit the first result ("I'm feeling lucky")
+	message = message.replace(/\bgl ?\[([^\]<]+)\]/ig, function(p0, p1) {
+		p1 = Tools.escapeHTML(encodeURIComponent(unescapeHTML(p1)));
+		return '<a href="http://www.google.com/search?ie=UTF-8&btnI&q=' + p1 +
+			'" target="_blank">' + p0 + '</a>';
+	});
+	// wiki [blah]
+	//   Search Wikipedia for 'blah' (and visit the article for 'blah' if it exists)
+	message = message.replace(/\bwiki ?\[([^\]<]+)\]/ig, function(p0, p1) {
+		p1 = Tools.escapeHTML(encodeURIComponent(unescapeHTML(p1)));
+		return '<a href="http://en.wikipedia.org/w/index.php?title=Special:Search&search=' +
+			p1 + '" target="_blank">' + p0 + '</a>';
+	});
+	// [[blah]]
+	//   Short form of gl[blah]
+	message = message.replace(/\[\[([^< ](?:[^<`]*?[^< ])?)\]\]/ig, function(p0, p1) {
+		var q = Tools.escapeHTML(encodeURIComponent(unescapeHTML(p1)));
+		return '<a href="http://www.google.com/search?ie=UTF-8&btnI&q=' + q +
+			'" target="_blank">' + p1 +'</a>';
+	});
+
+	message = parseLink(message);
+	return message;
+}
+
+	customcolor: 'changecolor',
+	customcolour: 'changecolor',
+	changecolour: 'changecolor',
+	changecolor: function(target, room, user) {
+		if (!this.can('changecolor') && !user.vip && user.userid !== 'jd') return this.sendReply('/changecolor - Access denied.');
+		if (!target) return this.sendReply('Usage: /changecolor [name/off]');
+		target = toId(target);
+		if (target == 'off') {
+			delete user.chat;
+			delete user.processChatQueue;
+			return this.sendReply('Your custom colour has been removed.');
+		}
+		target = hashColor(target);
+		THROTTLE_DELAY = 600;
+		THROTTLE_BUFFER_LIMIT = 6;
+		user.chat = function (message, room, connection) {
+		 	var now = new Date().getTime();
+			this.lastActive = now;
+
+		 	if (message.substr(0,16) === '/cmd userdetails') {
+				// certain commands are exempt from the queue
+				Monitor.activeIp = connection.ip;
+				room.chat(this, message, connection);
+				Monitor.activeIp = null;
+				return false; // but end the loop here
+			}
+
+			if (this.chatQueueTimeout) {
+				if (!this.chatQueue) this.chatQueue = []; // this should never happen
+				if (this.chatQueue.length >= THROTTLE_BUFFER_LIMIT-1) {
+					connection.sendTo(room, '|uhtml|' +
+						"<strong class=\"message-throttle-notice\">Your message was not sent because you've been typing too quickly.</strong>"
+						);
+					return false;
+				} else {
+					this.chatQueue.push([message, room, connection]);
+				}
+			} else if (now < this.lastChatMessage + THROTTLE_DELAY) {
+				this.chatQueue = [[message, room, connection]];
+				this.chatQueueTimeout = setTimeout(
+					this.processChatQueue.bind(this), THROTTLE_DELAY);
+			} else {
+				this.lastChatMessage = now;
+				this.lastChatText = message;
+				Monitor.activeIp = connection.ip;
+				if (message.substr(0,1) == '/' || message.substr(0,2) == '>>' || message.substr(0,1) == '!') {
+					room.chat(this, message, connection);
+				} else {
+					message = CommandParser.parse(message, room, connection.user, connection);
+					if (message) {
+						message = Tools.escapeHTML(message);
+						message = parseMessage(message);
+
+						if (Users.ShadowBan.checkBanned(user)) {
+							Users.ShadowBan.addMessage(user, "To " + this.id, message);
+							connection.sendTo(this, '<font color=#4249F8>'+connection.user.getIdentity(room).substr(0,1)+'</font>'+'<button class="astext" name="parseCommand" value="/user '+connection.user.name+'">' +
+								'<b><font color="'+target+'">'+Tools.escapeHTML(connection.user.name)+':</font></b></button> ' + message);
+						} else {
+							room.addRaw('<font color=#4249F8>'+connection.user.getIdentity(room).substr(0,1)+'</font>'+'<button class="astext" name="parseCommand" value="/user '+connection.user.name+'">' +
+								'<b><font color="'+target+'">'+Tools.escapeHTML(connection.user.name)+':</font></b></button> ' + message);
+							room.update();
+						}
+					}
+				}
+				Monitor.activeIp = null;
+			}
+		};
+
+		user.processChatQueue = function () {
+			if (!this.chatQueue) return; // this should never happen
+			var toChat = this.chatQueue.shift();
+			Monitor.activeIp = toChat[2].ip;
+			var message = toChat[0];
+			var room = toChat[1];
+			var connection = toChat[2];
+			if (message.substr(0,1) == '/' || message.substr(0,2) == '>>' || message.substr(0,1) == '!') {
+					room.chat(this, message, connection);
+			} else {
+				message = CommandParser.parse(message, room, connection.user, connection);
+				if (message) {
+					message = Tools.escapeHTML(message);
+					message = parseMessage(message);
+					room.addRaw('<font color=#4249F8>'+connection.user.getIdentity(room).substr(0,1)+'</font>'+'<button class="astext" name="parseCommand" value="/user '+connection.user.name+'">' +
+						'<b><font color="'+target+'">'+Tools.escapeHTML(connection.user.name)+':</font></b></button> ' + message);
+					room.update();
+				}
+			}
+			Monitor.activeIp = null;
+
+			if (this.chatQueue && this.chatQueue.length) {
+				this.chatQueueTimeout = setTimeout(
+					this.processChatQueue.bind(this), THROTTLE_DELAY);
+			} else {
+				this.chatQueue = null;
+				this.chatQueueTimeout = null;
+			}
+		};
+		return this.sendReply('|uhtml|Your colour has been set to <font color='+target+'>'+target+'.</font>');
+	}
