@@ -122,6 +122,10 @@
     background: rgba(255, 255, 255, 0.5) url("http://i.imgur.com/UR0ldNE.gif") right no-repeat;
   }
   
+  #monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
+    background: rgba(255, 255, 255, 0.5) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
+  }
+  
   /* Icons ~end */
   
   /****************************
