@@ -103,7 +103,7 @@ exports.commands = {
 					var win = true;
 					var winnings = 30 + house.ante;
 					user.sendTo(room, "You've hit the jackpot! You've won 30 bucks!");
-					room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
+					room.addRaw('<center><h3> ' + user.name + ' has hit a Jackpot on the slots!</h3></center><center><img src="http://i.imgur.com/I9Yv50R.gif" width="50" height="50"/></center>');
 				}
 			else if (roll1 === faces[1][0] || roll1 === faces[1][1]) {
 					var win = true;
