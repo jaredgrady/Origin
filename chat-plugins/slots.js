@@ -48,12 +48,12 @@ exports.commands = {
 			var roll3;
 			user.isRolling = true;
 			
-			if (prob < 1 && prob >= 0) {
+			if (prob < 3 && prob >= 0) {
 				roll1 = rollReels();
 				roll2 = roll1;
 				roll3 = roll1;
 			}
-			if (prob < 8 && prob >= 1) {
+			if (prob < 15 && prob >= 3) {
 				var sides = Math.floor((Math.random() * 2));
 				if (sides === 0) {
 					roll1 = rollReels();
@@ -66,7 +66,7 @@ exports.commands = {
 					roll1 = roll2;
 				}
 			}
-			if (prob <= 49 && prob >= 8) {
+			if (prob <= 49 && prob >= 15) {
 				roll1 = rollReels();
 				roll2 = rollReels();
 				roll3 = rollReels();
