@@ -686,37 +686,49 @@
   * TEAMBUILDER CSS *
   ******************/
   
-  .teamlist .team {
+  .teamlist .team, .teampane .button.big, .teamwrapper .button, .teampane .button {
     color: #AA0114;
     background: #8BF5A7;
     border: 1px solid #3DA458;
   }
   
-  .teamlist .team:hover {
+  .teamlist .team:hover, .teampane .button.big:hover, .teamwrapper .button:hover, .teampane .button:hover {
     background: #6AE68B;
   }
   
-  .folderpane button {
-    background: #AA0114;
-    border: 1px solid #CB0014;
-    color: #EEFFF4;
-    text-shadow: 0px 0px 2px #77010D;
+  .folder .selectFolder, .folderpane h3 {
+    background: rgba(139, 245, 167, 0.8);
   }
   
-  .folderpane button:hover {
-    background: #C00518;
+  .folderpane {
+    border-left: 5px solid rgba(139, 245, 167, 0.8);
   }
   
-  .folderpane button:disabled, .folderpane button:disabled:hover {
-    background: #A82230;
-    border: 1px solid #9E0010;
-    color: #C5F5D6;
-    font-style: italic;
-    text-shadow: none;
+  .folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before{
+    background: rgba(139, 245, 167, 0.8);
+  }
+  
+  .folder.cur .selectFolder, .folder.cur .selectFolder:hover {
+    border-color: #3DA458;
+    background: #CBFCD8;
+  }
+  
+  .folder .selectFolder:hover {
+    background: #ACF6C0;
   }
   
   .teamchartbox {
     border-color: #359C6C;
+  }
+  
+  .teamchartbox .select {
+    color: #AA0114;
+    background: #8BF5A7;
+    border: 1px solid #3DA458;
+  }
+  
+  .teamchartbox .select:hover {
+    background: #6AE68B;
   }
   
   .teambar button {
@@ -735,6 +747,16 @@
     border-color: #3DA458 !important;
     color: #AA0114 !important;
     background: #8BF5A7 !important;
+  }
+  
+  .teamlist button, .setmenu button {
+    color: #AA0114;
+  }
+  
+  .teamlist button:hover, .setmenu button:hover {
+    color: #7F0410;
+    border-color: #CB0014;
+    background: #F5624D;
   }
   
   .setchart, .setchart-nickname {
