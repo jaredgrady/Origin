@@ -18,6 +18,7 @@ var emotes = {
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelscri': 'http://i.imgur.com/QAuUW7u.jpg?1',
+	'feelscx': 'http://i.imgur.com/zRSUw2n.gif',
 	'feelsdd': 'http://i.imgur.com/fXtdLtV.png',
 	'feelsdoge': 'http://i.imgur.com/GklYWvi.png',
 	'feelsemo': 'http://i.imgur.com/FPolh5d.jpg',
