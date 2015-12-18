@@ -36,6 +36,7 @@ exports.commands = {
 		roll: function (target, room, user) {
 			var prob = Math.floor((Math.random() * 50));
 			if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply('Slots must be played in The Casino.');
+			if (!target) return this.parse('/help roll');
 			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
 			if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
