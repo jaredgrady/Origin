@@ -102,7 +102,7 @@ exports.commands = {
 				if (roll1 === faces[0][0] || roll1 === faces[0][1]) {
 					var win = true;
 					var winnings = 30 + house.ante;
-					user.sendTo(room, "You've hit the jackpot!");
+					user.sendTo(room, "You've hit the jackpot! You've won 30 bucks!");
 					room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
 				}
 			else if (roll1 === faces[1][0] || roll1 === faces[1][1]) {
