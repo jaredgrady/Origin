@@ -802,7 +802,7 @@ let commands = exports.commands = {
 		let rankLists = {};
 		for (let u in targetRoom.auth) {
 			if (!rankLists[targetRoom.auth[u]]) rankLists[targetRoom.auth[u]] = [];
-			rankLists[targetRoom.auth[u]].push(u);
+			rankLists[targetRoom.auth[u]].push(u in targetRoom.users ? "**" + u + "**" : u);
 		}
 
 		let buffer = [];
@@ -2082,7 +2082,6 @@ let commands = exports.commands = {
 	},
 
 	bash: function (target, room, user, connection) {
-
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/bash - Access denied.");
 		let exec = require('child_process').exec;
 

@@ -891,7 +891,7 @@ User = (function () {
 	User.prototype.handleRename = function (name, userid, newlyRegistered, userType) {
 		let conflictUser = users.get(userid);
 		if (conflictUser && !conflictUser.registered && conflictUser.connected) {
-			if (newlyRegistered) {
+			if (newlyRegistered && userType !== '1') {
 				if (conflictUser !== this) conflictUser.resetName();
 			} else {
 				this.send('|nametaken|' + name + "|Someone is already using the name \"" + conflictUser.name + "\".");
@@ -1082,7 +1082,7 @@ User = (function () {
 					connection.leaveRoom(room);
 					continue;
 				}
-				room.onJoin(this, connection, true);
+				room.onJoin(this, connection);
 				this.roomCount[i] = 0;
 			}
 			this.roomCount[i]++;
