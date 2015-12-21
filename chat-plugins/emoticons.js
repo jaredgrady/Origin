@@ -84,7 +84,8 @@ var emotes = {
 	'xaa': 'http://i.imgur.com/V728AvL.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
-	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg'
+	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
+	'feelslelouch': 'http://i.imgur.com/qZrV75o.png'
 };
 
 var emotesKeys = Object.keys(emotes);
