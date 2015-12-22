@@ -32,7 +32,7 @@ function rollReels() {
 exports.commands = {
 	
 	slots: {
-		start: 'roll',
+		/*start: 'roll',
 		roll: function (target, room, user) {
 			var prob = Math.floor((Math.random() * 50));
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
@@ -129,7 +129,7 @@ exports.commands = {
 			}
 			}, 3000);
 		},
-		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],
+		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],*/
 			
 		enable: function (target, room, user, cmd) {
 			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access Denied.');
