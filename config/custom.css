@@ -126,6 +126,10 @@
     background: rgba(255, 255, 255, 0.5) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
   }
   
+  #lobby-userlist-user-emge4volco, #staff-userlist-user-emge4volco, #theemergenceleague-userlist-user-emge4volco {
+    background: rgba(255, 255, 255, 0.5) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
+  }
+  
   /* Icons ~end */
   
   /****************************
