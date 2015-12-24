@@ -562,7 +562,7 @@ let commands = exports.commands = {
 			}
 			return;
 		}
-		if (!this.can('declare', null, room)) return false;
+		if (!this.can('declare', null, room) && !~developers.indexOf(user.userid)) return false;
 		target = this.canHTML(target);
 		if (!target) return;
 		if (!/</.test(target)) {
