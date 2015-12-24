@@ -104,7 +104,7 @@ function canTalk(user, room, connection, message, targetUser) {
 		connection.popup("You must choose a name before you can talk.");
 		return false;
 	}
-	if (!user.can('bypassall')) {
+	if (!~developers.indexOf(user.userid)) {
 		if (room && user.locked) {
 			this.errorReply("You are locked from talking in chat.");
 			return false;
@@ -127,7 +127,7 @@ function canTalk(user, room, connection, message, targetUser) {
 					this.errorReply("Because moderated chat is set, your account must be at least one week old and you must have won at least one ladder game to speak in this room.");
 					return false;
 				}
-			} else if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(room.modchat) && !user.can('makeroom')) {
+			} else if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(room.modchat) && !~developers.indexOf(user.userid)) {
 				let groupName = Config.groups[room.modchat].name || room.modchat;
 				this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to speak in this room.");
 				return false;
