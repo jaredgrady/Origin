@@ -6,24 +6,6 @@ exports.Formats = [
 
 // ORAS Singles
 	///////////////////////////////////////////////////////////////////
-
-	{
-		name: "Random Battle",
-		desc: ["Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable."],
-		section: "ORAS Singles",
-
-		team: 'random',
-		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
-		name: "Unrated Random Battle",
-		section: "ORAS Singles",
-
-		team: 'random',
-		challengeShow: false,
-		rated: false,
-		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-	},
 	{
 		name: "OU",
 		desc: [
@@ -432,17 +414,6 @@ exports.Formats = [
 		battle: 1
 	}
     },
-	{
-		name: "Stat Switch",
-		section: "Other Metagames",
-		
-		mod: 'statswitch',
-		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
-		banlist: ['Arceus', 'Azumarill', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Speed', 'Dialga', 'Giratina', 'Giratina-Origin',
-			'Groudon', 'Ho-Oh', 'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Regice', 'Reshiram', 'Xerneas',
-			'Yveltal', 'Zekrom', 'Diancite', 'Gengarite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
-		]
-	},
 	{
 		name: "CAP",
 		desc: [

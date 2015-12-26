@@ -125,4 +125,5 @@ exports.commands = {
             "More detailed help can be found in the <a href=\"https://www.smogon.com/sim/roomauth_guide\">roomauth guide</a><br />" +
             "</div>"
         );
-    },
+    }
+};

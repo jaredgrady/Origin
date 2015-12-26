@@ -70,7 +70,7 @@ let commands = exports.commands = Object.clone(baseCommands);
 // info always goes first so other plugins can shadow it
 Object.merge(commands, require('./chat-plugins/info.js').commands);
 
-fs.readdirSync(path.resolve(__dirname, 'chat-plugins')).forEach(function (file)) {
+fs.readdirSync(path.resolve(__dirname, 'chat-plugins')).forEach(function (file) {
 	if (file.substr(-3) !== '.js' || file === 'info.js') return;
 	Object.merge(commands, require('./chat-plugins/' + file).commands);
 });
