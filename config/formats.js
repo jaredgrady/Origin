@@ -49,6 +49,7 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3538036/\">RU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
+
 		ruleset: ['UU'],
 		banlist: ['UU', 'BL2']
 	},
@@ -673,7 +674,7 @@ exports.Formats = [
 	},
 	{
 		name: "OU Theorymon",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3541537/\">OU Theorymon</a>"],
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3559611/\">OU Theorymon</a>"],
 		section: "Other Metagames",
 
 		mod: 'theorymon',

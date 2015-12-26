@@ -802,7 +802,7 @@ let commands = exports.commands = {
 		let rankLists = {};
 		for (let u in targetRoom.auth) {
 			if (!rankLists[targetRoom.auth[u]]) rankLists[targetRoom.auth[u]] = [];
-			rankLists[targetRoom.auth[u]].push(u in targetRoom.users ? "**" + u + "**" : u);
+			rankLists[targetRoom.auth[u]].push(u);
 		}
 
 		let buffer = [];
@@ -813,7 +813,11 @@ let commands = exports.commands = {
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Config.groups[b] || {rank:0}).rank - (Config.groups[a] || {rank:0}).rank;
 		}).forEach(function (r) {
-			buffer.push((Config.groups[r] ? Config.groups[r] .name + "s (" + r + ")" : r) + ":\n" + rankLists[r].sort().join(", "));
+			let roomRankList = [];
+			rankLists[r].sort().forEach(function (s) {
+				roomRankList.push(s in targetRoom.users ? "**" + s + "**" : s);
+			});
+			buffer.push((Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + roomRankList.join(", "));
 		});
 
 		if (!buffer.length) {
@@ -900,7 +904,7 @@ let commands = exports.commands = {
 			return this.errorReply("Room bans are not meant to be used in room " + room.id + ".");
 		}
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
-		if (targetUser in room.users) {
+		if (targetUser in room.users || user.can('lock')) {
 			targetUser.popup(
 				"|html|<p>" + Tools.escapeHTML(user.name) + " has banned you from the room " + room.id + ".</p>" + (target ? "<p>Reason: " + Tools.escapeHTML(target) + "</p>"  : "") +
 				"<p>To appeal the ban, PM the staff member that banned you" + (room.auth ? " or a room owner. </p><p><button name=\"send\" value=\"/roomauth " + room.id + "\">List Room Staff</button></p>" : ".</p>")
