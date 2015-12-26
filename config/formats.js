@@ -4,14 +4,32 @@
 
 exports.Formats = [
 
-	// XY Singles
+// ORAS Singles
 	///////////////////////////////////////////////////////////////////
+
+	{
+		name: "Random Battle",
+		desc: ["Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable."],
+		section: "ORAS Singles",
+
+		team: 'random',
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "Unrated Random Battle",
+		section: "ORAS Singles",
+
+		team: 'random',
+		challengeShow: false,
+		rated: false,
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
 	{
 		name: "OU",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3521201/\">OU Metagame Discussion</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/ou/\">OU Banlist</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3536420/\">OU Viability Ranking</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3553516/\">OU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
 
@@ -58,7 +76,7 @@ exports.Formats = [
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557854/\">np: NU Stage 10</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/nu/\">NU Banlist</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523692/\">NU Viability Ranking</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545276/\">NU Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
 
@@ -74,16 +92,17 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['NU'],
-		banlist: ['NU', 'BL4', 'Chatter', 'Shell Smash + Baton Pass']
+		banlist: ['NU', 'BL4', 'Chatter']
 	},
 	{
 		name: "LC",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3505710/\">LC Metagame Discussion</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3490462/\">LC Banlist</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3496013/\">LC Viability Ranking</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3547566/\">LC Viability Ranking</a>"
 		],
 		section: "ORAS Singles",
+
 		maxLevel: 5,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
 		banlist: ['LC Uber', 'Gligar', 'Misdreavus', 'Scyther', 'Sneasel', 'Tangela', 'Dragon Rage', 'Sonic Boom', 'Swagger']
@@ -92,7 +111,7 @@ exports.Formats = [
 		name: "Anything Goes",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523229/\">Anything Goes</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3535064/\">Anything Goes Viability Ranking</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3548945/\">Anything Goes Resources</a>"
 		],
 		section: "ORAS Singles",
 
