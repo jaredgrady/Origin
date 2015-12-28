@@ -1,11 +1,30 @@
-// Note: This is the list of formats
-// The rules that formats use are stored in data/rulesets.
 'use strict';
+
+// Note: This is the list of formats
+// The rules that formats use are stored in data/rulesets.js
 
 exports.Formats = [
 
-// ORAS Singles
+	// XY Singles
 	///////////////////////////////////////////////////////////////////
+
+	{
+		name: "Random Battle",
+		desc: ["Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable."],
+		section: "ORAS Singles",
+
+		team: 'random',
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	{
+		name: "Unrated Random Battle",
+		section: "ORAS Singles",
+
+		team: 'random',
+		challengeShow: false,
+		rated: false,
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+	},
 	{
 		name: "OU",
 		desc: [
