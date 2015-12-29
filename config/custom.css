@@ -1,3 +1,21 @@
+  /************************
+  * Roomintro Classes CSS *
+  ************************/
+  
+  .astext {
+    border: none;
+    background: none;
+    padding: 0;
+    height: -20em;
+    font-family: Verdana,sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /*****************************
+  * Roomintro Classes CSS ~end *
+  *****************************/
+ 
   /***********************
   * Donation Benefit CSS *
   ***********************/
