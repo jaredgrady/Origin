@@ -483,18 +483,20 @@ exports.BattleItems = {
 		id: "blueorb",
 		name: "Blue Orb",
 		spritenum: 41,
-		onSwitchInPriority: -6,
 		onSwitchIn: function (pokemon) {
 			if (pokemon.isActive && pokemon.baseTemplate.species === 'Kyogre') {
-				var template = this.getTemplate('Kyogre-Primal');
-				pokemon.formeChange(template);
-				pokemon.baseTemplate = template;
-				pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
-				this.add('detailschange', pokemon, pokemon.details);
-				this.add('message', pokemon.name + "'s Primal Reversion! It reverted to its primal form!");
-				pokemon.setAbility(template.abilities['0']);
-				pokemon.baseAbility = pokemon.ability;
+				this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
 			}
+		},
+		onPrimal: function (pokemon) {
+			var template = this.getTemplate('Kyogre-Primal');
+			pokemon.formeChange(template);
+			pokemon.baseTemplate = template;
+			pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
+			this.add('detailschange', pokemon, pokemon.details);
+			this.add('message', pokemon.name + "'s Primal Reversion! It reverted to its primal form!");
+			pokemon.setAbility(template.abilities['0']);
+			pokemon.baseAbility = pokemon.ability;
 		},
 		onTakeItem: function (item, source) {
 			if (source.baseTemplate.baseSpecies === 'Kyogre') return false;
@@ -2074,7 +2076,7 @@ exports.BattleItems = {
 			basePower: 100,
 			type: "Dragon"
 		},
-		onAfterMoveSecondary: function (target, source, move) {
+		onAfterDamage: function (damage, target, source, move) {
 			if (source && source !== target && move && move.category === 'Physical') {
 				if (target.eatItem()) {
 					this.damage(source.maxhp / 8, source, target, null, true);
@@ -3635,18 +3637,20 @@ exports.BattleItems = {
 		id: "redorb",
 		name: "Red Orb",
 		spritenum: 390,
-		onSwitchInPriority: -6,
 		onSwitchIn: function (pokemon) {
 			if (pokemon.isActive && pokemon.baseTemplate.species === 'Groudon') {
-				var template = this.getTemplate('Groudon-Primal');
-				pokemon.formeChange(template);
-				pokemon.baseTemplate = template;
-				pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
-				this.add('detailschange', pokemon, pokemon.details);
-				this.add('message', pokemon.name + "'s Primal Reversion! It reverted to its primal form!");
-				pokemon.setAbility(template.abilities['0']);
-				pokemon.baseAbility = pokemon.ability;
+				this.insertQueue({pokemon: pokemon, choice: 'runPrimal'});
 			}
+		},
+		onPrimal: function (pokemon) {
+			var template = this.getTemplate('Groudon-Primal');
+			pokemon.formeChange(template);
+			pokemon.baseTemplate = template;
+			pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
+			this.add('detailschange', pokemon, pokemon.details);
+			this.add('message', pokemon.name + "'s Primal Reversion! It reverted to its primal form!");
+			pokemon.setAbility(template.abilities['0']);
+			pokemon.baseAbility = pokemon.ability;
 		},
 		onTakeItem: function (item, source) {
 			if (source.baseTemplate.baseSpecies === 'Groudon') return false;
@@ -3812,7 +3816,7 @@ exports.BattleItems = {
 			basePower: 100,
 			type: "Dark"
 		},
-		onAfterMoveSecondary: function (target, source, move) {
+		onAfterDamage: function (damage, target, source, move) {
 			if (source && source !== target && move && move.category === 'Special') {
 				if (target.eatItem()) {
 					this.damage(source.maxhp / 8, source, target, null, true);
@@ -3998,8 +4002,8 @@ exports.BattleItems = {
 		fling: {
 			basePower: 10
 		},
-		onModifyPokemonPriority: -10,
-		onModifyPokemon: function (pokemon) {
+		onTrapPokemonPriority: -10,
+		onTrapPokemon: function (pokemon) {
 			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 		num: 295,

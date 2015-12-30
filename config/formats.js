@@ -155,7 +155,7 @@ exports.Formats = [
 		gameType: 'doubles',
 		ruleset: ['Pokemon', 'Standard Doubles', 'Team Preview'],
 		banlist: ['Arceus', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo',
-			'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom', 'Salamencite', 'Soul Dew', 'Dark Void',
+			'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom', 'Salamence-Mega', 'Salamencite', 'Soul Dew', 'Dark Void',
 			'Gravity ++ Grass Whistle', 'Gravity ++ Hypnosis', 'Gravity ++ Lovely Kiss', 'Gravity ++ Sing', 'Gravity ++ Sleep Powder', 'Gravity ++ Spore'
 		]
 	},
@@ -605,7 +605,7 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		ruleset: ['OU'],
-		banlist: ['Ignore STAB Moves', 'Metagrossite']
+		banlist: ['Ignore STAB Moves', 'Aerodactylite', "King's Rock", 'Metagrossite', 'Razor Fang']
 	},
 	{
 		name: "LC UU",

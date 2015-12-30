@@ -151,7 +151,7 @@ exports.BattleAbilities = {
 	"arenatrap": {
 		desc: "Prevents adjacent opposing Pokemon from choosing to switch out unless they are immune to trapping or are airborne.",
 		shortDesc: "Prevents adjacent foes from choosing to switch unless they are airborne.",
-		onFoeModifyPokemon: function (pokemon) {
+		onFoeTrapPokemon: function (pokemon) {
 			if (!this.isAdjacent(pokemon, this.effectData.target)) return;
 			if (pokemon.isGrounded()) {
 				pokemon.tryTrap(true);
@@ -587,6 +587,10 @@ exports.BattleAbilities = {
 	"drizzle": {
 		shortDesc: "On switch-in, this Pokemon summons Rain Dance.",
 		onStart: function (source) {
+			for (var i = 0; i < this.queue.length; i++) {
+				if (this.queue[i].choice === 'runPrimal' && this.queue[i].pokemon === source && source.template.speciesid === 'kyogre') return;
+				if (this.queue[i].choice !== 'runSwitch' && this.queue[i].choice !== 'runPrimal') break;
+			}
 			this.setWeather('raindance');
 		},
 		id: "drizzle",
@@ -597,6 +601,10 @@ exports.BattleAbilities = {
 	"drought": {
 		shortDesc: "On switch-in, this Pokemon summons Sunny Day.",
 		onStart: function (source) {
+			for (var i = 0; i < this.queue.length; i++) {
+				if (this.queue[i].choice === 'runPrimal' && this.queue[i].pokemon === source && source.template.speciesid === 'groudon') return;
+				if (this.queue[i].choice !== 'runSwitch' && this.queue[i].choice !== 'runPrimal') break;
+			}
 			this.setWeather('sunnyday');
 		},
 		id: "drought",
@@ -1497,7 +1505,7 @@ exports.BattleAbilities = {
 	"magnetpull": {
 		desc: "Prevents adjacent opposing Steel-type Pokemon from choosing to switch out unless they are immune to trapping.",
 		shortDesc: "Prevents adjacent Steel-type foes from choosing to switch.",
-		onFoeModifyPokemon: function (pokemon) {
+		onFoeTrapPokemon: function (pokemon) {
 			if (pokemon.hasType('Steel') && this.isAdjacent(pokemon, this.effectData.target)) {
 				pokemon.tryTrap(true);
 			}
@@ -2293,7 +2301,7 @@ exports.BattleAbilities = {
 	"shadowtag": {
 		desc: "Prevents adjacent opposing Pokemon from choosing to switch out unless they are immune to trapping or also have this Ability.",
 		shortDesc: "Prevents adjacent foes from choosing to switch unless they also have this Ability.",
-		onFoeModifyPokemon: function (pokemon) {
+		onFoeTrapPokemon: function (pokemon) {
 			if (!pokemon.hasAbility('shadowtag') && this.isAdjacent(pokemon, this.effectData.target)) {
 				pokemon.tryTrap(true);
 			}

@@ -702,11 +702,14 @@ exports.BattleScripts = {
 			let poke = formes[i][this.random(formes[i].length)];
 			let template = this.getTemplate(poke);
 
-			// Random item
-			let item = items[this.random(items.length)];
+			// Random legal item
+			let item = '';
+			do {
+				item = items[this.random(items.length)];
+			} while (this.data.Items[item].isNonstandard);
 
 			// Make sure forme is legal
-			if (template.battleOnly || template.requiredItem && item !== template.requiredItem) {
+			if (template.battleOnly || template.requiredItem && item !== toId(template.requiredItem)) {
 				template = this.getTemplate(template.baseSpecies);
 				poke = template.name;
 			}
@@ -1271,7 +1274,7 @@ exports.BattleScripts = {
 					if (counter.setupType && (hasAbility['Guts'] || hasAbility['Speed Boost']) && !hasMove['batonpass']) rejected = true;
 					if (hasMove['rest'] && hasMove['sleeptalk']) rejected = true;
 					break;
-				case 'roar':
+				case 'roar': case 'whirlwind':
 					if (counter.setupType || hasMove['dragontail']) rejected = true;
 					break;
 				case 'stealthrock':
@@ -1538,6 +1541,7 @@ exports.BattleScripts = {
 					(hasAbility['Contrary'] && !counter['contrary'] && template.species !== 'Shuckle') ||
 					(hasAbility['Dark Aura'] && !counter['Dark']) ||
 					(hasAbility['Gale Wings'] && !counter['Flying']) ||
+					(hasAbility['Guts'] && hasType['Normal'] && movePool.indexOf('facade') >= 0) ||
 					(hasType['Dark'] && hasMove['suckerpunch'] && counter.stab < template.types.length) ||
 					(hasType['Dragon'] && !counter['Dragon'] && !hasAbility['Aerilate'] && !hasAbility['Pixilate'] && !hasMove['rest'] && !hasMove['sleeptalk']) ||
 					(hasType['Electric'] && !counter['Electric']) ||

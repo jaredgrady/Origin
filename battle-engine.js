@@ -199,7 +199,14 @@ BattlePokemon = (function () {
 				if (!move.id) continue;
 				if (move.id === 'hiddenpower') {
 					if (!this.set.ivs || Object.values(this.set.ivs).every(31)) {
-						this.set.ivs = this.battle.getType(move.type).HPivs;
+						if (this.battle.gen && this.battle.gen === 2) {
+							this.set.ivs = this.battle.getType(move.type).HPdvs;
+							for (let i in this.set.ivs) {
+								this.set.ivs[i] *= 2;
+							}
+						} else {
+							this.set.ivs = this.battle.getType(move.type).HPivs;
+						}
 					}
 					move = this.battle.getMove('hiddenpower');
 				}
@@ -334,7 +341,6 @@ BattlePokemon = (function () {
 		return this.details + '|' + this.getHealth(side);
 	};
 	BattlePokemon.prototype.update = function (init) {
-		this.trapped = this.maybeTrapped = false;
 		this.maybeDisabled = false;
 		for (let i in this.moveset) {
 			if (this.moveset[i]) this.moveset[i].disabled = false;
@@ -365,34 +371,6 @@ BattlePokemon = (function () {
 			}
 		}
 
-		if (this.runImmunity('trapped')) this.battle.runEvent('MaybeTrapPokemon', this);
-		// Disable the faculty to cancel switches if a foe may have a trapping ability
-		for (let i = 0; i < this.battle.sides.length; ++i) {
-			let side = this.battle.sides[i];
-			if (side === this.side) continue;
-			for (let j = 0; j < side.active.length; ++j) {
-				let pokemon = side.active[j];
-				if (!pokemon || pokemon.fainted) continue;
-				let template = (pokemon.illusion || pokemon).template;
-				if (!template.abilities) continue;
-				for (let k in template.abilities) {
-					let ability = template.abilities[k];
-					if (ability === pokemon.ability) {
-						// This event was already run above so we don't need
-						// to run it again.
-						continue;
-					}
-					if ((k === 'H') && template.unreleasedHidden) {
-						// unreleased hidden ability
-						continue;
-					}
-					if (this.runImmunity('trapped')) {
-						this.battle.singleEvent('FoeMaybeTrapPokemon',
-							this.battle.getAbility(ability), {}, this, pokemon);
-					}
-				}
-			}
-		}
 		this.battle.runEvent('ModifyPokemon', this);
 
 		this.speed = this.getDecisionSpeed();
@@ -2143,7 +2121,7 @@ Battle = (function () {
 			// it's changed; call it off
 			return relayVar;
 		}
-		if (eventid !== 'Start' && eventid !== 'TakeItem' && effect.effectType === 'Item' && (target instanceof BattlePokemon) && target.ignoringItem()) {
+		if (eventid !== 'Start' && eventid !== 'TakeItem' && eventid !== 'Primal' && effect.effectType === 'Item' && (target instanceof BattlePokemon) && target.ignoringItem()) {
 			this.debug(eventid + ' handler suppressed by Embargo, Klutz or Magic Room');
 			return relayVar;
 		}
@@ -2939,6 +2917,39 @@ Battle = (function () {
 						pokemon.lastAttackedBy.thisTurn = false;
 					} else {
 						pokemon.lastAttackedBy = null;
+					}
+				}
+
+				pokemon.trapped = pokemon.maybeTrapped = false;
+				this.runEvent('TrapPokemon', pokemon);
+				if (pokemon.runImmunity('trapped')) {
+					this.runEvent('MaybeTrapPokemon', pokemon);
+				}
+				// Disable the faculty to cancel switches if a foe may have a trapping ability
+				for (let i = 0; i < this.sides.length; ++i) {
+					let side = this.sides[i];
+					if (side === pokemon.side) continue;
+					for (let j = 0; j < side.active.length; ++j) {
+						let source = side.active[j];
+						if (!source || source.fainted) continue;
+						let template = (source.illusion || source).template;
+						if (!template.abilities) continue;
+						for (let k in template.abilities) {
+							let ability = template.abilities[k];
+							if (ability === source.ability) {
+								// pokemon event was already run above so we don't need
+								// to run it again.
+								continue;
+							}
+							if (k === 'H' && template.unreleasedHidden) {
+								// unreleased hidden ability
+								continue;
+							}
+							if (pokemon.runImmunity('trapped')) {
+								this.singleEvent('FoeMaybeTrapPokemon',
+									this.getAbility(ability), {}, pokemon, source);
+							}
+						}
 					}
 				}
 
@@ -3741,7 +3752,8 @@ Battle = (function () {
 					'beforeTurn': 100,
 					'beforeTurnMove': 99,
 					'switch': 7,
-					'runSwitch': 7.1,
+					'runSwitch': 7.2,
+					'runPrimal': 7.1,
 					'instaswitch': 101,
 					'megaEvo': 6.9,
 					'residual': -100,
@@ -3809,15 +3821,13 @@ Battle = (function () {
 		}
 
 		this.resolvePriority(decision);
-		for (let i = 0; i <= this.queue.length; i++) {
-			if (i === this.queue.length) {
-				this.queue.push(decision);
-				break;
-			} else if (Battle.comparePriority(decision, this.queue[i]) < 0) {
+		for (let i = 0; i < this.queue.length; i++) {
+			if (Battle.comparePriority(decision, this.queue[i]) < 0) {
 				this.queue.splice(i, 0, decision);
-				break;
+				return;
 			}
 		}
+		this.queue.push(decision);
 	};
 	Battle.prototype.prioritizeQueue = function (decision, source, sourceEffect) {
 		if (this.event) {
@@ -4015,6 +4025,9 @@ Battle = (function () {
 				this.singleEvent('Start', decision.pokemon.getItem(), decision.pokemon.itemData, decision.pokemon);
 			}
 			delete decision.pokemon.draggedIn;
+			break;
+		case 'runPrimal':
+			this.singleEvent('Primal', decision.pokemon.getItem(), decision.pokemon.itemData, decision.pokemon);
 			break;
 		case 'shift': {
 			if (!decision.pokemon.isActive) return false;

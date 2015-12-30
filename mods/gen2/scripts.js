@@ -692,9 +692,9 @@ exports.BattleScripts = {
 				let rejected = false;
 				if (moveid.substr(0, 11) === 'hiddenpower') {
 					// Check for hidden power DVs
-					let HPivs = this.getType(move.type).HPivs;
-					for (let iv in HPivs) {
-						ivs[iv] = HPivs[iv];
+					let HPdvs = this.getType(move.type).HPdvs;
+					for (let dv in HPdvs) {
+						ivs[dv] = HPdvs[dv] * 2;
 					}
 					moveid = 'hiddenpower';
 				}
