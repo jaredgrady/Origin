@@ -1767,7 +1767,7 @@ Rooms.aliases = aliases;
 
 Rooms.RoomGame = require('./room-game.js').RoomGame;
 Rooms.RoomGamePlayer = require('./room-game.js').RoomGamePlayer;
-
+/*
 var checkInactiveRooms = setInterval(function() {
 	for (var u in Rooms.rooms) {
 		if (!Rooms.rooms[u].active) {
@@ -1789,3 +1789,4 @@ var deleteInactiveRooms = setInterval(function() {
 		}
 	}
 }, 3 * 24 * 60 * 60 * 1000); // 72 hours
+*/
