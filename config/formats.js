@@ -47,6 +47,18 @@ exports.Formats = [
                 banlist: ['NU', 'BL4', 'Chatter']
         },
         {
+		name: "FU",
+		section: "ORAS Singles",
+		ruleset: ['PU'],
+		banlist: ['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
+			'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
+			'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
+			'Tangela', 'Gabite', 'Jumpluff', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
+			'Electrode', 'Relicanth', 'Lickilicky', 'Clefairy', 'Regice', 'Linoone', 'Leafeon', 'Leavanny', 'Drifblim', 'Meowstic',
+			'Ninetales', 'Metang', 'Simipour', 'Ninjask', 'Politoed', 'Beheeyem', 'Sticky Web'
+		]
+	},
+        {
                 name: "LC",
                 desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3505710/\">LC Metagame Discussion</a>", "&bullet; <a href=\"https://www.smogon.com/forums/threads/3490462/\">LC Banlist</a>", "&bullet; <a href=\"https://www.smogon.com/forums/threads/3547566/\">LC Viability Ranking</a>"],
                 section: "ORAS Singles",
