@@ -172,7 +172,7 @@ function canTalk(user, room, connection, message, targetUser) {
 			return Config.chatfilter.call(this, message, user, room, connection, targetUser);
 		}
 		//servers Spam
-		if (!user.can('bypassall') && Rooms('shadowbanroom')) {
+		if (!user.can('lock') && Rooms('shadowbanroom')) {
 			let serverexceptions = {'origin': 1, 'showdown': 1, 'smogtours': 1};
 			if (Config.serverexceptions) {
 				for (let i in Config.serverexceptions) serverexceptions[i] = 1;
