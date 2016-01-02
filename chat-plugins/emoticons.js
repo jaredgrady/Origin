@@ -58,7 +58,7 @@ var emotes = {
 	'feelsrs': 'http://i.imgur.com/qGEot0R.png',
 	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
 	'feelsseis': 'http://i.imgur.com/gGGYxrE.png?1',
-	'feelsshi': 'http://i.imgur.com/nY1YIWI.jpg?1',
+	'feelsshi': 'http://i.imgur.com/VzlGZ1M.jpg',
 	'feelsslo': 'http://i.imgur.com/iQuToJf.jpg?1',
 	'feelssnake': 'http://i.imgur.com/xoJnDUD.png',
 	'feelstea': 'http://i.imgur.com/M0f2zgJ.jpg?1',
