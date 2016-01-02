@@ -6,17 +6,17 @@
 var fs = require('fs');
 var anagramWords = ['pokemon'];
 try {
-	anagramWords = fs.readFileSync('config/wordlist.txt','utf8').split('\n');
+	anagramWords = fs.readFileSync('config/wordlist.txt', 'utf8').split('\n');
 } catch (e) {
 	request('http://pastebin.com/raw.php?i=5yQ8MLG2', function callback(error, response, body) {
-	    if (!error && response.statusCode === 200) {
-	    	fs.writeFileSync('config/wordlist.txt', body, 'utf8');
+	    	if (!error && response.statusCode === 200) {
+	    		fs.writeFileSync('config/wordlist.txt', body, 'utf8');
 	    }
 	});
 }
 
 exports.commands = {
-	anagram: function(target, room, user) {
+	anagram: function (target, room, user) {
 		if (!user.can('broadcast', null, room) || !this.canTalk()) return this.sendReply('/anagram - Access denied.');
 		if (!target && !room.anagram) return this.sendReply("Usage: /anagram [normal/pokemon]");
 		if (!this.canBroadcast()) return;
@@ -27,7 +27,7 @@ exports.commands = {
 		var theme = '';
 
 		switch (target) {
-			default:	
+			default:
 			case 'pokemon':
 				theme = 'Pokemon';
 				var pokemon = Tools.dataSearch(Object.keys(Tools.data.Pokedex).sample().trim())[0];
@@ -37,10 +37,10 @@ exports.commands = {
 					room.anagram.word = pokemon.name;
 				}
 				break;
-			case 'info': 
+			case 'info':
 				this.sendReplyBox("An anagram is a type of word game. Guess by simply saying the answer in the chat.");
 				delete room.anagram;
-				break; 
+				break;
 			case 'credits':
 				this.sendReplyBox("Anagram plugin by <a href=\"https://gist.github.com/jd4564/194c045bec24e137de92\">jd</a>");
 				delete room.anagram;
@@ -52,8 +52,8 @@ exports.commands = {
 				break;
 		}
 
-		room.anagram.scrambledWord = toId(room.anagram.word.split('').sort(function(){return 0.5-Math.random();}).join(''));
-		while (room.anagram.scrambledWord === toId(room.anagram.word)) room.anagram.scrambledWord = toId(room.anagram.word.split('').sort(function(){return 0.5-Math.random();}).join(''));
+		room.anagram.scrambledWord = toId(room.anagram.word.split('').sort(function () {return 0.5 - Math.random();}).join(''));
+		while (room.anagram.scrambledWord === toId(room.anagram.word)) room.anagram.scrambledWord = toId(room.anagram.word.split('').sort(function () {return 0.5 - Math.random();}).join(''));
 
 		room.chat = function (user, message, connection) {
 			message = CommandParser.parse(message, this, user, connection);
@@ -70,7 +70,7 @@ exports.commands = {
 		return this.add('|raw|<div class="infobox">' + Tools.escapeHTML(user.name) + ' has started an anagram. Letters: <b>' + room.anagram.scrambledWord + '</b> Theme: <b>' + theme + '</b></div>');
 	},
 
-	endanagram: function(target, room, user) {
+	endanagram: function (target, room, user) {
 		if (!user.can('broadcast', null, room)) return this.sendReply('/endanagram - Access denied.');
 		if (!room.anagram) return this.sendReply('There is no anagram running in here.');
 		delete room.anagram;
