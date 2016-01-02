@@ -2,11 +2,11 @@
 
 exports.commands = {
 
-kitten: function(target, room, user) {
+	kitten: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -27,17 +27,17 @@ kitten: function(target, room, user) {
  	 		case 14: image = '<center><img src="http://25.media.tumblr.com/tumblr_mb25o8Ih3Z1qkp9zpo1_500.jpg" width="400" height="400">'; break;
  	 		case 15: image = '<center><img src="https://metrouk2.files.wordpress.com/2013/07/gh2.jpg" width="350" height="350">'; break;
 
-                        
+
 		}
         }
 		this.sendReplyBox(image);
 },
 
-puppy: function(target, room, user) {
+	puppy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -58,17 +58,17 @@ puppy: function(target, room, user) {
  	 		case 14: image = '<center><img src="http://images6.fanpop.com/image/photos/35200000/Puppy-dogs-35247732-1440-900.jpg">'; break;
  	 		case 15: image = '<center><img src="http://www.funchap.com/wp-content/uploads/2014/05/small-dog.jpg" width="350" height="350">'; break;
 
-                        
+
 		}
         }
 		this.sendReplyBox(image);
 },
 
-cow: function(target, room, user) {
+	cow: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -89,17 +89,17 @@ cow: function(target, room, user) {
  	 		case 14: image = '<center><img src="http://blog.marincountyparks.org/wp-content/uploads/2013/03/cows-mt-burdell-2.jpg" width="400" height="400">'; break;
  	 		case 15: image = '<center><img src="http://hypescience.com/wp-content/uploads/2015/03/unidades-de-medida-absurdas-8.jpg" width="350" height="350">'; break;
 
-                        
+
 		}
         }
 		this.sendReplyBox(image);
 },
 
-frog: function(target, room, user) {
+	frog: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -120,17 +120,17 @@ frog: function(target, room, user) {
             case 14: image = '<center><img src="http://www.earthtimes.org/newsimage/save-frogs_02742012.jpg" width="400" height="400">'; break;
             case 15: image = '<center><img src="http://museum.wa.gov.au/sites/default/files/imagecache/wam_v2_article_half_nocrop/photo-galleries/574.jpeg" width="350" height="350">'; break;
 
-                        
+
 			}
         }
 		this.sendReplyBox(image);
 },
 
-zoo: function(target, room, user) {
+	zoo: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -151,17 +151,17 @@ zoo: function(target, room, user) {
             case 14: image = '<center><img src="http://animals.sandiegozoo.org/sites/default/files/styles/feeds_animal_thumbnail/public/tarantula_thumb.jpg?itok=1ftXZYuF" width="400" height="400">'; break;
             case 15: image = '<center><img src="http://animals.sandiegozoo.org/sites/default/files/styles/feeds_animal_thumbnail/public/tuatara_thumb.jpg?itok=DVPgvgfY" width="350" height="350">'; break;
 
-                        
+
 		}
         }
 		this.sendReplyBox(image);
 },
 
-otter: function(target, room, user) {
+	otter: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		var matched = false;
-		if (target === ''){
+		if (target === '') {
 
 		var rand = ~~(15 * Math.random()) + 1;
 
@@ -182,17 +182,17 @@ otter: function(target, room, user) {
           case 14: image = '<center><img src="http://www.defenders.org/sites/default/files/styles/large/public/magazine-spring-2012-sea-otter-michael-l-baird.jpg" width="400" height="400">'; break;
           case 15: image = '<center><img src="http://www.redorbit.com/media/uploads/2013/08/sea-otters-food-web-shutterstock_128679956-617x416.jpg" width="350" height="350">'; break;
 
-                        
+
 		}
         }
 		this.sendReplyBox(image);
 	},
-	
-	animals: function(target, room, user) {
-        if (!this.canBroadcast()) return;
-        target = target.toLowerCase();
-        if (target === '') {
-            return this.sendReplyBox('<center><b>Random Animals</b><br> Use any of the below to generate random animal image:</br><br>puppy - Generates a random dog</br><br>kitten - Generates a random cat</br><br>cow - Generates a random cow</br><br>otter - Generates a random otter</br><br>frog - Generates a random frog</br><br>zoo - Generates a random animal</br><br>-----------------------------------</br><br>Special thanks to Audino Primal, Natsume, tex rex1, Sundar, and NTGs.</br></center>');
+
+	animals: function (target, room, user) {
+        	if (!this.canBroadcast()) return;
+        	target = target.toLowerCase();
+        	if (target === '') {
+            	return this.sendReplyBox('<center><b>Random Animals</b><br> Use any of the below to generate random animal image:</br><br>puppy - Generates a random dog</br><br>kitten - Generates a random cat</br><br>cow - Generates a random cow</br><br>otter - Generates a random otter</br><br>frog - Generates a random frog</br><br>zoo - Generates a random animal</br><br>-----------------------------------</br><br>Special thanks to Audino Primal, Natsume, tex rex1, Sundar, and NTGs.</br></center>');
         }
-    }
+    },
 };
