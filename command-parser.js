@@ -81,7 +81,7 @@ fs.readdirSync(path.resolve(__dirname, 'chat-plugins')).forEach(function (file) 
 
 let modlog = exports.modlog = {
 	lobby: fs.createWriteStream(path.resolve(__dirname, 'logs/modlog/modlog_lobby.txt'), {flags:'a+'}),
-	battle: fs.createWriteStream(path.resolve(__dirname, 'logs/modlog/modlog_battle.txt'), {flags:'a+'})
+	battle: fs.createWriteStream(path.resolve(__dirname, 'logs/modlog/modlog_battle.txt'), {flags:'a+'}),
 };
 
 let writeModlog = exports.writeModlog = function (roomid, text) {
@@ -425,7 +425,7 @@ let Context = exports.Context = (function () {
 				this.errorReply('All images must have a width and height attribute');
 				return false;
 			}
-			let srcMatch = /src\w*\=\w*"?([^ "]+)(\w*")?/i.exec(match[0]);
+			let srcMatch = /src\s*\=\s*"?([^ "]+)(\s*")?/i.exec(match[0]);
 			if (srcMatch) {
 				let uri = this.canEmbedURI(srcMatch[1], true);
 				if (!uri) return false;
@@ -433,6 +433,11 @@ let Context = exports.Context = (function () {
 				// lastIndex is inaccurate since html was changed
 				images.lastIndex = match.index + 11;
 			}
+		}
+		if ((this.room.isPersonal) && !this.user.can('lock') && html.replace(/\s*style\s*=\s*\"?[^\"]*\"\s*>/g, '>').match(/<button[^>]/)) {
+			this.errorReply('You do not have permission to use scripted buttons in HTML.');
+			this.errorReply('If you just want to link to a room, you can do this: <a href="/roomid"><button>button contents</button></a>');
+			return false;
 		}
 		if (/>here.?</i.test(html) || /click here/i.test(html)) {
 			this.errorReply('Do not use "click here"');
@@ -592,7 +597,7 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 
 	let context = new Context({
 		target: target, room: room, user: user, connection: connection, cmd: cmd, message: message,
-		namespaces: namespaces, cmdToken: cmdToken, levelsDeep: levelsDeep
+		namespaces: namespaces, cmdToken: cmdToken, levelsDeep: levelsDeep,
 	});
 
 	if (commandHandler) {

@@ -15,7 +15,7 @@ let colors = {
 };
 let TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
-	elimination: require('./generator-elimination.js').Elimination
+	elimination: require('./generator-elimination.js').Elimination,
 };
 
 exports.tournaments = {};
@@ -66,7 +66,7 @@ class Tournament {
 			generator: generator.name,
 			playerCap: this.playerCap,
 			isStarted: false,
-			isJoined: false
+			isJoined: false,
 		}));
 		this.update();
 	}
@@ -130,12 +130,12 @@ class Tournament {
 			generator: this.generator.name,
 			isStarted: this.isTournamentStarted,
 			isJoined: isJoined,
-			bracketData: this.bracketCache
+			bracketData: this.bracketCache,
 		}));
 		if (this.isTournamentStarted && isJoined) {
 			connection.sendTo(this.room, '|tournament|update|' + JSON.stringify({
 				challenges: usersToNames(this.availableMatchesCache.challenges.get(targetUser)),
-				challengeBys: usersToNames(this.availableMatchesCache.challengeBys.get(targetUser))
+				challengeBys: usersToNames(this.availableMatchesCache.challengeBys.get(targetUser)),
 			}));
 
 			let pendingChallenge = this.pendingChallenges.get(targetUser);
@@ -414,7 +414,7 @@ class Tournament {
 
 		return {
 			challenges: challenges,
-			challengeBys: challengeBys
+			challengeBys: challengeBys,
 		};
 	}
 
@@ -724,7 +724,7 @@ class Tournament {
 			results: this.generator.getResults().map(usersToNames),
 			format: this.format,
 			generator: this.generator.name,
-			bracketData: this.getBracketData()
+			bracketData: this.getBracketData(),
 		}));
 		this.isEnded = true;
 		if (this.autoDisqualifyTimer) clearTimeout(this.autoDisqualifyTimer);
@@ -875,7 +875,7 @@ let commands = {
 		},
 		acceptchallenge: function (tournament, user) {
 			tournament.acceptChallenge(user, this);
-		}
+		},
 	},
 	creation: {
 		settype: function (tournament, user, params, cmd) {
@@ -899,7 +899,7 @@ let commands = {
 			if (tournament.startTournament(this)) {
 				this.sendModCommand("(" + user.name + " started the tournament.)");
 			}
-		}
+		},
 	},
 	moderation: {
 		dq: 'disqualify',
@@ -1037,8 +1037,8 @@ let commands = {
 			if (deleteTournament(tournament.room.id, this)) {
 				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
 			}
-		}
-	}
+		},
+	},
 };
 
 CommandParser.commands.tour = 'tournament';

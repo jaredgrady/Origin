@@ -6,6 +6,7 @@
 /chat-plugins/trainercards.js
 npm-debug.log
 db.json
+.eslintcache
 
 # boilerplate #
 ###############

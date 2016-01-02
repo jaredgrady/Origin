@@ -1551,12 +1551,12 @@ User = (function () {
 		if (challengeTo) {
 			challengeTo = {
 				to: challengeTo.to,
-				format: challengeTo.format
+				format: challengeTo.format,
 			};
 		}
 		this.send('|updatechallenges|' + JSON.stringify({
 			challengesFrom: Object.map(this.challengesFrom, 'format'),
-			challengeTo: challengeTo
+			challengeTo: challengeTo,
 		}));
 	};
 	User.prototype.makeChallenge = function (user, format/*, isPrivate*/) {
@@ -1578,7 +1578,7 @@ User = (function () {
 			to: user.userid,
 			format: '' + (format || ''),
 			//isPrivate: !!isPrivate, // currently unused
-			team: this.team
+			team: this.team,
 		};
 		this.lastChallenge = time;
 		this.challengeTo = challenge;

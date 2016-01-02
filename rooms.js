@@ -250,7 +250,7 @@ let Room = (function () {
 					userid: userid,
 					time: time,
 					guestNum: user.guestNum,
-					autoconfirmed: user.autoconfirmed
+					autoconfirmed: user.autoconfirmed,
 				};
 				this.muteQueue.splice(i, 0, entry);
 				// The timer needs to be switched to the new entry if it is to be unmuted
@@ -274,7 +274,7 @@ let Room = (function () {
 			// If the user is not found, construct a dummy user object for them.
 			user = {
 				userid: userid,
-				autoconfirmed: userid
+				autoconfirmed: userid,
 			};
 		}
 
@@ -328,17 +328,12 @@ let GlobalRoom = (function () {
 			this.chatRoomData = [{
 				title: 'Lobby',
 				isOfficial: true,
-				autojoin: true
+				autojoin: true,
 			}, {
 				title: 'Staff',
 				isPrivate: true,
 				staffRoom: true,
-				staffAutojoin: true
-	        }, {
-				title: 'Upper Staff',
-				isPrivate: true,
-				upperstaffRoom: true,
-				upperstaffAutojoin: true
+				staffAutojoin: true,
 			}];
 		}
 
@@ -452,13 +447,13 @@ let GlobalRoom = (function () {
 		if (this.maxUsersDate) {
 			LoginServer.request('updateuserstats', {
 				date: this.maxUsersDate,
-				users: this.maxUsers
+				users: this.maxUsers,
 			}, function () {});
 			this.maxUsersDate = 0;
 		}
 		LoginServer.request('updateuserstats', {
 			date: Date.now(),
-			users: this.userCount
+			users: this.userCount,
 		}, function () {});
 	};
 
@@ -521,7 +516,7 @@ let GlobalRoom = (function () {
 			(room.isOfficial ? roomsData.official : roomsData.chat).push({
 				title: room.title,
 				desc: room.desc,
-				userCount: room.userCount
+				userCount: room.userCount,
 			});
 		}
 		return roomsData;
@@ -564,7 +559,7 @@ let GlobalRoom = (function () {
 			userid: '',
 			team: user.team,
 			rating: 1000,
-			time: new Date().getTime()
+			time: new Date().getTime(),
 		};
 		let self = this;
 
@@ -684,7 +679,7 @@ let GlobalRoom = (function () {
 		if (rooms[id]) return false;
 
 		let chatRoomData = {
-			title: title
+			title: title,
 		};
 		let room = Rooms.createChatRoom(id, title, chatRoomData);
 		this.chatRoomData.push(chatRoomData);
@@ -883,7 +878,7 @@ let BattleRoom = (function () {
 			rated = {
 				p1: p1.userid,
 				p2: p2.userid,
-				format: format
+				format: format,
 			};
 		} else {
 			rated = false;
@@ -894,7 +889,7 @@ let BattleRoom = (function () {
 				p1: p1.userid,
 				p2: p2.userid,
 				format: format,
-				tour: options.tour
+				tour: options.tour,
 			};
 		} else {
 			this.tour = false;

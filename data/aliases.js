@@ -10,7 +10,6 @@ exports.BattleAliases = {
 	"underused": "UU",
 	"rarelyused": "RU",
 	"neverused": "NU",
-	"pu": "PU (suspect test)",
 	"dubs": "Doubles OU",
 	"dou": "Doubles OU",
 	"doubles": "Doubles OU",
@@ -27,7 +26,6 @@ exports.BattleAliases = {
 	"bh": "Balanced Hackmons",
 	"hc": "Hackmons Cup",
 	"ht": "Hidden Type",
-	"lce": "LC Extended",
 	"ts": "Tier Shift",
 	"theorymon": "OU Theorymon",
 	"inverse": "Inverse Battle",
@@ -122,7 +120,7 @@ exports.BattleAliases = {
 	"deod": "Deoxys-Defense",
 	"deoxyss": "Deoxys-Speed",
 	"deos": "Deoxys-Speed",
-	"eternalfloette": "Floette-Eternal-Flower",
+	"eternalfloette": "Floette-Eternal",
 	"giratinao": "Giratina-Origin",
 	"gourgeists": "Gourgeist-Small",
 	"gourgeistl": "Gourgeist-Large",
@@ -156,8 +154,8 @@ exports.BattleAliases = {
 	"wormadamground": "Wormadam-Sandy",
 	"wormadams": "Wormadam-Trash",
 	"wormadamsteel": "Wormadam-Trash",
-	"floettee": "Floette-Eternal-Flower",
-	"floetteeternal": "Floette-Eternal-Flower",
+	"floettee": "Floette-Eternal",
+	"floetteeternalflower": "Floette-Eternal",
 
 	// base formes
 	"nidoranfemale": "Nidoran-F",
@@ -372,7 +370,7 @@ exports.BattleAliases = {
 	"shinboraa": "Sigilyph",
 	"barujiina": "Mandibuzz",
 	"rankurusu": "Reuniclus",
-	"borutorosu": "Thundurus"
+	"borutorosu": "Thundurus",
 	// there's no need to type out the other Japanese names
 	// I'll autogenerate them at some point
 };
