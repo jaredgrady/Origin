@@ -398,7 +398,7 @@ let commands = exports.commands = {
 	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden."],
 
 		deregisterchatroom: function (target, room, user) {
-		if (!this.can('makeroom')) return;
+		if (!this.can('declare')) return;
 		this.errorReply("NOTE: You probably want to use `/deleteroom` now that it exists.");
 		let id = toId(target);
 		if (!id) return this.parse('/help deregisterchatroom');
@@ -417,7 +417,7 @@ let commands = exports.commands = {
 	deletechatroom: 'deleteroom',
 	deletegroupchat: 'deleteroom',
 	deleteroom: function (target, room, user) {
-		if (!this.can('makeroom')) return;
+		if (!this.can('declare') && !~developers.indexOf(user.userid)) return;
 		let roomid = target.trim();
 		if (!roomid) return this.parse('/help deleteroom');
 		let targetRoom = Rooms.search(roomid);
