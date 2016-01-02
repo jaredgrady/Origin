@@ -55,7 +55,7 @@ exports.Formats = [
 			'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
 			'Tangela', 'Gabite', 'Jumpluff', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
 			'Electrode', 'Relicanth', 'Lickilicky', 'Clefairy', 'Regice', 'Linoone', 'Leafeon', 'Leavanny', 'Drifblim', 'Meowstic',
-			'Ninetales', 'Metang', 'Simipour', 'Ninjask', 'Politoed', 'Beheeyem', 'Sticky Web'
+			'Ninetales', 'Metang', 'Simipour', 'Ninjask', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
 		]
 	},
         {
