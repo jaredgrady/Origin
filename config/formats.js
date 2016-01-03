@@ -100,13 +100,13 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['PU'],
-		['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
+		banlist: ['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
 		'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
 		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
 		'Tangela', 'Gabite', 'Jumpluff', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
 		'Electrode', 'Relicanth', 'Lickilicky', 'Clefairy', 'Regice', 'Linoone', 'Leafeon', 'Leavanny', 'Drifblim', 'Meowstic',
 		'Ninetales', 'Metang', 'Simipour', 'Ninjask', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
-		]
+		],
 	},
 	{
 		name: "LC",
