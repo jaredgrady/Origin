@@ -307,6 +307,8 @@ exports.commands = {
     },
     randp: function(target, room, user) {
         if (!this.canBroadcast()) return;
+        var fs = require("fs");
+        var Pokedex = require("../data/pokedex.js").BattlePokedex;
         var shinyPoke = ""
         if (/shiny/i.test(target)) {
             shinyPoke = "-shiny";
@@ -334,11 +336,8 @@ exports.commands = {
         var tarPoke = Object.keys(Pokedex)[x];
         console.log(tarPoke)
         var pokeData = Pokedex[tarPoke];
-        var pokeId = tarPoke;
-        if(/\-mega$/i.test(Pokedex[tarPoke].species)) var mega = true;
-        if(/\-primal$/i.test(Pokedex[tarPoke].species)) var primal = true;
-        if(primal || mega) pokeId = pokeId.replace(/primal$/i, "-primal").replace(/mega$/i, "-mega");
-        pokeId = pokeId.replace(/^basculinbluestriped$/i, "basculin-bluestriped").replace(/^pichuspikyeared$/i, "pichu-spikyeared").replace(/^floetteeternalflower$/i, "floette-eternalflower").replace(/^pumpkaboosmall$/i, "pumpkaboo-small").replace(/^pumpkaboosuper$/, "pumpkaboo-super").replace(/^pumpkaboolarge$/i, "pumpkaboo-large").replace("arceus", "arceus-").replace(/^arceus\-$/i, "arceus").replace("deoxys", "deoxys-").replace(/^deoxys\-$/i, "deoxys").replace("pikachu", "pikachu-").replace(/^pikachu\-$/i, "pikachu").replace("castform", "castform-").replace(/^castform\-$/i, "castform").replace("genesect", "genesect-").replace(/^genesect\-$/i, "genesect").replace(/^charizardmega/i, "charizard-mega-").replace(/^mewtwomega/i, "mewtwo-mega-");
+        var pokeId = pokeData.species.toLowerCase();
+        pokeId = pokeId.replace(/^basculinbluestriped$/i, "basculin-bluestriped").replace(/^pichuspikyeared$/i, "pichu-spikyeared").replace(/^floetteeternalflower$/i, "floette-eternalflower");
         if(pokeId === "pikachu-cosplay") pokeId = ["pikachu-belle", "pikachu-phd", "pikachu-libre", "pikachu-popstar", "pikachu-rockstar"][~~(Math.random() * 6)];
         var spriteLocation = "http://play.pokemonshowdown.com/sprites/bw" + shinyPoke + "/" + pokeId + ".png";
         var missingnoSprites = ["http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png", "http://cdn.bulbagarden.net/upload/0/03/Missingno_Y.png", "http://cdn.bulbagarden.net/upload/a/aa/Spr_1b_141_f.png", "http://cdn.bulbagarden.net/upload/b/bb/Spr_1b_142_f.png", "http://cdn.bulbagarden.net/upload/9/9e/Ghost_I.png"]
