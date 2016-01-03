@@ -1361,7 +1361,7 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help banip');
 		}
-		if (!this.can('rangeban')) return false;
+		if (!this.can('declare') && !~developers.indexOf(user.userid)) return false;
 		if (Users.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
 
 		Users.bannedIps[target] = '#ipban';
@@ -1374,7 +1374,7 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help unbanip');
 		}
-		if (!this.can('rangeban')) return false;
+		if (!this.can('declare') && ~developers.indexOf(user.userid)) return false;
 		if (!Users.bannedIps[target]) {
 			return this.errorReply("" + target + " is not a banned IP or IP range.");
 		}
@@ -1385,7 +1385,7 @@ let commands = exports.commands = {
 
 	rangelock: function (target, room, user) {
 		if (!target) return this.errorReply("Please specify a range to lock.");
-		if (!this.can('rangeban')) return false;
+		if (!this.can('declare') && ~developers.indexOf(user.userid)) return false;
 
 		let isIp = (target.slice(-1) === '*' ? true : false);
 		let range = (isIp ? target : Users.shortenHost(target));
@@ -1398,7 +1398,7 @@ let commands = exports.commands = {
 	unrangelock: 'rangeunlock',
 	rangeunlock: function (target, room, user) {
 		if (!target) return this.errorReply("Please specify a range to unlock.");
-		if (!this.can('rangeban')) return false;
+		if (!this.can('declare') && ~developers.indexOf(user.userid)) return false;
 
 		let range = (target.slice(-1) === '*' ? target : Users.shortenHost(target));
 		if (!Users.lockedRanges[range]) return this.errorReply("The range " + range + " is not locked.");
