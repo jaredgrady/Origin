@@ -47,12 +47,14 @@ exports.commands = {
 
 		var pollOptions = '';
 		var start = 0;
+		pollOptions += '<div style="padding: 3px; background: rgba(235, 235, 235, 0.5);"><br /><center>';
 		while (start < Poll[room.id].optionList.length) {
-			pollOptions += '<button name="send" value="/vote ' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '">' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '</button>&nbsp;';
+			pollOptions += '<button name="send" value="/vote ' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '" style="margin: 2px; border-radius: 3px; color: #444; background: #F8F8F8 none repeat scroll 0% 0%; border: 1px solid #AAA; box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);">' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '</button>&nbsp;';	
 			start++;
 		}
-		Poll[room.id].display = '<h2>' + Tools.escapeHTML(Poll[room.id].question) + '&nbsp;&nbsp;<font size="1" color="#AAAAAA">/vote OPTION</font><br><font size="1" color="#AAAAAA">Poll started by <em>' + user.name + '</em></font><br><hr>&nbsp;&nbsp;&nbsp;&nbsp;' + pollOptions;
-		room.add('|raw|<div class="infobox">' + Poll[room.id].display + '</div>');
+		pollOptions += '</center><br /></div>';
+		Poll[room.id].display = '<div style="background: #333; border-bottom: 1px solid #000; box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2) inset; padding: 3px;"><center><font size="5" color="white">' + Tools.escapeHTML(Poll[room.id].question) + '</font><font size="1" color="#CCC" style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poll started by ' + user.name + '</font></center></div>' + pollOptions;
+		room.add('|raw|<div style="width: 100%; border: 1px solid #000;">' + Poll[room.id].display + '</div>');
 	},
 
 	pollhelp: ["/poll [question], [option 1], [option 2]... - Create a poll where users can vote on an option."],
@@ -86,15 +88,16 @@ exports.commands = {
 			return a[1] - b[1];
 		});
 
-		var results = '';
+		var results = '<div style="padding: 3px; background: rgba(235, 235, 235, 0.5);"><br />';
 		var len = data.length;
 		var topOption = data[len - 1][0];
 		while (len--) {
 			if (data[len][1] > 0) {
-				results += '&bull; ' + data[len][0] + ' - ' + Math.floor(data[len][1] / votes * 100) + '% (' + data[len][1] + ')<br>';
+				results += '<table><tr><td style="width: 200px; overflow: hidden;">&nbsp;&nbsp;&nbsp;&bull; ' + data[len][0] + ' - ' + data[len][1] + '</td><td><div style="width: 180px; height: 20px; border-radius: 3px; border: 1px solid #AAA; background: #F8F8F8;"><div style="width: ' + Math.floor(data[len][1] / votes * 100) + '%; height: 20px; background: #337AB7;"><center><font color="#06233C">' + Math.floor(data[len][1] / votes * 100) + '%</font></center></div></div></td></tr></table>';
 			}
 		}
-		room.add('|raw|<div class="infobox"><h2>Results to "' + Poll[room.id].question + '"</h2><font size="1" color="#AAAAAA"><strong>Poll ended by <em>' + user.name + '</em></font><br><hr>' + results + '</strong></div>');
+		results += '<br /></div>';
+		room.add('|raw|<div style="width: 100%; border: 1px solid #000;"><div style="background: #333; border-bottom: 1px solid #000; box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2) inset; padding: 3px;"><center><font size="5" color="white">Results to "' + Poll[room.id].question + '"</font><font size="1" color="#CCC" style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poll ended by ' + user.name + '</font></center></div>' + results + '</strong></div>');
 		Poll.reset(room.id);
 		Poll[room.id].topOption = topOption;
 	},
