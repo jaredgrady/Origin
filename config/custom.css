@@ -1,6 +1,6 @@
-  /************************
-  * Roomintro Classes CSS *
-  ************************/
+  /*********************
+  * Custom Classes CSS *
+  *********************/
   
   .astext {
     border: none;
@@ -12,9 +12,14 @@
     cursor: pointer;
   }
   
-  /*****************************
-  * Roomintro Classes CSS ~end *
-  *****************************/
+  .pr {
+    width: 100%;
+    border: 1px solid #000;
+  }
+  
+  /**************************
+  * Custom Classes CSS ~end *
+  **************************/
  
   /***********************
   * Donation Benefit CSS *
