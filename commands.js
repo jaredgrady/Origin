@@ -1307,7 +1307,7 @@ let commands = exports.commands = {
 	unbanhelp: ["/unban [username] - Unban a user. Requires: @ & ~"],
 
 	unbanall: function (target, room, user) {
-		if (!this.can('rangeban') !~developers.indexOf(user.userid)) return false;
+		if (!this.can('rangeban') && !~developers.indexOf(user.userid)) return false;
 		if (!target) {
 			user.lastCommand = '/unbanall';
 			this.errorReply("THIS WILL UNBAN AND UNLOCK ALL USERS.");
