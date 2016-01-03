@@ -152,6 +152,16 @@ exports.commands = {
 				this.sendReply(userid + "'s custom avatar removed successfully");
 			}.bind(this));
 			break;
+			
+		case 'change':
+			var userid = toId(parts[1]);
+			var targetUser = Users.getExact(userid);
+			var avatar = parts.slice(2).join(',').trim();
+			if (!this.can('ban') && this.can('vip') && targetUser !== userid) return false;
+			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
+			this.parse('/customavatar delete, ' + targetUser)
+			this.parse('/customavatar set, ' + targetUser + ', ' + avatar)
+			break;
 
 		case 'reload':
 			if (!this.can('hotpatch')) return false;
