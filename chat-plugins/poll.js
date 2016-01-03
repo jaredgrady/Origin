@@ -93,7 +93,7 @@ exports.commands = {
 		var topOption = data[len - 1][0];
 		while (len--) {
 			if (data[len][1] > 0) {
-				results += '<table><tr><td style="width: 200px; overflow: hidden;">&nbsp;&nbsp;&nbsp;&bull; ' + data[len][0] + ' - ' + data[len][1] + '</td><td><div style="width: 180px; height: 20px; border-radius: 3px; border: 1px solid #AAA; background: #F8F8F8;"><div style="width: ' + Math.floor(data[len][1] / votes * 100) + '%; height: 20px; background: #337AB7;"><center><font color="#06233C">' + Math.floor(data[len][1] / votes * 100) + '%</font></center></div></div></td></tr></table>';
+				results += '<table><tr><td style="width: 200px; overflow: hidden;">&nbsp;&nbsp;&nbsp;&bull; ' + data[len][0] + ' - ' + data[len][1] + '</td><td><div style="width: 180px; height: 20px; border-radius: 3px; border: 1px solid #AAA; background: #F8F8F8;"><div style="width: ' + Math.floor(data[len][1] / votes * 100) + '%; height: 20px; background: #337AB7;"><center><font color="#06233C" size="1">' + Math.floor(data[len][1] / votes * 100) + '%</font></center></div></div></td></tr></table>';
 			}
 		}
 		results += '<br /></div>';
