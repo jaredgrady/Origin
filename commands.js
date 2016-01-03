@@ -848,11 +848,12 @@ let commands = exports.commands = {
 
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Config.groups[b] || {rank:0}).rank - (Config.groups[a] || {rank:0}).rank;
-		}).map(function (r) {
-			let roomRankList = rankLists[r].sort().map(function (s) {
-				return s in targetRoom.users ? "**" + s + "**" : s;
+		}).forEach(function (r) {
+			let roomRankList = [];
+			rankLists[r].sort().forEach(function (s) {
+				roomRankList.push(s in targetRoom.users ? "**" + s + "**" : s);
 			});
-			return (Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + roomRankList.join(", ");
+			buffer.push((Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + roomRankList.join(", "));
 		});
 
 		if (!buffer.length) {
