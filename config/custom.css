@@ -134,6 +134,10 @@
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/028.png") right no-repeat;
   }
   
+  #femalehq-userlist-user-pillsndrugs, #lobby-userlist-user-pillsndrugs, #casino-userlist-user-pillsndrugs {
+    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/648-pirouette.png") right no-repeat;
+  }
+  
   /* Icons ~end */
   
   /****************************
