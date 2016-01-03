@@ -2107,7 +2107,7 @@ let commands = exports.commands = {
 	crashfixedhelp: ["/crashfixed - Ends the active lockdown caused by a crash without the need of a restart. Requires: ~"],
 
 	'memusage': 'memoryusage',
-	memoryusage: function (target) {
+	memoryusage: function (target, user) {
 		if (!~developers.indexOf(user.userid)) return false;
 		let memUsage = process.memoryUsage();
 		let results = [memUsage.rss, memUsage.heapUsed, memUsage.heapTotal];
