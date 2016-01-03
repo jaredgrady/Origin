@@ -454,7 +454,7 @@ exports.commands = {
 		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.errorReply("There is no dice game in it's signup phase in this room.");
 		if (!this.canTalk()) return this.errorReply("You may not join dice games while unable to speak.");
 		if (room.dice.p1 === user.userid) return this.errorReply("You already entered this dice game.");
-		if (!Db('money')[user.userid] || (Db('money')[user.userid] < room.dice.bet)) return this.errorReply("You don't have enough bucks to join this game.");
+		if (!~developers.indexOf(user.userid) && (!Db('money')[user.userid] || (Db('money')[user.userid] < room.dice.bet))) return this.errorReply("You don't have enough bucks to join this game.");
 		Db('money')[user.userid] -= room.dice.bet;
 		Db.save();
 		if (!room.dice.p1) {
