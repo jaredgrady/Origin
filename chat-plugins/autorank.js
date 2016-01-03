@@ -48,6 +48,6 @@ exports.commands = {
 	 		return this.privateModCommand("(" + user.name + " has set autorank to \"" + target + "\" in this room.)");
 	 	}
 	 	return this.sendReply("Group \"" + target + "\" not found.");
-	 }
+	 },
 	 
 };
