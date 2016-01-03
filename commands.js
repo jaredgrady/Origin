@@ -2639,7 +2639,6 @@ let commands = exports.commands = {
 
 	a: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return false;
-		this.logModCommand(user.name + " used an admin command");
 		room.add(target);
 	},
 
