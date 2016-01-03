@@ -128,7 +128,7 @@ exports.commands = {
 				var targetUser = Users.getExact(userid);
 				if (targetUser) targetUser.avatar = Config.customavatars[userid];
 
-				var msg = '**' + user.name + " has set a custom avatar for" + '** ' + targetUser + ' **';
+				var msg = '**' + user.name + " has set a custom avatar for" + targetUser + '**';
 				Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 				this.sendReply(userid + "'s custom avatar has been set.");
 				room.update();
