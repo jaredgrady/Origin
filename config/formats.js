@@ -103,9 +103,9 @@ exports.Formats = [
 		banlist: ['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
 		'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
 		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
-		'Tangela', 'Gabite', 'Jumpluff', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
-		'Electrode', 'Relicanth', 'Lickilicky', 'Clefairy', 'Regice', 'Linoone', 'Leafeon', 'Leavanny', 'Drifblim', 'Meowstic',
-		'Ninetales', 'Metang', 'Simipour', 'Ninjask', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
+		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
+		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Linoone', 'Leafeon', 'Drifblim', 'Meowstic',
+		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
 		],
 	},
 	{
