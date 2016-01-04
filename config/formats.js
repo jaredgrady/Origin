@@ -902,7 +902,7 @@ exports.Formats = [
 		column: 3,
 
 		mod: 'gen4',
-		ruleset: ['Pokemon', 'Standard'],
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause'],
 		banlist: ['Uber'],
 	},
 	{
