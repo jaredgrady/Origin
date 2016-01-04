@@ -17,7 +17,7 @@ var shop = [
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Jack (~\'v\')~ or CreaturePhil once you bought one.)', 350]
+    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Irraquated or CreaturePhil once you bought one.)', 350]
 ];
 
 var shopDisplay = getShopDisplay(shop);
