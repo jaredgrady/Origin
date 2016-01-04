@@ -1,7 +1,7 @@
 /**************************************
 * Anagram plugin for PokÃ©mon Showdown *
 * By: jd                              *
-**************************************/
+**************************************
 
 var fs = require('fs');
 var anagramWords = ['pokemon'];
@@ -77,3 +77,4 @@ exports.commands = {
 		this.add('|raw|<div class="infobox">The anagram game was ended by <b>' + Tools.escapeHTML(user.name) + '</b></div>');
 	},
 };
+*/
