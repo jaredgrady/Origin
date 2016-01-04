@@ -805,6 +805,7 @@ exports.commands = {
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
+	
 	roombanlist: function(target, room, user, connection) {
 		if (!this.can('ban', null, room)) return false;
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
