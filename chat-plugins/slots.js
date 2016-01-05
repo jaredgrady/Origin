@@ -197,7 +197,7 @@ exports.commands = {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
 			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access Denied.');
 			if (!target) return this.parse('/help antehelp');
-			if (typeof target === 'string') return this.sendReply(target);
+			if (isNaN(target)) return this.errorReply('Must be a number, silly.');
 			room.slotsAnte = target;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.sendReply("The ante for playing slots has been set to " + room.slotsAnte + " .");
