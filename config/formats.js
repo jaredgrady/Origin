@@ -37,7 +37,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 	},
-	{
+	/*{
 		name: "OU(Turbo)",
 		desc: ["Similar to OU but with a forced timer set to 10 seconds",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3521201/\">OU Metagame Discussion</a>",
@@ -49,7 +49,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 		forceTimer: true,
-	},
+	}*/
 	{
 		name: "Ubers",
 		desc: [
@@ -113,12 +113,12 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['PU'],
-		banlist: ['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
+		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
 		'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
 		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
-		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
-		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Linoone', 'Leafeon', 'Drifblim', 'Meowstic',
-		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
+		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon', 'Audino', 'Vullaby'
+		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Linoone', 'Leafeon', 'Drifblim', 'Meowstic', 'Purugly', 'Torkoal',
+		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web', 'Dusclops', 'Regigigas', 'Carbink'
 		],
 	},
 	{
@@ -537,7 +537,7 @@ exports.Formats = [
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 	},
-	{
+	/*{
 		name: "Monotype(Turbo)",
 		desc: [
 			"All Pok&eacute;mon on a team must share a type.",
@@ -554,7 +554,7 @@ exports.Formats = [
 		],
 		forceTimer: true,
 		
-	},
+	}*/
 	{
 		name: "Tier Shift",
 		desc: [
