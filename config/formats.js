@@ -37,9 +37,9 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 	},
-	/*{
-		name: "OU(Turbo)",
-		desc: ["Similar to OU but with a forced timer set to 10 seconds",
+	{
+		name: "OU (Turbo)",
+		desc: ["Similar to OU but with a forced timer set to 20 seconds",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3521201/\">OU Metagame Discussion</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/ou/\">OU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3553516/\">OU Viability Ranking</a>",
@@ -49,7 +49,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 		forceTimer: true,
-	},*/
+	},
 	{
 		name: "Ubers",
 		desc: [
@@ -537,11 +537,11 @@ exports.Formats = [
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 	},
-	/*{
-		name: "Monotype(Turbo)",
+	{
+		name: "Monotype (Turbo)",
 		desc: [
 			"All Pok&eacute;mon on a team must share a type.",
-			"Similar to regular monotype but with a forced timer set to 10 seconds",
+			"Similar to regular monotype but with a forced timer set to 20 seconds",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3544507/\">Monotype</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3550310/\">Monotype Resources</a>",
 		],
@@ -554,7 +554,7 @@ exports.Formats = [
 		],
 		forceTimer: true,
 		
-	}*/
+	},
 	{
 		name: "Tier Shift",
 		desc: [
