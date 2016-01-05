@@ -1059,7 +1059,7 @@ exports.commands = {
         for (i = 0; i < userPacks[target].length; i++) {
             this.sendReply(toTitleCase(userPacks[i]));
         }
-    },*/
+    },
     buypacks: 'buypack',
     buypack: function(target, room, user) {
         if (!target) return this.sendReply('/buypack - Buys a pack from the pack shop. Alias: /buypacks');
@@ -1224,8 +1224,9 @@ exports.commands = {
 		});
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
-	},
-/*     transfercard: function (target, room, user) {
+	}, 
+   
+    transfercard: function (target, room, user) {
     var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
     if (!Users.get(toId(parts[0]))) return this.sendReply('User ' + parts[0] + ' was not found.');
