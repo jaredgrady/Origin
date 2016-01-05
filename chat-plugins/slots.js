@@ -38,11 +38,9 @@ exports.commands = {
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
 			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
-			if(!Db('money')[user.userid]) Db('money')[user.userid] = 0;
-			if (house.ante > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
-			var newTotal = (Db('money')[user.userid] || 0) - house.ante;
-			Db('money')[user.userid] = newTotal;
-			Db.save();
+			if (house.ante > Db('money').get(user.userid, 0)) return this.sendReply("You do not have enough bucks to play slots.");
+			var newTotal = Db('money').get(user.userid, 0) - house.ante;
+			Db('money').set(user.userid, newTotal);
 			var roll1;
 			var roll2;
 			var roll3;
@@ -81,9 +79,7 @@ exports.commands = {
 			if (roll1 === roll2 && roll2 !== roll3) {
 				var win = false; 
 				var winnings = house.ante;
-				var userTotal = (Db('money')[user.userid] || 0) + winnings;
-				Db('money')[user.userid] = userTotal;
-				Db.save();
+				Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 				user.isRolling = false;
 				return user.sendTo(room, "You hit 2 in a row and got your ante back.");
 			}
@@ -91,9 +87,7 @@ exports.commands = {
 			if (roll1 !== roll2 && roll2 === roll3) {
 				var win = false; 
 				var winnings = house.ante;
-				var userTotal = (Db('money')[user.userid] || 0) + winnings;
-				Db('money')[user.userid] = userTotal;
-				Db.save();
+				Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 				user.isRolling = false;
 				return user.sendTo(room, "You hit 2 in a row and got your ante back.");
 			}
@@ -121,9 +115,7 @@ exports.commands = {
 				return user.sendTo(room, "Better luck next time!");
 			}
 			if (win) {
-				var userTotal = (Db('money')[user.userid] || 0) + winnings;
-				Db('money')[user.userid] = userTotal;
-				Db.save();
+				Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 				logMoney(user + " won " + winnings + " from the slots.");
 				user.isRolling = false;
 			}
