@@ -110,7 +110,7 @@ exports.commands = {
 			if (isNaN(room.slotsAnte)) room.slotsAnte = 3;
 			if (room.slotsAnte > Db('money').get(user.userid, 0)) return this.sendReply("You do not have enough bucks to play slots.");
 			
-			Db('money').set(user.userid, Db('money').get(user.userid, 0) - rooms.slotsAnte);
+			Db('money').set(user.userid, Db('money').get(user.userid, 0) - room.slotsAnte);
 			user.isRolling = true;
 
 			//lets get a randomNumber from 0 - 4095
