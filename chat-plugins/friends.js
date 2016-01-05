@@ -23,7 +23,6 @@ function getFriendList(user) {
 };
 
 exports.commands = {
-
 	friendslist: 'friends',
 	friends: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -40,18 +39,12 @@ exports.commands = {
 
 		if (userid === targetUser) return this.errorReply("You cannot add yourself as a friend.");
 		if (!userid || !targetUser) return this.errorReply("User '" + targetUser + "' is not online.");
-		if (!(Db('friends')[userid])) {
-			(Db('friends')[userid]) = []; 
-			Db.save();
-		}
-		if ((Db('friends')[userid]).length === 20) return this.sendReply("You cannot have more then 20 friends. Remove some if you wish to add more.");
-		if ((Db('friends')[userid]).indexOf(targetUser) > -1) return this.sendReply("This user is already your friend.");
-			(Db('friends')[userid]).push(targetUser);
-			Db.save();
-			this.sendReply(targetUser + " has been added to your friends list.");
+		if (Db('friends').get(userid, []).length === 20) return this.sendReply("You cannot have more then 20 friends. Remove some if you wish to add more.");
+		if (Db('friends').get(userid, []).indexOf(targetUser) > -1) return this.sendReply("This user is already your friend.");
+		Db('friends').set(userid, Db('friends').get(userid, []).concat([targetUser]));
+		this.sendReply(targetUser + " has been added to your friends list.");
 	},
 	addfriendhelp: ["/addfriend [user] - Adds a friend to your friend list."],
-
 
 	removefriend: function (target, room, user) {
 		if (!target) return this.parse('/help removefriend');
@@ -59,13 +52,10 @@ exports.commands = {
 		var userid = user.userid;
 		var targetUser = toId(target);	
 		
-		if (Db('friends')[userid].indexOf(targetUser) > -1) {
-			for (fr = 0; fr < Db('friends')[userid].length; fr++) {
-				if (Db('friends')[userid][fr] === targetUser) {
-					delete Db('friends')[userid][fr];
-					Db.save();
-				}
-			}
+		if (Db('friends').get(userid, []).indexOf(targetUser) > -1) {
+			let friends = Db('friends').get(userid);
+			friends.splice(friends.indexOf(targetUser), 1);
+			Db('friends').set(userid, friends);
 			return this.sendReply("You have succesfully removed " + targetUser + " from your friendlist.");
 		} else {
 			return this.sendReply("This user is not on your friends list.");
