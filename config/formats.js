@@ -37,6 +37,19 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 	},
+	/*{
+		name: "OU(Turbo)",
+		desc: ["Similar to OU but with a forced timer set to 10 seconds",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3521201/\">OU Metagame Discussion</a>",
+			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/ou/\">OU Banlist</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3553516/\">OU Viability Ranking</a>",
+		],
+		section: "ORAS Singles",
+
+		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
+		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
+		forceTimer: true,
+	},*/
 	{
 		name: "Ubers",
 		desc: [
@@ -100,12 +113,12 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['PU'],
-		banlist: ['Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
-		'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
+		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
+		'Machoke', 'Floatzel', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
 		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
-		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon',
-		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Linoone', 'Leafeon', 'Drifblim', 'Meowstic',
-		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web'
+		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon', 'Audino', 'Vullaby',
+		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Leafeon', 'Drifblim', 'Meowstic', 'Purugly', 'Torkoal',
+		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web', 'Dusclops', 'Regigigas', 'Carbink'
 		],
 	},
 	{
@@ -524,6 +537,24 @@ exports.Formats = [
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 	},
+	/*{
+		name: "Monotype(Turbo)",
+		desc: [
+			"All Pok&eacute;mon on a team must share a type.",
+			"Similar to regular monotype but with a forced timer set to 10 seconds",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3544507/\">Monotype</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3550310/\">Monotype Resources</a>",
+		],
+		section: "Other Metagames",
+
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
+			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
+		],
+		forceTimer: true,
+		
+	}*/
 	{
 		name: "Tier Shift",
 		desc: [

@@ -907,7 +907,7 @@ let BattleRoom = (function () {
 		this.sideTurnTicks = [0, 0];
 		this.disconnectTickDiff = [0, 0];
 
-		if (Config.forcetimer) this.requestKickInactive(false);
+		if (Config.forcetimer || Tools.getFormat(formatid).forceTimer) this.requestKickInactive(false);
 	}
 	BattleRoom.prototype = Object.create(Room.prototype);
 	BattleRoom.prototype.type = 'battle';
@@ -1173,7 +1173,12 @@ let BattleRoom = (function () {
 			// if a player has left, don't wait longer than 6 ticks (1 minute)
 			maxTicksLeft = 6;
 		}
-		if (!this.rated && !this.tour) maxTicksLeft = 30;
+		if (this.format === "outurbo" || this.format === "monotypeturbo"){
+			maxTicksLeft = 1;
+		}
+	    else if (!this.rated && !this.tour){
+	    	maxTicksLeft = 30;
+	    }
 
 		this.sideTurnTicks = [maxTicksLeft, maxTicksLeft];
 
