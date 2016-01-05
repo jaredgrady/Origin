@@ -23,11 +23,6 @@ Overall payout: -1.99511
 Net gain for the server: 0.0359 bucks per roll
 */
 
-var house = {
-	ante: 3,
-	enabled: true,
-};
-
 var faces = {
 	"sv": {
 		name: "7",
@@ -111,11 +106,11 @@ exports.commands = {
 		start: 'roll',
 		roll: function(target, room, user) {
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
-			if (house.enabled === false) return this.errorReply('Slots is currently disabled.');
+			if (room.slotsEnabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
 			if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
-			if (house.ante > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
-			var newTotal = (Db('money')[user.userid] || 0) - house.ante;
+			if (room.slotsAnte > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
+			var newTotal = (Db('money')[user.userid] || 0) - room.slotsAnte;
 			Db('money')[user.userid] = newTotal;
 			Db.save();
 			user.isRolling = true;
@@ -147,7 +142,7 @@ exports.commands = {
 				//odds for 2 in a row; fuck cherries they're too popular xD
 				if (rollDetails.match == 2 && rollDetails.id !== "ch") {
 					var win = false;
-					var winnings = house.ante;
+					var winnings = room.slotsAnte;
 					var userTotal = (Db('money')[user.userid] || 0) + winnings;
 					Db('money')[user.userid] = userTotal;
 					Db.save();
@@ -157,7 +152,7 @@ exports.commands = {
 
 				if (rollDetails.match == 3) {
 					var win = true;
-					var winnings = faces[rollDetails.id].payout + house.ante;
+					var winnings = faces[rollDetails.id].payout + room.slotsAnte;
 					if (rollDetails.id === "sv") {
 						user.sendTo(room, "You've hit the jackpot!");
 						room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
@@ -182,25 +177,30 @@ exports.commands = {
 		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],
 
 		enable: function(target, room, user, cmd) {
+			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
 			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access Denied.');
-			house.enabled = true;
+			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 		enablehelp: ["Enable the playing of slots."],
 
 		disable: function(target, room, user, cmd) {
+			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
 			if (!user.can('makechatroom')) return this.errorReply('/slots disable - Access Denied.');
-			house.enabled = false;
+			room.slotsEnabled = false;
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.sendReply("Slots has been disabled.");
 		},
 		disablehelp: ["Disable the playing of slots."],
 
 		ante: function(target, room, user) {
+			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
 			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access Denied.');
 			if (!target) return this.parse('/help antehelp');
 			if (typeof target === 'string') return this.sendReply(target);
-			house.ante = target;
-			this.sendReply("The ante for playing slots has been set to " + house.ante + " .");
+			room.slotsAnte = target;
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
+			this.sendReply("The ante for playing slots has been set to " + room.slotsAnte + " .");
 		},
 		antehelp: ["Sets the ante for playing slots. Require ~."]
 	},
