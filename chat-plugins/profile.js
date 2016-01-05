@@ -165,12 +165,12 @@ Profile.prototype.dev = function() {
 Profile.prototype.show = function (callback) {
 	var userid = toId(this.username);
 
-	return callback(this.avatar() +
-									SPACE + this.name() + BR +
-									SPACE + this.group() + this.vip() + this.dev() + BR +
-									SPACE + this.money(Db('money')[userid] || 0) + BR +
-									SPACE + this.seen(Db('seen')[userid]) +
-									'<br clear="all">');
+	return this.buttonAvatar() +
+		SPACE + this.name() + BR +
+		SPACE + this.group() + BR +
+		SPACE + this.money(Db('money').get(userid, 0)) + BR +
+		SPACE + this.seen(Db('seen').get(userid)) +
+		'<br clear="all">';
 };
 
 exports.commands = {
@@ -178,17 +178,13 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		var targetUser = this.targetUserOrSelf(target);
-		//if (targetUser.userid === 'username') return false;
 		var profile;
 		if (!targetUser) {
 			profile = new Profile(false, target);
 		} else {
 			profile = new Profile(true, targetUser, targetUser.avatar);
 		}
-		profile.show(function (display) {
-			this.sendReplyBox(display);
-			room.update();
-		}.bind(this));
+		this.sendReplyBox(profile.show());
 	},
 	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."]
 };

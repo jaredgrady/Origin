@@ -138,7 +138,7 @@ Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.Tells = require('./tells.js');
 
-global.Db = require('eosdb')('config/eosdb');
+global.Db = require('origindb')('config/eosdb');
 
 global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/';
 
