@@ -554,7 +554,7 @@ exports.Formats = [
 		],
 		forceTimer: true,
 		
-	}
+	},
 	{
 		name: "Tier Shift",
 		desc: [
