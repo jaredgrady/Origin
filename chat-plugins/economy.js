@@ -377,7 +377,10 @@ exports.commands = {
 			return {name: name, money: Db('money').get(name)};
 		});
 		if (!keys.length) return this.sendReplyBox("Money ladder is empty.");
-		keys.sort(function (a, b) { return b.money > a.money; });
+		keys = keys.sort(function(a, b) {
+			if (b.money > a.money) return 1;
+			return -1;
+		});		
 		keys.slice(0, 10).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
 		});
