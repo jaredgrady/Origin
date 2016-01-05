@@ -49,7 +49,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
 		forceTimer: true,
-	}*/
+	},*/
 	{
 		name: "Ubers",
 		desc: [
@@ -114,10 +114,10 @@ exports.Formats = [
 
 		ruleset: ['PU'],
 		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
-		'Machoke', 'Floatzel', 'Exeggutor', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
+		'Machoke', 'Floatzel', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
 		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
-		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon', 'Audino', 'Vullaby'
-		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Linoone', 'Leafeon', 'Drifblim', 'Meowstic', 'Purugly', 'Torkoal',
+		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon', 'Audino', 'Vullaby',
+		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Leafeon', 'Drifblim', 'Meowstic', 'Purugly', 'Torkoal',
 		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web', 'Dusclops', 'Regigigas', 'Carbink'
 		],
 	},
