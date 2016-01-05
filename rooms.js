@@ -1174,7 +1174,7 @@ let BattleRoom = (function () {
 			maxTicksLeft = 6;
 		}
 		if (this.format === "outurbo" || this.format === "monotypeturbo"){
-			maxTicksLeft = 1;
+			maxTicksLeft = 2;
 		}
 	    else if (!this.rated && !this.tour){
 	    	maxTicksLeft = 30;
