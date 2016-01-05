@@ -70,7 +70,7 @@ exports.commands = {
 				if (params.length < 1) return this.sendReply('Usage: /leagueshop buy [item name]');
 				var item = params.shift();
 				if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "'+item+'" not found.');
-				let money = Db('money').get(user, 0);
+				var money = Db('money').get(user, 0);
 					if (money < room.shop[toId(item)].price) return self.sendReply('You don\'t have enough bucks to purchase a '+item+'. You need '+ ((money - room.shop[toId(item)].price) * -1) + ' more bucks.');
 					var buck = 'buck';
 					if (room.shop[toId(item)].price > 1) buck = 'bucks';

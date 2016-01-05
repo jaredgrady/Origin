@@ -53,7 +53,7 @@ exports.commands = {
 		var targetUser = toId(target);	
 		
 		if (Db('friends').get(userid, []).indexOf(targetUser) > -1) {
-			let friends = Db('friends').get(userid);
+			var friends = Db('friends').get(userid);
 			friends.splice(friends.indexOf(targetUser), 1);
 			Db('friends').set(userid, friends);
 			return this.sendReply("You have succesfully removed " + targetUser + " from your friendlist.");
