@@ -1379,7 +1379,6 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
-		onAnyRedirectTargetPriority: 1,
 		onAnyRedirectTarget: function (target, source, source2, move) {
 			if (move.type !== 'Electric' || move.id in {firepledge:1, grasspledge:1, waterpledge:1}) return;
 			if (this.validTarget(this.effectData.target, source, move.target)) {
@@ -2512,6 +2511,11 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
+		onAllyTryHitSide: function (target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectData.target, '[msg]', '[from] ability: Soundproof');
+			}
+		},
 		id: "soundproof",
 		name: "Soundproof",
 		rating: 2,
@@ -2628,7 +2632,6 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
-		onAnyRedirectTargetPriority: 1,
 		onAnyRedirectTarget: function (target, source, source2, move) {
 			if (move.type !== 'Water' || move.id in {firepledge:1, grasspledge:1, waterpledge:1}) return;
 			if (this.validTarget(this.effectData.target, source, move.target)) {

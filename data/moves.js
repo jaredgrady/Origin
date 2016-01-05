@@ -2120,6 +2120,7 @@ exports.BattleMovedex = {
 				this.effectData.position = null;
 				this.effectData.damage = 0;
 			},
+			onRedirectTargetPriority: -1,
 			onRedirectTarget: function (target, source, source2) {
 				if (source !== this.effectData.target) return;
 				return source.side.foe.active[this.effectData.position];
@@ -4653,6 +4654,7 @@ exports.BattleMovedex = {
 		volatileStatus: 'followme',
 		effect: {
 			duration: 1,
+			onFoeRedirectTargetPriority: 1,
 			onFoeRedirectTarget: function (target, source, source2, move) {
 				if (this.validTarget(this.effectData.target, source, move.target)) {
 					this.debug("Follow Me redirected target of move");
@@ -5833,9 +5835,10 @@ exports.BattleMovedex = {
 		onHit: function (pokemon, source) {
 			let side = pokemon.side;
 			for (let i = 0; i < side.pokemon.length; i++) {
+				if (side.pokemon[i].hasAbility('soundproof')) continue;
 				side.pokemon[i].status = '';
 			}
-			this.add('-cureteam', source, '[from] move: HealBell');
+			this.add('-cureteam', source, '[from] move: Heal Bell');
 		},
 		target: "allyTeam",
 		type: "Normal",
@@ -8362,6 +8365,7 @@ exports.BattleMovedex = {
 				this.effectData.position = null;
 				this.effectData.damage = 0;
 			},
+			onRedirectTargetPriority: -1,
 			onRedirectTarget: function (target, source, source2) {
 				if (source !== this.effectData.target) return;
 				return source.side.foe.active[this.effectData.position];
@@ -8656,6 +8660,7 @@ exports.BattleMovedex = {
 				this.effectData.position = null;
 				this.effectData.damage = 0;
 			},
+			onRedirectTargetPriority: -1,
 			onRedirectTarget: function (target, source, source2) {
 				if (source !== this.effectData.target) return;
 				return source.side.foe.active[this.effectData.position];
@@ -9571,7 +9576,7 @@ exports.BattleMovedex = {
 				for (let j = 0; j < this.sides[i].active.length; j++) {
 					if (this.sides[i].active[j]) {
 						if (this.sides[i].active[j].hasAbility('soundproof')) {
-							this.add('-immune', this.sides[i].active[j], '[msg]');
+							this.add('-immune', this.sides[i].active[j], '[msg]', '[from] ability: Soundproof');
 							result = true;
 						} else if (!this.sides[i].active[j].volatiles['perishsong']) {
 							this.sides[i].active[j].addVolatile('perishsong');
@@ -10633,6 +10638,7 @@ exports.BattleMovedex = {
 			onStart: function (pokemon) {
 				this.add('-start', pokemon, 'move: Rage Powder');
 			},
+			onFoeRedirectTargetPriority: 1,
 			onFoeRedirectTarget: function (target, source, source2, move) {
 				if (source.runImmunity('powder') && this.validTarget(this.effectData.target, source, move.target)) {
 					this.debug("Rage Powder redirected target of move");
@@ -12339,7 +12345,7 @@ exports.BattleMovedex = {
 					return null;
 				}
 			},
-			onRedirectTargetPriority: -99,
+			onRedirectTargetPriority: 99,
 			onRedirectTarget: function (target, source, source2) {
 				if (source !== this.effectData.target) return;
 				if (this.effectData.source.fainted) return;
