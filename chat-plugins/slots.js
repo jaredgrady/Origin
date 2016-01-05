@@ -1,14 +1,13 @@
 /* Slots Details
-
-777 = 1/4096 payout: 1000              ---0.24414
-RRR = 1/512 payout: 300                ---0.58593
-(pika)(pika)(pika) = 1/512 payout: 150 ---0.29297
-(duck)(duck)(duck) = 1/512 payout: 100 ---0.19531
-(mag)(mag)(mag) = 1/512 payout: 50     ---0.09765
-(sh)(sh)(sh) = 27/4096 payout: 35      ---0.23071
-(ch)(ch)(ch) = 1/64 payout: 20         ---0.31250
-Overall payout: 1.95921
-
+//make one win less "gamechanging", considering the low prices in the shop, a win at the cherries would even give a ton of cash.
+777 = 1/4096 payout: 500               ---0.12207
+RRR = 1/512 payout: 250                ---0.48828
+(pika)(pika)(pika) = 1/512 payout: 100 ---0.19531
+(duck)(duck)(duck) = 1/512 payout: 75  ---0.14648
+(mag)(mag)(mag) = 1/512 payout: 40     ---0.07813
+(sh)(sh)(sh) = 27/4096 payout: 20      ---0.13184
+(ch)(ch)(ch) = 1/64 payout: 10         ---0.15625
+Overall payout: 1.31836
 77x = 3/256
 RRx = 3/64
 Pika-Pika-x = 3/64
@@ -16,48 +15,46 @@ Duck-duck-x = 3/64
 Mag-mag-x = 3/64
 sh-sh-x = 27/256
 Overall payout: 0
-
 getting nothing: 681/1024
 Overall payout: -1.99511
-
-Net gain for the server: 0.0359 bucks per roll
+Net gain for the server: 0.67675 bucks per roll (shhhhh dont tell the gamblers :^)
 */
 
 var faces = {
 	"sv": {
 		name: "7",
 		img: "http://cdn.bulbagarden.net/upload/f/f0/Celadon_Game_Corner_7_FRLG.png",
-		payout: 1000,
+		payout: 500,
 	},
 	"ro": {
 		name: "R",
 		img: "http://cdn.bulbagarden.net/upload/5/5e/Celadon_Game_Corner_R_FRLG.png",
-		payout: 300,
+		payout: 250,
 	},
 	"pi": {
 		name: "Pikachu",
 		img: "http://cdn.bulbagarden.net/upload/1/16/Celadon_Game_Corner_Pikachu_FRLG.png",
-		payout: 150,
+		payout: 100,
 	},
 	"pd": {
 		name: "Psyduck",
 		img: "http://cdn.bulbagarden.net/upload/5/5b/Celadon_Game_Corner_Psyduck_FRLG.png",
-		payout: 100,
+		payout: 75,
 	},
 	"mg": {
 		name: "Magnemite",
 		img: "http://cdn.bulbagarden.net/upload/a/a2/Celadon_Game_Corner_Magnemite_FRLG.png",
-		payout: 50,
+		payout: 40,
 	},
 	"sh": {
 		name: "Shellder",
 		img: "http://cdn.bulbagarden.net/upload/e/e8/Celadon_Game_Corner_Shellder_FRLG.png",
-		payout: 35,
+		payout: 20,
 	},
 	"ch": {
 		name: "Cherry",
 		img: "http://cdn.bulbagarden.net/upload/2/2f/Celadon_Game_Corner_Cherry_FRLG.png",
-		payout: 20,
+		payout: 10,
 	},
 }
 var faceMatch = function(hexValue) {
@@ -109,6 +106,11 @@ exports.commands = {
 			if (room.slotsEnabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
 			if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
+			//safety check for the ante
+			if (!room.slotsAnte) room.slotsAnte = 3;
+			if (typeof room.slotsAnte == "string") room.slotsAnte = parseInt(room.slotsAnte);
+			if (isNaN(room.slotsAnte)) room.slotsAnte = 3;
+
 			if (room.slotsAnte > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
 			var newTotal = (Db('money')[user.userid] || 0) - room.slotsAnte;
 			Db('money')[user.userid] = newTotal;
@@ -174,7 +176,6 @@ exports.commands = {
 				}
 			}, 3000);
 		},
-		rollhelp: ["Plays a game of dice after paying the ante. Must be played in casino."],
 
 		enable: function(target, room, user, cmd) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
@@ -182,7 +183,6 @@ exports.commands = {
 			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
-		enablehelp: ["Enable the playing of slots."],
 
 		disable: function(target, room, user, cmd) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
@@ -191,19 +191,27 @@ exports.commands = {
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.sendReply("Slots has been disabled.");
 		},
-		disablehelp: ["Disable the playing of slots."],
 
 		ante: function(target, room, user) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
 			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access Denied.');
-			if (!target) return this.parse('/help antehelp');
+			if (!target) return this.parse('/help slotsante');
+			target = parseInt(target);
 			if (isNaN(target)) return this.errorReply('Must be a number, silly.');
 			room.slotsAnte = target;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
-			this.sendReply("The ante for playing slots has been set to " + room.slotsAnte + " .");
+			this.sendReply("The ante for playing slots has been set to " + room.slotsAnte + ".");
 		},
-		antehelp: ["Sets the ante for playing slots. Require ~."]
 	},
+	
+	slotsantehelp: ["/slots ante [number] - Sets the ante for playing slots. Require ~."],
+	
+	slotsdisablehelp: ["/slots disable - Disable the playing of slots."],
+	
+	slotsenablehelp: ["/slots enable - Enable the playing of slots."],
+	
+	slotsrollhelp: ["/slots roll - Plays a game of dice after paying the ante. Must be played in casino."],
+	
 	slotshelp: ["commands for /slots are:",
 		"/slots enable - Enable the playing of slots.",
 		"/slots disable - Disable the playing of slots.",
