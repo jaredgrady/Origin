@@ -30,7 +30,6 @@ const THROTTLE_BUFFER_LIMIT = 6;
 const THROTTLE_MULTILINE_WARN = 4;
 
 const fs = require('fs');
-const steno = require('steno');
 
 let Users = module.exports = getUser;
 
@@ -822,13 +821,10 @@ User = (function () {
 		} else {
 			this.send('|nametaken|' + name + "|Your authentication token was invalid.");
 		}
-		var rooms = Db('rooms')[userid];
 		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
-		if (rooms && rooms.length) {
-			rooms.forEach(function (room) {
-				this.tryJoinRoom(room, connection);
-			}.bind(this));
-		}
+		Db('rooms').get(userid, []).forEach(function (room) {
+			this.tryJoinRoom(room, connection);
+		}.bind(this));
 		return false;
 	};
 	User.prototype.validateRename = function (name, tokenData, newlyRegistered, challenge) {
@@ -1236,9 +1232,8 @@ User = (function () {
 			let rooms = Object.keys(this.roomCount).filter(function (room) {
 				return ['global', 'lobby', 'staff'].indexOf(room) < 0;
 			});
-			if (rooms.length) Db('rooms')[this.userid] = rooms;
-			Db('seen')[this.userid] = Date.now();
-			Db.save();
+			if (rooms.length) Db('rooms').set(this.userid, rooms);
+			Db('seen').set(this.userid, Date.now());
 		}
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {

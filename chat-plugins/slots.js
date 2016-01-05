@@ -105,16 +105,12 @@ exports.commands = {
 			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
 			if (room.slotsEnabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
-			if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
-			//safety check for the ante
 			if (!room.slotsAnte) room.slotsAnte = 3;
 			if (typeof room.slotsAnte == "string") room.slotsAnte = parseInt(room.slotsAnte);
 			if (isNaN(room.slotsAnte)) room.slotsAnte = 3;
-
-			if (room.slotsAnte > Db('money')[user.userid]) return this.sendReply("You do not have enough bucks to play slots.");
-			var newTotal = (Db('money')[user.userid] || 0) - room.slotsAnte;
-			Db('money')[user.userid] = newTotal;
-			Db.save();
+			if (room.slotsAnte > Db('money').get(user.userid, 0)) return this.sendReply("You do not have enough bucks to play slots.");
+			
+			Db('money').set(user.userid, Db('money').get(user.userid, 0) - rooms.slotsAnte);
 			user.isRolling = true;
 
 			//lets get a randomNumber from 0 - 4095
@@ -145,9 +141,7 @@ exports.commands = {
 				if (rollDetails.match == 2 && rollDetails.id !== "ch") {
 					var win = false;
 					var winnings = room.slotsAnte;
-					var userTotal = (Db('money')[user.userid] || 0) + winnings;
-					Db('money')[user.userid] = userTotal;
-					Db.save();
+					Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 					user.isRolling = false;
 					return user.sendTo(room, "You hit 2 " + faces[rollDetails.id].name + "'s and got your ante back.");
 				}
@@ -169,9 +163,7 @@ exports.commands = {
 				}
 				if (win) {
 					user.isRolling = false;
-					var userTotal = (Db('money')[user.userid] || 0) + winnings;
-					Db('money')[user.userid] = userTotal;
-					Db.save();
+					Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 					logMoney(user + " won " + winnings + " from the slots.");
 				}
 			}, 3000);

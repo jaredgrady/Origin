@@ -758,15 +758,13 @@ class Tournament {
 			var firstMoney = Math.round(tourSize / 4);
 			var secondMoney = Math.round(firstMoney / 2);
 
-			Db('money')[wid] = (Db('money')[wid] || 0) + firstMoney;
+			Db('money').set(wid, db('money').get(wid, 0) + firstmoney);
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has won " + "<font color='" + color + "'>" + firstMoney + "</font>" + currencyName(firstMoney) + " for winning the tournament!</b>");
 
 			if (runnerUp) {
-				Db('money')[rid] = (Db('money')[rid] || 0) + secondMoney;
+				Db('money').set(rid, Db('money').get(rid, 0) + secondMoney);
 				this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(runnerUp) + "</font> has won " +  "<font color='" + color + "'>" + secondMoney + "</font>" + currencyName(secondMoney) + " for winning the tournament!</b>");
 			}
-
-			Db.save();
 		}
 /*		    if (this.room.isOfficial && tourSize >= 4) {
         		var tourRarity = tourCard(tourSize, toId(winner));
