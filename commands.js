@@ -1813,7 +1813,7 @@ let commands = exports.commands = {
 			} catch (e) {
 				return this.errorReply("Something failed while trying to hotpatch chat: \n" + e.stack);
 			}
-		} else if (target === 'tournaments') {
+		} else if (target === 'tournaments' || target === 'tours') {
 			try {
 				let runningTournaments = Tournaments.tournaments;
 				CommandParser.uncacheTree('./tournaments');
