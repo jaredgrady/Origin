@@ -1,15 +1,14 @@
 'use strict';
 
-var color = require('../config/color');
-var fs = require('fs');
-var moment = require('moment');
-var geoip = require('geoip-ultralight');
+let color = require('../config/color');
+let moment = require('moment');
+let geoip = require('geoip-ultralight');
 geoip.startWatchingDataUpdate();
 
-var BR = '<br>';
-var SPACE = '&nbsp;';
-var profileColor = '#24678d';
-var trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
+let BR = '<br>';
+let SPACE = '&nbsp;';
+let profileColor = '#24678d';
+let trainersprites = [1, 2, 101, 102, 169, 170, 265, 266, 168];
 
 /**
  * Profile constructor.
@@ -88,7 +87,7 @@ function label(text) {
 }
 
 function currencyName(amount) {
-	var name = " buck";
+	let name = " buck";
 	return amount === 1 ? name : name + "s";
 }
 
@@ -97,24 +96,24 @@ Profile.prototype.avatar = function () {
 		if (typeof this.image === 'string') return img(this.url + '/avatars/' + this.image);
 		return img('http://play.pokemonshowdown.com/sprites/trainers/' + this.image + '.png');
 	}
-	for (var name in Config.customAvatars) {
+	for (let name in Config.customAvatars) {
 		if (this.username === name) {
 			return img(this.url + '/avatars/' + Config.customAvatars[name]);
 		}
 	}
-	var selectedSprite = trainersprites[Math.floor(Math.random() * trainersprites.length)];
+	let selectedSprite = trainersprites[Math.floor(Math.random() * trainersprites.length)];
 	return img('http://play.pokemonshowdown.com/sprites/trainers/' + selectedSprite + '.png');
 };
 
 Profile.prototype.buttonAvatar = function () {
-	var css = 'border:none;background:none;padding:0;float:left;';
+	let css = 'border:none;background:none;padding:0;float:left;';
 	return '<button style="' + css + '" name="parseCommand" value="/user ' + this.username + '">' + this.avatar() + "</button>";
 };
 
 Profile.prototype.group = function () {
 	if (this.isOnline && this.user.group === ' ') return label('Group') + 'Regular User';
 	if (this.isOnline) return label('Group') + Config.groups[this.user.group].name;
-	for (var name in Users.usergroups) {
+	for (let name in Users.usergroups) {
 		if (toId(this.username) === name) {
 			return label('Group') + Config.groups[Users.usergroups[name].charAt(0)].name;
 		}
@@ -127,10 +126,10 @@ Profile.prototype.money = function (amount) {
 };
 
 Profile.prototype.name = function () {
-	function getFlag () {
+	function getFlag() {
 		if (!this.isOnline) return false;
 		if (this.isOnline) {
-			var geo = geoip.lookupCountry(this.user.latestIp);
+			let geo = geoip.lookupCountry(this.user.latestIp);
 			if (!geo) {
 				return false;
 			} else {
@@ -138,7 +137,7 @@ Profile.prototype.name = function () {
 			}
 		}
 	}
-	if (!getFlag.call(this))return label('Name') + bold(font(color(toId(this.username)), this.username));
+	if (!getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username));
 	if (getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username)) + ' ' + getFlag.call(this);
 };
 
@@ -148,14 +147,14 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
-Profile.prototype.vip = function() { 
-    if (typeof this.user === 'string') return '';
-    if (this.user && !this.user.can('vip')) return '';
-    if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
-    return '';
+Profile.prototype.vip = function () {
+	if (typeof this.user === 'string') return '';
+	if (this.user && !this.user.can('vip')) return '';
+	if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
+	return '';
 };
 
-Profile.prototype.dev = function() {
+Profile.prototype.dev = function () {
 	if (typeof this.user === 'string') return '';
 	if (this.user && !this.user.can('dev')) return '';
 	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
@@ -163,7 +162,7 @@ Profile.prototype.dev = function() {
 };
 
 Profile.prototype.show = function (callback) {
-	var userid = toId(this.username);
+	let userid = toId(this.username);
 
 	return this.buttonAvatar() +
 		SPACE + this.name() + BR +
@@ -177,8 +176,8 @@ exports.commands = {
 	profile: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		var targetUser = this.targetUserOrSelf(target);
-		var profile;
+		let targetUser = this.targetUserOrSelf(target);
+		let profile;
 		if (!targetUser) {
 			profile = new Profile(false, target);
 		} else {
@@ -186,5 +185,5 @@ exports.commands = {
 		}
 		this.sendReplyBox(profile.show());
 	},
-	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."]
+	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
 };

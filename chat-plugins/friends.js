@@ -1,8 +1,8 @@
 // friends list
 function getFriendList(user) {
-	var list = Db('friends')[user.userid];
-	var display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);"><tr>';
-	var start = 0;
+	let list = Db('friends')[user.userid];
+	let display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);"><tr>';
+	let start = 0;
 	if (!list) return "You have no friends. :(";
 	if (list.length === 0) return "You have no friends :(";
 	while (start < list.length) {
@@ -26,7 +26,7 @@ exports.commands = {
 	friendslist: 'friends',
 	friends: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		var display = getFriendList(user);
+		let display = getFriendList(user);
 		this.sendReplyBox(display);
 	},
 	friendslisthelp: ["/friendslist or /friends - Show's your friend list. Add users with /addfriend."],
@@ -34,8 +34,8 @@ exports.commands = {
 	addfriend: function (target, room, user) {
 		if (!target) return this.parse('/help addfriend');
 		
-		var userid = user.userid;
-		var targetUser = toId(target);
+		let userid = user.userid;
+		let targetUser = toId(target);
 
 		if (userid === targetUser) return this.errorReply("You cannot add yourself as a friend.");
 		if (!userid || !targetUser) return this.errorReply("User '" + targetUser + "' is not online.");
@@ -49,11 +49,11 @@ exports.commands = {
 	removefriend: function (target, room, user) {
 		if (!target) return this.parse('/help removefriend');
 	
-		var userid = user.userid;
-		var targetUser = toId(target);	
+		let userid = user.userid;
+		let targetUser = toId(target);	
 		
 		if (Db('friends').get(userid, []).indexOf(targetUser) > -1) {
-			var friends = Db('friends').get(userid);
+			let friends = Db('friends').get(userid);
 			friends.splice(friends.indexOf(targetUser), 1);
 			Db('friends').set(userid, friends);
 			return this.sendReply("You have succesfully removed " + targetUser + " from your friendlist.");

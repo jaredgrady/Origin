@@ -565,7 +565,7 @@ let commands = exports.commands = {
 	roomdesc: function (target, room, user) {
 		if (!target) {
 			if (!this.canBroadcast()) return;
-			var re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
+			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
 			if (!room.desc) return this.sendReply("This room does not have a description set.");
 			this.sendReplyBox("The room description is: " + room.desc.replace(re, '<a href="$1">$1</a>'));
 			return;
@@ -585,7 +585,7 @@ let commands = exports.commands = {
 			Rooms.global.writeChatRoomData();
 		}
 	},
-	
+
 	topic: 'roomintro',
 	roomintro: function (target, room, user) {
 		if (!target) {
@@ -1021,7 +1021,6 @@ let commands = exports.commands = {
 	 * Moderating: Punishments
 	 *********************************************************/
 
-	w: 'warn',
 	warn: function (target, room, user) {
 		if (!target) return this.parse('/help warn');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
@@ -1117,7 +1116,7 @@ let commands = exports.commands = {
 
 	dm: 'daymute',
 	daymute: function (target) {
-		if(!target) return this.parse('/help daymute')
+		if (!target) return this.parse('/help daymute');
 		this.run('mute');
 	},
 	daymutehelp: ["/daymute OR /dm [username], [reason] - Mutes a user with reason for a day. Requires: % @ # & ~"],
@@ -1326,7 +1325,7 @@ let commands = exports.commands = {
 		this.addModCommand("All bans and locks have been lifted by " + user.name + ".");
 	},
 	unbanallhelp: ["/unbanall - Unban all IP addresses. Requires: & ~"],
-	
+
 	deroomvoiceall: function (target, room, user) {
 		if (!this.can('declare', null, room)) return false;
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
@@ -1897,7 +1896,7 @@ let commands = exports.commands = {
 
 			let curRoom = Rooms.rooms[id];
 			curRoom.addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
-			
+
 			if (curRoom.requestKickInactive && !curRoom.battle.ended) {
 				curRoom.requestKickInactive(user, true);
 				if (curRoom.modchat !== '+') {
@@ -2044,7 +2043,7 @@ let commands = exports.commands = {
 	},
 
 	updateserver: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) { 
+		if (!~developers.indexOf(user.userid)) {
 						return this.errorReply("/updateserver - Access denied.");
 		}
 		if (CommandParser.updateServerLock) {
@@ -2142,7 +2141,7 @@ let commands = exports.commands = {
 			connection.sendTo(room, stack);
 		}
 	},
-	
+
 	evalbattle: function (target, room, user, connection) {
 		if (!user.hasConsoleAccess(connection) || !~developers.indexOf(user.userid)) {
 			return this.errorReply("/evalbattle - Access denied.");
@@ -2578,7 +2577,7 @@ let commands = exports.commands = {
 			let roomList = {};
 			for (let i in targetUser.roomCount) {
 				if (i === 'global') continue;
-				
+
 				let targetRoom = Rooms.get(i);
 				if (!targetRoom) continue; // shouldn't happen
 				if (targetRoom.isPrivate && !(i in user.games)) continue;
