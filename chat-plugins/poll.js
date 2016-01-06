@@ -177,5 +177,43 @@ exports.commands = {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
 		this.sendReply("NUMBER OF VOTES: " + Object.keys(Poll[room.id].options).length);
-	}
+	},
+    rp: 'roompoll',
+    roompoll: function (target, room, user) {
+        if (target === 'help' || target === 'change') return this.parse('/roompollhelp');
+        if (target === '' || target === 'new' || target === 'start') {
+            if (!this.can('broadcast', null, room) || room.battle) return false;
+            Db('rpolls').get(room.id, ''); // im not 100% sure this is right
+            if (!room.RPoll || room.RPoll === '') return this.parse('/roompollhelp');
+            else return this.parse('/poll ' + String(room.RPoll)); // "String(room.RPoll)" or "room.RPoll"?
+        }
+        if (target.substr(0, 7) === 'change ') {
+            if (!this.can('declare', null, room) || room.battle) return false;
+            room.RPoll = target.substr(7);
+            if (room.RPoll.split(",").length > 2) {
+                Db('rpolls').set(room.id, room.RPoll);
+                return this.privateModCommand(user.name + " changed the roompoll to: /poll " + String(room.RPoll));
+            }
+            else {
+                this.errorReply('Not enough arguments for /roompoll change.');
+                return false;
+            }
+        }
+        if (target === 'view') {
+            if (!this.can('declare', null, room)) return false;
+            Db('rpolls').get(room.id, ''); // im not 100% sure this is right
+            if (!room.RPoll || room.RPoll === '') return this.parse('/roompollhelp');
+            return this.sendReply('/poll ' + String(room.RPoll)); // "String(room.RPoll)" or "room.RPoll"?
+        }
+        else return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
+    },
+    rphelp: 'roompollhelp',
+    roompollhelp: function (target, room, user) {
+        if (!this.canBroadcast()) return;
+        this.sendReplyBox(
+            "- /roompoll new/start: creates a new roompoll<br />(Start poll with '/roompoll', display poll with '!pr', end poll with '/endpoll'). Requires: + $ % @ # & ~<br />" +
+            "- /roompoll change: sets the roompoll. Requires: # & ~<br />" +
+            "- /roompoll view: displays the command for the current roompoll. Requires: # & ~"
+        );
+    }
 };
