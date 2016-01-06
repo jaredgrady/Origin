@@ -314,7 +314,6 @@ exports.commands = {
 		alertStaff(msg);
 		user.canSendRoomName = false;
 	},
-	sendavatarhelp: ["/sendavatar [avatar url] - If you have purchased a customavatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want."],
 
 	resetcustomsymbol: 'resetsymbol',
 	resetsymbol: function (target, room, user) {
