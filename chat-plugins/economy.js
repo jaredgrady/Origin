@@ -1,12 +1,12 @@
 'use strict';
 
-var fs = require('fs');
-var color = require('../config/color');
-var path = require('path');
-var highRollers = ['fender', 'duttyvybz', 'nineage'];
-var toggleRolling = false;
+let fs = require('fs');
+let color = require('../config/color');
+let path = require('path');
+let highRollers = ['fender', 'duttyvybz', 'nineage'];
+let toggleRolling = false;
 
-var shop = [
+let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
     ['Fix', 'Buys the ability to alter your current custom avatar, trainer card or icon. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
@@ -20,7 +20,7 @@ var shop = [
     ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Irraquated or CreaturePhil once you bought one.)', 350]
 ];
 
-var shopDisplay = getShopDisplay(shop);
+let shopDisplay = getShopDisplay(shop);
 
 function alertStaff(msg) {
 	Users.users.forEach(function (user) {
@@ -30,8 +30,8 @@ function alertStaff(msg) {
 	});
 }
 
-function isNumber(targetVar) { // checks if targetVar is a number
-	return !isNaN(parseFloat(targetVar)) && isFinite(targetVar);
+function isNumber(targetlet) { // checks if targetlet is a number
+	return !isNaN(parseFloat(targetlet)) && isFinite(targetlet);
 }
 
 /**
@@ -46,7 +46,7 @@ function isNumber(targetVar) { // checks if targetVar is a number
  * @returns {String}
  */
 global.currencyName = function(amount) {
-	var name = " buck";
+	let name = " buck";
 	return amount === 1 ? name : name + "s";
 }
 
@@ -57,7 +57,7 @@ global.currencyName = function(amount) {
  * @return {String|Number}
  */
 global.isMoney = function(money) {
-	var numMoney = Number(money);
+	let numMoney = Number(money);
 	if (isNaN(money)) return "Must be a number.";
 	if (String(money).includes('.')) return "Cannot contain a decimal.";
 	if (numMoney < 1) return "Cannot be less than one buck.";
@@ -71,9 +71,9 @@ global.isMoney = function(money) {
  */
 global.logMoney = function(message) {
 	if (!message) return;
-	var file = path.join(__dirname, '../logs/money.txt');
-	var date = "[" + new Date().toUTCString() + "] ";
-	var msg = message + "\n";
+	let file = path.join(__dirname, '../logs/money.txt');
+	let date = "[" + new Date().toUTCString() + "] ";
+	let msg = message + "\n";
 	fs.appendFile(file, date + msg);
 }
 
@@ -85,9 +85,9 @@ global.logMoney = function(message) {
  */
 
 function getShopDisplay(shop) {
-	var display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
+	let display = '<table style="width: 100%; border: 1px solid #803C6F; border-top-right-radius: 4px; border-top-left-radius: 4px; background: rgba(205, 159, 196, 0.7);">' +
 					'<tr><th color="#502243">Item</th><th color="#502243">Description</th><th color="#502243">Cost</th></tr>';
-	var start = 0;
+	let start = 0;
 	while (start < shop.length) {
 		display += '<tr>' +
 						'<td style="background: rgba(255, 255, 255, 0.5); border: 1px solid #803C6F; padding: 5px; border-radius: 4px; text-align: center;"><button name="send" value="/buy ' + shop[start][0] + '" style="border: 1px solid #803C6F; background: #CD9FC4; color: #502243; text-shadow: 0px 0px 2px #FCE8F1; padding: 5px; border-radius: 4px;">' + shop[start][0] + '</button>' + '</td>' +
@@ -108,9 +108,9 @@ function getShopDisplay(shop) {
  * @return {Object}
  */
 function findItem(item, money) {
-	var len = shop.length;
-	var price = 0;
-	var amount = 0;
+	let len = shop.length;
+	let price = 0;
+	let amount = 0;
 	while (len--) {
 		if (item.toLowerCase() !== shop[len][0].toLowerCase()) continue;
 		price = shop[len][2];
@@ -146,7 +146,7 @@ function handleBoughtItem(item, user, cost) {
 			this.sendReply("You have purchased a room, use /sendroomname [room name you want] to let the staff know what your room name you want.");
 		}
 	} else {
-		var msg = '**' + user.name + " has bought " + item + ".**";
+		let msg = '**' + user.name + " has bought " + item + ".**";
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
 		alertStaff(msg);
@@ -297,7 +297,7 @@ exports.commands = {
 	sendavatar: function (target, room, user) {
 		if (!user.sendAvatar ) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
-		var msg = '**' + user + " has purchased an avatar and wants" + '** ' + target + ' **' + "as their image." + '**';
+		let msg = '**' + user + " has purchased an avatar and wants" + '** ' + target + ' **' + "as their image." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
 		alertStaff(msg);
@@ -308,7 +308,7 @@ exports.commands = {
 	sendroomname: function (target, room, user) {
 		if (!user.canSendRoomName) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
-		var msg = '**' + user + " has purchased a room and wants " + target + " as the room name." + '**';
+		let msg = '**' + user + " has purchased a room and wants " + target + " as the room name." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
 		Rooms.rooms.staff.update();
 		alertStaff(msg);
@@ -328,12 +328,12 @@ exports.commands = {
 	
 	takecustomsymbol: 'takesymbol', 
 	takesymbol: function (target, room, user) {
-		var targetUser = Users.get(toId(target));
+		let targetUser = Users.get(toId(target));
 		if (!this.can('lock')) return this.errorReply("/takesymbol - Access Denied");
 		if (!target) return this.parse('/help takesymbol');
 		if (!targetUser.hasCustomSymbol) return this.errorReply("This user does not have a custom symbol.");
 			
-		var targetSymbol = targetUser.customSymbol;
+		let targetSymbol = targetUser.customSymbol;
 		targetUser.customSymbol = null;
 		targetUser.updateIdentity();
 		targetUser.hasCustomSymbol = false;
@@ -345,14 +345,14 @@ exports.commands = {
 
 	moneylog: function (target, room, user, connection) {
 		if (!this.can('modlog')) return;
-		var numLines = 15;
-		var matching = true;
+		let numLines = 15;
+		let matching = true;
 		if (target.match(/\d/g) && !isNaN(target)) {
 			numLines = Number(target);
 			matching = false;
 		}
-		var topMsg = "Displaying the last " + numLines + " lines of transactions:\n";
-		var file = path.join(__dirname, '../logs/money.txt');
+		let topMsg = "Displaying the last " + numLines + " lines of transactions:\n";
+		let file = path.join(__dirname, '../logs/money.txt');
 		fs.exists(file, function (exists) {
 			if (!exists) return connection.popup("No transactions.");
 			fs.readFile(file, 'utf8', function (err, data) {
@@ -459,7 +459,7 @@ exports.commands = {
 		if (!user.can('declare')) return this.sendReply('/registershop - Access Denied you silly goose!');
 		if (!target) return this.sendReply('Please specify a room you silly goose!');
 		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
-		var targetRoom = Rooms(toId(target));
+		let targetRoom = Rooms(toId(target));
 		targetRoom.add('|raw|<div class="broadcast-green"><b>'+user.name+' has just added a league shop to this room.</b></div>');
 		targetRoom.update();
 		if (!targetRoom.shop) {
