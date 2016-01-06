@@ -12,11 +12,6 @@
     cursor: pointer;
   }
   
-  .pr {
-    width: 100%;
-    border: 1px solid #000;
-  }
-  
   /**************************
   * Custom Classes CSS ~end *
   **************************/
@@ -30,15 +25,15 @@
   /*Float*/
   
   .pm-window-masterfloat h3 {
-    background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat;
+    background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
     background-position: 200px -8px;
-    color: #1EA88C;
-    text-shadow: 0px 0px 2px #B6F3E7;
+    color: #1EA88C !important;
+    text-shadow: 0px 0px 2px #B6F3E7 !important;
     border-color: #1F6C5D;
   }
   
   .pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
-    background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat;
+    background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
     background-position: 200px -8px;
     color: #1EA88C;
     text-shadow: 0px 0px 2px #B6F3E7;
