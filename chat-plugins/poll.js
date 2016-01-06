@@ -178,42 +178,39 @@ exports.commands = {
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
 		this.sendReply("NUMBER OF VOTES: " + Object.keys(Poll[room.id].options).length);
 	},
-    rp: 'roompoll',
-    roompoll: function (target, room, user) {
-        if (target === 'help' || target === 'change') return this.parse('/roompollhelp');
-        if (target === '' || target === 'new' || target === 'start') {
-            if (!this.can('broadcast', null, room) || room.battle) return false;
-            Db('rpolls').get(room.id, ''); // im not 100% sure this is right
-            if (!room.RPoll || room.RPoll === '') return this.parse('/roompollhelp');
-            else return this.parse('/poll ' + String(room.RPoll)); // "String(room.RPoll)" or "room.RPoll"?
-        }
-        if (target.substr(0, 7) === 'change ') {
-            if (!this.can('declare', null, room) || room.battle) return false;
-            room.RPoll = target.substr(7);
-            if (room.RPoll.split(",").length > 2) {
-                Db('rpolls').set(room.id, room.RPoll);
-                return this.privateModCommand(user.name + " changed the roompoll to: /poll " + String(room.RPoll));
-            }
-            else {
-                this.errorReply('Not enough arguments for /roompoll change.');
-                return false;
-            }
-        }
-        if (target === 'view') {
-            if (!this.can('declare', null, room)) return false;
-            Db('rpolls').get(room.id, ''); // im not 100% sure this is right
-            if (!room.RPoll || room.RPoll === '') return this.parse('/roompollhelp');
-            return this.sendReply('/poll ' + String(room.RPoll)); // "String(room.RPoll)" or "room.RPoll"?
-        }
-        else return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
-    },
-    rphelp: 'roompollhelp',
-    roompollhelp: function (target, room, user) {
-        if (!this.canBroadcast()) return;
-        this.sendReplyBox(
-            "- /roompoll new/start: creates a new roompoll<br />(Start poll with '/roompoll', display poll with '!pr', end poll with '/endpoll'). Requires: + $ % @ # & ~<br />" +
-            "- /roompoll change: sets the roompoll. Requires: # & ~<br />" +
-            "- /roompoll view: displays the command for the current roompoll. Requires: # & ~"
-        );
-    }
+	rpoll: 'roompoll',
+	roompoll: function(target, room, user) {
+		if (!target) {
+			if (!this.can('broadcast', null, room) || room.battle) return false;
+			if (!room.RPoll) return this.parse('/help roompoll');
+			return this.parse('/poll ' + room.RPoll);
+		}
+		var parts = target.split(" ");
+		var action = toId(parts[0] || " ");
+		var details = parts.slice(1).join(" ");
+		if (action == "help") return this.parse('/help roompoll');
+		if (action == "change" || action == "set") {
+			if (!this.can('declare', null, room) || room.battle) return false;
+			if (!toId(details || " ")) return this.parse("/help roompoll")
+			if (details.split(",").length < 3) {
+				return this.errorReply("You did not include enough arguments for the poll.")
+			}
+			room.RPoll = details.replace(/^\/poll/i, "");
+			if (room.chatRoomData) {
+				room.chatRoomData.RPoll = room.RPoll;
+				Rooms.global.writeChatRoomData();
+			}
+			return this.sendReply("The roompoll has been set.")
+		}
+		if (action === 'view') {
+			if (!this.can('declare', null, room)) return false;
+			if (!room.RPoll) return this.errorReply("No roompoll has been set yet.");
+			return this.sendReply('The roompoll is: /poll ' + room.RPoll);
+		}
+		else return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
+	},
+	roompollhelp: ["- /roompoll - creates a new roompoll. (Start poll with '/roompoll', display poll with '!pr', end poll with '/endpoll'). Requires: + $ % @ # & ~",
+		"- /roompoll set/change [details] - sets the roompoll. Requires: # & ~",
+		"- /roompoll view - displays the command for the current roompoll. Requires: # & ~"
+	]
 };
