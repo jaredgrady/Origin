@@ -26,22 +26,22 @@
   
   .pm-window-masterfloat h3 {
     background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-    background-position: 200px -8px;
+    background-position: 200px -8px !important;
     color: #1EA88C !important;
     text-shadow: 0px 0px 2px #B6F3E7 !important;
-    border-color: #1F6C5D;
+    border-color: #1F6C5D !important;
   }
   
   .pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
     background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-    background-position: 200px -8px;
-    color: #1EA88C;
-    text-shadow: 0px 0px 2px #B6F3E7;
-    border-color: #1F6C5D;
+    background-position: 200px -8px !important;
+    color: #1EA88C !important;
+    text-shadow: 0px 0px 2px #B6F3E7 !important;
+    border-color: #1F6C5D !important;
   }
   
   .pm-window-masterfloat h3 small, .pm-window-masterfloat h3 .minimizebutton, .pm-window-masterfloat h3 .closebutton, .pm-window-masterfloat h3:hover .minimizebutton {
-    color: #106B59;
+    color: #106B59 !important;
   }
   
   .pm-window-masterfloat h3 .closebutton:hover + .minimizebutton {
@@ -49,26 +49,26 @@
   }
   
   .pm-window-masterfloat h3 .closebutton:hover {
-    color: #982929;
+    color: #982929 !important;
   }
   
   .pm-window-masterfloat h3 .minimizebutton:hover {
-    color: #987729;
+    color: #987729 !important;
   }
   
   .pm-window-masterfloat .pm-log, .pm-window-masterfloat.focused .pm-log {
-    background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat;
-    border-color: #1F6C5D;
+    background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat !important;
+    border-color: #1F6C5D !important;
   }
   
   .pm-window-masterfloat .pm-log-add, .pm-window-masterfloat.focused .pm-log-add {
-    background: #52C7B0;
-    border-color: #1F6C5D;
+    background: #52C7B0 !important;
+    border-color: #1F6C5D !important;
   }
   
   .pm-window-masterfloat .pm-log-add .textbox {
-    border-color: #1F6C5D;
-    background: rgba(243, 255, 253, 0.95);
+    border-color: #1F6C5D !important;
+    background: rgba(243, 255, 253, 0.95) !important;
   }
   
   /*Float~end*/
