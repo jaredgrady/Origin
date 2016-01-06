@@ -73,6 +73,67 @@
   
   /*Float~end*/
   
+  /*Neo*/
+  
+  .pm-window-neosoul h3 {
+    background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #124A66 !important;
+    border-color: #124A66 !important;
+  }
+  
+  .pm-window-neosoul h3:hover, .pm-window-neosoul.focused h3, .pm-window-neosoul.focused h3:hover {
+    background: rgba(36, 110, 148, 0.9) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #0C374D !important;
+    border-color: #0C374D !important;
+  }
+  
+  .pm-window-neosoul h3 small, .pm-window-neosoul h3 .minimizebutton, .pm-window-neosoul h3 .closebutton, .pm-window-neosoul h3:hover .minimizebutton {
+    color: #E9F6FF !important;
+  }
+  
+  .pm-window-neosoul h3 .closebutton:hover + .minimizebutton {
+    color: #E9F6FF !important;
+  }
+  
+  .pm-window-neosoul h3 .closebutton:hover {
+    color: #FFAFAF !important;
+  }
+  
+  .pm-window-neosoul h3 .minimizebutton:hover {
+    color: #FFDAAF !important;
+  }
+  
+  .pm-window-neosoul .pm-log {
+    background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
+    border-color: #124A66 !important;
+  }
+  
+  .pm-window-neosoul.focused .pm-log {
+    background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
+    border-color: #0C374D !important;
+  }
+  
+  .pm-window-neosoul .pm-log-add {
+    background: rgba(76, 154, 180, 0.9) !important;
+    border-color: #124A66 !important;
+  }
+  
+  .pm-window-neosoul.focused .pm-log-add {
+    background: rgba(76, 154, 180, 0.9) !important;
+    border-color: #0C374D !important;
+  }
+  
+  .pm-window-neosoul .pm-log-add .textbox {
+    border-color: #124A66 !important;
+    background: rgba(227, 239, 247, 0.9) !important;
+  }
+  
+  /*Neo~end*/
+  
   /* CUSTOM PM ~end */
 
   /* Symbol Color */
