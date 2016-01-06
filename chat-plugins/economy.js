@@ -17,7 +17,7 @@ let shop = [
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Irraquated or CreaturePhil once you bought one.)', 350]
+    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Irraquated or CreaturePhil once you bought one.)', 350],
 ];
 
 let shopDisplay = getShopDisplay(shop);
@@ -28,10 +28,6 @@ function alertStaff(msg) {
 			user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 		}
 	});
-}
-
-function isNumber(targetlet) { // checks if targetlet is a number
-	return !isNaN(parseFloat(targetlet)) && isFinite(targetlet);
 }
 
 /**
@@ -45,7 +41,7 @@ function isNumber(targetlet) { // checks if targetlet is a number
  * @param {Number} amount
  * @returns {String}
  */
-global.currencyName = function(amount) {
+global.currencyName = function (amount) {
 	let name = " buck";
 	return amount === 1 ? name : name + "s";
 }
@@ -56,7 +52,7 @@ global.currencyName = function(amount) {
  * @param {String} money
  * @return {String|Number}
  */
-global.isMoney = function(money) {
+global.isMoney = function (money) {
 	let numMoney = Number(money);
 	if (isNaN(money)) return "Must be a number.";
 	if (String(money).includes('.')) return "Cannot contain a decimal.";

@@ -25,6 +25,7 @@ chat-plugins/shadow-ban.js
 chat-plugins/slots.js
 chat-plugins/vip.js
 chat-plugins/warlic.js
+chat-plugins/autorank.js
 config/formats.js
 lvl/*.js
 migrate.js
