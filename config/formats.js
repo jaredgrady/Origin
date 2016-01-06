@@ -113,12 +113,13 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['PU'],
-		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Pawniard', 'Monferno', 'Golem', 'Roselia',
-		'Machoke', 'Floatzel', 'Zebstrika', 'Kadabra', 'Stunfisk', 'Bouffalant', 'Probopass', 'Rotom-Frost', 'Chatot',
-		'Misdreavus', 'Stoutland', 'Raichu', 'Gourgeist-Super', 'Mr. Mime', 'Dodrio', 'Pelipper', 'Vullaby', 'Torkoal', 'Ursaring',
-		'Tangela', 'Gabite', 'Dusknoir', 'Gorebyss', 'Rampardos', 'Rapidash', 'Grumpig', 'Marowak', 'Flareon', 'Audino', 'Vullaby',
-		'Electrode', 'Relicanth', 'Lickilicky', 'Regice', 'Leafeon', 'Drifblim', 'Meowstic', 'Purugly', 'Torkoal',
-		'Ninetales', 'Metang', 'Simipour', 'Politoed', 'Beheeyem', 'Vigoroth', 'Sticky Web', 'Dusclops', 'Regigigas', 'Carbink'
+		banlist: ['Arbok', 'Armaldo', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Beheeyem', 'Bouffalant', 'Chatot', 'Clefairy',
+		'Dodrio', 'Drifblim', 'Dusknoir', 'Electrode', 'Exeggutor', 'Flareon', 'Floatzel', 'Fraxure', 'Gabite',
+		'Golduck', 'Golem', 'Gorebyss', 'Gothitelle', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
+		'Leafeon', 'Leavanny', 'Lickilicky', 'Linoone', 'Luxray', 'Machoke', 'Marowak', 'Meowstic', 'Metang', 'Mightyena', 'Misdreavus',
+		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
+		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Sawsbuck', 'Simipour', 'Solrock',
+		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vibrava', 'Vigoroth', 'Volbeat', 'Vullaby', 'Zebstrika', 'Sticky Web'
 		],
 	},
 	{
