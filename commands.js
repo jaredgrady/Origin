@@ -222,13 +222,12 @@ let commands = exports.commands = {
 
 		user.send(message);
 		if (targetUser !== user) {
-		if (Users.ShadowBan.checkBanned(user)) {
-			Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
-		}
-		else {
-			targetUser.send(message);
-			targetUser.lastPM = user.userid;
-			user.lastPM = targetUser.userid;
+			if (Users.ShadowBan.checkBanned(user)) {
+				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
+			} else {
+				targetUser.send(message);
+				targetUser.lastPM = user.userid;
+				user.lastPM = targetUser.userid;
 			}
 		}
 	},
@@ -396,7 +395,7 @@ let commands = exports.commands = {
 	},
 	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden. Requires global voice or roomdriver+ in a public room to make a groupchat."],
 
-		deregisterchatroom: function (target, room, user) {
+	deregisterchatroom: function (target, room, user) {
 		if (!this.can('declare')) return;
 		this.errorReply("NOTE: You probably want to use `/deleteroom` now that it exists.");
 		let id = toId(target);
@@ -791,13 +790,13 @@ let commands = exports.commands = {
 		}
 		if (room.auth[user.userid] === '&' && room.founder !== user.userid) {
 			if (currentGroup === '&' || currentGroup === '#' || nextGroup === '&' || nextGroup === '#') {
-			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
-		    }
+				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+			}
 		}
 		if (room.auth[user.userid] === '#' && room.founder !== user.userid) {
 			if (currentGroup === '#') {
-			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
-		    }
+				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+			}
 		}
 		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
 			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
@@ -1938,7 +1937,6 @@ let commands = exports.commands = {
 			return this.errorReply("We're not under lockdown right now.");
 		}
 		if (Rooms.global.lockdown === true) {
-
 			for (let id in Rooms.rooms) {
 				if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\" style=\"border-radius: 5px;\"><b>The server shutdown was canceled.</b></div>");
 			}
@@ -2044,7 +2042,7 @@ let commands = exports.commands = {
 
 	updateserver: function (target, room, user, connection) {
 		if (!~developers.indexOf(user.userid)) {
-						return this.errorReply("/updateserver - Access denied.");
+			return this.errorReply("/updateserver - Access denied.");
 		}
 		if (CommandParser.updateServerLock) {
 			return this.errorReply("/updateserver - Another update is already in progress.");

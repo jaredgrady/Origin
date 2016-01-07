@@ -1175,9 +1175,9 @@ let BattleRoom = (function () {
 		}
 		if (this.format === "outurbo" || this.format === "monotypeturbo") {
 			maxTicksLeft = 2;
-		} else if (!this.rated && !this.tour){
-	    	maxTicksLeft = 30;
-	    }
+		} else if (!this.rated && !this.tour) {
+			maxTicksLeft = 30;
+		}
 		this.sideTurnTicks = [maxTicksLeft, maxTicksLeft];
 		let inactiveSide = this.getInactiveSide();
 		if (inactiveSide < 0) {

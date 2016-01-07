@@ -291,7 +291,7 @@ exports.commands = {
 	customsymbolhelp: ["/customsymbol [symbol] - Get a custom symbol."],
 
 	sendavatar: function (target, room, user) {
-		if (!user.sendAvatar ) return this.sendReply("You need to buy this item from the shop.");
+		if (!user.sendAvatar) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
 		let msg = '**' + user + " has purchased an avatar and wants" + '** ' + target + ' **' + "as their image." + '**';
 		Rooms.rooms.staff.add('|c|~Shop Alert|' + msg);
@@ -373,7 +373,7 @@ exports.commands = {
 		keys = keys.sort(function (a, b) {
 			if (b.money > a.money) return 1;
 			return -1;
-		});	
+		});
 		keys.slice(0, 10).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
 		});
@@ -421,16 +421,21 @@ exports.commands = {
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
 		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
 			while (p1Number <= p2Number) {
-				p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
-				}
+				p1Number = Math.floor(6 * Math.random()) + 1;
+				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
-		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling)
-			while (p2Number <= p1Number)
-				p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
+		}
+		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling) {
+			while (p2Number <= p1Number) {
+				p1Number = Math.floor(6 * Math.random()) + 1;
+				p2Number = Math.floor(6 * Math.random()) + 1;
+			}
+		}
 		let output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		while (p1Number === p2Number) {
 			output += "Tie... rolling again.<br>";
-			p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
+			p1Number = Math.floor(6 * Math.random()) + 1;
+			p2Number = Math.floor(6 * Math.random()) + 1;
 			output += room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		}
 		let winner = room.dice[p1Number > p2Number ? 'p1' : 'p2'];
@@ -455,11 +460,11 @@ exports.commands = {
 		if (!target) return this.sendReply('Please specify a room you silly goose!');
 		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
 		let targetRoom = Rooms(toId(target));
-		targetRoom.add('|raw|<div class="broadcast-green"><b>'+user.name+' has just added a league shop to this room.</b></div>');
+		targetRoom.add('|raw|<div class="broadcast-green"><b>' + user.name + ' has just added a league shop to this room.</b></div>');
 		targetRoom.update();
 		if (!targetRoom.shop) {
-			targetRoom.shop = new Object();
-			targetRoom.shopList = new Array();
+			targetRoom.shop = {};
+			targetRoom.shopList = [];
 			targetRoom.chatRoomData.shop = targetRoom.shop;
 			targetRoom.chatRoomData.shopList = targetRoom.shopList;
 		}

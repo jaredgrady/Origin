@@ -1,3 +1,5 @@
+'use strict';
+
 exports.commands = {
 	autovoice: 'autorank',
 	autodriver: 'autorank',

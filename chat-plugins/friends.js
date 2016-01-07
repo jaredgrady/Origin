@@ -1,3 +1,5 @@
+'use strict';
+
 // friends list
 function getFriendList(user) {
 	let list = Db('friends')[user.userid];

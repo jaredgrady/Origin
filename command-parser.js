@@ -396,7 +396,7 @@ let Context = exports.Context = (function () {
 			'd.pr': 1,
 			'pokefans.net': 1,
 			'originps.boards.net': 1,
-			'origin.psim.us': 1
+			'origin.psim.us': 1,
 		};
 		if (domain in approvedDomains) {
 			return '//' + uri;
