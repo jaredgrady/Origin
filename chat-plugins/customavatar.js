@@ -21,7 +21,7 @@ function reloadCustomAvatars() {
 		if (typeof Config.customavatars[a] === 'number') {
 			newCustomAvatars[a] = Config.customavatars[a];
 		} else {
-			fs.exists('./config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
+			fs.exists('../config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
 				if (isExists) Config.customavatars[user] = file;
 			}.bind(null, a, Config.customavatars[a]));
 		}
@@ -32,7 +32,7 @@ function reloadCustomAvatars() {
 reloadCustomAvatars();
 
 if (Config.watchConfig) {
-	fs.watchFile('./config/config.js', function (curr, prev) {
+	fs.watchFile('../config/config.js', function (curr, prev) {
 		if (curr.mtime <= prev.mtime) return;
 		reloadCustomAvatars();
 	});
