@@ -40,7 +40,7 @@ const fs = require('fs');
 const path = require('path');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
 
-function getServersAds (text) {
+function getServersAds(text) {
 	let aux = text.toLowerCase();
 	let serversAds = [];
 	let spamindex;
@@ -396,7 +396,7 @@ let Context = exports.Context = (function () {
 			'd.pr': 1,
 			'pokefans.net': 1,
 			'originps.boards.net': 1,
-			'origin.psim.us': 1
+			'origin.psim.us': 1,
 		};
 		if (domain in approvedDomains) {
 			return '//' + uri;
@@ -637,7 +637,7 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 	message = canTalk.call(context, user, room, connection, message);
 
 	if (parseEmoticons(message, room, user)) return;
-	
+
 	if (nightclub[room.id]) {
 		room.addRaw('<div class="nightclub"><font size="3"><small>' + nightclubify((room.auth ? (room.auth[user.userid] || user.group) : user.group)) + "</small><b>" + nightclubify(Tools.escapeHTML(user.name) + ":") + "</b> " + nightclubify((message)) + '</font></div>');
 		return false;
