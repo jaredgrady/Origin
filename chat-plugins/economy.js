@@ -44,7 +44,7 @@ function alertStaff(msg) {
 global.currencyName = function (amount) {
 	let name = " buck";
 	return amount === 1 ? name : name + "s";
-}
+};
 
 /**
  * Checks if the money input is actually money.
@@ -58,20 +58,20 @@ global.isMoney = function (money) {
 	if (String(money).includes('.')) return "Cannot contain a decimal.";
 	if (numMoney < 1) return "Cannot be less than one buck.";
 	return numMoney;
-}
+};
 
 /**
  * Log money to logs/money.txt file.
  *
  * @param {String} message
  */
-global.logMoney = function(message) {
+global.logMoney = function (message) {
 	if (!message) return;
 	let file = path.join(__dirname, '../logs/money.txt');
 	let date = "[" + new Date().toUTCString() + "] ";
 	let msg = message + "\n";
 	fs.appendFile(file, date + msg);
-}
+};
 
 /**
  * Displays the shop
@@ -138,7 +138,7 @@ function handleBoughtItem(item, user, cost) {
 			user.sendAvatar = true;
 			this.sendReply("You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.");
 		} else {
-			user.canSendRoomName = true; 
+			user.canSendRoomName = true;
 			this.sendReply("You have purchased a room, use /sendroomname [room name you want] to let the staff know what your room name you want.");
 		}
 	} else {
@@ -289,7 +289,7 @@ exports.commands = {
 		user.hasCustomSymbol = true;
 	},
 	customsymbolhelp: ["/customsymbol [symbol] - Get a custom symbol."],
-	
+
 	sendavatar: function (target, room, user) {
 		if (!user.sendAvatar ) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
@@ -300,7 +300,7 @@ exports.commands = {
 		user.sendAvatar = false;
 	},
 	sendavatarhelp: ["/sendavatar [avatar url] - If you have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want."],
-	
+
 	sendroomname: function (target, room, user) {
 		if (!user.canSendRoomName) return this.sendReply("You need to buy this item from the shop.");
 		if (!target) return this.parse('/help sendavatar');
@@ -320,14 +320,12 @@ exports.commands = {
 		this.sendReply("Your symbol has been reset.");
 	},
 	resetsymbolhelp: ["/resetsymbol - Resets your custom symbol."],
-	
-	takecustomsymbol: 'takesymbol', 
+	takecustomsymbol: 'takesymbol',
 	takesymbol: function (target, room, user) {
 		let targetUser = Users.get(toId(target));
 		if (!this.can('lock')) return this.errorReply("/takesymbol - Access Denied");
 		if (!target) return this.parse('/help takesymbol');
 		if (!targetUser.hasCustomSymbol) return this.errorReply("This user does not have a custom symbol.");
-			
 		let targetSymbol = targetUser.customSymbol;
 		targetUser.customSymbol = null;
 		targetUser.updateIdentity();
@@ -372,17 +370,17 @@ exports.commands = {
 			return {name: name, money: Db('money').get(name)};
 		});
 		if (!keys.length) return this.sendReplyBox("Money ladder is empty.");
-		keys = keys.sort(function(a, b) {
+		keys = keys.sort(function (a, b) {
 			if (b.money > a.money) return 1;
 			return -1;
-		});		
+		});	
 		keys.slice(0, 10).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
 		});
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
 	},
-	
+
 	dicegame: 'startdice',
 	dicestart: 'startdice',
 	startdice: function (target, room, user) {
@@ -393,7 +391,7 @@ exports.commands = {
 		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
 
 		let amount = isMoney(target);
-		
+
 		if (Db('money').get(user.userid, 0) < amount) return this.errorReply("You don't have enough bucks to start that dice game.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (!room.dice) room.dice = {};
@@ -421,9 +419,11 @@ exports.commands = {
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
-		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling)
-			while (p1Number <= p2Number)
+		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
+			while (p1Number <= p2Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
+				}
+			}
 		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling)
 			while (p2Number <= p1Number)
 				p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
@@ -438,7 +438,7 @@ exports.commands = {
 		room.addRaw(output);
 		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
 		delete room.dice;
-	}, 
+	},
 
 	enddice: function (target, room, user) {
 		if (!user.can('broadcast', null, room)) return false;
@@ -474,7 +474,7 @@ exports.commands = {
 			if (toggleRolling === true) {
 				return this.sendReply('We are already rolling');
 			} else {
-				toggleRolling === true;	
+				toggleRolling === true;
 				return this.sendReply('We are now rolling!');
 			}
 		}
@@ -499,5 +499,5 @@ exports.commands = {
 		let output = "There is " + total + currencyName(total) + " circulating in the economy. ";
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
-	}
+	},
 };

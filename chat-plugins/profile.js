@@ -1,7 +1,6 @@
 'use strict';
 
 let color = require('../config/color');
-let fs = require('fs');
 let moment = require('moment');
 let geoip = require('geoip-ultralight');
 geoip.startWatchingDataUpdate();
@@ -127,7 +126,7 @@ Profile.prototype.money = function (amount) {
 };
 
 Profile.prototype.name = function () {
-	function getFlag () {
+	function getFlag() {
 		if (!this.isOnline) return false;
 		if (this.isOnline) {
 			let geo = geoip.lookupCountry(this.user.latestIp);
@@ -138,7 +137,7 @@ Profile.prototype.name = function () {
 			}
 		}
 	}
-	if (!getFlag.call(this))return label('Name') + bold(font(color(toId(this.username)), this.username));
+	if (!getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username));
 	if (getFlag.call(this)) return label('Name') + bold(font(color(toId(this.username)), this.username)) + ' ' + getFlag.call(this);
 };
 
@@ -148,14 +147,14 @@ Profile.prototype.seen = function (timeAgo) {
 	return label('Last Seen') + moment(timeAgo).fromNow();
 };
 
-Profile.prototype.vip = function() { 
-    if (typeof this.user === 'string') return '';
-    if (this.user && !this.user.can('vip')) return '';
-    if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
-    return '';
+Profile.prototype.vip = function () {
+	if (typeof this.user === 'string') return '';
+	if (this.user && !this.user.can('vip')) return '';
+	if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
+	return '';
 };
 
-Profile.prototype.dev = function() {
+Profile.prototype.dev = function () {
 	if (typeof this.user === 'string') return '';
 	if (this.user && !this.user.can('dev')) return '';
 	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
@@ -186,5 +185,5 @@ exports.commands = {
 		}
 		this.sendReplyBox(profile.show());
 	},
-	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."]
+	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
 };
