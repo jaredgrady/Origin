@@ -27,7 +27,7 @@ chat-plugins/vip.js
 chat-plugins/warlic.js
 chat-plugins/autorank.js
 config/formats.js
-config/avatars
+config/avatars/*
 lvl/*.js
 migrate.js
 mods/**
