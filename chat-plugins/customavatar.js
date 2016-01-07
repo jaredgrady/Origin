@@ -7,14 +7,16 @@ const color = require('../config/color');
 function reloadCustomAvatars() {
 	let path = require('path');
 	let newCustomAvatars = {};
-	fs.readdirSync('../config/avatars').forEach(function (file) {
-		let ext = path.extname(file);
-		if (ext !== '.png' && ext !== '.gif') return;
+	try {
+		fs.readdirSync('../config/avatars').forEach(function (file) {
+			let ext = path.extname(file);
+			if (ext !== '.png' && ext !== '.gif') return;
 
-		let user = toId(path.basename(file, ext));
-		newCustomAvatars[user] = file;
-		delete Config.customavatars[user];
-	});
+			let user = toId(path.basename(file, ext));
+			newCustomAvatars[user] = file;
+			delete Config.customavatars[user];
+		});
+	} catch () {}
 
 	// Make sure the manually entered avatars exist
 	for (let a in Config.customavatars) {
