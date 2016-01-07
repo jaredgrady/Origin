@@ -138,7 +138,7 @@ exports.commands = {
 			break;
 
 		case 'delete':
-			let userid = toId(parts[1]);
+			userid = toId(parts[1]);
 			if (!this.can('ban') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
@@ -158,9 +158,9 @@ exports.commands = {
 			break;
 
 		case 'change':
-			let userid = toId(parts[1]);
-			let targetUser = Users.getExact(userid);
-			let avatar = parts.slice(2).join(',').trim();
+			userid = toId(parts[1]);
+			targetUser = Users.getExact(userid);
+			avatar = parts.slice(2).join(',').trim();
 			if (!this.can('ban') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 			this.parse('/customavatar delete, ' + targetUser);
