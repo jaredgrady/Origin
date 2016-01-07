@@ -267,6 +267,88 @@
 
   /*ASL~end*/
   
+  /*fender*/
+  
+  .pm-window-fender h3 {
+    background: rgba(38, 38, 38, 0.8) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #000 !important;
+    border-color: #222 !important;
+  }
+  
+  .pm-window-fender h3:hover {
+    background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #EEE !important;
+    text-shadow: 0px 0px 2px #000 !important;
+    border-color: #222 !important;
+  }
+  
+  .pm-window-fender.focused h3, .pm-window-fender.focused h3:hover {
+    background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #DECA94 !important;
+    text-shadow: 0px 0px 2px #1B1B1B !important;
+    border-color: #1B1B1B !important;
+  }
+  
+  .pm-window-fender h3 small, .pm-window-fender h3 .minimizebutton, .pm-window-fender h3 .closebutton, .pm-window-fender h3:hover .minimizebutton {
+    color: #CCC !important;
+  }
+  
+  .pm-window-fender h3 .closebutton:hover + .minimizebutton {
+    color: #CCC !important;
+  }
+  
+  .pm-window-fender h3 .closebutton:hover {
+    color: #FF8383 !important;
+  }
+  
+  .pm-window-fender h3 .minimizebutton:hover {
+    color: #FFDA83 !important;
+  }
+  
+  .pm-window-fender .pm-log, .pm-window-fender.focused .pm-log {
+    background: rgba(235, 235, 235, 0.9) url("http://i.imgur.com/WebFitb.png?1") right no-repeat !important;
+    border-color: #555 !important;
+  }
+  
+  .pm-window-fender .pm-log .chat small {
+    color: #444 !important;
+  }
+  
+  .pm-window-fender .pm-log-add, .pm-window-fender.focused .pm-log-add {
+    background: rgba(75, 75, 75, 0.8) !important;
+    border-color: #444 !important;
+  }
+  
+  .pm-window-fender .pm-log-add .textbox {
+    border-color: #444 !important;
+    background: rgba(245, 245, 245, 0.92) !important;
+  }
+  
+  .pm-window-fender .pm-log-add .textbox:focus {
+    border-color: #444 !important;
+    background: #FEFEFE !important;
+  }
+  
+  .pm-window-fender h3.pm-notifying {
+    border-color: #C60000 !important;
+    background: rgba(0, 0, 0, 0.85) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+    color: #FF6464 !important;
+    text-shadow: 0px 0px 2px #000 !important;
+  }
+  
+  .pm-window-fender h3.pm-notifying:hover {
+    border-color: #C60000 !important;
+    background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") !important;
+    color: #FF6464 !important;
+    text-shadow: 0px 0px 2px #000 !important;
+  }
+  
+  /*fender~end*/
+  
   /* CUSTOM PM ~end */
 
   /* Symbol Color */
