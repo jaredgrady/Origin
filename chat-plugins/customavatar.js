@@ -3,9 +3,9 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const color = require('../config/color');
+const path = require('path');
 
 function reloadCustomAvatars() {
-	let path = require('path');
 	let newCustomAvatars = {};
 	try {
 		fs.readdirSync('../config/avatars').forEach(function (file) {
@@ -16,7 +16,9 @@ function reloadCustomAvatars() {
 			newCustomAvatars[user] = file;
 			delete Config.customavatars[user];
 		});
-	} catch () {}
+	} catch (e) {
+		console.error(e);
+	}
 
 	// Make sure the manually entered avatars exist
 	for (let a in Config.customavatars) {
