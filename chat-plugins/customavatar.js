@@ -7,7 +7,7 @@ const color = require('../config/color');
 function reloadCustomAvatars() {
 	let path = require('path');
 	let newCustomAvatars = {};
-	fs.readdirSync('./config/avatars').forEach(function (file) {
+	fs.readdirSync('../config/avatars').forEach(function (file) {
 		let ext = path.extname(file);
 		if (ext !== '.png' && ext !== '.gif') return;
 
