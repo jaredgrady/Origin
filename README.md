@@ -1,5 +1,4 @@
 # Origin
-========================================================================
 [![Build Status](https://api.travis-ci.com/TheFenderStory/Origin.svg?token=qVpSMkS1UKosxazx1Z3Q)](https://travis-ci.org/TheFenderStory/Origin)
 
 
