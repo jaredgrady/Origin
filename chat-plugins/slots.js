@@ -154,7 +154,7 @@ exports.commands = {
 						room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
 					}
 					else {
-						user.sendTo(room, "You've won " + (winnings - 3) + " Bucks!");
+						user.sendTo(room, "You've won " + (winnings - room.slotsAnte) + " Bucks!");
 					}
 				}
 				else {
