@@ -2,9 +2,10 @@
 
 let color = require('../config/color');
 let moment = require('moment');
+let geoip = {};
 
 try {
-	let geoip = require('geoip-ultralight');
+	geoip = require('geoip-ultralight');
 	geoip.startWatchingDataUpdate();
 } catch (e) {
 	console.error(e);
