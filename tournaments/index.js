@@ -5,6 +5,14 @@ const AUTO_DISQUALIFY_WARNING_TIMEOUT = 30 * 1000;
 const AUTO_START_MINIMUM_TIMEOUT = 30 * 1000;
 const MAX_REASON_LENGTH = 300;
 
+let colors = {
+    Mythic: '#E3E2AF',
+    Legendary: '#FF851B',
+    Epic: 'purple',
+    Rare: '#0074D9',
+    Uncommon: 'gray',
+    Common: 'black'
+};
 let TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
 	elimination: require('./generator-elimination.js').Elimination,
@@ -725,14 +733,14 @@ class Tournament {
 		// Tournament Winnings
 		//
 
-		let color = '#088cc7';
-		let sizeRequiredToEarn = 4;
-		let currencyName = function (amount) {
-			let name = " buck";
+		var color = '#088cc7';
+		var sizeRequiredToEarn = 4;
+		var currencyName = function (amount) {
+			var name = " buck";
 			return amount === 1 ? name : name + "s";
 		};
-		let data = this.generator.getResults().map(usersToNames).toString();
-		let winner, runnerUp;
+		var data = this.generator.getResults().map(usersToNames).toString();
+		var winner, runnerUp;
 
 		if (data.indexOf(',') >= 0) {
 			data = data.split(',');
@@ -742,13 +750,13 @@ class Tournament {
 			winner = data;
 		}
 
-		let wid = toId(winner);
-		let rid = toId(runnerUp);
-		let tourSize = this.generator.users.size;
+		var wid = toId(winner);
+		var rid = toId(runnerUp);
+		var tourSize = this.generator.users.size;
 
 		if (this.room.isOfficial && tourSize >= sizeRequiredToEarn) {
-			let firstMoney = Math.round(tourSize / 4);
-			let secondMoney = Math.round(firstMoney / 2);
+			var firstMoney = Math.round(tourSize / 4);
+			var secondMoney = Math.round(firstMoney / 2);
 
 			Db('money').set(wid, Db('money').get(wid, 0) + firstMoney);
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has won " + "<font color='" + color + "'>" + firstMoney + "</font>" + currencyName(firstMoney) + " for winning the tournament!</b>");
@@ -759,7 +767,7 @@ class Tournament {
 			}
 		}
 /*		    if (this.room.isOfficial && tourSize >= 4) {
-        		let tourRarity = tourCard(tourSize, toId(winner));
+        		var tourRarity = tourCard(tourSize, toId(winner));
 				this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + colors[tourRarity[0]] + ">" + tourRarity[0] + "</font> card: <button name='send' value='/card " + tourRarity[1] + "'>" + tourRarity[2] + "</button> from the tournament.");
 		} */
 		delete exports.tournaments[this.room.id];
@@ -954,10 +962,10 @@ let commands = {
 			tournament.runAutoDisqualify(this);
 		},
 		remind: function (tournament, user) {
-			let users = tournament.generator.getAvailableMatches().toString().split(',');
-			let offlineUsers = [];
-			for (let u in users) {
-				let targetUser = Users.get(users[u]);
+			var users = tournament.generator.getAvailableMatches().toString().split(',');
+			var offlineUsers = [];
+			for (var u in users) {
+				var targetUser = Users.get(users[u]);
 				if (!targetUser) {
 					offlineUsers.push(users[u]);
 					continue;

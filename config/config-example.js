@@ -173,7 +173,7 @@ exports.mysql = {
 	host: 'localhost',
 	user: 'me',
 	password: 'secret',
-	database: 'my_db',
+	database: 'my_db'
 };
 
 // Custom avatars.
@@ -264,7 +264,7 @@ exports.grouplist = [
 		name: "Administrator",
 		root: true,
 		upperstaff: true,
-		globalonly: true,
+		globalonly: true
 	},
 	{
 		symbol: '&',
@@ -286,7 +286,7 @@ exports.grouplist = [
 		disableladder: true,
 		globalonly: true,
 		upperstaff: true,
-		tournamentsmanagement: true,
+		tournamentsmanagement: true
 	},
 	{
 		symbol: '#',
@@ -300,7 +300,7 @@ exports.grouplist = [
 		declare: true,
 		modchatall: true,
 		roomonly: true,
-		tournamentsmanagement: true,
+		tournamentsmanagement: true
 	},
 	{
 		symbol: '\u2605',
@@ -311,7 +311,7 @@ exports.grouplist = [
 		modchat: true,
 		battleonly: true,
 		editroom: true,
-		joinbattle: true,
+		joinbattle: true
 	},
 	{
 		symbol: '@',
@@ -325,7 +325,7 @@ exports.grouplist = [
 		forcerename: true,
 		ip: true,
 		alts: '@u',
-		tournaments: true,
+		tournaments: true
 	},
 	{
 		symbol: '%',
@@ -346,7 +346,7 @@ exports.grouplist = [
 		receiveauthmessages: true,
 		tournamentsmoderation: true,
 		jeopardy: true,
-		joinbattle: true,
+		joinbattle: true
 	},
 	{
 		symbol: '+',
@@ -354,10 +354,12 @@ exports.grouplist = [
 		name: "Voice",
 		inherit: ' ',
 		alts: 's',
-		broadcast: true,
+		broadcast: true
 	},
 	{
 		symbol: ' ',
-		ip: 's',
-	},
+		ip: 's'
+	}
 ];
+
+

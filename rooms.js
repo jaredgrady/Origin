@@ -1173,12 +1173,15 @@ let BattleRoom = (function () {
 			// if a player has left, don't wait longer than 6 ticks (1 minute)
 			maxTicksLeft = 6;
 		}
-		if (this.format === "outurbo" || this.format === "monotypeturbo") {
+		if (this.format === "outurbo" || this.format === "monotypeturbo"){
 			maxTicksLeft = 2;
-		} else if (!this.rated && !this.tour) {
-			maxTicksLeft = 30;
 		}
+	    else if (!this.rated && !this.tour){
+	    	maxTicksLeft = 30;
+	    }
+
 		this.sideTurnTicks = [maxTicksLeft, maxTicksLeft];
+
 		let inactiveSide = this.getInactiveSide();
 		if (inactiveSide < 0) {
 			// add 10 seconds to bank if they're below 160 seconds

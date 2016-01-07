@@ -222,12 +222,13 @@ let commands = exports.commands = {
 
 		user.send(message);
 		if (targetUser !== user) {
-			if (Users.ShadowBan.checkBanned(user)) {
-				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
-			} else {
-				targetUser.send(message);
-				targetUser.lastPM = user.userid;
-				user.lastPM = targetUser.userid;
+		if (Users.ShadowBan.checkBanned(user)) {
+			Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
+		}
+		else {
+			targetUser.send(message);
+			targetUser.lastPM = user.userid;
+			user.lastPM = targetUser.userid;
 			}
 		}
 	},
@@ -395,7 +396,7 @@ let commands = exports.commands = {
 	},
 	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden. Requires global voice or roomdriver+ in a public room to make a groupchat."],
 
-	deregisterchatroom: function (target, room, user) {
+		deregisterchatroom: function (target, room, user) {
 		if (!this.can('declare')) return;
 		this.errorReply("NOTE: You probably want to use `/deleteroom` now that it exists.");
 		let id = toId(target);
@@ -564,7 +565,7 @@ let commands = exports.commands = {
 	roomdesc: function (target, room, user) {
 		if (!target) {
 			if (!this.canBroadcast()) return;
-			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
+			var re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
 			if (!room.desc) return this.sendReply("This room does not have a description set.");
 			this.sendReplyBox("The room description is: " + room.desc.replace(re, '<a href="$1">$1</a>'));
 			return;
@@ -584,7 +585,7 @@ let commands = exports.commands = {
 			Rooms.global.writeChatRoomData();
 		}
 	},
-
+	
 	topic: 'roomintro',
 	roomintro: function (target, room, user) {
 		if (!target) {
@@ -790,13 +791,13 @@ let commands = exports.commands = {
 		}
 		if (room.auth[user.userid] === '&' && room.founder !== user.userid) {
 			if (currentGroup === '&' || currentGroup === '#' || nextGroup === '&' || nextGroup === '#') {
-				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
-			}
+			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+		    }
 		}
 		if (room.auth[user.userid] === '#' && room.founder !== user.userid) {
 			if (currentGroup === '#') {
-				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
-			}
+			return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+		    }
 		}
 		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
 			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
@@ -1020,6 +1021,7 @@ let commands = exports.commands = {
 	 * Moderating: Punishments
 	 *********************************************************/
 
+	w: 'warn',
 	warn: function (target, room, user) {
 		if (!target) return this.parse('/help warn');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
@@ -1115,7 +1117,7 @@ let commands = exports.commands = {
 
 	dm: 'daymute',
 	daymute: function (target) {
-		if (!target) return this.parse('/help daymute');
+		if(!target) return this.parse('/help daymute')
 		this.run('mute');
 	},
 	daymutehelp: ["/daymute OR /dm [username], [reason] - Mutes a user with reason for a day. Requires: % @ # & ~"],
@@ -1324,7 +1326,7 @@ let commands = exports.commands = {
 		this.addModCommand("All bans and locks have been lifted by " + user.name + ".");
 	},
 	unbanallhelp: ["/unbanall - Unban all IP addresses. Requires: & ~"],
-
+	
 	deroomvoiceall: function (target, room, user) {
 		if (!this.can('declare', null, room)) return false;
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
@@ -1385,7 +1387,7 @@ let commands = exports.commands = {
 		if (!target) return this.errorReply("Please specify a range to lock.");
 		if (!this.can('rangeban')) return false;
 
-		let isIp = (target.slice(-1) === '*');
+		let isIp = (target.slice(-1) === '*' ? true : false);
 		let range = (isIp ? target : Users.shortenHost(target));
 		if (Users.lockedRanges[range]) return this.errorReply("The range " + range + " has already been temporarily locked.");
 
@@ -1895,7 +1897,7 @@ let commands = exports.commands = {
 
 			let curRoom = Rooms.rooms[id];
 			curRoom.addRaw("<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");
-
+			
 			if (curRoom.requestKickInactive && !curRoom.battle.ended) {
 				curRoom.requestKickInactive(user, true);
 				if (curRoom.modchat !== '+') {
@@ -1937,6 +1939,7 @@ let commands = exports.commands = {
 			return this.errorReply("We're not under lockdown right now.");
 		}
 		if (Rooms.global.lockdown === true) {
+
 			for (let id in Rooms.rooms) {
 				if (id !== 'global') Rooms.rooms[id].addRaw("<div class=\"broadcast-green\" style=\"border-radius: 5px;\"><b>The server shutdown was canceled.</b></div>");
 			}
@@ -2041,8 +2044,8 @@ let commands = exports.commands = {
 	},
 
 	updateserver: function (target, room, user, connection) {
-		if (!~developers.indexOf(user.userid)) {
-			return this.errorReply("/updateserver - Access denied.");
+		if (!~developers.indexOf(user.userid)) { 
+						return this.errorReply("/updateserver - Access denied.");
 		}
 		if (CommandParser.updateServerLock) {
 			return this.errorReply("/updateserver - Another update is already in progress.");
@@ -2139,7 +2142,7 @@ let commands = exports.commands = {
 			connection.sendTo(room, stack);
 		}
 	},
-
+	
 	evalbattle: function (target, room, user, connection) {
 		if (!user.hasConsoleAccess(connection) || !~developers.indexOf(user.userid)) {
 			return this.errorReply("/evalbattle - Access denied.");
@@ -2575,7 +2578,7 @@ let commands = exports.commands = {
 			let roomList = {};
 			for (let i in targetUser.roomCount) {
 				if (i === 'global') continue;
-
+				
 				let targetRoom = Rooms.get(i);
 				if (!targetRoom) continue; // shouldn't happen
 				if (targetRoom.isPrivate && !(i in user.games)) continue;
