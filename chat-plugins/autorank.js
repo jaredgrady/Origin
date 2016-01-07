@@ -1,3 +1,5 @@
+'use strict';
+
 exports.commands = {
 	autovoice: 'autorank',
 	autodriver: 'autorank',
@@ -48,7 +50,7 @@ exports.commands = {
 			room.autorank = target;
 			room.chatRoomData.autorank = target;
 			Rooms.global.writeChatRoomData();
-			for (var u of room.users) Users.users[u].updateIdentity();
+			for (let u of room.users) Users.users[u].updateIdentity();
 			return this.privateModCommand("(" + user.name + " has set autorank to \"" + target + "\" in this room.)");
 		}
 		return this.sendReply("Group \"" + target + "\" not found.");
