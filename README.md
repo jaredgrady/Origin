@@ -1,4 +1,7 @@
 # Origin
+========================================================================
+[![Build Status](https://api.travis-ci.com/TheFenderStory/Origin.svg?token=qVpSMkS1UKosxazx1Z3Q)](https://travis-ci.org/TheFenderStory/Origin)
+
 
 Origin is not a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
 private servers. ║ ಡ ͜ ʖ ಡ ║
