@@ -1,3 +1,5 @@
+// jscs:disable
+/* jshint ignore:start */
 exports.commands = {
     /*********************************************************
      * TC'S HERE!
@@ -411,3 +413,4 @@ exports.commands = {
      * TC'S STOP HERE!
      *********************************************************/
 };
+/* jshint ignore:end */
