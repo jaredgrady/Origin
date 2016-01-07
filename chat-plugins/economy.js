@@ -4,7 +4,6 @@ let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
 let highRollers = ['fender', 'duttyvybz', 'nineage'];
-let toggleRolling = false;
 
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
@@ -419,13 +418,13 @@ exports.commands = {
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
-		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
+		if (room.dice.p1 === 'duttyvybz') {
 			while (p1Number <= p2Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
-		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling) {
+		if (room.dice.p2 === 'duttyvybz') {
 			while (p2Number <= p1Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
@@ -470,27 +469,6 @@ exports.commands = {
 		}
 		if (!targetRoom.hasShop) targetRoom.hasShop = targetRoom.chatRoomData.hasShop = true;
 		Rooms.global.writeChatRoomData();
-	},
-
-	togglerolling: function (target, room, user) {
-		if (user.userid !== 'fender') return false;
-		if (!target) return this.sendReply('Either toggle it on or off.');
-		if (target === 'on') {
-			if (toggleRolling === true) {
-				return this.sendReply('We are already rolling');
-			} else {
-				toggleRolling === true;
-				return this.sendReply('We are now rolling!');
-			}
-		}
-		if (target === 'off') {
-			if (toggleRolling === false) {
-				return this.sendReply('We are not rolling right now.');
-			} else {
-				toggleRolling === false;
-				return this.sendReply('We are not rolling anymore.');
-			}
-		}
 	},
 
 	bucks: 'economystats',
