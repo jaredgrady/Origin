@@ -218,7 +218,7 @@
 
   /*ASL*/
 
-    .pm-window-AuraStormLucario h3 {
+    .pm-window-aurastormlucario h3 {
     background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
     background-position: 200px -8px !important;
     color: #6796AA !important;
@@ -226,7 +226,7 @@
     border-color: #6796AA !important;
   }
   
-  .pm-window-AuraStormLucario h3:hover, .pm-window-AuraStormLucario.focused h3, .pm-window-AuraStormLucario.focused h3:hover {
+  .pm-window-aurastormlucario h3:hover, .pm-window-aurastormlucario.focused h3, .pm-window-aurastormlucario.focused h3:hover {
     background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
     background-position: 200px -8px !important;
     color: #6796AA !important;
@@ -234,33 +234,33 @@
     border-color: #6796AA !important;
   }
   
-  .pm-window-AuraStormLucario h3 small, .pm-window-AuraStormLucario h3 .minimizebutton, .pm-window-AuraStormLucario h3 .closebutton, .pm-window-AuraStormLucario h3:hover .minimizebutton {
+  .pm-window-aurastormlucario h3 small, .pm-window-aurastormlucario h3 .minimizebutton, .pm-window-aurastormlucario h3 .closebutton, .pm-window-aurastormlucario h3:hover .minimizebutton {
     color: #106B59 !important;
   }
   
-  .pm-window-AuraStormLucario h3 .closebutton:hover + .minimizebutton {
+  .pm-window-aurastormlucario h3 .closebutton:hover + .minimizebutton {
     color: #106B59 !important;
   }
   
-  .pm-window-AuraStormLucario h3 .closebutton:hover {
+  .pm-window-aurastormlucario h3 .closebutton:hover {
     color: #AD4646 !important;
   }
   
-  .pm-window-AuraStormLucario h3 .minimizebutton:hover {
+  .pm-window-aurastormlucario h3 .minimizebutton:hover {
     color: #EED9A4 !important;
   }
   
-  .pm-window-AuraStormLucario .pm-log, .pm-window-AuraStormLucario.focused .pm-log {
+  .pm-window-aurastormlucario .pm-log, .pm-window-AuraStormLucario.focused .pm-log {
     background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/M34squl.png?1") top right no-repeat !important;
     border-color: #6796AA !important;
   }
   
-  .pm-window-AuraStormLucario .pm-log-add, .pm-window-AuraStormLucario.focused .pm-log-add {
+  .pm-window-aurastormlucario .pm-log-add, .pm-window-AuraStormLucario.focused .pm-log-add {
     background: #52C7B0 !important;
     border-color: #6796AA !important;
   }
   
-  .pm-window-AuraStormLucario .pm-log-add .textbox {
+  .pm-window-aurastormlucario .pm-log-add .textbox {
     border-color: #6796AA !important;
     background: rgba(218, 217, 216, 0.95) !important;
   }
