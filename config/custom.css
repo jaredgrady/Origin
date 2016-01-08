@@ -133,7 +133,7 @@
   }
   
   /*Neo~end*/
-  
+
   /*fender*/
   
   .pm-window-fender h3 {
@@ -218,52 +218,69 @@
 
   /*ASL*/
 
-    .pm-window-AuraStormLucario h3 {
-    background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+ .pm-window-aurastormlucario h3 {
+    background: rgba(0,170,255,0.9) url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
     background-position: 200px -8px !important;
-    color: #6796AA !important;
-    text-shadow: 0px 0px 2px #53758E !important;
-    border-color: #6796AA !important;
-  }
-  
-  .pm-window-AuraStormLucario h3:hover, .pm-window-AuraStormLucario.focused h3, .pm-window-AuraStormLucario.focused h3:hover {
-    background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+    color: #000 !important;
+    text-shadow: 0 0 2px #00AFFF !important;
+    border-color: #444 !important
+}
+
+.pm-window-aurastormlucario h3:hover, .pm-window-aurastormlucario.focused h3,
+.pm-window-aurastormlucario.focused h3:hover {
+    background: rgba(80,200,255,0.9) url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
     background-position: 200px -8px !important;
-    color: #6796AA !important;
-    text-shadow: 0px 0px 2px #53758E !important;
-    border-color: #6796AA !important;
-  }
-  
-  .pm-window-AuraStormLucario h3 small, .pm-window-AuraStormLucario h3 .minimizebutton, .pm-window-AuraStormLucario h3 .closebutton, .pm-window-AuraStormLucario h3:hover .minimizebutton {
-    color: #106B59 !important;
-  }
-  
-  .pm-window-AuraStormLucario h3 .closebutton:hover + .minimizebutton {
-    color: #106B59 !important;
-  }
-  
-  .pm-window-AuraStormLucario h3 .closebutton:hover {
-    color: #AD4646 !important;
-  }
-  
-  .pm-window-AuraStormLucario h3 .minimizebutton:hover {
-    color: #EED9A4 !important;
-  }
-  
-  .pm-window-AuraStormLucario .pm-log, .pm-window-AuraStormLucario.focused .pm-log {
-    background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/M34squl.png?1") top right no-repeat !important;
-    border-color: #6796AA !important;
-  }
-  
-  .pm-window-AuraStormLucario .pm-log-add, .pm-window-AuraStormLucario.focused .pm-log-add {
-    background: #52C7B0 !important;
-    border-color: #6796AA !important;
-  }
-  
-  .pm-window-AuraStormLucario .pm-log-add .textbox {
-    border-color: #6796AA !important;
-    background: rgba(218, 217, 216, 0.95) !important;
-  }
+    color: #222 !important;
+    text-shadow: 0 0 2px #50C8FF !important;
+    border-color: #444 !important
+}
+
+.pm-window-aurastormlucario h3 small, .pm-window-aurastormlucario h3 .minimizebutton,
+.pm-window-aurastormlucario h3 .closebutton, .pm-window-aurastormlucario h3:hover .minimizebutton {
+    color: #444 !important
+}
+
+.pm-window-aurastormlucario h3 .closebutton:hover + .minimizebutton {
+    color: #444 !important
+}
+
+.pm-window-aurastormlucario h3 .closebutton:hover {
+    color: #B74747 !important
+}
+
+.pm-window-aurastormlucario h3 .minimizebutton:hover {
+    color: #D7A747 !important
+}
+
+.pm-window-aurastormlucario .pm-log, .pm-window-AuraStormLucario.focused .pm-log {
+    background: rgba(248, 249, 255, 0.9) url("http://i.imgur.com/HBKTgBN.png?1") no-repeat right top !important;
+    border-color: #444 !important
+}
+
+.pm-window-aurastormlucario .pm-log-add, .pm-window-AuraStormLucario.focused .pm-log-add {
+    background: rgba(0,170,255,0.9) !important;
+    border-color: #444 !important
+}
+
+.pm-window-aurastormlucario .pm-log-add .textbox {
+    border-color: #444 !important;
+    background: rgba(248, 249, 255, 0.9) !important
+}
+
+.pm-window-aurastormlucario h3.pm-notifying {
+    border-color: #444 !important;
+    background: rgba(0,170,255,0.9) url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #000 !important;
+    text-shadow: 0 0 2px #00AFFF !important;
+}
+
+.pm-window-aurastormlucario h3.pm-notifying:hover {
+    border-color: #444 !important;
+    background: rgba(80,200,255,0.9) url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #222 !important;
+    text-shadow: 0 0 2px #50C8FF !important;
 
   /*ASL~end*/
   
