@@ -85,7 +85,7 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			avatar = parts.slice(2).join(',').trim();
-			if (!this.can('ban') && !this.can('vip')) return false;
+			if (!this.can('lock') && !this.can('vip')) return false;
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");
@@ -103,7 +103,7 @@ exports.commands = {
 
 		/* falls through */
 		case 'forceset':
-			if (user.avatarCooldown && !this.can('ban')) {
+			if (user.avatarCooldown && !this.can('lock')) {
 				let milliseconds = (Date.now() - user.avatarCooldown);
 				let seconds = ((milliseconds / 1000) % 60);
 				let remainingTime = Math.round(seconds - (5 * 60));
@@ -139,7 +139,7 @@ exports.commands = {
 
 		case 'delete':
 			userid = toId(parts[1]);
-			if (!this.can('ban') && !this.can('vip')) return false;
+			if (!this.can('lock') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
 			if (Config.customavatars[userid].toString().split('.').slice(0, -1).join('.') !== userid) {
@@ -161,7 +161,7 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			avatar = parts.slice(2).join(',').trim();
-			if (!this.can('ban') && !this.can('vip')) return false;
+			if (!this.can('lock') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 			this.parse('/customavatar delete, ' + targetUser);
 			this.parse('/customavatar set, ' + targetUser + ', ' + avatar);
