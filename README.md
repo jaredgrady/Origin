@@ -5,7 +5,7 @@
 
 
 Origin is not a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
-private servers. ║ ಡ ͜ ʖ ಡ ║
+private servers. ║ ಡ ͜ ʖ ಡ ║ Watch your travis build. 
 
 For more information on Pokémon Showdown, visit the main
 [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown) repository.
