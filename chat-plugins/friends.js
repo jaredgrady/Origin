@@ -26,6 +26,36 @@ function Friends(isOnline, user) {
  
     this.username = Tools.escapeHTML(this.isOnline ? this.user.name : this.user);
 }
+
+/**
+ * Create an bold html tag element.
+ *
+ * Example:
+ * createFont('Hello World!');
+ * => '<b>Hello World!</b>'
+ *
+ * @param {String} color
+ * @param {String} text
+ * @return {String}
+ */
+function bold(text) {
+    return '<b>' + text + '</b>';
+}
+ 
+/**
+ * Create an font html tag element.
+ *
+ * Example:
+ * createFont('Hello World!', 'blue');
+ * => '<font color="blue">Hello World!</font>'
+ *
+ * @param {String} color
+ * @param {String} text
+ * @return {String}
+ */
+function font(color, text) {
+    return '<font color="' + color + '">' + text + '</font>';
+}
  
 Friends.prototype.name = function () {
         let userName = bold(font(color(toId(this.username)), this.username))
