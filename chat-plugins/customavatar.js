@@ -79,12 +79,12 @@ exports.commands = {
 				message += "<strong>" + Tools.escapeHTML(a) + ":</strong> " + Tools.escapeHTML(Config.customavatars[a]) + "<br />";
 			return this.sendReplyBox(message);
 		}
-
+		let userid, targetUser, avatar;
 		switch (cmd) {
 		case 'set':
-			let userid = toId(parts[1]);
-			let targetUser = Users.getExact(userid);
-			let avatar = parts.slice(2).join(',').trim();
+			userid = toId(parts[1]);
+			targetUser = Users.getExact(userid);
+			avatar = parts.slice(2).join(',').trim();
 			if (!this.can('ban') && !this.can('vip')) return false;
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
