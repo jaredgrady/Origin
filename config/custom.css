@@ -215,6 +215,57 @@
   }
   
   /*fender~end*/
+
+  /*ASL*/
+
+    .pm-window-AuraStormLucario h3 {
+    background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #6796AA !important;
+    text-shadow: 0px 0px 2px #53758E !important;
+    border-color: #6796AA !important;
+  }
+  
+  .pm-window-AuraStormLucario h3:hover, .pm-window-AuraStormLucario.focused h3, .pm-window-AuraStormLucario.focused h3:hover {
+    background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #6796AA !important;
+    text-shadow: 0px 0px 2px #53758E !important;
+    border-color: #6796AA !important;
+  }
+  
+  .pm-window-AuraStormLucario h3 small, .pm-window-AuraStormLucario h3 .minimizebutton, .pm-window-AuraStormLucario h3 .closebutton, .pm-window-AuraStormLucario h3:hover .minimizebutton {
+    color: #106B59 !important;
+  }
+  
+  .pm-window-AuraStormLucario h3 .closebutton:hover + .minimizebutton {
+    color: #106B59 !important;
+  }
+  
+  .pm-window-AuraStormLucario h3 .closebutton:hover {
+    color: #AD4646 !important;
+  }
+  
+  .pm-window-AuraStormLucario h3 .minimizebutton:hover {
+    color: #EED9A4 !important;
+  }
+  
+  .pm-window-AuraStormLucario .pm-log, .pm-window-AuraStormLucario.focused .pm-log {
+    background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/M34squl.png?1") top right no-repeat !important;
+    border-color: #6796AA !important;
+  }
+  
+  .pm-window-AuraStormLucario .pm-log-add, .pm-window-AuraStormLucario.focused .pm-log-add {
+    background: #52C7B0 !important;
+    border-color: #6796AA !important;
+  }
+  
+  .pm-window-AuraStormLucario .pm-log-add .textbox {
+    border-color: #6796AA !important;
+    background: rgba(218, 217, 216, 0.95) !important;
+  }
+
+  /*ASL~end*/
   
   /* CUSTOM PM ~end */
 
@@ -272,8 +323,8 @@
     background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
   }
   
-  #lobby-userlist-user-aurastormlucario, #tournaments-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario {
-     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/azfj79a.png") right no-repeat;
+  #lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
+     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
   }
   
   #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
@@ -300,7 +351,7 @@
     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
   }
   
-  #lobby-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #othertiers-userlist-user-traineralain {
+  #lobby-userlist-user-sundars, #tournaments-userlist-user-sundars, #othermetas-userlist-user-sundars, #psmd-userlist-user-sundars, #theheartlessleague-userlist-user-sundars {
     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
   }
   
