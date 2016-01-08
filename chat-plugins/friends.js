@@ -174,6 +174,7 @@ exports.commands = {
          Db('FriendsDB').set(toId(user),  insertStatement);
          this.sendReply(target + ' has been added to your friend list.');
     },
+        unfriend: 'removefriend',
         removefriend: function (target, room, user) {
         if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
         if (target.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
