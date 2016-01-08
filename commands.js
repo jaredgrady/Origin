@@ -1045,7 +1045,6 @@ let commands = exports.commands = {
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
 		if (!target) return this.parse('/help redirect');
-		if (room.isPrivate || room.isPersonal) return this.errorReply("Users cannot be redirected from private or personal rooms.");
 
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
@@ -1058,9 +1057,6 @@ let commands = exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.errorReply("Users cannot be redirected to the global room.");
-		if (targetRoom.isPrivate || targetRoom.isPersonal) {
-			return this.parse('/msg ' + this.targetUsername + ', /invite ' + targetRoom.id);
-		}
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.errorReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
