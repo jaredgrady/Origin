@@ -8,7 +8,7 @@ const path = require('path');
 function reloadCustomAvatars() {
 	let newCustomAvatars = {};
 	try {
-		fs.readdirSync('../config/avatars').forEach(function (file) {
+		fs.readdirSync('./config/avatars').forEach(function (file) {
 			let ext = path.extname(file);
 			if (ext !== '.png' && ext !== '.gif') return;
 
@@ -25,7 +25,7 @@ function reloadCustomAvatars() {
 		if (typeof Config.customavatars[a] === 'number') {
 			newCustomAvatars[a] = Config.customavatars[a];
 		} else {
-			fs.exists('../config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
+			fs.exists('./config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
 				if (isExists) Config.customavatars[user] = file;
 			}.bind(null, a, Config.customavatars[a]));
 		}
