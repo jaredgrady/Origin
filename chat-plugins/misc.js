@@ -312,11 +312,12 @@ exports.commands = {
         let fs = require("fs");
         let Pokedex = require("../data/pokedex.js").BattlePokedex;
         let shinyPoke = ""
+        let x;
         if (/shiny/i.test(target)) {
             shinyPoke = "-shiny";
         }
         if (/kanto/i.test(target) || /gen 1/i.test(target)) {
-            let x = Math.floor(Math.random() * (174 - 1));
+            x = Math.floor(Math.random() * (174 - 1));
         }
         else if (/johto/i.test(target) || /gen 2/i.test(target)) {
             x = Math.floor(Math.random() * (281 - 173)) + 172;
