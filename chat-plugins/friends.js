@@ -84,7 +84,7 @@ function clearFriendList() {
  
 function getFriendsOutput() {
         let inlinecss = 'background: #24678d; border-radius: 3px; border: 1px solid #000; padding: 5px;';
-        return '<center><div style="width: 400px;"><div style="' + inlinecss + ' float: left;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Online Users(' + numOnline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + onlineFriendListOutput + '</div></div><div style="' + inlinecss + ' float: right;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Offline Users(' + numOffline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + offlineFriendListOutput + '</div></div><div style="clear: both;"></div></div></center>';
+        return '<center><div style="width: 330px;"><div style="' + inlinecss + ' float: left;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Online Users(' + numOnline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + onlineFriendListOutput + '</div></div><div style="' + inlinecss + ' float: right;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Offline Users(' + numOffline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + offlineFriendListOutput + '</div></div><div style="clear: both;"></div></div></center>';
 }
  
  
