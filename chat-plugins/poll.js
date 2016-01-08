@@ -138,6 +138,7 @@ exports.commands = {
 		if (!this.can('broadcast', null, room)) return false;
 		this.parse('/poll Tier for the next tournament?, Random Battles, Double Random Battles, Triple Random Battles, Gen [5] Random Battles, Gen [5] Double Random Battles, Gen [5] Random Triple Battles, Gen [4] Random Battles, Gen [4] Double Random Battles, Gen [4] Triple Random Battles, Gen [3] Random Battles, Gen [3] Double Random Battles, Gen [3] Triple Random Battles, Gen [2] Random Battles, Gen [1] Random Battles, Challenge Cup 1v1, 1v1, Hackmons Cup, Battle Factory, Seasonal, Monotype Random Battle, Ubers, OU, UU, RU, NU, PU, LC, AG, Doubles OU, No Status, MonsJustMons, Tier Shift, Monotype');
 	},
+	rpoll: 'randompoll',
 	randomspoll: 'randompoll',
 	randompoll: function (target, room, user) {
 		if (room.battle) return false;
@@ -176,39 +177,5 @@ exports.commands = {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
 		this.sendReply("NUMBER OF VOTES: " + Object.keys(Poll[room.id].options).length);
-	},
-	rpoll: 'roompoll',
-	roompoll: function(target, room, user) {
-		if (!target) {
-			if (!this.can('broadcast', null, room) || room.battle) return false;
-			if (!room.RPoll) return this.parse('/help roompoll');
-			return this.parse('/poll ' + room.RPoll);
-		}
-		var parts = target.split(" ");
-		var action = toId(parts[0] || " ");
-		var details = parts.slice(1).join(" ");
-		if (action == "help") return this.parse('/help roompoll');
-		if (action == "change" || action == "set") {
-			if (!this.can('declare', null, room) || room.battle) return false;
-			if (!toId(details || " ")) return this.parse("/help roompoll")
-			if (details.split(",").length < 3) {
-				return this.errorReply("You did not include enough arguments for the poll.")
-			}
-			room.RPoll = details.replace(/^\/poll/i, "");
-			if (room.chatRoomData) {
-				room.chatRoomData.RPoll = room.RPoll;
-				Rooms.global.writeChatRoomData();
-			}
-			return this.sendReply("The roompoll has been set.")
-		}
-		if (action === 'view') {
-			if (!this.can('declare', null, room)) return false;
-			if (!room.RPoll) return this.errorReply("No roompoll has been set yet.");
-			return this.sendReply('The roompoll is: /poll ' + room.RPoll);
-		}
-		else return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
-	},
-	roompollhelp: ["- /roompoll - creates a new roompoll. (Start poll with '/roompoll', display poll with '!pr', end poll with '/endpoll'). Requires: + $ % @ # & ~",
-		"- /roompoll set/change [details] - sets the roompoll. Requires: # & ~",
-		"- /roompoll view - displays the command for the current roompoll. Requires: # & ~"],
+	}
 };
