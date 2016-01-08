@@ -917,6 +917,7 @@ User = (function () {
 				this.ban(false, userid);
 			}
 		}
+		Users.parsePerma(userid, this);
 		let user = users.get(userid);
 		if (user && user !== this) {
 			// This user already exists; let's merge
