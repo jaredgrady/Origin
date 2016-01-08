@@ -484,4 +484,18 @@ exports.commands = {
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
 	},
+
+	cleaneconomy: function (target, room, user) {
+		if (!this.can('forcewin')) return false;
+		let moneyObject = Db('money').object();
+		Object.keys(moneyObject)
+			.filter(function (name) {
+				return Db('money').get(name) < 1;
+			})
+			.forEach(function (name) {
+				delete moneyObject[name];
+			});
+		Db.save();
+		this.sendReply("All users who has less than 1 buck are now removed from the database.");
+	},
 };
