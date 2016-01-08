@@ -120,7 +120,6 @@ exports.commands = {
         friends: function (target, room, user) {
         if (!this.canBroadcast()) return;
         let data = Db('FriendsDB').get(toId(user));
-        if (data.length === 24) return this.errorReply('Friends list is limited to 24 users.')
         if (typeof data !== 'undefined' && data !== null) {
         let rows = data.split(",");
         let friends = [];
