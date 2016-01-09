@@ -215,6 +215,103 @@
   }
   
   /*fender~end*/
+  
+  /*katheyisme123*/
+  
+  .pm-window-katheyisme123 h3 {
+    background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #CAF5B4 !important;
+    text-shadow: 0px 0px 2px #383631 !important;
+    border-color: #383631 !important;
+  }
+  
+  .pm-window-katheyisme123 h3:hover, .pm-window-katheyisme123.focused h3, .pm-window-katheyisme123.focused h3:hover {
+    background: rgba(56, 54, 49, 0.9) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #CAF5B4 !important;
+    text-shadow: 0px 0px 2px #24221F !important;
+    border-color: #2F2D29 !important;
+  }
+  
+  .pm-window-katheyisme123 h3 small, .pm-window-katheyisme123 h3 .minimizebutton, .pm-window-katheyisme123 h3 .closebutton, .pm-window-katheyisme123 h3:hover .minimizebutton {
+    color: #FCFBEB !important;
+  }
+  
+  .pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton {
+    color: #FCFBEB !important;
+  }
+  
+  .pm-window-katheyisme123 h3 .closebutton:hover {
+    color: #FF8383 !important;
+  }
+  
+  .pm-window-katheyisme123 h3 .minimizebutton:hover {
+    color: #FFDA83 !important;
+  }
+  
+  .pm-window-katheyisme123 .pm-log, .pm-window-katheyisme123.focused .pm-log {
+    background: rgba(252, 251, 235, 0.92) url("http://i.imgur.com/LhaU1ty.png?1") right no-repeat !important;
+    border-color: #383631 !important;
+    color: #06090C !important;
+  }
+  
+  .pm-window-katheyisme123 .pm-log .chat small {
+    color: #5F5B54 !important;
+  }
+  
+  .pm-window-katheyisme123 .pm-log-add, .pm-window-katheyisme123.focused .pm-log-add {
+    background: rgba(98, 94, 87, .8) !important;
+    border-color: #383631 !important;
+  }
+  
+  .pm-window-katheyisme123 .pm-log-add .textbox {
+    border-color: #383631 !important;
+    background: rgba(252, 251, 235, 0.92) !important;
+  }
+  
+  .pm-window-katheyisme123 h3.pm-notifying {
+    background: #9ACAE4 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #625D56 !important;
+    font-style: italic !important;
+    border-color: #383631 !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-katheyisme123 h3.pm-notifying:hover {
+    background: #6E97A9 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #383631 !important;
+    font-style: italic !important;
+    border-color: #383631 !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-katheyisme123 .challenge {
+    background: #BDF2A1 !important;
+    color: #06090C !important;
+    border-color: #383631 !important;
+  }
+  
+  .pm-window-katheyisme123 .challenge .select, .pm-window-katheyisme123 .challenge .buttonbar button {
+    background: #A5CB92 !important;
+    border-color: #759665 !important;
+    color: #06090C !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-katheyisme123 .challenge .select:hover, .pm-window-katheyisme123 .challenge .buttonbar button:hover {
+    background: #88B074 !important;
+    border-color: #5C7A4C !important;
+  } 
+  
+  .pm-window-katheyisme123 .challenge .select:disabled {
+    background: rgba(136, 176, 116, 0.5) !important;
+    border-color: #759665 !important;
+  }
+  
+  /*katheyisme123~end*/
 
   /* CUSTOM PM ~end */
 
