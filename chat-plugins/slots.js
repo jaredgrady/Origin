@@ -154,7 +154,7 @@ exports.commands = {
 						room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
 					}
 					else {
-						user.sendTo(room, "You've won " + (winnings - 3) + " Bucks!");
+						user.sendTo(room, "You've won " + (winnings - room.slotsAnte) + " Bucks!");
 					}
 				}
 				else {
@@ -191,7 +191,10 @@ exports.commands = {
 			target = parseInt(target);
 			if (isNaN(target)) return this.errorReply('Must be a number, silly.');
 			room.slotsAnte = target;
-			if (room.chatRoomData) Rooms.global.writeChatRoomData();
+			if (room.chatRoomData) {
+				room.chatRoomData.slotsAnte = room.slotsAnte;
+				Rooms.global.writeChatRoomData();
+			}
 			this.sendReply("The ante for playing slots has been set to " + room.slotsAnte + ".");
 		},
 	},

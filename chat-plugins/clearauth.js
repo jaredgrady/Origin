@@ -1,9 +1,11 @@
+'use strict';
+
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
 		if (!this.can('hotpatch') && room.founder !== user.userid) return this.errorReply("Access Denied");
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
-		var parts = target.split(',');
-		var cmd = parts[0].trim().toLowerCase();
+		let parts = target.split(',');
+		cmd = parts[0].trim().toLowerCase();
 		if (!target) {
 			this.errorReply("You must specify a roomauth group you want to clear.");
 			return;
@@ -11,8 +13,8 @@ exports.commands = {
 		switch (target) {
 
 		case 'voice':
-			var count = 0;
-			for (var userid in room.auth) {
+			count = 0;
+			for (let userid in room.auth) {
 			if (room.auth[userid] === '+') {
 				delete room.auth[userid];
 				count++;
@@ -29,8 +31,8 @@ exports.commands = {
 			break;
 			
 		case 'roomplayer':
-			var count = 0;
-			for (var userid in room.auth) {
+			count = 0;
+			for (let userid in room.auth) {
 			if (room.auth[userid] === '\u2605') {
 				delete room.auth[userid];
 				count++;
@@ -47,8 +49,8 @@ exports.commands = {
 		    break;	
 			
 		case 'driver':
-			var count = 0;
-			for (var userid in room.auth) {
+			count = 0;
+			for (let userid in room.auth) {
 			if (room.auth[userid] === '%') {
 				delete room.auth[userid];
 				count++;
@@ -65,8 +67,8 @@ exports.commands = {
 			break;
 
 		case 'mod':
-			var count = 0;
-			for (var userid in room.auth) {
+			count = 0;
+			for (let userid in room.auth) {
 			if (room.auth[userid] === '@') {
 				delete room.auth[userid];
 				count++;
@@ -83,8 +85,8 @@ exports.commands = {
 		    break;
 	
 			case 'roomowner':
-			var count = 0;
-			for (var userid in room.auth) {
+			count = 0;
+			for (let userid in room.auth) {
 			if (room.auth[userid] === '#') {
 				delete room.auth[userid];
 				count++;
