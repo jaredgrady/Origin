@@ -197,14 +197,17 @@ BattlePokemon = (function () {
 			for (let i = 0; i < this.set.moves.length; i++) {
 				let move = this.battle.getMove(this.set.moves[i]);
 				if (!move.id) continue;
-				if (move.id === 'hiddenpower') {
-					if (!this.set.ivs || Object.values(this.set.ivs).every(31)) {
-						if (this.battle.gen && this.battle.gen === 2) {
-							this.set.ivs = this.battle.getType(move.type).HPdvs;
-							for (let i in this.set.ivs) {
-								this.set.ivs[i] *= 2;
+				if (move.id === 'hiddenpower' && move.type !== 'Normal') {
+					if (this.battle.gen && this.battle.gen === 2) {
+						if (!this.set.ivs || Math.min.apply(Math, Object.values(this.set.ivs)) >= 30) {
+							let HPdvs = this.battle.getType(move.type).HPdvs;
+							this.set.ivs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
+							for (let i in HPdvs) {
+								this.set.ivs[i] *= HPdvs[i] * 2;
 							}
-						} else {
+						}
+					} else {
+						if (!this.set.ivs || Object.values(this.set.ivs).every(31)) {
 							this.set.ivs = this.battle.getType(move.type).HPivs;
 						}
 					}
@@ -651,6 +654,8 @@ BattlePokemon = (function () {
 		} else {
 			if (this.trapped) data.trapped = true;
 		}
+
+		if (this.canMegaEvo && !lockedMove) data.canMegaEvo = true;
 
 		return data;
 	};
@@ -1441,7 +1446,6 @@ BattleSide = (function () {
 				baseAbility: pokemon.baseAbility,
 				item: pokemon.item,
 				pokeball: pokemon.pokeball,
-				canMegaEvo: !!pokemon.canMegaEvo,
 			});
 		}
 		return data;
@@ -4183,7 +4187,7 @@ Battle = (function () {
 		if (!side.currentRequest) return;
 
 		// Make sure the decision is for the right request.
-		if ((rqid !== undefined) && (parseInt(rqid, 10) !== this.rqid)) {
+		if ((rqid !== undefined) && (parseInt(rqid) !== this.rqid)) {
 			return;
 		}
 
@@ -4351,7 +4355,7 @@ Battle = (function () {
 				let slotMap = dataArr.slice(); // Inverse of `dataArr` (slotMap[dataArr[x]] === x)
 
 				for (let j = 0; j < data.length; j++) {
-					let slot = parseInt(data.charAt(j), 10) - 1;
+					let slot = parseInt(data.charAt(j)) - 1;
 					if (slotMap[slot] < j) return false;
 					if (isNaN(slot) || slot < 0 || slot >= pokemonLength) return false;
 
@@ -4376,7 +4380,7 @@ Battle = (function () {
 			case 'switch':
 				if (i > side.active.length || i > side.pokemon.length) continue;
 
-				data = parseInt(data, 10) - 1;
+				data = parseInt(data) - 1;
 				if (data < 0) data = 0;
 				if (data > side.pokemon.length - 1) data = side.pokemon.length - 1;
 
@@ -4466,7 +4470,7 @@ Battle = (function () {
 				let requestMoves = pokemon.getRequestData().moves;
 				if (data.search(/^[0-9]+$/) >= 0) {
 					// parse a one-based move index
-					let moveIndex = parseInt(data, 10) - 1;
+					let moveIndex = parseInt(data) - 1;
 					if (!requestMoves[moveIndex]) {
 						this.debug("Can't use an unexpected move");
 						return false;

@@ -49,6 +49,9 @@
 
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 /*********************************************************
  * Make sure we have everything set up correctly
  *********************************************************/
@@ -56,21 +59,14 @@
 // Make sure our dependencies are available, and install them if they
 // aren't
 
-function runNpm(command) {
-	if (require.main !== module) throw new Error("Dependencies unmet");
-
-	command = 'npm ' + command + ' && ' + process.execPath + ' app.js';
-	console.log('Running `' + command + '`...');
-	require('child_process').spawn('sh', ['-c', command], {stdio: 'inherit', detached: true});
-	process.exit(0);
-}
-
-const fs = require('fs');
-const path = require('path');
 try {
 	require('sugar');
 } catch (e) {
-	runNpm('install --production');
+	if (require.main !== module) throw new Error("Dependencies unmet");
+
+	let command = 'npm install --production';
+	console.log('Installing dependencies: `' + command + '`...');
+	require('child_process').spawnSync('sh', ['-c', command], {stdio: 'inherit'});
 }
 
 /*********************************************************
@@ -103,27 +99,13 @@ if (Config.watchconfig) {
 	});
 }
 
-// Autoconfigure the app when running in cloud hosting environments:
-try {
-	let cloudenv = require('cloud-env');
-	Config.bindaddress = cloudenv.get('IP', Config.bindaddress || '');
-	Config.port = cloudenv.get('PORT', Config.port);
-} catch (e) {}
-
-if (require.main === module && process.argv[2]) {
-	let port = parseInt(process.argv[2]); // eslint-disable-line radix
-	if (port) {
-		Config.port = port;
-		Config.ssl = null;
-	}
-}
 /*********************************************************
  * Set up most of our globals
  *********************************************************/
 
 global.Monitor = require('./monitor.js');
 
-global.Tools = require('./tools.js').includeFormats();
+global.Tools = require('./tools.js');
 global.toId = Tools.getId;
 
 global.LoginServer = require('./loginserver.js');
@@ -134,8 +116,6 @@ global.Users = require('./users.js');
 
 global.Rooms = require('./rooms.js');
 
-Rooms.global.formatListText = Rooms.global.getFormatListText();
-
 global.Tells = require('./tells.js');
 
 global.Db = require('origindb')('config/eosdb');
@@ -143,14 +123,6 @@ global.Db = require('origindb')('config/eosdb');
 global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/';
 
 global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA_DIR + 'logs/') : './logs/';
-
-try {
-	global.Seen = JSON.parse(fs.readFileSync('config/seen.json', 'utf8'));
-} catch (e) {
-	if (e instanceof SyntaxError) e.message = 'Malformed JSON in seen.json: \n' + e.message;
-	if (e.code !== 'ENOENT') throw e;
-	global.Seen = {};
-}
 
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
@@ -178,13 +150,11 @@ if (Config.crashguard) {
 		quietCrash = quietCrash || ((dateNow - lastCrash) <= 1000 * 60 * 5);
 		lastCrash = Date.now();
 		if (quietCrash) return;
-
 		let stack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
 		if (Rooms.staff) {
 			Rooms.staff.addRaw('<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
 			Rooms.staff.addRaw('<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>');
 		}
-		Config.modchat = 'crash';
 		Rooms.global.lockdown = true;
 	});
 }
@@ -195,9 +165,27 @@ if (Config.crashguard) {
 
 global.Sockets = require('./sockets.js');
 
+exports.listen = function (port, bindAddress, workerCount) {
+	Sockets.listen(port, bindAddress, workerCount);
+};
+
+if (require.main === module) {
+	// if running with node app.js, set up the server directly
+	// (otherwise, wait for app.listen())
+	let port;
+	if (process.argv[2]) {
+		port = parseInt(process.argv[2]); // eslint-disable-line radix
+	}
+	Sockets.listen(port);
+}
+
 /*********************************************************
  * Set up our last global
  *********************************************************/
+
+// Generate and cache the format list.
+Tools.includeFormats();
+Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.TeamValidator = require('./team-validator.js');
 

@@ -17,6 +17,7 @@ let shop = [
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
     ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, Irraquated or CreaturePhil once you bought one.)', 350],
+    ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM Master Float to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
 
 let shopDisplay = getShopDisplay(shop);
@@ -482,5 +483,19 @@ exports.commands = {
 		let output = "There is " + total + currencyName(total) + " circulating in the economy. ";
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
+	},
+
+	cleaneconomy: function (target, room, user) {
+		if (!this.can('forcewin')) return false;
+		let moneyObject = Db('money').object();
+		Object.keys(moneyObject)
+			.filter(function (name) {
+				return Db('money').get(name) < 1;
+			})
+			.forEach(function (name) {
+				delete moneyObject[name];
+			});
+		Db.save();
+		this.sendReply("All users who has less than 1 buck are now removed from the database.");
 	},
 };

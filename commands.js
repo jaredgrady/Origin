@@ -80,7 +80,7 @@ let commands = exports.commands = {
 	avatar: function (target, room, user) {
 		if (!target) return this.parse('/avatars');
 		let parts = target.split(',');
-		let avatar = parseInt(parts[0], 10);
+		let avatar = parseInt(parts[0]);
 		if (parts[0] === '#bw2elesa' || parts[0] === '#teamrocket' || parts[0] === '#yellow') {
 			avatar = parts[0];
 		}
@@ -1696,7 +1696,7 @@ let commands = exports.commands = {
 		}
 		// Let's check the number of lines to retrieve or if it's a word instead
 		if (!target.match('[^0-9]')) {
-			lines = parseInt(target || 20, 10);
+			lines = parseInt(target || 20);
 			if (lines > 100) lines = 100;
 		}
 		let wordSearch = (!lines || lines < 0);
@@ -1842,6 +1842,7 @@ let commands = exports.commands = {
 			}
 		} else if (target === 'learnsets' || target === 'validator') {
 			TeamValidator.ValidatorProcess.respawn();
+			return this.sendReply("The team validator has been hotpatched. Any battles started after now will have teams be validated according to the new code.");
 		} else if (target.startsWith('disable')) {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch is already disabled.");
 			let reason = target.split(', ')[1];
@@ -1855,7 +1856,9 @@ let commands = exports.commands = {
 		"Hot-patching has greater memory requirements than restarting.",
 		"/hotpatch chat - reload commands.js and the chat-plugins",
 		"/hotpatch battles - spawn new simulator processes",
-		"/hotpatch formats - reload the tools.js tree, rebuild and rebroad the formats list, and also spawn new simulator processes"],
+		"/hotpatch validator - spawn new team validator processes",
+		"/hotpatch formats - reload the tools.js tree, rebuild and rebroad the formats list, and spawn new simulator and team validator processes",
+		"/hotpatch disable, [reason] - disables the use of hotpatch until the next server restart"],
 
 	savelearnsets: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return false;
@@ -2176,25 +2179,25 @@ let commands = exports.commands = {
 		}
 		function getPokemon(input) {
 			if (/^[0-9]+$/.test(input)) {
-				return '.pokemon[' + (parseInt(input, 10) - 1) + ']';
+				return '.pokemon[' + (parseInt(input) - 1) + ']';
 			}
 			return ".pokemon.find(function(p){return p.speciesid==='" + toId(targets[1]) + "'})";
 		}
 		switch (cmd) {
 		case 'hp':
 		case 'h':
-			room.battle.send('eval', "let p=" + getPlayer(targets[0]) + getPokemon(targets[1]) + ";p.sethp(" + parseInt(targets[2], 10) + ");if (p.isActive)battle.add('-damage',p,p.getHealth);");
+			room.battle.send('eval', "let p=" + getPlayer(targets[0]) + getPokemon(targets[1]) + ";p.sethp(" + parseInt(targets[2]) + ");if (p.isActive)battle.add('-damage',p,p.getHealth);");
 			break;
 		case 'status':
 		case 's':
 			room.battle.send('eval', "let pl=" + getPlayer(targets[0]) + ";let p=pl" + getPokemon(targets[1]) + ";p.setStatus('" + toId(targets[2]) + "');if (!p.isActive){battle.add('','please ignore the above');battle.add('-status',pl.active[0],pl.active[0].status,'[silent]');}");
 			break;
 		case 'pp':
-			room.battle.send('eval', "let pl=" + getPlayer(targets[0]) + ";let p=pl" + getPokemon(targets[1]) + ";p.moveset[p.moves.indexOf('" + toId(targets[2]) + "')].pp = " + parseInt(targets[3], 10));
+			room.battle.send('eval', "let pl=" + getPlayer(targets[0]) + ";let p=pl" + getPokemon(targets[1]) + ";p.moveset[p.moves.indexOf('" + toId(targets[2]) + "')].pp = " + parseInt(targets[3]));
 			break;
 		case 'boost':
 		case 'b':
-			room.battle.send('eval', "let p=" + getPlayer(targets[0]) + getPokemon(targets[1]) + ";battle.boost({" + toId(targets[2]) + ":" + parseInt(targets[3], 10) + "},p)");
+			room.battle.send('eval', "let p=" + getPlayer(targets[0]) + getPokemon(targets[1]) + ";battle.boost({" + toId(targets[2]) + ":" + parseInt(targets[3]) + "},p)");
 			break;
 		case 'volatile':
 		case 'v':
@@ -2287,7 +2290,7 @@ let commands = exports.commands = {
 	switch: function (target, room, user) {
 		if (!room.decision) return this.errorReply("You can only do this in battle rooms.");
 
-		room.decision(user, 'choose', 'switch ' + parseInt(target, 10));
+		room.decision(user, 'choose', 'switch ' + parseInt(target));
 	},
 
 	choose: function (target, room, user) {
@@ -2624,7 +2627,7 @@ let commands = exports.commands = {
 			commaIndex = target.indexOf(',');
 			targetRegistered = target;
 			if (commaIndex >= 0) {
-				targetRegistered = !!parseInt(target.substr(0, commaIndex), 10);
+				targetRegistered = !!parseInt(target.substr(0, commaIndex));
 				targetToken = target.substr(commaIndex + 1);
 			}
 		}

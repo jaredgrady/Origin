@@ -8,7 +8,7 @@ const path = require('path');
 function reloadCustomAvatars() {
 	let newCustomAvatars = {};
 	try {
-		fs.readdirSync('../config/avatars').forEach(function (file) {
+		fs.readdirSync('./config/avatars').forEach(function (file) {
 			let ext = path.extname(file);
 			if (ext !== '.png' && ext !== '.gif') return;
 
@@ -25,7 +25,7 @@ function reloadCustomAvatars() {
 		if (typeof Config.customavatars[a] === 'number') {
 			newCustomAvatars[a] = Config.customavatars[a];
 		} else {
-			fs.exists('../config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
+			fs.exists('./config/avatars/' + Config.customavatars[a], function (user, file, isExists) {
 				if (isExists) Config.customavatars[user] = file;
 			}.bind(null, a, Config.customavatars[a]));
 		}
@@ -79,13 +79,13 @@ exports.commands = {
 				message += "<strong>" + Tools.escapeHTML(a) + ":</strong> " + Tools.escapeHTML(Config.customavatars[a]) + "<br />";
 			return this.sendReplyBox(message);
 		}
-
+		let userid, targetUser, avatar;
 		switch (cmd) {
 		case 'set':
-			let userid = toId(parts[1]);
-			let targetUser = Users.getExact(userid);
-			let avatar = parts.slice(2).join(',').trim();
-			if (!this.can('ban') && !this.can('vip')) return false;
+			userid = toId(parts[1]);
+			targetUser = Users.getExact(userid);
+			avatar = parts.slice(2).join(',').trim();
+			if (!this.can('lock') && !this.can('vip')) return false;
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");
@@ -103,7 +103,7 @@ exports.commands = {
 
 		/* falls through */
 		case 'forceset':
-			if (user.avatarCooldown && !this.can('ban')) {
+			if (user.avatarCooldown && !this.can('lock')) {
 				let milliseconds = (Date.now() - user.avatarCooldown);
 				let seconds = ((milliseconds / 1000) % 60);
 				let remainingTime = Math.round(seconds - (5 * 60));
@@ -139,7 +139,7 @@ exports.commands = {
 
 		case 'delete':
 			userid = toId(parts[1]);
-			if (!this.can('ban') && !this.can('vip')) return false;
+			if (!this.can('lock') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 
 			if (Config.customavatars[userid].toString().split('.').slice(0, -1).join('.') !== userid) {
@@ -161,7 +161,7 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			avatar = parts.slice(2).join(',').trim();
-			if (!this.can('ban') && !this.can('vip')) return false;
+			if (!this.can('lock') && !this.can('vip')) return false;
 			if (!Config.customavatars[userid]) return this.sendReply(userid + " does not have a custom avatar.");
 			this.parse('/customavatar delete, ' + targetUser);
 			this.parse('/customavatar set, ' + targetUser + ', ' + avatar);

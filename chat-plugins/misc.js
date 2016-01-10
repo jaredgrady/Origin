@@ -312,11 +312,12 @@ exports.commands = {
         let fs = require("fs");
         let Pokedex = require("../data/pokedex.js").BattlePokedex;
         let shinyPoke = ""
+        let x;
         if (/shiny/i.test(target)) {
             shinyPoke = "-shiny";
         }
         if (/kanto/i.test(target) || /gen 1/i.test(target)) {
-            let x = Math.floor(Math.random() * (174 - 1));
+            x = Math.floor(Math.random() * (174 - 1));
         }
         else if (/johto/i.test(target) || /gen 2/i.test(target)) {
             x = Math.floor(Math.random() * (281 - 173)) + 172;
@@ -495,7 +496,7 @@ exports.commands = {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
 
-		if (!this.can('mute', targetUser, room)) return false;
+		if (!this.can('mute', targetUser, room) || targetUser.can("rangeban") && !user.can("rangeban")) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");
 		targetUser.popup("You were kicked from " + room.id + " by " + user.name + ".");
@@ -540,14 +541,15 @@ exports.commands = {
         if(!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
         if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
         if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
+        target = target.replace(/<(?:.|\n)*?>/gm, '');
 
         let pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
-
+        
         for (let i in room.users) {
-            let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + Tools.escapeHTML(target);
+            let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + target;
             room.users[i].send(message);
         }
-        this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + Tools.escapeHTML(target) + ')');
+        this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + target + ')');
     },
 
 	d: 'poof',
@@ -811,5 +813,22 @@ exports.commands = {
 	roombanlist: function(target, room, user, connection) {
 		if (!this.can('ban', null, room)) return false;
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
+	},
+	
+	reauth: "repromote",
+	repromote: function(target, room, user) {
+		if (!this.can("hotpatch")) return false;
+		if (!target) return this.errorReply("/repromote targetuser, demote message. Do not use this if you don\'t know what you are doing");
+		let parts = target.replace(/\, /g, ",").split(',');
+		let targetUser = toId(parts.shift());
+		parts.forEach(function(r){
+			var tarRoom = Rooms.get(toId(r));
+			if(tarRoom){
+				tarRoom.auth[targetUser] = r.charAt(0);
+			}
+		})
+		Rooms.global.writeChatRoomData();
+		Users(targetUser).updateIdentity();
+		this.sendReply("Succesfully repromoted " + targetUser + ".");
 	},
 };
