@@ -814,4 +814,21 @@ exports.commands = {
 		if (!this.can('ban', null, room)) return false;
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
 	},
+	
+	reauth: "repromote",
+	repromote: function(target, room, user) {
+		if (!this.can("hotpatch")) return false;
+		if (!target) return this.errorReply("/repromote targetuser, demote message. Do not use this if you don\'t know what you are doing");
+		let parts = target.replace(/\, /g, ",").split(',');
+		let targetUser = toId(parts.shift());
+		parts.forEach(function(r){
+			var tarRoom = Rooms.get(toId(r));
+			if(tarRoom){
+				tarRoom.auth[targetUser] = r.charAt(0);
+			}
+		})
+		Rooms.global.writeChatRoomData();
+		Users(targetUser).updateIdentity();
+		this.sendReply("Succesfully repromoted " + targetUser + ".");
+	},
 };
