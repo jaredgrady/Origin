@@ -496,7 +496,7 @@ exports.commands = {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
 
-		if (!this.can('mute', targetUser, room)) return false;
+		if (!this.can('mute', targetUser, room) || targetUser.can("rangeban") && !user.can("rangeban")) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");
 		targetUser.popup("You were kicked from " + room.id + " by " + user.name + ".");
