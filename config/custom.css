@@ -808,26 +808,26 @@
   
   .menugroup .select, .menugroup .button {
     background: #FFE0A7 !important;
-		border-color: #803C6F !important;
-		color: #803C6F !important;
-		text-shadow: none !important;
-		font-style: italic !important;
+    border-color: #803C6F !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+    font-style: italic !important;
   }
   
   .menugroup .select:hover, .menugroup .button:hover {
     background: #F2CF99 !important;
-		border-color: #803C6F !important;
-		color: #803C6F !important;
-		text-shadow: none !important;
-		font-style: italic !important;
+    border-color: #803C6F !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+    font-style: italic !important;
   }
   
   .menugroup .select:disabled, .menugroup .select:disabled:hover {
     background: rgba(255, 224, 167, 0.7) !important;
-		border-color: #803C6F !important;
-		color: #803C6F !important;
-		text-shadow: none !important;
-		font-style: italic !important;
+    border-color: #803C6F !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+    font-style: italic !important;
   }
   
   .pm-window h3 {
