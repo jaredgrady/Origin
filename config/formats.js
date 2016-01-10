@@ -463,8 +463,6 @@ exports.Formats = [
 		},
 	},
 	{
-<<<<<<< HEAD
-=======
 		name: "[Seasonal] Polar Opposites",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3491902/\">Seasonal Ladder</a>"],
 		section: "OM of the Month",
@@ -484,7 +482,6 @@ exports.Formats = [
 		},
 	},
 	{
->>>>>>> upstream/master
 		name: "CAP",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3537407/\">CAP Metagame Discussion</a>",
