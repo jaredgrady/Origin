@@ -116,8 +116,6 @@ global.Users = require('./users.js');
 
 global.Rooms = require('./rooms.js');
 
-Rooms.global.formatListText = Rooms.global.getFormatListText();
-
 global.Tells = require('./tells.js');
 
 global.Db = require('origindb')('config/eosdb');
@@ -125,14 +123,6 @@ global.Db = require('origindb')('config/eosdb');
 global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/';
 
 global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA_DIR + 'logs/') : './logs/';
-
-try {
-	global.Seen = JSON.parse(fs.readFileSync('config/seen.json', 'utf8'));
-} catch (e) {
-	if (e instanceof SyntaxError) e.message = 'Malformed JSON in seen.json: \n' + e.message;
-	if (e.code !== 'ENOENT') throw e;
-	global.Seen = {};
-}
 
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
@@ -160,13 +150,11 @@ if (Config.crashguard) {
 		quietCrash = quietCrash || ((dateNow - lastCrash) <= 1000 * 60 * 5);
 		lastCrash = Date.now();
 		if (quietCrash) return;
-
 		let stack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
 		if (Rooms.staff) {
 			Rooms.staff.addRaw('<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
 			Rooms.staff.addRaw('<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>');
 		}
-		Config.modchat = 'crash';
 		Rooms.global.lockdown = true;
 	});
 }
