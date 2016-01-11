@@ -369,12 +369,12 @@
   background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
 }
 
-#lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
-   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
+#lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #lucarioslair-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
 }
 
 #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
-   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
 }
 
 #lobby-userlist-user-phoenixsacred, #monotype-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred, #halloffame-userlist-user-phoenixsacred {
@@ -397,7 +397,8 @@
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
 }
 
-#lobby-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #othermetas-userlist-user-traineralain, #psmd-userlist-user-traineralain, #theheartlessleague-userlist-user-traineralain {  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
+#lobby-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #othermetas-userlist-user-traineralain, #psmd-userlist-user-traineralain, #theheartlessleague-userlist-user-traineralain {  
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
 }
 
 #lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
@@ -442,6 +443,10 @@
 
 #hingostraphouse-userlist-user-sariisaur, #phoenixleague-userlist-user-sariisaur, #theallegiantleague-userlist-user-sariisaur {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/6Ybg61Q.png") right no-repeat;
+}
+
+#lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat;
 }
 
 /* Icons ~end */
