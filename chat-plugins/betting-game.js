@@ -13,6 +13,11 @@ let diceTwo = function (dice) {
 	return dice;
 };
 
+let rng = function(n) {
+	n = Math.floor(Math.random() * 100);
+	return n
+};
+
 function isEven(n) {
 	return n % 2 === 0;
 }
@@ -27,6 +32,7 @@ exports.commands = {
 		let firstDice = diceOne();
 		let secondDice = diceTwo();
 		let totalDice = firstDice + secondDice;
+		let house = rng();
 
 		let choice = target.toUpperCase();
 
@@ -40,7 +46,7 @@ exports.commands = {
 		switch (choice) {
 		case 'ODD':
 			Db('money').set(user.userid, amount - 2).get(user.userid);
-			if (isOdd(totalDice)) {
+			if (isOdd(totalDice) && house < 45) {
 				this.sendReply('<div class="infobox" style="background: rgba(190 , 190 , 190 , 0.4) ; border-radius: 2px"><div style="background: url(&quot;http://i.imgur.com/otpca0K.png?1&quot;) left center no-repeat"><div style="background: url(&quot;http://i.imgur.com/rrq3gEp.png&quot;) right center no-repeat"><font style="color: #666; font-style: italic;">' + user.name + ' betted on "' + choice + '".</font><center><h2 style="color: #444"><font color="' + color(toId(this.user.name)) + '">' + user.name + '</font>\'s both dices rolled a<br />total of <font style="color: #f00 ; text-decoration: underline">' + totalDice + '</font>.</h2></center><br /><center><h2 style="color: #444">You Win!!</h2></center></div></div></div>');
 				Db('money').set(user.userid, amount + 2).get(user.userid);
 			} else {
@@ -49,7 +55,7 @@ exports.commands = {
 			break;
 		case 'EVEN':
 			Db('money').set(user.userid, amount - 2).get(user.userid);
-			if (isEven(totalDice)) {
+			if (isEven(totalDice) && house < 45) {
 				this.sendReply('<div class="infobox" style="background: rgba(190 , 190 , 190 , 0.4) ; border-radius: 2px"><div style="background: url(&quot;http://i.imgur.com/otpca0K.png?1&quot;) left center no-repeat"><div style="background: url(&quot;http://i.imgur.com/rrq3gEp.png&quot;) right center no-repeat"><font style="color: #666; font-style: italic;">' + user.name + ' betted on "' + choice + '".</font><center><h2 style="color: #444"><font color="' + color(toId(this.user.name)) + '">' + user.name + '</font>\'s both dices rolled a<br />total of <font style="color: #f00 ; text-decoration: underline">' + totalDice + '</font>.</h2></center><br /><center><h2 style="color: #444">You Win!!</h2></center></div></div></div>');
 				Db('money').set(user.userid, amount + 2).get(user.userid);
 			} else {
@@ -58,7 +64,7 @@ exports.commands = {
 			break;
 		case '7': case 'SEVEN':
 			Db('money').set(user.userid, amount - 2).get(user.userid);
-			if (totalDice === 7) {
+			if (totalDice === 7 && house < 45) {
 				this.sendReply('<div class="infobox" style="background: rgba(190 , 190 , 190 , 0.4) ; border-radius: 2px"><div style="background: url(&quot;http://i.imgur.com/otpca0K.png?1&quot;) left center no-repeat"><div style="background: url(&quot;http://i.imgur.com/rrq3gEp.png&quot;) right center no-repeat"><font style="color: #666; font-style: italic;">' + user.name + ' betted on "' + choice + '".</font><center><h2 style="color: #444"><font color="' + color(toId(this.user.name)) + '">' + user.name + '</font>\'s both dices rolled a<br />total of <font style="color: #f00 ; text-decoration: underline">' + totalDice + '</font>.</h2></center><br /><center><h2 style="color: #444">You Win!!</h2></center></div></div></div>');
 				Db('money').set(user.userid, amount + 14).get(user.userid);
 			} else {
