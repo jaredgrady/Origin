@@ -9,7 +9,7 @@ let emotes = {
 	'4Head': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0',
 	'bsmiss': 'http://i.imgur.com/C235Ljo.gif',
 	'bshax': 'http://i.imgur.com/scBu82l.gif',
-	'bscrit': 'http://i.imgur.com/xVqLpF0.gif'
+	'bscrit': 'http://i.imgur.com/xVqLpF0.gif',
 	'DansGame': 'https://static-cdn.jtvnw.net/emoticons/v1/33/1.0',
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
 	'EleGiggle': 'https://static-cdn.jtvnw.net/emoticons/v1/4339/2.0',
