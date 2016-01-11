@@ -1,1489 +1,1489 @@
-  /*********************
-  * Custom Classes CSS *
-  *********************/
-  
-  .astext {
-    border: none;
-    background: none;
-    padding: 0;
-    height: -20em;
-    font-family: Verdana,sans-serif;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  
-  /**************************
-  * Custom Classes CSS ~end *
-  **************************/
- 
-  /***********************
-  * Donation Benefit CSS *
-  ***********************/
-  
-  /* CUSTOM PM */
-  
-  /*Float*/
-  
-  .pm-window-masterfloat h3 {
-    background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #1EA88C !important;
-    text-shadow: 0px 0px 2px #B6F3E7 !important;
-    border-color: #1F6C5D !important;
-  }
-  
-  .pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
-    background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #1EA88C !important;
-    text-shadow: 0px 0px 2px #B6F3E7 !important;
-    border-color: #1F6C5D !important;
-  }
-  
-  .pm-window-masterfloat h3 small, .pm-window-masterfloat h3 .minimizebutton, .pm-window-masterfloat h3 .closebutton, .pm-window-masterfloat h3:hover .minimizebutton {
-    color: #106B59 !important;
-  }
-  
-  .pm-window-masterfloat h3 .closebutton:hover + .minimizebutton {
-    color: #106B59 !important;
-  }
-  
-  .pm-window-masterfloat h3 .closebutton:hover {
-    color: #982929 !important;
-  }
-  
-  .pm-window-masterfloat h3 .minimizebutton:hover {
-    color: #987729 !important;
-  }
-  
-  .pm-window-masterfloat .pm-log, .pm-window-masterfloat.focused .pm-log {
-    background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat !important;
-    border-color: #1F6C5D !important;
-  }
-  
-  .pm-window-masterfloat .pm-log-add, .pm-window-masterfloat.focused .pm-log-add {
-    background: #52C7B0 !important;
-    border-color: #1F6C5D !important;
-  }
-  
-  .pm-window-masterfloat .pm-log-add .textbox {
-    border-color: #1F6C5D !important;
-    background: rgba(243, 255, 253, 0.95) !important;
-  }
-  
-  /*Float~end*/
-  
-  /*Neo*/
-  
-  .pm-window-neosoul h3 {
-    background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #FFF !important;
-    text-shadow: 0px 0px 2px #124A66 !important;
-    border-color: #124A66 !important;
-  }
-  
-  .pm-window-neosoul h3:hover, .pm-window-neosoul.focused h3, .pm-window-neosoul.focused h3:hover {
-    background: rgba(36, 110, 148, 0.9) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #FFF !important;
-    text-shadow: 0px 0px 2px #0C374D !important;
-    border-color: #0C374D !important;
-  }
-  
-  .pm-window-neosoul h3 small, .pm-window-neosoul h3 .minimizebutton, .pm-window-neosoul h3 .closebutton, .pm-window-neosoul h3:hover .minimizebutton {
-    color: #E9F6FF !important;
-  }
-  
-  .pm-window-neosoul h3 .closebutton:hover + .minimizebutton {
-    color: #E9F6FF !important;
-  }
-  
-  .pm-window-neosoul h3 .closebutton:hover {
-    color: #FFAFAF !important;
-  }
-  
-  .pm-window-neosoul h3 .minimizebutton:hover {
-    color: #FFDAAF !important;
-  }
-  
-  .pm-window-neosoul .pm-log {
-    background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
-    border-color: #124A66 !important;
-  }
-  
-  .pm-window-neosoul.focused .pm-log {
-    background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
-    border-color: #0C374D !important;
-  }
-  
-  .pm-window-neosoul .pm-log-add {
-    background: rgba(76, 154, 180, 0.9) !important;
-    border-color: #124A66 !important;
-  }
-  
-  .pm-window-neosoul.focused .pm-log-add {
-    background: rgba(76, 154, 180, 0.9) !important;
-    border-color: #0C374D !important;
-  }
-  
-  .pm-window-neosoul .pm-log-add .textbox {
-    border-color: #124A66 !important;
-    background: rgba(227, 239, 247, 0.9) !important;
-  }
-  
-  /*Neo~end*/
-  
-  /*fender*/
-  
-  .pm-window-fender h3 {
-    background: rgba(38, 38, 38, 0.8) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #FFF !important;
-    text-shadow: 0px 0px 2px #000 !important;
-    border-color: #222 !important;
-  }
-  
-  .pm-window-fender h3:hover {
-    background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #EEE !important;
-    text-shadow: 0px 0px 2px #000 !important;
-    border-color: #222 !important;
-  }
-  
-  .pm-window-fender.focused h3, .pm-window-fender.focused h3:hover {
-    background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #DECA94 !important;
-    text-shadow: 0px 0px 2px #1B1B1B !important;
-    border-color: #1B1B1B !important;
-  }
-  
-  .pm-window-fender h3 small, .pm-window-fender h3 .minimizebutton, .pm-window-fender h3 .closebutton, .pm-window-fender h3:hover .minimizebutton {
-    color: #CCC !important;
-  }
-  
-  .pm-window-fender h3 .closebutton:hover + .minimizebutton {
-    color: #CCC !important;
-  }
-  
-  .pm-window-fender h3 .closebutton:hover {
-    color: #FF8383 !important;
-  }
-  
-  .pm-window-fender h3 .minimizebutton:hover {
-    color: #FFDA83 !important;
-  }
-  
-  .pm-window-fender .pm-log, .pm-window-fender.focused .pm-log {
-    background: rgba(235, 235, 235, 0.9) url("http://i.imgur.com/WebFitb.png?1") right no-repeat !important;
-    border-color: #555 !important;
-  }
-  
-  .pm-window-fender .pm-log .chat small {
-    color: #444 !important;
-  }
-  
-  .pm-window-fender .pm-log-add, .pm-window-fender.focused .pm-log-add {
-    background: rgba(75, 75, 75, 0.8) !important;
-    border-color: #444 !important;
-  }
-  
-  .pm-window-fender .pm-log-add .textbox {
-    border-color: #444 !important;
-    background: rgba(245, 245, 245, 0.92) !important;
-  }
-  
-  .pm-window-fender .pm-log-add .textbox:focus {
-    border-color: #444 !important;
-    background: #FEFEFE !important;
-  }
-  
-  .pm-window-fender h3.pm-notifying {
-    border-color: #C60000 !important;
-    background: rgba(0, 0, 0, 0.85) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-    color: #FF6464 !important;
-    text-shadow: 0px 0px 2px #000 !important;
-  }
-  
-  .pm-window-fender h3.pm-notifying:hover {
-    border-color: #C60000 !important;
-    background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") !important;
-    color: #FF6464 !important;
-    text-shadow: 0px 0px 2px #000 !important;
-  }
-  
-  /*fender~end*/
-  
-  /*katheyisme123*/
-  
-  .pm-window-katheyisme123 h3 {
-    background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #CAF5B4 !important;
-    text-shadow: 0px 0px 2px #383631 !important;
-    border-color: #383631 !important;
-  }
-  
-  .pm-window-katheyisme123 h3:hover, .pm-window-katheyisme123.focused h3, .pm-window-katheyisme123.focused h3:hover {
-    background: rgba(56, 54, 49, 0.9) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #CAF5B4 !important;
-    text-shadow: 0px 0px 2px #24221F !important;
-    border-color: #2F2D29 !important;
-  }
-  
-  .pm-window-katheyisme123 h3 small, .pm-window-katheyisme123 h3 .minimizebutton, .pm-window-katheyisme123 h3 .closebutton, .pm-window-katheyisme123 h3:hover .minimizebutton {
-    color: #FCFBEB !important;
-  }
-  
-  .pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton {
-    color: #FCFBEB !important;
-  }
-  
-  .pm-window-katheyisme123 h3 .closebutton:hover {
-    color: #FF8383 !important;
-  }
-  
-  .pm-window-katheyisme123 h3 .minimizebutton:hover {
-    color: #FFDA83 !important;
-  }
-  
-  .pm-window-katheyisme123 .pm-log, .pm-window-katheyisme123.focused .pm-log {
-    background: rgba(252, 251, 235, 0.92) url("http://i.imgur.com/LhaU1ty.png?1") right no-repeat !important;
-    border-color: #383631 !important;
-    color: #06090C !important;
-  }
-  
-  .pm-window-katheyisme123 .pm-log .chat small {
-    color: #5F5B54 !important;
-  }
-  
-  .pm-window-katheyisme123 .pm-log-add, .pm-window-katheyisme123.focused .pm-log-add {
-    background: rgba(98, 94, 87, .8) !important;
-    border-color: #383631 !important;
-  }
-  
-  .pm-window-katheyisme123 .pm-log-add .textbox {
-    border-color: #383631 !important;
-    background: rgba(252, 251, 235, 0.92) !important;
-  }
-  
-  .pm-window-katheyisme123 h3.pm-notifying {
-    background: #9ACAE4 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #625D56 !important;
-    font-style: italic !important;
-    border-color: #383631 !important;
-    text-shadow: none !important;
-  }
-  
-  .pm-window-katheyisme123 h3.pm-notifying:hover {
-    background: #6E97A9 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #383631 !important;
-    font-style: italic !important;
-    border-color: #383631 !important;
-    text-shadow: none !important;
-  }
-  
-  .pm-window-katheyisme123 .challenge {
-    background: #BDF2A1 !important;
-    color: #06090C !important;
-    border-color: #383631 !important;
-  }
-  
-  .pm-window-katheyisme123 .challenge .select, .pm-window-katheyisme123 .challenge .buttonbar button {
-    background: #A5CB92 !important;
-    border-color: #759665 !important;
-    color: #06090C !important;
-    text-shadow: none !important;
-  }
-  
-  .pm-window-katheyisme123 .challenge .select:hover, .pm-window-katheyisme123 .challenge .buttonbar button:hover {
-    background: #88B074 !important;
-    border-color: #5C7A4C !important;
-  } 
-  
-  .pm-window-katheyisme123 .challenge .select:disabled {
-    background: rgba(136, 176, 116, 0.5) !important;
-    border-color: #759665 !important;
-  }
-  
-  /*katheyisme123~end*/
+/*********************
+* Custom Classes CSS *
+*********************/
 
-  /* CUSTOM PM ~end */
+.astext {
+  border: none;
+  background: none;
+  padding: 0;
+  height: -20em;
+  font-family: Verdana,sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
 
-  /* Symbol Color */
-  
-  #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
-    color: #0D00BF;
-  }
-  
-  /* Symbol color ~end */
-  
-  /* Icons */
-  
-  #lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
-    background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-allianceexcadrill, #casino-userlist-user-allianceexcadrill, #allianceleague-userlist-user-allianceexcadrill, #phoenixleague-userlist-user-allianceexcadrill {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/645-therian.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
-  }
-  
-  #tournaments-userlist-user-resourceful {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
-  }
-  
-  #lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
-    background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/202.gif") right no-repeat;  
-  }
-  
-  #lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-notorangejuice, #staff-userlist-user-notorangejuice {
-    background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-lodvanitas, #thelegionofdoom-userlist-user-lodvanitas, #staff-userlist-user-lodvanitas {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
-  }
+/**************************
+* Custom Classes CSS ~end *
+**************************/
 
-  #upperstaff-userlist-user-masterfloat { 
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel {
-    background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
-     background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
-     background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-phoenixsacred, #monotype-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred, #halloffame-userlist-user-phoenixsacred {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/sugimori/645-therian.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-paulcentury, #theomegaleague-userlist-user-paulcentury, #overused-userlist-user-paulcentury {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/080.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-voidchrono, #\1v1-userlist-user-voidchrono, #voidleague-userlist-user-voidchrono {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-theace22, #catchevolve-userlist-user-theace22, #othertiers-userlist-user-theace22 {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-voidtrent, #voidleague-userlist-user-voidtrent, #alliancecup-userlist-user-voidtrent {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-sundars, #tournaments-userlist-user-sundars, #othermetas-userlist-user-sundars, #psmd-userlist-user-sundars, #theheartlessleague-userlist-user-sundars {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat;
-  }
+/***********************
+* Donation Benefit CSS *
+***********************/
 
-  #lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
-  }
+/* CUSTOM PM */
 
-  #lobby-userlist-user-rslgryphon, #casino-userlist-user-rslgryphon, #staff-userlist-user-rslgryphon {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-selena, #casino-userlist-user-selena, #artshop-userlist-user-selena {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/y7SEAv7.png") right no-repeat;
-  }
-  
-  #monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
-  }
-  
-  #lobby-userlist-user-volco, #staff-userlist-user-volco, #theemergenceleague-userlist-user-volco {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
-  }
+/*Float*/
 
-  #lobby-userlist-user-exotickey, #theomegaleague-userlist-user-exotickey, #hayleysden-userlist-user-exotickey {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/028.gif") right no-repeat;
-  }
-  
-  #femalehq-userlist-user-katheyisme123, #lobby-userlist-user-katheyisme123, #casino-userlist-user-katheyisme123 {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/P1x9UwM.png") right no-repeat;
-  }
-  
-  #lobby-userlist-user-chimechoo, #casino-userlist-user-chimechoo, #monotype-userlist-user-chimechoo, #thecarnieleague-userlist-user-chimechoo, #overused-userlist-user-chimechoo {
-    background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat;
-  }
-  
-  #phoenixleague-userlist-user-phoenixjane, #lobby-userlist-user-phoenixjane, #monotype-userlist-user-phoenixjane {
-    background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat;
-  }
-  
-  /* Icons ~end */
-  
-  /****************************
-  * Donation Benefit CSS ~end *
-  ****************************/
-  
-  /**************
-  * General CSS *
-  **************/
-  
-  body {
-    background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
-  }
-  
-  .ps-room.ps-room-light {
-    background: rgba(0, 0, 0, 0);
-    border-color: #11484F;
-  }
-  
-  .ps-room.ps-room-light.scrollable {
-    background: rgba(51, 98, 81, 0.6);
-  }
-  
-  .ps-room.ps-room-light.scrollable h3 {
-    color: #BBCCC9;
-    text-shadow: 0px 0px 2px #11484F;
-  }
-  
-  .ps-room.ps-room-light.scrollable p {
-    color: #031012;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .ps-room.ps-room-light.scrollable .button {
-    background: #BBCCC9;    
-    border: 1px solid #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .ps-room.ps-room-light.scrollable .button:hover {
-    background: #CBE1DD;    
-    border-color: #0C2D32;
-  }
-  
-  .chat.mine {
-    background: rgba(0, 0, 0, 0);
-  }
+.pm-window-masterfloat h3 {
+  background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #1EA88C !important;
+  text-shadow: 0px 0px 2px #B6F3E7 !important;
+  border-color: #1F6C5D !important;
+}
 
-  .broadcast-blue {
-    background: #CD9FC4;
-    border: 1px solid #0B1361;
-    color: #0B1361;
-    text-shadow: 0px 0px 2px #B287A9;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 8px;
-    margin: 5px;
-  }
+.pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
+  background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #1EA88C !important;
+  text-shadow: 0px 0px 2px #B6F3E7 !important;
+  border-color: #1F6C5D !important;
+}
 
-  .broadcast-blue a {
-    color: #000F98;
-  }
+.pm-window-masterfloat h3 small, .pm-window-masterfloat h3 .minimizebutton, .pm-window-masterfloat h3 .closebutton, .pm-window-masterfloat h3:hover .minimizebutton {
+  color: #106B59 !important;
+}
 
-  .broadcast-blue button {
-    background: #A87C9F;
-    border: 1px solid #090F47;
-    color: #FFF9FF;
-    text-shadow: 0px 0px 2px #090F47;
-    padding: 2px 8px;
-  }
+.pm-window-masterfloat h3 .closebutton:hover + .minimizebutton {
+  color: #106B59 !important;
+}
 
-  .broadcast-blue button:hover {
-    background: #9F7697;
-  }
+.pm-window-masterfloat h3 .closebutton:hover {
+  color: #982929 !important;
+}
 
-  .broadcast-red {
-    background: #FFEBF4;
-    border: 1px solid #B52C43;
-    color: #B52C43;
-    text-shadow: 0px 0px 2px #F2DBE5;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 8px;
-    margin: 5px;
-  }
+.pm-window-masterfloat h3 .minimizebutton:hover {
+  color: #987729 !important;
+}
 
-  .broadcast-red a {
-    color: #B3001E;
-  }
+.pm-window-masterfloat .pm-log, .pm-window-masterfloat.focused .pm-log {
+  background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat !important;
+  border-color: #1F6C5D !important;
+}
 
-  .broadcast-green {
-    background: #B5D896;
-    border: 1px solid #20493B;
-    color: #20493B;
-    text-shadow: 0px 0px 2px #A4C786;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 8px;
-    margin: 5px;
-  }
+.pm-window-masterfloat .pm-log-add, .pm-window-masterfloat.focused .pm-log-add {
+  background: #52C7B0 !important;
+  border-color: #1F6C5D !important;
+}
 
-  .broadcast-green a {
-    color: #005C3E;
-  }
-  
-  .ps-overlay {
-    background: rgba(0, 0, 0, 0.35);
-  }
-  
-  /*******************
-  * General CSS ~end *
-  *******************/
-  
-  /*************
-  * Header CSS *
-  *************/
-  
-  .header {
-    background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
-  }
-  
-  .header .logo {
-    opacity: 0;
-  }
-  
-  .maintabbarbottom {
-    border-color: #803C6F;
-    background: #CD9FC4;
-  }
-  
-  .tabbar a.button.notifying {
-    background: #FFE0A7;
-    border-color: #803C6F;
-    color: #803C6F;
-    text-shadow: none;
-    font-style: italic;
-  }
+.pm-window-masterfloat .pm-log-add .textbox {
+  border-color: #1F6C5D !important;
+  background: rgba(243, 255, 253, 0.95) !important;
+}
 
-  .tabbar a.button.notifying:hover {
-    background: #F9D990;  
-    border-color: #803C6F;
-    color: #803C6F;
-  }
-  .tabbar a.button.subtle-notifying {
-    color: #07948F;
-  }
- 
-  .tabbar a.button.subtle-notifying:hover {
-    color: #07948F;
-  } 
-  
-  .tabbar a.button.cur, .tabbar a.button.cur:hover {
-    border-color: #803C6F;
-    background: #CD9FC4;
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .tabbar a.button {
-    border-color: #803C6F;
-    background: #F3C5EA;
-    color: #803C6F;
-    text-shadow: none;
-  }
-  
-  .tabbar a.button:hover {
-    background: #E5B6DC;
-  }
-  
-  .tabbar .closebutton {
-    color: #803C6F;
-  }
-  
-  .tabbar .closebutton:hover {
-    color: #AF3B3B;
-  }
-  
-  .userbar button.icon {
-    border: 1px solid #803C6F;
-    background: #CD9FC4;
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .userbar button.icon:hover {
-    background: #DBAED2;
-  }
-  
-  .userbar .username {
-    text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F;
-  }
-  
-  /******************
-  * Header CSS ~end *
-  ******************/
-  
-  /*****************
-  * Roomlist CSS *
-  ***************/
-  
-  .roomlist h2 {
-    color: #FEE2B3;
-    text-shadow: 0px -1px 0px #11484F;
-  }
-  
-  .roomlist a.ilink, .roomcounters button {
-    background: #BBCCC9;    
-    border-color: #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .roomlist a.ilink:hover, .roomcounters button:hover {
-    background: #BBCCC9;    
-    border-color: #0E3339;
-    color: #0E3339;
-    text-shadow: none;
-  }
-  
-  /********************
-  * Roomlist CSS ~end *
-  ********************/
-  
-  /***********
-  * Chat CSS *
-  ***********/
-  
-  .userlist {
-    background: rgba(17, 72, 79, 0.6);
-    border-color: #11484F;
-    color: #11484F;
-  }
-  
-  .userlist li {
-    background: rgba(255, 255, 255, 0.65);
-    border-color: #11484F;
-  }
-  
-  .userlist li em.group {
-    color: #11484F;
-  }
-  
-  .userlist li button:hover, .userlist-minimized .userlist-count:hover {
-    background: rgba(255, 255, 255, 0.5);
-  }
-  
-  .infobox {
-    border-color: #11484F;
-  }
-  
-  .chat-log {
-    background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
-  }
-  
-  .chat-log .chat small {
-    color: #11484F;
-  }
-  
-  .chat-log .chat.mine.chat small {
-    color: #0A292E;
-  }
-  
-  .chat.highlighted {
-    background: rgba(178, 215, 148, 0.7);
-  }
-  
-  .chat-log-add {
-    border-color: #336251;
-    background: rgba(51, 98, 81, 0.6);
-  }
-  
-  .chat-log-add .textbox {
-    border-color: #336251;
-  }
-  
-  .chatbox label {
-    text-shadow: 0px 0px 2px #336251;
-  }
-  
-  .nightclub {
-    background: rgba(0, 0, 0, 0.85);
-    margin:-3px;
-    text-shadow: 0px 0px 2px #000;
-    color: #FFF;
-  }
-  
-  /****************
-  * Chat CSS ~end *
-  ****************/
-  
-  /*******************
-  * Tournaments CSS *
-  ******************/
-  
-  .tournament-title {
-    background: rgba(17, 72, 79, 0.6);
-    text-shadow: 0px -1px 0px #11484F;
-    color: #AFCFD4;
-  }
-  
-  .tournament-status, .tournament-toggle {
-    background: rgba(255, 255, 255, 0.65);
-    border-color: #11484F;
-    text-shadow: none;
-    color: #11484F;
-  }
-  
-  .tournament-tools {
-    border-color: #11484F;
-    background: rgba(51, 98, 81, 0.6);
-  }
-  
-  .tournament-tools .select {
-    border-color: #11484F;
-    background: #336251;
-    color: #D9FCEF;
-    text-shadow: 0px -1px 0px #11484F;
-  }
-  
-  .tournament-tools .select:hover {
-    background: #3D735F;
-  }
-  
-  .tournament-tools .select:disabled, .tournament-tools .select:disabled:hover {
-    background: rgba(51, 98, 81, 0.45);
-    color: #11484F !important;
-    text-shadow: none !important;
-    border-color: #11484F !important;
-  }
-  
-  .tournament-tools button {
-    border-color: #11484F;
-    background: #336251;
-    color: #D9FCEF;
-    text-shadow: 0px -1px 0px #11484F;
-  }
-  
-  .tournament-tools button:hover {
-    background: #3D735F;
-  }
-  
-  .tournament-wrapper, .tournament-box {
-    border-color: #11484F;
-  }
-  
-  .tournament-box {
-    background: url("http://i.imgur.com/xQmFRxz.jpg?2");
-  }
-  
-  /***********************
-  * Tournaments CSS ~end *
-  ***********************/
-  
-  /**********************
-  * Mainmenuwrapper CSS *
-  **********************/
+/*Float~end*/
 
-  .menugroup {
-    border: 1px solid #803C6F;
-    background: rgba(128, 60, 111, 0.25);
-    color: #FBE7F0;
-    text-shadow: 0px 0px 2px #803C6F;
-  }
-  
-  .menugroup .select, .menugroup .button {
-    background: #FFE0A7 !important;
-    border-color: #803C6F !important;
-    color: #803C6F !important;
-    text-shadow: none !important;
-    font-style: italic !important;
-  }
-  
-  .menugroup .select:hover, .menugroup .button:hover {
-    background: #F2CF99 !important;
-    border-color: #803C6F !important;
-    color: #803C6F !important;
-    text-shadow: none !important;
-    font-style: italic !important;
-  }
-  
-  .menugroup .select:disabled, .menugroup .select:disabled:hover {
-    background: rgba(255, 224, 167, 0.7) !important;
-    border-color: #803C6F !important;
-    color: #803C6F !important;
-    text-shadow: none !important;
-    font-style: italic !important;
-  }
-  
-  .pm-window h3 {
-    border-color: #336251;
-    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
-    background-position: 200px;
-    color: #E5FFF6;
-    text-shadow: 0px -1px 0px #336251;
-  }
-  
-  .pm-window h3:hover {
-    background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
-    background-position: 200px;
-    color: #CBEBE0;
-  }
-  
-  .pm-window h3 small {
-    color: #B2DBCD;
-  }
-  
-  .pm-window.focused h3, .pm-window.focused h3:hover {
-    border-color: #336251;
-    background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
-    background-position: 200px;
-    color: #E5FFF6;
-    text-shadow: 0px -1px 0px #336251;
-  }
-  
-  .pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
-    color: #D3F5E8;
-  }
-  
-  .pm-window h3 .closebutton:hover {
-    color: #F7A4A4;
-  }
-  
-  .pm-window h3 .minimizebutton:hover {
-    color: #F7D0A4;
-  }
-  
-  .pm-window h3 .closebutton:hover + .minimizebutton {
-    color: #D3F5E8 !important;
-  }
-  
-  .message-pm {
-    color: #46806A;
-  }
-  
-  .pm-window h3.pm-notifying {
-    border-color: #803C6F;
-    background: #F3C5EA;
-    color: #803C6F;
-    text-shadow: none;
-  }
-  
-  .pm-window h3.pm-notifying:hover {
-    background: #E5B6DC;
-  }
-  
-  .pm-window h3.pm-notifying small {
-    color: #A4578F;
-  }
-  
-  .pm-window h3.pm-notifying .closebutton, .pm-window h3.pm-notifying .minimizebutton {
-    color: #803C6F;
-  }
-  
-  .pm-window h3.pm-notifying .closebutton:hover {
-    color: #AF3B3B;
-  }
-  
-  .pm-window h3.pm-notifying .minimizebutton:hover {
-    color: #AF813B;
-  }
-  
-  .pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
-    color: #803C6F !important;
-  }
-  
-  .pm-log, .pm-window.focused .pm-log {
-    border-color: #336251;
-  }
-  
-  .challenge {
-    border-color: #803C6F;
-    background: #F3C5EA;
-    color: #803C6F;
-    text-shadow: none;
-  }
-  
-  .challenge .select {
-    border-color: #803C6F;
-    background: #CD9FC4;
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .challenge .select:hover {
-    background: #DBAED2;
-  }
-  
-  .challenge .select:disabled {
-    background: rgba(205, 159, 196, 0.5);
-  }
-  
-  .challenge .select.preselected, .challenge .select.preselected:disabled {
-    color: #803C6F;
-  }
-  
-  .challenge .buttonbar button {
-    border: 1px solid #803C6F;
-    background: #CD9FC4;
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-    padding: 2px 5px;
-  }
-  
-  .challenge .buttonbar button:hover {
-    background: #DBAED2;
-  }
-  
-  .pm-log-add {
-    border-color: #336251;
-    background: rgba(51, 98, 81, 0.6);
-  }
-  
-  .pm-window.focused .pm-log-add {
-    border-color: #336251;
-    background: rgba(51, 98, 81, 0.75);
-  }
-  
-  .pm-log-add .textbox {
-    border-color: #336251;
-  }
-  
-  .mainmenufooter a {
-    color: #FFE1B3;
-  }
-  
-  .mainmenufooter a:hover {
-    color: #F2D19C;
-  }
-  
-  .mainmenufooter {
-    color: #F2D19C;
-  }
-  
-  /***************************
-  * Mainmenuwrapper CSS ~end *
-  ***************************/
-  
-  /************
-  * Popup CSS *
-  ************/
-  
-  .ps-popup {
-    background: #BBCCC9;    
-    border-color: #11484F;
-  }
-  
-  .ps-popup a, .credits h2, .credits ul {
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .ps-popup a:hover {
-    color: #173B40;
-  }
-  
-  .ps-popup a.ilink.yours {
-    color: #0B282C;
-  }
-  
-  .ps-popup a.ilink.yours:hover {
-    color: #04171A;
-  }
-  
-  .ps-popup .buttonbar button {
-    background: #17626E;
-    border: 1px solid #11484F;
-    padding: 2px 5px;
-    color: #BBCCC9;
-    text-shadow: 0px -1px 0px #11484F;
-  }
-  
-  .ps-popup .buttonbar button:hover {
-    background: #1B545C;
-  }
-  
-  .popupmenu h3 {
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .popupmenu button.sel {
-    border-color: #11484F;
-  }
-  
-  .popupmenu button:hover, .popupmenu button.sel:hover {
-    border-color: #11484F;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
-  a.subtle, a.subtle:hover {
-    color: #000;
-  }
-  
-  .avatarlist button {
-    border-color: #11484F;
-  }
-  
-  .avatarlist button:hover {
-    border-color: #11484F;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .effect-volume em, .music-volume em {
-    color: #062529;
-  }
-  
-  .ps-popup hr {
-    border: none;
-    border-bottom: 1px solid #062529;
-  }
-  
-  /*****************
-  * Popup CSS ~end *
-  *****************/
-  
-  /*************
-  * Ladder CSS *
-  *************/
-  
-  .ladder th {
-    background: #CD9FC4;
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .ladder td {
-    background: rgba(255, 246, 250, 0.75);
-    color: #803C6F;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .ladder td:hover {
-    background: rgba(255, 246, 250, 0.95);
-  }
-  
-  .ladder table, .ladder td, .ladder th {
-    border-color: #803C6F;
-  }
-  
-  /******************
-  * Ladder CSS ~end *
-  ******************/
-  
-  /******************
-  * Teambuilder CSS *
-  ******************/
-  
-  .teamchartbox {
-    border-color: #11484F;
-  }
-  
-  .teamlist .team {
-    background: #BBCCC9;    
-    border-color: #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .teamlist .team:hover {
-    background: #BBCCC9;    
-    border-color: #0E3339;
-    color: #0E3339;
-    text-shadow: none;
-  }
-  
-  .setchart {
-    border-color: #175964;
-    background: #447F69;
-  }
-  
-  .setchart-nickname {
-    background: #336251;
-    border-color: #11484F;
-  }
- 
-  .setchart input, .setdetails, .setstats, .statform input.inputform {
-    border-color: #175964;
-  }
-  
-  .setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
-    border-color: #11424A;
-  }
-  
-  .setchart .setdetails label, .setchart .setstats label {
-    color: #11424A;
-    text-shadow: none;
-  }
-  
-  .setchart label {
-    text-shadow: 0px -1px 0px #175964;
-    color: #E6FFF7;
-  }
-  
-  .setchart-nickname label {
-    text-shadow: 0px -1px 0px #11484F;
-    color: #E6FFF7;
-  }
-  
-  .setchart-nickname input {
-    border-color: #11484F;
-  }
-  
-  .setchart-nickname input:hover {
-    border-color: #0A2B30;
-  }
-  
-  .setchart input.incomplete {
-    background: #FFF5FA;
-    color: #CE3FB6;
-    border-color: #CE3FB6;
-  }
-  
-  .teambuilder-results {
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
-  .teambuilder-results h3, .teambuilder-results .utilichart h3 {
-    border-color: #803C6F !important;
-    background: #F3C5EA !important;
-    color: #803C6F !important;
-    text-shadow: none !important;
-  }
-  
-  .teambuilder-results .firstresult a {
-    background: #BBCCC9;    
-    border-color: #11484F;
-  }
-  
-  .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
-    background: #CBE1DD;    
-    border-color: #0C2D32;
-  }
-  
-  .utilichart b {
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-    font-style: italic;
-  }
-  
-  .utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
-    color: #062529;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
-    color: #11484F;
-  }
-  
-  .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-    color: #1B606B;
-  }
-  
-  .utilichart .numcol {
-    color: #5B274D;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .utilichart .typecol img {
-    opacity: 0.75;
-  }
-  
-  .teambar button {
-    background: #BBCCC9;    
-    border-color: #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
-    background: #BBCCC9;    
-    border-color: #0E3339;
-    color: #0E3339;
-    text-shadow: none;
-  }
-  
-  .setmenu button {
-    color: #5B274D;
-    text-shadow: 0px 0px 2px #FCE8F1;
-  }
-  
-  .setmenu button:hover {
-    border-color: #803C6F !important;
-    background: #F3C5EA !important;
-    color: #803C6F !important;
-    text-shadow: none !important;
-  }
-  
-  .statform p.suggested button {
-    background: #BBCCC9;    
-    border: 1px solid #11484F;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-    padding: 2px 5px;
-  }
-  
-  .statform p.suggested button:hover {
-    background: #CBE1DD;    
-    border-color: #0C2D32;
-  }
-  
-  .statform p.suggested a {
-    color: #11484F;
-  }
-  
-  .statform .col div label, .statform .col div em, .detailsform label {
-    color: #062529;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .statform .col div b {
-    color: #031315;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  .jslider .jslider-label {
-    opacity: 1;
-    color: #062529;
-  }
-  
-  .jslider .jslider-value {
-    background: #CBE1DD;    
-    border: 1px solid #0C2D32;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  /***********************
-  * Teambuilder CSS ~end *
-  ***********************/
-  
-  /*************
-  * Battle CSS *
-  *************/
-  
-  .ps-room.ps-room-opaque {
-    background: rgba(51, 98, 81, 0.6);
-  }
-  
-  .ps-room .battle-controls {
-    background: rgba(255, 255, 255, 0.25);
-    padding-top: 10px; 
-    padding-bottom: 10px;
-  }
-  
-  .battle-log {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: #803C6F;
-  }
-  
-  .battle-log h2 {
-    border-color: #803C6F;
-    background: #F3C5EA;
-    color: #803C6F;
-    text-shadow: none;
-    text-align: center;
-  }
-  
-  .battle-log h2:hover {
-    color: #642F56;
-  }
-  
-  .battle-log .rated strong {
-    border-color: #803C6F;
-    background: #F3C5EA;
-    color: #803C6F;
-    text-shadow: none;
-    border: 1px solid #803C6F;
-    padding: 3px 6px;
-  }
-  
-  .battle-log .chat strong {
-    color: #803C6F;
-  }
-  
-  .battle-log-add {
-    border-color: #803C6F;
-    background: #F3C5EA;
-  }
-  
-  .battle-log-add .chatbox label {
-    text-shadow: 0px 0px #E4B7DB;
-  }
-  
-  .battle-log-add .textbox {
-    border-color: #803C6F;
-  }
-  
-  .turnstatus-protect {
-    background:url(http://i.imgur.com/RVxCoHz.png);
-    opacity: 1 !important;
-    height: 103px !important;
-    width: 150px !important;
-    border-radius: 0;
-    border-width: 0;
-    box-shadow: none;
-    opacity: 0.9;
-  }
- 
-  .sidecondition-safeguard {
-    background: url(http://i.imgur.com/FrCoWCW.png);
-    opacity: 0.6 !important;
-    height: 90px !important;
-    width: 130px !important;
-    border-radius: 0;
-    opacity: 0.9;
-    border-width: 0;
-    box-shadow: none;
-  }
- 
-  .sidecondition-reflect {
-    background: url(http://i.imgur.com/X1XDxVB.png);
-    opacity: 0.7 !important;
-    height: 90px !important;
-    width: 130px !important;
-    border-radius: 0;
-    border-width: 0;
-    opacity: 0.9;
-    box-shadow: none;
-  }
- 
-  .sidecondition-lightscreen {
-    background: url(http://i.imgur.com/8eLftNA.png);
-    opacity: 0.6 !important;
-    height: 90px !important;
-    width: 130px !important;
-    opacity: 0.9;
-    border-radius: 0;
-    border-width: 0;
-    box-shadow: none;
-  }
-  
-  .backdrop {
-    background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
-    opacity: 0.6;
-  } 
-  
-  .battle {
-    border-color: #11484F !important;
-  }
-  
-  .rightbar, .leftbar {
-    background: rgba(51, 98, 81, 0.6);
-    border-color: #11484F;
-  }
-  
-  .trainer strong {
-    color: #E6FDFF;
-    text-shadow: 0px -1px 0px #11484F;
-  }
-  
-  .trainer div {
-    opacity: 1;
-  }
-  
-  .battle-controls .whatdo {
-    color: #111;
-  }
-  
-  .battle-controls .whatdo small {
-    border-color: #111;
-  }
-  
-  .moveselect button, .switchselect button {
-    color: #BBCCC9 !important;
-    text-shadow: 0px 0px 2px #11484F !important;
-  }
-  
-  .switchmenu button {
-    background: #BBCCC9 !important;    
-    border-color: #11484F !important;
-    color: #11484F !important;
-    text-shadow: 0px 0px 2px #96BFB8 !important;
-  }
-  
-  .switchmenu button:hover {
-    background: #BBCCC9 !important;    
-    border-color: #0E3339 !important;
-    color: #0E3339 !important;
-    text-shadow: none !important;
-  }
-  
-  .switchmenu button .hpbar {
-    border-color: #0E3339;
-  }
-  
-  .switchmenu button.disabled, .switchmenu button:disabled {
-    background: #9BB6B1 !important;    
-    border: 2px solid #0E3339 !important;
-    color: #0E3339 !important;
-    font-weight: bold !important;
-    text-shadow: none !important;
-  }
-  
-  .movemenu button:disabled {
-    background: #9BB6B1;    
-    border: 2px solid #0E3339;
-    color: #0E3339;
-    font-weight: bold;
-    text-shadow: none;
-  }
-  
-  .movemenu button:disabled .movemenu button small.pp, .movemenu button:disabled .movemenu button small.type {
-    text-shadow: none;
-    color: #164E57;
-  }
-  
-  .movemenu button {
-    border: 1px solid #0E3339 !important;
-  }
-  
-  #tooltipwrapper {
-    text-align: left;
-    color: #11484F;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  #tooltipwrapper .tooltip {
-    width: 300px;
-    background: #BBCCC9;    
-    border-color: #11484F;
-    border-radius: 1px;
-  }
-  
-  #tooltipwrapper .tooltip h2 {
-    padding: 2px 4px;
-    margin: 0;
-    border-bottom: 1px solid #11484F;
-    font-size: 10pt;
-    color: #0B2D32;
-    text-shadow: 0px 0px 2px #96BFB8;
-  }
-  
-  #tooltipwrapper .tooltip p {
-    padding: 2px 4px;
-    margin: 0;
-    font-size: 8pt;
-  }
-  
-  #tooltipwrapper .tooltip p.section {
-    border-top: 1px solid #11484F;
-  }
-  
-  /******************
-  * Battle CSS ~end *
-  ******************/
+/*Neo*/
+
+.pm-window-neosoul h3 {
+  background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #124A66 !important;
+  border-color: #124A66 !important;
+}
+
+.pm-window-neosoul h3:hover, .pm-window-neosoul.focused h3, .pm-window-neosoul.focused h3:hover {
+  background: rgba(36, 110, 148, 0.9) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #0C374D !important;
+  border-color: #0C374D !important;
+}
+
+.pm-window-neosoul h3 small, .pm-window-neosoul h3 .minimizebutton, .pm-window-neosoul h3 .closebutton, .pm-window-neosoul h3:hover .minimizebutton {
+  color: #E9F6FF !important;
+}
+
+.pm-window-neosoul h3 .closebutton:hover + .minimizebutton {
+  color: #E9F6FF !important;
+}
+
+.pm-window-neosoul h3 .closebutton:hover {
+  color: #FFAFAF !important;
+}
+
+.pm-window-neosoul h3 .minimizebutton:hover {
+  color: #FFDAAF !important;
+}
+
+.pm-window-neosoul .pm-log {
+  background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
+  border-color: #124A66 !important;
+}
+
+.pm-window-neosoul.focused .pm-log {
+  background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
+  border-color: #0C374D !important;
+}
+
+.pm-window-neosoul .pm-log-add {
+  background: rgba(76, 154, 180, 0.9) !important;
+  border-color: #124A66 !important;
+}
+
+.pm-window-neosoul.focused .pm-log-add {
+  background: rgba(76, 154, 180, 0.9) !important;
+  border-color: #0C374D !important;
+}
+
+.pm-window-neosoul .pm-log-add .textbox {
+  border-color: #124A66 !important;
+  background: rgba(227, 239, 247, 0.9) !important;
+}
+
+/*Neo~end*/
+
+/*fender*/
+
+.pm-window-fender h3 {
+  background: rgba(38, 38, 38, 0.8) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #222 !important;
+}
+
+.pm-window-fender h3:hover {
+  background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #EEE !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #222 !important;
+}
+
+.pm-window-fender.focused h3, .pm-window-fender.focused h3:hover {
+  background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #DECA94 !important;
+  text-shadow: 0px 0px 2px #1B1B1B !important;
+  border-color: #1B1B1B !important;
+}
+
+.pm-window-fender h3 small, .pm-window-fender h3 .minimizebutton, .pm-window-fender h3 .closebutton, .pm-window-fender h3:hover .minimizebutton {
+  color: #CCC !important;
+}
+
+.pm-window-fender h3 .closebutton:hover + .minimizebutton {
+  color: #CCC !important;
+}
+
+.pm-window-fender h3 .closebutton:hover {
+  color: #FF8383 !important;
+}
+
+.pm-window-fender h3 .minimizebutton:hover {
+  color: #FFDA83 !important;
+}
+
+.pm-window-fender .pm-log, .pm-window-fender.focused .pm-log {
+  background: rgba(235, 235, 235, 0.9) url("http://i.imgur.com/WebFitb.png?1") right no-repeat !important;
+  border-color: #555 !important;
+}
+
+.pm-window-fender .pm-log .chat small {
+  color: #444 !important;
+}
+
+.pm-window-fender .pm-log-add, .pm-window-fender.focused .pm-log-add {
+  background: rgba(75, 75, 75, 0.8) !important;
+  border-color: #444 !important;
+}
+
+.pm-window-fender .pm-log-add .textbox {
+  border-color: #444 !important;
+  background: rgba(245, 245, 245, 0.92) !important;
+}
+
+.pm-window-fender .pm-log-add .textbox:focus {
+  border-color: #444 !important;
+  background: #FEFEFE !important;
+}
+
+.pm-window-fender h3.pm-notifying {
+  border-color: #C60000 !important;
+  background: rgba(0, 0, 0, 0.85) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
+  color: #FF6464 !important;
+  text-shadow: 0px 0px 2px #000 !important;
+}
+
+.pm-window-fender h3.pm-notifying:hover {
+  border-color: #C60000 !important;
+  background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") !important;
+  color: #FF6464 !important;
+  text-shadow: 0px 0px 2px #000 !important;
+}
+
+/*fender~end*/
+
+/*katheyisme123*/
+
+.pm-window-katheyisme123 h3 {
+  background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #CAF5B4 !important;
+  text-shadow: 0px 0px 2px #383631 !important;
+  border-color: #383631 !important;
+}
+
+.pm-window-katheyisme123 h3:hover, .pm-window-katheyisme123.focused h3, .pm-window-katheyisme123.focused h3:hover {
+  background: rgba(56, 54, 49, 0.9) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #CAF5B4 !important;
+  text-shadow: 0px 0px 2px #24221F !important;
+  border-color: #2F2D29 !important;
+}
+
+.pm-window-katheyisme123 h3 small, .pm-window-katheyisme123 h3 .minimizebutton, .pm-window-katheyisme123 h3 .closebutton, .pm-window-katheyisme123 h3:hover .minimizebutton {
+  color: #FCFBEB !important;
+}
+
+.pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton {
+  color: #FCFBEB !important;
+}
+
+.pm-window-katheyisme123 h3 .closebutton:hover {
+  color: #FF8383 !important;
+}
+
+.pm-window-katheyisme123 h3 .minimizebutton:hover {
+  color: #FFDA83 !important;
+}
+
+.pm-window-katheyisme123 .pm-log, .pm-window-katheyisme123.focused .pm-log {
+  background: rgba(252, 251, 235, 0.92) url("http://i.imgur.com/LhaU1ty.png?1") right no-repeat !important;
+  border-color: #383631 !important;
+  color: #06090C !important;
+}
+
+.pm-window-katheyisme123 .pm-log .chat small {
+  color: #5F5B54 !important;
+}
+
+.pm-window-katheyisme123 .pm-log-add, .pm-window-katheyisme123.focused .pm-log-add {
+  background: rgba(98, 94, 87, .8) !important;
+  border-color: #383631 !important;
+}
+
+.pm-window-katheyisme123 .pm-log-add .textbox {
+  border-color: #383631 !important;
+  background: rgba(252, 251, 235, 0.92) !important;
+}
+
+.pm-window-katheyisme123 h3.pm-notifying {
+  background: #9ACAE4 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #625D56 !important;
+  font-style: italic !important;
+  border-color: #383631 !important;
+  text-shadow: none !important;
+}
+
+.pm-window-katheyisme123 h3.pm-notifying:hover {
+  background: #6E97A9 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #383631 !important;
+  font-style: italic !important;
+  border-color: #383631 !important;
+  text-shadow: none !important;
+}
+
+.pm-window-katheyisme123 .challenge {
+  background: #BDF2A1 !important;
+  color: #06090C !important;
+  border-color: #383631 !important;
+}
+
+.pm-window-katheyisme123 .challenge .select, .pm-window-katheyisme123 .challenge .buttonbar button {
+  background: #A5CB92 !important;
+  border-color: #759665 !important;
+  color: #06090C !important;
+  text-shadow: none !important;
+}
+
+.pm-window-katheyisme123 .challenge .select:hover, .pm-window-katheyisme123 .challenge .buttonbar button:hover {
+  background: #88B074 !important;
+  border-color: #5C7A4C !important;
+} 
+
+.pm-window-katheyisme123 .challenge .select:disabled {
+  background: rgba(136, 176, 116, 0.5) !important;
+  border-color: #759665 !important;
+}
+
+/*katheyisme123~end*/
+
+/* CUSTOM PM ~end */
+
+/* Symbol Color */
+
+#monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
+  color: #0D00BF;
+}
+
+/* Symbol color ~end */
+
+/* Icons */
+
+#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+}
+
+#lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
+  background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+}
+
+#lobby-userlist-user-allianceexcadrill, #casino-userlist-user-allianceexcadrill, #allianceleague-userlist-user-allianceexcadrill, #phoenixleague-userlist-user-allianceexcadrill {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/645-therian.png") right no-repeat;
+}
+
+#lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
+}
+
+#tournaments-userlist-user-resourceful {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
+}
+
+#lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
+  background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/202.gif") right no-repeat;  
+}
+
+#lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
+}
+
+#lobby-userlist-user-notorangejuice, #staff-userlist-user-notorangejuice {
+  background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
+}
+
+#lobby-userlist-user-lodvanitas, #thelegionofdoom-userlist-user-lodvanitas, #staff-userlist-user-lodvanitas {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
+}
+
+#upperstaff-userlist-user-masterfloat { 
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+}
+
+#lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel {
+  background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
+}
+
+#lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #thebotlab-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
+   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
+}
+
+#lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
+   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
+}
+
+#lobby-userlist-user-phoenixsacred, #monotype-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred, #halloffame-userlist-user-phoenixsacred {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/sugimori/645-therian.png") right no-repeat;
+}
+
+#lobby-userlist-user-paulcentury, #theomegaleague-userlist-user-paulcentury, #overused-userlist-user-paulcentury {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/080.gif") right no-repeat;
+}
+
+#lobby-userlist-user-voidchrono, #\1v1-userlist-user-voidchrono, #voidleague-userlist-user-voidchrono {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
+}
+
+#lobby-userlist-user-theace22, #catchevolve-userlist-user-theace22, #othertiers-userlist-user-theace22 {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat;
+}
+
+#lobby-userlist-user-voidtrent, #voidleague-userlist-user-voidtrent, #alliancecup-userlist-user-voidtrent {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
+}
+
+#lobby-userlist-user-sundars, #tournaments-userlist-user-sundars, #othermetas-userlist-user-sundars, #psmd-userlist-user-sundars, #theheartlessleague-userlist-user-sundars {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
+}
+
+#lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat;
+}
+
+#lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
+}
+
+#lobby-userlist-user-rslgryphon, #casino-userlist-user-rslgryphon, #staff-userlist-user-rslgryphon {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
+}
+
+#lobby-userlist-user-selena, #casino-userlist-user-selena, #artshop-userlist-user-selena {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/y7SEAv7.png") right no-repeat;
+}
+
+#monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
+}
+
+#lobby-userlist-user-volco, #staff-userlist-user-volco, #theemergenceleague-userlist-user-volco {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
+}
+
+#lobby-userlist-user-exotickey, #theomegaleague-userlist-user-exotickey, #hayleysden-userlist-user-exotickey {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/028.gif") right no-repeat;
+}
+
+#femalehq-userlist-user-katheyisme123, #lobby-userlist-user-katheyisme123, #casino-userlist-user-katheyisme123 {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/P1x9UwM.png") right no-repeat;
+}
+
+#lobby-userlist-user-chimechoo, #casino-userlist-user-chimechoo, #monotype-userlist-user-chimechoo, #thecarnieleague-userlist-user-chimechoo, #overused-userlist-user-chimechoo {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat;
+}
+
+#phoenixleague-userlist-user-phoenixjane, #lobby-userlist-user-phoenixjane, #monotype-userlist-user-phoenixjane {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat;
+}
+
+/* Icons ~end */
+
+/****************************
+* Donation Benefit CSS ~end *
+****************************/
+
+/**************
+* General CSS *
+**************/
+
+body {
+  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
+}
+
+.ps-room.ps-room-light {
+  background: rgba(0, 0, 0, 0);
+  border-color: #11484F;
+}
+
+.ps-room.ps-room-light.scrollable {
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.ps-room.ps-room-light.scrollable h3 {
+  color: #BBCCC9;
+  text-shadow: 0px 0px 2px #11484F;
+}
+
+.ps-room.ps-room-light.scrollable p {
+  color: #031012;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.ps-room.ps-room-light.scrollable .button {
+  background: #BBCCC9;    
+  border: 1px solid #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.ps-room.ps-room-light.scrollable .button:hover {
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
+
+.chat.mine {
+  background: rgba(0, 0, 0, 0);
+}
+
+.broadcast-blue {
+  background: #CD9FC4;
+  border: 1px solid #0B1361;
+  color: #0B1361;
+  text-shadow: 0px 0px 2px #B287A9;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 5px;
+}
+
+.broadcast-blue a {
+  color: #000F98;
+}
+
+.broadcast-blue button {
+  background: #A87C9F;
+  border: 1px solid #090F47;
+  color: #FFF9FF;
+  text-shadow: 0px 0px 2px #090F47;
+  padding: 2px 8px;
+}
+
+.broadcast-blue button:hover {
+  background: #9F7697;
+}
+
+.broadcast-red {
+  background: #FFEBF4;
+  border: 1px solid #B52C43;
+  color: #B52C43;
+  text-shadow: 0px 0px 2px #F2DBE5;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 5px;
+}
+
+.broadcast-red a {
+  color: #B3001E;
+}
+
+.broadcast-green {
+  background: #B5D896;
+  border: 1px solid #20493B;
+  color: #20493B;
+  text-shadow: 0px 0px 2px #A4C786;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 5px;
+}
+
+.broadcast-green a {
+  color: #005C3E;
+}
+
+.ps-overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/*******************
+* General CSS ~end *
+*******************/
+
+/*************
+* Header CSS *
+*************/
+
+.header {
+  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+}
+
+.header .logo {
+  opacity: 0;
+}
+
+.maintabbarbottom {
+  border-color: #803C6F;
+  background: #CD9FC4;
+}
+
+.tabbar a.button.notifying {
+  background: #FFE0A7;
+  border-color: #803C6F;
+  color: #803C6F;
+  text-shadow: none;
+  font-style: italic;
+}
+
+.tabbar a.button.notifying:hover {
+  background: #F9D990;  
+  border-color: #803C6F;
+  color: #803C6F;
+}
+.tabbar a.button.subtle-notifying {
+  color: #07948F;
+}
+
+.tabbar a.button.subtle-notifying:hover {
+  color: #07948F;
+} 
+
+.tabbar a.button.cur, .tabbar a.button.cur:hover {
+  border-color: #803C6F;
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.tabbar a.button {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+}
+
+.tabbar a.button:hover {
+  background: #E5B6DC;
+}
+
+.tabbar .closebutton {
+  color: #803C6F;
+}
+
+.tabbar .closebutton:hover {
+  color: #AF3B3B;
+}
+
+.userbar button.icon {
+  border: 1px solid #803C6F;
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.userbar button.icon:hover {
+  background: #DBAED2;
+}
+
+.userbar .username {
+  text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F;
+}
+
+/******************
+* Header CSS ~end *
+******************/
+
+/*****************
+* Roomlist CSS *
+***************/
+
+.roomlist h2 {
+  color: #FEE2B3;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.roomlist a.ilink, .roomcounters button {
+  background: #BBCCC9;    
+  border-color: #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.roomlist a.ilink:hover, .roomcounters button:hover {
+  background: #BBCCC9;    
+  border-color: #0E3339;
+  color: #0E3339;
+  text-shadow: none;
+}
+
+/********************
+* Roomlist CSS ~end *
+********************/
+
+/***********
+* Chat CSS *
+***********/
+
+.userlist {
+  background: rgba(17, 72, 79, 0.6);
+  border-color: #11484F;
+  color: #11484F;
+}
+
+.userlist li {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: #11484F;
+}
+
+.userlist li em.group {
+  color: #11484F;
+}
+
+.userlist li button:hover, .userlist-minimized .userlist-count:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.infobox {
+  border-color: #11484F;
+}
+
+.chat-log {
+  background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
+}
+
+.chat-log .chat small {
+  color: #11484F;
+}
+
+.chat-log .chat.mine.chat small {
+  color: #0A292E;
+}
+
+.chat.highlighted {
+  background: rgba(178, 215, 148, 0.7);
+}
+
+.chat-log-add {
+  border-color: #336251;
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.chat-log-add .textbox {
+  border-color: #336251;
+}
+
+.chatbox label {
+  text-shadow: 0px 0px 2px #336251;
+}
+
+.nightclub {
+  background: rgba(0, 0, 0, 0.85);
+  margin:-3px;
+  text-shadow: 0px 0px 2px #000;
+  color: #FFF;
+}
+
+/****************
+* Chat CSS ~end *
+****************/
+
+/*******************
+* Tournaments CSS *
+******************/
+
+.tournament-title {
+  background: rgba(17, 72, 79, 0.6);
+  text-shadow: 0px -1px 0px #11484F;
+  color: #AFCFD4;
+}
+
+.tournament-status, .tournament-toggle {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: #11484F;
+  text-shadow: none;
+  color: #11484F;
+}
+
+.tournament-tools {
+  border-color: #11484F;
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.tournament-tools .select {
+  border-color: #11484F;
+  background: #336251;
+  color: #D9FCEF;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.tournament-tools .select:hover {
+  background: #3D735F;
+}
+
+.tournament-tools .select:disabled, .tournament-tools .select:disabled:hover {
+  background: rgba(51, 98, 81, 0.45);
+  color: #11484F !important;
+  text-shadow: none !important;
+  border-color: #11484F !important;
+}
+
+.tournament-tools button {
+  border-color: #11484F;
+  background: #336251;
+  color: #D9FCEF;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.tournament-tools button:hover {
+  background: #3D735F;
+}
+
+.tournament-wrapper, .tournament-box {
+  border-color: #11484F;
+}
+
+.tournament-box {
+  background: url("http://i.imgur.com/xQmFRxz.jpg?2");
+}
+
+/***********************
+* Tournaments CSS ~end *
+***********************/
+
+/**********************
+* Mainmenuwrapper CSS *
+**********************/
+
+.menugroup {
+  border: 1px solid #803C6F;
+  background: rgba(128, 60, 111, 0.25);
+  color: #FBE7F0;
+  text-shadow: 0px 0px 2px #803C6F;
+}
+
+.menugroup .select, .menugroup .button {
+  background: #FFE0A7 !important;
+  border-color: #803C6F !important;
+  color: #803C6F !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+.menugroup .select:hover, .menugroup .button:hover {
+  background: #F2CF99 !important;
+  border-color: #803C6F !important;
+  color: #803C6F !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+.menugroup .select:disabled, .menugroup .select:disabled:hover {
+  background: rgba(255, 224, 167, 0.7) !important;
+  border-color: #803C6F !important;
+  color: #803C6F !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+.pm-window h3 {
+  border-color: #336251;
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+  background-position: 200px;
+  color: #E5FFF6;
+  text-shadow: 0px -1px 0px #336251;
+}
+
+.pm-window h3:hover {
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+  background-position: 200px;
+  color: #CBEBE0;
+}
+
+.pm-window h3 small {
+  color: #B2DBCD;
+}
+
+.pm-window.focused h3, .pm-window.focused h3:hover {
+  border-color: #336251;
+  background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
+  background-position: 200px;
+  color: #E5FFF6;
+  text-shadow: 0px -1px 0px #336251;
+}
+
+.pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
+  color: #D3F5E8;
+}
+
+.pm-window h3 .closebutton:hover {
+  color: #F7A4A4;
+}
+
+.pm-window h3 .minimizebutton:hover {
+  color: #F7D0A4;
+}
+
+.pm-window h3 .closebutton:hover + .minimizebutton {
+  color: #D3F5E8 !important;
+}
+
+.message-pm {
+  color: #46806A;
+}
+
+.pm-window h3.pm-notifying {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+}
+
+.pm-window h3.pm-notifying:hover {
+  background: #E5B6DC;
+}
+
+.pm-window h3.pm-notifying small {
+  color: #A4578F;
+}
+
+.pm-window h3.pm-notifying .closebutton, .pm-window h3.pm-notifying .minimizebutton {
+  color: #803C6F;
+}
+
+.pm-window h3.pm-notifying .closebutton:hover {
+  color: #AF3B3B;
+}
+
+.pm-window h3.pm-notifying .minimizebutton:hover {
+  color: #AF813B;
+}
+
+.pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
+  color: #803C6F !important;
+}
+
+.pm-log, .pm-window.focused .pm-log {
+  border-color: #336251;
+}
+
+.challenge {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+}
+
+.challenge .select {
+  border-color: #803C6F;
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.challenge .select:hover {
+  background: #DBAED2;
+}
+
+.challenge .select:disabled {
+  background: rgba(205, 159, 196, 0.5);
+}
+
+.challenge .select.preselected, .challenge .select.preselected:disabled {
+  color: #803C6F;
+}
+
+.challenge .buttonbar button {
+  border: 1px solid #803C6F;
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+  padding: 2px 5px;
+}
+
+.challenge .buttonbar button:hover {
+  background: #DBAED2;
+}
+
+.pm-log-add {
+  border-color: #336251;
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.pm-window.focused .pm-log-add {
+  border-color: #336251;
+  background: rgba(51, 98, 81, 0.75);
+}
+
+.pm-log-add .textbox {
+  border-color: #336251;
+}
+
+.mainmenufooter a {
+  color: #FFE1B3;
+}
+
+.mainmenufooter a:hover {
+  color: #F2D19C;
+}
+
+.mainmenufooter {
+  color: #F2D19C;
+}
+
+/***************************
+* Mainmenuwrapper CSS ~end *
+***************************/
+
+/************
+* Popup CSS *
+************/
+
+.ps-popup {
+  background: #BBCCC9;    
+  border-color: #11484F;
+}
+
+.ps-popup a, .credits h2, .credits ul {
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.ps-popup a:hover {
+  color: #173B40;
+}
+
+.ps-popup a.ilink.yours {
+  color: #0B282C;
+}
+
+.ps-popup a.ilink.yours:hover {
+  color: #04171A;
+}
+
+.ps-popup .buttonbar button {
+  background: #17626E;
+  border: 1px solid #11484F;
+  padding: 2px 5px;
+  color: #BBCCC9;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.ps-popup .buttonbar button:hover {
+  background: #1B545C;
+}
+
+.popupmenu h3 {
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.popupmenu button.sel {
+  border-color: #11484F;
+}
+
+.popupmenu button:hover, .popupmenu button.sel:hover {
+  border-color: #11484F;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+a.subtle, a.subtle:hover {
+  color: #000;
+}
+
+.avatarlist button {
+  border-color: #11484F;
+}
+
+.avatarlist button:hover {
+  border-color: #11484F;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.effect-volume em, .music-volume em {
+  color: #062529;
+}
+
+.ps-popup hr {
+  border: none;
+  border-bottom: 1px solid #062529;
+}
+
+/*****************
+* Popup CSS ~end *
+*****************/
+
+/*************
+* Ladder CSS *
+*************/
+
+.ladder th {
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.ladder td {
+  background: rgba(255, 246, 250, 0.75);
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.ladder td:hover {
+  background: rgba(255, 246, 250, 0.95);
+}
+
+.ladder table, .ladder td, .ladder th {
+  border-color: #803C6F;
+}
+
+/******************
+* Ladder CSS ~end *
+******************/
+
+/******************
+* Teambuilder CSS *
+******************/
+
+.teamchartbox {
+  border-color: #11484F;
+}
+
+.teamlist .team {
+  background: #BBCCC9;    
+  border-color: #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.teamlist .team:hover {
+  background: #BBCCC9;    
+  border-color: #0E3339;
+  color: #0E3339;
+  text-shadow: none;
+}
+
+.setchart {
+  border-color: #175964;
+  background: #447F69;
+}
+
+.setchart-nickname {
+  background: #336251;
+  border-color: #11484F;
+}
+
+.setchart input, .setdetails, .setstats, .statform input.inputform {
+  border-color: #175964;
+}
+
+.setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
+  border-color: #11424A;
+}
+
+.setchart .setdetails label, .setchart .setstats label {
+  color: #11424A;
+  text-shadow: none;
+}
+
+.setchart label {
+  text-shadow: 0px -1px 0px #175964;
+  color: #E6FFF7;
+}
+
+.setchart-nickname label {
+  text-shadow: 0px -1px 0px #11484F;
+  color: #E6FFF7;
+}
+
+.setchart-nickname input {
+  border-color: #11484F;
+}
+
+.setchart-nickname input:hover {
+  border-color: #0A2B30;
+}
+
+.setchart input.incomplete {
+  background: #FFF5FA;
+  color: #CE3FB6;
+  border-color: #CE3FB6;
+}
+
+.teambuilder-results {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.teambuilder-results h3, .teambuilder-results .utilichart h3 {
+  border-color: #803C6F !important;
+  background: #F3C5EA !important;
+  color: #803C6F !important;
+  text-shadow: none !important;
+}
+
+.teambuilder-results .firstresult a {
+  background: #BBCCC9;    
+  border-color: #11484F;
+}
+
+.teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
+
+.utilichart b {
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+  font-style: italic;
+}
+
+.utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
+  color: #062529;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
+  color: #11484F;
+}
+
+.utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
+  color: #1B606B;
+}
+
+.utilichart .numcol {
+  color: #5B274D;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.utilichart .typecol img {
+  opacity: 0.75;
+}
+
+.teambar button {
+  background: #BBCCC9;    
+  border-color: #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
+  background: #BBCCC9;    
+  border-color: #0E3339;
+  color: #0E3339;
+  text-shadow: none;
+}
+
+.setmenu button {
+  color: #5B274D;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
+
+.setmenu button:hover {
+  border-color: #803C6F !important;
+  background: #F3C5EA !important;
+  color: #803C6F !important;
+  text-shadow: none !important;
+}
+
+.statform p.suggested button {
+  background: #BBCCC9;    
+  border: 1px solid #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+  padding: 2px 5px;
+}
+
+.statform p.suggested button:hover {
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
+
+.statform p.suggested a {
+  color: #11484F;
+}
+
+.statform .col div label, .statform .col div em, .detailsform label {
+  color: #062529;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.statform .col div b {
+  color: #031315;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+.jslider .jslider-label {
+  opacity: 1;
+  color: #062529;
+}
+
+.jslider .jslider-value {
+  background: #CBE1DD;    
+  border: 1px solid #0C2D32;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+/***********************
+* Teambuilder CSS ~end *
+***********************/
+
+/*************
+* Battle CSS *
+*************/
+
+.ps-room.ps-room-opaque {
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.ps-room .battle-controls {
+  background: rgba(255, 255, 255, 0.25);
+  padding-top: 10px; 
+  padding-bottom: 10px;
+}
+
+.battle-log {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #803C6F;
+}
+
+.battle-log h2 {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+  text-align: center;
+}
+
+.battle-log h2:hover {
+  color: #642F56;
+}
+
+.battle-log .rated strong {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+  border: 1px solid #803C6F;
+  padding: 3px 6px;
+}
+
+.battle-log .chat strong {
+  color: #803C6F;
+}
+
+.battle-log-add {
+  border-color: #803C6F;
+  background: #F3C5EA;
+}
+
+.battle-log-add .chatbox label {
+  text-shadow: 0px 0px #E4B7DB;
+}
+
+.battle-log-add .textbox {
+  border-color: #803C6F;
+}
+
+.turnstatus-protect {
+  background:url(http://i.imgur.com/RVxCoHz.png);
+  opacity: 1 !important;
+  height: 103px !important;
+  width: 150px !important;
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.sidecondition-safeguard {
+  background: url(http://i.imgur.com/FrCoWCW.png);
+  opacity: 0.6 !important;
+  height: 90px !important;
+  width: 130px !important;
+  border-radius: 0;
+  opacity: 0.9;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.sidecondition-reflect {
+  background: url(http://i.imgur.com/X1XDxVB.png);
+  opacity: 0.7 !important;
+  height: 90px !important;
+  width: 130px !important;
+  border-radius: 0;
+  border-width: 0;
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+.sidecondition-lightscreen {
+  background: url(http://i.imgur.com/8eLftNA.png);
+  opacity: 0.6 !important;
+  height: 90px !important;
+  width: 130px !important;
+  opacity: 0.9;
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.backdrop {
+  background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
+  opacity: 0.6;
+} 
+
+.battle {
+  border-color: #11484F !important;
+}
+
+.rightbar, .leftbar {
+  background: rgba(51, 98, 81, 0.6);
+  border-color: #11484F;
+}
+
+.trainer strong {
+  color: #E6FDFF;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.trainer div {
+  opacity: 1;
+}
+
+.battle-controls .whatdo {
+  color: #111;
+}
+
+.battle-controls .whatdo small {
+  border-color: #111;
+}
+
+.moveselect button, .switchselect button {
+  color: #BBCCC9 !important;
+  text-shadow: 0px 0px 2px #11484F !important;
+}
+
+.switchmenu button {
+  background: #BBCCC9 !important;    
+  border-color: #11484F !important;
+  color: #11484F !important;
+  text-shadow: 0px 0px 2px #96BFB8 !important;
+}
+
+.switchmenu button:hover {
+  background: #BBCCC9 !important;    
+  border-color: #0E3339 !important;
+  color: #0E3339 !important;
+  text-shadow: none !important;
+}
+
+.switchmenu button .hpbar {
+  border-color: #0E3339;
+}
+
+.switchmenu button.disabled, .switchmenu button:disabled {
+  background: #9BB6B1 !important;    
+  border: 2px solid #0E3339 !important;
+  color: #0E3339 !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+}
+
+.movemenu button:disabled {
+  background: #9BB6B1;    
+  border: 2px solid #0E3339;
+  color: #0E3339;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.movemenu button:disabled .movemenu button small.pp, .movemenu button:disabled .movemenu button small.type {
+  text-shadow: none;
+  color: #164E57;
+}
+
+.movemenu button {
+  border: 1px solid #0E3339 !important;
+}
+
+#tooltipwrapper {
+  text-align: left;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+#tooltipwrapper .tooltip {
+  width: 300px;
+  background: #BBCCC9;    
+  border-color: #11484F;
+  border-radius: 1px;
+}
+
+#tooltipwrapper .tooltip h2 {
+  padding: 2px 4px;
+  margin: 0;
+  border-bottom: 1px solid #11484F;
+  font-size: 10pt;
+  color: #0B2D32;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+#tooltipwrapper .tooltip p {
+  padding: 2px 4px;
+  margin: 0;
+  font-size: 8pt;
+}
+
+#tooltipwrapper .tooltip p.section {
+  border-top: 1px solid #11484F;
+}
+
+/******************
+* Battle CSS ~end *
+******************/
