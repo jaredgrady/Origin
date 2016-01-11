@@ -1,3 +1,4 @@
+// credits for the creation of this game goes to Dragotic.
 'use strict'
 
 let color = require('../config/color');
@@ -67,6 +68,6 @@ exports.commands = {
 				this.errorReply("Not a valid choice.");
 		}
 	},
-	bethelp: ["/bet [case],[bet] - bet is a dice game where if the total of the dices match the case you'll win. Valid cases are odd(example: 3,5,7,9),even(example: 2,4,6,8),seven(example: 7)."],
+	bethelp: ["/bet [type] - rolls two dices and adds the two to make a final number. Choose between odd, even or seven. If you guess correctly you win bucks (betting for seven and winning awards more bucks)."]
 	
 };
