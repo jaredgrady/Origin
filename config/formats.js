@@ -558,6 +558,22 @@ exports.Formats = [
 		],
 	},
 	{
+		name: "Monotype Doubles",
+		desc: [
+			"All Pok&eacute;mon on a team must share a type.",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3544507/\">Monotype</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3550310/\">Monotype Resources</a>"
+		],
+		section: "Other Metagames",
+
+		gameType: 'doubles',
+		ruleset: ['Pokemon', 'Standard Doubles', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh',
+			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
+			 'Damp Rock', 'Gengarite', 'Mawilite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew'
+		]
+	}, 
+	{
 		name: "Monotype (Turbo)",
 		desc: [
 			"All Pok&eacute;mon on a team must share a type.",
