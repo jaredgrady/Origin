@@ -68,7 +68,6 @@ let emotes = {
 	'feelsvpn': 'http://i.imgur.com/ODTZISl.gif',
 	'feelswnk': 'http://i.imgur.com/K1GhJaN.png', 
 	'feelskawaii': 'http://i.imgur.com/kLnDaYD.png', 
-	'fukya': 'http://i.imgur.com/ampqCZi.gif',
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
