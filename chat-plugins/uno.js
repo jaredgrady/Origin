@@ -6,15 +6,114 @@
 */
 
 'use strict';
-const deck = [
-    "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "RS", "RR", "R+2", "W+4",
-    "Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7", "Y8", "Y9", "YS", "YR", "Y+2", "W+4",
-    "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "GS", "GR", "G+2", "W+4",
-    "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BS", "BR", "B+2", "W+4",
-    "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "RS", "RR", "R+2", "WW", "R0",
-    "Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7", "Y8", "Y9", "YS", "YR", "Y+2", "WW", "Y0",
-    "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "GS", "GR", "G+2", "WW", "G0",
-    "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BS", "BR", "B+2", "WW", "B0"
+const deck = ["R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "RS",
+    "RR",
+    "R+2",
+    "W+4",
+    "Y1",
+    "Y2",
+    "Y3",
+    "Y4",
+    "Y5",
+    "Y6",
+    "Y7",
+    "Y8",
+    "Y9",
+    "YS",
+    "YR",
+    "Y+2",
+    "W+4",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "GS",
+    "GR",
+    "G+2",
+    "W+4",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "BS",
+    "BR",
+    "B+2",
+    "W+4",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "RS",
+    "RR",
+    "R+2",
+    "WW",
+    "R0",
+    "Y1",
+    "Y2",
+    "Y3",
+    "Y4",
+    "Y5",
+    "Y6",
+    "Y7",
+    "Y8",
+    "Y9",
+    "YS",
+    "YR",
+    "Y+2",
+    "WW",
+    "Y0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "GS",
+    "GR",
+    "G+2",
+    "WW",
+    "G0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "BS",
+    "BR",
+    "B+2",
+    "WW",
+    "B0"
 ];
 const drawButton = '<center><button style="background: black; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 56px ; border-radius: 5px , auto" name="send" value="/uno draw"><font color="white">Draw</font></button></center>';
 const passButton = '<center><button style="background: red; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 56px ; border-radius: 5px , auto" name="send" value="/uno pass"><font color="white">PASS</font></button></center>';
@@ -28,7 +127,6 @@ function buildCard(id) {
         "W": "black",
     };
     let colour = colourTable[id.charAt(0)];
-
     let value = id.slice(1);
     let fontColour = colour === "yellow" ? "black" : "white";
     let command = "/uno play " + id;
@@ -46,7 +144,6 @@ function getCard(id) {
         "W": "black",
     };
     let colour = colourTable[id.charAt(0)];
-
     let value = id.slice(1);
     let fontColour = colour === "yellow" ? "black" : "white";
     let buttonFace = value === "W" ? '<font color="red" size=4>W</font><font color="yellow" size=4>i</font><font color="blue" size=4><b>l</b></font><font color="green" size=4><b>d</b></font>' : '<font color="' + fontColour + "\" size=6>" + value + "</font>";
@@ -61,7 +158,7 @@ function buildHand(array) {
         return -1;
     }).forEach(function(c) {
         hand.push(buildCard(c));
-    })
+    });
     return hand.join("&nbsp;");
 }
 
@@ -96,8 +193,7 @@ function buildGameScreen(user, roomid, hand, uhtmlid, message, pass) {
 }
 
 function getColourChange(buffer, hand, id) {
-    return "|uhtmlchange|" + id + "|<table border=1 style=\"border-collapse: collapse;\"><tr><td>Choose which colour to change to:<br>" + '<button style="background: red; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' R"><font color="white" size=4>Red</font></button></center>' + '<button style="background: yellow; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' Y"><font color="black" size=4>Yellow</font></button></center>' + '<button style="background: blue; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' B"><font color="white" size=4>Blue</font></button></center>' + '<button style="background: green; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' G"><font color="white" size=4>Green</font></button></td></tr>' +
-        '<tr><td>Your Cards: <br>' + getCardArray(hand) + '</td></tr></table>'
+    return "|uhtmlchange|" + id + "|<table border=1 style=\"border-collapse: collapse;\"><tr><td>Choose which colour to change to:<br>" + '<button style="background: red; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' R"><font color="white" size=4>Red</font></button></center>' + '<button style="background: yellow; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' Y"><font color="black" size=4>Yellow</font></button></center>' + '<button style="background: blue; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' B"><font color="white" size=4>Blue</font></button></center>' + '<button style="background: green; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 80px ; border-radius: 5px , auto" name="send" value="' + buffer + ' G"><font color="white" size=4>Green</font></button></td></tr>' + '<tr><td>Your Cards: <br>' + getCardArray(hand) + '</td></tr></table>'
 }
 
 function getCardName(id) {
@@ -126,7 +222,6 @@ function playVerifier(topCard, card, hand, change, special) {
     if (special) {
         if (card !== special) return "You have to play the card you drew last! (" + special.replace(/^R/i, "Red ").replace(/^B/i, "Blue ").replace(/^Y/i, "Yellow ").replace(/^G/i, "Green ").replace("W+4", "Wild Draw Four").replace("WW", "Wildcard") + ")";
     }
-
     let currentColour = change || topCard.charAt(0);
     let currentValue = topCard.slice(1);
     if (hand.indexOf(card) === -1) return "You do not have that card!";
@@ -181,7 +276,7 @@ function receiveCard(userid, roomid, times, display) {
     for (let i = 0; i < times; i++) {
         let newCard = UNO[roomid].deck.shift();
         UNO[roomid].data[userid].push(newCard);
-        newCards.push(newCard)
+        newCards.push(newCard);
         if (UNO[roomid].deck.length === 0) {
             if (UNO[roomid].discard.length === 0) UNO[roomid].discard = initDeck(1);
             UNO[roomid].deck = shuffleDeck(UNO[roomid].discard);
@@ -271,9 +366,7 @@ function clearDQ(roomid) {
 function initTurn(context, roomid, repost) {
     let currentPlayer = UNO[roomid].player;
     UNO[roomid].id++;
-
     let playerName = Users(currentPlayer) ? Users(currentPlayer).name : currentPlayer;
-
     //announce the turn
     if (!repost) {
         context.add("|raw|" + playerName + "'s turn!");
@@ -288,8 +381,8 @@ function initTurn(context, roomid, repost) {
 
 //data for all rooms
 global.UNO = {};
-
 //for each room
+
 /*
 - top (top card);
 - data (playerdata);
@@ -356,7 +449,7 @@ exports.commands = {
             case "leave":
                 if (!UNO[roomid] || UNO[roomid].start) return false;
                 if (!UNO[roomid].data[userid]) return false;
-                if (UNO[roomid].pot) return this.errorReply("You cannot leave a game with bucks involved.")
+                if (UNO[roomid].pot) return this.errorReply("You cannot leave a game with bucks involved.");
                 UNO[roomid].list.splice(UNO[roomid].list.indexOf(userid), 1);
                 delete UNO[roomid].data[userid];
                 break;
@@ -365,12 +458,12 @@ exports.commands = {
                 let targetUser = toId(parts.join(" ") || " ");
                 if (!targetUser) return false;
                 if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
-                if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.")
+                if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
                 if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
-                    clearDQ(roomid);
-                    getNextPlayer();
-                    initTurn(this, roomid);
-                }
+                        clearDQ(roomid);
+                        getNextPlayer();
+                        initTurn(this, roomid);
+                    }
                 UNO[roomid].list.splice(UNO[roomid].list.indexOf(targetUser), 1);
                 delete UNO[roomid].data[targetUser];
                 this.add(targetUser + " has been disqualified!");
@@ -385,20 +478,15 @@ exports.commands = {
                 if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
                 //start the game!
                 UNO[roomid].start = UNO[roomid].list.length;
-
                 //create deck
                 UNO[roomid].deck = shuffleDeck(initDeck(UNO[roomid].list.length));
-
                 //deal the cards
                 UNO[roomid].list.forEach(function(u) {
-                    receiveCard(u, room.id, 7);
-                })
-
-                //get first player;
+                        receiveCard(u, room.id, 7);
+                    }) //get first player;
                 UNO[roomid].player = UNO[roomid].list[~~(Math.random() * UNO[roomid].list)];
                 let playerName = Users(UNO[roomid].player) ? Users(UNO[roomid].player).name : UNO[roomid].player;
                 this.add("The first player is: " + playerName);
-
                 //get top card
                 function initTopCard() {
                     UNO[roomid].top = UNO[roomid].deck.shift();
@@ -413,15 +501,13 @@ exports.commands = {
                 UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|The top card is <b>" + getCardName(UNO[roomid].top) + "</b>";
                 room.update();
                 //add top card to discard pile
-
                 //apply the effects if applicable;
                 applyEffects(this, roomid, UNO[roomid].player, UNO[roomid].top);
                 if (/R$/i.test(UNO[roomid].top)) getNextPlayer(roomid);
-
                 //start the first turn!
                 setTimeout(function() {
                     initTurn(self, roomid);
-                }, 200)
+                }, 200);
                 break;
             case "play":
                 if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
@@ -443,19 +529,15 @@ exports.commands = {
                     colourChanged = true;
                 }
                 //make last card less spammy
-                this.add(UNO[roomid].lastplay)
-
-                //set current card and add to discard pile
+                this.add(UNO[roomid].lastplay) //set current card and add to discard pile
                 UNO[roomid].top = parts[0];
                 UNO[roomid].discard.push(parts[0]);
                 //remove card from ahnd
                 UNO[roomid].data[userid].splice(UNO[roomid].data[userid].indexOf(parts[0]), 1);
-
                 //set next player
                 getNextPlayer(roomid);
                 //apply the effects of the card
                 applyEffects(this, roomid, UNO[roomid].player, parts[0]);
-
                 //clear the previous timer
                 clearDQ(roomid);
                 user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
@@ -463,7 +545,6 @@ exports.commands = {
                 this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>" + user.name + " played </b> " + getCard(UNO[roomid].top));
                 UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|" + user.name + " played <b>" + getCardName(UNO[roomid].top) + "</b>";
                 room.update();
-
                 //check for a winner or UNO
                 if (UNO[roomid].data[userid].length === 0) {
                     //clear out last card
@@ -485,10 +566,9 @@ exports.commands = {
                     this.add("|raw|<font size=6><b>UNO!</b></font>")
                 }
                 if (colourChanged) this.add("|raw|<font color=\"" + colourTable[parts[1]].toLowerCase().replace("yellow", "orange") + "\">The colour has been changed to <b>" + colourTable[parts[1]] + "</b></font>.");
-
                 setTimeout(function() {
                     initTurn(self, roomid);
-                }, 200)
+                }, 200);
                 break;
             case "draw":
                 if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
@@ -508,7 +588,7 @@ exports.commands = {
             case "pass":
                 this.add("|raw|</b>" + user.name + "</b> has passed!");
                 user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-                this.add(UNO[roomid].lastplay)
+                this.add(UNO[roomid].lastplay);
                 clearDQ(roomid);
                 getNextPlayer(roomid);
                 initTurn(this, roomid);
@@ -516,21 +596,20 @@ exports.commands = {
                 break;
             case "end":
                 if (!UNO[roomid] || !this.can("ban", null, room)) return false;
-                if (UNO[roomid].pot) return this.errorReply("You cannot end a game that is for bucks!")
-                if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay)
+                if (UNO[roomid].pot) return this.errorReply("You cannot end a game that is for bucks!");
+                if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
                 clearDQ(roomid);
                 destroy(roomid);
                 this.add("The game was forcibly ended.");
                 room.update();
                 break;
             default:
-                if (UNO[roomid] && UNO[roomid].start &&  userid === UNO[roomid].player) return this.parse("/uno display");
+                if (UNO[roomid] && UNO[roomid].start && userid === UNO[roomid].player) return this.parse("/uno display");
                 this.parse("/help uno");
                 break;
         }
     },
-    unohelp: [
-        "/uno new (entrance fee) - starts a new game, with an optional fee + jackpot",
+    unohelp: ["/uno new (entrance fee) - starts a new game, with an optional fee + jackpot",
         "/uno start - starts the game",
         "/uno end - ends the game",
         "/uno dq [player] - disqualifies the player from the game",
