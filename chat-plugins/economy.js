@@ -320,7 +320,6 @@ exports.commands = {
 		this.sendReply("Your symbol has been reset.");
 	},
 	resetsymbolhelp: ["/resetsymbol - Resets your custom symbol."],
-	
 	takecustomsymbol: 'takesymbol',
 	takesymbol: function (target, room, user) {
 		let targetUser = Users.get(toId(target));
