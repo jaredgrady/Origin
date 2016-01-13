@@ -49,7 +49,7 @@ exports.commands = {
 		var start = 0;
 		pollOptions += '<div style="padding: 3px; background: rgba(235, 235, 235, 0.5);"><br /><center>';
 		while (start < Poll[room.id].optionList.length) {
-			pollOptions += '<button name="send" value="/vote ' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '" style="margin: 2px; border-radius: 3px; color: #444; background: #F8F8F8 none repeat scroll 0% 0%; border: 1px solid #AAA; box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);">' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '</button>&nbsp;';	
+			pollOptions += '<button name="send" value="/vote ' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '" style="border-radius: 3px; box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);" class="pollButton">' + Tools.escapeHTML(Poll[room.id].optionList[start]) + '</button>&nbsp;';	
 			start++;
 		}
 		pollOptions += '</center><br /></div>';
