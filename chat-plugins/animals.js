@@ -67,6 +67,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		let matched = false;
+		let image;
 		if (target === '') {
 
 			let rand = ~~(15 * Math.random()) + 1;
@@ -128,6 +129,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		let matched = false;
+		let image;
 		if (target === '') {
 
 			let rand = ~~(15 * Math.random()) + 1;
@@ -189,6 +191,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		let matched = false;
+		let image;
 		if (target === '') {
 
 			let rand = ~~(15 * Math.random()) + 1;
@@ -250,6 +253,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		let matched = false;
+		let image;
 		if (target === '') {
 
 			let rand = ~~(15 * Math.random()) + 1;
@@ -311,6 +315,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
 		let matched = false;
+		let image;
 		if (target === '') {
 
 			let rand = ~~(15 * Math.random()) + 1;
