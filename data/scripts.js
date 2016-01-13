@@ -715,8 +715,8 @@ exports.BattleScripts = {
 			}
 
 			// Make sure forme/item combo is correct
-			while ((poke === 'Arceus' && item.substr(-5) === 'plate') ||
-					(poke === 'Giratina' && item === 'griseousorb') ||
+			while ((poke === 'Giratina' && item === 'griseousorb') ||
+					(poke === 'Arceus' && item.substr(-5) === 'plate') ||
 					(poke === 'Genesect' && item.substr(-5) === 'drive')) {
 				item = items[this.random(items.length)];
 			}
@@ -738,6 +738,9 @@ exports.BattleScripts = {
 				pool = Object.keys(this.data.Movedex).exclude('chatter', 'struggle', 'magikarpsrevenge');
 			} else if (template.learnset) {
 				pool = Object.keys(template.learnset);
+				if (template.species.substr(0, 6) === 'Rotom-' || template.species.substr(0, 10) === 'Pumpkaboo-') {
+					pool = pool.union(Object.keys(this.getTemplate(template.baseSpecies).learnset));
+				}
 			} else {
 				pool = Object.keys(this.getTemplate(template.baseSpecies).learnset);
 			}
@@ -1284,7 +1287,7 @@ exports.BattleScripts = {
 					break;
 				case 'switcheroo': case 'trick':
 					if (counter.Physical + counter.Special < 3) rejected = true;
-					if (hasMove['acrobatics'] || hasMove['lightscreen'] || hasMove['reflect'] || hasMove['trickroom']) rejected = true;
+					if (hasMove['acrobatics'] || hasMove['lightscreen'] || hasMove['reflect'] || hasMove['suckerpunch'] || hasMove['trickroom']) rejected = true;
 					break;
 				case 'toxicspikes':
 					if (counter.setupType || teamDetails.toxicSpikes) rejected = true;
@@ -1699,6 +1702,8 @@ exports.BattleScripts = {
 				rejectAbility = !counter['Bug'];
 			} else if (ability === 'Technician') {
 				rejectAbility = !counter['technician'] || (abilities.indexOf('Skill Link') >= 0 && counter['skilllink'] >= counter['technician']);
+			} else if (ability === 'Tinted Lens') {
+				rejectAbility = counter['damage'] >= counter.damagingMoves.length;
 			} else if (ability === 'Torrent') {
 				rejectAbility = !counter['Water'];
 			} else if (ability === 'Unburden') {
@@ -2895,6 +2900,8 @@ exports.BattleScripts = {
 				rejectAbility = !counter['Bug'];
 			} else if (ability === 'Technician') {
 				rejectAbility = !counter['technician'] || (abilities.indexOf('Skill Link') >= 0 && counter['skilllink'] >= counter['technician']);
+			} else if (ability === 'Tinted Lens') {
+				rejectAbility = counter['damage'] >= counter.damagingMoves.length;
 			} else if (ability === 'Torrent') {
 				rejectAbility = !counter['Water'];
 			} else if (ability === 'Unburden') {

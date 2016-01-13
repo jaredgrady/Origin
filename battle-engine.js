@@ -198,12 +198,12 @@ BattlePokemon = (function () {
 				let move = this.battle.getMove(this.set.moves[i]);
 				if (!move.id) continue;
 				if (move.id === 'hiddenpower' && move.type !== 'Normal') {
-					if (this.battle.gen && this.battle.gen === 2) {
+					if (this.battle.gen && this.battle.gen <= 2) {
 						if (!this.set.ivs || Math.min.apply(Math, Object.values(this.set.ivs)) >= 30) {
 							let HPdvs = this.battle.getType(move.type).HPdvs;
 							this.set.ivs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
 							for (let i in HPdvs) {
-								this.set.ivs[i] *= HPdvs[i] * 2;
+								this.set.ivs[i] = HPdvs[i] * 2;
 							}
 						}
 					} else {
@@ -218,7 +218,7 @@ BattlePokemon = (function () {
 					id: move.id,
 					pp: (move.noPPBoosts ? move.pp : move.pp * 8 / 5),
 					maxpp: (move.noPPBoosts ? move.pp : move.pp * 8 / 5),
-					target: (move.nonGhostTarget && !this.hasType('Ghost') ? move.nonGhostTarget : move.target),
+					target: move.target,
 					disabled: false,
 					used: false,
 				});
@@ -615,12 +615,18 @@ BattlePokemon = (function () {
 				moveName = 'Hidden Power ' + this.hpType;
 				if (this.battle.gen < 6) moveName += ' ' + this.hpPower;
 			}
+			let target = move.target;
+			if (move.id === 'curse') {
+				if (!this.hasType('Ghost')) {
+					target = this.battle.getMove('curse').nonGhostTarget || move.target;
+				}
+			}
 			moves.push({
 				move: moveName,
 				id: move.id,
 				pp: move.pp,
 				maxpp: move.maxpp,
-				target: move.target,
+				target: target,
 				disabled: move.disabled,
 			});
 		}
@@ -4009,7 +4015,7 @@ Battle = (function () {
 					// in gen 2-4, the switch still happens
 					decision.priority = -101;
 					this.queue.unshift(decision);
-					this.debug('Pursuit target fainted');
+					this.add('-hint', 'Pursuit target fainted, switch continues in gen 2-4');
 					break;
 				}
 				// in gen 5+, the switch is cancelled
@@ -4017,7 +4023,7 @@ Battle = (function () {
 				break;
 			}
 			if (decision.target.isActive) {
-				this.debug('Switch target is already active');
+				this.add('-hint', 'Switch failed; switch target is already active');
 				break;
 			}
 			if (decision.choice === 'switch' && decision.pokemon.activeTurns === 1) {
@@ -4030,6 +4036,11 @@ Battle = (function () {
 					}
 				}
 			}
+
+			if (decision.choice === 'switch' && decision.pokemon.status && this.data.Abilities.naturalcure) {
+				this.singleEvent('CheckShow', this.data.Abilities.naturalcure, null, decision.pokemon);
+			}
+
 			this.switchIn(decision.target, decision.pokemon.position);
 			break;
 		case 'runSwitch':

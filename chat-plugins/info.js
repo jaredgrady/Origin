@@ -116,9 +116,10 @@ exports.commands = {
 			for (let i = 0; i < Rooms.global.chatRooms.length; i++) {
 				let thisRoom = Rooms.global.chatRooms[i];
 				if (!thisRoom || thisRoom.isPrivate === true) continue;
-				if (thisRoom.bannedIps && (targetUser.latestIp in thisRoom.bannedIps || targetUser.userid in thisRoom.bannedUsers)) {
+				let roomBanned = ((thisRoom.bannedIps && thisRoom.bannedIps[targetUser.latestIp]) || (thisRoom.bannedUsers && thisRoom.bannedUsers[targetUser.userid]));
+				if (roomBanned) {
 					if (bannedFrom) bannedFrom += ", ";
-					bannedFrom += '<a href="/' + thisRoom + '">' + thisRoom + '</a>';
+					bannedFrom += '<a href="/' + thisRoom + '">' + thisRoom + '</a> (' + roomBanned + ')';
 				}
 			}
 			if (bannedFrom) buf += '<br />Banned from: ' + bannedFrom;
@@ -698,6 +699,29 @@ exports.commands = {
 		for (let mon in dex) {
 			if (dex[mon].baseSpecies && results.indexOf(dex[mon].baseSpecies) >= 0) continue;
 			results.push(dex[mon].species);
+		}
+
+		let moveGroups = searches
+			.filter(function (alts) {
+				return Object.any(alts.moves, function (move, isSearch) {
+					return isSearch;
+				});
+			})
+			.map(function (alts) {
+				return Object.keys(alts.moves);
+			});
+		if (moveGroups.length >= 2) {
+			results = results.filter(function (mon) {
+				let lsetData = {fastCheck: true, set: {}};
+				for (let group = 0; group < moveGroups.length; group++) {
+					for (let i = 0; i < moveGroups[group].length; i++) {
+						let problem = TeamValidator.checkLearnsetSync('anythinggoes', moveGroups[group][i], mon, lsetData);
+						if (!problem) break;
+						if (i === moveGroups[group].length - 1) return;
+					}
+				}
+				return true;
+			});
 		}
 
 		if (randomOutput && randomOutput < results.length) {

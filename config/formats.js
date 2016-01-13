@@ -411,8 +411,8 @@ exports.Formats = [
 		section: "OM of the Month",
 		column: 2,
 
-		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Baton Pass Clause', 'Team Preview', 'Gods and Followers Clause'],
-		banlist: [],
+		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Baton Pass Clause', 'Team Preview', 'Mega Rayquaza Clause'],
+		banlist: ['Geomancy'],
 		onValidateTeam: function (team) {
 			if (!team[0]) return;
 			let template = this.getTemplate(team[0].species);
@@ -492,7 +492,7 @@ exports.Formats = [
 		column: 2,
 
 		ruleset: ['OU'],
-		banlist: ['Allow CAP'],
+		banlist: ['Allow CAP', 'Crucibelle'],
 	},
 	{
 		name: "Battle Factory",
@@ -903,6 +903,7 @@ exports.Formats = [
 
 		mod: 'gen5',
 		gameType: 'doubles',
+		searchShow: false,
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
 		banlist: ['Arceus', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo',
 			'Palkia', 'Rayquaza', 'Reshiram', 'Zekrom', 'Soul Dew', 'Dark Void', 'Sky Drop',
