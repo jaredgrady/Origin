@@ -307,7 +307,7 @@ exports.commands = {
  
         this.sendReplyBox(official.join(' ') + nonOfficial.join(' ') + privateRoom.join(' '));
     },
-    randp: function(target, room, user) {
+   /* randp: function(target, room, user) {
         if (!this.canBroadcast()) return;
         let fs = require("fs");
         let Pokedex = require("../data/pokedex.js").BattlePokedex;
@@ -354,7 +354,7 @@ exports.commands = {
         }
         //build the table
         this.sendReplyBox("<table><tr><td><img src=\"" + spriteLocation + "\" height=\"96\" width=\"96\"></td><td><b>Name: </b>" + pokeData.species + "<br/><b>Type(s): </b>" + getTypeFormatting(pokeData.types) + "<br/><b>" + (Object.values(pokeData.abilities).length > 1 ? "Abilities" : "Ability") + ": </b>" + Object.values(pokeData.abilities).join(" / ") + "<br/><b>Stats: </b>" + Object.values(pokeData.baseStats).join(" / ") + "<br/><b>Colour: </b><font color=\"" + pokeData.color + "\">" + pokeData.color + "</font><br/><b>Egg Group(s): </b>" + pokeData.eggGroups.join(", ") + "</td></tr></table>")
-    },
+    }, */
     fj: 'forcejoin',
     forcejoin: function(target, room, user) {
         if (!user.can('mute')) return false;
