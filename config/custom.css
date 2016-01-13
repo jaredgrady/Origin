@@ -12,6 +12,21 @@
   cursor: pointer;
 }
 
+.pollButton {
+  background: #F8F8F8;
+  color: #444;
+  border: 1px solid #AAA;
+  margin: 2px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+.pollButton:hover {
+  background: #F6F6F6;
+  border-color: #337AB7;
+  color: #276297;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
