@@ -209,7 +209,7 @@
 
 .pm-window-fender h3.pm-notifying:hover {
   border-color: #C60000 !important;
-  background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") !important;
+  background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   color: #FF6464 !important;
   text-shadow: 0px 0px 2px #000 !important;
 }
@@ -312,6 +312,110 @@
 }
 
 /*katheyisme123~end*/
+
+/*sariisaur*/
+
+.pm-window-sariisaur h3 {
+    background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
+    background-position: 200px -3px !important;
+    color: #FDE0E2 !important;
+    text-shadow: 0px 0px 2px #842730 !important;
+    border-color: #983841 !important;
+  }
+  
+  .pm-window-sariisaur h3:hover {
+    background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
+    background-position: 200px -3px !important;
+    color: #FDE0E2 !important;
+    text-shadow: 0px 0px 2px #842730 !important;
+    border-color: #983841 !important;
+  }
+  
+  .pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
+    background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #D2F6C5 !important;
+    text-shadow: 0px 0px 2px #983841 !important;
+    border-color: #983841 !important;
+  }
+  
+  .pm-window-sariisaur h3 small, .pm-window-sariisaur h3 .minimizebutton, .pm-window-sariisaur h3 .closebutton, .pm-window-sariisaur h3:hover .minimizebutton {
+    color: #FAACB2 !important;
+  }
+  
+  .pm-window-sariisaur h3 .closebutton:hover + .minimizebutton {
+    color: #FAACB2 !important;
+  }
+  
+  .pm-window-sariisaur h3 .closebutton:hover {
+    color: #D2F6C5 !important;
+  }
+  
+  .pm-window-sariisaur h3 .minimizebutton:hover {
+    color: #D2F6C5 !important;
+  }
+  
+  .pm-window-sariisaur .pm-log, .pm-window-sariisaur.focused .pm-log {
+    background: rgba(243, 255, 239, 0.92) url("http://i.imgur.com/ZjO43fl.png?1") right no-repeat !important;
+    border-color: #949494 !important;
+  }
+  
+  .pm-window-sariisaur .pm-log .chat small {
+    color: #5A5A5A !important;
+  }
+  
+  .pm-window-sariisaur .pm-log-add, .pm-window-sariisaur.focused .pm-log-add {
+    background: #75CFB4 !important;
+    border-color: #206F5F !important;
+  }
+  
+  .pm-window-sariisaur .pm-log-add .textbox {
+    border-color: #206F5F !important;
+    background: rgba(243, 255, 239, 0.92) !important;
+  }
+  
+  .pm-window-sariisaur h3.pm-notifying {
+    border-color: #AB3E48 !important;
+    background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
+    background-position: 200px -7px !important;
+    color: #832730 !important;
+    font-style: italic !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-sariisaur h3.pm-notifying:hover {
+    border-color: #AB3E48 !important;
+    background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
+    background-position: 200px -8px !important;
+    color: #832730 !important;
+    font-style: italic !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-sariisaur .challenge {
+    background: #FFB5BA !important;
+    color: #A23B45 !important;
+    border-color: #A23B45 !important;
+  }
+  
+  .pm-window-sariisaur .challenge .select, .pm-window-sariisaur .challenge .buttonbar button {
+    background: #B0F597 !important;
+    border-color: #396A39 !important;
+    color: #396A39 !important;
+    text-shadow: none !important;
+  }
+  
+  .pm-window-sariisaur .challenge .select:hover, .pm-window-sariisaur .challenge .buttonbar button:hover {
+    background: #D2F6C5 !important;
+    border-color: #396A39 !important;
+  } 
+  
+  .pm-window-sariisaur .challenge .select:disabled {
+    background: rgba(176, 245, 151, 0.5) !important;
+    border-color: #396A39 !important;
+  }
+  
+  /*sariisaur~end*/
 
 /* CUSTOM PM ~end */
 
