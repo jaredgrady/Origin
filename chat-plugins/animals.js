@@ -1,6 +1,8 @@
 'use strict';
 //Random animal generator by Audino Primal. Finished by fender with manual labor from Natsume, tex rex1, Sundar, and ntgs.//
 exports.commands = {
+	let image;
+	
 	kitten: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		target = target.toLowerCase();
