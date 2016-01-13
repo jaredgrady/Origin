@@ -362,12 +362,12 @@ exports.commands = {
 	},
 	datahelp: ["/data [pokemon/item/move/ability] - Get details on this pokemon/item/move/ability/nature.",
 		"!data [pokemon/item/move/ability] - Show everyone these details. Requires: + % @ # & ~"],
-
+/*
 	dt: 'details',
 	details: function (target) {
 		if (!target) return this.parse('/help details');
 		this.run('data');
-	},
+	}, */
 	detailshelp: ["/details [pokemon] - Get additional details on this pokemon/item/move/ability/nature.",
 		"!details [pokemon] - Show everyone these details. Requires: + % @ # & ~"],
 
