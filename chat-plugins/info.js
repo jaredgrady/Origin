@@ -111,6 +111,7 @@ exports.commands = {
 		if ((user === targetUser || user.can('makeroom')) && privaterooms) {
 			buf += '<br />Private rooms: ' + privaterooms;
 		}
+
 		if (user.can('alts', targetUser) || (room.isPrivate !== true && user.can('mute', targetUser, room) && targetUser.userid in room.users)) {
 			let bannedFrom = "";
 			for (let i = 0; i < Rooms.global.chatRooms.length; i++) {
@@ -362,12 +363,12 @@ exports.commands = {
 	},
 	datahelp: ["/data [pokemon/item/move/ability] - Get details on this pokemon/item/move/ability/nature.",
 		"!data [pokemon/item/move/ability] - Show everyone these details. Requires: + % @ # & ~"],
-/*
+
 	dt: 'details',
 	details: function (target) {
 		if (!target) return this.parse('/help details');
 		this.run('data');
-	}, */
+	},
 	detailshelp: ["/details [pokemon] - Get additional details on this pokemon/item/move/ability/nature.",
 		"!details [pokemon] - Show everyone these details. Requires: + % @ # & ~"],
 
@@ -699,29 +700,6 @@ exports.commands = {
 		for (let mon in dex) {
 			if (dex[mon].baseSpecies && results.indexOf(dex[mon].baseSpecies) >= 0) continue;
 			results.push(dex[mon].species);
-		}
-
-		let moveGroups = searches
-			.filter(function (alts) {
-				return Object.any(alts.moves, function (move, isSearch) {
-					return isSearch;
-				});
-			})
-			.map(function (alts) {
-				return Object.keys(alts.moves);
-			});
-		if (moveGroups.length >= 2) {
-			results = results.filter(function (mon) {
-				let lsetData = {fastCheck: true, set: {}};
-				for (let group = 0; group < moveGroups.length; group++) {
-					for (let i = 0; i < moveGroups[group].length; i++) {
-						let problem = TeamValidator.checkLearnsetSync('anythinggoes', moveGroups[group][i], mon, lsetData);
-						if (!problem) break;
-						if (i === moveGroups[group].length - 1) return;
-					}
-				}
-				return true;
-			});
 		}
 
 		if (randomOutput && randomOutput < results.length) {
@@ -1983,9 +1961,11 @@ exports.commands = {
 	opensource: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"Pok&eacute;mon Showdown server Origin:<br />" +
+			"Pok&eacute;mon Showdown is open source:<br />" +
 			"- Language: JavaScript (Node.js or io.js)<br />" +
-			"- <a href=\"https://github.com/Origin-Devs/Origin-Source\">Open Source Github</a>"
+			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown/commits/master\">What's new?</a><br />" +
+			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown\">Server source code</a><br />" +
+			"- <a href=\"https://github.com/Zarel/Pokemon-Showdown-Client\">Client source code</a>"
 		);
 	},
 	opensourcehelp: ["/opensource - Links to PS's source code repository.",
@@ -1998,7 +1978,7 @@ exports.commands = {
 
 	forums: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("<a href=\"http://originps.boards.net/\">Origin Forums</a>");
+		this.sendReplyBox("<a href=\"https://www.smogon.com/forums/forums/pok%C3%A9mon-showdown.209\">Pok&eacute;mon Showdown Forums</a>");
 	},
 
 	suggestions: function (target, room, user) {
