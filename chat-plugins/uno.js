@@ -7,113 +7,113 @@
 global.UNO = {};
 //for each room
 const deck = ["R1",
-	"R2",
-	"R3",
-	"R4",
-	"R5",
-	"R6",
-	"R7",
-	"R8",
-	"R9",
-	"RS",
-	"RR",
-	"R+2",
-	"W+4",
-	"Y1",
-	"Y2",
-	"Y3",
-	"Y4",
-	"Y5",
-	"Y6",
-	"Y7",
-	"Y8",
-	"Y9",
-	"YS",
-	"YR",
-	"Y+2",
-	"W+4",
-	"G1",
-	"G2",
-	"G3",
-	"G4",
-	"G5",
-	"G6",
-	"G7",
-	"G8",
-	"G9",
-	"GS",
-	"GR",
-	"G+2",
-	"W+4",
-	"B1",
-	"B2",
-	"B3",
-	"B4",
-	"B5",
-	"B6",
-	"B7",
-	"B8",
-	"B9",
-	"BS",
-	"BR",
-	"B+2",
-	"W+4",
-	"R1",
-	"R2",
-	"R3",
-	"R4",
-	"R5",
-	"R6",
-	"R7",
-	"R8",
-	"R9",
-	"RS",
-	"RR",
-	"R+2",
-	"WW",
-	"R0",
-	"Y1",
-	"Y2",
-	"Y3",
-	"Y4",
-	"Y5",
-	"Y6",
-	"Y7",
-	"Y8",
-	"Y9",
-	"YS",
-	"YR",
-	"Y+2",
-	"WW",
-	"Y0",
-	"G1",
-	"G2",
-	"G3",
-	"G4",
-	"G5",
-	"G6",
-	"G7",
-	"G8",
-	"G9",
-	"GS",
-	"GR",
-	"G+2",
-	"WW",
-	"G0",
-	"B1",
-	"B2",
-	"B3",
-	"B4",
-	"B5",
-	"B6",
-	"B7",
-	"B8",
-	"B9",
-	"BS",
-	"BR",
-	"B+2",
-	"WW",
-	"B0",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "RS",
+    "RR",
+    "R+2",
+    "W+4",
+    "Y1",
+    "Y2",
+    "Y3",
+    "Y4",
+    "Y5",
+    "Y6",
+    "Y7",
+    "Y8",
+    "Y9",
+    "YS",
+    "YR",
+    "Y+2",
+    "W+4",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "GS",
+    "GR",
+    "G+2",
+    "W+4",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "BS",
+    "BR",
+    "B+2",
+    "W+4",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "RS",
+    "RR",
+    "R+2",
+    "WW",
+    "R0",
+    "Y1",
+    "Y2",
+    "Y3",
+    "Y4",
+    "Y5",
+    "Y6",
+    "Y7",
+    "Y8",
+    "Y9",
+    "YS",
+    "YR",
+    "Y+2",
+    "WW",
+    "Y0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "GS",
+    "GR",
+    "G+2",
+    "WW",
+    "G0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "BS",
+    "BR",
+    "B+2",
+    "WW",
+    "B0",
 ];
 const drawButton = '<center><button style="background: black; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 56px ; border-radius: 5px , auto" name="send" value="/uno draw"><font color="white">Draw</font></button></center>';
 const passButton = '<center><button style="background: red; border: 2px solid rgba(33 , 68 , 72 , 0.59) ; width: 56px ; border-radius: 5px , auto" name="send" value="/uno pass"><font color="white">PASS</font></button></center>';
@@ -342,9 +342,9 @@ function runDQ(context, roomid) {
 			context.add(UNO[roomid].lastplay);
 			context.add("|raw|<b>" + finalPlayer + "</b> has won the game!");
 			if (UNO[roomid].pot) {
-				let winnings = UNO[roomid].start * UNO[roomid].pot;
+				let winnings = UNO[room].start * UNO[room].pot;
 				Db("money").set(toId(finalPlayer), Db("money").get(toId(finalPlayer), 0) + winnings);
-				this.add(finalPlayer + " has won " + winnings + " bucks!");
+				this.add(finalPlayer + " has won " + winnings + " bucks!")
 			}
 			Rooms(roomid).update();
 			clearDQ(roomid);
@@ -353,7 +353,7 @@ function runDQ(context, roomid) {
 		} else {
 			initTurn(context, roomid);
 		}
-	}, 90000);
+	}, 90000)
 }
 
 function clearDQ(roomid) {
@@ -368,7 +368,7 @@ function initTurn(context, roomid, repost) {
 	if (!repost) {
 		context.add("|raw|" + playerName + "'s turn!");
 		UNO[roomid].lastDraw = null;
-		runDQ(context, roomid);
+		runDQ(context, roomid);	
 	}
 	Rooms(roomid).update();
 	//show the card control center
@@ -389,222 +389,222 @@ function initTurn(context, roomid, repost) {
 */
 
 exports.commands = {
-	uno: function (target, room, user) {
-		if (!target) target = " ";
-		let parts = target.split(" ");
-		let action = parts.shift();
-		let userid = user.userid;
-		let roomid = room.id;
-		let self = this;
-		switch (action) {
-		case "new":
-			if (!this.can("ban", null, room)) return false;
-			if (UNO[roomid]) return this.errorReply("There is already a game going on.");
-			let pot = null;
-			if (parseInt(parts[0])) {
-				pot = parseInt(parts[0]);
-			}
-			UNO[roomid] = {
-				top: null,
-				data: {},
-				list: [],
-				player: null,
-				start: false,
-				change: null,
-				id: 0,
-				deck: null,
-				discard: [],
-				"pot": pot && pot > 0 ? pot : null,
-				timer: null,
-				rand: ~~(Math.random() * 1000000),
-				lastDraw: null,
-				passed: false,
-				postuhtml: 0,
-				lastplay: null,
-			};
-			this.add("|raw|<center><img src=\"http://www.theboardgamefamily.com/wp-content/uploads/2010/12/uno-mobile-game1.jpg\" height=300 width=320><br><br><b>A new game of UNO is starting!</b><br><br><button style=\"height: 30px ; width: 60px ;\" name=\"send\" value=\"/uno join\">Join</button></center>");
-			if (pot) {
-				this.add("|raw|<br><center><font color=\"red\"><b>You will need " + pot + " bucks to join this game.</b></font></center>");
-			}
-			break;
-		case "join":
-			if (!UNO[roomid] || UNO[roomid].start) return false;
-			if (!verifyAlts(userid, UNO[roomid].list) || UNO[roomid].list.indexOf(userid) > -1) return this.errorReply("You already have an alt joined.");
-			if (UNO[roomid].pot) {
-				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
-				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
-			}
-			UNO[roomid].list.push(userid);
-			UNO[roomid].data[userid] = [];
-			this.add(user.name + " has joined the game!");
-			break;
-		case "leave":
-			if (!UNO[roomid] || UNO[roomid].start) return false;
-			if (!UNO[roomid].data[userid]) return false;
-			if (UNO[roomid].pot) return this.errorReply("You cannot leave a game with bucks involved.");
-			UNO[roomid].list.splice(UNO[roomid].list.indexOf(userid), 1);
-			delete UNO[roomid].data[userid];
-			break;
-		case "dq":
-			if (!UNO[roomid] || !UNO[roomid].start) return false;
-			let targetUser = toId(parts.join(" ") || " ");
-			if (!targetUser) return false;
-			if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
-			if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
-			if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
-				clearDQ(roomid);
-				getNextPlayer();
-				initTurn(this, roomid);
-			}
-			UNO[roomid].list.splice(UNO[roomid].list.indexOf(targetUser), 1);
-			delete UNO[roomid].data[targetUser];
-			this.add(targetUser + " has been disqualified!");
-			if (UNO[roomid].list.length === 1) {
-				this.add(UNO[roomid].list[0] + " has won!");
-				clearDQ(roomid);
-				destroy(roomid);
-			}
-			break;
-		case "start":
-			if (!UNO[roomid] || !this.can("ban", null, room) || UNO[roomid].start) return false;
-			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
-			//start the game!
-			UNO[roomid].start = UNO[roomid].list.length;
-			//create deck
-			UNO[roomid].deck = shuffleDeck(initDeck(UNO[roomid].list.length));
-			//deal the cards
-			UNO[roomid].list.forEach(function (u) {
-				receiveCard(u, room.id, 7);
-			}); //get first player;
-			UNO[roomid].player = UNO[roomid].list[~~(Math.random() * UNO[roomid].list)];
-			let playerName = Users(UNO[roomid].player) ? Users(UNO[roomid].player).name : UNO[roomid].player;
-			this.add("The first player is: " + playerName);
-			//get top card
-			function initTopCard() {
-				UNO[roomid].top = UNO[roomid].deck.shift();
-				UNO[roomid].discard.push(UNO[roomid].top);
-			}
-			initTopCard();
-			while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
-				initTopCard();
-			}
-			//announce top card
-			this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>The top card is:</b> " + getCard(UNO[roomid].top));
-			UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|The top card is <b>" + getCardName(UNO[roomid].top) + "</b>";
-			room.update();
-			//add top card to discard pile
-			//apply the effects if applicable;
-			applyEffects(this, roomid, UNO[roomid].player, UNO[roomid].top);
-			if (/R$/i.test(UNO[roomid].top)) getNextPlayer(roomid);
-			//start the first turn!
-			setTimeout(function () {
-				initTurn(self, roomid);
-			}, 200);
-			break;
-		case "play":
-			if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
-			let issues = playVerifier(UNO[roomid].top, parts[0], UNO[roomid].data[userid], UNO[roomid].change, UNO[roomid].lastDraw);
-			if (issues) return user.sendTo(room, buildGameScreen(userid, roomid, UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id, issues, UNO[roomid].lastDraw));
-			if (parts[0].charAt(0) === "W" && (!parts[1] || ["Y", "B", "G", "R"].indexOf(parts[1]) === -1)) return user.sendTo(roomid, getColourChange("/uno play " + parts[0], UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id));
-			UNO[roomid].change = null;
-			//apply colour change
-			let colourChanged = false;
-			let colourTable = {
-				"R": "RED",
-				"Y": "YELLOW",
-				"B": "BLUE",
-				"G": "GREEN",
-				"W": "BLACK",
-			};
-			if (parts[0].charAt(0) === "W") {
-				UNO[roomid].change = parts[1];
-				colourChanged = true;
-			}
-			//make last card less spammy
-			this.add(UNO[roomid].lastplay); //set current card and add to discard pile
-			UNO[roomid].top = parts[0];
-			UNO[roomid].discard.push(parts[0]);
-			//remove card from ahnd
-			UNO[roomid].data[userid].splice(UNO[roomid].data[userid].indexOf(parts[0]), 1);
-			//set next player
-			getNextPlayer(roomid);
-			//apply the effects of the card
-			applyEffects(this, roomid, UNO[roomid].player, parts[0]);
-			//clear the previous timer
-			clearDQ(roomid);
-			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			UNO[roomid].postuhtml++;
-			this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>" + user.name + " played </b> " + getCard(UNO[roomid].top));
-			UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|" + user.name + " played <b>" + getCardName(UNO[roomid].top) + "</b>";
-			room.update();
-			//check for a winner or UNO
-			if (UNO[roomid].data[userid].length === 0) {
-				//clear out last card
-				this.add(UNO[roomid].lastplay);
-				//announce winner
-				this.add("|raw|<b>Congratulations to " + user.name + " for winning!</b>");
-				//give pot
-				if (UNO[roomid].pot) {
-					let winnings = UNO[room].start * UNO[room].pot;
-					Db("money").set(userid, Db("money").get(userid, 0) + winnings);
-					this.add(user.name + " has won " + winnings + " bucks!");
-				}
-				room.update();
-				//end game
-				destroy(roomid);
-				return;
-			}
-			if (UNO[roomid].data[userid].length === 1) {
-				this.add("|raw|<font size=6><b>UNO!</b></font>");
-			}
-			if (colourChanged) this.add("|raw|<font color=\"" + colourTable[parts[1]].toLowerCase().replace("yellow", "orange") + "\">The colour has been changed to <b>" + colourTable[parts[1]] + "</b></font>.");
-			setTimeout(function () {
-				initTurn(self, roomid);
-			}, 200);
-			break;
-		case "draw":
-			if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
-			let receivedCards = receiveCard(userid, roomid);
-			let CCC = buildGameScreen(userid, roomid, UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id, "You have drawn a " + receivedCards.join(" ").replace(/^R/i, "Red ").replace(/^B/i, "Blue ").replace(/^Y/i, "Yellow ").replace(/^G/i, "Green ").replace("W+4", "Wild Draw Four").replace("WW", "Wildcard") + " card", true);
-			UNO[roomid].lastDraw = receivedCards.join("");
-			Users(userid).sendTo(roomid, CCC);
-			this.add("|raw|</b>" + user.name + "</b> has drawn a card!");
-			room.update();
-			break;
-		case "display":
-		case "repost":
-			if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
-			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			initTurn(this, roomid, true);
-			break;
-		case "pass":
-			this.add("|raw|</b>" + user.name + "</b> has passed!");
-			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			this.add(UNO[roomid].lastplay);
-			clearDQ(roomid);
-			getNextPlayer(roomid);
-			initTurn(this, roomid);
-			room.update();
-			break;
-		case "end":
-			if (!UNO[roomid] || !this.can("ban", null, room)) return false;
-			if (UNO[roomid].pot) return this.errorReply("You cannot end a game that is for bucks!");
-			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
-			clearDQ(roomid);
-			destroy(roomid);
-			this.add("The game was forcibly ended.");
-			room.update();
-			break;
-		default:
-			if (UNO[roomid] && UNO[roomid].start && userid === UNO[roomid].player) return this.parse("/uno display");
-			this.parse("/help uno");
-			break;
-		}
-	},
-	unohelp: ["/uno new (entrance fee) - starts a new game, with an optional fee + jackpot",
-		"/uno start - starts the game",
-		"/uno end - ends the game",
-		"/uno dq [player] - disqualifies the player from the game",
-		"Games with a bucks involved cannot be ended, and players can not be dq'd or leave from the game.",
-	],
+    uno: function(target, room, user) {
+        if (!target) target = " ";
+        let parts = target.split(" ");
+        let action = parts.shift();
+        let userid = user.userid;
+        let roomid = room.id;
+        let self = this;
+        switch (action) {
+            case "new":
+                if (!this.can("ban", null, room)) return false;
+                if (UNO[roomid]) return this.errorReply("There is already a game going on.");
+                let pot = null;
+                if (parseInt(parts[0])) {
+                    pot = parseInt(parts[0]);
+                }
+                UNO[roomid] = {
+                    top: null,
+                    data: {},
+                    list: [],
+                    player: null,
+                    start: false,
+                    change: null,
+                    id: 0,
+                    deck: null,
+                    discard: [],
+                    "pot": pot && pot > 0 ? pot : null,
+                    timer: null,
+                    rand: ~~(Math.random() * 1000000),
+                    lastDraw: null,
+                    passed: false,
+                    postuhtml: 0,
+                    lastplay: null,
+                };
+                this.add("|raw|<center><img src=\"http://www.theboardgamefamily.com/wp-content/uploads/2010/12/uno-mobile-game1.jpg\" height=300 width=320><br><br><b>A new game of UNO is starting!</b><br><br><button style=\"height: 30px ; width: 60px ;\" name=\"send\" value=\"/uno join\">Join</button></center>");
+                if (pot) {
+                    this.add("|raw|<br><center><font color=\"red\"><b>You will need " + pot + " bucks to join this game.</b></font></center>")
+                }
+                break;
+            case "join":
+                if (!UNO[roomid] || UNO[roomid].start) return false;
+                if (!verifyAlts(userid, UNO[roomid].list) || UNO[roomid].list.indexOf(userid) > -1) return this.errorReply("You already have an alt joined.");
+                if (UNO[roomid].pot) {
+                    if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
+                    Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
+                }
+                UNO[roomid].list.push(userid);
+                UNO[roomid].data[userid] = [];
+                this.add(user.name + " has joined the game!");
+                break;
+            case "leave":
+                if (!UNO[roomid] || UNO[roomid].start) return false;
+                if (!UNO[roomid].data[userid]) return false;
+                if (UNO[roomid].pot) return this.errorReply("You cannot leave a game with bucks involved.");
+                UNO[roomid].list.splice(UNO[roomid].list.indexOf(userid), 1);
+                delete UNO[roomid].data[userid];
+                break;
+            case "dq":
+                if (!UNO[roomid] || !UNO[roomid].start) return false;
+                let targetUser = toId(parts.join(" ") || " ");
+                if (!targetUser) return false;
+                if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
+                if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
+                if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
+                        clearDQ(roomid);
+                        getNextPlayer();
+                        initTurn(this, roomid);
+                    }
+                UNO[roomid].list.splice(UNO[roomid].list.indexOf(targetUser), 1);
+                delete UNO[roomid].data[targetUser];
+                this.add(targetUser + " has been disqualified!");
+                if (UNO[roomid].list.length === 1) {
+                    this.add(UNO[roomid].list[0] + " has won!");
+                    clearDQ(roomid);
+                    destroy(roomid);
+                }
+                break;
+            case "start":
+                if (!UNO[roomid] || !this.can("ban", null, room) || UNO[roomid].start) return false;
+                if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
+                //start the game!
+                UNO[roomid].start = UNO[roomid].list.length;
+                //create deck
+                UNO[roomid].deck = shuffleDeck(initDeck(UNO[roomid].list.length));
+                //deal the cards
+                UNO[roomid].list.forEach(function(u) {
+                        receiveCard(u, room.id, 7);
+                    }) //get first player;
+                UNO[roomid].player = UNO[roomid].list[~~(Math.random() * UNO[roomid].list)];
+                let playerName = Users(UNO[roomid].player) ? Users(UNO[roomid].player).name : UNO[roomid].player;
+                this.add("The first player is: " + playerName);
+                //get top card
+                function initTopCard() {
+                    UNO[roomid].top = UNO[roomid].deck.shift();
+                    UNO[roomid].discard.push(UNO[roomid].top);
+                }
+                initTopCard();
+                while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
+                    initTopCard();
+                }
+                //announce top card 
+                this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>The top card is:</b> " + getCard(UNO[roomid].top));
+                UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|The top card is <b>" + getCardName(UNO[roomid].top) + "</b>";
+                room.update();
+                //add top card to discard pile
+                //apply the effects if applicable;
+                applyEffects(this, roomid, UNO[roomid].player, UNO[roomid].top);
+                if (/R$/i.test(UNO[roomid].top)) getNextPlayer(roomid);
+                //start the first turn!
+                setTimeout(function() {
+                    initTurn(self, roomid);
+                }, 200);
+                break;
+            case "play":
+                if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
+                let issues = playVerifier(UNO[roomid].top, parts[0], UNO[roomid].data[userid], UNO[roomid].change, UNO[roomid].lastDraw);
+                if (issues) return user.sendTo(room, buildGameScreen(userid, roomid, UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id, issues, UNO[roomid].lastDraw));
+                if (parts[0].charAt(0) === "W" && (!parts[1] || ["Y", "B", "G", "R"].indexOf(parts[1]) === -1)) return user.sendTo(roomid, getColourChange("/uno play " + parts[0], UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id));
+                UNO[roomid].change = null;
+                //apply colour change
+                let colourChanged = false;
+                let colourTable = {
+                    "R": "RED",
+                    "Y": "YELLOW",
+                    "B": "BLUE",
+                    "G": "GREEN",
+                    "W": "BLACK",
+                };
+                if (parts[0].charAt(0) === "W") {
+                    UNO[roomid].change = parts[1];
+                    colourChanged = true;
+                }
+                //make last card less spammy
+                this.add(UNO[roomid].lastplay) //set current card and add to discard pile
+                UNO[roomid].top = parts[0];
+                UNO[roomid].discard.push(parts[0]);
+                //remove card from ahnd
+                UNO[roomid].data[userid].splice(UNO[roomid].data[userid].indexOf(parts[0]), 1);
+                //set next player
+                getNextPlayer(roomid);
+                //apply the effects of the card
+                applyEffects(this, roomid, UNO[roomid].player, parts[0]);
+                //clear the previous timer
+                clearDQ(roomid);
+                user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
+                UNO[roomid].postuhtml++;
+                this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>" + user.name + " played </b> " + getCard(UNO[roomid].top));
+                UNO[roomid].lastplay = "|uhtmlchange|post" + UNO[roomid].postuhtml + "|" + user.name + " played <b>" + getCardName(UNO[roomid].top) + "</b>";
+                room.update();
+                //check for a winner or UNO
+                if (UNO[roomid].data[userid].length === 0) {
+                    //clear out last card
+                    this.add(UNO[roomid].lastplay);
+                    //announce winner
+                    this.add("|raw|<b>Congratulations to " + user.name + " for winning!</b>");
+                    //give pot
+                    if (UNO[roomid].pot) {
+                        let winnings = UNO[room].start * UNO[room].pot;
+                        Db("money").set(userid, Db("money").get(userid, 0) + winnings);
+                        this.add(user.name + " has won " + winnings + " bucks!")
+                    }
+                    room.update();
+                    //end game
+                    destroy(roomid);
+                    return;
+                }
+                if (UNO[roomid].data[userid].length === 1) {
+                    this.add("|raw|<font size=6><b>UNO!</b></font>")
+                }
+                if (colourChanged) this.add("|raw|<font color=\"" + colourTable[parts[1]].toLowerCase().replace("yellow", "orange") + "\">The colour has been changed to <b>" + colourTable[parts[1]] + "</b></font>.");
+                setTimeout(function() {
+                    initTurn(self, roomid);
+                }, 200);
+                break;
+            case "draw":
+                if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
+                let receivedCards = receiveCard(userid, roomid);
+                let CCC = buildGameScreen(userid, roomid, UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id, "You have drawn a " + receivedCards.join(" ").replace(/^R/i, "Red ").replace(/^B/i, "Blue ").replace(/^Y/i, "Yellow ").replace(/^G/i, "Green ").replace("W+4", "Wild Draw Four").replace("WW", "Wildcard") + " card", true);
+                UNO[roomid].lastDraw = receivedCards.join("");
+                Users(userid).sendTo(roomid, CCC);
+                this.add("|raw|</b>" + user.name + "</b> has drawn a card!");
+                room.update();
+                break;
+            case "display":
+            case "repost":
+                if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
+                user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
+                initTurn(this, roomid, true);
+                break;
+            case "pass":
+                this.add("|raw|</b>" + user.name + "</b> has passed!");
+                user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
+                this.add(UNO[roomid].lastplay);
+                clearDQ(roomid);
+                getNextPlayer(roomid);
+                initTurn(this, roomid);
+                room.update();
+                break;
+            case "end":
+                if (!UNO[roomid] || !this.can("ban", null, room)) return false;
+                if (UNO[roomid].pot) return this.errorReply("You cannot end a game that is for bucks!");
+                if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
+                clearDQ(roomid);
+                destroy(roomid);
+                this.add("The game was forcibly ended.");
+                room.update();
+                break;
+            default:
+                if (UNO[roomid] && UNO[roomid].start && userid === UNO[roomid].player) return this.parse("/uno display");
+                this.parse("/help uno");
+                break;
+        }
+    },
+    unohelp: ["/uno new (entrance fee) - starts a new game, with an optional fee + jackpot",
+        "/uno start - starts the game",
+        "/uno end - ends the game",
+        "/uno dq [player] - disqualifies the player from the game",
+        "Games with a bucks involved cannot be ended, and players can not be dq'd or leave from the game."
+    ]
 };
