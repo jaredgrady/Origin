@@ -512,6 +512,15 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 	},
 	{
+        name: "LC Random Battle",
+        section: "Other Metagames",
+       
+        mod: 'randomlc',
+        team: 'randomLC',
+        maxForcedLevel: 5,
+        ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
+    },
+	{
 		name: "Balanced Hackmons",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3489849/\">Balanced Hackmons</a>",
