@@ -217,7 +217,7 @@ function invertArray(array) {
 	return buffer;
 }
 
-function initTopCard() {
+function initTopCard(roomid) {
 	UNO[roomid].top = UNO[roomid].deck.shift();
 	UNO[roomid].discard.push(UNO[roomid].top);
 }
@@ -485,7 +485,7 @@ exports.commands = {
 			let playerName = Users(UNO[roomid].player) ? Users(UNO[roomid].player).name : UNO[roomid].player;
 			this.add("The first player is: " + playerName);
 			//get top card
-			initTopCard();
+			initTopCard(roomid);
 			while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
 				initTopCard();
 			}
