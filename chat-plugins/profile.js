@@ -154,16 +154,14 @@ Profile.prototype.seen = function (timeAgo) {
 };
 
 Profile.prototype.vip = function () {
-	if (typeof this.user === 'string') return '';
-	if (this.user && !this.user.can('vip')) return '';
-	if (this.user && this.user.can('vip')) return ' (<font color=#6390F0><b>VIP User</b></font>)';
+	if (typeof this.user === 'string' && toId(this.user) in Users.vips) return ' (<font color=#6390F0><b>VIP User</b></font>)';
+	if (this.user && this.user.userid in Users.vips) return ' (<font color=#6390F0><b>VIP User</b></font>)';
 	return '';
 };
 
 Profile.prototype.dev = function () {
-	if (typeof this.user === 'string') return '';
-	if (this.user && !this.user.can('dev')) return '';
-	if (this.user && this.user.can('dev')) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
+	if (typeof this.user === 'string' && developers.indexOf(toId(this.user)) > -1) return ' (<font color=#980000><b>Origin Dev</b></font>)';
+	if (this.user && developers.indexOf(this.user.userid) > -1) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
 	return '';
 };
 
