@@ -197,8 +197,6 @@ exports.commands = {
 		}
 		this.sendReplyBox(profile.show());
 	},
-	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
-	
 	customtitle: function (target, room, user) {
 		let parts = target.split(',');
 		let cmd = parts[0].trim().toLowerCase();
@@ -225,7 +223,6 @@ exports.commands = {
 			default:
 			return this.sendReply("Invalid command. Valid commands are `/customctitle set, user, color, title`.");
 		}
-		
     },
-	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
+	profilehelp: ["/profile - Shows information regarding user's name, group, money, and when they were last seen."],
 };
