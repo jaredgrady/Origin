@@ -10,6 +10,7 @@ let shop = [
     ['Fix', 'Buys the ability to alter your current custom avatar, trainer card or icon. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly. Gifs are broken atm.)', 25],
+    ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 25],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
     ['Room Rename', 'Rename your chatroom to another name', 45],
