@@ -75,7 +75,18 @@ exports.commands = {
 	},
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-100).join('\n');
+		var i = -100;
+		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
+		for (; crashes.split('\n\n').length <= 16; i--) {
+			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
+		}
+		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i + 3).join('\n');
+		if (crashes.toString().substr(0, 22) === 'Additional information') {
+			for (; crashes.split('\n\n').length <= 17; i--) {
+				crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n')
+			}
+			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i + 3).join('\n');
+		}
 		user.send('|popup|' + crashes);
 	},
 	restart: function(target, room, user) {
