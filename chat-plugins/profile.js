@@ -167,11 +167,17 @@ Profile.prototype.dev = function () {
 	return '';
 };
 
+Profile.prototype.title = function () {
+	let title = Db('TitleDB').get(toId(toId(this.user)));
+	if(typeof title !== 'undefined' && title !== null)  return ' (<font color=#' + title[0] + '><b>' + title[1] + '</b></font>)';	
+	return '';
+};
+
 Profile.prototype.show = function (callback) {
 	let userid = toId(this.username);
 
 	return this.buttonAvatar() +
-		SPACE + this.name() + BR +
+		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
 		SPACE + this.seen(Db('seen').get(userid)) +
@@ -191,5 +197,35 @@ exports.commands = {
 		}
 		this.sendReplyBox(profile.show());
 	},
+	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
+	
+	customtitle: function (target, room, user) {
+		let parts = target.split(',');
+		let cmd = parts[0].trim().toLowerCase();
+		
+		let userid, targetUser;
+		let title = [];
+		switch (cmd) {
+			case 'set':
+				if (!this.can('lock') && !this.can('vip')) return false;
+				let reg = /^\w+$/;
+				userid = toId(parts[1]);
+				targetUser = Users.getExact(userid);
+				if (!userid) return this.sendReply("You didn't specify a user.")
+				if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
+				if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
+				if(!reg.test(parts[2].trim())) return this.sendReply("Enter only alphanumeric characters for the eg. ff80b3");
+				title[0] = parts[2].trim();
+				title[1] = parts[3].trim();		
+				Db('TitleDB').set(toId(userid),  title);
+				
+				Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom title from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: ' + '<font color=' + title[0] + '> <b>' + title[1] + '</b></font>');
+				this.sendReply("Usertitle set.")
+			break;			
+			default:
+			return this.sendReply("Invalid command. Valid commands are `/customctitle set, user, color, title`.");
+		}
+		
+    },
 	profilehelp: ["/profile -	Shows information regarding user's name, group, money, and when they were last seen."],
 };
