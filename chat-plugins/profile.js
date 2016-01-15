@@ -98,7 +98,10 @@ function currencyName(amount) {
 }
 
 Profile.prototype.avatar = function () {
+	
 	if (this.isOnline) {
+		// easter egg avatars (#teamrocket, #bwelesa2, #yellow)
+		if(this.image && typeof this.image === 'string' && this.image.charAt(0) === "#") return img('http://play.pokemonshowdown.com/sprites/trainers/' + this.image.slice(1) + '.png')
 		if (typeof this.image === 'string') return img(this.url + '/avatars/' + this.image);
 		return img('http://play.pokemonshowdown.com/sprites/trainers/' + this.image + '.png');
 	}
