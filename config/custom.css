@@ -59,7 +59,7 @@
   color: #106B59 !important;
 }
 
-.pm-window-masterfloat h3 .closebutton:hover + .minimizebutton {
+.pm-window-masterfloat h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #106B59 !important;
 }
 
@@ -110,7 +110,7 @@
   color: #E9F6FF !important;
 }
 
-.pm-window-neosoul h3 .closebutton:hover + .minimizebutton {
+.pm-window-neosoul h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #E9F6FF !important;
 }
 
@@ -179,7 +179,7 @@
   color: #CCC !important;
 }
 
-.pm-window-fender h3 .closebutton:hover + .minimizebutton {
+.pm-window-fender h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #CCC !important;
 }
 
@@ -255,7 +255,7 @@
   color: #FCFBEB !important;
 }
 
-.pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton {
+.pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #FCFBEB !important;
 }
 
@@ -360,7 +360,7 @@
     color: #FAACB2 !important;
   }
   
-  .pm-window-sariisaur h3 .closebutton:hover + .minimizebutton {
+  .pm-window-sariisaur h3 .closebutton:hover + .minimizebutton.minimizebutton {
     color: #FAACB2 !important;
   }
   
