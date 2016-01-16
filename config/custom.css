@@ -574,6 +574,10 @@
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat;
 }
 
+#lobby-userlist-user-emblempanda, #thelotusleague-userlist-user-emblempanda, #monotype-userlist-user-emblempanda, #casino-userlist-user-emblempanda, #halloffame-userlist-user-emblempanda {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/78hqXIv.png") right no-repeat;
+}
+
 /* Icons ~end */
 
 /****************************
