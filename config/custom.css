@@ -1447,6 +1447,32 @@ a.subtle, a.subtle:hover {
 * Teambuilder CSS *
 ******************/
 
+.folder .selectFolder, .folderpane h3 {
+  background: #BBCCC9;
+}
+
+.folderpane h3 {
+  color: #11484F !important;
+  text-shadow: none !important;
+}
+
+.folderpane {
+  border-left: 5px solid #BBCCC9;
+}
+
+.folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before{
+  background: #BBCCC9;
+}
+
+.folder.cur .selectFolder, .folder.cur .selectFolder:hover {
+  border-color: #11484F;
+  background: #BBCCC9;
+}
+
+.folder .selectFolder:hover {
+  background: #D4E5E2;
+}
+
 .teamchartbox {
   border-color: #11484F;
 }
@@ -1459,7 +1485,7 @@ a.subtle, a.subtle:hover {
 }
 
 .teamlist .team:hover {
-  background: #BBCCC9;    
+  background: #D4E5E2;    
   border-color: #0E3339;
   color: #0E3339;
   text-shadow: none;
@@ -1575,12 +1601,12 @@ a.subtle, a.subtle:hover {
   text-shadow: none;
 }
 
-.setmenu button {
+.setmenu button, .teamlist button {
   color: #5B274D;
   text-shadow: 0px 0px 2px #FCE8F1;
 }
 
-.setmenu button:hover {
+.setmenu button:hover, .teamlist button:hover {
   border-color: #803C6F !important;
   background: #F3C5EA !important;
   color: #803C6F !important;
