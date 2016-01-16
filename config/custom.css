@@ -433,6 +433,123 @@
   }
   
   /*sariisaur~end*/
+  
+  /*emblem panda*/
+  
+  .pm-window-emblempanda h3 {
+    background: rgba(74, 74, 74, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #2F2F2F !important;
+    border-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda h3:hover, .pm-window-emblempanda.focused h3, .pm-window-emblempanda.focused h3:hover {
+    background: rgba(60, 60, 60, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #2F2F2F !important;
+    border-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda h3 small {
+    color: #71EC85 !important;
+  }
+  
+  .pm-window-emblempanda h3 .minimizebutton, .pm-window-emblempanda h3 .closebutton, .pm-window-emblempanda h3:hover .minimizebutton {
+    color: #FFF !important;
+  }
+  
+  .pm-window-emblempanda h3 .closebutton:hover + .minimizebutton.minimizebutton {
+    color: #FFF !important;
+  }
+  
+  .pm-window-emblempanda h3 .closebutton:hover {
+    color: #71EC85 !important;
+  }
+  
+  .pm-window-emblempanda h3 .minimizebutton:hover {
+    color: #71EC85 !important;
+  }
+  
+  .pm-window-emblempanda .pm-log, .pm-window-emblempanda.focused .pm-log {
+    background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/82IUOPa.png?1") right no-repeat !important;
+    border-color: #BDB4AC !important;
+  }
+  
+  .pm-window-emblempanda .pm-log .chat small {
+    color: #6B6B73 !important;
+  }
+  
+  .pm-window-emblempanda .pm-log-add {
+    background: #E4E4E4 !important;
+    border-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda.focused .pm-log-add {
+    background: #C4BBB3 !important;
+    border-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda .pm-log-add .textbox {
+    border-color: #2B2B2B !important;
+    background: #FFF !important;
+  }
+  
+  .pm-window-emblempanda h3.pm-notifying {
+    border-color: #007313 !important;
+    background: #10AB26 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #007313 !important;
+    font-style: italic;
+  }
+  
+  .pm-window-emblempanda h3.pm-notifying:hover {
+    border-color: #00580F !important;
+    background: #0D8A22 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #00580F !important;
+    font-style: italic;
+  }
+  
+  .pm-window-emblempanda h3.pm-notifying .closebutton:hover {
+    color: #BBB3AB !important;
+  }
+  
+  .pm-window-emblempanda h3.pm-notifying .minimizebutton:hover {
+    color: #BBB3AB !important;
+  }
+  
+  .pm-window-emblempanda .challenge {
+    background: #E3E3E3 !important;
+    color: #2C2C2C !important;
+    border-color: #A29990 !important;
+    border-top-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda .challenge .select, .pm-window-emblempanda .challenge .buttonbar button {
+    background: rgba(74, 74, 74, 0.8) !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #2F2F2F !important;
+    border-color: #2B2B2B !important;
+  }
+  
+  .pm-window-emblempanda .challenge .select:hover, .pm-window-emblempanda .challenge .buttonbar button:hover {
+    background: rgba(74, 74, 74, 0.9) !important;
+    color: #71EC85 !important;
+    text-shadow: 0px 0px 2px #2F2F2F !important;
+    border-color: #2B2B2B !important;
+  } 
+  
+  .pm-window-emblempanda .challenge .select:disabled {
+    background: rgba(74, 74, 74, 0.45) !important;
+    border-color: #2B2B2B !important;
+    text-shadow: none !important;
+  }
+  
+  /*emblem panda~end*/
 
 /* CUSTOM PM ~end */
 
