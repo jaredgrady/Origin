@@ -361,8 +361,8 @@ exports.commands = {
         if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
         let parts = target.split(',');
         if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
-        userid = toId(parts[0]);
-        roomid = toId(parts[1]);
+        let userid = toId(parts[0]);
+        let roomid = toId(parts[1]);
         if (!Users.get(userid)) return this.sendReply ('User not found.');
         if (!Rooms.get(roomid)) return this.sendReply ('Room not found.');
         Users.get(userid).joinRoom(roomid);
