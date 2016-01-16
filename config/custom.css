@@ -1411,6 +1411,20 @@ a.subtle, a.subtle:hover {
   border-bottom: 1px solid #062529;
 }
 
+.bglist button {
+  border-color: #11484F;
+}
+  
+.bglist button:hover {
+  border-color: #11484F;
+  background: rgba(255, 255, 255, 0.35);
+}
+  
+.bglist button.cur, .bglist button.cur:hover {
+  border-color: #092428;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /*****************
 * Popup CSS ~end *
 *****************/
