@@ -216,7 +216,7 @@ exports.commands = {
 			if (parts.length < 4) return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 			title[0] = parts[2].trim();
 			title[1] = Tools.escapeHTML(parts.slice(3).join(",").trim());
-			if (title[1].length > 100) return this.errorReply("Custom titles cannot be longer than 100 characters.");
+			if (title[1].length > 30) return this.errorReply("Custom titles cannot be longer than 100 characters.");
 			Db('TitleDB').set(toId(userid), title);
 			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom title from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: ' + '<font color=' + title[0] + '> <b>' + Tools.escapeHTML(title[1]) + '</b></font>');
 			this.sendReply("Usertitle set.");
