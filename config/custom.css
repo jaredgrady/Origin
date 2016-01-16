@@ -1079,9 +1079,12 @@ body {
 .menugroup .select:disabled, .menugroup .select:disabled:hover {
   background: rgba(255, 224, 167, 0.7) !important;
   border-color: #803C6F !important;
-  color: #803C6F !important;
   text-shadow: none !important;
   font-style: italic !important;
+}
+
+.teamselect:disabled strong {
+    color: #803C6F !important;
 }
 
 .pm-window h3 {
