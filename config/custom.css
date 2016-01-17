@@ -652,6 +652,113 @@
 
 /*nineage~end*/
 
+/*chleg*/
+
+.pm-window-chleg h3 {
+    background: rgba(117, 77, 68, 0.8) url("http://www.serebii.net/pokedex-xy/icon/708.png") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 5px #EB8298 !important;
+    border-color: #313131 !important;
+  }
+  
+  .pm-window-chleg h3:hover, .pm-window-chleg.focused h3, .pm-window-chleg.focused h3:hover {
+    background: rgba(117, 77, 68, 0.9) url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 5px #EB8298 !important;
+    border-color: #313131 !important;        
+  }
+  
+  .pm-window-chleg h3 small, .pm-window-chleg h3 .minimizebutton, .pm-window-chleg h3 .closebutton, .pm-window-chleg h3:hover .minimizebutton {
+    color: #313131 !important;
+  }
+  
+  .pm-window-chleg h3 .closebutton:hover + .minimizebutton.minimizebutton {
+    color: #313131 !important;
+  }
+  
+  .pm-window-chleg h3 .closebutton:hover {
+    color: #111111 !important;
+  }
+  
+  .pm-window-chleg h3 .minimizebutton:hover {
+    color: #111111 !important;
+  }
+  
+  .pm-window-chleg .pm-log, .pm-window-chleg.focused .pm-log {
+    background: rgba(252, 225, 220, 0.95) url("http://i.imgur.com/Myqw4k2.png?1") right no-repeat !important;
+    border-color: #525252 !important;
+    text-shadow: 0px 0px 5px #EB8298;
+  }
+  
+  .pm-window-chleg .pm-log .chat small {
+    color: #955D52 !important;
+  }
+  
+  .pm-window-chleg .pm-log-add, .pm-window-chleg.focused .pm-log-add {
+    background: #81655D !important;
+    border-color: #313131 !important;
+  }
+  
+  .pm-window-chleg .pm-log-add .textbox {
+    border-color: #313131 !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+  }
+  
+  .pm-window-chleg h3.pm-notifying {
+    border-color: #622330 !important;
+    background: #EB8298 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #622330 !important;
+    text-shadow: 0px 0px 3px #B55064;
+    font-style: italic;
+  }
+  
+  .pm-window-chleg h3.pm-notifying:hover {
+    border-color: #622330 !important;
+    background: #DE7086 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #622330 !important;
+    text-shadow: 0px 0px 3px #944152;
+    font-style: italic;
+  }
+  
+  .pm-window-chleg .challenge {
+    background: #EB8298 !important;
+    color: #303030 !important;
+    border-color: #622330 !important;
+    text-shadow: 0px 0px 3px #B55064;
+  }
+  
+  .pm-window-chleg .challenge .select, .pm-window-chleg .challenge .buttonbar button {
+    background: #484848 !important;
+    border-color: #343637 !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #EB8298 !important;
+  }
+  
+  .pm-window-chleg .challenge .select:hover {
+    background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") right center no-repeat !important;
+    border-color: #111 !important;
+  } 
+  
+  .pm-window-chleg .challenge .buttonbar button:hover {
+    background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") center no-repeat !important;
+    border-color: #111 !important;
+  } 
+  
+  .pm-window-chleg .challenge .select:disabled {
+    background: rgba(60, 60, 60, 0.5) !important;
+    border-color: #111 !important;
+  }
+  
+  .pm-window-chleg .challenge .teamselect:disabled strong {
+    color: #111 !important;
+  }
+  
+  /*chleg~end*/
+
 /* CUSTOM PM ~end */
 
 /* Symbol Color */
