@@ -748,7 +748,7 @@
     border-color: #111 !important;
   } 
   
-  .pm-window-chleg .challenge .select:disabled {
+  .pm-window-chleg .challenge .select:disabled, .pm-window-chleg .challenge .select:disabled:hover {
     background: rgba(60, 60, 60, 0.5) !important;
     border-color: #111 !important;
   }
