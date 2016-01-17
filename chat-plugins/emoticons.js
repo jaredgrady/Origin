@@ -94,7 +94,8 @@ let emotes = {
 	'xoxo': 'http://orig00.deviantart.net/b49d/f/2014/220/5/3/ichigo_not_impressed_icon_by_magical_icon-d7u92zg.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
-	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg'
+	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
+	'gudone': 'http://i.imgur.com/USkp1b9.png'
 };
 
 let emotesKeys = Object.keys(emotes);
