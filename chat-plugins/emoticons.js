@@ -15,6 +15,7 @@ let emotes = {
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
+	'feelsbirb': 'http://i.imgur.com/o4KxmWe.png',
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelsbt': 'http://i.imgur.com/rghiV9b.png',
