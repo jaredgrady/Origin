@@ -104,7 +104,7 @@ exports.commands = {
             let friend;
             let userid = toId(friends[i]);
             let targetUser = Users.getExact(userid);
-            if (!targetUser) {
+            if (!targetUser || !targetUser.connected) {
                 friend = new Friends(false, userid);
             } else {
                 friend = new Friends(true, targetUser);
