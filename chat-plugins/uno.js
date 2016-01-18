@@ -565,6 +565,7 @@ exports.commands = {
 			break;
 		case "draw":
 			if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
+			if(UNO[roomid].lastDraw) return false;
 			let receivedCards = receiveCard(userid, roomid);
 			let CCC = buildGameScreen(userid, roomid, UNO[roomid].data[userid], UNO[roomid].rand.toString() + UNO[roomid].id, "You have drawn a " + receivedCards.join(" ").replace(/^R/i, "Red ").replace(/^B/i, "Blue ").replace(/^Y/i, "Yellow ").replace(/^G/i, "Green ").replace("W+4", "Wild Draw Four").replace("WW", "Wildcard") + " card", true);
 			UNO[roomid].lastDraw = receivedCards.join("");
@@ -579,6 +580,8 @@ exports.commands = {
 			initTurn(this, roomid, true);
 			break;
 		case "pass":
+			if (!UNO[roomid] || !UNO[roomid].start || userid !== UNO[roomid].player) return false;
+			if(!UNO[roomid].lastDraw) return false;
 			this.add("|raw|</b>" + user.name + "</b> has passed!");
 			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
 			this.add(UNO[roomid].lastplay);
