@@ -7,6 +7,7 @@ let fs = require('fs');
 let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
+const Float = require('float-ui');
 
 function clearRoom(room) {
 	let len = (room.log && room.log.length) || 0;
@@ -834,4 +835,16 @@ exports.commands = {
 		Users(targetUser).updateIdentity();
 		this.sendReply("Succesfully repromoted " + targetUser + ".");
 	},
+
+	floatdeclare: function (target, room, user) {
+		if (!target) return this.parse('/help floatdeclare');
+		if (!this.can('gdeclare', null, room)) return false;
+		if (!this.canTalk()) return;
+		target = this.canHTML(target);
+		if (!target) return;
+
+		this.add('|raw|' + Float.renderElement(target));
+		this.logModCommand(user.name + " float declared " + target);
+	},
+	htmldeclarehelp: ["/htmldeclare [message] - Anonymously announces a message using float. Requires: ~"],
 };

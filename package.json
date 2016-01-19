@@ -8,6 +8,7 @@
     "colors": "1.1.2",
     "elo-rank": "0.2.2",
     "es6-shim": "0.33.6",
+    "float-ui": "^1.0.2",
     "forever": "0.15.1",
     "geoip-ultralight": "0.1.1",
     "moment": "^2.10.2",
