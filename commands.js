@@ -310,7 +310,7 @@ let commands = exports.commands = {
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: & ~"],
 
 	makegroupchat: function (target, room, user, connection, cmd) {
-		if (this.can('lock')) {
+		if (!user.isStaff) {
 			return this.errorReply("You must be a staff member to make a groupchat");
 		}
 		// if (!this.can('makegroupchat')) return false;
