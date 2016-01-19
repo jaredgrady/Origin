@@ -441,7 +441,6 @@ exports.commands = {
 				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
 				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
 			}
-			if (users.length >= 10) return this.errorReply('There cannot be more than 10 players');
 			UNO[roomid].list.push(userid);
 			UNO[roomid].data[userid] = [];
 			this.add(user.name + " has joined the game!");
