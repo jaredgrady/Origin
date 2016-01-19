@@ -441,6 +441,7 @@ exports.commands = {
 				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
 				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
 			}
+			if (users.length >= 10) return this.errorReply('There cannot be more than 10 players');
 			UNO[roomid].list.push(userid);
 			UNO[roomid].data[userid] = [];
 			this.add(user.name + " has joined the game!");
@@ -474,7 +475,9 @@ exports.commands = {
 			break;
 		case "start":
 			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
+			if (!this.can("ban", null, room)) return this.errorReply('You must be @ or higher to start a game');
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
+			this.logModCommand(user.name + " has started the game");
 			//start the game!
 			UNO[roomid].start = UNO[roomid].list.length;
 			//create deck
@@ -600,6 +603,7 @@ exports.commands = {
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
 			destroy(roomid);
+			this.logModCommand(user.name + " has ended the game");
 			this.add("The game was forcibly ended.");
 			room.update();
 			break;
