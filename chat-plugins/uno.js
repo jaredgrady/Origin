@@ -471,7 +471,7 @@ exports.commands = {
 			}
 			break;
 		case "start":
-			if (!UNO[roomid]) || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
+			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
 			//start the game!
 			UNO[roomid].start = UNO[roomid].list.length;
