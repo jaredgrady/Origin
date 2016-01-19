@@ -433,6 +433,7 @@ exports.commands = {
 			if (pot) {
 				this.add("|raw|<br><center><font color=\"red\"><b>You will need " + pot + " bucks to join this game.</b></font></center>");
 			}
+			this.privateModCommand(user.name + " has created a game of UNO");
 			break;
 		case "join":
 			if (!UNO[roomid] || UNO[roomid].start) return false;
