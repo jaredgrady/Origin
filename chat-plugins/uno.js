@@ -457,7 +457,7 @@ exports.commands = {
 			let targetUser = toId(parts.join(" ") || " ");
 			if (!targetUser) return false;
 			if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
-			if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
+			if (UNO[roomid].pot) return this.errorReply("You cannot disqualify players in a game with bucks involved.");
 			if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
 				clearDQ(roomid);
 				getNextPlayer(roomid);
@@ -476,7 +476,7 @@ exports.commands = {
 			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
 			if (!this.can("ban", null, room)) return this.errorReply('You must be @ or higher to start a game');
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
-			this.logModCommand(user.name + " has started the game");
+			this.privateModCommand(user.name + " has started the game");
 			//start the game!
 			UNO[roomid].start = UNO[roomid].list.length;
 			//create deck
@@ -602,7 +602,7 @@ exports.commands = {
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
 			destroy(roomid);
-			this.logModCommand(user.name + " has ended the game");
+			this.privateModCommand(user.name + " has ended the game");
 			this.add("The game was forcibly ended.");
 			room.update();
 			break;
