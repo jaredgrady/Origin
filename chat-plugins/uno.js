@@ -458,7 +458,7 @@ exports.commands = {
 			if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
 			if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
 				clearDQ(roomid);
-				getNextPlayer();
+				getNextPlayer(roomid);
 				initTurn(this, roomid);
 			}
 			UNO[roomid].list.splice(UNO[roomid].list.indexOf(targetUser), 1);
