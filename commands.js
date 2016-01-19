@@ -1016,7 +1016,6 @@ let commands = exports.commands = {
 	/*********************************************************
 	 * Moderating: Punishments
 	 *********************************************************/
-
 	warn: function (target, room, user) {
 		if (!target) return this.parse('/help warn');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
@@ -1035,9 +1034,11 @@ let commands = exports.commands = {
 
 		this.addModCommand("" + targetUser.name + " was warned by " + user.name + "." + (target ? " (" + target + ")" : ""));
 		targetUser.send('|c|~|/warn ' + target);
-		this.add('|unlink|' + this.getLastIdOf(targetUser));
+		let userid = this.getLastIdOf(targetUser);
+		this.add('|unlink|' + userid);
+		if (userid !== toId(this.inputUsername)) this.add('|unlink|' + toId(this.inputUsername));
 	},
-	warnhelp: ["/warn OR /k [username], [reason] - Warns a user showing them the Pok\u00e9mon Showdown Rules and [reason] in an overlay. Requires: % @ # & ~"],
+	warnhelp: ["/warn OR /k [username], [reason] - Warns a user showing them the Pok\u00e9mon Showdown Rules and [reason] in an overlay. Requires: % @ # & ~"],      
 
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
