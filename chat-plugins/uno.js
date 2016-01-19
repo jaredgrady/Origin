@@ -487,7 +487,7 @@ exports.commands = {
 			//get top card
 			initTopCard(roomid);
 			while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
-				initTopCard();
+				initTopCard(roomid);
 			}
 			//announce top card
 			this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>The top card is:</b> " + getCard(UNO[roomid].top));
