@@ -1543,6 +1543,10 @@ let ChatRoom = (function () {
 			if (!this.users[i].named) {
 				continue;
 			}
+			if (!this.users[i].connected) {
+				delete this.users[i];
+				continue;
+			}
 			counter++;
 			buffer += ',' + this.users[i].getIdentity(this.id);
 		}
