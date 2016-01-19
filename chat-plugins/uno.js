@@ -427,6 +427,7 @@ exports.commands = {
 				postuhtml: 0,
 				lastplay: null,
 			};
+			if (Db('money').get(user.userid, 0) < pot) return this.errorReply('You cannot start a game with a pot that has more bucks than you.');
 			this.add("|raw|<center><img src=\"http://www.theboardgamefamily.com/wp-content/uploads/2010/12/uno-mobile-game1.jpg\" height=300 width=320><br><br><b>A new game of UNO is starting!</b><br><br><button style=\"height: 30px ; width: 60px ;\" name=\"send\" value=\"/uno join\">Join</button></center>");
 			if (pot) {
 				this.add("|raw|<br><center><font color=\"red\"><b>You will need " + pot + " bucks to join this game.</b></font></center>");
