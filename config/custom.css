@@ -333,106 +333,431 @@
 /*sariisaur*/
 
 .pm-window-sariisaur h3 {
-    background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
-    background-position: 200px -3px !important;
-    color: #FDE0E2 !important;
-    text-shadow: 0px 0px 2px #842730 !important;
-    border-color: #983841 !important;
-  }
-  
-  .pm-window-sariisaur h3:hover {
-    background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
-    background-position: 200px -3px !important;
-    color: #FDE0E2 !important;
-    text-shadow: 0px 0px 2px #842730 !important;
-    border-color: #983841 !important;
-  }
-  
-  .pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
-    background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
+  background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
+  background-position: 200px -3px !important;
+  color: #FDE0E2 !important;
+  text-shadow: 0px 0px 2px #842730 !important;
+  border-color: #983841 !important;
+}
+
+.pm-window-sariisaur h3:hover {
+  background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
+  background-position: 200px -3px !important;
+  color: #FDE0E2 !important;
+  text-shadow: 0px 0px 2px #842730 !important;
+  border-color: #983841 !important;
+}
+
+.pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
+  background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #D2F6C5 !important;
+  text-shadow: 0px 0px 2px #983841 !important;
+  border-color: #983841 !important;
+}
+
+.pm-window-sariisaur h3 small, .pm-window-sariisaur h3 .minimizebutton, .pm-window-sariisaur h3 .closebutton, .pm-window-sariisaur h3:hover .minimizebutton {
+  color: #FAACB2 !important;
+}
+
+.pm-window-sariisaur h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #FAACB2 !important;
+}
+
+.pm-window-sariisaur h3 .closebutton:hover {
+  color: #D2F6C5 !important;
+}
+
+.pm-window-sariisaur h3 .minimizebutton:hover {
+  color: #D2F6C5 !important;
+}
+
+.pm-window-sariisaur .pm-log, .pm-window-sariisaur.focused .pm-log {
+  background: rgba(243, 255, 239, 0.92) url("http://i.imgur.com/ZjO43fl.png?1") right no-repeat !important;
+  border-color: #949494 !important;
+}
+
+.pm-window-sariisaur .pm-log .chat small {
+  color: #5A5A5A !important;
+}
+
+.pm-window-sariisaur .pm-log-add, .pm-window-sariisaur.focused .pm-log-add {
+  background: #75CFB4 !important;
+  border-color: #206F5F !important;
+}
+
+.pm-window-sariisaur .pm-log-add .textbox {
+  border-color: #206F5F !important;
+  background: rgba(243, 255, 239, 0.92) !important;
+}
+
+.pm-window-sariisaur h3.pm-notifying {
+  border-color: #AB3E48 !important;
+  background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
+  background-position: 200px -7px !important;
+  color: #832730 !important;
+  font-style: italic !important;
+  text-shadow: none !important;
+}
+
+.pm-window-sariisaur h3.pm-notifying:hover {
+  border-color: #AB3E48 !important;
+  background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
+  background-position: 200px -8px !important;
+  color: #832730 !important;
+  font-style: italic !important;
+  text-shadow: none !important;
+}
+
+.pm-window-sariisaur .challenge {
+  background: #FFB5BA !important;
+  color: #A23B45 !important;
+  border-color: #A23B45 !important;
+}
+
+.pm-window-sariisaur .challenge .select, .pm-window-sariisaur .challenge .buttonbar button {
+  background: #B0F597 !important;
+  border-color: #396A39 !important;
+  color: #396A39 !important;
+  text-shadow: none !important;
+}
+
+.pm-window-sariisaur .challenge .select:hover, .pm-window-sariisaur .challenge .buttonbar button:hover {
+  background: #D2F6C5 !important;
+  border-color: #396A39 !important;
+} 
+
+.pm-window-sariisaur .challenge .select:disabled {
+  background: rgba(176, 245, 151, 0.5) !important;
+  border-color: #396A39 !important;
+}
+
+/*sariisaur~end*/
+
+/*emblem panda*/
+
+.pm-window-emblempanda h3 {
+  background: rgba(74, 74, 74, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #2F2F2F !important;
+  border-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda h3:hover, .pm-window-emblempanda.focused h3, .pm-window-emblempanda.focused h3:hover {
+  background: rgba(60, 60, 60, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #2F2F2F !important;
+  border-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda h3 small {
+  color: #71EC85 !important;
+}
+
+.pm-window-emblempanda h3 .minimizebutton, .pm-window-emblempanda h3 .closebutton, .pm-window-emblempanda h3:hover .minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-emblempanda h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-emblempanda h3 .closebutton:hover {
+  color: #71EC85 !important;
+}
+
+.pm-window-emblempanda h3 .minimizebutton:hover {
+  color: #71EC85 !important;
+}
+
+.pm-window-emblempanda .pm-log, .pm-window-emblempanda.focused .pm-log {
+  background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/82IUOPa.png?1") right no-repeat !important;
+  border-color: #BDB4AC !important;
+}
+
+.pm-window-emblempanda .pm-log .chat small {
+  color: #6B6B73 !important;
+}
+
+.pm-window-emblempanda .pm-log-add {
+  background: #E4E4E4 !important;
+  border-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda.focused .pm-log-add {
+  background: #C4BBB3 !important;
+  border-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda .pm-log-add .textbox {
+  border-color: #2B2B2B !important;
+  background: #FFF !important;
+}
+
+.pm-window-emblempanda h3.pm-notifying {
+  border-color: #007313 !important;
+  background: #10AB26 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #007313 !important;
+  font-style: italic;
+}
+
+.pm-window-emblempanda h3.pm-notifying:hover {
+  border-color: #00580F !important;
+  background: #0D8A22 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #00580F !important;
+  font-style: italic;
+}
+
+.pm-window-emblempanda h3.pm-notifying .closebutton:hover {
+  color: #BBB3AB !important;
+}
+
+.pm-window-emblempanda h3.pm-notifying .minimizebutton:hover {
+  color: #BBB3AB !important;
+}
+
+.pm-window-emblempanda .challenge {
+  background: #E3E3E3 !important;
+  color: #2C2C2C !important;
+  border-color: #A29990 !important;
+  border-top-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda .challenge .select, .pm-window-emblempanda .challenge .buttonbar button {
+  background: rgba(74, 74, 74, 0.8) !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #2F2F2F !important;
+  border-color: #2B2B2B !important;
+}
+
+.pm-window-emblempanda .challenge .select:hover, .pm-window-emblempanda .challenge .buttonbar button:hover {
+  background: rgba(74, 74, 74, 0.9) !important;
+  color: #71EC85 !important;
+  text-shadow: 0px 0px 2px #2F2F2F !important;
+  border-color: #2B2B2B !important;
+} 
+
+.pm-window-emblempanda .challenge .select:disabled {
+  background: rgba(74, 74, 74, 0.45) !important;
+  border-color: #2B2B2B !important;
+  text-shadow: none !important;
+}
+
+/*emblem panda~end*/
+
+/*nineage*/
+
+.pm-window-nineage h3 {
+  background: rgba(89, 174, 182, 0.8) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #EC8550 !important;
+  text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
+  border-color: #182021 !important;
+}
+
+.pm-window-nineage h3:hover, .pm-window-nineage.focused h3, .pm-window-nineage.focused h3:hover {
+  background: rgba(89, 174, 182, 0.9) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #FFEECB !important;
+  text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
+  border-color: #182021 !important;
+}
+
+.pm-window-nineage h3 small, .pm-window-nineage h3 .minimizebutton, .pm-window-nineage h3 .closebutton, .pm-window-nineage h3:hover .minimizebutton {
+  color: #FFEECB !important;
+}
+
+.pm-window-nineage h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #FFEECB !important;
+}
+
+.pm-window-nineage h3 .closebutton:hover {
+  color: #D64736 !important;
+}
+
+.pm-window-nineage h3 .minimizebutton:hover {
+  color: #D64736 !important;
+}
+
+.pm-window-nineage .pm-log, .pm-window-nineage.focused .pm-log {
+  background: rgba(232, 253, 251, 0.93) url("http://i.imgur.com/oL6Gu74.png?2") right no-repeat !important;
+  border-color: #3E4C4D !important;
+  border-width: 2px;
+}
+
+.pm-window-nineage .pm-log .chat small {
+  color: #86A9AB !important;
+}
+
+.pm-window-nineage .pm-log-add, .pm-window-nineage.focused .pm-log-add {
+  background: #AADCE0 !important;
+  border-color: #3E4C4D !important;
+}
+
+.pm-window-nineage .pm-log-add .textbox {
+  border-color: #3E4C4D !important;
+  background: #F9FFFF !important;
+}
+
+.pm-window-nineage h3.pm-notifying {
+  border-color: #182021 !important;
+  background: #EEA252 url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #EC8550 !important;
+  text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
+  font-style: italic;
+}
+
+.pm-window-nineage h3.pm-notifying:hover {
+  border-color: #182021 !important;
+  background: #D18A38 url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
+  background-position: 200px -4px !important;
+  color: #EC8550 !important;
+  text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
+  font-style: italic;
+}
+
+.pm-window-nineage .challenge {
+  background: #C9F1E9 !important;
+  color: #C34938 !important;
+  border-color: #3E4C4D !important;
+}
+
+.pm-window-nineage .challenge .select, .pm-window-nineage .challenge .buttonbar button {
+  background: #F3A467 !important;
+  border-color: #B74939 !important;
+  color: #B74939 !important;
+  text-shadow: 0px 0px 2px #F9C197 !important;
+}
+
+.pm-window-nineage .challenge .select:hover, .pm-window-nineage .challenge .buttonbar button:hover {
+  background: #FFBC89 !important;
+  border-color: # !important;
+} 
+
+.pm-window-nineage .challenge .select:disabled {
+  background: rgba(238, 147, 83, 0.5) !important;
+  border-color: #B74939 !important;
+}
+
+.pm-window-nineage .challenge .teamselect:disabled strong {
+  color: #B74939 !important;
+}
+
+/*nineage~end*/
+
+/*chleg*/
+
+.pm-window-chleg h3 {
+    background: rgba(117, 77, 68, 0.8) url("http://www.serebii.net/pokedex-xy/icon/708.png") no-repeat !important;
     background-position: 200px -4px !important;
-    color: #D2F6C5 !important;
-    text-shadow: 0px 0px 2px #983841 !important;
-    border-color: #983841 !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 5px #EB8298 !important;
+    border-color: #313131 !important;
   }
   
-  .pm-window-sariisaur h3 small, .pm-window-sariisaur h3 .minimizebutton, .pm-window-sariisaur h3 .closebutton, .pm-window-sariisaur h3:hover .minimizebutton {
-    color: #FAACB2 !important;
+  .pm-window-chleg h3:hover, .pm-window-chleg.focused h3, .pm-window-chleg.focused h3:hover {
+    background: rgba(117, 77, 68, 0.9) url("http://i.imgur.com/HYfcccn.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 5px #EB8298 !important;
+    border-color: #313131 !important;        
   }
   
-  .pm-window-sariisaur h3 .closebutton:hover + .minimizebutton.minimizebutton {
-    color: #FAACB2 !important;
+  .pm-window-chleg h3 small, .pm-window-chleg h3 .minimizebutton, .pm-window-chleg h3 .closebutton, .pm-window-chleg h3:hover .minimizebutton {
+    color: #313131 !important;
   }
   
-  .pm-window-sariisaur h3 .closebutton:hover {
-    color: #D2F6C5 !important;
+  .pm-window-chleg h3 .closebutton:hover + .minimizebutton.minimizebutton {
+    color: #313131 !important;
   }
   
-  .pm-window-sariisaur h3 .minimizebutton:hover {
-    color: #D2F6C5 !important;
+  .pm-window-chleg h3 .closebutton:hover {
+    color: #111111 !important;
   }
   
-  .pm-window-sariisaur .pm-log, .pm-window-sariisaur.focused .pm-log {
-    background: rgba(243, 255, 239, 0.92) url("http://i.imgur.com/ZjO43fl.png?1") right no-repeat !important;
-    border-color: #949494 !important;
+  .pm-window-chleg h3 .minimizebutton:hover {
+    color: #111111 !important;
   }
   
-  .pm-window-sariisaur .pm-log .chat small {
-    color: #5A5A5A !important;
+  .pm-window-chleg .pm-log, .pm-window-chleg.focused .pm-log {
+    background: rgba(252, 225, 220, 0.95) url("http://i.imgur.com/Myqw4k2.png?1") right no-repeat !important;
+    border-color: #525252 !important;
+    text-shadow: 0px 0px 5px #EB8298;
   }
   
-  .pm-window-sariisaur .pm-log-add, .pm-window-sariisaur.focused .pm-log-add {
-    background: #75CFB4 !important;
-    border-color: #206F5F !important;
+  .pm-window-chleg .pm-log .chat small {
+    color: #955D52 !important;
   }
   
-  .pm-window-sariisaur .pm-log-add .textbox {
-    border-color: #206F5F !important;
-    background: rgba(243, 255, 239, 0.92) !important;
+  .pm-window-chleg .pm-log-add, .pm-window-chleg.focused .pm-log-add {
+    background: #81655D !important;
+    border-color: #313131 !important;
   }
   
-  .pm-window-sariisaur h3.pm-notifying {
-    border-color: #AB3E48 !important;
-    background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
-    background-position: 200px -7px !important;
-    color: #832730 !important;
-    font-style: italic !important;
-    text-shadow: none !important;
+  .pm-window-chleg .pm-log-add .textbox {
+    border-color: #313131 !important;
+    background: rgba(255, 255, 255, 0.94) !important;
   }
   
-  .pm-window-sariisaur h3.pm-notifying:hover {
-    border-color: #AB3E48 !important;
-    background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
-    background-position: 200px -8px !important;
-    color: #832730 !important;
-    font-style: italic !important;
-    text-shadow: none !important;
+  .pm-window-chleg h3.pm-notifying {
+    border-color: #622330 !important;
+    background: #EB8298 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #622330 !important;
+    text-shadow: 0px 0px 3px #B55064;
+    font-style: italic;
   }
   
-  .pm-window-sariisaur .challenge {
-    background: #FFB5BA !important;
-    color: #A23B45 !important;
-    border-color: #A23B45 !important;
+  .pm-window-chleg h3.pm-notifying:hover {
+    border-color: #622330 !important;
+    background: #DE7086 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
+    background-position: 200px -4px !important;
+    color: #622330 !important;
+    text-shadow: 0px 0px 3px #944152;
+    font-style: italic;
   }
   
-  .pm-window-sariisaur .challenge .select, .pm-window-sariisaur .challenge .buttonbar button {
-    background: #B0F597 !important;
-    border-color: #396A39 !important;
-    color: #396A39 !important;
-    text-shadow: none !important;
+  .pm-window-chleg .challenge {
+    background: #EB8298 !important;
+    color: #303030 !important;
+    border-color: #622330 !important;
+    text-shadow: 0px 0px 3px #B55064;
   }
   
-  .pm-window-sariisaur .challenge .select:hover, .pm-window-sariisaur .challenge .buttonbar button:hover {
-    background: #D2F6C5 !important;
-    border-color: #396A39 !important;
+  .pm-window-chleg .challenge .select, .pm-window-chleg .challenge .buttonbar button {
+    background: #484848 !important;
+    border-color: #343637 !important;
+    color: #FFF !important;
+    text-shadow: 0px 0px 2px #EB8298 !important;
+  }
+  
+  .pm-window-chleg .challenge .select:hover {
+    background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") right center no-repeat !important;
+    border-color: #111 !important;
   } 
   
-  .pm-window-sariisaur .challenge .select:disabled {
-    background: rgba(176, 245, 151, 0.5) !important;
-    border-color: #396A39 !important;
+  .pm-window-chleg .challenge .buttonbar button:hover {
+    background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") center no-repeat !important;
+    border-color: #111 !important;
+  } 
+  
+  .pm-window-chleg .challenge .teamselect:disabled, .pm-window-chleg .challenge .teamselect:disabled:hover {
+    background: rgba(60, 60, 60, 0.5) !important;
+    border-color: #111 !important;
   }
   
-  /*sariisaur~end*/
+  .pm-window-chleg .challenge .teamselect:disabled strong {
+    color: #111 !important;
+  }
+  
+  /*chleg~end*/
 
 /* CUSTOM PM ~end */
 
@@ -568,6 +893,14 @@
 
 #lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat;
+}
+
+#lobby-userlist-user-phoenixeien, #phoenixleague-userlist-user-phoenixeien, #hingostraphouse-userlist-user-phoenixeien {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat;
+}
+
+#lobby-userlist-user-emblempanda, #thelotusleague-userlist-user-emblempanda, #monotype-userlist-user-emblempanda, #casino-userlist-user-emblempanda, #halloffame-userlist-user-emblempanda {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/78hqXIv.png") right no-repeat;
 }
 
 /* Icons ~end */
@@ -954,9 +1287,12 @@ body {
 .menugroup .select:disabled, .menugroup .select:disabled:hover {
   background: rgba(255, 224, 167, 0.7) !important;
   border-color: #803C6F !important;
-  color: #803C6F !important;
   text-shadow: none !important;
   font-style: italic !important;
+}
+
+.teamselect:disabled strong {
+    color: #803C6F !important;
 }
 
 .pm-window h3 {
@@ -1182,6 +1518,20 @@ a.subtle, a.subtle:hover {
   border-bottom: 1px solid #062529;
 }
 
+.bglist button {
+  border-color: #11484F;
+}
+  
+.bglist button:hover {
+  border-color: #11484F;
+  background: rgba(255, 255, 255, 0.35);
+}
+  
+.bglist button.cur, .bglist button.cur:hover {
+  border-color: #092428;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /*****************
 * Popup CSS ~end *
 *****************/
@@ -1218,6 +1568,32 @@ a.subtle, a.subtle:hover {
 * Teambuilder CSS *
 ******************/
 
+.folder .selectFolder, .folderpane h3 {
+  background: #BBCCC9;
+}
+
+.folderpane h3 {
+  color: #11484F !important;
+  text-shadow: none !important;
+}
+
+.folderpane {
+  border-left: 5px solid #BBCCC9;
+}
+
+.folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before{
+  background: #BBCCC9;
+}
+
+.folder.cur .selectFolder, .folder.cur .selectFolder:hover {
+  border-color: #11484F;
+  background: #BBCCC9;
+}
+
+.folder .selectFolder:hover {
+  background: #D4E5E2;
+}
+
 .teamchartbox {
   border-color: #11484F;
 }
@@ -1230,7 +1606,7 @@ a.subtle, a.subtle:hover {
 }
 
 .teamlist .team:hover {
-  background: #BBCCC9;    
+  background: #D4E5E2;    
   border-color: #0E3339;
   color: #0E3339;
   text-shadow: none;
@@ -1346,12 +1722,12 @@ a.subtle, a.subtle:hover {
   text-shadow: none;
 }
 
-.setmenu button {
+.setmenu button, .teamlist button {
   color: #5B274D;
   text-shadow: 0px 0px 2px #FCE8F1;
 }
 
-.setmenu button:hover {
+.setmenu button:hover, .teamlist button:hover {
   border-color: #803C6F !important;
   background: #F3C5EA !important;
   color: #803C6F !important;

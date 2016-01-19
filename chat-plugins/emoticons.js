@@ -15,10 +15,12 @@ let emotes = {
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
+	'feelsbirb': 'http://i.imgur.com/o4KxmWe.png',
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelsbt': 'http://i.imgur.com/rghiV9b.png',
 	'feelschime': 'http://i.imgur.com/uIIBChH.png',
+	'feelscrazy': 'http://i.imgur.com/NiJsT5W.png',
 	'feelscool': 'http://i.imgur.com/qdGngVl.jpg?1',
 	'feelscri': 'http://i.imgur.com/QAuUW7u.jpg?1',
 	'feelscx': 'http://i.imgur.com/zRSUw2n.gif',
@@ -33,6 +35,7 @@ let emotes = {
 	'feelsgro': 'http://i.imgur.com/jLhP0bZ.png?1',
 	'feelshigh': 'http://i.imgur.com/s9I2bxp.jpg?1',
 	'feelshlwn': 'http://i.imgur.com/OHMDVNJ.jpg',
+	'feelshp': 'http://i.imgur.com/1W19BDG.png',
 	'feelsho': 'http://i.imgur.com/J4oUHm2.png?1',
 	'feelsilum': 'http://i.imgur.com/CnyGTTD.png',
 	'feelsjig': 'http://i.imgur.com/hSzqy5z.png?1',
@@ -57,6 +60,7 @@ let emotes = {
 	'feelspn': 'http://i.imgur.com/wSSM6Zk.png',
 	'feelspoli': 'http://i.imgur.com/FnzhrWa.jpg?1',
 	'feelsPoli': 'http://i.imgur.com/sbKhXZE.jpg?1',
+	'feelsrb': 'http://i.imgur.com/L6ak1Uk.png',
 	'feelsrg': 'http://i.imgur.com/DsRQCsI.png',
 	'feelsrs': 'http://i.imgur.com/qGEot0R.png',
 	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
@@ -94,7 +98,8 @@ let emotes = {
 	'xoxo': 'http://orig00.deviantart.net/b49d/f/2014/220/5/3/ichigo_not_impressed_icon_by_magical_icon-d7u92zg.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
-	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg'
+	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
+	'gudone': 'http://i.imgur.com/USkp1b9.png'
 };
 
 let emotesKeys = Object.keys(emotes);

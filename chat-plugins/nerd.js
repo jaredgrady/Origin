@@ -75,18 +75,20 @@ exports.commands = {
 	},
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		var i = -100;
+		var i = -50;
 		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-		for (; crashes.split('\n\n').length <= 16; i--) {
+		var crashesLines = Number(target);
+		if (isNaN(target) || !target || Number(target) < 10) crashesLines = 10;
+		if (crashesLines > 50) crashesLines = 50;
+		for (; crashes.split('\n\n').length <= crashesLines; i--) {
 			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
+			if (crashes.split('\n\n').length === crashesLines && crashes.toString().substr(0, 22) === 'Additional information') {
+				for (; crashes.split('\n\n').length <= crashesLines + 1; i--) {
+					crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i - 1).join('\n');
+				}
+			}
 		}
 		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i + 3).join('\n');
-		if (crashes.toString().substr(0, 22) === 'Additional information') {
-			for (; crashes.split('\n\n').length <= 17; i--) {
-				crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n')
-			}
-			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i + 3).join('\n');
-		}
 		user.send('|popup|' + crashes);
 	},
 	restart: function(target, room, user) {

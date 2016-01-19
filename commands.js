@@ -310,11 +310,8 @@ let commands = exports.commands = {
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: & ~"],
 
 	makegroupchat: function (target, room, user, connection, cmd) {
-		if (!user.autoconfirmed) {
-			return this.errorReply("You must be autoconfirmed to make a groupchat.");
-		}
-		if (!user.confirmed) {
-			return this.errorReply("You must be global voice or roomdriver+ in some public room to make a groupchat.");
+		if (!user.isStaff) {
+			return this.errorReply("You must be a staff member to make a groupchat");
 		}
 		// if (!this.can('makegroupchat')) return false;
 		if (target.length > 64) return this.errorReply("Title must be under 32 characters long.");
@@ -1379,7 +1376,7 @@ let commands = exports.commands = {
 
 	rangelock: function (target, room, user) {
 		if (!target) return this.errorReply("Please specify a range to lock.");
-		if (!this.can('rangeban')) return false;
+		if (!this.can('forcewin')) return false;
 
 		let isIp = (target.slice(-1) === '*');
 		let range = (isIp ? target : Users.shortenHost(target));
@@ -1392,7 +1389,7 @@ let commands = exports.commands = {
 	unrangelock: 'rangeunlock',
 	rangeunlock: function (target, room, user) {
 		if (!target) return this.errorReply("Please specify a range to unlock.");
-		if (!this.can('rangeban')) return false;
+		if (!this.can('forcewin')) return false;
 
 		let range = (target.slice(-1) === '*' ? target : Users.shortenHost(target));
 		if (!Users.lockedRanges[range]) return this.errorReply("The range " + range + " is not locked.");

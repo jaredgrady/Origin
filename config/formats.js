@@ -530,6 +530,9 @@ exports.Formats = [
 			'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky',
 			'Xerneas', 'Yveltal', 'Zekrom', 'Focus Sash', 'Kangaskhanite', 'Soul Dew', 'Perish Song',
 		],
+		onBegin: function () {
+			this.add('-message', "Salutations good Sir or Madam");
+		},
 	},
 	{
 		name: "Monotype",

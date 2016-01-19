@@ -169,7 +169,7 @@ Profile.prototype.dev = function () {
 
 Profile.prototype.title = function () {
 	let title = Db('TitleDB').get(toId(toId(this.user)));
-	if (typeof title !== 'undefined' && title !== null)  return ' (<font color=#' + title[0] + '><b>' + title[1] + '</b></font>)';
+	if (typeof title !== 'undefined' && title !== null)  return ' (<font color=#' + title[0] + '><b>' + Tools.escapeHTML(title[1]) + '</b></font>)';
 	return '';
 };
 
@@ -209,17 +209,20 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
+			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
 			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			if (!reg.test(parts[2].trim())) return this.sendReply("Enter only alphanumeric characters for the eg. ff80b3");
+			if (parts.length < 4) return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 			title[0] = parts[2].trim();
-			title[1] = parts[3].trim();
+			title[1] = Tools.escapeHTML(parts.slice(3).join(",").trim());
+			if (title[1].length > 30) return this.errorReply("Custom titles cannot be longer than 100 characters.");
 			Db('TitleDB').set(toId(userid), title);
-			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom title from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: ' + '<font color=' + title[0] + '> <b>' + title[1] + '</b></font>');
+			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom title from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: ' + '<font color=' + title[0] + '> <b>' + Tools.escapeHTML(title[1]) + '</b></font>');
 			this.sendReply("Usertitle set.");
 			break;
 		default:
-			return this.sendReply("Invalid command. Valid commands are `/customctitle set, user, color, title`.");
+			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 		}
 	},
 	profilehelp: ["/profile - Shows information regarding user's name, group, money, and when they were last seen."],

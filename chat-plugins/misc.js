@@ -16,12 +16,15 @@ function clearRoom(room) {
 	}
 	for (let u in room.users) {
 		users.push(u);
+		if (!Users.get(u)) continue;
 		Users.get(u).leaveRoom(room, Users.get(u).connections[0]);
 	}
 	len = users.length;
 	setTimeout(function () {
 		while (len--) {
-			Users.get(users[len]).joinRoom(room, Users.get(users[len]).connections[0]);
+			if (Users.get(users[len])) {
+				Users.get(users[len]).joinRoom(room, Users.get(users[len]).connections[0]);
+			}
 		}
 	}, 1000);
 }
@@ -361,8 +364,8 @@ exports.commands = {
         if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
         let parts = target.split(',');
         if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
-        userid = toId(parts[0]);
-        roomid = toId(parts[1]);
+        let userid = toId(parts[0]);
+        let roomid = toId(parts[1]);
         if (!Users.get(userid)) return this.sendReply ('User not found.');
         if (!Rooms.get(roomid)) return this.sendReply ('Room not found.');
         Users.get(userid).joinRoom(roomid);
