@@ -584,7 +584,9 @@ exports.commands = {
 			if (!UNO[roomid].lastDraw) return false;
 			this.add("|raw|</b>" + user.name + "</b> has passed!");
 			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			this.add(UNO[roomid].lastplay);
+			if (UNO[roomid].lastplay) {
+				this.add(UNO[roomid].lastplay);
+			}
 			clearDQ(roomid);
 			getNextPlayer(roomid);
 			initTurn(this, roomid);
