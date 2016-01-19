@@ -1,5 +1,4 @@
-'use strict';
-//Shell Game by Dragotic and fender :)
+/*'use strict';
 let color = require('../config/color');
 
 function display(user, bet) {
@@ -81,4 +80,4 @@ exports.commands = {
 			room.addRaw('<h3>The Shell Game was ended early by ' + user + '.');
 		},
 	},
-};
+};   */
