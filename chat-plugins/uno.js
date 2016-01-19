@@ -401,6 +401,7 @@ exports.commands = {
 		let userid = user.userid;
 		let roomid = room.id;
 		let self = this;
+		let users = playerList.indexOf(current);
 		switch (action) {
 		case "new":
 			if (!this.can("ban", null, room)) return false;
@@ -437,6 +438,7 @@ exports.commands = {
 		case "join":
 			if (!UNO[roomid] || UNO[roomid].start) return false;
 			if (!verifyAlts(userid, UNO[roomid].list) || UNO[roomid].list.indexOf(userid) > -1) return this.errorReply("You already have an alt joined.");
+			if (users.length >= 10) return this.errorReply('There cannot be more than 10 players');
 			if (UNO[roomid].pot) {
 				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
 				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
