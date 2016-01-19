@@ -427,7 +427,7 @@ exports.commands = {
 				postuhtml: 0,
 				lastplay: null,
 			};
-			if (pot && room.id !== 'casino') return this.errorReply('You cannot start a game with bets in rooms besides Casino');
+			if (pot && room.id !== 'uno') return this.errorReply('You cannot start a game with bets in rooms besides Uno');
 			if (Db('money').get(user.userid, 0) < pot) return this.errorReply('You cannot start a game with a pot that has more bucks than you.');
 			this.add("|raw|<center><img src=\"http://www.theboardgamefamily.com/wp-content/uploads/2010/12/uno-mobile-game1.jpg\" height=300 width=320><br><br><b>A new game of UNO is starting!</b><br><br><button style=\"height: 30px ; width: 60px ;\" name=\"send\" value=\"/uno join\">Join</button></center>");
 			if (pot) {
