@@ -347,7 +347,8 @@ let Context = exports.Context = (function () {
 					'Additional information:\n' +
 					'user = ' + this.user.name + '\n' +
 					'room = ' + this.room.id + '\n' +
-					'message = ' + this.message;
+					'message = ' + this.message + '\n' +
+					'date = ' + new Date().toLocaleString();
 			let fakeErr = {stack: stack};
 
 			if (!require('./crashlogger.js')(fakeErr, 'A chat command')) {

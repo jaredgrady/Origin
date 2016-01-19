@@ -427,6 +427,8 @@ exports.commands = {
 				postuhtml: 0,
 				lastplay: null,
 			};
+			if (pot && room.id !== 'uno') return this.errorReply('You cannot start a game with bets in rooms besides Uno');
+			if (Db('money').get(user.userid, 0) < pot) return this.errorReply('You cannot start a game with a pot that has more bucks than you.');
 			this.add("|raw|<center><img src=\"http://www.theboardgamefamily.com/wp-content/uploads/2010/12/uno-mobile-game1.jpg\" height=300 width=320><br><br><b>A new game of UNO is starting!</b><br><br><button style=\"height: 30px ; width: 60px ;\" name=\"send\" value=\"/uno join\">Join</button></center>");
 			if (pot) {
 				this.add("|raw|<br><center><font color=\"red\"><b>You will need " + pot + " bucks to join this game.</b></font></center>");
@@ -455,10 +457,10 @@ exports.commands = {
 			let targetUser = toId(parts.join(" ") || " ");
 			if (!targetUser) return false;
 			if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
-			if (UNO[roomid].pot) return this.errorReply("You disqualify players in a game with bucks involved.");
+			if (UNO[roomid].pot) return this.errorReply("You cannot disqualify players in a game with bucks involved.");
 			if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
 				clearDQ(roomid);
-				getNextPlayer();
+				getNextPlayer(roomid);
 				initTurn(this, roomid);
 			}
 			UNO[roomid].list.splice(UNO[roomid].list.indexOf(targetUser), 1);
@@ -471,8 +473,10 @@ exports.commands = {
 			}
 			break;
 		case "start":
-			if (!UNO[roomid] || !this.can("ban", null, room) || UNO[roomid].start) return false;
+			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
+			if (!this.can("ban", null, room)) return this.errorReply('You must be @ or higher to start a game');
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
+			this.privateModCommand(user.name + " has started the game");
 			//start the game!
 			UNO[roomid].start = UNO[roomid].list.length;
 			//create deck
@@ -487,7 +491,7 @@ exports.commands = {
 			//get top card
 			initTopCard(roomid);
 			while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
-				initTopCard();
+				initTopCard(roomid);
 			}
 			//announce top card
 			this.add("|uhtml|post" + UNO[roomid].postuhtml + "|<b>The top card is:</b> " + getCard(UNO[roomid].top));
@@ -584,7 +588,9 @@ exports.commands = {
 			if (!UNO[roomid].lastDraw) return false;
 			this.add("|raw|</b>" + user.name + "</b> has passed!");
 			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			this.add(UNO[roomid].lastplay);
+			if (UNO[roomid].lastplay) {
+				this.add(UNO[roomid].lastplay);
+			}
 			clearDQ(roomid);
 			getNextPlayer(roomid);
 			initTurn(this, roomid);
@@ -592,10 +598,11 @@ exports.commands = {
 			break;
 		case "end":
 			if (!UNO[roomid] || !this.can("ban", null, room)) return false;
-			if (UNO[roomid].pot) return this.errorReply("You cannot end a game that is for bucks!");
+			if (UNO[roomid].pot && !this.can('bypassall')) return this.errorReply("You cannot end a game that is for bucks!");
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
 			destroy(roomid);
+			this.privateModCommand(user.name + " has ended the game");
 			this.add("The game was forcibly ended.");
 			room.update();
 			break;
