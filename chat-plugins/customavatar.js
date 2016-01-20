@@ -86,6 +86,7 @@ exports.commands = {
 			targetUser = Users.getExact(userid);
 			avatar = parts.slice(2).join(',').trim();
 			if (!this.can('lock') && !this.can('vip')) return false;
+			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to set other people their custom avatar.");
 
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");

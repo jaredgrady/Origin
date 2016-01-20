@@ -214,6 +214,7 @@ exports.commands = {
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			if (!reg.test(parts[2].trim())) return this.sendReply("Enter only alphanumeric characters for the eg. ff80b3");
 			if (parts.length < 4) return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
+			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to set other people their custom title.");
 			title[0] = parts[2].trim();
 			title[1] = Tools.escapeHTML(parts.slice(3).join(",").trim());
 			if (title[1].length > 30) return this.errorReply("Custom titles cannot be longer than 100 characters.");
