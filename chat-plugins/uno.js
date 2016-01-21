@@ -608,7 +608,7 @@ exports.commands = {
 			this.add("The game was forcibly ended.");
 			room.update();
 			break;
-		case: "getusers":
+		case "getusers":
 			if (!UNO[roomid]) return false;
 			if (!this.canBroadcast()) return;
 			return this.sendReplyBox("Players: (" + UNO[roomid].list.length + ")<br />" + UNO[roomid].list.join(", "));
