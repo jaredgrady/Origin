@@ -611,7 +611,7 @@ exports.commands = {
 		case "getusers":
 			if (!UNO[roomid]) return false;
 			if (!this.canBroadcast()) return;
-			return this.sendReplyBox("Players: (" + UNO[roomid].list.length + ")<br />" + UNO[roomid].list.join(", "));
+			this.add("Players: (" + UNO[roomid].list.length + ")<br />" + UNO[roomid].list.join(", "));
 			break;
 		default:
 			if (UNO[roomid] && UNO[roomid].start && userid === UNO[roomid].player) return this.parse("/uno display");
