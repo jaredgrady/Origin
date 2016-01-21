@@ -37,15 +37,6 @@ Full [For Pokemon with full background]
 
 All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
 */
-
-try {
-	cachePacks();
-	cacheRarity();
-} 
-catch (e) {
-	console.log("Error patching cards: " + e);
-}
-
 var uuid = require('uuid');
 
 var colors = {
@@ -77,6 +68,14 @@ var cleanCard = [];
 var rareCache = []; //Used to cache cards for tours
 var cardCache = []; //Used to cache cards in packs
 var userPacks = {}; //Used to store users unopened packs
+
+try {
+	cachePacks();
+	cacheRarity();
+} 
+catch (e) {
+	console.log("Error patching cards at line 72 in cards.js: " + e);
+}
 
 var cards = {
         'absol': {title: 'absol', name: 'Absol', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_40.png', publicid: '359', rarity: 'Uncommon', collection: ['Darkness', 'UU-Pack', 'XY-Roaring Skies', 'Gen3'], points: 3},
@@ -1046,7 +1045,7 @@ function toTitleCase(str) {
 }
 
 exports.commands = {
-/*
+
     packs: 'pack',
     pack: function(target, room, user) {
         if (!this.canBroadcast()) return;
@@ -1225,7 +1224,7 @@ exports.commands = {
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
 	}, 
-   
+/*
     transfercard: function (target, room, user) {
     var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
@@ -1251,12 +1250,12 @@ exports.commands = {
         });
     });
       },
-  */    psgo: 'cardshelp',
-      eoscg: 'cardshelp',
+  */  psgo: 'cardshelp',
+      origincg: 'cardshelp',
       cardshelp: function (target, room, user) {
         if (!this.canBroadcast()) return;
             return this.sendReplyBox('\
-            <center><b><u>EOS Trading Card Game:</u></b></center><br>\
+            <center><b><u>Origin Trading Card Game:</u></b></center><br>\
             <b>/buypack</b> - Buys a pack from the pack shop.<br>\
             <b>/packshop</b> - Shows the shop for buying packs.<br>\
             <b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
