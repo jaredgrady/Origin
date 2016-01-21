@@ -608,6 +608,11 @@ exports.commands = {
 			this.add("The game was forcibly ended.");
 			room.update();
 			break;
+		case: "getusers":
+			if (!UNO[roomid]) return false;
+			if (!this.canBroadcast()) return;
+			return this.sendReplyBox("Players: (" + UNO[roomid].list.length + ")<br>" + UNO[roomid].list.join(", "));
+			break;
 		default:
 			if (UNO[roomid] && UNO[roomid].start && userid === UNO[roomid].player) return this.parse("/uno display");
 			this.parse("/help uno");
