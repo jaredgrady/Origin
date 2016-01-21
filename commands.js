@@ -955,7 +955,9 @@ let commands = exports.commands = {
 				this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 			}
 		}
-		this.add('|unlink|' + this.getLastIdOf(targetUser));
+		let lastid = this.getLastIdOf(targetUser);
+		this.add('|unlink|hide|' + lastid);
+		if (lastid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
 	},
 	roombanhelp: ["/roomban [username] - Bans the user from the room you are in. Requires: @ # & ~"],
 
