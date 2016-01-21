@@ -759,9 +759,9 @@ class Tournament {
 			}
 		}
 		if (this.room.isOfficial && tourSize >= 4) {
-        		let tourRarity = tourCard(tourSize, toId(winner));
+			let tourRarity = tourCard(tourSize, toId(winner));
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + colors[tourRarity[0]] + ">" + tourRarity[0] + "</font> card: <button name='send' value='/card " + tourRarity[1] + "'>" + tourRarity[2] + "</button> from the tournament.");
-		} 
+		}
 		delete exports.tournaments[this.room.id];
 		delete this.room.game;
 	}
