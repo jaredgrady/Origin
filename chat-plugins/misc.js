@@ -858,4 +858,11 @@ exports.commands = {
 	floatpmall: function (target, room, user) {
 		this.parse('/pmall /html ' + Float.renderElement(target));
 	},
+
+	fhtmlbox: 'floathtmlbox',
+	floathtmlbox: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		room.update();
+		this.parse('/htmlbox ' + Float.renderElement(target));
+	},
 };
