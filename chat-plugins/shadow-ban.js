@@ -158,13 +158,13 @@ exports.commands = {
 		}
 
 		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
-
+		
 		var targets = addUser(this.targetUser);
 		if (targets.length === 0) {
 			return this.sendReply('||' + this.targetUsername + " is already shadow banned or isn't named.");
 		}
-		this.privateModCommand("(" + user.name + " has shadow banned: " + targets.join(", ") + (reason ? " (" + reason + ")" : "") + ")");
-
+		this.globalModlog("SBAN", this.targetUser, " by " + user.name);
+		Rooms.get("staff").add("(" +  this.targetUser.name + "was shadowbanned by" + user.name + ")");
 		//return this.parse('/' + action + ' ' + toId(this.targetUser) + ',' + reason);
 	},
 
@@ -180,6 +180,8 @@ exports.commands = {
 		if (targets.length === 0) {
 			return this.sendReply('||' + this.targetUsername + " is not shadow banned.");
 		}
+		this.globalModlog("UNSBAN", this.targetUser, " by " + user.name);
+		Rooms.get("staff").add("(" +  this.targetUser.name + "was unshadowbanned by" + user.name + ")");
 		this.privateModCommand("(" + user.name + " has unshadow banned: " + targets.join(", ") + ")");
 	},
 	
