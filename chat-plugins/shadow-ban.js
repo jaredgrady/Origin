@@ -145,7 +145,8 @@ var addMessage = exports.addMessage = function (user, tag, message) {
 exports.commands = {
 	spam: 'shadowban',
 	sban: 'shadowban',
-	shadowban: function (target, room, user) {
+	shadowban: function (target, room, user, connection, cmd) {
+		if (["~", "&"].indexOf(user.group) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!target) return this.sendReply("/shadowban OR /sban [username], [secondary command], [reason] - Sends all the user's messages to the shadow ban room.");
 
 		var params = this.splitTarget(target).split(',');
@@ -157,7 +158,6 @@ exports.commands = {
 		}
 
 		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
-		if (!this.can('declare', this.targetUser)) return;
 
 		var targets = addUser(this.targetUser);
 		if (targets.length === 0) {
@@ -170,11 +170,11 @@ exports.commands = {
 
 	unspam: 'unshadowban',
 	unsban: 'unshadowban',
-	unshadowban: function (target, room, user) {
+	unshadowban: function (target, room, user, connection, cmd) {
+		if (["~", "&"].indexOf(user.group) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!target) return this.sendReply("/unshadowban OR /unsban [username] - Undoes /shadowban (except the secondary command).");
 		this.splitTarget(target);
 
-		if (!this.can('declare')) return;
 
 		var targets = removeUser(this.targetUser || this.targetUsername);
 		if (targets.length === 0) {
@@ -183,10 +183,9 @@ exports.commands = {
 		this.privateModCommand("(" + user.name + " has unshadow banned: " + targets.join(", ") + ")");
 	},
 	
-	sbanlist: function (target, room, user) {
-		if (!target && !this.can('lock')) return this.sendReply("The command '/sbanlist' was unrecognized.  To send a message starting with '/sbanlist', type '//sbanlist'.");
+	sbanlist: function (target, room, user, connection, cmd) {
+		if (["~", "&", "@", "%"].indexOf(user.group) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");		
-		if (!this.can('lock')) return false;
 		Users.get(toId(user.name)).send('|popup| Here is a list of sbanned users: \n' + JSON.stringify(Rooms.rooms.shadowbanroom.chatRoomData, null, 2));
 	}
 };
