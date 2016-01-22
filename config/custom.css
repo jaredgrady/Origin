@@ -1018,13 +1018,26 @@ body {
   background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
 }
 
+.dark body {
+  background: #210720 url("http://i.imgur.com/D2kCH7Y.jpg") bottom no-repeat;
+}
+
 .ps-room.ps-room-light {
   background: rgba(0, 0, 0, 0);
   border-color: #11484F;
 }
 
+.dark .ps-room.ps-room-light {
+  background: none;
+  border-color: #09181F;
+}
+
 .ps-room.ps-room-light.scrollable {
   background: rgba(51, 98, 81, 0.6);
+}
+
+.dark .ps-room.ps-room-light.scrollable {
+  background: rgba(19, 36, 46, 0.6);
 }
 
 .ps-room.ps-room-light.scrollable h3 {
@@ -1126,7 +1139,15 @@ body {
   background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
 }
 
+.dark .header {
+  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+}
+
 .header .logo {
+  opacity: 0;
+}
+
+.dark .header .logo {
   opacity: 0;
 }
 
