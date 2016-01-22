@@ -1045,7 +1045,7 @@ function toTitleCase(str) {
 }
 
 exports.commands = {
-
+/*
     packs: 'pack',
     pack: function(target, room, user) {
         if (!this.canBroadcast()) return;
@@ -1224,7 +1224,7 @@ exports.commands = {
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
 	}, 
-/*
+
     transfercard: function (target, room, user) {
     var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
