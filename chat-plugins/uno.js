@@ -403,7 +403,7 @@ exports.commands = {
 		let self = this;
 		switch (action) {
 		case "new":
-			if (!this.can("ban", null, room)) return false;
+			if (!this.can("mute", null, room)) return false;
 			if (UNO[roomid]) return this.errorReply("There is already a game going on.");
 			let pot = null;
 			if (parseInt(parts[0])) {
@@ -458,7 +458,7 @@ exports.commands = {
 			if (!UNO[roomid] || !UNO[roomid].start) return false;
 			let targetUser = toId(parts.join(" ") || " ");
 			if (!targetUser) return false;
-			if (!(targetUser in UNO[roomid].data) || !this.can("ban", null, room)) return;
+			if (!(targetUser in UNO[roomid].data) || !this.can("mute", null, room)) return;
 			if (UNO[roomid].pot) return this.errorReply("You cannot disqualify players in a game with bucks involved.");
 			if (UNO[roomid].list.length !== 2 && targetUser === UNO[roomid].player) {
 				clearDQ(roomid);
@@ -476,7 +476,7 @@ exports.commands = {
 			break;
 		case "start":
 			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
-			if (!this.can("ban", null, room)) return this.errorReply('You must be @ or higher to start a game');
+			if (!this.can("mute", null, room)) return this.errorReply('You must be @ or higher to start a game');
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
 			this.privateModCommand(user.name + " has started the game");
 			//start the game!
@@ -599,7 +599,7 @@ exports.commands = {
 			room.update();
 			break;
 		case "end":
-			if (!UNO[roomid] || !this.can("ban", null, room)) return false;
+			if (!UNO[roomid] || !this.can("mute", null, room)) return false;
 			if (UNO[roomid].pot && !this.can('bypassall')) return this.errorReply("You cannot end a game that is for bucks!");
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
