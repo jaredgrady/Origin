@@ -8,6 +8,9 @@ let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
 const Float = require('float-ui');
+const Float_PS = require('float-ps');
+
+Float.extendElements(Float_PS);
 
 function clearRoom(room) {
 	let len = (room.log && room.log.length) || 0;
@@ -836,15 +839,23 @@ exports.commands = {
 		this.sendReply("Succesfully repromoted " + targetUser + ".");
 	},
 
+	fdeclare: 'floatdeclare',
 	floatdeclare: function (target, room, user) {
-		if (!target) return this.parse('/help floatdeclare');
-		if (!this.can('gdeclare', null, room)) return false;
-		if (!this.canTalk()) return;
-		target = this.canHTML(target);
-		if (!target) return;
-
-		this.add('|raw|' + Float.renderElement(target));
-		this.logModCommand(user.name + " float declared " + target);
+		this.parse('/declare ' + Float.renderElement(target));
 	},
-	htmldeclarehelp: ["/htmldeclare [message] - Anonymously announces a message using float. Requires: ~"],
+
+	fgdeclare: 'floatgdeclare',
+	floatgdeclare: function (target, room, user) {
+		this.parse('/gdeclare ' + Float.renderElement(target));
+	},
+
+	froomintro: 'floatroomintro',
+	floatroomintro: function (target, room, user) {
+		this.parse('/roomintro ' + Float.renderElement(target));
+	},
+
+	fpmall: 'floatpmall',
+	floatpmall: function (target, room, user) {
+		this.parse('/pmall /html ' + Float.renderElement(target));
+	},
 };
