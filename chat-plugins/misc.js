@@ -817,6 +817,22 @@ exports.commands = {
 		if (!this.can('ban', null, room)) return false;
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
 	},
+
+	userontime: 'ontime',
+	ontime: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		let targetUser = '';
+		if (!target) targetUser = user.userid;
+		else targetUser = Tools.escapeHTML(target);
+		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - user.start);
+		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
+		const second = ontime / 1000;
+		const minute = second / 60;
+		const hour = minute / 60;
+		const f = Math.floor;
+		this.sendReplyBox(targetUser + "'s total ontime is <b>" + f(hour) + (f(hour) === 1 ? " hour " : " hours ") + f(minute) + (f(minute) === 1 ? " minute " : " minutes ") + f(second) + (f(second) === 1 ? " second." : " seconds.") + "</b>");
+	},
+	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],
 	
 	reauth: "repromote",
 	repromote: function(target, room, user) {
