@@ -39,6 +39,7 @@
   background: rgba(248, 248, 248, 0.9);
   border: 1px solid #768D9C;
   text-align: center;
+  padding: 5px;
 }
 
 .table-option:hover {
