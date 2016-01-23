@@ -1927,6 +1927,10 @@ let commands = exports.commands = {
 				}
 			}
 		}
+		Users.user.forEach(function (user) {
+			if (!user.connected) return;
+			Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - user.start));
+		});
 
 		this.logEntry(user.name + " used /lockdown");
 	},
