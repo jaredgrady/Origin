@@ -842,7 +842,8 @@ exports.commands = {
 		let targetUser = '';
 		if (!target) targetUser = user.userid;
 		else targetUser = Tools.escapeHTML(target);
-		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - (Users.get(targetUser) || {}).start);
+		const userStart = (Users.get(targetUser) || {}).start;
+		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - (userStart || 0));
 		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
 		const t = convertTime(ontime);
 		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + ".</b>");
@@ -854,7 +855,9 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		let display = '<center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
 		let keys = Object.keys(Db('ontime').object()).map(function (name) {
-			return {name: name, time: Db('ontime').get(name)};
+			const userStart = (Users.get(name) || {}).start;
+			const ontime = Db('ontime').get(name, 0) + (Date.now() - (userStart || 0));
+			return {name: name, time: ontime};
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
 		keys = keys.sort(function (a, b) {
