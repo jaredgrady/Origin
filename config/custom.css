@@ -72,7 +72,7 @@
 
 .pm-window-masterfloat h3 {
   background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #1EA88C !important;
   text-shadow: 0px 0px 2px #B6F3E7 !important;
   border-color: #1F6C5D !important;
@@ -80,7 +80,7 @@
 
 .pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
   background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #1EA88C !important;
   text-shadow: 0px 0px 2px #B6F3E7 !important;
   border-color: #1F6C5D !important;
@@ -123,7 +123,7 @@
 
 .pm-window-neosoul h3 {
   background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #124A66 !important;
   border-color: #124A66 !important;
@@ -131,7 +131,7 @@
 
 .pm-window-neosoul h3:hover, .pm-window-neosoul.focused h3, .pm-window-neosoul.focused h3:hover {
   background: rgba(36, 110, 148, 0.9) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #0C374D !important;
   border-color: #0C374D !important;
@@ -184,7 +184,7 @@
 
 .pm-window-fender h3 {
   background: rgba(38, 38, 38, 0.8) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #000 !important;
   border-color: #222 !important;
@@ -192,7 +192,7 @@
 
 .pm-window-fender h3:hover {
   background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #EEE !important;
   text-shadow: 0px 0px 2px #000 !important;
   border-color: #222 !important;
@@ -200,7 +200,7 @@
 
 .pm-window-fender.focused h3, .pm-window-fender.focused h3:hover {
   background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #DECA94 !important;
   text-shadow: 0px 0px 2px #1B1B1B !important;
   border-color: #1B1B1B !important;
@@ -249,7 +249,7 @@
 .pm-window-fender h3.pm-notifying {
   border-color: #C60000 !important;
   background: rgba(0, 0, 0, 0.85) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #FF6464 !important;
   text-shadow: 0px 0px 2px #000 !important;
 }
@@ -257,7 +257,7 @@
 .pm-window-fender h3.pm-notifying:hover {
   border-color: #C60000 !important;
   background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #FF6464 !important;
   text-shadow: 0px 0px 2px #000 !important;
 }
@@ -268,7 +268,7 @@
 
 .pm-window-katheyisme123 h3 {
   background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #CAF5B4 !important;
   text-shadow: 0px 0px 2px #383631 !important;
   border-color: #383631 !important;
@@ -276,7 +276,7 @@
 
 .pm-window-katheyisme123 h3:hover, .pm-window-katheyisme123.focused h3, .pm-window-katheyisme123.focused h3:hover {
   background: rgba(56, 54, 49, 0.9) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #CAF5B4 !important;
   text-shadow: 0px 0px 2px #24221F !important;
   border-color: #2F2D29 !important;
@@ -320,7 +320,7 @@
 
 .pm-window-katheyisme123 h3.pm-notifying {
   background: #9ACAE4 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #625D56 !important;
   font-style: italic !important;
   border-color: #383631 !important;
@@ -329,7 +329,7 @@
 
 .pm-window-katheyisme123 h3.pm-notifying:hover {
   background: #6E97A9 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #383631 !important;
   font-style: italic !important;
   border-color: #383631 !important;
@@ -365,7 +365,7 @@
 
 .pm-window-sariisaur h3 {
   background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
-  background-position: 200px -3px !important;
+  background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
   border-color: #983841 !important;
@@ -373,7 +373,7 @@
 
 .pm-window-sariisaur h3:hover {
   background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
-  background-position: 200px -3px !important;
+  background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
   border-color: #983841 !important;
@@ -381,7 +381,7 @@
 
 .pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
   background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #D2F6C5 !important;
   text-shadow: 0px 0px 2px #983841 !important;
   border-color: #983841 !important;
@@ -425,7 +425,7 @@
 .pm-window-sariisaur h3.pm-notifying {
   border-color: #AB3E48 !important;
   background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
-  background-position: 200px -7px !important;
+  background-position: 225px -7px !important;
   color: #832730 !important;
   font-style: italic !important;
   text-shadow: none !important;
@@ -434,7 +434,7 @@
 .pm-window-sariisaur h3.pm-notifying:hover {
   border-color: #AB3E48 !important;
   background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
-  background-position: 200px -8px !important;
+  background-position: 225px -8px !important;
   color: #832730 !important;
   font-style: italic !important;
   text-shadow: none !important;
@@ -469,7 +469,7 @@
 
 .pm-window-emblempanda h3 {
   background: rgba(74, 74, 74, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
   border-color: #2B2B2B !important;
@@ -477,7 +477,7 @@
 
 .pm-window-emblempanda h3:hover, .pm-window-emblempanda.focused h3, .pm-window-emblempanda.focused h3:hover {
   background: rgba(60, 60, 60, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
   border-color: #2B2B2B !important;
@@ -530,7 +530,7 @@
 .pm-window-emblempanda h3.pm-notifying {
   border-color: #007313 !important;
   background: #10AB26 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #007313 !important;
   font-style: italic;
@@ -539,7 +539,7 @@
 .pm-window-emblempanda h3.pm-notifying:hover {
   border-color: #00580F !important;
   background: #0D8A22 url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #00580F !important;
   font-style: italic;
@@ -586,7 +586,7 @@
 
 .pm-window-nineage h3 {
   background: rgba(89, 174, 182, 0.8) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
   border-color: #182021 !important;
@@ -594,7 +594,7 @@
 
 .pm-window-nineage h3:hover, .pm-window-nineage.focused h3, .pm-window-nineage.focused h3:hover {
   background: rgba(89, 174, 182, 0.9) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFEECB !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
   border-color: #182021 !important;
@@ -639,7 +639,7 @@
 .pm-window-nineage h3.pm-notifying {
   border-color: #182021 !important;
   background: #EEA252 url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
   font-style: italic;
@@ -648,7 +648,7 @@
 .pm-window-nineage h3.pm-notifying:hover {
   border-color: #182021 !important;
   background: #D18A38 url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
   font-style: italic;
@@ -687,7 +687,7 @@
 
 .pm-window-chleg h3 {
   background: rgba(117, 77, 68, 0.8) url("http://www.serebii.net/pokedex-xy/icon/708.png") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #EB8298 !important;
   border-color: #313131 !important;
@@ -695,7 +695,7 @@
 
 .pm-window-chleg h3:hover, .pm-window-chleg.focused h3, .pm-window-chleg.focused h3:hover {
   background: rgba(117, 77, 68, 0.9) url("http://i.imgur.com/HYfcccn.gif") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #EB8298 !important;
   border-color: #313131 !important;        
@@ -740,7 +740,7 @@
 .pm-window-chleg h3.pm-notifying {
   border-color: #622330 !important;
   background: #EB8298 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #622330 !important;
   text-shadow: 0px 0px 3px #B55064;
   font-style: italic;
@@ -749,7 +749,7 @@
 .pm-window-chleg h3.pm-notifying:hover {
   border-color: #622330 !important;
   background: #DE7086 url("http://pokeliga.com/pictures/sprites/miniXY/708.gif") no-repeat !important;
-  background-position: 200px -4px !important;
+  background-position: 225px -4px !important;
   color: #622330 !important;
   text-shadow: 0px 0px 3px #944152;
   font-style: italic;
@@ -794,7 +794,7 @@
 
 .pm-window-paulcentury h3 {
     background: rgba(164, 160, 222, 0.8) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
-    background-position: 200px -4px !important;
+    background-position: 225px -4px !important;
     color: #291A84 !important;
     text-shadow: 0px 0px 2px #DEDBFF !important;
     border-color: #413BA2 !important;
@@ -802,7 +802,7 @@
   
   .pm-window-paulcentury h3:hover, .pm-window-paulcentury.focused h3, .pm-window-paulcentury.focused h3:hover {
     background: rgba(164, 160, 222, 0.9) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
-    background-position: 200px -4px !important;
+    background-position: 225px -4px !important;
     color: #291A84 !important;
     text-shadow: 0px 0px 2px #DEDBFF !important;
     border-color: #413BA2 !important;
@@ -846,7 +846,7 @@
   .pm-window-paulcentury h3.pm-notifying {
     border-color: #AC6A59 !important;
     background: #FFBDAC url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
-    background-position: 200px -4px !important;
+    background-position: 225px -4px !important;
     color: #291A84 !important;
     text-shadow: 0px 0px 2px #D48A77 !important;
     font-style: italic;
@@ -855,7 +855,7 @@
   .pm-window-paulcentury h3.pm-notifying:hover {
     border-color: #AC6A59 !important;
     background: #F3B09F url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
-    background-position: 200px -4px !important;
+    background-position: 225px -4px !important;
     color: #291A84 !important;
     text-shadow: 0px 0px 2px #D48A77 !important;
     font-style: italic;
@@ -1458,7 +1458,7 @@ body {
 
 .pm-window h3:hover {
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
-  background-position: 200px;
+  background-position: 225px;
   color: #CBEBE0;
 }
 
@@ -1469,7 +1469,7 @@ body {
 .pm-window.focused h3, .pm-window.focused h3:hover {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
-  background-position: 200px;
+  background-position: 225px;
   color: #E5FFF6;
   text-shadow: 0px -1px 0px #336251;
 }
