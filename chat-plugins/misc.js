@@ -8,7 +8,12 @@ let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
 const Float = require('float-ui');
-const Float_PS = require('float-ps');
+
+try {
+	const Float_PS = require('float-ps');
+} catch (e) {
+	console.error(e);
+}
 
 Float.extendElements(Float_PS);
 
