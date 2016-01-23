@@ -8,6 +8,24 @@ let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
 
+function convertTime(time) {
+	time = time / 1000
+	let seconds = time % 60
+	time /= 60
+	let minutes = time % 60
+	time /= 60
+	let hours = time % 24	
+	return {
+		s: Math.floor(seconds),
+		m: Math.floor(minutes),
+		h: Math.floor(hours),
+	};
+}
+
+function displayTime(t) {
+	return t.h + (t.h === 1 ? " hour " : " hours ") + t.m + (t.m === 1 ? " minute " : " minutes ") + t.s + (t.s === 1 ? " second." : " seconds");
+}
+
 function clearRoom(room) {
 	let len = (room.log && room.log.length) || 0;
 	let users = [];
@@ -826,13 +844,36 @@ exports.commands = {
 		else targetUser = Tools.escapeHTML(target);
 		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - user.start);
 		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
-		const second = ontime / 1000;
-		const minute = second / 60;
-		const hour = minute / 60;
-		const f = Math.floor;
-		this.sendReplyBox(targetUser + "'s total ontime is <b>" + f(hour) + (f(hour) === 1 ? " hour " : " hours ") + f(minute) + (f(minute) === 1 ? " minute " : " minutes ") + f(second) + (f(second) === 1 ? " second." : " seconds.") + "</b>");
+		const t = convertTime(ontime);
+		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + ".</b>");
 	},
 	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],
+
+	mostonline: 'ontimeladder',
+	ontimeladder: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		let display = '<center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
+		let keys = Object.keys(Db('ontime').object()).map(function (name) {
+			return {name: name, time: Db('ontime').get(name)};
+		});
+		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
+		keys = keys.sort(function (a, b) {
+			if (b.time > a.time) return 1;
+			return -1;
+		});
+		keys.slice(0, 10).forEach(function (user, index) {
+			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
+		});
+		if (this.broadcasting && Number(target) > 10) target = null;
+		if (!isNaN(target)) {
+			if (Number(target) > 100) target = 100;
+			keys.slice(10, target).forEach(function (user, index) {
+				display += "<tr><td>" + (index + 11) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
+			});
+		}
+		display += "</tbody></table>";
+		this.sendReply("|raw|" + display);
+	},
 	
 	reauth: "repromote",
 	repromote: function(target, room, user) {

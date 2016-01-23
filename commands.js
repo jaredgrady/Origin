@@ -1927,7 +1927,7 @@ let commands = exports.commands = {
 				}
 			}
 		}
-		Users.user.forEach(function (user) {
+		Users.users.forEach(function (user) {
 			if (!user.connected) return;
 			Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - user.start));
 		});
