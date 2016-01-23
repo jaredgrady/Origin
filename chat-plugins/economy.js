@@ -17,7 +17,7 @@ let shop = [
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Buys a 32x32 userlist icon supplied by you that will show in 3 rooms. (We will not change the rooms even if a fix is purchased. Will take time to appear. PM Master Float, Austin, AuraStormLucario, Irraquated or CreaturePhil once you bought one.)', 350],
+    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float with the pokemon and rooms you want it in (3 rooms maximum, will take time to appear).', 350],
     ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM Master Float to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
 
