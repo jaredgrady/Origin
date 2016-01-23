@@ -9,12 +9,12 @@ let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
 
 function convertTime(time) {
-	time = time / 1000
-	let seconds = time % 60
-	time /= 60
-	let minutes = time % 60
-	time /= 60
-	let hours = time % 24	
+	time = time / 1000;
+	let seconds = time % 60;
+	time /= 60;
+	let minutes = time % 60;
+	time /= 60;
+	let hours = time % 24;
 	return {
 		s: Math.floor(seconds),
 		m: Math.floor(minutes),
