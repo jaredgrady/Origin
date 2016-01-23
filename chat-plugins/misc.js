@@ -842,7 +842,7 @@ exports.commands = {
 		let targetUser = '';
 		if (!target) targetUser = user.userid;
 		else targetUser = Tools.escapeHTML(target);
-		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - Users.get(targetUser).start);
+		const ontime = Db('ontime').get(targetUser, 0) + (Date.now() - (Users.get(targetUser) || {}).start);
 		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
 		const t = convertTime(ontime);
 		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + ".</b>");
