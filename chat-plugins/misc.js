@@ -8,9 +8,10 @@ let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
 const Float = require('float-ui');
+let Float_PS = {};
 
 try {
-	const Float_PS = require('float-ps');
+	Float_PS = require('float-ps');
 } catch (e) {
 	console.error(e);
 }
