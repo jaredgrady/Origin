@@ -1049,7 +1049,6 @@
 body {
   background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
 }
-
 .dark body {
   background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat;
 }
@@ -1058,7 +1057,6 @@ body {
   background: rgba(0, 0, 0, 0);
   border-color: #11484F;
 }
-
 .dark .ps-room.ps-room-light {
   background: none;
   border-color: #09181F;
@@ -1067,19 +1065,26 @@ body {
 .ps-room.ps-room-light.scrollable {
   background: rgba(51, 98, 81, 0.6);
 }
-
 .dark .ps-room.ps-room-light.scrollable {
   background: rgba(19, 36, 46, 0.6);
 }
 
-.ps-room.ps-room-light.scrollable h3 {
+.rooms-officialchatrooms, .rooms-chatrooms {
   color: #BBCCC9;
   text-shadow: 0px 0px 2px #11484F;
+}
+.dark .rooms-officialchatrooms, .dark .rooms-chatrooms {
+  color: #DDD;
+  text-shadow: 1px 1px #222;
 }
 
 .ps-room.ps-room-light.scrollable p {
   color: #031012;
   text-shadow: 0px 0px 2px #96BFB8;
+}
+.dark .ps-room.ps-room-light.scrollable p {
+  color: #EEE;
+  text-shadow: 0px 0px 2px #000;
 }
 
 .ps-room.ps-room-light.scrollable .button {
@@ -1094,7 +1099,7 @@ body {
   border-color: #0C2D32;
 }
 
-.chat.mine {
+.chat.mine, .dark .chat.mine {
   background: rgba(0, 0, 0, 0);
 }
 
@@ -1158,6 +1163,9 @@ body {
 .ps-overlay {
   background: rgba(0, 0, 0, 0.35);
 }
+.dark .ps-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
 
 /*******************
 * General CSS ~end *
@@ -1170,22 +1178,21 @@ body {
 .header {
   background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
 }
-
 .dark .header {
-  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+  background: rgba(19, 36, 46, 0.5) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
 }
 
-.header .logo {
-  opacity: 0;
-}
-
-.dark .header .logo {
+.dark .header .logo, .header .logo {
   opacity: 0;
 }
 
 .maintabbarbottom {
   border-color: #803C6F;
   background: #CD9FC4;
+}
+.dark .maintabbarbottom {
+  background: #3A3A3A;
+  border-color: #111;
 }
 
 .tabbar a.button.notifying {
@@ -1195,25 +1202,45 @@ body {
   text-shadow: none;
   font-style: italic;
 }
+.dark .tabbar a.button.notifying {
+  background: #B4DCE4;
+  border-color: #8BBDC6;
+  color: #4A7179;
+  text-shadow: none;
+  font-style: italic;
+}
 
 .tabbar a.button.notifying:hover {
   background: #F9D990;  
   border-color: #803C6F;
   color: #803C6F;
 }
-.tabbar a.button.subtle-notifying {
-  color: #07948F;
+.dark .tabbar a.button.notifying:hover {
+  background: #A0CCD5;
+  border-color: #8BBDC6;
+  color: #4A7179;
+  text-shadow: none;
+  font-style: italic;
 }
 
-.tabbar a.button.subtle-notifying:hover {
+.tabbar a.button.subtle-notifying, .tabbar a.button.subtle-notifying:hover {
   color: #07948F;
-} 
+}
+.dark .tabbar a.button.subtle-notifying, .dark .tabbar a.button.subtle-notifying:hover {
+  color: #EB86BF;
+}
 
 .tabbar a.button.cur, .tabbar a.button.cur:hover {
   border-color: #803C6F;
   background: #CD9FC4;
   color: #803C6F;
   text-shadow: 0px 0px 2px #FCE8F1;
+}
+.dark .tabbar a.button.cur, .dark .tabbar a.button.cur:hover {
+  background: #3A3A3A;
+  border-color: #111;
+  color: #F9F9F9;
+  text-shadow: 1px 1px #111;
 }
 
 .tabbar a.button {
@@ -1222,9 +1249,21 @@ body {
   color: #803C6F;
   text-shadow: none;
 }
+.dark .tabbar a.button {
+  background: rgba(45, 45, 45, 0.7);
+  color: #BBB;
+  border-color: #222;
+  text-shadow: 1px 1px #222;
+}
 
 .tabbar a.button:hover {
   background: #E5B6DC;
+}
+.dark .tabbar a.button:hover {
+  background: rgba(45, 45, 45, 0.95);
+  color: #E2E2E2;
+  border-color: #222;
+  text-shadow: 1px 1px #222;
 }
 
 .tabbar .closebutton {
@@ -1241,20 +1280,32 @@ body {
   color: #803C6F;
   text-shadow: 0px 0px 2px #FCE8F1;
 }
+.dark .userbar button.icon {
+  border: 1px solid #803C6F;
+  background: #CD9FC4;
+  color: #803C6F;
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .userbar button.icon:hover {
   background: #DBAED2;
 }
+.dark .userbar button.icon:hover {
+  color: #B4DCE4;
+}
 
 .userbar .username {
   text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F;
+}
+.dark .userbar .username {
+  text-shadow: 1px 1px 0px #111, 1px -1px 0px #111, -1px 1px 0px #111, -1px -1px 0px #111;
 }
 
 /******************
 * Header CSS ~end *
 ******************/
 
-/*****************
+/***************
 * Roomlist CSS *
 ***************/
 
@@ -1269,12 +1320,22 @@ body {
   color: #11484F;
   text-shadow: 0px 0px 2px #96BFB8;
 }
+.dark .roomlist a.ilink, .dark .roomcounters button {
+  background: rgba(9, 24, 31, 0.95);
+  border-color: #B998AB;
+  color: #B998AB;
+}
 
 .roomlist a.ilink:hover, .roomcounters button:hover {
   background: #BBCCC9;    
   border-color: #0E3339;
   color: #0E3339;
   text-shadow: none;
+}
+.dark .roomlist a.ilink:hover, .dark .roomcounters button:hover {
+  background: rgba(9, 24, 31, 0.98);
+  border-color: #8BBDC6;
+  color: #8BBDC6;
 }
 
 /********************
@@ -1290,17 +1351,38 @@ body {
   border-color: #11484F;
   color: #11484F;
 }
+.dark .userlist {
+  background: rgba(14, 36, 49, 0.8);
+  border-color: #09181F;
+  color: #11484F;
+  text-shadow: none;
+}
 
 .userlist li {
   background: rgba(255, 255, 255, 0.65);
   border-color: #11484F;
 }
+.dark .userlist li {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: #1D4254;
+}
 
 .userlist li em.group {
   color: #11484F;
 }
+.dark .userlist li em.group {
+  color: #333;
+}
 
-.userlist li button:hover, .userlist-minimized .userlist-count:hover {
+.dark .userlist strong {
+  text-shadow: 0px 0px 2px #FFF;
+}
+
+.dark .userlist li button span {
+  text-shadow: 0px 0px 2px #EEE;
+}
+
+.userlist li button:hover, .userlist-minimized .userlist-count:hover, .dark .userlist li button:hover, .dark .userlist-minimized .userlist-count:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
@@ -1308,11 +1390,11 @@ body {
   border-color: #11484F;
 }
 
-.chat-log {
+.chat-log, .dark .chat-log {
   background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
 }
 
-.chat-log .chat small {
+.chat-log .chat small, .dark .chat-log .chat small {
   color: #11484F;
 }
 
@@ -1322,6 +1404,10 @@ body {
 
 .chat.highlighted {
   background: rgba(178, 215, 148, 0.7);
+}
+.dark .chat.highlighted {
+  background: #B4DCE4;
+  color: #0C3A43;
 }
 
 .chat-log-add {
@@ -1356,6 +1442,11 @@ body {
   background: rgba(17, 72, 79, 0.6);
   text-shadow: 0px -1px 0px #11484F;
   color: #AFCFD4;
+}
+.dark .tournament-title {
+  background: rgba(19, 36, 46, 0.6);
+  color: #EEE;
+  text-shadow: 0px -1px 0px #222;
 }
 
 .tournament-status, .tournament-toggle {
@@ -1422,11 +1513,38 @@ body {
   text-shadow: 0px 0px 2px #803C6F;
 }
 
+.menugroup .select:disabled, .menugroup .select:disabled:hover {
+  background: rgba(255, 224, 167, 0.7) !important;
+  border-color: #803C6F !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+.dark .menugroup .select:disabled, .dark .menugroup .select:disabled:hover {
+  background: rgba(159, 122, 142, 0.5) !important;
+  border-color: #493841 !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+.teamselect:disabled strong {
+    color: #803C6F !important;
+}
+.dark .teamselect:disabled strong {
+    color: #493841 !important;
+}
+
 .menugroup .select, .menugroup .button {
   background: #FFE0A7 !important;
   border-color: #803C6F !important;
   color: #803C6F !important;
   text-shadow: none !important;
+  font-style: italic !important;
+}
+.dark .menugroup .select, .dark .menugroup .button {
+  background: #9F7A8E !important;
+  border-color: #493841 !important;
+  color: #FFF !important;
+  text-shadow: 0px -1px 0px #876878 !important;
   font-style: italic !important;
 }
 
@@ -1437,16 +1555,12 @@ body {
   text-shadow: none !important;
   font-style: italic !important;
 }
-
-.menugroup .select:disabled, .menugroup .select:disabled:hover {
-  background: rgba(255, 224, 167, 0.7) !important;
-  border-color: #803C6F !important;
-  text-shadow: none !important;
+.dark .menugroup .select:hover, .dark .menugroup .button:hover {
+  background: #805B6F !important;
+  border-color: #2B1F25 !important;
+  color: #FFF !important;
+  text-shadow: 0px -1px 0px #2B1F25 !important;
   font-style: italic !important;
-}
-
-.teamselect:disabled strong {
-    color: #803C6F !important;
 }
 
 .pm-window h3 {
@@ -1456,11 +1570,23 @@ body {
   color: #E5FFF6;
   text-shadow: 0px -1px 0px #336251;
 }
+.dark .pm-window h3 {
+  background: rgba(45, 45, 45, 0.7);
+  color: #BBB;
+  border-color: #3D3D3D;
+  text-shadow: 0px -1px 0px #3D3D3D;
+}
 
 .pm-window h3:hover {
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #CBEBE0;
+}
+.dark .pm-window h3:hover {
+  background: rgba(45, 45, 45, 0.7);
+  color: #E2E2E2;
+  border-color: #3D3D3D;
+  text-shadow: 0px -1px 0px #3D3D3D;
 }
 
 .pm-window h3 small {
@@ -1473,6 +1599,15 @@ body {
   background-position: 225px;
   color: #E5FFF6;
   text-shadow: 0px -1px 0px #336251;
+}
+.dark .pm-window.focused h3, .dark .pm-window.focused h3:hover {
+  background: #3A3A3A;
+  border-color: #111;
+  color: #F9F9F9;
+  text-shadow: 0px -1px 0px #111;
+}
+.dark .pm-window.focused h3:hover {
+  color: #8BBDC6;
 }
 
 .pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
@@ -1490,8 +1625,11 @@ body {
 .pm-window h3 .closebutton:hover + .minimizebutton {
   color: #D3F5E8 !important;
 }
+.dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #CCC !important;
+}
 
-.message-pm {
+.message-pm, .dark .message-pm {
   color: #46806A;
 }
 
@@ -1501,9 +1639,23 @@ body {
   color: #803C6F;
   text-shadow: none;
 }
+.dark .pm-window h3.pm-notifying {
+  background: #B4DCE4;
+  border-color: #8BBDC6;
+  color: #4A7179;
+  text-shadow: none;
+  font-style: italic;
+}
 
 .pm-window h3.pm-notifying:hover {
   background: #E5B6DC;
+}
+.dark .pm-window h3.pm-notifying:hover {
+  background: #A0CCD5;
+  border-color: #8BBDC6;
+  color: #4A7179;
+  text-shadow: none;
+  font-style: italic;
 }
 
 .pm-window h3.pm-notifying small {
@@ -1525,6 +1677,9 @@ body {
 .pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
   color: #803C6F !important;
 }
+.dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #CCC !important;
+}
 
 .pm-log, .pm-window.focused .pm-log {
   border-color: #336251;
@@ -1535,6 +1690,11 @@ body {
   background: #F3C5EA;
   color: #803C6F;
   text-shadow: none;
+}
+.dark .challenge {
+  background: #FCD2B3 none repeat scroll 0% 0%;
+  border: 1px solid #F57B21;
+  color: #682F05;
 }
 
 .challenge .select {
@@ -1585,14 +1745,24 @@ body {
 .mainmenufooter a {
   color: #FFE1B3;
 }
+.dark .mainmenufooter a {
+  color: #91C2C9;
+}
 
 .mainmenufooter a:hover {
   color: #F2D19C;
+}
+.dark .mainmenufooter a:hover {
+  color: #B6DFDB;
 }
 
 .mainmenufooter {
   color: #F2D19C;
 }
+.dark .mainmenufooter {
+  color: #91C2C9;
+}
+  
 
 /***************************
 * Mainmenuwrapper CSS ~end *
@@ -2146,3 +2316,26 @@ a.subtle, a.subtle:hover {
 /******************
 * Battle CSS ~end *
 ******************/
+
+/* Extra Dark */
+
+.dark .chat-log a, .dark .pm-log a, .dark .battle-log a {
+  color: #0000EE;
+}
+
+.dark .pm-window h3 small, .dark .pm-window .closebutton, .dark .tabbar .closebutton, .dark .pm-window .minimizebutton, .dark .tabbar .minimizebutton, .dark .pm-window h3:hover .minimizebutton {
+  color: #BBB;
+}
+
+.dark .pm-window .closebutton:hover, .dark .tabbar .closebutton:hover {
+  color: #FFB9B9;
+}
+
+.dark .pm-window .minimizebutton:hover, .dark .tabbar .minimizebutton:hover {
+  color: #FFE1B9 !important;
+}
+
+.dark .chat-log-add, .dark .pm-log-add, .dark .battle-log-add {
+  background: rgba(34, 34, 34, 0.8);
+  color: #DDD;
+}
