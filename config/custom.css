@@ -1374,7 +1374,7 @@ body {
   color: #333;
 }
 
-.dark .userlist strong {
+.dark .userlist strong, .dark .userlist span {
   text-shadow: 0px 0px 2px #FFF;
 }
 
