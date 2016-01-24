@@ -1047,11 +1047,11 @@
 **************/
 
 body {
-  background: #000 url("http://i.imgur.com/aXop9m5.jpg") bottom left no-repeat;
+  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
 }
 
 .dark body {
-  background: #210720 url("http://i.imgur.com/D2kCH7Y.jpg") bottom no-repeat;
+  background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat;
 }
 
 .ps-room.ps-room-light {
