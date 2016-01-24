@@ -73,6 +73,7 @@ let emotes = {
 	'feelsdrg': 'http://i.imgur.com/UZzWcA3.png',
 	'feelsvolc': 'http://i.imgur.com/QXlKzZd.png?1',
 	'feelsvpn': 'http://i.imgur.com/ODTZISl.gif',
+	'feelswin': 'http://i.imgur.com/rbs9pZG.png?1',
 	'feelswnk': 'http://i.imgur.com/K1GhJaN.png', 
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
