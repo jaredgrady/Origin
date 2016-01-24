@@ -1326,7 +1326,7 @@ body {
   color: #B998AB;
 }
 
-.roomlist a.ilink:hover, .roomcounters button:hover {
+.roomlist a.ilink:hover, .dark .roomcounters button:hover {
   background: #BBCCC9;    
   border-color: #0E3339;
   color: #0E3339;
