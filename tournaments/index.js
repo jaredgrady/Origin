@@ -225,7 +225,7 @@ class Tournament {
 					return;
 				}
 			}
-		} 
+		}
 
 		let error = this.generator.addUser(user);
 		if (typeof error === 'string') {
