@@ -7,6 +7,16 @@ let fs = require('fs');
 let moment = require('moment');
 let request = require('request');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
+const Float = require('float-ui');
+let Float_PS = {};
+
+try {
+	Float_PS = require('float-ps');
+} catch (e) {
+	console.error(e);
+}
+
+Float.extendElements(Float_PS);
 
 function convertTime(time) {
 	time = time / 1000;
@@ -893,5 +903,32 @@ exports.commands = {
 		Rooms.global.writeChatRoomData();
 		Users(targetUser).updateIdentity();
 		this.sendReply("Succesfully repromoted " + targetUser + ".");
+	},
+
+	fdeclare: 'floatdeclare',
+	floatdeclare: function (target, room, user) {
+		this.parse('/declare ' + Float.renderElement(target));
+	},
+
+	fgdeclare: 'floatgdeclare',
+	floatgdeclare: function (target, room, user) {
+		this.parse('/gdeclare ' + Float.renderElement(target));
+	},
+
+	froomintro: 'floatroomintro',
+	floatroomintro: function (target, room, user) {
+		this.parse('/roomintro ' + Float.renderElement(target));
+	},
+
+	fpmall: 'floatpmall',
+	floatpmall: function (target, room, user) {
+		this.parse('/pmall /html ' + Float.renderElement(target));
+	},
+
+	fhtmlbox: 'floathtmlbox',
+	floathtmlbox: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		room.update();
+		this.parse('/htmlbox ' + Float.renderElement(target));
 	},
 };
