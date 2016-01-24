@@ -217,7 +217,7 @@ class Tournament {
 			output.sendReply('|tournament|error|Full');
 			return;
 		}
-/*
+
 		if (!isAllowAlts) {
 			for (let i = 0; i < users.length; i++) {
 				if (users[i].latestIp === user.latestIp) {
@@ -225,7 +225,7 @@ class Tournament {
 					return;
 				}
 			}
-		} */
+		} 
 
 		let error = this.generator.addUser(user);
 		if (typeof error === 'string') {
