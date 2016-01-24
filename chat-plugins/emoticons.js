@@ -51,7 +51,7 @@ let emotes = {
 	'feelsns': 'http://i.imgur.com/jYRFUYW.jpg?1',
 	'feelsok': 'http://i.imgur.com/gu3Osve.png',
 	'feelsorange': 'http://i.imgur.com/3fxXP16.jpg',
-	'feelspanda': 'http://i.imgur.com/igu1zCp.jpg',
+	'feelspanda': 'http://i.imgur.com/qi7fue9.png',
 	'feelspaul': 'http://imgur.com/KuDZMJR.png',
 	'feelsshrk': 'http://i.imgur.com/amTG3jF.jpg',
 	'feelspika': 'http://i.imgur.com/mBq3BAW.png',
