@@ -69,14 +69,6 @@ var rareCache = []; //Used to cache cards for tours
 var cardCache = []; //Used to cache cards in packs
 var userPacks = {}; //Used to store users unopened packs
 
-try {
-	cachePacks();
-	cacheRarity();
-} 
-catch (e) {
-	console.log("Error patching cards at line 72 in cards.js: " + e);
-}
-
 var cards = {
         'absol': {title: 'absol', name: 'Absol', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_40.png', publicid: '359', rarity: 'Uncommon', collection: ['Darkness', 'UU-Pack', 'XY-Roaring Skies', 'Gen3'], points: 3},
         'accelgor': {title: 'accelgor', name: 'Accelgor', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_9.png', publicid: '617', rarity: 'Uncommon', collection: ['Grass', 'RU-Pack', 'XY-Furious Fists', 'Gen5'], points: 3},
@@ -1016,12 +1008,10 @@ function addCard(name, card) {
     newCard.name = cards[card].name;
     newCard.rarity = cards[card].rarity;
     newCard.points = cards[card].points;
-    if (!Array.isArray(Db('cards')[toId(name)])) Db('cards')[toId(name)] = [];
-    Db('cards')[toId(name)].push(newCard);
-    Db.save();
-    var total = (Db('points')[toId(name)] || 0) + newCard.points;
-    Db('points')[toId(name)] = total;
-    Db.save();
+
+    var userid = toId(name);
+    Db('cards').set(userid, Db('cards').get(userid, []).concat([newCard]));
+    Db('points').set(userid, Db('points').get(userid, 0) + newCard.points);
 }
 
 function getShopDisplay (shop) {
@@ -1044,8 +1034,10 @@ function toTitleCase(str) {
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
+cachePacks();
+cacheRarity();
+
 exports.commands = {
-/*
     packs: 'pack',
     pack: function(target, room, user) {
         if (!this.canBroadcast()) return;
@@ -1064,17 +1056,15 @@ exports.commands = {
         if (!target) return this.sendReply('/buypack - Buys a pack from the pack shop. Alias: /buypacks');
         var self = this;
         var packId = toId(target);
+        var amount = Db('money').get(user.userid, 0);
         if (cleanShop.indexOf(packId) < 0) return self.sendReply('This is not a valid pack. Use /packshop to see all packs.');
         var shopIndex = cleanShop.indexOf(toId(target));
         if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
-        if (!Db('money')[user.userid]) Db('money')[user.userid] = 0;
         var cost = shop[shopIndex][2];
-        if (cost > Db('money')[user.userid]) return self.sendReply('You need ' + (cost - Db('money')[user.userid]) + ' more bucks to buy this card.');
-        var total = Db('money')[user.userid] - cost;
-	Db('money')[user.userid] = total;
-	Db.save();
-	var pack = toId(target);
-	self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
+        if (cost > amount) return self.sendReply('You need ' + (cost - amount) + ' more bucks to buy this card.');
+        var total = Db('money').set(user.userid, amount - cost).get(user.userid);
+		var pack = toId(target);
+		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
                        ' bucks. Use <button name="send" value="/openpack ' +
                     	pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
         self.sendReply('You have until the server restarts to open your pack.');
@@ -1154,25 +1144,25 @@ exports.commands = {
     showcards: 'showcase',
     showcard: 'showcase',
     showcase: function(target, room, user) {    
-    if(!this.canBroadcast()) return;
-    if (!target) {
-        targetU = user;
-        page = 1;
-    } else if (!isNaN(target)) {
+    	if(!this.canBroadcast()) return;
+    	if (!target) {
+        	targetU = user;
+        	page = 1;
+    	} else if (!isNaN(target)) {
             targetU = user;
             page = target;
         } else if (target.indexOf(',') < 0) {
         targetU = target;
         page = 1;
-    } else {
-        parts = target.split(',');
-        targetU = parts[0];
-        page = parts[1];
-    }
+    	} else {
+       		parts = target.split(',');
+        	targetU = parts[0];
+        	page = parts[1];
+    	}
     var self = this;
     if (!Users.get(targetU)) return self.sendReply('User ' + targetU + ' not found.');
-    var cards = Db('cards')[targetU];
-    var points = Db('points')[targetU];
+    var cards = Db('cards').get(targetU, []);
+    var points = Db('points').get(targetU, 0);
 		var display = '';
 		if (cards) {
 			for (i = (page - 1) * 10; i < page * 10; i++) {
@@ -1189,7 +1179,7 @@ exports.commands = {
 		self.sendReplyBox(display);
     },
     
-        card: function(target, room, user) {
+    card: function(target, room, user) {
         if (!target) return this.sendReply('/card [name] - Shows information about a card.');
         if (!this.canBroadcast()) return;
         var cardName = toId(target);
@@ -1207,24 +1197,31 @@ exports.commands = {
         this.sendReplyBox(html);
     },
 
-	cardrank: 'cardladder',
-	cardladder: function (target, room, user) {
+	richestuser: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
-		var keys = Object.keys(Db('points')).map(function(name) {
-			return {name: name, points: Db('points')[name]};
+		var keys = Object.keys(Db('points').object()).map(function (name) {
+			return {name: name, points: Db('points').get(name)};
 		});
-		if (!keys.length) return this.sendReplyBox("Cardladder is empty.");
-		keys.sort(function (a, b) {
-			return b.points - a.points;
+		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
+		keys = keys.sort(function (a, b) {
+			if (b.points > a.points) return 1;
+			return -1;
 		});
 		keys.slice(0, 10).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.points + "</td></tr>";
 		});
+		if (this.broadcasting && Number(target) > 10) target = null;
+		if (!isNaN(target)) {
+			if (Number(target) > 100) target = 100;
+			keys.slice(10, target).forEach(function (user, index) {
+				display += "<tr><td>" + (index + 11) + "</td><td>" + user.name + "</td><td>" + user.points + "</td></tr>";
+			});
+		}
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
-	}, 
-
+	},
+/*
     transfercard: function (target, room, user) {
     var parts = target.split(',');
     if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
@@ -1248,9 +1245,9 @@ exports.commands = {
                 });
             });
         });
-    });
-      },
-  */  psgo: 'cardshelp',
+    }); 
+	}, */
+  	  psgo: 'cardshelp',
       origincg: 'cardshelp',
       cardshelp: function (target, room, user) {
         if (!this.canBroadcast()) return;
@@ -1264,5 +1261,5 @@ exports.commands = {
             <b>/card</b> - Shows data and information on any specifc card.<br>\
             <b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>\
             ');
-    }
+    	} 
 };
