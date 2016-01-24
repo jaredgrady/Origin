@@ -116,6 +116,7 @@
 .pm-window-masterfloat .pm-log-add .textbox {
   border-color: #1F6C5D !important;
   background: rgba(243, 255, 253, 0.95) !important;
+  color: #000 !important;
 }
 
 /*Float~end*/
@@ -177,6 +178,7 @@
 .pm-window-neosoul .pm-log-add .textbox {
   border-color: #124A66 !important;
   background: rgba(227, 239, 247, 0.9) !important;
+  color: #000 !important;
 }
 
 /*Neo~end*/
@@ -240,11 +242,13 @@
 .pm-window-fender .pm-log-add .textbox {
   border-color: #444 !important;
   background: rgba(245, 245, 245, 0.92) !important;
+  color: #000 !important;
 }
 
 .pm-window-fender .pm-log-add .textbox:focus {
   border-color: #444 !important;
   background: #FEFEFE !important;
+  color: #000 !important;
 }
 
 .pm-window-fender h3.pm-notifying {
@@ -317,6 +321,7 @@
 .pm-window-katheyisme123 .pm-log-add .textbox {
   border-color: #383631 !important;
   background: rgba(252, 251, 235, 0.92) !important;
+  color: #000 !important;
 }
 
 .pm-window-katheyisme123 h3.pm-notifying {
@@ -421,6 +426,7 @@
 .pm-window-sariisaur .pm-log-add .textbox {
   border-color: #206F5F !important;
   background: rgba(243, 255, 239, 0.92) !important;
+  color: #000 !important;
 }
 
 .pm-window-sariisaur h3.pm-notifying {
@@ -526,6 +532,7 @@
 .pm-window-emblempanda .pm-log-add .textbox {
   border-color: #2B2B2B !important;
   background: #FFF !important;
+  color: #000 !important;
 }
 
 .pm-window-emblempanda h3.pm-notifying {
@@ -635,6 +642,7 @@
 .pm-window-nineage .pm-log-add .textbox {
   border-color: #3E4C4D !important;
   background: #F9FFFF !important;
+  color: #000 !important;
 }
 
 .pm-window-nineage h3.pm-notifying {
@@ -736,6 +744,7 @@
 .pm-window-chleg .pm-log-add .textbox {
   border-color: #313131 !important;
   background: rgba(255, 255, 255, 0.94) !important;
+  color: #000 !important;
 }
 
 .pm-window-chleg h3.pm-notifying {
@@ -841,7 +850,8 @@
   
   .pm-window-paulcentury .pm-log-add .textbox {
     border-color: #6A62DA !important;
-    background: rgba(, , , ) !important;
+    background: rgba(255, 240, 236, 0.95) !important;
+    color: #000 !important;
   }
   
   .pm-window-paulcentury h3.pm-notifying {
