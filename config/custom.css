@@ -1392,6 +1392,7 @@ body {
 
 .chat-log, .dark .chat-log {
   background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
+  color: #000;
 }
 
 .chat-log .chat small, .dark .chat-log .chat small {
@@ -1684,6 +1685,11 @@ body {
 .pm-log, .pm-window.focused .pm-log {
   border-color: #336251;
 }
+.dark .pm-log, .dark .pm-window.focused .pm-log {
+  background: rgba(242, 247, 250, 0.925) none repeat scroll 0% 0%;
+  color: #000;
+  border-color: #888;
+}
 
 .challenge {
   border-color: #803C6F;
@@ -1732,10 +1738,18 @@ body {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.6);
 }
+.dark .pm-log-add {
+  background: rgba(34, 34, 34, 0.8);
+  color: #DDD;
+}
 
 .pm-window.focused .pm-log-add {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.75);
+}
+.dark .pm-window.focused .pm-log-add {
+  border-color: #000;
+  background: #222;
 }
 
 .pm-log-add .textbox {
