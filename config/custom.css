@@ -1047,7 +1047,7 @@
 **************/
 
 body {
-  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
+  background: #000 url("http://i.imgur.com/aXop9m5.jpg") bottom left no-repeat;
 }
 
 .dark body {
