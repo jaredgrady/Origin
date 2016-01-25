@@ -846,6 +846,7 @@ exports.commands = {
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
 	},
 
+	nolife: 'ontime',
 	userontime: 'ontime',
 	ontime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
