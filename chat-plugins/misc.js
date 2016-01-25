@@ -857,7 +857,8 @@ exports.commands = {
 		const ontime = Db('ontime').get(toId(targetUser), 0) + (date - userStart);
 		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
 		const t = convertTime(ontime);
-		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + ".</b>");
+		const currentOntime = (date - userStart) ? " Current ontime: <b>" + displayTime(convertTime((date - userStart))) + "</b>" : "";
+		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + "</b>." + currentOntime);
 	},
 	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],
 
