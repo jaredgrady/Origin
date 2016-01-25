@@ -33,7 +33,7 @@ function convertTime(time) {
 }
 
 function displayTime(t) {
-	return t.h + (t.h === 1 ? " hour " : " hours ") + t.m + (t.m === 1 ? " minute " : " minutes ") + t.s + (t.s === 1 ? " second." : " seconds");
+	return t.h + (t.h === 1 ? " hour " : " hours ") + t.m + (t.m === 1 ? " minute " : " minutes ") + t.s + (t.s === 1 ? " second" : " seconds");
 }
 
 function clearRoom(room) {
@@ -852,8 +852,9 @@ exports.commands = {
 		let targetUser = '';
 		if (!target) targetUser = user.userid;
 		else targetUser = Tools.escapeHTML(target);
-		const userStart = (Users.get(targetUser) || {}).start;
-		const ontime = Db('ontime').get(toId(targetUser), 0) + (userStart ? Date.now() - userStart : 0);
+		const date = Date.now();
+		const userStart = Users.get(targetUser) && Users.get(targetUser).connected ? Users.get(targetUser).start : date;
+		const ontime = Db('ontime').get(toId(targetUser), 0) + (date - userStart);
 		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
 		const t = convertTime(ontime);
 		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + ".</b>");
@@ -865,8 +866,9 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		let display = '<center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
 		let keys = Object.keys(Db('ontime').object()).map(function (name) {
-			const userStart = (Users.get(name) || {}).start;
-			const ontime = Db('ontime').get(name, 0) + (userStart ? Date.now() - userStart : 0);
+			const date = Date.now();
+			const userStart = Users.get(name) && Users.get(name).connected ? Users.get(name).start : date;
+			const ontime = Db('ontime').get(toId(name), 0) + (date - userStart);
 			return {name: name, time: ontime};
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");

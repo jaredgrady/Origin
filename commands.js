@@ -1929,6 +1929,7 @@ let commands = exports.commands = {
 		}
 		Users.users.forEach(function (user) {
 			if (!user.connected) return;
+			if (!user.registered && !user.named) return;
 			Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - user.start));
 		});
 
