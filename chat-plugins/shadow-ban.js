@@ -189,7 +189,7 @@ exports.commands = {
 	sbanlist: function (target, room, user, connection, cmd) {
 		if (["~", "&", "@", "%"].indexOf(user.group) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");		
-		Users.get(toId(user.name)).send('|popup| Here is a list of sbanned users: \n' + JSON.stringify(Rooms.rooms.shadowbanroom.chatRoomData, null, 2));
+		Users.get(toId(user.name)).send('|popup| Here is a list of sbanned users: \n' + Object.keys(Rooms.rooms.shadowbanroom.chatRoomData.addedUsers).sort().join('\n'));
 	}
 };
 
