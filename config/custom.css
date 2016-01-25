@@ -803,104 +803,216 @@
 /*paulcentury*/
 
 .pm-window-paulcentury h3 {
-    background: rgba(164, 160, 222, 0.8) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
-    background-position: 225px -4px !important;
-    color: #291A84 !important;
-    text-shadow: 0px 0px 2px #DEDBFF !important;
-    border-color: #413BA2 !important;
-  }
+  background: rgba(164, 160, 222, 0.8) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #291A84 !important;
+  text-shadow: 0px 0px 2px #DEDBFF !important;
+  border-color: #413BA2 !important;
+}
+
+.pm-window-paulcentury h3:hover, .pm-window-paulcentury.focused h3, .pm-window-paulcentury.focused h3:hover {
+  background: rgba(164, 160, 222, 0.9) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #291A84 !important;
+  text-shadow: 0px 0px 2px #DEDBFF !important;
+  border-color: #413BA2 !important;
+}
+
+.pm-window-paulcentury h3 small, .pm-window-paulcentury h3 .minimizebutton, .pm-window-paulcentury h3 .closebutton, .pm-window-paulcentury h3:hover .minimizebutton {
+  color: #B24F5C !important;
+}
+
+.pm-window-paulcentury h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #B24F5C !important;
+}
+
+.pm-window-paulcentury h3 .closebutton:hover {
+  color: #9F3C49 !important;
+}
+
+.pm-window-paulcentury h3 .minimizebutton:hover {
+  color: #9F3C49 !important;
+}
+
+.pm-window-paulcentury .pm-log, .pm-window-paulcentury.focused .pm-log {
+  background: rgba(255, 240, 236, 0.95) url("http://i.imgur.com/yfuMK4a.png?1") right no-repeat !important;
+  border-color: #6A62DA !important;
+}
+
+.pm-window-paulcentury .pm-log .chat small {
+  color: #E66A7B !important;
+}
+
+.pm-window-paulcentury .pm-log-add, .pm-window-paulcentury.focused .pm-log-add {
+  background: #BEB9F9 !important;
+  border-color: #6A62DA !important;
+}
+
+.pm-window-paulcentury .pm-log-add .textbox {
+  border-color: #6A62DA !important;
+  background: rgba(255, 240, 236, 0.95) !important;
+  color: #000 !important;
+}
+
+.pm-window-paulcentury h3.pm-notifying {
+  border-color: #AC6A59 !important;
+  background: #FFBDAC url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #291A84 !important;
+  text-shadow: 0px 0px 2px #D48A77 !important;
+  font-style: italic;
+}
+
+.pm-window-paulcentury h3.pm-notifying:hover {
+  border-color: #AC6A59 !important;
+  background: #F3B09F url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #291A84 !important;
+  text-shadow: 0px 0px 2px #D48A77 !important;
+  font-style: italic;
+}
+
+.pm-window-paulcentury .challenge {
+  background: #FFBDAC !important;
+  color: #52525A !important;
+  border-color: #8D3F4A !important;
+}
+
+.pm-window-paulcentury .challenge .select, .pm-window-paulcentury .challenge .buttonbar button {
+  background: #E66A7B !important;
+  border-color: #8D3F4A !important;
+  color: #FFF !important;
+  text-shadow: 0px -1px 0px #BF5664 !important;
+}
+
+.pm-window-paulcentury .challenge .select:hover, .pm-window-paulcentury .challenge .buttonbar button:hover {
+  background: #EF7585 !important;
+  border-color: #8D3F4A !important;
+} 
+
+.pm-window-paulcentury .challenge .select:disabled {
+  background: rgba(239, 117, 133, 0.6) !important;
+  border-color: #8D3F4A !important;
+}
+
+.pm-window-paulcentury .challenge .teamselect:disabled strong {
+  color: #8D3F4A !important;
+  text-shadow: none !important;
+}
+
+/*paulcentury~end*/
+
+/*impfallenblood*/
+
+.pm-window-impfallenblood h3 {
+  background: rgba(64, 72, 128, 0.8) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #F8F8F8 !important;
+  text-shadow: 0px 0px 2px #283050 !important;
+  border-color: #283050 !important;    
+}
+
+.pm-window-impfallenblood h3:hover {
+  background: rgba(64, 72, 128, 0.8) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #DCFCFC !important;
+  text-shadow: 0px 0px 2px #283050 !important;
+  border-color: #283050 !important;
+}
+
+.pm-window-impfallenblood.focused h3, .pm-window-impfallenblood.focused h3:hover {
+  background: rgba(64, 72, 128, 0.92) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #F8F8F8 !important;
+  text-shadow: 0px 0px 2px #283050 !important;
+  border-color: #283050 !important;
+}
+
+.pm-window-impfallenblood h3 small {
+  color: #F890A0 !important;
+}
+
+.dark .pm-window-impfallenblood h3 .minimizebutton, .pm-window-impfallenblood h3 .minimizebutton, .pm-window-impfallenblood h3 .closebutton, .pm-window-impfallenblood h3:hover .minimizebutton {
+  color: #DDD !important;
+}
+
+.dark .pm-window-impfallenblood h3 .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-impfallenblood h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #DDD !important;
+}
+
+.pm-window-impfallenblood h3 .closebutton:hover {
+  color: #F05070 !important;
+}
+
+.dark .pm-window-impfallenblood h3 .minimizebutton:hover, .pm-window-impfallenblood h3 .minimizebutton:hover {
+  color: #F8D040 !important;
+}
+
+.pm-window-impfallenblood .pm-log, .pm-window-impfallenblood.focused .pm-log {
+  background: rgba(231, 233, 249, 0.95) url("http://i.imgur.com/BUz6OyP.png?1") right no-repeat !important;
+  border-color: #4A547A !important;
+}
+
+.pm-window-impfallenblood .pm-log .chat small {
+  color: #4A547A !important;
+}
+
+.pm-window-impfallenblood .pm-log-add {
+  background: rgba(74, 84, 122, 0.8) !important;
+  border-color: #4A547A !important;
+}
+
+.pm-window-impfallenblood.focused .pm-log-add {
+  background: rgba(74, 84, 122, 0.95) !important;
+  border-color: #3C4464 !important;
+}
+
+.pm-window-impfallenblood .pm-log-add .textbox {
+  border-color: #3C4464 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000;
+}
+
+.pm-window-impfallenblood h3.pm-notifying, .pm-window-impfallenblood h3.pm-notifying:hover {
+  border-color: #C02870 !important;
+  background: #F05070 url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px -1px 0px #C02870 !important;
+  font-style: italic;
+}
+
+.pm-window-impfallenblood .challenge {
+  background: rgba(122, 118, 151, 0.8) url("http://i.imgur.com/FX5D3l2.png?1") bottom left no-repeat !important;
+  color: #311057 !important;
+  text-shadow: 0px 0px 3px #B3AED5;
+  border-color: #41397F !important;
+}
+
+.pm-window-impfallenblood .challenge .select, .pm-window-impfallenblood .challenge .buttonbar button {
+  background: #645E94 !important;
+  border-color: #311057 !important;
+  color: #FFF !important;
+  text-shadow: 0px -1px 0px #311057 !important;
+}
+
+.pm-window-impfallenblood .challenge .select:hover, .pm-window-impfallenblood .challenge .buttonbar button:hover {
+  background: #524B7F !important;
+  border-color: #311057 !important;
+  color: #F890A0 !important;
+} 
+
+.pm-window-impfallenblood .challenge .select:disabled {
+  background: rgba(82, 75, 127, 0.5) !important;
+  border-color: #311057 !important;
+  text-shadow: none !important;
+}
+
+.pm-window-impfallenblood .challenge .teamselect:disabled strong {
+  color: #311057 !important;
+}
   
-  .pm-window-paulcentury h3:hover, .pm-window-paulcentury.focused h3, .pm-window-paulcentury.focused h3:hover {
-    background: rgba(164, 160, 222, 0.9) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
-    background-position: 225px -4px !important;
-    color: #291A84 !important;
-    text-shadow: 0px 0px 2px #DEDBFF !important;
-    border-color: #413BA2 !important;
-  }
-  
-  .pm-window-paulcentury h3 small, .pm-window-paulcentury h3 .minimizebutton, .pm-window-paulcentury h3 .closebutton, .pm-window-paulcentury h3:hover .minimizebutton {
-    color: #B24F5C !important;
-  }
-  
-  .pm-window-paulcentury h3 .closebutton:hover + .minimizebutton.minimizebutton {
-    color: #B24F5C !important;
-  }
-  
-  .pm-window-paulcentury h3 .closebutton:hover {
-    color: #9F3C49 !important;
-  }
-  
-  .pm-window-paulcentury h3 .minimizebutton:hover {
-    color: #9F3C49 !important;
-  }
-  
-  .pm-window-paulcentury .pm-log, .pm-window-paulcentury.focused .pm-log {
-    background: rgba(255, 240, 236, 0.95) url("http://i.imgur.com/yfuMK4a.png?1") right no-repeat !important;
-    border-color: #6A62DA !important;
-  }
-  
-  .pm-window-paulcentury .pm-log .chat small {
-    color: #E66A7B !important;
-  }
-  
-  .pm-window-paulcentury .pm-log-add, .pm-window-paulcentury.focused .pm-log-add {
-    background: #BEB9F9 !important;
-    border-color: #6A62DA !important;
-  }
-  
-  .pm-window-paulcentury .pm-log-add .textbox {
-    border-color: #6A62DA !important;
-    background: rgba(255, 240, 236, 0.95) !important;
-    color: #000 !important;
-  }
-  
-  .pm-window-paulcentury h3.pm-notifying {
-    border-color: #AC6A59 !important;
-    background: #FFBDAC url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
-    background-position: 225px -4px !important;
-    color: #291A84 !important;
-    text-shadow: 0px 0px 2px #D48A77 !important;
-    font-style: italic;
-  }
-  
-  .pm-window-paulcentury h3.pm-notifying:hover {
-    border-color: #AC6A59 !important;
-    background: #F3B09F url("http://i.imgur.com/2niGHnf.png") no-repeat !important;
-    background-position: 225px -4px !important;
-    color: #291A84 !important;
-    text-shadow: 0px 0px 2px #D48A77 !important;
-    font-style: italic;
-  }
-  
-  .pm-window-paulcentury .challenge {
-    background: #FFBDAC !important;
-    color: #52525A !important;
-    border-color: #8D3F4A !important;
-  }
-  
-  .pm-window-paulcentury .challenge .select, .pm-window-paulcentury .challenge .buttonbar button {
-    background: #E66A7B !important;
-    border-color: #8D3F4A !important;
-    color: #FFF !important;
-    text-shadow: 0px -1px 0px #BF5664 !important;
-  }
-  
-  .pm-window-paulcentury .challenge .select:hover, .pm-window-paulcentury .challenge .buttonbar button:hover {
-    background: #EF7585 !important;
-    border-color: #8D3F4A !important;
-  } 
-  
-  .pm-window-paulcentury .challenge .select:disabled {
-    background: rgba(239, 117, 133, 0.6) !important;
-    border-color: #8D3F4A !important;
-  }
-  
-  .pm-window-paulcentury .challenge .teamselect:disabled strong {
-    color: #8D3F4A !important;
-    text-shadow: none !important;
-  }
-  
-  /*paulcentury~end*/
+/*impfallenblood~end*/
 
 /* CUSTOM PM ~end */
 
