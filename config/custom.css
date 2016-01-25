@@ -1635,6 +1635,12 @@ body {
   color: #FBE7F0;
   text-shadow: 0px 0px 2px #803C6F;
 }
+.dark .menugroup {
+  border: 1px solid #000;
+  background: rgba(45, 45, 45, 0.25);
+  color: #FBE7F0;
+  text-shadow: 0px 0px 2px #803C6F;
+}
 
 .menugroup .select:disabled, .menugroup .select:disabled:hover {
   background: rgba(255, 224, 167, 0.7) !important;
@@ -1642,18 +1648,17 @@ body {
   text-shadow: none !important;
   font-style: italic !important;
 }
-.dark .menugroup .select:disabled, .dark .menugroup .select:disabled:hover {
-  background: rgba(159, 122, 142, 0.5) !important;
-  border-color: #493841 !important;
-  text-shadow: none !important;
-  font-style: italic !important;
+.dark .select:disabled, .dark .select:disabled:hover {
+  background: rgba(45, 45, 45, 0.5) !important;   
+  border-color: #222 !important;   
 }
 
 .teamselect:disabled strong {
-    color: #803C6F !important;
+  color: #803C6F !important;
 }
 .dark .teamselect:disabled strong {
-    color: #493841 !important;
+  color: #E2E2E2 !important;
+  text-shadow: 1px 1px #222 !important;
 }
 
 .menugroup .select, .menugroup .button {
@@ -1663,12 +1668,11 @@ body {
   text-shadow: none !important;
   font-style: italic !important;
 }
-.dark .menugroup .select, .dark .menugroup .button {
-  background: #9F7A8E !important;
-  border-color: #493841 !important;
-  color: #FFF !important;
-  text-shadow: 0px -1px 0px #876878 !important;
-  font-style: italic !important;
+.dark .select, .dark .menugroup .button {
+  background: rgba(45, 45, 45, 0.95) !important;
+  color: #E2E2E2 !important;
+  border-color: #222 !important;
+  text-shadow: 1px 1px #222 !important;
 }
 
 .menugroup .select:hover, .menugroup .button:hover {
@@ -1678,12 +1682,11 @@ body {
   text-shadow: none !important;
   font-style: italic !important;
 }
-.dark .menugroup .select:hover, .dark .menugroup .button:hover {
-  background: #805B6F !important;
-  border-color: #2B1F25 !important;
-  color: #FFF !important;
-  text-shadow: 0px -1px 0px #2B1F25 !important;
-  font-style: italic !important;
+.dark .select:hover, .dark .menugroup .button:hover {
+  background: rgba(30, 30, 30, 0.95) !important;
+  color: #8BBDC6 !important;
+  border-color: #222 !important;
+  text-shadow: 1px 1px #222 !important;
 }
 
 .pm-window h3 {
@@ -1876,6 +1879,9 @@ body {
 
 .pm-log-add .textbox {
   border-color: #336251;
+}
+.dark .pm-log-add .textbox {
+  border-color: #999;
 }
 
 .mainmenufooter a {
