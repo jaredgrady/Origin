@@ -850,16 +850,20 @@ exports.commands = {
 	userontime: 'ontime',
 	ontime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let targetUser = '';
-		if (!target) targetUser = user.userid;
-		else targetUser = Tools.escapeHTML(target);
-		const date = Date.now();
-		const userStart = Users.get(targetUser) && Users.get(targetUser).connected ? Users.get(targetUser).start : date;
-		const ontime = Db('ontime').get(toId(targetUser), 0) + (date - userStart);
-		if (!ontime) return this.sendReplyBox(targetUser + " has never been online on this server.");
-		const t = convertTime(ontime);
-		const currentOntime = (date - userStart) ? " Current ontime: <b>" + displayTime(convertTime((date - userStart))) + "</b>" : "";
-		this.sendReplyBox(targetUser + "'s total ontime is <b>" + displayTime(t) + "</b>." + currentOntime);
+		const userid = target ? toId(target) : user.userid;
+		let currentOntime = 0;
+		if (Ontime[userid]) currentOntime = Date.now() - Ontime[userid];
+		const totalOntime = Db('ontime').get(userid, 0) + currentOntime;
+		if (!totalOntime) return this.sendReplyBox(userid + " has never been online on this server.");
+
+		if (Users.get(userid) && Users.get(userid).connected) {
+			this.sendReplyBox(
+				userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>." + 
+				" Current ontime: <b>" + displayTime(convertTime((currentOntime))) + "</b>"
+			);
+		} else {
+			this.sendReplyBox(userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>.");
+		}
 	},
 	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],
 
@@ -868,10 +872,10 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		let display = '<center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
 		let keys = Object.keys(Db('ontime').object()).map(function (name) {
-			const date = Date.now();
-			const userStart = Users.get(name) && Users.get(name).connected ? Users.get(name).start : date;
-			const ontime = Db('ontime').get(toId(name), 0) + (date - userStart);
-			return {name: name, time: ontime};
+			let currentOntime = 0;
+			if (Ontime[name]) currentOntime = Date.now() - Ontime[name];
+			const totalOntime = Db('ontime').get(name, 0) + currentOntime;
+			return {name: name, time: totalOntime};
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
 		keys = keys.sort(function (a, b) {
