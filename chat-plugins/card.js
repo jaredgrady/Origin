@@ -40,12 +40,12 @@ All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon
 var uuid = require('uuid');
 
 var colors = {
-    Mythic: '#E3E2AF',
-    Legendary: '#FF851B',
-    Epic: 'purple',
-    Rare: '#0074D9',
-    Uncommon: 'gray',
-    Common: 'black'
+    Mythic: '#D82A2A',
+    Legendary: '#E8AB03',
+    Epic: '#73DF14',
+    Rare: '#2DD1B6',
+    Uncommon: '#2D3ED1',
+    Common: '#000'
 };
 
 var shop = [ //Actual shop display
@@ -1025,14 +1025,13 @@ function addCard(name, card) {
 }
 
 function getShopDisplay (shop) {
-    var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
-                    "<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
+    var display = "<table width='100%' border='1' style='border-collapse: collapse; color: #444; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);' cellpadding='5'>" +
+        "<tr><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Command</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Description</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Cost</th></tr>";
     var start = 0;
     while (start < shop.length) {
-        display += "<tr>" +
-                        "<td align='center'><button name='send' value='/buypack " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
-                        "<td align='center'>" + shop[start][1] + "</td>" +
-                        "<td align='center'>" + shop[start][2] + "</td>" +
+        display += "<tr>" +"<td class='card-td'><button name='send' value='/buypack " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
+                        "<td class='card-td'>" + shop[start][1] + "</td>" +
+                        "<td class='card-td'>" + shop[start][2] + "</td>" +
                     "</tr>";
         start++;
     }
