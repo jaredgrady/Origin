@@ -24,13 +24,14 @@ function convertTime(time) {
 	time /= 60;
 	let minutes = time % 60;
 	time /= 60;
-	let hours = time % 24;
+	let hours = time;
 	return {
 		s: Math.floor(seconds),
 		m: Math.floor(minutes),
 		h: Math.floor(hours),
 	};
 }
+global.c = convertTime;
 
 function displayTime(t) {
 	return t.h + (t.h === 1 ? " hour " : " hours ") + t.m + (t.m === 1 ? " minute " : " minutes ") + t.s + (t.s === 1 ? " second" : " seconds");
@@ -878,9 +879,8 @@ exports.commands = {
 			return {name: name, time: totalOntime};
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
-		keys = keys.sort(function (a, b) {
-			if (b.time > a.time) return 1;
-			return -1;
+		keys.sort(function (a, b) {
+			return b.time - a.time;
 		});
 		keys.slice(0, 10).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
