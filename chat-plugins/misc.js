@@ -31,7 +31,6 @@ function convertTime(time) {
 		h: Math.floor(hours),
 	};
 }
-global.c = convertTime;
 
 function displayTime(t) {
 	return t.h + (t.h === 1 ? " hour " : " hours ") + t.m + (t.m === 1 ? " minute " : " minutes ") + t.s + (t.s === 1 ? " second" : " seconds");
