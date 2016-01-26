@@ -40,12 +40,12 @@ All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon
 var uuid = require('uuid');
 
 var colors = {
-    Mythic: '#E3E2AF',
-    Legendary: '#FF851B',
-    Epic: 'purple',
-    Rare: '#0074D9',
-    Uncommon: 'gray',
-    Common: 'black'
+    Mythic: '#D82A2A',
+    Legendary: '#E8AB03',
+    Epic: '#73DF14',
+    Rare: '#2DD1B6',
+    Uncommon: '#2D3ED1',
+    Common: '#000'
 };
 
 var shop = [ //Actual shop display
@@ -1015,18 +1015,17 @@ function addCard(name, card) {
 }
 
 function getShopDisplay (shop) {
-    var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
-                    "<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
+    var display = "<table width='100%' border='1' style='border-collapse: collapse; color: #444; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);' cellpadding='5'>" +
+        "<tr><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Command</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Description</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Cost</th></tr>";
     var start = 0;
     while (start < shop.length) {
-        display += "<tr>" +
-                        "<td align='center'><button name='send' value='/buypack " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
-                        "<td align='center'>" + shop[start][1] + "</td>" +
-                        "<td align='center'>" + shop[start][2] + "</td>" +
-                    "</tr>";
+        display += "<tr>" +"<td class='card-td'><button name='send' value='/buypack " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
+                "<td class='card-td'>" + shop[start][1] + "</td>" +
+                "<td class='card-td'>" + shop[start][2] + "</td>" +
+                "</tr>";
         start++;
     }
-    display += "</tbody></table><center>To buy a pack from the shop, use /buypack <em>pack</em>.</center>";
+    display += "</table><center>To buy a pack from the shop, use /buypack <em>pack</em>.</center>";
     return display;
 }
 
@@ -1167,7 +1166,7 @@ exports.commands = {
 		if (cards) {
 			for (i = (page - 1) * 10; i < page * 10; i++) {
 				if (cards[i] && cards[i].hasOwnProperty('card')) {
-				display +=  '<button name="send" value="/card ' + cards[i].title + '"><img src="' + cards[i].card + '" width="50" title="' + cards[i].name +'"></button>';
+				'<button name="send" value="/card ' + cards[i].title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + cards[i].card + '" width="50" title="' + cards[i].name +'"></button>';
 				} else {
 					break;
 				}
@@ -1176,7 +1175,7 @@ exports.commands = {
 		} else {
 			display = targetU + ' has no cards.'
 		}
-		self.sendReplyBox(display);
+		self.sendReply('|raw|' + display);
     },
     
     card: function(target, room, user) {
@@ -1185,16 +1184,13 @@ exports.commands = {
         var cardName = toId(target);
         if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ': card not found.');
         var card = cards[cardName];
-        var html = '<img src="' + card.card + '" title="' + card.name + '" align="left">\
-                <br><center><h1><u><b>' + card.name + '</b></u></h1>\
-                <br><br>\
-                <h2><font color="' + colors[card.rarity] + '">' + card.rarity + '</font></h2>\
-                <br><br>\
-                <font color="#AAA"><i>Points:</i></font><br>' + 
-                card.points + '<br><br>\
-        <font color="#AAA"><i>Found in Packs:</i></font><br>' + 
-                card.collection.join(', ') + '</center><br clear="all">';
-        this.sendReplyBox(html);
+        var html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + card.card + '" title="' + card.name + '" align="right">' +
+                '<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">Absol</span>' +
+                '<br /><br /><h1><font color="' + colors[card.rarity] + '">' + card.rarity + '</font></h1>' +
+                '<br /><br /><font color="#AAA"><i>Points:</i></font> ' + card.points +
+                '<br /><br /><font color="#AAA"><i>Found in Packs:</i></font>' + card.collection.join(', ') +
+                '<br clear="all">';
+        this.sendReply('|raw|' + html);
     },
 
 	richestuser: function (target, room, user) {
