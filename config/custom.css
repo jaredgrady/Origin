@@ -59,6 +59,60 @@
   color: #11527D;
 }
 
+.card-th {
+  background-color: #DCE9F9;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  border: 1px solid #CCC;
+}
+
+.card-td {
+  background: #FFF;
+  border: 1px solid #CCC;
+  text-align: center;
+}
+
+.card-div {
+  padding: 5px;
+  color: #333;
+}
+
+.card-th:hover, .card-td:hover {
+  color: #222;
+}
+
+.card-button {
+  margin: 0px 3px;
+}
+
+.card-td button, .card-button {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  color: #333;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
+.card-td button:hover, .card-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid #CCC;
+  text-shadow: 1px 1px 1px #EEE; 
+}
+
+.card-td button:focus, .card-button:focus {
+  background: rgba(227, 235, 246, 0.8);
+  border: 1px solid #9EB2D0;
+}
+
+.card-name {
+  background-color: #DCE9F9;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  font-size: 25pt;
+  font-weight: bold;
+  padding: 12px 18px 10px 18px;
+  border: 1px solid #CCC;
+  color: #444;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
