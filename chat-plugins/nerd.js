@@ -75,9 +75,9 @@ exports.commands = {
 	},
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		var i = -50;
-		var crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-		var crashesLines = Number(target);
+		let i = -50;
+		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
+		let crashesLines = Number(target);
 		if (isNaN(target) || !target || Number(target) < 10) crashesLines = 10;
 		if (crashesLines > 50) crashesLines = 50;
 		for (; crashes.split('\n\n').length <= crashesLines; i--) {
