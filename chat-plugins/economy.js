@@ -7,7 +7,7 @@ let highRollers = ['fender', 'duttyvybz', 'nineage'];
 
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
-    ['Fix', 'Buys the ability to alter your current custom avatar, trainer card or icon. (don\'t buy if you don\'t have one)', 10],
+    ['Fix', 'Buys the ability to alter your current custom avatar, trainer card, title or icon. (don\'t buy if you don\'t have one)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly.)', 25],
     ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 25],
