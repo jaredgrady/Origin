@@ -1702,6 +1702,10 @@ body {
   border-color: #11484F;
   background: rgba(51, 98, 81, 0.6);
 }
+.dark .tournament-tools {
+  background: rgba(19, 36, 46, 0.6);
+  border-color: #111;
+}
 
 .tournament-tools .select {
   border-color: #11484F;
@@ -1727,9 +1731,19 @@ body {
   color: #D9FCEF;
   text-shadow: 0px -1px 0px #11484F;
 }
+.dark .tournament-tools button {
+  background: rgba(9, 24, 31, 0.95);
+  border-color: #B998AB;
+  color: #B998AB;
+}
 
 .tournament-tools button:hover {
   background: #3D735F;
+}
+.dark .tournament-tools button:hover {
+  background: rgba(9, 24, 31, 0.98);
+  border-color: #8BBDC6;
+  color: #8BBDC6;
 }
 
 .tournament-wrapper, .tournament-box {
@@ -1738,6 +1752,40 @@ body {
 
 .tournament-box {
   background: url("http://i.imgur.com/xQmFRxz.jpg?2");
+}
+
+.dark .tournament-bracket-tree-node > rect {
+  fill: rgba(9, 24, 31, 0.95);
+  stroke: #000;
+}
+
+.dark .tournament-bracket-tree-node-match-team {
+  fill: #8BBDC6;
+}
+
+.dark .tournament-bracket-tree-node-match-team-draw, .dark .tournament-bracket-tree-node-match-team-loss {
+  fill: #AAA;
+}
+
+.dark .tournament-bracket-tree-node > text {
+  fill: #EEE;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.dark .tournament-bracket-tree-link-active {
+  stroke: #8BBDC6;
+}
+
+.dark .tournament-bracket-tree-node > text > a {
+  fill: #B998AB;
+}
+
+.dark .tournament-bracket-tree-node > text > a:hover {
+  fill: #9E7D8F;
+}
+
+.dark .tournament-bracket-tree {
+  background: rgba(19, 36, 46, 0.5);
 }
 
 /***********************
