@@ -67,7 +67,7 @@
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-plugin-mocha": "^1.1.0",
-    "mocha": "~2.3.2",
+    "mocha": "2.4.3",
     "mock-fs": "3.6.0"
   }
 }
