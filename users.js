@@ -823,11 +823,11 @@ User = (function () {
 		} else {
 			this.send('|nametaken|' + name + "|Your authentication token was invalid.");
 		}
+		Ontime[userid] = Date.now();
 		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
 		Db('rooms').get(userid, []).forEach(function (room) {
 			this.tryJoinRoom(room, connection);
 		}.bind(this));
-		this.start = Date.now();
 		return false;
 	};
 	User.prototype.validateRename = function (name, tokenData, newlyRegistered, challenge) {
@@ -1231,7 +1231,8 @@ User = (function () {
 			});
 			if (rooms.length) Db('rooms').set(this.userid, rooms);
 			Db('seen').set(this.userid, Date.now());
-			Db('ontime').set(this.userid, Db('ontime').get(this.userid, 0) + (Date.now() - this.start));
+			Db('ontime').set(this.userid, Db('ontime').get(this.userid, 0) + (Date.now() - Ontime[this.userid]));
+			delete Ontime[this.userid];
 		}
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {

@@ -120,6 +120,8 @@ global.Tells = require('./tells.js');
 
 global.Db = require('origindb')('config/eosdb');
 
+global.Ontime = {};
+
 global.DATA_DIR = (process.env.OPENSHIFT_DATA_DIR) ? process.env.OPENSHIFT_DATA_DIR : './config/';
 
 global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA_DIR + 'logs/') : './logs/';
