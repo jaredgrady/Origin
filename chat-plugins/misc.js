@@ -850,10 +850,11 @@ exports.commands = {
 	userontime: 'ontime',
 	ontime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
+		
 		const userid = target ? toId(target) : user.userid;
-		let currentOntime = 0;
-		if (Ontime[userid]) currentOntime = Date.now() - Ontime[userid];
+		const currentOntime = Ontime[userid] ? Date.now() - Ontime[userid] : 0;
 		const totalOntime = Db('ontime').get(userid, 0) + currentOntime;
+
 		if (!totalOntime) return this.sendReplyBox(userid + " has never been online on this server.");
 
 		if (Users.get(userid) && Users.get(userid).connected) {
