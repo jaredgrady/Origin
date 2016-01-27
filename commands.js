@@ -38,6 +38,12 @@ let commands = exports.commands = {
 	globalauth: 'authority',
 	authlist: 'authority',
 	authority: function (target, room, user, connection) {
+		if (target) {
+			let targetRoom = Rooms.search(target);
+			let unavailableRoom = targetRoom && (targetRoom !== room && (targetRoom.modjoin || targetRoom.staffRoom) && !user.can('makeroom'));
+			if (targetRoom && !unavailableRoom) return this.parse('/roomauth1 ' + target);
+			return this.parse('/userauth ' + target);
+		}
 		let rankLists = {};
 		let ranks = Object.keys(Config.groups);
 		for (let u in Users.usergroups) {
@@ -60,6 +66,9 @@ let commands = exports.commands = {
 		if (!buffer.length) buffer = "This server has no global authority.";
 		connection.popup(buffer.join("\n\n"));
 	},
+	authhelp: ["/auth - Show global staff for the server.",
+		"/auth [room] - Show what roomauth a room has.",
+		"/auth [user] - Show what global and roomauth a user has."],
 
 	me: function (target, room, user, connection) {
 		// By default, /me allows a blank message
@@ -824,12 +833,15 @@ let commands = exports.commands = {
 		"/roomdeauth [username] - Removes all room rank from the user. Requires: @ # & ~"],
 
 	roomstaff: 'roomauth',
-	roomauth: function (target, room, user, connection) {
+	roomauth1: 'roomauth',
+	roomauth: function (target, room, user, connection, cmd) {
+		let userLookup = '';
+		if (cmd === 'roomauth1') userLookup = '\n\nTo look up auth for a user, use /userauth ' + target;
 		let targetRoom = room;
 		if (target) targetRoom = Rooms.search(target);
 		let unavailableRoom = targetRoom && (targetRoom !== room && (targetRoom.modjoin || targetRoom.staffRoom) && !user.can('makeroom'));
 		if (!targetRoom || unavailableRoom) return this.errorReply("The room '" + target + "' does not exist.");
-		if (!targetRoom.auth) return this.sendReply("/roomauth - The room '" + (targetRoom.title ? targetRoom.title : target) + "' isn't designed for per-room moderation and therefore has no auth list.");
+		if (!targetRoom.auth) return this.sendReply("/roomauth - The room '" + (targetRoom.title ? targetRoom.title : target) + "' isn't designed for per-room moderation and therefore has no auth list." + userLookup);
 
 		let rankLists = {};
 		for (let u in targetRoom.auth) {
@@ -853,11 +865,11 @@ let commands = exports.commands = {
 		});
 
 		if (!buffer.length) {
-			connection.popup("The room '" + targetRoom.title + "' has no auth.");
+			connection.popup("The room '" + targetRoom.title + "' has no auth." + userLookup);
 			return;
 		}
 		if (targetRoom !== room) buffer.unshift("" + targetRoom.title + " room auth:");
-		connection.popup(buffer.join("\n\n"));
+		connection.popup(buffer.join("\n\n") + userLookup);
 	},
 
 	userauth: function (target, room, user, connection) {
@@ -956,8 +968,8 @@ let commands = exports.commands = {
 			}
 		}
 		let lastid = this.getLastIdOf(targetUser);
-		this.add('|unlink|hide|' + lastid);
-		if (lastid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
+		this.add('|unlink|roomhide|' + lastid);
+		if (lastid !== toId(this.inputUsername)) this.add('|unlink|roomhide|' + toId(this.inputUsername));
 	},
 	roombanhelp: ["/roomban [username] - Bans the user from the room you are in. Requires: @ # & ~"],
 
