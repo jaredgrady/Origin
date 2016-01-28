@@ -15,7 +15,7 @@
     "moment": "^2.10.2",
     "node-serialize": "0.0.4",
     "node-static": "0.7.6",
-    "origindb": "^2.0.0",
+    "origindb": "^2.1.0",
     "q": "^1.2.0",
     "request": "^2.58.0",
     "sockjs": "0.3.15",
