@@ -826,7 +826,7 @@ User = (function () {
 		Ontime[userid] = Date.now();
 		if (Tells.inbox[userid]) Tells.sendTell(userid, this);
 		Db('rooms').get(userid, []).forEach(function (room) {
-			if (!(room in this.roomCount)) this.tryJoinRoom(room, connection); 
+			if (!(room in this.roomCount)) this.tryJoinRoom(room, connection);
 		}.bind(this));
 		return false;
 	};
