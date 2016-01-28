@@ -1957,7 +1957,9 @@ let commands = exports.commands = {
 		Users.users.forEach(function (user) {
 			if (!user.connected) return;
 			if (!user.registered) return;
-			Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - Ontime[user.userid]));
+			if (Ontime[user.userid]) {
+				Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - Ontime[user.userid]));
+			}
 		});
 
 		this.logEntry(user.name + " used /lockdown");
@@ -2196,7 +2198,7 @@ let commands = exports.commands = {
 	},
 
 	evalbattle: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection) || !~developers.indexOf(user.userid)) {
+		if (!~developers.indexOf(user.userid)) {
 			return this.errorReply("/evalbattle - Access denied.");
 		}
 		if (!this.canBroadcast()) return;

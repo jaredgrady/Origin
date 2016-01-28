@@ -1231,8 +1231,10 @@ User = (function () {
 			});
 			if (rooms.length) Db('rooms').set(this.userid, rooms);
 			Db('seen').set(this.userid, Date.now());
-			Db('ontime').set(this.userid, Db('ontime').get(this.userid, 0) + (Date.now() - Ontime[this.userid]));
-			delete Ontime[this.userid];
+			if (Ontime[this.userid]) {
+				Db('ontime').set(this.userid, Db('ontime').get(this.userid, 0) + (Date.now() - Ontime[this.userid]));
+				delete Ontime[this.userid];
+			}
 		}
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {

@@ -868,10 +868,11 @@ exports.commands = {
 	},
 	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],
 
+	nolifeladder: 'ontimeladder',
 	mostonline: 'ontimeladder',
 	ontimeladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let display = '<center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
+		let display = '<div style="max-height: 310px; overflow-y: scroll"><center><u><b>Ontime Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
 		let keys = Object.keys(Db('ontime').object()).map(function (name) {
 			let currentOntime = 0;
 			if (Ontime[name]) currentOntime = Date.now() - Ontime[name];
@@ -879,20 +880,11 @@ exports.commands = {
 			return {name: name, time: totalOntime};
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
-		keys.sort(function (a, b) {
-			return b.time - a.time;
-		});
-		keys.slice(0, 10).forEach(function (user, index) {
+		keys.sort(function (a, b) { return b.time - a.time; });
+		keys.slice(0, 100).forEach(function (user, index) {
 			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
 		});
-		if (this.broadcasting && Number(target) > 10) target = null;
-		if (!isNaN(target)) {
-			if (Number(target) > 100) target = 100;
-			keys.slice(10, target).forEach(function (user, index) {
-				display += "<tr><td>" + (index + 11) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
-			});
-		}
-		display += "</tbody></table>";
+		display += "</tbody></table></div>";
 		this.sendReply("|raw|" + display);
 	},
 	
