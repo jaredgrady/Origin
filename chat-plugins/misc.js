@@ -180,44 +180,71 @@ exports.commands = {
 		Rooms.global.send('|refresh|');
 		forever.restart('app.js');
 	},
-/*   
-   forceshart: 'shart',
-    shart: function (target, room, user, connection) {
-		if (!target) return this.parse('/help roomban');
-		if (room.isMuted(user) && !user.can('bypassall')) return this.sendReply("You cannot do this while unable to talk.");
+	forceshart: 'shart',
+	shart: function (target, room, user, connection, cmd) {
+		if (!target) return this.parse('/help shart');
 
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
-		let name = this.targetUsername;
-		let userid = toId(name);
+		if (!targetUser) return this.errorReply("User '" + this.targetUsername + "' does not exist.");
+		if (target.length > MAX_REASON_LENGTH) {
+			return this.errorReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
+		}
+		if (!this.can('ban', targetUser)) return false;
 
-		if (!userid || !targetUser) return this.sendReply("User '" + name + "' does not exist.");
-		if (!this.can('ban', targetUser, room)) return false;
-		if (!room.bannedUsers || !room.bannedIps) {
-			return this.sendReply("Room bans are not meant to be used in room " + room.id + ".");
+		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
+			let problem = " but was already banned";
+			return this.privateModCommand("(" + targetUser.name + " would be banned by " + user.name + problem + ".)");
 		}
-		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
-		if (targetUser in room.users) {
-			targetUser.popup(
-			"|html|<p>" + Tools.escapeHTML(user.name) + " has sharted on you " + ".</p>" + "</p>") +
-				"<p>To appeal the ban, PM the staff member that banned you" + (room.auth ? " or a room owner. </p><p><button name=\"send\" value=\"/roomauth " + room.id + "\">List Room Staff</button></p>" : ".</p>")
-			);
+
+		if (targetUser.confirmed) {
+			if (cmd === 'forceshart') {
+				let from = targetUser.deconfirm();
+				Monitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+			} else {
+				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
+			}
+		} else if (cmd === 'forceshart') {
+			return this.errorReply("Use /ban; " + targetUser.name + " is not a confirmed user.");
 		}
-		
-		this.addModCommand("" + targetUser.name + " was sharted on in room " + room.id + " by " + user.name + "." + (target ? " (" + target + ")" : ""));
+
+		// Destroy personal rooms of the banned user.
+		for (let i in targetUser.roomCount) {
+			if (i === 'global') continue;
+			let targetRoom = Rooms.get(i);
+			if (targetRoom.isPersonal && targetRoom.auth[targetUser.userid] && targetRoom.auth[targetUser.userid] === '#') {
+				targetRoom.destroy();
+			}
+		}
+
+		targetUser.popup("|modal|" + user.name + " has sharted on you.");
+
+		this.addModCommand("" + targetUser.name + " was sharted on by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
+		let alts = targetUser.getAlts();
 		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
-		let alts = room.roomBan(targetUser);
 		if (alts.length) {
-			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "roombanned alts: " + alts.join(", ") + ")");
+			let guests = 0;
+			alts = alts.filter(function (alt) {
+				if (alt.substr(0, 6) !== 'Guest ') return true;
+				guests++;
+				return false;
+			});
+			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
 			for (let i = 0; i < alts.length; ++i) {
 				this.add('|unlink|' + toId(alts[i]));
 			}
 		} else if (acAccount) {
 			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 		}
-		this.add('|unlink|' + this.getLastIdOf(targetUser));
+
+		let userid = this.getLastIdOf(targetUser);
+		this.add('|unlink|hide|' + userid);
+		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
+		targetUser.ban(false, userid);
+		this.globalModlog("BAN", targetUser, " by " + user.name + (target ? ": " + target : ""));
+		return true;
 	},
-*/
+	sharthelp: ["/shart [username], [reason] - Kick user from all rooms and ban user's IP address with reason. Requires: @ & ~"],
     	helixfossil: 'm8b',
 	helix: 'm8b',
 	magic8ball: 'm8b',
