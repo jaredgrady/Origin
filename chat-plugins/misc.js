@@ -891,7 +891,7 @@ exports.commands = {
 			Ontime[userid] = Date.now();
 		}
 
-		if (Users.get(userid) && Users.get(userid).connected) {
+		if (isConnected) {
 			this.sendReplyBox(
 				userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>." + 
 				" Current ontime: <b>" + displayTime(convertTime((currentOntime))) + "</b>"
