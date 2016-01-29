@@ -3,7 +3,6 @@
 let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
-let highRollers = ['fender', 'duttyvybz', 'nineage'];
 
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
@@ -425,13 +424,13 @@ exports.commands = {
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
-		if (room.dice.p1 === 'duttyvybz') {
+		if (room.dice.p1 === 'madschemin') {
 			while (p1Number <= p2Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
-		if (room.dice.p2 === 'duttyvybz') {
+		if (room.dice.p2 === 'madschemin') {
 			while (p2Number <= p1Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
