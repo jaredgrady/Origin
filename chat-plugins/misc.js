@@ -921,6 +921,29 @@ exports.commands = {
 		display += "</tbody></table></div>";
 		this.sendReply("|raw|" + display);
 	},
+
+	staffontime: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		if (!this.can('receiveauthmessages', null, room)) return false;
+		let display = '<div style="max-height: 310px; overflow-y: scroll"><center><u><b>Staff Ontime</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
+		let keys = Object.keys(Db('ontime').object())
+			.filter(function(name) {
+				return Users.usergroups[name];
+			})	
+			.map(function (name) {
+				let currentOntime = 0;
+				if (Ontime[name]) currentOntime = Date.now() - Ontime[name];
+				const totalOntime = Db('ontime').get(name, 0) + currentOntime;
+				return {name: name, time: totalOntime};
+			});
+		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
+		keys.sort(function (a, b) { return b.time - a.time; });
+		keys.slice(0, 100).forEach(function (user, index) {
+			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + displayTime(convertTime(user.time)) + "</td></tr>";
+		});
+		display += "</tbody></table></div>";
+		this.sendReply("|raw|" + display);
+	},
 	
 	reauth: "repromote",
 	repromote: function(target, room, user) {
