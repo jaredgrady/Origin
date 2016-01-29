@@ -922,6 +922,7 @@ exports.commands = {
 		this.sendReply("|raw|" + display);
 	},
 
+	ontimestaff: 'staffontime',
 	staffontime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!this.can('receiveauthmessages', null, room)) return false;
