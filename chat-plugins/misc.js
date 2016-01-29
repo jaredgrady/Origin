@@ -932,6 +932,7 @@ exports.commands = {
 			.filter(function(name) {
 				const u = Users.usergroups[name];
 				if (!target) return u;
+				if (toId(target) === 'upper') return u && u.charAt(0) !== '+';
 				return u && u.charAt(0) === target;
 			})	
 			.map(function (name) {
