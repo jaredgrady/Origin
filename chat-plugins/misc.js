@@ -884,6 +884,13 @@ exports.commands = {
 
 		if (!totalOntime) return this.sendReplyBox(userid + " has never been online on this server.");
 
+		const isConnected = Users.get(userid) && Users.get(userid).connected;
+
+		// happens when a user opens 2 tabs and closes one of them, removing them from the Ontime object
+		if (isConnected && !Ontime[userid]) {
+			Ontime[userid] = Date.now();
+		}
+
 		if (Users.get(userid) && Users.get(userid).connected) {
 			this.sendReplyBox(
 				userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>." + 
