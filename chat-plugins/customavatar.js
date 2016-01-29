@@ -72,6 +72,7 @@ exports.commands = {
 	customavatar: function (target, room, user) {
 		let parts = target.split(',');
 		let cmd = parts[0].trim().toLowerCase();
+		let hash;
 
 		if (cmd in {'':1, show:1, view:1, display:1}) {
 			let message = "";
@@ -91,7 +92,7 @@ exports.commands = {
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (Config.customavatars[userid]) return this.sendReply(userid + " already has a custom avatar.");
 
-			let hash = crypto.createHash('sha512').update(userid + '\u0000' + avatar).digest('hex').slice(0, 8);
+			hash = crypto.createHash('sha512').update(userid + '\u0000' + avatar).digest('hex').slice(0, 8);
 			pendingAdds[hash] = {userid: userid, avatar: avatar};
 			parts[1] = hash;
 
