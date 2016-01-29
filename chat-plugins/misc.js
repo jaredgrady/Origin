@@ -926,9 +926,12 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		if (!this.can('receiveauthmessages', null, room)) return false;
 		let display = '<div style="max-height: 310px; overflow-y: scroll"><center><u><b>Staff Ontime</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Total Time</th></tr>';
+		const ranks = Object.keys(Config.groups);
 		let keys = Object.keys(Db('ontime').object())
 			.filter(function(name) {
-				return Users.usergroups[name];
+				const u = Users.usergroups[name];
+				if (!target) return u;
+				return u && u.charAt(0) === target;
 			})	
 			.map(function (name) {
 				let currentOntime = 0;
