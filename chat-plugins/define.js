@@ -1,20 +1,8 @@
 'use strict';
 
-let fs = require('fs');
-let request = require('request');
+const request = require('request');
 
-let urbanCache;
-try {
-	urbanCache = JSON.parse(fs.readFileSync('../config/udcache.json', 'utf8'));
-} catch (e) {
-	urbanCache = {};
-}
-
-function cacheUrbanWord(word, definition) {
-	word = word.toLowerCase().replace(/ /g, '');
-	urbanCache[word] = {"definition": definition, "time": Date.now()};
-	fs.writeFile('config/urbancache.json', JSON.stringify(urbanCache));
-}
+const urbandefine = require('../urbandefine');
 
 exports.commands = {
 	def: 'define',
@@ -61,49 +49,38 @@ exports.commands = {
 	u: 'ud',
 	urbandefine: 'ud',
 	ud: function (target, room, user, connection, cmd) {
-		if (!target) return this.parse('/help ud');
-		if (target.toString().length > 50) return this.errorReply("Phrase cannot be longer than 50 characters.");
 		if (!this.canBroadcast()) return;
+		if (!target) return this.parse('/help ud');
+		if (target.length > 50) return this.errorReply("Phrase cannot be longer than 50 characters.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 
-		let options = {
-			url: 'http://www.urbandictionary.com/iphone/search/define',
-			term: target,
-			headers: {
-				'Referer': 'http://m.urbandictionary.com',
-			},
-			qs: {
-				'term': target,
-			},
-		};
+		const targetId = toId(target);
 
-		if (urbanCache[target.toLowerCase().replace(/ /g, '')] && Math.round(Math.abs((urbanCache[target.toLowerCase().replace(/ /g, '')].time - Date.now()) / (24 * 60 * 60 * 1000))) < 31) {
-			return this.sendReplyBox("<b>" + Tools.escapeHTML(target) + ":</b> " + urbanCache[target.toLowerCase().replace(/ /g, '')].definition.substr(0, 400));
+		if (Db('udcache').get(targetId)) {
+			return this.sendReplyBox("<b>" + Tools.escapeHTML(target) + ":</b> " + Db('udcache').get(targetId));
 		}
 
-		let self = this;
+		const self = this;
 
-		function callback(error, response, body) {
-			if (!error && response.statusCode === 200) {
-				let page = JSON.parse(body);
-				let definitions = page['list'];
-				if (page['result_type'] === 'no_results') {
+		urbandefine(targetId).fork(
+			function error(err) {
+				console.error(err);
+			},
+			function success(maybe) {
+				if (!maybe.value) {
 					self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
-					return room.update();
-				} else {
-					if (!definitions[0]['word'] || !definitions[0]['definition']) {
-						self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
-						return room.update();
-					}
-					let output = "<b>" + Tools.escapeHTML(definitions[0]['word']) + ":</b> " + Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
-					if (output.length > 400) output = output.slice(0, 400) + '...';
-					cacheUrbanWord(target, Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' '));
-					self.sendReplyBox(output);
-					return room.update();
+					room.update();
 				}
+				maybe.map(function (definition) {
+					const sanitizeDef = definition.slice(0, 400).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
+					const trimDef = definition.length > 400 ? sanitizeDef + '...' : sanitizeDef;
+					const output = "<b>" + Tools.escapeHTML(target) + ":</b> " + trimDef;
+					Db('udcache').set(targetId, trimDef);
+					self.sendReplyBox(output);
+					room.update();
+				});
 			}
-		}
-		request(options, callback);
+		);
 	},
 	udhelp: ["/urbandefine [phrase] - Shows the urban definition of the phrase. If you don't put in a phrase, it will show you a random phrase from urbandefine."],
 };
