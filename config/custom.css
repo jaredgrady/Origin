@@ -1225,7 +1225,7 @@
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
 }
 
-#lobby-userlist-user-agryphon, #casino-userlist-user-agryphon, #staff-userlist-user-agryphon {
+#lobby-userlist-user-phoenixgryphon, #casino-userlist-user-phoenixgryphon, #staff-userlist-user-phoenixgryphon {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
 }
 
@@ -1253,7 +1253,7 @@
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat;
 }
 
-#phoenixleague-userlist-user-phoenixjane, #lobby-userlist-user-phoenixjane, #monotype-userlist-user-phoenixjane {
+#phoenixleague-userlist-user-phoenixtana, #lobby-userlist-user-phoenixtana, #monotype-userlist-user-phoenixtana {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat;
 }
 
@@ -1275,6 +1275,9 @@
 
 #lobby-userlist-user-gyaratoast, #breadsmash-userlist-user-gyaratoast, #squad-userlist-user-gyaratoast, #pokemonjourney-userlist-user-gyaratoast, #sotascapfun-userlist-user-gyaratoast  {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/OXs5rDM.png") right no-repeat;
+}
+#lobby-userlist-user-lotuswincon, #thelotusleague-userlist-user-lotuswincon, #thepandaclub-userlist-user-lotuswincon {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/s8pvxAi.gif") right no-repeat;
 }
 
 /* Icons ~end */
