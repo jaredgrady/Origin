@@ -1959,6 +1959,7 @@ let commands = exports.commands = {
 			if (!user.registered) return;
 			if (Ontime[user.userid]) {
 				Db('ontime').set(user.userid, Db('ontime').get(user.userid, 0) + (Date.now() - Ontime[user.userid]));
+				Ontime[user.userid] = Date.now();
 			}
 		});
 
