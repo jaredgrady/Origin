@@ -2291,7 +2291,7 @@ a.subtle, a.subtle:hover {
 
 .setchart {
   border-color: #175964;
-  background: #447F69;
+  background: #447F69 no-repeat scroll 10px 5px none;
 }
 
 .setchart-nickname {
@@ -2336,8 +2336,18 @@ a.subtle, a.subtle:hover {
   border-color: #CE3FB6;
 }
 
+.dark .setchart input.incomplete {
+    background: #2F252A;
+    color: #CE3FB6;
+    border-color: #CE3FB6
+}
+
 .teambuilder-results {
   background: rgba(255, 255, 255, 0.3);
+}
+
+.dark .teambuilder-results {
+    background: rgba(0, 0, 0, 0.3)
 }
 
 .teambuilder-results h3, .teambuilder-results .utilichart h3 {
