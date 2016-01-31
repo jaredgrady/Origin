@@ -256,8 +256,8 @@ exports.commands = {
 			let html = '<center><b><font size="2">Rock/Paper/Scissors Ladder</font><b></center><br><div style="max-height: 310px; overflow-y: scroll">';
 			let index = 1;
 			let table = Object.keys(Db("rpsrank").object()).sort(function (a, b) {
-				if (Db("rpsrank").get(a, 1000) > Db("rpsrank").get(b, 1000)) return 1;
-				return -1;
+				if (Db("rpsrank").get(a, 1000) > Db("rpsrank").get(b, 1000)) return -1;
+				return 1;
 			}).map(function (u) {
 				return '<tr><td>&nbsp;' + index++ + '&nbsp;</td><td>&nbsp;' + u + '&nbsp;</td><td>&nbsp;' + Db("rpsrank").get(u, 1000) + "&nbsp;</td></tr>";
 			}).join("");
