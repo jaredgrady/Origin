@@ -59,6 +59,28 @@
   color: #11527D;
 }
 
+.intro-tabbarbtn {
+  background: rgba(243, 197, 234, 0.2);
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #693A60;
+  text-align: center;
+  width: 75px;
+  height: 35px;
+  color: #803C6F;
+  text-shadow: 0 0 2px #fce8f1;
+  margin: 0px 5px;
+}
+
+.intro-tabbarbtn:hover {
+  background: rgba(243, 197, 234, 0.7);
+}
+
+.important {
+  font-weight: bold;
+  font-style: italic;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
