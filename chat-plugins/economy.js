@@ -3,6 +3,7 @@
 let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
+let rankLadder = require('../rank-ladder');
 
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
@@ -363,27 +364,12 @@ exports.commands = {
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let display = '<center><u><b>Richest Users</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Money</th></tr>';
 		let keys = Object.keys(Db('money').object()).map(function (name) {
 			return {name: name, money: Db('money').get(name)};
 		});
 		if (!keys.length) return this.sendReplyBox("Money ladder is empty.");
-		keys = keys.sort(function (a, b) {
-			if (b.money > a.money) return 1;
-			return -1;
-		});
-		keys.slice(0, 10).forEach(function (user, index) {
-			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
-		});
-		if (this.broadcasting && Number(target) > 10) target = null;
-		if (!isNaN(target)) {
-			if (Number(target) > 100) target = 100;
-			keys.slice(10, target).forEach(function (user, index) {
-				display += "<tr><td>" + (index + 11) + "</td><td>" + user.name + "</td><td>" + user.money + "</td></tr>";
-			});
-		}
-		display += "</tbody></table>";
-		this.sendReply("|raw|" + display);
+		keys.sort(function (a, b) { return b.money - a.money; });
+		this.sendReplyBox(rankLadder('Richest Users', 'Money', keys.slice(0, 100), 'money'));
 	},
 
 	dicegame: 'startdice',
