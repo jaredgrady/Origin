@@ -27,6 +27,7 @@ class RPSGame {
 		Rooms.global.RPS.gameId++;
 		this.gameId = "RPS-" + Rooms.global.RPS.gameId;
 		this.gameType = gameType;
+		// set inactivity timer
 		this.timer = setTimeout(function () {
 			this.onEnd(true);
 		}.bind(this), 60000);
@@ -48,8 +49,6 @@ class RPSGame {
 		//send popups
 		this.sendGameInformation(this.p1, this.p2);
 		this.sendGameInformation(this.p2, this.p1);
-
-		//set timer - 60 seconds;
 	}
 
 	sendGameInformation(player, opponent) {
