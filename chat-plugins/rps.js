@@ -229,6 +229,9 @@ exports.commands = {
 		endsearch: function (target, room, user) {
 			if (!user.RPSgame || user.RPSgame !== "searching") return this.errorReply("You are not searching for a game of Rock/Paper/Scissors!");
 			updateSearches();
+			if (Rooms.global.RPS.searches[user.userid] === "bucks") {
+				Db("money").set(user.userid, Db("money").get(user.userid, 0) + 3);
+			}
 			delete Rooms.global.RPS.searches[user.userid];
 			user.RPSgame = null;
 			this.sendReply("You have cancelled your search for a game of Rock/Paper/Scissors.");
