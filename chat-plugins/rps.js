@@ -147,7 +147,10 @@ class RPSGame {
 			let loserPoints = Db("rpsrank").get(loser.userid, 1000);
 			let difference = Math.abs(winnerPoints - loserPoints);
 			let winnerPointGain, loserPointGain;
-			let pointGain = ~~(difference / 4);
+			let pointGain = ~~(difference / 4) + 8;
+			if (winnerPoints > loserPoints) {
+				pointGain = 12;
+			}
 			winnerPointGain = pointGain;
 			loserPointGain = -1 * pointGain;
 
