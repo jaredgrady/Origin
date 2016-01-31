@@ -161,7 +161,9 @@ class RPSGame {
 			if (winnerPoints < 1125) {
 				winnerPointGain *= 2;
 			}
+			//limit gains
 			if (winnerPointGain < 12) winnerPointGain = 12;
+			if (winnerPointGain > 75) winnerPointGain = 75;
 			let winnerFinalPoints = winnerPoints + winnerPointGain;
 			Db("rpsrank").set(winner.userid, winnerFinalPoints);
 
@@ -169,15 +171,17 @@ class RPSGame {
 			if (winnerPoints > loserPoints) {
 				loserPointGain = Math.ceil(loserPointGain / 2);
 			}
-			if (loserPointGain > -12) loserPointGain = -12;
+			//limit losses
+			if (loserPointGain > -6) loserPointGain = -6;
+			if (loserPointGain < -50) loserPointGain = -50;
 			let loserFinalPoints = loserPoints + loserPointGain;
 			//unable to go below 1000;
 			if (loserFinalPoints < 1000) loserFinalPoints = 1000;
 			Db("rpsrank").set(loser.userid, loserFinalPoints);
 
 			//announce the change in rank
-			winner.send("|pm|~Rock/Paper/Scissors Host|" + winner.userid + "|/html " + winner.name + ": " + winnerPoints + " --> " + winnerFinalPoints + "<br>" + loser.name + ": " + loserPoints + "-->" + loserFinalPoints);
-			loser.send("|pm|~Rock/Paper/Scissors Host|" + loser.userid + "|/html " + winner.name + ": " + winnerPoints + " --> " + winnerFinalPoints + "<br>" + loser.name + ": " + loserPoints + "-->" + loserFinalPoints);
+			winner.send("|pm|~Rock/Paper/Scissors Host|" + winner.userid + "|/html " + winner.name + ": " + winnerPoints + " --> " + winnerFinalPoints + "<br>" + loser.name + ": " + loserPoints + " --> " + loserFinalPoints);
+			loser.send("|pm|~Rock/Paper/Scissors Host|" + loser.userid + "|/html " + winner.name + ": " + winnerPoints + " --> " + winnerFinalPoints + "<br>" + loser.name + ": " + loserPoints + " --> " + loserFinalPoints);
 		}
 	}
 }
