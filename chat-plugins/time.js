@@ -96,7 +96,7 @@ exports.commands = {
 		});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
 		keys.sort(function (a, b) { return b.time - a.time; });
-		keys = keys.slice(0, 100).map(function (user) { return {name: user.name, time: displayTime(convertTime(user.time))} });
+		keys = keys.slice(0, 100).map(function (user) { return {name: user.name, time: displayTime(convertTime(user.time))}; });
 		this.sendReplyBox(rankLadder('Ontime Ladder', 'Total Ontime', keys, 'time'));
 	},
 
@@ -120,7 +120,7 @@ exports.commands = {
 			});
 		if (!keys.length) return this.sendReplyBox("Ontime ladder is empty.");
 		keys.sort(function (a, b) { return b.time - a.time; });
-		keys = keys.map(function (user) { return {name: user.name, time: displayTime(convertTime(user.time))} });
+		keys = keys.map(function (user) { return {name: user.name, time: displayTime(convertTime(user.time))}; });
 		this.sendReplyBox(rankLadder('Staff Ontime', 'Total Ontime', keys, 'time'));
 	},
 };
