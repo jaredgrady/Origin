@@ -282,5 +282,6 @@ exports.commands = {
 	rpshelp: ["/rps search (bucks) - searches for a game of Rock/Paper/Scissors either for ladder points or for bucks.",
 	"/rps endsearch - stop searching for a game of Rock/Paper/Scissors.",
 	"/rps rank [user] - shows rank for Rock/Paper/Scissors for either a user or yourself.",
-	"/rps ladder - shows top 100 on the RPS ladder.",]
+	"/rps ladder - shows top 100 on the RPS ladder.",
+	],
 };
