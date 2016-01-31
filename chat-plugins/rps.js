@@ -268,11 +268,19 @@ exports.commands = {
 			let table = Object.keys(Db("rpsrank").object()).sort(function (a, b) {
 				if (Db("rpsrank").get(a, 1000) > Db("rpsrank").get(b, 1000)) return -1;
 				return 1;
-			}).map(function (u) {
+			}).slice(0, 100).map(function (u) {
 				return '<tr><td>&nbsp;' + index++ + '&nbsp;</td><td>&nbsp;' + u + '&nbsp;</td><td>&nbsp;' + Db("rpsrank").get(u, 1000) + "&nbsp;</td></tr>";
 			}).join("");
 			if (!table.length) return this.sendReplyBox("The ladder is empty!");
 			this.sendReplyBox(html + '<table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>RPS Ladder Points</th></tr>' + table + "</table></div>");
 		},
+		"": "help",
+		"help": function (target, room, user) {
+			this.parse("/help rps");
+		}
 	},
+	rpshelp: ["/rps search (bucks) - searches for a game of Rock/Paper/Scissors either for ladder points or for bucks.",
+	"/rps endsearch - stop searching for a game of Rock/Paper/Scissors.",
+	"/rps rank [user] - shows rank for Rock/Paper/Scissors for either a user or yourself.",
+	"/rps ladder - shows top 100 on the RPS ladder."]
 };
