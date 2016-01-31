@@ -1,3 +1,7 @@
+/* * * * * * * * * * * *
+*  Rock/Paper/Scissors *
+*  by sparkychild      *
+* * * * * * * * * * * */
 'use strict';
 
 if (!Rooms.global.RPS) {
