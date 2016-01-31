@@ -1,5 +1,6 @@
 tournaments/lib/**
 logs/**
+card-data.js
 config/color.js
 chat-plugins/trainercards.js
 chat-plugins/animals.js
