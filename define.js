@@ -53,4 +53,4 @@ const extractDefinition = compose(map(prop('text')), safeHead);
 // define :: String -> Task Error (Maybe String)
 const define = compose(map(extractDefinition), Http.get, makeUrl(dictUrl));
 
-module.exports = { define: define, urbandefine: urbandefine };
+module.exports = {define: define, urbandefine: urbandefine};
