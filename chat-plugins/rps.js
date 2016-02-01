@@ -4,6 +4,8 @@
 * * * * * * * * * * * */
 'use strict';
 
+const rankLadder = require('../rank-ladder');
+
 if (!Rooms.global.RPS) {
 	Rooms.global.RPS = {
 		searches: {},
@@ -262,16 +264,12 @@ exports.commands = {
 		},
 		ladder: function (target, room, user) {
 			if (!this.canBroadcast()) return false;
-			let html = '<center><b><font size="2">Rock/Paper/Scissors Ladder</font><b></center><br><div style="max-height: 310px; overflow-y: scroll">';
-			let index = 1;
-			let table = Object.keys(Db("rpsrank").object()).sort(function (a, b) {
-				if (Db("rpsrank").get(a, 1000) > Db("rpsrank").get(b, 1000)) return -1;
-				return 1;
-			}).slice(0, 100).map(function (u) {
-				return '<tr><td>&nbsp;' + index++ + '&nbsp;</td><td>&nbsp;' + u + '&nbsp;</td><td>&nbsp;' + Db("rpsrank").get(u, 1000) + "&nbsp;</td></tr>";
-			}).join("");
-			if (!table.length) return this.sendReplyBox("The ladder is empty!");
-			this.sendReplyBox(html + '<table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>RPS Ladder Points</th></tr>' + table + "</table></div>");
+			let keys = Object.keys(Db('rpsrank').object()).map(function (name) {
+				return {name: name, points: Db('rpsrank').get(name)};
+			});
+			if (!keys.length) return this.sendReplyBox("RPS ladder is empty.");
+			keys.sort(function (a, b) { return b.points - a.points; });
+			this.sendReplyBox(rankLadder('Rock/Paper/Scissors Ladder', 'RPS Points', keys.slice(0, 100), 'points'));
 		},
 		"": "help",
 		"help": function (target, room, user) {
