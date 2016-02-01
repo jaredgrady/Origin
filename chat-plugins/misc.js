@@ -154,6 +154,7 @@ exports.commands = {
 		Rooms.global.send('|refresh|');
 		forever.restart('app.js');
 	},
+	
 	forceshart: 'shart',
 	shart: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help shart');
@@ -219,7 +220,8 @@ exports.commands = {
 		return true;
 	},
 	sharthelp: ["/shart [username], [reason] - Kick user from all rooms and ban user's IP address with reason. Requires: @ & ~"],
-    helixfossil: 'm8b',
+
+    	helixfossil: 'm8b',
 	helix: 'm8b',
 	magic8ball: 'm8b',
 	m8b: function(target, room, user) {
