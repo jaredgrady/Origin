@@ -457,11 +457,11 @@ Validator = (function () {
 							// In theory, limitedEgg should not exist in this case.
 							throw new Error("invalid limitedEgg on " + name + ": " + limitedEgg + " with " + lsetData.sources[i]);
 						}
-						let potentialFather = tools.getTemplate(lsetData.sources[i].slice(2));
+						let potentialFather = tools.getTemplate(lsetData.sources[i].slice(lsetData.sources[i].charAt(2) === 'T' ? 3 : 2));
 						let restrictedSources = 0;
 						for (let j = 0; j < limitedEgg.length; j++) {
 							let moveid = limitedEgg[j];
-							let fatherSources = potentialFather.learnset[moveid];
+							let fatherSources = potentialFather.learnset[moveid] || potentialFather.learnset['sketch'];
 							if (!fatherSources) throw new Error("Egg move father " + potentialFather.id + " can't learn " + moveid);
 							let hasUnrestrictedSource = false;
 							let hasSource = false;
@@ -592,7 +592,7 @@ Validator = (function () {
 			if (!lsetData.sources && lsetData.sourcesBefore <= 3 && tools.getAbility(set.ability).gen === 4 && !template.prevo && tools.gen <= 5) {
 				problems.push(name + " has a gen 4 ability and isn't evolved - it can't use anything from gen 3.");
 			}
-			if (!lsetData.sources && lsetData.sourcesBefore >= 3 && (isHidden || tools.gen <= 5) && template.gen <= lsetData.sourcesBefore) {
+			if (!lsetData.sources && lsetData.sourcesBefore < 6 && lsetData.sourcesBefore >= 3 && (isHidden || tools.gen <= 5) && template.gen <= lsetData.sourcesBefore) {
 				let oldAbilities = tools.mod('gen' + lsetData.sourcesBefore).getTemplate(set.species).abilities;
 				if (ability.name !== oldAbilities['0'] && ability.name !== oldAbilities['1'] && !oldAbilities['H']) {
 					problems.push(name + " has moves incompatible with its ability.");
@@ -653,7 +653,8 @@ Validator = (function () {
 	Validator.prototype.checkLearnset = function (move, template, lsetData) {
 		let tools = this.tools;
 
-		move = toId(move);
+		let moveid = toId(move);
+		move = tools.getMove(moveid);
 		template = tools.getTemplate(template);
 
 		lsetData = lsetData || {};
@@ -698,14 +699,16 @@ Validator = (function () {
 		// limitedEgg is false if there are any legal non-egg sources for the move, and true otherwise
 		let limitedEgg = null;
 
+		let tradebackEligible = false;
 		do {
 			alreadyChecked[template.speciesid] = true;
+			if (tools.gen === 2 && template.gen === 1) tradebackEligible = true;
 			// STABmons hack to avoid copying all of validateSet to formats
-			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(move in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'shellsmash':1})) {
+			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'shellsmash':1})) {
 				let types = template.types;
 				if (template.species === 'Shaymin') types = ['Grass', 'Flying'];
 				if (template.baseSpecies === 'Hoopa') types = ['Psychic', 'Ghost', 'Dark'];
-				if (types.indexOf(tools.getMove(move).type) >= 0) return false;
+				if (types.indexOf(move.type) >= 0) return false;
 			}
 			if (!template.learnset) {
 				if (template.baseSpecies !== template.species) {
@@ -719,11 +722,11 @@ Validator = (function () {
 				break;
 			}
 
-			if (template.learnset[move] || template.learnset['sketch']) {
+			if (template.learnset[moveid] || template.learnset['sketch']) {
 				sometimesPossible = true;
-				let lset = template.learnset[move];
+				let lset = template.learnset[moveid];
 				if (!lset || template.speciesid === 'smeargle') {
-					if (tools.getMove(move).noSketch) return true;
+					if (move.noSketch) return true;
 					lset = template.learnset['sketch'];
 					sketch = true;
 				}
@@ -731,19 +734,24 @@ Validator = (function () {
 
 				for (let i = 0, len = lset.length; i < len; i++) {
 					let learned = lset[i];
-					if (noPastGen && learned.charAt(0) !== '6') continue;
-					if (noFutureGen && parseInt(learned.charAt(0)) > tools.gen) continue;
-					if (learned.charAt(0) !== '6' && isHidden && !tools.mod('gen' + learned.charAt(0)).getTemplate(template.species).abilities['H']) {
+					let learnedGen = learned.charAt(0);
+					if (noPastGen && learnedGen !== '6') continue;
+					if (noFutureGen && parseInt(learnedGen) > tools.gen) continue;
+
+					// redundant
+					if (learnedGen <= sourcesBefore) continue;
+
+					if (learnedGen !== '6' && isHidden && !tools.mod('gen' + learnedGen).getTemplate(template.species).abilities['H']) {
 						// check if the Pokemon's hidden ability was available
 						incompatibleHidden = true;
 						continue;
 					}
 					if (!template.isNonstandard) {
 						// HMs can't be transferred
-						if (tools.gen >= 4 && learned.charAt(0) <= 3 && move in {'cut':1, 'fly':1, 'surf':1, 'strength':1, 'flash':1, 'rocksmash':1, 'waterfall':1, 'dive':1}) continue;
-						if (tools.gen >= 5 && learned.charAt(0) <= 4 && move in {'cut':1, 'fly':1, 'surf':1, 'strength':1, 'rocksmash':1, 'waterfall':1, 'rockclimb':1}) continue;
+						if (tools.gen >= 4 && learnedGen <= 3 && moveid in {'cut':1, 'fly':1, 'surf':1, 'strength':1, 'flash':1, 'rocksmash':1, 'waterfall':1, 'dive':1}) continue;
+						if (tools.gen >= 5 && learnedGen <= 4 && moveid in {'cut':1, 'fly':1, 'surf':1, 'strength':1, 'rocksmash':1, 'waterfall':1, 'rockclimb':1}) continue;
 						// Defog and Whirlpool can't be transferred together
-						if (tools.gen >= 5 && move in {'defog':1, 'whirlpool':1} && learned.charAt(0) <= 4) blockedHM = true;
+						if (tools.gen >= 5 && moveid in {'defog':1, 'whirlpool':1} && learnedGen <= 4) blockedHM = true;
 					}
 					if (learned.substr(0, 2) in {'4L':1, '5L':1, '6L':1}) {
 						// gen 4-6 level-up moves
@@ -753,7 +761,7 @@ Validator = (function () {
 						}
 						if (!template.gender || template.gender === 'F') {
 							// available as egg move
-							learned = learned.charAt(0) + 'Eany';
+							learned = learnedGen + 'Eany';
 							limitedEgg = false;
 						} else {
 							// this move is unavailable, skip it
@@ -761,7 +769,7 @@ Validator = (function () {
 						}
 					}
 					if (learned.charAt(1) in {L:1, M:1, T:1}) {
-						if (parseInt(learned.charAt(0)) === tools.gen) {
+						if (parseInt(learnedGen) === tools.gen) {
 							// current-gen TM or tutor moves:
 							//   always available
 							return false;
@@ -769,13 +777,14 @@ Validator = (function () {
 						// past-gen level-up, TM, or tutor moves:
 						//   available as long as the source gen was or was before this gen
 						limit1 = false;
-						sourcesBefore = Math.max(sourcesBefore, parseInt(learned.charAt(0)));
+						sourcesBefore = Math.max(sourcesBefore, parseInt(learnedGen));
+						limitedEgg = false;
 					} else if (learned.charAt(1) === 'E') {
 						// egg moves:
 						//   only if that was the source
-						if (learned.charAt(0) === '6' || lsetData.fastCheck) {
+						if (learnedGen === '6' || lsetData.fastCheck) {
 							// gen 6 doesn't have egg move incompatibilities except for certain cases with baby Pokemon
-							learned = learned.charAt(0) + 'E' + (template.prevo ? template.id : '');
+							learned = learnedGen + 'E' + (template.prevo ? template.id : '');
 							sources.push(learned);
 							limitedEgg = false;
 							continue;
@@ -794,7 +803,7 @@ Validator = (function () {
 							// can't inherit from CAP pokemon
 							if (dexEntry.isNonstandard) continue;
 							// can't breed mons from future gens
-							if (dexEntry.gen > parseInt(learned.charAt(0))) continue;
+							if (dexEntry.gen > parseInt(learnedGen)) continue;
 							// father must be male
 							if (dexEntry.gender === 'N' || dexEntry.gender === 'F') continue;
 							// can't inherit from dex entries with no learnsets
@@ -803,13 +812,17 @@ Validator = (function () {
 							// only basic pokemon have egg moves, so by now all evolutions should be in alreadyChecked
 							if (!fromSelf && alreadyChecked[dexEntry.speciesid]) continue;
 							// father must be able to learn the move
-							if (!fromSelf && !dexEntry.learnset[move] && !dexEntry.learnset['sketch']) continue;
+							if (!fromSelf && !dexEntry.learnset[moveid] && !dexEntry.learnset['sketch']) continue;
 
 							// must be able to breed with father
 							if (!dexEntry.eggGroups.intersect(eggGroups).length) continue;
 
 							// we can breed with it
 							atLeastOne = true;
+							if (tradebackEligible && learnedGen === '2' && move.gen <= 1) {
+								// can tradeback
+								sources.push('1ET' + dexEntry.id);
+							}
 							sources.push(learned + dexEntry.id);
 							if (limitedEgg !== false) limitedEgg = true;
 						}
@@ -824,6 +837,10 @@ Validator = (function () {
 						//   only if that was the source
 						// Event Pokémon:
 						//	Available as long as the past gen can get the Pokémon and then trade it back.
+						if (tradebackEligible && learnedGen === '2' && move.gen <= 1) {
+							// can tradeback
+							sources.push('1ST' + learned.slice(2) + ' ' + template.id);
+						}
 						sources.push(learned + ' ' + template.id);
 					} else if (learned.charAt(1) === 'D') {
 						// DW moves:
@@ -849,7 +866,7 @@ Validator = (function () {
 				}
 				if (getGlitch) {
 					sourcesBefore = Math.max(sourcesBefore, 4);
-					if (tools.getMove(move).gen < 5) {
+					if (move.gen < 5) {
 						limit1 = false;
 					}
 				}
@@ -872,13 +889,13 @@ Validator = (function () {
 			if (lsetData.sketchMove) {
 				return {type:'oversketched', maxSketches: 1};
 			}
-			lsetData.sketchMove = move;
+			lsetData.sketchMove = moveid;
 		}
 
 		if (blockedHM) {
 			// Limit one of Defog/Whirlpool to be transferred
 			if (lsetData.hm) return {type:'incompatible'};
-			lsetData.hm = move;
+			lsetData.hm = moveid;
 		}
 
 		// Now that we have our list of possible sources, intersect it with the current list
@@ -891,11 +908,10 @@ Validator = (function () {
 		if (sourcesBefore || lsetData.sourcesBefore) {
 			// having sourcesBefore is the equivalent of having everything before that gen
 			// in sources, so we fill the other array in preparation for intersection
-			let learned;
 			if (sourcesBefore && lsetData.sources) {
 				if (!sources) sources = [];
 				for (let i = 0, len = lsetData.sources.length; i < len; i++) {
-					learned = lsetData.sources[i];
+					let learned = lsetData.sources[i];
 					if (parseInt(learned.charAt(0)) <= sourcesBefore) {
 						sources.push(learned);
 					}
@@ -905,8 +921,9 @@ Validator = (function () {
 			if (lsetData.sourcesBefore && sources) {
 				if (!lsetData.sources) lsetData.sources = [];
 				for (let i = 0, len = sources.length; i < len; i++) {
-					learned = sources[i];
-					if (parseInt(learned.charAt(0)) <= lsetData.sourcesBefore) {
+					let learned = sources[i];
+					let sourceGen = parseInt(learned.charAt(0));
+					if (sourceGen <= lsetData.sourcesBefore && sourceGen > sourcesBefore) {
 						lsetData.sources.push(learned);
 					}
 				}
@@ -934,7 +951,7 @@ Validator = (function () {
 			// 'self' is a possible entry (namely, ExtremeSpeed on Dragonite) meaning it's always
 			// incompatible with any other egg move
 			if (!lsetData.limitedEgg) lsetData.limitedEgg = [];
-			lsetData.limitedEgg.push(limitedEgg === true ? move : limitedEgg);
+			lsetData.limitedEgg.push(limitedEgg === true ? moveid : limitedEgg);
 		}
 
 		return false;

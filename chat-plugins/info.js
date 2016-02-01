@@ -1383,10 +1383,20 @@ exports.commands = {
 		let buffer = template.name + (problem ? " <span class=\"message-learn-cannotlearn\">can't</span> learn " : " <span class=\"message-learn-canlearn\">can</span> learn ") + (targets.length > 2 ? "these moves" : move.name);
 		if (format) buffer += ' on ' + cmd.substring(0, 3).toUpperCase();
 		if (!problem) {
-			let sourceNames = {E:"egg", S:"event", D:"dream world"};
-			if (lsetData.sources || lsetData.sourcesBefore) buffer += " only when obtained from:<ul class=\"message-learn-list\">";
+			let sourceNames = {E:"egg", S:"event", D:"dream world", X:"egg, traded back", Y: "event, traded back"};
+			let sourcesBefore = lsetData.sourcesBefore;
+			if (sourcesBefore >= 6) sourcesBefore = 0;
+			if (lsetData.sources || sourcesBefore) buffer += " only when obtained from:<ul class=\"message-learn-list\">";
 			if (lsetData.sources) {
-				let sources = lsetData.sources.sort();
+				let sources = lsetData.sources.map(function (source) {
+					if (source.slice(0, 3) === '1ET') {
+						return '2X' + source.slice(3);
+					}
+					if (source.slice(0, 3) === '1ST') {
+						return '2Y' + source.slice(3);
+					}
+					return source;
+				}).sort();
 				let prevSourceType;
 				let prevSourceCount = 0;
 				for (let i = 0, len = sources.length; i < len; ++i) {
@@ -1409,12 +1419,8 @@ exports.commands = {
 					if (source.substr(2)) buffer += ": " + source.substr(2);
 				}
 			}
-			if (lsetData.sourcesBefore) {
-				if (!(cmd.substring(0, 3) in {'rby':1, 'gsc':1})) {
-					buffer += "<li>any generation before " + (lsetData.sourcesBefore + 1);
-				} else if (!lsetData.sources) {
-					buffer += "<li>gen " + lsetData.sourcesBefore;
-				}
+			if (sourcesBefore) {
+				buffer += "<li>any generation before " + (sourcesBefore + 1);
 			}
 			buffer += "</ul>";
 		}
