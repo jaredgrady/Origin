@@ -2154,7 +2154,6 @@ let commands = exports.commands = {
 			});
 		});
 	},
-	
 	crashfixed: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.errorReply('/crashfixed - There is no active crash.');
@@ -2420,7 +2419,6 @@ let commands = exports.commands = {
 
 		room.game.leaveGame(user);
 	},
-	
 	kickbattle: 'kickgame',
 	kickgame: function (target, room, user) {
 		if (!room.battle) return this.errorReply("You can only do this in battle rooms.");
