@@ -600,7 +600,7 @@ let commands = exports.commands = {
 			if (room.id !== "lobby") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
 			} else {
-				this.sendReply('|raw|' + room.introMessage +);
+				this.sendReply('|raw|' + room.introMessage);
 			}
 			if (!this.broadcasting && user.can('declare', null, room)) {
 				this.sendReply('Source:');
