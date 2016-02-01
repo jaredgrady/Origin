@@ -597,10 +597,11 @@ let commands = exports.commands = {
 		if (!target) {
 			if (!this.canBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-			if (room.id !== "lobby") 
+			if (room.id !== "lobby") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
-			else 
+			} else {
 				this.sendReply('|raw|' + room.introMessage +);
+			}
 			if (!this.broadcasting && user.can('declare', null, room)) {
 				this.sendReply('Source:');
 				this.sendReplyBox('<code>/roomintro ' + Tools.escapeHTML(room.introMessage) + '</code>');
