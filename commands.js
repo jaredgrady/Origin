@@ -66,9 +66,9 @@ let commands = exports.commands = {
 		if (!buffer.length) buffer = "This server has no global authority.";
 		connection.popup(buffer.join("\n\n"));
 	},
-	authhelp: ["/auth - Show global staff for the server.",
+	authhelp: ["/auth - Show global staff for the server."/*,
 		"/auth [room] - Show what roomauth a room has.",
-		"/auth [user] - Show what global and roomauth a user has."],
+		"/auth [user] - Show what global and roomauth a user has." FALSE INFORMATION*/],
 
 	me: function (target, room, user, connection) {
 		// By default, /me allows a blank message
@@ -1066,7 +1066,7 @@ let commands = exports.commands = {
 		this.add('|unlink|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|' + toId(this.inputUsername));
 	},
-	warnhelp: ["/warn OR /k [username], [reason] - Warns a user showing them the Pok\u00e9mon Showdown Rules and [reason] in an overlay. Requires: % @ # & ~"],
+	warnhelp: ["/warn [username], [reason] - Warns a user showing them the Pok\u00e9mon Showdown Rules and [reason] in an overlay. Requires: % @ # & ~"],
 
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
@@ -1376,6 +1376,7 @@ let commands = exports.commands = {
 	},
 	deroomvoiceallhelp: ["/deroomvoiceall - Devoice all roomvoiced users. Requires: # & ~"],
 
+	ipban: 'banip',
 	banip: function (target, room, user) {
 		target = target.trim();
 		if (!target) {
@@ -1387,8 +1388,9 @@ let commands = exports.commands = {
 		Users.bannedIps[target] = '#ipban';
 		this.addModCommand("" + user.name + " temporarily banned the " + (target.charAt(target.length - 1) === '*' ? "IP range" : "IP") + ": " + target);
 	},
-	baniphelp: ["/banip [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
+	baniphelp: ["/banip OR /ipban [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
 
+	unipban: 'unbanip',
 	unbanip: function (target, room, user) {
 		target = target.trim();
 		if (!target) {
@@ -1401,7 +1403,7 @@ let commands = exports.commands = {
 		delete Users.bannedIps[target];
 		this.addModCommand("" + user.name + " unbanned the " + (target.charAt(target.length - 1) === '*' ? "IP range" : "IP") + ": " + target);
 	},
-	unbaniphelp: ["/unbanip [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
+	unbaniphelp: ["/unbanip OR /unipban [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
 
 	rangelock: function (target, room, user) {
 		if (!target) return this.errorReply("Please specify a range to lock.");
@@ -2147,6 +2149,7 @@ let commands = exports.commands = {
 			});
 		});
 	},
+	
 	crashfixed: function (target, room, user) {
 		if (Rooms.global.lockdown !== true) {
 			return this.errorReply('/crashfixed - There is no active crash.');
@@ -2412,6 +2415,7 @@ let commands = exports.commands = {
 
 		room.game.leaveGame(user);
 	},
+	
 	kickbattle: 'kickgame',
 	kickgame: function (target, room, user) {
 		if (!room.battle) return this.errorReply("You can only do this in battle rooms.");
