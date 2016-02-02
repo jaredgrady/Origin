@@ -134,19 +134,20 @@ exports.commands = {
 			let rollDetails = parseRoll(rollFaces);
 
 			setTimeout(function () {
+				let win, winnings;
 				user.sendTo(room, display);
 				//odds for 2 in a row; fuck cherries they're too popular xD
 				if (rollDetails.match === 2 && rollDetails.id !== "ch") {
-					let win = false;
-					let winnings = room.slotsAnte;
+					win = false;
+					winnings = room.slotsAnte;
 					Db('money').set(user.userid, Db('money').get(user.userid, 0) + winnings);
 					user.isRolling = false;
 					return user.sendTo(room, "You hit 2 " + faces[rollDetails.id].name + "'s and got your ante back.");
 				}
 
 				if (rollDetails.match === 3) {
-					let win = true;
-					let winnings = faces[rollDetails.id].payout + room.slotsAnte;
+					win = true;
+					winnings = faces[rollDetails.id].payout + room.slotsAnte;
 					if (rollDetails.id === "sv") {
 						user.sendTo(room, "You've hit the jackpot!");
 						room.addRaw('<h3> ' + user + ' has hit a Jackpot on the slots!</h3>');
