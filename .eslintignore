@@ -5,7 +5,6 @@ chat-plugins/trainercards.js
 chat-plugins/animals.js
 chat-plugins/card.js
 chat-plugins/clans.js
-chat-plugins/clearauth.js
 chat-plugins/customavatar.js
 chat-plugins/eztc.js
 chat-plugins/customcolour.js
@@ -16,7 +15,6 @@ chat-plugins/leagueauth.js
 chat-plugins/leagueshops.js
 chat-plugins/lvl.js
 chat-plugins/misc.js
-chat-plugins/nerd.js
 chat-plugins/nightclub.js
 chat-plugins/poll.js
 chat-plugins/roomrank.js
