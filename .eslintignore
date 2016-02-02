@@ -2,6 +2,7 @@ tournaments/lib/**
 logs/**
 config/color.js
 chat-plugins/trainercards.js
+chat-plugins/card.js
 chat-plugins/clans.js
 chat-plugins/customavatar.js
 chat-plugins/eztc.js
@@ -14,7 +15,6 @@ chat-plugins/lvl.js
 chat-plugins/nightclub.js
 chat-plugins/roomrank.js
 chat-plugins/scavengers.js
-chat-plugins/shadow-ban.js
 chat-plugins/autorank.js
 config/formats.js
 lvl/*.js
