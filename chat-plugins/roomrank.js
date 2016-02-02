@@ -37,7 +37,7 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		delete room.auth[userid];
 		delete room.founder;
-		this.sendReply("(" + name + " is no longer Room Founder.)");
+		this.sendReply(name + ' was demoted from Room Founder by ' + user.name + '.');
 		if (targetUser) targetUser.updateIdentity();
 		if (room.chatRoomData) {
 			Rooms.global.writeChatRoomData();
