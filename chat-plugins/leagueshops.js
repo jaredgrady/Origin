@@ -112,7 +112,7 @@ exports.commands = {
 		case 'log':
 		case 'viewlog':
 			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
-			let target = params.shift();
+			target = params.shift();
 			let lines = 0;
 			if (!target.match('[^0-9]')) {
 				lines = parseInt(target || 15, 10);
