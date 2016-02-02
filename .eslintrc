@@ -8,7 +8,7 @@
 		"Tournaments": false, "Dnsbl": false, "Cidr": false, "Sockets": false, "TeamValidator": false, "Ladders": false,
 		"Db": false, "Tells": false, "currencyName": false, "logMoney": false, "isMoney": false, "developers": false, 
 		"nightclub": false, "nightclubify": false, "UNO": false, "tourCard": false, "colors": false, "Ontime": false, 
-		"forever": false
+		"forever": false, "parseWarlic": false
 	},
 	"rules": {
 		"comma-dangle": [2, "always-multiline"],
