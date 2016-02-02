@@ -1,7 +1,12 @@
 'use strict';
 
+<<<<<<< Updated upstream
 let fs = require('fs');
 let serialize = require('node-serialize');
+=======
+const fs = require('fs');
+const serialize = require('node-serialize');
+>>>>>>> Stashed changes
 let trainerCards = {};
 
 function loadTrainerCards() {
