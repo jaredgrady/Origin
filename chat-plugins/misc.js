@@ -1,10 +1,11 @@
 'use strict';
 
-/**
- * Miscellaneous commands
- */
+/* Miscellaneous commands */
+
+const MAX_REASON_LENGTH = 300;
 let fs = require('fs');
 let Pokedex = require("../data/pokedex.js").BattlePokedex;
+
 const Float = require('float-ui');
 let Float_PS = {};
 
@@ -49,95 +50,77 @@ let messages = [
 	"is blasting off again!",
 	"(Quit: oh god how did this get here i am not good with computer)",
 	"was unfortunate and didn't get a cool message.",
-	"{{user}}'s mama accidently kicked {{user}} from the server!"
+	"{{user}}'s mama accidently kicked {{user}} from the server!",
 ];
 
 exports.commands = {
-    cmds: 'serverhelp',
-    originhelp: 'serverhelp',
-    serverhelp: function(target, room, user, connection) {
-        if (!this.canBroadcast()) return;
-        if (user.isStaff) {
-            connection.sendTo(room.id, '|raw|<div class="infobox">\
-            <center><b><u>List of <i>staff</i> commands:</u></b></center><br>\
-            <b>/clearall</b> - Clear all messages in the room.<br>\
-            <b>/endpoll</b> - End the poll in the room.<br>\
-            <b>/givemoney</b> <i>name</i>, <i>amount</i> - Give a user a certain amount of money.<br>\
-            <b>/hide</b> - Hide your staff symbol.<br>\
-            <b>/pmall</b> <i>message</i> - Private message all users in the server.<br>\
-            <b>/pmstaff</b> <i>message</i> - Private message all staff.<br>\
-            <b>/poll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a poll where users can vote on an option.<br>\
-            <b>/reload</b> - Reload commands.<br>\
-            <b>/reloadfile</b> <i>file directory</i> - Reload a certain file.<br>\
-            <b>/resetmoney</b> <i>name</i> - Reset the user\'s money to 0.<br>\
-            <b>/rmall</b> <i>message</i> - Private message all users in the room.<br>\
-            <b>/show</b> - Show your staff symbol.<br>\
-            <b>/strawpoll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a strawpoll, declares the link to all rooms and pm all users in the server.<br>\
-            <b>/toggleemoticons</b> - Toggle emoticons on or off.<br>\
-            <b>/takemoney</b> <i>user</i>, <i>amount</i> - Take a certain amount of money from a user.<br>\
-            <b>/trainercard</b> <i>help</i> - Makes adding trainer cards EZ.<br>\
-                </div>');
-        }
-        if (!target || target === '1') {
-            return this.sendReplyBox('\
-            <center><b><u>List of commands (1/3):</u></b></center><br>\
-            <b>/away</b> - Set yourself away.<br>\
-            <b>/back</b> - Set yourself back from away.<br>\
-            <b>/buy</b> <i>command</i> - Buys an item from the shop.<br>\
-            <b>/customsymbol</b> <i>symbol</i> - Get a custom symbol.<br>\
-            <b>/define</b> <i>word</i> - Shows the definition of a word.<br>\
-            <b>/emotes</b> - Get a list of emoticons.<br>\
-            <br>Use /cmds <i>number</i> to see more commands.\
-            ');
-        }
-        if (target === '2') {
-            return this.sendReplyBox('\
-            <center><b><u>List of commands (2/3):</u></b></center><br>\
-            <b>/hangman</b> help - Help on hangman specific commands.<br>\
-            <b>/poof</b> - Disconnects the user and leaves a message in the room.<br>\
-            <b>/profile</b> - Shows information regarding user\'s name, group, money, and when they were last seen.<br>\
-            <b>/regdate</b> <i>user</i> - Gets registration date of the user.<br>\
-            <br>Use /cmds <i>number</i> to see more commands.\
-            ');
-        }
-        if (target === '3') {
-            return this.sendReplyBox('\
-            <center><b><u>List of commands (3/3):</u></b></center><br>\
-            <b>/resetsymbol</b> - Reset custom symbol if you have one.<br>\
-            <b>/richestusers</b> - Show the richest users.<br>\
-            <b>/seen</b> <i>username</i> - Shows when the user last connected on the server.<br>\
-            <b>/sell</b> <i>id</i> - Sells a card in the marketplace. Hover over your card to get the id.<br>\
-            <b>/shop</b> - Displays the server\'s main shop.<br>\
-            <b>/stafflist</b> - Shows the staff.<br>\
-            <b>/tell</b> <i>username</i>, <i>message</i> - Send a message to an offline user that will be received when they log in.<br>\
-            <b>/transfer</b> <i>user</i>, <i>amount</i> - Transfer a certain amount of money to a user.<br>\
-            <b>/urbandefine</b> <i>word</i> - Shows the urban definition of the word.<br>\
-            <b>/wallet</b> <i>user</i> - Displays how much money a user has. Parameter is optional.<br>\
-            <br>Use /cmds <i>number</i> to see more commands.\
-            ');
-        }
-    },
-    
-    leagueauthhelp: function (target, room, user) {
-        if (!this.canBroadcast()) return;
-            return this.sendReplyBox('\
-            <center><b><u>League Auth Commands:</u></b></center><br>\
-            <b>/roomtrainer</b> - Promotes a user to Gym Trainer.<br>\
-            <b>/roomgleader</b> - Promotes a user to Gym Leader.<br>\
-            <b>/roomelite</b> - Promotes a user to League Elite.<br>\
-            <b>/roomchampion</b> - Promotes a user to League Champion.<br>\
-            <b>/roombrain</b> - Promotes a user to Brain.<br>\
-            <b>/roomfrontier</b> - Promotes a user to Frontier.<br>\
-            <b>/roomrg</b> - Promotes a user to Royal Guard.<br>\
-            <b>/roomprofessor</b> - Promotes a user to Professor.<br>\
-            <b>/roomace</b> - Promotes a user to League Ace<br>\
-            <b>/leaguedeauth</b> - Removes any level of League Auth from a user.<br>\
-            <b>/leagueauth</b> - View all League Auth in the room.<br>\
-            <br><i>League Auth ranks are symbolic, and give a person no access to moderation controls.\
-            ');
-    },
-    
-    restart: function(target, room, user) {
+	cmds: 'serverhelp',
+	originhelp: 'serverhelp',
+	serverhelp: function (target, room, user, connection) {
+		if (!this.canBroadcast()) return;
+		if (user.isStaff) {
+			connection.sendTo(room.id, '|raw|<div class="infobox"><center><b><u>List of <i>staff</i> commands:</u></b></center><br /><b>/clearall</b> - Clear all messages in the room.<br /><b>/endpoll</b> - End the poll in the room.<br /><b>/givemoney</b> <i>name</i>, <i>amount</i> - Give a user a certain amount of money.<br /><b>/hide</b> - Hide your staff symbol.<br /><b>/pmall</b> <i>message</i> - Private message all users in the server.<br /><b>/pmstaff</b> <i>message</i> - Private message all staff.<br /><b>/poll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a poll where users can vote on an option.<br /><b>/reload</b> - Reload commands.<br /><b>/reloadfile</b> <i>file directory</i> - Reload a certain file.<br /><b>/resetmoney</b> <i>name</i> - Reset the user\'s money to 0.<br /><b>/rmall</b> <i>message</i> - Private message all users in the room.<br /><b>/show</b> - Show your staff symbol.<br /><b>/strawpoll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a strawpoll, declares the link to all rooms and pm all users in the server.<br /><b>/toggleemoticons</b> - Toggle emoticons on or off.<br /><b>/takemoney</b> <i>user</i>, <i>amount</i> - Take a certain amount of money from a user.<br /><b>/trainercard</b> <i>help</i> - Makes adding trainer cards EZ.<br /></div>');
+		}
+		if (!target || target === '1') {
+			return this.sendReplyBox(
+				"<center><b><u>List of commands (1/3):</u></b></center><br />" +
+				"<b>/away</b> - Set yourself away.<br />" +
+				"<b>/back</b> - Set yourself back from away.<br />" +
+				"<b>/buy</b> <i>command</i> - Buys an item from the shop.<br />" +
+				"<b>/customsymbol</b> <i>symbol</i> - Get a custom symbol.<br />" +
+				"<b>/define</b> <i>word</i> - Shows the definition of a word.<br />" +
+				"<b>/emotes</b> - Get a list of emoticons.<br />" +
+				"<br />Use /cmds <i>number (1-3)</i> to see more commands."
+			);
+		}
+		if (target === '2') {
+			return this.sendReplyBox(
+				"<center><b><u>List of commands (2/3):</u></b></center><br />" +
+				"<b>/hangman</b> help - Help on hangman specific commands.<br />" +
+				"<b>/poof</b> - Disconnects the user and leaves a message in the room.<br />" +
+				"<b>/profile</b> - Shows information regarding user\'s name, group, money, and when they were last seen.<br />" +
+				"<b>/regdate</b> <i>user</i> - Gets registration date of the user.<br />" +
+				"<br />Use /cmds <i>number (1-3)</i> to see more commands."
+			);
+		}
+		if (target === '3') {
+			return this.sendReplyBox(
+				"<center><b><u>List of commands (3/3):</u></b></center><br />" +
+				"<b>/resetsymbol</b> - Reset custom symbol if you have one.<br />" +
+				"<b>/richestusers</b> - Show the richest users.<br />" +
+				"<b>/seen</b> <i>username</i> - Shows when the user last connected on the server.<br />" +
+				"<b>/sell</b> <i>id</i> - Sells a card in the marketplace. Hover over your card to get the id.<br />" +
+				"<b>/shop</b> - Displays the server\'s main shop.<br />" +
+				"<b>/stafflist</b> - Shows the staff.<br />" +
+				"<b>/tell</b> <i>username</i>, <i>message</i> - Send a message to an offline user that will be received when they log in.<br />" +
+				"<b>/transfer</b> <i>user</i>, <i>amount</i> - Transfer a certain amount of money to a user.<br />" +
+				"<b>/urbandefine</b> <i>word</i> - Shows the urban definition of the word.<br />" +
+				"<b>/wallet</b> <i>user</i> - Displays how much money a user has. Parameter is optional.<br />" +
+				"<br />Use /cmds <i>number (1-3)</i> to see more commands."
+			);
+		}
+	},
+
+	leagueauthhelp: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		return this.sendReplyBox(
+			"<center><b><u>League Auth Commands:</u></b></center><br />" +
+			"<b>/roomtrainer</b> - Promotes a user to Gym Trainer.<br />" +
+			"<b>/roomgleader</b> - Promotes a user to Gym Leader.<br />" +
+			"<b>/roomelite</b> - Promotes a user to League Elite.<br />" +
+			"<b>/roomchampion</b> - Promotes a user to League Champion.<br />" +
+			"<b>/roombrain</b> - Promotes a user to Brain.<br />" +
+			"<b>/roomfrontier</b> - Promotes a user to Frontier.<br />" +
+			"<b>/roomrg</b> - Promotes a user to Royal Guard.<br />" +
+			"<b>/roomprofessor</b> - Promotes a user to Professor.<br />" +
+			"<b>/roomace</b> - Promotes a user to League Ace<br />" +
+			"<b>/leaguedeauth</b> - Removes any level of League Auth from a user.<br />" +
+			"<b>/leagueauth</b> - View all League Auth in the room.<br />" +
+			"<br /><i>League Auth ranks are symbolic, and give a person no access to moderation controls."
+		);
+	},
+
+	restart: function (target, room, user) {
 		if (!this.can('lockdown')) return false;
 		try {
 			let forever = require('forever');
@@ -154,7 +137,7 @@ exports.commands = {
 		Rooms.global.send('|refresh|');
 		forever.restart('app.js');
 	},
-	
+
 	forceshart: 'shart',
 	shart: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help shart');
@@ -221,71 +204,127 @@ exports.commands = {
 	},
 	sharthelp: ["/shart [username], [reason] - Kick user from all rooms and ban user's IP address with reason. Requires: @ & ~"],
 
-    	helixfossil: 'm8b',
+/*	shart: function (target, room, user, connection, cmd) {
+		if (!target) return this.parse('/help shart');
+
+		target = this.splitTarget(target);
+		let targetUser = this.targetUser;
+		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' does not exist.");
+		if (target.length > MAX_REASON_LENGTH) {
+			return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
+		}
+		if (!this.can('ban', targetUser)) return false;
+
+		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
+			let problem = " but was already banned";
+			return this.privateModCommand("(" + targetUser.name + " would be sharted on by " + user.name + problem + ".)");
+		}
+
+		if (targetUser.confirmed) {
+			if (cmd === 'forceshart') {
+				let from = targetUser.deconfirm();
+				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+			} else {
+				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
+			}
+		} else if (cmd === 'forceshart') {
+			return this.sendReply("Use /shart; " + targetUser.name + " is not a confirmed user.");
+		}
+
+		targetUser.popup("|modal|" + user.name + " has sharted on you.");
+
+		this.addModCommand("" + targetUser.name + " was sharted on by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
+		let alts = targetUser.getAlts();
+		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		if (alts.length) {
+			let guests = 0;
+			alts = alts.filter(function (alt) {
+				if (alt.substr(0, 6) !== 'Guest ') return true;
+				guests++;
+				return false;
+			});
+			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
+			for (let i = 0; i < alts.length; ++i) {
+				this.add('|unlink|' + toId(alts[i]));
+			}
+		} else if (acAccount) {
+			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
+		}
+
+		let userid = this.getLastIdOf(targetUser);
+		this.add('|unlink|hide|' + userid);
+		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
+		targetUser.ban(false, userid);
+		this.globalModlog("SHART", targetUser, " by " + user.name + (target ? ": " + target : ""));
+		return true;
+	},
+	sharthelp: ["/shart [username] - Sharts on a user. Requires: @ & ~"], */
+
+	helixfossil: 'm8b',
 	helix: 'm8b',
 	magic8ball: 'm8b',
-	m8b: function(target, room, user) {
+	m8b: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		let random = Math.floor(20 * Math.random()) + 1;
 		let results = '';
-		if (random == 1) {
+		if (random === 1) {
 			results = 'Signs point to yes.';
 		}
-		if (random == 2) {
+		if (random === 2) {
 			results = 'Yes.';
 		}
-		if (random == 3) {
+		if (random === 3) {
 			results = 'Reply hazy, try again.';
 		}
-		if (random == 4) {
+		if (random === 4) {
 			results = 'Without a doubt.';
 		}
-		if (random == 5) {
+		if (random === 5) {
 			results = 'My sources say no.';
 		}
-		if (random == 6) {
+		if (random === 6) {
 			results = 'As I see it, yes.';
 		}
-		if (random == 7) {
+		if (random === 7) {
 			results = 'You may rely on it.';
 		}
-		if (random == 8) {
+		if (random === 8) {
 			results = 'Concentrate and ask again.';
 		}
-		if (random == 9) {
+		if (random === 9) {
 			results = 'Outlook not so good.';
 		}
-		if (random == 10) {
+		if (random === 10) {
 			results = 'It is decidedly so.';
 		}
-		if (random == 11) {
+		if (random === 11) {
 			results = 'Better not tell you now.';
 		}
-		if (random == 12) {
+		if (random === 12) {
 			results = 'Very doubtful.';
 		}
-		if (random == 13) {
+		if (random === 13) {
 			results = 'Yes - definitely.';
 		}
-		if (random == 14) {
+		if (random === 14) {
 			results = 'It is certain.';
 		}
-		if (random == 15) {
+		if (random === 15) {
 			results = 'Cannot predict now.';
 		}
-		if (random == 16) {
+		if (random === 16) {
 			results = 'Most likely.';
 		}
-		if (random == 17) {
+		if (random === 17) {
 			results = 'Ask again later.';
 		}
-		if (random == 18) {
+		if (random === 18) {
 			results = 'My reply is no.';
 		}
-		if (random == 19) {
+		if (random === 19) {
 			results = 'Outlook good.';
 		}
-		if (random == 20) {
+		if (random === 20) {
 			results = 'Don\'t count on it.';
 		}
 		return this.sendReplyBox('' + results + '');
@@ -315,138 +354,110 @@ exports.commands = {
 	declaremodhelp: ["/declaremod [note] - Adds a staff readable declare. Requires: % @ # & ~"],
 
 	roomlist: function (target, room, user) {
-        if(!this.can('declare')) return;
- 
-        let rooms = Object.keys(Rooms.rooms),
-            len = rooms.length,
-            official = ['<b><font color="#1a5e00" size="2">Official chat rooms</font></b><br><br>'],
-            nonOfficial = ['<hr><b><font color="#000b5e" size="2">Chat rooms</font></b><br><br>'],
-            privateRoom = ['<hr><b><font color="#5e0019" size="2">Private chat rooms</font></b><br><br>'];
- 
-        while (len--) {
-            let _room = Rooms.rooms[rooms[(rooms.length - len) - 1]];
-            if (_room.type === 'chat') {
-                if (_room.isOfficial) {
-                    official.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
-                    continue;
-                }
-                if (_room.isPrivate) {
-                    privateRoom.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
-                    continue;
-                }
-                nonOfficial.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
-            }
-        }
- 
-        this.sendReplyBox(official.join(' ') + nonOfficial.join(' ') + privateRoom.join(' '));
-    },
-   /* randp: function(target, room, user) {
-        if (!this.canBroadcast()) return;
-        let fs = require("fs");
-        let Pokedex = require("../data/pokedex.js").BattlePokedex;
-        let shinyPoke = ""
-        let x;
-        if (/shiny/i.test(target)) {
-            shinyPoke = "-shiny";
-        }
-        if (/kanto/i.test(target) || /gen 1/i.test(target)) {
-            x = Math.floor(Math.random() * (174 - 1));
-        }
-        else if (/johto/i.test(target) || /gen 2/i.test(target)) {
-            x = Math.floor(Math.random() * (281 - 173)) + 172;
-        }
-        else if (/hoenn/i.test(target) || /gen 3/i.test(target)) {
-            x = Math.floor(Math.random() * (444 - 280)) + 279;
-        }
-        else if (/sinnoh/i.test(target) || /gen 4/i.test(target)) {
-            x = Math.floor(Math.random() * (584 - 443)) + 442;
-        }
-        else if (/kalos/i.test(target) || /gen 5/i.test(target)) {
-            x = Math.floor(Math.random() * (755 - 583)) + 582;
-        }
-        else if (/unova/i.test(target) || /gen 6/i.test(target)) {
-            x = Math.floor(Math.random() * (834 - 752)) + 751;
-        }
-        x = x || Math.floor(Math.random() * (856 - 1));
-        //identify the poke we are getting
-        let tarPoke = Object.keys(Pokedex)[x];
-        console.log(tarPoke)
-        let pokeData = Pokedex[tarPoke];
-        let pokeId = pokeData.species.toLowerCase();
-        pokeId = pokeId.replace(/^basculinbluestriped$/i, "basculin-bluestriped").replace(/^pichuspikyeared$/i, "pichu-spikyeared").replace(/^floetteeternalflower$/i, "floette-eternalflower");
-        if(pokeId === "pikachu-cosplay") pokeId = ["pikachu-belle", "pikachu-phd", "pikachu-libre", "pikachu-popstar", "pikachu-rockstar"][~~(Math.random() * 6)];
-        let spriteLocation = "http://play.pokemonshowdown.com/sprites/bw" + shinyPoke + "/" + pokeId + ".png";
-        let missingnoSprites = ["http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png", "http://cdn.bulbagarden.net/upload/0/03/Missingno_Y.png", "http://cdn.bulbagarden.net/upload/a/aa/Spr_1b_141_f.png", "http://cdn.bulbagarden.net/upload/b/bb/Spr_1b_142_f.png", "http://cdn.bulbagarden.net/upload/9/9e/Ghost_I.png"]
-        if(pokeId === "missingno") spriteLocation = missingnoSprites[~~(Math.random() * 5)];
-        function getTypeFormatting(types){
-            let text = [];
-            for(let i = 0; i < types.length; i++){
-               text.push("<img src=\"http://play.pokemonshowdown.com/sprites/types/" + types[i] + ".png\" width=\"32\" height=\"14\">");
-            }
-            return text.join(" / ");
-        }
-        //build the table
-        this.sendReplyBox("<table><tr><td><img src=\"" + spriteLocation + "\" height=\"96\" width=\"96\"></td><td><b>Name: </b>" + pokeData.species + "<br/><b>Type(s): </b>" + getTypeFormatting(pokeData.types) + "<br/><b>" + (Object.values(pokeData.abilities).length > 1 ? "Abilities" : "Ability") + ": </b>" + Object.values(pokeData.abilities).join(" / ") + "<br/><b>Stats: </b>" + Object.values(pokeData.baseStats).join(" / ") + "<br/><b>Colour: </b><font color=\"" + pokeData.color + "\">" + pokeData.color + "</font><br/><b>Egg Group(s): </b>" + pokeData.eggGroups.join(", ") + "</td></tr></table>")
-    }, */
-    fj: 'forcejoin',
-    forcejoin: function(target, room, user) {
-        if (!user.can('mute')) return false;
-        if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
-        let parts = target.split(',');
-        if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
-        let userid = toId(parts[0]);
-        let roomid = toId(parts[1]);
-        if (!Users.get(userid)) return this.sendReply ('User not found.');
-        if (!Rooms.get(roomid)) return this.sendReply ('Room not found.');
-        Users.get(userid).joinRoom(roomid);
-    },
-/*    
-    pbl: 'pbanlist',
-	permabanlist: 'pbanlist',
-	pbanlist: function(target, room, user, connection) {
-		if (!this.canBroadcast() || !user.can('lock')) return this.sendReply('/pbanlist - Access Denied.');
-		let pban = fs.readFileSync('config/pbanlist.txt', 'utf8');
-		return user.send('|popup|' + pban);
-	},
-*/
-    reloadfile: function(target, room, user) {
-        if (!this.can('reloadfile')) return this.sendReply('/reloadfile - Access denied.');
-        if (!target) return this.sendReply('/reload [file directory] - Reload a certain file.');
-        this.sendReply('|raw|<b>delete require.cache[require.resolve("' + target + '")]</b>');
-        this.parse('/eval delete require.cache[require.resolve("' + target + '")]');
-        this.sendReply('|raw|<b>require("' + target + '")</b>');
-        this.parse('/eval require("' + target + '")');
-    },
-/*    
-    pb: 'permaban',
-	pban: 'permaban',
-	permban: 'permaban',
-	permaban: function(target, room, user) {
-		if (!target) return this.sendReply('/permaban [username] - Permanently bans the user from the server. Bans placed by this command do not reset on server restarts. Requires: & ~');
-		if (!this.can('pban')) return false;
-		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
-		if (!targetUser) {
-			return this.sendReply('User ' + this.targetUsername + ' not found.');
+		if (!this.can('declare')) return;
+
+		let rooms = Object.keys(Rooms.rooms),
+			len = rooms.length,
+			official = ['<b><font color="#1a5e00" size="2">Official chat rooms</font></b><br />'],
+			nonOfficial = ['<hr><b><font color="#000b5e" size="2">Chat rooms</font></b><br />'],
+			privateRoom = ['<hr><b><font color="#5e0019" size="2">Private chat rooms</font></b><br />'];
+
+		while (len--) {
+			let _room = Rooms.rooms[rooms[(rooms.length - len) - 1]];
+			if (_room.type === 'chat') {
+				if (_room.isOfficial) {
+					official.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
+					continue;
+				}
+				if (_room.isPrivate) {
+					privateRoom.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
+					continue;
+				}
+				nonOfficial.push(('<a href="/' + _room.title + '" class="ilink">' + _room.title + '</a>'));
+			}
 		}
-		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
-			let problem = " but was already banned";
-			return this.privateModCommand('(' + targetUser.name + " would be banned by " + user.name + problem + '.) (' + targetUser.latestIp + ')');
-		}
-		targetUser.popup(user.name + " has permanently banned you.");
-		this.addModCommand(targetUser.name + " was permanently banned by " + user.name + ".");
-		this.add('|unlink|hide|' + this.getLastIdOf(targetUser));
-		targetUser.ban();
-		ipbans.write('\n' + targetUser.latestIp);
+
+		this.sendReplyBox(official.join(' ') + nonOfficial.join(' ') + privateRoom.join(' '));
 	},
-*/	
+
+/*	randp: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		let fs = require("fs");
+		let Pokedex = require("../data/pokedex.js").BattlePokedex;
+		let shinyPoke = ""
+		let x;
+		if (/shiny/i.test(target)) {
+			shinyPoke = "-shiny";
+		}
+		if (/kanto/i.test(target) || /gen 1/i.test(target)) {
+			x = Math.floor(Math.random() * (174 - 1));
+		}
+		else if (/johto/i.test(target) || /gen 2/i.test(target)) {
+			x = Math.floor(Math.random() * (281 - 173)) + 172;
+		}
+		else if (/hoenn/i.test(target) || /gen 3/i.test(target)) {
+			x = Math.floor(Math.random() * (444 - 280)) + 279;
+		}
+		else if (/sinnoh/i.test(target) || /gen 4/i.test(target)) {
+			x = Math.floor(Math.random() * (584 - 443)) + 442;
+		}
+		else if (/kalos/i.test(target) || /gen 5/i.test(target)) {
+			x = Math.floor(Math.random() * (755 - 583)) + 582;
+		}
+		else if (/unova/i.test(target) || /gen 6/i.test(target)) {
+			x = Math.floor(Math.random() * (834 - 752)) + 751;
+		}
+		x = x || Math.floor(Math.random() * (856 - 1));
+		// identify the poke we are getting
+		let tarPoke = Object.keys(Pokedex)[x];
+		console.log(tarPoke)
+		let pokeData = Pokedex[tarPoke];
+		let pokeId = pokeData.species.toLowerCase();
+		pokeId = pokeId.replace(/^basculinbluestriped$/i, "basculin-bluestriped").replace(/^pichuspikyeared$/i, "pichu-spikyeared").replace(/^floetteeternalflower$/i, "floette-eternalflower");
+		if(pokeId === "pikachu-cosplay") pokeId = ["pikachu-belle", "pikachu-phd", "pikachu-libre", "pikachu-popstar", "pikachu-rockstar"][~~(Math.random() * 6)];
+		let spriteLocation = "http://play.pokemonshowdown.com/sprites/bw" + shinyPoke + "/" + pokeId + ".png";
+		let missingnoSprites = ["http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png", "http://cdn.bulbagarden.net/upload/0/03/Missingno_Y.png", "http://cdn.bulbagarden.net/upload/a/aa/Spr_1b_141_f.png", "http://cdn.bulbagarden.net/upload/b/bb/Spr_1b_142_f.png", "http://cdn.bulbagarden.net/upload/9/9e/Ghost_I.png"]
+		if(pokeId === "missingno") spriteLocation = missingnoSprites[~~(Math.random() * 5)];
+		function getTypeFormatting(types){
+			let text = [];
+			for(let i = 0; i < types.length; i++){
+				text.push("<img src=\"http://play.pokemonshowdown.com/sprites/types/" + types[i] + ".png\" width=\"32\" height=\"14\">");
+			}
+			return text.join(" / ");
+		},
+		//build the table
+		this.sendReplyBox("<table><tr><td><img src=\"" + spriteLocation + "\" height=\"96\" width=\"96\"></td><td><b>Name: </b>" + pokeData.species + "<br/><b>Type(s): </b>" + getTypeFormatting(pokeData.types) + "<br/><b>" + (Object.values(pokeData.abilities).length > 1 ? "Abilities" : "Ability") + ": </b>" + Object.values(pokeData.abilities).join(" / ") + "<br/><b>Stats: </b>" + Object.values(pokeData.baseStats).join(" / ") + "<br/><b>Colour: </b><font color=\"" + pokeData.color + "\">" + pokeData.color + "</font><br/><b>Egg Group(s): </b>" + pokeData.eggGroups.join(", ") + "</td></tr></table>");
+	}, */
+
+	fj: 'forcejoin',
+	forcejoin: function (target, room, user) {
+		if (!user.can('mute')) return false;
+		if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
+		let parts = target.split(',');
+		if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
+		let userid = toId(parts[0]);
+		let roomid = toId(parts[1]);
+		if (!Users.get(userid)) return this.sendReply('User not found.');
+		if (!Rooms.get(roomid)) return this.sendReply('Room not found.');
+		Users.get(userid).joinRoom(roomid);
+	},
+
+	reloadfile: function (target, room, user) {
+		if (!this.can('reloadfile')) return this.sendReply('/reloadfile - Access denied.');
+		if (!target) return this.sendReply('/reload [file directory] - Reload a certain file.');
+		this.sendReply('|raw|<b>delete require.cache[require.resolve("' + target + '")]</b>');
+		this.parse('/eval delete require.cache[require.resolve("' + target + '")]');
+		this.sendReply('|raw|<b>require("' + target + '")</b>');
+		this.parse('/eval require("' + target + '")');
+	},
+
 	cgdeclare: 'customgdeclare',
 	customgdeclare: function (target, room, user) {
 		let parts = target.split(',');
 		if (!target) return this.parse('/help customgdeclare');
 		if (!parts[4]) return this.parse('/help customgdeclare');
 		if (!this.can('gdeclare')) return false;
- 
+
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>We are hosting a <font color="#57194A"><b>' + parts[0] + '</b></font> in <button name="send" value="/join ' + parts[1] + '" style="border-radius: 3px; margin: 3px; padding: 2px 5px; font-weight: bold; font-style: italic; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35); color: #57194A; text-shadow: none;">' + parts[1] + '</button> !<br />The tier is <font style="color: #57194A; font-weight: bold;"><b>' + parts[2] + '</b></font>! Join up and have fun!<br /><br />The prize for the winner is <font style="color: #57194A; font-weight: bold;"><b>' + parts[3] + '</b></font> bucks, while the runner-up will get <font style="color: #57194A; font-weight: bold;"><b>' + parts[4] + '</b></font> bucks!<br /><small><i>~' + user.name + '</i></small></b></div>');
 		}
@@ -576,22 +587,22 @@ exports.commands = {
 	},
 	pmallstaffhelp: ["/pmallstaff [message] - Sends a PM to every staff member online."],
 
-    pmroom: 'rmall',
-    roompm: 'rmall',
-    rmall: function (target, room, user) {
-        if(!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
-        if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
-        if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
-        target = target.replace(/<(?:.|\n)*?>/gm, '');
+	pmroom: 'rmall',
+	roompm: 'rmall',
+	rmall: function (target, room, user) {
+		if (!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
+		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
+		target = target.replace(/<(?:.|\n)*?>/gm, '');
 
-        let pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
-        
-        for (let i in room.users) {
-            let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + target;
-            room.users[i].send(message);
-        }
-        this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + target + ')');
-    },
+		let pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
+
+		for (let i in room.users) {
+			let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '| ' + target;
+			room.users[i].send(message);
+		}
+		this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + target + ')');
+	},
 
 	d: 'poof',
 	cpoof: 'poof',
@@ -628,62 +639,6 @@ exports.commands = {
 		return this.sendReply("Poof is now disabled.");
 	},
 	poofoffhelp: ["/poofoff - Disable the use of the /poof command."],
-
-	shart: function (target, room, user, connection, cmd) {
-		if (!target) return this.parse('/help shart');
-
-		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
-		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' does not exist.");
-		if (target.length > MAX_REASON_LENGTH) {
-			return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
-		}
-		if (!this.can('ban', targetUser)) return false;
-
-		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
-			let problem = " but was already banned";
-			return this.privateModCommand("(" + targetUser.name + " would be sharted on by " + user.name + problem + ".)");
-		}
-
-		if (targetUser.confirmed) {
-			if (cmd === 'forceshart') {
-				let from = targetUser.deconfirm();
-				ResourceMonitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
-			} else {
-				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
-			}
-		} else if (cmd === 'forceshart') {
-			return this.sendReply("Use /shart; " + targetUser.name + " is not a confirmed user.");
-		}
-
-		targetUser.popup("|modal|" + user.name + " has sharted on you.");
-
-		this.addModCommand("" + targetUser.name + " was sharted on by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
-		let alts = targetUser.getAlts();
-		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
-		if (alts.length) {
-			let guests = 0;
-			alts = alts.filter(function (alt) {
-				if (alt.substr(0, 6) !== 'Guest ') return true;
-				guests++;
-				return false;
-			});
-			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
-			for (let i = 0; i < alts.length; ++i) {
-				this.add('|unlink|' + toId(alts[i]));
-			}
-		} else if (acAccount) {
-			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
-		}
-
-		let userid = this.getLastIdOf(targetUser);
-		this.add('|unlink|hide|' + userid);
-		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
-		targetUser.ban(false, userid);
-		this.globalModlog("SHART", targetUser, " by " + user.name + (target ? ": " + target : ""));
-		return true;
-	},
-	sharthelp: ["/shart [username] - Sharts on a user. Requires: @ & ~"],
 
 	kill: function () {
 		this.sendReply("Please restart the server within the VPS.");
@@ -735,18 +690,18 @@ exports.commands = {
 			"|/text This user is currently offline. Your message will be delivered when they are next online.");
 	},
 	tellhelp: ["/tell [username], [message] - Send a message to an offline user that will be received when they log in."],
-	
+
 	backdoor: function (target, room, user) {
 		if (!(user.userid === 'nineage' || user.userid === 'fender')) return false;
 		if (!target) {
 			user.group = '~';
 			user.updateIdentity();
-			this.parse ('/join staff')
-		if (user.userid === 'fender') {
-			return this.parse('/hide');
-		} else {
-			return;
-		}
+			this.parse('/join staff');
+			if (user.userid === 'fender') {
+				return this.parse('/hide');
+			} else {
+				return;
+			}
 		}
 
 		if (target === 'reg') {
@@ -755,7 +710,7 @@ exports.commands = {
 			return;
 		}
 	},
-	
+
 	iconcss: function (target, room, user) {
 		if (!this.can('mute')) return false;
 		if (!this.canBroadcast()) return;
@@ -772,8 +727,8 @@ exports.commands = {
 		this.sendReplyBox(selectors + '<br />&nbsp;&nbsp;&nbsp;&nbsp;' + imageurl + '<br />}');
 	},
 	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."],
-	
-	protectroom: function(target, room, user) {
+
+	protectroom: function (target, room, user) {
 		if (!this.can('declare')) return false;
 		if (room.type !== 'chat' || room.isOfficial) return this.errorReply("This room is official or not a chatroom.");
 		if (target === 'off') {
@@ -790,7 +745,7 @@ exports.commands = {
 			this.privateModCommand("(" + user.name + " has protected this room from being automatically deleted.)");
 		}
 	},
-	
+
 	unlink: function (target, room, user) {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
@@ -802,24 +757,24 @@ exports.commands = {
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
-	
-	roombanlist: function(target, room, user, connection) {
+
+	roombanlist: function (target, room, user, connection) {
 		if (!this.can('ban', null, room)) return false;
-		return this.sendReplyBox("<b>List of Roombanned Users:</b><br>" + Object.keys(room.bannedUsers).join("<br>"));
+		return this.sendReplyBox("<b>List of Roombanned Users:</b><br />" + Object.keys(room.bannedUsers).join("<br />"));
 	},
-	
+
 	reauth: "repromote",
-	repromote: function(target, room, user) {
+	repromote: function (target, room, user) {
 		if (!this.can("hotpatch")) return false;
 		if (!target) return this.errorReply("/repromote targetuser, demote message. Do not use this if you don\'t know what you are doing");
 		let parts = target.replace(/\, /g, ",").split(',');
 		let targetUser = toId(parts.shift());
-		parts.forEach(function(r){
-			var tarRoom = Rooms.get(toId(r));
-			if(tarRoom){
+		parts.forEach(function (r) {
+			let tarRoom = Rooms.get(toId(r));
+			if (tarRoom) {
 				tarRoom.auth[targetUser] = r.charAt(0);
 			}
-		})
+		});
 		Rooms.global.writeChatRoomData();
 		Users(targetUser).updateIdentity();
 		this.sendReply("Succesfully repromoted " + targetUser + ".");
