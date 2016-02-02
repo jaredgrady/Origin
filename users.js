@@ -1204,6 +1204,7 @@ User = (function () {
 			let room = Rooms.global.chatRooms[i];
 			if (!room.isPrivate && room.auth && userid in room.auth && room.auth[userid] !== '+') {
 				removed.push(room.auth[userid] + room.id);
+				delete room.founder;
 				room.auth[userid] = '+';
 			}
 		}
