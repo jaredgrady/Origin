@@ -1342,6 +1342,17 @@
 
 /* Icons ~end */
 
+/* Custom chat */
+
+.chatmessage-masterfloat {
+  background: rgba(54, 178, 153, 0.05) !important;
+  color: rgb(0, 110, 88) !important;
+}
+
+.chatmessage-masterfloat small {
+  color: rgb(54, 178, 153) !important;
+}
+
 /****************************
 * Donation Benefit CSS ~end *
 ****************************/
