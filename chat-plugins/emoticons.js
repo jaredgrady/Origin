@@ -40,7 +40,7 @@ let emotes = {
 	'feelsilum': 'http://i.imgur.com/CnyGTTD.png',
 	'feelsjig': 'http://i.imgur.com/hSzqy5z.png?1',
 	'feelsjpn': 'http://i.imgur.com/Zz2WrQf.jpg',
-	'feelskawaii': 'http://i.imgur.com/kLnDaYD.png', 
+	'feelskawaii': 'http://i.imgur.com/kLnDaYD.png',
 	'feelsky': 'http://i.imgur.com/BtATPId.png?1',
 	'feelslelouch': 'http://i.imgur.com/qZrV75o.png',
 	'feelslot': 'http://i.imgur.com/tl88F7i.png?1',
@@ -74,7 +74,7 @@ let emotes = {
 	'feelsvolc': 'http://i.imgur.com/QXlKzZd.png?1',
 	'feelsvpn': 'http://i.imgur.com/ODTZISl.gif',
 	'feelswin': 'http://i.imgur.com/rbs9pZG.png?1',
-	'feelswnk': 'http://i.imgur.com/K1GhJaN.png', 
+	'feelswnk': 'http://i.imgur.com/K1GhJaN.png',
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
@@ -101,7 +101,7 @@ let emotes = {
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
 	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
 	'gudone': 'http://i.imgur.com/USkp1b9.png',
-	'feelsfloat': 'http://i.imgur.com/XKP1Kpf.gif'
+	'feelsfloat': 'http://i.imgur.com/XKP1Kpf.gif',
 };
 
 let emotesKeys = Object.keys(emotes);
@@ -143,7 +143,7 @@ function parseEmoticons(message, room, user, pm) {
 	}
 
 	if (!match) return false;
-		
+
 	//shadowbanroom message
 	let sbanmsg = message;
 
@@ -164,7 +164,7 @@ function parseEmoticons(message, room, user, pm) {
 
 	let group = user.getIdentity().charAt(0);
 	if (room.auth) group = room.auth[user.userid] || group;
-	if(pm) group = user.group;
+	if (pm) group = user.group;
 
 	let style = "background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer";
 
@@ -260,5 +260,5 @@ exports.commands = {
 		let randomEmote = emotesKeys[rng];
 		this.sendReplyBox("<img src='" + emotes[randomEmote] + "' title='" + randomEmote + "' height='50' width='50' />");
 	},
-	randemotehelp: ["/randemote - Get a random emote."]
+	randemotehelp: ["/randemote - Get a random emote."],
 };
