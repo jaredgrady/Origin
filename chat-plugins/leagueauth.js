@@ -1,56 +1,56 @@
 'use strict';
 
 //ranking is mostly arbitrary
-let Groupsranking = [' ', '\u03c4', '\u00a3', '\u03dd', '\u03b2', '\u039e', '\u03a9', '\u0398', '\u03a3', '\u00a9', ];
+let Groupsranking = [' ', '\u03c4', '\u00a3', '\u03dd', '\u03b2', '\u039e', '\u03a9', '\u0398', '\u03a3', '\u00a9'];
 let Groups = {
 
         '\u00a9': {
-                id: "champion",
-                name: "Champion",
-                rank: 9
+        	id: "champion",
+               	name: "Champion",
+               	rank: 9,
         },
         '\u03a3': {
                 id: "elite",
                 name: "Elite",
-                rank: 8
+                rank: 8,
         },
         '\u0398': {
                 id: "rg",
                 name: "Royal Guard",
-                rank: 7
+                rank: 7,
         },
         '\u03a9': {
                 id: "professor",
                 name: "Professor",
-                rank: 6
+                rank: 6,
         },
         '\u039e': {
         	id: "ace",
         	name: "Ace",
-        	rank: 5
+        	rank: 5,
         },
         '\u03b2': {
                 id: "brain",
                 name: "Frontier Brain",
-                rank: 4
+                rank: 4,
         },        
         '\u03dd': {
                 id: "frontier",
                 name: "Frontier",
-                rank: 3
+                rank: 3,
         },
         '\u00a3': {
                 id: "gleader",
                 name: "Gym Leader",
-                rank: 2
+                rank: 2,
         },
         '\u03c4': {
                 id: "trainer",
                 name: "Gym Trainer",
-                rank: 1
+                rank: 1,
         },
         ' ': {
-                rank: 0
+                rank: 0,
         }
 }
 
@@ -84,36 +84,36 @@ exports.commands = {
                         return this.sendReply("User '" + name + "' is offline and unauthed, and so can't be promoted.");
                 }
 
-                let currentGroup = ((room.leagueauth&& room.leagueauth[userid]) || ' ')[0];
+                let currentGroup = ((room.leagueauth && room.leagueauth[userid]) || ' ')[0];
                 let nextGroup = target;
                 if (target === 'leaguedeauth') nextGroup = Groupsranking[0];
-               
-                if (cmd==='roomtrainer') {
+
+                if (cmd === 'roomtrainer') {
                         nextGroup = Groupsranking[1];
-                } else if (cmd==='roomgleader') {
+                } else if (cmd === 'roomgleader') {
                         nextGroup = Groupsranking[2];
-                } else if (cmd==='roomfrontier') {
+                } else if (cmd === 'roomfrontier') {
                         nextGroup = Groupsranking[3];                
-                } else if (cmd==='roombrain') {
+                } else if (cmd === 'roombrain') {
                         nextGroup = Groupsranking[4];
-                } else if (cmd==='roomace') {
+                } else if (cmd === 'roomace') {
                         nextGroup = Groupsranking[5];
-                } else if (cmd==='roomprofessor') {
+                } else if (cmd === 'roomprofessor') {
                         nextGroup = Groupsranking[6];
-                } else if (cmd==='roomrg') {
+                } else if (cmd === 'roomrg') {
                         nextGroup = Groupsranking[7];
-                } else if (cmd==='roomelite') {
+                } else if (cmd === 'roomelite') {
                         nextGroup = Groupsranking[8];
-                } else if (cmd==='roomchampion') {
+                } else if (cmd === 'roomchampion') {
                         nextGroup = Groupsranking[9];
-                } else if (cmd==='leaguedeauth') {
+                } else if (cmd === 'leaguedeauth') {
                         nextGroup = Groupsranking[0];
                 }
-                
+
                 if (!nextGroup) {
 			return this.sendReply("Please specify a group such as /roomgldeader or /roomtrainer");
 		}
-		
+
 		if (!Groups[nextGroup]) {
                         return this.sendReply("Group '" + nextGroup + "' does not exist.");
                 }
@@ -165,7 +165,7 @@ exports.commands = {
 		if (targetRoom !== room) buffer.unshift("" + targetRoom.title + " room auth:");
 		connection.popup(buffer.join("\n\n"));
 	},
-	toggleauth: function(target, room, user) {
+	toggleauth: function (target, room, user) {
         if (!this.can('roommod', null, room)) return false;
         room.chatRoomData.showAuth = !room.showAuth;
         Rooms.global.writeChatRoomData();
@@ -176,5 +176,5 @@ exports.commands = {
         } else {
             this.add("|raw|<div class=\"broadcast-blue\"><b>Leagueauth will not show</div>");
         }
-    },  
+    },
 }
