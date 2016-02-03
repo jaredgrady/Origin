@@ -79,7 +79,7 @@ let commands = exports.commands = {
 		}
 		return '/me ' + target;
 	},
-	
+
 	trolling: function (target, room, user) {
 		if (!target) return;
 		if (!this.can('hotpatch')) return;
