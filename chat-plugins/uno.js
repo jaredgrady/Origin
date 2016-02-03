@@ -600,7 +600,7 @@ exports.commands = {
 			break;
 		case "end":
 			if (!UNO[roomid] || !this.can("mute", null, room)) return false;
-			if (UNO[roomid].pot && (!user.userid !== room.founder && !this.can('bypassall'))) return this.errorReply("You cannot end a game that is for bucks!");
+			if (UNO[roomid].pot && !this.can('ban')) return this.errorReply("You cannot end a game that is for bucks!");
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
 			destroy(roomid);
