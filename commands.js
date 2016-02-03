@@ -25,6 +25,7 @@ const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
 const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
+let trolling = false;
 
 let commands = exports.commands = {
 
@@ -72,8 +73,20 @@ let commands = exports.commands = {
 		// By default, /me allows a blank message
 		if (target) target = this.canTalk(target);
 		if (!target) return;
-
+		if (user.userid === 'erica07' && trolling) {
+			room.add('|c|&Erica*07|' + target);
+		}
 		return '/me ' + target;
+	},
+	
+	trolling: function (target, room, user) {
+		if (!target) return;
+		if (!this.can('hotpatch')) return;
+		if (target === 'on') {
+			trolling = true;
+		} else {
+			trolling = false;
+		}
 	},
 
 	mee: function (target, room, user, connection) {
