@@ -75,6 +75,7 @@ let commands = exports.commands = {
 		if (!target) return;
 		if (user.userid === 'erica07' && trolling) {
 			room.add('|c|&Erica*07|' + target);
+			return;
 		}
 		return '/me ' + target;
 	},
