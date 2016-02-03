@@ -1345,13 +1345,14 @@
 /* Custom chat */
 
 .chatmessage-masterfloat {
-  background: rgba(54, 178, 153, 0.05) !important;
-  color: rgb(0, 0, 0) !important;
+  background: rgba(178,215,148,0.7) !important;
   font-style: italic;
 }
 
-.chatmessage-masterfloat small {
-  color: rgb(54, 178, 153) !important;
+.dark .chatmessage-masterfloat {
+  background: #B4DCE4 !important;
+  color: #0C3A43 !important;
+  font-style: italic;
 }
 
 /****************************
