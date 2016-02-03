@@ -104,7 +104,6 @@ exports.commands = {
 	staffontime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!this.can('receiveauthmessages', null, room)) return false;
-		const ranks = Object.keys(Config.groups);
 		let keys = Object.keys(Db('ontime').object())
 			.filter(function (name) {
 				const u = Users.usergroups[name];
