@@ -5,9 +5,6 @@ chat-plugins/trainercards.js
 chat-plugins/card.js
 chat-plugins/clans.js
 chat-plugins/customavatar.js
-chat-plugins/icons.js
-chat-plugins/leagueauth.js
-chat-plugins/lvl.js
 config/formats.js
 lvl/*.js
 migrate.js
