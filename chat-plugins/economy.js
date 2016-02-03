@@ -477,27 +477,29 @@ exports.commands = {
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
 	},
-	
+
 	togglerolling: function (target, room, user) {
-    		if (!this.can('bypassall')) return false;
-    		if (!target) return this.sendReply('Either toggle it on or off.');
-	 	if (target === 'on') {
-	 		if (toggleRolling === true) {
-	 			return this.sendReply('We are already rolling');
-	 		} else {
-	 			toggleRolling === true;	
-	 			return this.sendReply('We are now rolling!');
-	 		}
-	 	}
-	 	if (target === 'off') {
-	 		if (toggleRolling === false) {
-	 			return this.sendReply('We are not rolling right now.');
-	 		} else {
-	 			toggleRolling === false;
-	 			return this.sendReply('We are not rolling anymore.');
-	 		}
-	 	}
-    },
+		if (!this.can('bypassall')) return false;
+		if (!target) return this.sendReply('Either toggle it on or off.');
+		if (target === 'on') {
+			if (toggleRolling === true) {
+				return this.sendReply('We are already rolling');
+			} else {
+				toggleRolling === true;	
+				return this.sendReply('We are now rolling!');
+			}
+			
+		}
+		if (target === 'off') {
+			if (toggleRolling === false) {
+				return this.sendReply('We are not rolling right now.');
+			} else {
+				toggleRolling === false;
+				return this.sendReply('We are not rolling anymore.');
+			}
+		}
+		
+	},
 
 	cleaneconomy: function (target, room, user) {
 		if (!this.can('forcewin')) return false;
