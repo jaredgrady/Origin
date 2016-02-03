@@ -485,10 +485,9 @@ exports.commands = {
 			if (toggleRolling === true) {
 				return this.sendReply('We are already rolling');
 			} else {
-				toggleRolling === true;	
+				toggleRolling === true;
 				return this.sendReply('We are now rolling!');
 			}
-			
 		}
 		if (target === 'off') {
 			if (toggleRolling === false) {
@@ -498,7 +497,6 @@ exports.commands = {
 				return this.sendReply('We are not rolling anymore.');
 			}
 		}
-		
 	},
 
 	cleaneconomy: function (target, room, user) {
