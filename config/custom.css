@@ -1346,7 +1346,8 @@
 
 .chatmessage-masterfloat {
   background: rgba(54, 178, 153, 0.05) !important;
-  color: rgb(0, 110, 88) !important;
+  color: rgb(0, 0, 0) !important;
+  font-style: italic;
 }
 
 .chatmessage-masterfloat small {
