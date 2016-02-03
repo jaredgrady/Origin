@@ -5,7 +5,9 @@
 * In an official hunt, the first three to finish within 60 seconds achieve blitz.
 */
 
-var scavengers = {
+'use strict';
+
+let scavengers = {
 	status: 'off',
 	blitz: null,
 	hints: null,
@@ -14,10 +16,10 @@ var scavengers = {
 	finished: [],
 	buyin: false,
 	official: 'off',
-	result: null
+	result: null,
 };
 
-var scavengersRoom = Rooms.get('scavengers');
+let scavengersRoom = Rooms.get('scavengers');
 if (scavengersRoom) {
 	if (scavengersRoom.plugin) {
 		scavengers = scavengersRoom.plugin;
@@ -36,13 +38,13 @@ exports.commands = {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
 		if (!this.can('mute', null, room)) return false;
 		if (scavengers.status === 'on') return this.sendReply('There is already an active scavenger hunt.');
-		var targets = target.split(target.includes('|') ? '|' : ',');
+		let targets = target.split(target.includes('|') ? '|' : ',');
 		if (!targets[0] || !targets[1] || !targets[2] || !targets[3] || !targets[4] || !targets[5] || targets[6]) {
 			return this.sendReply('You must specify three hints and three answers.');
 		}
 		if (cmd === 'startofficialhunt') {
 			if (!this.can('ban', null, room)) return false;
-			scavengers.official = 'on'; 
+			scavengers.official = 'on';
 			scavengers.blitz = setTimeout(function () {
 				scavengers.blitz = null;
 			}, 60000);
@@ -50,23 +52,25 @@ exports.commands = {
 		scavengers.status = 'on';
 		scavengers.hints = [targets[0].trim(), targets[2].trim(), targets[4].trim()];
 		scavengers.answers = [toId(targets[1]), toId(targets[3]), toId(targets[5])];
-		var result = (cmd === 'startofficialhunt' ? 'An official' : 'A new') + ' Scavenger Hunt has been started by <em> ' + Tools.escapeHTML(user.name) + '</em>! The first hint is: ' + Tools.escapeHTML(scavengers.hints[0]);
+		let result = (cmd === 'startofficialhunt' ? 'An official' : 'A new') + ' Scavenger Hunt has been started by <em> ' + Tools.escapeHTML(user.name) + '</em>! The first hint is: ' + Tools.escapeHTML(scavengers.hints[0]);
 		Rooms.rooms.scavengers.addRaw('<div class="broadcast-blue"><strong>' + result + '</strong></div>');
 	},
 	joinhunt: function (target, room, user) {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
 		if (scavengers.status !== 'on') return this.sendReply('There is no active scavenger hunt.');
 		if (user.userid in scavengers.participants) return this.sendReply('You are already participating in the current scavenger hunt.');
-		if (scavengers.buyin) { 
-		var total = (Db('money')[user.userid] || 0);
-		if (total < 1) { return this.sendReply('You do not have enough bucks to pay the buy-in to play.') }
-		Db('money')[user.userid] = total - 1;
-		Db.save();
-		scavengers.participants[user.userid] = {room: 0};
-		this.sendReply('You joined the scavenger hunt and have paid a 1 buck buy-in to play! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
+		if (scavengers.buyin) {
+			let total = (Db('money')[user.userid] || 0);
+			if (total < 1) {
+				return this.sendReply('You do not have enough bucks to pay the buy-in to play.');
+			}
+			Db('money')[user.userid] = total - 1;
+			Db.save();
+			scavengers.participants[user.userid] = {room: 0};
+			this.sendReply('You joined the scavenger hunt and have paid a 1 buck buy-in to play! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
 		} else {
-		scavengers.participants[user.userid] = {room: 0};
-		this.sendReply('You joined the scavenger hunt! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
+			scavengers.participants[user.userid] = {room: 0};
+			this.sendReply('You joined the scavenger hunt! Use the command /scavenge to answer. The first hint is: ' + scavengers.hints[0]);
 		}
 	},
 	scavenge: function (target, room, user) {
@@ -75,7 +79,7 @@ exports.commands = {
 		if (!scavengers.participants[user.userid]) return this.sendReply('You are not participating in the current scavenger hunt. Use the command /joinhunt to participate.');
 		if (scavengers.participants[user.userid].room >= 3) return this.sendReply('You have already finished!');
 		target = toId(target);
-		var roomnum = scavengers.participants[user.userid].room;
+		let roomnum = scavengers.participants[user.userid].room;
 		if (scavengers.answers[roomnum] === target) {
 			scavengers.participants[user.userid].room++;
 			roomnum++;
@@ -83,8 +87,8 @@ exports.commands = {
 				this.sendReply('Well done! Your ' + (roomnum === 1 ? 'second' : 'final') + ' hint is: ' + scavengers.hints[roomnum]);
 			} else {
 				scavengers.finished.push(user.name);
-				var position = scavengers.finished.length;
-				var result = '<em>' + Tools.escapeHTML(user.name) + '</em> has finished the hunt ';
+				let position = scavengers.finished.length;
+				let result = '<em>' + Tools.escapeHTML(user.name) + '</em> has finished the hunt ';
 				result += (position === 1) ? 'and is the winner!' : (position === 2) ? 'in 2nd place!' : (position === 3) ? 'in 3rd place!' : 'in ' + position + 'th place!';
 				result += (position < 4 && scavengers.blitz ? ' [BLITZ]' : '');
 				Rooms.rooms.scavengers.addRaw('<div class="broadcast-blue"><strong>' + result + '</strong></div>');
@@ -99,35 +103,35 @@ exports.commands = {
 		if (scavengers.status !== 'on') return this.sendReply('There is no active scavenger hunt.');
 		if (!scavengers.participants[user.userid]) return this.sendReply('You are not participating in the current scavenger hunt. Use the command /joinhunt to participate.');
 		if (scavengers.participants[user.userid].room >= 3) return this.sendReply('You have finished the current scavenger hunt.');
-		var roomnum = scavengers.participants[user.userid].room;
+		let roomnum = scavengers.participants[user.userid].room;
 		this.sendReply('You are on hint number ' + (roomnum + 1) + ': ' + scavengers.hints[roomnum]);
 	},
 	endhunt: function (target, room, user) {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
 		if (!this.can('mute', null, room)) return false;
 		if (scavengers.status !== 'on') return this.sendReply('There is no active scavenger hunt.');
-		var winner = scavengers.finished[0];
-		var second = scavengers.finished[1];
-		var third = scavengers.finished[2];
-		var consolation = scavengers.finished.slice(3).join(', ');
-		var msg = 'The Scavenger Hunt was ended by <em>' + Tools.escapeHTML(user.name) + '</em>. ';
+		let winner = scavengers.finished[0];
+		let second = scavengers.finished[1];
+		let third = scavengers.finished[2];
+		let consolation = scavengers.finished.slice(3).join(', ');
+		let msg = 'The Scavenger Hunt was ended by <em>' + Tools.escapeHTML(user.name) + '</em>. ';
 		if (winner) {
 			msg += '<br />Winner: <em>' + Tools.escapeHTML(winner) + '</em>.';
 			if (second) msg += ' Second place: <em>' + Tools.escapeHTML(second) + '</em>.';
 			if (third) msg += ' Third place: <em>' + Tools.escapeHTML(third) + '</em>.';
 			if (consolation) msg += ' Consolation prize to: ' + Tools.escapeHTML(consolation) + '.';
 			if (scavengers.official === 'on') {
-			var prize1 = (Db('money')[winner] || 0) + 15;
-			var consolation1 = (Db('money')[second] || 0) + 10;
-			Db('money')[winner] = prize1;
-			Db('money')[second] = consolation1;
-			Db.save();
-		} else { 
-			var prize2 = (Db('money')[winner] || 0) + 5;
-			var consolation2 = (Db('money')[second] || 0) + 3;
-			Db('money')[winner] = prize2;
-			Db('money')[second] = consolation2;
-			Db.save();
+				let prize1 = (Db('money')[winner] || 0) + 15;
+				let consolation1 = (Db('money')[second] || 0) + 10;
+				Db('money')[winner] = prize1;
+				Db('money')[second] = consolation1;
+				Db.save();
+			} else {
+				let prize2 = (Db('money')[winner] || 0) + 5;
+				let consolation2 = (Db('money')[second] || 0) + 3;
+				Db('money')[winner] = prize2;
+				Db('money')[second] = consolation2;
+				Db.save();
 			}
 		} else {
 			msg += 'No user has completed the hunt.';
@@ -159,11 +163,11 @@ exports.commands = {
 		if (room.id !== 'scavengers') return this.sendReply('This command can only be used in the Scavengers room.');
 		if (!this.can('hotpatch')) return false;
 		if (target === 'off') {
-		scavengers.buyin = false;
-		this.sendReply('Scavenger buy-ins have been disabled');
+			scavengers.buyin = false;
+			this.sendReply('Scavenger buy-ins have been disabled');
 		} else {
-		scavengers.buyin = true;
-		this.sendReply('Scavenger buy-ins have been enabled');
+			scavengers.buyin = true;
+			this.sendReply('Scavenger buy-ins have been enabled');
 		}
 	},
 	scavengershelp: 'scavengerhelp',
@@ -183,5 +187,5 @@ exports.commands = {
 			'- /endhunt - Finish the current hunt and announce the winners (Requires: % @ # & ~)<br />' +
 			'- /resethunt - Reset the scavenger hunt to mint status (Requires: % @ # & ~)'
 		);
-	}
+	},
 };

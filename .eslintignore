@@ -8,8 +8,6 @@ chat-plugins/customavatar.js
 chat-plugins/icons.js
 chat-plugins/leagueauth.js
 chat-plugins/lvl.js
-chat-plugins/nightclub.js
-chat-plugins/scavengers.js
 config/formats.js
 lvl/*.js
 migrate.js
