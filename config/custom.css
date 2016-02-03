@@ -1344,16 +1344,7 @@
 
 /* Custom chat */
 
-.chatmessage-masterfloat {
-  background: rgba(178,215,148,0.7) !important;
-  font-style: italic;
-}
 
-.dark .chatmessage-masterfloat {
-  background: #B4DCE4 !important;
-  color: #0C3A43 !important;
-  font-style: italic;
-}
 
 /****************************
 * Donation Benefit CSS ~end *
