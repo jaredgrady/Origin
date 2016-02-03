@@ -485,7 +485,7 @@ exports.commands = {
 			if (toggleRolling === true) {
 				return this.sendReply('We are already rolling');
 			} else {
-				toggleRolling === true;
+				toggleRolling = true;
 				return this.sendReply('We are now rolling!');
 			}
 		}
@@ -493,7 +493,7 @@ exports.commands = {
 			if (toggleRolling === false) {
 				return this.sendReply('We are not rolling right now.');
 			} else {
-				toggleRolling === false;
+				toggleRolling = false;
 				return this.sendReply('We are not rolling anymore.');
 			}
 		}
