@@ -84,8 +84,10 @@ let commands = exports.commands = {
 		if (!this.can('hotpatch')) return;
 		if (target === 'on') {
 			trolling = true;
+			this.sendReply('Now trolling');
 		} else {
 			trolling = false;
+			this.sendReply('No longer trolling');
 		}
 	},
 
