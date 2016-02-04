@@ -155,7 +155,7 @@ function canTalk(user, room, connection, message, targetUser) {
 			this.errorReply("Your message contains banned characters.");
 			return false;
 		}
-		
+
 		// replace Warlic with warlic
 		message = message.replace(/\bWarlic\b/ig, 'warlic');
 
