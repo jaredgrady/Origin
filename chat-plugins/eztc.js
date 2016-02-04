@@ -25,12 +25,13 @@ exports.commands = {
 		if (!target) target = 'help';
 		let parts = target.split(',');
 		for (let u in parts) parts[u] = parts[u].trim();
+		let commandName;
 
 		switch (parts[0]) {
 		case 'add':
 			if (!this.can('declare')) return false;
 			if (!parts[2]) return this.sendReply("Usage: /trainercard add, [command name], [html]");
-			let commandName = toId(parts[1]);
+			commandName = toId(parts[1]);
 			if (CommandParser.commands[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" already exists.");
 			let html = parts.splice(2, parts.length).join(',');
 			/* jshint ignore:start */
@@ -47,7 +48,7 @@ exports.commands = {
 		case 'remove':
 			if (!this.can('declare')) return false;
 			if (!parts[1]) return this.sendReply("Usage: /trainercard remove, [command name]");
-			let commandName = toId(parts[1]);
+			commandName = toId(parts[1]);
 			if (!trainerCards[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			delete CommandParser.commands[commandName];
 			delete trainerCards[commandName];
