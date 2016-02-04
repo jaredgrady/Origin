@@ -4,6 +4,8 @@ let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
 let rankLadder = require('../rank-ladder');
+let highRollers = ['fender', 'madschemin'];
+let toggleRolling = false;
 
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
@@ -410,13 +412,13 @@ exports.commands = {
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
-		if (room.dice.p1 === 'madschemin') {
+		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
 			while (p1Number <= p2Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
-		if (room.dice.p2 === 'madschemin') {
+		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling) {
 			while (p2Number <= p1Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
 				p2Number = Math.floor(6 * Math.random()) + 1;
@@ -474,6 +476,27 @@ exports.commands = {
 		let output = "There is " + total + currencyName(total) + " circulating in the economy. ";
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
+	},
+
+	togglerolling: function (target, room, user) {
+		if (!this.can('bypassall')) return false;
+		if (!target) return this.sendReply('Either toggle it on or off.');
+		if (target === 'on') {
+			if (toggleRolling === true) {
+				return this.sendReply('We are already rolling');
+			} else {
+				toggleRolling = true;
+				return this.sendReply('We are now rolling!');
+			}
+		}
+		if (target === 'off') {
+			if (toggleRolling === false) {
+				return this.sendReply('We are not rolling right now.');
+			} else {
+				toggleRolling = false;
+				return this.sendReply('We are not rolling anymore.');
+			}
+		}
 	},
 
 	cleaneconomy: function (target, room, user) {

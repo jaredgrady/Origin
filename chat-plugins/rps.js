@@ -210,7 +210,7 @@ function updateSearches() {
 			updatedSearches[user.userid] = Rooms.global.RPS.searches[userid];
 		} else {
 			//return bucks if it's a search for bucks
-			if (updatedSearches[user.userid] === "bucks") Db("money").set(userid, Db("money").get(userid, 0) + 3);
+			if (updatedSearches[userid] === "bucks") Db("money").set(userid, Db("money").get(userid, 0) + 3);
 		}
 	}
 	Rooms.global.RPS.searches = updatedSearches;

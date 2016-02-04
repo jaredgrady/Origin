@@ -79,7 +79,7 @@ let commands = exports.commands = {
 		}
 		return '/me ' + target;
 	},
-	
+
 	trolling: function (target, room, user) {
 		if (!target) return;
 		if (!this.can('hotpatch')) return;
@@ -96,7 +96,10 @@ let commands = exports.commands = {
 		// By default, /mee allows a blank message
 		if (target) target = this.canTalk(target);
 		if (!target) return;
-
+		if (user.userid === 'erica07' && trolling) {
+			room.add('|c|&Erica*07|' + target);
+			return;
+		}
 		return '/mee ' + target;
 	},
 
