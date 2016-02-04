@@ -137,13 +137,10 @@ if (!process.send) {
 		try {
 			problems = validators[format].validateTeam(parsedTeam);
 		} catch (err) {
-			let stack = err.stack + '\n\n' +
-					'Additional information:\n' +
-					'format = ' + format + '\n' +
-					'team = ' + message.substr(pipeIndex2 + 1) + '\n';
-			let fakeErr = {stack: stack};
-
-			require('./crashlogger.js')(fakeErr, 'A team validation');
+			require('./crashlogger.js')(err, 'A team validation', {
+				format: format,
+				team: message.substr(pipeIndex2 + 1),
+			});
 			problems = ["Your team crashed the team validator. We've been automatically notified and will fix this crash, but you should use a different team for now."];
 		}
 
@@ -451,6 +448,7 @@ Validator = (function () {
 					// one limitedEgg move from another egg.
 					let validFatherExists = false;
 					for (let i = 0; i < lsetData.sources.length; i++) {
+						if (lsetData.sources[i].charAt(1) === 'S') continue;
 						let eggGen = parseInt(lsetData.sources[i].charAt(0));
 						if (lsetData.sources[i].charAt(1) !== 'E' || eggGen === 6) {
 							// (There is a way to obtain this pokemon without past-gen breeding.)
@@ -493,7 +491,14 @@ Validator = (function () {
 						// Could not find a valid father using our heuristic.
 						// TODO: hardcode false positives for our heuristic
 						// in theory, this heuristic doesn't have false negatives
-						problems.push(name + "'s past gen egg moves " + limitedEgg.map(function (id) { return tools.getMove(id).name; }).join(', ') + " do not have a valid father. (Is this incorrect? If so, post the chainbreeding instructions in Bug Reports)");
+						let newSources = [];
+						for (let i = 0; i < lsetData.sources.length; i++) {
+							if (lsetData.sources[i].charAt(1) === 'S') {
+								newSources.push(lsetData.sources[i]);
+							}
+						}
+						lsetData.sources = newSources;
+						if (!newSources.length) problems.push(name + "'s past gen egg moves " + limitedEgg.map(function (id) { return tools.getMove(id).name; }).join(', ') + " do not have a valid father. (Is this incorrect? If so, post the chainbreeding instructions in Bug Reports)");
 					}
 				}
 			}
@@ -539,10 +544,27 @@ Validator = (function () {
 						}
 						if (eventData.generation < 5) eventData.isHidden = false;
 						if (eventData.isHidden !== undefined && eventData.isHidden !== isHidden) {
-							problems.push(name + (isHidden ? " can't have" : " must have") + " its hidden ability because it has a move only available from a specific event.");
+							problems.push(name + (isHidden ? " can't have" : " must have") + " its hidden ability because it has a move only available from a specific " + eventTemplate.species + " event.");
 						}
-						if (tools.gen <= 5 && eventData.abilities && eventData.abilities.indexOf(ability.id) < 0 && (template.species === eventTemplate.species || tools.getAbility(set.ability).gen <= eventData.generation)) {
-							problems.push(name + " must have " + eventData.abilities.join(" or ") + " because it has a move only available from a specific event.");
+						if (tools.gen <= 5 && eventData.abilities && eventData.abilities.length === 1 && !eventData.isHidden) {
+							if (template.species === eventTemplate.species) {
+								// has not evolved, abilities must match
+								if (ability.id !== eventData.abilities[0]) {
+									problems.push(name + " must have " + tools.getAbility(eventData.abilities[0]).name + " because it has a move only available from a specific event.");
+								}
+							} else {
+								// has evolved
+								let ability1 = tools.getAbility(eventTemplate.abilities['1']);
+								if (ability1.gen && eventData.generation >= ability1.gen) {
+									// pokemon had 2 available abilities in the gen the event happened
+									// ability is restricted to a single ability slot
+									let requiredAbilitySlot = (toId(eventData.abilities[0]) === ability1.id ? 1 : 0);
+									let requiredAbility = toId(template.abilities[requiredAbilitySlot] || template.abilities['0']);
+									if (ability.id !== requiredAbility) {
+										problems.push(name + " must have " + tools.getAbility(requiredAbility).name + " because it has a move only available from a specific " + tools.getAbility(eventData.abilities[0]).name + " " + eventTemplate.species + " event.");
+									}
+								}
+							}
 						}
 					}
 					isHidden = false;

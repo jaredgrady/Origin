@@ -145,17 +145,14 @@ global.Cidr = require('./cidr.js');
 
 if (Config.crashguard) {
 	// graceful crash - allow current battles to finish before restarting
-	let lastCrash = 0;
 	process.on('uncaughtException', function (err) {
-		let dateNow = Date.now();
-		let quietCrash = require('./crashlogger.js')(err, 'The main process', true);
-		quietCrash = quietCrash || ((dateNow - lastCrash) <= 1000 * 60 * 5);
-		lastCrash = Date.now();
-		if (quietCrash) return;
+		let crashMessage = require('./crashlogger.js')(err, 'The main process');
+		if (crashMessage !== 'lockdown') return;
 		let stack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
 		if (Rooms.staff) {
 			Rooms.staff.addRaw('<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
 			Rooms.staff.addRaw('<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>');
+			Rooms.staff.update();
 		}
 		Rooms.global.lockdown = true;
 	});

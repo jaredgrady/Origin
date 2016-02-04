@@ -343,15 +343,12 @@ let Context = exports.Context = (function () {
 		try {
 			result = commandHandler.call(this, this.target, this.room, this.user, this.connection, this.cmd, this.message);
 		} catch (err) {
-			let stack = err.stack + '\n\n' +
-					'Additional information:\n' +
-					'user = ' + this.user.name + '\n' +
-					'room = ' + this.room.id + '\n' +
-					'message = ' + this.message + '\n' +
-					'date = ' + new Date().toLocaleString();
-			let fakeErr = {stack: stack};
-
-			if (!require('./crashlogger.js')(fakeErr, 'A chat command')) {
+			if (require('./crashlogger.js')(err, 'A chat command', {
+				user: this.user.name,
+				room: this.room.id,
+				message: this.message,
+				date: new Date().toLocaleString(),
+			}) === 'lockdown') {
 				let ministack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
 				if (Rooms.lobby) Rooms.lobby.send('|html|<div class="broadcast-red"><b>POKEMON SHOWDOWN HAS CRASHED:</b> ' + ministack + '</div>');
 			} else {
