@@ -47,7 +47,7 @@ exports.commands = {
 		case 'remove':
 			if (!this.can('declare')) return false;
 			if (!parts[1]) return this.sendReply("Usage: /trainercard remove, [command name]");
-			commandName = toId(parts[1]);
+			let commandName = toId(parts[1]);
 			if (!trainerCards[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			delete CommandParser.commands[commandName];
 			delete trainerCards[commandName];
