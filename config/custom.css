@@ -81,6 +81,56 @@
   font-style: italic;
 }
 
+.rankladder-headers {
+  background: #454E50;
+  color: #FFF;
+  text-shadow: 1px 1px #262B2C, -1px 1px #262B2C;
+  border: 1px solid #222;
+}
+
+.default-td {
+  padding: 5px;
+  border: 1px solid #222;
+}
+
+.rankladder-tds {
+  background: #FCFCFC;
+}
+
+.rankladder-tds:hover {
+  background: #EFEFEF;
+}
+
+.first {
+  background: #CFB53B;
+  color: #645722;
+  text-shadow: 0px 0px 2px #F6EAB9;
+}
+
+.first:hover {
+  background: #D5BD5B;
+}
+
+.second {
+  background: #C0C0C0;
+  color: #5B5B5B;
+  text-shadow: 0px 0px 2px #EEE;
+}
+
+.second:hover {
+  background: #CACACA;
+}
+
+.third {
+  background: #CD7F32;
+  color: #694725;
+  text-shadow: 0px 0px 2px #E4BA91;
+}
+
+.third:hover {
+  background: #CD9054;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
