@@ -33,7 +33,7 @@ function rankLadder(title, type, array, prop) {
 		} else {
 			midColumn = '</td><td ' + tdStyle + '>';
 			tableRows += '<tr><td ' + tdStyle + '>' + (i + 1) + midColumn + array[i].name + midColumn + array[i][prop] + '</td></tr>';
-		}	
+		}
 	}
 	return ladderTitle + tableTop + tableRows + tableBottom;
 }
