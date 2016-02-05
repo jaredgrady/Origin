@@ -42,6 +42,7 @@ let emotes = {
 	'feelsjpn': 'http://i.imgur.com/Zz2WrQf.jpg',
 	'feelskawaii': 'http://i.imgur.com/kLnDaYD.png',
 	'feelsky': 'http://i.imgur.com/BtATPId.png?1',
+	'feelsllama': 'http://i.imgur.com/oSLSk2I.gif',
 	'feelslelouch': 'http://i.imgur.com/qZrV75o.png',
 	'feelslot': 'http://i.imgur.com/tl88F7i.png?1',
 	'feelslu': 'http://i.imgur.com/REEBSOT.png?1',
