@@ -294,7 +294,7 @@ exports.commands = {
         if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ': card not found.');
         var card = cards[cardName];
         var html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + card.card + '" title="' + card.name + '" align="right">' +
-                '<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">Absol</span>' +
+                '<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">' + card.title + '</span>' +
                 '<br /><br /><h1><font color="' + colors[card.rarity] + '">' + card.rarity + '</font></h1>' +
                 '<br /><br /><font color="#AAA"><i>Points:</i></font> ' + card.points +
                 '<br /><br /><font color="#AAA"><i>Found in Packs:</i></font>' + card.collection.join(', ') +
