@@ -431,7 +431,7 @@ exports.commands = {
 
 	fj: 'forcejoin',
 	forcejoin: function (target, room, user) {
-		if (!user.can('mute')) return false;
+		if (!user.can('lock')) return false;
 		if (!target) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
 		let parts = target.split(',');
 		if (!parts[0] || !parts[1]) return this.sendReply('/forcejoin [target], [room] - Forces a user to join a room');
