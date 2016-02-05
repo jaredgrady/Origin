@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const forever = require('forever');
 
 exports.commands = {
 	meme:'memes',
@@ -97,11 +98,6 @@ exports.commands = {
 	},
 	restart: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		try {
-			let forever = require('forever');
-		} catch (e) {
-			return this.sendReply("/restart requires the \"forever\" module.");
-		}
 		if (!Rooms.global.lockdown) {
 			return this.sendReply("For safety reasons, /restart can only be used during lockdown.");
 		}
