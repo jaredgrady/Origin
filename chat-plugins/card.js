@@ -326,45 +326,20 @@ exports.commands = {
 		display += "</tbody></table>";
 		this.sendReply("|raw|" + display);
 	},
-/*
-    transfercard: function (target, room, user) {
-    var parts = target.split(',');
-    if (!parts[0] || !parts[1]) return this.sendReply('/transfercard [user], [cardID] - Transfers a card to a user.');
-    if (!Users.get(toId(parts[0]))) return this.sendReply('User ' + parts[0] + ' was not found.');
-    if (parts[1].indexOf('-') === -1) return this.sendReply('This is not a valid card ID.');
-    var self = this;
-    Database.findOne('cards', parts[1], user.userid, function (err, cardObj) {
-        if (err || !cardObj) return self.sendReply('You don\'t have this card.'); 
-        Database.remove('cards', parts[1], user.userid, function (err) {
-            if (err || !cardObj) return self.sendReply(err);
-            Database.read('points', user.userid, function (err, oldPoints) {
-                if (err) oldPoints = 0;
-                Database.write('points', oldPoints - cardObj.points, user.userid, function (err) {
-                    if (err) throw err;
-                    cardObj.points = 0;
-                    Database.add('cards', cardObj, toId(parts[0]), function (err) {
-                        if (err) throw err;
-                        return self.sendReply('You have successfully transferred the card to ' + parts[0] + '.');
-                        Users.get(toId(parts[0])).popup(user.name + ' has sent you a card!');
-                    });
-                });
-            });
-        });
-    }); 
-	}, */
-  	  psgo: 'cardshelp',
-      origincg: 'cardshelp',
-      cardshelp: function (target, room, user) {
-        if (!this.canBroadcast()) return;
-            return this.sendReplyBox('\
-            <center><b><u>Origin Trading Card Game:</u></b></center><br>\
-            <b>/buypack</b> - Buys a pack from the pack shop.<br>\
-            <b>/packshop</b> - Shows the shop for buying packs.<br>\
-            <b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
-            <b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
-            <b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>\
-            <b>/card</b> - Shows data and information on any specifc card.<br>\
-            <b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>\
+
+  	psgo: 'cardshelp',
+	origincg: 'cardshelp',
+    cardshelp: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		return this.sendReplyBox('\
+    		<center><b><u>Origin Trading Card Game:</u></b></center><br>\
+    		<b>/buypack</b> - Buys a pack from the pack shop.<br>\
+    		<b>/packshop</b> - Shows the shop for buying packs.<br>\
+    		<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
+			<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
+			<b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>\
+			<b>/card</b> - Shows data and information on any specifc card.<br>\
+			<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>\
             ');
     	} 
 };
