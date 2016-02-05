@@ -50,11 +50,9 @@ exports.commands = {
 		}
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
-		let name = targetUser.name;
-
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
+		let name = targetUser.name;
 		if (!targetUser.registered) return this.sendReply("User '" + name + "' is not registered.");
-
 		if (!room.founder) return this.sendReply('The room needs a room founder before it can have a room owner.');
 		if (room.founder !== user.userid && !this.can('makeroom')) return this.sendReply('/roomowner - Access denied.');
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
