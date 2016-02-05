@@ -735,6 +735,7 @@ exports.commands = {
 		"The order of the parameters does not matter."],
 
 	rollpokemon: 'randompokemon',
+	randp: 'randompokemon',
 	randpoke: 'randompokemon',
 	randompokemon: function (target, room, user, connection, cmd, message) {
 		let targets = target.split(",");
