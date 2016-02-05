@@ -115,11 +115,11 @@ exports.Formats = [
 		ruleset: ['PU'],
 		banlist: ['Arbok', 'Armaldo', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Beheeyem', 'Bouffalant', 'Chatot', 'Clefairy',
 		'Dodrio', 'Drifblim', 'Dusknoir', 'Electrode', 'Exeggutor', 'Flareon', 'Floatzel', 'Fraxure', 'Gabite',
-		'Golduck', 'Golem', 'Gorebyss', 'Gothitelle', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
-		'Leafeon', 'Leavanny', 'Lickilicky', 'Linoone', 'Luxray', 'Machoke', 'Marowak', 'Meowstic', 'Metang', 'Mightyena', 'Misdreavus',
+		'Golem', 'Gorebyss', 'Gothitelle', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
+		'Leafeon', 'Leavanny', 'Lickilicky', 'Linoone', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
 		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
-		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Sawsbuck', 'Simipour', 'Solrock',
-		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vibrava', 'Vigoroth', 'Volbeat', 'Vullaby', 'Zebstrika', 'Sticky Web'
+		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Sawsbuck', 'Solrock',
+		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web'
 		],
 	},
 	{
