@@ -4,6 +4,7 @@ const BRACKET_MINIMUM_UPDATE_INTERVAL = 2 * 1000;
 const AUTO_DISQUALIFY_WARNING_TIMEOUT = 30 * 1000;
 const AUTO_START_MINIMUM_TIMEOUT = 30 * 1000;
 const MAX_REASON_LENGTH = 300;
+const colors = require('colors');
 
 let TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
