@@ -11,7 +11,7 @@ exports.commands = {
 		if (!room.shopList) room.shopList = [];
 		if (!target) target = '';
 		let self = this;
-
+		let item;
 		let cmdParts = target.split(' ');
 		let cmd = cmdParts.shift().trim().toLowerCase();
 		let params = cmdParts.join(' ').split(',').map(function (param) { return param.trim(); });
@@ -49,7 +49,7 @@ exports.commands = {
 			room.chatRoomData.shop = room.shop;
 			room.chatRoomData.shopList = room.shopList;
 			Rooms.global.writeChatRoomData();
-			this.sendReply('Added "' + name + '" to the league shop for ' + price + ' ' + ((price === 1) ? " buck." : " bucks.") + '.');
+			this.sendReply('Added "' + name + '" to the league shop for ' + price + ' ' + ((price === 1) ? " buck." : " bucks") + '.');
 			break;
 		case 'remove':
 		case 'rem':
@@ -57,7 +57,7 @@ exports.commands = {
 		case 'delete':
 			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
 			if (params.length < 1) return this.sendReply('Usage: /leagueshop delete [item name]');
-			let item = params.shift();
+			item = params.shift();
 			if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "' + item + '" not found.');
 			delete room.shop[toId(item)];
 			let index = room.shopList.indexOf(toId(item));
