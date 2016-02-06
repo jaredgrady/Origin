@@ -1288,6 +1288,89 @@
   
 /*swleric~end*/
 
+/*selena*/
+
+.pm-window-selena h3 {
+  background: rgba(255, 230, 146, 0.8) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #8BC66D !important;
+  text-shadow: none !important;
+  border-color: black !important;
+}
+
+.pm-window-selena h3:hover, .pm-window-selena.focused h3, .pm-window-selena.focused h3:hover {
+  background: rgba(255, 230, 146, 0.9) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #109333 !important;
+  text-shadow: none !important;
+  border-color: black !important;
+}
+
+.pm-window-selena h3 small, .pm-window-selena h3:hover .minimizebutton, .pm-window-selena h3 .minimizebutton, .pm-window-selena h3 .closebutton, .pm-window-selena h3 .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-selena h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-selena h3 .closebutton, .dark .pm-window-selena h3 .minimizebutton, .dark .pm-window-selena h3 .closebutton:hover + .minimizebutton.minimizebutton.minimizebutton {
+  color: #8BC66D !important;
+}
+
+.pm-window-selena h3 .closebutton:hover, .pm-window-selena h3 .minimizebutton:hover, .dark .pm-window-selena h3 .closebutton:hover, .dark .pm-window-selena h3 .minimizebutton:hover {
+  color: #109333 !important;
+}
+
+.pm-window-selena .pm-log, .pm-window-selena.focused .pm-log, .pm-window-selena .textbox, .pm-window-selena .textbox:hover, .pm-window-selena .textbox:focus, .dark .pm-window-selena .pm-log, .dark .pm-window-selena .textbox:focus {
+  background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right center !important;
+  border-color: black !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.pm-window-selena .pm-log {
+  background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right !important;
+  border-color: black !important;
+}
+
+.pm-window-selena.focused .pm-log {
+  background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right !important;
+  border-color: black !important;
+}
+
+.pm-window-selena .pm-log .chat small {
+  color: black !important;
+}
+
+.pm-window-selena .pm-log-add {
+  background: rgba(255, 230, 146, 0.8) !important;
+  border-color: black !important;
+}
+
+.pm-window-selena.focused .pm-log-add {
+  background: rgba(255, 230, 146, 0.9) !important;
+  border-color: black !important;
+}
+
+.pm-window-selena .pm-log-add .textbox {
+  border-color: black !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: black !important;
+}
+
+.pm-window-selena h3.pm-notifying {
+  border-color: black !important;
+  background: rgba(232, 82, 118, 0.8) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #DBCDCD !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+.pm-window-selena h3.pm-notifying:hover {
+  border-color: black !important;
+  background: rgba(232, 82, 118, 0.9) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #DBCDCD !important;
+  text-shadow: none !important;
+  font-style: italic !important;
+}
+
+/*selena ends*/
+
 /* CUSTOM PM ~end */
 
 /* Symbol Color */
