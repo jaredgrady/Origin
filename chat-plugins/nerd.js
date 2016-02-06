@@ -1,6 +1,10 @@
 'use strict';
 const fs = require('fs');
-const forever = require('forever');
+try {
+	const forever = require('forever');
+} catch (e) {
+	console.error(e);
+}
 
 exports.commands = {
 	meme:'memes',
