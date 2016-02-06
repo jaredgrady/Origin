@@ -1530,6 +1530,10 @@
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-bw/icon/596.png") right no-repeat;
 }
 
+#phoenixleague-userlist-user-swlconfluxx, #swl-userlist-user-swlconfluxx, #premierdraftdivision-userlist-user-swlconfluxx {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/720-u.png") right no-repeat;
+}
+
 /* Icons ~end */
 
 /* Custom chat */
