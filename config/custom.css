@@ -105,6 +105,7 @@
   background: #CFB53B;
   color: #645722;
   text-shadow: 0px 0px 2px #F6EAB9;
+  padding: 8px;
 }
 
 .first:hover {
@@ -115,6 +116,7 @@
   background: #C0C0C0;
   color: #5B5B5B;
   text-shadow: 0px 0px 2px #EEE;
+  padding: 8px;
 }
 
 .second:hover {
@@ -125,6 +127,7 @@
   background: #CD7F32;
   color: #694725;
   text-shadow: 0px 0px 2px #E4BA91;
+  padding: 8px;
 }
 
 .third:hover {
