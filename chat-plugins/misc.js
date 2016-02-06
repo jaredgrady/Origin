@@ -384,43 +384,36 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		let fs = require("fs");
 		let Pokedex = require("../data/pokedex.js").BattlePokedex;
-		let shinyPoke = ""
+		let shinyPoke = "";
 		let x;
-		if (/shiny/i.test(target)) {
-			shinyPoke = "-shiny";
-		}
+		if (/shiny/i.test(target)) shinyPoke = "-shiny";
 		if (/kanto/i.test(target) || /gen 1/i.test(target)) {
 			x = Math.floor(Math.random() * (174 - 1));
-		}
-		else if (/johto/i.test(target) || /gen 2/i.test(target)) {
+		} else if (/johto/i.test(target) || /gen 2/i.test(target)) {
 			x = Math.floor(Math.random() * (281 - 173)) + 172;
-		}
-		else if (/hoenn/i.test(target) || /gen 3/i.test(target)) {
+		} else if (/hoenn/i.test(target) || /gen 3/i.test(target)) {
 			x = Math.floor(Math.random() * (444 - 280)) + 279;
-		}
-		else if (/sinnoh/i.test(target) || /gen 4/i.test(target)) {
+		} else if (/sinnoh/i.test(target) || /gen 4/i.test(target)) {
 			x = Math.floor(Math.random() * (584 - 443)) + 442;
-		}
-		else if (/kalos/i.test(target) || /gen 5/i.test(target)) {
+		} else if (/kalos/i.test(target) || /gen 5/i.test(target)) {
 			x = Math.floor(Math.random() * (755 - 583)) + 582;
-		}
-		else if (/unova/i.test(target) || /gen 6/i.test(target)) {
+		} else if (/unova/i.test(target) || /gen 6/i.test(target)) {
 			x = Math.floor(Math.random() * (834 - 752)) + 751;
 		}
 		x = x || Math.floor(Math.random() * (856 - 1));
 		// identify the poke we are getting
 		let tarPoke = Object.keys(Pokedex)[x];
-		console.log(tarPoke)
+		console.log(tarPoke);
 		let pokeData = Pokedex[tarPoke];
 		let pokeId = pokeData.species.toLowerCase();
 		pokeId = pokeId.replace(/^basculinbluestriped$/i, "basculin-bluestriped").replace(/^pichuspikyeared$/i, "pichu-spikyeared").replace(/^floetteeternalflower$/i, "floette-eternalflower");
-		if(pokeId === "pikachu-cosplay") pokeId = ["pikachu-belle", "pikachu-phd", "pikachu-libre", "pikachu-popstar", "pikachu-rockstar"][~~(Math.random() * 6)];
+		if (pokeId === "pikachu-cosplay") pokeId = ["pikachu-belle", "pikachu-phd", "pikachu-libre", "pikachu-popstar", "pikachu-rockstar"][~~(Math.random() * 6)];
 		let spriteLocation = "http://play.pokemonshowdown.com/sprites/bw" + shinyPoke + "/" + pokeId + ".png";
-		let missingnoSprites = ["http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png", "http://cdn.bulbagarden.net/upload/0/03/Missingno_Y.png", "http://cdn.bulbagarden.net/upload/a/aa/Spr_1b_141_f.png", "http://cdn.bulbagarden.net/upload/b/bb/Spr_1b_142_f.png", "http://cdn.bulbagarden.net/upload/9/9e/Ghost_I.png"]
-		if(pokeId === "missingno") spriteLocation = missingnoSprites[~~(Math.random() * 5)];
-		function getTypeFormatting(types){
+		let missingnoSprites = ["http://cdn.bulbagarden.net/upload/9/98/Missingno_RB.png", "http://cdn.bulbagarden.net/upload/0/03/Missingno_Y.png", "http://cdn.bulbagarden.net/upload/a/aa/Spr_1b_141_f.png", "http://cdn.bulbagarden.net/upload/b/bb/Spr_1b_142_f.png", "http://cdn.bulbagarden.net/upload/9/9e/Ghost_I.png"];
+		if (pokeId === "missingno") spriteLocation = missingnoSprites[~~(Math.random() * 5)];
+		function getTypeFormatting(types) {
 			let text = [];
-			for(let i = 0; i < types.length; i++){
+			for (let i = 0; i < types.length; i++) {
 				text.push("<img src=\"http://play.pokemonshowdown.com/sprites/types/" + types[i] + ".png\" width=\"32\" height=\"14\">");
 			}
 			return text.join(" / ");

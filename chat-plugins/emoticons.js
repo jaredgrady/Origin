@@ -103,7 +103,7 @@ let emotes = {
 	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
 	'gudone': 'http://i.imgur.com/USkp1b9.png',
 	'feelsfloat': 'http://i.imgur.com/XKP1Kpf.gif',
-	'llamarawr': 'http://i.imgur.com/KWAQbPu.gif'
+	'llamarawr': 'http://i.imgur.com/KWAQbPu.gif',
 };
 
 let emotesKeys = Object.keys(emotes);
