@@ -81,7 +81,7 @@ exports.commands = {
 			let message = "";
 			for (let a in Config.customavatars) {
 				message += "<strong>" + Tools.escapeHTML(a) + ":</strong> " + Tools.escapeHTML(Config.customavatars[a]) + "<br />";
-			return this.sendReplyBox(message);
+				return this.sendReplyBox(message);
 			}
 		}
 		let userid, targetUser, avatar;
