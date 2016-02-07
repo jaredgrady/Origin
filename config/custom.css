@@ -3151,3 +3151,8 @@ a.subtle, a.subtle:hover {
   background: rgba(34, 34, 34, 0.8);
   color: #DDD;
 }
+
+
+  #lobby-userlist-user-niisama, #staff-userlist-user-niisama { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/491.gif") right no-repeat;
+  }
