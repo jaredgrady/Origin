@@ -2,8 +2,6 @@ tournaments/lib/**
 logs/**
 config/color.js
 chat-plugins/card.js
-chat-plugins/customavatar.js
 chat-plugins/eztc.js
 chat-plugins/nightclub.js
 lvl/*.js
-mods/**

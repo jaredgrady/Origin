@@ -39,10 +39,10 @@ function MD5(e) {
 			n = "",
 			r;
 		for (r = 0; r <= 3; r++) n = e >>> r * 8 & 255, n = "0" + n.toString(16), t += n.substr(n.length - 2, 2);
-		return t
+		return t;
 	}
 	var u = [],
-		a, f, l, c, h, p, d, v, e = function(e) {
+		a, f, l, c, h, p, d, v, e = function (e) {
 			for (var e = e.replace(/\r\n/g, "\n"), t = "", n = 0; n < e.length; n++) {
 				var r = e.charCodeAt(n);
 				r < 128 ? t += String.fromCharCode(r) : (r > 127 && r < 2048 ? t += String.fromCharCode(r >> 6 | 192) : (t += String.fromCharCode(r >> 12 | 224), t += String.fromCharCode(r >> 6 & 63 | 128)), t += String.fromCharCode(r & 63 | 128));
