@@ -113,10 +113,10 @@ exports.Formats = [
 		section: "ORAS Singles",
 
 		ruleset: ['PU'],
-		banlist: ['Arbok', 'Armaldo', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Beheeyem', 'Bouffalant', 'Chatot', 'Clefairy',
+		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Beheeyem', 'Bouffalant', 'Chatot', 'Clefairy',
 		'Dodrio', 'Drifblim', 'Dusknoir', 'Electrode', 'Exeggutor', 'Flareon', 'Floatzel', 'Fraxure', 'Gabite',
-		'Golem', 'Gorebyss', 'Gothitelle', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
-		'Leafeon', 'Leavanny', 'Lickilicky', 'Linoone', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
+		'Golem', 'Gorebyss', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
+		'Leafeon', 'Leavanny', 'Lickilicky', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
 		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
 		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Sawsbuck', 'Solrock',
 		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web',
