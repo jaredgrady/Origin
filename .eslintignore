@@ -5,3 +5,4 @@ chat-plugins/card.js
 chat-plugins/eztc.js
 chat-plugins/nightclub.js
 lvl/*.js
+mods/**
