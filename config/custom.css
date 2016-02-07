@@ -1374,6 +1374,128 @@
 
 /*selena ends*/
 
+/*gryph*/
+
+.pm-window-phoenixgryphon h3 {
+  background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #DADADA !important;
+  text-shadow: 0px 0px 2px #9A9A9A !important;
+  border-color: #6C6C6C !important;
+}
+
+.pm-window-phoenixgryphon h3:hover {
+  background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #CECECE !important;
+  border-color: #6C6C6C !important;
+}
+
+.pm-window-phoenixgryphon.focused h3, .pm-window-phoenixgryphon.focused h3:hover {
+  background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #CECECE !important;
+  border-color: #555454 !important;
+}
+
+.pm-window-phoenixgryphon h3 small {
+  color: #FEA32E !important;
+}
+
+.pm-window-phoenixgryphon h3 .minimizebutton, .dark .pm-window-phoenixgryphon h3 .minimizebutton, .pm-window-phoenixgryphon h3 .closebutton, .pm-window-phoenixgryphon h3:hover .minimizebutton {
+  color: #CBCBCB !important;
+}
+
+.pm-window-phoenixgryphon h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-phoenixgryphon h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #CBCBCB !important;
+}
+
+.pm-window-phoenixgryphon h3 .closebutton:hover {
+  color: #FFAA2F !important;
+}
+
+.pm-window-phoenixgryphon h3 .minimizebutton:hover, .dark .pm-window-phoenixgryphon h3 .minimizebutton:hover {
+  color: #FFAA2F !important;
+}
+
+.pm-window-phoenixgryphon .pm-log {
+  background: rgba(230, 230, 230, 0.9) url("http://i.imgur.com/xfMVJNY.png?2") left no-repeat !important;
+  border-color: #9A9A9A !important;
+  color: #222 !important;
+  text-shadow: 1px 1px 1px #B3B3B3;
+}
+
+.pm-window-phoenixgryphon.focused .pm-log {
+  background: rgba(230, 230, 230, 0.9) url("http://i.imgur.com/xfMVJNY.png?3") left no-repeat !important;
+  border-color: #818181 !important;
+  text-shadow: 1px 1px 1px #EEE;
+}
+
+.pm-window-phoenixgryphon .pm-log .chat small {
+  color: #555454 !important;
+}
+
+.pm-window-phoenixgryphon .pm-log-add, .pm-window-phoenixgryphon.focused .pm-log-add {
+  background: rgba(104, 104, 104, 0.8) !important;
+  border-color: #464646 !important;
+}
+
+.pm-window-phoenixgryphon .pm-log-add .textbox {
+  border-color: #464646 !important;
+  background: rgba(245, 245, 245, 0.95) !important;
+  color: #000;
+}
+
+.pm-window-phoenixgryphon h3.pm-notifying {
+  border-color: #333 !important;
+  background: #444 url("http://www.serebii.net/pokedex-dp/icon/397.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #AAA !important;
+  font-style: italic;
+}
+
+.pm-window-phoenixgryphon h3.pm-notifying:hover {
+  border-color: #222 !important;
+  background: #333 url("http://www.serebii.net/pokedex-dp/icon/397.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #AAA !important;
+  font-style: italic;
+}
+
+.pm-window-phoenixgryphon .challenge {
+  background: rgba(254, 163, 46, 0.9) url("http://i.imgur.com/KxLORUI.png?1") left no-repeat !important;
+  color: #B25235 !important;
+  text-shadow: 1px 1px 1px #FFC772 !important;
+  border-color: #DE6845 !important;
+}
+
+.pm-window-phoenixgryphon .challenge .select, .pm-window-phoenixgryphon .challenge .buttonbar button {
+  background: rgba(255, 199, 114, 0.8) !important;
+  border-color: #B25235 !important;
+  color: #B25235 !important;
+  text-shadow: 1px 1px 1px #FFDEAC !important;
+}
+
+.pm-window-phoenixgryphon .challenge .select:hover, .pm-window-phoenixgryphon .challenge .buttonbar button:hover {
+  background: rgba(225, 168, 82, 0.8) !important;
+  border-color: #B25235 !important;
+} 
+
+.pm-window-phoenixgryphon .challenge .select:disabled {
+  background: rgba(255, 199, 114, 0.5) !important;
+  border-color: #B25235 !important;
+}
+
+.pm-window-phoenixgryphon .challenge .teamselect:disabled strong {
+  color: #B25235 !important;
+}
+
+/*gryph ~end*/
+
 /* CUSTOM PM ~end */
 
 /* Symbol Color */
