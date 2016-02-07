@@ -32,7 +32,7 @@ exports.BattleScripts = {
 			def: 85,
 			spa: 85,
 			spd: 85,
-			spe: 85
+			spe: 85,
 		};
 		var ivs = {
 			hp: 31,
@@ -40,7 +40,7 @@ exports.BattleScripts = {
 			def: 31,
 			spa: 31,
 			spd: 31,
-			spe: 31
+			spe: 31,
 		};
 		var hasStab = {};
 		hasStab[template.types[0]] = true;
@@ -79,7 +79,7 @@ exports.BattleScripts = {
 				technician: 0, skilllink: 0, contrary: 0, sheerforce: 0, ironfist: 0, adaptability: 0, hustle: 0,
 				blaze: 0, overgrow: 0, swarm: 0, torrent: 0,
 				recoil: 0, inaccurate: 0,
-				physicalsetup: 0, specialsetup: 0, mixedsetup: 0
+				physicalsetup: 0, specialsetup: 0, mixedsetup: 0,
 			};
 			// Iterate through all moves we've chosen so far and keep track of what they do:
 			for (var k = 0; k < moves.length; k++) {
@@ -146,22 +146,22 @@ exports.BattleScripts = {
 				}
 				// Moves which drop stats:
 				var ContraryMove = {
-					leafstorm: 1, overheat: 1, closecombat: 1, superpower: 1, vcreate: 1
+					leafstorm: 1, overheat: 1, closecombat: 1, superpower: 1, vcreate: 1,
 				};
 				if (ContraryMove[moveid]) {
 					counter['contrary']++;
 				}
 				// Moves that boost Attack:
 				var PhysicalSetup = {
-					swordsdance:1, dragondance:1, coil:1, bulkup:1, curse:1, bellydrum:1, shiftgear:1, honeclaws:1, howl:1
+					swordsdance:1, dragondance:1, coil:1, bulkup:1, curse:1, bellydrum:1, shiftgear:1, honeclaws:1, howl:1,
 				};
 				// Moves which boost Special Attack:
 				var SpecialSetup = {
-					nastyplot:1, tailglow:1, quiverdance:1, calmmind:1, chargebeam:1
+					nastyplot:1, tailglow:1, quiverdance:1, calmmind:1, chargebeam:1,
 				};
 				// Moves which boost Attack AND Special Attack:
 				var MixedSetup = {
-					growth:1, workup:1, shellsmash:1
+					growth:1, workup:1, shellsmash:1,
 				};
 
 				if (PhysicalSetup[moveid]) {
@@ -392,7 +392,7 @@ exports.BattleScripts = {
 				var SetupException = {
 					overheat:1, dracometeor:1, leafstorm:1,
 					voltswitch:1, uturn:1,
-					suckerpunch:1, extremespeed:1
+					suckerpunch:1, extremespeed:1,
 				};
 				if (move.category === 'Special' && setupType === 'Physical' && !SetupException[move.id]) {
 					rejected = true;
@@ -768,7 +768,7 @@ exports.BattleScripts = {
 			OU: 74,
 			CAP: 74,
 			Unreleased: 74,
-			Uber: 70
+			Uber: 70,
 		};
 		var customScale = {
 			// Really bad Pokemon and jokemons
@@ -787,7 +787,7 @@ exports.BattleScripts = {
 			Snover: 95, Vulpix: 95, Excadrill: 78, Ninetales: 78, Tentacruel: 78, Toxicroak: 78, Venusaur: 78, "Tornadus-Therian": 74,
 
 			// Holistic judgment
-			Carvanha: 90, Blaziken: 74, "Deoxys-Defense": 74, "Deoxys-Speed": 74, Garchomp: 74, Thundurus: 74
+			Carvanha: 90, Blaziken: 74, "Deoxys-Defense": 74, "Deoxys-Speed": 74, Garchomp: 74, Thundurus: 74,
 		};
 		var level = levelScale[template.tier] || 90;
 		if (customScale[template.name]) level = customScale[template.name];
@@ -805,7 +805,7 @@ exports.BattleScripts = {
 			ivs: ivs,
 			item: item,
 			level: level,
-			shiny: !this.random(1024)
+			shiny: !this.random(1024),
 		};
 	},
 	randomTeam: function (side) {
@@ -925,5 +925,5 @@ exports.BattleScripts = {
 			}
 		}
 		return pokemon;
-	}
+	},
 };

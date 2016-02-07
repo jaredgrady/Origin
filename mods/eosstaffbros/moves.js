@@ -15784,7 +15784,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Fire"
+		type: "Fire",
 	},
 	"waterbullet": {
 		isNonstandard: true,
@@ -15804,7 +15804,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Water"
+		type: "Water",
 	},
 	"electricbullet": {
 		isNonstandard: true,
@@ -15824,7 +15824,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Electric"
+		type: "Electric",
 	},
 	"grassbullet": {
 		isNonstandard: true,
@@ -15844,7 +15844,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Grass"
+		type: "Grass",
 	},
 	"icebullet": {
 		isNonstandard: true,
@@ -15864,7 +15864,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Ice"
+		type: "Ice",
 	},
 	"psychicbullet": {
 		isNonstandard: true,
@@ -15884,7 +15884,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"dragonbullet": {
 		isNonstandard: true,
@@ -15904,7 +15904,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Dragon"
+		type: "Dragon",
 	},
 	"darkbullet": {
 		isNonstandard: true,
@@ -15924,7 +15924,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Dark"
+		type: "Dark",
 	},
 	"fairybullet": {
 		isNonstandard: true,
@@ -15944,7 +15944,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Fairy"
+		type: "Fairy",
 	},
 	"normalbullet": {
 		isNonstandard: true,
@@ -15964,7 +15964,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"fightingbullet": {
 		isNonstandard: true,
@@ -15984,7 +15984,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Fighting"
+		type: "Fighting",
 	},
 	"poisonbullet": {
 		isNonstandard: true,
@@ -16004,7 +16004,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Poison"
+		type: "Poison",
 	},
 	"groundbullet": {
 		isNonstandard: true,
@@ -16024,7 +16024,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Ground"
+		type: "Ground",
 	},
 	"flyingbullet": {
 		isNonstandard: true,
@@ -16044,7 +16044,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Flying"
+		type: "Flying",
 	},
 	"bugbullet": {
 		isNonstandard: true,
@@ -16064,7 +16064,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Bug"
+		type: "Bug",
 	},
 	"rockbullet": {
 		isNonstandard: true,
@@ -16084,7 +16084,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Rock"
+		type: "Rock",
 	},
 	"ghostbullet": {
 		isNonstandard: true,
@@ -16104,7 +16104,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Ghost"
+		type: "Ghost",
 	},
 	"steelbullet": {
 		isNonstandard: true,
@@ -16124,7 +16124,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Steel"
+		type: "Steel",
 	},
 	"vividdreams": {
 		isNonstandard: true,
@@ -16140,9 +16140,9 @@ exports.BattleMovedex = {
 		flags: {},
 		sleepUsable: true,
 		onTryHit: function (pokemon) {
-			if (pokemon.status !== 'slp') { 
+			if (pokemon.status !== 'slp') {
 				return false;
-			} else if (pokemon.status === 'slp'){
+			} else if (pokemon.status === 'slp') {
 				this.attrLastMove('[anim]calmmind');
 				this.add('c|~Naten|Oh shit.');
 			}
@@ -16155,7 +16155,7 @@ exports.BattleMovedex = {
 			for (var i = 0; i < pokemon.moveset.length; i++) {
 				var move = pokemon.moveset[i].id;
 				var NoSleepTalk = {
-					assist:1, bide:1, chatter:1, copycat:1, focuspunch:1, mefirst:1, metronome:1, mimic:1, mirrormove:1, naturepower:1, sketch:1, sleeptalk:1, uproar:1, vividdreams:1
+					assist:1, bide:1, chatter:1, copycat:1, focuspunch:1, mefirst:1, metronome:1, mimic:1, mirrormove:1, naturepower:1, sketch:1, sleeptalk:1, uproar:1, vividdreams:1,
 				};
 				if (move && !(NoSleepTalk[move] || this.getMove(move).flags['charge'])) {
 					moves.push(move);
@@ -16187,7 +16187,7 @@ exports.BattleMovedex = {
 				if (i !== move.id) continue;
 				if (move.isNonstandard) continue;
 				var noMetronome = {
-					afteryou:1, assist:1, belch:1, bestow:1, celebrate:1, chatter:1, copycat:1, counter:1, covet:1, craftyshield:1, destinybond:1, detect:1, diamondstorm:1, dragonascent:1, endure:1, feint:1, focuspunch:1, followme:1, freezeshock:1, happyhour:1, helpinghand:1, holdhands:1, hyperspacefury:1, hyperspacehole:1, iceburn:1, kingsshield:1, lightofruin:1, matblock:1, mefirst:1, metronome:1, mimic:1, mirrorcoat:1, mirrormove:1, naturepower:1, originpulse:1, precipiceblades:1, protect:1, quash:1, quickguard:1, ragepowder:1, relicsong:1, secretsword:1, sketch:1, sleeptalk:1, snarl:1, snatch:1, snore:1, spikyshield:1, steameruption:1, struggle:1, switcheroo:1, technoblast:1, thief:1, thousandarrows:1, thousandwaves:1, transform:1, trick:1, vcreate:1, wideguard:1
+					afteryou:1, assist:1, belch:1, bestow:1, celebrate:1, chatter:1, copycat:1, counter:1, covet:1, craftyshield:1, destinybond:1, detect:1, diamondstorm:1, dragonascent:1, endure:1, feint:1, focuspunch:1, followme:1, freezeshock:1, happyhour:1, helpinghand:1, holdhands:1, hyperspacefury:1, hyperspacehole:1, iceburn:1, kingsshield:1, lightofruin:1, matblock:1, mefirst:1, metronome:1, mimic:1, mirrorcoat:1, mirrormove:1, naturepower:1, originpulse:1, precipiceblades:1, protect:1, quash:1, quickguard:1, ragepowder:1, relicsong:1, secretsword:1, sketch:1, sleeptalk:1, snarl:1, snatch:1, snore:1, spikyshield:1, steameruption:1, struggle:1, switcheroo:1, technoblast:1, thief:1, thousandarrows:1, thousandwaves:1, transform:1, trick:1, vcreate:1, wideguard:1,
 				};
 				if (!noMetronome[move.id]) {
 					moves.push(move);
@@ -16206,7 +16206,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"hagottem": {
 		isNonstandard: true,
@@ -16244,10 +16244,10 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 100,
-			volatileStatus: 'flinch'
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"sideboffledge": {
 		isNonstandard: true,
@@ -16276,10 +16276,10 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 100,
-			status: 'par'
+			status: 'par',
 		},
 		target: "normal",
-		type: "Electric"
+		type: "Electric",
 	},
 	"evalbattle": {
 		isNonstandard: true,
@@ -16304,11 +16304,11 @@ exports.BattleMovedex = {
 		},
 		boosts: {
 			atk: 2,
-			spe: 2
+			spe: 2,
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"breakcode": {
 		isNonstandard: true,
@@ -16350,24 +16350,24 @@ exports.BattleMovedex = {
 				this.clearWeather();
 				break;
 			}
-			var hazard1 = [1, 2, 3];
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stealthrock');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
-			var pickHazard = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stickyweb');
-			var hazard2 = [1, 2];
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stealthrock');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
-			var pickHazard = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stickyweb');
-			var randomStatus = ['brn', 'par', 'slp', 'frz', 'psn', 'tox'];
-			var pickStatus = randomStatus[this.random(6)];
+			let hazard1 = [1, 2, 3];
+			let pickHazard1 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stealthrock');
+			let pickHazard2 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
+			let pickHazard3 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
+			let pickHazard4 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
+			let pickHazard5 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard6 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard7 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stickyweb');
+			let hazard2 = [1, 2];
+			let pickHazard8 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stealthrock');
+			let pickHazard9 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard10 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard11 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard12 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard13 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard14 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stickyweb');
+			let randomStatus = ['brn', 'par', 'slp', 'frz', 'psn', 'tox'];
+			let pickStatus = randomStatus[this.random(6)];
 			if (!target.volatiles['substitute']) {
 				if (!target.status) {
 					target.setStatus(pickStatus);
@@ -16377,7 +16377,7 @@ exports.BattleMovedex = {
 		selfdestruct: true,
 		secondary: false,
 		target: "self",
-		type: "Bird"
+		type: "Bird",
 	},
 	"hardbodyintimidation": {
 		isNonstandard: true,
@@ -16398,14 +16398,14 @@ exports.BattleMovedex = {
 		boosts: {
 			atk: -2,
 			spa: -2,
-			accuracy: -1
+			accuracy: -1,
 		},
 		secondary: {
 			chance: 75,
-			status: 'par'
+			status: 'par',
 		},
 		target: "normal",
-		type: "Steel"
+		type: "Steel",
 	},
 	"datquickness": {
 		isNonstandard: true,
@@ -16433,7 +16433,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Steel"
+		type: "Steel",
 	},
 	"trinitysaura": {
 		isNonstandard: true,
@@ -16456,7 +16456,7 @@ exports.BattleMovedex = {
 		boosts: {
 			atk: 2,
 			def: 1,
-			spd: 1
+			spd: 1,
 		},
 		onHit: function (pokemon) {
 			this.add('c|~ArkenCiel|Neski, are you there?');
@@ -16464,7 +16464,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"sweetdreams": {
 		isNonstandard: true,
@@ -16496,7 +16496,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Dark"
+		type: "Dark",
 	},
 	"makeabot": {
 		isNonstandard: true,
@@ -16523,7 +16523,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"banhammer": {
 		isNonstandard: true,
@@ -16543,11 +16543,11 @@ exports.BattleMovedex = {
 		boosts: {
 			spa: 2,
 			spd: 2,
-			spe: 2
+			spe: 2,
 		},
 		secondary: false,
 		target: "self",
-		type: "Fairy"
+		type: "Fairy",
 	},
 	"floatssharingan": {
 		isNonstandard: true,
@@ -16690,7 +16690,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"sexmachineguns": {
 		isNonstandard: true,
@@ -16710,7 +16710,7 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source, move) {
 			this.add('c|&Piers Niνans|I\'ve got you covered, laying down support fire!');
-			var moves = ['firebullet', 'waterbullet', 'grassbullet', 'electricbullet', 'steelbullet', 'groundbullet', 'rockbullet', 'psychicbullet', 'ghostbullet', 'normalbullet', 'poisonbullet', 'bugbullet', 'darkbullet', 'fairybullet', 'dragonbullet', 'icebullet', 'flyingbullet', 'fightingbullet']
+			var moves = ['firebullet', 'waterbullet', 'grassbullet', 'electricbullet', 'steelbullet', 'groundbullet', 'rockbullet', 'psychicbullet', 'ghostbullet', 'normalbullet', 'poisonbullet', 'bugbullet', 'darkbullet', 'fairybullet', 'dragonbullet', 'icebullet', 'flyingbullet', 'fightingbullet'];
 			var bullet = moves[this.random(moves.length)];
 			this.useMove(bullet, target);
 			var bullet = moves[this.random(moves.length)];
@@ -16724,7 +16724,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Steel"
+		type: "Steel",
 	},
 	"fuckouttheway": {
 		isNonstandard: true,
@@ -16748,7 +16748,7 @@ exports.BattleMovedex = {
 		ignoreEvasion: true,
 		ignoreDefensive: true,
 		target: "normal",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"pixiecannon": {
 		isNonstandard: true,
@@ -16774,17 +16774,17 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 75,
-			status: 'par'
+			status: 'par',
 		},
 		self: {
 			boosts: {
 				def: -1,
 				spd: -1,
-				spe: -1
-			}
+				spe: -1,
+			},
 		},
 		target: "normal",
-		type: "Fairy"
+		type: "Fairy",
 	},
 	"prescribemedications": {
 		isNonstandard: true,
@@ -16808,12 +16808,12 @@ exports.BattleMovedex = {
 		self: {
 			boosts: {
 				def: 1,
-				spd: 1
-			}
+				spd: 1,
+			},
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"pantsutoss": {
 		isNonstandard: true,
@@ -16842,7 +16842,7 @@ exports.BattleMovedex = {
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"filth": {
 		isNonstandard: true,
@@ -16870,9 +16870,9 @@ exports.BattleMovedex = {
 				this.add('c|@FranchescoEnzo|ey b0ss can i habe de win pls?');
 				this.useMove('spikyshield', pokemon);
 				pokemon.addVolatile('aquaring');
-					this.boost({atk:2});
-					this.boost({def:2});
-					this.boost({spe:-2});
+				this.boost({atk:2});
+				this.boost({def:2});
+				this.boost({spe:-2});
 				var enemy = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 				if (!enemy.volatiles['substitute']) {
 					if (!enemy.status) {
@@ -16883,7 +16883,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"doubletieraddition": {
 		isNonstandard: true,
@@ -16924,7 +16924,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Ghost"
+		type: "Ghost",
 	},
 	"graveyardstrike": {
 		isNonstandard: true,
@@ -16969,7 +16969,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Ghost"
+		type: "Ghost",
 	},
 	"bootyslam": {
 		isNonstandard: true,
@@ -17003,17 +17003,17 @@ exports.BattleMovedex = {
 				} else {
 					this.effectData.hit = true;
 				}
-			}
+			},
 		},
 		onHit: function () {
 			this.add('c|%SWL Neßki|Someone get him a wheelchair');
 		},
 		secondary: {
 			chance: 50,
-			status: 'par'
+			status: 'par',
 		},
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"admonish": {
 		isNonstandard: true,
@@ -17038,7 +17038,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"shitpostcombo": {
 		accuracy: 100,
@@ -17070,10 +17070,10 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 100,
-			volatileStatus: 'flinch'
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "Fighting"
+		type: "Fighting",
 	},
 	"fastball": {
 		isNonstandard: true,
@@ -17098,10 +17098,10 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 30,
-			volatileStatus: 'flinch'
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "Fighting"
+		type: "Fighting",
 	},
 	"mikurubeam": {
 		isNonstandard: true,
@@ -17135,7 +17135,7 @@ exports.BattleMovedex = {
 			}
 		},
 		target: "normal",
-		type: "Fairy"
+		type: "Fairy",
 	},
 	"roomowner": {
 		isNonstandard: true,
@@ -17168,11 +17168,11 @@ exports.BattleMovedex = {
 			def: 2,
 			spa: 2,
 			spd: 2,
-			spe: 2
+			spe: 2,
 		},
 		secondary: false,
 		target: "self",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"dragoonspride": {
 		accuracy: 80,
@@ -17221,14 +17221,14 @@ exports.BattleMovedex = {
 				if (move.id === 'gust' || move.id === 'twister') {
 					return this.chainModify(2);
 				}
-			}
+			},
 		},
 		secondary: {
 			chance: 50,
-			volatileStatus: 'flinch'
+			volatileStatus: 'flinch',
 		},
 		target: "any",
-		type: "Flying"
+		type: "Flying",
 	},
 	"dragonsfire": {
 		isNonstandard: true,
@@ -17254,7 +17254,7 @@ exports.BattleMovedex = {
 		recoil: [33, 100],
 		secondary: false,
 		target: "normal",
-		type: "Dragon"
+		type: "Dragon",
 	},
 	"niggapunch": {
 		id: "niggapunch",
@@ -17295,10 +17295,10 @@ exports.BattleMovedex = {
 		},
 		secondary: {
 			chance: 100,
-			status: 'par'
+			status: 'par',
 		},
 		target: "normal",
-		type: "Dark"
+		type: "Dark",
 	},
 	"sniped": {
 		isNonstandard: true,
@@ -17330,7 +17330,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "normal",
-		type: "Psychic"
+		type: "Psychic",
 	},
 	"lecancerstorm": {
 		isNonstandard: true,
@@ -17369,23 +17369,23 @@ exports.BattleMovedex = {
 		secondaries: [
 			{
 				chance: 20,
-				status: 'brn'
+				status: 'brn',
 			}, {
 				chance: 100,
 				self: {
 					boosts: {
-						spe: -1
-					}
-				}
+						spe: -1,
+					},
+				},
 			}, {
 				chance: 10,
 				boosts: {
-					def: -1
-				}
-			}
+					def: -1,
+				},
+			},
 		],
 		target: "allAdjacent",
-		type: "Normal"
+		type: "Normal",
 	},
 	"beybladespin": {
 		isNonstandard: true,
@@ -17422,11 +17422,11 @@ exports.BattleMovedex = {
 				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
 					pokemon.removeVolatile('partiallytrapped');
 				}
-			}
+			},
 		},
 		secondary: false,
 		target: "normal",
-		type: "Water"
+		type: "Water",
 	},
 	"finaltest": {
 		isNonstandard: true,
@@ -17470,7 +17470,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"nidificate": {
 		isNonstandard: true,
@@ -17491,13 +17491,13 @@ exports.BattleMovedex = {
 				this.add('c|+SWL Gryphon|pls no hurt am just birb');
 				this.attrLastMove('[anim]calmmind');
 				this.useMove('protect', target);
-				this.boost({spa:2})
-				this.boost({spe:2})
+				this.boost({spa:2});
+				this.boost({spe:2});
 			}
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal"
+		type: "Normal",
 	},
 	"twerkteam": {
 		isNonstandard: true,
@@ -17521,17 +17521,17 @@ exports.BattleMovedex = {
 		secondaries: [
 			{
 				chance: 100,
-				volatileStatus: 'confusion'
+				volatileStatus: 'confusion',
 			}, {
 				chance: 100,
-				volatileStatus: 'attract'
+				volatileStatus: 'attract',
 			}, {
 				chance: 100,
-				status: 'par'
-			}
+				status: 'par',
+			},
 		],
 		target: "allAdjacent",
-		type: "Normal"
+		type: "Normal",
 	},
 	"blamekammi": {
 		isNonstandard: true,
@@ -17556,28 +17556,28 @@ exports.BattleMovedex = {
 		secondaries: [
 			{
 				chance: 100,
-				status: 'par'
+				status: 'par',
 			}, {
 				chance: 100,
-				volatileStatus: 'confusion'
-			}, {
-				chance: 100,
-				self: {
-					boosts: {
-						spa: 1
-					}
-				}
+				volatileStatus: 'confusion',
 			}, {
 				chance: 100,
 				self: {
 					boosts: {
-						spd: 1
-					}
-				}
-			}
+						spa: 1,
+					},
+				},
+			}, {
+				chance: 100,
+				self: {
+					boosts: {
+						spd: 1,
+					},
+				},
+			},
 		],
 		target: "normal",
-		type: "Electric"
+		type: "Electric",
 	},
 	"climatestrike": {
 		isNonstandard: true,
@@ -17621,7 +17621,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Fire/Flying');
 				target.typesData = [
 					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'raindance':
@@ -17630,7 +17630,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Water/Flying');
 				target.typesData = [
 					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'sandstorm':
@@ -17639,7 +17639,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Rock/Flying');
 				target.typesData = [
 					{type: 'Rock', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'hail':
@@ -17648,7 +17648,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Ice/Flying');
 				target.typesData = [
 					{type: 'Ice', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'none':
@@ -17657,14 +17657,14 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Normal/Flying');
 				target.typesData = [
 					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			}
 		},
 		secondary: false,
 		target: "normal",
-		type: "Normal"
+		type: "Normal",
 	},
 	"quote": {
 		isNonstandard: true,
@@ -17695,7 +17695,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false}
+					{type: 'Ground', suppressed: false,  isAdded: false},
 				];
 				this.useMove('destinybond', target);
 				this.useMove('reflect', target);
@@ -17703,7 +17703,7 @@ exports.BattleMovedex = {
 				break;
 			case 2:
 				this.add('c|#Safety Shark|"Hoot is best Rock :x - *shot*" ~CGTNathan 2015');
-				if (source.hp > source.maxhp * 0.5) { 
+				if (source.hp > source.maxhp * 0.5) {
 					this.useMove('bellydrum', target);
 					this.heal(this.modify(source.maxhp, 0.5));
 				} else {
@@ -17736,7 +17736,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Rock');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Rock', suppressed: false,  isAdded: false}
+					{type: 'Rock', suppressed: false,  isAdded: false},
 				];
 				this.boost({def: 3});
 				this.useMove('rollout', target);
@@ -17765,14 +17765,14 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Steel/Fire');
 				target.typesData = [
 					{type: 'Steel', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false}
+					{type: 'Fire', suppressed: false,  isAdded: false},
 				];
 				this.useMove('sacredfire', target);
 				this.useMove('ironhead', target);
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false}
+					{type: 'Ground', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 11:
@@ -17781,9 +17781,9 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Ghost');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ghost', suppressed: false,  isAdded: false}
+					{type: 'Ghost', suppressed: false,  isAdded: false},
 				];
-				if (source.hp > source.maxhp * 0.5) { 
+				if (source.hp > source.maxhp * 0.5) {
 					this.useMove('curse', target);
 					this.heal(this.modify(source.maxhp, 0.5));
 				}
@@ -17794,7 +17794,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Dark');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Dark', suppressed: false,  isAdded: false}
+					{type: 'Dark', suppressed: false,  isAdded: false},
 				];
 				this.useMove('knockoff', target);
 				var enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
@@ -17807,7 +17807,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Normal');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Normal', suppressed: false,  isAdded: false}
+					{type: 'Normal', suppressed: false,  isAdded: false},
 				];
 				var enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
 				if (!enemy.volatiles['substitute']) {
@@ -17821,7 +17821,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false}
+					{type: 'Ground', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 14:
@@ -17830,7 +17830,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Water');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Water', suppressed: false,  isAdded: false}
+					{type: 'Water', suppressed: false,  isAdded: false},
 				];
 				this.boost({spa: 1});
 				this.useMove('scald', target);
@@ -17841,7 +17841,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false}
+					{type: 'Ground', suppressed: false,  isAdded: false},
 				];
 				this.useMove('reflect', target);
 				this.useMove('lightscreen', target);
@@ -17866,7 +17866,7 @@ exports.BattleMovedex = {
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
 					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false}
+					{type: 'Ground', suppressed: false,  isAdded: false},
 				];
 				this.useMove('reflect', target);
 				this.useMove('lightscreen', target);
@@ -17875,6 +17875,6 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Ground"
+		type: "Ground",
 	},
 };

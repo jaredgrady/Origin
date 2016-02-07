@@ -1,7 +1,6 @@
 'use strict';
 
 /*
-
 Ratings and how they work:
 
 -2: Extremely detrimental
@@ -3560,7 +3559,7 @@ exports.BattleAbilities = {
 			onBasePower: function (basePower) {
 				if (!this.effectData.hit) this.effectData.hit = 0;
 				return this.chainModify(Math.pow(0.85, this.effectData.hit++));
-			}
+			},
 		},
 	},
 	"nofuckyou": {
@@ -3575,7 +3574,7 @@ exports.BattleAbilities = {
 				}
 			} else {
 				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage * .33, source, target, null, true);
+					this.damage(damage / 3, source, target, null, true);
 				}
 			}
 		},
@@ -3612,12 +3611,12 @@ exports.BattleAbilities = {
 		onStart: function (pokemon) {
 			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
-				target.addVolatile('confusion')
+				target.addVolatile('confusion');
 			}
 		},
 		onFoeModifyPokemon: function (pokemon) {
 			if (!this.isAdjacent(pokemon, this.effectData.target)) return;
-				pokemon.tryTrap(true);
+			pokemon.tryTrap(true);
 		},
 		onFoeMaybeTrapPokemon: function (pokemon, source) {
 			if (!source) source = this.effectData.target;
@@ -3685,12 +3684,12 @@ exports.BattleAbilities = {
 			onEnd: function () {
 				this.add('-fieldend', 'move: Trick Room');
 				this.getStatCallback = null;
-			}
+			},
 		},
 		onEnd: function (pokemon, effect) {
 			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.hasAbility('graveyard')) {
-				this.removePseudoWeather('graveyard')
+				this.removePseudoWeather('graveyard');
 			}
 		},
 	},
@@ -3714,7 +3713,7 @@ exports.BattleAbilities = {
 			onBasePowerPriority: 8,
 			onBasePower: function (basePower, pokemon, target, move) {
 				return this.chainModify([0x14CD, 0x1000]);
-			}
+			},
 		},
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
@@ -3749,7 +3748,7 @@ exports.BattleAbilities = {
 				move.secondaries.push({
 					chance: 100,
 					status: 'par',
-					volatileStatus: 'confusion'
+					volatileStatus: 'confusion',
 				});
 			}
 		},
@@ -3788,7 +3787,7 @@ exports.BattleAbilities = {
 		name: "Leaguehopper",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox']
+			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
 			var leaguehop = statuses[this.random(statuses.length)];
 			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
@@ -3800,7 +3799,7 @@ exports.BattleAbilities = {
 		onResidualOrder: 10,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox']
+			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
 			var leaguehop = statuses[this.random(statuses.length)];
 			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
@@ -3830,7 +3829,7 @@ exports.BattleAbilities = {
 			}
 			if (!pokemon.side.pokemon[i]) return;
 			if (pokemon !== pokemon.side.pokemon[i]) return;
-		this.add('raw|Vi is working in the clutch!');
+			this.add('raw|Vi is working in the clutch!');
 			this.boost({atk: 1});
 			this.boost({spe: 1});
 			this.boost({accuracy: 1});
@@ -3863,7 +3862,7 @@ exports.BattleAbilities = {
 			onBasePowerPriority: 8,
 			onBasePower: function (basePower, pokemon, target, move) {
 				return this.chainModify([0x14CD, 0x1000]);
-			}
+			},
 		},
 		onTryHitPriority: 1,
 		onTryHit: function (target, source, move) {
@@ -3914,7 +3913,7 @@ exports.BattleAbilities = {
 		},
 		onDamagePriority: -100,
 		onDamage: function (damage, target, source, effect) {
-			if ( damage >= target.hp) {
+			if (damage >= target.hp) {
 				return target.hp - 1;
 			}
 		},
@@ -3939,7 +3938,7 @@ exports.BattleAbilities = {
 				this.add('-start', pokemon, 'typechange', 'Fire/Flying');
 				pokemon.typesData = [
 					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'raindance':
@@ -3948,7 +3947,7 @@ exports.BattleAbilities = {
 				this.add('-start', pokemon, 'typechange', 'Water/Flying');
 				pokemon.typesData = [
 					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'sandstorm':
@@ -3957,7 +3956,7 @@ exports.BattleAbilities = {
 				this.add('-start', pokemon, 'typechange', 'Rock/Flying');
 				pokemon.typesData = [
 					{type: 'Rock', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'hail':
@@ -3966,7 +3965,7 @@ exports.BattleAbilities = {
 				this.add('-start', pokemon, 'typechange', 'Ice/Flying');
 				pokemon.typesData = [
 					{type: 'Ice', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			case 'none':
@@ -3975,7 +3974,7 @@ exports.BattleAbilities = {
 				this.add('-start', pokemon, 'typechange', 'Normal/Flying');
 				pokemon.typesData = [
 					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false}
+					{type: 'Flying', suppressed: false,  isAdded: false},
 				];
 				break;
 			}

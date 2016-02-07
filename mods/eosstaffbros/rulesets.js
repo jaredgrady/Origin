@@ -1,3 +1,5 @@
+'use strict';
+
 exports.BattleFormats = {
 	pokemon: {
 		effectType: 'Banlist',
@@ -201,7 +203,7 @@ exports.BattleFormats = {
 				set.shiny = false;
 			}
 			return problems;
-		}
+		},
 	},
 	hppercentagemod: {
 		effectType: 'Rule',
@@ -209,13 +211,13 @@ exports.BattleFormats = {
 		onStart: function () {
 			this.add('rule', 'HP Percentage Mod: HP is shown in percentages');
 			this.reportPercentages = true;
-		}
+		},
 	},
 	cancelmod: {
 		effectType: 'Rule',
 		onStart: function () {
 			this.supportCancel = true;
-		}
+		},
 	},
 	sleepclausemod: {
 		effectType: 'Rule',
@@ -237,6 +239,6 @@ exports.BattleFormats = {
 					}
 				}
 			}
-		}
-	}
+		},
+	},
 };
