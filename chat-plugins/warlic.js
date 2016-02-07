@@ -1,5 +1,8 @@
 'use strict';
-
+/********************
+ * Warlic
+ * This file holds the code for warlicmode. Feel free to push anything you feel would improve the meme.
+********************/
 let warlicWords = {
 	'friend': 'comrade',
 	'bro': 'good Sire',

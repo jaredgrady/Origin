@@ -3,6 +3,10 @@ Origin Commands
 
 Commands
 ------------------------------------------------------------------------
+Commands are now grouped by category as either, user, mod, dev, or money commands if possible.
+Large files and complex systems such as cards, uno, and profile that have multiple dependent functions
+should be placed in their own file. Otherwise miscellenous commands should be placed in their respective 
+category. 
 
 `authority`
 *	Alias: stafflist, auth, authlist. Displays a list of the server's staff.

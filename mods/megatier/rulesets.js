@@ -1,3 +1,5 @@
+'use strict';
+
 exports.BattleFormats = {
 	pokemon: {
 		effectType: 'Banlist',
@@ -201,7 +203,7 @@ exports.BattleFormats = {
 				set.shiny = false;
 			}
 			return problems;
-		}
+		},
 	},
 	teampreview: {
 		onStartPriority: -10,
@@ -216,7 +218,7 @@ exports.BattleFormats = {
 		},
 		onTeamPreview: function () {
 			this.makeRequest('teampreview');
-		}
+		},
 	},
 	speciesclause: {
 		effectType: 'Rule',
@@ -232,7 +234,7 @@ exports.BattleFormats = {
 				}
 				speciesTable[template.num] = true;
 			}
-		}
+		},
 	},
 	nicknameclause: {
 		effectType: 'Rule',
@@ -250,7 +252,7 @@ exports.BattleFormats = {
 			}
 			// Illegality of impersonation of other species is
 			// hardcoded in team-validator.js, so we are done.
-		}
+		},
 	},
 	itemclause: {
 		effectType: 'Rule',
@@ -267,7 +269,7 @@ exports.BattleFormats = {
 				}
 				itemTable[item] = true;
 			}
-		}
+		},
 	},
 	ateclause: {
 		effectType: 'Rule',
@@ -283,7 +285,7 @@ exports.BattleFormats = {
 					ateAbility = true;
 				}
 			}
-		}
+		},
 	},
 	ohkoclause: {
 		effectType: 'Rule',
@@ -299,7 +301,7 @@ exports.BattleFormats = {
 				}
 			}
 			return problems;
-		}
+		},
 	},
 	evasionabilitiesclause: {
 		effectType: 'Banlist',
@@ -307,7 +309,7 @@ exports.BattleFormats = {
 		banlist: ['Sand Veil', 'Snow Cloak'],
 		onStart: function () {
 			this.add('rule', 'Evasion Abilities Clause: Evasion abilities are banned');
-		}
+		},
 	},
 	evasionmovesclause: {
 		effectType: 'Banlist',
@@ -315,7 +317,7 @@ exports.BattleFormats = {
 		banlist: ['Minimize', 'Double Team'],
 		onStart: function () {
 			this.add('rule', 'Evasion Moves Clause: Evasion moves are banned');
-		}
+		},
 	},
 	endlessbattleclause: {
 		effectType: 'Banlist',
@@ -323,7 +325,7 @@ exports.BattleFormats = {
 		banlist: ['Leppa Berry + Recycle', 'Harvest + Leppa Berry', 'Shadow Tag + Leppa Berry + Trick'],
 		onStart: function () {
 			this.add('rule', 'Endless Battle Clause: Forcing endless battles is banned');
-		}
+		},
 	},
 	moodyclause: {
 		effectType: 'Banlist',
@@ -331,7 +333,7 @@ exports.BattleFormats = {
 		banlist: ['Moody'],
 		onStart: function () {
 			this.add('rule', 'Moody Clause: Moody is banned');
-		}
+		},
 	},
 	swaggerclause: {
 		effectType: 'Banlist',
@@ -339,7 +341,7 @@ exports.BattleFormats = {
 		banlist: ['Swagger'],
 		onStart: function () {
 			this.add('rule', 'Swagger Clause: Swagger is banned');
-		}
+		},
 	},
 	batonpassclause: {
 		effectType: 'Banlist',
@@ -358,7 +360,7 @@ exports.BattleFormats = {
 				}
 			}
 			return problems;
-		}
+		},
 	},
 	hppercentagemod: {
 		effectType: 'Rule',
@@ -366,13 +368,13 @@ exports.BattleFormats = {
 		onStart: function () {
 			this.add('rule', 'HP Percentage Mod: HP is shown in percentages');
 			this.reportPercentages = true;
-		}
+		},
 	},
 	cancelmod: {
 		effectType: 'Rule',
 		onStart: function () {
 			this.supportCancel = true;
-		}
+		},
 	},
 	sleepclausemod: {
 		effectType: 'Rule',
@@ -394,7 +396,7 @@ exports.BattleFormats = {
 					}
 				}
 			}
-		}
+		},
 	},
 	freezeclausemod: {
 		effectType: 'Rule',
@@ -414,7 +416,7 @@ exports.BattleFormats = {
 					}
 				}
 			}
-		}
+		},
 	},
 	sametypeclause: {
 		effectType: 'Rule',
@@ -451,7 +453,7 @@ exports.BattleFormats = {
 					if (teamHas['damprock']) return ["Damp Rock is banned from Water monotype teams."];
 				}
 			}
-		}
+		},
 	},
 	megarayquazabanmod: {
 		effectType: 'Rule',
@@ -463,6 +465,6 @@ exports.BattleFormats = {
 			for (var i = 0; i < this.sides[1].pokemon.length; i++) {
 				if (this.sides[1].pokemon[i].speciesid === 'rayquaza') this.sides[1].pokemon[i].canMegaEvo = false;
 			}
-		}
-	}
+		},
+	},
 };

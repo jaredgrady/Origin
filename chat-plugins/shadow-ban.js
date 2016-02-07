@@ -1,4 +1,8 @@
 'use strict';
+/********************
+ * Shadow Ban
+ * This file runs the sban system. Don't mess with it.
+********************/
 const ROOM_NAME = "Shadow Ban Room";
 
 let room = Rooms.get(toId(ROOM_NAME));

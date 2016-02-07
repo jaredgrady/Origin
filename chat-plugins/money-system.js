@@ -1,5 +1,9 @@
 'use strict';
-
+/********************
+ * Money System
+ * (Formerly economy.js)
+ * This file handles the money system and some of its key commands, including dice games and the shop
+********************/
 let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
@@ -311,6 +315,7 @@ exports.commands = {
 		alertStaff(msg);
 		user.canSendRoomName = false;
 	},
+	sendroomnamehelp: ["/sendroomname [name] - If you have purchased a room, use /sendroomname [name] to let staff know what you want your room to be called."],
 
 	resetcustomsymbol: 'resetsymbol',
 	resetsymbol: function (target, room, user) {
@@ -321,6 +326,7 @@ exports.commands = {
 		this.sendReply("Your symbol has been reset.");
 	},
 	resetsymbolhelp: ["/resetsymbol - Resets your custom symbol."],
+
 	takecustomsymbol: 'takesymbol',
 	takesymbol: function (target, room, user) {
 		let targetUser = Users.get(toId(target));
@@ -360,6 +366,7 @@ exports.commands = {
 			});
 		});
 	},
+	moneyloghelp: ["/moneylog - Displays a log of all transactions in the economy."],
 
 	moneyladder: 'richestuser',
 	richladder: 'richestuser',
@@ -373,6 +380,7 @@ exports.commands = {
 		keys.sort(function (a, b) { return b.money - a.money; });
 		this.sendReplyBox(rankLadder('Richest Users', 'Money', keys.slice(0, 100), 'money'));
 	},
+	richestuserhelp: ["/moneyladder or /richestuser - Displays users ranked by the amount of Origin Bucks they possess."],
 
 	dicegame: 'startdice',
 	dicestart: 'startdice',
@@ -437,6 +445,7 @@ exports.commands = {
 		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
 		delete room.dice;
 	},
+	joindicehelp: ["/joindice - Joins a dice game."],
 
 	enddice: function (target, room, user) {
 		if (!user.can('broadcast', null, room)) return false;
@@ -447,11 +456,12 @@ exports.commands = {
 		delete room.dice;
 		room.addRaw("<b>" + user.name + " ended the dice game.");
 	},
+	enddicehelp: ["/enddice - Ends a dice game. Requires +"],
 
 	registershop: function (target, room, user) {
-		if (!user.can('declare')) return this.sendReply('/registershop - Access Denied you silly goose!');
-		if (!target) return this.sendReply('Please specify a room you silly goose!');
-		if (!Rooms(toId(target))) return this.sendReply('That\'s not a real room you silly goose!');
+		if (!user.can('declare')) return this.errorReply("/registershop - Access Denied");
+		if (!target) return this.errorReply("Please specifiy a room. Use /help registershop for more information.");
+		if (!Rooms(toId(target))) return this.errorReply("The specified room does not exist");
 		let targetRoom = Rooms(toId(target));
 		targetRoom.add('|raw|<div class="broadcast-green"><b>' + user.name + ' has just added a league shop to this room.</b></div>');
 		targetRoom.update();
@@ -464,6 +474,7 @@ exports.commands = {
 		if (!targetRoom.hasShop) targetRoom.hasShop = targetRoom.chatRoomData.hasShop = true;
 		Rooms.global.writeChatRoomData();
 	},
+	registershophelp: ["/registershop [room] - Adds a league shop to a room. Requires & ~"],
 
 	bucks: 'economystats',
 	economystats: function (target, room, user) {
@@ -477,6 +488,7 @@ exports.commands = {
 		output += "The average user has " + average + currencyName(average) + ".";
 		this.sendReplyBox(output);
 	},
+	economystatshelp: ["/economystats - Gives information about the state of the economy."],
 
 	togglerolling: function (target, room, user) {
 		if (!this.can('bypassall')) return false;
@@ -498,9 +510,10 @@ exports.commands = {
 			}
 		}
 	},
+	togglerollinghelp: ["/togglerolling - Enables or disables dice globally. Requires ~"],
 
 	cleaneconomy: function (target, room, user) {
-		if (!this.can('forcewin')) return false;
+		if (!this.can('hotpatch')) return false;
 		let moneyObject = Db('money').object();
 		Object.keys(moneyObject)
 			.filter(function (name) {
@@ -512,4 +525,5 @@ exports.commands = {
 		Db.save();
 		this.sendReply("All users who has less than 1 buck are now removed from the database.");
 	},
+	cleaneconomyhelp: ["/cleaneconomy - Cleans economy databases by removing users with less than one buck. Requires ~"],
 };

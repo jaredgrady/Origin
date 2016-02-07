@@ -1,4 +1,8 @@
 'use strict';
+/********************
+ * Time Commands
+ * This file contains commands that keep track of users activity.
+********************/
 
 let moment = require('moment');
 let request = require('request');
