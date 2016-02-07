@@ -734,8 +734,8 @@ exports.commands = {
 		"Parameters separated with '|' will be searched as alternatives for each other, e.g., 'trick | switcheroo' searches for all Pok\u00e9mon that learn either Trick or Switcheroo.",
 		"The order of the parameters does not matter."],
 
-/*	rollpokemon: 'randompokemon',
-	randp: 'randompokemon',
+	// randp: 'randompokemon',
+	rollpokemon: 'randompokemon',
 	randpoke: 'randompokemon',
 	randompokemon: function (target, room, user, connection, cmd, message) {
 		let targets = target.split(",");
@@ -759,7 +759,7 @@ exports.commands = {
 	},
 	randompokemonhelp: ["/randompokemon - Generates random Pok\u00e9mon based on given search conditions.",
 		"/randompokemon uses the same parameters as /dexsearch (see '/help ds').",
-		"Adding a number as a parameter returns that many random Pok\u00e9mon, e.g., '/randpoke 6' returns 6 random Pok\u00e9mon."], */
+		"Adding a number as a parameter returns that many random Pok\u00e9mon, e.g., '/randpoke 6' returns 6 random Pok\u00e9mon."],
 
 	ms: 'movesearch',
 	msearch: 'movesearch',
