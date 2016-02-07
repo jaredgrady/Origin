@@ -1,3 +1,5 @@
+'use strict';
+
 exports.BattleItems = {
 	"abomasite": {
 		id: "abomasite",
@@ -1572,7 +1574,7 @@ exports.BattleItems = {
 		name: "Full Incense",
 		spritenum: 155,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onModifyPriority: function (priority, pokemon) {
 			if (!pokemon.hasAbility('stall')) {
@@ -1738,7 +1740,7 @@ exports.BattleItems = {
 		name: "Grip Claw",
 		spritenum: 179,
 		fling: {
-			basePower: 90
+			basePower: 90,
 		},
 		// implemented in statuses
 		num: 286,
@@ -1750,7 +1752,7 @@ exports.BattleItems = {
 		name: "Griseous Orb",
 		spritenum: 180,
 		fling: {
-			basePower: 60
+			basePower: 60,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -1828,7 +1830,7 @@ exports.BattleItems = {
 		name: "Hard Stone",
 		spritenum: 187,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -1926,7 +1928,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Dark"
+			type: "Dark",
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 2) {
@@ -2184,7 +2186,7 @@ exports.BattleItems = {
 		onModifyMove: function (move) {
 			if (move.category !== "Status") {
 				if (!move.secondaries) move.secondaries = [];
-				for (var i = 0; i < move.secondaries.length; i++) {
+				for (let i = 0; i < move.secondaries.length; i++) {
 					if (move.secondaries[i].volatileStatus === 'flinch') return;
 				}
 				move.secondaries.push({
@@ -2304,7 +2306,7 @@ exports.BattleItems = {
 			type: "Fighting",
 		},
 		onUpdate: function (pokemon) {
-			var move = pokemon.getMoveData(pokemon.lastMove);
+			let move = pokemon.getMoveData(pokemon.lastMove);
 			if (move && move.pp === 0) {
 				pokemon.addVolatile('leppaberry');
 				pokemon.volatiles['leppaberry'].move = move;
@@ -2657,7 +2659,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
-			type: "Dark"
+			type: "Dark",
 		},
 		onAfterMoveSecondary: function (target, source, move) {
 			if (move.category === 'Special') {
@@ -2735,10 +2737,10 @@ exports.BattleItems = {
 		fling: {
 			basePower: 10,
 			effect: function (pokemon) {
-				var conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
-				for (var i = 0; i < conditions.length; i++) {
+				let conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+				for (let i = 0; i < conditions.length; i++) {
 					if (pokemon.volatiles[conditions[i]]) {
-						for (var j = 0; j < conditions.length; j++) {
+						for (let j = 0; j < conditions.length; j++) {
 							pokemon.removeVolatile(conditions[j]);
 							if (conditions[j] === 'attract') {
 								this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
@@ -2747,14 +2749,14 @@ exports.BattleItems = {
 						return;
 					}
 				}
-			}
+			},
 		},
 		onUpdate: function (pokemon) {
-			var conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
-			for (var i = 0; i < conditions.length; i++) {
+			let conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+			for (let i = 0; i < conditions.length; i++) {
 				if (pokemon.volatiles[conditions[i]]) {
 					if (!pokemon.useItem()) return;
-					for (var j = 0; j < conditions.length; j++) {
+					for (let j = 0; j < conditions.length; j++) {
 						pokemon.removeVolatile(conditions[j]);
 						if (conditions[j] === 'attract') {
 							this.add('-end', pokemon, 'move: Attract', '[from] item: Mental Herb');
@@ -2821,7 +2823,7 @@ exports.BattleItems = {
 		name: "Metronome",
 		spritenum: 289,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onStart: function (pokemon) {
 			pokemon.addVolatile('metronome');
@@ -2844,8 +2846,8 @@ exports.BattleItems = {
 				this.effectData.lastMove = move.id;
 			},
 			onModifyDamage: function (damage, source, target, move) {
-				var numConsecutive = this.effectData.numConsecutive > 5 ? 5 : this.effectData.numConsecutive;
-				var dmgMod = [1, 1.2, 1.4, 1.6, 1.8, 2];
+				let numConsecutive = this.effectData.numConsecutive > 5 ? 5 : this.effectData.numConsecutive;
+				let dmgMod = [1, 1.2, 1.4, 1.6, 1.8, 2];
 				return this.chainModify(dmgMod[numConsecutive]);
 			},
 		},
@@ -2963,7 +2965,7 @@ exports.BattleItems = {
 		name: "Muscle Band",
 		spritenum: 297,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -3045,7 +3047,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 90,
-			type: "Dragon"
+			type: "Dragon",
 		},
 		num: 178,
 		gen: 3,
@@ -3076,7 +3078,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Fire"
+			type: "Fire",
 		},
 		onSourceModifyDamage: function (damage, source, target, move) {
 			if (move.type === 'Fire' && move.typeMod > 0 && !target.volatiles['substitute']) {
@@ -3113,7 +3115,7 @@ exports.BattleItems = {
 		name: "Old Amber",
 		spritenum: 314,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		num: 103,
 		gen: 3,
@@ -3150,7 +3152,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 90,
-			type: "Steel"
+			type: "Steel",
 		},
 		num: 180,
 		gen: 3,
@@ -3171,7 +3173,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Water"
+			type: "Water",
 		},
 		onSourceModifyDamage: function (damage, source, target, move) {
 			if (move.type === 'Water' && move.typeMod > 0 && !target.volatiles['substitute']) {
@@ -3259,7 +3261,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
-			type: "Poison"
+			type: "Poison",
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 && pokemon.hasAbility('gluttony'))) {
@@ -3340,7 +3342,7 @@ exports.BattleItems = {
 		name: "Plume Fossil",
 		spritenum: 339,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		num: 573,
 		gen: 5,
@@ -3352,7 +3354,7 @@ exports.BattleItems = {
 		spritenum: 343,
 		fling: {
 			basePower: 70,
-			status: 'psn'
+			status: 'psn',
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -3455,7 +3457,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Poison"
+			type: "Poison",
 		},
 		num: 171,
 		gen: 3,
@@ -3480,7 +3482,7 @@ exports.BattleItems = {
 		name: "Quick Claw",
 		spritenum: 373,
 		fling: {
-			basePower: 80
+			basePower: 80,
 		},
 		num: 217,
 		gen: 2,
@@ -3491,7 +3493,7 @@ exports.BattleItems = {
 		name: "Quick Powder",
 		spritenum: 374,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onModifySpe: function (spe, pokemon) {
 			if (pokemon.template.species === 'Ditto' && !pokemon.transformed) {
@@ -3509,7 +3511,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 90,
-			type: "Ghost"
+			type: "Ghost",
 		},
 		num: 177,
 		gen: 3,
@@ -3520,7 +3522,7 @@ exports.BattleItems = {
 		name: "Rare Bone",
 		spritenum: 379,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		num: 106,
 		gen: 4,
@@ -3554,7 +3556,7 @@ exports.BattleItems = {
 		name: "Razor Claw",
 		spritenum: 382,
 		fling: {
-			basePower: 80
+			basePower: 80,
 		},
 		onModifyMove: function (move) {
 			move.critRatio++;
@@ -3569,17 +3571,17 @@ exports.BattleItems = {
 		spritenum: 383,
 		fling: {
 			basePower: 30,
-			volatileStatus: 'flinch'
+			volatileStatus: 'flinch',
 		},
 		onModifyMove: function (move) {
 			if (move.category !== "Status") {
 				if (!move.secondaries) move.secondaries = [];
-				for (var i = 0; i < move.secondaries.length; i++) {
+				for (let i = 0; i < move.secondaries.length; i++) {
 					if (move.secondaries[i].volatileStatus === 'flinch') return;
 				}
 				move.secondaries.push({
 					chance: 10,
-					volatileStatus: 'flinch'
+					volatileStatus: 'flinch',
 				});
 			}
 		},
@@ -3628,7 +3630,7 @@ exports.BattleItems = {
 		onSwitchInPriority: -6,
 		onSwitchIn: function (pokemon) {
 			if (pokemon.isActive && pokemon.baseTemplate.species === 'Groudon') {
-				var template = this.getTemplate('Groudon-Primal');
+				let template = this.getTemplate('Groudon-Primal');
 				pokemon.formeChange(template);
 				pokemon.baseTemplate = template;
 				pokemon.details = template.species + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
@@ -3731,7 +3733,7 @@ exports.BattleItems = {
 		name: "Rocky Helmet",
 		spritenum: 417,
 		fling: {
-			basePower: 60
+			basePower: 60,
 		},
 		onAfterDamageOrder: 2,
 		onAfterDamage: function (damage, target, source, move) {
@@ -3748,7 +3750,7 @@ exports.BattleItems = {
 		name: "Root Fossil",
 		spritenum: 418,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		num: 99,
 		gen: 3,
@@ -3800,7 +3802,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
-			type: "Dark"
+			type: "Dark",
 		},
 		onAfterMoveSecondary: function (target, source, move) {
 			if (source && source !== target && move && move.category === 'Special') {
@@ -3841,7 +3843,7 @@ exports.BattleItems = {
 		name: "Safety Goggles",
 		spritenum: 604,
 		fling: {
-			basePower: 80
+			basePower: 80,
 		},
 		onImmunity: function (type, pokemon) {
 			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
@@ -3863,7 +3865,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
-			type: "Fighting"
+			type: "Fighting",
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 && pokemon.hasAbility('gluttony'))) {
@@ -3924,7 +3926,7 @@ exports.BattleItems = {
 		name: "Scope Lens",
 		spritenum: 429,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onModifyMove: function (move) {
 			move.critRatio++;
@@ -3938,7 +3940,7 @@ exports.BattleItems = {
 		name: "Sea Incense",
 		spritenum: 430,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -3955,7 +3957,7 @@ exports.BattleItems = {
 		name: "Sharp Beak",
 		spritenum: 436,
 		fling: {
-			basePower: 50
+			basePower: 50,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -3986,7 +3988,7 @@ exports.BattleItems = {
 		name: "Shed Shell",
 		spritenum: 437,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onModifyPokemonPriority: -10,
 		onModifyPokemon: function (pokemon) {
@@ -4001,7 +4003,7 @@ exports.BattleItems = {
 		name: "Shell Bell",
 		spritenum: 438,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onAfterMoveSecondarySelfPriority: -1,
 		onAfterMoveSecondarySelf: function (pokemon, target, move) {
@@ -4035,7 +4037,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Ground"
+			type: "Ground",
 		},
 		onSourceModifyDamage: function (damage, source, target, move) {
 			if (move.type === 'Ground' && move.typeMod > 0 && !target.volatiles['substitute']) {
@@ -4055,7 +4057,7 @@ exports.BattleItems = {
 		name: "Silk Scarf",
 		spritenum: 444,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -4072,7 +4074,7 @@ exports.BattleItems = {
 		name: "SilverPowder",
 		spritenum: 447,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -4091,7 +4093,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Psychic"
+			type: "Psychic",
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 2) {
@@ -4113,7 +4115,7 @@ exports.BattleItems = {
 		name: "Skull Fossil",
 		spritenum: 449,
 		fling: {
-			basePower: 100
+			basePower: 100,
 		},
 		num: 105,
 		gen: 4,
@@ -4159,7 +4161,7 @@ exports.BattleItems = {
 		name: "Smooth Rock",
 		spritenum: 453,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		num: 283,
 		gen: 4,
@@ -4170,7 +4172,7 @@ exports.BattleItems = {
 		name: "Snowball",
 		spritenum: 606,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onAfterDamage: function (damage, target, source, move) {
 			if (move.type === 'Ice' && target.useItem()) {
@@ -4186,7 +4188,7 @@ exports.BattleItems = {
 		name: "Soft Sand",
 		spritenum: 456,
 		fling: {
-			basePower: 10
+			basePower: 10,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -4203,7 +4205,7 @@ exports.BattleItems = {
 		name: "Soul Dew",
 		spritenum: 459,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onModifySpAPriority: 1,
 		onModifySpA: function (spa, pokemon) {
@@ -4226,7 +4228,7 @@ exports.BattleItems = {
 		name: "Spell Tag",
 		spritenum: 461,
 		fling: {
-			basePower: 30
+			basePower: 30,
 		},
 		onBasePowerPriority: 6,
 		onBasePower: function (basePower, user, target, move) {
@@ -4245,7 +4247,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 90,
-			type: "Dark"
+			type: "Dark",
 		},
 		num: 179,
 		gen: 3,
@@ -4308,7 +4310,7 @@ exports.BattleItems = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
-			type: "Psychic"
+			type: "Psychic",
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 && pokemon.hasAbility('gluttony'))) {
@@ -4316,15 +4318,15 @@ exports.BattleItems = {
 			}
 		},
 		onEat: function (pokemon) {
-			var stats = [];
-			for (var i in pokemon.boosts) {
+			let stats = [];
+			for (let i in pokemon.boosts) {
 				if (i !== 'accuracy' && i !== 'evasion' && pokemon.boosts[i] < 6) {
 					stats.push(i);
 				}
 			}
 			if (stats.length) {
-				var i = stats[this.random(stats.length)];
-				var boost = {};
+				let i = stats[this.random(stats.length)];
+				let boost = {};
 				boost[i] = 2;
 				this.boost(boost);
 			}
@@ -4370,7 +4372,7 @@ exports.BattleItems = {
 		id: "stick",
 		name: "Stick",
 		fling: {
-			basePower: 60
+			basePower: 60,
 		},
 		spritenum: 475,
 		onModifyMove: function (move, user) {
@@ -4387,7 +4389,7 @@ exports.BattleItems = {
 		name: "Sticky Barb",
 		spritenum: 476,
 		fling: {
-			basePower: 80
+			basePower: 80,
 		},
 		onResidualOrder: 26,
 		onResidualSubOrder: 2,
@@ -4396,7 +4398,7 @@ exports.BattleItems = {
 		},
 		onHit: function (target, source, move) {
 			if (source && source !== target && !source.item && move && move.flags['contact']) {
-				var barb = target.takeItem();
+				let barb = target.takeItem();
 				source.setItem(barb);
 				// no message for Sticky Barb changing hands
 			}
@@ -4506,7 +4508,7 @@ exports.BattleItems = {
 		spritenum: 515,
 		fling: {
 			basePower: 30,
-			status: 'tox'
+			status: 'tox',
 		},
 		onResidualOrder: 26,
 		onResidualSubOrder: 2,

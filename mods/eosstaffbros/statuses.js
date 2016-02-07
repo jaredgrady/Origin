@@ -1,3 +1,5 @@
+'use strict';
+
 exports.BattleStatuses = {
 	brn: {
 		effectType: 'Status',
@@ -12,7 +14,7 @@ exports.BattleStatuses = {
 		onResidualOrder: 9,
 		onResidual: function (pokemon) {
 			this.damage(pokemon.maxhp / 8);
-		}
+		},
 	},
 	par: {
 		effectType: 'Status',
@@ -30,7 +32,7 @@ exports.BattleStatuses = {
 				this.add('cant', pokemon, 'par');
 				return false;
 			}
-		}
+		},
 	},
 	slp: {
 		effectType: 'Status',
@@ -63,14 +65,14 @@ exports.BattleStatuses = {
 				}
 				return false;
 			}
-		}
+		},
 	},
 	frz: {
 		effectType: 'Status',
 		onStart: function (target) {
 			this.add('-status', target, 'frz');
 			if (target.template.species === 'Shaymin-Sky' && target.baseTemplate.baseSpecies === 'Shaymin') {
-				var template = this.getTemplate('Shaymin');
+				let template = this.getTemplate('Shaymin');
 				target.formeChange(template);
 				target.baseTemplate = template;
 				target.setAbility(template.abilities['0']);
@@ -100,7 +102,7 @@ exports.BattleStatuses = {
 			if (move.thawsTarget || move.type === 'Fire' && move.category !== 'Status') {
 				target.cureStatus();
 			}
-		}
+		},
 	},
 	psn: {
 		effectType: 'Status',
@@ -110,7 +112,7 @@ exports.BattleStatuses = {
 		onResidualOrder: 9,
 		onResidual: function (pokemon) {
 			this.damage(pokemon.maxhp / 8);
-		}
+		},
 	},
 	tox: {
 		effectType: 'Status',
@@ -131,12 +133,12 @@ exports.BattleStatuses = {
 				this.effectData.stage++;
 			}
 			this.damage(this.clampIntRange(pokemon.maxhp / 16, 1) * this.effectData.stage);
-		}
+		},
 	},
 	confusion: {
 		// this is a volatile status
 		onStart: function (target, source, sourceEffect) {
-			var result = this.runEvent('TryConfusion', target, source, sourceEffect);
+			let result = this.runEvent('TryConfusion', target, source, sourceEffect);
 			if (!result) return result;
 			if (sourceEffect && sourceEffect.id === 'lockedmove') {
 				this.add('-start', target, 'confusion', '[fatigue]');
@@ -161,7 +163,7 @@ exports.BattleStatuses = {
 			}
 			this.directDamage(this.getDamage(pokemon, pokemon, 40));
 			return false;
-		}
+		},
 	},
 	flinch: {
 		duration: 1,
@@ -172,7 +174,7 @@ exports.BattleStatuses = {
 			}
 			this.add('cant', pokemon, 'flinch');
 			return false;
-		}
+		},
 	},
 	trapped: {
 		noCopy: true,
@@ -181,10 +183,10 @@ exports.BattleStatuses = {
 		},
 		onStart: function (target) {
 			this.add('-activate', target, 'trapped');
-		}
+		},
 	},
 	trapper: {
-		noCopy: true
+		noCopy: true,
 	},
 	partiallytrapped: {
 		duration: 5,
@@ -212,7 +214,7 @@ exports.BattleStatuses = {
 		},
 		onModifyPokemon: function (pokemon) {
 			pokemon.tryTrap();
-		}
+		},
 	},
 	lockedmove: {
 		// Outrage, Thrash, Petal Dance...
@@ -239,7 +241,7 @@ exports.BattleStatuses = {
 		},
 		onLockMove: function (pokemon) {
 			return this.effectData.move;
-		}
+		},
 	},
 	twoturnmove: {
 		// Skull Bash, SolarBeam, Sky Drop...
@@ -259,7 +261,7 @@ exports.BattleStatuses = {
 		},
 		onLockMoveTarget: function () {
 			return this.effectData.targetLoc;
-		}
+		},
 	},
 	choicelock: {
 		onStart: function (pokemon) {
@@ -274,13 +276,13 @@ exports.BattleStatuses = {
 			if (pokemon.ignoringItem()) {
 				return;
 			}
-			var moves = pokemon.moveset;
-			for (var i = 0; i < moves.length; i++) {
+			let moves = pokemon.moveset;
+			for (let i = 0; i < moves.length; i++) {
 				if (moves[i].id !== this.effectData.move) {
 					pokemon.disableMove(moves[i].id, false, this.effectData.sourceEffect);
 				}
 			}
-		}
+		},
 	},
 	mustrecharge: {
 		duration: 2,
@@ -293,21 +295,21 @@ exports.BattleStatuses = {
 		onLockMove: function (pokemon) {
 			this.add('-mustrecharge', pokemon);
 			return 'recharge';
-		}
+		},
 	},
 	futuremove: {
 		// this is a side condition
 		onStart: function (side) {
 			this.effectData.positions = [];
-			for (var i = 0; i < side.active.length; i++) {
+			for (let i = 0; i < side.active.length; i++) {
 				this.effectData.positions[i] = null;
 			}
 		},
 		onResidualOrder: 3,
 		onResidual: function (side) {
-			var finished = true;
-			for (var i = 0; i < side.active.length; i++) {
-				var posData = this.effectData.positions[i];
+			let finished = true;
+			for (let i = 0; i < side.active.length; i++) {
+				let posData = this.effectData.positions[i];
 				if (!posData) continue;
 
 				posData.duration--;
@@ -318,8 +320,8 @@ exports.BattleStatuses = {
 				}
 
 				// time's up; time to hit! :D
-				var target = side.foe.active[posData.targetPosition];
-				var move = this.getMove(posData.move);
+				let target = side.foe.active[posData.targetPosition];
+				let move = this.getMove(posData.move);
 				if (target.fainted) {
 					this.add('-hint', '' + move.name + ' did not hit because the target is fainted.');
 					this.effectData.positions[i] = null;
@@ -359,7 +361,7 @@ exports.BattleStatuses = {
 			if (finished) {
 				side.removeSideCondition('futuremove');
 			}
-		}
+		},
 	},
 	stall: {
 		// Protect, Detect, Endure counter
@@ -371,7 +373,7 @@ exports.BattleStatuses = {
 		onStallMove: function () {
 			// this.effectData.counter should never be undefined here.
 			// However, just in case, use 1 if it is undefined.
-			var counter = this.effectData.counter || 1;
+			let counter = this.effectData.counter || 1;
 			this.debug("Success chance: " + Math.round(100 / counter) + "%");
 			return (this.random(counter) === 0);
 		},
@@ -380,7 +382,7 @@ exports.BattleStatuses = {
 				this.effectData.counter *= 3;
 			}
 			this.effectData.duration = 2;
-		}
+		},
 	},
 	gem: {
 		duration: 1,
@@ -388,20 +390,20 @@ exports.BattleStatuses = {
 		onBasePower: function (basePower, user, target, move) {
 			this.debug('Gem Boost');
 			return this.chainModify([0x14CD, 0x1000]);
-		}
+		},
 	},
 	aura: {
 		duration: 1,
 		onBasePowerPriority: 8,
 		onBasePower: function (basePower, user, target, move) {
-			var modifier = 0x1547;
+			let modifier = 0x1547;
 			this.debug('Aura Boost');
 			if (user.volatiles['aurabreak']) {
 				modifier = 0x0C00;
 				this.debug('Aura Boost reverted by Aura Break');
 			}
 			return this.chainModify([modifier, 0x1000]);
-		}
+		},
 	},
 
 	// weather is implemented here since it's so important to the game
@@ -440,7 +442,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	primordialsea: {
 		effectType: 'Weather',
@@ -468,7 +470,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	sunnyday: {
 		effectType: 'Weather',
@@ -507,7 +509,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	desolateland: {
 		effectType: 'Weather',
@@ -538,7 +540,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	sandstorm: {
 		effectType: 'Weather',
@@ -575,7 +577,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	hail: {
 		effectType: 'Weather',
@@ -604,7 +606,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 	deltastream: {
 		effectType: 'Weather',
@@ -625,7 +627,7 @@ exports.BattleStatuses = {
 		},
 		onEnd: function () {
 			this.add('-weather', 'none');
-		}
+		},
 	},
 
 	arceus: {
@@ -637,7 +639,7 @@ exports.BattleStatuses = {
 		// Hackmons.
 		onSwitchInPriority: 101,
 		onSwitchIn: function (pokemon) {
-			var type = 'Normal';
+			let type = 'Normal';
 			if (pokemon.ability === 'multitype') {
 				type = pokemon.getItem().onPlate;
 				if (!type || type === true) {
@@ -645,6 +647,6 @@ exports.BattleStatuses = {
 				}
 			}
 			pokemon.setType(type, true);
-		}
-	}
+		},
+	},
 };
