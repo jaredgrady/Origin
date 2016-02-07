@@ -1536,27 +1536,6 @@
 
 /* Icons ~end */
 
-/* Custom chat */
-
-.chatmessage-masterfloat {
-  font-family: sans-serif;
-  font-style: italic;
-  text-shadow: 0px 1px 2px #FFF;
-}
-
-.chatmessage-masterfloat em {
-  font-style: italic;
-  text-shadow: 0px 1px 2px #FFF;
-}
-
-.chatmessage-masterfloat small {
-  font-style: normal;
-}
-
-.chatmessage-masterfloat small {
-  color: #1E7060 !important;
-}
-
 /****************************
 * Donation Benefit CSS ~end *
 ****************************/
