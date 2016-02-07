@@ -119,7 +119,7 @@ exports.Formats = [
 		'Leafeon', 'Leavanny', 'Lickilicky', 'Linoone', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
 		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
 		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Sawsbuck', 'Solrock',
-		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web'
+		'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web',
 		],
 	},
 	{
@@ -607,14 +607,14 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 	},
 	{
-        name: "LC Random Battle",
-        section: "Other Metagames",
-       
-        mod: 'randomlc',
-        team: 'randomLC',
-        maxForcedLevel: 5,
-        ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-    },
+		name: "LC Random Battle",
+		section: "Other Metagames",
+
+		mod: 'randomlc',
+		team: 'randomLC',
+		maxForcedLevel: 5,
+		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 	{
 		name: "Balanced Hackmons",
 		desc: [
@@ -670,7 +670,7 @@ exports.Formats = [
 		desc: [
 			"All Pok&eacute;mon on a team must share a type.",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3544507/\">Monotype</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3550310/\">Monotype Resources</a>"
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3550310/\">Monotype Resources</a>",
 		],
 		section: "Other Metagames",
 
@@ -678,9 +678,9 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard Doubles', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
 		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh',
 			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
-			 'Damp Rock', 'Gengarite', 'Mawilite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew'
-		]
-	}, 
+			 'Damp Rock', 'Gengarite', 'Mawilite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
+		],
+	},
 	{
 		name: "Monotype (Turbo)",
 		desc: [
@@ -697,7 +697,6 @@ exports.Formats = [
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 		forceTimer: true,
-		
 	},
 	{
 		name: "Tier Shift",
@@ -1050,23 +1049,23 @@ exports.Formats = [
 		ruleset: ['Team Preview', 'Cancel Mod'],
 	},
 	{
-                name: "[Gen 5] Random Doubles Battle",
-                section: 'BW2 Doubles',
-                mod: 'gen5',
-                searchShow: false,
-                gameType: 'doubles',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
-        {
-                name: "[Gen 5] Random Triples Battle",
-                section: 'BW2 Doubles',
-                mod: 'gen5',
-                searchShow: false,
-                gameType: 'triples',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
+		name: "[Gen 5] Random Doubles Battle",
+		section: 'BW2 Doubles',
+		mod: 'gen5',
+		searchShow: false,
+		gameType: 'doubles',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 5] Random Triples Battle",
+		section: 'BW2 Doubles',
+		mod: 'gen5',
+		searchShow: false,
+		gameType: 'triples',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 
 	// Past Generations
 	///////////////////////////////////////////////////////////////////
@@ -1094,23 +1093,23 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-                name: "[Gen 4] Random Doubles Battle",
-                section: 'Past Generations',
-                mod: 'gen4',
-                searchShow: false,
-                gameType: 'doubles',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
-        {
-                name: "[Gen 4] Random Triples Battle",
-                section: 'Past Generations',
-                mod: 'gen4',
-                searchShow: false,
-                gameType: 'triples',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
+		name: "[Gen 4] Random Doubles Battle",
+		section: 'Past Generations',
+		mod: 'gen4',
+		searchShow: false,
+		gameType: 'doubles',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 4] Random Triples Battle",
+		section: 'Past Generations',
+		mod: 'gen4',
+		searchShow: false,
+		gameType: 'triples',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 	{
 		name: "[Gen 4] Ubers",
 		desc: [
@@ -1197,23 +1196,23 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-                name: "[Gen 3] Random Doubles Battle",
-                section: 'Past Generations',
-                mod: 'gen3',
-                searchShow: false,
-                gameType: 'doubles',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
-        {
-                name: "[Gen 3] Random Triples Battle",
-                section: 'Past Generations',
-                mod: 'gen3',
-                searchShow: false,
-                gameType: 'triples',
-                team: 'random',
-                ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-        },
+		name: "[Gen 3] Random Doubles Battle",
+		section: 'Past Generations',
+		mod: 'gen3',
+		searchShow: false,
+		gameType: 'doubles',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 3] Random Triples Battle",
+		section: 'Past Generations',
+		mod: 'gen3',
+		searchShow: false,
+		gameType: 'triples',
+		team: 'random',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 	{
 		name: "[Gen 3] Ubers",
 		desc: [

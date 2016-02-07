@@ -6,7 +6,6 @@ chat-plugins/card.js
 chat-plugins/customavatar.js
 chat-plugins/eztc.js
 chat-plugins/nightclub.js
-config/formats.js
 lvl/*.js
 migrate.js
 mods/**
