@@ -734,7 +734,8 @@ exports.commands = {
 		"Parameters separated with '|' will be searched as alternatives for each other, e.g., 'trick | switcheroo' searches for all Pok\u00e9mon that learn either Trick or Switcheroo.",
 		"The order of the parameters does not matter."],
 
-	rollpokemon: 'randompokemon',
+/*	rollpokemon: 'randompokemon',
+	randp: 'randompokemon',
 	randpoke: 'randompokemon',
 	randompokemon: function (target, room, user, connection, cmd, message) {
 		let targets = target.split(",");
