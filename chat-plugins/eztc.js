@@ -1,5 +1,8 @@
 'use strict';
-
+/********************
+ * EZTC
+ * This file handles the automatic trainer card system. Trainer cards are stored in some json. Code by jd.
+********************/
 const fs = require('fs');
 const serialize = require('node-serialize');
 let trainerCards = {};

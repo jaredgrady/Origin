@@ -1,5 +1,8 @@
 'use strict';
-
+/********************
+ * Customavatar
+ * This file handles the automatic customavatar system. Code by jd.
+********************/
 const crypto = require('crypto');
 const fs = require('fs');
 const color = require('../config/color');

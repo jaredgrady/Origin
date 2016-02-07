@@ -1,4 +1,8 @@
 'use strict';
+/********************
+ * VIP
+ * Origin's vip system
+********************/
 let fs = require('fs');
 
 function loadVips() {

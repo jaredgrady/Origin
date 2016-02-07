@@ -1,5 +1,8 @@
 'use strict';
-
+/********************
+ * Emoticons
+ * This file handles basic features of the emoticons system. Some emoticons parsing is done in command-parser.js
+********************/
 let color = require('../config/color');
 
 exports.parseEmoticons = parseEmoticons;

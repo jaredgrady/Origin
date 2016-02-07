@@ -1,7 +1,8 @@
-//Made by Niisama
-
 'use strict';
-
+/********************
+ * Friends
+ * This file handles the Origin Friendlist system. Code by Nii Sama.
+********************/
 let color = require('../config/color');
 let moment = require('moment');
 let BR = '<br>';
