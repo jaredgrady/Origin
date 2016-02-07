@@ -79,9 +79,10 @@ exports.commands = {
 
 		if (cmd in {'':1, show:1, view:1, display:1}) {
 			let message = "";
-			for (let a in Config.customavatars)
+			for (let a in Config.customavatars) {
 				message += "<strong>" + Tools.escapeHTML(a) + ":</strong> " + Tools.escapeHTML(Config.customavatars[a]) + "<br />";
 			return this.sendReplyBox(message);
+			}
 		}
 		let userid, targetUser, avatar;
 		switch (cmd) {
