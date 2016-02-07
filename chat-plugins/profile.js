@@ -220,6 +220,7 @@ Profile.prototype.checkBadges = function () {
 	if (Db('ontime').get(this.user.userid) > 99000000000000) badges.push('Nolife Master');
 	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
 	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
+	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
 
 
 	let uniqueBadges = [];
