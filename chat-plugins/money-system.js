@@ -491,7 +491,7 @@ exports.commands = {
 	economystatshelp: ["/economystats - Gives information about the state of the economy."],
 
 	togglerolling: function (target, room, user) {
-		if (!this.can('bypassall')) return false;
+		if (!this.can('bypassall') && !highRollers.indexOf(user) > -1) return false;
 		if (!target) return this.sendReply('Either toggle it on or off.');
 		if (target === 'on') {
 			if (toggleRolling === true) {
