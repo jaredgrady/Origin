@@ -8,7 +8,7 @@ let fs = require('fs');
 let color = require('../config/color');
 let path = require('path');
 let rankLadder = require('../rank-ladder');
-let highRollers = ['fender', 'madschemin'];
+let highRollers = ['fender', 'madschemin', 'tyedolla'];
 let toggleRolling = false;
 
 let shop = [
