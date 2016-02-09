@@ -835,6 +835,9 @@ let commands = exports.commands = {
 		}
 		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
 			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
+			if (room.founder === user.userid) {
+				delete room.founder;
+			}
 			room.auth[user.userid] = '@';
 			user.updateIdentity(room.id);
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
