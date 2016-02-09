@@ -219,7 +219,7 @@ exports.commands = {
 
 	givepacks: 'givepack',
 	givepack: function (target, room, user) {
-		if (!user.can('declare')) return this.sendReply('/givepack - Access denied.');
+		if (!user.can('declare')) return this.errorReply('/givepack - Access denied.');
 		if (!target) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
 		var parts = target.split(',');
 		this.splitTarget(parts[0]);
@@ -238,7 +238,7 @@ exports.commands = {
 
 	takepacks: 'takepack',
 	takepack: function (target, room, user) {
-		if (!user.can('takepack')) return this.sendReply('/takepack - Access denied.');
+		if (!user.can('takepack')) return this.errorReply('/takepack - Access denied.');
 		if (!target) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
 		var parts = target.split(',');
 		this.splitTarget(parts[0]);
