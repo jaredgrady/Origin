@@ -1769,6 +1769,14 @@
 
 /* Icons ~end */
 
+/* Room Icon */
+
+#tournaments-userlist-users {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat;
+}
+
+/* Room Icon ~end */
+
 /****************************
 * Donation Benefit CSS ~end *
 ****************************/
