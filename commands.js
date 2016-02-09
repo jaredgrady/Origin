@@ -529,6 +529,7 @@ let commands = exports.commands = {
 		"/publicroom - Makes a room public. Requires: \u2605 & ~"],
 
 	modjoin: function (target, room, user) {
+		if (room.id === 'lobby') return false;
 		if (room.battle || room.isPersonal) {
 			if (!this.can('editroom', null, room)) return;
 		} else {
