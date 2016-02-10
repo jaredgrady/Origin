@@ -989,6 +989,9 @@ let commands = exports.commands = {
 		if (!room.bannedUsers || !room.bannedIps) {
 			return this.errorReply("Room bans are not meant to be used in room " + room.id + ".");
 		}
+		if (targetUser.isStaff) {
+			monitor.log("Staff member: " + targetUser.name + " was roombanned in" + room.id + ".");
+		}
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
 		if (targetUser in room.users || user.can('lock')) {
 			targetUser.popup(
