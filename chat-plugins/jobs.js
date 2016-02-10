@@ -44,7 +44,7 @@ let commands = {
 	},
 	delete: function (target) {
 		// Do some checks
-		if (!this.can('lock')) return this.errorReply('Only staff members to delete jobs.');
+		if (!this.can('lock')) return this.errorReply('Only staff members can delete jobs.');
 		if (!Db("jobs").get(target)) return this.errorReply('Job not found');
 
 		// Delete job and send reply back to user
