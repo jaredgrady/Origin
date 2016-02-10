@@ -267,6 +267,19 @@ exports.commands = {
 			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom title from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: ' + '<font color=' + title[0] + '> <b>' + Tools.escapeHTML(title[1]) + '</b></font>');
 			this.sendReply("Usertitle set.");
 			break;
+		case 'delete':
+			if (!this.can('lock') && !this.can('vip')) return false;
+			userid = toId(parts[1]);
+			targetUser = Users.getExact(userid);
+			if (!userid) return this.sendReply("You didn't specify a user.");
+			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
+			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
+			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
+			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to delete other people their custom title.");
+			if (!Db('TitleDB').has(userid)) return this.sendReply("This user does not have a custom title.");
+			Db('TitleDB').delete(userid);
+			this.sendReply("Usertitle  deleted.");
+			break;
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 		}
