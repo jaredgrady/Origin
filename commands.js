@@ -989,8 +989,8 @@ let commands = exports.commands = {
 		if (!room.bannedUsers || !room.bannedIps) {
 			return this.errorReply("Room bans are not meant to be used in room " + room.id + ".");
 		}
-		if (targetUser.isStaff) {
-			Monitor.log("Staff member: " + targetUser.name + " was roombanned in" + room.id + ".");
+		if (targetUser.isStaff && !room.isPrivate && !room.battle && !room.isPersonal) {
+			Monitor.log("[RoomMonitor] Staff member: " + targetUser.name + " was roombanned in " + room.id + ".");
 		}
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
 		if (targetUser in room.users || user.can('lock')) {
@@ -1293,7 +1293,7 @@ let commands = exports.commands = {
 			return this.privateModCommand("(" + targetUser.name + " would be banned by " + user.name + problem + ".)");
 		}
 
-		if (targetUser.confirmed) {
+		if (targetUser.confirmed ) {
 			if (cmd === 'forceban') {
 				let from = targetUser.deconfirm();
 				Monitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
