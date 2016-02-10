@@ -1293,7 +1293,7 @@ let commands = exports.commands = {
 			return this.privateModCommand("(" + targetUser.name + " would be banned by " + user.name + problem + ".)");
 		}
 
-		if (targetUser.confirmed ) {
+		if (targetUser.confirmed) {
 			if (cmd === 'forceban') {
 				let from = targetUser.deconfirm();
 				Monitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
