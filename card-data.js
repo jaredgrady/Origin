@@ -193,13 +193,8 @@ module.exports = {
 	'electrikedelta': {title: 'electrikedelta', name: 'Electrike (Delta)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_60.png', publicid: '309D', rarity: 'Uncommon', collection: ['Lightning', 'LC-Pack', 'XY-Primal Clash', 'Gen3', 'Delta'], points: 3},
 	'electrode': {title: 'electrode', name: 'Electrode', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_22.png', publicid: '101', rarity: 'Uncommon', collection: ['Lightning', 'PU-Pack', 'XY-Roaring Skies', 'Gen1'], points: 3},
 	'electrode2': {title: 'electrode2', name: 'Electrode', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_45.png', publicid: '101a', rarity: 'Uncommon', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen1'], points: 3},
-<<<<<<< HEAD
-	'emolgaex': {title: 'emolgaex', name: 'Emolga EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_46.png', publicid: '587', rarity: 'Epic', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack'], points: 10},
-	'emolgaexfull': {title: 'emolgaexfull', name: 'Emolga EX (Full)', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_143.png', publicid: '587a', rarity: 'Legendary', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack', 'Full'], points: 15},
-=======
 	'emolgaex': {title: 'emolgaex', name: 'Emolga EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_46.png', publicid: '587EX', rarity: 'Epic', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack'], points: 10},
 	'emolgaexfull': {title: 'emolgaexfull', name: 'Emolga EX (Full)', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_143.png', publicid: '587EXFull', rarity: 'Legendary', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack', 'Full'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'enhancedhammer': {title: 'enhancedhammer', name: 'Enhanced Hammer', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_94.png', publicid: 'enham', rarity: 'Uncommon', collection: ['Trainer', 'Item', 'XY-Phantom Forces'], points: 3},
 	'energyretrieval': {title: 'energyretrieval', name: 'Energy Retrieval', card: 'http://assets18.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_126.png', publicid: 'enret', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Primal Clash'], points: 1},
 	'energyswitch': {title: 'energyswitch', name: 'Energy Switch', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_89.png', publicid: 'enswi', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Furious Fists'], points: 1},
@@ -395,13 +390,8 @@ module.exports = {
 	'kyogre': {title: 'kyogre', name: 'Kyogre', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_53.png', publicid: '382', rarity: 'Rare', collection: ['Water', 'Uber-Pack', 'XY-Primal Clash', 'Legendary', 'Gen3'], points: 6},
 	'kyogreex': {title: 'kyogreex', name: 'Kyogre EX', card: 'http://assets20.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_54.png', publicid: '382EX', rarity: 'Epic', collection: ['Water', 'Uber-Pack', 'XY-Primal Clash', 'Legendary', 'Gen3', 'EX-Pack'], points: 10},
 	'kyogreex2': {title: 'kyogreex2', name: 'Kyogre EX', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY41.png', publicid: '382EXa', rarity: 'Epic', collection: ['Water', 'Uber-Pack', 'XY-Promo', 'EX-Pack', 'Legendary', 'Gen3'], points: 10},
-<<<<<<< HEAD
-	'kyogreexaquafull': {title:  'kyogreexaquafull', name: 'Kyogre EX (Full)', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_6.png', publicid: '382aqEX', rarity: 'Legendary', collection: ['Water', 'Uber-Pack', 'Double Crisis', 'Legendary', 'Gen3', 'Full', 'EX-Pack'], points: 15},
-	'kyogreexfull': {title: 'kyogreexfull', name: 'Kyogre EX (Full)', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_148.png', publicid: '382EXa', rarity: 'Legendary', collection: ['Water', 'Uber-Pack', 'XY-Primal Clash', 'Legendary', 'Gen3', 'EX-Pack', 'Full'], points: 15},
-=======
 	'kyogreexaquafull': {title: 'kyogreexaquafull', name: 'Kyogre EX (Full)', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_6.png', publicid: '382aqEXFull', rarity: 'Legendary', collection: ['Water', 'Uber-Pack', 'Double Crisis', 'Legendary', 'Gen3', 'Full', 'EX-Pack'], points: 15},
 	'kyogreexfull': {title: 'kyogreexfull', name: 'Kyogre EX (Full)', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_148.png', publicid: '382EXFull', rarity: 'Legendary', collection: ['Water', 'Uber-Pack', 'XY-Primal Clash', 'Legendary', 'Gen3', 'EX-Pack', 'Full'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'laironmagma': {title: 'laironmagma', name: 'Lairon', card: 'http://assets23.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_13.png', publicid: '305mag', rarity: 'Uncommon', collection: ['Fighting', 'NFE', 'Double Crisis', 'Magma', 'Gen3'], points: 3},
 	'lampent': {title: 'lampent', name: 'Lampent', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_42.png', publicid: '608', rarity: 'Uncommon', collection: ['Psychic', 'NFE', 'XY-Phantom Forces', 'Gen5'], points: 3},
 	'landorus': {title: 'landorus', name: 'Landorus', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_58.png', publicid: '645', rarity: 'Rare', collection: ['Fighting', 'Uber-Pack', 'Legendary', 'XY-Furious Fists', 'Gen5'], points: 6},
@@ -439,11 +429,7 @@ module.exports = {
 	'luxray': {title: 'luxray', name: 'Luxray', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_34.png', publicid: '405', rarity: 'Rare', collection: ['Lightning', 'PU-Pack', 'XY-Flashfire', 'Gen4'], points: 6},
 	'lysandre': {title: 'lysandre', name: 'Lysandre', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_90.png', publicid: 'lys', rarity: 'Uncommon', collection: ['Supporter', 'XY-Flashfire', 'Gen6'], points: 3},
 	'lysandrestrumpcard': {title: 'lysandrestrumpcard', name: 'Lysandre\'s Trump Card', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_99.png', publicid: 'lystrmp', rarity: 'Epic', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces'], points: 10},
-<<<<<<< HEAD
-	'lysandrestrumpcardfull': {title:  'lysandrestrumpcardfull', name: 'Lysandre\'s Trump Card (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_118.png', publicid: 'lystrmpa', rarity: 'Legendary', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces', 'Full'], points: 15},
-=======
 	'lysandrestrumpcardfull': {title: 'lysandrestrumpcardfull', name: 'Lysandre\'s Trump Card (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_118.png', publicid: 'lystrmpa', rarity: 'Legendary', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces', 'Full'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'machamp': {title: 'machamp', name: 'Machamp', card: 'http://assets21.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY13.png', publicid: '68', rarity: 'Epic', collection: ['Fighting', 'UU-Pack', 'XY-Promo', 'Gen1'], points: 10},
 	'machamp2': {title: 'machamp2', name: 'Machamp', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_46.png', publicid: '68a', rarity: 'Rare', collection: ['Fighting', 'UU-Pack', 'XY-Furious Fists', 'Gen2'], points: 6},
 	'machampbaseset': {title: 'machampbaseset', name: 'Machamp (Base Set)', card: 'http://i.imgur.com/ctAL2zJ.jpg?1', publicid: '68BS', rarity: 'Mythic', collection: ['Fighting', 'UU-Pack', 'Gen1'], points: 20},
@@ -481,11 +467,7 @@ module.exports = {
 	'medichamdelta': {title: 'medichamdelta', name: 'Medicham (Delta)', card: 'http://assets20.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_81.png', publicid: '308D', rarity: 'Rare', collection: ['Fighting', 'RU-Pack', 'XY-Primal Clash', 'Gen3', 'Delta'], points: 6},
 	'meditite': {title: 'meditite', name: 'Meditite', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_79.png', publicid: '307', rarity: 'Common', collection: ['Fighting', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
 	'megaaggronex': {title: 'megaaggronex', name: 'Mega Aggron EX', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_94.png', publicid: '306MEX', rarity: 'Legendary', collection: ['Metal', 'Mega', 'UU-Pack', 'EX-Pack', 'XY-Primal Clash', 'Gen3'], points: 15},
-<<<<<<< HEAD
-	'megaaggronexfull': {title: 'megaaggronexfull', name: 'Mega Aggron EX (Full)', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_154.png', publicid: '306MEXa', rarity: 'Mythic', collection: ['Metal', 'Mega', 'UU-Pack', 'EX-Pack', 'XY-Primal Clash', 'Gen3', 'Full'], points: 20},
-=======
 	'megaaggronexfull': {title: 'megaaggronexfull', name: 'Mega Aggron EX (Full)', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_154.png', publicid: '306MEXFull', rarity: 'Mythic', collection: ['Metal', 'Mega', 'UU-Pack', 'EX-Pack', 'XY-Primal Clash', 'Gen3', 'Full'], points: 20},
->>>>>>> refs/remotes/TheFenderStory/master
 	'megablastoiseex': {title: 'megablastoiseex', name: 'Mega Blastoise EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_30.png', publicid: '9MEX', rarity: 'Legendary', collection: ['Water', 'UU-Pack', 'XY-Base', 'Gen1', 'Mega', 'EX-Pack'], points: 15},
 	'megacharizardex': {title: 'megacharizardex', name: 'Mega Charizard EX (Y)', card: 'http://assets9.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_13.png', publicid: '6MEXa', rarity: 'Legendary', collection: ['Fire', 'OU-Pack', 'XY-Flashfire', 'Gen1', 'Mega', 'EX-Pack', 'Mega'], points: 15},
 	'megacharizardexa': {title: 'megacharizardexa', name: 'Mega Charizard EX (X)', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_108.png', publicid: '6MEXa', rarity: 'Legendary', collection: ['Fire', 'OU-Pack', 'XY-Flashfire', 'Gen1', 'Mega', 'EX-Pack'], points: 15},
@@ -509,11 +491,7 @@ module.exports = {
 	'megarayquazaex': {title: 'megarayquazaex', name: 'Mega Rayquaza EX', card: 'http://assets7.pokemon.com/assets/cms2/img/cards/web/XY7/XY7_EN_98.png', publicid: '384MEX', rarity: 'Mythic', collection: ['Dragon', 'Legendary', 'Mega', 'XY-Ancient Origins', 'EX-Pack', 'Uber-Pack', 'Gen3'], points: 20},
 	'megarayquazaex2': {title: 'megarayquazaex2', name: 'Mega Rayquaza EX', card: 'http://assets20.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_61.png', publicid: '384MEXa', rarity: 'Mythic', collection: ['Dragon', 'Legendary', 'Mega', 'XY-Roaring Skies', 'EX-Pack', 'Uber-Pack', 'Gen3'], points: 20},
 	'megarayquazaex3': {title: 'megarayquazaex3', name: 'Mega Rayquaza EX', card: 'http://assets1.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_76.png', publicid: '384MEXb', rarity: 'Mythic', collection: ['Colorless', 'Legendary', 'Mega', 'XY-Roaring Skies', 'EX-Pack', 'Uber-Pack', 'Gen3'], points: 20},
-<<<<<<< HEAD
-	'megarayquazaexfull': {title: 'megarayquazaexfull', name: 'Mega Rayquaza EX (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_105.png', publicid: '384MEXc', rarity: 'Mythic', collection: ['Colorless', 'Legendary', 'Mega', 'XY-Roaring Skies', 'EX-Pack', 'Uber-Pack', 'Gen3'], points: 20},
-=======
 	'megarayquazaexfull': {title: 'megarayquazaexfull', name: 'Mega Rayquaza EX (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_105.png', publicid: '384MEXFull', rarity: 'Mythic', collection: ['Colorless', 'Legendary', 'Mega', 'XY-Roaring Skies', 'EX-Pack', 'Uber-Pack', 'Gen3'], points: 20},
->>>>>>> refs/remotes/TheFenderStory/master
 	'megaturbo': {title: 'megaturbo', name: 'Mega Turbo', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_86.png', publicid: 'mtrb', rarity: 'Common', collection: ['Item', 'Trainer', 'XY-Roaring Skies'], points: 1},
 	'megavenusaurex': {title: 'megavenusaurex', name: 'Mega Venusaur EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_2.png', publicid: '3MEX', rarity: 'Legendary', collection: ['Grass', 'OU-Pack', 'XY-Base', 'Gen1', 'Mega', 'EX-Pack'], points: 15},
 	'meowstic': {title: 'meowstic', name: 'Meowstic', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_43.png', publicid: '678', rarity: 'Uncommon', collection: ['Psychic', 'PU-Pack', 'XY-Flashfire', 'Gen6'], points: 3},
@@ -676,40 +654,24 @@ module.exports = {
 	'sealeoaqua': {title: 'sealeoaqua', name: 'Sealeo', card: 'http://assets25.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_4.png', publicid: '364aq', rarity: 'Uncommon', collection: ['Water', 'NFE', 'Double Crisis', 'Gen3', 'Aqua'], points: 3},
 	'seedot': {title: 'seedot', name: 'Seedot', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_5.png', publicid: '273', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Flashfire', 'Gen3'], points: 1},
 	'seismitoadex': {title: 'seismitoadex', name: 'Seismitoad EX', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_20.png', publicid: '537EX', rarity: 'Epic', collection: ['Water', 'RU-Pack', 'XY-Furious Fists', 'Gen5', 'EX-Pack'], points: 10},
-<<<<<<< HEAD
-	'seismitoadexfull': {title: 'seismitoadexfull', name: 'Seismitoad EX (Full)', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_106.png', publicid: '537EXa', rarity: 'Legendary', collection: ['Water', 'RU-Pack', 'XY-Furious Fists', 'Gen5', 'EX-Pack', 'Full'], points: 15},
-=======
 	'seismitoadexfull': {title: 'seismitoadexfull', name: 'Seismitoad EX (Full)', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_106.png', publicid: '537EXFull', rarity: 'Legendary', collection: ['Water', 'RU-Pack', 'XY-Furious Fists', 'Gen5', 'EX-Pack', 'Full'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'sentret': {title: 'sentret', name: 'Sentret', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_81.png', publicid: '161', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Flashfire', 'Gen2'], points: 1},
 	'seviperaqua': {title: 'seviper', name: 'Seviper', card: 'http://assets5.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_9.png', publicid: '336aq', rarity: 'Uncommon', collection: ['Psychic', 'PU-Pack', 'Double Crisis', 'Gen3', 'Aqua'], points: 3},
 	'sewaddle': {title: 'sewaddle', name: 'Sewaddle', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_5.png', publicid: '540', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Phantom Forces', 'Gen5'], points: 1},
 	'shadowcircle': {title: 'shadowcircle', name: 'Shadow Circle', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_126.png', publicid: 'Shdwcrc', rarity: 'Rare', collection: ['Trainer', 'Stadium', 'XY-Base'], points: 6},
 	'sharpedoaqua': {title: 'sharpedoaqua', name: 'Sharpedo', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/DC1/DC1_EN_21.png', publicid: '319aq', rarity: 'Uncommon', collection: ['Darkness', 'UU-Pack', 'Double Crisis', 'Gen3', 'Aqua'], points: 3},
 	'sharpedoex': {title: 'sharpedoex', name: 'Sharpedo EX', card: 'http://assets21.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_91.png', publicid: '319EX', rarity: 'Epic', collection: ['Darkness', 'UU-Pack', 'XY-Primal Clash', 'Gen3', 'EX-Pack'], points: 10},
-<<<<<<< HEAD
-	'sharpedoexfull': {title: 'sharpedoexfull', name: 'Sharpedo EX (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_152.png', publicid: '319EXa', rarity: 'Legendary', collection: ['Darkness', 'UU-Pack', 'XY-Primal Clash', 'Gen3', 'EX-Pack', 'Full'], points: 15},
-	'shauna': {title: 'shauna', name: 'Shauna', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_104.png', publicid: 'Sha', rarity: 'Uncommon', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces', 'XY-Base'], points: 3},
-	'shayminskyex': {title: 'shayminskyex', name: 'Shaymin-Sky', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_77.png', publicid: '492EX', rarity: 'Legendary', collection: ['Colorless', 'Uber-Pack', 'XY-Roaring Skies', 'Gen4', 'Legendary', 'Event', 'EX-Pack'], points: 15},
-	'shayminskyexfull': {title: 'shayminskyexfull', name: 'Shaymin-Sky EX (Full)', card: 'http://assets18.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_106.png', publicid: '492EXa', rarity: 'Mythic', collection: ['Colorless', 'Uber-Pack', 'XY-Roaring Skies', 'Gen4', 'Legendary', 'Event', 'Full', 'EX-Pack'], points: 20},
-=======
 	'sharpedoexfull': {title: 'sharpedoexfull', name: 'Sharpedo EX (Full)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_152.png', publicid: '319EXFull', rarity: 'Legendary', collection: ['Darkness', 'UU-Pack', 'XY-Primal Clash', 'Gen3', 'EX-Pack', 'Full'], points: 15},
 	'shauna': {title: 'shauna', name: 'Shauna', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_104.png', publicid: 'Sha', rarity: 'Uncommon', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces', 'XY-Base'], points: 3},
 	'shayminskyex': {title: 'shayminskyex', name: 'Shaymin-Sky', card: 'http://assets2.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_77.png', publicid: '492EX', rarity: 'Legendary', collection: ['Colorless', 'Uber-Pack', 'XY-Roaring Skies', 'Gen4', 'Legendary', 'Event', 'EX-Pack'], points: 15},
 	'shayminskyexfull': {title: 'shayminskyexfull', name: 'Shaymin-Sky EX (Full)', card: 'http://assets18.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_106.png', publicid: '492EXFull', rarity: 'Mythic', collection: ['Colorless', 'Uber-Pack', 'XY-Roaring Skies', 'Gen4', 'Legendary', 'Event', 'Full', 'EX-Pack'], points: 20},
->>>>>>> refs/remotes/TheFenderStory/master
 	'shedinja': {title: 'shedinja', name: 'Shedinja', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_11.png', publicid: '292', rarity: 'Uncommon', collection: ['Grass', 'PU-Pack', 'XY-Roaring Skies', 'Gen3'], points: 3},
 	'shelgon': {title: 'shelgon', name: 'Shelgon', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_56.png', publicid: '372', rarity: 'Uncommon', collection: ['Dragon', 'NFE', 'XY-Roaring Skies', 'Gen3'], points: 3},
 	'shellder': {title: 'shellder', name: 'Shellder', card: 'http://assets7.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_31.png', publicid: '90', rarity: 'Common', collection: ['Water', 'LC-Pack', 'XY-Base', 'Gen1'], points: 1},
 	'shelmet': {title: 'shelmet', name: 'Shelmet', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_8.png', publicid: '616', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Furious Fists', 'Gen5'], points: 3},
 	'shieldenergy': {title: 'shieldenergy', name: 'Shield Energy', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_143.png', publicid: 'Shlde', rarity: 'Rare', collection: ['Energy', 'Special Energy', 'XY-Primal Clash', 'Metal'], points: 6},
-<<<<<<< HEAD
-	'shiftry': {title: 'shiftry', name: 'Shiftry', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_7.png', publicid: '276', rarity: 'Rare', collection: ['Grass', 'RU-Pack', 'XY-Flashfire', 'Gen3'], points: 6},
-	'shiftry2': {title: 'shiftry2', name: 'Shiftry', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY23.png', publicid: '275', rarity: 'Uncommon', collection: ['Grass', 'RU-Pack', 'XY-Promo', 'Gen3'], points: 3},
-=======
 	'shiftry': {title: 'shiftry', name: 'Shiftry', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_7.png', publicid: '275', rarity: 'Rare', collection: ['Grass', 'RU-Pack', 'XY-Flashfire', 'Gen3'], points: 6},
 	'shiftry2': {title: 'shiftry2', name: 'Shiftry', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY23.png', publicid: '275a', rarity: 'Uncommon', collection: ['Grass', 'RU-Pack', 'XY-Promo', 'Gen3'], points: 3},
->>>>>>> refs/remotes/TheFenderStory/master
 	'shinx': {title: 'shinx', name: 'Shinx', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_32.png', publicid: '403', rarity: 'Common', collection: ['Lightning', 'LC-Pack', 'XY-Flashfire', 'Gen4'], points: 1},
 	'shrineofmemories': {title: 'shrineofmemories', name: 'Shrine of Memories', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_139.png', publicid: 'Shrmem', rarity: 'Rare', collection: ['Trainer', 'Stadium', 'XY-Primal Clash'], points: 6},
 	'shroomish': {title: 'shroomish', name: 'Shroomish', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_15.png', publicid: '285', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
@@ -723,20 +685,12 @@ module.exports = {
 	'skarmory': {title: 'skarmory', name: 'Skarmory', card: 'http://assets3.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_69.png', publicid: '227', rarity: 'Uncommon', collection: ['Colorless', 'OU-Pack', 'XY-Roaring Skies', 'Gen2'], points: 3},
 	'skarmory2': {title: 'skarmory2', name: 'Skarmory', card: 'http://assets23.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_59.png', publicid: '227a', rarity: 'Uncommon', collection: ['Metal', 'OU-Pack', 'XY-Phantom Forces', 'Gen2'], points: 3},
 	'skarmoryex': {title: 'skarmoryex', name: 'Skarmory EX', card: 'http://assets11.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_80.png', publicid: '227EX', rarity: 'Epic', collection: ['Metal', 'OU-Pack', 'XY-Base', 'Gen2'], points: 10},
-<<<<<<< HEAD
-	'skarmoryexfull': {title: 'skarmoryexfull', name: 'Skarmory EX (Full)', card: 'http://assets11.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_145.png', publicid: '227EXa', rarity: 'Legendary', collection: ['Metal', 'OU-Pack', 'XY-Base', 'Gen2', 'Full'], points: 15},
-	'skiddo': {title: 'skiddo', name: 'Skiddo', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY11.png', publicid: '672', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Promo', 'Gen6'], points: 1},
-	'skiddo2': {title: 'skiddo2', name: 'Skiddo', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_18.png', publicid: '672a', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Base', 'Gen6'], points: 1},
-	'skitty': {title: 'skitty', name: 'Skitty', card: 'http://assets6.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_104.png', publicid: '300', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Primal Clash', 'XY-Base', 'Gen3'], points: 1},
-	'skitty3': {title: 'skitty3', name: 'Skitty', card: 'http://assets11.pokemon.com/assets/cms2/img/cards/web/XY0/XY0_EN_28.png', publicid: '300b', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Kalos Starter Set', 'Gen3'], points: 1},
-=======
 	'skarmoryexfull': {title: 'skarmoryexfull', name: 'Skarmory EX (Full)', card: 'http://assets11.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_145.png', publicid: '227EXFull', rarity: 'Legendary', collection: ['Metal', 'OU-Pack', 'XY-Base', 'Gen2', 'Full'], points: 15},
 	'skiddo': {title: 'skiddo', name: 'Skiddo', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY11.png', publicid: '672', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Promo', 'Gen6'], points: 1},
 	'skiddo2': {title: 'skiddo2', name: 'Skiddo', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_18.png', publicid: '672a', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Base', 'Gen6'], points: 1},
 	'skitty': {title: 'skitty', name: 'Skitty', card: 'http://assets6.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_104.png', publicid: '300', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Primal Clash', 'XY-Base', 'Gen3'], points: 1},
 	'skitty1': {title: 'skitty1', name: 'Skitty', card: 'http://assets23.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_113.png', publicid: '300a', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
 	'skitty2': {title: 'skitty2', name: 'Skitty', card: 'http://assets11.pokemon.com/assets/cms2/img/cards/web/XY0/XY0_EN_28.png', publicid: '300b', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Kalos Starter Set', 'Gen3'], points: 1},
->>>>>>> refs/remotes/TheFenderStory/master
 	'skorupi': {title: 'skorupi', name: 'Skorupi', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_38.png', publicid: '451', rarity: 'Common', collection: ['Psychic', 'LC-Pack', 'XY-Furious Fists', 'Gen4'], points: 1},
 	'skrelp': {title: 'skrelp', name: 'Skrelp', card: 'http://assets13.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_44.png', publicid: '690', rarity: 'Common', collection: ['Psychic', 'LC-Pack', 'XY-Flashfire', 'Gen6'], points: 1},
 	'skuntank': {title: 'skuntank', name: 'Skuntank', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_55.png', publicid: '435', rarity: 'Uncommon', collection: ['Darkness', 'RU-Pack', 'XY-Flashfire', 'Gen4'], points: 3},
@@ -759,11 +713,7 @@ module.exports = {
 	'solrock': {title: 'solrock', name: 'Solrock', card: 'http://assets13.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_64.png', publicid: '338', rarity: 'Uncommon', collection: ['Fighting', 'PU-Pack', 'XY-Primal Clash', 'Gen3'], points: 3},
 	'sparklingrobe': {title: 'sparklingrobe', name: 'Sparkling Robe', card: 'http://assets25.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_99.png', publicid: 'Sparkrobe', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Furious Fist'], points: 1},
 	'spearow': {title: 'spearow', name: 'Spearow', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_78.png', publicid: '21', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Phantom Forces', 'Gen1'], points: 1},
-<<<<<<< HEAD
-	'spearow2': {title: 'spearow', name: 'Spearow', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_65.png', publicid: '21', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Roaring Skies', 'Gen1'], points: 1},
-=======
 	'spearow2': {title: 'spearow2', name: 'Spearow', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_65.png', publicid: '21a', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Roaring Skies', 'Gen1'], points: 1},
->>>>>>> refs/remotes/TheFenderStory/master
 	'spewpa': {title: 'spewpa', name: 'Spewpa', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_16.png', publicid: '665', rarity: 'Uncommon', collection: ['Grass', 'NFE', 'XY-Base', 'Gen6'], points: 3},
 	'spheal': {title: 'spheal', name: 'Spheal', card: 'http://assets20.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_45.png', publicid: '363', rarity: 'Common', collection: ['Water', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
 	'spheal2': {title: 'spheal2', name: 'Spheal', card: 'http://assets21.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_46.png', publicid: '363a', rarity: 'Common', collection: ['Water', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
@@ -787,11 +737,7 @@ module.exports = {
 	'stunky2': {title: 'stunky2', name: 'Stunky', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_54.png', publicid: '434a', rarity: 'Common', collection: ['Darkness', 'LC-Pack', 'XY-Flashfire', 'Gen4'], points: 1},
 	'superpotion': {title: 'superpotion', name: 'Super Potion', card: 'http://assets12.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_128.png', publicid: 'Suprpot', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Base'], points: 1},
 	'superscoopup': {title: 'superscoopup', name: 'Super Scoop Up', card: 'http://assets6.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_100.png', publicid: 'Supscpp', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Base', 'XY-Primal Clash', 'XY-Flashfire', 'Double Crisis', 'XY-Kalos Starter Set', 'XY-Furious Fists', 'XY-Ancient Origins', 'XY-Roaring Skies', 'XY-Phantom Forces', 'XY-Promo'], points: 1},
-<<<<<<< HEAD
-	'surskit': {title: 'surskit', name: 'Surskit',  card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_13.png', publicid: '283', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
-=======
 	'surskit': {title: 'surskit', name: 'Surskit', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_13.png', publicid: '283', rarity: 'Common', collection: ['Grass', 'LC-Pack', 'XY-Primal Clash', 'Gen3'], points: 1},
->>>>>>> refs/remotes/TheFenderStory/master
 	'swablu': {title: 'swablu', name: 'Swablu', card: 'http://assets23.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_73.png', publicid: '333', rarity: 'Common', collection: ['Colorless', 'LC-Pack', 'XY-Roaring Skies', 'Gen3'], points: 1},
 	'swadloon': {title: 'swadloon', name: 'Swadloon', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_6.png', publicid: '541', rarity: 'Uncommon', collection: ['Grass', 'NFE', 'XY-Phantom Forces', 'Gen5'], points: 3},
 	'swalot': {title: 'swalot', name: 'Swalot', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_37.png', publicid: '317', rarity: 'Rare', collection: ['Psychic', 'PU-Pack', 'XY-Phantom Forces', 'Gen3'], points: 6},
@@ -832,11 +778,7 @@ module.exports = {
 	'tentacruel': {title: 'tentacruel', name: 'Tentacruel', card: 'http://assets20.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_72.png', publicid: '73', rarity: 'Uncommon', collection: ['Psychic', 'UU-Pack', 'XY-Primal Clash', 'Gen1'], points: 3},
 	'thundurus': {title: 'thundurus', name: 'Thundurus', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_33.png', publicid: '642', rarity: 'Rare', collection: ['Lightning', 'Legendary', 'OU-Pack', 'XY-Furious Fists', 'Gen5'], points: 6},
 	'thundurusex': {title: 'thundurusex', name: 'Thundurus EX', card: 'http://assets21.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_26.png', publicid: '642EX', rarity: 'Legendary', collection: ['Legendary', 'XY-Roaring Skies', 'OU-Pack', 'EX-Pack', 'Lightning', 'Gen5'], points: 15},
-<<<<<<< HEAD
-	'thundurusexfull': {title: 'thundurusexfull', name: 'Thundurus EX (Full)', card: 'http://assets5.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_98.png', publicid: '642EXa', rarity: 'Mythic', collection: ['Legendary', 'XY-Roaring Skies', 'OU-Pack', 'EX-Pack', 'Lightning', 'Gen5', 'Full'], points: 20},
-=======
 	'thundurusexfull': {title: 'thundurusexfull', name: 'Thundurus EX (Full)', card: 'http://assets5.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_98.png', publicid: '642EXFull', rarity: 'Mythic', collection: ['Legendary', 'XY-Roaring Skies', 'OU-Pack', 'EX-Pack', 'Lightning', 'Gen5', 'Full'], points: 20},
->>>>>>> refs/remotes/TheFenderStory/master
 	'tierno': {title: 'tierno', name: 'Tierno', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_107.png', publicid: 'tie', rarity: 'Rare', collection: ['Trainer', 'Supporter', 'XY-Phantom Forces', 'XY-Kalos Starter Set'], points: 6},
 	'timburr': {title: 'timburr', name: 'Timburr', card: 'http://assets14.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_65.png', publicid: '532', rarity: 'Common', collection: ['Fighting', 'LC-Pack', 'XY-Base', 'Gen5'], points: 1},
 	'togekiss': {title: 'togekiss', name: 'Togekiss', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_45.png', publicid: '468', rarity: 'Rare', collection: ['Fairy', 'BL-Pack', 'XY-Roaring Skies', 'Gen4'], points: 6},
@@ -852,11 +794,7 @@ module.exports = {
 	'tornadus': {title: 'tornadus', name: 'Tornadus', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_86.png', publicid: '641', rarity: 'Rare', collection: ['Colorless', 'BL2-Pack', 'Legendary', 'XY-Furious Fists', 'Gen5'], points: 6},
 	'totodile': {title: 'totodile', name: 'Totodile', card: 'http://assets15.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_15.png', publicid: '158', rarity: 'Common', collection: ['Water', 'LC-Pack', 'XY-Phantom Forces', 'Gen2'], points: 1},
 	'toxicroakex': {title: 'toxicroakex', name: 'Toxicroak EX', card: 'http://assets10.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_41.png', publicid: '454EX', rarity: 'Legendary', collection: ['Psychic', 'UU-Pack', 'EX-Pack', 'XY-Flashfire', 'Gen4'], points: 15},
-<<<<<<< HEAD
-	'toxicroakexfull': {title: 'toxicroakexfull', name: 'Toxicroak EX (Full)', card: 'http://assets6.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_102.png', publicid: '454fullex', rarity: 'Legendary', collection: ['Pyschic', 'UU-Pack', 'XY-Flashfire', 'Gen4', 'Full', 'EX-Pack'], points: 15},
-=======
 	'toxicroakexfull': {title: 'toxicroakexfull', name: 'Toxicroak EX (Full)', card: 'http://assets6.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_102.png', publicid: '454EXFull', rarity: 'Legendary', collection: ['Pyschic', 'UU-Pack', 'XY-Flashfire', 'Gen4', 'Full', 'EX-Pack'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'trainersmail': {title: 'trainersmail', name: 'Trainer\'s Mail', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_92.png', publicid: 'trml', rarity: 'Common', collection: ['Item', 'Trainer', 'XY-Roaring Skies'], points: 1},
 	'trainingcenter': {title: 'trainingcenter', name: 'Training Center', card: 'http://assets8.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_102.png', publicid: 'trainc', rarity: 'Rare', collection: ['Trainer', 'Stadium', 'XY-Furious Fists'], points: 6},
 	'tranquill': {title: 'tranquill', name: 'Tranquill', card: 'http://assets4.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_79.png', publicid: '520', rarity: 'Uncommon', collection: ['Colorless', 'NFE', 'XY-Roaring Skies', 'Gen5'], points: 3},
@@ -867,11 +805,7 @@ module.exports = {
 	'trevenant': {title: 'trevenant', name: 'Trevenant', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY14.png', publicid: '709', rarity: 'Uncommon', collection: ['Psychic', 'RU-Pack', 'XY-Promo', 'Gen6'], points: 3},
 	'trevenant2': {title: 'trevenant2', name: 'Trevenant', card: 'http://assets13.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_55.png', publicid: '709a', rarity: 'Uncommon', collection: ['Psychic', 'RU-Pack', 'XY-Base', 'Gen6'], points: 3},
 	'trevenantex': {title: 'trevenantex', name: 'Trevenant', card: 'http://assets21.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_19.png', publicid: '709EX', rarity: 'Epic', collection: ['Grass', 'EX-Pack', 'XY-Primal Clash', 'Gen6', 'RU-Pack'], points: 10},
-<<<<<<< HEAD
-	'trevenantexfull': {title: 'trevenantexfull', name: 'Trevanant EX (Full)', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_145.png', publicid: '709EXa', rarity: 'Legendary', collection: ['Grass', 'EX-Pack', 'Full', 'XY-Primal Clash', 'Gen6', 'RU-Pack'], points: 15},
-=======
 	'trevenantexfull': {title: 'trevenantexfull', name: 'Trevanant EX (Full)', card: 'http://assets19.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_145.png', publicid: '709EXFull', rarity: 'Legendary', collection: ['Grass', 'EX-Pack', 'Full', 'XY-Primal Clash', 'Gen6', 'RU-Pack'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'trevor': {title: 'trevor', name: 'Trevor', card: 'http://assets23.pokemon.com/assets/cms2/img/cards/web/XYP/XYP_EN_XY33.png', publicid: 'trev', rarity: 'Rare', collection: ['Trainer', 'Supporter', 'XY-Promo'], points: 6},
 	'trickcoin': {title: 'trickcoin', name: 'Trick Coin', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_108.png', publicid: 'trkcn', rarity: 'Uncommon', collection: ['Trainer', 'Item', 'XY-Phantom Forces'], points: 3},
 	'trickshovel': {title: 'trickshovel', name: 'Trick Shovel', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_98.png', publicid: 'trisho', rarity: 'Uncommon', collection: ['Item', 'Trainer', 'XY-Flashfire'], points: 3},
