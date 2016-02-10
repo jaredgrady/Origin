@@ -764,7 +764,7 @@ exports.Formats = [
 		'Fletchling', 'Ponyta', 'Amaura', 'Porygon', 'Gothita', 'Abra', 'Magnemite', 'Timburr', 'Larvesta', 'Gastly', 'Snivy', 'Vulpix', 'Croagunk', 'Aipom', 'Honedge', 'Foongus', 'Inkay', 'Pancham',
 		'Ferroseed', 'Rufflet', 'Karrablast', 'Squirtle', 'Spritzee', 'Archen', 'Pumpkaboo-Super', 'Volt absorb', 'Speed Boost', 'Regenerator', 'Sturdy', 'Levitate', 'Water Absorb',
 		'Thunder Wave', 'Belly Drum', 'Knock Off', 'Stealth Rock', 'Rapid Spin', 'Defog', 'Taunt', 'Baton Pass', 'Sticky Web', 'U-turn', 'Shell Smash', 'Scald', 'Sucker Punch', 'Toxic Spikes',
-		'Spike Cannon', 'Volt Switch', 'Will-o-Wisp', 'Spikes', 'Stun Spore','Substitute', 'Recover', 'Wish', 'Acrobatics', 'Protect', 'Swords Dance',
+		'Spike Cannon', 'Volt Switch', 'Will-o-Wisp', 'Spikes', 'Stun Spore', 'Substitute', 'Recover', 'Wish', 'Acrobatics', 'Protect', 'Swords Dance',
 		],
 	},
 	{
