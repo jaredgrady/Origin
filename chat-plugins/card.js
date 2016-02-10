@@ -11,10 +11,16 @@ Make a discretionary call on what rarity they should be (Mythics are exclusively
 If a card name repeats, attach a number to the end of it to make sure that it actually can be pulled with packs.
 
 publicids are dex numbers and any unique identifiers (if they're not a Pokemon, do a shorthand version of the card name)
-EX - EX
+Dex Number, (for multiple pokemon: DEX[lowercase letter, a, b, c, d])
+Magma - Mag
+Aqua - Aq
+Delta - D
 Primal - Pr
 Mega - M
-Ancient Trait (Delta) - D
+EX - EX
+Fullart - Full
+Base Set - BS
+Ancient - ANC
 If multiple unique identifiers are there, stack them.
 
 Deltas are bumped up 1 level of rarity from their normal form.
@@ -219,7 +225,7 @@ exports.commands = {
 
 	givepacks: 'givepack',
 	givepack: function (target, room, user) {
-		if (!user.can('declare')) return this.sendReply('/givepack - Access denied.');
+		if (!user.can('declare')) return this.errorReply('/givepack - Access denied.');
 		if (!target) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
 		var parts = target.split(',');
 		this.splitTarget(parts[0]);
@@ -238,7 +244,7 @@ exports.commands = {
 
 	takepacks: 'takepack',
 	takepack: function (target, room, user) {
-		if (!user.can('takepack')) return this.sendReply('/takepack - Access denied.');
+		if (!user.can('takepack')) return this.errorReply('/takepack - Access denied.');
 		if (!target) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
 		var parts = target.split(',');
 		this.splitTarget(parts[0]);

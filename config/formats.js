@@ -750,6 +750,24 @@ exports.Formats = [
 		},
 	},
 	{
+		name: "LC Ban Happy",
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3505710/\">LC Metagame Discussion</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3490462/\">LC Banlist</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3547566/\">LC Viability Ranking</a>",
+		],
+		section: "Other Metagames",
+
+		maxLevel: 5,
+		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
+		banlist: ['LC Uber', 'Gligar', 'Misdreavus', 'Scyther', 'Sneasel', 'Tangela', 'Dragon Rage', 'Sonic Boom', 'Swagger', 'Skrelp', 'Mienfoo', 'Drifloon', 'Pawniard', 'Diglett',
+		'Fletchling', 'Ponyta', 'Amaura', 'Porygon', 'Gothita', 'Abra', 'Magnemite', 'Timburr', 'Larvesta', 'Gastly', 'Snivy', 'Vulpix', 'Croagunk', 'Aipom', 'Honedge', 'Foongus', 'Inkay', 'Pancham',
+		'Ferroseed', 'Rufflet', 'Karrablast', 'Squirtle', 'Spritzee', 'Archen', 'Pumpkaboo-Super', 'Volt absorb', 'Speed Boost', 'Regenerator', 'Sturdy', 'Levitate', 'Water Absorb',
+		'Thunder Wave', 'Belly Drum', 'Knock Off', 'Stealth Rock', 'Rapid Spin', 'Defog', 'Taunt', 'Baton Pass', 'Sticky Web', 'U-turn', 'Shell Smash', 'Scald', 'Sucker Punch', 'Toxic Spikes',
+		'Spike Cannon', 'Volt Switch', 'Will-o-Wisp', 'Spikes', 'Stun Spore', 'Substitute', 'Recover', 'Wish', 'Acrobatics', 'Protect', 'Swords Dance',
+		],
+	},
+	{
 		name: "Almost Any Ability",
 		desc: [
 			"Pok&eacute;mon can use any ability, barring the few that are banned.",

@@ -17,7 +17,11 @@
     "moment": "^2.11.2",
     "node-serialize": "0.0.4",
     "node-static": "0.7.6",
+<<<<<<< HEAD
     "origindb": "^2.4.1",
+=======
+    "origindb": "^2.4.0",
+>>>>>>> refs/remotes/TheFenderStory/master
     "q": "^1.2.0",
     "ramda": "^0.19.1",
     "request": "^2.58.0",
