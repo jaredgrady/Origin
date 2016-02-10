@@ -17,10 +17,7 @@
     "moment": "^2.11.2",
     "node-serialize": "0.0.4",
     "node-static": "0.7.6",
-<<<<<<< HEAD
-=======
     "origindb": "^2.4.1",
->>>>>>> 96bdef6c16b5de9284261336357f1e009724d19e
     "origindb": "^2.4.0",
     "q": "^1.2.0",
     "ramda": "^0.19.1",
