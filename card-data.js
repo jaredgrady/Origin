@@ -193,13 +193,10 @@ module.exports = {
 	'electrikedelta': {title: 'electrikedelta', name: 'Electrike (Delta)', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_60.png', publicid: '309D', rarity: 'Uncommon', collection: ['Lightning', 'LC-Pack', 'XY-Primal Clash', 'Gen3', 'Delta'], points: 3},
 	'electrode': {title: 'electrode', name: 'Electrode', card: 'http://assets17.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_22.png', publicid: '101', rarity: 'Uncommon', collection: ['Lightning', 'PU-Pack', 'XY-Roaring Skies', 'Gen1'], points: 3},
 	'electrode2': {title: 'electrode2', name: 'Electrode', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_45.png', publicid: '101a', rarity: 'Uncommon', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen1'], points: 3},
-<<<<<<< HEAD
 	'emolgaex': {title: 'emolgaex', name: 'Emolga EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_46.png', publicid: '587', rarity: 'Epic', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack'], points: 10},
 	'emolgaexfull': {title: 'emolgaexfull', name: 'Emolga EX (Full)', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_143.png', publicid: '587a', rarity: 'Legendary', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack', 'Full'], points: 15},
-=======
 	'emolgaex': {title: 'emolgaex', name: 'Emolga EX', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_46.png', publicid: '587EX', rarity: 'Epic', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack'], points: 10},
 	'emolgaexfull': {title: 'emolgaexfull', name: 'Emolga EX (Full)', card: 'http://assets16.pokemon.com/assets/cms2/img/cards/web/XY1/XY1_EN_143.png', publicid: '587EXFull', rarity: 'Legendary', collection: ['Lightning', 'PU-Pack', 'XY-Base', 'Gen5', 'EX-Pack', 'Full'], points: 15},
->>>>>>> refs/remotes/TheFenderStory/master
 	'enhancedhammer': {title: 'enhancedhammer', name: 'Enhanced Hammer', card: 'http://assets22.pokemon.com/assets/cms2/img/cards/web/XY4/XY4_EN_94.png', publicid: 'enham', rarity: 'Uncommon', collection: ['Trainer', 'Item', 'XY-Phantom Forces'], points: 3},
 	'energyretrieval': {title: 'energyretrieval', name: 'Energy Retrieval', card: 'http://assets18.pokemon.com/assets/cms2/img/cards/web/XY5/XY5_EN_126.png', publicid: 'enret', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Primal Clash'], points: 1},
 	'energyswitch': {title: 'energyswitch', name: 'Energy Switch', card: 'http://assets24.pokemon.com/assets/cms2/img/cards/web/XY3/XY3_EN_89.png', publicid: 'enswi', rarity: 'Common', collection: ['Trainer', 'Item', 'XY-Furious Fists'], points: 1},
