@@ -28,7 +28,7 @@ exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
 		if (!user.isSysop && targetUser.isSysop) {
-			return this.errorReply("You are not allowed to have this information.")
+			return this.errorReply("You are not allowed to have this information.");
 		}
 		let showAll = (cmd === 'ip' || cmd === 'whoare' || cmd === 'alt' || cmd === 'alts');
 		if (showAll && !user.confirmed && targetUser !== user) {
