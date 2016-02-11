@@ -324,7 +324,7 @@ exports.commands = {
 			this.sendReplyBox(output);
 			break;
 		default:
-			return this.sendReply("Invalid command. Valid commands are `/badges set, user, badgeName`.");
+			return this.sendReply("Invalid command. Valid commands are `/badges list` and `/badges set, user, badgeName`.");
 		}
 	},
 	profilehelp: ["/profile - Shows information regarding user's name, group, money, and when they were last seen."],
