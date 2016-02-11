@@ -103,6 +103,15 @@ exports.Formats = [
 		],
 		section: "ORAS Singles",
 
+		searchShow: false,
+		ruleset: ['RU'],
+		banlist: ['RU', 'BL3'],
+	},
+	{
+		name: "NU (current)",
+		section: "ORAS Singles",
+
+		challengeShow: false,
 		ruleset: ['RU'],
 		banlist: ['RU', 'BL3'],
 	},
