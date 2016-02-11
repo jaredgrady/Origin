@@ -6,8 +6,8 @@
 const fs = require('fs');
 try {
 	const forever = require('forever');
-} catch(e) {
-	console.error(e);	
+} catch (e) {
+	console.error(e);
 }
 let selectors;
 
