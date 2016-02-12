@@ -27,6 +27,9 @@ exports.commands = {
 		if (!targetUser) {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
+		if (!user.isSysop && targetUser.isSysop) {
+			return this.errorReply("You are not allowed to have this information.");
+		}
 		let showAll = (cmd === 'ip' || cmd === 'whoare' || cmd === 'alt' || cmd === 'alts');
 		if (showAll && !user.confirmed && targetUser !== user) {
 			return this.errorReply("/alts - Access denied.");
@@ -134,9 +137,8 @@ exports.commands = {
 		if (!target) return this.parse('/help host');
 		if (!this.can('rangeban')) return;
 		if (!/[0-9.]+/.test(target)) return this.errorReply('You must pass a valid IPv4 IP to /host.');
-		let self = this;
-		Dnsbl.reverse(target, function (err, hosts) {
-			self.sendReply('IP ' + target + ': ' + (hosts ? hosts[0] : 'NULL'));
+		Dnsbl.reverse(target, (err, hosts) => {
+			this.sendReply('IP ' + target + ': ' + (hosts ? hosts[0] : 'NULL'));
 		});
 	},
 	hosthelp: ["/host [ip] - Gets the host for a given IP. Requires: & ~"],
@@ -154,7 +156,7 @@ exports.commands = {
 		if (/[a-z]/.test(target)) {
 			// host
 			this.sendReply("Users with host " + target + ":");
-			Users.users.forEach(function (curUser) {
+			Users.users.forEach(curUser => {
 				if (results.length > 100 && !isAll) return;
 				if (!curUser.latestHost || !curUser.latestHost.endsWith(target)) return;
 				results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
@@ -166,7 +168,7 @@ exports.commands = {
 			// IP range
 			this.sendReply("Users in IP range " + target + ":");
 			target = target.slice(0, -1);
-			Users.users.forEach(function (curUser) {
+			Users.users.forEach(curUser => {
 				if (results.length > 100 && !isAll) return;
 				if (!curUser.latestIp.startsWith(target)) return;
 				results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
@@ -176,7 +178,7 @@ exports.commands = {
 			}
 		} else {
 			this.sendReply("Users with IP " + target + ":");
-			Users.users.forEach(function (curUser) {
+			Users.users.forEach(curUser => {
 				if (curUser.latestIp === target) {
 					results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
 				}
@@ -285,7 +287,7 @@ exports.commands = {
 				if (!pokemon.evos.length) {
 					details['<font color="#686868">Does Not Evolve</font>'] = "";
 				} else {
-					details["Evolution"] = pokemon.evos.map(function (evo) {
+					details["Evolution"] = pokemon.evos.map(evo => {
 						evo = Tools.getTemplate(evo);
 						return evo.name + " (" + evo.evoLevel + ")";
 					}).join(", ");
@@ -352,7 +354,7 @@ exports.commands = {
 				details = {};
 			}
 
-			buffer += '|raw|<font size="1">' + Object.keys(details).map(function (detail) {
+			buffer += '|raw|<font size="1">' + Object.keys(details).map(detail => {
 				if (!details[detail]) return detail;
 				return '<font color="#686868">' + detail + ':</font> ' + details[detail];
 			}).join("&nbsp;|&ThickSpace;") + '</font>';
@@ -388,16 +390,15 @@ exports.commands = {
 		let capSearch = null;
 		let randomOutput = 0;
 
-		let self = this;
-		let validParameter = function (cat, param, isNotSearch) {
+		let validParameter = (cat, param, isNotSearch) => {
 			for (let h = 0; h < searches.length; h++) {
 				let group = searches[h];
 				if (group[cat] === undefined) continue;
 				if (group[cat][param] === undefined) continue;
 				if (group[cat][param] === isNotSearch) {
-					self.sendReplyBox("A search cannot both include and exclude '" + param + "'.");
+					this.sendReplyBox("A search cannot both include and exclude '" + param + "'.");
 				} else {
-					self.sendReplyBox("The search included '" + (isNotSearch ? "!" : "") + param + "' more than once.");
+					this.sendReplyBox("The search included '" + (isNotSearch ? "!" : "") + param + "' more than once.");
 				}
 				return false;
 			}
@@ -591,7 +592,7 @@ exports.commands = {
 
 		let learnSetsCompiled = false;
 		//ensure searches with the least alternatives are run first
-		searches.sort(function (a, b) {
+		searches.sort((a, b) => {
 			let aCount = 0, bCount = 0;
 			for (let cat in a) {
 				if (typeof a[cat] === "object") aCount += Object.size(a[cat]);
@@ -702,6 +703,26 @@ exports.commands = {
 		for (let mon in dex) {
 			if (dex[mon].baseSpecies && results.indexOf(dex[mon].baseSpecies) >= 0) continue;
 			results.push(dex[mon].species);
+		}
+		let moveGroups = searches
+			.filter(alts => {
+				return Object.any(alts.moves, (move, isSearch) => {
+					return isSearch;
+				});
+			})
+			.map(alts => Object.keys(alts.moves));
+		if (moveGroups.length >= 2) {
+			results = results.filter(mon => {
+				let lsetData = {fastCheck: true, set: {}};
+				for (let group = 0; group < moveGroups.length; group++) {
+					for (let i = 0; i < moveGroups[group].length; i++) {
+						let problem = TeamValidator.checkLearnsetSync('anythinggoes', moveGroups[group][i], mon, lsetData);
+						if (!problem) break;
+						if (i === moveGroups[group].length - 1) return;
+					}
+				}
+				return true;
+			});
 		}
 
 		if (randomOutput && randomOutput < results.length) {
@@ -1292,7 +1313,7 @@ exports.commands = {
 				if (/[1-9\.]+x/.test(descWords)) descWords += ' increases';
 				if (item.isBerry) descWords += ' berry';
 				descWords = descWords.replace(/super[\-\s]effective/g, 'supereffective');
-				descWords = descWords.toLowerCase().replace('-', ' ').replace(/[^a-z0-9\s\/]/g, '').replace(/(\D)\./, function (p0, p1) { return p1; }).split(' ');
+				descWords = descWords.toLowerCase().replace('-', ' ').replace(/[^a-z0-9\s\/]/g, '').replace(/(\D)\./, (p0, p1) => p1).split(' ');
 
 				for (let k = 0; k < searchedWords.length; k++) {
 					if (descWords.indexOf(searchedWords[k]) >= 0) matched++;
@@ -1310,7 +1331,7 @@ exports.commands = {
 				if (/[1-9\.]+x/.test(descWords)) descWords += ' increases';
 				if (item.isBerry) descWords += ' berry';
 				descWords = descWords.replace(/super[\-\s]effective/g, 'supereffective');
-				descWords = descWords.toLowerCase().replace('-', ' ').replace(/[^a-z0-9\s\/]/g, '').replace(/(\D)\./, function (p0, p1) { return p1; }).split(' ');
+				descWords = descWords.toLowerCase().replace('-', ' ').replace(/[^a-z0-9\s\/]/g, '').replace(/(\D)\./, (p0, p1) => p1).split(' ');
 
 				for (let k = 0; k < searchedWords.length; k++) {
 					if (descWords.indexOf(searchedWords[k]) >= 0) matched++;
@@ -1391,7 +1412,7 @@ exports.commands = {
 			if (lsetData.sources || sourcesBefore < gen) buffer += " only when obtained";
 			buffer += " from:<ul class=\"message-learn-list\">";
 			if (lsetData.sources) {
-				let sources = lsetData.sources.map(function (source) {
+				let sources = lsetData.sources.map(source => {
 					if (source.slice(0, 3) === '1ET') {
 						return '2X' + source.slice(3);
 					}
@@ -1460,7 +1481,7 @@ exports.commands = {
 		let weaknesses = [];
 		let resistances = [];
 		let immunities = [];
-		Object.keys(Tools.data.TypeChart).forEach(function (type) {
+		for (let type in Tools.data.TypeChart) {
 			let notImmune = Tools.getImmunity(type, pokemon);
 			if (notImmune) {
 				let typeMod = Tools.getEffectiveness(type, pokemon);
@@ -1481,7 +1502,7 @@ exports.commands = {
 			} else {
 				immunities.push(type);
 			}
-		});
+		}
 
 		let buffer = [];
 		buffer.push(pokemon.exists ? "" + target + ' (ignoring abilities):' : '' + target + ':');
@@ -2142,7 +2163,7 @@ exports.commands = {
 		if (format.effectType === 'Format') formatList = [targetId];
 		if (!formatList) {
 			if (this.broadcasting && (cmd !== 'om' && cmd !== 'othermetas')) return this.sendReply("'" + target + "' is not a format. This command's search mode is too spammy to broadcast.");
-			formatList = Object.keys(Tools.data.Formats).filter(function (formatid) {return Tools.data.Formats[formatid].effectType === 'Format';});
+			formatList = Object.keys(Tools.data.Formats).filter(formatid => Tools.data.Formats[formatid].effectType === 'Format');
 		}
 
 		// Filter formats and group by section
@@ -2708,11 +2729,11 @@ exports.commands = {
 	htmlboxhelp: ["/htmlbox [message] - Displays a message, parsing HTML code contained. Requires: ~ # with global authority"],
 };
 
-process.nextTick(function () {
+process.nextTick(() => {
 	// This slow operation is done *after* we start listening for connections
 	// to the server. Anybody who connects while data is loading will
 	// have to wait a couple seconds before they are able to join the server, but
 	// at least they probably won't receive a connection error message.
 
-	Tools.includeData();
+	Tools.includeMods();
 });

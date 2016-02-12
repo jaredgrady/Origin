@@ -438,7 +438,7 @@ exports.commands = {
 		case "join":
 			if (!UNO[roomid] || UNO[roomid].start) return false;
 			if (!verifyAlts(userid, UNO[roomid].list) || UNO[roomid].list.indexOf(userid) > -1) return this.errorReply("You already have an alt joined.");
-			if (UNO[roomid].list.length >= 10) return this.errorReply('There cannot be more than 10 players');
+			if (UNO[roomid].list.length >= 30) return this.errorReply('There cannot be more than 30 players');
 			if (UNO[roomid].pot) {
 				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
 				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
