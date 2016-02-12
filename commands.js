@@ -1732,7 +1732,7 @@ let commands = exports.commands = {
 		if (!targetUser) return this.errorReply("User '" + name + "' not found.");
 		let userid = this.getLastIdOf(targetUser);
 		let hidetype = '';
-		if (!user.can('lock', targetUser) && !user.can('ban', targetUser, room)) {
+		if (!user.can('lock', targetUser) && !user.can('mute', targetUser, room)) {
 			this.errorReply("/hidetext - Access denied.");
 			return false;
 		}
