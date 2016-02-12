@@ -156,8 +156,10 @@ function canTalk(user, room, connection, message, targetUser) {
 			return false;
 		}
 
-		// replace Warlic with warlic
-		message = message.replace(/\bWarlic\b/ig, 'warlic');
+		// replace Warlic with warlic in all room other than staff
+		if (!room.id === 'staff' && !room.id === 'upperstaff'){
+			message = message.replace(/\bWarlic\b/ig, 'warlic');
+		}
 
 		if (room && room.id === 'lobby') {
 			let normalized = message.trim();
