@@ -893,6 +893,17 @@ User = (() => {
 			this.ban(true, userid);
 			return;
 		}
+
+		if (Db('timedLockedUsers').has(userid)) {
+			let now = new Date();
+			if (now.getTime() < Db('timedLockedUsers').get(userid)) {
+				Users.getExact(userid).lock(false, userid);
+				this.send("|popup|Your username (" + name + ") is locked. Your lock will expire " + Db('timedLockedUsers').get(userid) + (Config.appealurl ? " Or you can appeal at:\n" + Config.appealurl : ""));
+			} else {
+				Users.unlock(Users.getExact(userid));
+				Db('timedLockedUsers').delete(userid);
+			}
+		}
 		if (registered && userid in lockedUsers) {
 			let bannedUnder = '';
 			if (lockedUsers[userid] !== userid) bannedUnder = ' because of rule-breaking by your alt account ' + lockedUsers[userid];
