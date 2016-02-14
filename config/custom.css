@@ -1767,8 +1767,12 @@
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-bw/icon/596.png") right no-repeat;
 }
 
-#phoenixleague-userlist-user-swlconfluxx, #swl-userlist-user-swlconfluxx, #premierdraftdivision-userlist-user-swlconfluxx {
+#lobby-userlist-user-swlconfluxx, #phoenixleague-userlist-user-swlconfluxx, #swl-userlist-user-swlconfluxx, #premierdraftdivision-userlist-user-swlconfluxx {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/720-u.png") right no-repeat;
+}
+
+#lobby-userlist-user-crystalxvz, #crystalleague-userlist-user-crystalxvz, #casino-userlist-user-crystalxvz, #1v1-userlist-user-crystalxvz {
+  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL");
 }
 
 /* Icons ~end */
