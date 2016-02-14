@@ -232,6 +232,15 @@ exports.commands = {
 		targetUser.leaveRoom(room.id);
 	},
 	kickhelp: ["/kick - Kick a user out of a room. Requires: % @ # & ~"],
+	
+	kickall: function (target, room, user) {
+		if (!this.can('declare')) return this.sendReply('/kickall - Access denied.');
+		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		for (let i in room.users) {
+			room.users[i].leaveRoom(room.id);
+		}
+		this.privateModCommand('(' + Tools.escapeHTML(user.name) + 'kicked everyone from the room.');
+	},
 
 	sd: 'declaremod',
 	staffdeclare: 'declaremod',
