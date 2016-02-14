@@ -1253,6 +1253,7 @@ let commands = exports.commands = {
 
 	timedlock: function (target, room, user, connection) {
 		if (!target) return this.parse('/help timedlock');
+		if (!this.can('lock')) return false;
 		let parts = target.split(',');
 		if (parts.length < 3) return this.parse('/help timedlock');
 		let targetUser = Users.getExact(toId(Tools.escapeHTML(parts[0].trim())));

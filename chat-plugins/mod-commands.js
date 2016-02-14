@@ -238,7 +238,7 @@ exports.commands = {
 		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
 		for (let i in room.users) {
 			if (room.users[i] !== user.userid) {
-			room.users[i].leaveRoom(room.id);
+				room.users[i].leaveRoom(room.id);
 			}
 		}
 		this.privateModCommand('(' + Tools.escapeHTML(user.name) + 'kicked everyone from the room.');
