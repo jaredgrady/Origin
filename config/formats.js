@@ -133,7 +133,7 @@ exports.Formats = [
 		ruleset: ['PU'],
 		banlist: ['Altaria', 'Arbok', 'Armaldo', 'Armaldo', 'Articuno', 'Avalugg', 'Basculin', 'Basculin-Blue-Striped', 'Beheeyem', 'Bouffalant', 'Chatot', 'Clefairy',
 		'Dodrio', 'Drifblim', 'Dusknoir', 'Electrode', 'Exeggutor', 'Flareon', 'Floatzel', 'Fraxure', 'Gabite',
-		'Golem', 'Gorebyss', 'Gourgeist-Super', 'Grumpig', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
+		'Golem', 'Gorebyss', 'Gourgeist-Super', 'Grumpig', 'Heat Rock', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
 		'Leafeon', 'Leavanny', 'Lickilicky', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
 		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
 		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web',
