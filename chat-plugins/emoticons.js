@@ -91,7 +91,7 @@ let emotes = {
 	'Kappa': 'http://i.imgur.com/ZxRU4z3.png?1',
 	'Kreygasm': 'https://static-cdn.jtvnw.net/emoticons/v1/41/1.0',
 	'llamacool': 'http://i.imgur.com/X1x3728.gif',
-	'llamanoodle' 'http://i.imgur.com/SUZkz5p.gif',
+	'llamanoodle': 'http://i.imgur.com/SUZkz5p.gif',
 	'llamarawr': 'http://i.imgur.com/KWAQbPu.gif',
 	'llamayawn': 'http://i.imgur.com/SVj8kBt.gif',
 	'meGusta': 'http://cdn.overclock.net/3/36/50x50px-ZC-369517fd_me-gusta-me-gusta-s.png',
