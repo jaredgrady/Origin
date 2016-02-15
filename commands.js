@@ -1251,6 +1251,72 @@ let commands = exports.commands = {
 	},
 	lockhelp: ["/lock OR /l [username], [reason] - Locks the user from talking in all chats. Requires: % @ & ~"],
 
+	timedlock: function (target, room, user, connection) {
+		if (!target) return this.parse('/help timedlock');
+		if (!this.can('lock')) return false;
+		let parts = target.split(',');
+		if (parts.length < 3) return this.parse('/help timedlock');
+		let targetUser = Users.getExact(toId(Tools.escapeHTML(parts[0].trim())));
+		if (!targetUser) return this.sendReply("You didn't specify a user.");
+		let days = Tools.escapeHTML(parts[1].trim());
+		let dateUnbanned = new Date();
+		dateUnbanned.setTime(dateUnbanned.getTime() + days * 86400000);
+		Db('timedLockedUsers').set(targetUser, dateUnbanned.getTime());
+
+		// Destroy personal rooms of the locked user.
+		for (let i in targetUser.roomCount) {
+			if (i === 'global') continue;
+			let targetRoom = Rooms.get(i);
+			if (targetRoom.isPersonal && targetRoom.auth[targetUser.userid] && targetRoom.auth[targetUser.userid] === '#') {
+				targetRoom.destroy();
+			}
+		}
+
+		targetUser.popup("|modal|" + user.name + " has locked you from talking in chats, battles, and PMing regular users." + (target ? "\n\nReason: " + parts[2] : "") + "\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire " + dateUnbanned + ".");
+
+		this.addModCommand("" + targetUser.name + " was locked from talking by " + user.name + "." + "(" + parts[2] + ")");
+		let alts = targetUser.getAlts();
+		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		if (alts.length) {
+			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "locked alts: " + alts.join(", ") + ")");
+		} else if (acAccount) {
+			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
+		}
+		let userid = this.getLastIdOf(targetUser);
+		this.add('|unlink|hide|' + userid);
+		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
+
+		this.globalModlog("LOCK", targetUser, " by " + user.name + "(" + parts[2] + ")");
+		targetUser.lock(false, userid);
+		return true;
+	},
+	timedlockhelp: ["/timedlock  [username], [days] - Locks the user from talking in all chats for a specified amount of days. Requires: % @ & ~"],
+
+	timedunlock: function (target, room, user) {
+		if (!target) return this.parse('/help timedunlock');
+		if (!this.can('lock')) return false;
+
+		let targetUser = Users.get(target);
+		let reason = '';
+		if (targetUser && targetUser.locked && targetUser.locked.charAt(0) === '#') {
+			reason = ' (' + targetUser.locked + ')';
+		}
+
+		let unlocked = Users.unlock(target);
+		Db('timedLockedUsers').delete(targetUser);
+
+		if (unlocked) {
+			let names = Object.keys(unlocked);
+			this.addModCommand(names.join(", ") + " " + ((names.length > 1) ? "were" : "was") +
+				" unlocked by " + user.name + "." + reason);
+			if (!reason) this.globalModlog("UNLOCK", target, " by " + user.name);
+			if (targetUser) targetUser.popup("" + user.name + " has unlocked you.");
+		} else {
+			this.errorReply("User '" + target + "' is not locked.");
+		}
+	},
+	timedunlockhelp: ["/timedunlock [username] - Unlocks the user. Requires: % @ & ~"],
+
 	unlock: function (target, room, user) {
 		if (!target) return this.parse('/help unlock');
 		if (!this.can('lock')) return false;
