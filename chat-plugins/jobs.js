@@ -2,6 +2,8 @@
 
 "use strict";
 
+let id = 0;
+
 function genJobTable(completionButton) {
 	let display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
 					"<tbody><tr><th>Employer</th><th>Description</th><th>Reward</th>" + (completionButton ? "<th>Completed</th>" : "") + "</tr>";
@@ -22,14 +24,8 @@ let commands = {
 		// Driver and up only
 		if (!this.can('lock')) return false;
 		let args = target.split(",");
-		let id;
-		if (!Object.keys(Db("jobs").object()).length) {
-			id = 1;
-		} else {
-			id = parseInt(Object.keys(Db("jobs").object()).sort((a, b) => {
-				if (parseInt(a) > parseInt(b)) return -1;
-				return 1;
-			})[0]) + 1;
+		while (Db("jobs").get(id)) {
+			id++;
 		}
 		// allow a possibility of no reward.
 		let reward = parseInt(args[args.length - 1]) || "None";
