@@ -208,6 +208,7 @@ exports.commands = {
 		let amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
+		if (amount > Db('money').get(user.userid)) return this.sendReply("The user's total money is less than " + amount + ".");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
