@@ -415,7 +415,42 @@ exports.Formats = [
 
 	// Other Metagames
 	///////////////////////////////////////////////////////////////////
+	{
+		name: "Physical/Special Split OU",
+		section: "Other Metagames",
 
+		searchShow: false,
+		banlist: ['Uber', 'Shadow Tag', 'Soul Dew'],
+		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Swagger Clause', 'Baton Pass Clause'],
+		onModifyMove: function (move, pokemon) {
+			if (!move) return;
+			if (move.category === "Status") return;
+			let categoryConversion = {
+				"Fire": "Special",
+				"Ice": "Special",
+				"Electric": "Special",
+				"Grass": "Special",
+				"Water": "Special",
+				"Psychic": "Special",
+				"Fairy": "Special",
+				"Rock": "Physical",
+				"Steel": "Physical",
+				"Ground": "Physical",
+				"Flying": "Physical",
+				"Dark": "Special",
+				"Ghost": "Physical",
+				"Normal": "Physical",
+				"Fighting": "Physical",
+				"Poison": "Physical",
+				"Bug": "Physical",
+				"Dragon": "Special",
+			};
+			move.category = categoryConversion[move.type];
+			if (pokemon.ability === "aerilate" && move.type === "Normal") move.category = "Physical";
+			if (pokemon.ability === "refrigerate" && move.type === "Normal") move.category = "Special";
+			if (pokemon.ability === "pixilate" && move.type === "Normal") move.category = "Special";
+		},
+	},
 	{
 		name: "Mix and Mega",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3540979/\">Mix and Mega</a>"],
