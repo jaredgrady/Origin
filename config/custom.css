@@ -2136,11 +2136,11 @@
 }
 
 #lobby-userlist-user-crystalxvz, #crystalleague-userlist-user-crystalxvz, #casino-userlist-user-crystalxvz, #1v1-userlist-user-crystalxvz {
-  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL");
+  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL") right no-repeat;
 }
 
 #lobby-userlist-user-niisama, #staff-userlist-user-niisama #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif");
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat;
 }
 
 /* Icons ~end */
