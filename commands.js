@@ -1972,9 +1972,9 @@ let commands = exports.commands = {
 				// rebuild the formats list
 				Rooms.global.formatListText = Rooms.global.getFormatListText();
 				// respawn validator processes
-				TeamValidator.ValidatorProcess.respawn();
+				TeamValidator.ValidatorProcess.reinit();
 				// respawn simulator processes
-				Simulator.SimulatorProcess.respawn();
+				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
 				Rooms.global.send(Rooms.global.formatListText);
 
