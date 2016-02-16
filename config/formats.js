@@ -415,7 +415,7 @@ exports.Formats = [
 
 	// Other Metagames
 	///////////////////////////////////////////////////////////////////
-		{
+	{
 		name: "Physical/Special Split OU",
 		section: "Other Metagames",
 
