@@ -4,7 +4,7 @@
  * This file contains commands which only developers can use. Most of these will be commands that help with coding and server upkeep.
 ********************/
 const fs = require('fs');
-let forever = {restart: function(){}};
+let forever = {restart: function () {}};
 try {
 	forever = require('forever');
 } catch (e) {
