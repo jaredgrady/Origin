@@ -113,7 +113,7 @@ exports.commands = {
 	nerding: 'away',
 	mimis: 'away',
 	away: function (target, room, user, connection, cmd) {
-		if (!user.isAway && user.name.length > 15) return this.sendReply("Your username is too long for any kind of use of this command.");
+		if (!user.isAway && user.name.length > 19) return this.sendReply("Your username is too long for any kind of use of this command.");
 
 		target = target ? target.replace(/[^a-zA-Z0-9]/g, '') : 'AWAY';
 		if (cmd !== 'away') target = cmd;
