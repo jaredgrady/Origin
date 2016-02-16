@@ -232,6 +232,9 @@ let commands = exports.commands = {
 						return this.errorReply('The user "' + targetUser.name + '" does not have permission to join "' + innerTarget + '".');
 					}
 				}
+				if (targetRoom.isPrivate && !(user.userid in targetRoom.auth) && !user.can('makeroom')) {
+					return this.errorReply('You do not have permission to invite people to this room.');
+				}
 
 				target = '/invite ' + targetRoom.id;
 				break;
@@ -1253,6 +1256,7 @@ let commands = exports.commands = {
 
 	timedlock: function (target, room, user, connection) {
 		if (!target) return this.parse('/help timedlock');
+		if (!this.can('lock')) return false;
 		let parts = target.split(',');
 		if (parts.length < 3) return this.parse('/help timedlock');
 		let targetUser = Users.getExact(toId(Tools.escapeHTML(parts[0].trim())));
@@ -1348,6 +1352,7 @@ let commands = exports.commands = {
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
 		if (!targetUser) return this.errorReply("User '" + this.targetUsername + "' not found.");
+		if (targetUser.isSysop) return this.errorReply("System Operators cannot be banned from the server");
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.errorReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
 		}
@@ -1959,7 +1964,8 @@ let commands = exports.commands = {
 				return this.errorReply("Something failed while trying to hotpatch tournaments: \n" + e.stack);
 			}
 		} else if (target === 'battles') {
-			Simulator.SimulatorProcess.respawn();
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
+			Simulator.SimulatorProcess.reinit();
 			return this.sendReply("Battles have been hotpatched. Any battles started after now will use the new code; however, in-progress battles will continue to use the old code.");
 		} else if (target === 'formats') {
 			try {
@@ -1971,9 +1977,9 @@ let commands = exports.commands = {
 				// rebuild the formats list
 				Rooms.global.formatListText = Rooms.global.getFormatListText();
 				// respawn validator processes
-				TeamValidator.ValidatorProcess.respawn();
+				TeamValidator.ValidatorProcess.reinit();
 				// respawn simulator processes
-				Simulator.SimulatorProcess.respawn();
+				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
 				Rooms.global.send(Rooms.global.formatListText);
 
