@@ -706,7 +706,7 @@ exports.BattleAbilities = {
 		onAfterDamage: function (damage, target, source, move) {
 			if (move && move.flags['contact']) {
 				if (this.random(10) < 3) {
-					source.trySetStatus('brn', target, move);
+					source.trySetStatus('brn', target);
 				}
 			}
 		},
@@ -1893,9 +1893,16 @@ exports.BattleAbilities = {
 			onBasePowerPriority: 8,
 			onBasePower: function (basePower) {
 				if (this.effectData.hit) {
+					this.effectData.hit++;
 					return this.chainModify(0.5);
 				} else {
-					this.effectData.hit = true;
+					this.effectData.hit = 1;
+				}
+			},
+			onSourceModifySecondaries: function (secondaries, target, source, move) {
+				if (move.id === 'secretpower' && this.effectData.hit < 2) {
+					// hack to prevent accidentally suppressing King's Rock/Razor Fang
+					return secondaries.filter(effect => effect.volatileStatus === 'flinch');
 				}
 			},
 		},
@@ -2016,7 +2023,7 @@ exports.BattleAbilities = {
 		onAfterDamage: function (damage, target, source, move) {
 			if (move && move.flags['contact']) {
 				if (this.random(10) < 3) {
-					source.trySetStatus('psn', target, move);
+					source.trySetStatus('psn', target);
 				}
 			}
 		},
@@ -2645,10 +2652,10 @@ exports.BattleAbilities = {
 	},
 	"static": {
 		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be paralyzed.",
-		onAfterDamage: function (damage, target, source, effect) {
-			if (effect && effect.flags['contact']) {
+		onAfterDamage: function (damage, target, source, move) {
+			if (move && move.flags['contact']) {
 				if (this.random(10) < 3) {
-					source.trySetStatus('par', target, effect);
+					source.trySetStatus('par', target);
 				}
 			}
 		},
@@ -2867,7 +2874,8 @@ exports.BattleAbilities = {
 			if (!source || source === target) return;
 			if (effect && effect.id === 'toxicspikes') return;
 			if (status.id === 'slp' || status.id === 'frz') return;
-			source.trySetStatus(status, target);
+			if (source.trySetStatus(status, target)) return;
+			this.add('-immune', source, '[msg]', '[from] ability: Synchronize', '[of] ' + target);
 		},
 		id: "synchronize",
 		name: "Synchronize",

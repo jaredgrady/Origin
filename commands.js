@@ -232,6 +232,9 @@ let commands = exports.commands = {
 						return this.errorReply('The user "' + targetUser.name + '" does not have permission to join "' + innerTarget + '".');
 					}
 				}
+				if (targetRoom.isPrivate && !(user.userid in targetRoom.auth) && !user.can('makeroom')) {
+					return this.errorReply('You do not have permission to invite people to this room.');
+				}
 
 				target = '/invite ' + targetRoom.id;
 				break;
@@ -1960,7 +1963,8 @@ let commands = exports.commands = {
 				return this.errorReply("Something failed while trying to hotpatch tournaments: \n" + e.stack);
 			}
 		} else if (target === 'battles') {
-			Simulator.SimulatorProcess.respawn();
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
+			Simulator.SimulatorProcess.reinit();
 			return this.sendReply("Battles have been hotpatched. Any battles started after now will use the new code; however, in-progress battles will continue to use the old code.");
 		} else if (target === 'formats') {
 			try {
@@ -1974,7 +1978,7 @@ let commands = exports.commands = {
 				// respawn validator processes
 				TeamValidator.ValidatorProcess.respawn();
 				// respawn simulator processes
-				Simulator.SimulatorProcess.respawn();
+				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
 				Rooms.global.send(Rooms.global.formatListText);
 
