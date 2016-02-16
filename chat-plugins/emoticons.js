@@ -76,6 +76,7 @@ let emotes = {
 	'feelsslo': 'http://i.imgur.com/iQuToJf.jpg?1',
 	'feelssnail': 'http://i.imgur.com/wf2ajCR.jpg',
 	'feelssnake': 'http://i.imgur.com/xoJnDUD.png',
+	'feelssteel': 'http://orig02.deviantart.net/56f7/f/2011/179/5/f/scizor_lickie_by_boyofftheting-d3kd3fk.gif',
 	'feelstea': 'http://i.imgur.com/M0f2zgJ.jpg?1',
 	'feelstired': 'http://i.imgur.com/EgYViOs.jpg',
 	'feelsdrg': 'http://i.imgur.com/UZzWcA3.png',
