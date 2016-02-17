@@ -16914,7 +16914,7 @@ exports.BattleMovedex = {
 				chance: 30,
 				status: 'brn',
 			}, {
-				chance: 30,
+				chance: 60,
 				self: {
 					boosts: {
 						spa: 1,
