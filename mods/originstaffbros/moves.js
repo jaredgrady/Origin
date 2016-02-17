@@ -16339,7 +16339,7 @@ exports.BattleMovedex = {
 		onHit: function (pokemon) {
 			this.add("c|@Safety Shark|Powering up... spammers beware!");
 		},
-		secondaries: false,
+		secondary: false,
 		target: "normal",
 		type: "Dragon",
 	},
@@ -16896,7 +16896,6 @@ exports.BattleMovedex = {
 		self: {
 			boosts: {
 				def: 1,
-				spa: 1,
 				spd: 1,
 			},
 		},
@@ -16910,10 +16909,19 @@ exports.BattleMovedex = {
 			this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
 			this.useMove('wish', source);
 		},
-		secondary: {
-			chance: 30,
-			status: 'brn',
-		},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'brn',
+			}, {
+				chance: 30,
+				self: {
+					boosts: {
+						spa: 1,
+					},
+				},
+			},
+		],
 		target: "normal",
 		type: "Water",
 	},

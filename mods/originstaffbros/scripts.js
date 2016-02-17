@@ -195,8 +195,6 @@ exports.BattleScripts = {
 				evs: {atk:252, def:4, spe:252}, nature: 'Adamant',
 			},
 
-			// Operators.
-
 			// Voices.
 			'+Castformz': {
 				species: 'Castform', ability: 'Forecast 2', item: 'Focus Sash', gender: 'M', shiny: true,
@@ -217,7 +215,7 @@ exports.BattleScripts = {
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			'+hayleysworld': {
-				species: 'Vaporeon', ability: 'Aquatic Dreams', item: 'Leftovers', gender: 'F',
+				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
 				moves: ['moonblast', 'icebeam', 'protect'],
 				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
