@@ -138,7 +138,7 @@ fender - Gible
 
 %Gnarly Commie - Munchlax
 - Ability: Communism - Increases speed, defence, special defence by +2 when it KO's an opposing Pokemon.
-- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +1 Priority
+- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +2 Priority
 - Movepool: Belly Drum, Pursuit, Drain Punch
 - Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
 
