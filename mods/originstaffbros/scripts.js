@@ -48,7 +48,7 @@ exports.BattleScripts = {
 			'~sparkychild': {
 				species: 'Floette-Eternal', ability: 'Appassionata', item: 'Life Orb', gender: "F",
 				moves: ['lightofruin', 'earthpower', 'focusblast'],
-				baseSignatureMove: 'lullaby', signatureMove: "Lullaby",
+				baseSignatureMove: 'cantabile', signatureMove: "Cantabile",
 				evs: {hp:4, spa:252, spe: 252}, nature: 'Modest',
 			},
 

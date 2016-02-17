@@ -30,7 +30,7 @@ fender - Gible
 
 ~sparkychild - Floette-Eternal
 - Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not be affected no matter what the audience's reaction; Everything will be expressed through music.  With this ability, you'll never miss a note!
-- Move: Lullaby - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
+- Move: Cantabile - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
 - Moveset: Light of Ruin, Earth Power, Focus Blast
 - Notes: Stops any sweep, and starts it's own.
 
@@ -41,10 +41,10 @@ fender - Gible
 - Remove boosts from the opponent in hopes of saving your team from getting swept.
 
 &Paul Century - Slowbro
-- Ability: Bro Power - Volt Absorb + Rocky Helmet + regenerator
-- Move: Omega Blast - Special, 130BP Psychic type move that raises defense by 2, and has a 50% chance to burn the opponent.
+- Ability: Bro Power - Volt Absorb + Rocky Helmet + regenerator, Roar has +1 priority
+- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2, and has a 100% chance to burn the opponent.
 - Movepool: Roar, Sticky Web, Slack Off
-- Notes: A pretty decent wall with a powerfull psychic type scald with a high chance of burning the opponent.
+- Notes: A pretty decent wall with a powerfull psychic type scald with a high chance of burning the opponent.  Stops almost any setup sweeper lacking in priority.
 
 &Piers Nivans - Octillery
 - Ability: Machinegunner - Technician + Skill Link, all single hit moves will now hit 5 times. Boosts defence and special defence by 2 on switch in
@@ -138,7 +138,7 @@ fender - Gible
 
 %Gnarly Commie - Munchlax
 - Ability: Communism - Increases speed, defence, special defence by +2 when it KO's an opposing Pokemon.
-- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +1 Priority
+- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +2 Priority, bypasses protect.
 - Movepool: Belly Drum, Pursuit, Drain Punch
 - Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
 
@@ -203,7 +203,7 @@ fender - Gible
 - Notes: Despite having no reliable recovery, if this pokemon gets too many boosts, few Pokmeon can stop it, from hitting hard and fast.
 
 +hayleysworld - Vaporeon (Water/Fairy)
-- Ability: Aquatic Dreams - Gets a boost of 1 stage to SpD, SpA, and Def upon entry; Regenerator upon switch
+- Ability: Aquatic Dreams - Gets a boost of 1 stage to SpD and Def upon entry; Regenerator upon switch
 - Move: Revenge of Neptune - 90BP Special Water move, 100% to raise SpD, SpA, and Def by 1 stage, puts up a wish, 30% chance to burn 
 - Movepool: Protect, Moonblast, Ice Beam
 - Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.

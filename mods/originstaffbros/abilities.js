@@ -3601,6 +3601,11 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
+		onModifyPriority: function (priority, pokemon, target, move) {
+			if (move && move.id === "roar") {
+				return 1;
+			}
+		},
 		onSwitchOut: function (pokemon) {
 			pokemon.heal(pokemon.maxhp / 3);
 		},
@@ -3851,7 +3856,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
-			return this.chainModify(4);
+			return this.chainModify(2);
 		},
 		onModifyMove: function (move) {
 			move.stab = 2;
@@ -4166,6 +4171,7 @@ exports.BattleAbilities = {
 		onStart: function (pokemon) {
 			this.add('-ability', pokemon, 'Aquatic Memes');
 			this.boost({def:1});
+			this.boost({spa:1});
 			this.boost({spd:1});
 		},
 		onSwitchOut: function (pokemon) {
