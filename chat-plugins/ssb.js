@@ -1,7 +1,8 @@
 'use strict';
 let fs = require("fs");
-try {
-	let monData = fs.readFileSync("data/ssbdata.txt").toString().split("\n\n");
+let monData;
+try { 
+	monData = fs.readFileSync("data/ssbdata.txt").toString().split("\n\n");
 } catch (e) {
 	console.error(e);
 }
