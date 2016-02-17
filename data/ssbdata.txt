@@ -1,0 +1,251 @@
+~Arkenciel - Metagross-Mega
+- Ability: striker - Full accuracy for all moves, Tough Claws
+- Move: Spirit Breaker - Physical, 130 BP Steel type move, cures status, changes opponent's ability to Run Away.
+- Movepool: Ice Punch, Zen Headbutt, Dynamic Punch, Bolt Strike, Precipice Blades, Megahorn
+- Notes: Bulky powerful attacker with useful resistances.
+
+fender - Gible
+- Ability: Eval Troll - Uses substitute on entering, and gains +1 to all stats, accuracy and evasion.
+- Move: evalbattle - boosts attack and speed by 2.
+- Movepool: Flare Blitz, Substitute, Earthquake, Stone Edge, Dragon Claw, Stealth Rock
+- A good revenge killer for many mons.  However, the HP does go down quickly so keep it for what you really need to KO.
+
+~Lt. Tesla - Raichu
+- Ability: Beard Coat - Gives +1 speed, special Defence, defence
+- Move: Side B off Ledge - 80 BP, +1 priority, physical electric attack. Targets weaker defensive stat.  Raises Attack by 1 stage.
+- Movepool: Ice Punch, Seed Bomb, Recover
+- Notes: Well it seems like a thick beard really is the best defence and offence!  Good set up sweeper as well as an effective revenge killer.
+
+~Master Float - Floatzel
+- Ability: Magic Immunity - Immune to all status and indirect damage.
+- Move: Float's Sharingans - Protect + copies all positive stat boosts and volatiles (substitute, leech seed, aqua ring, etc).
+- Movepool: Waterfall, Earthquake, Bolt Strike, ExtremeSpeed, Sacred Fire, Ice Punch.
+- Use this wisely to revenge kill all boosting sweepers. 
+
+~Neo Soul - Wobbuffet
+- Ability: Shadow Prankster - Prankster + Shadow Tag
+- Move: So Done - 1 turn perish song that goes through substitute and soundproof
+- Movepool: Torment, Taunt, Encore
+- Notes: A one time nuke, who is exceptionally good at stopping set up sweepers which run wild in this meta. 
+
+~sparkychild - Floette-Eternal
+- Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not get stage fright no matter the audience's reaction.  Everything will be expressed through music.  With this ability, you'll never miss a note!
+- Move: Lullaby - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
+- Moveset: Light of Ruin, Earth Power, Focus Blast
+- Notes: Stops any sweep, and starts it's own.
+
+&Erica07 - Meloetta
+- Ability: Serene Grace
+- Move: Admonish - remove all stat boosts, +1 priority, gains ability Insomnia
+- Movepool: Rest, Sleep Talk, Shadow Ball
+- Remove boosts from the opponent in hopes of saving your team from getting swept.
+
+&Paul Century - Slowbro
+- Ability: Bro Power - Volt Absorb + Rocky Helmet + regenerator
+- Move: Omega Blast - Special, 130BP Psychic type move that raises defense by 2, and has a 50% chance to burn the opponent.
+- Movepool: Roar, Sticky Web, Slack Off
+- Notes: A pretty decent wall with a powerfull psychic type scald with a high chance of burning the opponent.
+
+&Piers Nivans - Octillery
+- Ability: Machinegunner - Technician + Skill Link, all single hit moves will now hit 5 times. Boosts defence and special defence by 2 on switch in
+- Move: Anti-Material Rifle - Special, Attacks 6 times in a row, 30 BP, each attack of a different random type.
+- Movepool: Water Shuriken, Ominous Wind, Charge Beam, Flame Charge, Power-up Punch, Nuzzle, Frost Breath, Air Cutter, Bulldoze, DragonBreath, Heart Stamp, Echoed Voice, Metal Claw, Revenge, Mega Drain, Fury Cutter, Poison Tail, Draining Kiss, Parabolic Charge, Ice Shard, Shadow Sneak, Storm Throw
+- Try your luck with Pier Nivans; he's full of surprises that can make the opponent suffer!
+
+&SaNeski - Gyarados-Mega
+- Ability: Cursed Aura - Opponent takes 15% on entry and exit of this Pokémon
+- Move: Silent Departure - 100 BP Dark type U-turn
+- Movepool: Sucker Punch, Night Slash, Crabhammer, Pursuit, Focus Energy, Dragon Dance
+- Notes: This Pokémon will be switching in and out a LOT so careful of all the residual damage you will be recieving when facing this monster!
+
+&Vin Steel - Charizard-Mega-X
+- Ability: Dragon's Fire - Multiscale + Tough Claws
+- Move: Dragon Strike - Physical, 120BP, 1/3 recoil, +1 priority, Dragon Type, 50% of getting a Defense boost.
+- Movepool: Dragon Dance, Belly Drum, Fire Punch, Flare Blitz, Shadow Claw, Double-Edge, Roost
+- Notes: A frightening revenge killer that is capable of sweeping as well.  Be afraid if you see the Dragon dance + Roost set.
+
+@01 NTG - Dragonite
+- Ability: Simple
+- Move: Dragon Energy - Basically Dragon Dance
+- Movepool: ExtremeSpeed, Dragon Claw, Earthquake
+- Notes: Fast set up sweeper.
+
+@Phoenix 01 NTG - Dragonite
+- Ability: Simple
+- Move: Dragon Energy - Basically Dragon Dance
+- Movepool: ExtremeSpeed, Dragon Claw, Earthquake
+- Notes: Fast set up sweeper.
+
+@AuraStormLucario - Lucario-Mega
+- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn, ignores ghost immunity, STAB moves have a 2x multiplier instead (adaptability), Stats cannot be lowered (clear body), and this pokemon ignores opponents stat changes (unaware)
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
+- Notes: Have fun hitting hard!
+
+@ASL - Lucario-Mega
+- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn.  STAB moves have a 2x multiplier instead.
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
+- Notes: Have fun hitting hard!
+
+@Irraquated - Greninja
+- Ability: woops lmao - Protean + Adaptability
+- Move: Unlucky Mate - Dark type move with 100bp, Heals 50% of damage dealt.
+- Movepool: Hydropump, Boomburst, Secret Sword, Thunderbolt, Icebeam, Moonblast
+- Notes: Hits many pokemon, extremely hard.
+
+@Nii Sama - Darkrai
+- Ability: Goodnight - Uses Dark Void on switch-in, insomnia
+- Move: Shadow Drain - 60BP Dark type special draining move. Power is doubled if target is asleep.
+- Movepool: Nasty Plot, Shadow Ball, Dream Eater
+- Notes: Stops any sweeper in their tracks.  Follows sleep clause, so save it for what you really need (Munchlax, Braixen, Garchomp, etc).
+
+@Safety Shark - Garchomp-mega
+- Ability: Magic Guard
+- Move: DragonBot-Z - 80 BP Physical Dragon type attack, heals status, ignores defensive boosts, and boosts attack and speed by 1 stage.
+- Movepool: Knock Off, Earthquake, Recover
+- Notes: Good physical set up sweeper that takes everything down.
+
+%Alpha Ninja - Slowbro-Mega
+- Ability: Mega Poison - Poison Heal + Poisons on entry + moves never miss
+- Move: Beyblade Spin - 90 BP special Water type, removes hazards from player's side, +1 priority, raises Sp Attack, Sp Defence, Defence by one stage.
+- Movepool: Psystrike, Blizzard, Slack Off
+- Notes: Be VERY afraid.
+
+%Chief Sokka - Gliscor
+- Ability: Cancerous Ability - Poison Heal, +1 Special Defence on switch in.
+- Move: Super Bat - Brave Bird (25% recoil)
+- Movepool: Knock Off, Swords Dance, Earthquake, Roost
+- Notes: Physically Bulky, typical Gliscor with a neat Flying STAB attack.
+
+%CreaturePhil - Rotom-W
+- Ability: feelsgd - Levitate + Soundproof
+- Move: Water Bomb - 120BP, 90% accuracy, special water type move, 50% burn chance.  Now who said scald was bad?
+- Movepool: Volt Switch, Will-o-wisp, Pain Split
+- Notes: Good check to some of the metagame's scary physical attackers, such as ArkenCiel without Precipice Blades, Chief Sokka, Master Float, A Gryphon.  The burn chance is quite amazing together with the accuracy.
+
+%EmgProfessor Volco - Volcanion
+- Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
+- Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
+- Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
+- Notes: Getting hit by this is not fun.  It's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting.
+
+%EmgProfessor Volco - Volcanion
+- Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
+- Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
+- Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
+- Notes: Getting hit by this is not fun.  It's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting.
+
+%Gnarly Commie - Munchlax
+- Ability: Communism - Increases speed, defence, special defence by +2 when it KO's an opposing Pokemon.
+- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +1 Priority
+- Movepool: Belly Drum, Pursuit, Drain Punch
+- Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
+
+%Imp Fallen Blood - Sceptile-Mega (Grass/Flying)
+- Ability: Pirate - Trace + Gastro Acid
+- Move: Jet Gattling - 120 BP special Grass type move, 60% of lowering special defense by 2 stages.
+- Movepool: Aeroblast, Aura Sphere, Earth Power
+- Notes: A unique pokemon in this format, acting as a check to many water types, and a good wallbreaker if used right.
+
+%iSandman - Landorus-Incarnate
+- Ability: God's Force - Sheer Force
+- Move: Mega Earth Fissure - 110 BP special, ground type attack, with secondary effects, hits non grounded pokemon for 1.5x damage.
+- Movepool: Rock Polish, Psychic, Sludge Wave
+- Notes: Mega Earth Fissues hurts... Don't plan on switching in to it.
+
+%L Chevy 12 - Archeops
+- Ability: fuckyouup - Tough Claws, recoil reduced by 80%, Speed Boost
+- Move: Flying Forretress - Sky Drop with 130 BP, 60% to boost Defence and Special Defence by 1 stage.
+- Movepool: Earthquake, Brave Bird, Head Smash, Earthquake, Iron Head, Roost
+- Don't bother trying to find something to switch in to this, because you won't.  It leaves no survivors in it's path with it's extremely powerful attacks.  One of the best wallbreakers in this meta.
+
+%Phoenix Gryphon - Staravia
+- Ability: Feather Coat - Magic Guard + Fur Coat
+- Move: Nidificate - Boosts Attack, Speed, Defense, Sp Defense by 3 stages, Protect, works first turn only
+- Movepool: Toxic, Brave Bird, Roost
+- Notes: Extremely hard to take down with physical attackers.  Use this to your advantage and sweep with a recoilless Brave Bird!
+
+%a Gryphon - Staravia
+- Ability: Feather Coat - Magic Guard + Fur Coat
+- Move: Nidificate - Boosts Attack, Speed, Defense, Sp Defense by 3 stages, Protect, works first turn only
+- Movepool: Toxic, Brave Bird, Roost
+- Notes: Extremely hard to take down with physical attackers.  Use this to your advantage and sweep with a recoilless Brave Bird!
+
+%Selena - Vivillon (Bug/Fairy)
+- Ability: Headstrong - Magic Guard + Reckless + 1.3x modifier on all special moves, gains 2x Def, SpDef on entry.
+- Move: Bitchslap - Dual type Fighting/Rock Special attack, 80 BP, hits the opponent's Defence, 30% chance of paralyzing
+- Movepool: Light of Ruin, Quiver Dance, Bug Buzz, Air Slash, Heat Wave, Recover, Heal Bell
+- Notes: Good boosting sweeper.
+
+%Starfox :3 - Victini (Bug/Psychic)
+- Ability: Shit User - Defiant + lowers opponent's defense by 1 stage.
+- Move: REKTMIND - Physical Psychic attack, 130BP, lowers opponent's defence by 1 stage
+- Movepool: Recover, V-Create, Megahorn
+- Notes: A great revenge killer with a large amount of coverage.
+
++Castformz - Castform
+- Ability: Forecast 2 - Boosts special defense and defense by 1 stage on entry, summons Hail, Intense Sun, or Heavy Rain and boosts defense and special defense by 1, then changes its for depending on what weather was summoned.
+- Move: Adaptation - Uses protect and adds ability based on the current weather, Sun: Chlorophyll, Rain: Swift Swim, Hail: Ice Body
+- Movepool: Weather Ball, Earth Power, [Hurricane, Thunder, Energy Ball, Solar Beam - depending on weather]
+- Notes: One of the few pokemon that can summon weather, but can be unpredictable at times, if lucky you can do some major damage with it.
+
++Chronologically - Victini (Fire/Fighting)
+- Ability: Victory Prankster - Their non-damaging moves have their priority increased by 1
+- Move: Power Up Meme - 70BP Physical Fighting move, 100% to raise the attack by 1 stage, 
+- Movepool: Sacred Fire, Teeter Dance, Drain Punch
+- Notes: It hits many pokemon extremely hard, just watch out for water types.
+
++Crystal Gray - Greninja
+- Ability: Speedy Gonzales - Protean + Speed Boost
+- Move: Hydro Smash - 120 BP Special Water Move, 10% to Paralyze or Flinch, raises defense and SpD by 1, lowers speed by 1 stage
+- Movepool: Ice Beam, Extrasensory, Dark Pulse
+- Notes: Despite having no reliable recovery, if this pokemon gets too many boosts, few Pokmeon can stop it, from hitting hard and fast.
+
++hayleysworld - Vaporeon (Water/Fairy)
+- Ability: Aquatic Dreams - Gets a boost of 1 stage to SpD, SpA, and Def upon entry; Regenerator upon switch
+- Move: Revenge of Neptune - 90BP Special Water move, 100% to raise SpD, SpA, and Def by 1 stage, puts up a wish, 30% chance to burn 
+- Movepool: Protect, Moonblast, Ice Beam
+- Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
+
++PrincessHigh - Gardevoir-Mega
+- Ability: Trace upon entry ; When Mega Evolved: Pixie Shield - 2 stage raise to Speed, SpD, and SpA + One layer of Spikes
+- Move: Pixie Cannon - 180 BP Special Fairy move, 75% chance to paralyze, SpD/Speed/Def is lowered by 1, 25% recoil
+- Movepool: Psyshock, Thunderbolt, Recover
+- Notes: It's pretty broken and can easily sweep teams, be sure to save a reliable check to this pokemon (like Origin, ArkenCiel, or AuraStormLucario).
+
++Sota Higurashi - Victini
+- Ability: Contrary
+- Move: Zen Create - Psychic type V-Create
+- Movepool: U-turn, V-Create, Bolt Strike
+- Notes: Hits very hard, and prepare to be walled if you do not deal with this quickly enough.  Luckily this is still weak to entry hazards and has no reliable recovery.
+
+Mr. CGTNathan - Cofagrigus
+- Ability: Graveyard - Trick room is active when this Pokémon is on the field, completely reverses priority.
+- Move: Graveyard Strike - 80BP Hex that will burn the opponent before the damage is dealth
+- Movepool: Recover, Destiny Bond, Heal Bell
+- Notes: This Pokémon (used to) affect the metagame a lot by turning many physical attacker's speed and attack back on them with a "super fast" graveyard strike.  I hope you have a burn heal ready...
+
+Nineage - Arceus
+- Ability: error - Uses Defog on Entry
+- Move: Break Code - Randomly scatters entry hazards on both sides, sets random weather, sets random status on itself, and then faints
+- Movepool: Metronome, Heal Bell, Present
+- Hazards, especially Stealth Rock and Toxic Spikes, are a thorn in the side for most fire types and set up sweepers.  While it does cause the user trouble, the opponent is also put under pressure.  Use this move with caution, when only a major part of your team is unaffected by the hazards, or when you truly need their support to counter the opponent's sweepers.
+
+Piscean - Miltank (Normal/Ghost)
+- Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on switch in
+- Move: Fatniss Evereat - Magic coat for the turn, uses toxic, cures status, boost Def and SpD by 1 stage, +4 priority 
+- Movepool: Roar, Stealth Rock, Milk Drink
+- Notes: A good counter to set up pokemon by punishing pokemon when they hit it.
+
+d.e.a.t.h.l.y.p.l.a.y.s - Ludicolo
+- Ability: Sea of Lieks - Primordial Sea, 1.2x multiplier for each attack, perfect accuracy for all moves
+- Move: Aqua Subscribe - 80BP special water type move, +1 priority, boosts Sp Attack by 1 stage, 30% to boost Speed by 1 stage.
+- Movepool: Giga Drain, Focus Blast, Blizzard
+- Notes: Good counter to all the fire types in this tier.
+
+Origin Server - Mew
+- Ability: Uses TopsyTurvy against opponent on Entry
+- Move: Tri Spikes - Puts up 3 layers of spikes
+- Movepool: Transform, Psystrike, Recover
+- Notes: Is a godly reliable stop to all the disgusting set-up sweepers in this tier.
