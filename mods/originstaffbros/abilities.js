@@ -3601,6 +3601,9 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
+		},
 		id: "bropower",
 		name: "Bro Power",
 	},
