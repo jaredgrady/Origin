@@ -924,7 +924,7 @@ exports.Formats = [
 				this.add('c|%EmgProfessor Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|>> true');
+				this.add('c|%Gnarly Commie|ok');
 			}
 			if (name === 'impfallenblood') {
 				this.add('c|%Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
@@ -1059,7 +1059,7 @@ exports.Formats = [
 				this.add('c|%EmgProfessor Volco|Dang it my hax... they werent enough');
 			}
 			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|<< undefined');
+				this.add('c|%Gnarly Commie|ok');
 			}
 			if (name === 'impfallenblood') {
 				this.add('c|%Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
@@ -1195,7 +1195,7 @@ exports.Formats = [
 				this.add('c|%EmgProfessor Volco|Welp look like its time to run away like Sanic');
 			}
 			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|>> false');
+				this.add('c|%Gnarly Commie|ok');
 			}
 			if (name === 'impfallenblood') {
 				this.add('c|%Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
