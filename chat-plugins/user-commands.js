@@ -165,7 +165,10 @@ exports.commands = {
 		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = false;
-		if (user.can('lock', null, room)) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(newName) + "</strong></font> is no longer " + status.toLowerCase() + ".");
+		if (user.can('lock', null, room)) {
+			this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(newName) + "</strong></font> is no longer " + status.toLowerCase() + ".");
+			this.parse("/show");
+		}						
 	},
 	backhelp: ['/back - Sets a users away status back to normal.'],
 
