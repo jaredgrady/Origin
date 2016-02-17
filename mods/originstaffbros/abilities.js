@@ -3526,7 +3526,7 @@ exports.BattleAbilities = {
 			if (target.side === source.side || !move.flags['reflectable']) {
 				return;
 			}
-			this.add("raw|[Appassionata] The performance goes on. Don't you dare ... steal my thunder!");
+			this.add("raw|(Appassionata) The performance goes on. Don't you dare ... steal my thunder!");
 			return null;
 		},
 		onTryHit: function (target, source, move) {
@@ -3534,7 +3534,7 @@ exports.BattleAbilities = {
 			if (target === source || !move.flags['reflectable']) {
 				return;
 			}
-			this.add("raw|[Appassionata] The performance goes on. Don't you dare ... steal my thunder!");
+			this.add("raw|(Appassionata) The performance goes on. Don't you dare ... steal my thunder!");
 			return null;
 		},
 		// everything is has to be expressed through music
