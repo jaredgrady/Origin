@@ -15980,10 +15980,10 @@ exports.BattleMovedex = {
 	},
 
 	// Sparkychild complete (typing) (messeges)
-	"lullaby": {
+	"cantabile": {
 		isNonstandard: true,
-		id: "lullaby",
-		name: "Lullaby",
+		id: "cantabile",
+		name: "Cantabile",
 		category: "Special",
 		desc: "The user sings a magical song causing the opponent to sleep",
 		shortDesc: "Sound type attack",
@@ -16914,7 +16914,7 @@ exports.BattleMovedex = {
 				chance: 30,
 				status: 'brn',
 			}, {
-				chance: 60,
+				chance: 100,
 				self: {
 					boosts: {
 						spa: 1,
