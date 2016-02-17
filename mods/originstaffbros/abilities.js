@@ -3601,9 +3601,9 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
-		onModifyMove: function (move) {
-			if (move.id === "roar") {
-				move.priority = 1;
+		onModifyPriority: function (priority, pokemon, target, move) {
+			if (move && move.id === "roar") {
+				return 1;
 			}
 		},
 		onSwitchOut: function (pokemon) {

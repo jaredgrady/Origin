@@ -16073,7 +16073,7 @@ exports.BattleMovedex = {
 			status: 'brn',
 		},
 		target: "normal",
-		type: "Psychic",
+		type: "Water",
 	},
 
 	// Piers Niνаns
