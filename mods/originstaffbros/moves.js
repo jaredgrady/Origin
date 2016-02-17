@@ -16485,7 +16485,7 @@ exports.BattleMovedex = {
 		id: "ebat",
 		name: "/ebat",
 		pp: 10,
-		priority: 1,
+		priority: 2,
 		flags: {snatch: 1, heal: 1},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]return');
