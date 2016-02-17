@@ -3904,7 +3904,8 @@ exports.BattleAbilities = {
 				}
 				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
 				pokemon.setAbility(ability);
-				target.setAbility("none");
+				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
+				target.setAbility("noability");
 				return;
 			}
 		},
@@ -3925,18 +3926,18 @@ exports.BattleAbilities = {
 				}
 				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
 				pokemon.setAbility(ability);
-				this.add('-ability', target, "none", '[from] ability: Pirate', '[of] ' + target);
-				target.setAbility("none");
+				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
+				target.setAbility("noability");
 				return;
 			}
 		},
 		id: "pirate",
 		name: "Pirate",
 	},
-	"none": {
+	"noability": {
 		isNonstandard: true,
-		id: "none",
-		name: "None",
+		id: "noability",
+		name: "NoAbility",
 	},
 
 	// isandman
