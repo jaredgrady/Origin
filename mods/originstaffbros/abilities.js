@@ -4161,19 +4161,18 @@ exports.BattleAbilities = {
 	},
 
 	// hayleysworld
-	"aquaticdreams": {
+	"aquaticmemes": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Aquatic Dreams');
+			this.add('-ability', pokemon, 'Aquatic Memes');
 			this.boost({def:1});
-			this.boost({spa:1});
 			this.boost({spd:1});
 		},
 		onSwitchOut: function (pokemon) {
 			pokemon.heal(pokemon.maxhp / 3);
 		},
-		id: "aquaticdreams",
-		name: "Aquatic Dreams",
+		id: "aquaticmemes",
+		name: "Aquatic Memes",
 	},
 
 	// Princess High
