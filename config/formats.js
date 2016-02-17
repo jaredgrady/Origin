@@ -846,6 +846,13 @@ exports.Formats = [
 					{type: 'Fairy', suppressed: false,  isAdded: false},
 				];
 			}
+			if (name === 'paulcentury' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Water/Fire');
+				pokemon.typesData = [
+					{type: 'Water', suppressed: false,  isAdded: false},
+					{type: 'Fire', suppressed: false,  isAdded: false},
+				];
+			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
 				pokemon.typesData = [

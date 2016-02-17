@@ -16069,7 +16069,7 @@ exports.BattleMovedex = {
 			this.add('c|&Paul Century|Dope');
 		},
 		secondary: {
-			chance: 50,
+			chance: 100,
 			status: 'brn',
 		},
 		target: "normal",
