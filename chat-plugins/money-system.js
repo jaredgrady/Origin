@@ -208,6 +208,7 @@ exports.commands = {
 		let amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
+		if (amount > Db('money').get(user.userid)) return this.sendReply("The user's total money is less than " + amount + ".");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
@@ -345,13 +346,19 @@ exports.commands = {
 
 	moneylog: function (target, room, user, connection) {
 		if (!this.can('modlog')) return;
-		let numLines = 15;
+		let numLines = 14;
 		let matching = true;
-		if (target.match(/\d/g) && !isNaN(target)) {
-			numLines = Number(target);
+		if (target && /\,/i.test(target)) {
+			let parts = target.split(",");
+			if (!isNaN(parts[parts.length - 1])) {
+				numLines = Number(parts[parts.length - 1]) - 1;
+				target = parts.slice(0, parts.length - 1).join(",");
+			}
+		} else if (target.match(/\d/g) && !isNaN(target)) {
+			numLines = Number(target) - 1;
 			matching = false;
 		}
-		let topMsg = "Displaying the last " + numLines + " lines of transactions:\n";
+		let topMsg = "Displaying the last " + (numLines + 1) + " lines of transactions:\n";
 		let file = path.join(__dirname, '../logs/money.txt');
 		fs.exists(file, function (exists) {
 			if (!exists) return connection.popup("No transactions.");

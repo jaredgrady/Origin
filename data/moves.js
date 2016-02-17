@@ -11727,7 +11727,7 @@ exports.BattleMovedex = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHit: function (target, source, move) {
+		onModifyMove: function (move, pokemon) {
 			if (this.isTerrain('')) return;
 			move.secondaries = [];
 			if (this.isTerrain('electricterrain')) {

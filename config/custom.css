@@ -1849,6 +1849,128 @@
   
 /*piersnins~end*/
 
+/*implatios*/
+
+.pm-window-implatios h3 {
+  background: rgba(36, 137, 109, 0.8) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #42E5BA !important;
+  text-shadow: 0px 0px 2px #185B46 !important;
+  border-color: #185B46 !important;
+}
+
+.pm-window-implatios h3:hover {
+  background: rgba(36, 137, 109, 0.8) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #8DFFE1 !important;
+  text-shadow: 0px 0px 2px #185B46 !important;
+  border-color: #185B46 !important;
+}
+
+.pm-window-implatios .focused h3, .pm-window-implatios .focused h3:hover {
+  background: rgba(36, 137, 109, 0.9) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #8DFFE1 !important;
+  text-shadow: 0px 0px 2px #185B46 !important;
+  border-color: #185B46 !important;
+}
+
+.pm-window-implatios h3 small {
+  color: #FBB774 !important;
+}
+
+.pm-window-implatios h3 .minimizebutton, .dark .pm-window-implatios h3 .minimizebutton, .pm-window- h3 .closebutton, .pm-window-implatios h3:hover .minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-implatios h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-implatios h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-implatios h3 .closebutton:hover {
+  color: #FFDCDC !important;
+}
+
+.pm-window-implatios h3 .minimizebutton:hover, .dark .pm-window-implatios h3 .minimizebutton:hover {
+  color: #FFF8DC !important;
+}
+
+.pm-window-implatios .pm-log, .pm-window-implatios .focused .pm-log {
+  background: rgba(244, 244, 244, 0.95) url("http://i.imgur.com/w2C2jPY.png?1") left bottom no-repeat !important;
+  border-color: #9DBDB8 !important;
+  text-shadow: 0px 0px 2px #F9BB7D;
+}
+
+.pm-window-implatios .pm-log .chat small {
+  color: #34C49E !important;
+}
+
+.pm-window-implatios .pm-log .chat {
+  background: rgba(244, 244, 244, 0.8);
+}
+
+.pm-window-implatios .pm-log-add, .pm-window-implatios .focused .pm-log-add {
+  background: #D9E4E2 !important;
+  border-color: #9DBDB8 !important;
+}
+
+.pm-window-implatios .pm-log-add .textbox {
+  border-color: #BDDED6 !important;
+  background: #FFF !important;
+  color: #000;
+}
+
+.pm-window-implatios .pm-log-add .textbox:focus {
+  border-color: #2BD0A4 !important;
+}
+
+.pm-window-implatios h3.pm-notifying {
+  border-color: #2AB792 !important;
+  background: #42E5BA url("http://i.imgur.com/n5HletV.png") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #0C4032 !important;
+  text-shadow: 0px 0px 2px #2AB792 !important;
+  font-style: italic;
+}
+
+.pm-window-implatios h3.pm-notifying:hover {
+  border-color: #2AB792 !important;
+  background: #6BF2CE url("http://i.imgur.com/n5HletV.png") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #0C4032 !important;
+  text-shadow: 0px 0px 2px #2AB792 !important;
+  font-style: italic;
+}
+
+.pm-window-implatios .challenge {
+  background: #F7F9F8 !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+.pm-window-implatios .challenge .select, .pm-window-implatios .challenge .buttonbar button {
+  background: #A1F3DD !important;
+  border-color: #000 !important;
+  color: #000 !important;
+  text-shadow: 1px 1px 1px #7EE4C9 !important;
+}
+
+.pm-window-implatios .challenge .select:hover, .pm-window-implatios .challenge .buttonbar button:hover {
+  background: #79F2D2 !important;
+  border-color: #000 !important;
+} 
+
+.pm-window-implatios .challenge .select:disabled {
+  background: rgba(121, 242, 210, 0.5) !important;
+  border-color: #000 !important;
+}
+
+.pm-window-implatios .challenge .teamselect:disabled strong {
+  color: #000 !important;
+}
+
+/*implatios~end*/
+
 /* CUSTOM PM ~end */
 
 /* Symbol Color */
@@ -2014,11 +2136,11 @@
 }
 
 #lobby-userlist-user-crystalxvz, #crystalleague-userlist-user-crystalxvz, #casino-userlist-user-crystalxvz, #1v1-userlist-user-crystalxvz {
-  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL");
+  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL") right no-repeat;
 }
 
-#lobby-userlist-user-niisama, #staff-userlist-user-niisama #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif");
+#lobby-userlist-user-niisama, #staff-userlist-user-niisama, #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat;
 }
 
 /* Icons ~end */

@@ -113,7 +113,7 @@ exports.commands = {
 	nerding: 'away',
 	mimis: 'away',
 	away: function (target, room, user, connection, cmd) {
-		if (!user.isAway && user.name.length > 15) return this.sendReply("Your username is too long for any kind of use of this command.");
+		if (!user.isAway && user.name.length > 19) return this.sendReply("Your username is too long for any kind of use of this command.");
 
 		target = target ? target.replace(/[^a-zA-Z0-9]/g, '') : 'AWAY';
 		if (cmd !== 'away') target = cmd;
@@ -138,7 +138,10 @@ exports.commands = {
 			targetUser.send("|nametaken||Your name conflicts with " + user.name + (user.name.substr(-1) === "s" ? "'" : "'s") + " new away status.");
 		}
 
-		if (user.can('lock', null, room)) this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");
+		if (user.can('lock', null, room)) {
+			this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");
+			this.parse("/hide");
+		}
 		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = true;
