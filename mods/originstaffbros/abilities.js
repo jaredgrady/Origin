@@ -3522,19 +3522,17 @@ exports.BattleAbilities = {
 		},
 		// continuation only direct attacks affect the user's musical performance
 		onAllyTryHitSide: function (target, source, move) {
-			if (move.id === "admonish") this.add("c|~sparkychild|Nice try Erica07, but not this time! Because ... music is freedom.");
 			if (target.side === source.side || !move.flags['reflectable']) {
 				return;
 			}
-			this.add("raw|(Appassionata) The performance goes on. Don't you dare ... steal my thunder!");
+			this.add("raw|(Appassionata) The performance goes on, because .. music is freedom. Don't you dare ... steal my thunder!");
 			return null;
 		},
 		onTryHit: function (target, source, move) {
-			if (move.id === "admonish") this.add("c|~sparkychild|Nice try Erica07, but not this time! Because ... music is freedom.");
 			if (target === source || !move.flags['reflectable']) {
 				return;
 			}
-			this.add("raw|(Appassionata) The performance goes on. Don't you dare ... steal my thunder!");
+			this.add("raw|(Appassionata) The performance goes on, because .. music is freedom. Don't you dare ... steal my thunder!");
 			return null;
 		},
 		// everything is has to be expressed through music
