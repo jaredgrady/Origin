@@ -136,7 +136,7 @@ exports.commands = {
 	tierpoll: function (target, room, user) {
 		if (room.battle) return false;
 		if (!this.can('broadcast', null, room)) return false;
-		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, OverUsed (No Mega), Underused, RarelyUsed, NeverUsed, PU, FU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Battle Factory, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Gen 4 LC, Battle Factory, Doubles OU, CAP, Gen 5 OU, Gen 5 LC');
+		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, OverUsed (No Mega), Underused, RarelyUsed, NeverUsed, PU, FU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Battle Factory, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Gen 4 LC, Battle Factory, Doubles OU, CAP, Gen 5 OU, Gen 5 LC, Origin Super Staff Bros');
 	},
 
 	vote: function (target, room, user) {
