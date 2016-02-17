@@ -29,7 +29,7 @@ fender - Gible
 - Notes: A one time nuke, who is exceptionally good at stopping set up sweepers which run wild in this meta. 
 
 ~sparkychild - Floette-Eternal
-- Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not get stage fright no matter the audience's reaction.  Everything will be expressed through music.  With this ability, you'll never miss a note!
+- Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not be affected no matter what the audience's reaction; Everything will be expressed through music.  With this ability, you'll never miss a note!
 - Move: Lullaby - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
 - Moveset: Light of Ruin, Earth Power, Focus Blast
 - Notes: Stops any sweep, and starts it's own.

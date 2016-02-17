@@ -1999,6 +1999,10 @@
   background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
 }
 
+#lobby-userlist-user-princesshigh, #hayleysden-userlist-user-princesshigh, #zu-userlist-user-princesshigh {
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/282.gif") right no-repeat;
+}
+
 #lobby-userlist-user-cristiian, #tournaments-userlist-user-cristiian, #monotype-userlist-user-cristiian {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/4a7efMj.gif") right no-repeat;
 }
@@ -2083,7 +2087,7 @@
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
 }
 
-#lobby-userlist-user-volco, #staff-userlist-user-volco, #theemergenceleague-userlist-user-volco {
+#lobby-userlist-user-emgprofessorvolco, #staff-userlist-user-emgprofessorvolco, #theemergenceleague-userlist-user-emgprofessorvolco {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
 }
 
@@ -2142,6 +2146,15 @@
 #lobby-userlist-user-niisama, #staff-userlist-user-niisama, #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat;
 }
+
+#lobby-userlist-user-piscean, #hayleysden-userlist-user-piscean, #zu-userlist-user-piscean {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-rs/icon/230.gif") right no-repeat;
+}
+
+#lobby-userlist-user-hayleysworld, #hayleysden-userlist-user-hayleysworld, #zu-userlist-user-hayleysworld {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat;
+}
+
 
 /* Icons ~end */
 

@@ -16462,7 +16462,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]flareblitz');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Volco|Get ready because here comes my ultimate attack');
+			this.add('c|%EmgProfessor Volco|Get ready because here comes my ultimate attack');
 		},
 		secondary: {
 			chance: 80,
