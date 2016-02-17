@@ -1231,7 +1231,7 @@ exports.Formats = [
 				this.add('c|+hayleysworld|My bad memes will be back!');
 			}
 			if (name === 'princesshigh') {
-				this.add('c|+Princess High|');
+				this.add('c|+Princess High|I\'m out this bitch');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
