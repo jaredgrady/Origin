@@ -2,7 +2,7 @@
 let fs = require("fs");
 let monData;
 try {
-	monData = fs.readFileSync("data/ssbdata.txt").toString().split("\n\n");
+	monData = fs.readFileSync("data/OSSB-data.txt").toString().split("\n\n");
 } catch (e) {
 	console.error(e);
 }
@@ -20,6 +20,7 @@ function getMonData(target) {
 }
 
 exports.commands = {
+	ossb: 'ssb',
 	ssb: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
 		if (!target) return this.parse("/help ssb");
