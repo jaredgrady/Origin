@@ -28,11 +28,11 @@ fender - Gible
 - Movepool: Torment, Taunt, Encore
 - Notes: A one time nuke, who is exceptionally good at stopping set up sweepers which run wild in this meta. 
 
-~sparkychild - Floette-Eternal
-- Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not be affected no matter what the audience's reaction; Everything will be expressed through music.  With this ability, you'll never miss a note!
-- Move: Cantabile - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
-- Moveset: Light of Ruin, Earth Power, Focus Blast
-- Notes: Stops any sweep, and starts it's own.
+~sparkychild - Cresselia
+- Ability: Cantabile - Unaware + Magic Bounce
+- Move: Nanairo Shinfonī - Special, 6BP move, hits with each type once, heals status.
+- Moveset: Recover, Cosmic Power, Tail Glow
+- Notes: EVs: 252 HP / 252 SpA / 4 Spe - Hitting hard right off the bat means sparkychild cannot set up, and is probably your best bet in forcing it out.
 
 &Erica07 - Meloetta
 - Ability: Serene Grace
