@@ -77,14 +77,14 @@ fender - Gible
 - Notes: Fast set up sweeper.
 
 @AuraStormLucario - Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn, ignores ghost immunity, STAB moves have a 2x multiplier instead (adaptability), Stats cannot be lowered (clear body), and this pokemon ignores opponents stat changes (unaware)
-- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Ability: Aura Guard - Ignores speed cut from paralysis and attack cut from burn, STAB moves have a 2x multiplier (adaptability), Stats cannot be lowered (clear body), and opponent’s stat changes are ignored (unaware)
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat, and ignores ghost type immunity
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
 
 @ASL - (@AuraStormLucario) Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn.  STAB moves have a 2x multiplier instead.
-- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Ability: Aura Guard - Ignores speed cut from paralysis and attack cut from burn, STAB moves have a 2x multiplier (adaptability), Stats cannot be lowered (clear body), and opponent’s stat changes are ignored (unaware)
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat, and ignores ghost type immunity
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
 
