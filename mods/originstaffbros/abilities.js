@@ -3835,7 +3835,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
-			return this.chainModify(2);
+			return this.chainModify(4);
 		},
 		onModifyMove: function (move) {
 			move.stab = 2;
