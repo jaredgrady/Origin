@@ -126,6 +126,7 @@ exports.commands = {
 	pollremind: function (target, room, user) {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
+		if (room.game && room.id === 'lobby') return false;
 		if (!this.canBroadcast()) return;
 		this.sendReply('|raw|<div style="width: 100%; border: 1px solid #000;"> ' + Poll[room.id].display + '</div>');
 	},
