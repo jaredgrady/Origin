@@ -83,7 +83,7 @@ fender - Gible
 - Notes: Have fun hitting hard!
 
 @ASL - Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn.  STAB moves have a 2x multiplier instead.
+- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn, ignores ghost immunity, STAB moves have a 2x multiplier instead (adaptability), Stats cannot be lowered (clear body), and this pokemon ignores opponents stat changes (unaware)
 - Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
