@@ -818,6 +818,13 @@ exports.Formats = [
 			}
 
 			// Add here special typings, done for flavour mainly.
+			if (name === 'paulcentury' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Water/Fire');
+				pokemon.typesData = [
+					{type: 'Water', suppressed: false,  isAdded: false},
+					{type: 'Fire', suppressed: false,  isAdded: false},
+				];
+			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
 				pokemon.typesData = [
@@ -846,13 +853,6 @@ exports.Formats = [
 					{type: 'Fairy', suppressed: false,  isAdded: false},
 				];
 			}
-			if (name === 'paulcentury' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fire');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false},
-				];
-			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
 				pokemon.typesData = [
@@ -862,7 +862,7 @@ exports.Formats = [
 			}
 
 			// Edgy switch-in sentences go here.
-			// Admins.
+			// Admins
 			if (name === 'arkenciel') {
 				this.add('c|~ArkenCiel|You\'re alive. We can\'t have that.');
 			}
@@ -882,7 +882,7 @@ exports.Formats = [
 				this.add('c|~sparkychild|We’re all afraid, you know... to get up on stage. Maybe you’ll mess up. Maybe they’ll totally reject you. Even so, you grit your teeth and get up on stage anyway. Something compels us… moves us to play music.');
 			}
 
-			// Leaders.
+			// Leaders
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Mm, hello.');
 			}
@@ -900,7 +900,7 @@ exports.Formats = [
 				this.add('c|&Vin Steel|Time for moderation to take its course and slay all the misbehaving Dragons!');
 			}
 
-			// Mods.
+			// Mods
 			if (name === '01ntg') {
 				this.add('c|@01 NTG|Welcome to the Hax Side');
 			}
@@ -917,7 +917,7 @@ exports.Formats = [
 				this.add('c|@Safety Shark|C\'mon spammers, I\'m watching.');
 			}
 
-			// Drivers.
+			// Drivers
 			if (name === 'alphaninja') {
 				this.add('c|%Alpha Ninja|sup nigga');
 			}
@@ -952,7 +952,7 @@ exports.Formats = [
 				this.add('c|%StarFox :3|The Booty Master has Arrived');
 			}
 
-			// Voices.
+			// Voices
 			if (name === 'castformz') {
 				this.add('c|+Castformz|I know you were hoping for anything but me.');
 			}
@@ -972,7 +972,7 @@ exports.Formats = [
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
 			}
 
-			// Others.
+			// Others
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|Welcome to Origin Super Smash Bros, may I show you the door?');
 			}
@@ -986,7 +986,8 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
-			/* if (name === 'deathlyplays') {
+			/* permalocked
+			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
 			} */
 		},
@@ -995,7 +996,7 @@ exports.Formats = [
 		onFaint: function (pokemon) {
 			let name = toId(pokemon.name);
 
-			// Admins.
+			// Admins
 			if (name === 'arkenciel') {
 				this.add('c|~ArkenCiel|alright, you got me.');
 			}
@@ -1016,7 +1017,7 @@ exports.Formats = [
 				this.add('c|~sparkychild|So ephemeral and weak. But it\'s shining with all its might. Thump, Thump, like a heartbeat. This is the light of life.');
 			}
 
-			// Leaders.
+			// Leaders
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
 			}
@@ -1034,7 +1035,7 @@ exports.Formats = [
 				this.add('c|&Vin Steel|I failed my part as a Dragon Slayer...');
 			}
 
-			// Mods.
+			// Mods
 			if (name === '01ntg') {
 				this.add('c|@01 NTG|I went too easy :c');
 			}
@@ -1052,7 +1053,7 @@ exports.Formats = [
 				this.add('c|@Safety Shark|For the last time, I don\'t have security issues, ok?  First you kill off sparkyboTTT, then me... IM APPEALING TO ZAREL!');
 			}
 
-			// Drivers.
+			// Drivers
 			if (name === 'alphaninja') {
 				this.add('c|%Alpha Ninja|fuck this shit nigga');
 			}
@@ -1087,7 +1088,7 @@ exports.Formats = [
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
 			}
 
-			// Voices.
+			// Voices
 			if (name === 'castformz') {
 				this.add('c|+Castformz|thanks for getting me knocked out, now I can go eat pizza pops and ice cream.');
 				this.clearWeather();
@@ -1108,7 +1109,7 @@ exports.Formats = [
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
 
-			// Others.
+			// Others
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|__My ankle!__');
 			}
@@ -1122,7 +1123,8 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
 			}
-			/* if (name === 'deathlyplays') {
+			/* permalocked
+			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
 			} */
 		},
@@ -1134,7 +1136,7 @@ exports.Formats = [
 			// Switch Out Messages
 			let name = toId(pokemon.name);
 
-			// Admins.
+			// Admins
 			if (name === 'arkenciel') {
 				this.add('c|~ArkenCiel|You can consider yourself a little lucky.');
 			}
@@ -1154,7 +1156,7 @@ exports.Formats = [
 				this.add('c|~sparkychild|By exchanging notes, you get to know one another, to understand one another. As if your souls were connected and your hearts were overlapping. It\'s a conversation through instruments. A miracle that creates harmony. In that moment, music transcends words.');
 			}
 
-			// Leaders.
+			// Leaders
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 tells you all to take care while she\'s gone.');
 			}
@@ -1171,7 +1173,7 @@ exports.Formats = [
 				this.add('c|&Vin Steel|Well... I will be back and face you again');
 			}
 
-			// Mods.
+			// Mods
 			if (name === '01ntg') {
 				this.add('c|@01 NTG|Gotta Go, Bathroom');
 			}
@@ -1188,7 +1190,7 @@ exports.Formats = [
 				this.add('c|@Safety Shark|Restarting...');
 			}
 
-			// Drivers.
+			// Drivers
 			if (name === 'alphaninja') {
 				this.add('c|%Alpha Ninja|brb nigga');
 			}
@@ -1223,7 +1225,7 @@ exports.Formats = [
 				this.add('c|%StarFox :3|I\'ll git that booty later');
 			}
 
-			// Voices.
+			// Voices
 			if (name === 'castformz') {
 				this.add('c|+Castformz|I\'d like to go on record and say this was a bad idea');
 				this.clearWeather();
@@ -1244,7 +1246,7 @@ exports.Formats = [
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
 			}
 
-			// Others.
+			// Others
 			/* no quote
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|');
@@ -1258,7 +1260,8 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
-			/* if (name === 'deathlyplays') {
+			/* permalocked
+			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
 			} */
 		},
@@ -1296,7 +1299,6 @@ exports.Formats = [
 					pokemon.name = target.name;
 				};
 			}
-
 			// let name = toId(pokemon.illusion && move.sourceEffect === 'allyswitch' ? pokemon.illusion.name : pokemon.name);
 			// if (move.id === '' && name === '') {}
 		},
