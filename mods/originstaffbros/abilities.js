@@ -3572,12 +3572,6 @@ exports.BattleAbilities = {
 	// Paul Century complete
 	"bropower": {
 		isNonstandard: true,
-		onAfterDamageOrder: 1,
-		onAfterDamage: function (damage, target, source, move) {
-			if (source && source !== target && move && move.flags['contact']) {
-				this.damage(source.maxhp / 8, source, target, null, true);
-			}
-		},
 		onTryHit: function (target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.heal(target.maxhp / 4)) {
