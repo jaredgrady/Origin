@@ -360,7 +360,7 @@ exports.BattleAbilities = {
 				}
 			}
 			if (statsLowered) {
-				this.boost({spa: 2});
+				this.boost({spa:2});
 			}
 		},
 		id: "competitive",
@@ -497,7 +497,7 @@ exports.BattleAbilities = {
 				}
 			}
 			if (statsLowered) {
-				this.boost({atk: 2});
+				this.boost({atk:2});
 			}
 		},
 		id: "defiant",
@@ -961,7 +961,7 @@ exports.BattleAbilities = {
 		onAfterDamage: function (damage, target, source, effect) {
 			if (effect && effect.flags['contact']) {
 				this.add('-ability', target, 'Gooey');
-				this.boost({spe: -1}, source, target);
+				this.boost({spe:-1}, source, target);
 			}
 		},
 		id: "gooey",
@@ -1252,7 +1252,7 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-immune', foeactive[i], '[msg]');
 				} else {
-					this.boost({atk: -1}, foeactive[i], pokemon);
+					this.boost({atk:-1}, foeactive[i], pokemon);
 				}
 			}
 		},
@@ -2661,7 +2661,7 @@ exports.BattleAbilities = {
 	"steadfast": {
 		shortDesc: "If this Pokemon flinches, its Speed is raised by 1 stage.",
 		onFlinch: function (pokemon) {
-			this.boost({spe: 1});
+			this.boost({spe:1});
 		},
 		id: "steadfast",
 		name: "Steadfast",
@@ -3372,9 +3372,9 @@ exports.BattleAbilities = {
 		num: -4,
 	},
 
-	// CUSTOM SPECIAL ABILITIES FOR ORIGIN STAFF BROS
-	// Admin Abilities
-	// ArkenCiel complete
+	// CUSTOM ABILITIES FOR OSSB
+	// Admins
+	// ArkenCiel
 	"abnegate": {
 		isNonstandard: true,
 		onBasePower: function (basePower, attacker, defender, move) {
@@ -3403,19 +3403,13 @@ exports.BattleAbilities = {
 		name: "Abnegate",
 	},
 
-	// fender complete
+	// fender
 	"evaltroll": {
 		isNonstandard: true,
-		onStart: function (pokemon) { // there should be a more efficient way to do the stat boosts
+		onStart: function (pokemon) {
 			this.add('-ability', pokemon, 'Eval Troll');
 			this.useMove('substitute', pokemon);
-			this.boost({atk:1});
-			this.boost({def:1});
-			this.boost({spa:1});
-			this.boost({spd:1});
-			this.boost({spe:1});
-			this.boost({evasion:1});
-			this.boost({accuracy:1});
+			this.boost({atk:1, def:1, spa:1, spd:1, spe:1, evasion:1, accuracy:1});
 		},
 		id: "evaltroll",
 		name: "Eval Troll",
@@ -3431,7 +3425,7 @@ exports.BattleAbilities = {
 		name: "Beard Coat",
 	},
 
-	// Master Float complete
+	// Master Float
 	"magicimmunity": {
 		isNonstandard: true,
 		onTryHit: function (pokemon, target, move) {
@@ -3459,13 +3453,7 @@ exports.BattleAbilities = {
 			}
 		},
 		onImmunity: function (type, pokemon) {
-			if (type === 'brn') return false;
-			if (type === 'slp') return false;
-			if (type === 'psn') return false;
-			if (type === 'tox') return false;
-			if (type === 'par') return false;
-			if (type === 'frz') return false;
-			if (type === 'attract') {
+			if (type === 'brn' || type === 'slp' || type === 'psn' || type === 'tox' || type === 'par' || type === 'frz' || type === 'attract') {
 				this.add('-immune', pokemon, '[from] Master Guard');
 				return false;
 			}
@@ -3477,8 +3465,7 @@ exports.BattleAbilities = {
 		name: "Magic Immunity",
 	},
 
-	// Neo Soul
-	// designed by sparky
+	// Neo Soul (designed by sparky)
 	"shadowprankster": {
 		isNonstandard: true,
 		desc: "Prevents adjacent opposing Pokemon from choosing to switch out unless they are immune to trapping or also have this Ability.",
@@ -3545,7 +3532,8 @@ exports.BattleAbilities = {
 			return null;
 		},
 	},
-	// Leader Abilities
+
+	// Leaders
 	// Erica*07
 	"mischievous": {
 		isNonstandard: true,
@@ -3569,7 +3557,7 @@ exports.BattleAbilities = {
 		name: "Mischievous",
 	},
 
-	// Paul Century complete
+	// Paul Century
 	"bropower": {
 		isNonstandard: true,
 		onTryHit: function (target, source, move) {
@@ -3596,8 +3584,7 @@ exports.BattleAbilities = {
 	"machinegunner": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.boost({def:2});
-			this.boost({spd:2});
+			this.boost({def:2, spd:2});
 		},
 		onModifyMove: function (move) {
 			if (move.multihit && move.multihit.length) {
@@ -3685,6 +3672,7 @@ exports.BattleAbilities = {
 
 	// Mod Abilities
 	// 01NTG simple
+
 	// AuraStormLucario
 	"auraguard": {
 		isNonstandard: true,
@@ -3748,7 +3736,7 @@ exports.BattleAbilities = {
 		name: "Woops lmao",
 	},
 
-	// Nii Sama complete
+	// Nii Sama
 	"goodnight": {
 		isNonStandard: true,
 		onImmunity: function (type, pokemon) {
@@ -3773,7 +3761,7 @@ exports.BattleAbilities = {
 
 	// Safety Shark magic guard
 
-	// Driver Abilities
+	// Drivers
 	// Alpha Ninja
 	"megapoison": {
 		isNonstandard: true,
@@ -3835,7 +3823,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
-			return this.chainModify(4);
+			return this.chainModify(2);
 		},
 		onModifyMove: function (move) {
 			move.stab = 2;
@@ -3963,7 +3951,9 @@ exports.BattleAbilities = {
 			}
 		},
 		onDamage: function (damage, target, source, effect) {
-			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') return damage / 3;
+			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') {
+				return damage / 3;
+			}
 		},
 		id: "fuckyouup",
 		name: "Fuck You Up",
@@ -4004,7 +3994,7 @@ exports.BattleAbilities = {
 		name: "Headstrong",
 	},
 
-	// Starfox:3 complete
+	// Starfox:3
 	"shittiestuser": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
@@ -4015,8 +4005,8 @@ exports.BattleAbilities = {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Shittiest User', '[of] ' + pokemon);
 				} else {
 					this.add('-ability', pokemon, 'Shittiest User', '[of] ' + foeactive[i]);
-					this.boost({def: -1}, foeactive[i], pokemon);
-					this.boost({spe: 2}, pokemon);
+					this.boost({def:-1}, foeactive[i], pokemon);
+					this.boost({spe:2}, pokemon);
 				}
 			}
 		},
@@ -4028,13 +4018,15 @@ exports.BattleAbilities = {
 					statsLowered = true;
 				}
 			}
-			if (statsLowered) this.boost({atk: 2});
+			if (statsLowered) {
+				this.boost({atk:2});
+			}
 		},
 		id: "shittiestuser",
 		name: "Shittiest User",
 	},
 
-	// Voice Abilities
+	// Voices
 	// Castformz
 	"forecast2": {
 		isNonstandard: true,
@@ -4042,8 +4034,7 @@ exports.BattleAbilities = {
 			this.add('-ability', pokemon, 'Forecast2');
 			let randomWeather = ['hail', 'primordialsea', 'desolateland', 'sandstorm'][this.random(4)];
 			this.setWeather(randomWeather);
-			this.boost({def:1});
-			this.boost({spd:1});
+			this.boost({def:1, spd:1});
 		},
 		onUpdate: function (pokemon) {
 			function setMove(moveid) {
@@ -4149,9 +4140,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onStart: function (pokemon) {
 			this.add('-ability', pokemon, 'Aquatic Memes');
-			this.boost({def:1});
-			this.boost({spa:1});
-			this.boost({spd:1});
+			this.boost({def:1, spa:1, spd:1});
 		},
 		onSwitchOut: function (pokemon) {
 			pokemon.heal(pokemon.maxhp / 3);
@@ -4164,6 +4153,7 @@ exports.BattleAbilities = {
 	"pixieshield": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
+			this.add('-ability', pokemon, 'Pixie Shield');
 			this.useMove("spikes", pokemon);
 			this.boost({spa:2, spe:2, spd:2});
 		},
@@ -4174,7 +4164,7 @@ exports.BattleAbilities = {
 	// Sota Higurashi contrary
 
 	// Others
-	// Mr. CGTNathan complete
+	// Mr. CGTNathan
 	"graveyard": {
 		isNonstandard: true,
 		onAfterDamage: function (damage, target, source, move) {
@@ -4227,7 +4217,7 @@ exports.BattleAbilities = {
 		name: "Graveyard",
 	},
 
-	// nineage complete
+	// nineage
 	"error": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
@@ -4267,8 +4257,9 @@ exports.BattleAbilities = {
 		name: "No, You!",
 	},
 
+	/* permalocked
 	// DeathlyPlays
-	/* "seaoflieks": {
+	"seaoflieks": {
 		isNonstandard: true,
 		onStart: function (source) {
 			this.setWeather('primordialsea');

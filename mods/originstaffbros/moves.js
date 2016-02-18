@@ -15766,9 +15766,9 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	},
-	// CUSTOM SPECIAL MOVES FOR ORIGIN STAFF BROS
-	// Admin Abilities
-	// Arken Ciel (get messeges)
+	// CUSTOM MOVES FOR OSSB
+	// Admins
+	// Arken Ciel
 	"faithbreaker": {
 		isNonstandard: true,
 		id: "faithbreaker",
@@ -15812,7 +15812,7 @@ exports.BattleMovedex = {
 		type: "Steel",
 	},
 
-	// fender complete
+	// fender
 	"evalbattle": {
 		isNonstandard: true,
 		id: "evalbattle",
@@ -15841,7 +15841,7 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
-	// Lt.Tesla.  get info, get animation, get messeges
+	// Lt.Tesla
 	"sideboffledge": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -15895,7 +15895,7 @@ exports.BattleMovedex = {
 		category: "Status",
 		pp: 10,
 		priority: 3,
-		flags: {authentic: 1},
+		flags: {snatch: 1, authentic: 1},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]miracleeye');
 		},
@@ -15927,7 +15927,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Normal",
 	},
-	// Neo Soul complete (messeges)
+	// Neo Soul
 	"sodone": {
 		isNonstandard: true,
 		accuracy: true,
@@ -15937,7 +15937,7 @@ exports.BattleMovedex = {
 		name: "So Done",
 		pp: 5,
 		priority: 0,
-		flags: {distance: 1, authentic: 1},
+		flags: {snatch: 1, distance: 1, authentic: 1},
 		onHit: function (target, source, move) {
 			// this.add("c|~Neo Soul|Fuck Isis");
 			let oldAbility = source.setAbility('runaway');
@@ -15979,22 +15979,21 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
+	// Sparkychild
 	// Sparkychild complete (typing) (messeges)
 	"nanairoshinfonii": {
 		isNonstandard: true,
-		id: "nanairoshinfonii",
-		name: "Nanairo Shinfonī",
-		category: "Special",
-		desc: "Magical Piece full of colours",
-		shortDesc: "Sound type attack",
 		accuracy: true,
 		basePower: 6,
+		category: "Special",
+		id: "nanairoshinfonii",
+		name: "Nanairo Shinfonī",
 		pp: 10,
 		priority: 0,
 		multihit: 18,
 		ignoreImmunity: true,
 		typechart: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Grass", "Water", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy"],
-		flags: {protect:1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		onPrepareHit: function () {
 			this.add("c|~sparkychild|♩ ♫ ♪ ♬ ♫ ♪ ♩ ♬");
 		},
@@ -16010,12 +16009,13 @@ exports.BattleMovedex = {
 			move.type = move.typechart.shift();
 			move.typechart.push(move.type);
 		},
+		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 
-	// Leader Abilities
-	// Erica*07 complete
+	// Leaders
+	// Erica*07
 	"admonish": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16043,7 +16043,7 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
-	// Paul Century complete
+	// Paul Century
 	"omegablast": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16087,7 +16087,7 @@ exports.BattleMovedex = {
 		name: "Anti-Material Rifle",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		multihit: 6,
 		typeList: {
 			"Fire": "Flamethrower",
@@ -16118,7 +16118,7 @@ exports.BattleMovedex = {
 		onPrepareHit: function (target, source, move) {
 			if (!move.animatedhits) move.animatedhits = 0;
 			move.animatedhits++;
-			if (move.animatedhits > 5 || target.hp === 0) return;
+			if (move.animatedhits > 6 || target.hp === 0) return;
 			let rand = ~~(Object.keys(move.typeList).length * Math.random());
 			let type = Object.keys(move.typeList)[rand];
 			move.type = type;
@@ -16134,7 +16134,7 @@ exports.BattleMovedex = {
 		type: "???",
 	},
 
-	// SaNeski (get messeges)
+	// SaNeski
 	"silentdeparture": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16151,18 +16151,17 @@ exports.BattleMovedex = {
 		onMoveFail: function (target, source, move) {
 			this.attrLastMove('[anim]uturn');
 		},
-		/*
+		/* no quote
 		onHit: function (target, source, move) {
 			this.add('c|&SaNeski|');
-		},
-		*/
+		}, */
 		selfSwitch: true,
 		secondary: false,
 		target: "normal",
 		type: "Dark",
 	},
 
-	// Vin Steel (mega ability) dragonsfire
+	// Vin Steel
 	"dragonstrike": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16195,8 +16194,8 @@ exports.BattleMovedex = {
 		type: "Dragon",
 	},
 
-	// Mod Abilities
-	// 01NTG complete (messeges)
+	// Mods
+	// 01NTG complete
 	"dragonenergy": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16227,7 +16226,7 @@ exports.BattleMovedex = {
 		type: "Dragon",
 	},
 
-	// AuraStormLucaro (mega ability) auraguard
+	// AuraStormLucaro
 	"aurastorm": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16285,7 +16284,7 @@ exports.BattleMovedex = {
 		type: "Dark",
 	},
 
-	// Nii Sama complete
+	// Nii Sama
 	"shadowdrain": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16315,7 +16314,7 @@ exports.BattleMovedex = {
 		type: "Dark",
 	},
 
-	// Safety Shark (mega ability) magic guard
+	// Safety Shark
 	"dragonbotz": {
 		isNonstandard: true,
 		basePower: 80,
@@ -16345,8 +16344,8 @@ exports.BattleMovedex = {
 		type: "Dragon",
 	},
 
-	// Driver Abilities
-	// Alpha Ninja (new ability mega) (animation) (messeges)
+	// Drivers
+	// Alpha Ninja
 	"beybladespin": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16391,7 +16390,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Chief Sokka complete
+	// Chief Sokka
 	"superbat": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16417,7 +16416,7 @@ exports.BattleMovedex = {
 		type: "Flying",
 	},
 
-	// Creature Phil complete (messeges)
+	// Creature Phil
 	"waterbomb": {
 		isNonstandard: true,
 		accuracy: 90,
@@ -16445,7 +16444,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// EmgPrfoessor Volco (animation)
+	// EmgPrfoessor Volco
 	"volcanionsupersmash": {
 		isNonstandard: true,
 		accuracy: 80,
@@ -16503,7 +16502,7 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
-	// Imp Fallen Blood (messeges) (mega ability) pirate
+	// Imp Fallen Blood
 	"jetgattling": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16520,11 +16519,10 @@ exports.BattleMovedex = {
 		onMoveFail: function (target, source, move) {
 			this.attrLastMove('[anim]hyperspacefury');
 		},
-		/* No Quote
+		/* no quote
 		onHit: function (target, source, move) {
 			this.add('c|%Imp Fallen Blood|');
-		},
-		*/
+		}, */
 		secondary: {
 			chance: 60,
 			boosts: {
@@ -16683,7 +16681,7 @@ exports.BattleMovedex = {
 		type: "Flying",
 	},
 
-	// Phoenix Gryphon complete
+	// Phoenix Gryphon
 	"nidificate": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16740,7 +16738,7 @@ exports.BattleMovedex = {
 		type: "Fighting",
 	},
 
-	// Starfox:3 (messeges) (typing)
+	// Starfox:3
 	"mindwrecker": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16770,7 +16768,7 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
-	// Voice Abilities
+	// Voices
 	// Castformz
 	"adaptation": {
 		isNonstandard: true,
@@ -16822,7 +16820,6 @@ exports.BattleMovedex = {
 		category: "Status",
 		basePower: 70,
 		id: "powerupmeme",
-		isViable: true,
 		name: "Power-Up Meme",
 		pp: 20,
 		priority: 0,
@@ -16857,8 +16854,13 @@ exports.BattleMovedex = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHit: function (pokemon) {
+		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (pokemon) {
 			this.add("c|+Crystal Gray|Time for me to clean you");
 		},
 		secondaries: [
@@ -17036,7 +17038,7 @@ exports.BattleMovedex = {
 		type: "Ghost",
 	},
 
-	// nineage complete (travis)
+	// nineage
 	"breakcode": {
 		isNonstandard: true,
 		accuracy: true,
@@ -17166,8 +17168,9 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
+	/* permalocked
 	// DeathlyPlays
-	/* "aquasubscribe": {
+	"aquasubscribe": {
 		isNonstandard: true,
 		accuracy: 100,
 		basePower: 80,

@@ -4,11 +4,10 @@ exports.BattleScripts = {
 	randomOriginStaffBrosTeam: function (side) {
 		let userid = toId(side.name);
 		let team = [];
-		// let variant = this.random(2);
 		// Hardcoded sets of the available Pokemon.
 		let sets = {
 			// Admins.
-			'~ArkenCiel': { // (new mega ability) striker
+			'~ArkenCiel': { // (mega ability) abnegate
 				species: 'Metagross', ability: 'Clear Body', item: 'Metagrossite', gender: 'M',
 				moves: ['icepunch', 'boltstrike', 'precipiceblades'],
 				baseSignatureMove: 'faithbreaker', signatureMove: "Faithbreaker",
@@ -26,7 +25,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'sideboffledge', signatureMove: "Side B off ledge",
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
-			'~Master Float': { // complete
+			'~Master Float': {
 				species: 'Floatzel', ability: 'Magic Immunity', item: 'Focus Sash', gender: 'M',
 				moves: ['waterfall', 'earthquake', ['extremespeed', 'sacredfire', 'ice punch', 'boltstrike'][this.random(4)]],
 				baseSignatureMove: 'floatssharingan', signatureMove: "Float's Sharingan",
@@ -44,7 +43,7 @@ exports.BattleScripts = {
 				moves: ['thunderbolt', 'ice beam', 'psystrike'],
 				baseSignatureMove: 'makeabot', signatureMove: "Make-a-bot",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
-			},*/
+			}, */
 			'~sparkychild': {
 				species: 'Cresselia', ability: 'Cantabile', item: 'Leftovers', gender: "F",
 				moves: ['recover', 'cosmicpower', 'tailglow'],
@@ -59,7 +58,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'admonish', signatureMove: "Admonish",
 				evs: {hp:240, def:252, spd:16}, ivs: {atk:0}, nature: 'Bold',
 			},
-			'&Paul Century': {
+			'&Paul Century': { // (typing) water/fire
 				species: 'Slowbro', ability: 'Bro Power', item: 'Rocky Helmet', gender: 'M', shiny: true,
 				moves: ['roar', 'stickyweb', 'slackoff'],
 				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
@@ -76,13 +75,13 @@ exports.BattleScripts = {
 				baseSignatureMove: 'antimaterialrifle', signatureMove: "Anti-Material Rifle",
 				evs: {hp:4, atk:4, spa:252}, nature: 'Brave',
 			},
-			'&SaNeski': { // (new mega ability) cursed aura
+			'&SaNeski': { // (mega ability) cursedaura
 				species: 'Gyarados', ability: 'Intimidate', item: 'Gyaradosite', gender: 'M',
 				moves: ['crabhammer', ['suckerpunch', 'pursuit', 'nightslash'][this.random(3)], ['focusenergy', 'dragondance'][this.random(2)]],
 				baseSignatureMove: 'silentdeparture', signatureMove: "Silent Departure",
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
-			'&Vin Steel': { // (new mega ability) dragons fire
+			'&Vin Steel': { // (mega ability) dragonsfire
 				species: 'Charizard', ability: 'Blaze', item: 'Charizardite X', gender: 'M',
 				moves: [['dragondance', 'bellydrum'][this.random(2)], ['firepunch', 'flareblitz'][this.random(2)], ['shadowclaw', 'doubleedge', 'roost'][this.random(3)]],
 				baseSignatureMove: 'dragonstrike', signatureMove: "Dragon Strike",
@@ -96,7 +95,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'dragonenergy', signatureMove: "Dragon Energy",
 				evs: {atk:252, spd:252, spe:4}, nature: 'Adamant',
 			},
-			'@AuraStormLucario': { // complete (new abilty mega) aurastorm
+			'@AuraStormLucario': { // (mega ability) auraguard
 				species: 'Lucario', ability: 'Inner Focus', item: 'Lucarionite', gender: 'M',
 				moves: ['bulletpunch', 'ice punch', ['stealthrock', 'swordsdance'][this.random(2)]],
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
@@ -114,7 +113,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'shadowdrain', signatureMove: "Shadow Drain",
 				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
-			'@Safety Shark': { // (new abilty mega) magic guard
+			'@Safety Shark': { // (mega ability) magicguard
 				species: 'Garchomp', ability: 'Rough Skin', item: 'Garchompite', gender: 'M',
 				moves: ['earthquake', 'knockoff', 'recover'],
 				baseSignatureMove: 'dragonbotz', signatureMove: "DragonBot-Z",
@@ -122,7 +121,7 @@ exports.BattleScripts = {
 			},
 
 			// Drivers.
-			'%Alpha Ninja': { // (new abilty mega) Mega Poison animation messeges
+			'%Alpha Ninja': { // (mega ability) megapoison
 				species: 'Slowbro', ability: 'Regenerator', item: 'Slowbronite', gender: 'M',
 				moves: ['psystrike', 'slackoff', 'blizzard'],
 				baseSignatureMove: 'beybladespin', signatureMove: "Beyblade Spin",
@@ -134,7 +133,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'superbat', signatureMove: "Super Bat",
 				evs: {hp:244, def:8, spd:200, spe:56}, nature: 'Impish',
 			},
-			'%CreaturePhil': { // complete
+			'%CreaturePhil': {
 				species: 'Rotom-Wash', ability: 'feelsgd', item: 'Sitrus Berry',
 				moves: ['willowisp', 'painsplit', 'voltswitch'],
 				baseSignatureMove: 'waterbomb', signatureMove: "WaterBomb",
@@ -152,7 +151,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'ebat', signatureMove: '/ebat',
 				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
 			},
-			'%Imp Fallen Blood': { // (new abilty mega) Pirate
+			'%Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
 				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
 				moves: ['aeroblast', 'aurasphere', 'earthpower'],
 				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
@@ -176,7 +175,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'nidificate', signatureMove: "Nidificate",
 				evs: {hp:252, atk:252, def:4}, nature: 'Impish',
 			},
-			'%Selena': {
+			'%Selena': { // (type) bug/fairy
 				species: 'Vivillon', ability: 'Headstrong', item: 'Leftovers', gender: 'F',
 				moves: ['lightofruin', 'quiverdance',  ['recover', 'heatwave', 'bugbuzz'][this.random(3)]],
 				baseSignatureMove: 'bitchslap', signatureMove: 'Bitchslap',
@@ -188,7 +187,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'swagger', signatureMove: "Bad Pun",
 				evs: {hp:248, atk:252, spe:8}, nature: 'Naughty',
 			}, */
-			'%Starfox :3': { // custom bug/psychic typing
+			'%Starfox :3': { // (type) bug/psychic
 				species: 'Victini', ability: 'Shittiest User', item: 'Leftovers', shiny: true,
 				moves: ['vcreate', 'megahorn', 'recover'],
 				baseSignatureMove: 'mindwrecker', signatureMove: "Mind Wrecker",
@@ -202,7 +201,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'adaptation', signatureMove: "Adaptation",
 				evs: {spa:252, spd:4, spe:252}, nature: 'Modest',
 			},
-			'+Chronologically': { // custom fire/fighting typing
+			'+Chronologically': { // (type) fire/fighting
 				species: 'Victini', ability: 'Victory Prankster', item: 'Air Balloon', gender: 'M',
 				moves: ['sacredfire', 'teeterdance', 'drainpunch'],
 				baseSignatureMove: 'powerupmeme', signatureMove: "Power-up Meme",
@@ -214,13 +213,13 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
-			'+hayleysworld': {
+			'+hayleysworld': { // (type) water/fairy
 				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
 				moves: ['moonblast', 'icebeam', 'protect'],
 				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
 			},
-			'+Princess High': {
+			'+Princess High': { // (mega ability) pixieshield
 				species: 'Gardevoir', ability: 'Trace', item: 'Gardevoirite', gender: 'F',
 				moves: ['psyshock', 'thunderbolt', 'recover'],
 				baseSignatureMove: 'pixiecannon', signatureMove: "Pixie Cannon",
@@ -241,18 +240,19 @@ exports.BattleScripts = {
 				evs: {hp:252, def:4, spd:252}, ivs: {spe:0, atk:0}, nature: 'Sassy',
 			},
 			' Nineage': {
-				species: 'Arceus', ability: 'error', item: 'Life Orb', gender: 'M',
+				species: 'Arceus', ability: 'ERROR', item: 'Life Orb', gender: 'M',
 				moves: ['extremespeed', 'metronome', 'present'],
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},
-			' Piscean': {
+			' Piscean': { // (type) normal/ghost
 				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
 				moves: ['roar', 'stealthrock', 'milkdrink'],
 				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
 				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
 			},
-			/* ' DeathlyPlays': { // permalocked
+			/* permalocked
+			' DeathlyPlays': {
 				species: 'Ludicolo', ability: 'Sea of Lieks', item: 'Life Orb', gender: 'M',
 				moves: ['gigadrain', 'blizzard', 'focusblast'],
 				baseSignatureMove: 'aquasubscribe', signatureMove: "Aqua Subscribe",
