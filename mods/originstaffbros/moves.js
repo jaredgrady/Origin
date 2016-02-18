@@ -17028,7 +17028,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]hex');
 		},
 		onHit: function (target) {
-			this.add('c|+Mr. CGTNathan|One of us...');
+			this.add('c|Mr. CGTNathan|One of us...');
 		},
 		onEffectiveness: function (typeMod, type) {
 			if (type === 'Dark') return 1;
