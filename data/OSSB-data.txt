@@ -70,7 +70,7 @@ fender - Gible
 - Movepool: ExtremeSpeed, Dragon Claw, Earthquake
 - Notes: Fast set up sweeper.
 
-@Phoenix 01 NTG - Dragonite
+@Phoenix 01 NTG - (@01 NTG) Dragonite
 - Ability: Simple
 - Move: Dragon Energy - Basically Dragon Dance
 - Movepool: ExtremeSpeed, Dragon Claw, Earthquake
@@ -82,8 +82,8 @@ fender - Gible
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
 
-@ASL - Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn, ignores ghost immunity, STAB moves have a 2x multiplier instead (adaptability), Stats cannot be lowered (clear body), and this pokemon ignores opponents stat changes (unaware)
+@ASL - (@AuraStormLucario) Lucario-Mega
+- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn.  STAB moves have a 2x multiplier instead.
 - Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
@@ -130,7 +130,7 @@ fender - Gible
 - Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
 - Notes: Getting hit by this is not fun.  It's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting.
 
-%EmgProfessor Volco - Volcanion
+%Volco - (%EmgProfessor Volco) Volcanion
 - Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
 - Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
 - Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
@@ -166,7 +166,7 @@ fender - Gible
 - Movepool: Toxic, Brave Bird, Roost
 - Notes: Extremely hard to take down with physical attackers.  Use this to your advantage and sweep with a recoilless Brave Bird!
 
-%a Gryphon - Staravia
+%a Gryphon - (%Phoenix Gryphon) Staravia
 - Ability: Feather Coat - Magic Guard + Fur Coat
 - Move: Nidificate - Boosts Attack, Speed, Defense, Sp Defense by 3 stages, Protect, works first turn only
 - Movepool: Toxic, Brave Bird, Roost
