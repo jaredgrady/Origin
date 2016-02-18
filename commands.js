@@ -1117,6 +1117,7 @@ let commands = exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.errorReply("Users cannot be redirected to the global room.");
+		if (targetRoom.bannedUsers[userid] && targetRoom.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is banned from room " + room.id + ".");
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.errorReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
