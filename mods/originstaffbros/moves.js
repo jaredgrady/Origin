@@ -15980,18 +15980,24 @@ exports.BattleMovedex = {
 	},
 
 	// Sparkychild complete (typing) (messeges)
-	"cantabile": {
+	"nanairoshinfonii": {
 		isNonstandard: true,
-		id: "cantabile",
-		name: "Cantabile",
+		id: "nanairoshinfonii",
+		name: "Nanairo Shinfonī",
 		category: "Special",
-		desc: "The user sings a magical song causing the opponent to sleep",
+		desc: "Magical Piece full of colours",
 		shortDesc: "Sound type attack",
 		accuracy: true,
-		basePower: 80,
-		pp: 5,
-		priority: 1,
-		flags: {protect:1, mirror: 1, sound: 1, authentic: 1},
+		basePower: 6,
+		pp: 10,
+		priority: 0,
+		multihit: 18,
+		ignoreImmunity: true,
+		typechart: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Grass", "Water", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy"],
+		flags: {protect:1, mirror: 1},
+		onPrepareHit: function () {
+			this.add("c|~sparkychild|♩ ♫ ♪ ♬ ♫ ♪ ♩ ♬");
+		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]sing');
 			source.cureStatus();
@@ -16000,17 +16006,12 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]sing');
 		},
 		onHit: function (target, source, move) {
-			this.add("c|~sparkychild|♩ ♫ ♪ ♬ ♫ ♪ ♩ ♬...... zzz ...");
-		},
-		ignoreImmunity: {
-			"Psychic": true,
-		},
-		secondary: {
-			chance: 100,
-			status: 'slp',
+			// shuffle through the types
+			move.type = move.typechart.shift();
+			move.typechart.push(move.type);
 		},
 		target: "allAdjacentFoes",
-		type: "Psychic",
+		type: "Fairy",
 	},
 
 	// Leader Abilities
@@ -16069,7 +16070,7 @@ exports.BattleMovedex = {
 			this.add('c|&Paul Century|Dope');
 		},
 		secondary: {
-			chance: 100,
+			chance: 80,
 			status: 'brn',
 		},
 		target: "normal",

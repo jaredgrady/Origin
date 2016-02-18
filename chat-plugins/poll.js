@@ -126,6 +126,7 @@ exports.commands = {
 	pollremind: function (target, room, user) {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
+		if (room.game && room.id === 'lobby') return false;
 		if (!this.canBroadcast()) return;
 		this.sendReply('|raw|<div style="width: 100%; border: 1px solid #000;"> ' + Poll[room.id].display + '</div>');
 	},
@@ -136,7 +137,8 @@ exports.commands = {
 	tierpoll: function (target, room, user) {
 		if (room.battle) return false;
 		if (!this.can('broadcast', null, room)) return false;
-		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, OverUsed (No Mega), Underused, RarelyUsed, NeverUsed, PU, FU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Battle Factory, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Gen 4 LC, Battle Factory, Doubles OU, CAP, Gen 5 OU, Gen 5 LC, Origin Super Staff Bros');
+		if (room.game && room.id === 'lobby') return this.errorReply("Polls cannot be created in Lobby when there is a room game in progress");
+		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, Underused, RarelyUsed, NeverUsed, PU, ZU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Battle Factory, Doubles OU, CAP, Gen 5 OU, Origin Super Staff Bros');
 	},
 
 	vote: function (target, room, user) {

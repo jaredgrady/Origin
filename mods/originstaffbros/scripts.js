@@ -46,10 +46,10 @@ exports.BattleScripts = {
 				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
 			},*/
 			'~sparkychild': {
-				species: 'Floette-Eternal', ability: 'Appassionata', item: 'Life Orb', gender: "F",
-				moves: ['lightofruin', 'earthpower', 'focusblast'],
-				baseSignatureMove: 'cantabile', signatureMove: "Cantabile",
-				evs: {hp:4, spa:252, spe: 252}, nature: 'Modest',
+				species: 'Cresselia', ability: 'Cantabile', item: 'Leftovers', gender: "F",
+				moves: ['recover', 'cosmicpower', 'tailglow'],
+				baseSignatureMove: 'nanairoshinfonii', signatureMove: "Nanairo Shinfonī",
+				evs: {hp:252, spa:252, spe:4}, nature: 'Modest',
 			},
 
 			// Leaders.
@@ -156,7 +156,7 @@ exports.BattleScripts = {
 				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
 				moves: ['aeroblast', 'aurasphere', 'earthpower'],
 				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
-				evs: {hp:4, spa:252, spd:252}, nature: 'Timid',
+				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
@@ -241,8 +241,8 @@ exports.BattleScripts = {
 				evs: {hp:252, def:4, spd:252}, ivs: {spe:0, atk:0}, nature: 'Sassy',
 			},
 			' Nineage': {
-				species: 'Arceus', ability: 'error', item: 'Dome Fossil', gender: 'M',
-				moves: ['healbell', 'metronome', 'present'],
+				species: 'Arceus', ability: 'error', item: 'Life Orb', gender: 'M',
+				moves: ['extremespeed', 'metronome', 'present'],
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},

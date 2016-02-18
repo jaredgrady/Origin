@@ -3504,44 +3504,13 @@ exports.BattleAbilities = {
 	},
 
 	// Sparkychild
-	"appassionata": {
-		// musicians emotions are unpredictable
-		onSourceFaint: function (target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({spa:[0, 1][this.random(2)], spe:1, def:[0, 0, 0, 0, 1][this.random(5)], spd:[0, 0, 0, 0, 1][this.random(5)]}, source);
-				this.add("c|~sparkychild|Whether you’re sad, you’re a mess, or you’ve hit rock bottom, you still have to play! That’s how people like us survive.");
-			}
-		},
+	"cantabile": {
+		// unaware
 		isNonstandard: true,
-		shortDesc: "The user's emotions and powers flow free, increasing their speed and power.",
-		// only direct attacks affect the user's musical performance
-		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
-		},
-		// continuation only direct attacks affect the user's musical performance
-		onAllyTryHitSide: function (target, source, move) {
-			if (target.side === source.side || !move.flags['reflectable']) {
-				return;
-			}
-			this.add("raw|(Appassionata) The performance goes on, because .. music is freedom. Don't you dare ... steal my thunder!");
-			return null;
-		},
-		onTryHit: function (target, source, move) {
-			if (target === source || !move.flags['reflectable']) {
-				return;
-			}
-			this.add("raw|(Appassionata) The performance goes on, because .. music is freedom. Don't you dare ... steal my thunder!");
-			return null;
-		},
-		// everything is has to be expressed through music
-		onModifyMove: function (move) {
-			move.flags['sound'] = 1;
-			move.flags['authentic'] = 1;
-			move.accuracy = true;
-		},
-		// unaware of the audience's reaction
+		desc: "This Pokemon ignores other Pokemon's Attack, Special Attack, and accuracy stat stages when taking damage, and ignores other Pokemon's Defense, Special Defense, and evasiveness stat stages when dealing damage.",
+		shortDesc: "This Pokemon ignores other Pokemon's stat stages when taking or doing damage.",
+		id: "cantabile",
+		name: "Cantabile",
 		onAnyModifyBoost: function (boosts, target) {
 			let source = this.effectData.target;
 			if (source === target) return;
@@ -3556,10 +3525,26 @@ exports.BattleAbilities = {
 				boosts['accuracy'] = 0;
 			}
 		},
-		id: "apassionata",
-		name: "Apassionata",
+		// magic bounce
+		onTryHit: function (target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide: function (target, source, move) {
+			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
 	},
-
 	// Leader Abilities
 	// Erica*07
 	"mischievous": {
@@ -3587,12 +3572,6 @@ exports.BattleAbilities = {
 	// Paul Century complete
 	"bropower": {
 		isNonstandard: true,
-		onAfterDamageOrder: 1,
-		onAfterDamage: function (damage, target, source, move) {
-			if (source && source !== target && move && move.flags['contact']) {
-				this.damage(source.maxhp / 8, source, target, null, true);
-			}
-		},
 		onTryHit: function (target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.heal(target.maxhp / 4)) {
@@ -3601,13 +3580,13 @@ exports.BattleAbilities = {
 				return null;
 			}
 		},
-		onModifyPriority: function (priority, pokemon, target, move) {
-			if (move && move.id === "roar") {
-				return 1;
-			}
-		},
 		onSwitchOut: function (pokemon) {
 			pokemon.heal(pokemon.maxhp / 3);
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
+			}
 		},
 		id: "bropower",
 		name: "Bro Power",

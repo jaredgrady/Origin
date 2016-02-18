@@ -28,11 +28,11 @@ fender - Gible
 - Movepool: Torment, Taunt, Encore
 - Notes: A one time nuke, who is exceptionally good at stopping set up sweepers which run wild in this meta. 
 
-~sparkychild - Floette-Eternal
-- Ability: Appassionata - Only direct attacks affect the user's musical performance, the user will not be affected no matter what the audience's reaction; Everything will be expressed through music.  With this ability, you'll never miss a note!
-- Move: Cantabile - Special, 80 BP Psychic type sound move, puts opponent to sleep, ignores immunities, +1 priority.
-- Moveset: Light of Ruin, Earth Power, Focus Blast
-- Notes: Stops any sweep, and starts it's own.
+~sparkychild - Cresselia
+- Ability: Cantabile - Unaware + Magic Bounce
+- Move: Nanairo Shinfonī - Special, 6BP move, hits with each type once, heals status.
+- Moveset: Recover, Cosmic Power, Tail Glow
+- Notes: EVs: 252 HP / 252 SpA / 4 Spe - Hitting hard right off the bat means sparkychild cannot set up, and is probably your best bet in forcing it out.
 
 &Erica07 - Meloetta
 - Ability: Serene Grace
@@ -41,8 +41,8 @@ fender - Gible
 - Remove boosts from the opponent in hopes of saving your team from getting swept.
 
 &Paul Century - Slowbro
-- Ability: Bro Power - Volt Absorb + Rocky Helmet + regenerator, Roar has +1 priority
-- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2, and has a 100% chance to burn the opponent.
+- Ability: Bro Power - Volt Absorb + regenerator
+- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2, and has a 80% chance to burn the opponent.
 - Movepool: Roar, Sticky Web, Slack Off
 - Notes: A pretty decent wall with a powerfull psychic type scald with a high chance of burning the opponent.  Stops almost any setup sweeper lacking in priority.
 
@@ -77,14 +77,14 @@ fender - Gible
 - Notes: Fast set up sweeper.
 
 @AuraStormLucario - Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn, ignores ghost immunity, STAB moves have a 2x multiplier instead (adaptability), Stats cannot be lowered (clear body), and this pokemon ignores opponents stat changes (unaware)
-- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Ability: Aura Guard - Ignores speed cut from paralysis and attack cut from burn, STAB moves have a 2x multiplier (adaptability), Stats cannot be lowered (clear body), and opponent’s stat changes are ignored (unaware)
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat, and ignores ghost type immunity
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
 
 @ASL - (@AuraStormLucario) Lucario-Mega
-- Ability: Aura Guard - Ignores speed and attack cut from paralysis and burn.  STAB moves have a 2x multiplier instead.
-- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat
+- Ability: Aura Guard - Ignores speed cut from paralysis and attack cut from burn, STAB moves have a 2x multiplier (adaptability), Stats cannot be lowered (clear body), and opponent’s stat changes are ignored (unaware)
+- Move: Aura Storm - 120 BP Physical Fighting type move that hits the target's lower defensive stat, and ignores ghost type immunity
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard!
 
