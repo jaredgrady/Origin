@@ -241,8 +241,8 @@ exports.BattleScripts = {
 				evs: {hp:252, def:4, spd:252}, ivs: {spe:0, atk:0}, nature: 'Sassy',
 			},
 			' Nineage': {
-				species: 'Arceus', ability: 'error', item: 'Dome Fossil', gender: 'M',
-				moves: ['healbell', 'metronome', 'present'],
+				species: 'Arceus', ability: 'error', item: 'Life Orb', gender: 'M',
+				moves: ['extremespeed', 'metronome', 'present'],
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},

@@ -41,8 +41,8 @@ fender - Gible
 - Remove boosts from the opponent in hopes of saving your team from getting swept.
 
 &Paul Century - Slowbro
-- Ability: Bro Power - Volt Absorb + Rocky Helmet + regenerator, Roar has +1 priority
-- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2, and has a 100% chance to burn the opponent.
+- Ability: Bro Power - Volt Absorb + regenerator
+- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2, and has a 80% chance to burn the opponent.
 - Movepool: Roar, Sticky Web, Slack Off
 - Notes: A pretty decent wall with a powerfull psychic type scald with a high chance of burning the opponent.  Stops almost any setup sweeper lacking in priority.
 
