@@ -46,9 +46,9 @@ exports.BattleScripts = {
 			}, */
 			'~sparkychild': {
 				species: 'Cresselia', ability: 'Cantabile', item: 'Leftovers', gender: "F",
-				moves: ['recover', 'cosmicpower', 'tailglow'],
+				moves: ['recover', 'fierydance', 'agility'],
 				baseSignatureMove: 'nanairoshinfonii', signatureMove: "Nanairo Shinfonī",
-				evs: {hp:252, spa:252, spe:4}, nature: 'Modest',
+				evs: {hp:252, def:184, spe:72}, nature: 'Calm',
 			},
 
 			// Leaders.
