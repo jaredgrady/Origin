@@ -31,8 +31,8 @@ fender - Gible
 ~sparkychild - Cresselia
 - Ability: Cantabile - Unaware + Magic Bounce
 - Move: Nanairo Shinfonī - Special, 6BP move, hits with each type once, heals status.
-- Moveset: Recover, Cosmic Power, Tail Glow
-- Notes: EVs: 252 HP / 252 SpA / 4 Spe - Hitting hard right off the bat means sparkychild cannot set up, and is probably your best bet in forcing it out.
+- Moveset: Recover, Fiery Dance, Agility
+- Notes: Much easier to force out with powerful attacks.  Can still be dangerous if it sets up
 
 &Erica07 - Meloetta
 - Ability: Serene Grace
