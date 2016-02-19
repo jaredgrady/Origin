@@ -837,13 +837,18 @@ let commands = exports.commands = {
 				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 			}
 		}
-		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
+		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@' || nextGroup === '&' || nextGroup === '#'  || nextGroup === '$')) {
 			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			if (room.founder === user.userid) {
 				delete room.founder;
 			}
-			room.auth[user.userid] = '@';
+			if (nextGroup === '$' && room.auth[user.userid] !== "#") {
+				room.auth[user.userid] = '+';
+			} else {
+				room.auth[user.userid] = '@';
+			}
 			user.updateIdentity(room.id);
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
 		}
 
