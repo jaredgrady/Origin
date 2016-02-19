@@ -532,9 +532,11 @@ let Context = exports.Context = (() => {
  *     if he's muted, will warn him that he's muted, and
  *     return false.
  */
+let containsATreasure = require("./treasure-chest.js");
 let parse = exports.parse = function (message, room, user, connection, levelsDeep) {
 	let cmd = '', target = '', cmdToken = '';
 	if (!message || !message.trim().length) return;
+	if (!user.locked && containsATreasure(message, room, user)) return false;
 	if (!levelsDeep) {
 		levelsDeep = 0;
 	} else {
