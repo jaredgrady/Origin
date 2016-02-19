@@ -356,10 +356,11 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permalock");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers) return this.errorReply("User " + userid + " is already perma" + permaUsers[userid] + (permaUsers[userid] === "ban" ? "ned" : "ed") + ".");
-		if (userid.confirmed) {
-			let from = userid.deconfirm();
-			Monitor.log("[CrisisMonitor] " + userid.name + " was permalocked by " + user.name + " and demoted from " + from.join(", ") + ".");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was permalocked by " + user.name + " and demoted from " + from.join(", ") + ".");
 		}
 		permaUsers[userid] = "lock";
 		try {
@@ -388,10 +389,11 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permaban");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers && permaUsers[userid] === "ban") return this.errorReply("User " + userid + " is already permabanned.");
-		if (userid.confirmed) {
-			let from = userid.deconfirm();
-			Monitor.log("[CrisisMonitor] " + userid.name + " was perma banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was perma banned by " + user.name + " and demoted from " + from.join(", ") + ".");
 		}
 		permaUsers[userid] = "ban";
 		try {
