@@ -3626,7 +3626,7 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Cursed Aura', '[of] ' + pokemon);
 				} else {
-					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon);
+					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon, null, true);
 				}
 			}
 		},
@@ -3644,7 +3644,7 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Cursed Aura', '[of] ' + pokemon);
 				} else {
-					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], foeactive[i]);
+					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], foeactive[i], null, true);
 				}
 			}
 		},
