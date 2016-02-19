@@ -15988,7 +15988,7 @@ exports.BattleMovedex = {
 		category: "Special",
 		id: "nanairoshinfonii",
 		name: "Nanairo Shinfonī",
-		pp: 10,
+		pp: 20,
 		priority: 0,
 		multihit: 18,
 		ignoreImmunity: true,
