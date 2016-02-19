@@ -838,7 +838,6 @@ let commands = exports.commands = {
 			}
 		}
 		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@' || nextGroup === '&' || nextGroup === '#'  || nextGroup === '$')) {
-			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			if (room.founder === user.userid) {
 				delete room.founder;
 			}
@@ -847,6 +846,7 @@ let commands = exports.commands = {
 			} else {
 				room.auth[user.userid] = '@';
 			}
+			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			user.updateIdentity(room.id);
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
