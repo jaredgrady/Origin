@@ -152,7 +152,7 @@ fender - Gible
 - Ability: God's Force - Sheer Force
 - Move: Mega Earth Fissure - 110 BP special, ground type attack, with secondary effects, hits non grounded pokemon for 1.5x damage.
 - Movepool: Rock Polish, Psychic, Sludge Wave
-- Notes: Mega Earth Fissues hurts... Don't plan on switching in to it.
+- Notes: Mega Earth Fissures hurts... Don't plan on switching in to it.
 
 %L Chevy 12 - Archeops
 - Ability: fuckyouup - Tough Claws, recoil reduced by 80%, Speed Boost
