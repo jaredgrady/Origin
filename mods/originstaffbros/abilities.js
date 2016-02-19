@@ -3626,7 +3626,11 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Cursed Aura', '[of] ' + pokemon);
 				} else {
+					let damage = ~~(foeactive[i].maxhp * 0.15);
 					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon, null, true);
+					if (foeactive[i].hp <= damage) {
+						foeactive[i].faint(pokemon, "Cursed Aura");
+					}
 				}
 			}
 		},
