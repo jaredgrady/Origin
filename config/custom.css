@@ -2155,6 +2155,9 @@
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat;
 }
 
+#lobby-userlist-user-phoenixshady, #premierdraftdivision-userlist-user-phoenixshady, #phoenixleague-userlist-user-phoenixshady {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/3u9r8Zt.png?1") right no-repeat;
+}
 
 /* Icons ~end */
 
