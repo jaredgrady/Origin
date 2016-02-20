@@ -208,6 +208,12 @@ fender - Gible
 - Movepool: Protect, Moonblast, Ice Beam
 - Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
 
++Piscean - Miltank (Normal/Ghost type)
+- Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on entry
+- Move: Fatniss Evereat - +4 priority, Magic coat for the turn, uses toxic, cures status, boosts defense and special defense by 1 stage
+- Movepool: Roar, Stealth Rock, Milk Drink
+- Notes: A good counter to set up pokemon by punishing pokemon when they hit it.
+
 +PrincessHigh - Gardevoir-Mega
 - Ability: Trace upon entry ; When Mega Evolved: Pixie Shield - puts up 1 layer of spikes and raises special attack, special defense, and speed by 2 stages
 - Move: Pixie Cannon - 180 BP Special Fairy move, 75% chance to paralyze, SpD/Speed/Def is lowered by 1 stage, 25% recoil
@@ -232,20 +238,14 @@ Nineage - Arceus
 - Movepool: Metronome, Heal Bell, Present
 - Hazards, especially Stealth Rock and Toxic Spikes, are a thorn in the side for most fire types and set up sweepers.  While it does cause the user trouble, the opponent is also put under pressure.  Use this move with caution, when only a major part of your team is unaffected by the hazards, or when you truly need their support to counter the opponent's sweepers.
 
-Piscean - Miltank (Normal/Ghost type)
-- Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on entry
-- Move: Fatniss Evereat - +4 priority, Magic coat for the turn, uses toxic, cures status, boosts defense and special defense by 1 stage
-- Movepool: Roar, Stealth Rock, Milk Drink
-- Notes: A good counter to set up pokemon by punishing pokemon when they hit it.
+Origin Server - Mew
+- Ability: Uses TopsyTurvy against opponent on entry
+- Move: Tri Spikes - Puts up 3 layers of spikes
+- Movepool: Transform, Psystrike, Recover
+- Notes: Is a godly reliable stop to all the disgusting set-up sweepers in this tier.
 
 d.e.a.t.h.l.y.p.l.a.y.s - Ludicolo
 - Ability: Sea of Lieks - Primordial Sea, 1.2x multiplier for each attack, perfect accuracy for all moves
 - Move: Aqua Subscribe - 80BP special water type move, +1 priority, 100% chance to boost special attack and special defense by 1 stage, and 30% chance to boost speed by 1 stage.
 - Movepool: Giga Drain, Focus Blast, Blizzard
 - Notes: Good counter to all the fire types in this tier.
-
-Origin Server - Mew
-- Ability: Uses TopsyTurvy against opponent on entry
-- Move: Tri Spikes - Puts up 3 layers of spikes
-- Movepool: Transform, Psystrike, Recover
-- Notes: Is a godly reliable stop to all the disgusting set-up sweepers in this tier.

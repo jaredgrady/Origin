@@ -97,10 +97,14 @@ exports.BattleScripts = {
 			},
 			'@AuraStormLucario': { // (mega ability) auraguard
 				species: 'Lucario', ability: 'Inner Focus', item: 'Lucarionite', gender: 'M',
-				moves: ['bulletpunch', 'ice punch', ['stealthrock', 'swordsdance'][this.random(2)]],
+				moves: [
+					['bulletpunch', 'ice punch', 'swordsdance'],
+					['bulletpunch', 'ice punch', ['stealthrock', 'swordsdance'][this.random(2)]],
+				][this.random(2)],
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
 			},
+
 			'@Irraquated': {
 				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
 				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
@@ -219,6 +223,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
 			},
+			'+Piscean': { // (type) normal/ghost
+				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
+				moves: ['roar', 'stealthrock', 'milkdrink'],
+				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
+				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
+			},
 			'+Princess High': { // (mega ability) pixieshield
 				species: 'Gardevoir', ability: 'Trace', item: 'Gardevoirite', gender: 'F',
 				moves: ['psyshock', 'thunderbolt', 'recover'],
@@ -245,11 +255,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},
-			' Piscean': { // (type) normal/ghost
-				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
-				moves: ['roar', 'stealthrock', 'milkdrink'],
-				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
-				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
+			' Origin Server': {
+				species: 'Mew', ability: 'Counter-Meta', item: 'Leftovers',
+				moves: ['psystrike', 'recover', 'transform'],
+				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
+				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			/* permalocked
 			' DeathlyPlays': {
@@ -258,12 +268,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'aquasubscribe', signatureMove: "Aqua Subscribe",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			}, */
-			' Origin Server': {
-				species: 'Mew', ability: 'Counter-Meta', item: 'Leftovers',
-				moves: ['psystrike', 'recover', 'transform'],
-				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
-			},
 		};
 		// Generate the team randomly.
 		let pool = Object.keys(sets).randomize();

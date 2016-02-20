@@ -16899,6 +16899,7 @@ exports.BattleMovedex = {
 		self: {
 			boosts: {
 				def: 1,
+				spa: 1,
 				spd: 1,
 			},
 		},
@@ -16912,21 +16913,67 @@ exports.BattleMovedex = {
 			this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
 			this.useMove('wish', source);
 		},
-		secondaries: [
-			{
-				chance: 30,
-				status: 'brn',
-			}, {
-				chance: 100,
-				self: {
-					boosts: {
-						spa: 1,
-					},
-				},
-			},
-		],
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Water",
+	},
+
+
+	// Piscean
+	"fatnissevereat": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "fatnissevereat",
+		name: "Fatniss Evereat",
+		pp: 15,
+		priority: 4,
+		flags: {},
+		volatileStatus: 'magiccoat',
+		effect: {
+			duration: 1,
+			onStart: function (target) {
+				this.add('-singleturn', target, 'move: Magic Coat');
+			},
+			onTryHitPriority: 2,
+			onTryHit: function (target, source, move) {
+				this.attrLastMove('[anim]magicbounce');
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				let newMove = this.getMoveCopy(move.id);
+				newMove.hasBounced = true;
+				this.useMove(newMove, target, source);
+				return null;
+			},
+			onAllyTryHitSide: function (target, source, move) {
+				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				let newMove = this.getMoveCopy(move.id);
+				newMove.hasBounced = true;
+				this.useMove(newMove, target, source);
+				return null;
+			},
+		},
+		onHit: function (source, target, move) {
+			this.add('c|+Piscean|NO! I\'M THE FATTEST! ୧( ಠ Д ಠ )୨');
+			source.cureStatus();
+			this.useMove("toxic", source);
+		},
+		self: {
+			boosts: {
+				def:1,
+				spd:1,
+			},
+		},
+		secondary: false,
+		target: "self",
+		type: "Psychic",
 	},
 
 	// Princess High
@@ -17114,58 +17161,29 @@ exports.BattleMovedex = {
 		type: "Bird",
 	},
 
-	// Piscean
-	"fatnissevereat": {
+	// Origin Server
+	"trispikes": {
 		isNonstandard: true,
-		accuracy: true,
-		basePower: 0,
 		category: "Status",
-		id: "fatnissevereat",
-		name: "Fatniss Evereat",
-		pp: 15,
-		priority: 4,
-		flags: {},
-		volatileStatus: 'magiccoat',
-		effect: {
-			duration: 1,
-			onStart: function (target) {
-				this.add('-singleturn', target, 'move: Magic Coat');
-			},
-			onTryHitPriority: 2,
-			onTryHit: function (target, source, move) {
-				this.attrLastMove('[anim]magicbounce');
-				if (target === source || move.hasBounced || !move.flags['reflectable']) {
-					return;
-				}
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
-			onAllyTryHitSide: function (target, source, move) {
-				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
-					return;
-				}
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
+		id: "trispikes",
+		name: "Tri Spikes",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, nonsky: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]spikes');
 		},
-		onHit: function (source, target, move) {
-			this.add('c|piscean|NO! I\'M THE FATTEST! ୧( ಠ Д ಠ )୨');
-			source.cureStatus();
-			this.useMove("toxic", source);
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]spikes');
 		},
-		self: {
-			boosts: {
-				def:1,
-				spd:1,
-			},
+		onHit: function (target, source, move) {
+			this.useMove('spikes', target);
+			this.useMove('spikes', target);
+			this.useMove('spikes', target);
 		},
 		secondary: false,
 		target: "self",
-		type: "Psychic",
+		type: "Ground",
 	},
 
 	/* permalocked
@@ -17196,29 +17214,4 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	}, */
-
-	// Origin Server
-	"trispikes": {
-		isNonstandard: true,
-		category: "Status",
-		id: "trispikes",
-		name: "Tri Spikes",
-		pp: 20,
-		priority: 0,
-		flags: {reflectable: 1, nonsky: 1},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]spikes');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]spikes');
-		},
-		onHit: function (target, source, move) {
-			this.useMove('spikes', target);
-			this.useMove('spikes', target);
-			this.useMove('spikes', target);
-		},
-		secondary: false,
-		target: "self",
-		type: "Ground",
-	},
 };
