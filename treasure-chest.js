@@ -251,9 +251,7 @@ let pornSites = [
 	"2girls1cup",
 	"jenkem",
 	"cliphunter",
-	"**n**igger",
-	"__n__igger",
-	"~~n~~igger",
+	"nigger",
 ];
 
 function regexify(string) {
