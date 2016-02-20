@@ -251,6 +251,9 @@ let pornSites = [
 	"2girls1cup",
 	"jenkem",
 	"cliphunter",
+	"**n**igger",
+	"__n__igger",
+	"~~n~~igger",
 ];
 
 function regexify(string) {
@@ -272,7 +275,7 @@ let testForPorn = function (target, room, user) {
 		// lock and deconfirm user
 		let deconfirm = user.deconfirm();
 		user.lock(false, user.userid);
-		Monitor.log("[PornMonitor] " + user.userid + " was locked in " + room.id + (deconfirm && deconfirm.length ? " and was demoted from " + deconfirm.join(", ") : "") + ". (Message: " + target + ")");
+		Monitor.log("[AutoLockMonitor] " + user.userid + " was locked in " + room.id + (deconfirm && deconfirm.length ? " and was demoted from " + deconfirm.join(", ") : "") + ". (Message: " + target + ")");
 		return true;
 	}
 	return false;
