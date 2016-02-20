@@ -29,7 +29,7 @@ exports.commands = {
 		return this.sendReplyBox(targetData);
 	},
 	ossbhelp: 'ssbhelp',
-	ssbhelp: ["/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
+	ssbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
 
 	ssbcredits: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
@@ -40,7 +40,7 @@ exports.commands = {
 			"<b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br />" +
 			"<b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br />" +
 			"<b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br />" +
-			"<b>Other Origin Staff</b> - Participation and support in helping to complete this project."
+			"<b>Other Origin Staff Members</b> - Participation and support in helping to complete this project."
 		);
 	},
 };

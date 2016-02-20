@@ -322,6 +322,7 @@ exports.commands = {
 		}
 	},
 	bethelp: ["/bet [type] - rolls two dices and adds the two to make a final number. Choose between odd, even or seven. If you guess correctly you win bucks (betting for seven and winning awards more bucks)."],
+
 	slots: {
 		start: 'roll',
 		roll: function (target, room, user) {
