@@ -268,7 +268,7 @@ exports.commands = {
 		user.updateIdentity();
 		this.sendReply("You have hidden your staff symbol.");
 	},
-
+	unhide: "show",
 	showauth: 'show',
 	show: function (target, room, user) {
 		if (!this.can('lock')) return false;
