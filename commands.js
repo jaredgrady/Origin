@@ -536,7 +536,7 @@ let commands = exports.commands = {
 		if (room.battle || room.isPersonal) {
 			if (!this.can('editroom', null, room)) return;
 		} else {
-			if (!this.can('makeroom')) return;
+			if (!this.can('declare')) return;
 		}
 		if (room.tour && !room.tour.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
 		if (target === 'off' || target === 'false') {
