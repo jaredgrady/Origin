@@ -1,8 +1,8 @@
 'use strict';
-
+let Poll;
 if (!Rooms.global.Poll) {
 	Rooms.global.Poll = {
-		reset: function(roomId) {
+		reset: function (roomId) {
 			Poll[roomId] = {
 				question: undefined,
 				optionList: [],
@@ -11,7 +11,7 @@ if (!Rooms.global.Poll) {
 				topOption: '',
 			};
 		},
-		splint: function(target) {
+		splint: function (target) {
 			let parts = target.split(',');
 			let len = parts.length;
 			while (len--) {
@@ -19,9 +19,9 @@ if (!Rooms.global.Poll) {
 			}
 			return parts;
 		},
-	}
+	};
 }
-let Poll = Rooms.global.Poll;
+Poll = Rooms.global.Poll;
 
 for (let id in Rooms.rooms) {
 	if (Rooms.rooms[id].type === 'chat' && !Poll[id]) {
