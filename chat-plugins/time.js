@@ -83,7 +83,7 @@ exports.commands = {
 				userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>." + " Current ontime: <b>" + displayTime(convertTime((currentOntime))) + "</b>"
 			);
 		} else {
-			this.sendReplyBox(userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>.");
+			this.sendReplyBox(userid + "'s total ontime is <b>" + displayTime(convertTime(totalOntime)) + "</b>." + " Currently not online.");
 		}
 	},
 	ontimehelp: ["/ontime - Shows how long in total the user has been on the server."],

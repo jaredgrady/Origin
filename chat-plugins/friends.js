@@ -4,11 +4,7 @@
  * This file handles the Origin Friendlist system. Code by Nii Sama.
 ********************/
 let color = require('../config/color');
-let moment = require('moment');
 let BR = '<br>';
-let SPACE = '&nbsp;';
-let BIGSPACE = '&nbsp;&nbsp;&nbsp;&nbsp;';
-let profileColor = '#24678d';
 let onlineFriendListOutput = '';
 let offlineFriendListOutput = '';
 let numOnline = 0;
@@ -64,8 +60,6 @@ Friends.prototype.name = function () {
 };
 
 Friends.prototype.addFriendToOutput = function (callback) {
-	let userid = toId(this.username);
-
 	if (this.isOnline) {
 		onlineFriendListOutput += this.name() + '<br />';
 		++numOnline;

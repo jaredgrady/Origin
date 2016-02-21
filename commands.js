@@ -618,7 +618,7 @@ let commands = exports.commands = {
 		if (!target) {
 			if (!this.canBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-			if (room.id !== "lobby") {
+			if (room.id !== "lobby" && room.id !== "tournaments") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
 			} else {
 				this.sendReply('|raw|' + room.introMessage);
@@ -641,7 +641,7 @@ let commands = exports.commands = {
 
 		room.introMessage = target;
 		this.sendReply("(The room introduction has been changed to:)");
-		if (room.id !== "lobby") {
+		if (room.id !== "lobby" && room.id !== "tournaments") {
 			this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 		} else {
 			this.sendReply('|raw|' + target);
@@ -837,13 +837,18 @@ let commands = exports.commands = {
 				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 			}
 		}
-		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
-			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
+		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@' || nextGroup === '&' || nextGroup === '#'  || nextGroup === '$')) {
 			if (room.founder === user.userid) {
 				delete room.founder;
 			}
-			room.auth[user.userid] = '@';
+			if (nextGroup === '$' && room.auth[user.userid] !== "#") {
+				room.auth[user.userid] = '+';
+			} else {
+				room.auth[user.userid] = '@';
+			}
+			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			user.updateIdentity(room.id);
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
 		}
 
@@ -1117,6 +1122,7 @@ let commands = exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.errorReply("Users cannot be redirected to the global room.");
+		if (targetRoom.bannedUsers[targetUser.userid] && targetRoom.bannedIps[targetUser.latestIp]) return this.errorReply("User " + targetUser.name + " is banned from room " + targetRoom.id + ".");
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.errorReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
@@ -1977,7 +1983,7 @@ let commands = exports.commands = {
 				// rebuild the formats list
 				Rooms.global.formatListText = Rooms.global.getFormatListText();
 				// respawn validator processes
-				TeamValidator.ValidatorProcess.reinit();
+				TeamValidator.ValidatorProcess.respawn();
 				// respawn simulator processes
 				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
@@ -2875,5 +2881,4 @@ let commands = exports.commands = {
 			}
 		}
 	},
-
 };

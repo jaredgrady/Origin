@@ -268,7 +268,7 @@ exports.commands = {
 		user.updateIdentity();
 		this.sendReply("You have hidden your staff symbol.");
 	},
-
+	unhide: "show",
 	showauth: 'show',
 	show: function (target, room, user) {
 		if (!this.can('lock')) return false;
@@ -356,7 +356,12 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permalock");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers) return this.errorReply("User " + userid + " is already perma" + permaUsers[userid] + (permaUsers[userid] === "ban" ? "ned" : "ed") + ".");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was permalocked by " + user.name + " and demoted from " + from.join(", ") + ".");
+		}
 		permaUsers[userid] = "lock";
 		try {
 			Users.get(userid).lock(false, userid);
@@ -384,7 +389,12 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permaban");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers && permaUsers[userid] === "ban") return this.errorReply("User " + userid + " is already permabanned.");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was perma banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+		}
 		permaUsers[userid] = "ban";
 		try {
 			Users.get(userid).ban(false, userid);

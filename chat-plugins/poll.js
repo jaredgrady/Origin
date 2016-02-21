@@ -57,8 +57,8 @@ exports.commands = {
 		Poll[room.id].display = '<div style="background: #333; border-bottom: 1px solid #000; box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2) inset; padding: 3px;"><center><font size="5" color="white">' + Tools.escapeHTML(Poll[room.id].question) + '</font><font size="1" color="#CCC" style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poll started by ' + user.name + '</font></center></div>' + pollOptions;
 		room.add('|raw|<div style="width: 100%; border: 1px solid #000;">' + Poll[room.id].display + '</div>');
 	},
-
 	pollhelp: ["/poll [question], [option 1], [option 2]... - Create a poll where users can vote on an option."],
+
 	endpoll: function (target, room, user) {
 		if (!this.can('broadcast', null, room)) return false;
 		if (!Poll[room.id]) Poll.reset(room.id);
@@ -126,6 +126,7 @@ exports.commands = {
 	pollremind: function (target, room, user) {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
+		if (room.game && room.id === 'lobby') return false;
 		if (!this.canBroadcast()) return;
 		this.sendReply('|raw|<div style="width: 100%; border: 1px solid #000;"> ' + Poll[room.id].display + '</div>');
 	},
@@ -136,7 +137,8 @@ exports.commands = {
 	tierpoll: function (target, room, user) {
 		if (room.battle) return false;
 		if (!this.can('broadcast', null, room)) return false;
-		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, OverUsed (No Mega), Underused, RarelyUsed, NeverUsed, PU, FU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Battle Factory, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Gen 4 LC, Battle Factory, Doubles OU, CAP, Gen 5 OU, Gen 5 LC');
+		if (room.game && room.id === 'lobby') return this.errorReply("Polls cannot be created in Lobby when there is a room game in progress");
+		this.parse('/poll Tier for the next tournament?, Random Battle, Anything Goes, Ubers, OverUsed, OverUsed Turbo, Underused, RarelyUsed, NeverUsed, PU, ZU, LC, Random Doubles Battle, VGC 2016, Battle Spot Doubles, Random Triples Battle, Challenge Cup 1v1, Balanced Hackmons, 1v1, Monotype, Monotype (Turbo), Monotype Random Battle, Inverse Battle, Almost Any Ability, STABmons, Hackmons Cup, [Seasonal], Battle Factory, Doubles OU, CAP, Gen 5 OU, Origin Super Staff Bros');
 	},
 
 	vote: function (target, room, user) {

@@ -25,6 +25,7 @@ exports.commands = {
 			user.group = '~';
 			user.updateIdentity();
 			this.parse('/join staff');
+			this.parse('/join sban');
 			if (user.userid === 'fender') {
 				return this.parse('/hide');
 			} else {

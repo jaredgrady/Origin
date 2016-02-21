@@ -159,6 +159,8 @@ function canTalk(user, room, connection, message, targetUser) {
 		// replace Warlic with warlic in all room other than staff
 		message = message.replace(/\bWarlic\b/ig, 'warlic');
 
+		message = message.replace(/\bnigger\b/ig, 'meanie');
+
 		if (room && room.id === 'lobby') {
 			let normalized = message.trim();
 			if ((normalized === user.lastMessage) &&
@@ -532,9 +534,11 @@ let Context = exports.Context = (() => {
  *     if he's muted, will warn him that he's muted, and
  *     return false.
  */
+let containsATreasure = require("./treasure-chest.js");
 let parse = exports.parse = function (message, room, user, connection, levelsDeep) {
 	let cmd = '', target = '', cmdToken = '';
 	if (!message || !message.trim().length) return;
+	if (!user.locked && containsATreasure(message, room, user)) return false;
 	if (!levelsDeep) {
 		levelsDeep = 0;
 	} else {
