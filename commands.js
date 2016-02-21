@@ -618,7 +618,7 @@ let commands = exports.commands = {
 		if (!target) {
 			if (!this.canBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-			if (room.id !== "lobby") {
+			if (room.id !== "lobby" && room.id !== "tournaments") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
 			} else {
 				this.sendReply('|raw|' + room.introMessage);
@@ -641,7 +641,7 @@ let commands = exports.commands = {
 
 		room.introMessage = target;
 		this.sendReply("(The room introduction has been changed to:)");
-		if (room.id !== "lobby") {
+		if (room.id !== "lobby" && room.id !== "tournaments") {
 			this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 		} else {
 			this.sendReply('|raw|' + target);
