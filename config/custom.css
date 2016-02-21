@@ -188,6 +188,24 @@
   color: #444;
 }
 
+.tour-btn {
+  background: none;
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding-right: 8px;
+  padding-right: 30px;
+  color: #DDD;
+  font-size: 11pt;
+  text-align: right;
+}
+
+.tour-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #8E85DE;
+  border-left: 4px solid #8E85DE;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
