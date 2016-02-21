@@ -676,7 +676,9 @@ exports.Formats = [
 			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
 			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%EmgProfessor Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
-			this.add('raw|<font size="4" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
+			this.add('raw|<br />');
+			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
+			this.add('raw|<br />');
 			// This variable saves the status of a spammy conversation to be played, so it's only played once.
 			this.convoPlayed = false;
 
