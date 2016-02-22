@@ -44,8 +44,6 @@ Full [For Pokemon with full background]
 
 All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
 */
-'use strict';
-
 const uuid = require('uuid');
 const cards = require('../card-data.js');
 
@@ -78,7 +76,7 @@ let userPacks = {}; //Used to store users unopened packs
 
 function cachePacks() {
 	for (let i = 0; i < packShop.length; i++) {
-		cardCache.push(new Array());
+		cardCache.push([]);
 		for (let key in cards) {
 			if (cards.hasOwnProperty(key)) {
 				let obj = cards[key];
@@ -86,14 +84,14 @@ function cachePacks() {
 			}
 		}
 	}
-	for (let i= 0; i < packShop.length; i++) {
+	for (let i = 0; i < packShop.length; i++) {
 		cleanShop.push(toId(packShop[i]));
 	}
 }
 
 function cacheRarity() {
 	for (let i = 0; i < cardRarity.length; i++) {
-		rareCache.push(new Array());
+		rareCache.push([]);
 		for (let key in cards) {
 			if (cards.hasOwnProperty(key)) {
 				let obj = cards[key];
@@ -106,7 +104,7 @@ function cacheRarity() {
 	}
 }
 
-global.tourCard = function(tourSize, userid) {
+global.tourCard = function (tourSize, userid) {
 	if (tourSize > 32) tourSize = 32;
 	let tourRarity = tourCardRarity[Math.floor(tourSize / 4)];
 	let cacheValue = rareCache[cleanCard.indexOf(toId(tourRarity))];
@@ -130,12 +128,12 @@ function addCard(name, card) {
 	Db('points').set(userid, Db('points').get(userid, 0) + newCard.points);
 }
 
-function getShopDisplay (shop) {
+function getShopDisplay(shop) {
 	let display = "<table width='100%' border='1' style='border-collapse: collapse; color: #444; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);' cellpadding='5'>" +
 		"<tr><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Command</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Description</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Cost</th></tr>";
 	let start = 0;
 	while (start < shop.length) {
-		display += "<tr>" +"<td class='card-td'><button name='send' value='/buypack " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
+		display += "<tr>" + "<td class='card-td'><button name='send' value='/buypack " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
 			"<td class='card-td'>" + shop[start][1] + "</td>" +
 			"<td class='card-td'>" + shop[start][2] + "</td>" +
 			"</tr>";
@@ -146,7 +144,7 @@ function getShopDisplay (shop) {
 }
 
 function toTitleCase(str) {
-	return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	return str.replace(/\w\S*/g, function (txt) {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
 cachePacks();
@@ -162,7 +160,7 @@ exports.commands = {
 			return this.sendReply((target === user.userid ? 'You have' : target + ' has') + ' no packs.');
 		}
 		this.sendReply('|raw|<u><b>List of packs:</b></u>');
-		for (i = 0; i < userPacks[target].length; i++) {
+		for (let i = 0; i < userPacks[target].length; i++) {
 			this.sendReply(toTitleCase(userPacks[i]));
 		}
 	},
@@ -180,7 +178,7 @@ exports.commands = {
 		if (cost > amount) return self.sendReply('You need ' + (cost - amount) + ' more bucks to buy this card.');
 		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
 		let pack = toId(target);
-		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost + 
+		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost +
 			' bucks. Use <button name="send" value="/openpack ' +
 			pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
 		self.sendReply('You have until the server restarts to open your pack.');
@@ -214,9 +212,9 @@ exports.commands = {
 			addCard(user.userid, card);
 			let cardName = cards[card].name;
 			let packName = packShop[cleanShop.indexOf(toId(target))];
-			this.sendReplyBox(user.name + ' got <font color="' + colors[cards[card].rarity] + '">' + cards[card].rarity + '</font>\
-			<button name="send" value="/card ' + card  + '"><b>' + cardName + '</b></button> from a \
-			<button name="send" value="/buypack ' + packName + '">' + packName + ' Pack</button>.');
+			this.sendReplyBox(user.name + ' got <font color="' + colors[cards[card].rarity] + '">' + cards[card].rarity + '</font>' +
+			'<button name="send" value="/card ' + card  + '"><b>' + cardName + '</b></button> from a' +
+			'<button name="send" value="/buypack ' + packName + '">' + packName + ' Pack</button>.');
 		}
 		let usrIndex = userPacks[user.userid].indexOf(newPack);
 		userPacks[user.userid].splice(usrIndex, 1);
@@ -237,8 +235,8 @@ exports.commands = {
 		userPacks[userid].push(pack);
 		this.sendReply(this.targetUsername + ' was given ' + pack + ' pack. This user now has ' + userPacks[userid].length + ' pack(s).');
 		Users.get(this.targetUsername).connections[0].sendTo(room.id,
-			'|raw|' + user.name + ' has given you ' + pack + ' pack. You have until the server restarts to open your pack. \
-			Use <button name="send" value="/openpack ' + pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
+			'|raw|' + user.name + ' has given you ' + pack + ' pack. You have until the server restarts to open your pack.' +
+			'Use <button name="send" value="/openpack ' + pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
 	},
 
 	takepacks: 'takepack',
@@ -249,15 +247,15 @@ exports.commands = {
 		this.splitTarget(parts[0]);
 		if (!parts[1]) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
 		let pack = toId(parts[1]);
-		let packIndex = userPacks[userid].indexOf(pack);
 		let userid = toId(this.targetUsername);
-		if (packsKeys.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
+		let packIndex = userPacks[userid].indexOf(pack);
+		if (packShop.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
 		if (!this.targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
 		if (!userPacks[userid]) userPacks[userid] = [];
 		if (packIndex < 0) return this.sendReply('This user does not have this pack.');
 		userPacks[userid].splice(packIndex, 1);
-		this.sendReply(this.targetUsername + ' lost ' + pack + ' pack. This user now has ' + users[userid].length + ' pack(s).');
-		Users.get(this.targetUsername).send('|raw|' + user.name + ' has taken ' + pack + ' pack from you. You now have ' +  users[userid].length + ' pack(s).');
+		this.sendReply(this.targetUsername + ' lost ' + pack + ' pack. This user now has ' + userPacks[userid].length + ' pack(s).');
+		Users.get(this.targetUsername).send('|raw|' + user.name + ' has taken ' + pack + ' pack from you. You now have ' +  userPacks[userid].length + ' pack(s).');
 	},
 
 	showcards: 'showcase',
@@ -281,11 +279,11 @@ exports.commands = {
 		if (!cards.length) return this.sendReplyBox(userid + " has no cards.");
 
 		const cardsMapping = cards.map(function (card) {
-			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="50" title="' + card.name +'"></button>';
+			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="50" title="' + card.name + '"></button>';
 		});
 
-		const start = (page-1)*10;
-		const end = page*10;
+		const start = (page - 1) * 10;
+		const end = page * 10;
 		const bottom = '<br><br>' + userid + ' has ' + points + ' points.<br><br><b>Showing cards: ' + start + ' through ' + end + ' of ' + cards.length + '</b>';
 		const display = cardsMapping.slice(start, end);
 
@@ -294,7 +292,7 @@ exports.commands = {
 		this.sendReplyBox(display.join('') + bottom);
 	},
 
-	card: function(target, room, user) {
+	card: function (target, room, user) {
 		if (!target) return this.sendReply('/card [name] - Shows information about a card.');
 		if (!this.canBroadcast()) return;
 		let cardName = toId(target);
@@ -338,14 +336,13 @@ exports.commands = {
 	origincg: 'cardshelp',
 	cardshelp: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		return this.sendReplyBox('\
-			<center><b><u>Origin Trading Card Game:</u></b></center><br>\
-			<b>/buypack</b> - Buys a pack from the pack shop.<br>\
-			<b>/packshop</b> - Shows the shop for buying packs.<br>\
-			<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>\
-			<b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>\
-			<b>/card</b> - Shows data and information on any specifc card.<br>\
-			<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>\
-		');
+		return this.sendReplyBox('<center><b><u>Origin Trading Card Game:</u></b></center><br>' +
+			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
+			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
+			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
+			'<b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>' +
+			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
+			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>'
+		);
 	},
 };
