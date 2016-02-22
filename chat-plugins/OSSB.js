@@ -28,7 +28,9 @@ exports.commands = {
 		if (!targetData) return this.errorReply("The staffmon \"" + toId(target) + "\" could not be found.");
 		return this.sendReplyBox(targetData);
 	},
-	ssbhelp: ["/ssb [staff member name] - displays the data for a staff member's staffmon."],
+	ossbhelp: 'ssbhelp',
+	ssbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
+
 	ssbcredits: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
 		this.sendReplyBox(
@@ -37,8 +39,8 @@ exports.commands = {
 			"<b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br />" +
 			"<b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br />" +
 			"<b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br />" +
-			"<b>%&PaulCentury, %Selena, Piscean</b> - Testing.<br />" +
-			"<b>Other Origin Staff</b> - Participation and support in helping to complete this project."
+			"<b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br />" +
+			"<b>Other Origin Staff Members</b> - Participation and support in helping to complete this project."
 		);
 	},
 };

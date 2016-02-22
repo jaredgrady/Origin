@@ -3626,7 +3626,11 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Cursed Aura', '[of] ' + pokemon);
 				} else {
-					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon);
+					let damage = ~~(foeactive[i].maxhp * 0.15);
+					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon, null, true);
+					if (foeactive[i].hp <= damage) {
+						foeactive[i].faint(pokemon, "Cursed Aura");
+					}
 				}
 			}
 		},
@@ -3644,7 +3648,7 @@ exports.BattleAbilities = {
 				if (foeactive[i].volatiles['substitute']) {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Cursed Aura', '[of] ' + pokemon);
 				} else {
-					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], foeactive[i]);
+					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], foeactive[i], null, true);
 				}
 			}
 		},
@@ -4149,6 +4153,36 @@ exports.BattleAbilities = {
 		name: "Aquatic Memes",
 	},
 
+	// Piscean
+	"noyou": {
+		isNonstandard: true,
+		onAfterDamageOrder: 1,
+		onAfterDamage: function (damage, target, source, move) {
+			if (move && move.effectType === 'Move' && move.crit) {
+				if (source !== target && move && move.effectType === 'Move') {
+					this.damage(damage, source, target, null, true);
+				}
+			} else {
+				if (source !== target && move && move.effectType === 'Move') {
+					this.damage(damage / 3, source, target, null, true);
+				}
+			}
+		},
+		onStart: function (pokemon) {
+			let foeactive = pokemon.side.foe.active;
+			let activated = false;
+			for (let i = 0; i < foeactive.length; i++) {
+				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
+				if (!activated) {
+					this.useMove("light screen", pokemon, pokemon);
+					this.useMove("reflect", pokemon, pokemon);
+				}
+			}
+		},
+		id: "noyou",
+		name: "No, You!",
+	},
+
 	// Princess High
 	"pixieshield": {
 		isNonstandard: true,
@@ -4227,34 +4261,21 @@ exports.BattleAbilities = {
 		name: "ERROR",
 	},
 
-	// Piscean
-	"noyou": {
+	// Origin Server
+	"countermeta": {
 		isNonstandard: true,
-		onAfterDamageOrder: 1,
-		onAfterDamage: function (damage, target, source, move) {
-			if (move && move.effectType === 'Move' && move.crit) {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage, source, target, null, true);
-				}
-			} else {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage / 3, source, target, null, true);
-				}
-			}
-		},
 		onStart: function (pokemon) {
 			let foeactive = pokemon.side.foe.active;
 			let activated = false;
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
 				if (!activated) {
-					this.useMove("light screen", pokemon, pokemon);
-					this.useMove("reflect", pokemon, pokemon);
+					this.useMove("topsyturvy", pokemon, foeactive[i]);
 				}
 			}
 		},
-		id: "noyou",
-		name: "No, You!",
+		id: "countermeta",
+		name: "Counter-Meta",
 	},
 
 	/* permalocked
@@ -4290,21 +4311,4 @@ exports.BattleAbilities = {
 		id: "seaoflieks",
 		name: "Sea of Lieks",
 	}, */
-
-	// Origin Server
-	"countermeta": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			let foeactive = pokemon.side.foe.active;
-			let activated = false;
-			for (let i = 0; i < foeactive.length; i++) {
-				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (!activated) {
-					this.useMove("topsyturvy", pokemon, foeactive[i]);
-				}
-			}
-		},
-		id: "countermeta",
-		name: "Counter-Meta",
-	},
 };

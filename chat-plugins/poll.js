@@ -1,25 +1,27 @@
 'use strict';
-
-let Poll = {
-	reset: function (roomId) {
-		Poll[roomId] = {
-			question: undefined,
-			optionList: [],
-			options: {},
-			display: '',
-			topOption: '',
-		};
-	},
-
-	splint: function (target) {
-		let parts = target.split(',');
-		let len = parts.length;
-		while (len--) {
-			parts[len] = parts[len].trim();
-		}
-		return parts;
-	},
-};
+let Poll;
+if (!Rooms.global.Poll) {
+	Rooms.global.Poll = {
+		reset: function (roomId) {
+			Poll[roomId] = {
+				question: undefined,
+				optionList: [],
+				options: {},
+				display: '',
+				topOption: '',
+			};
+		},
+		splint: function (target) {
+			let parts = target.split(',');
+			let len = parts.length;
+			while (len--) {
+				parts[len] = parts[len].trim();
+			}
+			return parts;
+		},
+	};
+}
+Poll = Rooms.global.Poll;
 
 for (let id in Rooms.rooms) {
 	if (Rooms.rooms[id].type === 'chat' && !Poll[id]) {
@@ -57,8 +59,8 @@ exports.commands = {
 		Poll[room.id].display = '<div style="background: #333; border-bottom: 1px solid #000; box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2) inset; padding: 3px;"><center><font size="5" color="white">' + Tools.escapeHTML(Poll[room.id].question) + '</font><font size="1" color="#CCC" style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Poll started by ' + user.name + '</font></center></div>' + pollOptions;
 		room.add('|raw|<div style="width: 100%; border: 1px solid #000;">' + Poll[room.id].display + '</div>');
 	},
-
 	pollhelp: ["/poll [question], [option 1], [option 2]... - Create a poll where users can vote on an option."],
+
 	endpoll: function (target, room, user) {
 		if (!this.can('broadcast', null, room)) return false;
 		if (!Poll[room.id]) Poll.reset(room.id);

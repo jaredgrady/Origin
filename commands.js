@@ -536,7 +536,7 @@ let commands = exports.commands = {
 		if (room.battle || room.isPersonal) {
 			if (!this.can('editroom', null, room)) return;
 		} else {
-			if (!this.can('makeroom')) return;
+			if (!this.can('declare')) return;
 		}
 		if (room.tour && !room.tour.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
 		if (target === 'off' || target === 'false') {
@@ -618,7 +618,7 @@ let commands = exports.commands = {
 		if (!target) {
 			if (!this.canBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-			if (room.id !== "lobby") {
+			if (room.id !== "lobby" && room.id !== "tournaments") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
 			} else {
 				this.sendReply('|raw|' + room.introMessage);
@@ -641,7 +641,7 @@ let commands = exports.commands = {
 
 		room.introMessage = target;
 		this.sendReply("(The room introduction has been changed to:)");
-		if (room.id !== "lobby") {
+		if (room.id !== "lobby" && room.id !== "tournaments") {
 			this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 		} else {
 			this.sendReply('|raw|' + target);
@@ -837,13 +837,18 @@ let commands = exports.commands = {
 				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 			}
 		}
-		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
-			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
+		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@' || nextGroup === '&' || nextGroup === '#'  || nextGroup === '$')) {
 			if (room.founder === user.userid) {
 				delete room.founder;
 			}
-			room.auth[user.userid] = '@';
+			if (nextGroup === '$' && room.auth[user.userid] !== "#") {
+				room.auth[user.userid] = '+';
+			} else {
+				room.auth[user.userid] = '@';
+			}
+			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			user.updateIdentity(room.id);
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
 		}
 

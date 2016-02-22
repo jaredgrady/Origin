@@ -673,10 +673,12 @@ exports.Formats = [
 			this.add('message', "3");
 			this.add('message', "2");
 			this.add('message', "1");
-			this.add('message', "GET READY!");
+			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
-			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%EmgProfessor Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>%Selena, %Starfox3, &PaulCentury, Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
-			this.add('raw|<font size="3" style="font-weight:bold">/ssb [staff member name] - displays the data for a staff member\'s staffmon.</font>');
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%EmgProfessor Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
+			this.add('raw|<br />');
+			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
+			this.add('raw|<br />');
 			// This variable saves the status of a spammy conversation to be played, so it's only played once.
 			this.convoPlayed = false;
 
@@ -965,6 +967,9 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|+hayleysworld|The Queen of the Sea has arrived.');
 			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
+			}
 			if (name === 'princesshigh') {
 				this.add('c|+Princess High|You bitch');
 			}
@@ -983,9 +988,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'piscean') {
-				this.add('c|Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1102,6 +1104,9 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|+hayleysworld|I will stop being afk to get revenge later.');
 			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
+			}
 			if (name === 'princesshigh') {
 				this.add('c|+Princess High|Dammit...');
 			}
@@ -1120,9 +1125,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'piscean') {
-				this.add('c|Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1239,6 +1241,9 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|+hayleysworld|My bad memes will be back!');
 			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
+			}
 			if (name === 'princesshigh') {
 				this.add('c|+Princess High|I\'m out this bitch');
 			}
@@ -1257,9 +1262,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'piscean') {
-				this.add('c|Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
