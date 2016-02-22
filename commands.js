@@ -255,6 +255,7 @@ let commands = exports.commands = {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
 				targetUser.send(message);
+				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
 			}
