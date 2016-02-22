@@ -60,6 +60,25 @@ class PmLogger {
 		return true;
 	}
 
+	resolve(id) {
+		if (!this.reports[id]) return false;
+		let reporter = this.reports[id].reporter;
+		// remove their filedReports
+		let regex = new RegExp("(^" + reporter + "\-|\-" + reporter + "$)", "i");
+		let reportTarget = id.replace(regex, "");
+		let user = Users.get(reporter);
+		if (user) {
+			if (!user.filedReports || !user.filedReports[reportTarget]) return false;
+			// remove the filedReport
+			// useful in situations where the logs have progressed more, and you would like to have more logs reported
+			delete user.filedReports[reportTarget];
+			// let the user know the issue is taken care of
+			user.popup("Your report has been taken care of and resolved.");
+			return true;
+		}
+		return false;
+	}
+
 	report(user, target, targetUser) {
 		// get user-target id
 		let logId = user.userid + "-" + target;
@@ -70,16 +89,17 @@ class PmLogger {
 		// check if user has already reported;
 		if (this.reports[logId]) {
 			// if so merge logs;
-			this.reports[logId] = Object.merge(this.logs[logId], this.reports[logId]);
+			this.reports[logId] = Object.assign({}, this.logs[logId], this.reports[logId]);
 		} else {
-			// save a new instance in this.reports
-			this.reports[logId] = this.logs[logId];
+			// save a copy in this.reports
+			// use Object.assign() to break all ties to the original this.logs() object
+			this.reports[logId] = Object.assign({}, this.logs[logId]);
 		}
 		// set reporter
 		this.reports[logId].reporter = user.userid;
 		this.reports[logId].saved = false;
 		// send a message to the targetted staff room.
-		rRoom.addRaw("<div class=\"broadcast-red\"><font color=\"black\"><b>" + user.name + "</b> has reported <b>" + targetUser.name + "</b> for PM harrassment.<br>Logs: <button name=\"send\" value=\"/viewreport " + logId + "\">View</button>&nbsp;<button name=\"send\" value=\"/savereport " + logId + "\">Save</button>");
+		rRoom.addRaw("<div class=\"broadcast-red\"><font color=\"black\"><b>" + user.name + "</b> has reported <b>" + targetUser.name + "</b> for PM harrassment.<br>Logs: <button name=\"send\" value=\"/viewreport " + logId + "\">View</button>&nbsp;<button name=\"send\" value=\"/savereport " + logId + "\">Save</button>&nbsp;<button name=\"send\" value=\"/resolvereport " + logId + "\">Resolve</button>");
 		// update staff room so it shows on time
 		rRoom.update();
 		// success!
@@ -140,14 +160,23 @@ exports.commands = {
 		if (!reportExists) this.errorReply("That is not a valid report.");
 	},
 	savereport: function (target, room, user) {
-		if (!this.can("makeroom")) return false;
+		if (!this.can("declare")) return false;
 		if (!target) return this.errorReply("Please include the report id you want to save.");
 		let reportExists = PML.saveReport(target);
 		if (!reportExists) return this.errorReply("That is not a valid report or it has already been saved.");
 		this.sendReply("You have saved the report.");
 	},
+	resolvereport: function (target, room, user) {
+		if (!this.can("declare")) return false;
+		if (!target) return this.errorReply("Please include the report id you want to view.");
+		let resolveSuccess = PML.resolve(target);
+		if (!resolveSuccess) return this.errorReply("Report was not found or is already resolved.");
+		rRoom.add(user.name + " has resolved report " + target + ".");
+		// make sure it shows in room
+		rRoom.update();
+	},
 	searchreports: function (target, room, user) {
-		if (!this.can("makeroom")) return false;
+		if (!this.can("declare")) return false;
 		if (!target) return this.errorReply("Please include which user to search for");
 		target = toId(target);
 		let found = {};
@@ -173,7 +202,7 @@ exports.commands = {
 		this.sendReply("|raw|<table border=1 style=\"border-collapse: collapse;\"><tr><td>Date</td><td>Reporter</td><td>Logs</td></tr>" + tableContents + "</table>");
 	},
 	viewsavedreport: function (target, room, user) {
-		if (!this.can("makeroom")) return false;
+		if (!this.can("declare")) return false;
 		// you're only viewing this via the button, there's no way you can get the data without the button
 		if (!target) return false;
 		let parts = target.split(",");
