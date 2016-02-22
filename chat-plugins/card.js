@@ -1,6 +1,6 @@
 'use strict';
 /********************
- * Cards 
+ * Cards
  * Origin's Card System: Credit to Naten, nineage, fender, and everyone who added cards/
  * All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
  * Cards are organized alphabetically and use a point system
