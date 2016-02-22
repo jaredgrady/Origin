@@ -144,9 +144,6 @@ exports.commands = {
 			// set it in the user's report data
 			if (!user.filedReports) user.filedReports = {};
 			user.filedReports[targetId] = 1;
-			setTimeout(() => {
-				delete user.filedReports[targetUser.userid];
-			}, /* allow reporting again in 30 minutes */ 1800000);
 		}
 		// check for target rather than target user, since /trn would cause it to direct to the new name's userid
 		let reportSuccess = PML.report(user, targetId, targetUser);
