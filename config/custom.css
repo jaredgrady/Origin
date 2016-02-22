@@ -2112,7 +2112,6 @@
 .pm-window-chimechoo .pm-log, .pm-window-chimechoo .focused .pm-log {
   background: rgba(246, 247, 246, 0.95) url("http://i.imgur.com/Je7n6SH.png?1") right no-repeat !important;
   border-color: #FF4DB8 !important;
-  text-shadow: 0px 0px 1px #FF4DB8;
 }
 
 .pm-window-chimechoo .pm-log .chat small {
