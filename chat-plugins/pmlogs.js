@@ -79,7 +79,7 @@ class PmLogger {
 		this.reports[logId].reporter = user.userid;
 		this.reports[logId].saved = false;
 		// send a message to the targetted staff room.
-		rRoom.addRaw("<div class=\"broadcast-red\"><font color=white><b>" + user.name + "</b> has reported <b>" + targetUser.name + "</b> for PM harrassment.<br>Logs: <button name=\"send\" value=\"/viewreport " + logId + "\">View</button>&nbsp;<button name=\"send\" value=\"/savereport " + logId + "\">Save</button>");
+		rRoom.addRaw("<div class=\"broadcast-red\"><font color=\"black\"><b>" + user.name + "</b> has reported <b>" + targetUser.name + "</b> for PM harrassment.<br>Logs: <button name=\"send\" value=\"/viewreport " + logId + "\">View</button>&nbsp;<button name=\"send\" value=\"/savereport " + logId + "\">Save</button>");
 		// update staff room so it shows on time
 		rRoom.update();
 		// success!
