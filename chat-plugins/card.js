@@ -1,49 +1,12 @@
 'use strict';
-//PSCG
-/*Cards are organized alphabetically and use a point system
-Common 1 Point
-Uncommon 3 Points
-Rare 6 points
-Epic 10 points
-Legendary 15 points
-Mythic 20 points
-Make a discretionary call on what rarity they should be (Mythics are exclusively very unique legendary cards)
-
-If a card name repeats, attach a number to the end of it to make sure that it actually can be pulled with packs.
-
-publicids are dex numbers and any unique identifiers (if they're not a Pokemon, do a shorthand version of the card name)
-Dex Number, (for multiple pokemon: DEX[lowercase letter, a, b, c, d])
-Magma - Mag
-Aqua - Aq
-Delta - D
-Primal - Pr
-Mega - M
-EX - EX
-Fullart - Full
-Base Set - BS
-Ancient - ANC
-If multiple unique identifiers are there, stack them.
-
-Deltas are bumped up 1 level of rarity from their normal form.
-Full images are bumped up 1 level of rarity from their normal form
-EX cards are Epic
-EX Megas are Legendary
-Etc
-
-Collections are different identifiers of the CARD, please include the card's typing, anything included in it, the pack it came from, and anything special about it in the game
-Possible identifiers include
-Gen#
-Card Type [Fighting, Colorless, etc]
-Tier
-Pack Name [XY-Roaring Skies]
-Legendary
-Event
-Pseudo [For pseudo legendaries]
-Starter [For starter Pokemon]
-Full [For Pokemon with full background]
-
-All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
-*/
+/********************
+ * Cards 
+ * Origin's Card System: Credit to Naten, nineage, fender, and everyone who added cards/
+ * All cards should be retrieved here http://www.pokemon.com/us/pokemon-tcg/pokemon-cards/
+ * Cards are organized alphabetically and use a point system
+ * publicids are dex numbers and any unique identifiers (if they're not a Pokemon, do a shorthand version of the card name)
+ * Dex Number, (for multiple pokemon: DEX[lowercase letter, a, b, c, d])
+********************/
 const uuid = require('uuid');
 const cards = require('../card-data.js');
 
@@ -56,7 +19,7 @@ const colors = {
 	Common: '#000',
 };
 
-const shop = [ //Actual shop display
+const shop = [
 	['XY-Base', 'Get three cards from the first pack released in the Pokemon XY set.', 10],
 	['XY-Flashfire', 'Get three cards from the Flashfire pack released in the Pokemon XY set.', 10],
 	['XY-Furious Fists', 'Get three cards from the Furious Fists pack released in the Pokemon XY set.', 10],
@@ -64,7 +27,6 @@ const shop = [ //Actual shop display
 	['XY-Primal Clash', 'Get three cards from the Primal Clash pack released in the Pokemon XY set.', 10],
 	['XY-Roaring Skies', 'Get three cards from the Roaring Skies pack released in the Pokemon XY set.', 10],
 ];
-//Shop used in cardCache to reduce RAM usage of card caching
 let packShop = ['XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'Double Crisis', 'Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack', 'Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6', 'Metal', 'Trainer', 'Supporter', 'Item', 'Stadium', 'EX-Pack', 'Legendary', 'Full', 'Event'];
 const tourCardRarity = ['No Card', 'Common', 'Uncommon', 'Rare', 'Epic', 'Epic', 'Legendary', 'Legendary', 'Mythic'];
 const cardRarity = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'];
