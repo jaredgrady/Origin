@@ -128,6 +128,24 @@ exports.commands = {
 			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
 			break;
 
+		case 'roomleader':
+			count = 0;
+			for (let userid in room.auth) {
+				if (room.auth[userid] === '&') {
+					delete room.auth[userid];
+					count++;
+					if (userid in room.users) room.users[userid].updateIdentity(room.id);
+				}
+			}
+			if (!count) {
+				return this.sendReply("(This room has zero room leaders)");
+			}
+			if (room.chatRoomData) {
+				Rooms.global.writeChatRoomData();
+			}
+			this.addModCommand("All " + count + " room leaders have been cleared by " + user.name + ".");
+			break;
+
 		case 'roomowner':
 			count = 0;
 			for (let userid in room.auth) {
@@ -144,6 +162,15 @@ exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 			this.addModCommand("All " + count + " roomowners have been cleared by " + user.name + ".");
+			break;
+
+		case 'all':
+			if (!room.auth) return this.errorReply("This room has no auth.")
+			delete room.auth;
+			if (room.chatRoomData) {
+				Rooms.global.writeChatRoomData();
+			}
+			this.addModCommand("All roomauth has been cleared by " + user.name + ".");
 			break;
 
 		default:
