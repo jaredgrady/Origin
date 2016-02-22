@@ -17,6 +17,7 @@ let emotes = {
 	'FailFish': 'https://static-cdn.jtvnw.net/emoticons/v1/360/1.0',
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
 	'feelsamy': 'http://i.imgur.com/Aw8KAmi.gif',
+	'feelsarken': 'http://imgur.com/YCCDZWq.png',
 	'feelsasl': 'http://i.imgur.com/ZQbYp9l.gif',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',

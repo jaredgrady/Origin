@@ -1409,7 +1409,7 @@
   color: #109333 !important;
 }
 
-.pm-window-selena .pm-log, .pm-window-selena.focused .pm-log, .pm-window-selena .textbox, .pm-window-selena .textbox:hover, .pm-window-selena .textbox:focus, .dark .pm-window-selena .pm-log, .dark .pm-window-selena .textbox:focus {
+.pm-window-selena .textbox, .pm-window-selena .textbox:hover, .pm-window-selena .textbox:focus, .dark .pm-window-selena .pm-log, .dark .pm-window-selena .textbox:focus {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right center !important;
   border-color: black !important;
   box-shadow: none !important;
@@ -1440,7 +1440,7 @@
   border-color: black !important;
 }
 
-.pm-window-selena .pm-log-add .textbox {
+.pm-window-selena .pm-log-add .textbox, .pm-window-selena .pm-log-add .textbox:focus {
   border-color: black !important;
   background: rgba(255, 255, 255, 0.95) !important;
   color: black !important;
