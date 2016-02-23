@@ -942,7 +942,7 @@ exports.Formats = [
 				this.add('c|%isandman|ENTER SANDMAN');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Cheyvy 12|');
+				this.add('c|%L Cheyvy 12|I have swooped in to fuck up your day today feelsok');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
