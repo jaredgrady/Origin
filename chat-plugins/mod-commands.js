@@ -165,7 +165,7 @@ exports.commands = {
 			break;
 
 		case 'all':
-			if (!room.auth) return this.errorReply("This room has no auth.")
+			if (!room.auth) return this.errorReply("This room has no auth.");
 			delete room.auth;
 			if (room.chatRoomData) {
 				Rooms.global.writeChatRoomData();
