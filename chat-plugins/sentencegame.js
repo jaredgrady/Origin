@@ -49,7 +49,7 @@ exports.commands = {
 		if (room.sentence.lastUser === user.userid) return this.errorReply('You just gave the previous word. Give someone else a turn!');
 
 		let word = cleanWord(target);
-		if (word === false) return this.errorReply('The word must contain only alpha characters.')
+		if (word === false) return this.errorReply('The word must contain only alpha characters.');
 		if (room.sentence.result.length === room.sentence.size - 1 && badEndings.indexOf(word) > -1) return this.errorReply('Nobody wants the sentence to end with "' + word + '".');
 		room.sentence.result.push(word);
 
