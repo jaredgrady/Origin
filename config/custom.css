@@ -2467,6 +2467,10 @@
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kuLIhtK.gif") right no-repeat;
 }
 
+#lobby-userlist-user-calucha, #alliance-userlist-user-calucha, #1v1-userlist-user-calucha {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/499.png") right no-repeat;
+}
+
 /* Icons ~end */
 
 /* Room Icon */
