@@ -206,6 +206,18 @@
   border-left: 4px solid #8E85DE;
 }
 
+.sentence-container {
+  background: #EEE;
+  padding: 4px;
+  border-width: 1px 15px;
+  border-style: solid;
+  border-color: #CCC;
+  color: #333;
+  text-shadow: 1px 1px #FFF;
+  font-weight: bold;
+  text-align: center;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
