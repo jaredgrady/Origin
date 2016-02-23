@@ -17,7 +17,7 @@ function cleanWord(word) {
 
 function endDisplay(arr) {
 	let result = arr.join(' ');
-	let display = '<font size="4" style="font-weight:bold;text-align:center">The Sentence has been finished!</font><br /><font size="4" style="font-weight:bold">' + result + '</font>.';
+	let display = '<div class="sentence-container"><font size="4">The Sentence has been finished!<br />"<i>' + result + '.</i>"</font></div>';
 	return display;
 }
 
@@ -29,7 +29,7 @@ exports.commands = {
 		if (room.sentence) return this.errorReply('There is already a sentence game in this room.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
 
-		let length = Math.floor(Number(target));
+		let length = Number(target);
 		if (isNaN(length)) return this.errorReply('The length must be a number.');
 		if (length > 16 || length < 2) return this.errorReply('The sentence cannot be this long.');
 
@@ -37,7 +37,7 @@ exports.commands = {
 		room.sentence.size = length;
 		room.sentence.result = [];
 		room.sentence.lastUser = '';
-		room.addRaw('<font size="4" style="font-weight:bold;text-align:center">A Sentence Game has been started! The sentence will be ' + target + ' words long.</font><br />');
+		room.addRaw('<div class="sentence-container"><font size="4">A Sentence Game has been started!<br />The sentence will be <font color="red">' + target + '</font> words long.</font></div>');
 	},
 
 	aw: 'addword',
@@ -60,7 +60,7 @@ exports.commands = {
 			return;
 		} else {
 			room.sentence.lastUser = user.userid;
-			room.addRaw('<font size="3" style="font-weight:bold">' + user + ' has added the word "' + word + '" to the sentence.</font><br>');
+			room.addRaw('<div class="sentence-container"><font size="3"><i>' + user + '</i> has added the word "<font color="red">' + word + '</font>" to the sentence.</font></div>');
 		}
 	},
 
@@ -68,7 +68,7 @@ exports.commands = {
 		if (!this.can('lock', null, room)) return this.errorReply('/endsentence - Access denied');
 		if (!room.sentence) return this.errorReply('There is not a sentence game in this room.');
 		delete room.sentence;
-		room.addRaw('<font size="3" style="font-weight:bold">The Sentence Game was ended by ' + user + '.</font><br>');
+		room.addRaw('<div class="sentence-container"><font size="3">The Sentence Game was ended by <i>' + user + '</i>.</font></div>');
 	},
 
 	sentencehelp: ["- /sentence [length] - ",
