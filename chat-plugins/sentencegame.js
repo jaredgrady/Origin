@@ -27,8 +27,8 @@ exports.commands = {
 	addword: function (target, room, user) {
 		if (!room.sentence) return this.errorReply('There is not a sentence game in this room.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
-		if (target.length > 16) this.errorReply('You may not use a word longer then 16 characters');
-		if (target.indexOf(' ') > -1) this.errorReply('Your word should not include spaces');
+		if (target.length > 16) return this.errorReply('You may not use a word longer then 16 characters');
+		if (target.indexOf(' ') > -1) return this.errorReply('Your word should not include spaces');
 		if (room.sentence.lastWord === user.userid) return this.errorReply('You just gave the previous word. Give someone else a turn.');
 		room.sentence.result.push(target);
 
