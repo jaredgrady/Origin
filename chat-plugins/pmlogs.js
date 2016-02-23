@@ -89,7 +89,7 @@ class PmLogger {
 		// check if user has already reported;
 		if (this.reports[logId]) {
 			// if so merge logs;
-			this.reports[logId] = Object.assign({}, this.logs[logId], this.reports[logId]);
+			this.reports[logId] = Object.assign({}, this.reports[logId], this.logs[logId]);
 		} else {
 			// save a copy in this.reports
 			// use Object.assign() to break all ties to the original this.logs() object
