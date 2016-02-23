@@ -29,7 +29,7 @@ exports.commands = {
 		if (room.sentence) return this.errorReply('There is already a sentence game in this room.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
 
-		let length = Number(target);
+		let length = Math.floor(Number(target));
 		if (isNaN(length)) return this.errorReply('The length must be a number.');
 		if (length > 16 || length < 2) return this.errorReply('The sentence cannot be this long.');
 
