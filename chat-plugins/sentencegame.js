@@ -33,15 +33,11 @@ exports.commands = {
 		room.sentence.result.push(target);
 
 		if (room.sentence.result.length === room.sentence.size) {
-			console.log('game ended');
 			let end = endDisplay(room.sentence.result);
 			room.addRaw(end);
 			delete room.sentence;
 			return;
 		} else {
-			console.log('did not end');
-			console.log(room.sentence.size);
-			console.log(room.sentence.result.length);
 			room.sentence.lastWord = user.userid;
 			room.addRaw('<h4>' + user + ' has added the word "' + target + '" to the sentence.</h4>');
 		}
