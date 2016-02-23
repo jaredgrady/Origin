@@ -16,6 +16,7 @@ exports.commands = {
 		if (!target) return this.errorReply('You must specify a sentence length.');
 		let length = Number(target);
 		if (isNaN(length)) return this.errorReply('The length must be a number.');
+		if (length > 16) return this.errorReply('The sentence cannot be this long.');
 		room.sentence = {};
 		room.sentence.size = length;
 		room.sentence.result = [];
