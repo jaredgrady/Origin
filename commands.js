@@ -2284,7 +2284,7 @@ let commands = exports.commands = {
 	},
 
 	bash: function (target, room, user, connection) {
-		return;
+		if (1 === 1) return;
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/bash - Access denied.");
 		let exec = require('child_process').exec;
 		exec(target, (error, stdout, stderr) => {
