@@ -18,7 +18,7 @@ const IP_CHECK_EXCEPTIONS = ["hayleysworld", "alainscharizard", "resourceful", "
 // these commands cannot be used when the user is in trouble
 const IP_BLACKLISTED_COMMANDS = ["ban", "lock", "shadowban", "unban", "unlock", "unshadowban", "timedlock", "timedunlock", // global moderation commands
 	"eval", "hotpatch", "lockdown", "prelockdown", "restart", "kill", "bash", "slowlockdown", "endlockdown", "refreshpage", "evalbattle", "updateserver", "editbattle", // dev/console/admin commands
-	"makechatroom", "deleteroom", "deregisterroom", "backdoor", "resetladder", "cleaneconomy", "givebucks", "takebucks", // commands that affect the server badly and mess with it's data
+	"makechatroom", "deleteroom", "deregisterroom", "backdoor", "resetladder", "resetbucks", "givebucks", "takebucks", // commands that affect the server badly and mess with it's data
 	"banip", "unbanip", "rangelock", "rangeunlock"]; // extremely dangerous moderation commands that can ban the entire server
 
 // Notes:
