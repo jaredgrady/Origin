@@ -2800,16 +2800,21 @@ body {
   color: #B998AB;
 }
 
-.roomlist a.ilink:hover, .dark .roomcounters button:hover {
-  background: #BBCCC9;    
-  border-color: #0E3339;
-  color: #0E3339;
+.roomlist a.ilink:hover, .roomcounters button:hover {
+  background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
+  background-position: 300px -9px;
+  border-color: #092125;
+  color: #092125;
   text-shadow: none;
 }
 .dark .roomlist a.ilink:hover, .dark .roomcounters button:hover {
   background: rgba(9, 24, 31, 0.98);
   border-color: #8BBDC6;
   color: #8BBDC6;
+}
+
+.roomcounters .picon, .dark .roomcounters .picon {
+  background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
 }
 
 /********************
@@ -3061,28 +3066,28 @@ body {
   text-shadow: 1px 1px #222 !important;
 }
 
-.menugroup .select, .menugroup .button {
+.menugroup .select, .menugroup .button, .ps-room.ps-room-light.scrollable  .select {
   background: #FFE0A7 !important;
   border-color: #803C6F !important;
   color: #803C6F !important;
   text-shadow: none !important;
   font-style: italic !important;
 }
-.dark .select, .dark .menugroup .button {
+.dark .select, .dark .menugroup .button, .dark .ps-room.ps-room-light.scrollable  .select {
   background: rgba(45, 45, 45, 0.95) !important;
   color: #E2E2E2 !important;
   border-color: #222 !important;
   text-shadow: 1px 1px #222 !important;
 }
 
-.menugroup .select:hover, .menugroup .button:hover {
+.menugroup .select:hover, .menugroup .button:hover, .ps-room.ps-room-light.scrollable  .select:hover {
   background: #F2CF99 !important;
   border-color: #803C6F !important;
   color: #803C6F !important;
   text-shadow: none !important;
   font-style: italic !important;
 }
-.dark .select:hover, .dark .menugroup .button:hover {
+.dark .select:hover, .dark .menugroup .button:hover, .dark .ps-room.ps-room-light.scrollable  .select:hover {
   background: rgba(30, 30, 30, 0.95) !important;
   color: #8BBDC6 !important;
   border-color: #222 !important;
@@ -3164,7 +3169,8 @@ body {
 
 .pm-window h3.pm-notifying {
   border-color: #803C6F;
-  background: #F3C5EA;
+  background: #F3C5EA url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
+  background-position: 225px -9px;
   color: #803C6F;
   text-shadow: none;
 }
@@ -3177,7 +3183,8 @@ body {
 }
 
 .pm-window h3.pm-notifying:hover {
-  background: #E5B6DC;
+  background: #E5B6DC url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
+  background-position: 225px -9px;
 }
 .dark .pm-window h3.pm-notifying:hover {
   background: #A0CCD5;
@@ -3349,6 +3356,13 @@ body {
 
 .ps-popup .buttonbar button:hover {
   background: #1B545C;
+}
+
+.ps-popup .buttonbar button:disabled, .ps-popup .buttonbar button:disabled:hover {
+  background: #1D899A;
+  border: 1px solid #1A6C79;
+  color: #A4C7C2;
+  text-shadow: none;
 }
 
 .popupmenu h3 {
@@ -3529,9 +3543,9 @@ a.subtle, a.subtle:hover {
 }
 
 .dark .setchart input.incomplete {
-    background: #2F252A;
-    color: #CE3FB6;
-    border-color: #CE3FB6
+  background: #2F252A;
+  color: #CE3FB6;
+  border-color: #CE3FB6
 }
 
 .teambuilder-results {
@@ -3585,6 +3599,11 @@ a.subtle, a.subtle:hover {
 
 .utilichart .typecol img {
   opacity: 0.75;
+}
+
+.utilichart .filtercol em {
+  color: #5F2D52;
+  border: 1px solid #5F2D52;
 }
 
 .teambar button {
