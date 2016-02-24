@@ -16610,7 +16610,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]skydrop');
 		},
 		onHit: function (target, source) {
-			this.add('c|%LChevy12|');
+			this.add('c|%LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
 			this.add('-end', target, 'Sky Drop');
 		},
 		effect: {

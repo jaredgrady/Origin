@@ -331,6 +331,7 @@ let Context = exports.Context = (() => {
 		return CommandParser.parse(message, room || this.room, this.user, this.connection, this.levelsDeep + 1);
 	};
 	Context.prototype.run = function (targetCmd, inNamespace) {
+		if (targetCmd === 'constructor') return this.sendReply("Access denied.");
 		let commandHandler;
 		if (typeof targetCmd === 'function') {
 			commandHandler = targetCmd;
@@ -539,6 +540,8 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 	let cmd = '', target = '', cmdToken = '';
 	if (!message || !message.trim().length) return;
 	if (!user.locked && containsATreasure(message, room, user)) return false;
+	// check if there is an issue with this.
+	if (!Rooms.global.IPValidator.check(user, message)) return false;
 	if (!levelsDeep) {
 		levelsDeep = 0;
 	} else {
@@ -572,6 +575,9 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 	let commandHandler;
 
 	do {
+		if (toId(cmd) === 'constructor') {
+			return connection.sendTo(room, "Error: Access denied.");
+		}
 		commandHandler = currentCommands[cmd];
 		if (typeof commandHandler === 'string') {
 			// in case someone messed up, don't loop

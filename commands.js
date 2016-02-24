@@ -18,7 +18,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'nineage', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild']; //sys developers
+global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild']; //sys developers
 const developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
@@ -255,6 +255,7 @@ let commands = exports.commands = {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
 				targetUser.send(message);
+				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
 			}
@@ -538,7 +539,7 @@ let commands = exports.commands = {
 		} else {
 			if (!this.can('declare')) return;
 		}
-		if (room.tour && !room.tour.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
+		if (room.tour && !room.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
 		if (target === 'off' || target === 'false') {
 			delete room.modjoin;
 			this.addModCommand("" + user.name + " turned off modjoin.");
@@ -2046,6 +2047,9 @@ let commands = exports.commands = {
 
 	lockdown: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/lockdown - Access denied.");
+		if (Rooms.get("staff")) {
+			Rooms.get("staff").add(user.name + " has initiated lockdown");
+		}
 		Rooms.global.lockdown = true;
 		for (let id in Rooms.rooms) {
 			if (id === 'global') continue;
@@ -2283,6 +2287,7 @@ let commands = exports.commands = {
 	},
 
 	bash: function (target, room, user, connection) {
+		if (1) return;
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/bash - Access denied.");
 		let exec = require('child_process').exec;
 		exec(target, (error, stdout, stderr) => {
@@ -2453,13 +2458,7 @@ let commands = exports.commands = {
 
 	savereplay: function (target, room, user, connection) {
 		if (!room || !room.battle) return;
-		let logidx = 0; // spectator log (no exact HP)
-		if (room.battle.ended) {
-			// If the battle is finished when /savereplay is used, include
-			// exact HP in the replay log.
-			logidx = 3;
-		}
-		let data = room.getLog(logidx).join("\n");
+		let data = room.getLog(0).join("\n"); // spectator log (no exact HP)
 		let datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
 		let players = room.battle.playerNames;
 		LoginServer.request('prepreplay', {

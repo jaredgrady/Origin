@@ -502,6 +502,8 @@ let GlobalRoom = (() => {
 			if (room.active && room.battle) {
 				if (room.battle.p1) roomData.p1 = room.battle.p1.name;
 				if (room.battle.p2) roomData.p2 = room.battle.p2.name;
+				if (room.tour) roomData.minElo = 'tour';
+				if (room.rated) roomData.minElo = Math.floor(room.rated);
 			}
 			if (!roomData.p1 || !roomData.p2) continue;
 			roomTable[room.id] = roomData;
@@ -592,7 +594,7 @@ let GlobalRoom = (() => {
 
 		user1.lastMatch = user2.userid;
 		user2.lastMatch = user1.userid;
-		return true;
+		return Math.min(search1.rating, search2.rating) || 1;
 	};
 	GlobalRoom.prototype.addSearch = function (newSearch, user, formatid) {
 		// Filter racing conditions
@@ -606,11 +608,12 @@ let GlobalRoom = (() => {
 		for (let i = 0; i < formatSearches.length; i++) {
 			let search = formatSearches[i];
 			let searchUser = Users.getExact(search.userid);
-			if (this.matchmakingOK(search, newSearch, searchUser, user, formatid)) {
+			let minRating = this.matchmakingOK(search, newSearch, searchUser, user, formatid);
+			if (minRating) {
 				delete user.searching[formatid];
 				delete searchUser.searching[formatid];
 				formatSearches.splice(i, 1);
-				this.startBattle(searchUser, user, formatid, search.team, newSearch.team, {rated: true});
+				this.startBattle(searchUser, user, formatid, search.team, newSearch.team, {rated: minRating});
 				return;
 			}
 		}
@@ -630,12 +633,13 @@ let GlobalRoom = (() => {
 			for (let i = 1; i < formatSearches.length; i++) {
 				let search = formatSearches[i];
 				let searchUser = Users.getExact(search.userid);
-				if (this.matchmakingOK(search, longestSearch, searchUser, longestSearcher, formatid)) {
+				let minRating = this.matchmakingOK(search, longestSearch, searchUser, longestSearcher, formatid);
+				if (minRating) {
 					delete longestSearcher.searching[formatid];
 					delete searchUser.searching[formatid];
 					formatSearches.splice(i, 1);
 					formatSearches.splice(0, 1);
-					this.startBattle(searchUser, longestSearcher, formatid, search.team, longestSearch.team, {rated: true});
+					this.startBattle(searchUser, longestSearcher, formatid, search.team, longestSearch.team, {rated: minRating});
 					return;
 				}
 			}
@@ -730,6 +734,9 @@ let GlobalRoom = (() => {
 				i--;
 				continue;
 			}
+			if (user.can("upperstaff")) {
+				user.joinRoom("upperstaff", connection);
+			}
 			if (room.staffAutojoin === true && user.isStaff ||
 					typeof room.staffAutojoin === 'string' && room.staffAutojoin.indexOf(user.group) >= 0) {
 				// if staffAutojoin is true: autojoin if isStaff
@@ -819,8 +826,12 @@ let GlobalRoom = (() => {
 		newRoom.battle.addPlayer(p2, p2team);
 		this.cancelSearch(p1);
 		this.cancelSearch(p2);
-		if (Config.reportbattles && rooms.lobby) {
-			rooms.lobby.add('|b|' + newRoom.id + '|' + p1.getIdentity() + '|' + p2.getIdentity());
+		if (Config.reportbattles) {
+			let reportRoom = Rooms(Config.reportbattles === true ? 'lobby' : Config.reportbattles);
+			if (reportRoom) {
+				reportRoom.add('|b|' + newRoom.id + '|' + p1.getIdentity() + '|' + p2.getIdentity());
+				reportRoom.update();
+			}
 		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
@@ -862,22 +873,13 @@ let BattleRoom = (() => {
 
 		let rated;
 		if (options.rated && Tools.getFormat(formatid).rated !== false) {
-			rated = {
-				p1: p1.userid,
-				p2: p2.userid,
-				format: format,
-			};
+			rated = options.rated;
 		} else {
 			rated = false;
 		}
 
 		if (options.tour) {
-			this.tour = {
-				p1: p1.userid,
-				p2: p2.userid,
-				format: format,
-				tour: options.tour,
-			};
+			this.tour = options.tour;
 		} else {
 			this.tour = false;
 		}
@@ -919,32 +921,25 @@ let BattleRoom = (() => {
 
 		// Check if the battle was rated to update the ladder, return its response, and log the battle.
 		if (this.rated) {
-			let rated = this.rated;
 			this.rated = false;
 
-			if (winnerid === rated.p1) {
+			if (winnerid === this.p1.userid) {
 				p1score = 1;
-			} else if (winnerid === rated.p2) {
+			} else if (winnerid === this.p2.userid) {
 				p1score = 0;
 			}
 
-			let p1 = Users.getExact(rated.p1);
-			let p1name = p1 ? p1.name : rated.p1;
-			let p2 = Users.getExact(rated.p2);
-			let p2name = p2 ? p2.name : rated.p2;
+			let p1name = this.p1.name;
+			let p2name = this.p2.name;
 
 			//update.updates.push('[DEBUG] uri: ' + Config.loginserver + 'action.php?act=ladderupdate&serverid=' + Config.serverid + '&p1=' + encodeURIComponent(p1) + '&p2=' + encodeURIComponent(p2) + '&score=' + p1score + '&format=' + toId(rated.format) + '&servertoken=[token]');
 
-			if (!rated.p1 || !rated.p2) {
-				this.push('|raw|ERROR: Ladder not updated: a player does not exist');
-			} else {
-				winner = Users.get(winnerid);
-				if (winner && !winner.registered) {
-					this.sendUser(winner, '|askreg|' + winner.userid);
-				}
-				// update rankings
-				Ladders(rated.format).updateRating(p1name, p2name, p1score, this);
+			winner = Users.get(winnerid);
+			if (winner && !winner.registered) {
+				this.sendUser(winner, '|askreg|' + winner.userid);
 			}
+			// update rankings
+			Ladders(this.battle.format).updateRating(p1name, p2name, p1score, this);
 		} else if (Config.logchallenges) {
 			// Log challenges if the challenge logging config is enabled.
 			if (winnerid === this.p1.userid) {
@@ -963,14 +958,13 @@ let BattleRoom = (() => {
 		}
 		if (this.tour) {
 			winner = Users.get(winner);
-			let tour = this.tour.tour;
-			tour.onBattleWin(this, winner);
+			this.tour.onBattleWin(this, winner);
 		}
 		this.update();
 	};
-	// logNum = 0    : spectator log
-	// logNum = 1, 2 : player log
-	// logNum = 3    : replay log
+	// logNum = 0    : spectator log (no exact HP)
+	// logNum = 1, 2 : player log (exact HP for that player)
+	// logNum = 3    : debug log (exact HP for all players)
 	BattleRoom.prototype.getLog = function (logNum) {
 		let log = [];
 		for (let i = 0; i < this.log.length; ++i) {
@@ -985,7 +979,6 @@ let BattleRoom = (() => {
 		return log;
 	};
 	BattleRoom.prototype.getLogForUser = function (user) {
-		if (this.game.ended) return this.getLog(3);
 		if (!(user in this.game.players)) return this.getLog(0);
 		return this.getLog(this.game.players[user].slotNum + 1);
 	};
@@ -1516,7 +1509,7 @@ let ChatRoom = (() => {
 	};
 	ChatRoom.prototype.getIntroMessage = function (user) {
 		let message = '';
-		if (this.introMessage) message += '\n|raw|<div' + ((this.toString().toLowerCase() === "lobby" || this.toString().toLowerCase() === "tournaments") ? '' : ' class="infobox"') + '>' + this.introMessage + '</div>';
+		if (this.introMessage) message += '\n|raw|<div' + ((this.id === "lobby" || this.id === "tournaments") ? '' : ' class="infobox"') + '>' + this.introMessage + '</div>';
 		if (this.staffMessage && user.can('mute', null, this)) message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '(Staff intro:)<br /><div>' + this.staffMessage + '</div>';
 		if (this.modchat) {
 			message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '<div class="broadcast-red">' +
@@ -1560,6 +1553,7 @@ let ChatRoom = (() => {
 		if (!this.checkBanned(user, oldid)) {
 			return;
 		}
+		if (this.poll && user.userid in this.poll.voters) this.poll.updateFor(user);
 		if (this.game && this.game.onRename) this.game.onRename(user, oldid, joining);
 		return user;
 	};
