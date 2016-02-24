@@ -128,7 +128,7 @@ class IPValidator {
 				let sIp = dbips[i];
 				// check for a match
 				// if IP is a range
-				if (sIp.indexOf("*") > -1 && sIp.split("*")[0].split(".").length >= IP_MATCH_STRICTNESS) {
+				if (sIp.indexOf("*") > -1) {
 					let range = sIp.split("*")[0];
 					if (ip.indexOf(range) === 0) {
 						// acknowledge that it's a good match, no need to update database
