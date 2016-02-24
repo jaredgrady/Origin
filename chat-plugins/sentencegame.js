@@ -28,6 +28,7 @@ exports.commands = {
 		if (!this.can('lock', null, room)) return this.errorReply('/sentence - Access denied');
 		if (room.sentence) return this.errorReply('There is already a sentence game in this room.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
+		if (target === 'help') return this.parse('/help sentence');
 
 		let length = Math.floor(Number(target));
 		if (isNaN(length)) return this.errorReply('The length must be a number.');
