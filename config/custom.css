@@ -2813,7 +2813,7 @@ body {
   color: #8BBDC6;
 }
 
-.roomcounters .picon, .dark .roomcounters .picon {
+.picon, .dark .picon {
   background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
 }
 
