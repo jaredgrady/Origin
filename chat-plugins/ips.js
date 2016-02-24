@@ -12,7 +12,7 @@
 const BLACKLISTED_RANGES = ["208.83.7.*"];
 // this will show how strictly it will match ips
 // at 3, it will match ips XXX.XXX.XXX.* as safe ips.
-const IP_MATCH_STRICTNESS = 3;
+const IP_MATCH_STRICTNESS = 2;
 // non staff users that require their ips checked - prominent roomauth and bots
 const IP_CHECK_EXCEPTIONS = ["hayleysworld", "alainscharizard", "resourceful", "nineage"];
 // these commands cannot be used when the user is in trouble
