@@ -2047,6 +2047,9 @@ let commands = exports.commands = {
 
 	lockdown: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/lockdown - Access denied.");
+		if (Rooms.get("staff")) {
+			Rooms.get("staff").add(user.name + " has initiated lockdown");
+		}
 		Rooms.global.lockdown = true;
 		for (let id in Rooms.rooms) {
 			if (id === 'global') continue;
