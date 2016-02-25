@@ -3683,7 +3683,7 @@ a.subtle, a.subtle:hover {
 }
 
 .ps-room .battle-controls {
-  background: rgba(255, 255, 255, 0.25) url("http://i.imgur.com/5nLkqSF.png") no-repeat;
+  background: rgba(255, 255, 255, 0.25);
   padding-top: 10px; 
   padding-bottom: 10px;
 }
@@ -3809,6 +3809,18 @@ a.subtle, a.subtle:hover {
 .moveselect button, .switchselect button {
   color: #BBCCC9 !important;
   text-shadow: 0px 0px 2px #11484F !important;
+}
+
+.moveselect button {
+  background: url("http://i.imgur.com/GPzZsG1.png") center right no-repeat;
+  background-position: right 14px;
+  padding-right: 35px;
+}
+
+.switchselect button {
+  background: url("http://i.imgur.com/d0UDk9G.png")  bottom no-repeat;
+  padding-right: 20px;
+  background-position: right 14px;
 }
 
 .switchmenu button {
