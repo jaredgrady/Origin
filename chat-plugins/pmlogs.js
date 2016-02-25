@@ -1,7 +1,7 @@
 "use strict";
 // pm log age in hours
 const PM_LOG_AGE = 2;
-const reportRoom = "upperstaff";
+const reportRoom = "upperstaffroom";
 const rRoom = Rooms.get(reportRoom);
 
 class PmLogger {
