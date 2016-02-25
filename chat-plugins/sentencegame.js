@@ -3,7 +3,7 @@
 /************************************************
  * Sentence Game by fender and AuraStormLucario *
  ************************************************/
-const badEndings = ['the', 'and', 'a', 'an', 'or'];
+const badEndings = ['the', 'and', 'a', 'an', 'or', 'with', 'to', 'that'];
 
 function cleanWord(word) {
 	let reg = /[^a-zA-Z0-9 :]/g;
