@@ -2813,7 +2813,9 @@ body {
   color: #8BBDC6;
 }
 
-.picon, .dark .picon {
+/*.picon, .dark .picon {
+This makes everything into a mew*/
+.roomcounters .picon, .dark .roomcounters .picon {
   background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
 }
 
