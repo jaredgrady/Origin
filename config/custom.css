@@ -3683,7 +3683,7 @@ a.subtle, a.subtle:hover {
 }
 
 .ps-room .battle-controls {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25) url("http://i.imgur.com/5nLkqSF.png") no-repeat;
   padding-top: 10px; 
   padding-bottom: 10px;
 }
