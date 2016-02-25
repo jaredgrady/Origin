@@ -747,10 +747,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id === 'lightningrod') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id === 'pixilate') {
@@ -802,10 +799,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id !== 'pirate') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id !== 'pixieshield') {
@@ -819,45 +813,27 @@ exports.Formats = [
 			// Add here special typings, done for flavour mainly.
 			if (name === 'paulcentury' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fire');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fire"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Fairy"];
 			}
 			if (name === 'starfox3' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Psychic', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Psychic"];
 			}
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
-				pokemon.typesData = [
-					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Fighting', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Fire", "Fighting"];
 			}
 			if (name === 'hayleysworld' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fairy"];
 			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
-				pokemon.typesData = [
-					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Ghost', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Normal", "Ghost"];
 			}
 
 			// Edgy switch-in sentences go here.

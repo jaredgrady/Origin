@@ -3628,8 +3628,9 @@ exports.BattleAbilities = {
 				} else {
 					let damage = ~~(foeactive[i].maxhp * 0.15);
 					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon, null, true);
-					if (foeactive[i].hp <= damage) {
+					if (foeactive[i].hp <= 0) {
 						foeactive[i].faint(pokemon, "Cursed Aura");
+						this.faintMessages();
 					}
 				}
 			}
