@@ -70,6 +70,10 @@ function parseStatus(text, encoding) {
 	return text;
 }
 
+var roomIntro = function(i) {
+	return '<div style="background: url(\'http://i.imgur.com/eTWlzCR.jpg?2\') center top; background-size: cover; width: 100%; text-align: center; border: 1px solid #11484F; border-bottom: none; border-top-right-radius: 8px; border-top-left-radius: 8px;"><div style="background: rgba(17, 72, 79, 0.6); box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.8); padding: 10px 0px; border-top-right-radius: 8px; border-top-left-radius: 8px;"><img src="//i.imgur.com/knvNVoQ.png?1" width="250" height="75"></div></div><div style="text-align: center; border: 1px solid #803C6F; border-right-color: #CD9FC4; border-left-color: #CD9FC4; background: #CD9FC4; background: -moz-linear-gradient(#CD9FC4, #A57D9D); background: -webkit-linear-gradient(#CD9FC4, #A57D9D); background: -o-linear-gradient(#CD9FC4, #A57D9D); background: linear-gradient(#CD9FC4, #A57D9D); box-shadow: 1px 0px 0px #803C6F, -1px 0px 0px #803C6F, inset 0px -1px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.8); width: 100%; height: 35px;"><a href="https://docs.google.com/document/d/1B-g2ESwArLDoXcjH516awPnqlxjYPyOxzgut4-Zw7JE/edit?pref=2&pli=1"><button class="intro-tabbarbtn" style="box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), -1px 0px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);">VIP Info</button></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=originvip%40gmail%2ecom&lc=US&item_name=Origin%20Donations&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><button class="intro-tabbarbtn important" style="box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), -1px 0px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);">Donate</button></a><a href="http://originps.boards.net/"><button class="intro-tabbarbtn important" style="box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), -1px 0px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);">Forums</button></a><a href="http://originps.boards.net/thread/9/rules"><button class="intro-tabbarbtn" style="box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), -1px 0px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 1px rgba(255, 255, 255, 0.5);">Rules</button></a></div><div class="important" style="text-align: center; box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.4); background: #FFE0A7; border: 1px solid #803C6F; border-top: none; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; padding: 7px 0px; width: 100%; color: #58294C;"><marquee><u>Announcements</u>: ' + i + '</marquee></div>';
+}
+
 exports.commands = {
 	stafflist: 'authority',
 	auth: 'authority',
@@ -541,4 +545,14 @@ exports.commands = {
 			);
 		}
 	},
+	
+	clobbyannounce: 'changeannounce',
+	cannounce: 'changeannounce',
+	changeannounce: function(target, room, user) {
+		if (room.id !== "lobby") return false;
+		if (!target) return false;
+		if (!this.can('declare', null, room)) return false;
+		
+		this.parse("/roomintro " + roomIntro(target));
+	}
 };
