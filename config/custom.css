@@ -2815,7 +2815,7 @@ body {
 
 /*.picon, .dark .picon {
 This makes everything into a mew*/
-.roomcounters .picon, .dark .roomcounters .picon {
+.roomcounters .picon, .roomlist .picon, .dark .roomcounters .picon, .dark .roomlist .picon {
   background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
 }
 
