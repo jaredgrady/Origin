@@ -3819,6 +3819,14 @@ exports.BattleAbilities = {
 				this.add('-immune', this.effectData.target, '[msg]', '[from] ability: feelsgd');
 			}
 		},
+		onResidual: function (pokemon) {
+			if (this.isWeather(['sunnyday', 'desolateland']) || this.random(2) === 0) {
+				if (pokemon.hp && !pokemon.item && this.getItem(pokemon.lastItem).isBerry) {
+					pokemon.setItem(pokemon.lastItem);
+					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Harvest');
+				}
+			}
+		},
 		id: "feelsgd",
 		name: "feelsgd",
 	},
