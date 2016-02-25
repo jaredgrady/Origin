@@ -979,7 +979,8 @@ exports.Formats = [
 				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
 			}
 			if (name === 'lttesla') {
-				this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				//this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				this.add('c|~Lt. Tesla|Nothing in showdown is certain except Deth and haxes');
 			}
 			if (name === 'masterfloat') {
 				this.add('c|~Master Float|shitzel, fkin hax #blameZarel');
