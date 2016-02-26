@@ -3387,7 +3387,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		shortDesc: "This Pokemon's moves and their effects ignore the Abilities of other Pokemon.",
 		onStart: function (pokemon, target) {
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			target.addVolatile('torment');
 		},
 		stopAttackEvents: true,
@@ -3454,9 +3454,9 @@ exports.BattleAbilities = {
 		name: "Indifference",
 		target: "normal",
 		onStart: function (pokemon) {
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
-				var oldAbility = target.setAbility('download');
+				let oldAbility = target.setAbility('download');
 				if (oldAbility) {
 					this.add('-ability', target, 'download', '[from] ' + pokemon.name + '\s Indifference!');
 					return;
@@ -3464,7 +3464,7 @@ exports.BattleAbilities = {
 			}
 		},
 		onAnyModifyBoost: function (boosts, target) {
-			var source = this.effectData.target;
+			let source = this.effectData.target;
 			if (source === target) return;
 			if (source === this.activePokemon && target === this.activeTarget) {
 				boosts['def'] = 0;
@@ -3609,7 +3609,7 @@ exports.BattleAbilities = {
 		desc: "There is a 30% chance a Pokemon making contact with this Pokemon will become infatuated if it is of the opposite gender.",
 		shortDesc: "30% chance of infatuating Pokemon of the opposite gender if they make contact.",
 		onStart: function (pokemon) {
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
 				target.addVolatile('confusion');
 			}
@@ -3638,7 +3638,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		shortDesc: "If this Pokemon has a stat stage raised it is lowered instead, and vice versa.",
 		onBoost: function (boost) {
-			for (var i in boost) {
+			for (let i in boost) {
 				boost[i] *= -1;
 			}
 		},
@@ -3653,7 +3653,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onAfterDamage: function (damage, target, source, move) {
 			if (source && source !== target && move && move.flags['contact']) {
-				var oldAbility = source.setAbility('mummy', source, 'mummy', true);
+				let oldAbility = source.setAbility('mummy', source, 'mummy', true);
 				if (oldAbility) {
 					this.add('-endability', source, oldAbility, '[from] Graveyard');
 					this.add('-ability', source, 'Mummy', '[from] Graveyard');
@@ -3687,7 +3687,7 @@ exports.BattleAbilities = {
 			},
 		},
 		onEnd: function (pokemon, effect) {
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.hasAbility('graveyard')) {
 				this.removePseudoWeather('graveyard');
 			}
@@ -3732,7 +3732,7 @@ exports.BattleAbilities = {
 			move.infiltrates = true;
 			if (move.secondaries && move.id !== 'secretpower') {
 				this.debug('doubling secondary chance');
-				for (var i = 0; i < move.secondaries.length; i++) {
+				for (let i = 0; i < move.secondaries.length; i++) {
 					move.secondaries[i].chance *= 2;
 				}
 			}
@@ -3787,9 +3787,9 @@ exports.BattleAbilities = {
 		name: "Leaguehopper",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
-			var leaguehop = statuses[this.random(statuses.length)];
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
+			let leaguehop = statuses[this.random(statuses.length)];
+			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
 				if (!target.status) {
 					target.setStatus(leaguehop);
@@ -3799,9 +3799,9 @@ exports.BattleAbilities = {
 		onResidualOrder: 10,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			var statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
-			var leaguehop = statuses[this.random(statuses.length)];
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
+			let leaguehop = statuses[this.random(statuses.length)];
+			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
 				target.setStatus(leaguehop);
 			}
@@ -3822,7 +3822,7 @@ exports.BattleAbilities = {
 		name: "Clutch",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			var i;
+			let i;
 			for (i = pokemon.side.pokemon.length - 1; i > pokemon.position; i--) {
 				if (!pokemon.side.pokemon[i]) continue;
 				if (!pokemon.side.pokemon[i].fainted) break;
@@ -3845,7 +3845,7 @@ exports.BattleAbilities = {
 			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
 				return;
 			}
-			var newMove = this.getMoveCopy(move.id);
+			let newMove = this.getMoveCopy(move.id);
 			newMove.hasBounced = true;
 			this.useMove(newMove, target, source);
 			return null;
@@ -3869,7 +3869,7 @@ exports.BattleAbilities = {
 			if (target === source || move.hasBounced || !move.flags['reflectable']) {
 				return;
 			}
-			var newMove = this.getMoveCopy(move.id);
+			let newMove = this.getMoveCopy(move.id);
 			newMove.hasBounced = true;
 			this.useMove(newMove, target, source);
 			return null;
@@ -3929,8 +3929,8 @@ exports.BattleAbilities = {
 		name: "Atmospheric Devastation",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			var weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'none'];
-			var randomWeather = weather[this.random(5)];
+			let weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'none'];
+			let randomWeather = weather[this.random(5)];
 			switch (randomWeather) {
 			case 'sunnyday':
 				this.setWeather('sunnyday');
@@ -3990,16 +3990,16 @@ exports.BattleAbilities = {
 		name: "Safety First",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			var side = pokemon.side;
-			for (var i = 0; i < side.pokemon.length; i++) {
+			let side = pokemon.side;
+			for (let i = 0; i < side.pokemon.length; i++) {
 				side.pokemon[i].status = '';
 			}
 			this.add('-cureteam', pokemon, '[from] ability: Safety First');
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] ability: Safety First', '[of] ' + pokemon);
 			}
-			var sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
-			for (var i in sideConditions) {
+			let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
+			for (let i in sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(i)) {
 					this.add('-sideend', pokemon.side, this.getEffect(i).name, '[from] ability: Safety First', '[of] ' + pokemon);
 				}

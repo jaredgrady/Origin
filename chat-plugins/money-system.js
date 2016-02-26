@@ -14,16 +14,18 @@ let toggleRolling = false;
 let shop = [
     ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
     ['Fix', 'Buys the ability to alter your current custom avatar, trainer card, title or icon. (don\'t buy if you don\'t have one)', 10],
+    ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly.)', 25],
-    ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 25],
+    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float with the exta room you want (Will take time to appear).', 30],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
     ['Room Rename', 'Rename your chatroom to another name', 45],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused. You are responsible for your room, if you get in trouble your room may be deleted.)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float with the pokemon and rooms you want it in (3 rooms maximum, will take time to appear).', 350],
+    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float with the icon and rooms you want it in (3 rooms maximum, will take time to appear).', 350],
+    ['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
     ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM Master Float to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
 
@@ -208,7 +210,7 @@ exports.commands = {
 		let amount = isMoney(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
-		if (amount > Db('money').get(user.userid)) return this.sendReply("The user's total money is less than " + amount + ".");
+		if (amount > Db('money').get(uid)) return this.sendReply("The user's total money is less than " + amount + ".");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 

@@ -15731,4 +15731,1452 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	},
+	// CUSTOM MOVES FOR OSSB
+	// Admins
+	// Arken Ciel
+	"faithbreaker": {
+		isNonstandard: true,
+		id: "faithbreaker",
+		name: "Faithbreaker",
+		accuracy: 5,
+		basePower: 130,
+		category: "Physical",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]meteormash');
+			let bannedAbilities = {multitype:1, stancechange:1, truant:1};
+			if (bannedAbilities[target.ability]) {
+				return false;
+			}
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]meteormash');
+		},
+		onHit: function (pokemon) {
+			let oldAbility = pokemon.setAbility('runaway');
+			if (oldAbility) {
+				this.add('-endability', pokemon, oldAbility, '[from] move: Faithbreaker');
+				this.add('-ability', pokemon, 'Run Away', '[from] move: Faithbreaker');
+				return;
+			}
+			this.add("c|~Arken Ciel|Don\'t be so persistent. Just give up.");
+			return false;
+		},
+		onAfterMoveSecondarySelf: function (pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) {
+				pokemon.cureStatus();
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Steel",
+	},
+
+	// fender
+	"evalbattle": {
+		isNonstandard: true,
+		id: "evalbattle",
+		name: "evalbattle",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		pp: 10,
+		priority: 1,
+		flags: {snatch: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]swordsdance');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]swordsdance');
+		},
+		onHit: function () {
+			this.add('c|~fender|evalbattle p1active.setStatus(\'pwning\')');
+		},
+		boosts: {
+			atk: 2,
+			spe: 2,
+		},
+		secondary: false,
+		target: "self",
+		type: "Normal",
+	},
+
+	// Lt.Tesla
+	"sideboffledge": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		id: "sideboffledge",
+		name: "Side B off Ledge",
+		pp: 10,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		self: {
+			boosts: {
+				atk: 1,
+			},
+		},
+		ignoreEvasion: true,
+		ignoreDefensive: true,
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]volttackle');
+			if (target.stats.def > target.stats.spd) {
+				move.defensiveCategory = 'Special';
+			} else {
+				move.defensiveCategory = 'Physical';
+			}
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]volttackle');
+		},
+		onHit: function (source, target, move) {
+			this.add("c|~Lt. Tesla|bzzt... SOLDIER!");
+			if (target.stats.def > target.stats.spd) {
+				move.defensiveCategory = 'Special';
+			} else {
+				move.defensiveCategory = 'Physical';
+			}
+		},
+		target: "normal",
+		type: "Electric",
+	},
+
+	// Master Float
+	"floatssharingan": {
+		isNonstandard: true,
+		id: "floatssharingan",
+		name: "Float's Sharingan",
+		accuracy: true,
+		category: "Status",
+		pp: 10,
+		priority: 3,
+		flags: {snatch: 1, authentic: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]miracleeye');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]miracleeye');
+		},
+		onHit: function (target, source) {
+			this.add('c|~Master Float|Sharingan activated.');
+			this.add('c|~Master Float|Dominance: asserted.');
+			this.useMove('protect', source);
+			let targetBoosts = {};
+			for (let i in target.boosts) {
+				// copy positive boosts only
+				if (target.boosts[i] < 0) continue;
+				targetBoosts[i] = target.boosts[i];
+			}
+			source.setBoost(targetBoosts);
+			let volatileList = ['substitute', 'leechseed', 'aquaring', 'magiccoat', 'taunt', 'disable', 'focusenergy', 'torment', 'smackdown', 'curse', 'ingrain', 'magnetrise', 'attract', 'confusion', 'mustrecharge', 'yawn', 'lockon', 'uproar', 'telekenisis', 'nightmare', 'stockpile', 'foresight'];
+			volatileList.forEach(function (v) {
+				if (target.volatiles[v]) {
+					source.addVolatile(v);
+				} else if (!target.volatiles[v]) {
+					source.removeVolatile(v);
+				}
+			});
+			this.add('-copyboost', source, target, '[from] move: Float\'s Sharingan');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Normal",
+	},
+	// Neo Soul
+	"sodone": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "sodone",
+		name: "So Done",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, distance: 1, authentic: 1},
+		onHit: function (target, source, move) {
+			// this.add("c|~Neo Soul|Fuck Isis");
+			let oldAbility = source.setAbility('runaway');
+			if (oldAbility) {
+				this.add('-endability', source, oldAbility, '[from] move: So Done');
+				this.add('-ability', source, 'Run Away', '[from] move: So Done');
+				return;
+			}
+		},
+		onHitField: function (target, source) {
+			let result = false;
+			let message = false;
+			for (let i = 0; i < this.sides.length; i++) {
+				for (let j = 0; j < this.sides[i].active.length; j++) {
+					if (!this.sides[i].active[j].volatiles['sodone']) {
+						this.sides[i].active[j].addVolatile('sodone');
+						this.add('-start', this.sides[i].active[j], 'perish1', '[silent]');
+						result = true;
+						message = true;
+					}
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: So Done');
+		},
+		effect: {
+			duration: 1,
+			onEnd: function (target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidual: function (pokemon) {
+				let duration = pokemon.volatiles['sodone'].duration;
+				this.add('-start', pokemon, 'perish' + duration);
+			},
+		},
+		secondary: false,
+		target: "all",
+		type: "Normal",
+	},
+
+	// Sparkychild
+	// Sparkychild complete (typing) (messeges)
+	"nanairoshinfonii": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 6,
+		category: "Special",
+		id: "nanairoshinfonii",
+		name: "Nanairo Shinfonī",
+		pp: 20,
+		priority: 0,
+		multihit: 18,
+		ignoreImmunity: true,
+		typechart: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Grass", "Water", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy"],
+		flags: {protect: 1, mirror: 1},
+		onPrepareHit: function () {
+			this.add("c|~sparkychild|♩ ♫ ♪ ♬ ♫ ♪ ♩ ♬");
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]sing');
+			source.cureStatus();
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]sing');
+		},
+		onHit: function (target, source, move) {
+			// shuffle through the types
+			move.type = move.typechart.shift();
+			move.typechart.push(move.type);
+		},
+		secondary: false,
+		target: "allAdjacentFoes",
+		type: "Fairy",
+	},
+
+	// Leaders
+	// Erica*07
+	"admonish": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "admonish",
+		name: "Admonish",
+		pp: 5,
+		priority: 1,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]charm');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]charm');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|&Erica*07|Mm, can you please stop?');
+			this.useMove('worryseed', source);
+			this.useMove('haze', source);
+			this.useMove('nobleroar', source);
+		},
+		secondary: false,
+		target: "normal",
+		type: "Psychic",
+	},
+
+	// Paul Century
+	"omegablast": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		defensiveCategory: "Physical",
+		id: "omegablast",
+		name: "Omega Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: 2,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]psystrike');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]psystrike');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|&Paul Century|Dope');
+		},
+		secondary: {
+			chance: 80,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+	},
+
+	// Piers Niνаns
+	"antimaterialrifle": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 30,
+		category: "Status",
+		id: "antimaterialrifle",
+		name: "Anti-Material Rifle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 6,
+		typeList: {
+			"Fire": "Flamethrower",
+			"Ice": "Ice Beam",
+			"Electric": "Zap Cannon",
+			"Grass": "Leaf Storm",
+			"Water": "Hydro Pump",
+			"Psychic": "Mist Ball",
+			"Fairy": "Hyper Voice",
+			"Rock": "Ancient Power",
+			"Steel": "Flash Cannon",
+			"Ground": "Mud Bomb",
+			"Flying": "Air Slash",
+			"Dark": "Hyperspace Fury",
+			"Ghost": "Shadow Ball",
+			"Normal": "Boomburst",
+			"Fighting": "Aura Sphere",
+			"Poison": "Sludge Wave",
+			"Bug": "Bug Buzz",
+			"Dragon": "Dragon Pulse",
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]bulletseed');
+		},
+		onTryHit: function () {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit: function (target, source, move) {
+			if (!move.animatedhits) move.animatedhits = 0;
+			move.animatedhits++;
+			if (move.animatedhits > 6 || target.hp === 0) return;
+			let rand = ~~(Object.keys(move.typeList).length * Math.random());
+			let type = Object.keys(move.typeList)[rand];
+			move.type = type;
+			this.add('-anim', source, move.typeList[type], target);
+		},
+		onHit: function (target, source, move) {
+			move.onPrepareHit.call(this, target, source, move);
+			delete move.typeList[move.type];
+			this.add('c|&Piers Niνаns|HQ! We have a Type 5 Mutation! Anti-Material Rifle, locked and loaded!');
+		},
+		secondary: false,
+		target: "normal",
+		type: "???",
+	},
+
+	// SaNeski
+	"silentdeparture": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		id: "silentdeparture",
+		name: "Silent Departure",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]uturn');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]uturn');
+		},
+		/* no quote
+		onHit: function (target, source, move) {
+			this.add('c|&SaNeski|');
+		}, */
+		selfSwitch: true,
+		secondary: false,
+		target: "normal",
+		type: "Dark",
+	},
+
+	// Vin Steel
+	"dragonstrike": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		id: "dragonstrike",
+		name: "Dragon Strike",
+		pp: 10,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		recoil: [33, 100],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]outrage');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]outrage');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|&Vin Steel|DRAGON STRIKE ALL THE WAY TO HELL!');
+		},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+
+	// Mods
+	// 01NTG complete
+	"dragonenergy": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "dragonenergy",
+		name: "Dragon Energy",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		self: {
+			boosts: {
+				atk: 1,
+				spe: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]dragondance');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]dragondance');
+		},
+		onHit: function (source, target, move) {
+			this.add("c|@01NTG|Behold my godly hax");
+		},
+		secondary: false,
+		target: "self",
+		type: "Dragon",
+	},
+
+	// AuraStormLucaro
+	"aurastorm": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 120,
+		category: "Physical",
+		id: "aurastorm",
+		name: "AuraStorm",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		ignoreImmunity: true,
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]aurasphere');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]aurasphere');
+		},
+		onHit: function (source, target, move) {
+			this.add("c|@AuraStormLucario|get rekt");
+			if (target.stats.def > target.stats.spd) {
+				move.defensiveCategory = 'Special';
+			} else {
+				move.defensiveCategory = 'Physical';
+			}
+			this.add("c|@AuraStormLucario|Now you\'ve felt the wrath of my AuraStorm");
+		},
+		secondary: false,
+		target: "allAdjacentFoes",
+		type: "Fighting",
+	},
+
+	// Irraquated
+	"unluckymate": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "unluckymate",
+		name: "Unlucky Mate",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|@Irraquated|Oof, unlucky mate.');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dark",
+	},
+
+	// Nii Sama
+	"shadowdrain": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 60,
+		basePowerCallback: function (pokemon, target) {
+			if (target.status === 'slp') return 120;
+			return 60;
+		},
+		category: "Special",
+		id: "shadowdrain",
+		name: "Shadow Drain",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|@Nii Sama|Dwell in my shadows!');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dark",
+	},
+
+	// Safety Shark
+	"dragonbotz": {
+		isNonstandard: true,
+		basePower: 80,
+		accuracy: 100,
+		category: "Physical",
+		defensiveCategory: "Special",
+		id: "dragonbotz",
+		name: "DragonBot-Z",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: 1,
+				spe: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]rollout');
+			source.cureStatus();
+		},
+		onHit: function (pokemon) {
+			this.add("c|@Safety Shark|Powering up... spammers beware!");
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dragon",
+	},
+
+	// Drivers
+	// Alpha Ninja
+	"beybladespin": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		id: "beybladespin",
+		name: "Beyblade Spin",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit: function (pokemon) {
+				this.attrLastMove('[anim]rapidspin');
+				this.add("c|%Alpha Ninja|Beyblade Spin!");
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
+				for (let i in sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(i)) {
+						this.add('-sideend', pokemon.side, this.getEffect(i).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			},
+			boosts: {
+				def: 1,
+				spa: 1,
+				spd: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]rapidspin');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]rapidspin');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Water",
+	},
+
+	// Chief Sokka
+	"superbat": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		id: "superbat",
+		name: "Super Bat",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]bravebird');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]bravebird');
+		},
+		onHit: function (target, source, move) {
+			this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> I\'M BATMAN! <em class="mine"><img src="http://i.imgur.com/Jf0n4BL.png" title="feelsgd" height="50" width="50" /></em></div>');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Flying",
+	},
+
+	// Creature Phil
+	"waterbomb": {
+		isNonstandard: true,
+		accuracy: 90,
+		basePower: 110,
+		category: "Special",
+		id: "waterbomb",
+		name: "Water Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%CreaturePhil|give me money');
+		},
+		secondary: {
+			chance: 50,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+	},
+
+	// EmgPrfoessor Volco
+	"volcanionsupersmash": {
+		isNonstandard: true,
+		accuracy: 80,
+		basePower: 150,
+		category: "Special",
+		id: "volcanionsupersmash",
+		name: "Volcanion Super smash",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]flareblitz');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]flareblitz');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%EmgProfessor Volco|Get ready because here comes my ultimate attack');
+		},
+		secondary: {
+			chance: 80,
+			self: {
+				boosts: {
+					spe: 2,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fire",
+	},
+
+	// Gnarly Commie
+	"ebat": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 102,
+		category: "Physical",
+		id: "ebat",
+		name: "/ebat",
+		pp: 10,
+		priority: 2,
+		flags: {snatch: 1, heal: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]return');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]return');
+		},
+		onHit: function (target, source, move) {
+			this.add("<<< undefined");
+			this.useMove('recover', source);
+		},
+		secondary: false,
+		target: "target",
+		type: "Normal",
+	},
+
+	// Imp Fallen Blood
+	"jetgattling": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		id: "jetgattling",
+		name: "Jet Gattling",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		/* no quote
+		onHit: function (target, source, move) {
+			this.add('c|%Imp Fallen Blood|');
+		}, */
+		secondary: {
+			chance: 60,
+			boosts: {
+				spd: -2,
+			},
+		},
+		target: "normal",
+		type: "Grass",
+	},
+
+	// isandman
+	"megaearthfissure": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		id: "megaearthfissure",
+		name: "Mega Earth Fissure",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		ignoreImmunity: {'Ground': true},
+		onBasePower: function (basePower, pokemon, target) {
+			if (target.types.indexOf("Flying") > -1 || target.ability === "levitate" || toId(target.item || " ") === "airballoon") {
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]earthpower');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]earthpower');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%isandman|WOA WE OUT HERE');
+		},
+		secondary: {
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Ground",
+	},
+
+	// LChevy12
+	"flyingforretress": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		id: "flyingforretress",
+		name: "Flying Forretress",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1},
+		self: {
+			chance: 60,
+			boosts: {
+				def: 1,
+				spd: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]skydrop');
+			if (target.fainted) return false;
+			if (source.removeVolatile(move.id)) {
+				if (target !== source.volatiles['twoturnmove'].source) return false;
+
+				if (target.hasType('Flying')) {
+					this.add('-immune', target, '[msg]');
+					this.add('-end', target, 'Sky Drop');
+					return null;
+				}
+			} else {
+				if (target.volatiles['substitute'] || target.side === source.side) {
+					return false;
+				}
+				this.add('-prepare', source, move.name, target);
+				source.addVolatile('twoturnmove', target);
+				return null;
+			}
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]skydrop');
+		},
+		onHit: function (target, source) {
+			this.add('c|%LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
+			this.add('-end', target, 'Sky Drop');
+		},
+		effect: {
+			duration: 2,
+			onStart: function () {
+				this.effectData.source.removeVolatile('followme');
+				this.effectData.source.removeVolatile('ragepowder');
+			},
+			onAnyDragOut: function (pokemon) {
+				if (pokemon === this.effectData.target || pokemon === this.effectData.source) return false;
+			},
+			onFoeTrapPokemonPriority: -15,
+			onFoeTrapPokemon: function (defender) {
+				if (defender !== this.effectData.source) return;
+				defender.trapped = true;
+			},
+			onFoeBeforeMovePriority: 12,
+			onFoeBeforeMove: function (attacker, defender, move) {
+				if (attacker === this.effectData.source) {
+					this.debug('Sky drop nullifying.');
+					return null;
+				}
+			},
+			onRedirectTargetPriority: 99,
+			onRedirectTarget: function (target, source, source2) {
+				if (source !== this.effectData.target) return;
+				if (this.effectData.source.fainted) return;
+				return this.effectData.source;
+			},
+			onAnyAccuracy: function (accuracy, target, source, move) {
+				if (target !== this.effectData.target && target !== this.effectData.source) {
+					return;
+				}
+				if (source === this.effectData.target && target === this.effectData.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return;
+				}
+				if (move.id === 'skyuppercut' || move.id === 'thunder' || move.id === 'hurricane' || move.id === 'smackdown' || move.id === 'thousandarrows' || move.id === 'helpinghand') {
+					return;
+				}
+				if (source.hasAbility('noguard') || target.hasAbility('noguard')) {
+					return;
+				}
+				if (source.volatiles['lockon'] && target === source.volatiles['lockon'].source) return;
+				return 0;
+			},
+			onAnyBasePower: function (basePower, target, source, move) {
+				if (target !== this.effectData.target && target !== this.effectData.source) {
+					return;
+				}
+				if (source === this.effectData.target && target === this.effectData.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+			onFaint: function (target) {
+				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+				}
+			},
+		},
+		secondary: false,
+		target: "normal",
+		type: "Flying",
+	},
+
+	// Phoenix Gryphon
+	"nidificate": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "nidificate",
+		name: "Nidificate",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		onTry: function (pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.add('-fail', pokemon);
+				this.add('-hint', "Nidificate only works on your first turn out.");
+				return null;
+			} else {
+				this.add('c|%Phoenix Gryphon|pls no hurt am just birb');
+				this.attrLastMove('[anim]calmmind');
+				this.useMove('protect', target);
+				this.boost({atk:3, spe:3, def:3, spd:3});
+			}
+		},
+		secondary: false,
+		target: "self",
+		type: "Normal",
+	},
+
+	// Selena
+	"bitchslap": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		defensiveCategory: "Physical",
+		id: "bitchslap",
+		name: "Bitchslap",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]wakeupslap');
+		},
+		onEffectiveness: function (typeMod, type, move) {
+			return typeMod + this.getEffectiveness('Rock', type);
+		},
+		onHit: function (target, source, move) {
+			this.add("c|%Selena|bish pls");
+		},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Fighting",
+	},
+
+	// Starfox:3
+	"mindwrecker": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		id: "mindwrecker",
+		name: "Mind Wrecker",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]psychic');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]psychic');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%Starfox .3.|get rekt');
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+	},
+
+	// Voices
+	// Castformz
+	"adaptation": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "adaptation",
+		name: "Adaptation",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		volatileStatus: 'protect',
+		self: {
+			boosts: {
+				spa: 2,
+			},
+		},
+		onTry: function (pokemon, target) {
+			this.useMove('protect', target);
+		},
+		onHit: function (pokemon) {
+			this.add('c|+Castformz|hold on its weathering outside');
+			if (this.isWeather(['sunnyday', 'desolateland'])) {
+				let oldAbility = pokemon.setAbility('chlorophyll');
+				this.add('-ability', pokemon, 'Chlorophyll', '[from] move: Adaptation');
+			}
+			if (this.isWeather(['raindance', 'primordialsea'])) {
+				let oldAbility = pokemon.setAbility('swiftswim');
+				this.add('-ability', pokemon, 'Swift Swim', '[from] move: Adaptation');
+			}
+			if (this.isWeather(['hail'])) {
+				let oldAbility = pokemon.setAbility('icebody');
+				this.add('-ability', pokemon, 'Ice Body', '[from] move: Adaptation');
+			}
+			if (this.isWeather(['sandstorm'])) {
+				let oldAbility = pokemon.setAbility('sandrush');
+				this.add('-ability', pokemon, 'Sand Rush', '[from] move: Adaptation');
+			}
+		},
+		secondary: false,
+		target: "self",
+		type: "Normal",
+	},
+
+	// Chronologically
+	"powerupmeme": {
+		isNonstandard: true,
+		accuracy: 100,
+		category: "Status",
+		basePower: 70,
+		id: "powerupmeme",
+		name: "Power-Up Meme",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onModifyMove: function (move, pokemon) {
+			move.category = "Physical";
+		},
+		onTryHit: function () {
+			this.attrLastMove("[anim]revenge");
+		},
+		onHit: function (target, source, move) {
+			this.add('c|+Chronologically|9 out of 10 memers recommend this move');
+		},
+		self: {
+			boosts: {
+				atk:1,
+			},
+		},
+		secondary: false,
+		target: "normal",
+		type: "Fighting",
+	},
+
+	// Crystal Gray
+	"hydrosmash": {
+		isNonstandard: true,
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		id: "hydrosmash",
+		name: "Hydro Smash",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (pokemon) {
+			this.add("c|+Crystal Gray|Time for me to clean you");
+		},
+		secondaries: [
+			{
+				chance: 10,
+				status: 'par',
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			}, {
+				chance: 100,
+				self: {
+					boosts: {
+						def: 1,
+						spd: 1,
+						spe: -1,
+					},
+				},
+			},
+		],
+		target: "normal",
+		type: "Water",
+	},
+
+	// hayleysworld
+	"revengeofneptune": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		id: "revengeofneptune",
+		name: "Revenge of Neptune",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
+		self: {
+			boosts: {
+				def: 1,
+				spa: 1,
+				spd: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (target, source, move) {
+			this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
+			this.useMove('wish', source);
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+	},
+
+
+	// Piscean
+	"fatnissevereat": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "fatnissevereat",
+		name: "Fatniss Evereat",
+		pp: 15,
+		priority: 4,
+		flags: {},
+		volatileStatus: 'magiccoat',
+		effect: {
+			duration: 1,
+			onStart: function (target) {
+				this.add('-singleturn', target, 'move: Magic Coat');
+			},
+			onTryHitPriority: 2,
+			onTryHit: function (target, source, move) {
+				this.attrLastMove('[anim]magicbounce');
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				let newMove = this.getMoveCopy(move.id);
+				newMove.hasBounced = true;
+				this.useMove(newMove, target, source);
+				return null;
+			},
+			onAllyTryHitSide: function (target, source, move) {
+				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				let newMove = this.getMoveCopy(move.id);
+				newMove.hasBounced = true;
+				this.useMove(newMove, target, source);
+				return null;
+			},
+		},
+		onHit: function (source, target, move) {
+			this.add('c|+Piscean|NO! I\'M THE FATTEST! ୧( ಠ Д ಠ )୨');
+			source.cureStatus();
+			this.useMove("toxic", source);
+		},
+		self: {
+			boosts: {
+				def:1,
+				spd:1,
+			},
+		},
+		secondary: false,
+		target: "self",
+		type: "Psychic",
+	},
+
+	// Princess High
+	"pixiecannon": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 180,
+		category: "Special",
+		id: "pixiecannon",
+		name: "Pixie Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]moonblast');
+			this.add("c|+PrincessHigh|Prepare to die");
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]moonblast');
+		},
+		recoil: [1, 4],
+		self: {
+			boosts: {
+				spd: -1,
+				spe: -1,
+				def: -1,
+			},
+		},
+		secondary: {
+			chance: 75,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+
+	// Sota Higurashi
+	"zencreate": {
+		isNonstandard: true,
+		accuracy: 95,
+		basePower: 180,
+		category: "Physical",
+		id: "zencreate",
+		name: "Zen Create",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -1,
+				def: -1,
+				spd: -1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]vcreate');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]vcreate');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|+Sota Higurashi|I would advise you not to try to fite the sweg');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Psychic",
+	},
+
+	// Others
+	// Mr. CGTNathan
+	"graveyardstrike": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 70,
+		basePowerCallback: function (pokemon, target) {
+			if (target.status) return 140;
+			return 70;
+		},
+		onModifyMove: function (move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Ghost'] = true;
+			}
+		},
+		category: "Special",
+		id: "graveyardstrike",
+		name: "Graveyard Strike",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]calmmind');
+			if (!target.status) {
+				target.setStatus('brn');
+			}
+			this.add('-anim', source, "Hex", target);
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hex');
+		},
+		onHit: function (target) {
+			this.add('c|Mr. CGTNathan|One of us...');
+		},
+		onEffectiveness: function (typeMod, type) {
+			if (type === 'Dark') return 1;
+		},
+		secondary: false,
+		target: "normal",
+		type: "Ghost",
+	},
+
+	// nineage
+	"breakcode": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "breakcode",
+		name: "Break Code",
+		pp: 5,
+		priority: 8,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]explosion');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]explosion');
+		},
+		onHit: function (pokemon, target, source) {
+			this.add('raw|<div class="broadcast-red"><center>ERROR: Object \"elo\" is not defined<br/>RIP Chaos League</div>');
+			// let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'desolateland', 'primordialsea', 'deltastream', 'none'];
+			let randomWeather = weather[this.random(8)];
+			switch (randomWeather) {
+			case 'sunnyday':
+				this.setWeather('sunnyday');
+				break;
+			case 'raindance':
+				this.setWeather('raindance');
+				break;
+			case 'sandstorm':
+				this.setWeather('sandstorm');
+				break;
+			case 'hail':
+				this.setWeather('hail');
+				break;
+			case 'desolateland':
+				this.setWeather('desolateland');
+				break;
+			case 'primordialsea':
+				this.setWeather('primordialsea');
+				break;
+			case 'deltastream':
+				this.setWeather('deltastream');
+				break;
+			case 'none':
+				this.clearWeather();
+				break;
+			}
+			let hazard1 = [1, 2, 3];
+			let pickHazard1 = hazard1[this.random(3)]; if (pickHazard1 !== 3) target.side.addSideCondition('stealthrock');
+			let pickHazard2 = hazard1[this.random(3)]; if (pickHazard2 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard3 = hazard1[this.random(3)]; if (pickHazard3 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard4 = hazard1[this.random(3)]; if (pickHazard4 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard5 = hazard1[this.random(3)]; if (pickHazard5 !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard6 = hazard1[this.random(3)]; if (pickHazard6 !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard7 = hazard1[this.random(3)]; if (pickHazard7 !== 3) target.side.addSideCondition('stickyweb');
+			let hazard2 = [1, 2];
+			let pickHazard8 = hazard2[this.random(2)]; if (pickHazard8 !== 2) pokemon.side.addSideCondition('stealthrock');
+			let pickHazard9 = hazard2[this.random(2)]; if (pickHazard9 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard10 = hazard2[this.random(2)]; if (pickHazard10 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard11 = hazard2[this.random(2)]; if (pickHazard11 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard12 = hazard2[this.random(2)]; if (pickHazard12 !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard13 = hazard2[this.random(2)]; if (pickHazard13 !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard14 = hazard2[this.random(2)]; if (pickHazard14 !== 2) pokemon.side.addSideCondition('stickyweb');
+			let randomStatus = ['brn', 'par', 'slp', 'frz', 'psn', 'tox'];
+			let pickStatus = randomStatus[this.random(6)];
+			if (!target.volatiles['substitute'] && !target.status) {
+				target.setStatus(pickStatus);
+			}
+		},
+		selfdestruct: true,
+		secondary: false,
+		target: "normal",
+		type: "Bird",
+	},
+
+	// Origin Server
+	"trispikes": {
+		isNonstandard: true,
+		category: "Status",
+		id: "trispikes",
+		name: "Tri Spikes",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, nonsky: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]spikes');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]spikes');
+		},
+		onHit: function (target, source, move) {
+			this.useMove('spikes', target);
+			this.useMove('spikes', target);
+			this.useMove('spikes', target);
+		},
+		secondary: false,
+		target: "self",
+		type: "Ground",
+	},
+
+	/* permalocked
+	// DeathlyPlays
+	"aquasubscribe": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		id: "aquasubscribe",
+		name: "Aqua Subscribe",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: 1,
+			},
+		},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Water",
+	}, */
 };

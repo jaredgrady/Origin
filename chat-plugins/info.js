@@ -1949,7 +1949,6 @@ exports.commands = {
 		}
 		return this.sendReplyBox('Base ' + statValue + (calcHP ? ' HP ' : ' ') + 'at level ' + level + ' with ' + iv + ' IVs, ' + ev + (nature === 1.1 ? '+' : (nature === 0.9 ? '-' : '')) + ' EVs' + (modifier > 0 && !calcHP ? ' at ' + (positiveMod ? '+' : '-') + modifier : '') + ': <b>' + Math.floor(output) + '</b>.');
 	},
-
 	statcalchelp: ["/statcalc [level] [base stat] [IVs] [nature] [EVs] [modifier] (only base stat is required) - Calculates what the actual stat of a Pokémon is with the given parameters. For example, '/statcalc lv50 100 30iv positive 252ev scarf' calculates the speed of a base 100 scarfer with HP Ice in Battle Spot, and '/statcalc uninvested 90 neutral' calculates the attack of an uninvested Crobat.",
 		"!statcalc [level] [base stat] [IVs] [nature] [EVs] [modifier] (only base stat is required) - Shows this information to everyone.",
 		"Inputing 'hp' as an argument makes it use the formula for HP. Instead of giving nature, '+' and '-' can be appended to the EV amount (e.g. 252+ev) to signify a boosting or inhibiting nature."],
@@ -2259,6 +2258,28 @@ exports.commands = {
 			"- Your ladder ranking and teams will not change<br />" +
 			"- We are restarting to update Pok&eacute;mon Showdown to a newer version"
 		);
+	},
+
+	processes: function (target, room, user) {
+		if (!this.can('lockdown')) return false;
+		let buf = "<strong>" + process.pid + "</strong> - Main<br />";
+		for (let i in Sockets.workers) {
+			let worker = Sockets.workers[i];
+			buf += "<strong>" + (worker.pid || worker.process.pid) + "</strong> - Sockets " + i + "<br />";
+		}
+		{
+			let i = 0;
+			for (let process of Simulator.SimulatorProcess.processes) {
+				buf += "<strong>" + process.process.pid + "</strong> - Simulator " + (i++) + "<br />";
+			}
+		}
+		{
+			let i = 0;
+			for (let process of TeamValidator.ValidatorProcess.processes) {
+				buf += "<strong>" + process.process.pid + "</strong> - Validator " + (i++) + "<br />";
+			}
+		}
+		this.sendReplyBox(buf);
 	},
 
 	rule: 'rules',

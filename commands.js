@@ -18,7 +18,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'nineage', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild']; //sys developers
+global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild']; //sys developers
 const developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
@@ -255,6 +255,7 @@ let commands = exports.commands = {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
 				targetUser.send(message);
+				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
 			}
@@ -536,9 +537,9 @@ let commands = exports.commands = {
 		if (room.battle || room.isPersonal) {
 			if (!this.can('editroom', null, room)) return;
 		} else {
-			if (!this.can('makeroom')) return;
+			if (!this.can('declare')) return;
 		}
-		if (room.tour && !room.tour.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
+		if (room.tour && !room.tour.modjoin) return this.errorReply("You can't do this in tournaments where modjoin is prohibited.");
 		if (target === 'off' || target === 'false') {
 			delete room.modjoin;
 			this.addModCommand("" + user.name + " turned off modjoin.");
@@ -618,7 +619,7 @@ let commands = exports.commands = {
 		if (!target) {
 			if (!this.canBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
-			if (room.id !== "lobby") {
+			if (room.id !== "lobby" && room.id !== "tournaments") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
 			} else {
 				this.sendReply('|raw|' + room.introMessage);
@@ -641,7 +642,7 @@ let commands = exports.commands = {
 
 		room.introMessage = target;
 		this.sendReply("(The room introduction has been changed to:)");
-		if (room.id !== "lobby") {
+		if (room.id !== "lobby" && room.id !== "tournaments") {
 			this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 		} else {
 			this.sendReply('|raw|' + target);
@@ -837,13 +838,18 @@ let commands = exports.commands = {
 				return this.errorReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
 			}
 		}
-		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@')) {
-			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
+		if (targetUser && targetUser.locked && !room.isPrivate && !room.battle && !room.isPersonal && (nextGroup === '%' || nextGroup === '@' || nextGroup === '&' || nextGroup === '#'  || nextGroup === '$')) {
 			if (room.founder === user.userid) {
 				delete room.founder;
 			}
-			room.auth[user.userid] = '@';
+			if (nextGroup === '$' && room.auth[user.userid] !== "#") {
+				room.auth[user.userid] = '+';
+			} else {
+				room.auth[user.userid] = '@';
+			}
+			Monitor.log("[CrisisMonitor] " + user.name + " was automatically demoted in " + room.id + " for trying to promote locked user: " + targetUser.name + ".");
 			user.updateIdentity(room.id);
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			return this.errorReply("You have been automatically deauthed for trying to promote locked user: '" + name + "'.");
 		}
 
@@ -1117,6 +1123,7 @@ let commands = exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.errorReply("Users cannot be redirected to the global room.");
+		if (targetRoom.bannedUsers[targetUser.userid] && targetRoom.bannedIps[targetUser.latestIp]) return this.errorReply("User " + targetUser.name + " is banned from room " + targetRoom.id + ".");
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.errorReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
@@ -1977,7 +1984,7 @@ let commands = exports.commands = {
 				// rebuild the formats list
 				Rooms.global.formatListText = Rooms.global.getFormatListText();
 				// respawn validator processes
-				TeamValidator.ValidatorProcess.reinit();
+				TeamValidator.ValidatorProcess.respawn();
 				// respawn simulator processes
 				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
@@ -2040,6 +2047,9 @@ let commands = exports.commands = {
 
 	lockdown: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/lockdown - Access denied.");
+		if (Rooms.get("staff")) {
+			Rooms.get("staff").add(user.name + " has initiated lockdown");
+		}
 		Rooms.global.lockdown = true;
 		for (let id in Rooms.rooms) {
 			if (id === 'global') continue;
@@ -2277,6 +2287,7 @@ let commands = exports.commands = {
 	},
 
 	bash: function (target, room, user, connection) {
+		if (1) return;
 		if (!~developers.indexOf(user.userid) || !~developersIPs.indexOf(user.latestIp)) return this.errorReply("/bash - Access denied.");
 		let exec = require('child_process').exec;
 		exec(target, (error, stdout, stderr) => {
@@ -2447,13 +2458,7 @@ let commands = exports.commands = {
 
 	savereplay: function (target, room, user, connection) {
 		if (!room || !room.battle) return;
-		let logidx = 0; // spectator log (no exact HP)
-		if (room.battle.ended) {
-			// If the battle is finished when /savereplay is used, include
-			// exact HP in the replay log.
-			logidx = 3;
-		}
-		let data = room.getLog(logidx).join("\n");
+		let data = room.getLog(0).join("\n"); // spectator log (no exact HP)
 		let datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
 		let players = room.battle.playerNames;
 		LoginServer.request('prepreplay', {
@@ -2875,5 +2880,4 @@ let commands = exports.commands = {
 			}
 		}
 	},
-
 };

@@ -4408,7 +4408,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Physical",
 		desc: "The power of this move is based on the user's held item. The held item is lost and it activates for the target if applicable. If there is no target or the target avoids this move by protecting itself, the user's held item is still lost. The user can regain a thrown item with Recycle or the Ability Harvest. Fails if the user has no held item, if the held item cannot be thrown, if the user is under the effect of Embargo or Magic Room, or if the user has the Ability Klutz.",
-		shortDesc: "Flings the user's item at the target. Power varies.",
+		shortDesc: "Flings the user's item at the target. Power leties.",
 		id: "fling",
 		name: "Fling",
 		pp: 10,
@@ -6189,7 +6189,7 @@ exports.BattleMovedex = {
 		basePower: 60,
 		category: "Special",
 		desc: "This move's type depends on the user's individual values (IVs), and can be any type but Fairy and Normal.",
-		shortDesc: "Varies in type based on the user's IVs.",
+		shortDesc: "leties in type based on the user's IVs.",
 		id: "hiddenpower",
 		name: "Hidden Power",
 		pp: 15,
@@ -7231,7 +7231,7 @@ exports.BattleMovedex = {
 		basePower: 100,
 		category: "Special",
 		desc: "This move's type depends on the user's held Plate.",
-		shortDesc: "Type varies based on the held Plate.",
+		shortDesc: "Type leties based on the held Plate.",
 		id: "judgment",
 		isViable: true,
 		name: "Judgment",
@@ -8090,8 +8090,8 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		category: "Physical",
-		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Dig.",
-		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Dig.",
+		desc: "The power of this move leties; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Dig.",
+		shortDesc: "Hits adjacent Pokemon. Power leties; 2x on Dig.",
 		id: "magnitude",
 		name: "Magnitude",
 		pp: 30,
@@ -11717,7 +11717,7 @@ exports.BattleMovedex = {
 		basePower: 70,
 		category: "Physical",
 		desc: "Has a 30% chance to cause a secondary effect on the target based on the battle terrain. Causes paralysis on the regular Wi-Fi terrain, causes paralysis during Electric Terrain, lowers Special Attack by 1 stage during Misty Terrain, and causes sleep during Grassy Terrain. The secondary effect chance is not affected by the Ability Serene Grace.",
-		shortDesc: "Effect varies with terrain. (30% paralysis chance)",
+		shortDesc: "Effect leties with terrain. (30% paralysis chance)",
 		id: "secretpower",
 		name: "Secret Power",
 		pp: 20,
@@ -14043,7 +14043,7 @@ exports.BattleMovedex = {
 		basePower: 120,
 		category: "Special",
 		desc: "This move's type depends on the user's held Drive.",
-		shortDesc: "Type varies based on the held Drive.",
+		shortDesc: "Type leties based on the held Drive.",
 		id: "technoblast",
 		isViable: true,
 		name: "Techno Blast",
@@ -15236,7 +15236,7 @@ exports.BattleMovedex = {
 		},
 		category: "Special",
 		desc: "Power doubles during weather effects and this move's type changes to match; Ice type during Hail, Water type during Rain Dance, Rock type during Sandstorm, and Fire type during Sunny Day.",
-		shortDesc: "Power doubles and type varies in each weather.",
+		shortDesc: "Power doubles and type leties in each weather.",
 		id: "weatherball",
 		name: "Weather Ball",
 		pp: 10,
@@ -16151,49 +16151,49 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]calmmind');
 		},
 		onHit: function (pokemon) {
-			var moves = [];
-			for (var i = 0; i < pokemon.moveset.length; i++) {
-				var move = pokemon.moveset[i].id;
-				var NoSleepTalk = {
+			let moves = [];
+			for (let i = 0; i < pokemon.moveset.length; i++) {
+				let move = pokemon.moveset[i].id;
+				let NoSleepTalk = {
 					assist:1, bide:1, chatter:1, copycat:1, focuspunch:1, mefirst:1, metronome:1, mimic:1, mirrormove:1, naturepower:1, sketch:1, sleeptalk:1, uproar:1, vividdreams:1,
 				};
 				if (move && !(NoSleepTalk[move] || this.getMove(move).flags['charge'])) {
 					moves.push(move);
 				}
 			}
-			var move = '';
+			let move = '';
 			if (moves.length) move = moves[this.random(moves.length)];
 			if (!move) {
 				return false;
 			}
 			this.useMove(move, pokemon);
-			var stats = [];
-			for (var i in pokemon.boosts) {
+			let stats = [];
+			for (let i in pokemon.boosts) {
 				if (pokemon.boosts[i] < 6) {
 					stats.push(i);
 				}
 			}
 			if (stats.length) {
-				var i = stats[this.random(stats.length)];
-				var boost = {};
+				let i = stats[this.random(stats.length)];
+				let boost = {};
 				boost[i] = 2;
 				this.boost(boost);
 			} else {
 				return false;
 			}
-			var moves = [];
-			for (var i in exports.BattleMovedex) {
-				var move = exports.BattleMovedex[i];
+			moves = [];
+			for (let i in exports.BattleMovedex) {
+				let move = exports.BattleMovedex[i];
 				if (i !== move.id) continue;
 				if (move.isNonstandard) continue;
-				var noMetronome = {
+				let noMetronome = {
 					afteryou:1, assist:1, belch:1, bestow:1, celebrate:1, chatter:1, copycat:1, counter:1, covet:1, craftyshield:1, destinybond:1, detect:1, diamondstorm:1, dragonascent:1, endure:1, feint:1, focuspunch:1, followme:1, freezeshock:1, happyhour:1, helpinghand:1, holdhands:1, hyperspacefury:1, hyperspacehole:1, iceburn:1, kingsshield:1, lightofruin:1, matblock:1, mefirst:1, metronome:1, mimic:1, mirrorcoat:1, mirrormove:1, naturepower:1, originpulse:1, precipiceblades:1, protect:1, quash:1, quickguard:1, ragepowder:1, relicsong:1, secretsword:1, sketch:1, sleeptalk:1, snarl:1, snatch:1, snore:1, spikyshield:1, steameruption:1, struggle:1, switcheroo:1, technoblast:1, thief:1, thousandarrows:1, thousandwaves:1, transform:1, trick:1, vcreate:1, wideguard:1,
 				};
 				if (!noMetronome[move.id]) {
 					moves.push(move);
 				}
 			}
-			var move = '';
+			move = '';
 			if (moves.length) {
 				moves.sort(function (a, b) {return a.num - b.num;});
 				move = moves[this.random(moves.length)].id;
@@ -16268,8 +16268,8 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source, move) {
 			this.add('c|~AM Tesla|Cmon hax gods!!!');
-			var random = [1, 2, 3];
-			var pickRandom = random[this.random(3)];
+			let random = [1, 2, 3];
+			let pickRandom = random[this.random(3)];
 			if (pickRandom === 3) {
 				this.damage(source.maxhp / 3, source, source, 'sideboffledge');
 			}
@@ -16330,9 +16330,9 @@ exports.BattleMovedex = {
 		},
 		onHit: function (pokemon, target, source) {
 			this.add('raw|<div class="broadcast-red"><center>ERROR: Object \"elo\" is not defined<br/>RIP Chaos League</div>');
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			var weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'none'];
-			var randomWeather = weather[this.random(5)];
+			// let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			let weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'desolateland', 'primordialsea', 'deltastream', 'none'];
+			let randomWeather = weather[this.random(8)];
 			switch (randomWeather) {
 			case 'sunnyday':
 				this.setWeather('sunnyday');
@@ -16346,32 +16346,39 @@ exports.BattleMovedex = {
 			case 'hail':
 				this.setWeather('hail');
 				break;
+			case 'desolateland':
+				this.setWeather('desolateland');
+				break;
+			case 'primordialsea':
+				this.setWeather('primordialsea');
+				break;
+			case 'deltastream':
+				this.setWeather('deltastream');
+				break;
 			case 'none':
 				this.clearWeather();
 				break;
 			}
 			let hazard1 = [1, 2, 3];
-			let pickHazard1 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stealthrock');
-			let pickHazard2 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			let pickHazard3 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			let pickHazard4 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('spikes');
-			let pickHazard5 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
-			let pickHazard6 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('toxicspikes');
-			let pickHazard7 = hazard1[this.random(3)]; if (pickHazard !== 3) target.side.addSideCondition('stickyweb');
+			let pickHazard1 = hazard1[this.random(3)]; if (pickHazard1 !== 3) target.side.addSideCondition('stealthrock');
+			let pickHazard2 = hazard1[this.random(3)]; if (pickHazard2 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard3 = hazard1[this.random(3)]; if (pickHazard3 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard4 = hazard1[this.random(3)]; if (pickHazard4 !== 3) target.side.addSideCondition('spikes');
+			let pickHazard5 = hazard1[this.random(3)]; if (pickHazard5 !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard6 = hazard1[this.random(3)]; if (pickHazard6 !== 3) target.side.addSideCondition('toxicspikes');
+			let pickHazard7 = hazard1[this.random(3)]; if (pickHazard7 !== 3) target.side.addSideCondition('stickyweb');
 			let hazard2 = [1, 2];
-			let pickHazard8 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stealthrock');
-			let pickHazard9 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			let pickHazard10 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			let pickHazard11 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('spikes');
-			let pickHazard12 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
-			let pickHazard13 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('toxicspikes');
-			let pickHazard14 = hazard2[this.random(2)]; if (pickHazard !== 2) pokemon.side.addSideCondition('stickyweb');
+			let pickHazard8 = hazard2[this.random(2)]; if (pickHazard8 !== 2) pokemon.side.addSideCondition('stealthrock');
+			let pickHazard9 = hazard2[this.random(2)]; if (pickHazard9 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard10 = hazard2[this.random(2)]; if (pickHazard10 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard11 = hazard2[this.random(2)]; if (pickHazard11 !== 2) pokemon.side.addSideCondition('spikes');
+			let pickHazard12 = hazard2[this.random(2)]; if (pickHazard12 !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard13 = hazard2[this.random(2)]; if (pickHazard13 !== 2) pokemon.side.addSideCondition('toxicspikes');
+			let pickHazard14 = hazard2[this.random(2)]; if (pickHazard14 !== 2) pokemon.side.addSideCondition('stickyweb');
 			let randomStatus = ['brn', 'par', 'slp', 'frz', 'psn', 'tox'];
 			let pickStatus = randomStatus[this.random(6)];
-			if (!target.volatiles['substitute']) {
-				if (!target.status) {
-					target.setStatus(pickStatus);
-				}
+			if (!target.volatiles['substitute'] && !target.status) {
+				target.setStatus(pickStatus);
 			}
 		},
 		selfdestruct: true,
@@ -16429,7 +16436,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]bulletpunch');
 		},
 		onHit: function (pokemon, target) {
-			var target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 		},
 		secondary: false,
 		target: "normal",
@@ -16571,8 +16578,8 @@ exports.BattleMovedex = {
 			this.add('c|&Master Float|Sharingan activated.');
 			this.add('c|&Master Float|Dominance: asserted.');
 			this.useMove('protect', source);
-			var targetBoosts = {};
-			for (var i in target.boosts) {
+			let targetBoosts = {};
+			for (let i in target.boosts) {
 				targetBoosts[i] = target.boosts[i];
 			}
 			source.setBoost(targetBoosts);
@@ -16710,17 +16717,11 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source, move) {
 			this.add('c|&Piers Niνans|I\'ve got you covered, laying down support fire!');
-			var moves = ['firebullet', 'waterbullet', 'grassbullet', 'electricbullet', 'steelbullet', 'groundbullet', 'rockbullet', 'psychicbullet', 'ghostbullet', 'normalbullet', 'poisonbullet', 'bugbullet', 'darkbullet', 'fairybullet', 'dragonbullet', 'icebullet', 'flyingbullet', 'fightingbullet'];
-			var bullet = moves[this.random(moves.length)];
-			this.useMove(bullet, target);
-			var bullet = moves[this.random(moves.length)];
-			this.useMove(bullet, target);
-			var bullet = moves[this.random(moves.length)];
-			this.useMove(bullet, target);
-			var bullet = moves[this.random(moves.length)];
-			this.useMove(bullet, target);
-			var bullet = moves[this.random(moves.length)];
-			this.useMove(bullet, target);
+			let moves = ['firebullet', 'waterbullet', 'grassbullet', 'electricbullet', 'steelbullet', 'groundbullet', 'rockbullet', 'psychicbullet', 'ghostbullet', 'normalbullet', 'poisonbullet', 'bugbullet', 'darkbullet', 'fairybullet', 'dragonbullet', 'icebullet', 'flyingbullet', 'fightingbullet'];
+			for (let i = 0; i < 5; i++) {
+				let bullet = moves[this.random(moves.length)];
+				this.useMove(bullet, target);
+			}
 		},
 		secondary: false,
 		target: "self",
@@ -16873,7 +16874,7 @@ exports.BattleMovedex = {
 				this.boost({atk:2});
 				this.boost({def:2});
 				this.boost({spe:-2});
-				var enemy = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+				let enemy = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 				if (!enemy.volatiles['substitute']) {
 					if (!enemy.status) {
 						enemy.setStatus('par');
@@ -16914,7 +16915,7 @@ exports.BattleMovedex = {
 				this.useMove('protect', pokemon);
 				this.boost({def:-2});
 				this.boost({spd:-2});
-				var enemy = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+				let enemy = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 				if (!enemy.volatiles['substitute']) {
 					if (!enemy.status) {
 						enemy.setStatus('brn');
@@ -17108,7 +17109,7 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		basePowerCallback: function (pokemon, target) {
-			var power = (Math.floor(25 * target.getStat('spe') / pokemon.getStat('spe')) || 1);
+			let power = (Math.floor(25 * target.getStat('spe') / pokemon.getStat('spe')) || 1);
 			if (power > 150) power = 150;
 			this.debug('' + power + ' bp');
 			return power;
@@ -17275,8 +17276,8 @@ exports.BattleMovedex = {
 		},
 		onBasePowerPriority: 4,
 		onBasePower: function (basePower, pokemon, target) {
-			var item = target.getItem();
-			var noKnockOff = item.onTakeItem && item.onTakeItem(item, target) === false;
+			let item = target.getItem();
+			let noKnockOff = item.onTakeItem && item.onTakeItem(item, target) === false;
 			if (item.id && !noKnockOff) {
 				return this.chainModify(1.5);
 			}
@@ -17284,7 +17285,7 @@ exports.BattleMovedex = {
 		onAfterHit: function (target, source) {
 			if (target.hasAbility('stickyhold')) return;
 			if (source.hp) {
-				var item = target.takeItem();
+				let item = target.takeItem();
 				if (item) {
 					this.add('-enditem', target, item.name, '[from] move: Nigga Punch', '[of] ' + source);
 				}
@@ -17319,7 +17320,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]zenheadbutt');
 		},
 		onTry: function (source, target) {
-			var decision = this.willMove(target);
+			let decision = this.willMove(target);
 			if (!decision || decision.choice !== 'move') {
 				this.add('-fail', source);
 				return null;
@@ -17413,8 +17414,8 @@ exports.BattleMovedex = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
-				var sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
-				for (var i in sideConditions) {
+				let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
+				for (let i in sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(i)) {
 						this.add('-sideend', pokemon.side, this.getEffect(i).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
 					}
@@ -17460,7 +17461,7 @@ exports.BattleMovedex = {
 				this.boost({def: -1});
 				this.boost({spd: -1});
 				this.useMove('boomburst', target);
-				var enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
+				let enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
 				if (!enemy.volatiles['substitute']) {
 					if (!enemy.status) {
 						enemy.setStatus('par');
@@ -17612,8 +17613,8 @@ exports.BattleMovedex = {
 			}
 		},
 		onHit: function (source, target) {
-			var weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'none'];
-			var randomWeather = weather[this.random(5)];
+			let weather = ['raindance', 'sunnyday', 'sandstorm', 'hail', 'none'];
+			let randomWeather = weather[this.random(5)];
 			switch (randomWeather) {
 			case 'sunnyday':
 				this.setWeather('sunnyday');
@@ -17683,11 +17684,11 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]metronome');
 		},
 		onHit: function (target, source) {
-			var deltaStaff = ['#Champion CGTNathan', '#Prof. Pyrate', '#Prof. KGBeast', '#Prof. Cryptis', '#Prof. Ralker', '#Prof. NTG', '#Delta Jzb', '#Delta Kray', '#Delta Orion', '#Delta Hoot', '#Delta Dialga', '#Delta SimonScience', '#Delta Naten', '#Delta Chrono', '#Prof. Beastly', '#Prof. Asziran', '#Prof. Spike', '@Delta alv', '@Delta Kеori', '@Delta Caelestis', '@Delta Ronman5', '@Delta Staravia', '@Delta Penguinn', '%Delta Vergi1', '%Delta Infernus', '%Delta Myth', '%Delta UT', '%Delta Icarus', '%Delta Sara', '%Delta Nightmare', '%Delta Pop', '%Delta akaFila', '%Delta Forest', '%Delta Virgo', '%Delta Coo', '%Delta Emys', '%Delta Tacoboy', '%Delta Wanderer', '#Delta sparkychild', '%Delta Maria V', '+Delta P0tat0', '+Delta Starbomb', '+Delta Hax'];
-			var randomDelta = deltaStaff[this.random(43)];
+			let deltaStaff = ['#Champion CGTNathan', '#Prof. Pyrate', '#Prof. KGBeast', '#Prof. Cryptis', '#Prof. Ralker', '#Prof. NTG', '#Delta Jzb', '#Delta Kray', '#Delta Orion', '#Delta Hoot', '#Delta Dialga', '#Delta SimonScience', '#Delta Naten', '#Delta Chrono', '#Prof. Beastly', '#Prof. Asziran', '#Prof. Spike', '@Delta alv', '@Delta Kеori', '@Delta Caelestis', '@Delta Ronman5', '@Delta Staravia', '@Delta Penguinn', '%Delta Vergi1', '%Delta Infernus', '%Delta Myth', '%Delta UT', '%Delta Icarus', '%Delta Sara', '%Delta Nightmare', '%Delta Pop', '%Delta akaFila', '%Delta Forest', '%Delta Virgo', '%Delta Coo', '%Delta Emys', '%Delta Tacoboy', '%Delta Wanderer', '#Delta sparkychild', '%Delta Maria V', '+Delta P0tat0', '+Delta Starbomb', '+Delta Hax'];
+			let randomDelta = deltaStaff[this.random(43)];
 			this.add('c|' + randomDelta + '|+q');
-			var random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-			var pickRandom = random[this.random(18)];
+			let random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+			let pickRandom = random[this.random(18)];
 			switch (pickRandom) {
 			case 1:
 				this.add('c|#Safety Shark|"The name\'s Bond... Destiny Bond..." ~CGTNathan 2015');
@@ -17797,7 +17798,7 @@ exports.BattleMovedex = {
 					{type: 'Dark', suppressed: false,  isAdded: false},
 				];
 				this.useMove('knockoff', target);
-				var enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
+				let enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
 				enemy.setItem('Lagging Tail');
 				this.add('-item', enemy, 'Lagging Tail', '[from] move: +quote');
 				break;
@@ -17809,7 +17810,7 @@ exports.BattleMovedex = {
 					{type: 'Dragon', suppressed: false,  isAdded: false},
 					{type: 'Normal', suppressed: false,  isAdded: false},
 				];
-				var enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
+				enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
 				if (!enemy.volatiles['substitute']) {
 					if (!enemy.status) {
 						enemy.setStatus('par');

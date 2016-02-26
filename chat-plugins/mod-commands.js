@@ -47,7 +47,7 @@ function clearRoom(room) {
 
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
-		if (!this.can('hotpatch') && room.founder !== user.userid) return this.errorReply("Access Denied");
+		if (!this.can('declare') && room.founder !== user.userid) return this.errorReply("Access Denied");
 		if (!room.auth) return this.errorReply("Room does not have roomauth.");
 		let parts = target.split(',');
 		let count;
@@ -128,6 +128,24 @@ exports.commands = {
 			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
 			break;
 
+		case 'roomleader':
+			count = 0;
+			for (let userid in room.auth) {
+				if (room.auth[userid] === '&') {
+					delete room.auth[userid];
+					count++;
+					if (userid in room.users) room.users[userid].updateIdentity(room.id);
+				}
+			}
+			if (!count) {
+				return this.sendReply("(This room has zero room leaders)");
+			}
+			if (room.chatRoomData) {
+				Rooms.global.writeChatRoomData();
+			}
+			this.addModCommand("All " + count + " room leaders have been cleared by " + user.name + ".");
+			break;
+
 		case 'roomowner':
 			count = 0;
 			for (let userid in room.auth) {
@@ -144,6 +162,15 @@ exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 			this.addModCommand("All " + count + " roomowners have been cleared by " + user.name + ".");
+			break;
+
+		case 'all':
+			if (!room.auth) return this.errorReply("This room has no auth.");
+			delete room.auth;
+			if (room.chatRoomData) {
+				Rooms.global.writeChatRoomData();
+			}
+			this.addModCommand("All roomauth has been cleared by " + user.name + ".");
 			break;
 
 		default:
@@ -268,7 +295,7 @@ exports.commands = {
 		user.updateIdentity();
 		this.sendReply("You have hidden your staff symbol.");
 	},
-
+	unhide: "show",
 	showauth: 'show',
 	show: function (target, room, user) {
 		if (!this.can('lock')) return false;
@@ -356,7 +383,12 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permalock");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers) return this.errorReply("User " + userid + " is already perma" + permaUsers[userid] + (permaUsers[userid] === "ban" ? "ned" : "ed") + ".");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was permalocked by " + user.name + " and demoted from " + from.join(", ") + ".");
+		}
 		permaUsers[userid] = "lock";
 		try {
 			Users.get(userid).lock(false, userid);
@@ -384,7 +416,12 @@ exports.commands = {
 		if (!this.can('declare')) return false;
 		if (!target) return this.parse("/help permaban");
 		let userid = toId(target);
+		let targetUser = Users(target);
 		if (userid in permaUsers && permaUsers[userid] === "ban") return this.errorReply("User " + userid + " is already permabanned.");
+		if (targetUser && targetUser.confirmed) {
+			let from = targetUser.deconfirm();
+			Monitor.log("[CrisisMonitor] " + targetUser.name + " was perma banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+		}
 		permaUsers[userid] = "ban";
 		try {
 			Users.get(userid).ban(false, userid);
