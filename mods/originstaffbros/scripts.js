@@ -229,12 +229,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
 				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
 			},
-			'+Princess High': { // (mega ability) pixieshield
-				species: 'Gardevoir', ability: 'Trace', item: 'Gardevoirite', gender: 'F',
-				moves: ['psyshock', 'thunderbolt', 'recover'],
-				baseSignatureMove: 'pixiecannon', signatureMove: "Pixie Cannon",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
-			},
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',
 				moves: ['vcreate', 'uturn', 'boltstrike'],
@@ -260,6 +254,12 @@ exports.BattleScripts = {
 				moves: ['psystrike', 'recover', 'transform'],
 				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
+			},
+			' Princess High': { // (mega ability) pixieshield
+				species: 'Gardevoir', ability: 'Trace', item: 'Gardevoirite', gender: 'F',
+				moves: ['psyshock', 'thunderbolt', 'recover'],
+				baseSignatureMove: 'pixiecannon', signatureMove: "Pixie Cannon",
+				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
 			},
 			/* permalocked
 			' DeathlyPlays': {

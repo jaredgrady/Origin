@@ -943,9 +943,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|You bitch');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
 			}
@@ -961,6 +958,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|You bitch');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1081,9 +1081,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|Dammit...');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
@@ -1099,6 +1096,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|Dammit...');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1218,9 +1218,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|I\'m out this bitch');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
 			}
@@ -1236,6 +1233,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|I\'m out this bitch');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
