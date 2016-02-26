@@ -178,7 +178,8 @@ Profile.prototype.title = function () {
 
 Profile.prototype.badges = function () {
 	let badges = Db('badgesDB').get(toId(toId(this.user)));
-	let css = 'border:none;background:none;padding:0;float:right;position:relative;right:60%';
+	//let css = 'border:none;background:none;padding:0;float:right;position:relative;right:60%';
+	let css = 'border:none;background:none;padding:0;';
 	if (typeof badges !== 'undefined' && badges !== null) {
 		let output = ' <table style="' + css +  '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
@@ -196,11 +197,12 @@ Profile.prototype.badges = function () {
 Profile.prototype.show = function (callback) {
 	this.checkBadges();
 	let userid = toId(this.username);
-	return this.buttonAvatar() + this.badges() +
-		SPACE + this.name() + this.title() + BR +
+	let cheatSpaceFeelsFdra = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	return ' <div overflow:hidden; " > <div  style = "float:left;" >' + this.buttonAvatar() +
+		SPACE + this.name() + this.title() + cheatSpaceFeelsFdra + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.seen(Db('seen').get(userid)) +
+		SPACE + this.seen(Db('seen').get(userid)) + '</div> <div style = "float:left;" >' + this.badges() + '</div> </div>' +
 		'<br clear="all">';
 };
 
