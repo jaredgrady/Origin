@@ -271,27 +271,12 @@ exports.commands = {
 
 	cardladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let display = '<center><u><b>Card Ladder</b></u></center><br><table border="1" cellspacing="0" cellpadding="5" width="100%"><tbody><tr><th>Rank</th><th>Username</th><th>Points</th></tr>';
 		let keys = Object.keys(Db('points').object()).map(function (name) {
 			return {name: name, points: Db('points').get(name)};
 		});
 		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
-		keys = keys.sort(function (a, b) {
-			if (b.points > a.points) return 1;
-			return -1;
-		});
-		keys.slice(0, 10).forEach(function (user, index) {
-			display += "<tr><td>" + (index + 1) + "</td><td>" + user.name + "</td><td>" + user.points + "</td></tr>";
-		});
-		if (this.broadcasting && Number(target) > 10) target = null;
-		if (!isNaN(target)) {
-			if (Number(target) > 100) target = 100;
-			keys.slice(10, target).forEach(function (user, index) {
-				display += "<tr><td>" + (index + 11) + "</td><td>" + user.name + "</td><td>" + user.points + "</td></tr>";
-			});
-		}
-		display += "</tbody></table>";
-		this.sendReply("|raw|" + display);
+		keys.sort(function (a, b) { return b.points - a.points; });
+		this.sendReplyBox(rankLadder('Card Ladder', 'Points', keys.slice(0, 100), 'points'));
 	},
 
 	psgo: 'cardshelp',
