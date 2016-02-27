@@ -197,13 +197,11 @@ Profile.prototype.badges = function () {
 Profile.prototype.show = function (callback) {
 	this.checkBadges();
 	let userid = toId(this.username);
-	let cheatSpaceFeelsFdra = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-	return ' <div overflow:hidden; " > <div  style = "float:left;" >' + this.buttonAvatar() +
-		SPACE + this.name() + this.title() + cheatSpaceFeelsFdra + BR +
+	return '<div style="float: left; width: 75%;">' + this.buttonAvatar() +
+		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.seen(Db('seen').get(userid)) + '</div> <div style = "float:left;" >' + this.badges() + '</div> </div>' +
-		'<br clear="all">';
+		SPACE + this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };
 
 /**
