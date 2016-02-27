@@ -873,6 +873,8 @@ let commands = {
 			if (params.length < 1) {
 				return this.sendReply("Usage: " + cmd + " <type> [, <comma-separated arguments>]");
 			}
+			if (params[2] > 6) params[2] = 6; // limit rounds of elimination to 6
+
 			let playerCap = parseInt(params.splice(1, 1));
 			let generator = createTournamentGenerator(params.shift(), params, this);
 			if (generator && tournament.setGenerator(generator, this)) {
@@ -1091,6 +1093,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		if (params.length < 2) {
 			return this.sendReply("Usage: " + cmd + " <format>, <type> [, <comma-separated arguments>]");
 		}
+		if (params[3] > 6) params[3] = 6; // limit rounds of elimination to 6
 
 		let tour = createTournament(room, params.shift(), params.shift(), params.shift(), Config.istournamentsrated, params, this);
 		if (tour) {
