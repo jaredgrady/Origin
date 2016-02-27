@@ -998,7 +998,7 @@ exports.Formats = [
 				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
 			}
 			if (name === 'paulcentury') {
-				this.add('c|&Paul Century|this is defiantly not dope');
+				this.add('c|&Paul Century|I out but I\'ll end this with a fuck you but have a nice day');
 			}
 			if (name === 'piersniνаns') {
 				this.add('c|&Piers Niνаns|I\'m sorry, but I can\'t carry on...');
