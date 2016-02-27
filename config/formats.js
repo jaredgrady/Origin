@@ -747,10 +747,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id === 'lightningrod') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id === 'pixilate') {
@@ -802,10 +799,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id !== 'pirate') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id !== 'pixieshield') {
@@ -819,45 +813,27 @@ exports.Formats = [
 			// Add here special typings, done for flavour mainly.
 			if (name === 'paulcentury' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fire');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fire"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Fairy"];
 			}
 			if (name === 'starfox3' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Psychic', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Psychic"];
 			}
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
-				pokemon.typesData = [
-					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Fighting', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Fire", "Fighting"];
 			}
 			if (name === 'hayleysworld' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fairy"];
 			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
-				pokemon.typesData = [
-					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Ghost', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Normal", "Ghost"];
 			}
 
 			// Edgy switch-in sentences go here.
@@ -967,9 +943,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|You bitch');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
 			}
@@ -985,6 +958,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|You bitch');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1003,7 +979,8 @@ exports.Formats = [
 				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
 			}
 			if (name === 'lttesla') {
-				this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				//this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				this.add('c|~Lt. Tesla|Nothing in showdown is certain except Deth and haxes');
 			}
 			if (name === 'masterfloat') {
 				this.add('c|~Master Float|shitzel, fkin hax #blameZarel');
@@ -1021,7 +998,7 @@ exports.Formats = [
 				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
 			}
 			if (name === 'paulcentury') {
-				this.add('c|&Paul Century|this is defiantly not dope');
+				this.add('c|&Paul Century|I out but I\'ll end this with a fuck you but have a nice day');
 			}
 			if (name === 'piersniνаns') {
 				this.add('c|&Piers Niνаns|I\'m sorry, but I can\'t carry on...');
@@ -1104,9 +1081,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|Dammit...');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
@@ -1122,6 +1096,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|Dammit...');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1241,9 +1218,6 @@ exports.Formats = [
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
-			if (name === 'princesshigh') {
-				this.add('c|+Princess High|I\'m out this bitch');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
 			}
@@ -1259,6 +1233,9 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
+			if (name === 'princesshigh') {
+				this.add('c|Princess High|I\'m out this bitch');
+			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');

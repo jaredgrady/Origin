@@ -1,0 +1,219 @@
+.ps-room.ps-room-opaque {
+  background: rgba(51, 98, 81, 0.6);
+}
+
+.ps-room .battle-controls {
+  background: rgba(255, 255, 255, 0.25);
+  padding-top: 10px; 
+  padding-bottom: 10px;
+}
+
+.battle-log {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #803C6F;
+}
+
+.battle-log h2 {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+  text-align: center;
+}
+
+.battle-log h2:hover {
+  color: #642F56;
+}
+
+.battle-log .rated strong {
+  border-color: #803C6F;
+  background: #F3C5EA;
+  color: #803C6F;
+  text-shadow: none;
+  border: 1px solid #803C6F;
+  padding: 3px 6px;
+}
+
+.battle-log .chat strong {
+  color: #803C6F;
+}
+
+.battle-log-add {
+  border-color: #803C6F;
+  background: #F3C5EA;
+}
+
+.battle-log-add .chatbox label {
+  text-shadow: 0px 0px #E4B7DB;
+}
+
+.battle-log-add .textbox {
+  border-color: #803C6F;
+}
+
+.turnstatus-protect {
+  background:url(http://i.imgur.com/RVxCoHz.png);
+  opacity: 1 !important;
+  height: 103px !important;
+  width: 150px !important;
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.sidecondition-safeguard {
+  background: url(http://i.imgur.com/FrCoWCW.png);
+  opacity: 0.6 !important;
+  height: 90px !important;
+  width: 130px !important;
+  border-radius: 0;
+  opacity: 0.9;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.sidecondition-reflect {
+  background: url(http://i.imgur.com/X1XDxVB.png);
+  opacity: 0.7 !important;
+  height: 90px !important;
+  width: 130px !important;
+  border-radius: 0;
+  border-width: 0;
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+.sidecondition-lightscreen {
+  background: url(http://i.imgur.com/8eLftNA.png);
+  opacity: 0.6 !important;
+  height: 90px !important;
+  width: 130px !important;
+  opacity: 0.9;
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.backdrop {
+  background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
+  opacity: 0.6;
+} 
+
+.battle {
+  border-color: #11484F !important;
+}
+
+.rightbar, .leftbar {
+  background: rgba(51, 98, 81, 0.6);
+  border-color: #11484F;
+}
+
+.trainer strong {
+  color: #E6FDFF;
+  text-shadow: 0px -1px 0px #11484F;
+}
+
+.trainer div {
+  opacity: 1;
+}
+
+.battle-controls .whatdo {
+  color: #111;
+}
+
+.battle-controls .whatdo small {
+  border-color: #111;
+}
+
+.moveselect button, .switchselect button {
+  color: #BBCCC9 !important;
+  text-shadow: 0px 0px 2px #11484F !important;
+}
+
+.moveselect button {
+  background: url("http://i.imgur.com/GPzZsG1.png") center right no-repeat;
+  background-position: right 14px;
+  padding-right: 35px;
+}
+
+.switchselect button {
+  background: url("http://i.imgur.com/d0UDk9G.png")  bottom no-repeat;
+  padding-right: 20px;
+  background-position: right 14px;
+}
+
+.switchmenu button {
+  background: #BBCCC9 !important;    
+  border-color: #11484F !important;
+  color: #11484F !important;
+  text-shadow: 0px 0px 2px #96BFB8 !important;
+}
+
+.switchmenu button:hover {
+  background: #BBCCC9 !important;    
+  border-color: #0E3339 !important;
+  color: #0E3339 !important;
+  text-shadow: none !important;
+}
+
+.switchmenu button .hpbar {
+  border-color: #0E3339;
+}
+
+.switchmenu button.disabled, .switchmenu button:disabled {
+  background: #9BB6B1 !important;    
+  border: 2px solid #0E3339 !important;
+  color: #0E3339 !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+}
+
+.movemenu button:disabled {
+  background: #9BB6B1;    
+  border: 2px solid #0E3339;
+  color: #0E3339;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.movemenu button:disabled .movemenu button small.pp, .movemenu button:disabled .movemenu button small.type {
+  text-shadow: none;
+  color: #164E57;
+}
+
+.movemenu button {
+  border: 1px solid #0E3339 !important;
+}
+
+#tooltipwrapper {
+  text-align: left;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+#tooltipwrapper .tooltip {
+  width: 300px;
+  background: #BBCCC9;    
+  border-color: #11484F;
+  border-radius: 1px;
+}
+
+#tooltipwrapper .tooltip h2 {
+  padding: 2px 4px;
+  margin: 0;
+  border-bottom: 1px solid #11484F;
+  font-size: 10pt;
+  color: #0B2D32;
+  text-shadow: 0px 0px 2px #96BFB8;
+}
+
+#tooltipwrapper .tooltip p {
+  padding: 2px 4px;
+  margin: 0;
+  font-size: 8pt;
+}
+
+#tooltipwrapper .tooltip p.section {
+  border-top: 1px solid #11484F;
+}
