@@ -9,6 +9,7 @@
 ********************/
 const uuid = require('uuid');
 const cards = require('../card-data.js');
+let rankLadder = require('../rank-ladder');
 
 const colors = {
 	Mythic: '#D82A2A',
