@@ -1,6 +1,7 @@
 /*********************
 * Custom Classes CSS *
 *********************/
+
 .astext {
   border: none;
   background: none;
@@ -8,7 +9,8 @@
   height: -20em;
   font-family: Verdana,sans-serif;
   font-size: 12px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .pollButton {
   background: #F8F8F8;
@@ -16,28 +18,33 @@
   border: 1px solid #AAA;
   margin: 2px;
   padding-top: 2px;
-  padding-bottom: 3px; }
+  padding-bottom: 3px;
+}
 
 .pollButton:hover {
   background: #F6F6F6;
   border-color: #337AB7;
-  color: #276297; }
+  color: #276297;
+}
 
 .table-header {
   background: #061C2A;
   padding: 8px 25px;
   border: 1px solid #768D9C;
   color: #FFF;
-  font-size: 13pt; }
+  font-size: 13pt;
+}
 
 .table-option {
   background: rgba(248, 248, 248, 0.9);
   border: 1px solid #768D9C;
   text-align: center;
-  padding: 5px; }
+  padding: 5px;
+}
 
 .table-option:hover {
-  background: rgba(255, 255, 255, 0.98); }
+  background: rgba(255, 255, 255, 0.98);
+}
 
 .table-btn {
   background: #CFE0EB;
@@ -45,10 +52,12 @@
   width: 100%;
   padding: 20px 0px;
   font-size: 11pt;
-  text-shadow: 1px 1px #FFF, 0px -1px #FFF; }
+  text-shadow: 1px 1px #FFF, 0px -1px #FFF;
+}
 
 .table-btn:hover {
-  color: #11527D; }
+  color: #11527D;
+}
 
 .intro-tabbarbtn {
   background: rgba(243, 197, 234, 0.2);
@@ -60,93 +69,114 @@
   height: 35px;
   color: #803C6F;
   text-shadow: 0 0 2px #fce8f1;
-  margin: 0px 5px; }
+  margin: 0px 5px;
+}
 
 .intro-tabbarbtn:hover {
-  background: rgba(243, 197, 234, 0.7); }
+  background: rgba(243, 197, 234, 0.7);
+}
 
 .important {
   font-weight: bold;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .rankladder-headers {
   background: #454E50;
   color: #FFF;
   text-shadow: 1px 1px #262B2C, -1px 1px #262B2C;
-  border: 1px solid #222; }
+  border: 1px solid #222;
+}
 
 .default-td {
   padding: 5px;
-  border: 1px solid #222; }
+  border: 1px solid #222;
+}
 
 .rankladder-tds {
-  background: #FCFCFC; }
+  background: #FCFCFC;
+}
 
 .rankladder-tds:hover {
-  background: #EFEFEF; }
+  background: #EFEFEF;
+}
 
 .first {
   background: #CFB53B;
   color: #645722;
   text-shadow: 0px 0px 2px #F6EAB9;
-  padding: 8px; }
+  padding: 8px;
+}
 
 .first:hover {
-  background: #D5BD5B; }
+  background: #D5BD5B;
+}
 
 .second {
   background: #C0C0C0;
   color: #5B5B5B;
   text-shadow: 0px 0px 2px #EEE;
-  padding: 8px; }
+  padding: 8px;
+}
 
 .second:hover {
-  background: #CACACA; }
+  background: #CACACA;
+}
 
 .third {
   background: #CD7F32;
   color: #694725;
   text-shadow: 0px 0px 2px #E4BA91;
-  padding: 8px; }
+  padding: 8px;
+}
 
 .third:hover {
-  background: #CD9054; }
+  background: #CD9054;
+}
 
 .card-th {
   background-color: #DCE9F9;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-  border: 1px solid #CCC; }
+  border: 1px solid #CCC;
+}
 
 .card-td {
   background: #FFF;
   border: 1px solid #CCC;
-  text-align: center; }
+  text-align: center;
+}
 
 .card-div {
   padding: 5px;
-  color: #333; }
+  color: #333;
+}
 
 .card-th:hover, .card-td:hover {
-  color: #222; }
+  color: #222;
+}
 
 .card-button {
-  margin: 0px 3px; }
+  margin: 0px 3px;
+}
 
 .card-td button, .card-button {
   background: rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 15px;
   color: #333;
-  text-shadow: 1px 1px 1px #FFF; }
+  text-shadow: 1px 1px 1px #FFF;
+}
 
 .card-td button:hover, .card-button:hover {
   background: rgba(0, 0, 0, 0.06);
   border: 1px solid #CCC;
-  text-shadow: 1px 1px 1px #EEE; }
+  text-shadow: 1px 1px 1px #EEE; 
+}
 
 .card-td button:focus, .card-button:focus {
   background: rgba(227, 235, 246, 0.8);
-  border: 1px solid #9EB2D0; }
+  border: 1px solid #9EB2D0;
+}
 
 .card-name {
   background-color: #DCE9F9;
@@ -155,7 +185,8 @@
   font-weight: bold;
   padding: 12px 18px 10px 18px;
   border: 1px solid #CCC;
-  color: #444; }
+  color: #444;
+}
 
 .tour-btn {
   background: none;
@@ -166,12 +197,14 @@
   padding-right: 30px;
   color: #DDD;
   font-size: 11pt;
-  text-align: right; }
+  text-align: right;
+}
 
 .tour-btn:hover {
   background: rgba(0, 0, 0, 0.1);
   color: #8E85DE;
-  border-left: 4px solid #8E85DE; }
+  border-left: 4px solid #8E85DE;
+}
 
 .sentence-container {
   background: #EEE;
@@ -182,218 +215,273 @@
   color: #333;
   text-shadow: 1px 1px #FFF;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+}
 
 /**************************
 * Custom Classes CSS ~end *
 **************************/
+
 /***********************
 * Donation Benefit CSS *
 ***********************/
+
 /* CUSTOM PM */
+
 /*Float*/
+
 .pm-window-masterfloat h3 {
   background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #1EA88C !important;
   text-shadow: 0px 0px 2px #B6F3E7 !important;
-  border-color: #1F6C5D !important; }
+  border-color: #1F6C5D !important;
+}
 
 .pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
   background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #1EA88C !important;
   text-shadow: 0px 0px 2px #B6F3E7 !important;
-  border-color: #1F6C5D !important; }
+  border-color: #1F6C5D !important;
+}
 
 .pm-window-masterfloat h3 small, .pm-window-masterfloat h3 .minimizebutton, .pm-window-masterfloat h3 .closebutton, .pm-window-masterfloat h3:hover .minimizebutton {
-  color: #106B59 !important; }
+  color: #106B59 !important;
+}
 
 .pm-window-masterfloat h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #106B59 !important; }
+  color: #106B59 !important;
+}
 
 .pm-window-masterfloat h3 .closebutton:hover {
-  color: #982929 !important; }
+  color: #982929 !important;
+}
 
 .pm-window-masterfloat h3 .minimizebutton:hover {
-  color: #987729 !important; }
+  color: #987729 !important;
+}
 
 .pm-window-masterfloat .pm-log, .pm-window-masterfloat.focused .pm-log {
   background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat !important;
-  border-color: #1F6C5D !important; }
+  border-color: #1F6C5D !important;
+}
 
 .pm-window-masterfloat .pm-log-add, .pm-window-masterfloat.focused .pm-log-add {
   background: #52C7B0 !important;
-  border-color: #1F6C5D !important; }
+  border-color: #1F6C5D !important;
+}
 
 .pm-window-masterfloat .pm-log-add .textbox {
   border-color: #1F6C5D !important;
   background: rgba(243, 255, 253, 0.95) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 /*Float~end*/
+
 /*Neo*/
+
 .pm-window-neosoul h3 {
   background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #124A66 !important;
-  border-color: #124A66 !important; }
+  border-color: #124A66 !important;
+}
 
 .pm-window-neosoul h3:hover, .pm-window-neosoul.focused h3, .pm-window-neosoul.focused h3:hover {
   background: rgba(36, 110, 148, 0.9) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #0C374D !important;
-  border-color: #0C374D !important; }
+  border-color: #0C374D !important;
+}
 
 .pm-window-neosoul h3 small, .pm-window-neosoul h3 .minimizebutton, .pm-window-neosoul h3 .closebutton, .pm-window-neosoul h3:hover .minimizebutton {
-  color: #E9F6FF !important; }
+  color: #E9F6FF !important;
+}
 
 .pm-window-neosoul h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #E9F6FF !important; }
+  color: #E9F6FF !important;
+}
 
 .pm-window-neosoul h3 .closebutton:hover {
-  color: #FFAFAF !important; }
+  color: #FFAFAF !important;
+}
 
 .pm-window-neosoul h3 .minimizebutton:hover {
-  color: #FFDAAF !important; }
+  color: #FFDAAF !important;
+}
 
 .pm-window-neosoul .pm-log {
   background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
-  border-color: #124A66 !important; }
+  border-color: #124A66 !important;
+}
 
 .pm-window-neosoul.focused .pm-log {
   background: rgba(211, 231, 245, 0.9) url("http://i.imgur.com/HVvCefH.gif?1") right no-repeat !important;
-  border-color: #0C374D !important; }
+  border-color: #0C374D !important;
+}
 
 .pm-window-neosoul .pm-log-add {
   background: rgba(76, 154, 180, 0.9) !important;
-  border-color: #124A66 !important; }
+  border-color: #124A66 !important;
+}
 
 .pm-window-neosoul.focused .pm-log-add {
   background: rgba(76, 154, 180, 0.9) !important;
-  border-color: #0C374D !important; }
+  border-color: #0C374D !important;
+}
 
 .pm-window-neosoul .pm-log-add .textbox {
   border-color: #124A66 !important;
   background: rgba(227, 239, 247, 0.9) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 /*Neo~end*/
+
 /*fender*/
+
 .pm-window-fender h3 {
   background: rgba(38, 38, 38, 0.8) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #000 !important;
-  border-color: #222 !important; }
+  border-color: #222 !important;
+}
 
 .pm-window-fender h3:hover {
   background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #EEE !important;
   text-shadow: 0px 0px 2px #000 !important;
-  border-color: #222 !important; }
+  border-color: #222 !important;
+}
 
 .pm-window-fender.focused h3, .pm-window-fender.focused h3:hover {
   background: rgba(38, 38, 38, 0.9) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #DECA94 !important;
   text-shadow: 0px 0px 2px #1B1B1B !important;
-  border-color: #1B1B1B !important; }
+  border-color: #1B1B1B !important;
+}
 
 .pm-window-fender h3 small, .pm-window-fender h3 .minimizebutton, .pm-window-fender h3 .closebutton, .pm-window-fender h3:hover .minimizebutton {
-  color: #CCC !important; }
+  color: #CCC !important;
+}
 
 .pm-window-fender h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CCC !important; }
+  color: #CCC !important;
+}
 
 .pm-window-fender h3 .closebutton:hover {
-  color: #FF8383 !important; }
+  color: #FF8383 !important;
+}
 
 .pm-window-fender h3 .minimizebutton:hover {
-  color: #FFDA83 !important; }
+  color: #FFDA83 !important;
+}
 
 .pm-window-fender .pm-log, .pm-window-fender.focused .pm-log {
   background: rgba(235, 235, 235, 0.9) url("http://i.imgur.com/WebFitb.png?1") right no-repeat !important;
-  border-color: #555 !important; }
+  border-color: #555 !important;
+}
 
 .pm-window-fender .pm-log .chat small {
-  color: #444 !important; }
+  color: #444 !important;
+}
 
 .pm-window-fender .pm-log-add, .pm-window-fender.focused .pm-log-add {
   background: rgba(75, 75, 75, 0.8) !important;
-  border-color: #444 !important; }
+  border-color: #444 !important;
+}
 
 .pm-window-fender .pm-log-add .textbox {
   border-color: #444 !important;
   background: rgba(245, 245, 245, 0.92) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-fender .pm-log-add .textbox:focus {
   border-color: #444 !important;
   background: #FEFEFE !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-fender h3.pm-notifying {
   border-color: #C60000 !important;
   background: rgba(0, 0, 0, 0.85) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FF6464 !important;
-  text-shadow: 0px 0px 2px #000 !important; }
+  text-shadow: 0px 0px 2px #000 !important;
+}
 
 .pm-window-fender h3.pm-notifying:hover {
   border-color: #C60000 !important;
   background: rgba(0, 0, 0, 0.88) url("http://pldh.net/media/pokecons_action/443.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FF6464 !important;
-  text-shadow: 0px 0px 2px #000 !important; }
+  text-shadow: 0px 0px 2px #000 !important;
+}
 
 /*fender~end*/
+
 /*katheyisme123*/
+
 .pm-window-katheyisme123 h3 {
   background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #CAF5B4 !important;
   text-shadow: 0px 0px 2px #383631 !important;
-  border-color: #383631 !important; }
+  border-color: #383631 !important;
+}
 
 .pm-window-katheyisme123 h3:hover, .pm-window-katheyisme123.focused h3, .pm-window-katheyisme123.focused h3:hover {
   background: rgba(56, 54, 49, 0.9) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #CAF5B4 !important;
   text-shadow: 0px 0px 2px #24221F !important;
-  border-color: #2F2D29 !important; }
+  border-color: #2F2D29 !important;
+}
 
 .pm-window-katheyisme123 h3 small, .pm-window-katheyisme123 h3 .minimizebutton, .pm-window-katheyisme123 h3 .closebutton, .pm-window-katheyisme123 h3:hover .minimizebutton {
-  color: #FCFBEB !important; }
+  color: #FCFBEB !important;
+}
 
 .pm-window-katheyisme123 h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #FCFBEB !important; }
+  color: #FCFBEB !important;
+}
 
 .pm-window-katheyisme123 h3 .closebutton:hover {
-  color: #FF8383 !important; }
+  color: #FF8383 !important;
+}
 
 .pm-window-katheyisme123 h3 .minimizebutton:hover {
-  color: #FFDA83 !important; }
+  color: #FFDA83 !important;
+}
 
 .pm-window-katheyisme123 .pm-log, .pm-window-katheyisme123.focused .pm-log {
   background: rgba(252, 251, 235, 0.92) url("http://i.imgur.com/LhaU1ty.png?1") right no-repeat !important;
   border-color: #383631 !important;
-  color: #06090C !important; }
+  color: #06090C !important;
+}
 
 .pm-window-katheyisme123 .pm-log .chat small {
-  color: #5F5B54 !important; }
+  color: #5F5B54 !important;
+}
 
 .pm-window-katheyisme123 .pm-log-add, .pm-window-katheyisme123.focused .pm-log-add {
-  background: rgba(98, 94, 87, 0.8) !important;
-  border-color: #383631 !important; }
+  background: rgba(98, 94, 87, .8) !important;
+  border-color: #383631 !important;
+}
 
 .pm-window-katheyisme123 .pm-log-add .textbox {
   border-color: #383631 !important;
   background: rgba(252, 251, 235, 0.92) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-katheyisme123 h3.pm-notifying {
   background: #9ACAE4 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
@@ -401,7 +489,8 @@
   color: #625D56 !important;
   font-style: italic !important;
   border-color: #383631 !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-katheyisme123 h3.pm-notifying:hover {
   background: #6E97A9 url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
@@ -409,77 +498,95 @@
   color: #383631 !important;
   font-style: italic !important;
   border-color: #383631 !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-katheyisme123 .challenge {
   background: #BDF2A1 !important;
   color: #06090C !important;
-  border-color: #383631 !important; }
+  border-color: #383631 !important;
+}
 
 .pm-window-katheyisme123 .challenge .select, .pm-window-katheyisme123 .challenge .buttonbar button {
   background: #A5CB92 !important;
   border-color: #759665 !important;
   color: #06090C !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-katheyisme123 .challenge .select:hover, .pm-window-katheyisme123 .challenge .buttonbar button:hover {
   background: #88B074 !important;
-  border-color: #5C7A4C !important; }
+  border-color: #5C7A4C !important;
+} 
 
 .pm-window-katheyisme123 .challenge .select:disabled {
   background: rgba(136, 176, 116, 0.5) !important;
-  border-color: #759665 !important; }
+  border-color: #759665 !important;
+}
 
 /*katheyisme123~end*/
+
 /*sariisaur*/
+
 .pm-window-sariisaur h3 {
   background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
   background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
-  border-color: #983841 !important; }
+  border-color: #983841 !important;
+}
 
 .pm-window-sariisaur h3:hover {
   background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
   background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
-  border-color: #983841 !important; }
+  border-color: #983841 !important;
+}
 
 .pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
   background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #D2F6C5 !important;
   text-shadow: 0px 0px 2px #983841 !important;
-  border-color: #983841 !important; }
+  border-color: #983841 !important;
+}
 
 .pm-window-sariisaur h3 small, .pm-window-sariisaur h3 .minimizebutton, .pm-window-sariisaur h3 .closebutton, .pm-window-sariisaur h3:hover .minimizebutton {
-  color: #FAACB2 !important; }
+  color: #FAACB2 !important;
+}
 
 .pm-window-sariisaur h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #FAACB2 !important; }
+  color: #FAACB2 !important;
+}
 
 .pm-window-sariisaur h3 .closebutton:hover {
-  color: #D2F6C5 !important; }
+  color: #D2F6C5 !important;
+}
 
 .pm-window-sariisaur h3 .minimizebutton:hover {
-  color: #D2F6C5 !important; }
+  color: #D2F6C5 !important;
+}
 
 .pm-window-sariisaur .pm-log, .pm-window-sariisaur.focused .pm-log {
   background: rgba(243, 255, 239, 0.92) url("http://i.imgur.com/ZjO43fl.png?1") right no-repeat !important;
-  border-color: #949494 !important; }
+  border-color: #949494 !important;
+}
 
 .pm-window-sariisaur .pm-log .chat small {
-  color: #5A5A5A !important; }
+  color: #5A5A5A !important;
+}
 
 .pm-window-sariisaur .pm-log-add, .pm-window-sariisaur.focused .pm-log-add {
   background: #75CFB4 !important;
-  border-color: #206F5F !important; }
+  border-color: #206F5F !important;
+}
 
 .pm-window-sariisaur .pm-log-add .textbox {
   border-color: #206F5F !important;
   background: rgba(243, 255, 239, 0.92) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-sariisaur h3.pm-notifying {
   border-color: #AB3E48 !important;
@@ -487,7 +594,8 @@
   background-position: 225px -7px !important;
   color: #832730 !important;
   font-style: italic !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-sariisaur h3.pm-notifying:hover {
   border-color: #AB3E48 !important;
@@ -495,77 +603,96 @@
   background-position: 225px -8px !important;
   color: #832730 !important;
   font-style: italic !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-sariisaur .challenge {
   background: #FFB5BA !important;
   color: #A23B45 !important;
-  border-color: #A23B45 !important; }
+  border-color: #A23B45 !important;
+}
 
 .pm-window-sariisaur .challenge .select, .pm-window-sariisaur .challenge .buttonbar button {
   background: #B0F597 !important;
   border-color: #396A39 !important;
   color: #396A39 !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-sariisaur .challenge .select:hover, .pm-window-sariisaur .challenge .buttonbar button:hover {
   background: #D2F6C5 !important;
-  border-color: #396A39 !important; }
+  border-color: #396A39 !important;
+} 
 
 .pm-window-sariisaur .challenge .select:disabled {
   background: rgba(176, 245, 151, 0.5) !important;
-  border-color: #396A39 !important; }
+  border-color: #396A39 !important;
+}
 
 /*sariisaur~end*/
+
 /*pndas*/
+
 .pm-window-pndas h3 {
   background: rgba(74, 74, 74, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+}
 
 .pm-window-pndas h3:hover, .pm-window-pndas.focused h3, .pm-window-pndas.focused h3:hover {
   background: rgba(60, 60, 60, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+}
 
 .pm-window-pndas h3 small {
-  color: #71EC85 !important; }
+  color: #71EC85 !important;
+}
 
 .pm-window-pndas h3 .minimizebutton, .pm-window-pndas h3 .closebutton, .pm-window-pndas h3:hover .minimizebutton {
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .pm-window-pndas h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .pm-window-pndas h3 .closebutton:hover {
-  color: #71EC85 !important; }
+  color: #71EC85 !important;
+}
 
 .pm-window-pndas h3 .minimizebutton:hover {
-  color: #71EC85 !important; }
+  color: #71EC85 !important;
+}
 
 .pm-window-pndas .pm-log, .pm-window-pndas.focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/82IUOPa.png?1") right no-repeat !important;
-  border-color: #BDB4AC !important; }
+  border-color: #BDB4AC !important;
+}
 
 .pm-window-pndas .pm-log .chat small {
-  color: #6B6B73 !important; }
+  color: #6B6B73 !important;
+}
 
 .pm-window-pndas .pm-log-add {
   background: #E4E4E4 !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+}
 
 .pm-window-pndas.focused .pm-log-add {
   background: #C4BBB3 !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+}
 
 .pm-window-pndas .pm-log-add .textbox {
   border-color: #2B2B2B !important;
   background: #FFF !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-pndas h3.pm-notifying {
   border-color: #007313 !important;
@@ -573,7 +700,8 @@
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #007313 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-pndas h3.pm-notifying:hover {
   border-color: #00580F !important;
@@ -581,81 +709,100 @@
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #00580F !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-pndas h3.pm-notifying .closebutton:hover {
-  color: #BBB3AB !important; }
+  color: #BBB3AB !important;
+}
 
 .pm-window-pndas h3.pm-notifying .minimizebutton:hover {
-  color: #BBB3AB !important; }
+  color: #BBB3AB !important;
+}
 
 .pm-window-pndas .challenge {
   background: #E3E3E3 !important;
   color: #2C2C2C !important;
   border-color: #A29990 !important;
-  border-top-color: #2B2B2B !important; }
+  border-top-color: #2B2B2B !important;
+}
 
 .pm-window-pndas .challenge .select, .pm-window-pndas .challenge .buttonbar button {
   background: rgba(74, 74, 74, 0.8) !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+}
 
 .pm-window-pndas .challenge .select:hover, .pm-window-pndas .challenge .buttonbar button:hover {
   background: rgba(74, 74, 74, 0.9) !important;
   color: #71EC85 !important;
   text-shadow: 0px 0px 2px #2F2F2F !important;
-  border-color: #2B2B2B !important; }
+  border-color: #2B2B2B !important;
+} 
 
 .pm-window-pndas .challenge .select:disabled {
   background: rgba(74, 74, 74, 0.45) !important;
   border-color: #2B2B2B !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 /*pndas~end*/
+
 /*nineage*/
+
 .pm-window-nineage h3 {
   background: rgba(89, 174, 182, 0.8) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
-  border-color: #182021 !important; }
+  border-color: #182021 !important;
+}
 
 .pm-window-nineage h3:hover, .pm-window-nineage.focused h3, .pm-window-nineage.focused h3:hover {
   background: rgba(89, 174, 182, 0.9) url("http://www.serebii.net/pokedex-xy/icon/231.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFEECB !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
-  border-color: #182021 !important; }
+  border-color: #182021 !important;
+}
 
 .pm-window-nineage h3 small, .pm-window-nineage h3 .minimizebutton, .pm-window-nineage h3 .closebutton, .pm-window-nineage h3:hover .minimizebutton {
-  color: #FFEECB !important; }
+  color: #FFEECB !important;
+}
 
 .pm-window-nineage h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #FFEECB !important; }
+  color: #FFEECB !important;
+}
 
 .pm-window-nineage h3 .closebutton:hover {
-  color: #D64736 !important; }
+  color: #D64736 !important;
+}
 
 .pm-window-nineage h3 .minimizebutton:hover {
-  color: #D64736 !important; }
+  color: #D64736 !important;
+}
 
 .pm-window-nineage .pm-log, .pm-window-nineage.focused .pm-log {
   background: rgba(232, 253, 251, 0.93) url("http://i.imgur.com/oL6Gu74.png?2") right no-repeat !important;
   border-color: #3E4C4D !important;
-  border-width: 2px; }
+  border-width: 2px;
+}
 
 .pm-window-nineage .pm-log .chat small {
-  color: #86A9AB !important; }
+  color: #86A9AB !important;
+}
 
 .pm-window-nineage .pm-log-add, .pm-window-nineage.focused .pm-log-add {
   background: #AADCE0 !important;
-  border-color: #3E4C4D !important; }
+  border-color: #3E4C4D !important;
+}
 
 .pm-window-nineage .pm-log-add .textbox {
   border-color: #3E4C4D !important;
   background: #F9FFFF !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-nineage h3.pm-notifying {
   border-color: #182021 !important;
@@ -663,7 +810,8 @@
   background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-nineage h3.pm-notifying:hover {
   border-color: #182021 !important;
@@ -671,73 +819,91 @@
   background-position: 225px -4px !important;
   color: #EC8550 !important;
   text-shadow: 1px 1px 0px #204143, 1px -1px 0px #204143, -1px 1px 0px #204143, -1px -1px 0px #204143 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-nineage .challenge {
   background: #C9F1E9 !important;
   color: #C34938 !important;
-  border-color: #3E4C4D !important; }
+  border-color: #3E4C4D !important;
+}
 
 .pm-window-nineage .challenge .select, .pm-window-nineage .challenge .buttonbar button {
   background: #F3A467 !important;
   border-color: #B74939 !important;
   color: #B74939 !important;
-  text-shadow: 0px 0px 2px #F9C197 !important; }
+  text-shadow: 0px 0px 2px #F9C197 !important;
+}
 
 .pm-window-nineage .challenge .select:hover, .pm-window-nineage .challenge .buttonbar button:hover {
-  background: #FFBC89 !important; }
+  background: #FFBC89 !important;
+} 
 
 .pm-window-nineage .challenge .select:disabled {
   background: rgba(238, 147, 83, 0.5) !important;
-  border-color: #B74939 !important; }
+  border-color: #B74939 !important;
+}
 
 .pm-window-nineage .challenge .teamselect:disabled strong {
-  color: #B74939 !important; }
+  color: #B74939 !important;
+}
 
 /*nineage~end*/
+
 /*chleg*/
+
 .pm-window-chleg h3 {
   background: rgba(117, 77, 68, 0.8) url("http://www.serebii.net/pokedex-xy/icon/708.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #EB8298 !important;
-  border-color: #313131 !important; }
+  border-color: #313131 !important;
+}
 
 .pm-window-chleg h3:hover, .pm-window-chleg.focused h3, .pm-window-chleg.focused h3:hover {
   background: rgba(117, 77, 68, 0.9) url("http://i.imgur.com/HYfcccn.gif") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #EB8298 !important;
-  border-color: #313131 !important; }
+  border-color: #313131 !important;        
+}
 
 .pm-window-chleg h3 small, .pm-window-chleg h3 .minimizebutton, .pm-window-chleg h3 .closebutton, .pm-window-chleg h3:hover .minimizebutton {
-  color: #313131 !important; }
+  color: #313131 !important;
+}
 
 .pm-window-chleg h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #313131 !important; }
+  color: #313131 !important;
+}
 
 .pm-window-chleg h3 .closebutton:hover {
-  color: #111111 !important; }
+  color: #111111 !important;
+}
 
 .pm-window-chleg h3 .minimizebutton:hover {
-  color: #111111 !important; }
+  color: #111111 !important;
+}
 
 .pm-window-chleg .pm-log, .pm-window-chleg.focused .pm-log {
   background: rgba(252, 225, 220, 0.95) url("http://i.imgur.com/Myqw4k2.png?1") right no-repeat !important;
   border-color: #525252 !important;
-  text-shadow: 0px 0px 5px #EB8298; }
+  text-shadow: 0px 0px 5px #EB8298;
+}
 
 .pm-window-chleg .pm-log .chat small {
-  color: #955D52 !important; }
+  color: #955D52 !important;
+}
 
 .pm-window-chleg .pm-log-add, .pm-window-chleg.focused .pm-log-add {
   background: #81655D !important;
-  border-color: #313131 !important; }
+  border-color: #313131 !important;
+}
 
 .pm-window-chleg .pm-log-add .textbox {
   border-color: #313131 !important;
   background: rgba(255, 255, 255, 0.94) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-chleg h3.pm-notifying {
   border-color: #622330 !important;
@@ -745,7 +911,8 @@
   background-position: 225px -4px !important;
   color: #622330 !important;
   text-shadow: 0px 0px 3px #B55064;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-chleg h3.pm-notifying:hover {
   border-color: #622330 !important;
@@ -753,78 +920,97 @@
   background-position: 225px -4px !important;
   color: #622330 !important;
   text-shadow: 0px 0px 3px #944152;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-chleg .challenge {
   background: #EB8298 !important;
   color: #303030 !important;
   border-color: #622330 !important;
-  text-shadow: 0px 0px 3px #B55064; }
+  text-shadow: 0px 0px 3px #B55064;
+}
 
 .pm-window-chleg .challenge .select, .pm-window-chleg .challenge .buttonbar button {
   background: #484848 !important;
   border-color: #343637 !important;
   color: #FFF !important;
-  text-shadow: 0px 0px 2px #EB8298 !important; }
+  text-shadow: 0px 0px 2px #EB8298 !important;
+}
 
 .pm-window-chleg .challenge .select:hover {
   background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") right center no-repeat !important;
-  border-color: #111 !important; }
+  border-color: #111 !important;
+} 
 
 .pm-window-chleg .challenge .buttonbar button:hover {
   background: #3D3D3D url("http://i.imgur.com/xLmHiqg.png?1") center no-repeat !important;
-  border-color: #111 !important; }
+  border-color: #111 !important;
+} 
 
 .pm-window-chleg .challenge .teamselect:disabled, .pm-window-chleg .challenge .teamselect:disabled:hover {
   background: rgba(60, 60, 60, 0.5) !important;
-  border-color: #111 !important; }
+  border-color: #111 !important;
+}
 
 .pm-window-chleg .challenge .teamselect:disabled strong {
-  color: #111 !important; }
+  color: #111 !important;
+}
 
 /*chleg~end*/
+
 /*paulcentury*/
+
 .pm-window-paulcentury h3 {
   background: rgba(164, 160, 222, 0.8) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #291A84 !important;
   text-shadow: 0px 0px 2px #DEDBFF !important;
-  border-color: #413BA2 !important; }
+  border-color: #413BA2 !important;
+}
 
 .pm-window-paulcentury h3:hover, .pm-window-paulcentury.focused h3, .pm-window-paulcentury.focused h3:hover {
   background: rgba(164, 160, 222, 0.9) url("http://i.imgur.com/W1JIqzz.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #291A84 !important;
   text-shadow: 0px 0px 2px #DEDBFF !important;
-  border-color: #413BA2 !important; }
+  border-color: #413BA2 !important;
+}
 
 .pm-window-paulcentury h3 small, .pm-window-paulcentury h3 .minimizebutton, .pm-window-paulcentury h3 .closebutton, .pm-window-paulcentury h3:hover .minimizebutton {
-  color: #B24F5C !important; }
+  color: #B24F5C !important;
+}
 
 .pm-window-paulcentury h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #B24F5C !important; }
+  color: #B24F5C !important;
+}
 
 .pm-window-paulcentury h3 .closebutton:hover {
-  color: #9F3C49 !important; }
+  color: #9F3C49 !important;
+}
 
 .pm-window-paulcentury h3 .minimizebutton:hover {
-  color: #9F3C49 !important; }
+  color: #9F3C49 !important;
+}
 
 .pm-window-paulcentury .pm-log, .pm-window-paulcentury.focused .pm-log {
   background: rgba(255, 240, 236, 0.95) url("http://i.imgur.com/yfuMK4a.png?1") right no-repeat !important;
-  border-color: #6A62DA !important; }
+  border-color: #6A62DA !important;
+}
 
 .pm-window-paulcentury .pm-log .chat small {
-  color: #E66A7B !important; }
+  color: #E66A7B !important;
+}
 
 .pm-window-paulcentury .pm-log-add, .pm-window-paulcentury.focused .pm-log-add {
   background: #BEB9F9 !important;
-  border-color: #6A62DA !important; }
+  border-color: #6A62DA !important;
+}
 
 .pm-window-paulcentury .pm-log-add .textbox {
   border-color: #6A62DA !important;
   background: rgba(255, 240, 236, 0.95) !important;
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 .pm-window-paulcentury h3.pm-notifying {
   border-color: #AC6A59 !important;
@@ -832,7 +1018,8 @@
   background-position: 225px -4px !important;
   color: #291A84 !important;
   text-shadow: 0px 0px 2px #D48A77 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-paulcentury h3.pm-notifying:hover {
   border-color: #AC6A59 !important;
@@ -840,88 +1027,109 @@
   background-position: 225px -4px !important;
   color: #291A84 !important;
   text-shadow: 0px 0px 2px #D48A77 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-paulcentury .challenge {
   background: #FFBDAC !important;
   color: #52525A !important;
-  border-color: #8D3F4A !important; }
+  border-color: #8D3F4A !important;
+}
 
 .pm-window-paulcentury .challenge .select, .pm-window-paulcentury .challenge .buttonbar button {
   background: #E66A7B !important;
   border-color: #8D3F4A !important;
   color: #FFF !important;
-  text-shadow: 0px -1px 0px #BF5664 !important; }
+  text-shadow: 0px -1px 0px #BF5664 !important;
+}
 
 .pm-window-paulcentury .challenge .select:hover, .pm-window-paulcentury .challenge .buttonbar button:hover {
   background: #EF7585 !important;
-  border-color: #8D3F4A !important; }
+  border-color: #8D3F4A !important;
+} 
 
 .pm-window-paulcentury .challenge .select:disabled {
   background: rgba(239, 117, 133, 0.6) !important;
-  border-color: #8D3F4A !important; }
+  border-color: #8D3F4A !important;
+}
 
 .pm-window-paulcentury .challenge .teamselect:disabled strong {
   color: #8D3F4A !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 /*paulcentury~end*/
+
 /*impfallenblood*/
+
 .pm-window-impfallenblood h3 {
   background: rgba(64, 72, 128, 0.8) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #F8F8F8 !important;
   text-shadow: 0px 0px 2px #283050 !important;
-  border-color: #283050 !important; }
+  border-color: #283050 !important;    
+}
 
 .pm-window-impfallenblood h3:hover {
   background: rgba(64, 72, 128, 0.8) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #DCFCFC !important;
   text-shadow: 0px 0px 2px #283050 !important;
-  border-color: #283050 !important; }
+  border-color: #283050 !important;
+}
 
 .pm-window-impfallenblood.focused h3, .pm-window-impfallenblood.focused h3:hover {
   background: rgba(64, 72, 128, 0.92) url("http://i.imgur.com/kJiIFj3.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #F8F8F8 !important;
   text-shadow: 0px 0px 2px #283050 !important;
-  border-color: #283050 !important; }
+  border-color: #283050 !important;
+}
 
 .pm-window-impfallenblood h3 small {
-  color: #F890A0 !important; }
+  color: #F890A0 !important;
+}
 
 .dark .pm-window-impfallenblood h3 .minimizebutton, .pm-window-impfallenblood h3 .minimizebutton, .pm-window-impfallenblood h3 .closebutton, .pm-window-impfallenblood h3:hover .minimizebutton {
-  color: #DDD !important; }
+  color: #DDD !important;
+}
 
 .dark .pm-window-impfallenblood h3 .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-impfallenblood h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #DDD !important; }
+  color: #DDD !important;
+}
 
 .pm-window-impfallenblood h3 .closebutton:hover {
-  color: #F05070 !important; }
+  color: #F05070 !important;
+}
 
 .dark .pm-window-impfallenblood h3 .minimizebutton:hover, .pm-window-impfallenblood h3 .minimizebutton:hover {
-  color: #F8D040 !important; }
+  color: #F8D040 !important;
+}
 
 .pm-window-impfallenblood .pm-log, .pm-window-impfallenblood.focused .pm-log {
   background: rgba(231, 233, 249, 0.95) url("http://i.imgur.com/BUz6OyP.png?1") right no-repeat !important;
-  border-color: #4A547A !important; }
+  border-color: #4A547A !important;
+}
 
 .pm-window-impfallenblood .pm-log .chat small {
-  color: #4A547A !important; }
+  color: #4A547A !important;
+}
 
 .pm-window-impfallenblood .pm-log-add {
   background: rgba(74, 84, 122, 0.8) !important;
-  border-color: #4A547A !important; }
+  border-color: #4A547A !important;
+}
 
 .pm-window-impfallenblood.focused .pm-log-add {
   background: rgba(74, 84, 122, 0.95) !important;
-  border-color: #3C4464 !important; }
+  border-color: #3C4464 !important;
+}
 
 .pm-window-impfallenblood .pm-log-add .textbox {
   border-color: #3C4464 !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-impfallenblood h3.pm-notifying, .pm-window-impfallenblood h3.pm-notifying:hover {
   border-color: #C02870 !important;
@@ -929,94 +1137,116 @@
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px -1px 0px #C02870 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-impfallenblood .challenge {
   background: rgba(122, 118, 151, 0.8) url("http://i.imgur.com/FX5D3l2.png?1") bottom left no-repeat !important;
   color: #311057 !important;
   text-shadow: 0px 0px 3px #B3AED5;
-  border-color: #41397F !important; }
+  border-color: #41397F !important;
+}
 
 .pm-window-impfallenblood .challenge .select, .pm-window-impfallenblood .challenge .buttonbar button {
   background: #645E94 !important;
   border-color: #311057 !important;
   color: #FFF !important;
-  text-shadow: 0px -1px 0px #311057 !important; }
+  text-shadow: 0px -1px 0px #311057 !important;
+}
 
 .pm-window-impfallenblood .challenge .select:hover, .pm-window-impfallenblood .challenge .buttonbar button:hover {
   background: #524B7F !important;
   border-color: #311057 !important;
-  color: #F890A0 !important; }
+  color: #F890A0 !important;
+} 
 
 .pm-window-impfallenblood .challenge .select:disabled {
   background: rgba(82, 75, 127, 0.5) !important;
   border-color: #311057 !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-impfallenblood .challenge .teamselect:disabled strong {
-  color: #311057 !important; }
-
+  color: #311057 !important;
+}
+  
 /*impfallenblood~end*/
+
 /*01ntg*/
+
 .pm-window-01ntg h3 {
   background: rgba(213, 139, 49, 0.6) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFEEBD !important;
   text-shadow: 0px 0px 2px #442720 !important;
-  border-color: #8A5E54 !important; }
+  border-color: #8A5E54 !important;
+ 
+}
 
 .pm-window-01ntg h3:hover {
   background: rgba(213, 139, 49, 0.65) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFAE6 !important;
   text-shadow: 0px 0px 2px #442720 !important;
-  border-color: #8A5E54 !important; }
+  border-color: #8A5E54 !important;    
+}
 
 .pm-window-01ntg.focused h3, .pm-window-01ntg.focused h3:hover {
   background: rgba(213, 139, 49, 0.8) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFAE6 !important;
   text-shadow: 0px 0px 2px #442720 !important;
-  border-color: #442720 !important; }
+  border-color: #442720 !important;
+}
 
 .pm-window-01ntg h3 small {
-  color: #59CDB3 !important; }
+  color: #59CDB3 !important;
+}
 
 .pm-window-01ntg h3 .minimizebutton, .dark .pm-window-01ntg h3 .minimizebutton, .pm-window-01ntg h3 .closebutton, .pm-window-01ntg h3:hover .minimizebutton {
-  color: #E2D29E !important; }
+  color: #E2D29E !important;
+}
 
 .pm-window-01ntg h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-01ntg h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #E2D29E !important; }
+  color: #E2D29E !important;
+}
 
 .pm-window-01ntg h3 .closebutton:hover {
-  color: #FEF8CB !important; }
+  color: #FEF8CB !important;
+}
 
 .pm-window-01ntg h3 .minimizebutton:hover, .dark .pm-window-01ntg h3 .minimizebutton:hover {
-  color: #FEF8CB !important; }
+  color: #FEF8CB !important;
+}
 
 .pm-window-01ntg .pm-log, .pm-window-01ntg.focused .pm-log {
   background: rgba(255, 255, 245, 0.92) url("http://i.imgur.com/9WLAbsz.png?1") right no-repeat !important;
-  border-color: #BA877A !important; }
+  border-color: #BA877A !important;
+}
 
 .pm-window-01ntg .pm-log .chat small {
-  color: #8A5E54 !important; }
+  color: #8A5E54 !important;
+}
 
 .pm-window-01ntg .pm-log-add, .pm-window-01ntg.focused .pm-log-add {
   background: #186A62 !important;
-  border-color: #114D47 !important; }
+  border-color: #114D47 !important;
+}
 
 .pm-window-01ntg .pm-log-add .textbox {
   border-color: #092926 !important;
   background: rgba(246, 246, 246, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-01ntg h3.pm-notifying {
-  border-color: #114D47 !important;
+   border-color: #114D47 !important;
   background: #186A62 url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #F6F6F6 !important;
   text-shadow: 0px -1px 0px #186A62 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-01ntg h3.pm-notifying:hover {
   border-color: #114D47 !important;
@@ -1024,78 +1254,96 @@
   background-position: 225px -4px !important;
   color: #59CDB3 !important;
   text-shadow: 0px -1px 0px #186A62 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-01ntg .challenge {
   background: #FFEEBD url("http://i.imgur.com/f4BEG7u.png?1") no-repeat bottom left !important;
   color: #442720 !important;
-  border-color: #8A5E54 !important; }
+  border-color: #8A5E54 !important;
+}
 
 .pm-window-01ntg .challenge .select, .pm-window-01ntg .challenge .buttonbar button {
   background: #8A5E54 !important;
   border-color: #442720 !important;
   color: #FFF3AE !important;
-  text-shadow: 1px 1px 1px #442720 !important; }
+  text-shadow: 1px 1px 1px #442720 !important;
+}
 
 .pm-window-01ntg .challenge .select:hover, .pm-window-01ntg .challenge .buttonbar button:hover {
   background: #64433B !important;
-  border-color: #39201A !important; }
+  border-color: #39201A !important;
+} 
 
 .pm-window-01ntg .challenge .select:disabled {
   background: rgba(100, 67, 59, 0.5) !important;
-  border-color: #442720 !important; }
+  border-color: #442720 !important;
+}
 
 .pm-window-01ntg .challenge .teamselect:disabled strong {
   color: #39201A !important;
-  text-shadow: none !important; }
-
+  text-shadow: none !important;
+}
+  
 /*01ntg~end*/
+
 /*swleric*/
+
 .pm-window-swleric h3 {
   background: rgba(0, 0, 0, 0.8) url("http://i.imgur.com/TgbJqOJ.png") no-repeat !important;
   background-position: 225px -8px !important;
   color: #EEE !important;
   text-shadow: 0px 0px 2px #111 !important;
-  border-color: #111 !important; }
+  border-color: #111 !important;
+}
 
 .pm-window-swleric h3:hover {
   background: rgba(0, 0, 0, 0.8) url("http://i.imgur.com/TgbJqOJ.png") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #111 !important;
-  border-color: #111 !important; }
+  border-color: #111 !important;
+}
 
 .pm-window-swleric .focused h3, .pm-window-swleric .focused h3:hover {
   background: rgba(0, 0, 0, 0.9) url("http://i.imgur.com/TgbJqOJ.png") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #000 !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+}
 
 .pm-window-swleric h3 .minimizebutton, .dark .pm-window-swleric h3 .minimizebutton, .pm-window-swleric h3 .closebutton, .pm-window-swleric h3:hover .minimizebutton, .pm-window-swleric h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-swleric h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #DDD !important; }
+  color: #DDD !important;
+}
 
 .pm-window-swleric h3 small, .pm-window-swleric h3 .closebutton:hover, .pm-window-swleric h3 .minimizebutton:hover, .dark .pm-window-swleric h3 .minimizebutton:hover {
-  color: #E94242 !important; }
+  color: #E94242 !important;
+}
 
 .pm-window-swleric .pm-log, .pm-window-swleric .focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/9NbaN0q.png") bottom no-repeat !important;
-  border-color: #555 !important; }
+  border-color: #555 !important;
+}
 
 .pm-window-swleric .pm-log .chat small {
-  color: #E94242 !important; }
+  color: #E94242 !important;
+}
 
 .pm-window-swleric .pm-log-add, .pm-window-swleric .focused .pm-log-add {
   background: rgba(0, 0, 0, 0.65) !important;
-  border-color: #333 !important; }
+  border-color: #333 !important;
+}
 
 .pm-window-swleric .pm-log-add .textbox {
   border-color: #222 !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-swleric .pm-log-add .textbox:focus {
-  border-color: #E94242 !important; }
+  border-color: #E94242 !important;
+}
 
 .pm-window-swleric h3.pm-notifying {
   border-color: #D03D3D !important;
@@ -1103,7 +1351,8 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #7C1E1E !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-swleric h3.pm-notifying:hover {
   border-color: #D03D3D !important;
@@ -1111,83 +1360,102 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #571414 !important;
-  font-style: italic; }
-
+  font-style: italic;
+}
+  
 .pm-window-swleric .challenge {
   background: #E94242 url("http://i.imgur.com/NuGlU2R.png?1") left bottom no-repeat !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #CD0000;
-  border-color: #CD0000 !important; }
+  border-color: #CD0000 !important;
+}
 
 .pm-window-swleric .challenge .select, .pm-window-swleric .challenge .buttonbar button {
   background: rgba(0, 0, 0, 0.8) !important;
   border-color: #000 !important;
   color: #FFF !important;
-  text-shadow: 0px 0px 2px #000 !important; }
+  text-shadow: 0px 0px 2px #000 !important;
+}
 
 .pm-window-swleric .challenge .select:hover, .pm-window-swleric .challenge .buttonbar button:hover {
   background: rgba(0, 0, 0, 0.9) !important;
   color: #FA4444 !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+} 
 
 .pm-window-swleric .challenge .select:disabled {
   background: rgba(0, 0, 0, 0.5) !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+}
 
 .pm-window-swleric .challenge .teamselect:disabled strong {
-  color: #DDD !important; }
-
+  color: #DDD !important;
+}
+  
 /*swleric~end*/
+
 /*selena*/
+
 .pm-window-selena h3 {
   background: rgba(255, 230, 146, 0.8) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #8BC66D !important;
   text-shadow: none !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena h3:hover, .pm-window-selena.focused h3, .pm-window-selena.focused h3:hover {
   background: rgba(255, 230, 146, 0.9) url("http://i.imgur.com/7YcDNa8.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #109333 !important;
   text-shadow: none !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena h3 small, .pm-window-selena h3:hover .minimizebutton, .pm-window-selena h3 .minimizebutton, .pm-window-selena h3 .closebutton, .pm-window-selena h3 .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-selena h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-selena h3 .closebutton, .dark .pm-window-selena h3 .minimizebutton, .dark .pm-window-selena h3 .closebutton:hover + .minimizebutton.minimizebutton.minimizebutton {
-  color: #8BC66D !important; }
+  color: #8BC66D !important;
+}
 
 .pm-window-selena h3 .closebutton:hover, .pm-window-selena h3 .minimizebutton:hover, .dark .pm-window-selena h3 .closebutton:hover, .dark .pm-window-selena h3 .minimizebutton:hover {
-  color: #109333 !important; }
+  color: #109333 !important;
+}
 
 .pm-window-selena .textbox, .pm-window-selena .textbox:hover, .pm-window-selena .textbox:focus, .dark .pm-window-selena .pm-log, .dark .pm-window-selena .textbox:focus {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right center !important;
   border-color: black !important;
   box-shadow: none !important;
-  color: black !important; }
+  color: black !important;
+}
 
 .pm-window-selena .pm-log {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena.focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/HC7iZ8W.png") no-repeat right !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena .pm-log .chat small {
-  color: black !important; }
+  color: black !important;
+}
 
 .pm-window-selena .pm-log-add {
   background: rgba(255, 230, 146, 0.8) !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena.focused .pm-log-add {
   background: rgba(255, 230, 146, 0.9) !important;
-  border-color: black !important; }
+  border-color: black !important;
+}
 
 .pm-window-selena .pm-log-add .textbox, .pm-window-selena .pm-log-add .textbox:focus {
   border-color: black !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: black !important; }
+  color: black !important;
+}
 
 .pm-window-selena h3.pm-notifying {
   border-color: black !important;
@@ -1195,7 +1463,8 @@
   background-position: 225px -4px !important;
   color: #DBCDCD !important;
   text-shadow: none !important;
-  font-style: italic !important; }
+  font-style: italic !important;
+}
 
 .pm-window-selena h3.pm-notifying:hover {
   border-color: black !important;
@@ -1203,68 +1472,84 @@
   background-position: 225px -4px !important;
   color: #DBCDCD !important;
   text-shadow: none !important;
-  font-style: italic !important; }
+  font-style: italic !important;
+}
 
 /*selena ends*/
+
 /*gryph*/
+
 .pm-window-phoenixgryphon h3 {
   background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #DADADA !important;
   text-shadow: 0px 0px 2px #9A9A9A !important;
-  border-color: #6C6C6C !important; }
+  border-color: #6C6C6C !important;
+}
 
 .pm-window-phoenixgryphon h3:hover {
   background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #CECECE !important;
-  border-color: #6C6C6C !important; }
+  border-color: #6C6C6C !important;
+}
 
 .pm-window-phoenixgryphon.focused h3, .pm-window-phoenixgryphon.focused h3:hover {
   background: rgba(104, 104, 104, 0.8) url("http://i.imgur.com/sH7QFEf.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #CECECE !important;
-  border-color: #555454 !important; }
+  border-color: #555454 !important;
+}
 
 .pm-window-phoenixgryphon h3 small {
-  color: #FEA32E !important; }
+  color: #FEA32E !important;
+}
 
 .pm-window-phoenixgryphon h3 .minimizebutton, .dark .pm-window-phoenixgryphon h3 .minimizebutton, .pm-window-phoenixgryphon h3 .closebutton, .pm-window-phoenixgryphon h3:hover .minimizebutton {
-  color: #CBCBCB !important; }
+  color: #CBCBCB !important;
+}
 
 .pm-window-phoenixgryphon h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-phoenixgryphon h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CBCBCB !important; }
+  color: #CBCBCB !important;
+}
 
 .pm-window-phoenixgryphon h3 .closebutton:hover {
-  color: #FFAA2F !important; }
+  color: #FFAA2F !important;
+}
 
 .pm-window-phoenixgryphon h3 .minimizebutton:hover, .dark .pm-window-phoenixgryphon h3 .minimizebutton:hover {
-  color: #FFAA2F !important; }
+  color: #FFAA2F !important;
+}
 
 .pm-window-phoenixgryphon .pm-log {
   background: rgba(230, 230, 230, 0.9) url("http://i.imgur.com/xfMVJNY.png?2") left no-repeat !important;
   border-color: #9A9A9A !important;
   color: #222 !important;
-  text-shadow: 1px 1px 1px #B3B3B3; }
+  text-shadow: 1px 1px 1px #B3B3B3;
+}
 
 .pm-window-phoenixgryphon.focused .pm-log {
   background: rgba(230, 230, 230, 0.9) url("http://i.imgur.com/xfMVJNY.png?3") left no-repeat !important;
   border-color: #818181 !important;
-  text-shadow: 1px 1px 1px #EEE; }
+  text-shadow: 1px 1px 1px #EEE;
+}
 
 .pm-window-phoenixgryphon .pm-log .chat small {
-  color: #555454 !important; }
+  color: #555454 !important;
+}
 
 .pm-window-phoenixgryphon .pm-log-add, .pm-window-phoenixgryphon.focused .pm-log-add {
   background: rgba(104, 104, 104, 0.8) !important;
-  border-color: #464646 !important; }
+  border-color: #464646 !important;
+}
 
 .pm-window-phoenixgryphon .pm-log-add .textbox {
   border-color: #464646 !important;
   background: rgba(245, 245, 245, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-phoenixgryphon h3.pm-notifying {
   border-color: #333 !important;
@@ -1272,7 +1557,8 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #AAA !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-phoenixgryphon h3.pm-notifying:hover {
   border-color: #222 !important;
@@ -1280,82 +1566,101 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #AAA !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-phoenixgryphon .challenge {
   background: rgba(254, 163, 46, 0.9) url("http://i.imgur.com/KxLORUI.png?1") left no-repeat !important;
   color: #B25235 !important;
   text-shadow: 1px 1px 1px #FFC772 !important;
-  border-color: #DE6845 !important; }
+  border-color: #DE6845 !important;
+}
 
 .pm-window-phoenixgryphon .challenge .select, .pm-window-phoenixgryphon .challenge .buttonbar button {
   background: rgba(255, 199, 114, 0.8) !important;
   border-color: #B25235 !important;
   color: #B25235 !important;
-  text-shadow: 1px 1px 1px #FFDEAC !important; }
+  text-shadow: 1px 1px 1px #FFDEAC !important;
+}
 
 .pm-window-phoenixgryphon .challenge .select:hover, .pm-window-phoenixgryphon .challenge .buttonbar button:hover {
   background: rgba(225, 168, 82, 0.8) !important;
-  border-color: #B25235 !important; }
+  border-color: #B25235 !important;
+} 
 
 .pm-window-phoenixgryphon .challenge .select:disabled {
   background: rgba(255, 199, 114, 0.5) !important;
-  border-color: #B25235 !important; }
+  border-color: #B25235 !important;
+}
 
 .pm-window-phoenixgryphon .challenge .teamselect:disabled strong {
-  color: #B25235 !important; }
+  color: #B25235 !important;
+}
 
 /*gryph ~end*/
+
 /*carn0x*/
+
 .pm-window-carn0x h3 {
   background: rgba(106, 151, 235, 0.8) url("http://i.imgur.com/U90VSU7.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #DFF2FF !important;
   text-shadow: 0px 0px 2px #4F73B8 !important;
-  border-color: #4F73B8 !important; }
+  border-color: #4F73B8 !important;
+}
 
 .pm-window-carn0x h3:hover {
   background: rgba(106, 151, 235, 0.8) url("http://i.imgur.com/U90VSU7.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #D6D6D6 !important;
   text-shadow: 0px 0px 2px #4F73B8 !important;
-  border-color: #4F73B8 !important; }
+  border-color: #4F73B8 !important;
+}
 
 .pm-window-carn0x.focused h3, .pm-window-carn0x.focused h3:hover {
   background: rgba(79, 125, 203, 0.9) url("http://i.imgur.com/U90VSU7.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #9ED7FF !important;
   text-shadow: 0px 0px 2px #2C5191 !important;
-  border-color: #2C5191 !important; }
+  border-color: #2C5191 !important;
+}
 
 .pm-window-carn0x h3 small, .pm-window-carn0x h3 .minimizebutton, .dark .pm-window-carn0x h3 .minimizebutton, .pm-window-carn0x h3 .closebutton, .pm-window-carn0x h3:hover .minimizebutton {
-  color: #9ED7FF !important; }
+  color: #9ED7FF !important;
+}
 
 .pm-window-carn0x h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-carn0x h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #9ED7FF !important; }
+  color: #9ED7FF !important;
+}
 
 .pm-window-carn0x h3 .closebutton:hover {
-  color: #D0504F !important; }
+  color: #D0504F !important;
+}
 
 .pm-window-carn0x h3 .minimizebutton:hover, .dark .pm-window-carn0x h3 .minimizebutton:hover {
-  color: #D0504F !important; }
+  color: #D0504F !important;
+}
 
 .pm-window-carn0x .pm-log, .pm-window-carn0x.focused .pm-log {
   background: rgba(250, 250, 250, 0.93) url("http://i.imgur.com/JHI63Co.png?2") right no-repeat !important;
   border-color: #699BF2 !important;
-  text-shadow: 0px 0px 2px #9BD3FE; }
+  text-shadow: 0px 0px 2px #9BD3FE;
+}
 
 .pm-window-carn0x .pm-log .chat small {
-  color: #4F73B8 !important; }
+  color: #4F73B8 !important;
+}
 
 .pm-window-carn0x .pm-log-add, .pm-window-carn0x.focused .pm-log-add {
   background: rgba(106, 151, 235, 0.8) !important;
-  border-color: #4F73B8 !important; }
+  border-color: #4F73B8 !important;
+}
 
 .pm-window-carn0x .pm-log-add .textbox {
   border-color: #2C5191 !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-carn0x h3.pm-notifying {
   border-color: #EE7777 !important;
@@ -1363,7 +1668,8 @@
   background-position: 225px -4px !important;
   color: #FFD4D4 !important;
   text-shadow: 0px 0px 2px #EE7777 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-carn0x h3.pm-notifying:hover {
   border-color: #D05050 !important;
@@ -1371,183 +1677,226 @@
   background-position: 225px -4px !important;
   color: #D6D6D6 !important;
   text-shadow: 0px 0px 2px #888 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-carn0x .challenge {
   background: url("http://i.imgur.com/YYaDEHl.jpg") !important;
   color: #5376BE !important;
   text-shadow: 1px 1px 1px #FFF, 1px -1px 1px #FFF;
-  border-color: #979784 !important; }
+  border-color: #979784 !important;
+}
 
 .pm-window-carn0x .challenge .select, .pm-window-carn0x .challenge .buttonbar button {
   background: rgba(100, 100, 100, 0.8) !important;
   border-color: #555 !important;
   color: #9BD3FE !important;
-  text-shadow: 0px 0px 2px #5376BE !important; }
+  text-shadow: 0px 0px 2px #5376BE !important;
+}
 
 .pm-window-carn0x .challenge .select:hover, .pm-window-carn0x .challenge .buttonbar button:hover {
   background: rgba(100, 100, 100, 0.9) !important;
-  border-color: #444 !important; }
+  border-color: #444 !important;
+} 
 
 .pm-window-carn0x .challenge .select:disabled {
   background: rgba(100, 100, 100, 0.5) !important;
-  border-color: #666 !important; }
+  border-color: #666 !important;
+}
 
 .pm-window-carn0x .challenge .teamselect:disabled strong {
-  color: #9BD3FE !important; }
+  color: #9BD3FE !important;
+}
 
 /*carn0x ~end*/
+
 /* vin steel */
+
 .pm-window-vinsteel h3 {
   background: rgba(48, 48, 48, 0.8) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #DDD !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
-  border-color: #44464A !important; }
+  border-color: #44464A !important;
+}
 
 .pm-window-vinsteel h3:hover {
   background: rgba(48, 48, 48, 0.9) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #EEE !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
-  border-color: #2C2D2F !important; }
+  border-color: #2C2D2F !important;
+}
 
 .pm-window-vinsteel.focused h3, .pm-window-vinsteel.focused h3:hover {
   background: rgba(83, 83, 83, 0.95) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
-  border-color: #2C2D2F !important; }
+  border-color: #2C2D2F !important;
+}
 
 .pm-window-vinsteel h3 small {
-  color: #22A8E0 !important; }
+  color: #22A8E0 !important;
+}
 
 .pm-window-vinsteel h3 .minimizebutton, .dark .pm-window-vinsteel h3 .minimizebutton, .pm-window-vinsteel h3 .closebutton, .pm-window-vinsteel h3:hover .minimizebutton {
-  color: #BBB !important; }
+  color: #BBB !important;
+}
 
 .pm-window-vinsteel h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-vinsteel h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #BBB !important; }
+  color: #BBB !important;
+}
 
 .pm-window-vinsteel h3 .closebutton:hover {
-  color: #FFA4B6 !important; }
+  color: #FFA4B6 !important;
+}
 
 .pm-window-vinsteel h3 .minimizebutton:hover, .dark .pm-window-vinsteel h3 .minimizebutton:hover {
-  color: #FFDBA4 !important; }
+  color: #FFDBA4 !important;
+}
 
 .pm-window-vinsteel .pm-log, .pm-window-vinsteel.focused .pm-log {
   background: rgba(248, 248, 248, 0.95) url("http://i.imgur.com/8Atzt1P.png?1") right no-repeat !important;
-  border-color: #2C2D2F !important; }
+  border-color: #2C2D2F !important;
+}
 
 .pm-window-vinsteel .pm-log .chat small {
-  color: #1898D0 !important; }
+  color: #1898D0 !important;
+}
 
 .pm-window-vinsteel .pm-log-add, .pm-window-vinsteel.focused .pm-log-add {
   background: #777 !important;
-  border-color: #444 !important; }
+  border-color: #444 !important;
+}
 
 .pm-window-vinsteel .pm-log-add .textbox {
   border-color: #555 !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-vinsteel .pm-log-add .textbox:focus {
-  border-color: #1898D0 !important; }
+  border-color: #1898D0 !important;
+}
 
 .pm-window-vinsteel h3.pm-notifying {
   border-color: #0E76A2 !important;
   background: #22A8E0 url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #2B4A68 !important;
-  text-shadow: !important;
-  font-style: italic; }
+  text-shadow:  !important;
+  font-style: italic;
+}
 
 .pm-window-vinsteel h3.pm-notifying:hover {
   border-color: #0E76A2 !important;
   background: #0897D4 url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #2B4A68 !important;
-  text-shadow: !important;
-  font-style: italic; }
+  text-shadow:  !important;
+  font-style: italic;
+}
 
 .pm-window-vinsteel .challenge {
   background: #98E0F8 !important;
   color: #2B4A68 !important;
-  border-color: #2B4A68 !important; }
+  border-color: #2B4A68 !important;
+}
 
 .pm-window-vinsteel .challenge .select, .pm-window-vinsteel .challenge .buttonbar button {
   background: rgba(69, 120, 179, 0.8) !important;
   border-color: #2B4A68 !important;
   color: #98E0F8 !important;
-  text-shadow: 1px 1px 1px #2B4A68 !important; }
+  text-shadow: 1px 1px 1px #2B4A68 !important;
+}
 
 .pm-window-vinsteel .challenge .select:hover, .pm-window-vinsteel .challenge .buttonbar button:hover {
   background: rgba(69, 120, 179, 0.9) !important;
-  border-color: #2B4A68 !important; }
+  border-color: #2B4A68 !important;
+} 
 
 .pm-window-vinsteel .challenge .select:disabled {
   background: rgba(69, 120, 179, 0.5) !important;
-  border-color: #2B4A68 !important; }
+  border-color: #2B4A68 !important;
+}
 
 .pm-window-vinsteel .challenge .teamselect:disabled strong {
-  color: #2B4A68 !important; }
+  color: #2B4A68 !important;
+}
 
 /* vin steel ~end */
+
 /*piersnins*/
+
 .pm-window-piersnins h3 {
   background: rgba(136, 205, 115, 0.8) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF6D5 !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
-  border-color: #5A9C4A !important; }
+  border-color: #5A9C4A !important;
+}
 
 .pm-window-piersnins h3:hover {
   background: rgba(136, 205, 115, 0.9) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFCEB !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
-  border-color: #5A9C4A !important; }
+  border-color: #5A9C4A !important;
+}
 
 .pm-window-piersnins .focused h3, .pm-window-piersnins .focused h3:hover {
   background: rgba(136, 205, 115, 0.9) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #0F618A !important;
   text-shadow: 0px 0px 2px #5A9C4A !important;
-  border-color: #5A9C4A !important; }
+  border-color: #5A9C4A !important;
+}
 
 .pm-window-piersnins h3 small {
-  color: #03ACFF !important; }
+  color: #03ACFF !important;
+}
 
 .pm-window-piersnins h3 .minimizebutton, .dark .pm-window-piersnins h3 .minimizebutton, .pm-window-piersnins h3 .closebutton, .pm-window-piersnins h3:hover .minimizebutton {
-  color: #0F79AF !important; }
+  color: #0F79AF !important;
+}
 
 .pm-window-piersnins h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-piersnins h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #0F79AF !important; }
+  color: #0F79AF !important;
+}
 
 .pm-window-piersnins h3 .closebutton:hover {
-  color: #0F618A !important; }
+  color: #0F618A !important;
+}
 
 .pm-window-piersnins h3 .minimizebutton:hover, .dark .pm-window-piersnins h3 .minimizebutton:hover {
-  color: #0F618A !important; }
+  color: #0F618A !important;
+}
 
 .pm-window-piersnins .pm-log, .pm-window-piersnins .focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/JGUvxtO.png") left no-repeat !important;
   border-color: #5A9C4A !important;
-  text-shadow: 0px 0px 2px #8BCD73; }
+  text-shadow: 0px 0px 2px #8BCD73;
+}
 
 .pm-window-piersnins .pm-log .chat small {
-  color: #74AE5E !important; }
+  color: #74AE5E !important;
+}
 
 .pm-window-piersnins .pm-log-add, .pm-window-piersnins .focused .pm-log-add {
   background: rgba(3, 172, 255, 0.7) !important;
-  border-color: #1586BF !important; }
+  border-color: #1586BF !important;
+}
 
 .pm-window-piersnins .pm-log-add .textbox {
   border-color: #1586BF !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-piersnins .pm-log-add .textbox:focus {
-  border-color: #156994 !important; }
+  border-color: #156994 !important;
+}
 
 .pm-window-piersnins h3.pm-notifying {
   border-color: #BD1919 !important;
@@ -1556,10 +1905,12 @@
   background-position: 225px -4px !important;
   color: #BD1919 !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-piersnins h3.pm-notifying small {
-  color: #BD1919 !important; }
+  color: #BD1919 !important;
+}
 
 .pm-window-piersnins h3.pm-notifying:hover {
   border-color: #BD1919 !important;
@@ -1568,91 +1919,113 @@
   background-position: 225px -4px !important;
   color: #BD1919 !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-piersnins .challenge {
   background: rgba(3, 172, 255, 0.7) url("http://i.imgur.com/gKuBy8k.png?1") bottom left no-repeat !important;
   color: #0F79AF !important;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) !important;
-  border-color: #0F79AF !important; }
+  border-color: #0F79AF !important;
+}
 
 .pm-window-piersnins .challenge .select, .pm-window-piersnins .challenge .buttonbar button {
   background: rgba(28, 128, 178, 0.8) !important;
   border-color: #0F618A !important;
   color: #BDE673 !important;
-  text-shadow: 1px 1px 1px #0F618A !important; }
+  text-shadow: 1px 1px 1px #0F618A !important;
+}
 
 .pm-window-piersnins .challenge .select:hover, .pm-window-piersnins .challenge .buttonbar button:hover {
   background: rgba(28, 128, 178, 0.9) !important;
-  border-color: #0F618A !important; }
+  border-color: #0F618A !important;
+} 
 
 .pm-window-piersnins .challenge .select:disabled {
   background: rgba(28, 128, 178, 0.5) !important;
-  border-color: #0F618A !important; }
+  border-color: #0F618A !important;
+}
 
 .pm-window-piersnins .challenge .teamselect:disabled strong {
-  color: #BDE673 !important; }
-
+  color: #BDE673 !important;
+}
+  
 /*piersnins~end*/
+
 /*implatios*/
+
 .pm-window-implatios h3 {
   background: rgba(36, 137, 109, 0.8) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #42E5BA !important;
   text-shadow: 0px 0px 2px #185B46 !important;
-  border-color: #185B46 !important; }
+  border-color: #185B46 !important;
+}
 
 .pm-window-implatios h3:hover {
   background: rgba(36, 137, 109, 0.8) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #8DFFE1 !important;
   text-shadow: 0px 0px 2px #185B46 !important;
-  border-color: #185B46 !important; }
+  border-color: #185B46 !important;
+}
 
 .pm-window-implatios .focused h3, .pm-window-implatios .focused h3:hover {
   background: rgba(36, 137, 109, 0.9) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #8DFFE1 !important;
   text-shadow: 0px 0px 2px #185B46 !important;
-  border-color: #185B46 !important; }
+  border-color: #185B46 !important;
+}
 
 .pm-window-implatios h3 small {
-  color: #FBB774 !important; }
+  color: #FBB774 !important;
+}
 
 .pm-window-implatios h3 .minimizebutton, .dark .pm-window-implatios h3 .minimizebutton, .pm-window- h3 .closebutton, .pm-window-implatios h3:hover .minimizebutton {
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .pm-window-implatios h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-implatios h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .pm-window-implatios h3 .closebutton:hover {
-  color: #FFDCDC !important; }
+  color: #FFDCDC !important;
+}
 
 .pm-window-implatios h3 .minimizebutton:hover, .dark .pm-window-implatios h3 .minimizebutton:hover {
-  color: #FFF8DC !important; }
+  color: #FFF8DC !important;
+}
 
 .pm-window-implatios .pm-log, .pm-window-implatios .focused .pm-log {
   background: rgba(244, 244, 244, 0.95) url("http://i.imgur.com/w2C2jPY.png?1") left bottom no-repeat !important;
   border-color: #9DBDB8 !important;
-  text-shadow: 0px 0px 2px #F9BB7D; }
+  text-shadow: 0px 0px 2px #F9BB7D;
+}
 
 .pm-window-implatios .pm-log .chat small {
-  color: #34C49E !important; }
+  color: #34C49E !important;
+}
 
 .pm-window-implatios .pm-log .chat {
-  background: rgba(244, 244, 244, 0.8); }
+  background: rgba(244, 244, 244, 0.8);
+}
 
 .pm-window-implatios .pm-log-add, .pm-window-implatios .focused .pm-log-add {
   background: #D9E4E2 !important;
-  border-color: #9DBDB8 !important; }
+  border-color: #9DBDB8 !important;
+}
 
 .pm-window-implatios .pm-log-add .textbox {
   border-color: #BDDED6 !important;
   background: #FFF !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-implatios .pm-log-add .textbox:focus {
-  border-color: #2BD0A4 !important; }
+  border-color: #2BD0A4 !important;
+}
 
 .pm-window-implatios h3.pm-notifying {
   border-color: #2AB792 !important;
@@ -1660,7 +2033,8 @@
   background-position: 225px -8px !important;
   color: #0C4032 !important;
   text-shadow: 0px 0px 2px #2AB792 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-implatios h3.pm-notifying:hover {
   border-color: #2AB792 !important;
@@ -1668,87 +2042,108 @@
   background-position: 225px -8px !important;
   color: #0C4032 !important;
   text-shadow: 0px 0px 2px #2AB792 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-implatios .challenge {
   background: #F7F9F8 !important;
   color: #000 !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+}
 
 .pm-window-implatios .challenge .select, .pm-window-implatios .challenge .buttonbar button {
   background: #A1F3DD !important;
   border-color: #000 !important;
   color: #000 !important;
-  text-shadow: 1px 1px 1px #7EE4C9 !important; }
+  text-shadow: 1px 1px 1px #7EE4C9 !important;
+}
 
 .pm-window-implatios .challenge .select:hover, .pm-window-implatios .challenge .buttonbar button:hover {
   background: #79F2D2 !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+} 
 
 .pm-window-implatios .challenge .select:disabled {
   background: rgba(121, 242, 210, 0.5) !important;
-  border-color: #000 !important; }
+  border-color: #000 !important;
+}
 
 .pm-window-implatios .challenge .teamselect:disabled strong {
-  color: #000 !important; }
+  color: #000 !important;
+}
 
 /*implatios~end*/
+
 /*chimechoo*/
+
 .pm-window-chimechoo h3 {
   background: rgba(163, 100, 101, 0.8) url("http://i.imgur.com/q5SlMYK.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #F6F7F6 !important;
   text-shadow: 0px 0px 1px #FF4DB8 !important;
-  border-color: #7C3F3F !important; }
+  border-color: #7C3F3F !important;
+}
 
 .pm-window-chimechoo h3:hover {
   background: rgba(163, 100, 101, 0.8) url("http://i.imgur.com/q5SlMYK.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #FF4DB8 !important;
-  border-color: #7C3F3F !important; }
+  border-color: #7C3F3F !important;
+}
 
 .pm-window-chimechoo .focused h3, .pm-window-chimechoo .focused h3:hover {
   background: rgba(163, 100, 101, 0.9) url("http://i.imgur.com/q5SlMYK.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 5px #FF4DB8 !important;
-  border-color: #7C3F3F !important; }
+  border-color: #7C3F3F !important;
+}
 
 .pm-window-chimechoo h3 small {
-  color: #7C3F3F !important; }
+  color: #7C3F3F !important;
+}
 
 .pm-window-chimechoo h3 .minimizebutton, .dark .pm-window-chimechoo h3 .minimizebutton, .pm-window-chimechoo h3 .closebutton, .pm-window-chimechoo h3:hover .minimizebutton {
-  color: #B8BBD5 !important; }
+  color: #B8BBD5 !important;
+}
 
 .pm-window-chimechoo h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-chimechoo h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CFD2EB !important; }
+  color: #CFD2EB !important;
+}
 
 .pm-window-chimechoo h3 .closebutton:hover {
-  color: #ABCE99 !important; }
+  color: #ABCE99 !important;
+}
 
 .pm-window-chimechoo h3 .minimizebutton:hover, .dark .pm-window-chimechoo h3 .minimizebutton:hover {
-  color: #ABCE99 !important; }
+  color: #ABCE99 !important;
+}
 
 .pm-window-chimechoo .pm-log, .pm-window-chimechoo .focused .pm-log {
   background: rgba(246, 247, 246, 0.95) url("http://i.imgur.com/Je7n6SH.png?1") right no-repeat !important;
-  border-color: #FF4DB8 !important; }
+  border-color: #FF4DB8 !important;
+}
 
 .pm-window-chimechoo .pm-log .chat small {
-  color: #FF4DB8 !important; }
+  color: #FF4DB8 !important;
+}
 
 .pm-window-chimechoo .pm-log-add, .pm-window-chimechoo .focused .pm-log-add {
   background: #A0C78D !important;
-  border-color: #436031 !important; }
+  border-color: #436031 !important;
+}
 
 .pm-window-chimechoo .pm-log-add .textbox {
   border-color: #436031 !important;
   background: rgba(246, 247, 246, 0.95) !important;
-  color: #000; }
+  color: #000;
+}
 
 .pm-window-chimechoo .pm-log-add .textbox:focus {
   background: rgba(255, 255, 255, 0.95) !important;
-  border-color: #FF4DB8 !important; }
+  border-color: #FF4DB8 !important;
+}
 
 .pm-window-chimechoo h3.pm-notifying {
   border-color: #C32D87 !important;
@@ -1756,7 +2151,8 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 1px 1px 1px #C32D87 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-chimechoo h3.pm-notifying:hover {
   border-color: #C32D87 !important;
@@ -1764,81 +2160,99 @@
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 1px 1px 1px #C32D87 !important;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window-chimechoo .challenge {
   background: #A0C78D !important;
   color: #000 !important;
-  border-color: #436031 !important; }
+  border-color: #436031 !important;
+}
 
 .pm-window-chimechoo .challenge .select, .pm-window-chimechoo .challenge .buttonbar button {
   background: rgba(163, 100, 101, 0.8) !important;
   border-color: #7A4141 !important;
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .pm-window-chimechoo .challenge .select:hover, .pm-window-chimechoo .challenge .buttonbar button:hover {
   background: rgba(163, 100, 101, 0.9) !important;
   border-color: #7C3F3F !important;
-  text-shadow: 0px 0px 2px #FF4DB8; }
+  text-shadow: 0px 0px 2px #FF4DB8;
+} 
 
 .pm-window-chimechoo .challenge .select:disabled {
   background: rgba(163, 100, 101, 0.5) !important;
-  border-color: #7C3F3F !important; }
+  border-color: #7C3F3F !important;
+}
 
 .pm-window-chimechoo .challenge .teamselect:disabled strong {
-  color: #7C3F3F !important; }
-
+  color: #7C3F3F !important;
+}
+  
 /*chimechoo~end*/
+
 /*hayleysworld*/
+
 .pm-window-hayleysworld h3 {
   background: rgba(135, 194, 198, 0.8) url("http://i.imgur.com/YQk9pP7.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #62358E !important;
   text-shadow: none !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld h3:hover, .pm-window-hayleysworld.focused h3, .pm-window-hayleysworld.focused h3:hover {
-  background: rgba(90, 125, 163, 0.9) url("http://i.imgur.com/YQk9pP7.png") no-repeat !important;
-  /* not precise color, was too dark */
+  background: rgba(90, 125, 163, 0.9) url("http://i.imgur.com/YQk9pP7.png") no-repeat !important; /* not precise color, was too dark */
   background-position: 225px -4px !important;
   color: #62358E !important;
   text-shadow: none !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld h3 small, .pm-window-hayleysworld h3:hover .minimizebutton, .pm-window-hayleysworld h3 .minimizebutton, .pm-window-hayleysworld h3 .closebutton, .pm-window-hayleysworld h3 .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-hayleysworld h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-hayleysworld h3 .closebutton, .dark .pm-window-hayleysworld h3 .minimizebutton, .dark .pm-window-hayleysworld h3 .closebutton:hover + .minimizebutton.minimizebutton.minimizebutton {
-  color: #62358E !important; }
+  color: #62358E !important
+}
 
 .pm-window-hayleysworld h3 .closebutton:hover, .pm-window-hayleysworld h3 .minimizebutton:hover, .dark .pm-window-hayleysworld h3 .closebutton:hover, .dark .pm-window-hayleysworld h3 .minimizebutton:hover {
-  color: #AFB5D3  !important; }
+  color: #AFB5D3  !important
+}
 
 .pm-window-hayleysworld .textbox, .pm-window-hayleysworld .textbox:hover, .pm-window-hayleysworld .textbox:focus, .dark .pm-window-hayleysworld .pm-log, .dark .pm-window-hayleysworld .textbox:focus {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/qDoQnc6.png") no-repeat center !important;
   border-color: #211D1B !important;
-  color: black !important; }
+  color: black !important
+}
 
 .pm-window-hayleysworld .pm-log {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/qDoQnc6.png") no-repeat center !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld.focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/qDoQnc6.png") no-repeat center !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld .pm-log .chat small {
-  color: black !important; }
+  color: black !important
+}
 
 .pm-window-hayleysworld .pm-log-add {
   background: rgba(135, 194, 198, 0.8) !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld.focused .pm-log-add {
   background: rgba(90, 125, 163, 0.9) !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important
+}
 
 .pm-window-hayleysworld .pm-log-add .textbox, .pm-window-hayleysworld .pm-log-add .textbox:focus {
   border-color: #211D1B !important;
   background: rgba(255, 255, 255, 0.95) !important;
-  color: black !important; }
+  color: black !important
+}
 
 .pm-window-hayleysworld h3.pm-notifying {
   border-color: #211D1B !important;
@@ -1846,7 +2260,8 @@
   background-position: 225px -4px !important;
   color: #62358E !important;
   text-shadow: none !important;
-  font-style: italic !important; }
+  font-style: italic !important
+}
 
 .pm-window-hayleysworld h3.pm-notifying:hover {
   border-color: #211D1B !important;
@@ -1854,242 +2269,316 @@
   background-position: 225px -4px !important;
   color: #62358E !important;
   text-shadow: none !important;
-  font-style: italic !important; }
+  font-style: italic !important
+}
 
 .pm-window-hayleysworld .challenge {
   background: rgba(245, 241, 185, 0.8) url("http://i.imgur.com/3GOMzUy.gif") !important;
   color: #211D1B !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important;
+}
 
 .pm-window-hayleysworld .challenge .select, .pm-window-hayleysworld .challenge .buttonbar button {
   background: rgba(135, 194, 198, 0.8) !important;
   border-color: #211D1B !important;
   color: #62358E !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .pm-window-hayleysworld .challenge .select:hover, .pm-window-hayleysworld .challenge .buttonbar button:hover {
   background: rgba(154, 225, 230, 0.9) !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important;
+} 
 
 .pm-window-hayleysworld .challenge .select:disabled {
   background: rgba(135, 194, 198, 0.5) !important;
-  border-color: #211D1B !important; }
+  border-color: #211D1B !important;
+}
 
 .pm-window-hayleysworld .challenge .teamselect:disabled strong {
-  color: #62358E !important; }
+  color: #62358E !important;
+}
 
 /*hayleysworld~end*/
+
 /* CUSTOM PM ~end */
+
 /* Symbol Color */
+
 #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
-  color: #0D00BF; }
+  color: #0D00BF;
+}
 
 /* Symbol color ~end */
+
 /* Icons */
+
 #lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+}
 
 #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
-  background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+}
 
 #lobby-userlist-user-primalexca, #monotype-userlist-user-primalexca, #primalleague-userlist-user-primalexca, #phoenixleague-userlist-user-primalexca {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/645-therian.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/645-therian.png") right no-repeat;
+}
 
 #lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
+}
 
 #lobby-userlist-user-princesshigh, #hayleysden-userlist-user-princesshigh, #zu-userlist-user-princesshigh, #voidleague-userlist-user-princesshigh {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/282.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/282.gif") right no-repeat;
+}
 
 #lobby-userlist-user-cristiian, #tournaments-userlist-user-cristiian, #monotype-userlist-user-cristiian {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/4a7efMj.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/4a7efMj.gif") right no-repeat;
+}
 
 #tournaments-userlist-user-resourceful {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
+}
 
 #lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
-  background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/202.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/202.gif") right no-repeat;  
+}
 
 #lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
+}
 
 #lobby-userlist-user-notorangejuice, #staff-userlist-user-notorangejuice {
-  background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
+}
 
 #lobby-userlist-user-impfallenblood, #thelegionofdoom-userlist-user-impfallenblood, #staff-userlist-user-impfallenblood {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
+}
 
-#upperstaff-userlist-user-masterfloat {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
+#upperstaff-userlist-user-masterfloat { 
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+}
 
 #lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel {
-  background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat;
+}
 
 #lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #lucarioslair-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
+}
 
 #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
+}
 
 #lobby-userlist-user-phoenixsacred, #monotype-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred, #halloffame-userlist-user-phoenixsacred {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/sugimori/645-therian.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/sugimori/645-therian.png") right no-repeat;
+}
 
 #lobby-userlist-user-paulcentury, #theomegaleague-userlist-user-paulcentury, #overused-userlist-user-paulcentury {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/080.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/080.gif") right no-repeat;
+}
 
 #lobby-userlist-user-chronologically, #1v1-userlist-user-chronologically, #voidleague-userlist-user-chronologically {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
+}
 
 #lobby-userlist-user-theace22, #catchevolve-userlist-user-theace22, #othertiers-userlist-user-theace22 {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat;
+}
 
 #lobby-userlist-user-voidtrent, #voidleague-userlist-user-voidtrent, #alliancecup-userlist-user-voidtrent {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
+}
 
-#lobby-userlist-user-vinsteel, #tournaments-userlist-user-vinsteel, #othermetas-userlist-user-vinsteel, #psmd-userlist-user-vinsteel, #theheartlessleague-userlist-user-vinsteel {
-  background: rgba(255, 255, 255, 0.65) url("http://media.pldh.net/pokecons_action/212.gif") right no-repeat; }
+#lobby-userlist-user-vinsteel, #tournaments-userlist-user-vinsteel, #othermetas-userlist-user-vinsteel, #psmd-userlist-user-vinsteel, #theheartlessleague-userlist-user-vinsteel {  
+  background: rgba(255, 255, 255, 0.65) url("http://media.pldh.net/pokecons_action/212.gif") right no-repeat;
+}
 
 #lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat;
+}
 
 #lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
+}
 
 #lobby-userlist-user-phoenixgryphon, #casino-userlist-user-phoenixgryphon, #staff-userlist-user-phoenixgryphon {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
+}
 
 #lobby-userlist-user-selena, #casino-userlist-user-selena, #artshop-userlist-user-selena {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/L1kwV6j.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/L1kwV6j.png") right no-repeat;
+}
 
 #monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
+}
 
 #lobby-userlist-user-emgrfvolc, #staff-userlist-user-emgrfvolc, #theemergenceleague-userlist-user-emgrfvolc {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
+}
 
 #lobby-userlist-user-exotickey, #theomegaleague-userlist-user-exotickey, #hayleysden-userlist-user-exotickey {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/028.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/028.gif") right no-repeat;
+}
 
 #femalehq-userlist-user-katheyisme123, #lobby-userlist-user-katheyisme123, #casino-userlist-user-katheyisme123 {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/9C4khjv.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/9C4khjv.gif") right no-repeat;
+}
 
 #lobby-userlist-user-chimechoo, #casino-userlist-user-chimechoo, #monotype-userlist-user-chimechoo, #thecarnieleague-userlist-user-chimechoo, #phoenixleague-userlist-user-chimechoo {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat;
+}
 
 #phoenixleague-userlist-user-phoenixtana, #lobby-userlist-user-phoenixtana, #monotype-userlist-user-phoenixtana {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat;
+}
 
 #hingostraphouse-userlist-user-sariisaur, #phoenixleague-userlist-user-sariisaur, #theallegiantleague-userlist-user-sariisaur {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/6Ybg61Q.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/6Ybg61Q.png") right no-repeat;
+}
 
 #lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat;
+}
 
 #lobby-userlist-user-phoenixeien, #phoenixleague-userlist-user-phoenixeien, #hingostraphouse-userlist-user-phoenixeien {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat;
+}
 
 #lobby-userlist-user-pndas, #thelotusleague-userlist-user-pndas, #monotype-userlist-user-pndas, #casino-userlist-user-pndas, #halloffame-userlist-user-pndas {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/NcP1gJ1.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/NcP1gJ1.gif") right no-repeat;
+}
 
-#lobby-userlist-user-gyaratoast, #breadsmash-userlist-user-gyaratoast, #squad-userlist-user-gyaratoast, #pokemonjourney-userlist-user-gyaratoast, #sotascapfun-userlist-user-gyaratoast {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/OXs5rDM.png") right no-repeat; }
+#lobby-userlist-user-gyaratoast, #breadsmash-userlist-user-gyaratoast, #squad-userlist-user-gyaratoast, #pokemonjourney-userlist-user-gyaratoast, #sotascapfun-userlist-user-gyaratoast  {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/OXs5rDM.png") right no-repeat;
+}
 
 #lobby-userlist-user-lotuswincon, #thelotusleague-userlist-user-lotuswincon, #thepandaclub-userlist-user-lotuswincon {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/s8pvxAi.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/s8pvxAi.gif") right no-repeat;
+}
 
 #lobby-userlist-user-swleric, #swl-userlist-user-swleric, #monotype-userlist-user-swleric {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-bw/icon/596.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-bw/icon/596.png") right no-repeat;
+}
 
 #lobby-userlist-user-swlconfluxx, #phoenixleague-userlist-user-swlconfluxx, #swl-userlist-user-swlconfluxx, #premierdraftdivision-userlist-user-swlconfluxx {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/720-u.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/720-u.png") right no-repeat;
+}
 
 #lobby-userlist-user-crystalxvz, #crystalleague-userlist-user-crystalxvz, #casino-userlist-user-crystalxvz, #1v1-userlist-user-crystalxvz {
-  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL") right no-repeat;
+}
 
 #lobby-userlist-user-niisama, #staff-userlist-user-niisama, #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat;
+}
 
 #lobby-userlist-user-piscean, #hayleysden-userlist-user-piscean, #zu-userlist-user-piscean {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-rs/icon/230.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-rs/icon/230.gif") right no-repeat;
+}
 
 #lobby-userlist-user-hayleysworld, #hayleysden-userlist-user-hayleysworld, #zu-userlist-user-hayleysworld {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat;
+}
 
 #lobby-userlist-user-phoenixshady, #premierdraftdivision-userlist-user-phoenixshady, #phoenixleague-userlist-user-phoenixshady {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/3u9r8Zt.png?1") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/3u9r8Zt.png?1") right no-repeat;
+}
 
 #lobby-userlist-user-starfox3, #staff-userlist-user-starfox3, #ossb-userlist-user-starfox3 {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kuLIhtK.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kuLIhtK.gif") right no-repeat;
+}
 
 #lobby-userlist-user-calucha, #alliance-userlist-user-calucha, #1v1-userlist-user-calucha {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/499.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/499.png") right no-repeat;
+}
 
 #lobby-userlist-user-01ntg, #monotype-userlist-user-01ntg, #casino-userlist-user-01ntg {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/w5laVDX.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/w5laVDX.gif") right no-repeat;
+}
 
 /* Icons ~end */
+
 /* Room Icon */
+
 #tournaments-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat;
+}
 
 #theomegaleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") no-repeat;
+}
 
 /* Room Icon ~end */
+
 /****************************
 * Donation Benefit CSS ~end *
 ****************************/
+
 /**************
 * General CSS *
 **************/
-body {
-  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left; }
 
+body {
+  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
+}
 .dark body {
-  background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat; }
+  background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat;
+}
 
 .ps-room.ps-room-light {
-  background: transparent;
-  border-color: #11484F; }
-
+  background: rgba(0, 0, 0, 0);
+  border-color: #11484F;
+}
 .dark .ps-room.ps-room-light {
   background: none;
-  border-color: #09181F; }
+  border-color: #09181F;
+}
 
 .ps-room.ps-room-light.scrollable {
-  background: rgba(51, 98, 81, 0.6); }
-
+  background: rgba(51, 98, 81, 0.6);
+}
 .dark .ps-room.ps-room-light.scrollable {
-  background: rgba(19, 36, 46, 0.6); }
+  background: rgba(19, 36, 46, 0.6);
+}
 
 .rooms-officialchatrooms, .rooms-chatrooms {
   color: #BBCCC9;
-  text-shadow: 0px 0px 2px #11484F; }
-
+  text-shadow: 0px 0px 2px #11484F;
+}
 .dark .rooms-officialchatrooms, .dark .rooms-chatrooms {
   color: #DDD;
-  text-shadow: 1px 1px #222; }
+  text-shadow: 1px 1px #222;
+}
 
 .ps-room.ps-room-light.scrollable p {
   color: #031012;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 .dark .ps-room.ps-room-light.scrollable p {
   color: #EEE;
-  text-shadow: 0px 0px 2px #000; }
+  text-shadow: 0px 0px 2px #000;
+}
 
 .ps-room.ps-room-light.scrollable .button {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border: 1px solid #11484F;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .ps-room.ps-room-light.scrollable .button:hover {
-  background: #CBE1DD;
-  border-color: #0C2D32; }
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
 
 .chat.mine, .dark .chat.mine {
-  background: transparent; }
+  background: rgba(0, 0, 0, 0);
+}
 
 .broadcast-blue {
   background: #CD9FC4;
@@ -2099,20 +2588,24 @@ body {
   text-align: center;
   font-family: sans-serif;
   padding: 8px;
-  margin: 5px; }
+  margin: 5px;
+}
 
 .broadcast-blue a {
-  color: #000F98; }
+  color: #000F98;
+}
 
 .broadcast-blue button {
   background: #A87C9F;
   border: 1px solid #090F47;
   color: #FFF9FF;
   text-shadow: 0px 0px 2px #090F47;
-  padding: 2px 8px; }
+  padding: 2px 8px;
+}
 
 .broadcast-blue button:hover {
-  background: #9F7697; }
+  background: #9F7697;
+}
 
 .broadcast-red {
   background: #FFEBF4;
@@ -2122,10 +2615,12 @@ body {
   text-align: center;
   font-family: sans-serif;
   padding: 8px;
-  margin: 5px; }
+  margin: 5px;
+}
 
 .broadcast-red a {
-  color: #B3001E; }
+  color: #B3001E;
+}
 
 .broadcast-green {
   background: #B5D896;
@@ -2135,901 +2630,1079 @@ body {
   text-align: center;
   font-family: sans-serif;
   padding: 8px;
-  margin: 5px; }
+  margin: 5px;
+}
 
 .broadcast-green a {
-  color: #005C3E; }
+  color: #005C3E;
+}
 
 .ps-overlay {
-  background: rgba(0, 0, 0, 0.35); }
-
+  background: rgba(0, 0, 0, 0.35);
+}
 .dark .ps-overlay {
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+}
 
 /*******************
 * General CSS ~end *
 *******************/
+
 /*************
 * Header CSS *
 *************/
-.header {
-  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat; }
 
+.header {
+  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+}
 .dark .header {
-  background: rgba(19, 36, 46, 0.5) url("http://i.imgur.com/A3wunN6.png?1") no-repeat; }
+  background: rgba(19, 36, 46, 0.5) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+}
 
 .dark .header .logo, .header .logo {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .maintabbarbottom {
   border-color: #803C6F;
-  background: #CD9FC4; }
-
+  background: #CD9FC4;
+}
 .dark .maintabbarbottom {
   background: #3A3A3A;
-  border-color: #111; }
+  border-color: #111;
+}
 
 .tabbar a.button.notifying {
   background: #FFE0A7;
   border-color: #803C6F;
   color: #803C6F;
   text-shadow: none;
-  font-style: italic; }
-
+  font-style: italic;
+}
 .dark .tabbar a.button.notifying {
   background: #B4DCE4;
   border-color: #8BBDC6;
   color: #4A7179;
   text-shadow: none;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .tabbar a.button.notifying:hover {
-  background: #F9D990;
+  background: #F9D990;  
   border-color: #803C6F;
-  color: #803C6F; }
-
+  color: #803C6F;
+}
 .dark .tabbar a.button.notifying:hover {
   background: #A0CCD5;
   border-color: #8BBDC6;
   color: #4A7179;
   text-shadow: none;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .tabbar a.button.subtle-notifying, .tabbar a.button.subtle-notifying:hover {
-  color: #07948F; }
-
+  color: #07948F;
+}
 .dark .tabbar a.button.subtle-notifying, .dark .tabbar a.button.subtle-notifying:hover {
-  color: #EB86BF; }
+  color: #EB86BF;
+}
 
 .tabbar a.button.cur, .tabbar a.button.cur:hover {
   border-color: #803C6F;
   background: #CD9FC4;
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
-
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 .dark .tabbar a.button.cur, .dark .tabbar a.button.cur:hover {
   background: #3A3A3A;
   border-color: #111;
   color: #F9F9F9;
-  text-shadow: 1px 1px #111; }
+  text-shadow: 1px 1px #111;
+}
 
 .tabbar a.button {
   border-color: #803C6F;
   background: #F3C5EA;
   color: #803C6F;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 .dark .tabbar a.button {
   background: rgba(45, 45, 45, 0.7);
   color: #BBB;
   border-color: #222;
-  text-shadow: 1px 1px #222; }
+  text-shadow: 1px 1px #222;
+}
 
 .tabbar a.button:hover {
-  background: #E5B6DC; }
-
+  background: #E5B6DC;
+}
 .dark .tabbar a.button:hover {
   background: rgba(45, 45, 45, 0.95);
   color: #E2E2E2;
   border-color: #222;
-  text-shadow: 1px 1px #222; }
+  text-shadow: 1px 1px #222;
+}
 
 .tabbar .closebutton {
-  color: #803C6F; }
+  color: #803C6F;
+}
 
 .tabbar .closebutton:hover {
-  color: #AF3B3B; }
+  color: #AF3B3B;
+}
 
 .userbar button.icon {
   border: 1px solid #803C6F;
   background: #CD9FC4;
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
-
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 .dark .userbar button.icon {
   border: 1px solid #803C6F;
   background: #CD9FC4;
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .userbar button.icon:hover {
-  background: #DBAED2; }
-
+  background: #DBAED2;
+}
 .dark .userbar button.icon:hover {
-  color: #B4DCE4; }
+  color: #B4DCE4;
+}
 
 .userbar .username {
-  text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F; }
-
+  text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F;
+}
 .dark .userbar .username {
-  text-shadow: 1px 1px 0px #111, 1px -1px 0px #111, -1px 1px 0px #111, -1px -1px 0px #111; }
+  text-shadow: 1px 1px 0px #111, 1px -1px 0px #111, -1px 1px 0px #111, -1px -1px 0px #111;
+}
 
 /******************
 * Header CSS ~end *
 ******************/
+
 /***************
 * Roomlist CSS *
 ***************/
+
 .roomlist h2 {
   color: #FEE2B3;
-  text-shadow: 0px -1px 0px #11484F; }
+  text-shadow: 0px -1px 0px #11484F;
+}
 
 .roomlist a.ilink, .roomcounters button {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border-color: #11484F;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 .dark .roomlist a.ilink, .dark .roomcounters button {
   background: rgba(9, 24, 31, 0.95);
   border-color: #B998AB;
-  color: #B998AB; }
+  color: #B998AB;
+}
 
 .roomlist a.ilink:hover, .roomcounters button:hover {
   background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
   background-position: 300px -9px;
   border-color: #092125;
   color: #092125;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 .dark .roomlist a.ilink:hover, .dark .roomcounters button:hover {
   background: rgba(9, 24, 31, 0.98);
   border-color: #8BBDC6;
-  color: #8BBDC6; }
+  color: #8BBDC6;
+}
 
 /*.picon, .dark .picon {
 This makes everything into a mew*/
 .roomcounters .picon, .roomlist .picon, .dark .roomcounters .picon, .dark .roomlist .picon {
-  background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important; }
+  background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+}
 
 /********************
 * Roomlist CSS ~end *
 ********************/
+
 /***********
 * Chat CSS *
 ***********/
+
 .userlist {
   background: rgba(17, 72, 79, 0.6);
   border-color: #11484F;
-  color: #11484F; }
-
+  color: #11484F;
+}
 .dark .userlist {
   background: rgba(14, 36, 49, 0.8);
   border-color: #09181F;
   color: #11484F;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .userlist li {
   background: rgba(255, 255, 255, 0.65);
-  border-color: #11484F; }
-
+  border-color: #11484F;
+}
 .dark .userlist li {
   background: rgba(255, 255, 255, 0.65);
-  border-color: #1D4254; }
+  border-color: #1D4254;
+}
 
 .userlist li em.group {
-  color: #11484F; }
-
+  color: #11484F;
+}
 .dark .userlist li em.group {
-  color: #333; }
+  color: #333;
+}
 
 .dark .userlist strong, .dark .userlist span {
-  text-shadow: 0px 0px 2px #FFF; }
+  text-shadow: 0px 0px 2px #FFF;
+}
 
 .dark .userlist li button span {
-  text-shadow: 0px 0px 2px #EEE; }
+  text-shadow: 0px 0px 2px #EEE;
+}
 
 .userlist li button:hover, .userlist-minimized .userlist-count:hover, .dark .userlist li button:hover, .dark .userlist-minimized .userlist-count:hover {
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .infobox {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .chat-log, .dark .chat-log {
   background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
-  color: #000; }
+  color: #000;
+}
 
 .chat-log .chat small, .dark .chat-log .chat small {
-  color: #11484F; }
+  color: #11484F;
+}
 
 .chat-log .chat.mine.chat small {
-  color: #0A292E; }
+  color: #0A292E;
+}
 
 .chat.highlighted {
-  background: rgba(178, 215, 148, 0.7); }
-
+  background: rgba(178, 215, 148, 0.7);
+}
 .dark .chat.highlighted {
   background: #B4DCE4;
-  color: #0C3A43; }
+  color: #0C3A43;
+}
 
 .chat-log-add {
   border-color: #336251;
-  background: rgba(51, 98, 81, 0.6); }
+  background: rgba(51, 98, 81, 0.6);
+}
 
 .chat-log-add .textbox {
-  border-color: #336251; }
+  border-color: #336251;
+}
 
 .chatbox label {
-  text-shadow: 0px 0px 2px #336251; }
+  text-shadow: 0px 0px 2px #336251;
+}
 
 .nightclub {
   background: rgba(0, 0, 0, 0.85);
-  margin: -3px;
+  margin:-3px;
   text-shadow: 0px 0px 2px #000;
-  color: #FFF; }
+  color: #FFF;
+}
 
 /****************
 * Chat CSS ~end *
 ****************/
+
 /*******************
 * Tournaments CSS *
 ******************/
+
 .tournament-title {
   background: rgba(17, 72, 79, 0.6);
   text-shadow: 0px -1px 0px #11484F;
-  color: #AFCFD4; }
-
+  color: #AFCFD4;
+}
 .dark .tournament-title {
   background: rgba(19, 36, 46, 0.6);
   color: #EEE;
-  text-shadow: 0px -1px 0px #222; }
+  text-shadow: 0px -1px 0px #222;
+}
 
 .tournament-status, .tournament-toggle {
   background: rgba(255, 255, 255, 0.65);
   border-color: #11484F;
   text-shadow: none;
-  color: #11484F; }
+  color: #11484F;
+}
 
 .tournament-tools {
   border-color: #11484F;
-  background: rgba(51, 98, 81, 0.6); }
-
+  background: rgba(51, 98, 81, 0.6);
+}
 .dark .tournament-tools {
   background: rgba(19, 36, 46, 0.6);
-  border-color: #111; }
+  border-color: #111;
+}
 
 .tournament-tools .select {
   border-color: #11484F;
   background: #336251;
   color: #D9FCEF;
-  text-shadow: 0px -1px 0px #11484F; }
+  text-shadow: 0px -1px 0px #11484F;
+}
 
 .tournament-tools .select:hover {
-  background: #3D735F; }
+  background: #3D735F;
+}
 
 .tournament-tools .select:disabled, .tournament-tools .select:disabled:hover {
   background: rgba(51, 98, 81, 0.45);
   color: #11484F !important;
   text-shadow: none !important;
-  border-color: #11484F !important; }
+  border-color: #11484F !important;
+}
 
 .tournament-tools button {
   border-color: #11484F;
   background: #336251;
   color: #D9FCEF;
-  text-shadow: 0px -1px 0px #11484F; }
-
+  text-shadow: 0px -1px 0px #11484F;
+}
 .dark .tournament-tools button {
   background: rgba(9, 24, 31, 0.95);
   border-color: #B998AB;
-  color: #B998AB; }
+  color: #B998AB;
+}
 
 .tournament-tools button:hover {
-  background: #3D735F; }
-
+  background: #3D735F;
+}
 .dark .tournament-tools button:hover {
   background: rgba(9, 24, 31, 0.98);
   border-color: #8BBDC6;
-  color: #8BBDC6; }
+  color: #8BBDC6;
+}
 
 .tournament-wrapper, .tournament-box {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .tournament-box {
-  background: url("http://i.imgur.com/xQmFRxz.jpg?2"); }
+  background: url("http://i.imgur.com/xQmFRxz.jpg?2");
+}
 
 .dark .tournament-bracket-tree-node > rect {
   fill: rgba(9, 24, 31, 0.95);
-  stroke: #000; }
+  stroke: #000;
+}
 
 .dark .tournament-bracket-tree-node-match-team {
-  fill: #8BBDC6; }
+  fill: #8BBDC6;
+}
 
 .dark .tournament-bracket-tree-node-match-team-draw, .dark .tournament-bracket-tree-node-match-team-loss {
-  fill: #AAA; }
+  fill: #AAA;
+}
 
 .dark .tournament-bracket-tree-node > text {
   fill: #EEE;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
 
 .dark .tournament-bracket-tree-link-active {
-  stroke: #8BBDC6; }
+  stroke: #8BBDC6;
+}
 
 .dark .tournament-bracket-tree-node > text > a {
-  fill: #B998AB; }
+  fill: #B998AB;
+}
 
 .dark .tournament-bracket-tree-node > text > a:hover {
-  fill: #9E7D8F; }
+  fill: #9E7D8F;
+}
 
 .dark .tournament-bracket-tree {
-  background: rgba(19, 36, 46, 0.5); }
+  background: rgba(19, 36, 46, 0.5);
+}
 
 /***********************
 * Tournaments CSS ~end *
 ***********************/
+
 /**********************
 * Mainmenuwrapper CSS *
 **********************/
+
 .menugroup {
   border: 1px solid #803C6F;
   background: rgba(128, 60, 111, 0.25);
   color: #FBE7F0;
-  text-shadow: 0px 0px 2px #803C6F; }
-
+  text-shadow: 0px 0px 2px #803C6F;
+}
 .dark .menugroup {
   border: 1px solid #000;
   background: rgba(45, 45, 45, 0.25);
   color: #FBE7F0;
-  text-shadow: 0px 0px 2px #803C6F; }
+  text-shadow: 0px 0px 2px #803C6F;
+}
 
 .menugroup .select:disabled, .menugroup .select:disabled:hover {
   background: rgba(255, 224, 167, 0.7) !important;
   border-color: #803C6F !important;
   text-shadow: none !important;
-  font-style: italic !important; }
-
+  font-style: italic !important;
+}
 .dark .select:disabled, .dark .select:disabled:hover {
-  background: rgba(45, 45, 45, 0.5) !important;
-  border-color: #222 !important; }
+  background: rgba(45, 45, 45, 0.5) !important;   
+  border-color: #222 !important;   
+}
 
 .teamselect:disabled strong {
-  color: #803C6F !important; }
-
+  color: #803C6F !important;
+}
 .dark .teamselect:disabled strong {
   color: #E2E2E2 !important;
-  text-shadow: 1px 1px #222 !important; }
+  text-shadow: 1px 1px #222 !important;
+}
 
-.menugroup .select, .menugroup .button, .ps-room.ps-room-light.scrollable .select {
+.menugroup .select, .menugroup .button, .ps-room.ps-room-light.scrollable  .select {
   background: #FFE0A7 !important;
   border-color: #803C6F !important;
   color: #803C6F !important;
   text-shadow: none !important;
-  font-style: italic !important; }
-
-.dark .select, .dark .menugroup .button, .dark .ps-room.ps-room-light.scrollable .select {
+  font-style: italic !important;
+}
+.dark .select, .dark .menugroup .button, .dark .ps-room.ps-room-light.scrollable  .select {
   background: rgba(45, 45, 45, 0.95) !important;
   color: #E2E2E2 !important;
   border-color: #222 !important;
-  text-shadow: 1px 1px #222 !important; }
+  text-shadow: 1px 1px #222 !important;
+}
 
-.menugroup .select:hover, .menugroup .button:hover, .ps-room.ps-room-light.scrollable .select:hover {
+.menugroup .select:hover, .menugroup .button:hover, .ps-room.ps-room-light.scrollable  .select:hover {
   background: #F2CF99 !important;
   border-color: #803C6F !important;
   color: #803C6F !important;
   text-shadow: none !important;
-  font-style: italic !important; }
-
-.dark .select:hover, .dark .menugroup .button:hover, .dark .ps-room.ps-room-light.scrollable .select:hover {
+  font-style: italic !important;
+}
+.dark .select:hover, .dark .menugroup .button:hover, .dark .ps-room.ps-room-light.scrollable  .select:hover {
   background: rgba(30, 30, 30, 0.95) !important;
   color: #8BBDC6 !important;
   border-color: #222 !important;
-  text-shadow: 1px 1px #222 !important; }
+  text-shadow: 1px 1px #222 !important;
+}
 
 .pm-window h3 {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #E5FFF6;
-  text-shadow: 0px -1px 0px #336251; }
-
+  text-shadow: 0px -1px 0px #336251;
+}
 .dark .pm-window h3 {
   background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #BBB;
   border-color: #3D3D3D;
-  text-shadow: 0px -1px 0px #3D3D3D; }
+  text-shadow: 0px -1px 0px #3D3D3D;
+}
 
 .pm-window h3:hover {
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
-  color: #CBEBE0; }
-
+  color: #CBEBE0;
+}
 .dark .pm-window h3:hover {
   background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #E2E2E2;
   border-color: #3D3D3D;
-  text-shadow: 0px -1px 0px #3D3D3D; }
+  text-shadow: 0px -1px 0px #3D3D3D;
+}
 
 .pm-window h3 small {
-  color: #B2DBCD; }
+  color: #B2DBCD;
+}
 
 .pm-window.focused h3, .pm-window.focused h3:hover {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #E5FFF6;
-  text-shadow: 0px -1px 0px #336251; }
-
+  text-shadow: 0px -1px 0px #336251;
+}
 .dark .pm-window.focused h3, .dark .pm-window.focused h3:hover {
   background: #3A3A3A url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
   background-position: 225px;
   border-color: #111;
   color: #F9F9F9;
-  text-shadow: 0px -1px 0px #111; }
-
+  text-shadow: 0px -1px 0px #111;
+}
 .dark .pm-window.focused h3:hover {
-  color: #8BBDC6; }
+  color: #8BBDC6;
+}
 
 .pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
-  color: #D3F5E8; }
+  color: #D3F5E8;
+}
 
 .pm-window h3 .closebutton:hover {
-  color: #F7A4A4; }
+  color: #F7A4A4;
+}
 
 .pm-window h3 .minimizebutton:hover {
-  color: #F7D0A4; }
+  color: #F7D0A4;
+}
 
 .pm-window h3 .closebutton:hover + .minimizebutton {
-  color: #D3F5E8 !important; }
-
+  color: #D3F5E8 !important;
+}
 .dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CCC !important; }
+  color: #CCC !important;
+}
 
 .message-pm, .dark .message-pm {
-  color: #46806A; }
+  color: #46806A;
+}
 
 .pm-window h3.pm-notifying {
   border-color: #803C6F;
   background: #F3C5EA url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
   background-position: 225px -9px;
   color: #803C6F;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 .dark .pm-window h3.pm-notifying {
   background: #B4DCE4;
   border-color: #8BBDC6;
   color: #4A7179;
   text-shadow: none;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window h3.pm-notifying:hover {
   background: #E5B6DC url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
-  background-position: 225px -9px; }
-
+  background-position: 225px -9px;
+}
 .dark .pm-window h3.pm-notifying:hover {
   background: #A0CCD5;
   border-color: #8BBDC6;
   color: #4A7179;
   text-shadow: none;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .pm-window h3.pm-notifying small {
-  color: #A4578F; }
+  color: #A4578F;
+}
 
 .pm-window h3.pm-notifying .closebutton, .pm-window h3.pm-notifying .minimizebutton {
-  color: #803C6F; }
+  color: #803C6F;
+}
 
 .pm-window h3.pm-notifying .closebutton:hover {
-  color: #AF3B3B; }
+  color: #AF3B3B;
+}
 
 .pm-window h3.pm-notifying .minimizebutton:hover {
-  color: #AF813B; }
+  color: #AF813B;
+}
 
 .pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
-  color: #803C6F !important; }
-
+  color: #803C6F !important;
+}
 .dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CCC !important; }
+  color: #CCC !important;
+}
 
 .pm-log, .pm-window.focused .pm-log {
-  border-color: #336251; }
-
+  border-color: #336251;
+}
 .dark .pm-log, .dark .pm-window.focused .pm-log {
   background: rgba(242, 247, 250, 0.925) none repeat scroll 0% 0%;
   color: #000;
-  border-color: #888; }
+  border-color: #888;
+}
 
 .challenge {
   border-color: #803C6F;
   background: #F3C5EA;
   color: #803C6F;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 .dark .challenge {
   background: #FCD2B3 none repeat scroll 0% 0%;
   border: 1px solid #F57B21;
-  color: #682F05; }
+  color: #682F05;
+}
 
 .challenge .select {
   border-color: #803C6F;
   background: #CD9FC4;
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .challenge .select:hover {
-  background: #DBAED2; }
+  background: #DBAED2;
+}
 
 .challenge .select:disabled {
-  background: rgba(205, 159, 196, 0.5); }
+  background: rgba(205, 159, 196, 0.5);
+}
 
 .challenge .select.preselected, .challenge .select.preselected:disabled {
-  color: #803C6F; }
+  color: #803C6F;
+}
 
 .challenge .buttonbar button {
   border: 1px solid #803C6F;
   background: #CD9FC4;
   color: #803C6F;
   text-shadow: 0px 0px 2px #FCE8F1;
-  padding: 2px 5px; }
+  padding: 2px 5px;
+}
 
 .challenge .buttonbar button:hover {
-  background: #DBAED2; }
+  background: #DBAED2;
+}
 
 .pm-log-add {
   border-color: #336251;
-  background: rgba(51, 98, 81, 0.6); }
-
+  background: rgba(51, 98, 81, 0.6);
+}
 .dark .pm-log-add {
   background: rgba(34, 34, 34, 0.8);
-  color: #DDD; }
+  color: #DDD;
+}
 
 .pm-window.focused .pm-log-add {
   border-color: #336251;
-  background: rgba(51, 98, 81, 0.75); }
-
+  background: rgba(51, 98, 81, 0.75);
+}
 .dark .pm-window.focused .pm-log-add {
   border-color: #000;
-  background: #222; }
+  background: #222;
+}
 
 .pm-log-add .textbox {
-  border-color: #336251; }
-
+  border-color: #336251;
+}
 .dark .pm-log-add .textbox {
-  border-color: #999; }
+  border-color: #999;
+}
 
 .mainmenufooter a {
-  color: #FFE1B3; }
-
+  color: #FFE1B3;
+}
 .dark .mainmenufooter a {
-  color: #91C2C9; }
+  color: #91C2C9;
+}
 
 .mainmenufooter a:hover {
-  color: #F2D19C; }
-
+  color: #F2D19C;
+}
 .dark .mainmenufooter a:hover {
-  color: #B6DFDB; }
+  color: #B6DFDB;
+}
 
 .mainmenufooter {
-  color: #F2D19C; }
-
+  color: #F2D19C;
+}
 .dark .mainmenufooter {
-  color: #91C2C9; }
+  color: #91C2C9;
+}
+  
 
 /***************************
 * Mainmenuwrapper CSS ~end *
 ***************************/
+
 /************
 * Popup CSS *
 ************/
+
 .ps-popup {
-  background: #BBCCC9;
-  border-color: #11484F; }
+  background: #BBCCC9;    
+  border-color: #11484F;
+}
 
 .ps-popup a, .credits h2, .credits ul {
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .ps-popup a:hover {
-  color: #173B40; }
+  color: #173B40;
+}
 
 .ps-popup a.ilink.yours {
-  color: #0B282C; }
+  color: #0B282C;
+}
 
 .ps-popup a.ilink.yours:hover {
-  color: #04171A; }
+  color: #04171A;
+}
 
 .ps-popup .buttonbar button {
   background: #17626E;
   border: 1px solid #11484F;
   padding: 2px 5px;
   color: #BBCCC9;
-  text-shadow: 0px -1px 0px #11484F; }
+  text-shadow: 0px -1px 0px #11484F;
+}
 
 .ps-popup .buttonbar button:hover {
-  background: #1B545C; }
+  background: #1B545C;
+}
 
 .popupmenu h3 {
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .popupmenu button.sel {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .popupmenu button:hover, .popupmenu button.sel:hover {
   border-color: #11484F;
-  background: rgba(255, 255, 255, 0.3); }
+  background: rgba(255, 255, 255, 0.3);
+}
 
 a.subtle, a.subtle:hover {
-  color: #000; }
+  color: #000;
+}
 
 .avatarlist button {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .avatarlist button:hover {
   border-color: #11484F;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 .effect-volume em, .music-volume em {
-  color: #062529; }
+  color: #062529;
+}
 
 .ps-popup hr {
   border: none;
-  border-bottom: 1px solid #062529; }
+  border-bottom: 1px solid #062529;
+}
 
 .bglist button {
-  border-color: #11484F; }
-
+  border-color: #11484F;
+}
+  
 .bglist button:hover {
   border-color: #11484F;
-  background: rgba(255, 255, 255, 0.35); }
-
+  background: rgba(255, 255, 255, 0.35);
+}
+  
 .bglist button.cur, .bglist button.cur:hover {
   border-color: #092428;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+}
 
 /*****************
 * Popup CSS ~end *
 *****************/
+
 /*************
 * Ladder CSS *
 *************/
+
 .ladder th {
   background: #CD9FC4;
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .ladder td {
   background: rgba(255, 246, 250, 0.75);
   color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .ladder td:hover {
-  background: rgba(255, 246, 250, 0.95); }
+  background: rgba(255, 246, 250, 0.95);
+}
 
 .ladder table, .ladder td, .ladder th {
-  border-color: #803C6F; }
+  border-color: #803C6F;
+}
 
 /******************
 * Ladder CSS ~end *
 ******************/
+
 /******************
 * Teambuilder CSS *
 ******************/
+
 .folder .selectFolder, .folderpane h3 {
-  background: #BBCCC9; }
+  background: #BBCCC9;
+}
 
 .folderpane h3 {
   color: #11484F !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .folderpane {
-  border-left: 5px solid #BBCCC9; }
+  border-left: 5px solid #BBCCC9;
+}
 
-.folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before {
-  background: #BBCCC9; }
+.folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before{
+  background: #BBCCC9;
+}
 
 .folder.cur .selectFolder, .folder.cur .selectFolder:hover {
   border-color: #11484F;
-  background: #BBCCC9; }
+  background: #BBCCC9;
+}
 
 .folder .selectFolder:hover {
-  background: #D4E5E2; }
+  background: #D4E5E2;
+}
 
 .teamchartbox {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .teamlist .team {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border-color: #11484F;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .teamlist .team:hover {
-  background: #D4E5E2;
+  background: #D4E5E2;    
   border-color: #0E3339;
   color: #0E3339;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .setchart {
   border-color: #175964;
-  background: #447F69 no-repeat scroll 10px 5px none; }
+  background: #447F69 no-repeat scroll 10px 5px none;
+}
 
 .setchart-nickname {
   background: #336251;
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .setchart input, .setdetails, .setstats, .statform input.inputform {
-  border-color: #175964; }
+  border-color: #175964;
+}
 
 .setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
-  border-color: #11424A; }
+  border-color: #11424A;
+}
 
 .setchart .setdetails label, .setchart .setstats label {
   color: #11424A;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .setchart label {
   text-shadow: 0px -1px 0px #175964;
-  color: #E6FFF7; }
+  color: #E6FFF7;
+}
 
 .setchart-nickname label {
   text-shadow: 0px -1px 0px #11484F;
-  color: #E6FFF7; }
+  color: #E6FFF7;
+}
 
 .setchart-nickname input {
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .setchart-nickname input:hover {
-  border-color: #0A2B30; }
+  border-color: #0A2B30;
+}
 
 .setchart input.incomplete {
   background: #FFF5FA;
   color: #CE3FB6;
-  border-color: #CE3FB6; }
+  border-color: #CE3FB6;
+}
 
 .dark .setchart input.incomplete {
   background: #2F252A;
   color: #CE3FB6;
-  border-color: #CE3FB6; }
+  border-color: #CE3FB6
+}
 
 .teambuilder-results {
-  background: rgba(255, 255, 255, 0.3); }
+  background: rgba(255, 255, 255, 0.3);
+}
 
 .dark .teambuilder-results {
-  background: rgba(0, 0, 0, 0.3); }
+    background: rgba(0, 0, 0, 0.3)
+}
 
 .teambuilder-results h3, .teambuilder-results .utilichart h3 {
   border-color: #803C6F !important;
   background: #F3C5EA !important;
   color: #803C6F !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .teambuilder-results .firstresult a {
-  background: #BBCCC9;
-  border-color: #11484F; }
+  background: #BBCCC9;    
+  border-color: #11484F;
+}
 
 .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
-  background: #CBE1DD;
-  border-color: #0C2D32; }
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
 
 .utilichart b {
   color: #11484F;
   text-shadow: 0px 0px 2px #96BFB8;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
   color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
-  color: #11484F; }
+  color: #11484F;
+}
 
 .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-  color: #1B606B; }
+  color: #1B606B;
+}
 
 .utilichart .numcol {
   color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .utilichart .typecol img {
-  opacity: 0.75; }
+  opacity: 0.75;
+}
 
 .utilichart .filtercol em {
   color: #5F2D52;
-  border: 1px solid #5F2D52; }
+  border: 1px solid #5F2D52;
+}
 
 .teambar button {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border-color: #11484F;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border-color: #0E3339;
   color: #0E3339;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .setmenu button, .teamlist button {
   color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1; }
+  text-shadow: 0px 0px 2px #FCE8F1;
+}
 
 .setmenu button:hover, .teamlist button:hover {
   border-color: #803C6F !important;
   background: #F3C5EA !important;
   color: #803C6F !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .statform p.suggested button {
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border: 1px solid #11484F;
   color: #11484F;
   text-shadow: 0px 0px 2px #96BFB8;
-  padding: 2px 5px; }
+  padding: 2px 5px;
+}
 
 .statform p.suggested button:hover {
-  background: #CBE1DD;
-  border-color: #0C2D32; }
+  background: #CBE1DD;    
+  border-color: #0C2D32;
+}
 
 .statform p.suggested a {
-  color: #11484F; }
+  color: #11484F;
+}
 
 .statform .col div label, .statform .col div em, .detailsform label {
   color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .statform .col div b {
   color: #031315;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 .jslider .jslider-label {
   opacity: 1;
-  color: #062529; }
+  color: #062529;
+}
 
 .jslider .jslider-value {
-  background: #CBE1DD;
+  background: #CBE1DD;    
   border: 1px solid #0C2D32;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 /***********************
 * Teambuilder CSS ~end *
 ***********************/
+
 /*************
 * Battle CSS *
 *************/
+
 .ps-room.ps-room-opaque {
-  background: rgba(51, 98, 81, 0.6); }
+  background: rgba(51, 98, 81, 0.6);
+}
 
 .ps-room .battle-controls {
   background: rgba(255, 255, 255, 0.25);
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 10px; 
+  padding-bottom: 10px;
+}
 
 .battle-log {
   background: rgba(255, 255, 255, 0.9);
-  border-color: #803C6F; }
+  border-color: #803C6F;
+}
 
 .battle-log h2 {
   border-color: #803C6F;
   background: #F3C5EA;
   color: #803C6F;
   text-shadow: none;
-  text-align: center; }
+  text-align: center;
+}
 
 .battle-log h2:hover {
-  color: #642F56; }
+  color: #642F56;
+}
 
 .battle-log .rated strong {
   border-color: #803C6F;
@@ -3037,30 +3710,36 @@ a.subtle, a.subtle:hover {
   color: #803C6F;
   text-shadow: none;
   border: 1px solid #803C6F;
-  padding: 3px 6px; }
+  padding: 3px 6px;
+}
 
 .battle-log .chat strong {
-  color: #803C6F; }
+  color: #803C6F;
+}
 
 .battle-log-add {
   border-color: #803C6F;
-  background: #F3C5EA; }
+  background: #F3C5EA;
+}
 
 .battle-log-add .chatbox label {
-  text-shadow: 0px 0px #E4B7DB; }
+  text-shadow: 0px 0px #E4B7DB;
+}
 
 .battle-log-add .textbox {
-  border-color: #803C6F; }
+  border-color: #803C6F;
+}
 
 .turnstatus-protect {
-  background: url(http://i.imgur.com/RVxCoHz.png);
+  background:url(http://i.imgur.com/RVxCoHz.png);
   opacity: 1 !important;
   height: 103px !important;
   width: 150px !important;
   border-radius: 0;
   border-width: 0;
   box-shadow: none;
-  opacity: 0.9; }
+  opacity: 0.9;
+}
 
 .sidecondition-safeguard {
   background: url(http://i.imgur.com/FrCoWCW.png);
@@ -3070,7 +3749,8 @@ a.subtle, a.subtle:hover {
   border-radius: 0;
   opacity: 0.9;
   border-width: 0;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .sidecondition-reflect {
   background: url(http://i.imgur.com/X1XDxVB.png);
@@ -3080,7 +3760,8 @@ a.subtle, a.subtle:hover {
   border-radius: 0;
   border-width: 0;
   opacity: 0.9;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .sidecondition-lightscreen {
   background: url(http://i.imgur.com/8eLftNA.png);
@@ -3090,92 +3771,112 @@ a.subtle, a.subtle:hover {
   opacity: 0.9;
   border-radius: 0;
   border-width: 0;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .backdrop {
   background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
-  opacity: 0.6; }
+  opacity: 0.6;
+} 
 
 .battle {
-  border-color: #11484F !important; }
+  border-color: #11484F !important;
+}
 
 .rightbar, .leftbar {
   background: rgba(51, 98, 81, 0.6);
-  border-color: #11484F; }
+  border-color: #11484F;
+}
 
 .trainer strong {
   color: #E6FDFF;
-  text-shadow: 0px -1px 0px #11484F; }
+  text-shadow: 0px -1px 0px #11484F;
+}
 
 .trainer div {
-  opacity: 1; }
+  opacity: 1;
+}
 
 .battle-controls .whatdo {
-  color: #111; }
+  color: #111;
+}
 
 .battle-controls .whatdo small {
-  border-color: #111; }
+  border-color: #111;
+}
 
 .moveselect button, .switchselect button {
   color: #BBCCC9 !important;
-  text-shadow: 0px 0px 2px #11484F !important; }
+  text-shadow: 0px 0px 2px #11484F !important;
+}
 
 .moveselect button {
   background: url("http://i.imgur.com/GPzZsG1.png") center right no-repeat;
   background-position: right 14px;
-  padding-right: 35px; }
+  padding-right: 35px;
+}
 
 .switchselect button {
-  background: url("http://i.imgur.com/d0UDk9G.png") bottom no-repeat;
+  background: url("http://i.imgur.com/d0UDk9G.png")  bottom no-repeat;
   padding-right: 20px;
-  background-position: right 14px; }
+  background-position: right 14px;
+}
 
 .switchmenu button {
-  background: #BBCCC9 !important;
+  background: #BBCCC9 !important;    
   border-color: #11484F !important;
   color: #11484F !important;
-  text-shadow: 0px 0px 2px #96BFB8 !important; }
+  text-shadow: 0px 0px 2px #96BFB8 !important;
+}
 
 .switchmenu button:hover {
-  background: #BBCCC9 !important;
+  background: #BBCCC9 !important;    
   border-color: #0E3339 !important;
   color: #0E3339 !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .switchmenu button .hpbar {
-  border-color: #0E3339; }
+  border-color: #0E3339;
+}
 
 .switchmenu button.disabled, .switchmenu button:disabled {
-  background: #9BB6B1 !important;
+  background: #9BB6B1 !important;    
   border: 2px solid #0E3339 !important;
   color: #0E3339 !important;
   font-weight: bold !important;
-  text-shadow: none !important; }
+  text-shadow: none !important;
+}
 
 .movemenu button:disabled {
-  background: #9BB6B1;
+  background: #9BB6B1;    
   border: 2px solid #0E3339;
   color: #0E3339;
   font-weight: bold;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 .movemenu button:disabled .movemenu button small.pp, .movemenu button:disabled .movemenu button small.type {
   text-shadow: none;
-  color: #164E57; }
+  color: #164E57;
+}
 
 .movemenu button {
-  border: 1px solid #0E3339 !important; }
+  border: 1px solid #0E3339 !important;
+}
 
 #tooltipwrapper {
   text-align: left;
   color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 #tooltipwrapper .tooltip {
   width: 300px;
-  background: #BBCCC9;
+  background: #BBCCC9;    
   border-color: #11484F;
-  border-radius: 1px; }
+  border-radius: 1px;
+}
 
 #tooltipwrapper .tooltip h2 {
   padding: 2px 4px;
@@ -3183,32 +3884,42 @@ a.subtle, a.subtle:hover {
   border-bottom: 1px solid #11484F;
   font-size: 10pt;
   color: #0B2D32;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  text-shadow: 0px 0px 2px #96BFB8;
+}
 
 #tooltipwrapper .tooltip p {
   padding: 2px 4px;
   margin: 0;
-  font-size: 8pt; }
+  font-size: 8pt;
+}
 
 #tooltipwrapper .tooltip p.section {
-  border-top: 1px solid #11484F; }
+  border-top: 1px solid #11484F;
+}
 
 /******************
 * Battle CSS ~end *
 ******************/
+
 /* Extra Dark */
+
 .dark .chat-log a, .dark .pm-log a, .dark .battle-log a {
-  color: #0000EE; }
+  color: #0000EE;
+}
 
 .dark .pm-window h3 small, .dark .pm-window .closebutton, .dark .tabbar .closebutton, .dark .pm-window .minimizebutton, .dark .tabbar .minimizebutton, .dark .pm-window h3:hover .minimizebutton {
-  color: #BBB; }
+  color: #BBB;
+}
 
 .dark .pm-window .closebutton:hover, .dark .tabbar .closebutton:hover {
-  color: #FFB9B9; }
+  color: #FFB9B9;
+}
 
 .dark .pm-window .minimizebutton:hover, .dark .tabbar .minimizebutton:hover {
-  color: #FFE1B9 !important; }
+  color: #FFE1B9 !important;
+}
 
 .dark .chat-log-add, .dark .pm-log-add, .dark .battle-log-add {
   background: rgba(34, 34, 34, 0.8);
-  color: #DDD; }
+  color: #DDD;
+}
