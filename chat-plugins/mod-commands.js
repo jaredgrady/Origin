@@ -641,4 +641,15 @@ exports.commands = {
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
+	ad: 'advertise',
+	advertise: function (target, room, user) {
+		if (!user.can('lock')) return false;
+		let parts = target.split(',');
+		if (parts.length < 2) return this.sendReply("Invalid command. `/ad room,message`.");
+		let innerTarget = Tools.escapeHTML(parts[0]);
+		let message = Tools.escapeHTML(parts[1]);
+		let targetRoom = Rooms.search(innerTarget);
+		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
+		room.addRaw('<div class="infobox"><a href="/' + targetRoom.id + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + targetRoom.id + '</strong>:</font> ' + message + '</a>  -' + toId(user) + '</div>');
+	},
 };
