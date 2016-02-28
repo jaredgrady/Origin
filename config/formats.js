@@ -766,6 +766,9 @@ exports.Formats = [
 				pokemon.addVolatile('curse', pokemon);
 				this.add('-message', pokemon.name + "'s Wonder Guard has cursed it!");
 			}
+			if (name === 'masterfloat' && !pokemon.illusion) {
+				this.boost({atk:3}, pokemon, pokemon, 'Magic Immunity');
+			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.boost({def:2, spd:2}, pokemon, pokemon, 'beauty');
 			}
