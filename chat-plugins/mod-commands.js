@@ -645,7 +645,7 @@ exports.commands = {
 	advertise: function (target, room, user) {
 		if (!user.can('lock')) return false;
 		let parts = target.split(',');
-		if (parts.length < 2) return this.sendReply("Invalid command. `/ad room,message`.");
+		if (parts.length < 2) return this.errorReply("Invalid command. `/ad room, message`.");
 		let innerTarget = Tools.escapeHTML(parts[0]);
 		let message = Tools.escapeHTML(parts[1]);
 		let targetRoom = Rooms.search(innerTarget);
