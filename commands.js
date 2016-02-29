@@ -548,7 +548,7 @@ let commands = exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 		} else {
-			if ((target === 'on' || target === 'true' || !target) || !user.can('editroom')) {
+			if ((target === 'on' || target === 'true' || !target) || !user.can('declare')) {
 				room.modjoin = true;
 				this.addModCommand("" + user.name + " turned on modjoin.");
 			} else if (target in Config.groups) {
