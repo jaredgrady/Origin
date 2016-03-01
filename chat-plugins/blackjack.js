@@ -1,8 +1,8 @@
 'use strict';
-/********************
- * Blackjack
- * by Creaturephil, prepared for Origin by fender
-********************/
+/******************************************************
+ * Blackjack chat-plugin cretaed by CreaturePhil and  *
+ * Prepared for Origin by fender and AuraStormLucario *
+ ******************************************************/
 const color = require('../config/color');
 
 /**
@@ -164,8 +164,11 @@ function Blackjack(pot, room, creator) {
 	// Create a new deck.
 	this.deck = new Deck();
 
-	// The prize money to be won.
+	// The entry ante.
 	this.pot = pot;
+
+	// Money to be won.
+	this.payout = 0;
 
 	// Boolean to check if a blackjack game has started or not.
 	this.started = false;
@@ -245,6 +248,8 @@ Blackjack.prototype.chooseWinner = function () {
  */
 Blackjack.prototype.endGame = function (winner) {
 	BJView.end.call(this.room, winner);
+	let winnings = Db("money").get(toId(winner), 0) + this.room.bj.payout;
+	Db("money").set(toId(winner), winnings);
 	this.room.bj = null;
 };
 
@@ -275,7 +280,7 @@ Blackjack.prototype.isPlayerTurn = function (player) {
  */
 Blackjack.prototype.addPlayer = function (player) {
 	this.players[player] = {name: player, hand: [], total: 0};
-
+	this.payout += this.room.bj.pot;
 	BJView.join.call(this.room, player);
 };
 
@@ -324,12 +329,23 @@ exports.commands = {
 		new: 'create',
 		create: function (target, room, user) {
 			if (!this.can('broadcast', null, room)) return false;
+			if (!room.bjEnabled) return this.errorReply('Blackjack is currently disabled.');
 			if (room.bj) return this.sendReply("A blackjack game has already been created in this room.");
 
 			let amount = isMoney(target);
 			if (typeof amount === 'string') return this.sendReply(amount);
 
 			room.bj = new Blackjack(amount, room, user.name);
+		},
+
+		join: function (target, room, user) {
+			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
+			if (room.bj.started) return this.sendReply("A blackjack game has already started in this room.");
+			if (room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are already in this blackjack game.");
+			if (Db("money").get(user.userid, 0) < room.bj.pot) return this.errorReply('You do not have enough bucks to play');
+			room.bj.addPlayer(user.userid);
+			let ante = Db("money").get(user.userid, 0) - room.bj.pot;
+			Db("money").set(user.userid, ante);
 		},
 
 		start: function (target, room, user) {
@@ -339,16 +355,6 @@ exports.commands = {
 			if (Object.keys(room.bj.players).length < 2) return this.sendReply("|raw|<b>There aren't enough users.</b>");
 
 			room.bj.startGame();
-		},
-
-		join: function (target, room, user) {
-			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
-			if (room.bj.started) return this.sendReply("A blackjack game has already started in this room.");
-			if (room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are already in this blackjack game.");
-
-			// check if they have enough money for pot
-
-			room.bj.addPlayer(user.userid);
 		},
 
 		hit: function (target, room, user) {
@@ -361,15 +367,6 @@ exports.commands = {
 			room.bj.hasPlayerWinOrBust(user.userid);
 		},
 
-		hand: function (target, room, user) {
-			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
-			if (!room.bj.started) return this.sendReply("A blackjack game has not started.");
-			if (!room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are not in this blackjack game.");
-			if (!room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are not in this blackjack game.");
-
-			this.sendReply("Your hand: " + room.bj.players[user.userid].hand.join(', '));
-		},
-
 		stand: function (target, room, user) {
 			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
 			if (!room.bj.started) return this.sendReply("A blackjack game has not started.");
@@ -377,6 +374,15 @@ exports.commands = {
 			if (!room.bj.isPlayerTurn(user.userid)) return this.sendReply("It is not your turn.");
 
 			room.bj.nextTurn();
+		},
+
+		hand: function (target, room, user) {
+			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
+			if (!room.bj.started) return this.sendReply("A blackjack game has not started.");
+			if (!room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are not in this blackjack game.");
+			if (!room.bj.isPlayerInGame(user.userid)) return this.sendReply("You are not in this blackjack game.");
+
+			this.sendReply("Your hand: " + room.bj.players[user.userid].hand.join(', '));
 		},
 
 		deck: function (target, room, user) {
@@ -391,9 +397,43 @@ exports.commands = {
 		end: function (target, room, user) {
 			if (!user.can('broadcast', null, room)) return false;
 			if (!room.bj) return this.sendReply("A blackjack game has not been created.");
-
+			let moneyBack = Object.keys(room.bj.players);
+			let curMoney;
+			for (let u = 0; u <= moneyBack.length; u++) {
+				curMoney = Db("money").get(toId(u), 0) + room.bj.pot;
+				Db("money").get(toId(u), curMoney);
+			}
 			room.bj = null;
-			room.addRaw("<b>" + user.name + " ended the dice game.</b>");
+			room.addRaw("<b>" + user.name + " ended the blackjack game.</b>");
+		},
+
+		enable: function (target, room, user, cmd) {
+			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
+			if (!user.can('makechatroom')) return this.errorReply('/blackjack enable - Access Denied.');
+			room.bjEnabled = true;
+			this.sendReply("Blackjack has been enabled.");
+		},
+
+		disable: function (target, room, user, cmd) {
+			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
+			if (!user.can('makechatroom')) return this.errorReply('/blackjack disable - Access Denied.');
+			room.bjEnabled = false;
+			this.sendReply("Blackjack has been disabled.");
+		},
+
+		help: function (target, room, user) {
+			this.parse('/help blackjack');
 		},
 	},
+	bjhelp: 'blackjackhelp',
+	blackjackhelp: ["- /blackjack new - ",
+		"- /blackjack join - ",
+		"- /blackjack start - ",
+		"- /blackjack hit - ",
+		"- /blackjack stand - ",
+		"- /blackjack hand - ",
+		"- /blackjack deck - ",
+		"- /blackjack end - ",
+		"- /blackjack enable - Enable the playing of blackjack. Requires: ~",
+		"- /blackjack disable - Disable the playing of blackjack. Requires: ~"],
 };
