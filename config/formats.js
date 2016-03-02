@@ -108,12 +108,11 @@ exports.Formats = [
 		banlist: ['RU', 'BL3'],
 	},
 	{
-		name: "NU (current)",
+		name: "NU (suspect test)",
 		section: "ORAS Singles",
 
-		challengeShow: false,
-		ruleset: ['RU'],
-		banlist: ['RU', 'BL3'],
+		ruleset: ['NU'],
+		banlist: ['Sawk'],
 	},
 	{
 		name: "PU",
@@ -476,7 +475,7 @@ exports.Formats = [
 			if (!item.megaEvolves && item.id !== 'blueorb' && item.id !== 'redorb') return;
 			if (template.baseSpecies === item.megaEvolves || (item.id === 'redorb' && template.baseSpecies === 'Groudon') || (item.id === 'blueorb' && template.baseSpecies === 'Kyogre')) return;
 			if (template.evos.length) return ["" + template.species + " is not allowed to hold " + item.name + " because it's not fully evolved."];
-			if (template.tier === 'Uber' || template.species in {'Cresselia':1, 'Dragonite':1, 'Kyurem-Black':1, 'Lucario':1, 'Manaphy':1, 'Slaking':1, 'Smeargle':1, 'Regigigas':1}) {
+			if (template.tier === 'Uber' || template.species in {'Cresselia':1, 'Dragonite':1, 'Kyurem-Black':1, 'Lucario':1, 'Slaking':1, 'Smeargle':1, 'Regigigas':1}) {
 				return ["" + template.species + " is not allowed to hold " + item.name + "."];
 			}
 			if (template.species === 'Shuckle' && ['aggronite', 'audinite', 'charizarditex', 'charizarditey', 'galladite', 'gyaradosite', 'houndoominite', 'latiasite', 'salamencite', 'scizorite', 'sharpedonite', 'steelixite', 'tyranitarite', 'venusaurite'].indexOf(item.id) >= 0) {
@@ -614,9 +613,7 @@ exports.Formats = [
 		onBegin: function () {
 			this.add('-message', "NOTE: This is an Inverse Battle! Type effectivenesses are reversed!");
 		},
-		onNegateImmunity: function (pokemon, type) {
-			if (type in this.data.TypeChart && this.runEvent('Immunity', pokemon, null, null, type)) return false;
-		},
+		onNegateImmunity: false,
 		onEffectiveness: function (typeMod, target, type, move) {
 			// The effectiveness of Freeze Dry on Water isn't reverted
 			if (move && move.id === 'freezedry' && type === 'Water') return;
@@ -750,10 +747,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id === 'lightningrod') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id === 'pixilate') {
@@ -805,10 +799,7 @@ exports.Formats = [
 				if (name === 'impfallenblood' && pokemon.getAbility().id !== 'pirate') {
 					pokemon.setAbility('pirate');
 					this.add('-ability', pokemon, pokemon.ability);
-					pokemon.typesData = [
-						{type: 'Grass', suppressed: false,  isAdded: false},
-						{type: 'Flying', suppressed: false,  isAdded: false},
-					];
+					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
 				if (name === 'princesshigh' && pokemon.getAbility().id !== 'pixieshield') {
@@ -822,45 +813,27 @@ exports.Formats = [
 			// Add here special typings, done for flavour mainly.
 			if (name === 'paulcentury' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fire');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fire"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Fairy"];
 			}
 			if (name === 'starfox3' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
-				pokemon.typesData = [
-					{type: 'Bug', suppressed: false,  isAdded: false},
-					{type: 'Psychic', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Bug", "Psychic"];
 			}
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
-				pokemon.typesData = [
-					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Fighting', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Fire", "Fighting"];
 			}
 			if (name === 'hayleysworld' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Fairy', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Water", "Fairy"];
 			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
-				pokemon.typesData = [
-					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Ghost', suppressed: false,  isAdded: false},
-				];
+				pokemon.types = ["Normal", "Ghost"];
 			}
 
 			// Edgy switch-in sentences go here.
@@ -942,7 +915,7 @@ exports.Formats = [
 				this.add('c|%isandman|ENTER SANDMAN');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Cheyvy 12|');
+				this.add('c|%L Cheyvy 12|I have swooped in to fuck up your day today feelsok');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
@@ -1006,7 +979,8 @@ exports.Formats = [
 				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
 			}
 			if (name === 'lttesla') {
-				this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				//this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
+				this.add('c|~Lt. Tesla|Nothing in showdown is certain except Deth and haxes');
 			}
 			if (name === 'masterfloat') {
 				this.add('c|~Master Float|shitzel, fkin hax #blameZarel');
@@ -1429,9 +1403,7 @@ exports.Formats = [
 			'Ho-Oh', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Serperior',
 			'Shaymin-Sky', 'Snorlax', 'Xerneas', 'Yveltal', 'Zekrom', 'Gengarite', 'Kangaskhanite', 'Salamencite', 'Soul Dew', 'Shadow Tag',
 		],
-		onNegateImmunity: function (pokemon, type) {
-			if (type in this.data.TypeChart && this.runEvent('Immunity', pokemon, null, null, type)) return false;
-		},
+		onNegateImmunity: false,
 		onEffectiveness: function (typeMod, target, type, move) {
 			// The effectiveness of Freeze Dry on Water isn't reverted
 			if (move && move.id === 'freezedry' && type === 'Water') return;
@@ -1552,7 +1524,7 @@ exports.Formats = [
 		searchShow: false,
 		mod: 'averagemons',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
-		banlist: ['Sableye + Prankster', 'Shedinja', 'Smeargle', 'Venomoth',
+		banlist: ['Sableye + Prankster', 'Shedinja', 'Smeargle',
 			'DeepSeaScale', 'DeepSeaTooth', 'Eviolite', 'Gengarite', 'Kangaskhanite', 'Light Ball', 'Mawilite', 'Medichamite', 'Soul Dew', 'Thick Club',
 			'Arena Trap', 'Huge Power', 'Pure Power', 'Shadow Tag', 'Chatter',
 		],

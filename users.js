@@ -647,6 +647,28 @@ User = (() => {
 	};
 	User.prototype.filterName = function (name) {
 		name = name.substr(0, 30);
+		if (!Config.disablebasicnamefilter) {
+			// whitelist
+			// \u00A1-\u00BF\u00D7\u00F7  Latin punctuation/symbols
+			// \u02B9-\u0362              basic combining accents
+			// \u2012-\u2027\u2030-\u205E Latin punctuation/symbols extended
+			// \u2050-\u205F              fractions extended
+			// \u2190-\u23FA\u2500-\u2BD1 misc symbols
+			// \u2E80-\u32FF              CJK symbols
+			// \u3400-\u9FFF              CJK
+			// \uF900-\uFAFF\uFE00-\uFE6F CJK extended
+			name = name.replace(/[^a-zA-Z0-9 \/\\.~()&=+$@#_'!"\u00A1-\u00BF\u00D7\u00F7\u02B9-\u0362\u2012-\u2027\u2030-\u205E\u2050-\u205F\u2190-\u23FA\u2500-\u2BD1\u2E80-\u32FF\u3400-\u9FFF\uF900-\uFAFF\uFE00-\uFE6F-]+/g, '');
+
+			// blacklist
+			// \u00a1 upside-down exclamation mark (i)
+			// \u2580-\u2590 black bars
+			// \u25A0\u25Ac\u25AE\u25B0 black bars
+			// \u534d\u5350 swastika
+			// \u2a0d crossed integral (f)
+			name = name.replace(/[\u00a1\u2580-\u2590\u25A0\u25Ac\u25AE\u25B0\u2a0d\u534d\u5350]/g, '');
+			// e-mail address
+			if (name.includes('@') && name.includes('.')) return '';
+		}
 		if (Config.namefilter) {
 			name = Config.namefilter(name, this);
 		}
@@ -664,7 +686,7 @@ User = (() => {
 	User.prototype.rename = function (name, token, newlyRegistered, connection) {
 		for (let i in this.roomCount) {
 			let room = Rooms(i);
-			if (room && room.rated && (this.userid === room.rated.p1 || this.userid === room.rated.p2)) {
+			if (room && room.rated && (this.userid in room.game.players)) {
 				this.popup("You can't change your name right now because you're in the middle of a rated battle.");
 				return false;
 			}
@@ -1286,8 +1308,7 @@ User = (() => {
 		let makeRoom = this.can('makeroom');
 		let isdev = ~developers.indexOf(this.userid);
 		if (room.tour && !makeRoom && !isdev) {
-			let tour = room.tour.tour;
-			let errorMessage = tour.onBattleJoin(room, this);
+			let errorMessage = room.tour.onBattleJoin(room, this);
 			if (errorMessage) {
 				connection.sendTo(roomid, "|noinit|joinfailed|" + errorMessage);
 				return false;

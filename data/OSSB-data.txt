@@ -243,9 +243,3 @@ Origin Server - Mew
 - Move: Tri Spikes - Puts up 3 layers of spikes
 - Movepool: Transform, Psystrike, Recover
 - Notes: Is a godly reliable stop to all the disgusting set-up sweepers in this tier.
-
-d.e.a.t.h.l.y.p.l.a.y.s - Ludicolo
-- Ability: Sea of Lieks - Primordial Sea, 1.2x multiplier for each attack, perfect accuracy for all moves
-- Move: Aqua Subscribe - 80BP special water type move, +1 priority, 100% chance to boost special attack and special defense by 1 stage, and 30% chance to boost speed by 1 stage.
-- Movepool: Giga Drain, Focus Blast, Blizzard
-- Notes: Good counter to all the fire types in this tier.

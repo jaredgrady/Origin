@@ -23,6 +23,7 @@ snatch: Can be stolen from the original user and instead used by another Pokemon
 sound: Has no effect on Pokemon with the Ability Soundproof.
 
 */
+
 'use strict';
 
 exports.BattleMovedex = {
@@ -2080,7 +2081,7 @@ exports.BattleMovedex = {
 			spe: -2,
 		},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -3689,7 +3690,7 @@ exports.BattleMovedex = {
 		onHit: function (target, source) {
 			let oldAbility = target.setAbility(source.ability);
 			if (oldAbility) {
-				this.add('-ability', target, target.ability, '[from] move: Entrainment');
+				this.add('-ability', target, this.getAbility(target.ability).name, '[from] move: Entrainment');
 				return;
 			}
 			return false;
@@ -4622,10 +4623,7 @@ exports.BattleMovedex = {
 			pokemon.addVolatile('focuspunch');
 		},
 		beforeMoveCallback: function (pokemon) {
-			if (!pokemon.removeVolatile('focuspunch')) {
-				return false;
-			}
-			if (pokemon.lastAttackedBy && pokemon.lastAttackedBy.thisTurn && pokemon.lastAttackedBy.damage > 0 && this.getMove(pokemon.lastAttackedBy.move).category !== 'Status') {
+			if (pokemon.volatiles['focuspunch'] && pokemon.volatiles['focuspunch'].lostFocus) {
 				this.add('cant', pokemon, 'Focus Punch', 'Focus Punch');
 				return true;
 			}
@@ -4634,6 +4632,11 @@ exports.BattleMovedex = {
 			duration: 1,
 			onStart: function (pokemon) {
 				this.add('-singleturn', pokemon, 'move: Focus Punch');
+			},
+			onHit: function (pokemon, source, move) {
+				if (move.category !== 'Status') {
+					pokemon.volatiles['focuspunch'].lostFocus = true;
+				}
 			},
 		},
 		secondary: false,
@@ -5396,6 +5399,35 @@ exports.BattleMovedex = {
 			},
 			onStart: function () {
 				this.add('-fieldstart', 'move: Gravity');
+				for (let side of this.sides) {
+					for (let pokemon of side.pokemon) {
+						let applies = false;
+						if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
+							applies = true;
+							this.cancelMove(pokemon);
+							pokemon.removeVolatile('twoturnmove');
+						}
+						if (pokemon.volatiles['skydrop']) {
+							applies = true;
+							this.cancelMove(pokemon);
+
+							if (pokemon.volatiles['skydrop'].source) {
+								this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+							}
+							pokemon.removeVolatile('skydrop');
+							pokemon.removeVolatile('twoturnmove');
+						}
+						if (pokemon.volatiles['magnetrise']) {
+							applies = true;
+							delete pokemon.volatiles['magnetrise'];
+						}
+						if (pokemon.volatiles['telekinesis']) {
+							applies = true;
+							delete pokemon.volatiles['telekinesis'];
+						}
+						if (applies) this.add('-activate', pokemon, 'Gravity');
+					}
+				}
 			},
 			onModifyAccuracy: function (accuracy) {
 				if (typeof accuracy !== 'number') return;
@@ -5407,37 +5439,7 @@ exports.BattleMovedex = {
 					pokemon.disableMove(m);
 				}
 			},
-			onModifyPokemonPriority: 100,
-			onModifyPokemon: function (pokemon) {
-				let applies = false;
-				if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
-					applies = true;
-					this.cancelMove(pokemon);
-					pokemon.removeVolatile('twoturnmove');
-				}
-				if (pokemon.volatiles['skydrop']) {
-					applies = true;
-					this.cancelMove(pokemon);
-
-					if (pokemon.volatiles['skydrop'].source) {
-						this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
-					}
-					pokemon.removeVolatile('skydrop');
-					pokemon.removeVolatile('twoturnmove');
-				}
-				if (pokemon.volatiles['magnetrise']) {
-					applies = true;
-					delete pokemon.volatiles['magnetrise'];
-				}
-				if (pokemon.volatiles['telekinesis']) {
-					applies = true;
-					delete pokemon.volatiles['telekinesis'];
-				}
-				if (applies) this.add('-activate', pokemon, 'Gravity');
-			},
-			onNegateImmunity: function (pokemon, type) {
-				if (type === 'Ground') return false;
-			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 			onBeforeMovePriority: 6,
 			onBeforeMove: function (pokemon, target, move) {
 				if (move.flags['gravity']) {
@@ -7024,7 +7026,7 @@ exports.BattleMovedex = {
 				let foeMoves = this.effectData.source.moveset;
 				for (let f = 0; f < foeMoves.length; f++) {
 					if (foeMoves[f].id === 'struggle') continue;
-					pokemon.disableMove(foeMoves[f].id, true);
+					pokemon.disableMove(foeMoves[f].id, 'hidden');
 				}
 				pokemon.maybeDisabled = true;
 			},
@@ -7123,9 +7125,7 @@ exports.BattleMovedex = {
 			onTrapPokemon: function (pokemon) {
 				pokemon.tryTrap();
 			},
-			onNegateImmunity: function (pokemon, type) {
-				if (type === 'Ground') return false;
-			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 			onDragOut: function (pokemon) {
 				this.add('-activate', pokemon, 'move: Ingrain');
 				return null;
@@ -8479,7 +8479,7 @@ exports.BattleMovedex = {
 			}
 			let randomMove = '';
 			if (moves.length) {
-				moves.sort(function (a, b) {return a.num - b.num;});
+				moves.sort((a, b) => a.num - b.num);
 				randomMove = moves[this.random(moves.length)].id;
 			}
 			if (!randomMove) {
@@ -9844,7 +9844,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -9922,7 +9922,7 @@ exports.BattleMovedex = {
 		priority: 1,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1, authentic: 1},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -10451,6 +10451,7 @@ exports.BattleMovedex = {
 			onBeforeSwitchOut: function (pokemon) {
 				this.debug('Pursuit start');
 				let sources = this.effectData.sources;
+				this.add('-activate', pokemon, 'move: Pursuit');
 				for (let i = 0; i < sources.length; i++) {
 					if (sources[i].moveThisTurn || sources[i].fainted) continue;
 					this.cancelMove(sources[i]);
@@ -10644,7 +10645,7 @@ exports.BattleMovedex = {
 			},
 			onFoeRedirectTargetPriority: 1,
 			onFoeRedirectTarget: function (target, source, source2, move) {
-				if (source.runImmunity('powder') && this.validTarget(this.effectData.target, source, move.target)) {
+				if (source.runStatusImmunity('powder') && this.validTarget(this.effectData.target, source, move.target)) {
 					this.debug("Rage Powder redirected target of move");
 					return this.effectData.target;
 				}
@@ -10873,15 +10874,8 @@ exports.BattleMovedex = {
 		onHit: function (target, source) {
 			if (source.template && source.template.num === 493) return false;
 			this.add('-start', source, 'typechange', '[from] move: Reflect Type', '[of] ' + target);
-			source.typesData = [];
-			for (let i = 0, l = target.typesData.length; i < l; i++) {
-				if (target.typesData[i].suppressed) continue;
-				source.typesData.push({
-					type: target.typesData[i].type,
-					suppressed: false,
-					isAdded: target.typesData[i].isAdded,
-				});
-			}
+			source.types = target.getTypes(true);
+			source.addedType = target.addedType;
 		},
 		secondary: false,
 		target: "normal",
@@ -11280,7 +11274,7 @@ exports.BattleMovedex = {
 		onHit: function (target, source) {
 			let oldAbility = source.setAbility(target.ability);
 			if (oldAbility) {
-				this.add('-ability', source, source.ability, '[from] move: Role Play', '[of] ' + target);
+				this.add('-ability', source, this.getAbility(source.ability).name, '[from] move: Role Play', '[of] ' + target);
 				return;
 			}
 			return false;
@@ -11375,30 +11369,7 @@ exports.BattleMovedex = {
 		},
 		effect: {
 			duration: 1,
-			onStart: function (pokemon) {
-				for (let i = 0, l = pokemon.typesData.length; i < l; i++) {
-					if (pokemon.typesData[i].type === 'Flying') {
-						pokemon.typesData[i].suppressed = true;
-						break;
-					}
-				}
-			},
-			onModifyPokemon: function (pokemon) {
-				for (let i = 0, l = pokemon.typesData.length; i < l; i++) {
-					if (pokemon.typesData[i].type === 'Flying') {
-						pokemon.typesData[i].suppressed = true;
-						break;
-					}
-				}
-			},
-			onEnd: function (pokemon) {
-				for (let i = 0, l = pokemon.typesData.length; i < l; i++) {
-					if (pokemon.typesData[i].type === 'Flying') {
-						pokemon.typesData[i].suppressed = false;
-						break;
-					}
-				}
-			},
+			// implemented in BattlePokemon#getTypes
 		},
 		secondary: false,
 		target: "self",
@@ -11723,7 +11694,7 @@ exports.BattleMovedex = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHit: function (target, source, move) {
+		onModifyMove: function (move, pokemon) {
 			if (this.isTerrain('')) return;
 			move.secondaries = [];
 			if (this.isTerrain('electricterrain')) {
@@ -12476,7 +12447,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -12624,9 +12595,7 @@ exports.BattleMovedex = {
 					this.add('-start', pokemon, 'Smack Down');
 				}
 			},
-			onNegateImmunity: function (pokemon, type) {
-				if (type === 'Ground') return false;
-			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 		},
 		secondary: false,
 		target: "normal",
@@ -13102,7 +13071,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -13441,7 +13410,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		onTryHit: function (target) {
-			if (!target.runImmunity('powder')) {
+			if (!target.runStatusImmunity('powder')) {
 				this.add('-immune', target, '[msg]');
 				return null;
 			}
@@ -14173,10 +14142,10 @@ exports.BattleMovedex = {
 		onEffectiveness: function (typeMod, type, move) {
 			if (move.type !== 'Ground') return;
 			let target = this.activeTarget;
-			// only the attack that grounds the target ignores effectiveness
-			// if called from a chat plugin, don't ignore effectiveness
-			if (!this.runEvent || !this.runEvent('NegateImmunity', target, 'Ground')) return;
-			if (!this.getImmunity('Ground', target)) return 0;
+			// ignore effectiveness if the target is Flying type and immune to Ground
+			if (!target.runImmunity('Ground')) {
+				if (target.hasType('Flying')) return 0;
+			}
 		},
 		volatileStatus: 'smackdown',
 		ignoreImmunity: {'Ground': true},
@@ -14198,7 +14167,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1, nonsky: 1},
 		isUnreleased: true,
 		onHit: function (target, source, move) {
-			target.addVolatile('trapped', source, move, 'trapper');
+			if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
 		},
 		secondary: false,
 		target: "allAdjacentFoes",
@@ -14575,14 +14544,10 @@ exports.BattleMovedex = {
 			if (myItem) {
 				target.setItem(myItem);
 				this.add('-item', target, myItem, '[from] move: Trick');
-			} else {
-				this.add('-enditem', target, yourItem, '[silent]');
 			}
 			if (yourItem) {
 				source.setItem(yourItem);
 				this.add('-item', source, yourItem, '[from] move: Trick');
-			} else {
-				this.add('-enditem', source, myItem, '[silent]');
 			}
 		},
 		secondary: false,
@@ -15625,7 +15590,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		volatileStatus: 'yawn',
 		onTryHit: function (target) {
-			if (target.status || !target.runImmunity('slp')) {
+			if (target.status || !target.runStatusImmunity('slp')) {
 				return false;
 			}
 		},
@@ -16610,7 +16575,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]skydrop');
 		},
 		onHit: function (target, source) {
-			this.add('c|%LChevy12|');
+			this.add('c|%LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
 			this.add('-end', target, 'Sky Drop');
 		},
 		effect: {

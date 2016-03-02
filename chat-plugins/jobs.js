@@ -65,8 +65,8 @@ let commands = {
 exports.commands = {
 	jobs: commands,
 	jobshelp: [
-		"/jobs add, [description], [optional reward] - Adds a new job to the list of jobs; requires % @ & ~.",
-		"/jobs delete, [id] - Deletes the specified job from the list of jobs; requires % @ & ~.",
+		"/jobs add [description], [optional reward] - Adds a new job to the list of jobs; requires % @ & ~.",
+		"/jobs delete [id] - Deletes the specified job from the list of jobs; requires % @ & ~.",
 		"/jobs list - views the list of jobs.",
 	],
 };

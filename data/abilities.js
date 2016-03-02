@@ -339,7 +339,6 @@ exports.BattleAbilities = {
 			if (target.isActive && move.effectType === 'Move' && move.category !== 'Status' && type !== '???' && !target.hasType(type)) {
 				if (!target.setType(type)) return false;
 				this.add('-start', target, 'typechange', type, '[from] Color Change');
-				target.update();
 			}
 		},
 		id: "colorchange",
@@ -475,9 +474,6 @@ exports.BattleAbilities = {
 			if (pokemon.hp <= pokemon.maxhp / 2) {
 				return this.chainModify(0.5);
 			}
-		},
-		onResidual: function (pokemon) {
-			pokemon.update();
 		},
 		id: "defeatist",
 		name: "Defeatist",
@@ -655,7 +651,7 @@ exports.BattleAbilities = {
 		desc: "30% chance a Pokemon making contact with this Pokemon will be poisoned, paralyzed, or fall asleep.",
 		shortDesc: "30% chance of poison/paralysis/sleep on others making contact with this Pokemon.",
 		onAfterDamage: function (damage, target, source, move) {
-			if (move && move.flags['contact'] && !source.status && source.runImmunity('powder')) {
+			if (move && move.flags['contact'] && !source.status && source.runStatusImmunity('powder')) {
 				let r = this.random(100);
 				if (r < 11) {
 					source.setStatus('slp', target);
@@ -1351,9 +1347,7 @@ exports.BattleAbilities = {
 	"levitate": {
 		desc: "This Pokemon is immune to Ground. Gravity, Ingrain, Smack Down, Thousand Arrows, and Iron Ball nullify the immunity.",
 		shortDesc: "This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it.",
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
-		},
+		// airborneness implemented in battle-engine.js:BattlePokemon#isGrounded
 		id: "levitate",
 		name: "Levitate",
 		rating: 3.5,
@@ -1931,7 +1925,6 @@ exports.BattleAbilities = {
 			randomTarget.lastItem = '';
 			let item = pokemon.getItem();
 			this.add('-item', pokemon, item, '[from] Pickup');
-			if (item.isBerry) pokemon.update();
 		},
 		id: "pickup",
 		name: "Pickup",

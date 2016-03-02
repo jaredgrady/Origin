@@ -3,13 +3,14 @@
 exports.BattleFormats = {
 	pokemon: {
 		effectType: 'Banlist',
+		ruleset: ['Sleep Clause Mod', 'Species Clause', 'Exact HP Mod', 'Cancel Mod'],
 		validateTeam: function (team, format) {
-			var problems = [];
+			let problems = [];
 			// ----------- legality line ------------------------------------------
 			if (!format || !format.banlistTable || !format.banlistTable['illegal']) return problems;
 			// everything after this line only happens if we're doing legality enforcement
-			var kyurems = 0;
-			for (var i = 0; i < team.length; i++) {
+			let kyurems = 0;
+			for (let i = 0; i < team.length; i++) {
 				if (team[i].species === 'Kyurem-White' || team[i].species === 'Kyurem-Black') {
 					if (kyurems > 0) {
 						problems.push('You cannot have more than one Kyurem-Black/Kyurem-White.');
@@ -21,17 +22,17 @@ exports.BattleFormats = {
 			return problems;
 		},
 		validateSet: function (set, format) {
-			var item = this.getItem(set.item);
-			var template = this.getTemplate(set.species);
-			var problems = [];
-			var totalEV = 0;
-			var allowCAP = !!(format && format.banlistTable && format.banlistTable['allowcap']);
+			let item = this.getItem(set.item);
+			let template = this.getTemplate(set.species);
+			let problems = [];
+			let totalEV = 0;
+			let allowCAP = !!(format && format.banlistTable && format.banlistTable['allowcap']);
 
 			if (set.species === set.name) delete set.name;
 			if (template.gen > this.gen) {
 				problems.push(set.species + ' does not exist in gen ' + this.gen + '.');
 			}
-			var ability = {};
+			let ability = {};
 			if (set.ability) {
 				ability = this.getAbility(set.ability);
 				if (ability.gen > this.gen) {
@@ -39,8 +40,8 @@ exports.BattleFormats = {
 				}
 			}
 			if (set.moves) {
-				for (var i = 0; i < set.moves.length; i++) {
-					var move = this.getMove(set.moves[i]);
+				for (let i = 0; i < set.moves.length; i++) {
+					let move = this.getMove(set.moves[i]);
 					if (move.gen > this.gen) {
 						problems.push(move.name + ' does not exist in gen ' + this.gen + '.');
 					} else if (!allowCAP && move.isNonstandard) {
@@ -69,7 +70,7 @@ exports.BattleFormats = {
 					problems.push(item.name + ' is not a real item.');
 				}
 			}
-			for (var k in set.evs) {
+			for (let k in set.evs) {
 				if (typeof set.evs[k] !== 'number' || set.evs[k] < 0) {
 					set.evs[k] = 0;
 				}
@@ -92,20 +93,20 @@ exports.BattleFormats = {
 			// "Undiscovered" egg group Pokemon caught in the wild in gen 6 must have at least 3 perfect IVs
 			if (set.ivs && this.gen >= 6 && ((template.species in {Xerneas:1, Yveltal:1, Zygarde:1}) ||
 				(format.requirePentagon && template.eggGroups.indexOf('Undiscovered') >= 0 && !template.evos.length))) {
-				var perfectIVs = 0;
-				for (var i in set.ivs) {
+				let perfectIVs = 0;
+				for (let i in set.ivs) {
 					if (set.ivs[i] >= 31) perfectIVs++;
 				}
 				if (perfectIVs < 3) problems.push((set.name || set.species) + " has less than three perfect IVs.");
 			}
 
 			// limit one of each move
-			var moves = [];
+			let moves = [];
 			if (set.moves) {
-				var hasMove = {};
-				for (var i = 0; i < set.moves.length; i++) {
-					var move = this.getMove(set.moves[i]);
-					var moveid = move.id;
+				let hasMove = {};
+				for (let i = 0; i < set.moves.length; i++) {
+					let move = this.getMove(set.moves[i]);
+					let moveid = move.id;
 					if (hasMove[moveid]) continue;
 					hasMove[moveid] = true;
 					moves.push(set.moves[i]);
@@ -229,8 +230,8 @@ exports.BattleFormats = {
 				return;
 			}
 			if (status.id === 'slp') {
-				for (var i = 0; i < target.side.pokemon.length; i++) {
-					var pokemon = target.side.pokemon[i];
+				for (let i = 0; i < target.side.pokemon.length; i++) {
+					let pokemon = target.side.pokemon[i];
 					if (pokemon.hp && pokemon.status === 'slp') {
 						if (!pokemon.statusData.source || pokemon.statusData.source.side !== pokemon.side) {
 							this.add('-message', 'Sleep Clause Mod activated.');

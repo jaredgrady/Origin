@@ -3628,8 +3628,9 @@ exports.BattleAbilities = {
 				} else {
 					let damage = ~~(foeactive[i].maxhp * 0.15);
 					this.damage(foeactive[i].maxhp * 0.15, foeactive[i], pokemon, null, true);
-					if (foeactive[i].hp <= damage) {
+					if (foeactive[i].hp <= 0) {
 						foeactive[i].faint(pokemon, "Cursed Aura");
+						this.faintMessages();
 					}
 				}
 			}
@@ -3816,6 +3817,14 @@ exports.BattleAbilities = {
 		onAllyTryHitSide: function (target, source, move) {
 			if (move.flags['sound']) {
 				this.add('-immune', this.effectData.target, '[msg]', '[from] ability: feelsgd');
+			}
+		},
+		onResidual: function (pokemon) {
+			if (this.isWeather(['sunnyday', 'desolateland']) || this.random(2) === 0) {
+				if (pokemon.hp && !pokemon.item && this.getItem(pokemon.lastItem).isBerry) {
+					pokemon.setItem(pokemon.lastItem);
+					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Harvest');
+				}
 			}
 		},
 		id: "feelsgd",

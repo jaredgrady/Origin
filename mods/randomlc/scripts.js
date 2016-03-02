@@ -2,11 +2,11 @@
 
 exports.BattleScripts = {
 	randomLCTeam: function (side) {
-		var keys = [];
-		var pokemonLeft = 0;
-		var pokemon = [];
-		for (var i in this.data.FormatsData) {
-			var template = this.getTemplate(i);
+		let keys = [];
+		let pokemonLeft = 0;
+		let pokemon = [];
+		for (let i in this.data.FormatsData) {
+			let template = this.getTemplate(i);
 			//!this.data.FormatsData[i].isNonstandard && !template.evos.length
 			if (this.data.FormatsData[i].randomBattleMoves && (template.forme.substr(0, 4) !== 'Mega')) {
 				keys.push(i);
@@ -15,22 +15,22 @@ exports.BattleScripts = {
 		keys = keys.randomize();
 
 		// PotD stuff
-		var potd = {};
+		let potd = {};
 		if ('Rule:potd' in this.getBanlistTable(this.getFormat())) {
 			potd = this.getTemplate(Config.potd);
 		}
 
-		var typeCount = {};
-		var typeComboCount = {};
-		var baseFormes = {};
-		var uberCount = 0;
-		var nuCount = 0;
-		var megaCount = 0;
+		let typeCount = {};
+		let typeComboCount = {};
+		let baseFormes = {};
+		let uberCount = 0;
+		let nuCount = 0;
+		let megaCount = 0;
 
-		for (var i = 0; i < keys.length && pokemonLeft < 6; i++) {
-			var template = this.getTemplate(keys[i]);
+		for (let i = 0; i < keys.length && pokemonLeft < 6; i++) {
+			let template = this.getTemplate(keys[i]);
 			if (!template || !template.name || !template.types) continue;
-			var tier = template.tier;
+			let tier = template.tier;
 			// This tries to limit the amount of Ubers and NUs on one team to promote "fun":
 			// LC Pokemon have a hard limit in place at 2; NFEs/NUs/Ubers are also limited to 2 but have a 20% chance of being added anyway.
 			// LC/NFE/NU Pokemon all share a counter (so having one of each would make the counter 3), while Ubers have a counter of their own.
@@ -47,9 +47,9 @@ exports.BattleScripts = {
 			if (template.species === 'Pichu-Spiky-eared') continue;
 
 			// Limit 2 of any type
-			var types = template.types;
-			var skip = false;
-			for (var t = 0; t < types.length; t++) {
+			let types = template.types;
+			let skip = false;
+			for (let t = 0; t < types.length; t++) {
 				if (typeCount[types[t]] > 1 && Math.random() * 5 > 1) {
 					skip = true;
 					break;
@@ -71,13 +71,13 @@ exports.BattleScripts = {
 				}
 			}
 
-			var set = this.randomSet(template, i, megaCount);
+			let set = this.randomSet(template, i, megaCount);
 
 			// Illusion shouldn't be on the last pokemon of the team
 			if (set.ability === 'Illusion' && pokemonLeft > 4) continue;
 
 			// Limit 1 of any type combination
-			var typeCombo = types.join();
+			let typeCombo = types.join();
 			if (set.ability === 'Drought' || set.ability === 'Drizzle') {
 				// Drought and Drizzle don't count towards the type combo limit
 				typeCombo = set.ability;
@@ -97,7 +97,7 @@ exports.BattleScripts = {
 
 			pokemonLeft++;
 			// Now that our Pokemon has passed all checks, we can increment the type counter
-			for (var t = 0; t < types.length; t++) {
+			for (let t = 0; t < types.length; t++) {
 				if (types[t] in typeCount) {
 					typeCount[types[t]]++;
 				} else {
