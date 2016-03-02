@@ -1158,7 +1158,6 @@ class User {
 
 	onDisconnect(connection) {
 	let name = 'Guest ' + this.guestNum;
-	console.log(name);
 		let userid = toId(name);
 		if (this.registered && this.userid !== userid) {
 			let rooms = Object.keys(this.roomCount).filter(function (room) {
