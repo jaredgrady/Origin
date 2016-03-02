@@ -1157,7 +1157,7 @@ class User {
 	}
 
 	onDisconnect(connection) {
-	let name = 'Guest ' + this.guestNum;
+		let name = 'Guest ' + this.guestNum;
 		let userid = toId(name);
 		if (this.registered && this.userid !== userid) {
 			let rooms = Object.keys(this.roomCount).filter(function (room) {
@@ -1184,7 +1184,7 @@ class User {
 				break;
 			}
 		}
-	
+
 		if (!this.connections.length) {
 			// cleanup
 			for (let i in this.roomCount) {
