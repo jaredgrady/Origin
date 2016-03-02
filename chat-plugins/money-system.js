@@ -232,11 +232,12 @@ exports.commands = {
 		logMoney(user.name + " reset the money of " + target + ".");
 	},
 	resetmoneyhelp: ["/resetmoney [user] - Reset user's money to zero."],
-
+	
+	forcetransfer: 'transfermoney',
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
-	transfermoney: function (target, room, user) {
+	transfermoney: function (target, room, user, cmd) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfermoney');
 
 		let parts = target.split(',');
@@ -248,6 +249,7 @@ exports.commands = {
 		if (username.length > 19) return this.sendReply("Username cannot be longer than 19 characters.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (amount > Db('money').get(user.userid, 0)) return this.errorReply("You cannot transfer more money than what you have.");
+		if (cmd !== 'forcetransfer' && !username.registered) return this.errorReply("WARNING: The user you are trying to transfer to is unregistered. If you want to transfer anyway use /forcetransfer [user]");
 
 		Db('money')
 			.set(user.userid, Db('money').get(user.userid) - amount)
