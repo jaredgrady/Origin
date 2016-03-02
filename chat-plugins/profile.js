@@ -293,7 +293,7 @@ exports.commands = {
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
-			userid = toId(parts[1]);
+			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
@@ -301,7 +301,7 @@ exports.commands = {
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			if (typeof badges === 'undefined' || badges === null) badges = [];
-			badge = parts[2];
+			badge = parts[2].trim();
 			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.sendReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
