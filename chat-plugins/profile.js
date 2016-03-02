@@ -318,7 +318,8 @@ exports.commands = {
 			let data2 = Object.keys(data);
 			let output = '<table> <tr>';
 			for (let i = 0; i < data2.length; i++) {
-				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td> </tr> <tr>';
+				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td>';
+				if (i % 3 == 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
