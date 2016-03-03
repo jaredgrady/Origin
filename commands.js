@@ -1047,9 +1047,6 @@ let commands = exports.commands = {
 				this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 			}
 		}
-		if (targetUser.confirmed && room.chatRoomData && !room.isPrivate) {
-			Monitor.log("[CrisisMonitor] Confirmed user " + targetUser.name + (targetUser.confirmed !== targetUser.userid ? " (" + targetUser.confirmed + ")" : "") + " was roombanned from " + room.id + " by " + user.name + ", and should probably be demoted.");
-		}
 		let lastid = targetUser.getLastId();
 		this.add('|unlink|roomhide|' + lastid);
 		if (lastid !== toId(this.inputUsername)) this.add('|unlink|roomhide|' + toId(this.inputUsername));
