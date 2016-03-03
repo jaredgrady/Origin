@@ -216,7 +216,7 @@ Profile.prototype.checkBadges = function () {
 	if (typeof badges === 'undefined' || badges === null) badges = [];
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
-	if (Db('ontime').get(this.user.userid) > 99000000000000) badges.push('Nolife Master');
+	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
 	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
 	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
 	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
@@ -293,7 +293,7 @@ exports.commands = {
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
-			userid = toId(parts[1]);
+			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
@@ -301,7 +301,7 @@ exports.commands = {
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			if (typeof badges === 'undefined' || badges === null) badges = [];
-			badge = parts[2];
+			badge = parts[2].trim();
 			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.sendReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
@@ -318,7 +318,8 @@ exports.commands = {
 			let data2 = Object.keys(data);
 			let output = '<table> <tr>';
 			for (let i = 0; i < data2.length; i++) {
-				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td> </tr> <tr>';
+				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td>';
+				if (i % 3 === 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
