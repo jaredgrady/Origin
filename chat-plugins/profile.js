@@ -284,6 +284,7 @@ exports.commands = {
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 		}
 	},
+	badge: 'badges',
 	badges: function (target, room, user) {
 		let parts = target.split(',');
 		let cmd = parts[0].trim().toLowerCase();
@@ -313,7 +314,7 @@ exports.commands = {
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
-			if (!this.can('ban')) return false;
+			if (!this.canBroadcast()) return;
 			let data = Db('badgeIcons').object();
 			let data2 = Object.keys(data);
 			let output = '<table> <tr>';
