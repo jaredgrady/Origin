@@ -298,12 +298,12 @@ exports.commands = {
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
+			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
+			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			if (typeof badges === 'undefined' || badges === null) badges = [];
 			badge = parts[2].trim();
-			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.sendReply('This badge does not exist, please check /badges list');
+			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.errorReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
 			uniqueBadges = badges.filter(function (elem, pos) {
@@ -331,11 +331,11 @@ exports.commands = {
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
+			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
+			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
-			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.sendReply('This badge does not exist, please check /badges list');
+			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.errorReply('This badge does not exist, please check /badges list');
 			let index = badges.indexOf(badge);
 			if (index !== -1) {
 				badges.splice(index, 1);
