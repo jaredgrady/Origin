@@ -479,10 +479,24 @@ exports.commands = {
 		});
 		if (!keys.length) return this.sendReplyBox("Dice ladder is empty.");
 		keys.sort(function (a, b) { return b.dicewins - a.dicewins; });
-		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 10), 'dicewins'));
+		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 100), 'dicewins'));
 	},
 	diceladderhelp: 'dicegameladderhelp',
 	dicegameladderhelp: ["/diceladder - Shows the dice ladder."],
+
+	dicewins: 'dicegamewins',
+	dicegamewins: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		if (!target) target = user.name;
+
+		const targetId = toId(target);
+		if (!targetId) return this.parse('/help dicewins');
+
+		const dicewins = Db('dicewins').get(toId(target), 0);
+		this.sendReplyBox(Tools.escapeHTML(target) + " has " + dicewins + " dicewins.");
+	},
+	dicewinshelp: 'dicegamewinshelp',
+	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],
 
 	resetdicewins: function (target, room, user) {
 		if (!this.can('declare', null, room)) return false;
