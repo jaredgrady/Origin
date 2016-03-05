@@ -471,7 +471,8 @@ exports.commands = {
 	},
 	enddicehelp: ["/enddice - Ends a dice game. Requires +"],
 
-	diceladder: function (target, room, user) {
+	diceladder: 'dicegameladder',
+	dicegameladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		let keys = Object.keys(Db('dicewins').object()).map(function (name) {
 			return {name: name, dicewins: Db('dicewins').get(name)};
@@ -480,7 +481,8 @@ exports.commands = {
 		keys.sort(function (a, b) { return b.dicewins - a.dicewins; });
 		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 10), 'dicewins'));
 	},
-	diceladderhelp: ["/diceladder - Shows the dice ladder."],
+	diceladderhelp: 'dicegameladderhelp',
+	dicegameladderhelp: ["/diceladder - Shows the dice ladder."],
 
 	resetdicewins: function (target, room, user) {
 		if (!this.can('declare', null, room)) return false;
