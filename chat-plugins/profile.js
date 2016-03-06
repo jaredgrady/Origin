@@ -294,9 +294,10 @@ exports.commands = {
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.sendReply("You didn't specify a user.");
+			if (!userid) return this.errorReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
 			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
@@ -327,9 +328,10 @@ exports.commands = {
 			break;
 		case 'take':
 			if (!this.can('ban')) return false;
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.sendReply("You didn't specify a user.");
+			if (!userid) return this.errorReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
 			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
