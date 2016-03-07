@@ -231,9 +231,3 @@ Origin Server - Mew
 - Move: Tri Spikes - Puts up 3 layers of spikes
 - Movepool: Transform, Psystrike, Recover
 - Notes: Is a godly reliable stop to all the disgusting set-up sweepers in this tier.
-
-PrincessHigh - Gardevoir-Mega
-- Ability: Trace upon entry ; When Mega Evolved: Pixie Shield - puts up 1 layer of spikes and raises special attack, special defense, and speed by 2 stages
-- Move: Pixie Cannon - 180 BP Special Fairy move, 75% chance to paralyze, SpD/Speed/Def is lowered by 1 stage, 25% recoil
-- Movepool: Psyshock, Thunderbolt, Recover
-- Notes: It's pretty broken and can easily sweep teams, be sure to save a reliable check to this pokemon (like Origin, ArkenCiel, or AuraStormLucario).
