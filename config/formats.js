@@ -804,10 +804,6 @@ exports.Formats = [
 					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
-				if (name === 'princesshigh' && pokemon.getAbility().id === 'pixilate') {
-					pokemon.setAbility('pixieshield');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 			}
 		},
 
