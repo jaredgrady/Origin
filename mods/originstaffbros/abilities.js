@@ -4275,18 +4275,6 @@ exports.BattleAbilities = {
 		name: "Counter-Meta",
 	},
 
-	// Princess High
-	"pixieshield": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Pixie Shield');
-			this.useMove("spikes", pokemon);
-			this.boost({spa:2, spe:2, spd:2});
-		},
-		id: "pixieshield",
-		name: "Pixie Shield",
-	},
-
 	/* permalocked
 	// DeathlyPlays
 	"seaoflieks": {

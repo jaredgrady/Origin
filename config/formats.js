@@ -804,10 +804,6 @@ exports.Formats = [
 					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
 				}
-				if (name === 'princesshigh' && pokemon.getAbility().id === 'pixilate') {
-					pokemon.setAbility('pixieshield');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 			}
 		},
 
@@ -858,10 +854,6 @@ exports.Formats = [
 					this.add('-ability', pokemon, pokemon.ability);
 					pokemon.types = ["Grass", "Flying"];
 					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
-				}
-				if (name === 'princesshigh' && pokemon.getAbility().id !== 'pixieshield') {
-					// pokemon.setAbility('pixieshield');
-					// this.add('-ability', pokemon, pokemon.ability);
 				}
 			} else {
 				pokemon.canMegaEvo = this.canMegaEvo(pokemon); // Bypass one mega limit.
@@ -1015,9 +1007,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'princesshigh') {
-				this.add('c|Princess High|You bitch');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1153,9 +1142,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'princesshigh') {
-				this.add('c|Princess High|Dammit...');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');
@@ -1290,9 +1276,6 @@ exports.Formats = [
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
-			if (name === 'princesshigh') {
-				this.add('c|Princess High|I\'m out this bitch');
-			}
 			/* permalocked
 			if (name === 'deathlyplays') {
 				this.add('c|Deathly Plays|');

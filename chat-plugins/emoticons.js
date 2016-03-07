@@ -247,7 +247,7 @@ exports.commands = {
 	toggleemote: 'toggleemoticons',
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
-		if (!this.can('declare', null, room)) return this.errorReply("/toggleemotes - Access denied.");
+		if (!this.can('declare', null, room)) return this.errorReply("/toggleemoticons - Access denied.");
 		if (!room.disableEmoticons) {
 			room.disableEmoticons = true;
 			room.chatRoomData.disableEmoticons = true;

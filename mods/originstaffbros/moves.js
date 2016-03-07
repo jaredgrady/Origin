@@ -17121,40 +17121,6 @@ exports.BattleMovedex = {
 		type: "Ground",
 	},
 
-	// Princess High
-	"pixiecannon": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 180,
-		category: "Special",
-		id: "pixiecannon",
-		name: "Pixie Cannon",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]moonblast');
-			this.add("c|+PrincessHigh|Prepare to die");
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]moonblast');
-		},
-		recoil: [1, 4],
-		self: {
-			boosts: {
-				spd: -1,
-				spe: -1,
-				def: -1,
-			},
-		},
-		secondary: {
-			chance: 75,
-			status: 'par',
-		},
-		target: "normal",
-		type: "Fairy",
-	},
-
 	/* permalocked
 	// DeathlyPlays
 	"aquasubscribe": {
