@@ -3,6 +3,7 @@
 let color = require('../config/color');
 let moment = require('moment');
 let geoip = {};
+let badgeicons = require('./badgeicons');
 
 try {
 	geoip = require('geoip-ultralight');
@@ -178,7 +179,6 @@ Profile.prototype.title = function () {
 
 Profile.prototype.badges = function () {
 	let badges = Db('badgesDB').get(toId(toId(this.user)));
-	//let css = 'border:none;background:none;padding:0;float:right;position:relative;right:60%';
 	let css = 'border:none;background:none;padding:0;';
 	if (typeof badges !== 'undefined' && badges !== null) {
 		let output = ' <table style="' + css +  '"> <tr>';
@@ -186,7 +186,8 @@ Profile.prototype.badges = function () {
 			if (i !== 0 && i % 8 === 0) {
 				output += '</tr> <tr>';
 			}
-			output += '<td>' + badgeImg(Db('badgeIcons').get(badges[i]), badges[i]) + '</td>';
+			console.log(badgeicons[badges[i]]);
+			output += '<td>' + badgeImg(badgeicons[badges[i]], badges[i]) + '</td>';
 		}
 		output += '</tr> </table>';
 		return output;
@@ -302,21 +303,21 @@ exports.commands = {
 			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
-			if (typeof badges === 'undefined' || badges === null) badges = [];
 			badge = parts[2].trim();
-			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.errorReply('This badge does not exist, please check /badges list');
+<
+			if (!badgeicons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
 			uniqueBadges = badges.filter(function (elem, pos) {
 				return badges.indexOf(elem) === pos;
 			});
 			Db('badgesDB').set(toId(userid), uniqueBadges);
-			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + Db('badgeIcons').get(badge) + '" width="16" height="16">');
+			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeicons[badge] + '" width="16" height="16">');
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
 			if (!this.canBroadcast()) return;
-			let data = Db('badgeIcons').object();
+			let data = badgeicons;
 			let data2 = Object.keys(data);
 			let output = '<table> <tr>';
 			for (let i = 0; i < data2.length; i++) {
