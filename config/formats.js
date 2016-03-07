@@ -1300,7 +1300,7 @@ exports.Formats = [
 		},
 
 		onModifyPokemon: function (pokemon) {
-			let name = toId(pokemon.name);
+			// let name = toId(pokemon.name);
 			// Enforce choice item locking on custom moves.
 			let moves = pokemon.moveset;
 			if (pokemon.getItem().isChoice && pokemon.lastMove === moves[3].id) {
