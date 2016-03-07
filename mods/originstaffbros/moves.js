@@ -16345,7 +16345,7 @@ exports.BattleMovedex = {
 		onMoveFail: function (target, source, move) {
 			this.attrLastMove('[anim]rapidspin');
 		},
-		secondary:
+		secondary: {
 			chance: 70,
 			self: {
 				boosts: {
