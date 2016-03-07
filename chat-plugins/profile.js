@@ -304,7 +304,7 @@ exports.commands = {
 			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
-<
+
 			if (!badgeicons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
