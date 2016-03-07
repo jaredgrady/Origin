@@ -143,7 +143,7 @@ function handleBoughtItem(item, user, cost) {
 	} else if (item === 'room' || item === 'leagueroom' || item === 'avatar') {
 		if (item === 'avatar') {
 			user.sendAvatar = true;
-			this.sendReply("You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.");
+			this.sendReply("|raw|<div class='brodcast-green'>You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.</div>");
 		} else {
 			user.canSendRoomName = true;
 			this.sendReply("You have purchased a room, use /sendroomname [room name you want] to let the staff know what your room name you want.");
