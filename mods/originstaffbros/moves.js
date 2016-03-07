@@ -16346,7 +16346,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]rapidspin');
 		},
 		secondary:
-			chance: 60,
+			chance: 70,
 			self: {
 				boosts: {
 					def: 1,
