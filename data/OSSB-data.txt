@@ -102,7 +102,7 @@ fender - Gible
 
 %Alpha Ninja - Slowbro-Mega
 - Ability: Mega Poison - Poison Heal + Poisons on entry + moves never miss
-- Move: Beyblade Spin - 90 BP special Water type, removes hazards from player's side, +1 priority, raises special attack, special defense, and defense by 1 stage.
+- Move: Beyblade Spin - 90 BP special Water type, removes hazards from player's side, +1 priority, 70% chance to raise defense, special attack, and special defense by 1 stage.
 - Movepool: Psystrike, Blizzard, Slack Off
 - Notes: Be VERY afraid.
 

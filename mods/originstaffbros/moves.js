@@ -16338,11 +16338,6 @@ exports.BattleMovedex = {
 					pokemon.removeVolatile('partiallytrapped');
 				}
 			},
-			boosts: {
-				def: 1,
-				spa: 1,
-				spd: 1,
-			},
 		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]rapidspin');
@@ -16350,7 +16345,16 @@ exports.BattleMovedex = {
 		onMoveFail: function (target, source, move) {
 			this.attrLastMove('[anim]rapidspin');
 		},
-		secondary: false,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					def: 1,
+					spa: 1,
+					spd: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Water",
 	},
