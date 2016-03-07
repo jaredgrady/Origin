@@ -178,7 +178,8 @@ Profile.prototype.title = function () {
 
 Profile.prototype.badges = function () {
 	let badges = Db('badgesDB').get(toId(toId(this.user)));
-	let css = 'border:none;background:none;padding:0;float:right;position:relative;right:60%';
+	//let css = 'border:none;background:none;padding:0;float:right;position:relative;right:60%';
+	let css = 'border:none;background:none;padding:0;';
 	if (typeof badges !== 'undefined' && badges !== null) {
 		let output = ' <table style="' + css +  '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
@@ -196,12 +197,11 @@ Profile.prototype.badges = function () {
 Profile.prototype.show = function (callback) {
 	this.checkBadges();
 	let userid = toId(this.username);
-	return this.buttonAvatar() + this.badges() +
+	return '<div style="float: left; width: 75%;">' + this.buttonAvatar() +
 		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.seen(Db('seen').get(userid)) +
-		'<br clear="all">';
+		SPACE + this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };
 
 /**
@@ -216,7 +216,7 @@ Profile.prototype.checkBadges = function () {
 	if (typeof badges === 'undefined' || badges === null) badges = [];
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
-	if (Db('ontime').get(this.user.userid) > 99000000000000) badges.push('Nolife Master');
+	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
 	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
 	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
 	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
@@ -284,6 +284,7 @@ exports.commands = {
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
 		}
 	},
+	badge: 'badges',
 	badges: function (target, room, user) {
 		let parts = target.split(',');
 		let cmd = parts[0].trim().toLowerCase();
@@ -293,16 +294,17 @@ exports.commands = {
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
-			userid = toId(parts[1]);
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
+			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.sendReply("You didn't specify a user.");
+			if (!userid) return this.errorReply("You didn't specify a user.");
 			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
+			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
+			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			if (typeof badges === 'undefined' || badges === null) badges = [];
-			badge = parts[2];
-			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.sendReply('This badge does not exist, please check /badges list');
+			badge = parts[2].trim();
+			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.errorReply('This badge does not exist, please check /badges list');
 			badges.push(badge);
 			let uniqueBadges = [];
 			uniqueBadges = badges.filter(function (elem, pos) {
@@ -313,18 +315,38 @@ exports.commands = {
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
-			if (!this.can('ban')) return false;
+			if (!this.canBroadcast()) return;
 			let data = Db('badgeIcons').object();
 			let data2 = Object.keys(data);
 			let output = '<table> <tr>';
 			for (let i = 0; i < data2.length; i++) {
-				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td> </tr> <tr>';
+				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td>';
+				if (i % 3 === 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
 			break;
+		case 'take':
+			if (!this.can('ban')) return false;
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
+			userid = toId(parts[1].trim());
+			targetUser = Users.getExact(userid);
+			if (!userid) return this.errorReply("You didn't specify a user.");
+			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
+			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
+			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
+			badges = Db('badgesDB').get(userid);
+			badge = parts[2].trim();
+			if (typeof Db('badgeIcons').get(badge) === 'undefined' || Db('badgeIcons').get(badge) === null) return this.errorReply('This badge does not exist, please check /badges list');
+			let index = badges.indexOf(badge);
+			if (index !== -1) {
+				badges.splice(index, 1);
+			}
+			Db('badges').set(toId(userid), badges);
+			this.sendReply("Badge taken.");
+			break;
 		default:
-			return this.sendReply("Invalid command. Valid commands are `/badges list` and `/badges set, user, badgeName`.");
+			return this.sendReply("Invalid command. Valid commands are `/badges list`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 		}
 	},
 	profilehelp: ["/profile - Shows information regarding user's name, group, money, and when they were last seen."],

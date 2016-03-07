@@ -190,8 +190,6 @@
 /***********************
 * Donation Benefit CSS *
 ***********************/
-/* CUSTOM PM */
-/*Float*/
 .pm-window-masterfloat h3 {
   background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
   background-position: 225px -8px !important;
@@ -1879,13 +1877,6 @@
   color: #62358E !important; }
 
 /*hayleysworld~end*/
-/* CUSTOM PM ~end */
-/* Symbol Color */
-#monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
-  color: #0D00BF; }
-
-/* Symbol color ~end */
-/* Icons */
 #lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
 
@@ -2027,7 +2018,11 @@
 #lobby-userlist-user-01ntg, #monotype-userlist-user-01ntg, #casino-userlist-user-01ntg {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/w5laVDX.gif") right no-repeat; }
 
-/* Icons ~end */
+/* Symbol Color */
+#monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
+  color: #0D00BF; }
+
+/* Symbol color ~end */
 /* Room Icon */
 #tournaments-userlist-users {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat; }
@@ -2823,9 +2818,6 @@ a.subtle, a.subtle:hover {
 /******************
 * Ladder CSS ~end *
 ******************/
-/******************
-* Teambuilder CSS *
-******************/
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
@@ -3003,12 +2995,6 @@ a.subtle, a.subtle:hover {
   color: #11484F;
   text-shadow: 0px 0px 2px #96BFB8; }
 
-/***********************
-* Teambuilder CSS ~end *
-***********************/
-/*************
-* Battle CSS *
-*************/
 .ps-room.ps-room-opaque {
   background: rgba(51, 98, 81, 0.6); }
 
@@ -3193,9 +3179,6 @@ a.subtle, a.subtle:hover {
 #tooltipwrapper .tooltip p.section {
   border-top: 1px solid #11484F; }
 
-/******************
-* Battle CSS ~end *
-******************/
 /* Extra Dark */
 .dark .chat-log a, .dark .pm-log a, .dark .battle-log a {
   color: #0000EE; }

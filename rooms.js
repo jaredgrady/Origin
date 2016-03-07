@@ -422,7 +422,7 @@ let GlobalRoom = (() => {
 		})();
 
 		// init users
-		this.users = {};
+		this.users = Object.create(null);
 		this.userCount = 0; // cache of `Object.size(this.users)`
 		this.maxUsers = 0;
 		this.maxUsersDate = 0;
@@ -589,7 +589,8 @@ let GlobalRoom = (() => {
 		let searchRange = 100, elapsed = Date.now() - Math.min(search1.time, search2.time);
 		if (formatid === 'ou' || formatid === 'oucurrent' || formatid === 'randombattle') searchRange = 50;
 		searchRange += elapsed / 300; // +1 every .3 seconds
-		if (searchRange > 300) searchRange = 300;
+		if (searchRange > 300) searchRange = 300 + (searchRange - 300) / 10; // +1 every 3 sec after 300
+		if (searchRange > 600) searchRange = 600;
 		if (Math.abs(search1.rating - search2.rating) > searchRange) return false;
 
 		user1.lastMatch = user2.userid;
@@ -922,15 +923,17 @@ let BattleRoom = (() => {
 		// Check if the battle was rated to update the ladder, return its response, and log the battle.
 		if (this.rated) {
 			this.rated = false;
+			let p1 = this.battle.p1;
+			let p2 = this.battle.p2;
 
-			if (winnerid === this.p1.userid) {
+			if (winnerid === p1.userid) {
 				p1score = 1;
-			} else if (winnerid === this.p2.userid) {
+			} else if (winnerid === p2.userid) {
 				p1score = 0;
 			}
 
-			let p1name = this.p1.name;
-			let p2name = this.p2.name;
+			let p1name = p1.name;
+			let p2name = p2.name;
 
 			//update.updates.push('[DEBUG] uri: ' + Config.loginserver + 'action.php?act=ladderupdate&serverid=' + Config.serverid + '&p1=' + encodeURIComponent(p1) + '&p2=' + encodeURIComponent(p2) + '&score=' + p1score + '&format=' + toId(rated.format) + '&servertoken=[token]');
 

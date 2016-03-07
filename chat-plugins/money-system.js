@@ -233,10 +233,11 @@ exports.commands = {
 	},
 	resetmoneyhelp: ["/resetmoney [user] - Reset user's money to zero."],
 
+	forcetransfer: 'transfermoney',
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
-	transfermoney: function (target, room, user) {
+	transfermoney: function (target, room, user, cmd) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfermoney');
 
 		let parts = target.split(',');
@@ -248,6 +249,8 @@ exports.commands = {
 		if (username.length > 19) return this.sendReply("Username cannot be longer than 19 characters.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (amount > Db('money').get(user.userid, 0)) return this.errorReply("You cannot transfer more money than what you have.");
+		if (!Users.get(username)) return this.errorReply('The target user could not be found');
+		if (!Users.get(username).registered && cmd !== 'forcetransfer') return this.errorReply("WARNING: The user you are trying to transfer to is unregistered. If you want to transfer anyway use /forcetransfer [user], [amount]");
 
 		Db('money')
 			.set(user.userid, Db('money').get(user.userid) - amount)
@@ -452,6 +455,7 @@ exports.commands = {
 		output += "<font color=#24678d><b>" + winner + "</b></font> has won <font color=#24678d><b>" + room.dice.bet + "</b></font>" + currencyName(room.dice.bet) + ".<br>Better luck next time " + room.dice[p1Number < p2Number ? 'p1' : 'p2'] + "!</div>";
 		room.addRaw(output);
 		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
+		Db('dicewins').set(winner, Db('dicewins').get(winner, 0) + 1);
 		delete room.dice;
 	},
 	joindicehelp: ["/joindice - Joins a dice game."],
@@ -466,6 +470,48 @@ exports.commands = {
 		room.addRaw("<b>" + user.name + " ended the dice game.");
 	},
 	enddicehelp: ["/enddice - Ends a dice game. Requires +"],
+
+	diceladder: 'dicegameladder',
+	dicegameladder: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		let keys = Object.keys(Db('dicewins').object()).map(function (name) {
+			return {name: name, dicewins: Db('dicewins').get(name)};
+		});
+		if (!keys.length) return this.sendReplyBox("Dice ladder is empty.");
+		keys.sort(function (a, b) { return b.dicewins - a.dicewins; });
+		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 100), 'dicewins'));
+	},
+	diceladderhelp: 'dicegameladderhelp',
+	dicegameladderhelp: ["/diceladder - Shows the dice ladder."],
+
+	dicewins: 'dicegamewins',
+	dicegamewins: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		if (!target) target = user.name;
+
+		const targetId = toId(target);
+		if (!targetId) return this.parse('/help dicewins');
+
+		const dicewins = Db('dicewins').get(toId(target), 0);
+		this.sendReplyBox(Tools.escapeHTML(target) + " has " + dicewins + " dicewins.");
+	},
+	dicewinshelp: 'dicegamewinshelp',
+	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],
+
+	resetdicewins: function (target, room, user) {
+		if (!this.can('declare', null, room)) return false;
+		let wins = Db('dicewins').object();
+		Object.keys(wins)
+		.filter(function (name) {
+			return Db('dicewins').get(name);
+		})
+		.forEach(function (name) {
+			delete wins[name];
+		});
+		Db.save();
+		this.sendReply("The dice wins ladder has been reset.");
+	},
+	resetdicewinshelp: ["/resetdicewins - Resets the dice wins ladder."],
 
 	registershop: function (target, room, user) {
 		if (!user.can('declare')) return this.errorReply("/registershop - Access Denied");

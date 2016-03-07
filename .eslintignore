@@ -3,6 +3,3 @@ logs/**
 config/color.js
 chat-plugins/eztc.js
 chat-plugins/nightclub.js
-mods/gen3/scripts.js
-mods/gen4/scripts.js
-mods/megatier/rulesets.js
