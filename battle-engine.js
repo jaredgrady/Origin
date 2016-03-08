@@ -276,7 +276,8 @@ BattlePokemon = (() => {
 		}
 
 		this.maxhp = Math.floor(Math.floor(2 * this.template.baseStats['hp'] + this.set.ivs['hp'] + Math.floor(this.set.evs['hp'] / 4) + 100) * this.level / 100 + 10);
-		if (this.template.baseStats['hp'] === 1) this.maxhp = 1; // shedinja
+		if (this.template.maxHP) this.maxhp = this.template.maxHP; // Shedinja
+
 		this.hp = this.hp || this.maxhp;
 
 		this.isStale = 0;
@@ -1669,13 +1670,7 @@ Battle = (() => {
 		this.faintQueue = [];
 		this.messageLog = [];
 
-		// use a random initial seed (64-bit, [high -> low])
-		this.startingSeed = this.seed = [
-			Math.floor(Math.random() * 0x10000),
-			Math.floor(Math.random() * 0x10000),
-			Math.floor(Math.random() * 0x10000),
-			Math.floor(Math.random() * 0x10000),
-		];
+		this.startingSeed = this.generateSeed();
 	};
 
 	Battle.prototype.turn = 0;
@@ -1705,6 +1700,17 @@ Battle = (() => {
 
 	Battle.prototype.toString = function () {
 		return 'Battle: ' + this.format;
+	};
+
+	Battle.prototype.generateSeed = function () {
+		// use a random initial seed (64-bit, [high -> low])
+		this.seed = [
+			Math.floor(Math.random() * 0x10000),
+			Math.floor(Math.random() * 0x10000),
+			Math.floor(Math.random() * 0x10000),
+			Math.floor(Math.random() * 0x10000),
+		];
+		return this.seed;
 	};
 
 	// This function is designed to emulate the on-cartridge PRNG for Gens 3 and 4, as described in
