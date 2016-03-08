@@ -313,6 +313,7 @@ exports.commands = {
 			});
 			Db('badgesDB').set(toId(userid), uniqueBadges);
 			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeicons[badge] + '" width="16" height="16">');
+			this.logModCommand(user.name + " gave " + targetUser + " a badge.");
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
@@ -344,6 +345,7 @@ exports.commands = {
 				badges.splice(index, 1);
 			}
 			Db('badgesDB').set(toId(userid), badges);
+			this.logModCommand(user.name + " took a badge from " + targetUser + ".");
 			this.sendReply("Badge taken.");
 			break;
 		default:
