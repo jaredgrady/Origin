@@ -17,7 +17,7 @@ let shop = [
     ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
     ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly.)', 25],
-    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float with the exta room you want (Will take time to appear).', 30],
+    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float with the extra room you want (Will take time to appear).', 30],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
     ['Room Rename', 'Rename your chatroom to another name', 45],
