@@ -35,7 +35,7 @@ class Wtp {
 			this.endDisplay(display);
 			this.endGame();
 		} else {
-			this.room.addRaw('<h5>' + user + ' guessed<font color="red" >' + guessed + '</font> incorrectly.</h5>');
+			this.room.addRaw('<h5>' + user + ' guessed <font color="red">' + guessed + '</font> incorrectly.</h5>');
 			this.guesses.push(guessed);
 		}
 	}
@@ -71,6 +71,7 @@ exports.commands = {
 	whosthatpokemon: function (target, room, user) {
 		if (!this.can('ban', null, room)) return false;
 		let params = target.split(',');
+		if (params.length < 3) return this.errorReply('Must have one mon and a 3 hints');
 		let mon;
 		if (room.wtp) return this.errorReply('Already a game of wtp in progess.');
 		if (checkMon(params[0])) {
