@@ -143,7 +143,7 @@ function parseEmoticons(message, room, user, pm) {
 		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|' + parseWarlic(message));
 		return true;
 	}
-	if (room.battle) {
+	if (room.battle || room.isPersonal) {
 		if ((typeof message !== 'string' || room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
 	} else {
 		if ((typeof message !== 'string' || (!pm && room.chatRoomData.disableEmoticons)) && !~developers.indexOf(user.userid)) return false;
@@ -252,7 +252,7 @@ exports.commands = {
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
 		if (!this.can('declare', null, room)) return this.errorReply("/toggleemoticons - Access denied.");
-		if (room.battle) {
+		if (room.battle || room.isPersonal) {
 			room.disableEmoticons = !room.disableEmoticons;
 			if (room.disableEmoticons) {
 				this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
