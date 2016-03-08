@@ -143,7 +143,11 @@ function parseEmoticons(message, room, user, pm) {
 		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|' + parseWarlic(message));
 		return true;
 	}
-	if (typeof message !== 'string' || (!pm && room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
+	if (room.battle || room.isPersonal) {
+		if ((typeof message !== 'string' || room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
+	} else {
+		if ((typeof message !== 'string' || (!pm && room.chatRoomData.disableEmoticons)) && !~developers.indexOf(user.userid)) return false;
+	}
 
 	let match = false;
 	let len = emotesKeys.length;
@@ -193,7 +197,7 @@ function parseEmoticons(message, room, user, pm) {
 }
 
 /**
- * Create a two column table listing emoticons.
+ * Create a four column table listing emoticons.
  *
  * @return {String} emotes table
  */
@@ -247,13 +251,26 @@ exports.commands = {
 	toggleemote: 'toggleemoticons',
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
-		if (!this.can('declare', null, room)) return this.errorReply("Access denied.");
-		room.disableEmoticons = !room.disableEmoticons;
-		this.sendReply("Disallowing emoticons is set to " + room.disableEmoticons + " in this room.");
-		if (room.disableEmoticons) {
-			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+		if (!this.can('declare', null, room)) return this.errorReply("/toggleemoticons - Access denied.");
+		if (room.battle || room.isPersonal) {
+			room.disableEmoticons = !room.disableEmoticons;
+			if (room.disableEmoticons) {
+				this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+			} else {
+				this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+			}
 		} else {
-			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+			if (!room.chatRoomData.disableEmoticons) {
+				room.chatRoomData.disableEmoticons = true;
+				Rooms.global.writeChatRoomData();
+				this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+				this.privateModCommand("(" + user.name + " has disabled emoticons in this room.)");
+			} else {
+				delete room.chatRoomData.disableEmoticons;
+				Rooms.global.writeChatRoomData();
+				this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+				this.privateModCommand("(" + user.name + " has enabled emoticons in this room.)");
+			}
 		}
 	},
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],

@@ -73,8 +73,10 @@ exports.commands = {
 			if (!this.can('roommod', null, room)) return false;
 			if (room.disableTrainerCards) return this.sendReply("Broadcasting trainer cards is already disabled in this room.");
 			room.disableTrainerCards = true;
-			room.chatRoomData.disableTrainerCards = true;
-			Rooms.global.writeChatRoomData();
+			if (!room.battle && !room.isPersonal) {
+				room.chatRoomData.disableTrainerCards = true;
+				Rooms.global.writeChatRoomData();
+			}
 			this.privateModCommand("(" + user.name + " has disabled broadcasting trainer cards in this room.)");
 			break;
 
@@ -82,8 +84,10 @@ exports.commands = {
 			if (!this.can('roommod', null, room)) return false;
 			if (!room.disableTrainerCards) return this.sendReply("Broadcasing trainer cards is already enabled in this room.");
 			delete room.disableTrainerCards;
-			delete room.chatRoomData.disableTrainerCards;
-			Rooms.global.writeChatRoomData();
+			if (!room.battle && !room.isPersonal) {
+				delete room.chatRoomData.disableTrainerCards;
+				Rooms.global.writeChatRoomData();
+			}
 			this.privateModCommand("(" + user.name + " has enabled broadcasting trainer cards in this room.)");
 			break;
 
