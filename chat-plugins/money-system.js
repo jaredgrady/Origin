@@ -33,7 +33,7 @@ let shopDisplay = getShopDisplay(shop);
 
 function alertStaff(msg) {
 	Users.users.forEach(function (user) {
-		if (user.group === '~' || user.group === '&') {
+		if (user.isStaff) {
 			user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 		}
 	});
