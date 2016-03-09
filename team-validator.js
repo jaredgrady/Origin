@@ -568,7 +568,7 @@ class Validator {
 		if (lsetData.sourcesBefore === undefined) lsetData.sourcesBefore = 6;
 		let noPastGen = !!format.requirePentagon;
 		// Pokemon cannot be traded to past generations except in Gen 1 Tradeback
-		let noFutureGen = !(format.banlistTable && format.banlistTable['tradeback']);
+		let noFutureGen = !(format.banlistTable && format.banlistTable['allowtradeback']);
 		// if a move can only be learned from a gen 2-5 egg, we have to check chainbreeding validity
 		// limitedEgg is false if there are any legal non-egg sources for the move, and true otherwise
 		let limitedEgg = null;
@@ -578,7 +578,7 @@ class Validator {
 			alreadyChecked[template.speciesid] = true;
 			if (tools.gen === 2 && template.gen === 1) tradebackEligible = true;
 			// STABmons hack to avoid copying all of validateSet to formats
-			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'shellsmash':1})) {
+			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'lovelykiss':1, 'shellsmash':1, 'shiftgear':1})) {
 				let types = template.types;
 				if (template.species === 'Shaymin') types = ['Grass', 'Flying'];
 				if (template.baseSpecies === 'Hoopa') types = ['Psychic', 'Ghost', 'Dark'];
