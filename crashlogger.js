@@ -36,6 +36,21 @@ exports = module.exports = function (err, description, data) {
 		console.error("\nSUBCRASH: " + err.stack + "\n");
 	});
 
+	let found = null;
+	let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-1).join('\n');
+	for (let i = -1; found === null; i--) {
+		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
+		if (crashes.toString().substr(0, 22) === 'Additional information') found = true;
+		if (i <= -6) found = false;
+	}
+	if (found === true) {
+		Rooms.rooms.staff.add('|c|~Crash Alert|Pokemon Showdown has crashed, Additional Information is below.');
+		Rooms.rooms.staff.add(crashes);
+	} else {
+		Rooms.rooms.staff.add('|c|~Crash Alert|Pokemon Showdown has crashed, there is no Additional Information to display.');
+	}
+	Rooms.rooms.staff.update();
+
 	if (Config.crashguardemail && ((datenow - lastCrashLog) > CRASH_EMAIL_THROTTLE)) {
 		lastCrashLog = datenow;
 		try {
