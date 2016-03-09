@@ -41,25 +41,26 @@ exports = module.exports = function (err, description, data) {
 	let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(-1).join('\n').toString();
 	let findAdditional = null;
 	let findError = null;
-	let indexi;
-	let indexj;
-	for (let i = -1; findAdditional === null; i--) {
+	let additional;
+	let error;
+	for (let i = -1; findAdditional === null; i--) { // find additional information of crash
 		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n').toString();
 		if (crashes.indexOf("Additional information") === 0) findAdditional = true;
 		if (i <= -6) findAdditional = false;
-		indexi = i;
+		additional = crashes.split('\n').splice(i); // prevent it from printing on multiple lines
 	}
-	let additional = crashes.split('\n').splice(indexi); // prevent it from printing on multiple lines
-	for (let j = -1; findError === null; j--) {
+	for (let k = 0; k < additional.length; k++) {
+		additional[k] = " " + additional[k]; // add a space for readability
+	}
+	for (let j = -1; findError === null; j--) { // find the type of crash
 		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(j).join('\n').toString();
 		if (crashes.indexOf("Error") === 0 || crashes.indexOf("TypeError") === 0 || crashes.indexOf("ReferenceError") === 0 || crashes.indexOf("SyntaxError") === 0) findError = true;
 		if (j <= -22) findError = false;
-		indexj = j;
+		error = (fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(j))[0];
 	}
-	let error = (fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(indexj))[0];
 	Rooms.rooms.staff.add('|c|~Crash Alert|Pokemon Showdown has crashed, Additional information is below.');
-	if (findError === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + error);
-	if (findAdditional === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + additional);
+	if (findError === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + error); // add type of crash if any
+	if (findAdditional === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + additional); // add additonal information if any
 	Rooms.rooms.staff.update();
 
 	if (Config.crashguardemail && ((datenow - lastCrashLog) > CRASH_EMAIL_THROTTLE)) {
