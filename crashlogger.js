@@ -58,7 +58,7 @@ exports = module.exports = function (err, description, data) {
 		if (j <= -22) findError = false;
 		error = (fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(j))[0];
 	}
-	Rooms.rooms.staff.add('|c|~Crash Alert|Pokemon Showdown has crashed, Additional information is below.');
+	Rooms.rooms.staff.add('|c|~Crash Alert|**Pokemon Showdown has crashed.**');
 	if (findError === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + error); // add type of crash if any
 	if (findAdditional === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + additional); // add additonal information if any
 	Rooms.rooms.staff.update();
