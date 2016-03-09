@@ -10,6 +10,8 @@
 
 'use strict';
 
+const fs = require('fs');
+
 const CRASH_EMAIL_THROTTLE = 5 * 60 * 1000; // 5 minutes
 
 const logPath = require('path').resolve(__dirname, 'logs/errors.txt');
