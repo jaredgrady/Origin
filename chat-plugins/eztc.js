@@ -124,6 +124,7 @@ exports.commands = {
 				"/trainercard list - Shows a list of all trainer cards added with this command.<br />" +
 				"/trainercard off - Disables broadcasting trainer cards in the current room.<br />" +
 				"/trainercard on - Enables broadcasting trainer cards in the current room.<br />" +
+				"/trainercard view, [command name] - Views the current code for a TC<br />" +
 				"/trainercard help - Shows this help command.<br />" +
 				"<a href=\"https://gist.github.com/jd4564/399934fce2e9a5ae29ad\">EZ-TC Plugin by jd</a>"
 			);
