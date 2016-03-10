@@ -176,9 +176,7 @@ exports.commands = {
 		if (action === "change" || action === "set") {
 			if (!this.can('declare', null, room) || room.battle) return false;
 			if (!toId(details || " ")) return this.parse("/help roompoll");
-			if (details.split(",").length < 3) {
-				return this.errorReply("You did not include enough arguments for the poll.");
-			}
+			if (details.split(",").length < 3) return this.errorReply("You did not include enough arguments for the poll.");
 			room.RPoll = details.replace(/^\/poll/i, "");
 			if (room.chatRoomData) {
 				room.chatRoomData.RPoll = room.RPoll;
@@ -190,6 +188,10 @@ exports.commands = {
 			if (!this.can('declare', null, room)) return false;
 			if (!room.RPoll) return this.errorReply("No roompoll has been set yet.");
 			return this.sendReply('The roompoll is: /poll ' + room.RPoll);
+		}
+		if (action === 'end') {
+			if (!this.can('broadcast', null, room) || room.battle) return false;
+			return this.parse("/endpoll");
 		} else {
 			return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
 		}
