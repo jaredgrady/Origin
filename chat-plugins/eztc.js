@@ -101,6 +101,18 @@ exports.commands = {
 			}
 			break;
 
+		case 'view':
+			if (!this.can('declare')) return false;
+			commandName = toId(parts[1]);
+			if (!commandName) return this.sendReply("/trainercard view, [command name] - Views html of trainer card")
+			let htmlOutput = false;
+			for (let tc in trainerCards) {
+				if (tc === commandName) htmlOutput = trainerCards[commandName].toString().split('\n')[2].toString().split('if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox(\'').toString().split('\');')[0].toString().slice(1);
+			}
+			if (htmlOutput === false) return this.sendReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
+			return this.sendReply(htmlOutput);
+			break;
+
 		default:
 		case 'info':
 		case 'help':
