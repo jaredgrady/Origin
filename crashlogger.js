@@ -43,10 +43,11 @@ exports = module.exports = function (err, description, data) {
 	let findError = null;
 	let additional;
 	let error;
+	let crashRepeat = false;
 	for (let i = -1; findAdditional === null; i--) { // find additional information of crash
 		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n').toString();
 		if (crashes.indexOf("Additional information") === 0) findAdditional = true;
-		if (i <= -6) findAdditional = false;
+		if (i <= -7) findAdditional = false;
 		additional = crashes.split('\n').splice(i); // prevent it from printing on multiple lines
 	}
 	for (let k = 0; k < additional.length; k++) {
@@ -58,9 +59,15 @@ exports = module.exports = function (err, description, data) {
 		if (j <= -22) findError = false;
 		error = (fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(j))[0];
 	}
-	Rooms.rooms.staff.add('|c|~Crash Alert|**Pokemon Showdown has crashed.**');
-	if (findError === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + error); // add type of crash if any
-	if (findAdditional === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + additional); // add additonal information if any
+	if (Db('recentcrash').get('recentCrash') === error && findError === true) crashRepeat = true;
+	Db('recentcrash').set('recentCrash', error);
+	if (crashRepeat === false) {
+		Rooms.rooms.staff.add('|c|~Crash Alert|**Pokemon Showdown has crashed, more information (if any) is below.**');
+		if (findError === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + error); // add type of crash if any
+		if (findAdditional === true) Rooms.rooms.staff.add('|c|~Crash Alert|' + additional); // add additonal information if any
+	} else {
+		Rooms.rooms.staff.add('|c|~Crash Alert|**Pokemon Showdown has crashed, it is the same crash as the one previous to this crash.**');
+	}
 	Rooms.rooms.staff.update();
 
 	if (Config.crashguardemail && ((datenow - lastCrashLog) > CRASH_EMAIL_THROTTLE)) {
