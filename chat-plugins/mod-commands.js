@@ -634,7 +634,7 @@ exports.commands = {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 
-		let targetUser = Users.get(target).getLastId();;
+		let targetUser = Users.get(target).getLastId();
 
 		this.add('|unlink|' + targetUser);
 		this.addModCommand(targetUser.name + "'s links were unlinked by " + user.name);
