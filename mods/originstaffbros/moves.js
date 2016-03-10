@@ -15945,7 +15945,6 @@ exports.BattleMovedex = {
 	},
 
 	// Sparkychild
-	// Sparkychild complete (typing) (messeges)
 	"nanairoshinfonii": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16160,35 +16159,53 @@ exports.BattleMovedex = {
 	},
 
 	// Mods
-	// 01NTG complete
-	"dragonenergy": {
+	// Alpha Ninja
+	"beybladespin": {
 		isNonstandard: true,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		id: "dragonenergy",
-		name: "Dragon Energy",
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		id: "beybladespin",
+		name: "Beyblade Spin",
 		pp: 20,
-		priority: 0,
-		flags: {snatch: 1},
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
 		self: {
-			boosts: {
-				atk: 1,
-				spe: 1,
+			onHit: function (pokemon) {
+				this.attrLastMove('[anim]rapidspin');
+				this.add("c|@Alpha Ninja|Beyblade Spin!");
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
+				for (let i in sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(i)) {
+						this.add('-sideend', pokemon.side, this.getEffect(i).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
 			},
 		},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]rapidspin');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]rapidspin');
 		},
-		onHit: function (source, target, move) {
-			this.add("c|@01NTG|Behold my godly hax");
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					def: 1,
+					spa: 1,
+					spd: 1,
+				},
+			},
 		},
-		secondary: false,
-		target: "self",
-		type: "Dragon",
+		target: "normal",
+		type: "Water",
 	},
 
 	// AuraStormLucaro
@@ -16221,32 +16238,6 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fighting",
-	},
-
-	// Irraquated
-	"unluckymate": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		id: "unluckymate",
-		name: "Unlucky Mate",
-		pp: 15,
-		priority: 1,
-		flags: {protect: 1, mirror: 1, heal: 1},
-		drain: [1, 2],
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onHit: function (target, source, move) {
-			this.add('c|@Irraquated|Oof, unlucky mate.');
-		},
-		secondary: false,
-		target: "normal",
-		type: "Dark",
 	},
 
 	// Nii Sama
@@ -16310,53 +16301,35 @@ exports.BattleMovedex = {
 	},
 
 	// Drivers
-	// Alpha Ninja
-	"beybladespin": {
+	// Alliance NTG
+	"dragonenergy": {
 		isNonstandard: true,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		id: "beybladespin",
-		name: "Beyblade Spin",
+		accuracy: true,
+		basePower: 60,
+		category: "Status",
+		id: "dragonenergy",
+		name: "Dragon Energy",
 		pp: 20,
 		priority: 1,
-		flags: {protect: 1, mirror: 1},
+		flags: {snatch: 1},
 		self: {
-			onHit: function (pokemon) {
-				this.attrLastMove('[anim]rapidspin');
-				this.add("c|%Alpha Ninja|Beyblade Spin!");
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-				}
-				let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1, stickyweb:1};
-				for (let i in sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(i)) {
-						this.add('-sideend', pokemon.side, this.getEffect(i).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-					}
-				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-					pokemon.removeVolatile('partiallytrapped');
-				}
+			boosts: {
+				atk: 1,
+				spe: 1,
 			},
 		},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]rapidspin');
+			this.attrLastMove('[anim]dragondance');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]rapidspin');
+			this.attrLastMove('[anim]dragondance');
 		},
-		secondary: {
-			chance: 70,
-			self: {
-				boosts: {
-					def: 1,
-					spa: 1,
-					spd: 1,
-				},
-			},
+		onHit: function (source, target, move) {
+			this.add("c|%Alliance NTG|Behold my godly hax");
 		},
-		target: "normal",
-		type: "Water",
+		secondary: false,
+		target: "self",
+		type: "Dragon",
 	},
 
 	// Chief Sokka
@@ -16413,7 +16386,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// EmgPrfoessor Volco
+	// Emg рrоf Volcо
 	"volcanionsupersmash": {
 		isNonstandard: true,
 		accuracy: 80,
@@ -16431,7 +16404,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]flareblitz');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%EmgProfessor Volco|Get ready because here comes my ultimate attack');
+			this.add('c|%Emg рrоf Volcо|Get ready because here comes my ultimate attack');
 		},
 		secondary: {
 			chance: 80,
@@ -16471,35 +16444,66 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
-	// Imp Fallen Blood
-	"jetgattling": {
+	// hayleysworld
+	"revengeofneptune": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 90,
 		category: "Special",
-		id: "jetgattling",
-		name: "Jet Gattling",
+		id: "revengeofneptune",
+		name: "Revenge of Neptune",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hyperspacefury');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hyperspacefury');
-		},
-		/* no quote
-		onHit: function (target, source, move) {
-			this.add('c|%Imp Fallen Blood|');
-		}, */
-		secondary: {
-			chance: 60,
+		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
+		self: {
 			boosts: {
-				spd: -2,
+				def: 1,
+				spa: 1,
+				spd: 1,
 			},
 		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (target, source, move) {
+			this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
+			this.useMove('wish', source);
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
-		type: "Grass",
+		type: "Water",
+	},
+
+	// Irraquated
+	"unluckymate": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "unluckymate",
+		name: "Unlucky Mate",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%Irraquated|Oof, unlucky mate.');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dark",
 	},
 
 	// isandman
@@ -16854,42 +16858,36 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// hayleysworld
-	"revengeofneptune": {
+	// Imp Fallen Blood
+	"jetgattling": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 120,
 		category: "Special",
-		id: "revengeofneptune",
-		name: "Revenge of Neptune",
+		id: "jetgattling",
+		name: "Jet Gattling",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
-		self: {
-			boosts: {
-				def: 1,
-				spa: 1,
-				spd: 1,
-			},
-		},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]hyperspacefury');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]hyperspacefury');
 		},
+		/* no quote
 		onHit: function (target, source, move) {
-			this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
-			this.useMove('wish', source);
-		},
+			this.add('c|+Imp Fallen Blood|');
+		}, */
 		secondary: {
-			chance: 30,
-			status: 'brn',
+			chance: 60,
+			boosts: {
+				spd: -2,
+			},
 		},
 		target: "normal",
-		type: "Water",
+		type: "Grass",
 	},
-
 
 	// Piscean
 	"fatnissevereat": {

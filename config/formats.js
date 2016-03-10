@@ -715,7 +715,7 @@ exports.Formats = [
 			this.add('message', "1");
 			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
-			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%EmgProfessor Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>+hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg рrоf Volcо</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
 			this.add('raw|<br />');
 			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
 			this.add('raw|<br />');
@@ -779,12 +779,12 @@ exports.Formats = [
 					pokemon.setAbility('auraguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'safetyshark' && pokemon.getAbility().id === 'sandforce') {
-					pokemon.setAbility('magicguard');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 				if (name === 'alphaninja' && pokemon.getAbility().id === 'shellarmor') {
 					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'safetyshark' && pokemon.getAbility().id === 'sandforce') {
+					pokemon.setAbility('magicguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
 				if (name === 'impfallenblood' && pokemon.getAbility().id === 'lightningrod') {
@@ -830,12 +830,12 @@ exports.Formats = [
 					pokemon.setAbility('auraguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'safetyshark' && pokemon.getAbility().id !== 'magicguard') {
-					pokemon.setAbility('magicguard');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 				if (name === 'alphaninja' && pokemon.getAbility().id !== 'megapoison') {
 					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'safetyshark' && pokemon.getAbility().id !== 'magicguard') {
+					pokemon.setAbility('magicguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
 				if (name === 'impfallenblood' && pokemon.getAbility().id !== 'pirate') {
@@ -853,6 +853,10 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Water/Fire');
 				pokemon.types = ["Water", "Fire"];
 			}
+			if (name === 'hayleysworld' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
+				pokemon.types = ["Water", "Fairy"];
+			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
 				pokemon.types = ["Bug", "Fairy"];
@@ -864,10 +868,6 @@ exports.Formats = [
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
-			}
-			if (name === 'hayleysworld' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.types = ["Water", "Fairy"];
 			}
 			if (name === 'piscean' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
@@ -914,14 +914,11 @@ exports.Formats = [
 			}
 
 			// Mods
-			if (name === '01ntg') {
-				this.add('c|@01 NTG|Welcome to the Hax Side');
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|sup nigga');
 			}
 			if (name === 'aurastormlucario') {
 				this.add('c|@AuraStormLucario|I\'ll slap you with a piano!');
-			}
-			if (name === 'irraquated') {
-				this.add('c|@Irraquated|Oh so you\'re the guy...');
 			}
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
@@ -931,8 +928,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alphaninja') {
-				this.add('c|%Alpha Ninja|sup nigga');
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|Welcome to the Hax Side');
 			}
 			if (name === 'chiefsokka') {
 				this.add('c|%Chief Sokka|Sokka Reporting for duty Kappa!');
@@ -940,14 +937,17 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgprofessorvolco') {
-				this.add('c|%EmgProfessor Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
+			if (name === 'emgрrоfvolcо') {
+				this.add('c|%emgрrоfvolcо|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'gnarlycommie') {
 				this.add('c|%Gnarly Commie|ok');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|%Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
+			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|Oh so you\'re the guy...');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|ENTER SANDMAN');
@@ -975,8 +975,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
 			}
-			if (name === 'hayleysworld') {
-				this.add('c|+hayleysworld|The Queen of the Sea has arrived.');
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
@@ -995,10 +995,6 @@ exports.Formats = [
 			}
 			if (name === 'originserver') {
 				this.add('c|originserver|');
-			} */
-			/* permalocked
-			if (name === 'deathlyplays') {
-				this.add('c|Deathly Plays|');
 			} */
 		},
 
@@ -1036,7 +1032,7 @@ exports.Formats = [
 				this.add('c|&Paul Century|I\'m out but I\'ll end this with a fuck you but have a nice day');
 			}
 			if (name === 'piersniνаns') {
-				this.add('c|&Piers Niνаns|I\'m sorry, but I can\'t carry on...');
+				this.add('c|&Piers Niνаns|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
 			}
 			/* no quote
 			if (name === 'saneski') {
@@ -1047,15 +1043,11 @@ exports.Formats = [
 			}
 
 			// Mods
-			if (name === '01ntg') {
-				this.add('c|@01 NTG|I went too easy :c');
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|fuck this shit nigga');
 			}
 			if (name === 'aurastormlucario') {
 				this.add('c|@AuraStormLucario|U know, this is all ' + pokemon.side.foe.name + '\'s fault');
-			}
-			if (name === 'irraquated') {
-				this.add('c|@Irraquated|it was meant to be.');
-				this.add('c|@Irraquated|Six god is watching, I hope you\'re prepared to face him.');
 			}
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
@@ -1065,8 +1057,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alphaninja') {
-				this.add('c|%Alpha Ninja|fuck this shit nigga');
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|I went too easy :c');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/DsRQCsI.png" title="feelsrg" height="50" width="50" /></em></div>');
@@ -1074,14 +1066,18 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgprofessorvolco') {
-				this.add('c|%EmgProfessor Volco|Dang it my hax... they werent enough');
+			if (name === 'emgрrоfvolcо') {
+				this.add('c|%Emg рrоf Volcо|Dang it my hax... they werent enough');
 			}
 			if (name === 'gnarlycommie') {
 				this.add('c|%Gnarly Commie|ok');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|%Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
+			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|it was meant to be.');
+				this.add('c|%Irraquated|Six god is watching, I hope you\'re prepared to face him.');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
@@ -1110,8 +1106,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|I got cleaned');
 			}
-			if (name === 'hayleysworld') {
-				this.add('c|+hayleysworld|I will stop being afk to get revenge later.');
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
@@ -1130,10 +1126,6 @@ exports.Formats = [
 			}
 			if (name === 'originserver') {
 				this.add('c|originserver|');
-			} */
-			/* permalocked
-			if (name === 'deathlyplays') {
-				this.add('c|Deathly Plays|');
 			} */
 		},
 
@@ -1182,14 +1174,11 @@ exports.Formats = [
 			}
 
 			// Mods
-			if (name === '01ntg') {
-				this.add('c|@01 NTG|Gotta Go, Bathroom');
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|brb nigga');
 			}
 			if (name === 'aurastormlucario') {
 				this.add('c|@AuraStormLucario|I\'ll be back, skrub');
-			}
-			if (name === 'irraquated') {
-				this.add('c|@Irraquated|I have to go make some vegemite toast brb lol');
 			}
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Without darkness one cannot know light.');
@@ -1199,8 +1188,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alphaninja') {
-				this.add('c|%Alpha Ninja|brb nigga');
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|Gotta Go, Bathroom');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/M0f2zgJ.jpg?1" title="feelstea" height="50" width="50" /></em></div>');
@@ -1208,14 +1197,17 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgprofessorvolco') {
-				this.add('c|%EmgProfessor Volco|Welp look like its time to run away like Sanic');
+			if (name === 'emgрrоfvolcо') {
+				this.add('c|%Emg рrоf Volcо|Welp look like its time to run away like Sanic');
 			}
 			if (name === 'gnarlycommie') {
 				this.add('c|%Gnarly Commie|ok');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|%Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|My bad memes will be back!');
+			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|I have to go make some vegemite toast brb lol');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|JOY BANGLA , JOY BANGOBANDHU');
@@ -1244,8 +1236,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|you can get wet later ;)');
 			}
-			if (name === 'hayleysworld') {
-				this.add('c|+hayleysworld|My bad memes will be back!');
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
@@ -1264,10 +1256,6 @@ exports.Formats = [
 			}
 			if (name === 'originserver') {
 				this.add('c|originserver|');
-			} */
-			/* permalocked
-			if (name === 'deathlyplays') {
-				this.add('c|Deathly Plays|');
 			} */
 		},
 

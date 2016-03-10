@@ -89,11 +89,11 @@ exports.BattleScripts = {
 			},
 
 			// Mods.
-			'@01 NTG': {
-				species: 'Dragonite', ability: 'Simple', item: 'Weakness Policy', gender: 'M',
-				moves: ['dragonclaw', 'extremespeed', 'earthquake'],
-				baseSignatureMove: 'dragonenergy', signatureMove: "Dragon Energy",
-				evs: {atk:252, spd:252, spe:4}, nature: 'Adamant',
+			'@Alpha Ninja': { // (mega ability) megapoison
+				species: 'Slowbro', ability: 'Regenerator', item: 'Slowbronite', gender: 'M',
+				moves: ['psystrike', 'slackoff', 'blizzard'],
+				baseSignatureMove: 'beybladespin', signatureMove: "Beyblade Spin",
+				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
 			'@AuraStormLucario': { // (mega ability) auraguard
 				species: 'Lucario', ability: 'Inner Focus', item: 'Lucarionite', gender: 'M',
@@ -103,13 +103,6 @@ exports.BattleScripts = {
 				][this.random(2)],
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
-			},
-
-			'@Irraquated': {
-				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
-				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
-				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
-				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
 			},
 			'@Nii sama': {
 				species: 'Darkrai', ability: 'Goodnight', item: 'Life Orb',
@@ -125,11 +118,11 @@ exports.BattleScripts = {
 			},
 
 			// Drivers.
-			'%Alpha Ninja': { // (mega ability) megapoison
-				species: 'Slowbro', ability: 'Regenerator', item: 'Slowbronite', gender: 'M',
-				moves: ['psystrike', 'slackoff', 'blizzard'],
-				baseSignatureMove: 'beybladespin', signatureMove: "Beyblade Spin",
-				evs: {spa:248, def:238, spd:28}, nature: 'bold',
+			'%Alliance NTG': {
+				species: 'Dragonite', ability: 'Simple', item: 'Weakness Policy', gender: 'M',
+				moves: ['dragonclaw', 'extremespeed', 'earthquake'],
+				baseSignatureMove: 'dragonenergy', signatureMove: "Dragon Energy",
+				evs: {atk:252, spd:252, spe:4}, nature: 'Adamant',
 			},
 			'%Chief Sokka': {
 				species: 'Gliscor', ability: 'Cancerous Ability', item: 'Toxic Orb', gender: 'M',
@@ -143,7 +136,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'waterbomb', signatureMove: "WaterBomb",
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
-			'%EmgProfessor Volco': {
+			'%Emg рrоf Volcо': {
 				species: 'Volcanion', ability: 'Adaptabulksturdy', item: 'Air Balloon',
 				moves: [['psystrike', 'thunder', 'icebeam', 'searingshot', 'grass knot'][this.random(5)], 'fierydance', 'steameruption'],
 				baseSignatureMove: 'volcanionsupersmash', signatureMove: "Volcanion Super Smash",
@@ -155,11 +148,17 @@ exports.BattleScripts = {
 				baseSignatureMove: 'ebat', signatureMove: '/ebat',
 				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
 			},
-			'%Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
-				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
-				moves: ['aeroblast', 'aurasphere', 'earthpower'],
-				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
+			'%hayleysworld': { // (type) water/fairy
+				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
+				moves: ['moonblast', 'icebeam', 'protect'],
+				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
+				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
+			},
+			'%Irraquated': {
+				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
+				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
+				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
+				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
 			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
@@ -217,11 +216,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
-			'+hayleysworld': { // (type) water/fairy
-				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
-				moves: ['moonblast', 'icebeam', 'protect'],
-				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
-				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
+			'+Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
+				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
+				moves: ['aeroblast', 'aurasphere', 'earthpower'],
+				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
+				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			'+Piscean': { // (type) normal/ghost
 				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
