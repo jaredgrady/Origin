@@ -33,4 +33,5 @@ module.exports = {
 	"Meme Lord":"http://i.imgur.com/4nLKC4V.png",
 	"Cute Fox":"http://i.imgur.com/xgN76US.png",
 	"vip":"http://i.imgur.com/7heNNTP.png",
+	"Donor of the month":"http://i.imgur.com/EHx2ozm.gif",
 };
