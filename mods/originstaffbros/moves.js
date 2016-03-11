@@ -16328,7 +16328,7 @@ exports.BattleMovedex = {
 			this.add("c|%Alliance NTG|Behold my godly hax");
 		},
 		secondary: false,
-		target: "self",
+		target: "normal",
 		type: "Dragon",
 	},
 
