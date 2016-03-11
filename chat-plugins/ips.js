@@ -14,7 +14,7 @@ const BLACKLISTED_RANGES = ["208.83.7.*"];
 // at 3, it will match ips XXX.XXX.XXX.* as safe ips.
 const IP_MATCH_STRICTNESS = 2;
 // non staff users that require their ips checked - prominent roomauth and bots
-const IP_CHECK_EXCEPTIONS = ["hayleysworld", "alainscharizard", "resourceful", "nineage"];
+const IP_CHECK_EXCEPTIONS = ["alainscharizard", "resourceful", "nineage"];
 // these commands cannot be used when the user is in trouble
 const IP_BLACKLISTED_COMMANDS = ["ban", "lock", "shadowban", "unban", "unbanall", "unlock", "unshadowban", "timedlock", "timedunlock", "permalock", "unpermalock", "permaban", "unpermaban", // global moderation commands
 	"eval", "hotpatch", "lockdown", "prelockdown", "restart", "kill", "bash", "slowlockdown", "endlockdown", "refreshpage", "evalbattle", "updateserver", "editbattle", // dev/console/admin commands
