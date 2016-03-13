@@ -94,118 +94,6 @@ let writeModlog = exports.writeModlog = function (roomid, text) {
 /*********************************************************
  * Parser
  *********************************************************/
-
-/**
- * Can this user talk?
- * Shows an error message if not.
- */
-function canTalk(user, room, connection, message, targetUser) {
-	if (!user.named) {
-		connection.popup("You must choose a name before you can talk.");
-		return false;
-	}
-	if (!~developers.indexOf(user.userid)) {
-		if (room && user.locked) {
-			this.errorReply("You are locked from talking in chat.");
-			return false;
-		}
-		if (room && room.isMuted(user)) {
-			this.errorReply("You are muted and cannot talk in this room.");
-			return false;
-		}
-		if (room && room.modchat) {
-			let userGroup = user.group;
-			if (room.auth) {
-				if (room.auth[user.userid]) {
-					userGroup = room.auth[user.userid];
-				} else if (room.isPrivate === true) {
-					userGroup = ' ';
-				}
-			}
-			if (room.modchat === 'autoconfirmed') {
-				if (!user.autoconfirmed && userGroup === ' ') {
-					this.errorReply("Because moderated chat is set, your account must be at least one week old and you must have won at least one ladder game to speak in this room.");
-					return false;
-				}
-			} else if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(room.modchat) && !~developers.indexOf(user.userid)) {
-				let groupName = Config.groups[room.modchat].name || room.modchat;
-				this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to speak in this room.");
-				return false;
-			}
-		}
-		if (room && !(user.userid in room.users)) {
-			connection.popup("You can't send a message to this room without being in it.");
-			return false;
-		}
-	}
-
-	if (typeof message === 'string') {
-		if (!message) {
-			connection.popup("Your message can't be blank.");
-			return false;
-		}
-		if (message.length > MAX_MESSAGE_LENGTH && !user.can('ignorelimits')) {
-			this.errorReply("Your message is too long: " + message);
-			return false;
-		}
-
-		// remove zalgo
-		message = message.replace(/[\u0300-\u036f\u0483-\u0489\u0610-\u0615\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06ED\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]{3,}/g, '');
-		if (/[\u239b-\u23b9]/.test(message)) {
-			this.errorReply("Your message contains banned characters.");
-			return false;
-		}
-
-		// replace Warlic with warlic in all room other than staff
-		message = message.replace(/\bWarlic\b/ig, 'warlic');
-
-		message = message.replace(/\bnigger\b/ig, 'meanie');
-
-		if (room && room.id === 'lobby') {
-			let normalized = message.trim();
-			if ((normalized === user.lastMessage) &&
-					((Date.now() - user.lastMessageTime) < MESSAGE_COOLDOWN)) {
-				this.errorReply("You can't send the same message again so soon.");
-				return false;
-			}
-			user.lastMessage = message;
-			user.lastMessageTime = Date.now();
-		}
-
-		if (Config.chatfilter) {
-			/*jshint validthis:true */
-			return Config.chatfilter.call(this, message, user, room, connection, targetUser);
-		}
-		//servers Spam
-		if (!user.can('lock') && Rooms('shadowbanroom')) {
-			let serverexceptions = {'origin': 1, 'showdown': 1, 'smogtours': 1};
-			if (Config.serverexceptions) {
-				for (let i in Config.serverexceptions) serverexceptions[i] = 1;
-			}
-			let serverAd = getServersAds(message);
-			if (message.indexOf('pandorashowdown.net') >= 0) serverAd.push('pandora');
-			if (serverAd.length) {
-				for (let i = 0; i < serverAd.length; i++) {
-					if (!serverexceptions[serverAd[i]]) {
-						if (!room && targetUser) {
-							connection.send('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + message);
-							Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM to ' + targetUser.getIdentity() + '__) -- ' + message);
-							Rooms('shadowbanroom').update();
-						} else if (room) {
-							connection.sendTo(room, '|c|' + user.getIdentity(room.id) + '|' + message);
-							Rooms('shadowbanroom').add('|c|' + user.getIdentity(room.id) + '|(__' + room.id + '__) -- ' + message);
-							Rooms('shadowbanroom').update();
-						}
-						return false;
-					}
-				}
-			}
-		}
-		return message;
-	}
-	return true;
-}
-
 class CommandContext {
 	constructor(options) {
 		this.cmd = options.cmd || '';
@@ -426,6 +314,11 @@ class CommandContext {
 				return false;
 			}
 
+			// replace Warlic with warlic in all room other than staff
+			message = message.replace(/\bWarlic\b/ig, 'warlic');
+
+			message = message.replace(/\bnigger\b/ig, 'meanie');
+
 			if (room && room.id === 'lobby') {
 				let normalized = message.trim();
 				if ((normalized === user.lastMessage) &&
@@ -438,11 +331,36 @@ class CommandContext {
 			}
 
 			if (Config.chatfilter) {
+				/*jshint validthis:true */
 				return Config.chatfilter.call(this, message, user, room, connection, targetUser);
+			}
+			//servers Spam
+			if (!user.can('lock') && Rooms('shadowbanroom')) {
+				let serverexceptions = {'origin': 1, 'showdown': 1, 'smogtours': 1};
+				if (Config.serverexceptions) {
+					for (let i in Config.serverexceptions) serverexceptions[i] = 1;
+				}
+				let serverAd = getServersAds(message);
+				if (message.indexOf('pandorashowdown.net') >= 0) serverAd.push('pandora');
+				if (serverAd.length) {
+					for (let i = 0; i < serverAd.length; i++) {
+						if (!serverexceptions[serverAd[i]]) {
+							if (!room && targetUser) {
+								connection.send('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + message);
+								Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM to ' + targetUser.getIdentity() + '__) -- ' + message);
+								Rooms('shadowbanroom').update();
+							} else if (room) {
+								connection.sendTo(room, '|c|' + user.getIdentity(room.id) + '|' + message);
+								Rooms('shadowbanroom').add('|c|' + user.getIdentity(room.id) + '|(__' + room.id + '__) -- ' + message);
+								Rooms('shadowbanroom').update();
+							}
+							return false;
+						}
+					}
+				}
 			}
 			return message;
 		}
-
 		return true;
 	}
 	canEmbedURI(uri, isRelative) {
