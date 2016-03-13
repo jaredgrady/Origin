@@ -5986,7 +5986,7 @@ exports.BattleMovedex = {
 					this.add('-heal', target, target.getHealth, '[from] move: Healing Wish');
 					this.effectData.positions[target.position] = false;
 				}
-				if (!this.effectData.positions.any(true)) {
+				if (!this.effectData.positions.some(affected => affected === true)) {
 					target.side.removeSideCondition('healingwish');
 				}
 			},
@@ -7848,7 +7848,7 @@ exports.BattleMovedex = {
 					this.add('-heal', target, target.getHealth, '[from] move: Lunar Dance');
 					this.effectData.positions[target.position] = false;
 				}
-				if (!this.effectData.positions.any(true)) {
+				if (!this.effectData.positions.some(affected => affected === true)) {
 					target.side.removeSideCondition('lunardance');
 				}
 			},
@@ -13527,6 +13527,7 @@ exports.BattleMovedex = {
 		onTry: function (source, target) {
 			let decision = this.willMove(target);
 			if (!decision || decision.choice !== 'move' || (decision.move.category === 'Status' && decision.move.id !== 'mefirst') || target.volatiles.mustrecharge) {
+				this.attrLastMove('[still]');
 				this.add('-fail', source);
 				return null;
 			}
