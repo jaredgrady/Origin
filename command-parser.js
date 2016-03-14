@@ -637,6 +637,11 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 
 	message = context.canTalk(message);
 
+	if (message) {
+		// only do it if there is a message left to prevent crashes....
+		if (Cynesthesia.pixilate(room, user, message)) return false;
+	}
+
 	if (parseEmoticons(message, room, user)) return;
 
 	if (nightclub[room.id]) {

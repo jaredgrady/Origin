@@ -18,7 +18,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario']; //sys developers
+global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen']; //sys developers
 const developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
@@ -26,6 +26,7 @@ const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
 const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
 let trolling = false;
+global.Cynesthesia = require("./hentai-server.js");
 
 let commands = exports.commands = {
 
@@ -69,6 +70,35 @@ let commands = exports.commands = {
 	},
 	authhelp: ["/auth - Show global staff for the server."],
 
+	pixilate: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		target = toId(target);
+		if (target in Cynesthesia.pixilation) return this.errorReply("User " + target + " is already pixilated!");
+		Cynesthesia.pixilation[target] = 1;
+		Db.save();
+		this.sendReply(target + " is now being pixilated.");
+	},
+
+	normalize: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		target = toId(target);
+		if (!(target in Cynesthesia.pixilation)) return this.errorReply("User " + target + " is not being pixilated!");
+		delete Cynesthesia.pixilation[target];
+		Db.save();
+		this.sendReply(target + " is no longer being pixilated.");
+	},
+
+	pixilation: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		this.sendReplyBox("List of Pixilated users: <br /><br />" + Object.keys(Db("pixilation").object()).sort().map(u => {
+			let User = Users.get(u);
+			return "- " + (User && User.connected ? "<b>" + u + "</b> <font color=\"gray\"><i>(online)</i></font>" : u);
+		}).join("<br />") + "<br /><br /> To add/remove users from this list use /pixilate [user] and /normalize [user].");
+	},
+
 	me: function (target, room, user, connection) {
 		// By default, /me allows a blank message
 		if (!target) target = '';
@@ -78,6 +108,7 @@ let commands = exports.commands = {
 			room.add('|c|&Erica*07|' + target);
 			return;
 		}
+		if (Cynesthesia.pixilate(room, user, target, "/me ")) return false;
 		return target;
 	},
 
@@ -106,6 +137,7 @@ let commands = exports.commands = {
 			room.add('|c|&Erica*07|' + target);
 			return;
 		}
+		if (Cynesthesia.pixilate(room, user, target, "/mee ")) return false;
 		return target;
 	},
 
@@ -251,6 +283,7 @@ let commands = exports.commands = {
 		}
 
 		let emoteMsg = parseEmoticons(target, room, user, true);
+		let originalMessage = target;
 		if ((!user.blockEmoticons && !targetUser.blockEmoticons) && emoteMsg) target = '/html ' + emoteMsg;
 
 		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
@@ -260,7 +293,7 @@ let commands = exports.commands = {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
-				targetUser.send(message);
+				targetUser.send(Cynesthesia.pixilate(room, user, message, "/pm ", originalMessage));
 				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
