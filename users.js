@@ -442,6 +442,9 @@ class User {
 		this.s2 = '';
 		this.s3 = '';
 
+		// emoticon blocking
+		this.blockEmoticons = Db("ignoremotes").get(this.userid, false);
+
 		// initialize
 		users.set(this.userid, this);
 	}

@@ -144,6 +144,7 @@ let patternRegex = new RegExp(patterns.join('|'), 'g');
  * @returns {Boolean|String}
  */
 function parseEmoticons(message, room, user, pm) {
+	let originalMessage = message;
 	if (room.WarlicMode && !pm) {
 		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|' + parseWarlic(message));
 		return true;
@@ -196,8 +197,19 @@ function parseEmoticons(message, room, user, pm) {
 	if (Users.ShadowBan.checkBanned(user)) {
 		user.sendTo(room, '|html|' + message);
 		Users.ShadowBan.addMessage(user, "To " + room, sbanmsg);
+		return true;
 	}
-	if (!Users.ShadowBan.checkBanned(user)) room.addRaw(message);
+	for (let u in room.users) {
+		let targetUser = Users.get(u);
+		// in case the user is offline
+		if (!targetUser || !targetUser.connected) continue;
+		// if user is ignoring emotes
+		if (targetUser.blockEmoticons) {
+			targetUser.sendTo(room, "|c|" + group + user.name + "|" + originalMessage);
+		} else {
+			targetUser.sendTo(room, "|uhtml|emoticon-" + user.userid + "|" + message);
+		}
+	}
 	return true;
 }
 
@@ -226,26 +238,6 @@ function create_table() {
 let emotes_table = create_table();
 
 exports.commands = {
-	blockemote: 'blockemoticons',
-	blockemotes: 'blockemoticons',
-	blockemoticon: 'blockemoticons',
-	blockemoticons: function (target, room, user) {
-		if (user.blockEmoticons === (target || true)) return this.sendReply("You are already blocking emoticons in private messages! To unblock, use /unblockemoticons");
-		user.blockEmoticons = true;
-		return this.sendReply("You are now blocking emoticons in private messages.");
-	},
-	blockemoticonshelp: ["/blockemoticons - Blocks emoticons in private messages. Unblock them with /unblockemoticons."],
-
-	unblockemote: 'unblockemoticons',
-	unblockemotes: 'unblockemoticons',
-	unblockemoticon: 'unblockemoticons',
-	unblockemoticons: function (target, room, user) {
-		if (!user.blockEmoticons) return this.sendReply("You are not blocking emoticons in private messages! To block, use /blockemoticons");
-		user.blockEmoticons = false;
-		return this.sendReply("You are no longer blocking emoticons in private messages.");
-	},
-	unblockemoticonshelp: ["/unblockemoticons - Unblocks emoticons in private messages. Block them with /blockemoticons."],
-
 	emotes: 'emoticons',
 	emoticons: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -288,4 +280,27 @@ exports.commands = {
 		this.sendReplyBox("<img src='" + emotes[randomEmote] + "' title='" + randomEmote + "' height='50' width='50' />");
 	},
 	randemotehelp: ["/randemote - Get a random emote."],
+
+	// emoticon blocking for both PMs and chatrooms.
+	blockemote: 'ignoreemotes',
+	blockemotes: 'ignoreemotes',
+	blockemoticon: 'ignoreemotes',
+	blockemoticons: 'ignoreemotes',
+	ignoremotes: 'ignoreemotes',
+	ignoreemotes: function (target, room, user) {
+		user.blockEmoticons = true;
+		Db("ignoremotes").set(user.userid, true);
+		this.sendReply("You are now ignoring emotes.");
+	},
+	unblockemote: 'unignoreemotes',
+	unblockemotes: 'unignoreemotes',
+	unblockemoticon: 'unignoreemotes',
+	unblockemoticons: 'unignoreemotes',
+	unignoremotes: 'unignoreemotes',
+	unignoreemotes: function (target, room, user) {
+		Db("ignoremotes").delete(user.userid);
+		user.blockEmoticons = false;
+		this.sendReply("You are no longer ignoring emotes.");
+		user.blockEmoticons = false;
+	},
 };
