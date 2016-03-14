@@ -16,7 +16,9 @@ let emotes = {
 	'FacePalm': 'http://i.imgur.com/lv3GmpM.png',
 	'FailFish': 'https://static-cdn.jtvnw.net/emoticons/v1/360/1.0',
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
+	'feelssammich': 'http://i.imgur.com/sVgkUF1.png?1',
 	'feelsamy': 'http://i.imgur.com/Aw8KAmi.gif',
+	'feelsapple': 'http://i.imgur.com/h42wGYF.gif',
 	'feelsarken': 'http://imgur.com/YCCDZWq.png',
 	'feelsasl': 'http://i.imgur.com/ZQbYp9l.gif',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
@@ -26,6 +28,7 @@ let emotes = {
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelsbt': 'http://i.imgur.com/rghiV9b.png',
 	'feelschime': 'http://i.imgur.com/uIIBChH.png',
+	'feelscop': 'http://i.imgur.com/eNaFHvR.png?1',
 	'feelscrazy': 'http://i.imgur.com/NiJsT5W.png',
 	'feelscool': 'http://i.imgur.com/qdGngVl.jpg?1',
 	'feelscri': 'http://i.imgur.com/QAuUW7u.jpg?1',
@@ -60,6 +63,7 @@ let emotes = {
 	'feelsok': 'http://i.imgur.com/gu3Osve.png',
 	'feelsorange': 'http://i.imgur.com/3fxXP16.jpg',
 	'feelspanda': 'http://i.imgur.com/qi7fue9.png',
+	'feelspuke': 'http://i.imgur.com/nQbRspU.png?1',
 	'feelspaul': 'http://imgur.com/KuDZMJR.png',
 	'feelsshrk': 'http://i.imgur.com/amTG3jF.jpg',
 	'feelspika': 'http://i.imgur.com/mBq3BAW.png',
@@ -105,6 +109,7 @@ let emotes = {
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'PeoplesChamp': 'http://i.imgur.com/QMiMBKe.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
+	'sht': 'http://i.imgur.com/s9owArF.png?1',
 	'stevo': 'http://imgur.com/Gid6Zjy.png',
 	'thumbsup': 'http://i.imgur.com/eWcFLLn.jpg',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
@@ -143,7 +148,11 @@ function parseEmoticons(message, room, user, pm) {
 		room.add('|c|' + user.getIdentity().charAt(0) + user.name + '|' + parseWarlic(message));
 		return true;
 	}
-	if (typeof message !== 'string' || (!pm && room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
+	if (room.battle || room.isPersonal) {
+		if ((typeof message !== 'string' || room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
+	} else {
+		if ((typeof message !== 'string' || (!pm && room.chatRoomData.disableEmoticons)) && !~developers.indexOf(user.userid)) return false;
+	}
 
 	let match = false;
 	let len = emotesKeys.length;
@@ -193,7 +202,7 @@ function parseEmoticons(message, room, user, pm) {
 }
 
 /**
- * Create a two column table listing emoticons.
+ * Create a four column table listing emoticons.
  *
  * @return {String} emotes table
  */
@@ -204,21 +213,12 @@ function create_table() {
 	let len = emotes_name.length;
 
 	for (let i = 0; i < len; i++) {
-		emotes_list.push("<td>" +
-			"<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "' height='50' width='50' />" +
-			emotes_name[i] + "</td>");
+		emotes_list.push("<td>" + "<img src='" + emotes[emotes_name[i]] + "'' title='" + emotes_name[i] + "' height='50' width='50' />" + emotes_name[i] + "</td>");
 	}
 
-	let emotes_list_right = emotes_list.splice(len / 2, len / 2);
-
-	for (let i = 0; i < len / 2; i++) {
-		let emote1 = emotes_list[i],
-			emote2 = emotes_list_right[i];
-		if (emote2) {
-			emotes_group_list.push("<tr>" + emote1 + emote2 + "</tr>");
-		} else {
-			emotes_group_list.push("<tr>" + emote1 + "</tr>");
-		}
+	for (let i = 0; i < len; i += 4) {
+		let emoteOutput = [emotes_list[i], emotes_list[i + 1], emotes_list[i + 2], emotes_list[i + 3]];
+		if (i < len) emotes_group_list.push("<tr>" + emoteOutput.join('') + "</tr>");
 	}
 	return "<div class='infobox'><center><b><u>List of Emoticons</u></b></center>" + "<div class='infobox-limited'><table border='1' cellspacing='0' cellpadding='5' width='100%'>" + "<tbody>" + emotes_group_list.join("") + "</tbody>" + "</table></div></div>";
 }
@@ -256,13 +256,26 @@ exports.commands = {
 	toggleemote: 'toggleemoticons',
 	toggleemotes: 'toggleemoticons',
 	toggleemoticons: function (target, room, user) {
-		if (!this.can('declare', null, room)) return this.errorReply("Access denied.");
-		room.disableEmoticons = !room.disableEmoticons;
-		this.sendReply("Disallowing emoticons is set to " + room.disableEmoticons + " in this room.");
-		if (room.disableEmoticons) {
-			this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+		if (!this.can('declare', null, room)) return this.errorReply("/toggleemoticons - Access denied.");
+		if (room.battle || room.isPersonal) {
+			room.disableEmoticons = !room.disableEmoticons;
+			if (room.disableEmoticons) {
+				this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+			} else {
+				this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+			}
 		} else {
-			this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+			if (!room.chatRoomData.disableEmoticons) {
+				room.chatRoomData.disableEmoticons = true;
+				Rooms.global.writeChatRoomData();
+				this.add("|raw|<div class=\"broadcast-red\" style=\"border-radius: 5px;\"><b>Emoticons are disabled!</b><br />Emoticons will not work.</div>");
+				this.privateModCommand("(" + user.name + " has disabled emoticons in this room.)");
+			} else {
+				delete room.chatRoomData.disableEmoticons;
+				Rooms.global.writeChatRoomData();
+				this.add("|raw|<div class=\"broadcast-blue\" style=\"border-radius: 5px;\"><b>Emoticons are enabled!</b><br />Emoticons will work now.</div>");
+				this.privateModCommand("(" + user.name + " has enabled emoticons in this room.)");
+			}
 		}
 	},
 	toggleemoticonshelp: ["/toggleemoticons - Toggle emoticons on or off."],

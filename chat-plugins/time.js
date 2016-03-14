@@ -29,9 +29,9 @@ function displayTime(t) {
 exports.commands = {
 	regdate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		if (!target || !toId(target)) return this.parse('/help regdate');
-		let username = toId(target);
-		request('http://pokemonshowdown.com/users/' + username, function (error, response, body) {
+		target = toId(target);
+		if (!target) target = toId(user.name);
+		request('http://pokemonshowdown.com/users/' + target, function (error, response, body) {
 			if (error && response.statusCode !== 200) {
 				this.sendReplyBox(Tools.escapeHTML(target) + " is not registered.");
 				return room.update();

@@ -17,6 +17,7 @@
     "moment": "^2.11.2",
     "node-serialize": "0.0.4",
     "node-static": "0.7.6",
+    "object.values": "1.0.3",
     "origindb": "^2.4.0",
     "q": "^1.2.0",
     "ramda": "^0.19.1",
@@ -24,6 +25,7 @@
     "simple-git": "1.22.0",
     "sockjs": "0.3.15",
     "sugar": "1.4.1",
+	"sugar-deprecated": "0.0.1",
     "uuid": "2.0.1"
   },
   "optionalDependencies": {
@@ -41,7 +43,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha"
+    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha",
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch"
   },
   "bin": "./pokemon-showdown",
   "homepage": "http://pokemonshowdown.com",
@@ -71,6 +75,8 @@
   "devDependencies": {
     "eslint": "1.10.3",
     "eslint-plugin-mocha": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
     "mocha": "2.4.5",
     "mock-fs": "3.7.0"
   }

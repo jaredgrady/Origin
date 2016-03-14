@@ -16,15 +16,15 @@ let shop = [
     ['Fix', 'Buys the ability to alter your current custom avatar, trainer card, title or icon. (don\'t buy if you don\'t have one)', 10],
     ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 10],
     ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
-    ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly.)', 25],
-    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float with the exta room you want (Will take time to appear).', 30],
+    ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly, can be refused.)', 25],
+    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float or AuraStormLucario with the extra room you want (Will take time to appear).', 30],
     ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
     ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
     ['Room Rename', 'Rename your chatroom to another name', 45],
     ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
     ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused. You are responsible for your room, if you get in trouble your room may be deleted.)', 90],
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float with the icon and rooms you want it in (3 rooms maximum, will take time to appear).', 350],
+    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float or AuraStormLucario with the icon and rooms you want it in (Size must be 32x32, 3 rooms maximum, will take time to appear).', 350],
     ['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
     ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM Master Float to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
@@ -33,7 +33,7 @@ let shopDisplay = getShopDisplay(shop);
 
 function alertStaff(msg) {
 	Users.users.forEach(function (user) {
-		if (user.group === '~' || user.group === '&') {
+		if (user.isStaff) {
 			user.send('|pm|~Shop Alert|' + user.getIdentity() + '|' + msg);
 		}
 	});
@@ -143,7 +143,7 @@ function handleBoughtItem(item, user, cost) {
 	} else if (item === 'room' || item === 'leagueroom' || item === 'avatar') {
 		if (item === 'avatar') {
 			user.sendAvatar = true;
-			this.sendReply("You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.");
+			this.sendReply("|raw|<div class='brodcast-green'>You have purchased an avatar, use /sendavatar [url to avatar image] to let the staff know what avatar you want.</div>");
 		} else {
 			user.canSendRoomName = true;
 			this.sendReply("You have purchased a room, use /sendroomname [room name you want] to let the staff know what your room name you want.");
@@ -233,10 +233,11 @@ exports.commands = {
 	},
 	resetmoneyhelp: ["/resetmoney [user] - Reset user's money to zero."],
 
+	forcetransfer: 'transfermoney',
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
-	transfermoney: function (target, room, user) {
+	transfermoney: function (target, room, user, cmd) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfermoney');
 
 		let parts = target.split(',');
@@ -248,6 +249,8 @@ exports.commands = {
 		if (username.length > 19) return this.sendReply("Username cannot be longer than 19 characters.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (amount > Db('money').get(user.userid, 0)) return this.errorReply("You cannot transfer more money than what you have.");
+		if (!Users.get(username)) return this.errorReply('The target user could not be found');
+		if (!Users.get(username).registered && cmd !== 'forcetransfer') return this.errorReply("WARNING: The user you are trying to transfer to is unregistered. If you want to transfer anyway use /forcetransfer [user], [amount]");
 
 		Db('money')
 			.set(user.userid, Db('money').get(user.userid) - amount)
@@ -398,7 +401,7 @@ exports.commands = {
 		if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply("Dice games can't be used outside of  Casino.");
 		if (!this.can('broadcast', null, room)) return this.errorReply("You must be at least a voice to start a dice game.");
 		if (room.id === 'casino' && target > 500) return this.errorReply("Dice can only be started for amounts less than 500 bucks.");
-		if (!this.canTalk()) return this.errorReply("You can not start dice games while unable to speak.");
+		if (!this.canTalk()) return this.errorReply("You cannot start dice games while unable to speak.");
 
 		let amount = isMoney(target);
 
@@ -452,6 +455,7 @@ exports.commands = {
 		output += "<font color=#24678d><b>" + winner + "</b></font> has won <font color=#24678d><b>" + room.dice.bet + "</b></font>" + currencyName(room.dice.bet) + ".<br>Better luck next time " + room.dice[p1Number < p2Number ? 'p1' : 'p2'] + "!</div>";
 		room.addRaw(output);
 		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
+		Db('dicewins').set(winner, Db('dicewins').get(winner, 0) + 1);
 		delete room.dice;
 	},
 	joindicehelp: ["/joindice - Joins a dice game."],
@@ -466,6 +470,48 @@ exports.commands = {
 		room.addRaw("<b>" + user.name + " ended the dice game.");
 	},
 	enddicehelp: ["/enddice - Ends a dice game. Requires +"],
+
+	diceladder: 'dicegameladder',
+	dicegameladder: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		let keys = Object.keys(Db('dicewins').object()).map(function (name) {
+			return {name: name, dicewins: Db('dicewins').get(name)};
+		});
+		if (!keys.length) return this.sendReplyBox("Dice ladder is empty.");
+		keys.sort(function (a, b) { return b.dicewins - a.dicewins; });
+		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 100), 'dicewins'));
+	},
+	diceladderhelp: 'dicegameladderhelp',
+	dicegameladderhelp: ["/diceladder - Shows the dice ladder."],
+
+	dicewins: 'dicegamewins',
+	dicegamewins: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		if (!target) target = user.name;
+
+		const targetId = toId(target);
+		if (!targetId) return this.parse('/help dicewins');
+
+		const dicewins = Db('dicewins').get(toId(target), 0);
+		this.sendReplyBox(Tools.escapeHTML(target) + " has " + dicewins + " dicewins.");
+	},
+	dicewinshelp: 'dicegamewinshelp',
+	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],
+
+	resetdicewins: function (target, room, user) {
+		if (!this.can('declare', null, room)) return false;
+		let wins = Db('dicewins').object();
+		Object.keys(wins)
+		.filter(function (name) {
+			return Db('dicewins').get(name);
+		})
+		.forEach(function (name) {
+			delete wins[name];
+		});
+		Db.save();
+		this.sendReply("The dice wins ladder has been reset.");
+	},
+	resetdicewinshelp: ["/resetdicewins - Resets the dice wins ladder."],
 
 	registershop: function (target, room, user) {
 		if (!user.can('declare')) return this.errorReply("/registershop - Access Denied");

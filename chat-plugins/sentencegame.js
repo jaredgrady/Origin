@@ -3,7 +3,7 @@
 /************************************************
  * Sentence Game by fender and AuraStormLucario *
  ************************************************/
-const badEndings = ['the', 'and', 'a', 'an', 'or', 'with', 'to', 'that'];
+const badEndings = ['the', 'and', 'a', 'an', 'or', 'with', 'to'];
 
 function cleanWord(word) {
 	let reg = /[^a-zA-Z0-9 :]/g;
@@ -44,8 +44,8 @@ exports.commands = {
 	aw: 'addword',
 	addword: function (target, room, user) {
 		if (!room.sentence) return this.errorReply('There is not a sentence game in this room.');
-		if (!target) return this.errorReply('You must specify a sentence length.');
-		if (target.length > 16) return this.errorReply('You may not use a word longer then 16 characters.');
+		if (!target) return this.errorReply('You must specify a word to add.');
+		if (target.length > 16) return this.errorReply('Your word should not be longer than 16 characters.');
 		if (target.indexOf(' ') > -1) return this.errorReply('Your word should not include spaces.');
 		if (room.sentence.lastUser === user.userid) return this.errorReply('You just gave the previous word. Give someone else a turn!');
 
@@ -54,6 +54,8 @@ exports.commands = {
 		if (room.sentence.result.length === room.sentence.size - 1 && badEndings.indexOf(word) > -1) return this.errorReply('Nobody wants the sentence to end with "' + word + '".');
 		room.sentence.result.push(word);
 
+		room.addRaw('<div class="sentence-container"><font size="3"><i>' + user + '</i> has added the word "<font color="red">' + word + '</font>" to the sentence.</font></div>');
+
 		if (room.sentence.result.length === room.sentence.size) {
 			let end = endDisplay(room.sentence.result);
 			room.addRaw(end);
@@ -61,7 +63,6 @@ exports.commands = {
 			return;
 		} else {
 			room.sentence.lastUser = user.userid;
-			room.addRaw('<div class="sentence-container"><font size="3"><i>' + user + '</i> has added the word "<font color="red">' + word + '</font>" to the sentence.</font></div>');
 		}
 	},
 

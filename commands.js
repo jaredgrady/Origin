@@ -18,7 +18,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild']; //sys developers
+global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen']; //sys developers
 const developersIPs = [];
 
 const MAX_REASON_LENGTH = 300;
@@ -26,6 +26,7 @@ const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
 const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
 let trolling = false;
+global.Cynesthesia = require("./hentai-server.js");
 
 let commands = exports.commands = {
 
@@ -61,7 +62,7 @@ let commands = exports.commands = {
 		let buffer = Object.keys(rankLists).sort((a, b) =>
 			(Config.groups[b] || {rank: 0}).rank - (Config.groups[a] || {rank: 0}).rank
 		).map(r =>
-			(Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + rankLists[r].sortBy(toId).join(", ")
+			(Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + rankLists[r].sort((a, b) => toId(a).localeCompare(toId(b))).join(", ")
 		);
 
 		if (!buffer.length) buffer = "This server has no global authority.";
@@ -69,15 +70,46 @@ let commands = exports.commands = {
 	},
 	authhelp: ["/auth - Show global staff for the server."],
 
+	pixilate: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		target = toId(target);
+		if (target in Cynesthesia.pixilation) return this.errorReply("User " + target + " is already pixilated!");
+		Cynesthesia.pixilation[target] = 1;
+		Db.save();
+		this.sendReply(target + " is now being pixilated.");
+	},
+
+	normalize: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		target = toId(target);
+		if (!(target in Cynesthesia.pixilation)) return this.errorReply("User " + target + " is not being pixilated!");
+		delete Cynesthesia.pixilation[target];
+		Db.save();
+		this.sendReply(target + " is no longer being pixilated.");
+	},
+
+	pixilation: function (target, room, user, connection, cmd) {
+		// if user is admin AND dev; this is to prevent admins from trolling.
+		if (!user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		this.sendReplyBox("List of Pixilated users: <br /><br />" + Object.keys(Db("pixilation").object()).sort().map(u => {
+			let User = Users.get(u);
+			return "- " + (User && User.connected ? "<b>" + u + "</b> <font color=\"gray\"><i>(online)</i></font>" : u);
+		}).join("<br />") + "<br /><br /> To add/remove users from this list use /pixilate [user] and /normalize [user].");
+	},
+
 	me: function (target, room, user, connection) {
 		// By default, /me allows a blank message
-		if (target) target = this.canTalk(target);
+		if (!target) target = '';
+		target = this.canTalk('/me ' + target);
 		if (!target) return;
 		if (user.userid === 'erica07' && trolling) {
 			room.add('|c|&Erica*07|' + target);
 			return;
 		}
-		return '/me ' + target;
+		if (Cynesthesia.pixilate(room, user, target, "/me ")) return false;
+		return target;
 	},
 
 	trolling: function (target, room, user) {
@@ -94,13 +126,19 @@ let commands = exports.commands = {
 
 	mee: function (target, room, user, connection) {
 		// By default, /mee allows a blank message
-		if (target) target = this.canTalk(target);
+		if (!target) target = '';
+		target = target.trim();
+		if (/[A-Za-z0-9]/.test(target.charAt(0))) {
+			return this.errorReply("To prevent confusion, /mee can't start with a letter or number.");
+		}
+		target = this.canTalk('/mee ' + target);
 		if (!target) return;
 		if (user.userid === 'erica07' && trolling) {
 			room.add('|c|&Erica*07|' + target);
 			return;
 		}
-		return '/mee ' + target;
+		if (Cynesthesia.pixilate(room, user, target, "/mee ")) return false;
+		return target;
 	},
 
 	avatar: function (target, room, user) {
@@ -232,7 +270,7 @@ let commands = exports.commands = {
 						return this.errorReply('The user "' + targetUser.name + '" does not have permission to join "' + innerTarget + '".');
 					}
 				}
-				if (targetRoom.isPrivate && !(user.userid in targetRoom.auth) && !user.can('makeroom')) {
+				if (targetRoom.auth && targetRoom.isPrivate && !(user.userid in targetRoom.auth) && !user.can('makeroom')) {
 					return this.errorReply('You do not have permission to invite people to this room.');
 				}
 
@@ -245,6 +283,7 @@ let commands = exports.commands = {
 		}
 
 		let emoteMsg = parseEmoticons(target, room, user, true);
+		let originalMessage = target;
 		if ((!user.blockEmoticons && !targetUser.blockEmoticons) && emoteMsg) target = '/html ' + emoteMsg;
 
 		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
@@ -254,7 +293,7 @@ let commands = exports.commands = {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
-				targetUser.send(message);
+				targetUser.send(Cynesthesia.pixilate(room, user, message, "/pm ", originalMessage));
 				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
@@ -303,6 +342,26 @@ let commands = exports.commands = {
 		this.parse('/unblockchallenges');
 	},
 	backhelp: ["/back - Unblocks challenges and/or private messages, if either are blocked."],
+
+	rank: function (target, room, user) {
+		if (!target) target = user.name;
+
+		Ladders.visualizeAll(target).then(values => {
+			let buffer = '<div class="ladder"><table>';
+			buffer += '<tr><td colspan="8">User: <strong>' + Tools.escapeHTML(target) + '</strong></td></tr>';
+
+			let ratings = values.join('');
+			if (!ratings) {
+				buffer += '<tr><td colspan="8"><em>This user has not played any ladder games yet.</em></td></tr>';
+			} else {
+				buffer += '<tr><th>Format</th><th><abbr title="Elo rating">Elo</abbr></th><th>W</th><th>L</th><th>Total</th>';
+				buffer += ratings;
+			}
+			buffer += '</table></div>';
+
+			this.sendReply('|raw|' + buffer);
+		});
+	},
 
 	makeprivatechatroom: 'makechatroom',
 	makechatroom: function (target, room, user, connection, cmd) {
@@ -548,7 +607,7 @@ let commands = exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 		} else {
-			if ((target === 'on' || target === 'true' || !target) || !user.can('editroom')) {
+			if ((target === 'on' || target === 'true' || !target) || !user.can('declare')) {
 				room.modjoin = true;
 				this.addModCommand("" + user.name + " turned on modjoin.");
 			} else if (target in Config.groups) {
@@ -1021,7 +1080,7 @@ let commands = exports.commands = {
 				this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 			}
 		}
-		let lastid = this.getLastIdOf(targetUser);
+		let lastid = targetUser.getLastId();
 		this.add('|unlink|roomhide|' + lastid);
 		if (lastid !== toId(this.inputUsername)) this.add('|unlink|roomhide|' + toId(this.inputUsername));
 	},
@@ -1102,7 +1161,7 @@ let commands = exports.commands = {
 
 		this.addModCommand("" + targetUser.name + " was warned by " + user.name + "." + (target ? " (" + target + ")" : ""));
 		targetUser.send('|c|~|/warn ' + target);
-		let userid = this.getLastIdOf(targetUser);
+		let userid = targetUser.getLastId();
 		this.add('|unlink|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|' + toId(this.inputUsername));
 	},
@@ -1152,19 +1211,20 @@ let commands = exports.commands = {
 		if (cmd === 'dm' || cmd === 'daymute') muteDuration = DAYMUTE_LENGTH;
 		if (!this.can('mute', targetUser, room)) return false;
 		let canBeMutedFurther = ((room.getMuteTime(targetUser) || 0) <= (muteDuration * 5 / 6));
-		if ((room.isMuted(targetUser) && !canBeMutedFurther) || targetUser.locked || !targetUser.connected) {
-			let problem = " but was already " + (!targetUser.connected ? "offline" : targetUser.locked ? "locked" : "muted");
+		if ((room.isMuted(targetUser) && !canBeMutedFurther) || targetUser.locked) {
+			let problem = " but was already " + (targetUser.locked ? "locked" : "muted");
 			if (!target) {
 				return this.privateModCommand("(" + targetUser.name + " would be muted by " + user.name + problem + ".)");
 			}
 			return this.addModCommand("" + targetUser.name + " would be muted by " + user.name + problem + "." + (target ? " (" + target + ")" : ""));
 		}
 
-		if (targetUser in room.users) targetUser.popup("|modal|" + user.name + " has muted you in " + room.id + " for " + muteDuration.duration() + ". " + target);
-		this.addModCommand("" + targetUser.name + " was muted by " + user.name + " for " + muteDuration.duration() + "." + (target ? " (" + target + ")" : ""));
+		if (targetUser in room.users) targetUser.popup("|modal|" + user.name + " has muted you in " + room.id + " for " + Tools.toDurationString(muteDuration) + ". " + target);
+		this.addModCommand("" + targetUser.name + " was muted by " + user.name + " for " + Tools.toDurationString(muteDuration) + "." + (target ? " (" + target + ")" : ""));
 		if (targetUser.autoconfirmed && targetUser.autoconfirmed !== targetUser.userid) this.privateModCommand("(" + targetUser.name + "'s ac account: " + targetUser.autoconfirmed + ")");
-		this.add('|unlink|' + this.getLastIdOf(targetUser));
-
+		let userid = targetUser.getLastId();
+		this.add('|unlink|' + userid);
+		if (userid !== toId(this.inputUsername)) this.add('|unlink|' + toId(this.inputUsername));
 		room.mute(targetUser, muteDuration, false);
 	},
 	mutehelp: ["/mute OR /m [username], [reason] - Mutes a user with reason for 7 minutes. Requires: % @ # & ~"],
@@ -1215,43 +1275,44 @@ let commands = exports.commands = {
 			return this.errorReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
 		}
 		if (!this.can('lock', targetUser)) return false;
+		let name = targetUser.getLastName();
+		let userid = targetUser.getLastId();
 
 		if ((targetUser.locked || Users.checkBanned(targetUser.latestIp)) && !target) {
 			let problem = " but was already " + (targetUser.locked ? "locked" : "banned");
-			return this.privateModCommand("(" + targetUser.name + " would be locked by " + user.name + problem + ".)");
+			return this.privateModCommand("(" + name + " would be locked by " + user.name + problem + ".)");
 		}
 
 		if (targetUser.confirmed) {
 			if (cmd === 'forcelock') {
 				let from = targetUser.deconfirm();
-				Monitor.log("[CrisisMonitor] " + targetUser.name + " was locked by " + user.name + " and demoted from " + from.join(", ") + ".");
+				Monitor.log("[CrisisMonitor] " + name + " was locked by " + user.name + " and demoted from " + from.join(", ") + ".");
 			} else {
-				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to lock them use /forcelock.");
+				return this.sendReply("" + name + " is a confirmed user. If you are sure you would like to lock them use /forcelock.");
 			}
 		} else if (cmd === 'forcelock') {
-			return this.errorReply("Use /lock; " + targetUser.name + " is not a confirmed user.");
+			return this.errorReply("Use /lock; " + name + " is not a confirmed user.");
 		}
 
 		// Destroy personal rooms of the locked user.
 		for (let i in targetUser.roomCount) {
 			if (i === 'global') continue;
 			let targetRoom = Rooms.get(i);
-			if (targetRoom.isPersonal && targetRoom.auth[targetUser.userid] && targetRoom.auth[targetUser.userid] === '#') {
+			if (targetRoom.isPersonal && targetRoom.auth[userid] && targetRoom.auth[userid] === '#') {
 				targetRoom.destroy();
 			}
 		}
 
 		targetUser.popup("|modal|" + user.name + " has locked you from talking in chats, battles, and PMing regular users." + (target ? "\n\nReason: " + target : "") + "\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");
 
-		this.addModCommand("" + targetUser.name + " was locked from talking by " + user.name + "." + (target ? " (" + target + ")" : ""));
+		this.addModCommand("" + name + " was locked from talking by " + user.name + "." + (target ? " (" + target + ")" : ""));
 		let alts = targetUser.getAlts();
-		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		let acAccount = (targetUser.autoconfirmed !== userid && targetUser.autoconfirmed);
 		if (alts.length) {
-			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "locked alts: " + alts.join(", ") + ")");
+			this.privateModCommand("(" + name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "locked alts: " + alts.join(", ") + ")");
 		} else if (acAccount) {
-			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
+			this.privateModCommand("(" + name + "'s ac account: " + acAccount + ")");
 		}
-		let userid = this.getLastIdOf(targetUser);
 		this.add('|unlink|hide|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
 
@@ -1364,50 +1425,51 @@ let commands = exports.commands = {
 			return this.errorReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
 		}
 		if (!this.can('ban', targetUser)) return false;
+		let name = targetUser.getLastName();
+		let userid = targetUser.getLastId();
 
 		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
 			let problem = " but was already banned";
-			return this.privateModCommand("(" + targetUser.name + " would be banned by " + user.name + problem + ".)");
+			return this.privateModCommand("(" + name + " would be banned by " + user.name + problem + ".)");
 		}
 
 		if (targetUser.confirmed) {
 			if (cmd === 'forceban') {
 				let from = targetUser.deconfirm();
-				Monitor.log("[CrisisMonitor] " + targetUser.name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
+				Monitor.log("[CrisisMonitor] " + name + " was banned by " + user.name + " and demoted from " + from.join(", ") + ".");
 			} else {
-				return this.sendReply("" + targetUser.name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
+				return this.sendReply("" + name + " is a confirmed user. If you are sure you would like to ban them use /forceban.");
 			}
 		} else if (cmd === 'forceban') {
-			return this.errorReply("Use /ban; " + targetUser.name + " is not a confirmed user.");
+			return this.errorReply("Use /ban; " + name + " is not a confirmed user.");
 		}
 
 		// Destroy personal rooms of the banned user.
 		for (let i in targetUser.roomCount) {
 			if (i === 'global') continue;
 			let targetRoom = Rooms.get(i);
-			if (targetRoom.isPersonal && targetRoom.auth[targetUser.userid] && targetRoom.auth[targetUser.userid] === '#') {
+			if (targetRoom.isPersonal && targetRoom.auth[userid] && targetRoom.auth[userid] === '#') {
 				targetRoom.destroy();
 			}
 		}
 
 		targetUser.popup("|modal|" + user.name + " has banned you." + (target ? "\n\nReason: " + target : "") + (Config.appealurl ? "\n\nIf you feel that your ban was unjustified, you can appeal:\n" + Config.appealurl : "") + "\n\nYour ban will expire in a few days.");
 
-		this.addModCommand("" + targetUser.name + " was banned by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
+		this.addModCommand("" + name + " was banned by " + user.name + "." + (target ? " (" + target + ")" : ""), " (" + targetUser.latestIp + ")");
 		let alts = targetUser.getAlts();
-		let acAccount = (targetUser.autoconfirmed !== targetUser.userid && targetUser.autoconfirmed);
+		let acAccount = (targetUser.autoconfirmed !== userid && targetUser.autoconfirmed);
 		if (alts.length) {
 			let guests = alts.length;
 			alts = alts.filter(alt => alt.substr(0, 6) !== 'Guest ');
 			guests -= alts.length;
-			this.privateModCommand("(" + targetUser.name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
+			this.privateModCommand("(" + name + "'s " + (acAccount ? " ac account: " + acAccount + ", " : "") + "banned alts: " + alts.join(", ") + (guests ? " [" + guests + " guests]" : "") + ")");
 			for (let i = 0; i < alts.length; ++i) {
 				this.add('|unlink|' + toId(alts[i]));
 			}
 		} else if (acAccount) {
-			this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
+			this.privateModCommand("(" + name + "'s ac account: " + acAccount + ")");
 		}
 
-		let userid = this.getLastIdOf(targetUser);
 		this.add('|unlink|hide|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
 		targetUser.ban(false, userid);
@@ -1613,6 +1675,7 @@ let commands = exports.commands = {
 		if (targetUser.confirmed) return this.errorReply("User '" + name + "' is already confirmed.");
 
 		targetUser.setGroup(' ', true);
+		this.sendReply("User '" + name + "' is now confirmed.");
 	},
 	confirmuserhelp: ["/confirmuser [username] - Confirms the user (makes them immune to locks). Requires: & ~"],
 
@@ -1717,7 +1780,7 @@ let commands = exports.commands = {
 		if (!this.can('declare', null, room)) return false;
 		if (!this.canTalk()) return;
 
-		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare can not exceed 500 characters for stability reasons.');
+		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare cannot exceed 500 characters for stability reasons.');
 		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
@@ -1807,7 +1870,7 @@ let commands = exports.commands = {
 		let targetUser = this.targetUser;
 		let name = this.targetUsername;
 		if (!targetUser) return this.errorReply("User '" + name + "' not found.");
-		let userid = this.getLastIdOf(targetUser);
+		let userid = targetUser.getLastId();
 		let hidetype = '';
 		if (!user.can('lock', targetUser) && !user.can('mute', targetUser, room)) {
 			this.errorReply("/hidetext - Access denied.");
@@ -1878,15 +1941,39 @@ let commands = exports.commands = {
 		if (isWin) {
 			command = path.normalize(__dirname + '/lib/winmodlog') + ' tail ' + lines + ' ' + filename;
 		} else {
-			command = 'tail -' + lines + ' ' + filename;
+			command = 'tail -' + lines + ' ' + filename + ' | tac';
 		}
 		let grepLimit = 100;
+		let strictMatch = false;
 		if (wordSearch) { // searching for a word instead
-			if (target.match(/^["'].+["']$/)) target = target.substring(1, target.length - 1);
-			if (isWin) {
-				command = path.normalize(__dirname + '/lib/winmodlog') + ' ws ' + grepLimit + ' "' + target.replace(/%/g, "%%").replace(/([\^"&<>\|])/g, "^$1") + '" ' + filename;
+			let searchString = target;
+			strictMatch = true; // search for a 1:1 match?
+
+			if (searchString.match(/^["'].+["']$/)) {
+				searchString = searchString.substring(1, searchString.length - 1);
+			} else if (isWin) {  // ID search with RegEx isn't implemented for windows yet (feel free to add it to winmodlog.cmd)
+				target = '"' + target + '"';  // add quotes to target so the caller knows they are getting a strict match
 			} else {
-				command = "awk '{print NR,$0}' " + filename + " | sort -nr | cut -d' ' -f2- | grep -m" + grepLimit + " -i '" + target.replace(/\\/g, '\\\\\\\\').replace(/["'`]/g, '\'\\$&\'').replace(/[\{\}\[\]\(\)\$\^\.\?\+\-\*]/g, '[$&]') + "'";
+				// search for ID: allow any number of non-word characters (\W*) in between the letters we have to match.
+				// i.e. if searching for "myUsername", also match on "My User-Name".
+				// note that this doesn't really add a lot of unwanted results, since we use \b..\b
+				target = toId(target);
+				searchString = '\\b' + target.split('').join('\\W*') + '\\b';
+				strictMatch = false;
+			}
+
+			if (isWin) {
+				if (strictMatch) {
+					command = path.normalize(__dirname + '/lib/winmodlog') + ' ws ' + grepLimit + ' "' + searchString.replace(/%/g, "%%").replace(/([\^"&<>\|])/g, "^$1") + '" ' + filename;
+				} else {
+					// doesn't happen. ID search with RegEx isn't implemented for windows yet (feel free to add it to winmodlog.cmd and call it from here)
+				}
+			} else {
+				if (strictMatch) {
+					command = "awk '{print NR,$0}' " + filename + " | sort -nr | cut -d' ' -f2- | grep -m" + grepLimit + " -i '" + searchString.replace(/\\/g, '\\\\\\\\').replace(/["'`]/g, '\'\\$&\'').replace(/[\{\}\[\]\(\)\$\^\.\?\+\-\*]/g, '[$&]') + "'";
+				} else {
+					command = "awk '{print NR,$0}' " + filename + " | sort -nr | cut -d' ' -f2- | grep -m" + grepLimit + " -Ei '" + searchString + "'";
+				}
 			}
 		}
 
@@ -1904,8 +1991,8 @@ let commands = exports.commands = {
 				let bracketIndex = line.indexOf(']');
 				let parenIndex = line.indexOf(')');
 				if (bracketIndex < 0) return Tools.escapeHTML(line);
-				let time = line.slice(1, bracketIndex);
-				let timestamp = new Date(time).format('{yyyy}-{MM}-{dd} {hh}:{mm}{tt}');
+				const time = line.slice(1, bracketIndex);
+				let timestamp = Tools.toTimeStamp(new Date(time), {hour12: true});
 				parenIndex = line.indexOf(')');
 				let roomid = line.slice(bracketIndex + 3, parenIndex);
 				if (!hideIps && Config.modloglink) {
@@ -1922,9 +2009,11 @@ let commands = exports.commands = {
 				}
 			} else {
 				if (!stdout) {
-					connection.popup("No moderator actions containing '" + target + "' were found on " + roomNames + ".");
+					connection.popup("No moderator actions containing " + target + " were found on " + roomNames + "." +
+					                 (strictMatch ? "" : " Add quotes to the search parameter to search for a phrase, rather than a user."));
 				} else {
-					connection.popup("|wide||html|<p>The last " + grepLimit + " logged actions containing '" + target + "' on " + roomNames + ":</p>" + stdout);
+					connection.popup("|wide||html|<p>The last " + grepLimit + " logged actions containing " + target + " on " + roomNames + "." +
+					                 (strictMatch ? "" : " Add quotes to the search parameter to search for a phrase, rather than a user.") + "</p>" + stdout);
 				}
 			}
 		});
@@ -2303,7 +2392,7 @@ let commands = exports.commands = {
 			let me = user;
 			this.sendReply('||<< ' + eval(target));
 		} catch (e) {
-			this.sendReply('|| << ' + ('' + e.stack).replace(/\n *at Context\.exports\.commands\.eval [\s\S]*/m, '').replace(/\n/g, '\n||'));
+			this.sendReply('|| << ' + ('' + e.stack).replace(/\n *at CommandContext\.exports\.commands(\.[a-z0-9]+)*\.eval [\s\S]*/m, '').replace(/\n/g, '\n||'));
 		}
 	},
 
@@ -2458,7 +2547,8 @@ let commands = exports.commands = {
 
 	savereplay: function (target, room, user, connection) {
 		if (!room || !room.battle) return;
-		let data = room.getLog(0).join("\n"); // spectator log (no exact HP)
+		let logidx = Tools.getFormat(room.battle.format).team ? 3 : 0; // retrieve spectator log (0) if there are set privacy concerns
+		let data = room.getLog(logidx).join("\n");
 		let datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
 		let players = room.battle.playerNames;
 		LoginServer.request('prepreplay', {

@@ -3676,7 +3676,24 @@ exports.BattleAbilities = {
 	},
 
 	// Mod Abilities
-	// 01NTG simple
+	// Alpha Ninja
+	"megapoison": {
+		isNonstandard: true,
+		onStart: function (source) {
+			source.setStatus('tox');
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.id === 'psn' || effect.id === 'tox') {
+				this.heal(target.maxhp / 8);
+				return false;
+			}
+		},
+		onAllyModifyMove: function (move) {
+			move.accuracy = true;
+		},
+		id: "megapoison",
+		name: "Mega Poison",
+	},
 
 	// AuraStormLucario
 	"auraguard": {
@@ -3724,23 +3741,6 @@ exports.BattleAbilities = {
 		name: "Aura Guard",
 	},
 
-	// Irraquated
-	"woopslmao": {
-		isNonstandard: true,
-		onPrepareHit: function (source, target, move) {
-			let type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.add('-start', source, 'typechange', type, '[from] Protean');
-			}
-		},
-		onModifyMove: function (move) {
-			move.stab = 2;
-		},
-		id: "woopslmao",
-		name: "Woops lmao",
-	},
-
 	// Nii Sama
 	"goodnight": {
 		isNonStandard: true,
@@ -3767,24 +3767,7 @@ exports.BattleAbilities = {
 	// Safety Shark magic guard
 
 	// Drivers
-	// Alpha Ninja
-	"megapoison": {
-		isNonstandard: true,
-		onStart: function (source) {
-			source.setStatus('tox');
-		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect.id === 'psn' || effect.id === 'tox') {
-				this.heal(target.maxhp / 8);
-				return false;
-			}
-		},
-		onAllyModifyMove: function (move) {
-			move.accuracy = true;
-		},
-		id: "megapoison",
-		name: "Mega Poison",
-	},
+	// Alliance NTG simple
 
 	// Chief Sokka
 	"cancerousability": {
@@ -3831,7 +3814,7 @@ exports.BattleAbilities = {
 		name: "feelsgd",
 	},
 
-	// EmgProfessor Volco
+	// Emg рrоf Volcо
 	"adaptabulksturdy": {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
@@ -3870,60 +3853,35 @@ exports.BattleAbilities = {
 		name: "Communism",
 	},
 
-	// Imp Fallen Blood
-	"pirate": {
+	// hayleysworld
+	"aquaticmemes": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			let possibleTargets = [];
-			for (let i = 0; i < pokemon.side.foe.active.length; i++) {
-				if (pokemon.side.foe.active[i] && !pokemon.side.foe.active[i].fainted) possibleTargets.push(pokemon.side.foe.active[i]);
-			}
-			while (possibleTargets.length) {
-				let rand = 0;
-				if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
-				let target = possibleTargets[rand];
-				let ability = this.getAbility(target.ability);
-				let bannedAbilities = {flowergift:1, forecast:1, forecast2: 1, illusion:1, imposter:1, multitype:1, stancechange:1, trace:1, zenmode:1, pirate:1};
-				if (bannedAbilities[target.ability]) {
-					possibleTargets.splice(rand, 1);
-					continue;
-				}
-				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
-				pokemon.setAbility(ability);
-				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
-				target.setAbility("noability");
-				return;
-			}
+			this.add('-ability', pokemon, 'Aquatic Memes');
+			this.boost({def:1, spa:1, spd:1});
 		},
-		onUpdate: function (pokemon) {
-			let possibleTargets = [];
-			for (let i = 0; i < pokemon.side.foe.active.length; i++) {
-				if (pokemon.side.foe.active[i] && !pokemon.side.foe.active[i].fainted) possibleTargets.push(pokemon.side.foe.active[i]);
-			}
-			while (possibleTargets.length) {
-				let rand = 0;
-				if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
-				let target = possibleTargets[rand];
-				let ability = this.getAbility(target.ability);
-				let bannedAbilities = {flowergift:1, forecast:1, illusion:1, imposter:1, multitype:1, stancechange:1, trace:1, zenmode:1, pirate:1};
-				if (bannedAbilities[target.ability]) {
-					possibleTargets.splice(rand, 1);
-					continue;
-				}
-				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
-				pokemon.setAbility(ability);
-				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
-				target.setAbility("noability");
-				return;
-			}
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
 		},
-		id: "pirate",
-		name: "Pirate",
+		id: "aquaticmemes",
+		name: "Aquatic Memes",
 	},
-	"noability": {
+
+	// Irraquated
+	"woopslmao": {
 		isNonstandard: true,
-		id: "noability",
-		name: "NoAbility",
+		onPrepareHit: function (source, target, move) {
+			let type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] Protean');
+			}
+		},
+		onModifyMove: function (move) {
+			move.stab = 2;
+		},
+		id: "woopslmao",
+		name: "Woops lmao",
 	},
 
 	// isandman
@@ -4148,18 +4106,60 @@ exports.BattleAbilities = {
 		name: "Speedy Gonzales",
 	},
 
-	// hayleysworld
-	"aquaticmemes": {
+	// Imp Fallen Blood
+	"pirate": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Aquatic Memes');
-			this.boost({def:1, spa:1, spd:1});
+			let possibleTargets = [];
+			for (let i = 0; i < pokemon.side.foe.active.length; i++) {
+				if (pokemon.side.foe.active[i] && !pokemon.side.foe.active[i].fainted) possibleTargets.push(pokemon.side.foe.active[i]);
+			}
+			while (possibleTargets.length) {
+				let rand = 0;
+				if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
+				let target = possibleTargets[rand];
+				let ability = this.getAbility(target.ability);
+				let bannedAbilities = {flowergift:1, forecast:1, forecast2: 1, illusion:1, imposter:1, multitype:1, stancechange:1, trace:1, zenmode:1, pirate:1};
+				if (bannedAbilities[target.ability]) {
+					possibleTargets.splice(rand, 1);
+					continue;
+				}
+				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
+				pokemon.setAbility(ability);
+				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
+				target.setAbility("noability");
+				return;
+			}
 		},
-		onSwitchOut: function (pokemon) {
-			pokemon.heal(pokemon.maxhp / 3);
+		onUpdate: function (pokemon) {
+			let possibleTargets = [];
+			for (let i = 0; i < pokemon.side.foe.active.length; i++) {
+				if (pokemon.side.foe.active[i] && !pokemon.side.foe.active[i].fainted) possibleTargets.push(pokemon.side.foe.active[i]);
+			}
+			while (possibleTargets.length) {
+				let rand = 0;
+				if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
+				let target = possibleTargets[rand];
+				let ability = this.getAbility(target.ability);
+				let bannedAbilities = {flowergift:1, forecast:1, illusion:1, imposter:1, multitype:1, stancechange:1, trace:1, zenmode:1, pirate:1};
+				if (bannedAbilities[target.ability]) {
+					possibleTargets.splice(rand, 1);
+					continue;
+				}
+				this.add('-ability', pokemon, ability, '[from] ability: Pirate', '[of] ' + target);
+				pokemon.setAbility(ability);
+				this.add('-ability', target, "noability", '[from] ability: Pirate', '[of] ' + target);
+				target.setAbility("noability");
+				return;
+			}
 		},
-		id: "aquaticmemes",
-		name: "Aquatic Memes",
+		id: "pirate",
+		name: "Pirate",
+	},
+	"noability": {
+		isNonstandard: true,
+		id: "noability",
+		name: "NoAbility",
 	},
 
 	// Piscean
@@ -4190,18 +4190,6 @@ exports.BattleAbilities = {
 		},
 		id: "noyou",
 		name: "No, You!",
-	},
-
-	// Princess High
-	"pixieshield": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Pixie Shield');
-			this.useMove("spikes", pokemon);
-			this.boost({spa:2, spe:2, spd:2});
-		},
-		id: "pixieshield",
-		name: "Pixie Shield",
 	},
 
 	// Sota Higurashi contrary

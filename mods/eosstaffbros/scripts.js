@@ -3,7 +3,6 @@
 exports.BattleScripts = {
 	randomOMAuthTeam: function (side) {
 		let team = [];
-		let variant = this.random(2);
 		// Hardcoded sets of the available Pokémon.
 		let sets = {
 			// RO/Admins.
@@ -273,7 +272,7 @@ exports.BattleScripts = {
 		};
 		// Generate the team randomly.
 		let pool = Object.keys(sets).randomize();
-		let ranks = {'~':'admins', '&':'leaders', '@':'mods', '%':'drivers', '$':'operators', '+':'voices'};
+		// let ranks = {'~':'admins', '&':'leaders', '@':'mods', '%':'drivers', '$':'operators', '+':'voices'};
 		let levels = {'~':99, '&':98, '@':97, '%':96, '$':95, '+':94};
 		for (let i = 0; i < 6; i++) {
 			let rank = pool[i].charAt(0);

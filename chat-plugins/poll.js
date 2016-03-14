@@ -9,6 +9,7 @@ if (!Rooms.global.Poll) {
 				options: {},
 				display: '',
 				topOption: '',
+				voters: [],
 			};
 		},
 		splint: function (target) {
@@ -45,8 +46,15 @@ exports.commands = {
 
 		options = options.join(',').toLowerCase().split(',');
 
+		if (question.length > 100) return this.errorReply("You cannot have a title this long in your poll");
+		if (options.length > 50) return this.errorReply("You cannot have this many options in your poll");
+		for (let i = 0; i < options[i].length; i++) {
+			if (options[i].length > 50 || options[i].length === 0) return this.errorReply("You cannot have an option this long in your poll");
+		}
+
 		Poll[room.id].question = question;
 		Poll[room.id].optionList = options;
+		Poll[room.id].voters = [];
 
 		let pollOptions = '';
 		let start = 0;
@@ -151,6 +159,7 @@ exports.commands = {
 
 		let ips = JSON.stringify(user.ips);
 		Poll[room.id].options[ips] = target.toLowerCase();
+		Poll[room.id].voters.push(user.name);
 
 		return this.sendReply("You are now voting for " + target + ".");
 	},
@@ -162,6 +171,15 @@ exports.commands = {
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
 		this.sendReply("NUMBER OF VOTES: " + Object.keys(Poll[room.id].options).length);
 	},
+
+	voters: function (target, room, user) {
+		if (!this.can('declare', null, room)) return false;
+		if (!this.canBroadcast()) return;
+		if (!Poll[room.id]) Poll.reset(room.id);
+		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
+		this.sendReply("VOTERS: " + Poll[room.id].voters);
+	},
+
 	rpoll: 'roompoll',
 	roompoll: function (target, room, user) {
 		if (!target) {
@@ -176,9 +194,7 @@ exports.commands = {
 		if (action === "change" || action === "set") {
 			if (!this.can('declare', null, room) || room.battle) return false;
 			if (!toId(details || " ")) return this.parse("/help roompoll");
-			if (details.split(",").length < 3) {
-				return this.errorReply("You did not include enough arguments for the poll.");
-			}
+			if (details.split(",").length < 3) return this.errorReply("You did not include enough arguments for the poll.");
 			room.RPoll = details.replace(/^\/poll/i, "");
 			if (room.chatRoomData) {
 				room.chatRoomData.RPoll = room.RPoll;
@@ -190,6 +206,10 @@ exports.commands = {
 			if (!this.can('declare', null, room)) return false;
 			if (!room.RPoll) return this.errorReply("No roompoll has been set yet.");
 			return this.sendReply('The roompoll is: /poll ' + room.RPoll);
+		}
+		if (action === 'end') {
+			if (!this.can('broadcast', null, room) || room.battle) return false;
+			return this.parse("/endpoll");
 		} else {
 			return this.errorReply('This is not a valid roompoll command, do "/roompoll help" for more information');
 		}

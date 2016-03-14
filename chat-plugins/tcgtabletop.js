@@ -1,5 +1,5 @@
 /**
-* Traditional Games: Yugioh wiki plugin
+* TCG & Tabletop: Yugioh wiki plugin
 * This is a command that allows users to search the yugioh wiki for cards. It will display the closest match with a given query, or a separate message if there isn't anything found.
 * By bumbadadabum with help from ascriptmaster, codelegend and the PS development team.
 */
@@ -7,6 +7,8 @@
 'use strict';
 
 const http = require('http');
+
+function noop() {}
 
 function wikiaSearch(subdomain, query, callback) {
 	http.get('http://' + subdomain + '.wikia.com/api/v1/Search/List/?query=' + encodeURIComponent(query) + '&limit=1', res => {
@@ -28,7 +30,10 @@ function wikiaSearch(subdomain, query, callback) {
 
 			return callback(null, result.items[0]);
 		});
-	}).on('error', callback);
+	}).once('error', function (err) {
+		callback(err);
+		this.on('error', noop);
+	});
 }
 
 exports.commands = {
@@ -36,13 +41,13 @@ exports.commands = {
 	mtg: 'yugioh',
 	magic: 'yugioh',
 	yugioh: function (target, room, user, connection, cmd) {
-		if (room.id !== 'traditionalgames') return this.errorReply("This command can only be used in the Traditional Games room.");
+		if (room.id !== 'tcgtabletop') return this.errorReply("This command can only be used in the TCG & Tabletop room.");
 		if (!this.canBroadcast()) return;
 		let broadcasting = this.broadcasting;
 		let subdomain = (cmd === 'yugioh' || cmd === 'ygo') ? 'yugioh' : 'mtg';
 		let query = target.trim();
 
-		wikiaSearch(subdomain, query, ((err, data) => {
+		wikiaSearch(subdomain, query, (err, data) => {
 			if (err) {
 				if (err instanceof SyntaxError || err.message === 'Malformed data') {
 					if (!broadcasting) return connection.sendTo(room, "Error: something went wrong in the request: " + err.message);
@@ -56,6 +61,6 @@ exports.commands = {
 			let htmlReply = "<strong>Best result for " + Tools.escapeHTML(query) + ":</strong><br/><a href=\"" + Tools.escapeHTML(entryUrl) + "\">" + Tools.escapeHTML(entryTitle) + "</a>";
 			if (!broadcasting) return connection.sendTo(room, "|raw|<div class=\"infobox\">" + htmlReply + "</div>");
 			room.addRaw("<div class=\"infobox\">" + htmlReply + "</div>").update();
-		}).once());
+		});
 	},
 };

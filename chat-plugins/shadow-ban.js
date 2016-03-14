@@ -24,7 +24,7 @@ if (!room) {
 		Rooms.global.writeChatRoomData();
 	}
 }
-if (Object.size(room.addedUsers) > 0) {
+if (Object.keys(room.addedUsers).length > 0) {
 	setImmediate(function () {
 		room.add("||Loaded user list: " + Object.keys(room.addedUsers).sort().join(", "));
 		room.update();

@@ -269,6 +269,7 @@ let pornRegex = new RegExp(buildPornRegex, "i");
 
 let testForPorn = function (target, room, user) {
 	if (!target || !room || !user) return;
+	if (room.id === 'staff' || room.id === 'upperstaffroom') return; // prevent filter from checking in staff rooms
 	if (pornRegex.test(target)) {
 		// lock and deconfirm user
 		let deconfirm = user.deconfirm();

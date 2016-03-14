@@ -422,8 +422,8 @@ let GlobalRoom = (() => {
 		})();
 
 		// init users
-		this.users = {};
-		this.userCount = 0; // cache of `Object.size(this.users)`
+		this.users = Object.create(null);
+		this.userCount = 0; // cache of `size(this.users)`
 		this.maxUsers = 0;
 		this.maxUsersDate = 0;
 
@@ -589,7 +589,8 @@ let GlobalRoom = (() => {
 		let searchRange = 100, elapsed = Date.now() - Math.min(search1.time, search2.time);
 		if (formatid === 'ou' || formatid === 'oucurrent' || formatid === 'randombattle') searchRange = 50;
 		searchRange += elapsed / 300; // +1 every .3 seconds
-		if (searchRange > 300) searchRange = 300;
+		if (searchRange > 300) searchRange = 300 + (searchRange - 300) / 10; // +1 every 3 sec after 300
+		if (searchRange > 600) searchRange = 600;
 		if (Math.abs(search1.rating - search2.rating) > searchRange) return false;
 
 		user1.lastMatch = user2.userid;
@@ -922,15 +923,17 @@ let BattleRoom = (() => {
 		// Check if the battle was rated to update the ladder, return its response, and log the battle.
 		if (this.rated) {
 			this.rated = false;
+			let p1 = this.battle.p1;
+			let p2 = this.battle.p2;
 
-			if (winnerid === this.p1.userid) {
+			if (winnerid === p1.userid) {
 				p1score = 1;
-			} else if (winnerid === this.p2.userid) {
+			} else if (winnerid === p2.userid) {
 				p1score = 0;
 			}
 
-			let p1name = this.p1.name;
-			let p2name = this.p2.name;
+			let p1name = p1.name;
+			let p2name = p2.name;
 
 			//update.updates.push('[DEBUG] uri: ' + Config.loginserver + 'action.php?act=ladderupdate&serverid=' + Config.serverid + '&p1=' + encodeURIComponent(p1) + '&p2=' + encodeURIComponent(p2) + '&score=' + p1score + '&format=' + toId(rated.format) + '&servertoken=[token]');
 
@@ -1010,9 +1013,10 @@ let BattleRoom = (() => {
 		logData.endType = this.battle.endType;
 		if (!p1rating) logData.ladderError = true;
 		logData.log = BattleRoom.prototype.getLog.call(logData, 3); // replay log (exact damage)
-		let date = new Date();
-		let logfolder = date.format('{yyyy}-{MM}');
-		let logsubfolder = date.format('{yyyy}-{MM}-{dd}');
+		const date = new Date();
+		const logsubfolder = Tools.toTimeStamp(date).split(' ')[0];
+		const logfolder = logsubfolder.split('-', 2).join('-');
+
 		let curpath = 'logs/' + logfolder;
 		fs.mkdir(curpath, '0755', () => {
 			let tier = this.format.toLowerCase().replace(/[^a-z0-9]+/g, '');
@@ -1327,7 +1331,7 @@ let ChatRoom = (() => {
 	function ChatRoom(roomid, title, options) {
 		Room.call(this, roomid, title);
 		if (options) {
-			Object.merge(this, options);
+			Object.assign(this, options);
 			if (!this.isPersonal) this.chatRoomData = options;
 		}
 
@@ -1340,7 +1344,7 @@ let ChatRoom = (() => {
 		if (Config.logchat) {
 			this.rollLogFile(true);
 			this.logEntry = function (entry, date) {
-				let timestamp = (new Date()).format('{HH}:{mm}:{ss} ');
+				const timestamp = Tools.toTimeStamp(new Date()).split(' ')[1] + ' ';
 				entry = entry.replace(/<img[^>]* src="data:image\/png;base64,[^">]+"[^>]*>/g, '');
 				this.logFile.write(timestamp + entry + '\n');
 			};
@@ -1379,10 +1383,11 @@ let ChatRoom = (() => {
 		let date = new Date();
 		let basepath = 'logs/chat/' + this.id + '/';
 		mkdir(basepath, '0755', () => {
-			let path = date.format('{yyyy}-{MM}');
+			const dateString = Tools.toTimeStamp(date).split(' ')[0];
+			let path = dateString.split('-', 2).join('-');
 			mkdir(basepath + path, '0755', () => {
 				if (this.destroyingLog) return;
-				path += '/' + date.format('{yyyy}-{MM}-{dd}') + '.txt';
+				path += '/' + dateString + '.txt';
 				if (path !== this.logFilename) {
 					this.logFilename = path;
 					if (this.logFile) this.logFile.destroySoon();
@@ -1401,9 +1406,9 @@ let ChatRoom = (() => {
 						} catch (e) {} // OS doesn't support atomic rename
 					} catch (e) {} // OS doesn't support symlinks
 				}
-				let timestamp = +date;
-				date.advance('1 hour').reset('minutes').advance('1 second');
-				setTimeout(() => this.rollLogFile(), +date - timestamp);
+				let currentTime = date.getTime();
+				let nextHour = new Date(date.setMinutes(60)).setSeconds(1);
+				setTimeout(() => this.rollLogFile(), nextHour - currentTime);
 			});
 		});
 	};

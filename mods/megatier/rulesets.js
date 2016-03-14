@@ -4,12 +4,12 @@ exports.BattleFormats = {
 	pokemon: {
 		effectType: 'Banlist',
 		validateTeam: function (team, format) {
-			var problems = [];
+			let problems = [];
 			// ----------- legality line ------------------------------------------
 			if (!format || !format.banlistTable || !format.banlistTable['illegal']) return problems;
 			// everything after this line only happens if we're doing legality enforcement
-			var kyurems = 0;
-			for (var i = 0; i < team.length; i++) {
+			let kyurems = 0;
+			for (let i = 0; i < team.length; i++) {
 				if (team[i].species === 'Kyurem-White' || team[i].species === 'Kyurem-Black') {
 					if (kyurems > 0) {
 						problems.push('You cannot have more than one Kyurem-Black/Kyurem-White.');
@@ -21,17 +21,17 @@ exports.BattleFormats = {
 			return problems;
 		},
 		validateSet: function (set, format) {
-			var item = this.getItem(set.item);
-			var template = this.getTemplate(set.species);
-			var problems = [];
-			var totalEV = 0;
-			var allowCAP = !!(format && format.banlistTable && format.banlistTable['allowcap']);
+			let item = this.getItem(set.item);
+			let template = this.getTemplate(set.species);
+			let problems = [];
+			let totalEV = 0;
+			let allowCAP = !!(format && format.banlistTable && format.banlistTable['allowcap']);
 
 			if (set.species === set.name) delete set.name;
 			if (template.gen > this.gen) {
 				problems.push(set.species + ' does not exist in gen ' + this.gen + '.');
 			}
-			var ability = {};
+			let ability = {};
 			if (set.ability) {
 				ability = this.getAbility(set.ability);
 				if (ability.gen > this.gen) {
@@ -39,8 +39,8 @@ exports.BattleFormats = {
 				}
 			}
 			if (set.moves) {
-				for (var i = 0; i < set.moves.length; i++) {
-					var move = this.getMove(set.moves[i]);
+				for (let i = 0; i < set.moves.length; i++) {
+					let move = this.getMove(set.moves[i]);
 					if (move.gen > this.gen) {
 						problems.push(move.name + ' does not exist in gen ' + this.gen + '.');
 					} else if (!allowCAP && move.isNonstandard) {
@@ -69,7 +69,7 @@ exports.BattleFormats = {
 					problems.push(item.name + ' is not a real item.');
 				}
 			}
-			for (var k in set.evs) {
+			for (let k in set.evs) {
 				if (typeof set.evs[k] !== 'number' || set.evs[k] < 0) {
 					set.evs[k] = 0;
 				}
@@ -92,20 +92,20 @@ exports.BattleFormats = {
 			// "Undiscovered" egg group Pokemon caught in the wild in gen 6 must have at least 3 perfect IVs
 			if (set.ivs && this.gen >= 6 && ((template.species in {Xerneas:1, Yveltal:1, Zygarde:1}) ||
 				(format.requirePentagon && template.eggGroups.indexOf('Undiscovered') >= 0 && !template.evos.length))) {
-				var perfectIVs = 0;
-				for (var i in set.ivs) {
+				let perfectIVs = 0;
+				for (let i in set.ivs) {
 					if (set.ivs[i] >= 31) perfectIVs++;
 				}
 				if (perfectIVs < 3) problems.push((set.name || set.species) + " has less than three perfect IVs.");
 			}
 
 			// limit one of each move
-			var moves = [];
+			let moves = [];
 			if (set.moves) {
-				var hasMove = {};
-				for (var i = 0; i < set.moves.length; i++) {
-					var move = this.getMove(set.moves[i]);
-					var moveid = move.id;
+				let hasMove = {};
+				for (let i = 0; i < set.moves.length; i++) {
+					let move = this.getMove(set.moves[i]);
+					let moveid = move.id;
 					if (hasMove[moveid]) continue;
 					hasMove[moveid] = true;
 					moves.push(set.moves[i]);
@@ -116,9 +116,9 @@ exports.BattleFormats = {
 			/*if (template.isMega) {
 				// Mega evolutions evolve in-battle
 				set.species = template.baseSpecies;
-				var baseAbilities = Tools.getTemplate(set.species).abilities;
-				var niceAbility = false;
-				for (var i in baseAbilities) {
+				let baseAbilities = Tools.getTemplate(set.species).abilities;
+				let niceAbility = false;
+				for (let i in baseAbilities) {
 					if (baseAbilities[i] === set.ability) {
 						niceAbility = true;
 						break;
@@ -209,10 +209,10 @@ exports.BattleFormats = {
 		onStartPriority: -10,
 		onStart: function () {
 			this.add('clearpoke');
-			for (var i = 0; i < this.sides[0].pokemon.length; i++) {
+			for (let i = 0; i < this.sides[0].pokemon.length; i++) {
 				this.add('poke', this.sides[0].pokemon[i].side.id, this.sides[0].pokemon[i].details.replace(/(Arceus|Gourgeist|Genesect|Pumpkaboo)(-[a-zA-Z?]+)?/g, '$1-*'));
 			}
-			for (var i = 0; i < this.sides[1].pokemon.length; i++) {
+			for (let i = 0; i < this.sides[1].pokemon.length; i++) {
 				this.add('poke', this.sides[1].pokemon[i].side.id, this.sides[1].pokemon[i].details.replace(/(Arceus|Gourgeist|Genesect|Pumpkaboo)(-[a-zA-Z?]+)?/g, '$1-*'));
 			}
 		},
@@ -226,9 +226,9 @@ exports.BattleFormats = {
 			this.add('rule', 'Species Clause: Limit one of each Pokémon');
 		},
 		validateTeam: function (team, format) {
-			var speciesTable = {};
-			for (var i = 0; i < team.length; i++) {
-				var template = this.getTemplate(team[i].species);
+			let speciesTable = {};
+			for (let i = 0; i < team.length; i++) {
+				let template = this.getTemplate(team[i].species);
 				if (speciesTable[template.num]) {
 					return ["You are limited to one of each Pokémon by Species Clause.", "(You have more than one " + template.name + ")"];
 				}
@@ -239,9 +239,9 @@ exports.BattleFormats = {
 	nicknameclause: {
 		effectType: 'Rule',
 		validateTeam: function (team, format) {
-			var nameTable = {};
-			for (var i = 0; i < team.length; i++) {
-				var name = team[i].name;
+			let nameTable = {};
+			for (let i = 0; i < team.length; i++) {
+				let name = team[i].name;
 				if (name) {
 					if (name === team[i].species) continue;
 					if (nameTable[name]) {
@@ -260,9 +260,9 @@ exports.BattleFormats = {
 			this.add('rule', 'Item Clause: Limit one of each item');
 		},
 		validateTeam: function (team, format) {
-			var itemTable = {};
-			for (var i = 0; i < team.length; i++) {
-				var item = toId(team[i].item);
+			let itemTable = {};
+			for (let i = 0; i < team.length; i++) {
+				let item = toId(team[i].item);
 				if (!item) continue;
 				if (itemTable[item]) {
 					return ["You are limited to one of each item by Item Clause.", "(You have more than one " + this.getItem(item).name + ")"];
@@ -277,9 +277,9 @@ exports.BattleFormats = {
 			this.add('rule', '-ate Clause: Limit one of Aerilate/Refrigerate/Pixilate');
 		},
 		validateTeam: function (team, format) {
-			var ateAbility = false;
-			for (var i = 0; i < team.length; i++) {
-				var ability = toId(team[i].ability);
+			let ateAbility = false;
+			for (let i = 0; i < team.length; i++) {
+				let ability = toId(team[i].ability);
 				if (ability === 'refrigerate' || ability === 'pixilate' || ability === 'aerilate') {
 					if (ateAbility) return ["You have more than one of Aerilate/Refrigerate/Pixilate, which is banned by -ate Clause."];
 					ateAbility = true;
@@ -293,10 +293,10 @@ exports.BattleFormats = {
 			this.add('rule', 'OHKO Clause: OHKO moves are banned');
 		},
 		validateSet: function (set) {
-			var problems = [];
+			let problems = [];
 			if (set.moves) {
-				for (var i in set.moves) {
-					var move = this.getMove(set.moves[i]);
+				for (let i in set.moves) {
+					let move = this.getMove(set.moves[i]);
 					if (move.ohko) problems.push(move.name + ' is banned by OHKO Clause.');
 				}
 			}
@@ -350,9 +350,9 @@ exports.BattleFormats = {
 			this.add('rule', 'Baton Pass Clause: Limit one Pokémon knowing Baton Pass');
 		},
 		validateTeam: function (team, format) {
-			var problems = [];
-			var BPcount = 0;
-			for (var i = 0; i < team.length; i++) {
+			let problems = [];
+			let BPcount = 0;
+			for (let i = 0; i < team.length; i++) {
 				if (team[i].moves.indexOf('Baton Pass') >= 0) BPcount++;
 				if (BPcount > 1) {
 					problems.push("You are limited to one Pokémon with the move Baton Pass by the Baton Pass Clause.");
@@ -386,8 +386,8 @@ exports.BattleFormats = {
 				return;
 			}
 			if (status.id === 'slp') {
-				for (var i = 0; i < target.side.pokemon.length; i++) {
-					var pokemon = target.side.pokemon[i];
+				for (let i = 0; i < target.side.pokemon.length; i++) {
+					let pokemon = target.side.pokemon[i];
 					if (pokemon.hp && pokemon.status === 'slp') {
 						if (!pokemon.statusData.source || pokemon.statusData.source.side !== pokemon.side) {
 							this.add('-message', 'Sleep Clause Mod activated.');
@@ -408,8 +408,8 @@ exports.BattleFormats = {
 				return;
 			}
 			if (status.id === 'frz') {
-				for (var i = 0; i < target.side.pokemon.length; i++) {
-					var pokemon = target.side.pokemon[i];
+				for (let i = 0; i < target.side.pokemon.length; i++) {
+					let pokemon = target.side.pokemon[i];
 					if (pokemon.status === 'frz') {
 						this.add('-message', 'Freeze Clause activated.');
 						return false;
@@ -425,10 +425,10 @@ exports.BattleFormats = {
 		},
 		validateTeam: function (team, format, teamHas) {
 			if (!team[0]) return;
-			var template = this.getTemplate(team[0].species);
-			var typeTable = template.types;
+			let template = this.getTemplate(team[0].species);
+			let typeTable = template.types;
 			if (!typeTable) return ["Your team must share a type."];
-			for (var i = 1; i < team.length; i++) {
+			for (let i = 1; i < team.length; i++) {
 				template = this.getTemplate(team[i].species);
 				if (!template.types) return ["Your team must share a type."];
 
@@ -459,10 +459,10 @@ exports.BattleFormats = {
 		effectType: 'Rule',
 		onStart: function () {
 			this.add('rule', 'Mega Rayquaza Ban Mod: You cannot mega evolve Rayquaza');
-			for (var i = 0; i < this.sides[0].pokemon.length; i++) {
+			for (let i = 0; i < this.sides[0].pokemon.length; i++) {
 				if (this.sides[0].pokemon[i].speciesid === 'rayquaza') this.sides[0].pokemon[i].canMegaEvo = false;
 			}
-			for (var i = 0; i < this.sides[1].pokemon.length; i++) {
+			for (let i = 0; i < this.sides[1].pokemon.length; i++) {
 				if (this.sides[1].pokemon[i].speciesid === 'rayquaza') this.sides[1].pokemon[i].canMegaEvo = false;
 			}
 		},

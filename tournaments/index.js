@@ -794,7 +794,7 @@ function createTournament(room, format, generator, playerCap, isRated, args, out
 	format = Tools.getFormat(format);
 	if (format.effectType !== 'Format' || !format.tournamentShow) {
 		output.errorReply(format.id + " is not a valid tournament format.");
-		output.errorReply("Valid formats: " + Object.values(Tools.data.Formats).filter(function (f) { return f.effectType === 'Format' && f.tournamentShow; }).map('name').join(", "));
+		output.errorReply("Valid formats: " + Object.values(Tools.data.Formats).filter(f => f.effectType === 'Format' && f.tournamentShow).map(format => format.name).join(", "));
 		return;
 	}
 	if (!TournamentGenerators[toId(generator)]) {
@@ -873,6 +873,8 @@ let commands = {
 			if (params.length < 1) {
 				return this.sendReply("Usage: " + cmd + " <type> [, <comma-separated arguments>]");
 			}
+			if (params[2] > 6) params[2] = 6; // limit rounds of elimination to 6
+
 			let playerCap = parseInt(params.splice(1, 1));
 			let generator = createTournamentGenerator(params.shift(), params, this);
 			if (generator && tournament.setGenerator(generator, this)) {
@@ -885,14 +887,21 @@ let commands = {
 				this.sendReply("Tournament set to " + generator.name + (playerCap ? " with a player cap of " + tournament.playerCap : "") + ".");
 			}
 		},
+		end: 'delete',
+		stop: 'delete',
+		delete: function (tournament, user) {
+			if (deleteTournament(tournament.room.id, this)) {
+				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
+			}
+		},
+	},
+	moderation: {
 		begin: 'start',
 		start: function (tournament, user) {
 			if (tournament.startTournament(this)) {
 				this.sendModCommand("(" + user.name + " started the tournament.)");
 			}
 		},
-	},
-	moderation: {
 		dq: 'disqualify',
 		disqualify: function (tournament, user, params, cmd) {
 			if (params.length < 1) {
@@ -1028,13 +1037,6 @@ let commands = {
 				return this.sendReply("Usage: " + cmd + " <allow|disallow>");
 			}
 		},
-		end: 'delete',
-		stop: 'delete',
-		delete: function (tournament, user) {
-			if (deleteTournament(tournament.room.id, this)) {
-				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
-			}
-		},
 	},
 };
 
@@ -1091,6 +1093,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		if (params.length < 2) {
 			return this.sendReply("Usage: " + cmd + " <format>, <type> [, <comma-separated arguments>]");
 		}
+		if (params[3] > 6) params[3] = 6; // limit rounds of elimination to 6
 
 		let tour = createTournament(room, params.shift(), params.shift(), params.shift(), Config.istournamentsrated, params, this);
 		if (tour) {

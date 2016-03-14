@@ -262,7 +262,7 @@ exports.commands = {
 
 	kickall: function (target, room, user) {
 		if (!this.can('declare')) return this.sendReply('/kickall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
 		for (let i in room.users) {
 			if (room.users[i] !== user.userid) {
 				room.users[i].leaveRoom(room.id);
@@ -365,7 +365,7 @@ exports.commands = {
 	roompm: 'rmall',
 	rmall: function (target, room, user) {
 		if (!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
 		if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
 		target = target.replace(/<(?:.|\n)*?>/gm, '');
 
@@ -634,11 +634,23 @@ exports.commands = {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 
-		let targetUser = Users.get(target);
+		let targetUser = Users.get(target).getLastId();
 
-		this.add('|unlink|' + this.getLastIdOf(targetUser));
+		this.add('|unlink|' + targetUser);
 		this.addModCommand(targetUser.name + "'s links were unlinked by " + user.name);
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
+
+	ad: 'advertise',
+	advertise: function (target, room, user) {
+		if (!user.can('lock')) return false;
+		let parts = target.split(',');
+		if (parts.length < 2) return this.errorReply("Invalid command. `/ad room, message`.");
+		let innerTarget = Tools.escapeHTML(parts[0]);
+		let message = Tools.escapeHTML(parts.slice(1).join(","));
+		let targetRoom = Rooms.search(innerTarget);
+		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
+		room.addRaw('<div class="infobox"><a href="/' + targetRoom.id + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + targetRoom.id + '</strong>:</font> ' + message + '</a>  -' + toId(user) + '</div>');
+	},
 };
