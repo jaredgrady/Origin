@@ -262,7 +262,7 @@ exports.commands = {
 
 	kickall: function (target, room, user) {
 		if (!this.can('declare')) return this.sendReply('/kickall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
 		for (let i in room.users) {
 			if (room.users[i] !== user.userid) {
 				room.users[i].leaveRoom(room.id);
@@ -365,7 +365,7 @@ exports.commands = {
 	roompm: 'rmall',
 	rmall: function (target, room, user) {
 		if (!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command can not be used in Lobby.');
+		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
 		if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
 		target = target.replace(/<(?:.|\n)*?>/gm, '');
 
@@ -641,6 +641,7 @@ exports.commands = {
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
+
 	ad: 'advertise',
 	advertise: function (target, room, user) {
 		if (!user.can('lock')) return false;

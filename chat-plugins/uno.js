@@ -623,6 +623,6 @@ exports.commands = {
 		"/uno start - starts the game",
 		"/uno end - ends the game",
 		"/uno dq [player] - disqualifies the player from the game",
-		"Games with a bucks involved cannot be ended, and players can not be dq'd or leave from the game.",
+		"Games with a bucks involved cannot be ended, and players cannot be dq'd or leave from the game.",
 	],
 };

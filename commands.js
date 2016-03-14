@@ -1747,7 +1747,7 @@ let commands = exports.commands = {
 		if (!this.can('declare', null, room)) return false;
 		if (!this.canTalk()) return;
 
-		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare can not exceed 500 characters for stability reasons.');
+		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare cannot exceed 500 characters for stability reasons.');
 		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
