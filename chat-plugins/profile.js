@@ -3,7 +3,7 @@
 let color = require('../config/color');
 let moment = require('moment');
 let geoip = {};
-let badgeicons = require('./badgeicons');
+let badgePlugin = require('./badgePlugin');
 
 try {
 	geoip = require('geoip-ultralight');
@@ -186,8 +186,7 @@ Profile.prototype.badges = function () {
 			if (i !== 0 && i % 8 === 0) {
 				output += '</tr> <tr>';
 			}
-			console.log(badgeicons[badges[i]]);
-			output += '<td>' + badgeImg(badgeicons[badges[i]], badges[i]) + '</td>';
+			output += '<td>' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</td>';
 		}
 		output += '</tr> </table>';
 		return output;
@@ -283,73 +282,6 @@ exports.commands = {
 			break;
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
-		}
-	},
-	badge: 'badges',
-	badges: function (target, room, user) {
-		let parts = target.split(',');
-		let cmd = parts[0].trim().toLowerCase();
-		let userid, targetUser;
-		let badges;
-		let badge;
-		switch (cmd) {
-		case 'set':
-			if (!this.can('ban')) return false;
-			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
-			userid = toId(parts[1].trim());
-			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
-			badges = Db('badgesDB').get(userid);
-			badge = parts[2].trim();
-
-			if (!badgeicons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
-			badges.push(badge);
-			let uniqueBadges = [];
-			uniqueBadges = badges.filter(function (elem, pos) {
-				return badges.indexOf(elem) === pos;
-			});
-			Db('badgesDB').set(toId(userid), uniqueBadges);
-			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeicons[badge] + '" width="16" height="16">');
-			this.logModCommand(user.name + " gave " + targetUser + " a badge.");
-			this.sendReply("Badge set.");
-			break;
-		case 'list':
-			if (!this.canBroadcast()) return;
-			let data = badgeicons;
-			let data2 = Object.keys(data);
-			let output = '<table> <tr>';
-			for (let i = 0; i < data2.length; i++) {
-				output += '<td>' + data2[i] + '</td> <td>' + badgeImg(data[data2[i]], data2[i]) + '</td>';
-				if (i % 3 === 2) output +=  '</tr> <tr>';
-			}
-			output += '</tr> <table>';
-			this.sendReplyBox(output);
-			break;
-		case 'take':
-			if (!this.can('ban')) return false;
-			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
-			userid = toId(parts[1].trim());
-			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
-			badges = Db('badgesDB').get(userid);
-			badge = parts[2].trim();
-			if (!badgeicons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
-			let index = badges.indexOf(badge);
-			if (index !== -1) {
-				badges.splice(index, 1);
-			}
-			Db('badgesDB').set(toId(userid), badges);
-			this.logModCommand(user.name + " took a badge from " + targetUser + ".");
-			this.sendReply("Badge taken.");
-			break;
-		default:
-			return this.sendReply("Invalid command. Valid commands are `/badges list`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 		}
 	},
 	profilehelp: ["/profile - Shows information regarding user's name, group, money, and when they were last seen."],
