@@ -251,6 +251,7 @@ let commands = exports.commands = {
 		}
 
 		let emoteMsg = parseEmoticons(target, room, user, true);
+		let originalMessage = target;
 		if ((!user.blockEmoticons && !targetUser.blockEmoticons) && emoteMsg) target = '/html ' + emoteMsg;
 
 		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
@@ -260,7 +261,7 @@ let commands = exports.commands = {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
-				targetUser.send(message);
+				targetUser.send(Cynesthesia.pixilate(room, user, message, "/pm ", originalMessage));
 				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;
 				user.lastPM = targetUser.userid;
