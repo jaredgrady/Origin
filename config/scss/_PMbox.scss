@@ -2070,3 +2070,130 @@
 }
 
 /*hayleysworld~end*/
+
+/*allegiant exca*/
+
+.pm-window-allegiantexca h3 {
+  background: rgba(123, 99, 90, 0.8) url("http://i.imgur.com/UnK7nYH.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #DCDCDC !important;
+  text-shadow: 0px 0px 2px #423131 !important;
+  border-color: #555 !important;
+}
+
+.pm-window-allegiantexca h3:hover {
+  background: rgba(123, 99, 90, 0.8) url("http://i.imgur.com/UnK7nYH.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #EEE !important;
+  text-shadow: 0px 0px 2px #423131 !important;
+  border-color: #333 !important;
+}
+
+.pm-window-allegiantexca.focused h3, .pm-window-allegiantexca.focused h3:hover {
+  background: rgba(123, 99, 90, 0.9) url("http://i.imgur.com/UnK7nYH.png") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #EEE !important;
+  text-shadow: 0px 0px 2px #423131 !important;
+  border-color: #333 !important;
+}
+
+.pm-window-allegiantexca h3 small {
+  color: #D66B6B !important;
+}
+
+.pm-window-allegiantexca h3 .minimizebutton, .dark .pm-window-allegiantexca h3 .minimizebutton, .pm-window-allegiantexca h3 .closebutton, .pm-window-allegiantexca h3:hover .minimizebutton {
+  color: #DCDCDC !important;
+}
+
+.pm-window-allegiantexca h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-allegiantexca h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #DCDCDC !important;
+}
+
+.pm-window-allegiantexca h3 .closebutton:hover {
+  color: #F0BFBF !important;
+}
+
+.pm-window-allegiantexca h3 .minimizebutton:hover, .dark .pm-window-allegiantexca h3 .minimizebutton:hover {
+  color: #F0D9BF !important;
+}
+
+.pm-window-allegiantexca .pm-log, .pm-window-allegiantexca.focused .pm-log {
+  background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/cJMrTAz.png?2") right no-repeat !important;
+  border-color: #777 !important;
+  text-shadow: 1px 0px 2px #FFF !important;
+}
+
+.pm-window-allegiantexca .pm-log .chat small {
+  color: #555 !important;
+}
+
+.pm-window-allegiantexca .pm-log-add, .pm-window-allegiantexca.focused .pm-log-add {
+  background: #BBB !important;
+  border-color: #777 !important;
+}
+
+.pm-window-allegiantexca .pm-log-add .textbox {
+  border-color: #555 !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  color: #000 !important;
+}
+
+.pm-window-allegiantexca h3.pm-notifying {
+  border-color: #AB4949 !important;
+  background: #DE7373 url("http://i.imgur.com/PFE0TCz.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #555 !important;
+  text-shadow: none !important;
+  font-style: italic;
+}
+
+.pm-window-allegiantexca h3.pm-notifying:hover {
+  border-color: #555 !important;
+  background: #D26C6C url("http://i.imgur.com/PFE0TCz.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #555 !important;
+  text-shadow: none !important;
+  font-style: italic;
+}
+
+.pm-window-allegiantexca h3.pm-notifying .closebutton, .pm-window-allegiantexca h3.pm-notifying .minimizebutton {
+  color: #555 !important;
+}
+
+.pm-window-allegiantexca h3.pm-notifying .closebutton:hover {
+  color: #A61E1E !important;
+}
+
+.pm-window-allegiantexca h3.pm-notifying .minimizebutton:hover {
+  color: #A6701E !important;
+}
+
+.pm-window-allegiantexca .challenge {
+  background: #DE7373 url("http://i.imgur.com/S0R9sYI.gif") no-repeat left !important;
+  color: #732020 !important;
+  text-shadow: 0px 0px 2px #F9CDCD !important;
+  border-color: #AB4949 !important;
+}
+
+.pm-window-allegiantexca .challenge .select, .pm-window-allegiantexca .challenge .buttonbar button {
+  background: rgba(171, 73, 73, 0.6) !important;
+  border-color: #555 !important;
+  color: #555 !important;
+  text-shadow: none !important;
+}
+
+.pm-window-allegiantexca .challenge .select:hover, .pm-window-allegiantexca .challenge .buttonbar button:hover {
+  background: rgba(208, 115, 115, 0.6) !important;
+  border-color: #444 !important;
+} 
+
+.pm-window-allegiantexca .challenge .select:disabled {
+  background: rgba(208, 115, 115, 0.8) !important;
+  border-color: #666 !important;
+}
+
+.pm-window-allegiantexca .challenge .teamselect:disabled strong {
+  color: #555 !important;
+}
+  
+/*alegiant exca*/
