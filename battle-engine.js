@@ -12,7 +12,7 @@
 
 'use strict';
 
-require('sugar-deprecated')(require('./crashlogger.js'));
+require('sugar')(require('./crashlogger.js'));
 Object.defineProperty(Object, 'values', {writable: true, configurable: true, value: require('object.values')});
 
 global.Config = require('./config/config.js');
