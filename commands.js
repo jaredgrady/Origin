@@ -1609,7 +1609,9 @@ let commands = exports.commands = {
 			return this.errorReply("The note is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
 		}
 		if (!this.can('receiveauthmessages', null, room)) return false;
-		return this.privateModCommand("(" + user.name + " notes: " + target + ")");
+
+		if (Users.ShadowBan.checkBanned(user)) return Users.ShadowBan.addMessage(user, "To " + room, target);
+		if (!Users.ShadowBan.checkBanned(user)) return this.privateModCommand("(" + user.name + " notes: " + target + ")");
 	},
 	modnotehelp: ["/modnote [note] - Adds a moderator note that can be read through modlog. Requires: % @ # & ~"],
 
