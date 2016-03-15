@@ -499,6 +499,7 @@ class CommandContext {
 		return target.substr(commaIndex + 1).trim();
 	}
 }
+exports.CommandContext = CommandContext;
 
 /**
  * Command parser
