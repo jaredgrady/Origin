@@ -301,6 +301,5 @@ exports.commands = {
 		Db("ignoremotes").delete(user.userid);
 		user.blockEmoticons = false;
 		this.sendReply("You are no longer ignoring emotes.");
-		user.blockEmoticons = false;
 	},
 };
