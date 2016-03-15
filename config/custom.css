@@ -3637,3 +3637,8 @@ a.subtle, a.subtle:hover {
 .dark .chat-log-add, .dark .pm-log-add, .dark .battle-log-add {
   background: rgba(34, 34, 34, 0.8);
   color: #DDD; }
+
+
+  #c-userlist-user-a, #d-userlist-user-a { 
+    background: rgba(244, 244, 244, 0.8) url("b") right no-repeat;
+  }
