@@ -1,10 +1,9 @@
 'use strict';
+/**********************
+ * Badges by Nii Sama *
+ **********************/
 
 let color = require('../config/color');
-
-/************************************************
- * Badge Icons *
- ************************************************/
 
 module.exports.badgeIcons = {
 	"rpsmaster":"http://i.imgur.com/xpRhWgI.png",
@@ -89,6 +88,7 @@ exports.commands = {
 		let output = '<table> <tr>';
 		let badgeIcons = module.exports.badgeIcons;
 		let keys;
+		let listkeys;
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
@@ -116,24 +116,21 @@ exports.commands = {
 		case 'list':
 			if (!this.canBroadcast()) return;
 			keys = Object.keys(badgeIcons);
+			listkeys = Object.keys(badgeDescriptions);
 			output = '<table> <tr>';
 			for (let i = 0; i < keys.length; i++) {
-				output += '<td>' + keys[i] + '</td> <td>' + badgeImg(badgeIcons[keys[i]], keys[i]) + '</td>';
-				if (i % 3 === 2) output +=  '</tr> <tr>';
+				output += '<td>' + badgeImg(badgeIcons[keys[i]], keys[i]) + '</td> <td>' + keys[i] + '</td> <td>' + badgeDescriptions[listkeys[i]] + '</td>';
+				if (i % 2 === 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
 			break;
-		case 'descriptions':
+		case 'info':
 			if (!this.canBroadcast()) return;
-			keys = Object.keys(badgeDescriptions);
-			output = '<table> <tr>';
-			for (let i = 0; i < keys.length; i++) {
-				output += '<td>' + keys[i] + '</td> <td>' + badgeDescriptions[keys[i]] + '</td>';
-				if (i % 3 === 2) output +=  '</tr> <tr>';
-			}
-			output += '</tr> <table>';
-			this.sendReplyBox(output);
+			badge = parts[1].trim();
+			listkeys = Object.keys(badgeDescriptions);
+			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			this.sendReply(badgeDescriptions[badge]);
 			break;
 		case 'take':
 			if (!this.can('ban')) return false;
@@ -156,7 +153,7 @@ exports.commands = {
 			this.sendReply("Badge taken.");
 			break;
 		default:
-			return this.sendReply("Invalid command. Valid commands are `/badges list`, `/badges descriptions`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
+			return this.sendReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 		}
 	},
 	badgeshelp: ["Valid commands are `/badges list`, `/badges set, user, badgeName` and `/badges take, user, badgeName`."],
