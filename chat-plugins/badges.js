@@ -87,7 +87,6 @@ exports.commands = {
 		let badge;
 		let output = '<table> <tr>';
 		let badgeIcons = module.exports.badgeIcons;
-		let keys;
 		let listkeys;
 		switch (cmd) {
 		case 'set':
@@ -115,11 +114,11 @@ exports.commands = {
 			break;
 		case 'list':
 			if (!this.canBroadcast()) return;
-			keys = Object.keys(badgeIcons);
+			badges = Object.keys(badgeIcons);
 			listkeys = Object.keys(badgeDescriptions);
 			output = '<table> <tr>';
-			for (let i = 0; i < keys.length; i++) {
-				output += '<td>' + badgeImg(badgeIcons[keys[i]], keys[i]) + '</td> <td>' + keys[i] + '</td> <td>' + badgeDescriptions[listkeys[i]] + '</td>';
+			for (let i = 0; i < badges.length; i++) {
+				output += '<td>' + badgeImg(badgeIcons[badges[i]], badges[i]) + '</td> <td>' + badges[i] + '</td> <td>' + badgeDescriptions[listkeys[i]] + '</td>';
 				if (i % 2 === 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
@@ -127,6 +126,7 @@ exports.commands = {
 			break;
 		case 'info':
 			if (!this.canBroadcast()) return;
+			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 			badge = parts[1].trim();
 			listkeys = Object.keys(badgeDescriptions);
 			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
@@ -153,7 +153,7 @@ exports.commands = {
 			this.sendReply("Badge taken.");
 			break;
 		default:
-			return this.sendReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
+			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 		}
 	},
 	badgeshelp: ["Valid commands are `/badges list`, `/badges set, user, badgeName` and `/badges take, user, badgeName`."],

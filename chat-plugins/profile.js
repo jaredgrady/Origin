@@ -183,7 +183,7 @@ Profile.prototype.badges = function () {
 	if (typeof badges !== 'undefined' && badges !== null) {
 		let output = ' <table style="' + css +  '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
-			if (i !== 0 && i % 8 === 0) {
+			if (i !== 0 && i % 4 === 0) {
 				output += '</tr> <tr>';
 			}
 			output += '<td>' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</td>';
