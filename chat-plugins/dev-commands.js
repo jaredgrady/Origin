@@ -84,7 +84,7 @@ exports.commands = {
 		let args = target.split(',');
 		if (args.length < 3) return this.parse('/help iconcss');
 		let username = toId(args.shift());
-		let imageurl = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
+		let imageurl = 'background: rgba(255, 255, 255, 0.65) url("' + args.shift().trim() + '") right no-repeat;';
 		let selectors = '#' + toId(args.shift()) + '-userlist-user-' + username;
 		args.forEach(function (room) {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username;
@@ -138,7 +138,7 @@ exports.commands = {
 		let args = target.split(',');
 		if (args.length < 3) return this.parse('/help seticon');
 		let username = toId(args.shift());
-		let image = 'background: rgba(244, 244, 244, 0.8) url("' + args.shift().trim() + '") right no-repeat;';
+		let image = 'background: rgba(255, 255, 255, 0.65) url("' + args.shift().trim() + '") right no-repeat;';
 		selectors = '\n\n' + '  #' + toId(args.shift()) + '-userlist-user-' + username;
 		args.forEach(function (room) {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username;

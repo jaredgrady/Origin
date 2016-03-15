@@ -3,7 +3,7 @@
 let color = require('../config/color');
 let moment = require('moment');
 let geoip = {};
-let badgePlugin = require('./badgePlugin');
+let badgePlugin = require('./badges');
 
 try {
 	geoip = require('geoip-ultralight');

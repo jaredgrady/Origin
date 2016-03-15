@@ -48,9 +48,11 @@ exports.commands = {
 
 		if (question.length > 100) return this.errorReply("You cannot have a title this long in your poll");
 		if (options.length > 50) return this.errorReply("You cannot have this many options in your poll");
+		/*
 		for (let i = 0; i < options[i].length; i++) {
 			if (options[i].length > 50 || options[i].length === 0) return this.errorReply("You cannot have an option this long in your poll");
 		}
+		*/
 
 		Poll[room.id].question = question;
 		Poll[room.id].optionList = options;

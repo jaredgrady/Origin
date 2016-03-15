@@ -919,7 +919,7 @@ exports.Formats = [
 				this.add('c|&Erica*07|Mm, hello.');
 			}
 			if (name === 'paulcentury') {
-				this.add('c|&Paul Century|The King of the Slowbros is here');
+				this.add("raw|<div class='chat'><small>&</small><button name='parseCommand' value='/user Paul Century' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#5F4FC1'>Paul Century:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/sVgkUF1.png?1\" title=\"feelssammich\" height=\"50\" width=\"50\" /></em></div>");
 			}
 			if (name === 'piersniνаns') {
 				this.add('c|&Piers Niνаns|Rabinov, reporting for duty!');
