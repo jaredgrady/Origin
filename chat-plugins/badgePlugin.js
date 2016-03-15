@@ -37,7 +37,7 @@ module.exports.badgeIcons = {
 	"Cute Fox":"http://i.imgur.com/xgN76US.png",
 	"vip":"http://i.imgur.com/7heNNTP.png",
 	"Donor of the month":"http://i.imgur.com/EHx2ozm.gif",
-	"Neptune badge":"http://i.imgur.com/c0eYyOf.png",
+	"Neptune badge":"http://i.imgur.com/d1iHXxr.png",
 };
 
 let badgeDescriptions = {
