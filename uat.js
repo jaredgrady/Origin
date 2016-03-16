@@ -52,6 +52,8 @@ let checkEvade = function (user) {
 		if (MAX_AUTO_SHADOWBAN_TIME === true || Date.now() - time <= MAX_AUTO_SHADOWBAN_TIME * 3600000) {
 			Users.ShadowBan.addUser(user);
 			Monitor.log("[SecretEvaderMonitor] " + user.name + " was automatically shadowbanned - evading alt of " + lockedUserAgents[agent].userid + ".");
+			// update the times
+			lockUserAgent(user);
 		} else {
 			// just warn staff room
 			Monitor.log("[SecretEvaderMonitor] " + user.name + " suspected of being evading alt of " + lockedUserAgents[agent].userid + ".");
