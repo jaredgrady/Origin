@@ -1,6 +1,6 @@
 'use strict';
 /**********************
- * Badges by Nii Sama *
+ * Badges by a weeb for weebs *
  **********************/
 
 let color = require('../config/color');
@@ -87,7 +87,6 @@ exports.commands = {
 		let badge;
 		let output = '<table> <tr>';
 		let badgeIcons = module.exports.badgeIcons;
-		let listkeys;
 		switch (cmd) {
 		case 'set':
 			if (!this.can('ban')) return false;
@@ -115,10 +114,9 @@ exports.commands = {
 		case 'list':
 			if (!this.canBroadcast()) return;
 			badges = Object.keys(badgeIcons);
-			listkeys = Object.keys(badgeDescriptions);
 			output = '<table> <tr>';
 			for (let i = 0; i < badges.length; i++) {
-				output += '<td>' + badgeImg(badgeIcons[badges[i]], badges[i]) + '</td> <td>' + badges[i] + '</td> <td>' + badgeDescriptions[listkeys[i]] + '</td>';
+				output += '<td>' + badgeImg(badgeIcons[badges[i]], badges[i]) + '</td> <td>' + badges[i] + '</td> <td>' + badgeDescriptions[badges[i]] + '</td>';
 				if (i % 2 === 1) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
@@ -128,7 +126,6 @@ exports.commands = {
 			if (!this.canBroadcast()) return;
 			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 			badge = parts[1].trim();
-			listkeys = Object.keys(badgeDescriptions);
 			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
 			this.sendReply(badgeDescriptions[badge]);
 			break;
