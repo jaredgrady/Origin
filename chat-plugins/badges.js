@@ -120,14 +120,14 @@ exports.commands = {
 			output = '<table> <tr>';
 			for (let i = 0; i < keys.length; i++) {
 				output += '<td>' + badgeImg(badgeIcons[keys[i]], keys[i]) + '</td> <td>' + keys[i] + '</td> <td>' + badgeDescriptions[listkeys[i]] + '</td>';
-				if (i % 2 === 1) output +=  '</tr> <tr>';
+				if (i % 3 === 2) output +=  '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
 			break;
 		case 'info':
 			if (!this.canBroadcast()) return;
-			badge = parts[1].trim();
+			if (parts[1]) badge = parts[1].trim();
 			listkeys = Object.keys(badgeDescriptions);
 			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
 			this.sendReply(badgeDescriptions[badge]);
