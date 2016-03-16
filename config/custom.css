@@ -1957,7 +1957,7 @@
 #monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat; }
 
-#lobby-userlist-user-emgrfvolc, #staff-userlist-user-emgrfvolc, #theemergenceleague-userlist-user-emgrfvolc {
+#lobby-userlist-user-emge4volco, #staff-userlist-user-emge4volco, #theemergenceleague-userlist-user-emge4volco, #ossb-userlist-user-emge4volco {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat; }
 
 #lobby-userlist-user-exotickey, #theomegaleague-userlist-user-exotickey, #hayleysden-userlist-user-exotickey {
@@ -2028,6 +2028,9 @@
 
 #lobby-userlist-user-piersnins, #hayleysden-userlist-user-piersnins, #theomegaleague-userlist-user-piersnins {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/c5eeP7n.gif") right no-repeat; }
+
+#lobby-userlist-user-trafalgarlaw, #voidleague-userlist-user-trafalgarlaw, #yugioh-userlist-user-trafalgarlaw {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/5XEA8Km.png") right no-repeat; }
 
 /* Symbol Color */
 #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
