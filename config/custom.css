@@ -1396,62 +1396,62 @@
 
 /*carn0x ~end*/
 /* vin steel */
-.pm-window-vinsteel h3 {
+.pm-window-mightysciz h3 {
   background: rgba(48, 48, 48, 0.8) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #DDD !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
   border-color: #44464A !important; }
 
-.pm-window-vinsteel h3:hover {
+.pm-window-mightysciz h3:hover {
   background: rgba(48, 48, 48, 0.9) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #EEE !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
   border-color: #2C2D2F !important; }
 
-.pm-window-vinsteel.focused h3, .pm-window-vinsteel.focused h3:hover {
+.pm-window-mightysciz.focused h3, .pm-window-mightysciz.focused h3:hover {
   background: rgba(83, 83, 83, 0.95) url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
   color: #FFF !important;
   text-shadow: 0px 0px 2px #2C2D2F !important;
   border-color: #2C2D2F !important; }
 
-.pm-window-vinsteel h3 small {
+.pm-window-mightysciz h3 small {
   color: #22A8E0 !important; }
 
-.pm-window-vinsteel h3 .minimizebutton, .dark .pm-window-vinsteel h3 .minimizebutton, .pm-window-vinsteel h3 .closebutton, .pm-window-vinsteel h3:hover .minimizebutton {
+.pm-window-mightysciz h3 .minimizebutton, .dark .pm-window-mightysciz h3 .minimizebutton, .pm-window-mightysciz h3 .closebutton, .pm-window-mightysciz h3:hover .minimizebutton {
   color: #BBB !important; }
 
-.pm-window-vinsteel h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-vinsteel h3 .closebutton:hover + .minimizebutton.minimizebutton {
+.pm-window-mightysciz h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-mightysciz h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #BBB !important; }
 
-.pm-window-vinsteel h3 .closebutton:hover {
+.pm-window-mightysciz h3 .closebutton:hover {
   color: #FFA4B6 !important; }
 
-.pm-window-vinsteel h3 .minimizebutton:hover, .dark .pm-window-vinsteel h3 .minimizebutton:hover {
+.pm-window-mightysciz h3 .minimizebutton:hover, .dark .pm-window-mightysciz h3 .minimizebutton:hover {
   color: #FFDBA4 !important; }
 
-.pm-window-vinsteel .pm-log, .pm-window-vinsteel.focused .pm-log {
+.pm-window-mightysciz .pm-log, .pm-window-mightysciz.focused .pm-log {
   background: rgba(248, 248, 248, 0.95) url("http://i.imgur.com/8Atzt1P.png?1") right no-repeat !important;
   border-color: #2C2D2F !important; }
 
-.pm-window-vinsteel .pm-log .chat small {
+.pm-window-mightysciz .pm-log .chat small {
   color: #1898D0 !important; }
 
-.pm-window-vinsteel .pm-log-add, .pm-window-vinsteel.focused .pm-log-add {
+.pm-window-mightysciz .pm-log-add, .pm-window-mightysciz.focused .pm-log-add {
   background: #777 !important;
   border-color: #444 !important; }
 
-.pm-window-vinsteel .pm-log-add .textbox {
+.pm-window-mightysciz .pm-log-add .textbox {
   border-color: #555 !important;
   background: rgba(255, 255, 255, 0.95) !important;
   color: #000; }
 
-.pm-window-vinsteel .pm-log-add .textbox:focus {
+.pm-window-mightysciz .pm-log-add .textbox:focus {
   border-color: #1898D0 !important; }
 
-.pm-window-vinsteel h3.pm-notifying {
+.pm-window-mightysciz h3.pm-notifying {
   border-color: #0E76A2 !important;
   background: #22A8E0 url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
@@ -1459,7 +1459,7 @@
   text-shadow: !important;
   font-style: italic; }
 
-.pm-window-vinsteel h3.pm-notifying:hover {
+.pm-window-mightysciz h3.pm-notifying:hover {
   border-color: #0E76A2 !important;
   background: #0897D4 url("http://i.imgur.com/mItS4Xy.gif") no-repeat !important;
   background-position: 225px -8px !important;
@@ -1467,26 +1467,26 @@
   text-shadow: !important;
   font-style: italic; }
 
-.pm-window-vinsteel .challenge {
+.pm-window-mightysciz .challenge {
   background: #98E0F8 !important;
   color: #2B4A68 !important;
   border-color: #2B4A68 !important; }
 
-.pm-window-vinsteel .challenge .select, .pm-window-vinsteel .challenge .buttonbar button {
+.pm-window-mightysciz .challenge .select, .pm-window-mightysciz .challenge .buttonbar button {
   background: rgba(69, 120, 179, 0.8) !important;
   border-color: #2B4A68 !important;
   color: #98E0F8 !important;
   text-shadow: 1px 1px 1px #2B4A68 !important; }
 
-.pm-window-vinsteel .challenge .select:hover, .pm-window-vinsteel .challenge .buttonbar button:hover {
+.pm-window-mightysciz .challenge .select:hover, .pm-window-mightysciz .challenge .buttonbar button:hover {
   background: rgba(69, 120, 179, 0.9) !important;
   border-color: #2B4A68 !important; }
 
-.pm-window-vinsteel .challenge .select:disabled {
+.pm-window-mightysciz .challenge .select:disabled {
   background: rgba(69, 120, 179, 0.5) !important;
   border-color: #2B4A68 !important; }
 
-.pm-window-vinsteel .challenge .teamselect:disabled strong {
+.pm-window-mightysciz .challenge .teamselect:disabled strong {
   color: #2B4A68 !important; }
 
 /* vin steel ~end */
@@ -1939,8 +1939,8 @@
 #lobby-userlist-user-voidtrent, #voidleague-userlist-user-voidtrent, #alliancecup-userlist-user-voidtrent {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat; }
 
-#lobby-userlist-user-vinsteel, #tournaments-userlist-user-vinsteel, #othermetas-userlist-user-vinsteel, #psmd-userlist-user-vinsteel, #theheartlessleague-userlist-user-vinsteel {
-  background: rgba(255, 255, 255, 0.65) url("http://media.pldh.net/pokecons_action/212.gif") right no-repeat; }
+#lobby-userlist-user-mightysciz, #tournaments-userlist-user-mightysciz, #othermetas-userlist-user-mightysciz, #psmd-userlist-user-mightysciz, #theheartlessleague-userlist-user-mightysciz {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kfBjKIM.gif") right no-repeat; }
 
 #lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
   background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat; }
