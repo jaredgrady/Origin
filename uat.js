@@ -67,4 +67,3 @@ module.exports = {
 	lockedUserAgents: lockedUserAgents,
 	disable: disable,
 };
-	
