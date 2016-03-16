@@ -173,6 +173,7 @@ function unlock(name, unlocked, noRecurse) {
 			delete lockedUsers[id];
 			unlocked = unlocked || {};
 			unlocked[name] = 1;
+			UAT.unlock(id);
 		}
 	}
 	return unlocked;
