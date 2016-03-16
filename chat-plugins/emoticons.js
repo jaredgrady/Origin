@@ -207,7 +207,12 @@ function parseEmoticons(message, room, user, pm) {
 		if (targetUser.blockEmoticons) {
 			targetUser.sendTo(room, "|c|" + group + user.name + "|" + originalMessage);
 		} else {
-			targetUser.sendTo(room, "|uhtml|emoticon-" + user.userid + "|" + message);
+			if (room.battle) {
+				// battles do not support uhtml (yet)
+				targetUser.sendTo(room, "|raw|" + message);
+			} else {
+				targetUser.sendTo(room, "|uhtml|emoticon-" + user.userid + "|" + message);
+			}
 		}
 	}
 	return true;
