@@ -94,6 +94,8 @@ let lockedUsers = Users.lockedUsers = Object.create(null);
 let lockedRanges = Users.lockedRanges = Object.create(null);
 let rangelockedUsers = Users.rangeLockedUsers = Object.create(null);
 
+let UAT = Users.UAT = require("./uat.js");
+
 /**
  * Searches for IP in table.
  *
@@ -330,7 +332,7 @@ Users.cacheGroupData = cacheGroupData;
 let connections = Users.connections = new Map();
 
 class Connection {
-	constructor(id, worker, socketid, user, ip) {
+	constructor(id, worker, socketid, user, ip, useragent) {
 		this.id = id;
 		this.socketid = socketid;
 		this.worker = worker;
@@ -339,6 +341,8 @@ class Connection {
 		this.user = user;
 
 		this.ip = ip || '';
+
+		this.useragent = useragent;
 
 		this.autojoin = '';
 	}
@@ -400,6 +404,7 @@ class User {
 		this.connected = true;
 
 		if (connection.user) connection.user = this;
+		this.useragent = connection.useragent;
 		this.connections = [connection];
 		this.latestHost = '';
 		this.ips = Object.create(null);
@@ -872,6 +877,7 @@ class User {
 			this.destroy();
 			Rooms.global.checkAutojoin(user);
 			if (Config.loginfilter) Config.loginfilter(user, this, userType);
+			UAT.check(this);
 			return true;
 		}
 
@@ -879,6 +885,7 @@ class User {
 		if (this.forceRename(name, registered)) {
 			Rooms.global.checkAutojoin(this);
 			if (Config.loginfilter) Config.loginfilter(this, null, userType);
+			UAT.check(this);
 			return true;
 		}
 		return false;
@@ -1285,6 +1292,7 @@ class User {
 			bannedUsers[this.userid] = userid;
 			this.autoconfirmed = '';
 		}
+		UAT.lock(this);
 		this.locked = userid; // in case of merging into a recently banned account
 		lockedUsers[this.userid] = userid;
 		this.disconnectAll();
@@ -1313,6 +1321,7 @@ class User {
 		this.locked = userid;
 		this.autoconfirmed = '';
 		this.updateIdentity();
+		UAT.lock(this);
 	}
 	tryJoinRoom(room, connection) {
 		let roomid = (room && room.id ? room.id : room);
@@ -1713,9 +1722,9 @@ Users.shortenHost = function (host) {
 	return host.substr(dotLoc + 1);
 };
 
-Users.socketConnect = function (worker, workerid, socketid, ip) {
+Users.socketConnect = function (worker, workerid, socketid, ip, useragent) {
 	let id = '' + workerid + '-' + socketid;
-	let connection = new Connection(id, worker, socketid, null, ip);
+	let connection = new Connection(id, worker, socketid, null, ip, useragent);
 	connections.set(id, connection);
 
 	if (Monitor.countConnection(ip)) {

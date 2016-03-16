@@ -35,8 +35,8 @@ if (!process.send) {
 			case '*': {
 				// *socketid, ip
 				// connect
-				let nlPos = data.indexOf('\n');
-				Users.socketConnect(worker, id, data.substr(1, nlPos - 1), data.substr(nlPos + 1));
+				let splitData = data.split("\n");
+				Users.socketConnect(worker, id, toId(splitData[0]), splitData[1], splitData[2]);
 				break;
 			}
 
@@ -455,7 +455,7 @@ if (!process.send) {
 			}
 		}
 
-		process.send('*' + socketid + '\n' + socket.remoteAddress);
+		process.send('*' + socketid + '\n' + socket.remoteAddress + "\n" + socket.headers["user-agent"]);
 
 		socket.on('data', message => {
 			// drop empty messages (DDoS?)
