@@ -161,7 +161,12 @@ exports.commands = {
 
 		let ips = JSON.stringify(user.ips);
 		Poll[room.id].options[ips] = target.toLowerCase();
-		Poll[room.id].voters.push(user.name);
+
+		let addVoter = true;
+		for (let i = 0; i <= Poll[room.id].voters.length; i++) {
+			if (Poll[room.id].voters[i] === user.name) addVoter = false;
+		}
+		if (addVoter === true) Poll[room.id].voters.push(user.name);
 
 		return this.sendReply("You are now voting for " + target + ".");
 	},
