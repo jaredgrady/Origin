@@ -1995,13 +1995,17 @@
 .pm-window-hayleysworld .pm-log {
   background: rgba(255, 255, 255, 0.9) url("http://i.imgur.com/qDoQnc6.png") no-repeat center !important;
   border-color: #211D1B !important;
-  text-shadow: 0px 0px 1px #211D1B !important;
+  text-shadow: none !important;
 }
 
 .pm-window-hayleysworld.focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/qDoQnc6.png") no-repeat center !important;
   border-color: #211D1B !important;
-  text-shadow: 0px 0px 1px #211D1B !important;
+  text-shadow: none !important;
+}
+
+.pm-window-hayleysworld .pm-log .chat {
+  background: rgba(244, 244, 244, 0.2)
 }
 
 .pm-window-hayleysworld .pm-log .chat small {
