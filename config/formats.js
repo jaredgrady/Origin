@@ -1348,6 +1348,21 @@ exports.Formats = [
 		],
 	},
 	{
+		name: "Monotype X/Y",
+		desc: [
+			"Monotype format up until before ORAS",
+			"&bullet; <a href=\"http://pastebin.com/qfpLMWiR\">Bans & Unbans</a>",
+			"Message user:SaNeski if you notice any irregularities or have somethign to contribute",
+		],
+		section: "Other Metagames",
+		mod: 'xy',
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Audinite', 'Beedrillite', 'Blaziken', 'Cameruptite', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Diancite', 'Galladite', 'Giratina', 'Giratina-Origin', 'Glalitite', 'Groudon', 'Heart Stamp', 'Ho-Oh', 'Hoopa', 'Hoopa-Unbound',
+			'Kyogre', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lugia', 'Mewtwo', 'Palkia', 'Pidgeotite', 'Rayquaza', 'Reshiram', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Altarianite', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Sceptilite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Soul Dew', 'Swampertite',
+		],
+	},
+	{
 		name: "Monotype Doubles",
 		desc: [
 			"All Pok&eacute;mon on a team must share a type.",
