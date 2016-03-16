@@ -64,20 +64,22 @@ let messageReplacer = function (room, user, message, special, originalPMmessage)
 	// used in chatrooms
 	if (!isPM) {
 		// build the original message and allow for emoticons
+		// allow for users ignoring emotes
 		let emoteMessage = emotify(message, room, user, true);
-		let originalMessage;
-		if (emoteMessage) {
-			originalMessage = "|raw|" + emoteMessage;
-		} else {
-			originalMessage = "|c|" + symbol + user.name + "|" + special + message;
-		}
+		let emotelessMessage;
+		let originalMessage = "|c|" + symbol + user.name + "|" + special + message;
+
 		newMessage = "|c|" + symbol + user.name + "|" + special + newMessage;
 		for (let u in room.users) {
 			// get target to send to
 			let target = Users.get(u);
 			if (intersection(Object.keys(target.ips), Object.keys(user.ips)) || target.userid === "safetyshark") {
 				// return original message
-				target.sendTo(room, originalMessage);
+				if (target.blockEmoticons || !emoteMessage) {
+					target.sendTo(room, originalMessage);
+				} else {
+					target.sendTo(room, "|uhtml|emoticon-" + user.userid + "|" + emoteMessage);
+				}
 			} else {
 				// le special message
 				target.sendTo(room, newMessage);
