@@ -40,6 +40,15 @@ let lockUserAgent = function (user) {
 	};
 };
 
+let unlockUserAgent = function (userid) {
+	for (let ua in lockedUserAgents) {
+		if (lockedUserAgents[ua].userid === userid) {
+			// delete it, no longer locked
+			delete lockedUserAgents[ua];
+		}
+	}
+};
+
 let checkEvade = function (user) {
 	cleanUserAgents();
 	// no need to keep on spamming up staff room
@@ -65,6 +74,7 @@ let checkEvade = function (user) {
 
 module.exports = {
 	lock: lockUserAgent,
+	unlock: unlockUserAgent,
 	check: checkEvade,
 	lockedUserAgents: lockedUserAgents,
 	disable: disable,
