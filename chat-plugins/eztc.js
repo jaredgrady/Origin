@@ -10,14 +10,14 @@ let trainerCards = {};
 function loadTrainerCards() {
 	try {
 		trainerCards = serialize.unserialize(fs.readFileSync('config/trainercards.json', 'utf8'));
-		Object.merge(CommandParser.commands, trainerCards);
+		Object.assign(CommandParser.commands, trainerCards);
 	} catch (e) {}
 }
 setTimeout(function () {loadTrainerCards();}, 1000);
 
 function saveTrainerCards() {
 	fs.writeFileSync('config/trainercards.json', serialize.serialize(trainerCards));
-	Object.merge(CommandParser.commands, trainerCards);
+	Object.assign(CommandParser.commands, trainerCards);
 }
 
 exports.commands = {
@@ -62,7 +62,7 @@ exports.commands = {
 
 		case 'list':
 			if (!this.can('declare')) return false;
-			let output = "<b>There's a total of " + Object.size(trainerCards) + " trainer cards added with this command:</b><br />";
+			let output = "<b>There's a total of " + Object.keys(trainerCards).length + " trainer cards added with this command:</b><br />";
 			for (let tc in trainerCards) {
 				output += tc + "<br />";
 			}
