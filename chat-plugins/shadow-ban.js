@@ -208,13 +208,13 @@ exports.commands = {
 
 		// create the buttons
 		let buttons = "<center>" + Object.keys(sbanList).sort().map(l => {
-			let colour = target === l ? "style=\"background-color:lightblue\"" : "style=\"background-color:aliceblue\"";
+			let colour = target === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"";
 			return "<button name=\"send\" value=\"/sbanlist " + l + "\"" + colour + ">" + l.toUpperCase() + "</button>";
 		}).join("&nbsp;");
 		// add the no filter button
 		buttons += "&nbsp;" + // space
 			"<button name=\"send\" value=\"/sbanlist\" " + // command
-			(target && sbanList.hasOwnProperty(target) ? "style=\"background-color:aliceblue\"" : "style=\"background-color:lightblue\"") +
+			(target && sbanList.hasOwnProperty(target) ? "style=\"background-color:aliceblue;height:30px;width:35px\"" : "style=\"background-color:lightblue;height:30px;width:35px\"") +
 			">All</button></center>";
 
 		// create the full popup
@@ -228,7 +228,7 @@ exports.commands = {
 				}).join(", ") + "<br /><br />"; // contents for each letter
 			}).join("");
 
-			user.popup("|wide||html|List of shadowbanned users:" +
+			user.popup("|html|List of shadowbanned users:" +
 				buttons + // buttons for searching
 				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
 				fullPopup + // the contents
@@ -240,7 +240,7 @@ exports.commands = {
 				// bold online users
 				return (targetUser && targetUser.connected ? "<b>" + u + "</b>" : u);
 			}).join(", ");
-			user.popup("|wide||html|List of shadowbanned users:" +
+			user.popup("|html|List of shadowbanned users:" +
 				buttons + // buttons for searching
 				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
 				"<b>" + target.toUpperCase() + " - </b><br />" +
