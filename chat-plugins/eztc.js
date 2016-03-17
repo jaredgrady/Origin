@@ -27,20 +27,19 @@ exports.commands = {
 	trainercard: function (target, room, user) {
 		if (!target) target = 'help';
 		let parts = target.split(',');
-		for (let u in parts) parts[u] = parts[u].trim();
 		let commandName;
 
-		switch (parts[0]) {
+		switch (toId(parts[0])) {
 		case 'add':
 			if (!this.can('declare')) return false;
 			if (!parts[2]) return this.errorReply("Usage: /trainercard add, [command name], [html]");
 			commandName = toId(parts[1]);
 			if (CommandParser.commands[commandName]) return this.errorReply("/trainercards - The command \"" + commandName + "\" already exists.");
-			let html = parts.splice(2, parts.length).join(',');
-			/* jshint ignore:start */
-			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/([^a-z0-9\s])/g, match => {
+			let html = parts.slice(2).join(',').replace(/([^a-z0-9\s])/g, match => {
 				return "\\" + match;
-			}) + "');");
+			}).trim();
+			/* jshint ignore:start */
+			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html + "');");
 			/* jshint ignore:end */
 			saveTrainerCards();
 			this.sendReply("The trainer card \"" + commandName + "\" has been added.");
