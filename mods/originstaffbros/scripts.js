@@ -1,7 +1,7 @@
 'use strict';
 
 // fml 
-require('sugar-deprecated')(require('../../../crashlogger.js'));
+const sugar = require('sugar');
 
 exports.BattleScripts = {
 	randomOriginStaffBrosTeam: function (side) {
