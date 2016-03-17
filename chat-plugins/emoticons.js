@@ -216,7 +216,7 @@ function parseEmoticons(message, room, user, pm) {
 		}
 	}
 	// add to room.log
-	room.log.push((!room.battle ? "|uhtml|emoticon-" + user.userid + "|" : "|raw|") + message);
+	room.log.push("|c|" + group + user.name + "|" + originalMessage);
 	room.lastUpdate = room.log.length;
 	return true;
 }
