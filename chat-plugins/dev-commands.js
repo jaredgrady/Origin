@@ -48,10 +48,10 @@ exports.commands = {
 		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
 		let crashesLines = Number(target);
 		if (isNaN(target) || !target || Number(target) < 10) crashesLines = 10;
-		if (crashesLines > 50) crashesLines = 50;
+		if (crashesLines > 25) crashesLines = 25;
 		for (; crashes.split('\n\n').length <= crashesLines; i--) {
 			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-			if (crashes.split('\n\n').length === crashesLines && crashes.toString().substr(0, 22) === 'Additional information') {
+			if (crashes.split('\n\n').length === crashesLines && crashes.toString().indexOf('Additional information') === 0) {
 				for (; crashes.split('\n\n').length <= crashesLines + 1; i--) {
 					crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i - 1).join('\n');
 				}
@@ -62,10 +62,10 @@ exports.commands = {
 	},
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
 
-	devdeclare: 'ddeclare',
-	ddeclare: function (target, room, user) {
-		if (!target) return this.parse('/help devdeclare');
+	ddeclare: 'devdeclare',
+	devdeclare: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/devdeclare - Access denied.");
+		if (!target) return this.parse('/help devdeclare');
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-black"><large><i>' + 'Developer declare from: ' + user.userid + '</i></large><br /><b>' + target + '</b></div>');
 		}
@@ -74,6 +74,7 @@ exports.commands = {
 	devdeclarehelp: ['/devdeclare [message] - Declares a message anonymously. Requires system operator status.'],
 
 	kill: function () {
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/kill - Access denied.");
 		this.errorReply("Please restart the server within the VPS.");
 	},
 
@@ -95,7 +96,7 @@ exports.commands = {
 	iconcsshelp: ["/iconcss [username], [image url], [room 1], [room 2], ... - Generate css for icons."],
 
 	restart: function (target, room, user) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/restart - Access denied.");
 		if (!Rooms.global.lockdown) {
 			return this.sendReply("For safety reasons, /restart can only be used during lockdown.");
 		}
