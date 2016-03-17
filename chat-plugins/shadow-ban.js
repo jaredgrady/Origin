@@ -26,7 +26,7 @@ if (!room) {
 }
 if (Object.keys(room.addedUsers).length > 0) {
 	setImmediate(function () {
-		room.add("||Loaded user list: " + Object.keys(room.addedUsers).sort().join(", "));
+		room.add("|raw|Loaded user list: <button name=\"send\" value=\"/sbanlist\">View</button>");
 		room.update();
 	});
 }
