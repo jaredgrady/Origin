@@ -2022,6 +2022,7 @@ let commands = exports.commands = {
 				CommandParser.uncacheTree('./command-parser.js');
 				delete require.cache[require.resolve('./commands.js')];
 				delete require.cache[require.resolve('./chat-plugins/info.js')];
+
 				for (let file of dir) {
 					if (file.substr(-3) !== '.js' || file === 'info.js') continue;
 					delete require.cache[require.resolve('./chat-plugins/' + file)];
@@ -2061,7 +2062,7 @@ let commands = exports.commands = {
 				// rebuild the formats list
 				Rooms.global.formatListText = Rooms.global.getFormatListText();
 				// respawn validator processes
-				TeamValidator.ValidatorProcess.respawn();
+				TeamValidator.PM.respawn();
 				// respawn simulator processes
 				Simulator.SimulatorProcess.reinit();
 				// broadcast the new formats list to clients
@@ -2077,7 +2078,7 @@ let commands = exports.commands = {
 			global.LoginServer = require('./loginserver.js');
 			return this.sendReply("The login server has been hotpatched. New login server requests will use the new code.");
 		} else if (target === 'learnsets' || target === 'validator') {
-			TeamValidator.ValidatorProcess.respawn();
+			TeamValidator.PM.respawn();
 			return this.sendReply("The team validator has been hotpatched. Any battles started after now will have teams be validated according to the new code.");
 		} else if (target.startsWith('disable')) {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch is already disabled.");
@@ -2724,7 +2725,7 @@ let commands = exports.commands = {
 				return false;
 			}
 		}
-		user.prepBattle(Tools.getFormat(target).id, 'challenge', connection, result => {
+		user.prepBattle(Tools.getFormat(target).id, 'challenge', connection).then(result => {
 			if (result) user.makeChallenge(targetUser, target);
 		});
 	},
@@ -2763,7 +2764,7 @@ let commands = exports.commands = {
 			this.popupReply(target + " cancelled their challenge before you could accept it.");
 			return false;
 		}
-		user.prepBattle(Tools.getFormat(format).id, 'challenge', connection, result => {
+		user.prepBattle(Tools.getFormat(format).id, 'challenge', connection).then(result => {
 			if (result) user.acceptChallengeFrom(userid);
 		});
 	},
@@ -2788,12 +2789,12 @@ let commands = exports.commands = {
 		let format = originalFormat.effectType === 'Format' ? originalFormat : Tools.getFormat('Anything Goes');
 		if (format.effectType !== 'Format') return this.popupReply("Please provide a valid format.");
 
-		TeamValidator.validateTeam(format.id, user.team, (success, details) => {
+		TeamValidator(format.id).prepTeam(user.team).then(result => {
 			let matchMessage = (originalFormat === format ? "" : "The format '" + originalFormat.name + "' was not found.");
-			if (success) {
+			if (result.charAt(0) === '1') {
 				connection.popup("" + (matchMessage ? matchMessage + "\n\n" : "") + "Your team is valid for " + format.name + ".");
 			} else {
-				connection.popup("" + (matchMessage ? matchMessage + "\n\n" : "") + "Your team was rejected for the following reasons:\n\n- " + details.replace(/\n/g, '\n- '));
+				connection.popup("" + (matchMessage ? matchMessage + "\n\n" : "") + "Your team was rejected for the following reasons:\n\n- " + result.slice(1).replace(/\n/g, '\n- '));
 			}
 		});
 	},
