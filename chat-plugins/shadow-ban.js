@@ -197,26 +197,56 @@ exports.commands = {
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 		let sbanList = {};
 
+		// get target to lower case if there is one
+		if (target) target = toId(target);
+
 		// sort users by letter
 		for (let u in Rooms.rooms.shadowbanroom.chatRoomData.addedUsers) {
 			if (!sbanList[u.charAt(0)]) sbanList[u.charAt(0)] = {};
 			sbanList[u.charAt(0)][u] = 1;
 		}
 
-		// create the popup
-		let popup = Object.keys(sbanList).sort().map(l => {
-			return "<b>" + l.toUpperCase() + " -</b><br />" +
-			Object.keys(sbanList[l]).sort().map(u => {
-				let targetUser = Users.get(u);
+		// create the buttons
+		let buttons = "<center>" + Object.keys(sbanList).sort().map(l => {
+			let colour = target === l ? "style=\"background-color:lightblue\"" : "style=\"background-color:aliceblue\"";
+			return "<button name=\"send\" value=\"/sbanlist " + l + "\"" + colour + ">" + l.toUpperCase() + "</button>";
+		}).join("&nbsp;");
+		// add the no filter button
+		buttons += "&nbsp;" + // space
+			"<button name=\"send\" value=\"/sbanlist\" " + // command
+			(target && sbanList.hasOwnProperty(target) ? "style=\"background-color:aliceblue\"" : "style=\"background-color:lightblue\"") +
+			">All</button></center>";
+
+		// create the full popup
+		if (!target || target.length !== 1 || !sbanList.hasOwnProperty(target)) {
+			let fullPopup = Object.keys(sbanList).sort().map(l => {
+				return "<b>" + l.toUpperCase() + " -</b><br />" +
+				Object.keys(sbanList[l]).sort().map(u => {
+					let targetUser = Users.getExact(u);
+					// bold online users
+					return (targetUser && targetUser.connected ? "<b>" + u + "</b>" : u);
+				}).join(", ") + "<br /><br />"; // contents for each letter
+			}).join("");
+
+			user.popup("|wide||html|List of shadowbanned users:" +
+				buttons + // buttons for searching
+				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
+				fullPopup + // the contents
+				"</div>");
+		} else {
+			// create popup for only one letter
+			let details = Object.keys(sbanList[target]).sort().map(u => {
+				let targetUser = Users.getExact(u);
 				// bold online users
 				return (targetUser && targetUser.connected ? "<b>" + u + "</b>" : u);
-			}).join(", ") + "<br /><br />"; // contents for each letter
-		}).join("");
-
-		user.popup("|wide||html|List of shadowbanned users:" +
-			"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
-			popup + // the contents
-			"</div>");
+			}).join(", ");
+			user.popup("|wide||html|List of shadowbanned users:" +
+				buttons + // buttons for searching
+				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
+				"<b>" + target.toUpperCase() + " - </b><br />" +
+				details + // the contents
+				"</div>");
+		}
 	},
 };
 
