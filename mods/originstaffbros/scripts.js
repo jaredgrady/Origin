@@ -1,5 +1,16 @@
 'use strict';
 
+function Randomize () {
+	let arr = this.concat(), i = arr.length, j, x;
+	while (i) {
+		j = (Math.random() * i) | 0;
+		x = arr[--i];
+		arr[i] = arr[j];
+		arr[j] = x;
+	}
+	return arr;
+}
+
 exports.BattleScripts = {
 	randomOriginStaffBrosTeam: function (side) {
 		let userid = toId(side.name);
@@ -263,7 +274,7 @@ exports.BattleScripts = {
 			}, */
 		};
 		// Generate the team randomly.
-		let pool = Object.keys(sets).randomize();
+		let pool = Randomize(Object.keys(sets));
 		// let ranks = {'~':'admins', '&':'leaders', '@':'mods', '%':'drivers', '$':'operators', '+':'voices', ' ':'others'};
 		let levels = {'~':99, '&':98, '@':97, '%':96, '$':95, '+':95, ' ': 94};
 		for (let i = 0; i < 6; i++) {
