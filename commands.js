@@ -109,18 +109,6 @@ let commands = exports.commands = {
 		return target;
 	},
 
-	trolling: function (target, room, user) {
-		if (!target) return;
-		if (!this.can('hotpatch')) return;
-		if (target === 'on') {
-			trolling = true;
-			this.sendReply('Now trolling');
-		} else {
-			trolling = false;
-			this.sendReply('No longer trolling');
-		}
-	},
-
 	mee: function (target, room, user, connection) {
 		// By default, /mee allows a blank message
 		if (!target) target = '';
