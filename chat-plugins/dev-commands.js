@@ -46,13 +46,15 @@ exports.commands = {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		let i = -100;
 		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-		let crashesLines = Number(target);
-		if (isNaN(target) || !target || Number(target) < 10) crashesLines = 10;
+		/*
+		let crashesLines = Number(target); // 15 replaced with crashLines
+		if (isNaN(target) || !target || crashesLines < 10) crashesLines = 10;
 		if (crashesLines > 20) crashesLines = 20;
-		for (; crashes.split('\n\n').length <= crashesLines; i--) {
+		*/
+		for (; crashes.split('\n\n').length <= 15; i--) {
 			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-			if (crashes.split('\n\n').length === crashesLines && crashes.toString().indexOf('Additional information') === 0) {
-				for (; crashes.split('\n\n').length <= crashesLines + 1; i--) {
+			if (crashes.split('\n\n').length === 15 && crashes.toString().indexOf('Additional information') === 0) {
+				for (; crashes.split('\n\n').length <= 16; i--) {
 					crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i - 1).join('\n');
 				}
 			}
