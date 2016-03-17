@@ -33,12 +33,14 @@ exports.commands = {
 		switch (parts[0]) {
 		case 'add':
 			if (!this.can('declare')) return false;
-			if (!parts[2]) return this.sendReply("Usage: /trainercard add, [command name], [html]");
+			if (!parts[2]) return this.erroRreply("Usage: /trainercard add, [command name], [html]");
 			commandName = toId(parts[1]);
-			if (CommandParser.commands[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" already exists.");
+			if (CommandParser.commands[commandName]) return this.erroRreply("/trainercards - The command \"" + commandName + "\" already exists.");
 			let html = parts.splice(2, parts.length).join(',');
 			/* jshint ignore:start */
-			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/'/g, "\\'") + "');");
+			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/([^a-z])/g, match => {
+				return "\\" + match;
+			}) + "');");
 			/* jshint ignore:end */
 			saveTrainerCards();
 			this.sendReply("The trainer card \"" + commandName + "\" has been added.");
@@ -50,9 +52,10 @@ exports.commands = {
 		case 'delete':
 		case 'remove':
 			if (!this.can('declare')) return false;
-			if (!parts[1]) return this.sendReply("Usage: /trainercard remove, [command name]");
+			if (!parts[1]) return this.erroRreply("Usage: /trainercard remove, [command name]");
 			commandName = toId(parts[1]);
-			if (!trainerCards[commandName]) return this.sendReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
+			if (!commandName) return this.errorReply("The command name must consist of alphanumeric characters only.");
+			if (!trainerCards[commandName]) return this.erroRreply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			delete CommandParser.commands[commandName];
 			delete trainerCards[commandName];
 			saveTrainerCards();
@@ -71,7 +74,7 @@ exports.commands = {
 
 		case 'off':
 			if (!this.can('roommod', null, room)) return false;
-			if (room.disableTrainerCards) return this.sendReply("Broadcasting trainer cards is already disabled in this room.");
+			if (room.disableTrainerCards) return this.erroRreply("Broadcasting trainer cards is already disabled in this room.");
 			room.disableTrainerCards = true;
 			if (!room.battle && !room.isPersonal) {
 				room.chatRoomData.disableTrainerCards = true;
@@ -82,7 +85,7 @@ exports.commands = {
 
 		case 'on':
 			if (!this.can('roommod', null, room)) return false;
-			if (!room.disableTrainerCards) return this.sendReply("Broadcasing trainer cards is already enabled in this room.");
+			if (!room.disableTrainerCards) return this.erroRreply("Broadcasing trainer cards is already enabled in this room.");
 			delete room.disableTrainerCards;
 			if (!room.battle && !room.isPersonal) {
 				delete room.chatRoomData.disableTrainerCards;
@@ -104,12 +107,12 @@ exports.commands = {
 		case 'view':
 			if (!this.can('declare')) return false;
 			commandName = toId(parts[1]);
-			if (!commandName) return this.sendReply("/trainercard view, [command name] - Views html of trainer card")
+			if (!commandName) return this.erroRreply("/trainercard view, [command name] - Views html of trainer card")
 			let htmlOutput = false;
 			for (let tc in trainerCards) {
 				if (tc === commandName) htmlOutput = trainerCards[commandName].toString().split('\n')[2].toString().split('if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox(\'').toString().split('\');')[0].toString().slice(1);
 			}
-			if (htmlOutput === false) return this.sendReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
+			if (htmlOutput === false) return this.erroRreply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			return this.sendReply(htmlOutput);
 			break;
 
