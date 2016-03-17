@@ -193,9 +193,30 @@ exports.commands = {
 	},
 
 	sbanlist: function (target, room, user, connection, cmd) {
-		if (["~", "&", "@", "%"].indexOf(user.group) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		if (!user.can("lock")) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
-		Users.get(toId(user.name)).send('|popup| Here is a list of sbanned users: \n' + Object.keys(Rooms.rooms.shadowbanroom.chatRoomData.addedUsers).sort().join('\n'));
+		let sbanList = {};
+
+		// sort users by letter
+		for (let u in Rooms.rooms.shadowbanroom.chatRoomData.addedUsers) {
+			if (!sbanList[u.charAt(0)]) sbanList[u.charAt(0)] = {};
+			sbanList[u.charAt(0)][u] = 1;
+		}
+
+		// create the popup
+		let popup = Object.keys(sbanList).sort().map(l => {
+			return "<b>" + l.toUpperCase() + " -</b><br />" +
+			Object.keys(sbanList[l]).sort().map(u => {
+				let targetUser = Users.get(u);
+				// bold online users
+				return (targetUser && targetUser.connected ? "<b>" + u + "</b>" : u);
+			}).join(", ") + "<br /><br />"; // contents for each letter
+		}).join("");
+
+		user.popup("|wide||html|List of shadowbanned users:" +
+			"<div style=\"max-height: 310px; overflow-y: scroll\">" + // scrollable popup
+			popup + // the contents
+			"</div>");
 	},
 };
 
