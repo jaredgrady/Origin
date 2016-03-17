@@ -212,9 +212,9 @@ exports.commands = {
 			return "<button name=\"send\" value=\"/sbanlist " + l + "\"" + colour + ">" + l.toUpperCase() + "</button>";
 		}).join("&nbsp;");
 		// add the no filter button
-		buttons += "&nbsp;" + // space
+		buttons += "<br />" + // new line
 			"<button name=\"send\" value=\"/sbanlist\" " + // command
-			(target && sbanList.hasOwnProperty(target) ? "style=\"background-color:aliceblue;height:30px;width:35px\"" : "style=\"background-color:lightblue;height:30px;width:35px\"") +
+			(target && sbanList.hasOwnProperty(target) ? "style=\"background-color:aliceblue;height:30px;width:90px\"" : "style=\"background-color:lightblue;height:30px;width:90px\"") +
 			">All</button></center>";
 
 		// create the full popup
