@@ -75,7 +75,7 @@ exports.commands = {
 	},
 	devdeclarehelp: ['/devdeclare [message] - Declares a message anonymously. Requires system operator status.'],
 
-	kill: function () {
+	kill: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/kill - Access denied.");
 		this.errorReply("Please restart the server within the VPS.");
 	},
