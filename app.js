@@ -79,7 +79,7 @@ Array.prototype.randomize = function () {
 		arr[j] = x;
 	}
 	return arr;
-},
+};
 
 /*********************************************************
  * Load configuration
