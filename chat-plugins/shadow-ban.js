@@ -230,7 +230,7 @@ exports.commands = {
 
 			user.popup("|html|List of shadowbanned users:" +
 				buttons + // buttons for searching
-				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
+				"<div style=\"max-height: 300px; overflow-y: scroll\">" + // scrollable popup
 				fullPopup + // the contents
 				"</div>");
 		} else {
@@ -242,7 +242,7 @@ exports.commands = {
 			}).join(", ");
 			user.popup("|html|List of shadowbanned users:" +
 				buttons + // buttons for searching
-				"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
+				"<div style=\"max-height: 300px; overflow-y: scroll\">" + // scrollable popup
 				"<b>" + target.toUpperCase() + " - </b><br />" +
 				details + // the contents
 				"</div>");
