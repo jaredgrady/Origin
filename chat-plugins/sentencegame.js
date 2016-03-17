@@ -27,6 +27,7 @@ exports.commands = {
 	sentence: function (target, room, user) {
 		if (!this.can('lock', null, room)) return this.errorReply('/sentence - Access denied');
 		if (room.sentence) return this.errorReply('There is already a sentence game in this room.');
+		if (room.battle) return this.errorReply('You cannot play sentence game in battle rooms.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
 		if (target === 'help') return this.parse('/help sentence');
 
