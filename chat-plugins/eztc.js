@@ -38,7 +38,7 @@ exports.commands = {
 			if (CommandParser.commands[commandName]) return this.errorReply("/trainercards - The command \"" + commandName + "\" already exists.");
 			let html = parts.splice(2, parts.length).join(',');
 			/* jshint ignore:start */
-			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/([^a-z0-9])/g, match => {
+			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html.replace(/([^a-z0-9\s])/g, match => {
 				return "\\" + match;
 			}) + "');");
 			/* jshint ignore:end */
