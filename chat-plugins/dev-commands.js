@@ -44,11 +44,11 @@ exports.commands = {
 	errorlog: 'crashlogs',
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		let i = -50;
+		let i = -100;
 		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
 		let crashesLines = Number(target);
 		if (isNaN(target) || !target || Number(target) < 10) crashesLines = 10;
-		if (crashesLines > 25) crashesLines = 25;
+		if (crashesLines > 20) crashesLines = 20;
 		for (; crashes.split('\n\n').length <= crashesLines; i--) {
 			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
 			if (crashes.split('\n\n').length === crashesLines && crashes.toString().indexOf('Additional information') === 0) {
