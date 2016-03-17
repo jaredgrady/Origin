@@ -213,8 +213,8 @@ exports.commands = {
 			}).join(", ") + "<br /><br />"; // contents for each letter
 		}).join("");
 
-		user.popup("|wide||html|List of shadowbanned users:" +
-			"<div style=\"max-height: 310px; overflow-y: scroll\">" + // scrollable popup
+		user.popup("|html|List of shadowbanned users:" +
+			"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable popup
 			popup + // the contents
 			"</div>");
 	},
