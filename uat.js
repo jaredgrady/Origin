@@ -52,7 +52,7 @@ let unlockUserAgent = function (userid) {
 let checkEvade = function (user) {
 	cleanUserAgents();
 	// no need to keep on spamming up staff room
-	if (user.caughtEvading) return false;
+	if (user.caughtEvading || user.locked) return false;
 	let agent = user.useragent;
 
 	if (agent in lockedUserAgents) {
