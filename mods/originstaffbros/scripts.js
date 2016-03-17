@@ -1,7 +1,7 @@
 'use strict';
 
-function Randomize () {
-	let arr = this.concat(), i = arr.length, j, x;
+function Randomize (array) {
+	let arr = [].concat(array), i = arr.length, j, x;
 	while (i) {
 		j = (Math.random() * i) | 0;
 		x = arr[--i];
