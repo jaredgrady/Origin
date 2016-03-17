@@ -69,6 +69,18 @@ try {
 	require('child_process').spawnSync('sh', ['-c', command], {stdio: 'inherit'});
 }
 
+// add Array#randomize() - copied from sugar
+Array.prototype.randomize = function () {
+	let arr = this.concat(), i = arr.length, j, x;
+	while (i) {
+		j = (Math.random() * i) | 0;
+		x = arr[--i];
+        	arr[i] = arr[j];
+		arr[j] = x;
+	}
+	return arr;
+},
+
 /*********************************************************
  * Load configuration
  *********************************************************/
