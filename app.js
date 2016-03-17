@@ -69,7 +69,7 @@ try {
 	require('child_process').spawnSync('sh', ['-c', command], {stdio: 'inherit'});
 }
 
-/* jshint ignore:start */
+/* eslint-disable */
 // add Array#randomize() - copied from sugar
 Array.prototype.randomize = function () {
 	let arr = this.concat(), i = arr.length, j, x;
@@ -81,7 +81,7 @@ Array.prototype.randomize = function () {
 	}
 	return arr;
 };
-/* jshint ignore:end */
+/* eslint-enable */
 
 /*********************************************************
  * Load configuration
