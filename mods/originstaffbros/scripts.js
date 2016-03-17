@@ -1,6 +1,4 @@
 'use strict';
-
-// fml 
 const sugar = require('sugar');
 
 exports.BattleScripts = {
