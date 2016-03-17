@@ -27,7 +27,6 @@ const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
 const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
-let trolling = false;
 global.Cynesthesia = require("./hentai-server.js");
 
 let commands = exports.commands = {
@@ -106,10 +105,6 @@ let commands = exports.commands = {
 		if (!target) target = '';
 		target = this.canTalk('/me ' + target);
 		if (!target) return;
-		if (user.userid === 'erica07' && trolling) {
-			room.add('|c|&Erica*07|' + target);
-			return;
-		}
 		if (Cynesthesia.pixilate(room, user, target, "/me ")) return false;
 		return target;
 	},
@@ -135,10 +130,6 @@ let commands = exports.commands = {
 		}
 		target = this.canTalk('/mee ' + target);
 		if (!target) return;
-		if (user.userid === 'erica07' && trolling) {
-			room.add('|c|&Erica*07|' + target);
-			return;
-		}
 		if (Cynesthesia.pixilate(room, user, target, "/mee ")) return false;
 		return target;
 	},
