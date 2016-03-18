@@ -860,14 +860,14 @@ exports.commands = {
 			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
 			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
 			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
-			'<b>/packs</b> - Shows a display of all your unopened packs '
+			'<b>/packs</b> - Shows a display of all your unopened packs.' +
 			'<b>/showcase</b> - Shows a display of all cards that you have.<br>' +
 			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
 			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
 			'<b>/cardsearch</b> - Opens a window allowing you to search through all the cards.<br>' +
 			'<b>/trade</b> - /trade [user\'s card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
 			'<b>/trades</b> - View your current pending trade requests.<br>' +
-			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>'
+			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>' +
 			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
 		);
 	},
