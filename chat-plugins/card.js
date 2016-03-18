@@ -107,7 +107,9 @@ function getShopDisplay(shop) {
 }
 
 function toTitleCase(str) {
-	return str.replace(/\w\S*/g, function (txt) {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	return str.replace(/(\w\S*)/g, txt => {
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
 }
 
 cachePacks();
@@ -124,7 +126,7 @@ exports.commands = {
 		}
 		this.sendReply('|raw|<u><b>List of packs:</b></u>');
 		for (let i = 0; i < userPacks[target].length; i++) {
-			this.sendReply(toTitleCase(userPacks[i]));
+			this.sendReply(toTitleCase(userPacks[target][i]));
 		}
 	},
 
