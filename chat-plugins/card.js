@@ -835,6 +835,11 @@ exports.commands = {
 		if (!canTransfer) return this.errorReply("Invalid card.");
 		// complete transfer
 		addCard(targetUser, card);
+
+		// update points
+		Db("points").set(targetUser, getPointTotal(targetUser);
+		Db("points").set(user.userid, getPointTotal(user.userid));
+
 		// build transfer profile
 		let newTransfer = {
 			from: user.userid,
