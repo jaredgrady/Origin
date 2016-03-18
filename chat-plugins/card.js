@@ -255,34 +255,17 @@ exports.commands = {
 	showcard: 'showcase',
 	showcase: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-
-		let page = 1;
 		let userid = user.userid;
-		const parts = target.split(',');
-		if (parts.length === 2) {
-			userid = toId(parts[0]);
-			page = isNaN(parts[1]) ? 1 : Number(parts[1]);
-		} else if (parts.length === 1 && toId(parts[0])) {
-			userid = toId(parts[0]);
-		}
+		if (target) userid = toId(target);
 
 		const cards = Db('cards').get(userid, []);
 		const points = Db('points').get(userid, 0);
-
 		if (!cards.length) return this.sendReplyBox(userid + " has no cards.");
-
 		const cardsMapping = cards.map(function (card) {
-			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="50" title="' + card.name + '"></button>';
+			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="90" title="' + card.name + '"></button>';
 		});
 
-		const start = (page - 1) * 10;
-		const end = page * 10;
-		const bottom = '<br><br>' + userid + ' has ' + points + ' points.<br><br><b>Showing cards: ' + start + ' through ' + end + ' of ' + cards.length + '</b>';
-		const display = cardsMapping.slice(start, end);
-
-		if (!display.length) return this.sendReplyBox("Too many pages.");
-
-		this.sendReplyBox(display.join('') + bottom);
+		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + cardsMapping.join('') + '</div><br><center><b>' + userid + ' has ' + cards.length + ' cards and ' + points + ' points.</b></center>');
 	},
 
 	card: function (target, room, user) {
@@ -308,25 +291,6 @@ exports.commands = {
 		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
 		keys.sort(function (a, b) { return b.points - a.points; });
 		this.sendReplyBox(rankLadder('Card Ladder', 'Points', keys.slice(0, 100), 'points'));
-	},
-
-	psgo: 'cardshelp',
-	origincg: 'cardshelp',
-	cardshelp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		return this.sendReplyBox('<center><b><u>Origin Trading Card Game:</u></b></center><br>' +
-			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
-			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
-			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
-			'<b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>' +
-			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
-			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
-			'<b>/cs</b> - Opens a window allowing you to search through all the cards.<br>' +
-			'<b>/trade</b> - /trade [card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
-			'<b>/trades</b> - View your current pending trade requests.<br>' +
-			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>' +
-			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
-		);
 	},
 
 	// searching cards
@@ -886,5 +850,25 @@ exports.commands = {
 
 		let now = Date.now().toString();
 		Db("completedTrades").set(now, newTransfer);
+	},
+
+	psgo: 'cardshelp',
+	origincg: 'cardshelp',
+	cardshelp: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		return this.sendReplyBox('<center><b><u>Origin Trading Card Game:</u></b></center><br>' +
+			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
+			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
+			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
+			'<b>/packs</b> - Shows a display of all your unopened packs '
+			'<b>/showcase</b> - Shows a display of all cards that you have.<br>' +
+			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
+			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
+			'<b>/cardsearch</b> - Opens a window allowing you to search through all the cards.<br>' +
+			'<b>/trade</b> - /trade [user\'s card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
+			'<b>/trades</b> - View your current pending trade requests.<br>' +
+			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>'
+			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
+		);
 	},
 };
