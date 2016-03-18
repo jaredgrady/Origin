@@ -196,6 +196,27 @@
 
 /*fender~end*/
 
+/*origincardtradeclient*/
+
+.pm-window-origincardtradeclient h3.pm-notifying {
+    border-color: #000 !important;
+    background: rgba(255, 0, 0, 0.85) url("http://i.imgur.com/GtcMGsq.png") no-repeat !important;
+    background-position: 225px 0px !important;
+    color: #FFF !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+}
+
+.pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton:hover {
+    color: #000 !important;
+}
+
+.pm-window-origincardtradeclient h3.pm-notifying .closebutton, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying small {
+    color: #FFF !important;
+}
+
+/*origincardtradeclient~end*/
+
 /*katheyisme123*/
 
 .pm-window-katheyisme123 h3 {
