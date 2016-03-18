@@ -91,6 +91,34 @@ function addCard(name, card) {
 	Db('points').set(userid, Db('points').get(userid, 0) + newCard.points);
 }
 
+function removeCard(cardTitle, userid) {
+	let userCards = Db('cards').get(userid, []);
+	let idx = -1;
+	// search for index of the card
+	for (let i = 0; i < userCards.length; i++) {
+		let card = userCards[i];
+		if (card.title === cardTitle) {
+			idx = i;
+			break;
+		}
+	}
+	if (idx === -1) return false;
+	// remove it
+	userCards.splice(idx, 1);
+	// set it in db
+	Db('cards').set(userid, userCards);
+	return true;
+}
+
+function getPointTotal(userid) {
+	let totalCards = Db('cards').get(userid, []);
+	let total = 0;
+	for (let i = 0; i < totalCards.length; i++) {
+		total += totalCards[i].points;
+	}
+	return total;
+}
+
 function getShopDisplay(shop) {
 	let display = "<table width='100%' border='1' style='border-collapse: collapse; color: #444; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);' cellpadding='5'>" +
 		"<tr><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Command</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Description</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Cost</th></tr>";
@@ -107,7 +135,7 @@ function getShopDisplay(shop) {
 }
 
 function toTitleCase(str) {
-	return str.replace(/(\w\S*)/g, txt => {
+	return str.replace(/(\w\S*)/g, function (txt) {
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 	});
 }
@@ -316,8 +344,8 @@ exports.commands = {
 
 		const definePopup = "|wide||html|<center><b>CardSearch</b></center><br />";
 		const generalMenu = "<center>" +
-			'<button name="send" value="/searchcard letter" style=\"background-color:aliceblue;height:30\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
-			'<button name="send" value="/searchcard category" style=\"background-color:aliceblue;height:30\">Categories</button>&nbsp;&nbsp;' + // category
+			'<button name="send" value="/searchcard letter" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
+			'<button name="send" value="/searchcard category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' + // category
 			'</center><br />';
 		if (!target) {
 			return user.popup(definePopup + generalMenu);
@@ -335,7 +363,7 @@ exports.commands = {
 			let letter = toId(parts[0]);
 
 			const letterMenu = '<center>' + letters.map(l => {
-				return '<button name="send" value="/searchcard letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35\"" : "style=\"background-color:aliceblue;height:30px;width:35\"") + ">" + l.toUpperCase() + "</button>";
+				return '<button name="send" value="/searchcard letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
 			}).join("&nbsp;") + "</center><br />";
 
 			if (!letter || letters.indexOf(letter) === -1) {
@@ -349,6 +377,8 @@ exports.commands = {
 				if (!letterMons[m.charAt(0)]) letterMons[m.charAt(0)] = {};
 				letterMons[m.charAt(0)][m] = 1;
 			}
+
+			if (!letterMons[letter]) return user.popup(definePopup + generalMenu + letterMenu);
 			// make graphics for the letter
 			cardDisplay = Object.keys(letterMons[letter]).sort().map(m => {
 				let card = cards[m];
@@ -456,13 +486,21 @@ exports.commands = {
 			// get users that have the card
 			let allCardUsers = Db('cards').object();
 			let cardHolders = [];
+			// dont allow duplicates
 			for (let u in allCardUsers) {
 				let userData = allCardUsers[u];
 				for (let i = 0; i < userData.length; i++) {
 					let tC = userData[i];
-					if (tC && tC.title === card.title) cardHolders.push("&nbsp;&nbsp;- " + u);
+					if (tC && tC.title === card.title) {
+						if (!cardHolders[user]) cardHolders[user] = 0;
+						cardHolders[user]++;
+					}
 				}
 			}
+			// show duplicates as (x#)
+			cardHolders = Object.keys(cardHolders).map(u => {
+				return "&nbsp;- " + u  + (cardHolders[u] > 1 ? " (x" + cardHolders[u] + ")" : "");
+			});
 
 			// build the display!
 			cardDisplay = "<center><table><tr>" +
@@ -481,5 +519,324 @@ exports.commands = {
 			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for CardSearch</b></font></center>');
 			break;
 		}
+	},
+
+	trade: "tradecard",
+	tradecard: function (target, room, user) {
+		if (!target) return this.errorReply("/tradecard [card ID], [user], [targetCard ID]");
+		let parts = target.split(",").map(p => toId(p));
+		if (parts.length !== 3) return this.errorReply("/tradecard [your card's ID], [targetUser], [targetCard ID]");
+		let match;
+
+		// check for user's card
+		let forTrade = parts[0];
+		match = false;
+		let userCards = Db("cards").get(user.userid, []);
+		for (let i = 0; i < userCards.length; i++) {
+			if (userCards[i].title === forTrade) {
+				match = true;
+				break;
+			}
+		}
+		if (!match) return this.errorReply("You don't have that card!");
+
+		// check for target's card
+		let targetUser = parts[1];
+		let targetTrade = parts[2];
+
+		let targetCards = Db("cards").get(targetUser, []);
+		match = false;
+		for (let i = 0; i < targetCards.length; i++) {
+			if (targetCards[i].title === targetTrade) {
+				match = true;
+				break;
+			}
+		}
+
+		if (!match) return this.errorReply(targetUser + " does not have that card!");
+
+		// initiate trade
+		let tradeId = uuid.v1();
+		let newTrade = {
+			from: user.userid,
+			to: targetUser,
+			fromExchange: forTrade,
+			toExchange: targetTrade,
+			id: tradeId,
+		};
+
+		Db("cardtrades").set(tradeId, newTrade);
+
+		// send messages
+		this.sendReply("Your trade has been taken submitted.");
+		if (Users.get(targetUser)) Users.get(targetUser).send("|pm|~OriginCardTradeClient|" + targetUser + "|/html <div class=\"broadcast-green\">" + Tools.escapeHTML(user.name) + " has initiated a trade with you.  Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
+		user.send("|pm|~OriginCardTradeClient|" + user.userid + "|/html <div class=\"broadcast-green\">Your trade with " + Tools.escapeHTML(targetUser) + " has been initiated.  Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
+	},
+
+	trades: "viewcardtrades",
+	viewcardtrades: function (target, room, user) {
+		// popup variables
+		const popup = "|html|<center><b><font color=\"blue\">Trade Manager</font></b></center><br />";
+
+		// get the user's trades
+		let allTrades = Db("cardtrades").object();
+		let userTrades = [];
+		for (let id in allTrades) {
+			let trade = allTrades[id];
+			if (allTrades.from === user.userid || allTrades.to === user.userId) {
+				// push this into the user's trade data
+				userTrades.push(trade);
+			}
+		}
+
+		// if no pending trades
+		if (!userTrades.length) return user.popup(popup + "<center>You have no pending trades.</center>");
+
+		// build trade manager screen
+		// decide which trade to display
+		if (target === "last") {
+			target = userTrades.length - 1;
+		} else {
+			// when there is no target (initial use of command)
+			if (!target) target = 0;
+			target = parseInt(target);
+			if (isNaN(target)) target = 0;
+			if (target < 0) target = 0;
+			if (target >= userTrades.length) target = userTrades.length - 1;
+		}
+
+		// show trade details
+		let displayTrade = userTrades[target];
+		const acceptReject = '<center><button name="send" value="/tradeaction accept, ' + displayTrade.id + '" style=\"background-color:green;height:30px\"><b>Accept</b></button>' + // accept button
+			'&nbsp;&nbsp;' + // spacing
+			'<button name="send" value="/tradeaction ' + (displayTrade.from === user.userid ? "cancel" : "reject") + ', ' + displayTrade.id + '" style=\"background-color:red;height:30px\"><b>' + (displayTrade.from === user.userid ? "Cancel" : "Reject") + '</b></button></center>' + // reject button
+			'<br /><br />'; // new line
+
+		// build the user's card first
+		let card = cards[(displayTrade.from === user.userid ? displayTrade.fromExchange : displayTrade.toExchange)];
+		// the image
+		let cardImage = '<img src="' + card.card + '" height=250>';
+		// rarity display
+		let cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points +  ')<br />';
+		let userSideDisplay = '<center>' + user.userid + '<br />' + cardImage + "<br />" + cardRarityPoints + '</center>';
+
+		// now build the target's side
+		card = cards[(displayTrade.from !== user.userid ? displayTrade.fromExchange : displayTrade.toExchange)];
+		// the image
+		cardImage = '<img src="' + card.card + '" height=250>';
+		// rarity display
+		cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points +  ')<br />';
+		let targetSideDisplay = "<center>" + (displayTrade.from !== user.userid ? displayTrade.from : displayTrade.to) + '<br />' + cardImage + "<br />" + cardRarityPoints + "</center>";
+
+		// now build the entire popup
+		let tradeScreen = popup + // base popup
+			'<center><table><tr><td>' + // table element
+			userSideDisplay +
+			'</td><td>' + // next column
+			targetSideDisplay +
+			'</td></tr></table></center><br />' + // close table and add new line
+			acceptReject;
+
+		// build the navigation bar
+		// build max and min
+		let navigationButtons;
+		if (userTrades.length === 1) {
+			navigationButtons = '<center><button style="background-color:deepskyblue;height:30px;width:30px">1</button></center>';
+		} else {
+			// build min and mas
+			let min = '<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewcardtrades 0">1</button>&nbsp;&nbsp;&nbsp;';
+			let max = '&nbsp;&nbsp;&nbsp;<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewcardtrades last">' + (userTrades.length) + '</button>';
+			// lazy replace for colour
+			if (target === 0) min = min.replace("background-color:lightblue;height:30px", "background-color:deepskyblue;height:30px");
+			if (target === userTrades.length - 1) max = max.replace("background-color:lightblue;height:30px", "background-color:deepskyblue;height:30px");
+
+			let middle = "";
+			// build range
+			let range = Object.keys(userTrades).slice(1, userTrades.length - 1); // remove min and max and turn it into a array of numbers
+			if (range.length !== 0) { // only build middle buttons is there is none
+				if (range.length > 5) {
+					// find the current one and get 2 above and below
+					let displayRange = [target - 2, target - 1, target, target + 1, target + 2].filter(i => {
+						return i > 0 && i <= range.length;
+					});
+					// build middle buttons
+					middle = (displayRange[0] !== 1 ? "... " :  "") + displayRange.map(n => {
+						n = parseInt(n);
+						let style = n === target ? "background-color:deepskyblue;height:30px;width:30px" : "background-color:aliceblue;height:30px;width:30px";
+						return '<button style="' + style + '" name="send" value="/viewcardtrades ' + n + '">' + (n + 1) + '</button>';
+					}).join("&nbsp;") + (displayRange[displayRange.length - 1] !== range.length ? " ..." : "");
+				} else {
+					// just map the range
+					middle = range.map(n => {
+						n = parseInt(n);
+						let style = n === target ? "background-color:deepskyblue;height:30px;width:30px" : "background-color:aliceblue;height:30px;width:30px";
+						return '<button style="' + style + '" name="send" value="/viewcardtrades ' + n + '">' + (n + 1) + '</button>';
+					}).join("&nbsp;");
+				}
+			}
+			// add the stuff to navigation buttons
+			navigationButtons = "<center>" + min + middle + max + "</center>";
+		}
+		// add the navigation buttons to the popup
+		user.lastTradeCommand = "/viewcardtrades " + target;
+		tradeScreen += navigationButtons;
+		user.popup(tradeScreen);
+	},
+
+	tradeaction: function (target, room, user) {
+		if (!target) return false; // due to the complexity of the command, this should only be used through the viewtrades screen
+
+		let parts = target.split(",").map(p => p.trim());
+
+		let action = toId(parts.shift());
+
+		const backButton = '<button name="send" value="' + (user.lastTradeCommand || '/viewcardtrades') + '" style="background-color:aliceblue;height:30px">< Back</button><br /><br />';
+		const tradeError = "|html|" + backButton + '<center><font color="red"><b>ERROR: Invalid Trade / You cannot accept your own trade request!</b></font><center>';
+
+		let trade;
+
+		switch (action) {
+		case "confirmaccept":
+		case "accept":
+			if (!parts[0]) return false;
+			if (action === "accept") {
+				// make the user confirm the decision
+				// build a back button
+				return user.popup("|html|" + backButton + // back button
+				'<center><button name="send" value="/tradeaction confirmaccept, ' + parts[0] + '" style="background-color:red;height:65px;width:150px"><b>Confirm Trade</b></button></center>');
+			}
+			// finalize trade
+			// get the trade
+			trade = Db("cardtrades").get(parts[0], null);
+			if (!trade) return user.popup(tradeError);
+
+			// check if the trade involves the user
+			let accepter, otherTarget;
+			if (trade.to === user.userid) {
+				accepter = "to";
+				otherTarget = "from";
+			} else {
+				// user has no say in this trade
+				return user.popup(tradeError);
+			}
+
+			let match;
+			// now double check that both users still have those cards
+			// check user first
+			match = false;
+			let userCards = Db("cards").get(user.userid, []);
+			for (let i = 0; i < userCards.length; i++) {
+				if (userCards[i].title === trade[accepter + "Exchange"]) {
+					match = true;
+					break;
+				}
+			}
+
+			if (!match) return this.parse("/tradeaction forcecancel, " + trade.id);
+
+			// check target
+			match = false;
+			let targetCards = Db("cards").get(trade[otherTarget], []);
+			for (let i = 0; i < targetCards.length; i++) {
+				if (targetCards[i].title === trade[otherTarget + "Exchange"]) {
+					match = true;
+					break;
+				}
+			}
+			if (!match) return this.parse("/tradeaction forcecancel, " + trade.id);
+
+			// now go ahead with the trade!
+			// for "from" first
+			addCard(trade.from, trade.toExchange);
+			removeCard(trade.fromExchange, trade.from);
+
+			// apply the actions to "to"
+			addCard(trade.to, trade.fromExchange);
+			removeCard(trade.toExchange, trade.to);
+
+			// update points
+			Db("points").set(trade.to, getPointTotal(trade.to));
+			Db("points").set(trade.from, getPointTotal(trade.from));
+
+			// remove the trade
+			Db("cardtrades").delete(parts[0]);
+
+			// on trade success
+			// send popups to both user and target saying the trade with user was a success
+			// and a button to view the card they just received
+			let targetUsers = [Users.get(trade.to), Users.get(trade.from)];
+			if (targetUsers[0]) {
+				targetUsers[0].popup("|html|" + backButton + "<center>Your trade with " + trade.from + " has gone through." +
+				"<br /><button name=\"send\" value=\"/cs card, " + trade.fromExchange + "\">View Traded Card</button></center>"); // show card
+			}
+			if (targetUsers[1]) {
+				targetUsers[1].popup("|html|<center>Your trade with " + trade.to + " has gone through." +
+				"<br /><button name=\"send\" value=\"/cs card, " + trade.toExchange + "\">View Traded Card</button></center>");
+			}
+
+			// log trades and delete the data from list of trades.
+			let now = Date.now().toString();
+			Db("completedTrades").set(now, trade);
+			break;
+		case "forcecancel":
+		case "cancel":
+		case "reject":
+			if (!parts[0]) return false;
+			// check for trade
+			trade = Db("cardtrades").get(parts[0], null);
+
+			if (!trade) return user.popup(tradeError);
+
+			// additional consts
+			const popupText = {
+				forcecancel: "The trade has automatically been cancelled as one of the participants does not have that card anymore.",
+				cancel: "You have cancelled the trade",
+			};
+
+			// check if user is involved
+			if (trade.from === user.userid || trade.to === user.userid) {
+				// check that the action is correct
+				if (trade.from === user.userid && action === "reject") action = "cancel";
+				if (trade.to === user.userid && action !== "reject") action = "reject";
+			}
+
+			// remove the trade
+			Db("cardtrades").delete(parts[0]);
+
+			// letting the users involved know
+			let targetUser;
+			if (action === "reject") {
+				targetUser = Users.get(trade.from);
+				if (targetUser) targetUser.popup("Your trade request with " + user.userid + " was rejected");
+				user.popup("|html|" + backButton + "You have rejected " + trade.from + "'s trade request.");
+			} else {
+				user.popup("|html|" + backButton + popupText[action]);
+			}
+			break;
+		}
+	},
+	confirmtransfercard: "transfercard",
+	transfercard: function (target, room, user) {
+		if (!target) return this.errorReply("/transfercard [user], [card ID]");
+		let parts = target.split(",").map(p => toId(p));
+		// find targetUser and the card being transfered.
+		let targetUser = parts.shift();
+		let card = parts[0];
+		if (!targetUser || !card) return this.errorReply("/transfercard [user], [card ID]");
+		// check if card can been removed
+		let canTransfer = removeCard(card, user.userid);
+		if (!canTransfer) return this.errorReply("Invalid card.");
+		// complete transfer
+		addCard(targetUser, card);
+		// build transfer profile
+		let newTransfer = {
+			from: user.userid,
+			to: targetUser,
+			transfer: card,
+		};
+		// log it
+		let now = Date.now().toString();
+		Db("completedTrades").set(now, newTransfer);
+		this.sendReply("You have successfully transfered " + card + " to " + targetUser + ".");
 	},
 };
