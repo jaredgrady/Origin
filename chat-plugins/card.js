@@ -822,21 +822,22 @@ exports.commands = {
 	confirmtransfercard: "transfercard",
 	transfercard: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transfercard [user], [card ID]");
-		if (cmd === "transfercard") {
-			return user.popup('|html|<center><button name="send" value="/confirmtransfercard ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer</font></b></button>');
-		}
+
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the card being transfered.
 		let targetUser = parts.shift();
 		let card = parts[0];
 		if (!targetUser || !card) return this.errorReply("/transfercard [user], [card ID]");
+
+		if (cmd === "transfercard") {
+			return user.popup('|html|<center><button name="send" value="/confirmtransfercard ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
+		}
 		// check if card can been removed
 		let canTransfer = removeCard(card, user.userid);
 		if (!canTransfer) return this.errorReply("Invalid card.");
 		// complete transfer
 		addCard(targetUser, card);
 
-		// update points
 		Db("points").set(targetUser, getPointTotal(targetUser));
 		Db("points").set(user.userid, getPointTotal(user.userid));
 
@@ -850,5 +851,30 @@ exports.commands = {
 		let now = Date.now().toString();
 		Db("completedTrades").set(now, newTransfer);
 		user.popup("You have successfully transfered " + card + " to " + targetUser + ".");
+	},
+
+	confirmtransferallcards: "transferallcards",
+	transferallcards: function (target, room, user, connection, cmd) {
+		if (!target) return this.errorReply("/transferallcards [user]");
+		let targetUser = toId(target);
+		if (!targetUser) return this.errorReply("/transferallcards [user]");
+		let userCards = Db("cards").get(user.userid, []);
+		let targetCards = Db("cards").get(targetUser, []);
+
+		if (!userCards.length) return this.errorReply("You don't have any cards.");
+
+		// confirmation
+		if (cmd === "transferallcards") {
+			return user.popup('|html|<center><button name="send" value="/confirmtransferallcards ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
+		}
+
+		// now the real work
+		Db("cards").set(targetUser, targetCards.concat(userCards));
+		Db("cards").set(user.userid, []);
+
+		Db("points").set(targetUser, getPointTotal(targetUser));
+		Db("points").set(user.userid, getPointTotal(user.userid));
+
+		user.popup("You have transfered all your cards to " + targetUser + ".");
 	},
 };
