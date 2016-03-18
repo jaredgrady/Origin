@@ -320,7 +320,11 @@ exports.commands = {
 			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
 			'<b>/showcase</b> - Shows a display of all cards that you have. Specify a page number to see more cards.<br>' +
 			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
-			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>'
+			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
+			'<b>/cs</b> - Opens a window allowing you to search through all the cards.<br>' +
+			'<b>/trade</b> - /trade [card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
+			'<b>/trades</b> - View your current pending trade requests.<br>' +
+			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>'
 		);
 	},
 
