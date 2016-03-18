@@ -324,7 +324,8 @@ exports.commands = {
 			'<b>/cs</b> - Opens a window allowing you to search through all the cards.<br>' +
 			'<b>/trade</b> - /trade [card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
 			'<b>/trades</b> - View your current pending trade requests.<br>' +
-			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>'
+			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>' +
+			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
 		);
 	},
 
