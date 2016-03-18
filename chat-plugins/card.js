@@ -837,7 +837,7 @@ exports.commands = {
 		addCard(targetUser, card);
 
 		// update points
-		Db("points").set(targetUser, getPointTotal(targetUser);
+		Db("points").set(targetUser, getPointTotal(targetUser));
 		Db("points").set(user.userid, getPointTotal(user.userid));
 
 		// build transfer profile
