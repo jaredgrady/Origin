@@ -492,13 +492,13 @@ exports.commands = {
 				for (let i = 0; i < userData.length; i++) {
 					let tC = userData[i];
 					if (tC && tC.title === card.title) {
-						if (!cardHolders[user]) cardHolders[user] = 0;
-						cardHolders[user]++;
+						if (!cardHolders[u]) cardHolders[u] = 0;
+						cardHolders[u]++;
 					}
 				}
 			}
 			// show duplicates as (x#)
-			cardHolders = Object.keys(cardHolders).map(u => {
+			cardHolders = Object.keys(cardHolders).sort().map(u => {
 				return "&nbsp;- " + u  + (cardHolders[u] > 1 ? " (x" + cardHolders[u] + ")" : "");
 			});
 
@@ -509,7 +509,7 @@ exports.commands = {
 				cardName + cardId + cardRarityPoints + cardCollection +
 				"<b>Users with this card:</b><br />" + // card holders
 				"<div style=\"max-height: 130px; overflow-y: scroll\">" + // scrollable
-				cardHolders.sort().join("<br />") + "<br />" +
+				cardHolders.join("<br />") + "<br />" +
 				"</td></tr></table></center>"; // close the table
 
 			user.popup(definePopup + backButton + cardDisplay);
@@ -607,7 +607,7 @@ exports.commands = {
 
 		// show trade details
 		let displayTrade = userTrades[target];
-		const acceptReject = '<center><button name="send" value="/tradeaction accept, ' + displayTrade.id + '" style=\"background-color:green;height:30px\"><b>Accept</b></button>' + // accept button
+		const acceptReject = '<center>' + (displayTrade.from === user.userid ? "" : '<button name="send" value="/tradeaction accept, ' + displayTrade.id + '" style=\"background-color:green;height:30px\"><b>Accept</b></button>') + // accept button
 			'&nbsp;&nbsp;' + // spacing
 			'<button name="send" value="/tradeaction ' + (displayTrade.from === user.userid ? "cancel" : "reject") + ', ' + displayTrade.id + '" style=\"background-color:red;height:30px\"><b>' + (displayTrade.from === user.userid ? "Cancel" : "Reject") + '</b></button></center>' + // reject button
 			'<br /><br />'; // new line
@@ -816,8 +816,11 @@ exports.commands = {
 		}
 	},
 	confirmtransfercard: "transfercard",
-	transfercard: function (target, room, user) {
+	transfercard: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transfercard [user], [card ID]");
+		if (cmd === "transfercard") {
+			return user.popup('|html|<center><button name="send" value="/confirmtransfercard ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer</font></b></button>');
+		}
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the card being transfered.
 		let targetUser = parts.shift();
@@ -837,6 +840,6 @@ exports.commands = {
 		// log it
 		let now = Date.now().toString();
 		Db("completedTrades").set(now, newTransfer);
-		this.sendReply("You have successfully transfered " + card + " to " + targetUser + ".");
+		user.popup("You have successfully transfered " + card + " to " + targetUser + ".");
 	},
 };
