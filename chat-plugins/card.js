@@ -436,7 +436,7 @@ exports.commands = {
 		case "card":
 			let backButton = '<button name="send" value="/cardsearch ' + user.lastCardSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
 			if (!parts[0] || !(toId(parts[0]) in cards)) {
-				user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Card</b></font></center>');
+				return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Card</b></font></center>');
 			}
 
 			// build the display screen for the card
