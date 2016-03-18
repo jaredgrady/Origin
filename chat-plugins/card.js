@@ -293,4 +293,191 @@ exports.commands = {
 			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>'
 		);
 	},
+
+	// searching cards
+	cs: "cardsearch",
+	cardsearch: "searchcard",
+	searchcard: function (target, room, user) {
+		// consts
+		const letters = "abcdefghijklmnopqrstuvwuyz".split("");
+		const categories = {
+			Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'], // rarities
+			Packs: ['XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'Double Crisis'],
+			Types: ['Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'Metal'],
+			Tiers: ['OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack'],
+			Generation: ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6'],
+			Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'EX-Pack', 'Legendary', 'Full', 'Event'],
+		};
+
+		const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">"; // code for scrollable html
+		const divEnd = "</div>";
+
+		const definePopup = "|wide||html|<center><b>CardSearch</b></center><br />";
+		const generalMenu = "<center>" +
+			'<button name="send" value="/searchcard letter" style=\"background-color:aliceblue;height:30\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
+			'<button name="send" value="/searchcard category" style=\"background-color:aliceblue;height:30\">Categories</button>&nbsp;&nbsp;' + // category
+			'</center><br />';
+		if (!target) {
+			return user.popup(definePopup + generalMenu);
+		}
+		// quick fix for when target ends with a comma
+		target = target.replace(/\,[\s]+$/i, "");
+		let parts = target.split(",");
+
+		let actionCommand = parts.shift();
+
+		let cardDisplay;
+
+		switch (toId(actionCommand)) {
+		case "letter":
+			let letter = toId(parts[0]);
+
+			const letterMenu = '<center>' + letters.map(l => {
+				return '<button name="send" value="/searchcard letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35\"" : "style=\"background-color:aliceblue;height:30px;width:35\"") + ">" + l.toUpperCase() + "</button>";
+			}).join("&nbsp;") + "</center><br />";
+
+			if (!letter || letters.indexOf(letter) === -1) {
+				// invalid letter to search for, or none given
+				// only show menu
+				return user.popup(definePopup + generalMenu + letterMenu);
+			}
+			// sort cards by letter
+			let letterMons = {};
+			for (let m in cards) {
+				if (!letterMons[m.charAt(0)]) letterMons[m.charAt(0)] = {};
+				letterMons[m.charAt(0)][m] = 1;
+			}
+			// make graphics for the letter
+			cardDisplay = Object.keys(letterMons[letter]).sort().map(m => {
+				let card = cards[m];
+				return '<button name="send" value="/searchcard card, ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="100" title="' + card.name + '"></button>';
+			}).join("&nbsp;");
+			// send the popup
+			user.lastCardSearch = target;
+			user.popup(definePopup + generalMenu + letterMenu + scrollable + cardDisplay + divEnd);
+			break;
+		case "category":
+			// clean all the parts first
+			parts = parts.map(p => {
+				return toId(p);
+			});
+
+			// create category menu
+			let categoryMenu = "";
+			for (let c in categories) {
+				categoryMenu += '<b>' + c  + ' -</b> ' + categories[c].map(k => {
+					let m = toId(k);
+					// add a special search condition for rarity
+					if (c === "Rarity") m += "rarity";
+
+					// new params for the search
+					// clone parts
+					let newParams = parts.slice(0);
+					if (parts.indexOf(m) > -1) {
+						// remove it
+						newParams.splice(newParams.indexOf(m), 1);
+					} else {
+						newParams.push(m);
+					}
+
+					let style = (parts.indexOf(m) > -1  ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\""); // button style checking if currently searching
+
+					return '<button name="send" value="/searchcard category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
+				}).join("&nbsp;") + "<br />";
+			}
+			if (!parts.length) {
+				return user.popup(definePopup + generalMenu + categoryMenu);
+			}
+			// now clone the cards and delete the ones who dont match the categories
+			let paramCards = Object.assign({}, cards);
+
+			// filter out the unneeded ones; ignore rarity
+			for (let i = 0; i < parts.length; i++) {
+				let param = parts[i];
+				// ignore rarity
+				if (/rarity$/i.test(param)) continue;
+				for (let c in paramCards) {
+					let cardParams = paramCards[c].collection.join("~").toLowerCase().replace(/[^a-z0-9\~]/g, "").split("~");
+					if (cardParams.indexOf(param) === -1) delete paramCards[c]; // remove the card from the currently searched ones.
+				}
+			}
+
+			// seperate check for rarity
+			let rarityCheck = parts.some(a => {
+				return /rarity$/i.test(a);
+			});
+			if (rarityCheck) {
+				for (let c in paramCards) {
+					let cardRare = toId(paramCards[c].rarity);
+					for (let i = 0; i < parts.length; i++) {
+						if (/rarity$/i.test(parts[i])) {
+							// check if rarity is the card's rarity
+							if (parts[i].replace(/rarity$/i, "") !== cardRare) {
+								// remove if not matched
+								delete paramCards[c];
+							}
+						}
+					}
+				}
+			}
+
+			// no cards left
+			if (!Object.keys(paramCards).length) {
+				return user.popup(definePopup + generalMenu + categoryMenu + '<br /><center><font color="red"><b>Nothing matches your search</b></font></center>');
+			}
+			user.lastCardSearch = target;
+			// build the display
+			cardDisplay = Object.keys(paramCards).sort().map(m => {
+				let card = paramCards[m];
+				return '<button name="send" value="/searchcard card, ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="100" title="' + card.name + '"></button>';
+			}).join("&nbsp;");
+			user.popup(definePopup + generalMenu + categoryMenu + scrollable + cardDisplay + divEnd);
+			break;
+		case "card":
+			let backButton = '<button name="send" value="/cardsearch ' + user.lastCardSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
+			if (!parts[0] || !(toId(parts[0]) in cards)) {
+				user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Card</b></font></center>');
+			}
+
+			// build the display screen for the card
+			let card = cards[toId(parts[0])];
+			// the image
+			let cardImage = '<img src="' + card.card + '" height=250>';
+			// the name of the card
+			let cardName = "<b>Name:</b> " + card.name + "<br />";
+			// the id of the card
+			let cardId =  "<font color=\"gray\">(" + card.title + ")</font><br />";
+			// rarity display
+			let cardRarityPoints = '<b>Rarity: </b><font color="' + colors[card.rarity] + '">' + card.rarity + '</font> (' + card.points +  ')<br />';
+			// collections
+			let cardCollection = '<b>Packs: </b>' + card.collection.join(", ") + "<br />";
+			// get users that have the card
+			let allCardUsers = Db('cards').object();
+			let cardHolders = [];
+			for (let u in allCardUsers) {
+				let userData = allCardUsers[u];
+				for (let i = 0; i < userData.length; i++) {
+					let tC = userData[i];
+					if (tC && tC.title === card.title) cardHolders.push("&nbsp;&nbsp;- " + u);
+				}
+			}
+
+			// build the display!
+			cardDisplay = "<center><table><tr>" +
+				"<td>" + cardImage + "</td>" + // Card on the left
+				"<td>" + // details now
+				cardName + cardId + cardRarityPoints + cardCollection +
+				"<b>Users with this card:</b><br />" + // card holders
+				"<div style=\"max-height: 130px; overflow-y: scroll\">" + // scrollable
+				cardHolders.join(", ") + "<br />" +
+				"</td></tr></table></center>"; // close the table
+
+			user.popup(definePopup + backButton + cardDisplay);
+			break;
+		case "error":
+		default:
+			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for CardSearch</b></font></center>');
+			break;
+		}
+	},
 };
