@@ -860,7 +860,7 @@ exports.commands = {
 			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
 			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
 			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
-			'<b>/packs</b> - Shows a display of all your unopened packs.' +
+			'<b>/packs</b> - Shows a display of all your unopened packs.<br>' +
 			'<b>/showcase</b> - Shows a display of all cards that you have.<br>' +
 			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
 			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
