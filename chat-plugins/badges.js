@@ -145,9 +145,22 @@ exports.commands = {
 			if (index !== -1) {
 				badges.splice(index, 1);
 			}
-			Db('badgesDB').set(toId(userid), badges);
 			this.logModCommand(user.name + " took a badge from " + targetUser + ".");
 			this.sendReply("Badge taken.");
+			break;
+		case 'deleteall':
+			if (!(~developers.indexOf(user.userid) || user.userid === 'niisama')) return this.errorReply("Access denied.");
+			if (parts.length !== 2) return this.errorReply('Correct command: `/badges deleteall, badgeName`');
+			badge = parts[1].trim();
+			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			let badgeObject = Db('badgesDB').object();
+			let users = Object.keys(badgeObject);
+			for (let i = 0; i < users.length; i++) {
+				let index = badgeObject[users[i]].indexOf(badge);
+				if (index !== -1) {
+					badgeObject[users[i]].splice(index, 1);
+				}
+			}
 			break;
 		default:
 			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
