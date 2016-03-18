@@ -876,5 +876,14 @@ exports.commands = {
 		Db("points").set(user.userid, getPointTotal(user.userid));
 
 		user.popup("You have transfered all your cards to " + targetUser + ".");
+
+		let newTransfer = {
+			from: user.userid,
+			to: targetUser,
+			transfer: "all",
+		};
+
+		let now = Date.now().toString();
+		Db("completedTrades").set(now, newTransfer);
 	},
 };
