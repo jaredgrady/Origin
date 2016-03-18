@@ -469,7 +469,7 @@ exports.commands = {
 				cardName + cardId + cardRarityPoints + cardCollection +
 				"<b>Users with this card:</b><br />" + // card holders
 				"<div style=\"max-height: 130px; overflow-y: scroll\">" + // scrollable
-				cardHolders.join("<br />") + "<br />" +
+				cardHolders.sort().join("<br />") + "<br />" +
 				"</td></tr></table></center>"; // close the table
 
 			user.popup(definePopup + backButton + cardDisplay);
