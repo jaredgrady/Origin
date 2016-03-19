@@ -766,7 +766,7 @@ exports.commands = {
 			if (trade.from === user.userid || trade.to === user.userid) {
 				// check that the action is correct
 				if (trade.from === user.userid && action === "reject") action = "cancel";
-				if (trade.to === user.userid && action !== "reject") action = "reject";
+				if (trade.to === user.userid && action !== "reject" && action !== "forcecancel") action = "reject";
 			} else {
 				return user.popup(tradeError);
 			}
