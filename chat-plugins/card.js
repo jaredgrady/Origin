@@ -552,7 +552,7 @@ exports.commands = {
 		let userTrades = [];
 		for (let id in allTrades) {
 			let trade = allTrades[id];
-			if (allTrades.from === user.userid || allTrades.to === user.userid) {
+			if (trades.from === user.userid || trades.to === user.userid) {
 				// push this into the user's trade data
 				userTrades.push(trade);
 			}
@@ -767,6 +767,8 @@ exports.commands = {
 				// check that the action is correct
 				if (trade.from === user.userid && action === "reject") action = "cancel";
 				if (trade.to === user.userid && action !== "reject") action = "reject";
+			} else {
+				return user.popup(tradeError);
 			}
 
 			// remove the trade
