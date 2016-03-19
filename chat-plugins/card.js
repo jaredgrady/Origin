@@ -801,7 +801,7 @@ exports.commands = {
 		}
 		// check if card can been removed
 		let canTransfer = removeCard(card, user.userid);
-		if (!canTransfer) return this.errorReply("Invalid card.");
+		if (!canTransfer) return user.popup("Invalid card.");
 		// complete transfer
 		addCard(targetUser, card);
 
