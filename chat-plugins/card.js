@@ -262,7 +262,7 @@ exports.commands = {
 		const points = Db('points').get(userid, 0);
 		if (!cards.length) return this.sendReplyBox(userid + " has no cards.");
 		const cardsMapping = cards.map(function (card) {
-			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="90" title="' + card.name + '"></button>';
+			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="80" title="' + card.name + '"></button>';
 		});
 
 		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + cardsMapping.join('') + '</div><br><center><b>' + userid + ' has ' + cards.length + ' cards and ' + points + ' points.</b></center>');
