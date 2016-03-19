@@ -168,7 +168,7 @@ exports.commands = {
 		let shopIndex = cleanShop.indexOf(toId(target));
 		if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
 		let cost = shop[shopIndex][2];
-		if (cost > amount) return self.sendReply('You need ' + (cost - amount) + ' more bucks to buy this card.');
+		if (cost > amount) return self.sendReply('You need ' + (cost - amount) + ' more bucks to buy this pack.');
 		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
 		let pack = toId(target);
 		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost +
@@ -177,7 +177,7 @@ exports.commands = {
 		self.sendReply('You have until the server restarts to open your pack.');
 		if (!userPacks[user.userid]) userPacks[user.userid] = [];
 		userPacks[user.userid].push(pack);
-		if (room.id !== 'lobby') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
+		if (room.id !== 'lobby' || room.id !== 'casino') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
 		room.update();
 	},
 
@@ -257,15 +257,12 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		let userid = user.userid;
 		if (target) userid = toId(target);
-
 		const cards = Db('cards').get(userid, []);
-		const points = Db('points').get(userid, 0);
 		if (!cards.length) return this.sendReplyBox(userid + " has no cards.");
 		const cardsMapping = cards.map(function (card) {
 			return '<button name="send" value="/card ' + card.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + card.card + '" width="80" title="' + card.name + '"></button>';
 		});
-
-		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + cardsMapping.join('') + '</div><br><center><b>' + userid + ' has ' + cards.length + ' cards and ' + points + ' points.</b></center>');
+		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + cardsMapping.join('') + '</div><br><center><b>' + userid + ' has ' + cards.length + ' cards and ' + getPointTotal(userid) + ' points.</b></center>');
 	},
 
 	card: function (target, room, user) {
@@ -286,7 +283,7 @@ exports.commands = {
 	cardladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		let keys = Object.keys(Db('points').object()).map(function (name) {
-			return {name: name, points: Db('points').get(name)};
+			return {name: name, points: getPointTotal(name)};
 		});
 		if (!keys.length) return this.sendReplyBox("Card ladder is empty.");
 		keys.sort(function (a, b) { return b.points - a.points; });
