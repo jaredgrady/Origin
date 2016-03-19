@@ -552,7 +552,7 @@ exports.commands = {
 		let userTrades = [];
 		for (let id in allTrades) {
 			let trade = allTrades[id];
-			if (trades.from === user.userid || trades.to === user.userid) {
+			if (trade.from === user.userid || trade.to === user.userid) {
 				// push this into the user's trade data
 				userTrades.push(trade);
 			}
