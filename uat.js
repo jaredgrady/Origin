@@ -10,7 +10,7 @@
 // set to true to disable cleaning.
 // the higher the userbase, the lower this number is
 // faulty issues are only more probable when user count is above 1.5k users.
-let LOCKED_USER_AGENT_TRACKING_TIME = 1.5;
+let LOCKED_USER_AGENT_TRACKING_TIME = 0;
 
 // Time (in hours) past the lock where the server WILL auto shadow ban the evading user.
 // set to true if you to always auto shadowban
