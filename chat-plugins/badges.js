@@ -93,22 +93,19 @@ exports.commands = {
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 
 			if (!badgeIcons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
+			if (!Db('badgesDB').has(userid))	badges = [];
 			badges.push(badge);
 			let uniqueBadges = [];
 			uniqueBadges = badges.filter(function (elem, pos) {
 				return badges.indexOf(elem) === pos;
 			});
 			Db('badgesDB').set(toId(userid), uniqueBadges);
-			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
-			this.logModCommand(user.name + " gave " + targetUser + " a badge.");
+			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
+			this.logModCommand(user.name + " gave " + userid + " a badge.");
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
@@ -134,10 +131,7 @@ exports.commands = {
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
+			if (!Db('badgesDB').has(userid)) return this.errorReply("This user doesn't have any badges.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
@@ -145,7 +139,7 @@ exports.commands = {
 			if (index !== -1) {
 				badges.splice(index, 1);
 			}
-			this.logModCommand(user.name + " took a badge from " + targetUser + ".");
+			this.logModCommand(user.name + " took a badge from " + userid + ".");
 			this.sendReply("Badge taken.");
 			break;
 		case 'deleteall':
