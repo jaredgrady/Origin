@@ -40,17 +40,13 @@ exports.commands = {
 	},
 	backdoorhelp: ["backdoor - Promotes you to admin. Must be a meme to use."],
 
+/*
 	crashlog: 'crashlogs',
 	errorlog: 'crashlogs',
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		let i = -100;
 		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-		/*
-		let crashesLines = Number(target); // 15 replaced with crashLines
-		if (isNaN(target) || !target || crashesLines < 10) crashesLines = 10;
-		if (crashesLines > 20) crashesLines = 20;
-		*/
 		for (; crashes.split('\n\n').length <= 15; i--) {
 			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
 			if (crashes.split('\n\n').length === 15 && crashes.toString().indexOf('Additional information') === 0) {
@@ -63,6 +59,7 @@ exports.commands = {
 		user.send('|popup|' + crashes);
 	},
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
+*/
 
 	ddeclare: 'devdeclare',
 	devdeclare: function (target, room, user) {
