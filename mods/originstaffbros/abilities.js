@@ -3680,7 +3680,7 @@ exports.BattleAbilities = {
 	"megapoison": {
 		isNonstandard: true,
 		onStart: function (source) {
-			source.setStatus('tox');
+			source.trySetStatus('tox');
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (effect.id === 'psn' || effect.id === 'tox') {
