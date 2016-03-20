@@ -134,6 +134,7 @@ exports.commands = {
 			let parts = target.split(",");
 			let taskId = TaskMethods.add(room, parts[0], user.name, parts[1] ? (parts.slice(1).join(",").trim()) : []);
 			TaskMethods.view(room, user, "Your task has been added.", taskId);
+			this.privateModCommand("(" + user.name + " has added a task.)");
 		},
 		"": "view",
 		view: function (target, room, user) {
