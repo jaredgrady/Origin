@@ -22,6 +22,7 @@ const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
 global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen']; //sys developers
 const developersIPs = [];
 const dir = fs.readdirSync(path.resolve(__dirname, 'chat-plugins'));
+const logMessage = require('./logger');
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
@@ -274,6 +275,14 @@ let commands = exports.commands = {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
 			} else {
+				// log messages to origin-data service
+				logMessage({
+					message: target,
+					name: user.name,
+					type: 'pm',
+					typeData: user.name + '>' + targetUser.name,
+					date: Date.now(),
+				});
 				targetUser.send(Cynesthesia.pixilate(room, user, message, "/pm ", originalMessage));
 				Rooms.global.pmLogger.log(user, targetUser, message);
 				targetUser.lastPM = user.userid;

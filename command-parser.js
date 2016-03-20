@@ -39,6 +39,7 @@ const BROADCAST_TOKEN = '!';
 const fs = require('fs');
 const path = require('path');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
+const logMessage = require('./logger');
 
 function getServersAds(text) {
 	let aux = text.toLowerCase();
@@ -637,6 +638,15 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 	}
 
 	message = context.canTalk(message);
+
+	// log messages to origin-data service
+	logMessage({
+		message: message,
+		name: user.name,
+		type: 'room',
+		typeData: room.title,
+		date: Date.now(),
+	});
 
 	if (message) {
 		// only do it if there is a message left to prevent crashes....
