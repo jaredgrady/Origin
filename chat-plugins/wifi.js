@@ -295,7 +295,7 @@ let commands = {
 	},
 	guessanswer: 'guess',
 	guess: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 		if (!giveaways[room.id]) return this.errorReply("There is no giveaway going on at the moment.");
 		if (giveaways[room.id].type !== 'question') return this.errorReply("This is not a question giveaway.");
 		giveaways[room.id].guessAnswer(user, target, this);
@@ -329,7 +329,7 @@ let commands = {
 	joinlotto: 'join',
 	joinlottery: 'join',
 	join: function (target, room, user, conn, cmd) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 		let giveaway = giveaways[room.id];
 		if (!giveaway) return this.errorReply("There is no giveaway going on at the moment.");
 		if (giveaway.type !== 'lottery') return this.errorReply("This is not a lottery giveaway.");
@@ -350,7 +350,7 @@ let commands = {
 	// general.
 	stop: 'end',
 	end: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 		if (!giveaways[room.id]) return this.errorReply("There is no giveaway going on at the moment.");
 		if (!this.can('warn', null, room) && user.userid !== giveaways[room.id].host.userid) return false;
 
@@ -358,7 +358,7 @@ let commands = {
 	},
 	rm: 'remind',
 	remind: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 		let giveaway = giveaways[room.id];
 		if (!giveaway) return this.errorReply("There is no giveaway going on at the moment.");
 		if (!this.canBroadcast()) return;
@@ -373,7 +373,7 @@ let commands = {
 	},
 	'': 'help',
 	help: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 
 		let reply = '';
 		switch (target) {
@@ -400,7 +400,7 @@ let commands = {
 			break;
 		default:
 			if (!this.canBroadcast()) return;
-			reply = '<b>Wi-Fi room Giveaway help and info</b><br />' +
+			reply = '<b>Marketplace room Giveaway help and info</b><br />' +
 			'- help user - shows list of participation commands<br />' +
 			'- help staff - shows giveaway staff commands (Requires: % @ # & ~)';
 		}
