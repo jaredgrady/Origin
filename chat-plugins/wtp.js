@@ -3,7 +3,7 @@
  * Who's that Pokemon?
  * by fender
 ********************/
-const cards = require('../card-data.js');
+const cards = require('./card-data.js');
 let rankLadder = require('../rank-ladder');
 
 const maxMistakes = 6;

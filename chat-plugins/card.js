@@ -8,7 +8,7 @@
  * Dex Number, (for multiple pokemon: DEX[lowercase letter, a, b, c, d])
 ********************/
 const uuid = require('uuid');
-const cards = require('../card-data.js');
+const cards = require('./card-data.js');
 let rankLadder = require('../rank-ladder');
 
 const colors = {

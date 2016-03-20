@@ -21,7 +21,7 @@ function checkAllAlts(user, list) {
 }
 
 let giveaways = {};
-let wifiRoom = Rooms.get('wifi');
+let wifiRoom = Rooms.get('marketplace');
 
 // import giveaways if stored in room
 if (wifiRoom) {
