@@ -173,11 +173,11 @@ exports.commands = {
 		detail: function (target, room, user) {
 			if (!this.can('announce', null, room)) return false;
 			if (!target) return this.errorReply("/task detail [add / delete], [Task ID], [new detail / detail id]");
-			let parts = target.split(",").map(p => p.trim());
+			let parts = target.split(",");
 			if (parts.length < 3) return this.errorReply("/task detail [add / delete], [Task ID], [new detail / detail id]");
-			let action = parts[0];
-			let taskId = parts[1];
-			let detail = parts.slice(2).join(",");
+			let action = toId(parts[0]);
+			let taskId = parts[1].trim();
+			let detail = parts.slice(2).join(",").trim();
 			let success;
 			switch (action) {
 			case "add":
