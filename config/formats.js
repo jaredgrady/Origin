@@ -262,7 +262,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
 		banlist: ['Arceus', 'Audinite', 'Beedrillite', 'Blaziken', 'Cameruptite', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Diancite', 'Galladite', 'Giratina', 'Giratina-Origin', 'Glalitite', 'Groudon', 'Heart Stamp', 'Ho-Oh', 'Hoopa', 'Hoopa-Unbound',
 			'Kyogre', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lugia', 'Mewtwo', 'Palkia', 'Pidgeotite', 'Rayquaza', 'Reshiram', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Altarianite', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Sceptilite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Soul Dew', 'Swampertite',
+			'Altarianite', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Sablenite', 'Sceptilite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Soul Dew', 'Swampertite',
 		],
 	},
 	{
