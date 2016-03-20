@@ -177,7 +177,7 @@ exports.commands = {
 		self.sendReply('You have until the server restarts to open your pack.');
 		if (!userPacks[user.userid]) userPacks[user.userid] = [];
 		userPacks[user.userid].push(pack);
-		if (room.id !== 'lobby' || room.id !== 'casino') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
+		if (room.id !== 'lobby' && room.id !== 'casino') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
 		room.update();
 	},
 
