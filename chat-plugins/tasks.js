@@ -21,7 +21,7 @@ const TaskMethods = {
 		let taskList = Db("tasks").get(room.id, {});
 
 		// sorting for special display method
-		let taskKeys = Object.keys(taskList);
+		let taskKeys = Object.keys(taskList).reverse();
 		if (topId) {
 			if (taskKeys.indexOf(topId) > -1) {
 				// remove and put at the top.
@@ -134,7 +134,7 @@ exports.commands = {
 			let parts = target.split(",");
 			let taskId = TaskMethods.add(room, parts[0], user.name, parts[1] ? (parts.slice(1).join(",").trim()) : []);
 			TaskMethods.view(room, user, "Your task has been added.", taskId);
-			this.privateModCommand("(" + user.name + " has added a task.)");
+`			this.privateModCommand("(" + user.name + " has added a task - " + parts[0] + ")");
 		},
 		"": "view",
 		view: function (target, room, user) {
