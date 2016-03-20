@@ -644,7 +644,7 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 		message: message,
 		name: user.name,
 		type: 'room',
-		typeData: room.title	
+		typeData: room.title,
 	});
 
 	if (message) {

@@ -280,7 +280,7 @@ let commands = exports.commands = {
 					message: target,
 					name: user.name,
 					type: 'pm',
-					typeData: user.name + '>' + targetUser.name
+					typeData: user.name + '>' + targetUser.name,
 				});
 				targetUser.send(Cynesthesia.pixilate(room, user, message, "/pm ", originalMessage));
 				Rooms.global.pmLogger.log(user, targetUser, message);
