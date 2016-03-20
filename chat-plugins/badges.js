@@ -37,40 +37,42 @@ module.exports.badgeIcons = {
 	"vip":"http://i.imgur.com/7heNNTP.png",
 	"Donor of the month":"http://i.imgur.com/EHx2ozm.gif",
 	"Neptune badge":"http://i.imgur.com/d1iHXxr.png",
+	"Steel Badge":"http://i.imgur.com/hlAeXU9.png",
 };
 
 let badgeDescriptions = {
-	"rpsmaster":"info",
-	"staff":"info",
-	"Nolife Master":"info",
-	"Collector":"info",
-	"Ace":"info",
-	"Annoying":"info",
-	"Mono Pro":"info",
-	"Champ":"info",
-	"LUCKY MOFO":"info",
-	"High Roller":"info",
-	"Achievement Unlocked!":"info",
-	"Persistent!":"info",
-	"Active Poster!":"info",
-	"Float Badge":"info",
-	"Commie Badge":"info",
-	"Cannon Badge":"info",
-	"Pixel Badge":"info",
-	"Neo Badge":"info",
-	"Century Badge":"info",
-	"Neski Badge":"info",
-	"Arken Badge":"info",
-	"Alpha Badge":"info",
-	"Gryphon Badge":"info",
-	"fender Badge":"info",
-	"Lucario Badge":"info",
-	"weeb":"info",
-	"Meme Lord":"info",
-	"Cute Fox":"info",
-	"vip":"info",
-	"Donor of the month":"info",
-	"Neptune badge":"info",
+	"rpsmaster":"Reach 1500 on the RPS ladder.",
+	"staff":"Be a global staff member.",
+	"Nolife Master":"Accumulate an ontime of 300 hours.",
+	"Collector":"Earn 750 card points.",
+	"Ace":"Win at least 2 different Origin events",
+	"Annoying":"Hidden Achievement",
+	"Mono Pro":"Win in all 3 formats of Monotype Series.",
+	"Champ":"Be a league's champion.",
+	"LUCKY MOFO":"Win the lottery.",
+	"High Roller":"Spend 500 bucks or more on Origin's shop.",
+	"Achievement Unlocked!":"Earn 3,000 points on Safety Shark's leaderboard",
+	"Persistent!":"1000 wins on the dice ladder.",
+	"Active Poster!":"Have 120 posts on the forums and a reputation of at least 40.",
+	"Float Badge":"Defeat Master Float in Anything Goes.",
+	"Commie Badge":"Defeat Gnarly Commie in OU, best of 3.",
+	"Cannon Badge":"Defeat Volco in UU.",
+	"Pixel Badge":"Defeat Selena in NU.",
+	"Neo Badge":"Defeat Neo Soul in Random Battle, best of 3.",
+	"Century Badge":"Defeat Paul Century in ZU.",
+	"Neski Badge":"Defeat SaNeski in Monotype (Turbo), best of 3.",
+	"Arken Badge":"Defeat ArkenCiel in Monotype or Monotype (Turbo) twice in a row.",
+	"Alpha Badge":"Defeat Alpha Ninja in an OM other than Monotype.",
+	"Gryphon Badge":"Defeat Gryphon in Uno, best of 3, 1v1",
+	"fender Badge":"Defeat fender in LC.",
+	"Lucario Badge":"Defeat AuraStormLucario in VGC (2013-2015), best of 3",
+	"weeb":"10 posts in Anime subforum.",
+	"Meme Lord":"Hidden Achievement",
+	"Cute Fox":"Hidden Achievement",
+	"vip":"Donate for VIP status.",
+	"Donor of the month":"Donate the most for the month.",
+	"Neptune badge":"Defeat Hayleysworld in OSSB, best of 3",
+	"Steel Badge":"Defeat Sundar in Anything Goes, best of 3.",
 };
 
 function badgeImg(link, name) {
@@ -93,22 +95,19 @@ exports.commands = {
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 
 			if (!badgeIcons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
+			if (!Db('badgesDB').has(userid))	badges = [];
 			badges.push(badge);
 			let uniqueBadges = [];
 			uniqueBadges = badges.filter(function (elem, pos) {
 				return badges.indexOf(elem) === pos;
 			});
 			Db('badgesDB').set(toId(userid), uniqueBadges);
-			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
-			this.logModCommand(user.name + " gave " + targetUser + " a badge.");
+			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
+			this.logModCommand(user.name + " gave " + userid + " a badge.");
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
@@ -134,10 +133,7 @@ exports.commands = {
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
-			if (!userid) return this.errorReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
-			if (targetUser.length >= 19) return this.errorReply("Usernames are required to be less than 19 characters long.");
-			if (targetUser.length < 3) return this.errorReply("Usernames are required to be greater than 2 characters long.");
+			if (!Db('badgesDB').has(userid)) return this.errorReply("This user doesn't have any badges.");
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
@@ -145,9 +141,22 @@ exports.commands = {
 			if (index !== -1) {
 				badges.splice(index, 1);
 			}
-			Db('badgesDB').set(toId(userid), badges);
-			this.logModCommand(user.name + " took a badge from " + targetUser + ".");
+			this.logModCommand(user.name + " took a badge from " + userid + ".");
 			this.sendReply("Badge taken.");
+			break;
+		case 'deleteall':
+			if (!(~developers.indexOf(user.userid) || user.userid === 'niisama')) return this.errorReply("Access denied.");
+			if (parts.length !== 2) return this.errorReply('Correct command: `/badges deleteall, badgeName`');
+			badge = parts[1].trim();
+			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			let badgeObject = Db('badgesDB').object();
+			let users = Object.keys(badgeObject);
+			for (let i = 0; i < users.length; i++) {
+				let index = badgeObject[users[i]].indexOf(badge);
+				if (index !== -1) {
+					badgeObject[users[i]].splice(index, 1);
+				}
+			}
 			break;
 		default:
 			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
