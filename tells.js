@@ -100,6 +100,7 @@ exports.sendTell = function (userid, user) {
 		}
 		let timeStr = Tells.getTellTime(tellsToSend[i].time);
 		buffer += '<div class="chat"><font color="gray">[' + timeStr + ' ago]</font> <b><font color="' + color(toId(tellsToSend[i].sender)) + '">' + tellsToSend[i].sender + ':</font></b> ' + Tools.escapeHTML(tellsToSend[i].msg.replace(/\|/g, '&#124;')) + '</div>';
+		user.send('|pm|~Origin Mail Service|' + userid + '|[' + timeStr + ' ago] ' + tellsToSend[i].sender + ': ' + Tools.escapeHTML(tellsToSend[i].msg.replace(/\|/g, '&#124;')));
 	}
 	user.send(buffer);
 	delete Tells.inbox[userid];
