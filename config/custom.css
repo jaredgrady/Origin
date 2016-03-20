@@ -1506,64 +1506,64 @@
   color: #2B4A68 !important; }
 
 /* vin steel ~end */
-/*piersnins*/
-.pm-window-piersnins h3 {
+/*omeganivans*/
+.pm-window-omeganivans h3 {
   background: rgba(136, 205, 115, 0.8) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFF6D5 !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
   border-color: #5A9C4A !important; }
 
-.pm-window-piersnins h3:hover {
+.pm-window-omeganivans h3:hover {
   background: rgba(136, 205, 115, 0.9) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFCEB !important;
   text-shadow: 0px 1px 1px #5A9C4A !important;
   border-color: #5A9C4A !important; }
 
-.pm-window-piersnins .focused h3, .pm-window-piersnins .focused h3:hover {
+.pm-window-omeganivans .focused h3, .pm-window-omeganivans .focused h3:hover {
   background: rgba(136, 205, 115, 0.9) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #0F618A !important;
   text-shadow: 0px 0px 2px #5A9C4A !important;
   border-color: #5A9C4A !important; }
 
-.pm-window-piersnins h3 small {
+.pm-window-omeganivans h3 small {
   color: #03ACFF !important; }
 
-.pm-window-piersnins h3 .minimizebutton, .dark .pm-window-piersnins h3 .minimizebutton, .pm-window-piersnins h3 .closebutton, .pm-window-piersnins h3:hover .minimizebutton {
+.pm-window-omeganivans h3 .minimizebutton, .dark .pm-window-omeganivans h3 .minimizebutton, .pm-window-omeganivans h3 .closebutton, .pm-window-omeganivans h3:hover .minimizebutton {
   color: #0F79AF !important; }
 
-.pm-window-piersnins h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-piersnins h3 .closebutton:hover + .minimizebutton.minimizebutton {
+.pm-window-omeganivans h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-omeganivans h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #0F79AF !important; }
 
-.pm-window-piersnins h3 .closebutton:hover {
+.pm-window-omeganivans h3 .closebutton:hover {
   color: #0F618A !important; }
 
-.pm-window-piersnins h3 .minimizebutton:hover, .dark .pm-window-piersnins h3 .minimizebutton:hover {
+.pm-window-omeganivans h3 .minimizebutton:hover, .dark .pm-window-omeganivans h3 .minimizebutton:hover {
   color: #0F618A !important; }
 
-.pm-window-piersnins .pm-log, .pm-window-piersnins .focused .pm-log {
+.pm-window-omeganivans .pm-log, .pm-window-omeganivans .focused .pm-log {
   background: rgba(255, 255, 255, 0.95) url("http://i.imgur.com/JGUvxtO.png") left no-repeat !important;
   border-color: #5A9C4A !important;
   text-shadow: 0px 0px 2px #8BCD73; }
 
-.pm-window-piersnins .pm-log .chat small {
+.pm-window-omeganivans .pm-log .chat small {
   color: #74AE5E !important; }
 
-.pm-window-piersnins .pm-log-add, .pm-window-piersnins .focused .pm-log-add {
+.pm-window-omeganivans .pm-log-add, .pm-window-omeganivans .focused .pm-log-add {
   background: rgba(3, 172, 255, 0.7) !important;
   border-color: #1586BF !important; }
 
-.pm-window-piersnins .pm-log-add .textbox {
+.pm-window-omeganivans .pm-log-add .textbox {
   border-color: #1586BF !important;
   background: rgba(255, 255, 255, 0.95) !important;
   color: #000; }
 
-.pm-window-piersnins .pm-log-add .textbox:focus {
+.pm-window-omeganivans .pm-log-add .textbox:focus {
   border-color: #156994 !important; }
 
-.pm-window-piersnins h3.pm-notifying {
+.pm-window-omeganivans h3.pm-notifying {
   border-color: #BD1919 !important;
   border-width: 2px;
   background: rgba(136, 205, 115, 0.8) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
@@ -1572,10 +1572,10 @@
   text-shadow: 0px 1px 1px #5A9C4A !important;
   font-style: italic; }
 
-.pm-window-piersnins h3.pm-notifying small {
+.pm-window-omeganivans h3.pm-notifying small {
   color: #BD1919 !important; }
 
-.pm-window-piersnins h3.pm-notifying:hover {
+.pm-window-omeganivans h3.pm-notifying:hover {
   border-color: #BD1919 !important;
   border-width: 2px;
   background: rgba(136, 205, 115, 0.8) url("http://i.imgur.com/8ncXnM9.png") no-repeat !important;
@@ -1584,30 +1584,30 @@
   text-shadow: 0px 1px 1px #5A9C4A !important;
   font-style: italic; }
 
-.pm-window-piersnins .challenge {
+.pm-window-omeganivans .challenge {
   background: rgba(3, 172, 255, 0.7) url("http://i.imgur.com/gKuBy8k.png?1") bottom left no-repeat !important;
   color: #0F79AF !important;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) !important;
   border-color: #0F79AF !important; }
 
-.pm-window-piersnins .challenge .select, .pm-window-piersnins .challenge .buttonbar button {
+.pm-window-omeganivans .challenge .select, .pm-window-omeganivans .challenge .buttonbar button {
   background: rgba(28, 128, 178, 0.8) !important;
   border-color: #0F618A !important;
   color: #BDE673 !important;
   text-shadow: 1px 1px 1px #0F618A !important; }
 
-.pm-window-piersnins .challenge .select:hover, .pm-window-piersnins .challenge .buttonbar button:hover {
+.pm-window-omeganivans .challenge .select:hover, .pm-window-omeganivans .challenge .buttonbar button:hover {
   background: rgba(28, 128, 178, 0.9) !important;
   border-color: #0F618A !important; }
 
-.pm-window-piersnins .challenge .select:disabled {
+.pm-window-omeganivans .challenge .select:disabled {
   background: rgba(28, 128, 178, 0.5) !important;
   border-color: #0F618A !important; }
 
-.pm-window-piersnins .challenge .teamselect:disabled strong {
+.pm-window-omeganivans .challenge .teamselect:disabled strong {
   color: #BDE673 !important; }
 
-/*piersnins~end*/
+/*omeganivans~end*/
 /*implatios*/
 .pm-window-implatios h3 {
   background: rgba(36, 137, 109, 0.8) url("http://i.imgur.com/n5HletV.png") no-repeat !important;
@@ -2045,7 +2045,7 @@
 #lobby-userlist-user-seoking, #monotype-userlist-user-seoking, #hayleysden-userlist-user-seoking, #swl-userlist-user-seoking {
   background: rgba(255, 255, 255, 0.65) url("http://forums.tppc.info/images/pokemon/560.gif") right no-repeat; }
 
-#lobby-userlist-user-piersnins, #hayleysden-userlist-user-piersnins, #theomegaleague-userlist-user-piersnins {
+#lobby-userlist-user-omeganivans, #hayleysden-userlist-user-omeganivans, #theomegaleague-userlist-user-omeganivans {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/c5eeP7n.gif") right no-repeat; }
 
 #lobby-userlist-user-trafalgarlaw, #voidleague-userlist-user-trafalgarlaw, #yugioh-userlist-user-trafalgarlaw {
