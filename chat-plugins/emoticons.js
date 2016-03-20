@@ -109,7 +109,7 @@ let emotes = {
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'PeoplesChamp': 'http://i.imgur.com/QMiMBKe.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
-	'sht': 'http://i.imgur.com/s9owArF.png?1',
+	'feelssht': 'http://i.imgur.com/s9owArF.png?1',
 	'stevo': 'http://imgur.com/Gid6Zjy.png',
 	'thumbsup': 'http://i.imgur.com/eWcFLLn.jpg',
 	'trollface': 'http://cdn.overclock.net/a/a0/50x50px-ZC-a0e3f9a7_troll-troll-face.png',
