@@ -177,7 +177,7 @@ exports.commands = {
 			let buck = 'buck';
 			if (room.shop[toId(item)].price > 1) buck = 'bucks';
 			if (!room.shopBank) room.shopBank = room.founder;
-			this.parse('/transferbucks ' + room.shopBank + ',' + room.shop[toId(item)].price);
+			this.parse('/forcetransfer ' + room.shopBank + ',' + room.shop[toId(item)].price);
 			fs.appendFile('logs/leagueshop_' + room.id + '.txt', '[' + new Date().toJSON() + '] ' + user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + buck + '.\n');
 			room.add(user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + ((price === 1) ? " buck." : " bucks.") + '.');
 			Rooms.global.addTask(room, "Shop Purchase - " + room.shop[toId(item)].name, user.name);
