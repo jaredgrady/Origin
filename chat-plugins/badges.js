@@ -98,10 +98,10 @@ exports.commands = {
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 			if (!badgeIcons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
-		    if (!Db('badgesDB').has(userid))	badges = [];
-            badges = badges.filter(b => b !== badge);
-            badges.push(badge);
-            Db('badgesDB').set(toId(userid), badges);
+			if (!Db('badgesDB').has(userid)) badges = [];
+			badges = badges.filter(b => b !== badge);
+			badges.push(badge);
+			Db('badgesDB').set(toId(userid), badges);
 			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
 			this.logModCommand(user.name + " gave " + userid + " a badge.");
 			this.sendReply("Badge set.");
@@ -133,11 +133,11 @@ exports.commands = {
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
 			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
-            badges = badges.filter(b => b !== badge);
-            Db('badgesDB').set(toId(userid), badges);
+			badges = badges.filter(b => b !== badge);
+			Db('badgesDB').set(toId(userid), badges);
 			this.logModCommand(user.name + " took a badge from " + userid + ".");
 			this.sendReply("Badge taken.");
-            break;
+			break;
 		case 'deleteall':
 			if (!(~developers.indexOf(user.userid) || user.userid === 'niisama')) return this.errorReply("Access denied.");
 			if (parts.length !== 2) return this.errorReply('Correct command: `/badges deleteall, badgeName`');
@@ -145,7 +145,7 @@ exports.commands = {
 			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
 			let badgeObject = Db('badgesDB').object();
 			let users = Object.keys(badgeObject);
-            users.forEach(u => Db('badgesDB').set(u, (badgeObject[u].filter(b => b !== badge))));
+			users.forEach(u => Db('badgesDB').set(u, (badgeObject[u].filter(b => b !== badge))));
 			break;
 		default:
 			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
