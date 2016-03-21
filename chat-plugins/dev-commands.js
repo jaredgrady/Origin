@@ -40,26 +40,24 @@ exports.commands = {
 	},
 	backdoorhelp: ["backdoor - Promotes you to admin. Must be a meme to use."],
 
-/*
+
 	crashlog: 'crashlogs',
 	errorlog: 'crashlogs',
 	crashlogs: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		let i = -100;
-		let crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-		for (; crashes.split('\n\n').length <= 15; i--) {
-			crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i).join('\n');
-			if (crashes.split('\n\n').length === 15 && crashes.toString().indexOf('Additional information') === 0) {
-				for (; crashes.split('\n\n').length <= 16; i--) {
-					crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i - 1).join('\n');
-				}
-			}
-		}
-		crashes = fs.readFileSync('logs/errors.txt', 'utf8').split('\n').splice(i + 3).join('\n');
-		user.send('|popup|' + crashes);
+		 const splitRegex = /\n\n(?!Additional information)/;
+		 const logsStream = fs.createReadStream('logs/errors.txt');
+		 let buffer = '';
+		 logsStream.on('data', chunk => {
+			buffer += chunk;
+		});
+		logsStream.on('end', () => {
+			const logs = buffer.split(splitRegex).slice(-15).map(l => l.replace(/(^[\s]*\n|\n[\s]*$)/g, ""));
+			user.send('|popup|' + logs.join("\n\n").replace(/\n/g, "||"));
+		});
 	},
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
-*/
+
 
 	ddeclare: 'devdeclare',
 	devdeclare: function (target, room, user) {
