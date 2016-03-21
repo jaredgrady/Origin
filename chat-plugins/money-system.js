@@ -237,7 +237,7 @@ exports.commands = {
 	transfer: 'transfermoney',
 	transferbuck: 'transfermoney',
 	transferbucks: 'transfermoney',
-	transfermoney: function (target, room, user, cmd) {
+	transfermoney: function (target, room, user, connection, cmd) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfermoney');
 
 		let parts = target.split(',');
