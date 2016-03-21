@@ -1,3 +1,4 @@
+"use strict";
 const roomId = "cinnabarisland";
 const targetRoom = Rooms.get(roomId);
 let targetUsers = ["paulcentury"];
@@ -10,4 +11,3 @@ module.exports = {
 	onMessage: onMessage,
 	targetUsers: targetUsers,
 };
-	
