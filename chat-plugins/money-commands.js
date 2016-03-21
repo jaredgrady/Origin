@@ -173,11 +173,11 @@ exports.commands = {
 			item = params.shift();
 			if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "' + item + '" not found.');
 			let money = Db('money').get(user, 0);
-			if (money < room.shop[toId(item)].price) return self.sendReply('You don\'t have enough bucks to purchase a ' + item + '. You need ' + ((money - room.shop[toId(item)].price) *  -1) + ' more bucks.');
+			if (money < room.shop[toId(item)].price) return this.sendReply('You don\'t have enough bucks to purchase a ' + item + '. You need ' + ((money - room.shop[toId(item)].price) *  -1) + ' more bucks.');
 			let buck = 'buck';
 			if (room.shop[toId(item)].price > 1) buck = 'bucks';
 			if (!room.shopBank) room.shopBank = room.founder;
-			self.parse('/transferbucks ' + room.shopBank + ',' + room.shop[toId(item)].price);
+			this.parse('/transferbucks ' + room.shopBank + ',' + room.shop[toId(item)].price);
 			fs.appendFile('logs/leagueshop_' + room.id + '.txt', '[' + new Date().toJSON() + '] ' + user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + buck + '.\n');
 			room.add(user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + ((price === 1) ? " buck." : " bucks.") + '.');
 			Rooms.global.addTask(room, "Shop Purchase - " + room.shop[toId(item)].name, user.name);
