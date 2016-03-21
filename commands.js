@@ -1070,6 +1070,7 @@ let commands = exports.commands = {
 				this.privateModCommand("(" + targetUser.name + "'s ac account: " + acAccount + ")");
 			}
 		}
+		if (Config.showRoomBans && !room.isPrivate && !room.battle && !room.isPersonal && room.auth[targetUser.userid]) Monitor.log("[RoomMonitor] User: " + targetUser.name + " was roombanned in " + room.id + " (please go check if the account is hacked).");
 		let lastid = targetUser.getLastId();
 		this.add('|unlink|roomhide|' + lastid);
 		if (lastid !== toId(this.inputUsername)) this.add('|unlink|roomhide|' + toId(this.inputUsername));
