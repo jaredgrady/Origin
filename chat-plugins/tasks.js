@@ -129,7 +129,7 @@ exports.commands = {
 	tasks: "task",
 	task: {
 		add: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!this.can('announce', null, room)) return false;
 			if (!target) return this.errorReply("/task add taskName [, details]");
 			let parts = target.split(",");
@@ -139,12 +139,12 @@ exports.commands = {
 		},
 		"": "view",
 		view: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!this.can('announce', null, room)) return false;
 			TaskMethods.view(room, user);
 		},
 		selfassign: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
@@ -155,7 +155,7 @@ exports.commands = {
 			if (success) TaskMethods.view(room, user, "You have self-assigned yourself to task " + target + ".", target);
 		},
 		complete: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
@@ -166,7 +166,7 @@ exports.commands = {
 			if (success) TaskMethods.view(room, user, "You have closed task " + target + ".", target);
 		},
 		delete: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
@@ -177,7 +177,7 @@ exports.commands = {
 			if (success) TaskMethods.view(room, user, "You have deleted task " + target + ".", target);
 		},
 		detail: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.")
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!this.can('announce', null, room)) return false;
 			if (!target) return this.errorReply("/task detail [add / delete], [Task ID], [new detail / detail id]");
 			let parts = target.split(",");
