@@ -216,7 +216,7 @@ exports.commands = {
 		if (!targetUser) return false;
 		let targetId = toId(parts[0]);
 		// user cannot confirm him/herself
-		if (targetId === user.userid && /*exception*/ user.userid !== "sparkychild") return this.errorReply("You cannot confirm your own IP for security reasons.");
+		if (targetId === user.userid || user.isNotSafe) return this.errorReply("You cannot confirm your own IP, or confirm ips when you are not fully confirmed -  for security reasons naturally.");
 		// check if next part is really an ip
 		if (!/^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$/i.test(parts[1])) return this.errorReply("Invalid IP.");
 		IPV.updateUserIp(targetId, parts[1]);
