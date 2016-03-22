@@ -27,7 +27,9 @@ exports.commands = {
 	insult: function (target, room, user) {
 		if (!this.canTalk()) return false;
 		let parts = [insultsA[Math.floor(Math.random() * 10)], insultsB[Math.floor(Math.random() * 10)], insultsC[Math.floor(Math.random() * 10)]];
-		let message = '|c|' + user.name + '|Oh, its ' + target + ', ' + parts[0] + '. ' + parts[1] + ' you ' + parts[2] + '.';
+		let group = user.getIdentity().charAt(0);
+		if (room.auth) group = room.auth[user.userid] || group;
+		let message = '|c|' + group + user.name + '|Oh, its ' + target + ', ' + parts[0] + '. ' + parts[1] + ' you ' + parts[2] + '.';
 		if (Users.ShadowBan.checkBanned(user)) {
 			user.sendTo(room, message);
 			Users.ShadowBan.addMessage(user, 'To' + room, message);
