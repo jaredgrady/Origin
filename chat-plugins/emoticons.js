@@ -62,6 +62,7 @@ let emotes = {
 	'feelsok': 'http://i.imgur.com/gu3Osve.png',
 	'feelsorange': 'http://i.imgur.com/3fxXP16.jpg',
 	'feelspanda': 'http://i.imgur.com/qi7fue9.png',
+	'feelspix': 'http://cbc.pokecommunity.com/config/emoticons/pix.png',
 	'feelspuke': 'http://i.imgur.com/nQbRspU.png?1',
 	'feelspaul': 'http://imgur.com/KuDZMJR.png',
 	'feelsshrk': 'http://i.imgur.com/amTG3jF.jpg',
@@ -121,7 +122,6 @@ let emotes = {
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
 	'youdontsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
-	'feelspix': 'http://cbc.pokecommunity.com/config/emoticons/pix.png',
 };
 
 let emotesKeys = Object.keys(emotes);
