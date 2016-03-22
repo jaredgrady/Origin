@@ -302,7 +302,7 @@ exports.commands = {
 			Types: ['Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'Metal'],
 			Tiers: ['OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack'],
 			Generation: ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6'],
-			Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'EX-Pack', 'Mega', 'Legendary', 'Full', 'Event'],
+			Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'Delta', 'EX-Pack', 'Mega', 'Legendary', 'Full', 'Event'],
 		};
 
 		const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">"; // code for scrollable html
