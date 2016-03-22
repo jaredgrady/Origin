@@ -38,6 +38,7 @@ const TaskMethods = {
 			const selfAssignTask = '<button name="send" value="/task selfassign ' + room.id + ", " + task.id + '" style="background-color:lightblue;width:75px">Self Assign</button><br />';
 			const deleteTask = '<button name="send" value="/task delete ' + room.id + ", "  + task.id + '" style="background-color:red;width:75px"><font color="white">Delete</font></button><br />';
 			const completeTask = '<button name="send" value="/task complete ' + room.id + ", "  + task.id + '" style="background-color:green;width:75px"><font color="white">Close</font></button><br />';
+			const reopenTask = '<button name="send" value="/task reopen ' + room.id + ", "  + task.id + '" style="background-color:blue;width:75px"><font color="white">Reopen</font></button><br />';
 
 			display += "<tr>" +
 				"<td><center>" + Tools.escapeHTML(task.name) + '<br /><font color="gray">(ID: ' + task.id + ')</font></center></td>' + // task id
@@ -45,7 +46,7 @@ const TaskMethods = {
 				"<td><center>" + Tools.escapeHTML(task.assignee || "None") + "</center></td>" +
 				"<td width=\"30%\">- " + task.details.map(l => Tools.escapeHTML(l)).join("<br />- ") + "</td>" +
 				"<td><center>" + task.status + (task.status !== "Closed" ? "<br /><font color=\"gray\">(Pending)</font>" : "") + "</center></td>" + // simple details
-				"<td>" + (task.status !== "Closed" && (!task.assignee || toId(task.assignee) !== user.userid) ? selfAssignTask : "") + (task.status !== "Closed" ? completeTask : "") + deleteTask + // determine which buttons
+				"<td>" + (task.status !== "Closed" && (!task.assignee || toId(task.assignee) !== user.userid) ? selfAssignTask : "") + (task.status !== "Closed" ? completeTask : reopenTask) + deleteTask + // determine which buttons
 				"</td><tr>"; // finish the row
 		}
 		// finish the table
@@ -98,6 +99,15 @@ const TaskMethods = {
 		}
 		return false;
 	},
+	reopen: function (room, taskId) {
+		let task = Db("tasks").get([room.id, taskId], null);
+		if (task) {
+			task.status = new Date().toLocaleString() + " (GMT)";
+			Db("tasks").set([room.id, taskId], task);
+			return true;
+		}
+		return false;
+	},
 	addDetail: function (room, taskId, addition) {
 		let task = Db("tasks").get([room.id, taskId], null);
 		if (task) {
@@ -144,35 +154,46 @@ exports.commands = {
 			TaskMethods.view(room, user);
 		},
 		selfassign: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
 			target = parts.join(",").trim();
 			room = Rooms.get(room);
 			if (!room || !this.can('announce', null, room) || !target) return false;
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			let success = TaskMethods.selfAssign(room, user, target);
 			if (success) TaskMethods.view(room, user, "You have self-assigned yourself to task " + target + ".", target);
 		},
-		complete: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
+		reopen: function (target, room, user) {
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
 			target = parts.join(",").trim();
 			room = Rooms.get(room);
 			if (!room || !this.can('announce', null, room) || !target) return false;
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
+			let success = TaskMethods.reopen(room, target);
+			if (success) TaskMethods.view(room, user, "You have reopened task " + target + ".", target);
+		},
+		complete: function (target, room, user) {
+			if (!target) return false;
+			let parts = target.split(",");
+			room = parts.shift();
+			target = parts.join(",").trim();
+			room = Rooms.get(room);
+			if (!room || !this.can('announce', null, room) || !target) return false;
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			let success = TaskMethods.complete(room, target);
 			if (success) TaskMethods.view(room, user, "You have closed task " + target + ".", target);
 		},
 		delete: function (target, room, user) {
-			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!target) return false;
 			let parts = target.split(",");
 			room = parts.shift();
 			target = parts.join(",").trim();
 			room = Rooms.get(room);
 			if (!room || !this.can('announce', null, room) || !target) return false;
+			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			let success = TaskMethods.remove(room, target);
 			if (success) TaskMethods.view(room, user, "You have deleted task " + target + ".", target);
 		},
