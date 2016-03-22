@@ -911,7 +911,7 @@ TeamValidator.PM = PM = {
 		}
 	},
 	send(format, team) {
-		if (!this.processes) {
+		if (!this.processes.length) {
 			// synchronously!
 			return Promise.resolve(this.receive(format, team));
 		}
@@ -954,8 +954,6 @@ TeamValidator.PM = PM = {
 
 if (process.send && module === process.mainModule) {
 	// This is a child process!
-
-	Object.defineProperty(Object, 'values', {writable: true, configurable: true, value: require('object.values')});
 
 	global.Config = require('./config/config.js');
 

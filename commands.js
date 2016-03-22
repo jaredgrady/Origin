@@ -2025,7 +2025,7 @@ let commands = exports.commands = {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/hotpatch - Access denied.");
 		this.logEntry(user.name + " used /hotpatch " + target);
 		let staff = Rooms('staff');
-		if (staff) staff.add("(" + user.name + " used /hotpatch " + target + ")");
+		if (staff) staff.add("(" + user.name + " used /hotpatch " + target + ")").update();
 
 		if (target === 'chat' || target === 'commands') {
 			try {

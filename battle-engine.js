@@ -12,8 +12,6 @@
 
 'use strict';
 
-Object.defineProperty(Object, 'values', {writable: true, configurable: true, value: require('object.values')});
-
 global.Config = require('./config/config.js');
 
 if (Config.crashguard) {
