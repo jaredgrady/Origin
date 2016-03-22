@@ -397,6 +397,7 @@ class CommandContext {
 			'd.pr': 1,
 			'pokefans.net': 1,
 			'originps.boards.net': 1,
+			'origin-forums.com': 1,
 			'origin.psim.us': 1,
 		};
 		if (domain in approvedDomains) {
