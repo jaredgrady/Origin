@@ -420,7 +420,7 @@ exports.commands = {
 		this.sendReply("|raw|This server uses <a href='https://github.com/CreaturePhil/Showdown-Boilerplate'>Showdown-Boilerplate</a>.");
 	},
 	showdownboilerplatehelp: ["/showdownboilerplate - Links to the Showdown-Boilerplate repository on Github."],
-	
+
 	cmdlist: 'commands',
 	commands: function (target, room, user) {
 		if (!this.canBroadcast()) return;
