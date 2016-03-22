@@ -534,6 +534,7 @@ exports.commands = {
 		let name = targetUser.name;
 		if (!targetUser.registered) return this.sendReply("User '" + name + "' is not registered.");
 		if (!room.founder) return this.sendReply('The room needs a room founder before it can have a room owner.');
+		if (target === room.founder && !this.can('makeroom')) return this.sendReply('You cannot demote yourself from founder to owner.');
 		if (room.founder !== user.userid && !this.can('makeroom')) return this.sendReply('/roomowner - Access denied.');
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
 
