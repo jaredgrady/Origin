@@ -427,13 +427,6 @@ exports.commands = {
 		this.sendReply("|raw|For a complete list of the commands are Origin, check out this thread.  <a href='http://origin-forums.com/index.php?/topic/70-origin-chat-commands/'>Origin Commands</a>.");
 	},
 
-	sb: 'showdownboilerplate',
-	showdownboilerplate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReply("|raw|This server uses <a href='https://github.com/CreaturePhil/Showdown-Boilerplate'>Showdown-Boilerplate</a>.");
-	},
-	showdownboilerplatehelp: ["/showdownboilerplate - Links to the Showdown-Boilerplate repository on Github."],
-
 	tell: function (target, room, user, connection) {
 		if (!target) return this.parse('/help tell');
 		target = this.splitTarget(target);
