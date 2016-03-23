@@ -295,7 +295,7 @@ exports.commands = {
 	cardsearch: "searchcard",
 	searchcard: function (target, room, user) {
 		// consts
-		const letters = "abcdefghijklmnopqrstuvwuyz".split("");
+		const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 		const categories = {
 			Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'], // rarities
 			Packs: ['XY-Promo', 'XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'Double Crisis'],
