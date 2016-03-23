@@ -846,7 +846,7 @@ exports.Formats = [
 			}
 		},
 
-		// Hacks for megas changed abilities. This allow for their changed abilities.
+		// This allows for their changed abilities.
 		onUpdate: function (pokemon) {
 			let name = toId(pokemon.name);
 			if (pokemon.template.isMega) {
@@ -857,7 +857,7 @@ exports.Formats = [
 				if (name === 'saneski' && pokemon.getAbility().id === 'moldbreaker') {
 					pokemon.setAbility('cursedaura');
 				}
-				if (name === 'vinsteel' && pokemon.getAbility().id === 'toughclaws') {
+				if (name === 'mightysciz' && pokemon.getAbility().id === 'toughclaws') {
 					pokemon.setAbility('dragonsfire');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
@@ -882,11 +882,9 @@ exports.Formats = [
 			}
 		},
 
-		// Here we treat many things, read comments inside for information.
 		onSwitchInPriority: 1,
 		onSwitchIn: function (pokemon) {
 			let name = toId(pokemon.illusion ? pokemon.illusion.name : pokemon.name);
-			// No OP pls. Balance stuff, changing them upon switch in. Wonder Guard gets curse to minimise their turns out.
 			if (pokemon.getAbility().id === 'wonderguard') {
 				pokemon.addVolatile('curse', pokemon);
 				this.add('-message', pokemon.name + "'s Wonder Guard has cursed it!");
@@ -908,7 +906,7 @@ exports.Formats = [
 				if (name === 'saneski' && pokemon.getAbility().id !== 'cursedaura') {
 					// pokemon.setAbility('cursedaura');
 				}
-				if (name === 'vinsteel' && pokemon.getAbility().id !== 'dragonsfire') {
+				if (name === 'mightysciz' && pokemon.getAbility().id !== 'dragonsfire') {
 					pokemon.setAbility('dragonsfire');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
@@ -985,13 +983,13 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Mm, hello.');
 			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|Time for moderation to take its course and slay all the misbehaving Dragons!');
+			}
 			/* no quote
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|');
 			} */
-			if (name === 'vinsteel') {
-				this.add('c|&Vin Steel|Time for moderation to take its course and slay all the misbehaving Dragons!');
-			}
 
 			// Mods
 			if (name === 'alphaninja') {
@@ -1027,10 +1025,10 @@ exports.Formats = [
 				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
 			}
 			if (name === 'isandman') {
-				this.add('c|%isandman|ENTER SANDMAN');
+				this.add('c|%iSandman|ENTER SANDMAN');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Cheyvy 12|I have swooped in to fuck up your day today feelsok');
+				this.add('c|%L Chevy 12|I have swooped in to fuck up your day today feelsok');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
@@ -1097,7 +1095,6 @@ exports.Formats = [
 				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
 			}
 			if (name === 'lttesla') {
-				//this.add('c|~Lt. Tesla|A real Tesla never dies. Even when he\'s killed');
 				this.add('c|~Lt. Tesla|Nothing in showdown is certain except Deth and haxes');
 			}
 			if (name === 'masterfloat') {
@@ -1115,13 +1112,13 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
 			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
+			}
 			/* no quote
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|');
 			} */
-			if (name === 'vinsteel') {
-				this.add('c|&Vin Steel|I failed my part as a Dragon Slayer...');
-			}
 
 			// Mods
 			if (name === 'alphaninja') {
@@ -1157,10 +1154,10 @@ exports.Formats = [
 				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
 			}
 			if (name === 'isandman') {
-				this.add('c|%isandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
+				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Cheyvy 12|Screw this, you aren\'t worth it.');
+				this.add('c|%L Chevy 12|Screw this, you aren\'t worth it.');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
@@ -1248,11 +1245,11 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 tells you all to take care while she\'s gone.');
 			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|Well... I will be back and face you again');
+			}
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|Do not go gentle into that good night');
-			}
-			if (name === 'vinsteel') {
-				this.add('c|&Vin Steel|Well... I will be back and face you again');
 			}
 
 			// Mods
@@ -1289,10 +1286,10 @@ exports.Formats = [
 				this.add('c|%hayleysworld|My bad memes will be back!');
 			}
 			if (name === 'isandman') {
-				this.add('c|%isandman|JOY BANGLA , JOY BANGOBANDHU');
+				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Cheyvy 12|I live to Fuck You Up another day!');
+				this.add('c|%L Chevy 12|I live to Fuck You Up another day!');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');

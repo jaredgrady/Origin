@@ -3545,6 +3545,22 @@ exports.BattleAbilities = {
 		name: "Mischievous",
 	},
 
+	// Mighty Sciz
+	"dragonsfire": {
+		isNonstandard: true,
+		onSourceModifyDamage: function (damage, source, target, move) {
+			if (target.hp >= target.maxhp) {
+				this.debug('Multiscale weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceFaint: function (target, source, effect) {
+			if (effect && effect.effectType === 'Move') this.boost({atk:1}, source);
+		},
+		id: "dragonsfire",
+		name: "Dragon's Fire",
+	},
+
 	// SaNeski
 	"cursedaura": {
 		isNonstandard: true,
@@ -3591,22 +3607,6 @@ exports.BattleAbilities = {
 		},
 		id: "cursedaura",
 		name: "Cursed Aura",
-	},
-
-	// Vin Steel
-	"dragonsfire": {
-		isNonstandard: true,
-		onSourceModifyDamage: function (damage, source, target, move) {
-			if (target.hp >= target.maxhp) {
-				this.debug('Multiscale weaken');
-				return this.chainModify(0.5);
-			}
-		},
-		onSourceFaint: function (target, source, effect) {
-			if (effect && effect.effectType === 'Move') this.boost({atk:1}, source);
-		},
-		id: "dragonsfire",
-		name: "Dragon's Fire",
 	},
 
 	// Mod Abilities

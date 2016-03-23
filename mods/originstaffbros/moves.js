@@ -16004,6 +16004,39 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
+	// Mighty Sciz
+	"dragonstrike": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		id: "dragonstrike",
+		name: "Dragon Strike",
+		pp: 10,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		recoil: [33, 100],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]outrage');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]outrage');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|&Mighty Sciz|DRAGON STRIKE ALL THE WAY TO HELL!');
+		},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+
 	// SaNeski
 	"silentdeparture": {
 		isNonstandard: true,
@@ -16029,39 +16062,6 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
-	},
-
-	// Vin Steel
-	"dragonstrike": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 120,
-		category: "Physical",
-		id: "dragonstrike",
-		name: "Dragon Strike",
-		pp: 10,
-		priority: 1,
-		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		recoil: [33, 100],
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]outrage');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]outrage');
-		},
-		onHit: function (target, source, move) {
-			this.add('c|&Vin Steel|DRAGON STRIKE ALL THE WAY TO HELL!');
-		},
-		secondary: {
-			chance: 50,
-			self: {
-				boosts: {
-					def: 1,
-				},
-			},
-		},
-		target: "normal",
-		type: "Dragon",
 	},
 
 	// Mods
@@ -16394,7 +16394,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// isandman
+	// iSandman
 	"megaearthfissure": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16416,7 +16416,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]earthpower');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%isandman|WOA WE OUT HERE');
+			this.add('c|%iSandman|WOA WE OUT HERE');
 		},
 		secondary: {
 			boosts: {

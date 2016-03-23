@@ -31,6 +31,7 @@ exports.commands = {
 	ossbhelp: 'ssbhelp',
 	ssbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
 
+	ossbcredits: 'ssbcredits',
 	ssbcredits: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
 		this.sendReplyBox(

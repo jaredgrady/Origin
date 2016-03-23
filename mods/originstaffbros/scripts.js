@@ -59,17 +59,17 @@ exports.BattleScripts = {
 				baseSignatureMove: 'admonish', signatureMove: "Admonish",
 				evs: {hp:240, def:252, spd:16}, ivs: {atk:0}, nature: 'Bold',
 			},
+			'&Mighty Sciz': { // (mega ability) dragonsfire
+				species: 'Charizard', ability: 'Blaze', item: 'Charizardite X', gender: 'M',
+				moves: [['dragondance', 'bellydrum'][this.random(2)], ['firepunch', 'flareblitz'][this.random(2)], ['shadowclaw', 'doubleedge', 'roost'][this.random(3)]],
+				baseSignatureMove: 'dragonstrike', signatureMove: "Dragon Strike",
+				evs: {hp:4, atk:252, spe: 252}, nature: 'Jolly',
+			},
 			'&SaNeski': { // (mega ability) cursedaura
 				species: 'Gyarados', ability: 'Intimidate', item: 'Gyaradosite', gender: 'M',
 				moves: ['crabhammer', ['suckerpunch', 'pursuit', 'nightslash'][this.random(3)], ['focusenergy', 'dragondance'][this.random(2)]],
 				baseSignatureMove: 'silentdeparture', signatureMove: "Silent Departure",
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
-			},
-			'&Vin Steel': { // (mega ability) dragonsfire
-				species: 'Charizard', ability: 'Blaze', item: 'Charizardite X', gender: 'M',
-				moves: [['dragondance', 'bellydrum'][this.random(2)], ['firepunch', 'flareblitz'][this.random(2)], ['shadowclaw', 'doubleedge', 'roost'][this.random(3)]],
-				baseSignatureMove: 'dragonstrike', signatureMove: "Dragon Strike",
-				evs: {hp:4, atk:252, spe: 252}, nature: 'Jolly',
 			},
 
 			// Mods.
@@ -258,7 +258,6 @@ exports.BattleScripts = {
 		};
 		// Generate the team randomly.
 		let pool = Object.keys(sets).randomize();
-		// let ranks = {'~':'admins', '&':'leaders', '@':'mods', '%':'drivers', '$':'operators', '+':'voices', ' ':'others'};
 		let levels = {'~':99, '&':98, '@':97, '%':96, '$':95, '+':95, ' ': 94};
 		for (let i = 0; i < 6; i++) {
 			if (i === 1) {
