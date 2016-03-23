@@ -1,10 +1,13 @@
 'use strict';
-/*
-    UNO Game for PS
-    by sparkychild
-*/
+/******************************************
+ * UNO chat-plugin cretaed by Sparkychild *
+ ******************************************/
+
 //data for all rooms
-global.UNO = {};
+if (!global.UNO) {
+	global.UNO = {};
+}
+
 //for each room
 const deck = ["R1",
 	"R2",
