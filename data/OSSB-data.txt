@@ -100,7 +100,7 @@ fender - Gible
 - Movepool: Volt Switch, Will-o-wisp, Pain Split
 - Notes: Good check to some of the metagame's scary physical attackers and water types, and the burn chance is quite amazing together with the accuracy. Harvest Sitrus Berry keeps it alive for more time than you'll want it to. 
 
-%Emg E4 Volcо - Volcanion
+%Emg E4 Volco - Volcanion
 - Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
 - Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
 - Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption

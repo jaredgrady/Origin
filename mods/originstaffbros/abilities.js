@@ -3761,7 +3761,7 @@ exports.BattleAbilities = {
 		name: "feelsgd",
 	},
 
-	// Emg E4 Volcо
+	// Emg E4 Volco
 	"adaptabulksturdy": {
 		isNonstandard: true,
 		onModifyDefPriority: 6,

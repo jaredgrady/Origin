@@ -16326,7 +16326,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Emg E4 Volcо
+	// Emg E4 Volco
 	"volcanionsupersmash": {
 		isNonstandard: true,
 		accuracy: 80,
