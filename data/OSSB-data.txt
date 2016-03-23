@@ -40,18 +40,6 @@ fender - Gible
 - Movepool: Rest, Sleep Talk, Shadow Ball
 - Remove boosts from the opponent in hopes of saving your team from getting swept.
 
-&Paul Century - Slowbro (Water/Fire type)
-- Ability: Bro Power - Volt Absorb + Regenerator + Magic Guard
-- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2 stages, and has a 80% chance to burn the opponent.
-- Movepool: Roar, Sticky Web, Slack Off
-- Notes: A pretty decent wall with a powerful water type scald with a high chance of burning the opponent.  Stops many setup sweepers lacking in priority.
-
-&Piers Nivans - Octillery
-- Ability: Machinegunner - Technician + Skill Link, all single hit moves hit 5 times, +2 defense and special defense on entry
-- Move: Anti-Material Rifle - Special, Attacks 6 times in a row, 30 BP, each attack of a different random type.
-- Movepool: Water Shuriken, Ominous Wind, Charge Beam, Flame Charge, Power-up Punch, Nuzzle, Frost Breath, Air Cutter, Bulldoze, DragonBreath, Heart Stamp, Echoed Voice, Metal Claw, Revenge, Mega Drain, Fury Cutter, Poison Tail, Draining Kiss, Parabolic Charge, Ice Shard, Shadow Sneak, Storm Throw
-- Try your luck with Pier Nivans; he's full of surprises that can make the opponent suffer!
-
 &SaNeski - Gyarados-Mega
 - Ability: Cursed Aura - Opponent takes 15% on entry and exit of this Pokémon
 - Move: Silent Departure - 100 BP Dark type U-turn
@@ -88,6 +76,12 @@ fender - Gible
 - Movepool: Nasty Plot, Shadow Ball, Dream Eater
 - Notes: Stops any sweeper in their tracks, however it does follow sleep clause, so save it for when you really need it.
 
+@Paul Century - Slowbro (Water/Fire type)
+- Ability: Bro Power - Volt Absorb + Regenerator + Magic Guard
+- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2 stages, and has a 80% chance to burn the opponent.
+- Movepool: Roar, Sticky Web, Slack Off
+- Notes: A pretty decent wall with a powerful water type scald with a high chance of burning the opponent.  Stops many setup sweepers lacking in priority.
+
 @Safety Shark - Garchomp-mega
 - Ability: Magic Guard
 - Move: DragonBot-Z - 80 BP Physical Dragon type attack, heals status, ignores opponent’s defensive boosts, and boosts attack and speed by 1 stage.
@@ -112,35 +106,23 @@ fender - Gible
 - Movepool: Volt Switch, Will-o-wisp, Pain Split
 - Notes: Good check to some of the metagame's scary physical attackers and water types, andthe burn chance is quite amazing together with the accuracy.
 
-%Emg рrоf Volcо - Volcanion
+%Emg E4 Volcо - Volcanion
 - Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
 - Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
 - Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
 - Notes: Taking a hit from this is not fun, it's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting.
 
-%Volco - (%Emg рrоf Volcо) Volcanion
+%Volco - (%Emg E4 Volcо) Volcanion
 - Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
 - Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages.
 - Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
 - Notes: Getting hit by this is not fun.  It's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting.
-
-%Gnarly Commie - Munchlax
-- Ability: Communism - Increases defense, special defense, and speed by 2 stages when it KO's an opposing Pokemon.
-- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +2 Priority, and bypasses protect.
-- Movepool: Belly Drum, Pursuit, Drain Punch
-- Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
 
 %hayleysworld - Vaporeon (Water/Fairy type)
 - Ability: Aquatic Dreams - Gets a boost of 1 stage to SpD and Def upon entry; Regenerator upon switch
 - Move: Revenge of Neptune - 90BP Special Water move, 100% to raise defense, special attack, and special defense by 1 stage, puts up a wish, 30% chance to burn 
 - Movepool: Protect, Moonblast, Ice Beam
 - Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
-
-%Irraquated - Greninja
-- Ability: woops lmao - Protean + Adaptability
-- Move: Unlucky Mate - Dark type move with 100BP, Heals 50% of damage dealt.
-- Movepool: Hydropump, Boomburst, Secret Sword, Thunderbolt, Ice Beam, Moonblast
-- Notes: Hits many pokemon, extremely hard.
 
 %iSandman - Landorus-Incarnate
 - Ability: God's Force - Sheer Force
@@ -172,7 +154,7 @@ fender - Gible
 - Movepool: Recover, V-Create, Megahorn
 - Notes: A great revenge killer with a large amount of coverage.
 
-+Castformz - Castform
++casty - Castform
 - Ability: Forecast 2 - +1 defense and special defense on entry, summons Hail, Intense Sun, or Heavy Rain and boosts defense and special defense by 1 stage, then changes its for depending on what weather was summoned.
 - Move: Adaptation - Uses protect and adds ability based on the current weather, Sun: Chlorophyll, Rain: Swift Swim, Hail: Ice Body
 - Movepool: Weather Ball, Earth Power, [Hurricane, Thunder, Energy Ball, Solar Beam - depending on weather]
@@ -196,6 +178,12 @@ fender - Gible
 - Movepool: Aeroblast, Aura Sphere, Earth Power
 - Notes: A unique pokemon in this format, acting as a check to many water types, and a good wallbreaker if used right.
 
++Irraquated - Greninja
+- Ability: woops lmao - Protean + Adaptability
+- Move: Unlucky Mate - Dark type move with 100BP, Heals 50% of damage dealt.
+- Movepool: Hydropump, Boomburst, Secret Sword, Thunderbolt, Ice Beam, Moonblast
+- Notes: Hits many pokemon, extremely hard.
+
 +Piscean - Miltank (Normal/Ghost type)
 - Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on entry
 - Move: Fatniss Evereat - +4 priority, Magic coat for the turn, uses toxic, cures status, boosts defense and special defense by 1 stage
@@ -208,6 +196,12 @@ fender - Gible
 - Movepool: U-turn, V-Create, Bolt Strike
 - Notes: Hits very hard, and prepare to be walled if you do not deal with this quickly enough.  Luckily this is still weak to entry hazards and has no reliable recovery.
 
+Gnarly Commie - Munchlax
+- Ability: Communism - Increases defense, special defense, and speed by 2 stages when it KO's an opposing Pokemon.
+- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +2 Priority, and bypasses protect.
+- Movepool: Belly Drum, Pursuit, Drain Punch
+- Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
+
 Mr. CGTNathan - Cofagrigus
 - Ability: Graveyard - Trick room is active when this Pokémon is on the field, completely reverses priority.
 - Move: Graveyard Strike - 80BP Hex that will burn the opponent before the damage is dealth
@@ -219,6 +213,12 @@ Nineage - Arceus
 - Move: Break Code - Randomly scatters entry hazards on both sides, sets random weather, sets random status on itself, and then faints
 - Movepool: Extreme Speed, Metronome, Present
 - Hazards, especially Stealth Rock and Toxic Spikes, are a thorn in the side for most fire types and set up sweepers.  While it does cause the user trouble, the opponent is also put under pressure.  Use this move with caution, when only a major part of your team is unaffected by the hazards, or when you truly need their support to counter the opponent's sweepers.
+
+Omega Nivans - Octillery
+- Ability: Machinegunner - Technician + Skill Link, all single hit moves hit 5 times, +2 defense and special defense on entry
+- Move: Anti-Material Rifle - Special, Attacks 6 times in a row, 30 BP, each attack of a different random type.
+- Movepool: Water Shuriken, Ominous Wind, Charge Beam, Flame Charge, Power-up Punch, Nuzzle, Frost Breath, Air Cutter, Bulldoze, DragonBreath, Heart Stamp, Echoed Voice, Metal Claw, Revenge, Mega Drain, Fury Cutter, Poison Tail, Draining Kiss, Parabolic Charge, Ice Shard, Shadow Sneak, Storm Throw
+- Try your luck with Pier Nivans; he's full of surprises that can make the opponent suffer!
 
 Origin Server - Mew
 - Ability: Uses TopsyTurvy against opponent on entry

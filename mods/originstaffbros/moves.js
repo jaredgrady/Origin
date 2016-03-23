@@ -15731,6 +15731,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	},
+
 	// CUSTOM MOVES FOR OSSB
 	// Admins
 	// Arken Ciel
@@ -15747,9 +15748,7 @@ exports.BattleMovedex = {
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]meteormash');
 			let bannedAbilities = {multitype:1, stancechange:1, truant:1};
-			if (bannedAbilities[target.ability]) {
-				return false;
-			}
+			if (bannedAbilities[target.ability]) return false;
 		},
 		onMoveFail: function (target, source, move) {
 			this.attrLastMove('[anim]meteormash');
@@ -15765,9 +15764,7 @@ exports.BattleMovedex = {
 			return false;
 		},
 		onAfterMoveSecondarySelf: function (pokemon, target, move) {
-			if (!target || target.fainted || target.hp <= 0) {
-				pokemon.cureStatus();
-			}
+			if (!target || target.fainted || target.hp <= 0) pokemon.cureStatus();
 		},
 		secondary: {
 			chance: 100,
@@ -16007,97 +16004,6 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
-	// Paul Century
-	"omegablast": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 130,
-		category: "Special",
-		defensiveCategory: "Physical",
-		id: "omegablast",
-		name: "Omega Blast",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		self: {
-			boosts: {
-				def: 2,
-			},
-		},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]psystrike');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]psystrike');
-		},
-		onHit: function (target, source, move) {
-			this.add('c|&Paul Century|Dope');
-		},
-		secondary: {
-			chance: 80,
-			status: 'brn',
-		},
-		target: "normal",
-		type: "Water",
-	},
-
-	// Piers Niνаns
-	"antimaterialrifle": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 30,
-		category: "Status",
-		id: "antimaterialrifle",
-		name: "Anti-Material Rifle",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		multihit: 6,
-		typeList: {
-			"Fire": "Flamethrower",
-			"Ice": "Ice Beam",
-			"Electric": "Zap Cannon",
-			"Grass": "Leaf Storm",
-			"Water": "Hydro Pump",
-			"Psychic": "Mist Ball",
-			"Fairy": "Hyper Voice",
-			"Rock": "Ancient Power",
-			"Steel": "Flash Cannon",
-			"Ground": "Mud Bomb",
-			"Flying": "Air Slash",
-			"Dark": "Hyperspace Fury",
-			"Ghost": "Shadow Ball",
-			"Normal": "Boomburst",
-			"Fighting": "Aura Sphere",
-			"Poison": "Sludge Wave",
-			"Bug": "Bug Buzz",
-			"Dragon": "Dragon Pulse",
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]bulletseed');
-		},
-		onTryHit: function () {
-			this.attrLastMove('[still]');
-		},
-		onPrepareHit: function (target, source, move) {
-			if (!move.animatedhits) move.animatedhits = 0;
-			move.animatedhits++;
-			if (move.animatedhits > 6 || target.hp === 0) return;
-			let rand = ~~(Object.keys(move.typeList).length * Math.random());
-			let type = Object.keys(move.typeList)[rand];
-			move.type = type;
-			this.add('-anim', source, move.typeList[type], target);
-		},
-		onHit: function (target, source, move) {
-			move.onPrepareHit.call(this, target, source, move);
-			delete move.typeList[move.type];
-			this.add('c|&Piers Niνаns|HQ! We have a Type 5 Mutation! Anti-Material Rifle, locked and loaded!');
-		},
-		secondary: false,
-		target: "normal",
-		type: "???",
-	},
-
 	// SaNeski
 	"silentdeparture": {
 		isNonstandard: true,
@@ -16270,6 +16176,40 @@ exports.BattleMovedex = {
 		type: "Dark",
 	},
 
+	// Paul Century
+	"omegablast": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		defensiveCategory: "Physical",
+		id: "omegablast",
+		name: "Omega Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: 2,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]psystrike');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]psystrike');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|@Paul Century|Dope');
+		},
+		secondary: {
+			chance: 80,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+	},
+
 	// Safety Shark
 	"dragonbotz": {
 		isNonstandard: true,
@@ -16386,7 +16326,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Emg рrоf Volcо
+	// Emg E4 Volcо
 	"volcanionsupersmash": {
 		isNonstandard: true,
 		accuracy: 80,
@@ -16404,7 +16344,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]flareblitz');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Emg рrоf Volcо|Get ready because here comes my ultimate attack');
+			this.add('c|%Emg E4 Volcо|Get ready because here comes my ultimate attack');
 		},
 		secondary: {
 			chance: 80,
@@ -16416,32 +16356,6 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
-	},
-
-	// Gnarly Commie
-	"ebat": {
-		isNonstandard: true,
-		accuracy: true,
-		basePower: 102,
-		category: "Physical",
-		id: "ebat",
-		name: "/ebat",
-		pp: 10,
-		priority: 2,
-		flags: {snatch: 1, heal: 1},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]return');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]return');
-		},
-		onHit: function (target, source, move) {
-			this.add("<<< undefined");
-			this.useMove('recover', source);
-		},
-		secondary: false,
-		target: "target",
-		type: "Normal",
 	},
 
 	// hayleysworld
@@ -16480,32 +16394,6 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Irraquated
-	"unluckymate": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		id: "unluckymate",
-		name: "Unlucky Mate",
-		pp: 15,
-		priority: 1,
-		flags: {protect: 1, mirror: 1, heal: 1},
-		drain: [1, 2],
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onHit: function (target, source, move) {
-			this.add('c|%Irraquated|Oof, unlucky mate.');
-		},
-		secondary: false,
-		target: "normal",
-		type: "Dark",
-	},
-
 	// isandman
 	"megaearthfissure": {
 		isNonstandard: true,
@@ -16519,9 +16407,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1},
 		ignoreImmunity: {'Ground': true},
 		onBasePower: function (basePower, pokemon, target) {
-			if (target.types.indexOf("Flying") > -1 || target.ability === "levitate" || toId(target.item || " ") === "airballoon") {
-				return this.chainModify(1.5);
-			}
+			if (target.types.indexOf("Flying") > -1 || target.ability === "levitate" || toId(target.item || " ") === "airballoon") return this.chainModify(1.5);
 		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]earthpower');
@@ -16567,7 +16453,7 @@ exports.BattleMovedex = {
 
 				if (target.hasType('Flying')) {
 					this.add('-immune', target, '[msg]');
-					this.add('-end', target, 'Sky Drop');
+					this.add('-end', target, 'Flying Forretress');
 					return null;
 				}
 			} else {
@@ -16584,7 +16470,7 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source) {
 			this.add('c|%LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
-			this.add('-end', target, 'Sky Drop');
+			this.add('-end', target, 'Flying Forretress');
 		},
 		effect: {
 			duration: 2,
@@ -16603,7 +16489,7 @@ exports.BattleMovedex = {
 			onFoeBeforeMovePriority: 12,
 			onFoeBeforeMove: function (attacker, defender, move) {
 				if (attacker === this.effectData.source) {
-					this.debug('Sky drop nullifying.');
+					this.debug('Flying Forretress nullifying.');
 					return null;
 				}
 			},
@@ -16645,7 +16531,7 @@ exports.BattleMovedex = {
 			},
 			onFaint: function (target) {
 				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
-					this.add('-end', target.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Flying Forretress', '[interrupt]');
 				}
 			},
 		},
@@ -16729,7 +16615,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psychic');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Starfox .3.|get rekt');
+			this.add('c|%Starfox :3|get rekt');
 		},
 		secondary: {
 			chance: 100,
@@ -16742,7 +16628,7 @@ exports.BattleMovedex = {
 	},
 
 	// Voices
-	// Castformz
+	// casty
 	"adaptation": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16889,6 +16775,32 @@ exports.BattleMovedex = {
 		type: "Grass",
 	},
 
+	// Irraquated
+	"unluckymate": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "unluckymate",
+		name: "Unlucky Mate",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|+Irraquated|Oof, unlucky mate.');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dark",
+	},
+
 	// Piscean
 	"fatnissevereat": {
 		isNonstandard: true,
@@ -16909,18 +16821,14 @@ exports.BattleMovedex = {
 			onTryHitPriority: 2,
 			onTryHit: function (target, source, move) {
 				this.attrLastMove('[anim]magicbounce');
-				if (target === source || move.hasBounced || !move.flags['reflectable']) {
-					return;
-				}
+				if (target === source || move.hasBounced || !move.flags['reflectable']) return;
 				let newMove = this.getMoveCopy(move.id);
 				newMove.hasBounced = true;
 				this.useMove(newMove, target, source);
 				return null;
 			},
 			onAllyTryHitSide: function (target, source, move) {
-				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
-					return;
-				}
+				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) return;
 				let newMove = this.getMoveCopy(move.id);
 				newMove.hasBounced = true;
 				this.useMove(newMove, target, source);
@@ -16976,6 +16884,32 @@ exports.BattleMovedex = {
 	},
 
 	// Others
+	// Gnarly Commie
+	"ebat": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 102,
+		category: "Physical",
+		id: "ebat",
+		name: "/ebat",
+		pp: 10,
+		priority: 2,
+		flags: {snatch: 1, heal: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]return');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]return');
+		},
+		onHit: function (target, source, move) {
+			this.add("<<< undefined");
+			this.useMove('recover', source);
+		},
+		secondary: false,
+		target: "target",
+		type: "Normal",
+	},
+
 	// Mr. CGTNathan
 	"graveyardstrike": {
 		isNonstandard: true,
@@ -16987,9 +16921,7 @@ exports.BattleMovedex = {
 		},
 		onModifyMove: function (move) {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
-			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Ghost'] = true;
-			}
+			if (move.ignoreImmunity !== true) move.ignoreImmunity['Ghost'] = true;
 		},
 		category: "Special",
 		id: "graveyardstrike",
@@ -16999,9 +16931,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]calmmind');
-			if (!target.status) {
-				target.setStatus('brn');
-			}
+			if (!target.status) target.setStatus('brn');
 			this.add('-anim', source, "Hex", target);
 		},
 		onMoveFail: function (target, source, move) {
@@ -17084,14 +17014,69 @@ exports.BattleMovedex = {
 			let pickHazard14 = hazard2[this.random(2)]; if (pickHazard14 !== 2) pokemon.side.addSideCondition('stickyweb');
 			let randomStatus = ['brn', 'par', 'slp', 'frz', 'psn', 'tox'];
 			let pickStatus = randomStatus[this.random(6)];
-			if (!target.volatiles['substitute'] && !target.status) {
-				target.setStatus(pickStatus);
-			}
+			if (!target.volatiles['substitute'] && !target.status) target.setStatus(pickStatus);
 		},
 		selfdestruct: true,
 		secondary: false,
 		target: "normal",
 		type: "Bird",
+	},
+
+	// Piers Niνаns
+	"antimaterialrifle": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 30,
+		category: "Status",
+		id: "antimaterialrifle",
+		name: "Anti-Material Rifle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 6,
+		typeList: {
+			"Fire": "Flamethrower",
+			"Ice": "Ice Beam",
+			"Electric": "Zap Cannon",
+			"Grass": "Leaf Storm",
+			"Water": "Hydro Pump",
+			"Psychic": "Mist Ball",
+			"Fairy": "Hyper Voice",
+			"Rock": "Ancient Power",
+			"Steel": "Flash Cannon",
+			"Ground": "Mud Bomb",
+			"Flying": "Air Slash",
+			"Dark": "Hyperspace Fury",
+			"Ghost": "Shadow Ball",
+			"Normal": "Boomburst",
+			"Fighting": "Aura Sphere",
+			"Poison": "Sludge Wave",
+			"Bug": "Bug Buzz",
+			"Dragon": "Dragon Pulse",
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]bulletseed');
+		},
+		onTryHit: function () {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit: function (target, source, move) {
+			if (!move.animatedhits) move.animatedhits = 0;
+			move.animatedhits++;
+			if (move.animatedhits > 6 || target.hp === 0) return;
+			let rand = ~~(Object.keys(move.typeList).length * Math.random());
+			let type = Object.keys(move.typeList)[rand];
+			move.type = type;
+			this.add('-anim', source, move.typeList[type], target);
+		},
+		onHit: function (target, source, move) {
+			move.onPrepareHit.call(this, target, source, move);
+			delete move.typeList[move.type];
+			this.add('c|&Piers Niνаns|HQ! We have a Type 5 Mutation! Anti-Material Rifle, locked and loaded!');
+		},
+		secondary: false,
+		target: "normal",
+		type: "???",
 	},
 
 	// Origin Server
@@ -17118,33 +17103,4 @@ exports.BattleMovedex = {
 		target: "self",
 		type: "Ground",
 	},
-
-	/* permalocked
-	// DeathlyPlays
-	"aquasubscribe": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		id: "aquasubscribe",
-		name: "Aqua Subscribe",
-		pp: 20,
-		priority: 1,
-		flags: {protect: 1, mirror: 1},
-		self: {
-			boosts: {
-				spa: 1,
-			},
-		},
-		secondary: {
-			chance: 30,
-			self: {
-				boosts: {
-					spe: 1,
-				},
-			},
-		},
-		target: "normal",
-		type: "Water",
-	}, */
 };

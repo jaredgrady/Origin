@@ -3378,9 +3378,7 @@ exports.BattleAbilities = {
 	"abnegate": {
 		isNonstandard: true,
 		onBasePower: function (basePower, attacker, defender, move) {
-			if (move.flags['contact']) {
-				return this.chainModify([0x14CD, 0x1000]);
-			}
+			if (move.flags['contact']) return this.chainModify([0x14CD, 0x1000]);
 		},
 		onAllyModifyMove: function (move) {
 			move.accuracy = true;
@@ -3435,9 +3433,7 @@ exports.BattleAbilities = {
 			}
 		},
 		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
+			if (effect.effectType !== 'Move') return false;
 		},
 		onUpdate: function (pokemon) {
 			if (pokemon.status === 'brn' || pokemon.status === 'slp' || pokemon.status === 'psn' || pokemon.status === 'tox' || pokemon.status === 'par' || pokemon.status === 'frz') {
@@ -3482,9 +3478,7 @@ exports.BattleAbilities = {
 			}
 		},
 		onModifyPriority: function (priority, pokemon, target, move) {
-			if (move && move.category === 'Status') {
-				return priority + 4;
-			}
+			if (move && move.category === 'Status') return priority + 4;
 		},
 		id: "shadowprankster",
 		name: "Shadow Prankster",
@@ -3514,18 +3508,14 @@ exports.BattleAbilities = {
 		},
 		// magic bounce
 		onTryHit: function (target, source, move) {
-			if (target === source || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
+			if (target === source || move.hasBounced || !move.flags['reflectable']) return;
 			let newMove = this.getMoveCopy(move.id);
 			newMove.hasBounced = true;
 			this.useMove(newMove, target, source);
 			return null;
 		},
 		onAllyTryHitSide: function (target, source, move) {
-			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
+			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) return;
 			let newMove = this.getMoveCopy(move.id);
 			newMove.hasBounced = true;
 			this.useMove(newMove, target, source);
@@ -3549,64 +3539,10 @@ exports.BattleAbilities = {
 			}
 		},
 		onModifyPriority: function (priority, pokemon, target, move) {
-			if (move && move.category === 'Status') {
-				return priority + 1;
-			}
+			if (move && move.category === 'Status') return priority + 1;
 		},
 		id: "mischievous",
 		name: "Mischievous",
-	},
-
-	// Paul Century
-	"bropower": {
-		isNonstandard: true,
-		onTryHit: function (target, source, move) {
-			if (target !== source && move.type === 'Electric') {
-				if (!this.heal(target.maxhp / 4)) {
-					this.add('-immune', target, '[msg]');
-				}
-				return null;
-			}
-		},
-		onSwitchOut: function (pokemon) {
-			pokemon.heal(pokemon.maxhp / 3);
-		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
-		},
-		id: "bropower",
-		name: "Bro Power",
-	},
-
-	// Piers Niνаns
-	"machinegunner": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.boost({def:2, spd:2});
-		},
-		onModifyMove: function (move) {
-			if (move.multihit && move.multihit.length) {
-				move.multihit = move.multihit[1];
-			}
-		},
-		onPrepareHit: function (source, target, move) {
-			if (move.id in {iceball: 1, rollout: 1}) return;
-			if (move.category !== 'Status' && !move.selfdestruct && !move.multihit && !move.flags['charge'] && !move.spreadHit) {
-				move.multihit = 6;
-				source.addVolatile('machinegunner');
-			}
-		},
-		onBasePowerPriority: 8,
-		onBasePower: function (basePower, attacker, defender, move) {
-			if (basePower <= 60) {
-				this.debug('Technician boost');
-				return this.chainModify(1.5);
-			}
-		},
-		id: "machinegunner",
-		name: "Machine Gunner",
 	},
 
 	// SaNeski
@@ -3667,9 +3603,7 @@ exports.BattleAbilities = {
 			}
 		},
 		onSourceFaint: function (target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({atk:1}, source);
-			}
+			if (effect && effect.effectType === 'Move') this.boost({atk:1}, source);
 		},
 		id: "dragonsfire",
 		name: "Dragon's Fire",
@@ -3728,14 +3662,10 @@ exports.BattleAbilities = {
 		},
 		onModifyAtkPriority: 5,
 		onModifyAtk: function (atk, pokemon) {
-			if (pokemon.status === 'brn') {
-				return this.chainModify(2);
-			}
+			if (pokemon.status === 'brn') return this.chainModify(2);
 		},
 		onModifySpe: function (spe, pokemon) {
-			if (pokemon.status === 'par') {
-				return this.chainModify(4);
-			}
+			if (pokemon.status === 'par') return this.chainModify(4);
 		},
 		id: "auraguard",
 		name: "Aura Guard",
@@ -3755,13 +3685,30 @@ exports.BattleAbilities = {
 			let activated = false;
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (!activated) {
-					this.useMove("dark void", pokemon, foeactive[i]);
-				}
+				if (!activated) this.useMove("dark void", pokemon, foeactive[i]);
 			}
 		},
 		id: "goodnight",
 		name: "Goodnight",
+	},
+
+	// Paul Century
+	"bropower": {
+		isNonstandard: true,
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.heal(target.maxhp / 4)) this.add('-immune', target, '[msg]');
+				return null;
+			}
+		},
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') return false;
+		},
+		id: "bropower",
+		name: "Bro Power",
 	},
 
 	// Safety Shark magic guard
@@ -3814,7 +3761,7 @@ exports.BattleAbilities = {
 		name: "feelsgd",
 	},
 
-	// Emg рrоf Volcо
+	// Emg E4 Volcо
 	"adaptabulksturdy": {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
@@ -3841,18 +3788,6 @@ exports.BattleAbilities = {
 		id: "adaptabulksturdy",
 	},
 
-	// Gnarly Commie
-	"communism": {
-		isNonstandard: true,
-		onSourceFaint: function (target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({def:2, spd:2, spe:2}, source);
-			}
-		},
-		id: "communism",
-		name: "Communism",
-	},
-
 	// hayleysworld
 	"aquaticmemes": {
 		isNonstandard: true,
@@ -3865,23 +3800,6 @@ exports.BattleAbilities = {
 		},
 		id: "aquaticmemes",
 		name: "Aquatic Memes",
-	},
-
-	// Irraquated
-	"woopslmao": {
-		isNonstandard: true,
-		onPrepareHit: function (source, target, move) {
-			let type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.add('-start', source, 'typechange', type, '[from] Protean');
-			}
-		},
-		onModifyMove: function (move) {
-			move.stab = 2;
-		},
-		id: "woopslmao",
-		name: "Woops lmao",
 	},
 
 	// isandman
@@ -3910,21 +3828,15 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onBasePowerPriority: 8,
 		onBasePower: function (basePower, attacker, defender, move) {
-			if (move.flags['contact']) {
-				return this.chainModify([0x14CD, 0x1000]);
-			}
+			if (move.flags['contact']) return this.chainModify([0x14CD, 0x1000]);
 		},
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			if (pokemon.activeTurns) {
-				this.boost({spe:1});
-			}
+			if (pokemon.activeTurns) this.boost({spe:1});
 		},
 		onDamage: function (damage, target, source, effect) {
-			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') {
-				return damage / 3;
-			}
+			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') return damage / 3;
 		},
 		id: "fuckyouup",
 		name: "Fuck You Up",
@@ -3948,9 +3860,7 @@ exports.BattleAbilities = {
 	"headstrong": {
 		isNonstandard: true,
 		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
+			if (effect.effectType !== 'Move') return false;
 		},
 		onBasePower: function (basePower, attacker, defender, move) {
 			if (move.recoil || move.hasCustomRecoil) {
@@ -3985,20 +3895,16 @@ exports.BattleAbilities = {
 			if (!source || target.side === source.side) return;
 			let statsLowered = false;
 			for (let i in boost) {
-				if (boost[i] < 0) {
-					statsLowered = true;
-				}
+				if (boost[i] < 0) statsLowered = true;
 			}
-			if (statsLowered) {
-				this.boost({atk:2});
-			}
+			if (statsLowered) this.boost({atk:2});
 		},
 		id: "shittiestuser",
 		name: "Shittiest User",
 	},
 
 	// Voices
-	// Castformz
+	// casty
 	"forecast2": {
 		isNonstandard: true,
 		onStart: function (pokemon, source) {
@@ -4077,9 +3983,7 @@ exports.BattleAbilities = {
 	"victoryprankster": {
 		isNonstandard: true,
 		onModifyPriority: function (priority, pokemon, target, move) {
-			if (move && move.category === 'Status') {
-				return priority + 1;
-			}
+			if (move && move.category === 'Status') return priority + 1;
 		},
 		id: "victoryprankster",
 		name: "Victory Prankster",
@@ -4098,9 +4002,7 @@ exports.BattleAbilities = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			if (pokemon.activeTurns) {
-				this.boost({spe:1});
-			}
+			if (pokemon.activeTurns) this.boost({spe:1});
 		},
 		id: "speedygonzales",
 		name: "Speedy Gonzales",
@@ -4162,6 +4064,23 @@ exports.BattleAbilities = {
 		name: "NoAbility",
 	},
 
+	// Irraquated
+	"woopslmao": {
+		isNonstandard: true,
+		onPrepareHit: function (source, target, move) {
+			let type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] Protean');
+			}
+		},
+		onModifyMove: function (move) {
+			move.stab = 2;
+		},
+		id: "woopslmao",
+		name: "Woops lmao",
+	},
+
 	// Piscean
 	"noyou": {
 		isNonstandard: true,
@@ -4195,6 +4114,16 @@ exports.BattleAbilities = {
 	// Sota Higurashi contrary
 
 	// Others
+	// Gnarly Commie
+	"communism": {
+		isNonstandard: true,
+		onSourceFaint: function (target, source, effect) {
+			if (effect && effect.effectType === 'Move') this.boost({def:2, spd:2, spe:2}, source);
+		},
+		id: "communism",
+		name: "Communism",
+	},
+
 	// Mr. CGTNathan
 	"graveyard": {
 		isNonstandard: true,
@@ -4214,9 +4143,7 @@ exports.BattleAbilities = {
 		effect: {
 			duration: 0,
 			durationCallback: function (source, effect) {
-				if (source && source.hasAbility('persistent')) {
-					return 0;
-				}
+				if (source && source.hasAbility('persistent')) return 0;
 				return 0;
 			},
 			onStart: function (target, source) {
@@ -4228,9 +4155,7 @@ exports.BattleAbilities = {
 				};
 			},
 			onModifyPriority: function (priority, pokemon, target, move) {
-				if (move.priority !== 0) {
-					return priority - (priority * 2);
-				}
+				if (move.priority !== 0) return priority - (priority * 2);
 			},
 			onResidualOrder: 23,
 			onEnd: function () {
@@ -4240,9 +4165,7 @@ exports.BattleAbilities = {
 		},
 		onEnd: function (pokemon, effect) {
 			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			if (!target.hasAbility('graveyard')) {
-				this.removePseudoWeather('graveyard');
-			}
+			if (!target.hasAbility('graveyard')) this.removePseudoWeather('graveyard');
 		},
 		id: "graveyard",
 		name: "Graveyard",
@@ -4258,6 +4181,33 @@ exports.BattleAbilities = {
 		name: "ERROR",
 	},
 
+	// Omega Nivans
+	"machinegunner": {
+		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.boost({def:2, spd:2});
+		},
+		onModifyMove: function (move) {
+			if (move.multihit && move.multihit.length) move.multihit = move.multihit[1];
+		},
+		onPrepareHit: function (source, target, move) {
+			if (move.id in {iceball: 1, rollout: 1}) return;
+			if (move.category !== 'Status' && !move.selfdestruct && !move.multihit && !move.flags['charge'] && !move.spreadHit) {
+				move.multihit = 6;
+				source.addVolatile('machinegunner');
+			}
+		},
+		onBasePowerPriority: 8,
+		onBasePower: function (basePower, attacker, defender, move) {
+			if (basePower <= 60) {
+				this.debug('Technician boost');
+				return this.chainModify(1.5);
+			}
+		},
+		id: "machinegunner",
+		name: "Machine Gunner",
+	},
+
 	// Origin Server
 	"countermeta": {
 		isNonstandard: true,
@@ -4266,46 +4216,10 @@ exports.BattleAbilities = {
 			let activated = false;
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (!activated) {
-					this.useMove("topsyturvy", pokemon, foeactive[i]);
-				}
+				if (!activated) this.useMove("topsyturvy", pokemon, foeactive[i]);
 			}
 		},
 		id: "countermeta",
 		name: "Counter-Meta",
 	},
-
-	/* permalocked
-	// DeathlyPlays
-	"seaoflieks": {
-		isNonstandard: true,
-		onStart: function (source) {
-			this.setWeather('primordialsea');
-		},
-		onAnySetWeather: function (target, source, weather) {
-			if (this.getWeather().id === 'primordialsea' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
-		},
-		onEnd: function (pokemon) {
-			if (this.weatherData.source !== pokemon) return;
-			for (let i = 0; i < this.sides.length; i++) {
-				for (let j = 0; j < this.sides[i].active.length; j++) {
-					let target = this.sides[i].active[j];
-					if (target === pokemon) continue;
-					if (target && target.hp && target.hasAbility('primordialsea')) {
-						this.weatherData.source = target;
-						return;
-					}
-				}
-			}
-			this.clearWeather();
-		},
-		onAllyModifyMove: function (move) {
-			move.accuracy = true;
-		},
-		onModifySpA: function (atk) {
-			return this.chainModify(1.2);
-		},
-		id: "seaoflieks",
-		name: "Sea of Lieks",
-	}, */
 };

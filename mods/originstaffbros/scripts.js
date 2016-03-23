@@ -59,23 +59,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'admonish', signatureMove: "Admonish",
 				evs: {hp:240, def:252, spd:16}, ivs: {atk:0}, nature: 'Bold',
 			},
-			'&Paul Century': { // (typing) water/fire
-				species: 'Slowbro', ability: 'Bro Power', item: 'Rocky Helmet', gender: 'M', shiny: true,
-				moves: ['roar', 'stickyweb', 'slackoff'],
-				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
-				evs: {hp:248, spa:252, spd:8}, nature: 'Modest',
-			},
-			'&Piers Niνаns': {
-				species: 'Octillery', ability: 'Machine Gunner', item: 'Expert Belt', gender: 'M',
-				moves: [
-					['watershuriken', 'ominouswind', ['frostbreath', 'aircutter', 'dragonbreath', 'echoedvoice', 'megadrain', 'drainingkiss', 'paraboliccharge', 'chargebeam'][this.random(8)]],
-					['watershuriken', 'chargebeam', ['frostbreath', 'aircutter', 'dragonbreath', 'echoedvoice', 'megadrain', 'drainingkiss', 'ominouswind', 'paraboliccharge'][this.random(8)]],
-					['watershuriken', 'flamecharge', ['nuzzle', 'bulldoze', 'heartstamp', 'metalclaw', 'revenge', 'poisontail', 'furycutter', 'iceshard', 'shadowsneak', 'stormthrow', 'poweruppunch'][this.random(11)]],
-					['watershuriken', 'poweruppunch', ['nuzzle', 'bulldoze', 'heartstamp', 'metalclaw', 'revenge', 'poisontail', 'furycutter', 'iceshard', 'shadowsneak', 'stormthrow', 'flamecharge'][this.random(11)]],
-				][this.random(4)],
-				baseSignatureMove: 'antimaterialrifle', signatureMove: "Anti-Material Rifle",
-				evs: {hp:4, atk:4, spa:252}, nature: 'Brave',
-			},
 			'&SaNeski': { // (mega ability) cursedaura
 				species: 'Gyarados', ability: 'Intimidate', item: 'Gyaradosite', gender: 'M',
 				moves: ['crabhammer', ['suckerpunch', 'pursuit', 'nightslash'][this.random(3)], ['focusenergy', 'dragondance'][this.random(2)]],
@@ -111,6 +94,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'shadowdrain', signatureMove: "Shadow Drain",
 				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
+			'@Paul Century': { // (typing) water/fire
+				species: 'Slowbro', ability: 'Bro Power', item: 'Rocky Helmet', gender: 'M', shiny: true,
+				moves: ['roar', 'stickyweb', 'slackoff'],
+				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
+				evs: {hp:248, spa:252, spd:8}, nature: 'Modest',
+			},
 			'@Safety Shark': { // (mega ability) magicguard
 				species: 'Garchomp', ability: 'Rough Skin', item: 'Garchompite', gender: 'M',
 				moves: ['earthquake', 'knockoff', 'recover'],
@@ -137,29 +126,17 @@ exports.BattleScripts = {
 				baseSignatureMove: 'waterbomb', signatureMove: "WaterBomb",
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
-			'%Emg рrоf Volcо': {
+			'%Emg E4 Volco': {
 				species: 'Volcanion', ability: 'Adaptabulksturdy', item: 'Air Balloon',
 				moves: [['psystrike', 'thunder', 'icebeam', 'searingshot', 'grass knot'][this.random(5)], 'fierydance', 'steameruption'],
 				baseSignatureMove: 'volcanionsupersmash', signatureMove: "Volcanion Super Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
-			},
-			'%Gnarly Commie': {
-				species: 'Munchlax', ability: 'Communism', item: 'Eviolite', gender: 'M',
-				moves: ['bellydrum', 'drainpunch', 'pursuit'],
-				baseSignatureMove: 'ebat', signatureMove: '/ebat',
-				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
 			},
 			'%hayleysworld': { // (type) water/fairy
 				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
 				moves: ['moonblast', 'icebeam', 'protect'],
 				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
-			},
-			'%Irraquated': {
-				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
-				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
-				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
-				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
 			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
@@ -199,7 +176,7 @@ exports.BattleScripts = {
 			},
 
 			// Voices.
-			'+Castformz': {
+			'+casty': {
 				species: 'Castform', ability: 'Forecast 2', item: 'Focus Sash', gender: 'M', shiny: true,
 				moves: ["weatherball", "earthpower", "sketch"],
 				baseSignatureMove: 'adaptation', signatureMove: "Adaptation",
@@ -223,6 +200,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
+			'+Irraquated': {
+				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
+				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
+				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
+				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
+			},
 			'+Piscean': { // (type) normal/ghost
 				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
 				moves: ['roar', 'stealthrock', 'milkdrink'],
@@ -237,6 +220,12 @@ exports.BattleScripts = {
 			},
 
 			// Others
+			' Gnarly Commie': {
+				species: 'Munchlax', ability: 'Communism', item: 'Eviolite', gender: 'M',
+				moves: ['bellydrum', 'drainpunch', 'pursuit'],
+				baseSignatureMove: 'ebat', signatureMove: '/ebat',
+				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
+			},
 			' Mr. CGTNathan': {
 				species: 'Cofagrigus', ability: 'Graveyard', item: 'Leftovers', gender: 'M',
 				moves: ['destinybond', 'recover', 'healbell'],
@@ -249,19 +238,23 @@ exports.BattleScripts = {
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},
+			' Omega Nivans': {
+				species: 'Octillery', ability: 'Machine Gunner', item: 'Expert Belt', gender: 'M',
+				moves: [
+					['watershuriken', 'ominouswind', ['frostbreath', 'aircutter', 'dragonbreath', 'echoedvoice', 'megadrain', 'drainingkiss', 'paraboliccharge', 'chargebeam'][this.random(8)]],
+					['watershuriken', 'chargebeam', ['frostbreath', 'aircutter', 'dragonbreath', 'echoedvoice', 'megadrain', 'drainingkiss', 'ominouswind', 'paraboliccharge'][this.random(8)]],
+					['watershuriken', 'flamecharge', ['nuzzle', 'bulldoze', 'heartstamp', 'metalclaw', 'revenge', 'poisontail', 'furycutter', 'iceshard', 'shadowsneak', 'stormthrow', 'poweruppunch'][this.random(11)]],
+					['watershuriken', 'poweruppunch', ['nuzzle', 'bulldoze', 'heartstamp', 'metalclaw', 'revenge', 'poisontail', 'furycutter', 'iceshard', 'shadowsneak', 'stormthrow', 'flamecharge'][this.random(11)]],
+				][this.random(4)],
+				baseSignatureMove: 'antimaterialrifle', signatureMove: "Anti-Material Rifle",
+				evs: {hp:4, atk:4, spa:252}, nature: 'Brave',
+			},
 			' Origin Server': {
 				species: 'Mew', ability: 'Counter-Meta', item: 'Leftovers',
 				moves: ['psystrike', 'recover', 'transform'],
 				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
-			/* permalocked
-			' DeathlyPlays': {
-				species: 'Ludicolo', ability: 'Sea of Lieks', item: 'Life Orb', gender: 'M',
-				moves: ['gigadrain', 'blizzard', 'focusblast'],
-				baseSignatureMove: 'aquasubscribe', signatureMove: "Aqua Subscribe",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
-			}, */
 		};
 		// Generate the team randomly.
 		let pool = Object.keys(sets).randomize();

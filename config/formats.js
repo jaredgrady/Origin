@@ -801,7 +801,7 @@ exports.Formats = [
 			this.add('message', "1");
 			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
-			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg рrоf Volcо</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld</b> - Pokemon Descriptions, Testing.<br /><b>&PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff</b> - Participation and support in helping to achieve this project.</div>');
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
 			this.add('raw|<br />');
 			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
 			this.add('raw|<br />');
@@ -861,12 +861,12 @@ exports.Formats = [
 					pokemon.setAbility('dragonsfire');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'aurastormlucario' && pokemon.getAbility().id === 'adaptability') {
-					pokemon.setAbility('auraguard');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 				if (name === 'alphaninja' && pokemon.getAbility().id === 'shellarmor') {
 					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'aurastormlucario' && pokemon.getAbility().id === 'adaptability') {
+					pokemon.setAbility('auraguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
 				if (name === 'safetyshark' && pokemon.getAbility().id === 'sandforce') {
@@ -912,12 +912,12 @@ exports.Formats = [
 					pokemon.setAbility('dragonsfire');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'aurastormlucario' && pokemon.getAbility().id !== 'auraguard') {
-					pokemon.setAbility('auraguard');
-					this.add('-ability', pokemon, pokemon.ability);
-				}
 				if (name === 'alphaninja' && pokemon.getAbility().id !== 'megapoison') {
 					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'aurastormlucario' && pokemon.getAbility().id !== 'auraguard') {
+					pokemon.setAbility('auraguard');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
 				if (name === 'safetyshark' && pokemon.getAbility().id !== 'magicguard') {
@@ -985,12 +985,6 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Mm, hello.');
 			}
-			if (name === 'paulcentury') {
-				this.add("raw|<div class='chat'><small>&</small><button name='parseCommand' value='/user Paul Century' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#5F4FC1'>Paul Century:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/sVgkUF1.png?1\" title=\"feelssammich\" height=\"50\" width=\"50\" /></em></div>");
-			}
-			if (name === 'piersniνаns') {
-				this.add('c|&Piers Niνаns|Rabinov, reporting for duty!');
-			}
 			/* no quote
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|');
@@ -1009,6 +1003,9 @@ exports.Formats = [
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
 			}
+			if (name === 'paulcentury') {
+				this.add("raw|<div class='chat'><small>@</small><button name='parseCommand' value='/user Paul Century' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#5F4FC1'>Paul Century:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/sVgkUF1.png?1\" title=\"feelssammich\" height=\"50\" width=\"50\" /></em></div>");
+			}
 			if (name === 'safetyshark') {
 				this.add('c|@Safety Shark|C\'mon spammers, I\'m watching.');
 			}
@@ -1023,17 +1020,11 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgрrоfvolcо') {
-				this.add('c|%emgрrоfvolcо|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
-			}
-			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|ok');
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
-			}
-			if (name === 'irraquated') {
-				this.add('c|%Irraquated|Oh so you\'re the guy...');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|ENTER SANDMAN');
@@ -1045,15 +1036,15 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
 			}
 			if (name === 'selena') {
-				this.add('c|%selena|o3o hi');
+				this.add('c|%Selena|o3o hi');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|The Booty Master has Arrived');
 			}
 
 			// Voices
-			if (name === 'castformz') {
-				this.add('c|+Castformz|I know you were hoping for anything but me.');
+			if (name === 'casty') {
+				this.add('c|+casty|I know you were hoping for anything but me.');
 			}
 			if (name === 'chronologically') {
 				this.add("raw|<div class='chat'><small>+</small><button name='parseCommand' value='/user Chronologically' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#B64E5A'>Chronologically:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/zRSUw2n.gif\" title=\"feelscx\" height=\"50\" width=\"50\" /></em></div>");
@@ -1064,6 +1055,9 @@ exports.Formats = [
 			if (name === 'impfallenblood') {
 				this.add('c|+Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
 			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|Oh so you\'re the guy...');
+			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
@@ -1072,13 +1066,20 @@ exports.Formats = [
 			}
 
 			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|Welcome to Origin Super Smash Bros, may I show you the door?');
 			}
 			/* no quote
 			if (name === 'nineage') {
 				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
 			}
+			/* no quote
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
@@ -1114,12 +1115,6 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
 			}
-			if (name === 'paulcentury') {
-				this.add('c|&Paul Century|I\'m out but I\'ll end this with a fuck you but have a nice day');
-			}
-			if (name === 'piersniνаns') {
-				this.add('c|&Piers Niνаns|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
-			}
 			/* no quote
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|');
@@ -1138,6 +1133,9 @@ exports.Formats = [
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
 			}
+			if (name === 'paulcentury') {
+				this.add('c|@Paul Century|I\'m out but I\'ll end this with a fuck you but have a nice day');
+			}
 			if (name === 'safetyshark') {
 				this.add('c|@Safety Shark|For the last time, I don\'t have security issues, ok?  First you kill off sparkyboTTT, then me... IM APPEALING TO ZAREL!');
 			}
@@ -1152,18 +1150,11 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgрrоfvolcо') {
-				this.add('c|%Emg рrоf Volcо|Dang it my hax... they werent enough');
-			}
-			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|ok');
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|Dang it my hax... they werent enough');
 			}
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
-			}
-			if (name === 'irraquated') {
-				this.add('c|%Irraquated|it was meant to be.');
-				this.add('c|%Irraquated|Six god is watching, I hope you\'re prepared to face him.');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
@@ -1175,15 +1166,15 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
 			}
 			if (name === 'selena') {
-				this.add('c|%selena|;~; fuck that shit');
+				this.add('c|%Selena|;~; fuck that shit');
 			}
 			if (name === 'starfox3') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
 			}
 
 			// Voices
-			if (name === 'castformz') {
-				this.add('c|+Castformz|thanks for getting me knocked out, now I can go eat pizza pops and ice cream.');
+			if (name === 'casty') {
+				this.add('c|+casty|thanks for getting me knocked out, now I can go eat pizza pops and ice cream.');
 				this.clearWeather();
 			}
 			if (name === 'chronologically') {
@@ -1195,6 +1186,10 @@ exports.Formats = [
 			if (name === 'impfallenblood') {
 				this.add('c|+Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
 			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|it was meant to be.');
+				this.add('c|+Irraquated|Six god is watching, I hope you\'re prepared to face him.');
+			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
 			}
@@ -1203,13 +1198,20 @@ exports.Formats = [
 			}
 
 			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|__My ankle!__');
 			}
 			/* no quote
 			if (name === 'nineage') {
 				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|Omega Nivans|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
 			}
+			/* no quote
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
@@ -1246,12 +1248,6 @@ exports.Formats = [
 			if (name === 'erica07') {
 				this.add('c|&Erica*07|Erica*07 tells you all to take care while she\'s gone.');
 			}
-			if (name === 'paulcentury') {
-				this.add('c|&Paul Century|Fuck this shit im out');
-			}
-			if (name === 'piersniνаns') {
-				this.add('c|&Piers Niνаns|Tactical retreat!');
-			}
 			if (name === 'saneski') {
 				this.add('c|&SaNeski|Do not go gentle into that good night');
 			}
@@ -1269,6 +1265,9 @@ exports.Formats = [
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Without darkness one cannot know light.');
 			}
+			if (name === 'paulcentury') {
+				this.add('c|@Paul Century|Fuck this shit im out');
+			}
 			if (name === 'safetyshark') {
 				this.add('c|@Safety Shark|Restarting...');
 			}
@@ -1283,17 +1282,11 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emgрrоfvolcо') {
-				this.add('c|%Emg рrоf Volcо|Welp look like its time to run away like Sanic');
-			}
-			if (name === 'gnarlycommie') {
-				this.add('c|%Gnarly Commie|ok');
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|Welp look like its time to run away like Sanic');
 			}
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|My bad memes will be back!');
-			}
-			if (name === 'irraquated') {
-				this.add('c|%Irraquated|I have to go make some vegemite toast brb lol');
 			}
 			if (name === 'isandman') {
 				this.add('c|%isandman|JOY BANGLA , JOY BANGOBANDHU');
@@ -1305,15 +1298,15 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');
 			}
 			if (name === 'selena') {
-				this.add('c|%selena|\\o/ gtg');
+				this.add('c|%Selena|\\o/ gtg');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|I\'ll git that booty later');
 			}
 
 			// Voices
-			if (name === 'castformz') {
-				this.add('c|+Castformz|I\'d like to go on record and say this was a bad idea');
+			if (name === 'casty') {
+				this.add('c|+casty|I\'d like to go on record and say this was a bad idea');
 				this.clearWeather();
 			}
 			if (name === 'chronologically') {
@@ -1325,6 +1318,9 @@ exports.Formats = [
 			if (name === 'impfallenblood') {
 				this.add('c|+Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
 			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|I have to go make some vegemite toast brb lol');
+			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
@@ -1333,13 +1329,20 @@ exports.Formats = [
 			}
 
 			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
 			/* no quote
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|');
 			}
 			if (name === 'nineage') {
 				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|&Omega Nivans|Tactical retreat!');
 			}
+			/* no quote
 			if (name === 'originserver') {
 				this.add('c|originserver|');
 			} */
