@@ -200,7 +200,7 @@ exports.commands = {
 		new: function (target, room, user) {
 			let params = target.split(',');
 
-			if (!this.can('minigame', null, room)) return false;
+			if (!this.can('mute', null, room)) return false;
 			if (room.hangmanDisabled) return this.errorReply("Hangman is disabled for this room.");
 			if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 			if (room.game) return this.errorReply("There is already a game of " + room.game.title + " in progress in this room.");
@@ -237,7 +237,7 @@ exports.commands = {
 
 		stop: 'end',
 		end: function (target, room, user) {
-			if (!this.can('minigame', null, room)) return false;
+			if (!this.can('mute', null, room)) return false;
 			if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 			if (!room.game || room.game.gameid !== 'hangman') return this.errorReply("There is no game of hangman running in this room.");
 
@@ -247,7 +247,7 @@ exports.commands = {
 		endhelp: ["/hangman end - Ends the game of hangman before the man is hanged or word is guessed. Requires: % @ # & ~"],
 
 		disable: function (target, room, user) {
-			if (!this.can('gamemanagement', null, room)) return;
+			if (!this.can('declare', null, room)) return;
 			if (room.hangmanDisabled) {
 				return this.errorReply("Hangman is already disabled.");
 			}
@@ -260,7 +260,7 @@ exports.commands = {
 		},
 
 		enable: function (target, room, user) {
-			if (!this.can('gamemanagement', null, room)) return;
+			if (!this.can('declare', null, room)) return;
 			if (!room.hangmanDisabled) {
 				return this.errorReply("Hangman is already enabled.");
 			}
