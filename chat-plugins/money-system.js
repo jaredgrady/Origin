@@ -384,7 +384,7 @@ exports.commands = {
 		});
 	},
 	moneyloghelp: ["/moneylog - Displays a log of all transactions in the economy."],
-	
+
 	baltop: 'richestuser',
 	moneyladder: 'richestuser',
 	richladder: 'richestuser',
