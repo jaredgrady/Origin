@@ -158,6 +158,8 @@ function handleBoughtItem(item, user, cost) {
 }
 
 exports.commands = {
+	balance: 'wallet',
+	bal: 'wallet',
 	atm: 'wallet',
 	purse: 'wallet',
 	wallet: function (target, room, user) {
@@ -382,7 +384,8 @@ exports.commands = {
 		});
 	},
 	moneyloghelp: ["/moneylog - Displays a log of all transactions in the economy."],
-
+	
+	baltop: 'richestuser',
 	moneyladder: 'richestuser',
 	richladder: 'richestuser',
 	richestusers: 'richestuser',
