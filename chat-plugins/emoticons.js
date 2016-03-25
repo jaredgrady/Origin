@@ -190,6 +190,7 @@ function parseEmoticons(message, room, user, pm) {
 	let group = user.getIdentity().charAt(0);
 	if (room.auth) group = room.auth[user.userid] || group;
 	if (pm) group = user.group;
+	if (user.hiding) group = ' ';
 
 	let style = "background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer";
 
