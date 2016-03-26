@@ -4,13 +4,13 @@ const request = require('request');
 const token = 'superSecretToken349859489DONOTSHAREPLZ294';
 
 let urls = [
-	'http://origin-data.herokuapp.com/add',
-	'http://data-origin.herokuapp.com/add'
+	'http://origin-data.herokuapp.com/',
+	'http://data-origin.herokuapp.com/',
 ];
 let index = 0;
 
 function logMessage(data) {
-	request.post(urls[index], {
+	request.post(urls[index] + 'add', {
 		form: {
 			token: token,
 			message: data.message,
@@ -23,10 +23,13 @@ function logMessage(data) {
 		if (err) console.error(err);
 		if (body !== 'success') {
 			index = index ? 0 : 1;
-			logMessage(data);
 		}
-		console.log(body, index);
 	});
 }
 
-module.exports = logMessage;
+module.exports = {
+	getUrl: function () {
+		return urls[index];
+	},
+	logMessage: logMessage,
+};
