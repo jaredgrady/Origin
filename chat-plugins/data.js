@@ -3,22 +3,15 @@
 const request = require('request');
 const getUrl = require('../logger').getUrl;
 
-let cached = {};
-
 function get(data) {
 	return new Promise(function (resolve, reject) {
-		if (cached[data]) {
-			resolve(cached[data]);
-		} else {
-			request(getUrl() + data, function (error, response, body) {
-				if (!error && response.statusCode === 200) {
-					cached[data] = JSON.parse(body);
-					resolve(cached[data]);
-				} else {
-					reject();
-				}
-			});
-		}
+		request(getUrl() + data, function (error, response, body) {
+			if (!error && response.statusCode === 200) {
+				resolve(JSON.parse(body));
+			} else {
+				reject();
+			}
+		});
 	});
 }
 
