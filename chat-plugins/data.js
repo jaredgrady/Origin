@@ -7,7 +7,7 @@ function get(data) {
 	return new Promise(function (resolve, reject) {
 		request(getUrl() + data, function (error, response, body) {
 			if (!error && response.statusCode === 200) {
-				resolve(JSON.parse(body));
+				resolve(JSON.parse(body).slice(0, 100));
 			} else {
 				reject();
 			}
