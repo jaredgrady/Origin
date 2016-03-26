@@ -39,7 +39,7 @@ const BROADCAST_TOKEN = '!';
 const fs = require('fs');
 const path = require('path');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-const logMessage = require('./logger');
+const logMessage = require('./logger').logMessage;
 
 function getServersAds(text) {
 	let aux = text.toLowerCase();

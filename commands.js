@@ -22,7 +22,7 @@ const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
 global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen']; //sys developers
 const developersIPs = [];
 const dir = fs.readdirSync(path.resolve(__dirname, 'chat-plugins'));
-const logMessage = require('./logger');
+const logMessage = require('./logger').logMessage;
 
 const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
