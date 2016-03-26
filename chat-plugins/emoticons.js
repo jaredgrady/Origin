@@ -151,9 +151,9 @@ function parseEmoticons(message, room, user, pm) {
 		return true;
 	}
 	if (room.battle || room.isPersonal) {
-		if ((typeof message !== 'string' || room.disableEmoticons) && !~developers.indexOf(user.userid)) return false;
+		if ((typeof message !== 'string' || room.disableEmoticons) && !~developers.indexOf(user.userid) && !user.can('upperstaff')) return false;
 	} else {
-		if ((typeof message !== 'string' || (!pm && room.chatRoomData.disableEmoticons)) && !~developers.indexOf(user.userid)) return false;
+		if ((typeof message !== 'string' || (!pm && room.chatRoomData.disableEmoticons)) && !~developers.indexOf(user.userid) && !user.can('upperstaff')) return false;
 	}
 
 	let match = false;
