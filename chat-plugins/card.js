@@ -74,7 +74,7 @@ global.tourCard = function (tourSize, userid) {
 	let card = cacheValue[Math.round(Math.random() * (cacheValue.length - 1))];
 	if (tourRarity === 'No Card') return;
 	addCard(userid, card);
-	return [cards[card].rarity, cards[card].title, cards[card].name];
+	return [colors[cards[card].rarity], cards[card].rarity, cards[card].title, cards[card].name];
 };
 
 function addCard(name, card) {
