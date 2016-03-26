@@ -154,7 +154,7 @@ exports.commands = {
 		}
 		this.sendReply('|raw|<u><b>List of packs:</b></u>');
 		for (let i = 0; i < userPacks[target].length; i++) {
-			this.sendReply(toTitleCase(userPacks[target][i]));
+			this.sendReply('|raw| <button name="send" value="/openpack ' + userPacks[target][i] + '"> Press to open <b>' + toTitleCase(userPacks[target][i]) + '</b> pack</button>');
 		}
 	},
 
