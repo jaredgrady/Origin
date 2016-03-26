@@ -28,16 +28,20 @@ module.exports.badgeIcons = {
 	"Neski Badge":"http://i.imgur.com/ZBRW9CZ.png",
 	"Arken Badge":"http://i.imgur.com/KvELNsF.png",
 	"Alpha Badge":"http://i.imgur.com/JfflYtk.png",
-	"Gryphon Badge":"http://i.imgur.com/crtS5z2.png",
+	"Gryphon Badge":"http://i.imgur.com/tUOYNCj.png",
 	"fender Badge":"http://i.imgur.com/s16lNTS.gif",
 	"Lucario Badge":"http://i.imgur.com/yfSYq1w.gif",
-	"weeb":"http://i.imgur.com/XJmjJDE.png",
+	"weeb":"http://i.imgur.com/5FzJ4Tt.png",
 	"Meme Lord":"http://i.imgur.com/4nLKC4V.png",
 	"Cute Fox":"http://i.imgur.com/xgN76US.png",
 	"vip":"http://i.imgur.com/7heNNTP.png",
 	"Donor of the month":"http://i.imgur.com/EHx2ozm.gif",
 	"Neptune badge":"http://i.imgur.com/d1iHXxr.png",
 	"Steel Badge":"http://i.imgur.com/hlAeXU9.png",
+	"Jokester":"http://imgur.com/ndhm2wf.png",
+	"Big Brother Badge":"http://i.imgur.com/qcOQDhT.png",
+	"Good User":"http://i.imgur.com/XXWuh8V.png",
+	"NTG Badge":"http://i.imgur.com/7vBjDyV.png",
 };
 
 let badgeDescriptions = {
@@ -62,8 +66,8 @@ let badgeDescriptions = {
 	"Century Badge":"Defeat Paul Century in ZU.",
 	"Neski Badge":"Defeat SaNeski in Monotype (Turbo), best of 3.",
 	"Arken Badge":"Defeat ArkenCiel in Monotype or Monotype (Turbo) twice in a row.",
-	"Alpha Badge":"Defeat Alpha Ninja in an OM other than Monotype.",
-	"Gryphon Badge":"Defeat Gryphon in Uno, best of 3, 1v1.",
+	"Alpha Badge":"Defeat Alpha Ninja in an OM other than Monotype, best of 3.",
+	"Gryphon Badge":"Defeat Gryphon in Uno, best of 3, 1v1",
 	"fender Badge":"Defeat fender in LC.",
 	"Lucario Badge":"Defeat AuraStormLucario in VGC13, VGC15, or VGC16, best of 3.",
 	"weeb":"10 posts in Anime subforum.",
@@ -71,8 +75,12 @@ let badgeDescriptions = {
 	"Cute Fox":"Hidden Achievement.",
 	"vip":"Donate for VIP status.",
 	"Donor of the month":"Donate the most for the month.",
-	"Neptune badge":"Defeat Hayleysworld in OSSB, best of 3",
+	"Neptune badge":"Help create/run 5 successful events.",
 	"Steel Badge":"Defeat Sundar in Anything Goes, best of 3.",
+	"Jokester":"Tell Chevy a joke that makes him laugh via PM, Only 1 joke per day.",
+	"Big Brother Badge":"Send Nii Sama a gif or vine that makes him laugh.",
+	"Good User":"Hidden Achievement",
+	"NTG Badge":"Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.",
 };
 
 function badgeImg(link, name) {
