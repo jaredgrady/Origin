@@ -20,6 +20,15 @@ const colors = {
 	Common: '#000',
 };
 
+const costs = {
+	Mythic: '7',
+	Legendary: '5',
+	Epic: '3',
+	Rare: '2',
+	Uncommon: '1',
+	Common: '1'
+};
+
 const shop = [
 	['XY-Base', 'Get three cards from the first pack released in the Pokemon XY set.', 10],
 	['XY-Flashfire', 'Get three cards from the Flashfire pack released in the Pokemon XY set.', 10],
@@ -851,6 +860,33 @@ exports.commands = {
 		Db("completedTrades").set(now, newTransfer);
 	},
 
+	sellcard: function(target, room, user) {
+		let cardName = toId(target);
+		let card = cards[cardName];
+		let match;
+
+		match = false;
+		let userCards = Db("cards").get(user.userid, []);
+		for (let i = 0; i < userCards.length; i++) {
+			if (userCards[i].title === target) {
+				match = true;
+				break;
+			}
+		}
+		if (!match) return this.errorReply("You don't have that card!");
+		
+		if (!target) return this.sendReply('/sellcard [card name] - Sell a card back to the server.');
+		if (!cards.hasOwnProperty(cardName)) return this.errorReply(toTitleCase(target) + ': card not found.');
+		
+		if (!userCards.length) return this.errorReply('You have no cards to sell.');
+		
+		Db('money').set(user, Db('money').get(user, 0) + Number(costs[cards[cardName].rarity])).get(user);
+		removeCard(cardName, user.userid);
+		
+		this.sendReply('You have sold ' + card.title + "(" + card.rarity + ") for " + costs[cards[cardName].rarity] + " bucks");
+		logMoney(user + " sold " + card.title + "(" + card.rarity + ") for " + costs[cards[cardName].rarity] + " bucks");
+	},
+
 	psgo: 'cardshelp',
 	origincg: 'cardshelp',
 	cardshelp: function (target, room, user) {
@@ -867,7 +903,8 @@ exports.commands = {
 			'<b>/trade</b> - /trade [user\'s card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
 			'<b>/trades</b> - View your current pending trade requests.<br>' +
 			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>' +
-			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
+			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>' +
+			'<b>/sellcard</b> - /sellcard [cardName] - Sells your card to the server. [Common = 1, Uncommon = 1, Rare = 2, Epic = 3, Legendary = 5, Mythic = 7]'
 		);
 	},
 };
