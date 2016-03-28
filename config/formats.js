@@ -762,7 +762,7 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545628/\">CAP Viability Ranking</a>",
 		],
 		section: "Other Metagames",
-		
+
 		gameType: 'doubles',
 		ruleset: ['OU'],
 		banlist: ['Allow CAP'],
