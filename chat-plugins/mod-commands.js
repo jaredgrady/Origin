@@ -5,7 +5,15 @@
 ********************/
 const MAX_REASON_LENGTH = 300;
 const fs = require("fs");
+const Autolinker = require("autolinker");
 let permaUsers;
+let Advertisements;
+
+try {
+	Advertisements = JSON.parse(fs.readFileSync('config/advertisements.json', 'utf8'));
+} catch (e) {
+	Advertisements = {};
+}
 
 try {
 	permaUsers = JSON.parse(fs.readFileSync("config/perma.json"));
@@ -23,6 +31,37 @@ Users.parsePerma = function (userid, targetUser) {
 		}
 	}
 };
+
+// Strips html but allows /'s (For some reason escapeHTML doesn't allow /'s)
+function escapeTags(arg) {
+	if (!arg) return false;
+	arg = arg.replace(/(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g, '');
+
+	return arg;
+}
+
+function queueAdvertisement(message, user, ip) {
+	Advertisements[ip] = {
+		message: message,
+		user: user
+	};
+	fs.writeFile('config/advertisements.json', JSON.stringify(Advertisements));
+}
+
+if (!Config.advertisementTimer) {
+	Config.advertisementTimer = setInterval(function(target) {
+		if (!Object.keys(Advertisements)[0]) return;
+		var ip = Object.keys(Advertisements)[0];
+		var message = Advertisements[ip].message;
+		var user = Advertisements[ip].user;
+		Rooms('lobby').add('|raw|<div class="infobox"><strong><font color=#db2500>Advertisement: </font></strong> ' + Autolinker.link(escapeTags(message)) + ' - ' + Tools.escapeHTML(user) + '</div>');
+		Rooms('lobby').update();
+		delete Advertisements[ip];
+		fs.writeFile('config/advertisements.json', JSON.stringify(Advertisements));
+	}, 5 * 60 * 1000);
+	Config.advertisementsLoaded = true;
+}
+exports.queueAdvertisement = queueAdvertisement;
 
 function clearRoom(room) {
 	let len = (room.log && room.log.length) || 0;
@@ -643,15 +682,45 @@ exports.commands = {
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
 
-	ad: 'advertise',
-	advertise: function (target, room, user) {
-		if (!user.can('lock')) return false;
-		let parts = target.split(',');
-		if (parts.length < 2) return this.errorReply("Invalid command. `/ad room, message`.");
-		let innerTarget = Tools.escapeHTML(parts[0]);
-		let message = Tools.escapeHTML(parts.slice(1).join(","));
-		let targetRoom = Rooms.search(innerTarget);
-		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
-		room.addRaw('<div class="infobox"><a href="/' + targetRoom.id + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + targetRoom.id + '</strong>:</font> ' + message + '</a>  -' + toId(user) + '</div>');
-	},
+	advertise: function(target, room, user, connection) {
+		if (room.id !== 'lobby') return this.sendReply("This command only works in the lobby.");
+		if (!target) return this.sendReply("Usage: /advertise [message] - Adds an advertisement to the advertisement queue.");
+		if (target.length > 250) return this.sendReply("Advertisements may not be longer than 250 characters.");
+		if (!this.canTalk()) return this.sendReply("You're unable to chat in this room.");
+		for (var u in user.ips) {
+			if (Advertisements[u]) {
+				return this.sendReply("You already have an advertisement in the queue. Please wait for it to be broadcast before adding another one.");
+			}
+		}
+
+		if (user.advertisementCooldown) {
+			var milliseconds = (Date.now() - user.advertisementCooldown);
+			var seconds = ((milliseconds / 1000) % 60);
+			var minutes = ((seconds / 60) % 60);
+			var remainingTime = Math.round(seconds - (15 * 60));
+			if (((Date.now() - user.advertisementCooldown) <= 15 * 60 * 1000)) return this.sendReply("You must wait " + (remainingTime - remainingTime * 2) + " seconds before placing another advertisement.");
+		}
+		user.advertisementCooldown = Date.now();
+
+		var message = target;
+		if (!message) return;
+
+		if (!room.lastAdvertisement) {
+			room.add('|raw|<div class="infobox"><strong><font color=#db2500>Advertisement: </font></strong> ' + Autolinker.link(escapeTags(message)) + ' - ' + Tools.escapeHTML(user.name) + '</div>');
+			room.update();
+			room.lastAdvertisement = Date.now();
+			return;
+		}
+
+		if ((Date.now() - room.lastAdvertisement) >= 5 * 60 * 1000) {
+			room.add('|raw|<div class="infobox"><strong><font color=#db2500>Advertisement: </font></strong> ' + Autolinker.link(escapeTags(message)) + ' - ' + Tools.escapeHTML(user.name) + '</div>');
+			room.update();
+			room.lastAdvertisement = Date.now();
+			return;
+		}
+
+		queueAdvertisement(message, user.name, user.latestIp);
+		room.lastAdvertisement = Date.now();
+		return this.sendReply("Your message has been added to the advertisement queue. It will be broadcasted in the lobby shortly.");
+	}
 };
