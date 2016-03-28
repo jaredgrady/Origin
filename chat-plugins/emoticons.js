@@ -33,6 +33,7 @@ let emotes = {
 	'feelscri': 'http://i.imgur.com/QAuUW7u.jpg?1',
 	'feelscx': 'http://i.imgur.com/zRSUw2n.gif',
 	'feelsdd': 'http://i.imgur.com/fXtdLtV.png',
+	'feelsdell': 'http://i.imgur.com/1CgwuDz.jpg',
 	'feelsdoge': 'http://i.imgur.com/GklYWvi.png',
 	'feelsemo': 'http://i.imgur.com/FPolh5d.jpg',
 	'feelsfdra': 'http://i.imgur.com/ZIcl9Zy.jpg',
