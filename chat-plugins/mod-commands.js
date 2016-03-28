@@ -43,17 +43,17 @@ function escapeTags(arg) {
 function queueAdvertisement(message, user, ip) {
 	Advertisements[ip] = {
 		message: message,
-		user: user
+		user: user,
 	};
 	fs.writeFile('config/advertisements.json', JSON.stringify(Advertisements));
 }
 
 if (!Config.advertisementTimer) {
-	Config.advertisementTimer = setInterval(function(target) {
+	Config.advertisementTimer = setInterval (function(target) {
 		if (!Object.keys(Advertisements)[0]) return;
-		var ip = Object.keys(Advertisements)[0];
-		var message = Advertisements[ip].message;
-		var user = Advertisements[ip].user;
+		let ip = Object.keys(Advertisements)[0];
+		let message = Advertisements[ip].message;
+		let user = Advertisements[ip].user;
 		Rooms('lobby').add('|raw|<div class="infobox"><strong><font color=#db2500>Advertisement: </font></strong> ' + Autolinker.link(escapeTags(message)) + ' - ' + Tools.escapeHTML(user) + '</div>');
 		Rooms('lobby').update();
 		delete Advertisements[ip];
@@ -682,27 +682,27 @@ exports.commands = {
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
 
-	advertise: function(target, room, user, connection) {
+	advertise: function (target, room, user, connection) {
 		if (room.id !== 'lobby') return this.sendReply("This command only works in the lobby.");
 		if (!target) return this.sendReply("Usage: /advertise [message] - Adds an advertisement to the advertisement queue.");
 		if (target.length > 250) return this.sendReply("Advertisements may not be longer than 250 characters.");
 		if (!this.canTalk()) return this.sendReply("You're unable to chat in this room.");
-		for (var u in user.ips) {
+		for (let u in user.ips) {
 			if (Advertisements[u]) {
 				return this.sendReply("You already have an advertisement in the queue. Please wait for it to be broadcast before adding another one.");
 			}
 		}
 
 		if (user.advertisementCooldown) {
-			var milliseconds = (Date.now() - user.advertisementCooldown);
-			var seconds = ((milliseconds / 1000) % 60);
-			var minutes = ((seconds / 60) % 60);
-			var remainingTime = Math.round(seconds - (15 * 60));
+			let milliseconds = (Date.now() - user.advertisementCooldown);
+			let seconds = ((milliseconds / 1000) % 60);
+			let minutes = ((seconds / 60) % 60);
+			let remainingTime = Math.round(seconds - (15 * 60));
 			if (((Date.now() - user.advertisementCooldown) <= 15 * 60 * 1000)) return this.sendReply("You must wait " + (remainingTime - remainingTime * 2) + " seconds before placing another advertisement.");
 		}
 		user.advertisementCooldown = Date.now();
 
-		var message = target;
+		let message = target;
 		if (!message) return;
 
 		if (!room.lastAdvertisement) {
@@ -722,5 +722,5 @@ exports.commands = {
 		queueAdvertisement(message, user.name, user.latestIp);
 		room.lastAdvertisement = Date.now();
 		return this.sendReply("Your message has been added to the advertisement queue. It will be broadcasted in the lobby shortly.");
-	}
+	},
 };
