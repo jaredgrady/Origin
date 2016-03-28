@@ -145,15 +145,6 @@ exports.Formats = [
 		banlist: ['LC Uber', 'Gligar', 'Misdreavus', 'Scyther', 'Sneasel', 'Tangela', 'Dragon Rage', 'Sonic Boom', 'Swagger'],
 	},
 	{
-		name: "LC (suspect test)",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3566865/\">LC Suspect</a>"],
-		section: "ORAS Singles",
-
-		maxLevel: 5,
-		ruleset: ['LC'],
-		banlist: ['Diglett'],
-	},
-	{
 		name: "Anything Goes",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3523229/\">Anything Goes</a>",
@@ -760,6 +751,19 @@ exports.Formats = [
 		section: "Other Metagames",
 		column: 2,
 
+		ruleset: ['OU'],
+		banlist: ['Allow CAP'],
+	},
+	{
+		name: "CAP Doubles",
+		desc: [
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3537407/\">CAP Metagame Discussion</a>",
+			"&bullet; <a href=\"https://www.smogon.com/dex/xy/formats/cap/\">CAP Banlist</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545628/\">CAP Viability Ranking</a>",
+		],
+		section: "Other Metagames",
+		
+		gameType: 'doubles',
 		ruleset: ['OU'],
 		banlist: ['Allow CAP'],
 	},
