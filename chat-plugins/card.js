@@ -26,7 +26,7 @@ const costs = {
 	Epic: '3',
 	Rare: '2',
 	Uncommon: '1',
-	Common: '1'
+	Common: '1',
 };
 
 const shop = [
@@ -860,7 +860,7 @@ exports.commands = {
 		Db("completedTrades").set(now, newTransfer);
 	},
 
-	sellcard: function(target, room, user) {
+	sellcard: function (target, room, user) {
 		let cardName = toId(target);
 		let card = cards[cardName];
 		let match;
@@ -874,15 +874,15 @@ exports.commands = {
 			}
 		}
 		if (!match) return this.errorReply("You don't have that card!");
-		
+
 		if (!target) return this.sendReply('/sellcard [card name] - Sell a card back to the server.');
 		if (!cards.hasOwnProperty(cardName)) return this.errorReply(toTitleCase(target) + ': card not found.');
-		
+
 		if (!userCards.length) return this.errorReply('You have no cards to sell.');
-		
+
 		Db('money').set(user, Db('money').get(user, 0) + Number(costs[cards[cardName].rarity])).get(user);
 		removeCard(cardName, user.userid);
-		
+
 		this.sendReply('You have sold ' + card.title + "(" + card.rarity + ") for " + costs[cards[cardName].rarity] + " bucks");
 		logMoney(user + " sold " + card.title + "(" + card.rarity + ") for " + costs[cards[cardName].rarity] + " bucks");
 	},
