@@ -49,7 +49,7 @@ function queueAdvertisement(message, user, ip) {
 }
 
 if (!Config.advertisementTimer) {
-	Config.advertisementTimer = setInterval (function(target) {
+	Config.advertisementTimer = setInterval(function (target) {
 		if (!Object.keys(Advertisements)[0]) return;
 		let ip = Object.keys(Advertisements)[0];
 		let message = Advertisements[ip].message;
