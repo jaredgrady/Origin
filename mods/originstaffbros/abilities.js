@@ -3915,7 +3915,6 @@ exports.BattleAbilities = {
 		},
 		onUpdate: function (pokemon) {
 			function setMove(moveid) {
-				console.log("updating move: " + moveid);
 				let index = pokemon.moves.indexOf("sketch");
 				let move = Tools.getMove(moveid);
 				let sketchedMove = {
