@@ -1772,9 +1772,7 @@ let commands = exports.commands = {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
 		if (!this.canTalk()) return;
-
-		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare cannot exceed 500 characters for stability reasons.');
-		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
+		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px; max-height: 300px; overflow-y: scroll"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
 	declarehelp: ["/declare [message] - Anonymously announces a message. Requires: # & ~"],
@@ -1799,7 +1797,7 @@ let commands = exports.commands = {
 		if (!target) return;
 
 		for (let id in Rooms.rooms) {
-			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
+			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px; max-height: 300px; overflow-y: scroll;"><b>' + target + '</b></div>');
 		}
 		this.logModCommand(user.name + " globally declared " + target);
 	},
