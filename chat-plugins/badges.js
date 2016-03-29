@@ -83,6 +83,10 @@ let badgeDescriptions = {
 	"NTG Badge":"Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.",
 };
 
+function badgeImg(link, name) {
+	return '<img src="' + link + '" height="16" width="16" alt="' + name + '" title="' + name + '" >';
+}
+
 exports.commands = {
 	badge: 'badges',
 	badges: function (target, room, user) {
