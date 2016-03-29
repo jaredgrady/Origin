@@ -99,7 +99,7 @@ exports.commands = {
 		let badgeIcons = module.exports.badgeIcons;
 		switch (cmd) {
 		case 'set':
-			if (!this.can('ban')) return false;
+			if (!this.can('lock')) return false;
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
@@ -111,7 +111,7 @@ exports.commands = {
 			badges.push(badge);
 			Db('badgesDB').set(toId(userid), badges);
 			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
-			this.logModCommand(user.name + " gave " + userid + " a badge.");
+			this.logModCommand(user.name + " gave the badge '" + badge + "' badge to " + userid + ".");
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
@@ -133,7 +133,7 @@ exports.commands = {
 			this.sendReply(badgeDescriptions[badge]);
 			break;
 		case 'take':
-			if (!this.can('ban')) return false;
+			if (!this.can('lock')) return false;
 			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
 			userid = toId(parts[1].trim());
 			targetUser = Users.getExact(userid);
@@ -143,7 +143,7 @@ exports.commands = {
 			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
 			badges = badges.filter(b => b !== badge);
 			Db('badgesDB').set(toId(userid), badges);
-			this.logModCommand(user.name + " took a badge from " + userid + ".");
+			this.logModCommand(user.name + " took the badge '" + badge + "' badge from " + userid + ".");
 			this.sendReply("Badge taken.");
 			break;
 		case 'deleteall':
