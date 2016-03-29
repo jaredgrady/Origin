@@ -2192,7 +2192,7 @@
 ****************************/
 /**************
 * General CSS *
-**************/
+**************
 body {
   background: url("http://i.imgur.com/aXop9m5.jpg") bottom left; }
 
@@ -2302,7 +2302,7 @@ body {
 *******************/
 /*************
 * Header CSS *
-*************/
+*************
 .header {
   background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat; }
 
@@ -2420,7 +2420,7 @@ body {
 ******************/
 /***************
 * Roomlist CSS *
-***************/
+***************
 .roomlist h2 {
   color: #FEE2B3;
   text-shadow: 0px -1px 0px #11484F; }
@@ -2458,7 +2458,7 @@ This makes everything into a mew*/
 ********************/
 /***********
 * Chat CSS *
-***********/
+***********
 .userlist {
   background: rgba(17, 72, 79, 0.6);
   border-color: #11484F;
@@ -2534,7 +2534,7 @@ This makes everything into a mew*/
 ****************/
 /*******************
 * Tournaments CSS *
-******************/
+******************
 .tournament-title {
   background: rgba(17, 72, 79, 0.6);
   text-shadow: 0px -1px 0px #11484F;
@@ -2630,7 +2630,7 @@ This makes everything into a mew*/
 ***********************/
 /**********************
 * Mainmenuwrapper CSS *
-**********************/
+**********************
 .menugroup {
   border: 1px solid #803C6F;
   background: rgba(128, 60, 111, 0.25);
@@ -2882,7 +2882,7 @@ This makes everything into a mew*/
 ***************************/
 /************
 * Popup CSS *
-************/
+************
 .ps-popup {
   background: #BBCCC9;
   border-color: #11484F; }
@@ -2954,7 +2954,7 @@ a.subtle, a.subtle:hover {
 *****************/
 /*************
 * Ladder CSS *
-*************/
+*************
 .ladder th {
   background: #CD9FC4;
   color: #803C6F;
@@ -2973,7 +2973,7 @@ a.subtle, a.subtle:hover {
 
 /******************
 * Ladder CSS ~end *
-******************/
+******************
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
@@ -3351,3 +3351,310 @@ a.subtle, a.subtle:hover {
 .dark .chat-log-add, .dark .pm-log-add, .dark .battle-log-add {
   background: rgba(34, 34, 34, 0.8);
   color: #DDD; }
+  
+/* Frost CSS for prank */
+.header .logo {
+    opacity: 0; 
+}
+ 
+#header{
+    background: url(http://i.imgur.com/lA1gRmN.png) no-repeat;
+    background-color:#4594c9
+}
+ 
+body {
+    background: url(http://frostserver.net:8000/images/background1.jpg);
+}
+ 
+.backdrop {
+    background-image: url("http://i.imgur.com/kn6PolX.jpg") !important;
+}
+ 
+.ps-room .battle-log-add {
+    background-color:#4594c9
+}
+ 
+.trainer strong {
+    color:#0070ba;
+}
+ 
+.battle-log h2 {
+    background-color:#b2d9f0;
+    border-color:#4594c9;
+}
+ 
+.chat small {
+    color:#4249F8
+}
+ 
+.userlist li em.group {
+    color:#4249F8;
+}
+ 
+.pm-window.focused h3:hover {
+    background-color:#58bbf6;
+    border-color:#58bbf6;
+}
+ 
+.pm-window.focused h3 {
+    background-color:#58bbf6;
+    border-color:#58bbf6;
+}
+ 
+.pm-window h3 {
+    background-color:#8dcbf0;
+    border-color:#8dcbf0;
+}
+ 
+.pm-log-add {
+    background-color:#4594c9;
+    border-color:#4594c9;
+}
+ 
+.pm-log-add.focused {
+    background-color:#8dcbf0;
+    border-color:#8dcbf0;
+}
+ 
+.chat-log-add {
+    background-color:#4594c9
+}
+ 
+.mainmenuwrapper {
+    background-image: none !important;
+}
+ 
+.chat-log {
+    background: url("http://i.imgur.com/dIfUHsq.png") right top no-repeat;
+    font-size:10pt;
+    overflow:auto;
+}
+ 
+.menugroup .button{
+    background:#3A5FCD
+}
+ 
+.menugroup .menugroup{
+    text-align:center
+}
+ 
+.button:hover{
+    background:#4876FF
+}
+ 
+.userlist {
+    border-left:1px solid #D5DDE4;
+    background:#b2d9f0;
+}
+ 
+ 
+/**************************
+* For the colour commands *
+**************************/
+ 
+.motc-blue {
+    background: #6464FF;
+    border: 3px solid #0B0BA6;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-blue-tr {
+    background: #94DBEE
+}
+ 
+.motc-red {
+    background: #E24242;
+    border: 3px solid #A60B0B;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-red-tr {
+    background: #EC8484;
+}
+ 
+.motc-yellow {
+    background: #FFD733;
+    border: 3px solid #A68C21;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-yellow-tr {
+    background: #FFFF99;
+}
+ 
+.motc-green {
+    background: #11BB11;
+    border: 3px solid #0B7A0B;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-green-tr {
+    background: #64D364;
+}
+ 
+.motc-black {
+    background: #858585;
+    border: 3px solid #2C2C2C;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-black-tr {
+    background: #BBBBBB;
+}
+ 
+.motc-brown {
+    background: brown;
+    border: 3px solid #704214;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-brown-tr {
+    background: #CC9966;
+}
+ 
+.motc-purple {
+    background: #A040A0;
+    border: 3px solid #682A68;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-purple-tr {
+    background: #C183C1;
+}
+ 
+.motc-gray {
+    background: #B8B8D0;
+    border: 3px solid #787887;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-gray-tr {
+    background: #D1D1E0;
+}
+ 
+.motc-white {
+    background: #E3CED0;
+    border: 3px solid #929292;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-white-tr {
+    background: #FFF;
+}
+ 
+.motc-pink {
+    background: #EE99AC;
+    border: 3px solid #9B6470;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-top-left-radius: 5px;
+}
+ 
+.motc-pink-tr {
+    background: #F4BDC9;
+}
+ 
+.button-green {
+    padding:5px;
+    background-color:green;
+    border:1px solid #25CC4D;
+    color:white
+}
+ 
+.button-black {
+    padding:5px;
+    background-color:black;
+    border:1px solid #666;
+    color: white;
+}
+ 
+.button-blue {
+    padding:5px;
+    background-color:#4594c9;
+    border:1px solid #8dcbf0;
+    color: #d8d8d8;
+}
+ 
+.button-blue:hover {
+    background:#6db9ec;
+}
+ 
+.astext{
+    border: none;
+  background: none;
+  padding:0;
+  height: -20em;
+  font-family:Verdana,sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+ 
+.button-halloween {
+    padding: 5px;
+    background-color: #000;
+    border: 1px solid #FFA500;
+    color: #FFA500;
+}
+ 
+.nightclub {
+    background: #000;
+    margin: -3px;
+}
