@@ -135,6 +135,20 @@ exports.commands = {
 	},
 	reloadfilehelp: ["/reloadfile [file directory] - Reloads a file. Requires system operator status."],
 
+	renamechatroom: function (target, room, user) {
+		if (!this.can('declare')) return this.errorReply('/renamechatroom - Access denied.');
+		if (!target) return this.parse('/help renamechatroom');
+		if (target.includes(',') || target.includes('|') || target.includes('[') || target.includes('-')) {
+			return this.errorReply("Room titles can't contain any of: ,|[-");
+		}
+		let id = toId(target);
+		if (Rooms.search(id)) return this.errorReply("The room '" + target + "' already exists.");
+		room.chatRoomData.title = target;
+		Rooms.global.writeChatRoomData();
+		room.add('|title|' + target);
+	},
+	renamechatroomhelp: ["/reloadfile [file directory] - Reloads a file. Requires system operator status."],
+
 	seticon: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
 		let args = target.split(',');
