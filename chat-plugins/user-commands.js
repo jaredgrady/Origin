@@ -505,6 +505,10 @@ exports.commands = {
 		);
 	},
 
+	demandhelp: function (target, room, user) {
+		this.sendReply('April Fools!');
+	},
+
 	originhelp: 'serverhelp',
 	serverhelp: function (target, room, user, connection) {
 		if (!this.canBroadcast()) return;
