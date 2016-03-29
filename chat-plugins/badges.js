@@ -82,3 +82,78 @@ let badgeDescriptions = {
 	"Good User":"Hidden Achievement",
 	"NTG Badge":"Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.",
 };
+
+exports.commands = {
+	badge: 'badges',
+	badges: function (target, room, user) {
+		let parts = target.split(',');
+		let cmd = parts[0].trim().toLowerCase();
+		let userid, targetUser;
+		let badges;
+		let badge;
+		let output = '<table> <tr>';
+		let badgeIcons = module.exports.badgeIcons;
+		switch (cmd) {
+		case 'set':
+			if (!this.can('lock')) return false;
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges set, user, badgeName`');
+			userid = toId(parts[1].trim());
+			targetUser = Users.getExact(userid);
+			badges = Db('badgesDB').get(userid);
+			badge = parts[2].trim();
+			if (!badgeIcons[badge]) return this.sendReply('This badge does not exist, please check /badges list');
+			if (!Db('badgesDB').has(userid)) badges = [];
+			badges = badges.filter(b => b !== badge);
+			badges.push(badge);
+			Db('badgesDB').set(toId(userid), badges);
+			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
+			this.logModCommand(user.name + " gave the badge '" + badge + "' badge to " + userid + ".");
+			this.sendReply("Badge set.");
+			break;
+		case 'list':
+			if (!this.canBroadcast()) return;
+			badges = Object.keys(badgeIcons);
+			output = '<table> <tr>';
+			for (let i = 0; i < badges.length; i++) {
+				output += '<td>' + badgeImg(badgeIcons[badges[i]], badges[i]) + '</td> <td>' + badges[i] + '</td> <td>' + badgeDescriptions[badges[i]] + '</td>';
+				if (i % 2 === 1) output +=  '</tr> <tr>';
+			}
+			output += '</tr> <table>';
+			this.sendReplyBox(output);
+			break;
+		case 'info':
+			if (!this.canBroadcast()) return;
+			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
+			badge = parts[1].trim();
+			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			this.sendReply(badgeDescriptions[badge]);
+			break;
+		case 'take':
+			if (!this.can('lock')) return false;
+			if (parts.length !== 3) return this.errorReply('Correct command: `/badges take, user, badgeName`');
+			userid = toId(parts[1].trim());
+			targetUser = Users.getExact(userid);
+			if (!Db('badgesDB').has(userid)) return this.errorReply("This user doesn't have any badges.");
+			badges = Db('badgesDB').get(userid);
+			badge = parts[2].trim();
+			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			badges = badges.filter(b => b !== badge);
+			Db('badgesDB').set(toId(userid), badges);
+			this.logModCommand(user.name + " took the badge '" + badge + "' badge from " + userid + ".");
+			this.sendReply("Badge taken.");
+			break;
+		case 'deleteall':
+			if (!(~developers.indexOf(user.userid) || user.userid === 'niisama')) return this.errorReply("Access denied.");
+			if (parts.length !== 2) return this.errorReply('Correct command: `/badges deleteall, badgeName`');
+			badge = parts[1].trim();
+			if (!badgeIcons[badge]) return this.errorReply('This badge does not exist, please check /badges list');
+			let badgeObject = Db('badgesDB').object();
+			let users = Object.keys(badgeObject);
+			users.forEach(u => Db('badgesDB').set(u, (badgeObject[u].filter(b => b !== badge))));
+			break;
+		default:
+			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
+		}
+	},
+	badgeshelp: ["Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`."],
+};
