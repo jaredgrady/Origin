@@ -147,7 +147,7 @@ exports.commands = {
 		Rooms.global.writeChatRoomData();
 		room.add('|title|' + target);
 	},
-	renamechatroomhelp: ["/reloadfile [file directory] - Reloads a file. Requires system operator status."],
+	renamechatroomhelp: ["/renamechatroom [new name] - Renames the current chatroom. Requires &"],
 
 	seticon: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
