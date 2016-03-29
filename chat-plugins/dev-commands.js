@@ -58,6 +58,10 @@ exports.commands = {
 	},
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
 
+	caledrith: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.parse('!data purrloin');
+	},
 
 	ddeclare: 'devdeclare',
 	devdeclare: function (target, room, user) {
