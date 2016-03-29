@@ -183,10 +183,8 @@ Profile.prototype.badges = function () {
 	if (typeof badges !== 'undefined' && badges !== null) {
 		let output = ' <table style="' + css +  '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
-			if (i !== 0 && i % 4 === 0) {
-				output += '</tr> <tr>';
-			}
-			output += '<td>' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</td>';
+			if (i !== 0 && i % 4 === 0) output += '</tr> <tr>';
+			output += '<td><button style="' + css + '" name="send" value="/badges info, ' + badges[i] + '">' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</button></td>';
 		}
 		output += '</tr> </table>';
 		return output;
