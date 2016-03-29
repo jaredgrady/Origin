@@ -94,6 +94,7 @@ let emotes = {
 	'feelswin': 'http://i.imgur.com/rbs9pZG.png?1',
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'gudone': 'http://i.imgur.com/USkp1b9.png',
+	'gudsht': 'http://i.imgur.com/R9SO76u.png?1',
 	'happyface': 'http://imgur.com/krzCL3j.jpg',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
 	'hypnotoad': 'http://i.imgur.com/lJtbSfl.gif',
