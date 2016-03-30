@@ -222,9 +222,6 @@ Profile.prototype.checkBadges = function () {
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
 	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
-	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
-	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
-	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
 	if (this.user && this.user.isStaff) badges.push('staff');
 
 
