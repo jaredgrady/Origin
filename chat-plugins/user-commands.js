@@ -564,7 +564,7 @@ exports.commands = {
 	friendcodeadd: function (target, room, user) {
 		if (!target) return this.errorReply("Invalid command. Valid commands are `/friendcodeadd user` and /friendcoderemove.");
 		let fc = Tools.escapeHTML(target.trim());
-		let reg = /\d{4}-\d{4}-\d{4}/;
+		let reg = /^\d{4}-\d{4}-\d{4}$/;
 		if (!reg.test(fc)) return this.errorReply("Invalid friend code, example: 3110-7818-5106");
 		Db('FriencodeDB').set(toId(user), fc);
 		this.sendReply("Friendcode set.");
