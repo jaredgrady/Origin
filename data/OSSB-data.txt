@@ -50,7 +50,7 @@ fender - Gible
 - Ability: Cursed Aura - Opponent takes 15% on entry and exit of this Pokémon
 - Move: Silent Departure - 100 BP Dark type U-turn
 - Movepool: Sucker Punch, Night Slash, Crabhammer, Pursuit, Focus Energy, Dragon Dance
-- Notes:  100 BP STAB U-turn, plus all the damage from Cursed Aura really tears holes through teams, so be very careful! It will be switching around a LOT.
+- Notes: 100 BP STAB U-turn, plus all the damage from Cursed Aura really tears holes through teams, so be very careful! It will be switching around a LOT.
 
 @Alpha Ninja - Slowbro-Mega
 - Ability: Mega Poison - Poison Heal + Poisons on entry + moves never miss
