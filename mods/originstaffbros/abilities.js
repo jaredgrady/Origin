@@ -4038,7 +4038,6 @@ exports.BattleAbilities = {
 					this.boost({def:1}, pokemon);
 					this.boost({spd:1}, pokemon);
 					this.boost({spd:-2}, foeactive[i], pokemon);
-					target.addVolatile('attract', target);
 				}
 			}
 		},
