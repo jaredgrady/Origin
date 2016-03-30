@@ -3561,7 +3561,7 @@ exports.BattleAbilities = {
 		name: "Dragon's Fire",
 	},
 
-	// SaNeski
+	// Sky Might Fall
 	"cursedaura": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
@@ -3802,6 +3802,23 @@ exports.BattleAbilities = {
 		name: "Aquatic Memes",
 	},
 
+	// Irraquated
+	"woopslmao": {
+		isNonstandard: true,
+		onPrepareHit: function (source, target, move) {
+			let type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] Protean');
+			}
+		},
+		onModifyMove: function (move) {
+			move.stab = 2;
+		},
+		id: "woopslmao",
+		name: "Woops lmao",
+	},
+
 	// isandman
 	"godsforce": {
 		isNonstandard: true,
@@ -4007,6 +4024,71 @@ exports.BattleAbilities = {
 		name: "Speedy Gonzales",
 	},
 
+	// Otami
+	"senpai": {
+		isNonstandard: true,
+		onStart: function (pokemon, target) {
+			let foeactive = pokemon.side.foe.active;
+			for (let i = 0; i < foeactive.length; i++) {
+				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
+				if (foeactive[i].volatiles['substitute']) {
+					this.add('-activate', foeactive[i], 'Substitute', 'ability: Senpai', '[of] ' + pokemon);
+				} else {
+					this.add('-ability', pokemon, 'Senpai', '[of] ' + foeactive[i]);
+					this.boost({def:1}, pokemon);
+					this.boost({spd:1}, pokemon);
+					this.boost({spd:-2}, foeactive[i], pokemon);
+					target.addVolatile('attract', target);
+				}
+			}
+		},
+		id: "senpai",
+		name: "Senpai",
+	},
+
+	// Piscean
+	"noyou": {
+		isNonstandard: true,
+		onAfterDamageOrder: 1,
+		onAfterDamage: function (damage, target, source, move) {
+			if (move && move.effectType === 'Move' && move.crit) {
+				if (source !== target && move && move.effectType === 'Move') {
+					this.damage(damage, source, target, null, true);
+				}
+			} else {
+				if (source !== target && move && move.effectType === 'Move') {
+					this.damage(damage / 3, source, target, null, true);
+				}
+			}
+		},
+		onStart: function (pokemon) {
+			let foeactive = pokemon.side.foe.active;
+			let activated = false;
+			for (let i = 0; i < foeactive.length; i++) {
+				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
+				if (!activated) {
+					this.useMove("light screen", pokemon, pokemon);
+					this.useMove("reflect", pokemon, pokemon);
+				}
+			}
+		},
+		id: "noyou",
+		name: "No, You!",
+	},
+
+	// Sota Higurashi contrary
+
+	// Others
+	// Gnarly Commie
+	"communism": {
+		isNonstandard: true,
+		onSourceFaint: function (target, source, effect) {
+			if (effect && effect.effectType === 'Move') this.boost({def:2, spd:2, spe:2}, source);
+		},
+		id: "communism",
+		name: "Communism",
+	},
+
 	// Imp Fallen Blood
 	"pirate": {
 		isNonstandard: true,
@@ -4061,66 +4143,6 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		id: "noability",
 		name: "NoAbility",
-	},
-
-	// Irraquated
-	"woopslmao": {
-		isNonstandard: true,
-		onPrepareHit: function (source, target, move) {
-			let type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.add('-start', source, 'typechange', type, '[from] Protean');
-			}
-		},
-		onModifyMove: function (move) {
-			move.stab = 2;
-		},
-		id: "woopslmao",
-		name: "Woops lmao",
-	},
-
-	// Piscean
-	"noyou": {
-		isNonstandard: true,
-		onAfterDamageOrder: 1,
-		onAfterDamage: function (damage, target, source, move) {
-			if (move && move.effectType === 'Move' && move.crit) {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage, source, target, null, true);
-				}
-			} else {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage / 3, source, target, null, true);
-				}
-			}
-		},
-		onStart: function (pokemon) {
-			let foeactive = pokemon.side.foe.active;
-			let activated = false;
-			for (let i = 0; i < foeactive.length; i++) {
-				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (!activated) {
-					this.useMove("light screen", pokemon, pokemon);
-					this.useMove("reflect", pokemon, pokemon);
-				}
-			}
-		},
-		id: "noyou",
-		name: "No, You!",
-	},
-
-	// Sota Higurashi contrary
-
-	// Others
-	// Gnarly Commie
-	"communism": {
-		isNonstandard: true,
-		onSourceFaint: function (target, source, effect) {
-			if (effect && effect.effectType === 'Move') this.boost({def:2, spd:2, spe:2}, source);
-		},
-		id: "communism",
-		name: "Communism",
 	},
 
 	// Mr. CGTNathan

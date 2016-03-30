@@ -16037,7 +16037,7 @@ exports.BattleMovedex = {
 		type: "Dragon",
 	},
 
-	// SaNeski
+	// Sky Might Fall
 	"silentdeparture": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -16056,7 +16056,7 @@ exports.BattleMovedex = {
 		},
 		/* no quote
 		onHit: function (target, source, move) {
-			this.add('c|&SaNeski|');
+			this.add('c|&Sky Might Fall|');
 		}, */
 		selfSwitch: true,
 		secondary: false,
@@ -16392,6 +16392,32 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+	},
+
+	// Irraquated
+	"unluckymate": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "unluckymate",
+		name: "Unlucky Mate",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]darkpulse');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%Irraquated|Oof, unlucky mate.');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Dark",
 	},
 
 	// iSandman
@@ -16744,61 +16770,29 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Imp Fallen Blood
-	"jetgattling": {
+	// Otami
+	"whatdoyoumean": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 110,
 		category: "Special",
-		id: "jetgattling",
-		name: "Jet Gattling",
-		pp: 10,
+		id: "whatdoyoumean",
+		name: "What Do You Mean",
+		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hyperspacefury');
+			this.attrLastMove('[anim]solarbeam');
 		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hyperspacefury');
-		},
-		/* no quote
 		onHit: function (target, source, move) {
-			this.add('c|+Imp Fallen Blood|');
-		}, */
+			this.add("c|+Otami|what do you mean fam?");
+		},
 		secondary: {
-			chance: 60,
-			boosts: {
-				spd: -2,
-			},
+			chance: 30,
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Grass",
-	},
-
-	// Irraquated
-	"unluckymate": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		id: "unluckymate",
-		name: "Unlucky Mate",
-		pp: 15,
-		priority: 1,
-		flags: {protect: 1, mirror: 1, heal: 1},
-		drain: [1, 2],
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
-		},
-		onHit: function (target, source, move) {
-			this.add('c|+Irraquated|Oof, unlucky mate.');
-		},
-		secondary: false,
-		target: "normal",
-		type: "Dark",
 	},
 
 	// Piscean
@@ -16908,6 +16902,37 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "target",
 		type: "Normal",
+	},
+
+	// Imp Fallen Blood
+	"jetgattling": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		id: "jetgattling",
+		name: "Jet Gattling",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		/* no quote
+		onHit: function (target, source, move) {
+			this.add('c|+Imp Fallen Blood|');
+		}, */
+		secondary: {
+			chance: 60,
+			boosts: {
+				spd: -2,
+			},
+		},
+		target: "normal",
+		type: "Grass",
 	},
 
 	// Mr. CGTNathan
@@ -17022,7 +17047,7 @@ exports.BattleMovedex = {
 		type: "Bird",
 	},
 
-	// Piers Niνаns
+	// Omega Nivans
 	"antimaterialrifle": {
 		isNonstandard: true,
 		accuracy: 100,
@@ -17072,7 +17097,7 @@ exports.BattleMovedex = {
 		onHit: function (target, source, move) {
 			move.onPrepareHit.call(this, target, source, move);
 			delete move.typeList[move.type];
-			this.add('c|&Piers Niνаns|HQ! We have a Type 5 Mutation! Anti-Material Rifle, locked and loaded!');
+			this.add('c|Omega Nivans|HQ! We have a Type 5 Mutation! Anti-Material Rifle, locked and loaded!');
 		},
 		secondary: false,
 		target: "normal",
@@ -17100,7 +17125,7 @@ exports.BattleMovedex = {
 			this.useMove('spikes', target);
 		},
 		secondary: false,
-		target: "self",
+		target: "target",
 		type: "Ground",
 	},
 };

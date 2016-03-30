@@ -65,7 +65,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'dragonstrike', signatureMove: "Dragon Strike",
 				evs: {hp:4, atk:252, spe: 252}, nature: 'Jolly',
 			},
-			'&SaNeski': { // (mega ability) cursedaura
+			'&Sky Might Fall': { // (mega ability) cursedaura
 				species: 'Gyarados', ability: 'Intimidate', item: 'Gyaradosite', gender: 'M',
 				moves: ['crabhammer', ['suckerpunch', 'pursuit', 'nightslash'][this.random(3)], ['focusenergy', 'dragondance'][this.random(2)]],
 				baseSignatureMove: 'silentdeparture', signatureMove: "Silent Departure",
@@ -138,6 +138,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
 			},
+			'%Irraquated': {
+				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
+				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
+				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
+				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
+			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
 				moves: ['rockpolish', 'sludgewave', 'psychic'],
@@ -194,17 +200,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
-			'+Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
-				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
-				moves: ['aeroblast', 'aurasphere', 'earthpower'],
-				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
-			},
-			'+Irraquated': {
-				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
-				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
-				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
-				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
+			'+Otami': {
+				species: 'Vileplume', ability: 'Senpai', item: 'Black Sludge', gender: 'M',
+				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],
+				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
+				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
 			},
 			'+Piscean': { // (type) normal/ghost
 				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
@@ -225,6 +225,12 @@ exports.BattleScripts = {
 				moves: ['bellydrum', 'drainpunch', 'pursuit'],
 				baseSignatureMove: 'ebat', signatureMove: '/ebat',
 				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
+			},
+			' Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
+				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
+				moves: ['aeroblast', 'aurasphere', 'earthpower'],
+				baseSignatureMove: 'jetgattling', signatureMove: "Jet Gattling",
+				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			' Mr. CGTNathan': {
 				species: 'Cofagrigus', ability: 'Graveyard', item: 'Leftovers', gender: 'M',

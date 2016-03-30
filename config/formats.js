@@ -246,7 +246,7 @@ exports.Formats = [
 		desc: [
 			"Monotype format up until before ORAS",
 			"&bullet; <a href=\"http://pastebin.com/qfpLMWiR\">Bans & Unbans</a>",
-			"Message user: SaNeski, if you notice any irregularities or have something to contribute",
+			"Message user: Sky Might Fall, if you notice any irregularities or have something to contribute",
 		],
 		section: "Monotype Tier",
 		mod: 'xy',
@@ -858,7 +858,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'saneski' && pokemon.getAbility().id === 'moldbreaker') {
+				if (name === 'skynightfall' && pokemon.getAbility().id === 'moldbreaker') {
 					pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id === 'toughclaws') {
@@ -907,7 +907,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'saneski' && pokemon.getAbility().id !== 'cursedaura') {
+				if (name === 'skynightfall' && pokemon.getAbility().id !== 'cursedaura') {
 					// pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id !== 'dragonsfire') {
@@ -991,8 +991,8 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|Time for moderation to take its course and slay all the misbehaving Dragons!');
 			}
 			/* no quote
-			if (name === 'saneski') {
-				this.add('c|&SaNeski|');
+			if (name === 'skynightfall') {
+				this.add('c|&Sky Might Fall|');
 			} */
 
 			// Mods
@@ -1028,6 +1028,9 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
 			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|Oh so you\'re the guy...');
+			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|ENTER SANDMAN');
 			}
@@ -1054,11 +1057,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|+Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
-			}
-			if (name === 'irraquated') {
-				this.add('c|+Irraquated|Oh so you\'re the guy...');
+			if (name === 'otami') {
+				this.add('c|+Otami|hi fam! how are you? :3c');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
@@ -1070,6 +1070,9 @@ exports.Formats = [
 			// Others
 			if (name === 'gnarlycommie') {
 				this.add('c|Gnarly Commie|ok');
+			}
+			if (name === 'impfallenblood') {
+				this.add('c|Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
 			}
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|Welcome to Origin Super Smash Bros, may I show you the door?');
@@ -1120,8 +1123,8 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
 			}
 			/* no quote
-			if (name === 'saneski') {
-				this.add('c|&SaNeski|');
+			if (name === 'skynightfall') {
+				this.add('c|&Sky Might Fall|');
 			} */
 
 			// Mods
@@ -1157,6 +1160,10 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
 			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|it was meant to be.');
+				this.add('c|%Irraquated|Six god is watching, I hope you\'re prepared to face him.');
+			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
 			}
@@ -1184,12 +1191,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|I got cleaned');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|+Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
-			}
-			if (name === 'irraquated') {
-				this.add('c|+Irraquated|it was meant to be.');
-				this.add('c|+Irraquated|Six god is watching, I hope you\'re prepared to face him.');
+			if (name === 'otami') {
+				this.add('c|+Otami|feelsotami');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
@@ -1201,6 +1204,9 @@ exports.Formats = [
 			// Others
 			if (name === 'gnarlycommie') {
 				this.add('c|Gnarly Commie|ok');
+			}
+			if (name === 'impfallenblood') {
+				this.add('c|Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
 			}
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|__My ankle!__');
@@ -1252,8 +1258,8 @@ exports.Formats = [
 			if (name === 'mightysciz') {
 				this.add('c|&Mighty Sciz|Well... I will be back and face you again');
 			}
-			if (name === 'saneski') {
-				this.add('c|&SaNeski|Do not go gentle into that good night');
+			if (name === 'skynightfall') {
+				this.add('c|&Sky Might Fall|Do not go gentle into that good night');
 			}
 
 			// Mods
@@ -1289,6 +1295,9 @@ exports.Formats = [
 			if (name === 'hayleysworld') {
 				this.add('c|%hayleysworld|My bad memes will be back!');
 			}
+			if (name === 'irraquated') {
+				this.add('c|%Irraquated|I have to go make some vegemite toast brb lol');
+			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');
 			}
@@ -1316,11 +1325,8 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|you can get wet later ;)');
 			}
-			if (name === 'impfallenblood') {
-				this.add('c|+Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
-			}
-			if (name === 'irraquated') {
-				this.add('c|+Irraquated|I have to go make some vegemite toast brb lol');
+			if (name === 'otami') {
+				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
@@ -1333,6 +1339,9 @@ exports.Formats = [
 			if (name === 'gnarlycommie') {
 				this.add('c|Gnarly Commie|ok');
 			}
+			if (name === 'impfallenblood') {
+				this.add('c|Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
+			}
 			/* no quote
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|');
@@ -1341,7 +1350,7 @@ exports.Formats = [
 				this.add('c|nineage|');
 			}*/
 			if (name === 'omeganivans') {
-				this.add('c|&Omega Nivans|Tactical retreat!');
+				this.add('c|Omega Nivans|Tactical retreat!');
 			}
 			/* no quote
 			if (name === 'originserver') {
