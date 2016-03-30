@@ -179,8 +179,8 @@ Profile.prototype.title = function () {
 
 Profile.prototype.friendcode = function () {
 	let fc = Db('FriencodeDB').get(toId(toId(this.user)));
-	if (Db('FriencodeDB').has(toId(this.user))) return label('Friendcode') + fc;
-	return label('Friendcode') + 'N/A';
+	if (Db('FriencodeDB').has(toId(this.user))) return label('Friendcode') + fc + BR + SPACE;
+	return '';
 };
 
 Profile.prototype.badges = function () {
@@ -205,7 +205,7 @@ Profile.prototype.show = function (callback) {
 		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.friendcode() + BR +
+		SPACE + this.friendcode() +
 		SPACE + this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };
 
