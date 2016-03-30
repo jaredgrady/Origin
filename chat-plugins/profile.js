@@ -225,6 +225,7 @@ Profile.prototype.checkBadges = function () {
 	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
 	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
 	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
+	if (this.user && this.user.isStaff) badges.push('staff');
 
 
 	let uniqueBadges = [];
