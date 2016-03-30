@@ -221,8 +221,15 @@ Profile.prototype.checkBadges = function () {
 	if (typeof badges === 'undefined' || badges === null) badges = [];
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
-	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
 	if (this.user && this.user.isStaff) badges.push('staff');
+	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
+	if (Db('rpsrank').get(this.user.userid, []) > 1500) badges.push('rpsmaster');
+	if (Db('dicewins').get(this.user.userid, []) > 1000) badges.push('Persistent!');
+	let total = 0;
+	for (let i = 0; i < Db('cards').get(userid, []).length; i++) {
+		total += Db('cards').get(userid, [])[i].points;
+	}
+	if (total >= 750) badges.push('Collector');
 
 
 	let uniqueBadges = [];
