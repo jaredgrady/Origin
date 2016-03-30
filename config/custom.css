@@ -2015,6 +2015,102 @@
   color: #555 !important; }
 
 /*alegiant exca*/
+/*omega exo*/
+.pm-window-omegaexo h3 {
+  background: rgba(48, 48, 48, 0.8) url("http://pldh.net/media/pokecons_action/028.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #DDD !important;
+  text-shadow: 0px 0px 2px #2C2D2F !important;
+  border-color: #844410 !important; }
+
+.pm-window-omegaexo h3:hover {
+  background: rgba(48, 48, 48, 0.9) url("http://pldh.net/media/pokecons_action/028.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #EEE !important;
+  text-shadow: 0px 0px 2px #2C2D2F !important;
+  border-color: #844410 !important; }
+
+.pm-window-omegaexo.focused h3, .pm-window-omegaexo.focused h3:hover {
+  background: rgba(83, 83, 83, 0.95) url("http://pldh.net/media/pokecons_action/028.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #FFF !important;
+  text-shadow: 0px 0px 2px #2C2D2F !important;
+  border-color: #844410 !important; }
+
+.pm-window-omegaexo h3 small {
+  color: #FFBF00 !important; }
+
+.pm-window-omegaexo h3 .minimizebutton, .dark .pm-window-omegaexo h3 .minimizebutton, .pm-window-omegaexo h3 .closebutton, .pm-window-omegaexo h3:hover .minimizebutton {
+  color: #BBB !important; }
+
+.pm-window-omegaexo h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-omegaexo h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #BBB !important; }
+
+.pm-window-omegaexo h3 .closebutton:hover {
+  color: #FFA4B6 !important; }
+
+.pm-window-omegaexo h3 .minimizebutton:hover, .dark .pm-window-omegaexo h3 .minimizebutton:hover {
+  color: #FFBF00 !important; }
+
+.pm-window-omegaexo .pm-log, .pm-window-omegaexo.focused .pm-log {
+  background: rgba(248, 248, 248, 0.95) url("http://i.imgur.com/aKpC5Bi.png") right no-repeat !important;
+  border-color: #844410 !important; }
+
+.pm-window-omegaexo .pm-log .chat small {
+  color: #1898D0 !important; }
+
+.pm-window-omegaexo .pm-log-add, .pm-window-omegaexo.focused .pm-log-add {
+  background: #777 !important;
+  border-color: #444 !important; }
+
+.pm-window-omegaexo .pm-log-add .textbox {
+  border-color: #555 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000; }
+
+.pm-window-omegaexo .pm-log-add .textbox:focus {
+  border-color: #1898D0 !important; }
+
+.pm-window-omegaexo h3.pm-notifying {
+  border-color: #0E76A2 !important;
+  background: #22A8E0 url("http://pldh.net/media/pokecons_action/028.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #2B4A68 !important;
+  text-shadow: !important;
+  font-style: italic; }
+
+.pm-window-omegaexo h3.pm-notifying:hover {
+  border-color: #0E76A2 !important;
+  background: #0897D4 url("http://pldh.net/media/pokecons_action/028.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #2B4A68 !important;
+  text-shadow: !important;
+  font-style: italic; }
+
+.pm-window-omegaexo .challenge {
+  background: #98E0F8 !important;
+  color: #2B4A68 !important;
+  border-color: #2B4A68 !important; }
+
+.pm-window-omegaexo .challenge .select, .pm-window-omegaexo .challenge .buttonbar button {
+  background: rgba(69, 120, 179, 0.8) !important;
+  border-color: #2B4A68 !important;
+  color: #98E0F8 !important;
+  text-shadow: 1px 1px 1px #2B4A68 !important; }
+
+.pm-window-omegaexo .challenge .select:hover, .pm-window-omegaexo .challenge .buttonbar button:hover {
+  background: rgba(69, 120, 179, 0.9) !important;
+  border-color: #2B4A68 !important; } 
+
+.pm-window-omegaexo .challenge .select:disabled {
+  background: rgba(69, 120, 179, 0.5) !important;
+  border-color: #2B4A68 !important; }
+
+.pm-window-omegaexo .challenge .teamselect:disabled strong {
+  color: #2B4A68 !important; }
+
+/* omega exo ~end */
+
 #lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
 
