@@ -120,7 +120,7 @@ exports.commands = {
 			output = '<table> <tr>';
 			for (let i = 0; i < badges.length; i++) {
 				output += '<td>' + badgeImg(badgeIcons[badges[i]], badges[i]) + '</td> <td>' + badges[i] + '</td> <td>' + badgeDescriptions[badges[i]] + '</td>';
-				if (i % 2 === 1) output +=  '</tr> <tr>';
+				if (i % 2 === 1) output += '</tr> <tr>';
 			}
 			output += '</tr> <table>';
 			this.sendReplyBox(output);
@@ -130,7 +130,7 @@ exports.commands = {
 			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 			badge = parts[1].trim();
 			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');
-			this.sendReply(badgeDescriptions[badge]);
+			this.sendReply(badge + ": " + badgeDescriptions[badge]);
 			break;
 		case 'take':
 			if (!this.can('lock')) return false;

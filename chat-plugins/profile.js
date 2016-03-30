@@ -167,13 +167,13 @@ Profile.prototype.vip = function () {
 
 Profile.prototype.dev = function () {
 	if (typeof this.user === 'string' && developers.indexOf(toId(this.user)) > -1) return ' (<font color=#980000><b>Origin Dev</b></font>)';
-	if (this.user && developers.indexOf(this.user.userid) > -1) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
+	if (this.user && developers.indexOf(this.user.userid) > -1) return ' (<font color=#980000><b>Origin Dev</b></font>)';
 	return '';
 };
 
 Profile.prototype.title = function () {
 	let title = Db('TitleDB').get(toId(toId(this.user)));
-	if (typeof title !== 'undefined' && title !== null)  return ' (<font color=#' + title[0] + '><b>' + Tools.escapeHTML(title[1]) + '</b></font>)';
+	if (typeof title !== 'undefined' && title !== null) return ' (<font color=#' + title[0] + '><b>' + Tools.escapeHTML(title[1]) + '</b></font>)';
 	return '';
 };
 
@@ -181,7 +181,7 @@ Profile.prototype.badges = function () {
 	let badges = Db('badgesDB').get(toId(toId(this.user)));
 	let css = 'border:none;background:none;padding:0;';
 	if (typeof badges !== 'undefined' && badges !== null) {
-		let output = ' <table style="' + css +  '"> <tr>';
+		let output = ' <table style="' + css + '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
 			if (i !== 0 && i % 4 === 0) output += '</tr> <tr>';
 			output += '<td><button style="' + css + '" name="send" value="/badges info, ' + badges[i] + '">' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</button></td>';
@@ -276,7 +276,7 @@ exports.commands = {
 			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to delete other people their custom title.");
 			if (!Db('TitleDB').has(userid)) return this.sendReply("This user does not have a custom title.");
 			Db('TitleDB').delete(userid);
-			this.sendReply("Usertitle  deleted.");
+			this.sendReply("Usertitle deleted.");
 			break;
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");
