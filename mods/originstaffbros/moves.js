@@ -16780,7 +16780,7 @@ exports.BattleMovedex = {
 		name: "What Do You Mean",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1},
+		flags: {protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]solarbeam');
 		},

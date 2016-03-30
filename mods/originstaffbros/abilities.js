@@ -3896,6 +3896,7 @@ exports.BattleAbilities = {
 	"shittiestuser": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
+			this.boost({spe:2}, pokemon);
 			let foeactive = pokemon.side.foe.active;
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
@@ -3904,7 +3905,6 @@ exports.BattleAbilities = {
 				} else {
 					this.add('-ability', pokemon, 'Shittiest User', '[of] ' + foeactive[i]);
 					this.boost({def:-1}, foeactive[i], pokemon);
-					this.boost({spe:2}, pokemon);
 				}
 			}
 		},
@@ -4027,7 +4027,8 @@ exports.BattleAbilities = {
 	// Otami
 	"senpai": {
 		isNonstandard: true,
-		onStart: function (pokemon, target) {
+		onStart: function (pokemon) {
+			this.boost({def:1, spd:1, spe:1});
 			let foeactive = pokemon.side.foe.active;
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
@@ -4035,14 +4036,12 @@ exports.BattleAbilities = {
 					this.add('-activate', foeactive[i], 'Substitute', 'ability: Senpai', '[of] ' + pokemon);
 				} else {
 					this.add('-ability', pokemon, 'Senpai', '[of] ' + foeactive[i]);
-					this.boost({def:1}, pokemon);
-					this.boost({spd:1}, pokemon);
 					this.boost({spd:-2}, foeactive[i], pokemon);
 				}
 			}
 		},
 		id: "senpai",
-		name: "Senpai",
+		name: "S-S-Senpai",
 	},
 
 	// Piscean

@@ -201,7 +201,7 @@ exports.BattleScripts = {
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 			'+Otami': {
-				species: 'Vileplume', ability: 'Senpai', item: 'Black Sludge', gender: 'M',
+				species: 'Vileplume', ability: 'S-S-Senpai', item: 'Black Sludge', gender: 'M',
 				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],
 				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
 				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
@@ -272,7 +272,7 @@ exports.BattleScripts = {
 				});
 				let monName;
 				for (let mon in sets) {
-					if (toId(mon) === userid || (userid === "jigglykongisfum16" && toId(mon) === "sotahigurashi")) {
+					if (toId(mon) === userid || (userid === "jigglykong" && toId(mon) === "sotahigurashi")) {
 						monName = mon;
 						break;
 					}
