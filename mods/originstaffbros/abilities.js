@@ -4025,7 +4025,7 @@ exports.BattleAbilities = {
 	},
 
 	// Otami
-	"senpai": {
+	"sssenpai": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
 			this.boost({def:1, spd:1, spe:1});
@@ -4033,14 +4033,14 @@ exports.BattleAbilities = {
 			for (let i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
 				if (foeactive[i].volatiles['substitute']) {
-					this.add('-activate', foeactive[i], 'Substitute', 'ability: Senpai', '[of] ' + pokemon);
+					this.add('-activate', foeactive[i], 'Substitute', 'ability: S-S-Senpai', '[of] ' + pokemon);
 				} else {
-					this.add('-ability', pokemon, 'Senpai', '[of] ' + foeactive[i]);
+					this.add('-ability', pokemon, 'S-S-Senpai', '[of] ' + foeactive[i]);
 					this.boost({spd:-2}, foeactive[i], pokemon);
 				}
 			}
 		},
-		id: "senpai",
+		id: "sssenpai",
 		name: "S-S-Senpai",
 	},
 
