@@ -39,15 +39,19 @@ function wikiaSearch(subdomain, query, callback) {
 exports.commands = {
 	ygo: 'yugioh',
 	yugioh: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.canBroadcast(true)) return;
 		let subdomain = 'yugioh';
 		let query = target.trim();
 
 		wikiaSearch(subdomain, query, (err, data) => {
+			if (!this.canBroadcast()) return;
 			if (err) {
 				if (err instanceof SyntaxError || err.message === 'Malformed data') {
-					if (!this.broadcasting) return this.sendReply("Error: something went wrong in the request: " + err.message);
+					if (!this.broadcasting) return this.sendReply("Error: Something went wrong in the request: " + err.message);
 					return room.add("Error: Something went wrong in the request: " + err.message).update();
+				} else if (err.message === 'Not found') {
+					if (!this.broadcasting) return this.sendReply("|raw|<div class=\"infobox\">No results found.</div>");
+					return room.addRaw("<div class=\"infobox\">No results found.</div>").update();
 				}
 				if (!this.broadcasting) return this.sendReply("Error: " + err.message);
 				return room.add("Error: " + err.message).update();
