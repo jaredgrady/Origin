@@ -12,7 +12,7 @@ const TaskMethods = {
 	view: function (room, user, message, topId) {
 		let display = "<center><font style='color: #11484F; text-shadow: 0px 0px 2px #96BFB8; font-weight: bold;'>Task List - " + room.title + "</font></center><br />" +
 			"<div style='max-height: 450px; overflow-y: scroll;'>" + // scrollable
-			"<center><table style='border: 1px solid #803C6F; border-collapse: collapse;'><tr><th style='border: 1px solid #803C6F; padding: 3px 8px; box-shadow: 1px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Task</th>" + // title for of the columns
+			"<center><table style='border: 1px solid #803C6F; border-collapse: collapse;'><tr><th style='box-shadow: 1px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Task</th>" + // title for of the columns
 			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>By</th>" +
 			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Assignee</th>" +
 			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Details</th>" +
