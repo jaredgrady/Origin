@@ -226,8 +226,8 @@ Profile.prototype.checkBadges = function () {
 	if (Db('rpsrank').get(this.user.userid, []) > 1500) badges.push('rpsmaster');
 	if (Db('dicewins').get(this.user.userid, []) > 1000) badges.push('Persistent!');
 	let total = 0;
-	for (let i = 0; i < Db('cards').get(userid, []).length; i++) {
-		total += Db('cards').get(userid, [])[i].points;
+	for (let i = 0; i < Db('cards').get(this.user.userid, []).length; i++) {
+		total += Db('cards').get(this.user.userid, [])[i].points;
 	}
 	if (total >= 750) badges.push('Collector');
 
