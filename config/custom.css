@@ -184,6 +184,63 @@
   font-weight: bold;
   text-align: center; }
 
+.tasks-th, .tasks-td {
+  border: 1px solid #803C6F;
+  padding: 3px 8px; }
+
+.tasks-th {
+  background: #FFE0A7;
+  color: #803C6F;
+  text-shadow: none;
+  font-style: italic; }
+
+.tasks-td:hover {
+  background: rgba(255, 255, 255, 0.3); }
+
+#selfassign-button {
+  background: #A5E6E6;
+  color: #074141;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #6BC1C1;
+  padding: 3px 7px; }
+
+#selfassign-button:hover {
+  background: #BDEBEB;
+  border: 1px solid #50B2B2; }
+
+#close-button {
+  background: #A6E6AD;
+  color: #07400F;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #6BC37A;
+  padding: 3px 7px; }
+
+#close-button:hover {
+  background: #BDECBE;
+  border: 1px solid #51B351; }
+
+#reopen-button {
+  background: #A6A6E6;
+  color: #070940;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #6B6BC3;
+  padding: 3px 7px; }
+
+#reopen-button:hover {
+  background: #BDBDEC;
+  border: 1px solid #5A51B3; }
+
+#delete-button {
+  background: #E6A6A6;
+  color: #400707;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #C36B6B;
+  padding: 3px 7px; }
+
+#delete-button:hover {
+  background: #ECBDBD;
+  border: 1px solid #B35151; }
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
@@ -2100,7 +2157,7 @@
 
 .pm-window-omegaexo .challenge .select:hover, .pm-window-omegaexo .challenge .buttonbar button:hover {
   background: rgba(69, 120, 179, 0.9) !important;
-  border-color: #2B4A68 !important; } 
+  border-color: #2B4A68 !important; }
 
 .pm-window-omegaexo .challenge .select:disabled {
   background: rgba(69, 120, 179, 0.5) !important;
@@ -2110,7 +2167,6 @@
   color: #2B4A68 !important; }
 
 /* omega exo ~end */
-
 #lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
 
