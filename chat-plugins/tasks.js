@@ -6,17 +6,18 @@
 "use strict";
 
 const uuid = require('uuid');
+let color = require('../config/color');
 
 const TaskMethods = {
 	view: function (room, user, message, topId) {
-		let display = "<center><b>Task List - " + room.title + "</b></center><br />" +
-			"<div style=\"max-height: 450px; overflow-y: scroll\">" + // scrollable
-			"<center><table border=\"1\"><tr><th>Task</th>" + // title for of the columns
-			"<th>By</th>" +
-			"<th>Assignee</th>" +
-			"<th>Details</th>" +
-			"<th>Date</th>" +
-			"<th>Actions</th><tr>"; // finish defining the table
+		let display = "<center><font style='color: #11484F; text-shadow: 0px 0px 2px #96BFB8; font-weight: bold;'>Task List - " + room.title + "</font></center><br />" +
+			"<div style='max-height: 450px; overflow-y: scroll;'>" + // scrollable
+			"<center><table style='border: 1px solid #803C6F; border-collapse: collapse;'><tr><th style='border: 1px solid #803C6F; padding: 3px 8px; box-shadow: 1px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Task</th>" + // title for of the columns
+			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>By</th>" +
+			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Assignee</th>" +
+			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Details</th>" +
+			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Date</th>" +
+			"<th style='box-shadow: -1px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Actions</th><tr>"; // finish defining the table
 		// get the details
 		let taskList = Db("tasks").get(room.id, {});
 
@@ -35,18 +36,18 @@ const TaskMethods = {
 			if (!task) continue;
 
 			// task action buttons
-			const selfAssignTask = '<button name="send" value="/task selfassign ' + room.id + ", " + task.id + '" style="background-color:lightblue;width:75px">Self Assign</button><br />';
-			const deleteTask = '<button name="send" value="/task delete ' + room.id + ", "  + task.id + '" style="background-color:red;width:75px"><font color="white">Delete</font></button><br />';
-			const completeTask = '<button name="send" value="/task complete ' + room.id + ", "  + task.id + '" style="background-color:green;width:75px"><font color="white">Close</font></button><br />';
-			const reopenTask = '<button name="send" value="/task reopen ' + room.id + ", "  + task.id + '" style="background-color:blue;width:75px"><font color="white">Reopen</font></button><br />';
+			const selfAssignTask = '<button name="send" value="/task selfassign ' + room.id + ', ' + task.id + '" id="selfassign-button">Self Assign</button><br />';
+			const deleteTask = '<button name="send" value="/task delete ' + room.id + ', '  + task.id + '" id="delete-button">Delete</font></button><br />';
+			const completeTask = '<button name="send" value="/task complete ' + room.id + ', '  + task.id + '" id="close-button">Close</font></button><br />';
+			const reopenTask = '<button name="send" value="/task reopen ' + room.id + ', '  + task.id + '" id="reopen-button">Reopen</font></button><br />';
 
 			display += "<tr>" +
-				"<td><center>" + Tools.escapeHTML(task.name) + '<br /><font color="gray">(ID: ' + task.id + ')</font></center></td>' + // task id
-				"<td><center>" + Tools.escapeHTML(task.by) + "</center></td>" +
-				"<td><center>" + Tools.escapeHTML(task.assignee || "None") + "</center></td>" +
-				"<td width=\"30%\">- " + task.details.map(l => Tools.escapeHTML(l)).join("<br />- ") + "</td>" +
-				"<td><center>" + task.status + (task.status !== "Closed" ? "<br /><font color=\"gray\">(Pending)</font>" : "") + "</center></td>" + // simple details
-				"<td>" + (task.status !== "Closed" && (!task.assignee || toId(task.assignee) !== user.userid) ? selfAssignTask : "") + (task.status !== "Closed" ? completeTask : reopenTask) + deleteTask + // determine which buttons
+				"<td style='box-shadow: 1px 0px rgba(0, 0, 0, 0.2) inset;' class='tasks-td'><center>" + Tools.escapeHTML(task.name) + '<br /><font color="gray">(ID: ' + task.id + ')</font></center></td>' + // task id
+				"<td class='tasks-td'><center><b><font color='" + Tools.escapeHTML(color(task.by)) + "'>" + Tools.escapeHTML(task.by) + "</font></b></center></td>" +
+				"<td class='tasks-td'><center><b><font color='" + Tools.escapeHTML(color(task.assignee)) + "'>" + Tools.escapeHTML(Tools.escapeHTML(task.assignee) || "None") + "</font></b></center></td>" +
+				"<td class='tasks-td' width='30%'>- " + task.details.map(l => Tools.escapeHTML(l)).join("<br />- ") + "</td>" +
+				"<td class='tasks-td'><center>" + task.status + (task.status !== "Closed" ? "<br /><font color='gray'>(Pending)</font>" : "") + "</center></td>" + // simple details
+				"<td style='box-shadow: -1px 0px rgba(0, 0, 0, 0.2) inset;' class='tasks-td'>" + (task.status !== "Closed" && (!task.assignee || toId(task.assignee) !== user.userid) ? selfAssignTask : "") + (task.status !== "Closed" ? completeTask : reopenTask) + deleteTask + // determine which buttons
 				"</td><tr>"; // finish the row
 		}
 		// finish the table
