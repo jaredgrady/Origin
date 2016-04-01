@@ -75,6 +75,7 @@ let roomIntro = function (i) {
 };
 
 exports.commands = {
+/*
 	stafflist: 'authority',
 	auth: 'authority',
 	authlist: 'authority',
@@ -101,7 +102,7 @@ exports.commands = {
 		if (!buffer.length) buffer = "This server has no auth.";
 		connection.popup(buffer.join("\n\n"));
 	},
-
+*/
 	//Lots of these
 	afk: 'away',
 	busy: 'away',
