@@ -50,8 +50,16 @@ function alertStaff(msg) {
  * @param {Number} amount
  * @returns {String}
  */
+
+/*
 global.currencyName = function (amount) {
 	let name = " buck";
+	return amount === 1 ? name : name + "s";
+};
+*/
+
+global.currencyName = function (amount) {
+	let name = " frost buck";
 	return amount === 1 ? name : name + "s";
 };
 

@@ -37,6 +37,7 @@ let commands = exports.commands = {
 		this.sendReplyBox("Server version: <b>" + CommandParser.package.version + "</b>");
 	},
 
+/*
 	auth: 'authority',
 	stafflist: 'authority',
 	globalauth: 'authority',
@@ -71,6 +72,15 @@ let commands = exports.commands = {
 		connection.popup(buffer.join("\n\n"));
 	},
 	authhelp: ["/auth - Show global staff for the server."],
+*/
+
+	auth: 'authority',
+	stafflist: 'authority',
+	globalauth: 'authority',
+	authlist: 'authority',
+	authority: function (target, room, user) {
+		user.popup('~Administrators (5):\ncolonial mustang, jd, kupo, piiiikachuuu, Tailz\n\n@Moderators (7):\nChief Sokka, docG, Félicette, Ghetto Ghetsis, Giegue, panpawn, Shrek Bot\n\n%Drivers (7):\n13490ufd, AM E4 Shag, Blck rbbt, Family♥Man♥TPSN, Isawa, M4R1JN, Not Orangejuice, \n\n+Voices (16):\nall falls down, BrittleWind, Cashier, Castformz, FarNeo 2, Flippy456, jolteon64, KGBeast, Lights, mpea, Roseybear, shourai, SuperJeenius, TridentSmash!, Truedrew, Vanitas\n');
+	},
 
 	pixilate: function (target, room, user, connection, cmd) {
 		// if user is admin AND dev; this is to prevent admins from trolling.
