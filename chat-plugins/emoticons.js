@@ -20,6 +20,7 @@ let emotes = {
 	'feelsapple': 'http://i.imgur.com/h42wGYF.gif',
 	'feelsarken': 'http://imgur.com/YCCDZWq.png',
 	'feelsasl': 'http://i.imgur.com/ZQbYp9l.gif',
+	'feelsbald': 'http://i.imgur.com/Gv2BFxs.png',
 	'feelsbebop': 'http://i.imgur.com/TDwC3wL.png',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
 	'feelsbirb': 'http://i.imgur.com/o4KxmWe.png',
