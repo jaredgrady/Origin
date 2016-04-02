@@ -12,6 +12,11 @@ if (!Rooms.global.Poll) {
 				voters: [],
 			};
 		},
+		onConnect: function (user, connection, chatroom) {
+			if (!connection) connection = user;
+			let roomId = toId(chatroom);
+			connection.sendTo(Rooms.global.Poll[roomId], '|raw|<div style="width: 100%; border: 1px solid #000;">' + Rooms.global.Poll[roomId].display + '</div>');
+		},
 		splint: function (target) {
 			let parts = target.split(',');
 			let len = parts.length;
@@ -157,6 +162,7 @@ exports.commands = {
 		if (!Poll[room.id]) Poll.reset(room.id);
 		if (!Poll[room.id].question) return this.sendReply("There is no poll currently going on in this room.");
 		if (!target) return this.parse('/help vote');
+		if (user.userid.substr(0, 5) === 'guest') return this.errorReply('You must be logged in to vote in a poll.');
 		if (Poll[room.id].optionList.indexOf(target.toLowerCase()) === -1) return this.sendReply("'" + target + "' is not an option for the current poll.");
 
 		let ips = JSON.stringify(user.ips);
