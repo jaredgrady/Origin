@@ -142,6 +142,7 @@ global.LOGS_DIR = (process.env.OPENSHIFT_DATA_DIR) ? (process.env.OPENSHIFT_DATA
 
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
+Verifier.PM.spawn();
 
 global.CommandParser = require('./command-parser.js');
 

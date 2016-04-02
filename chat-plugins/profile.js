@@ -167,13 +167,19 @@ Profile.prototype.vip = function () {
 
 Profile.prototype.dev = function () {
 	if (typeof this.user === 'string' && developers.indexOf(toId(this.user)) > -1) return ' (<font color=#980000><b>Origin Dev</b></font>)';
-	if (this.user && developers.indexOf(this.user.userid) > -1) return  ' (<font color=#980000><b>Origin Dev</b></font>)';
+	if (this.user && developers.indexOf(this.user.userid) > -1) return ' (<font color=#980000><b>Origin Dev</b></font>)';
 	return '';
 };
 
 Profile.prototype.title = function () {
 	let title = Db('TitleDB').get(toId(toId(this.user)));
-	if (typeof title !== 'undefined' && title !== null)  return ' (<font color=#' + title[0] + '><b>' + Tools.escapeHTML(title[1]) + '</b></font>)';
+	if (typeof title !== 'undefined' && title !== null) return ' (<font color=#' + title[0] + '><b>' + Tools.escapeHTML(title[1]) + '</b></font>)';
+	return '';
+};
+
+Profile.prototype.friendcode = function () {
+	let fc = Db('FriencodeDB').get(toId(toId(this.user)));
+	if (Db('FriencodeDB').has(toId(this.user))) return label('Friendcode') + fc + BR + SPACE;
 	return '';
 };
 
@@ -181,12 +187,10 @@ Profile.prototype.badges = function () {
 	let badges = Db('badgesDB').get(toId(toId(this.user)));
 	let css = 'border:none;background:none;padding:0;';
 	if (typeof badges !== 'undefined' && badges !== null) {
-		let output = ' <table style="' + css +  '"> <tr>';
+		let output = ' <table style="' + css + '"> <tr>';
 		for (let i = 0; i < badges.length; i++) {
-			if (i !== 0 && i % 4 === 0) {
-				output += '</tr> <tr>';
-			}
-			output += '<td>' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</td>';
+			if (i !== 0 && i % 4 === 0) output += '</tr> <tr>';
+			output += '<td><button style="' + css + '" name="send" value="/badges info, ' + badges[i] + '">' + badgeImg(badgePlugin.badgeIcons[badges[i]], badges[i]) + '</button></td>';
 		}
 		output += '</tr> </table>';
 		return output;
@@ -201,7 +205,8 @@ Profile.prototype.show = function (callback) {
 		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
+		SPACE + this.friendcode() +
+		this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };
 
 /**
@@ -216,10 +221,15 @@ Profile.prototype.checkBadges = function () {
 	if (typeof badges === 'undefined' || badges === null) badges = [];
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
+	if (this.user && this.user.isStaff) badges.push('staff');
 	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
-	if (this.user && toId(this.username) === 'niisama') badges.push('weeb');
-	if (this.user && toId(this.username) === 'sparkychild') badges.push('Cute Fox');
-	if (this.user && toId(this.username) === 'creaturephil') badges.push('Meme Lord');
+	if (Db('rpsrank').get(this.user.userid, []) > 1500) badges.push('rpsmaster');
+	if (Db('dicewins').get(this.user.userid, []) > 1000) badges.push('Persistent!');
+	let total = 0;
+	for (let i = 0; i < Db('cards').get(this.user.userid, []).length; i++) {
+		total += Db('cards').get(this.user.userid, [])[i].points;
+	}
+	if (total >= 750) badges.push('Collector');
 
 
 	let uniqueBadges = [];
@@ -233,6 +243,7 @@ exports.commands = {
 	profile: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
+		if (target.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 		let targetUser = this.targetUserOrSelf(target);
 		let profile;
 		if (!targetUser) {
@@ -278,7 +289,7 @@ exports.commands = {
 			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to delete other people their custom title.");
 			if (!Db('TitleDB').has(userid)) return this.sendReply("This user does not have a custom title.");
 			Db('TitleDB').delete(userid);
-			this.sendReply("Usertitle  deleted.");
+			this.sendReply("Usertitle deleted.");
 			break;
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customtitle set, user, color, title`.");

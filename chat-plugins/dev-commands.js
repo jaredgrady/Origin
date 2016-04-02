@@ -58,6 +58,10 @@ exports.commands = {
 	},
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
 
+	caledrith: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.parse('!data purrloin');
+	},
 
 	ddeclare: 'devdeclare',
 	devdeclare: function (target, room, user) {
@@ -130,6 +134,20 @@ exports.commands = {
 		this.parse('/eval require("' + target + '")');
 	},
 	reloadfilehelp: ["/reloadfile [file directory] - Reloads a file. Requires system operator status."],
+
+	renamechatroom: function (target, room, user) {
+		if (!this.can('declare')) return this.errorReply('/renamechatroom - Access denied.');
+		if (!target) return this.parse('/help renamechatroom');
+		if (target.includes(',') || target.includes('|') || target.includes('[') || target.includes('-')) {
+			return this.errorReply("Room titles can't contain any of: ,|[-");
+		}
+		let id = toId(target);
+		if (Rooms.search(id)) return this.errorReply("The room '" + target + "' already exists.");
+		room.chatRoomData.title = target;
+		Rooms.global.writeChatRoomData();
+		room.add('|title|' + target);
+	},
+	renamechatroomhelp: ["/renamechatroom [new name] - Renames the current chatroom. Requires &"],
 
 	seticon: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");

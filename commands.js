@@ -19,7 +19,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const parseEmoticons = require('./chat-plugins/emoticons').parseEmoticons;
-global.developers = ['fender', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen']; //sys developers
+global.developers = ['fender', 'nineage', 'irraquated', 'masterfloat', 'gnarlycommie', 'sparkychild', 'aurastormlucario', 'littlevixen', 'niisama']; //sys developers
 const developersIPs = [];
 const dir = fs.readdirSync(path.resolve(__dirname, 'chat-plugins'));
 const logMessage = require('./logger').logMessage;
@@ -1053,7 +1053,7 @@ let commands = exports.commands = {
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
 		if (targetUser in room.users || user.can('lock')) {
 			targetUser.popup(
-				"|html|<p>" + Tools.escapeHTML(user.name) + " has banned you from the room " + room.id + ".</p>" + (target ? "<p>Reason: " + Tools.escapeHTML(target) + "</p>"  : "") +
+				"|html|<p>" + Tools.escapeHTML(user.name) + " has banned you from the room " + room.id + ".</p>" + (target ? "<p>Reason: " + Tools.escapeHTML(target) + "</p>" : "") +
 				"<p>To appeal the ban, PM the staff member that banned you" + (room.auth ? " or a room owner. </p><p><button name=\"send\" value=\"/roomauth " + room.id + "\">List Room Staff</button></p>" : ".</p>")
 			);
 		}
@@ -1772,9 +1772,7 @@ let commands = exports.commands = {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
 		if (!this.canTalk()) return;
-
-		if (target.length > 500 && room.id !== 'staff') return this.sendReply('Your declare cannot exceed 500 characters for stability reasons.');
-		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
+		this.add('|raw|<div class="broadcast-blue" style="border-radius: 5px; max-height: 300px; overflow-y: scroll"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
 	},
 	declarehelp: ["/declare [message] - Anonymously announces a message. Requires: # & ~"],
@@ -1799,7 +1797,7 @@ let commands = exports.commands = {
 		if (!target) return;
 
 		for (let id in Rooms.rooms) {
-			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>' + target + '</b></div>');
+			if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px; max-height: 300px; overflow-y: scroll;"><b>' + target + '</b></div>');
 		}
 		this.logModCommand(user.name + " globally declared " + target);
 	},
@@ -2029,6 +2027,14 @@ let commands = exports.commands = {
 
 		if (target === 'chat' || target === 'commands') {
 			try {
+				const ProcessManagers = require('./process-manager').cache;
+				for (let PM of ProcessManagers.keys()) {
+					if (PM.isChatBased) {
+						PM.unspawn();
+						ProcessManagers.delete(PM);
+					}
+				}
+
 				CommandParser.uncacheTree('./command-parser.js');
 				delete require.cache[require.resolve('./commands.js')];
 				delete require.cache[require.resolve('./chat-plugins/info.js')];

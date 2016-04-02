@@ -378,7 +378,7 @@ exports.commands = {
 						newParams.push(m);
 					}
 
-					let style = (parts.indexOf(m) > -1  ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\""); // button style checking if currently searching
+					let style = (parts.indexOf(m) > -1 ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\""); // button style checking if currently searching
 
 					return '<button name="send" value="/searchcard category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
 				}).join("&nbsp;") + "<br />";
@@ -626,7 +626,7 @@ exports.commands = {
 						return i > 0 && i <= range.length;
 					});
 					// build middle buttons
-					middle = (displayRange[0] !== 1 ? "... " :  "") + displayRange.map(n => {
+					middle = (displayRange[0] !== 1 ? "... " : "") + displayRange.map(n => {
 						n = parseInt(n);
 						let style = n === target ? "background-color:deepskyblue;height:30px;width:30px" : "background-color:aliceblue;height:30px;width:30px";
 						return '<button style="' + style + '" name="send" value="/viewcardtrades ' + n + '">' + (n + 1) + '</button>';

@@ -46,11 +46,11 @@ fender - Gible
 - Movepool: Dragon Dance, Belly Drum, Fire Punch, Flare Blitz, Shadow Claw, Double-Edge, Roost
 - Notes: A frightening revenge killer that is capable of sweeping as well, be afraid if you see the Dragon dance + Roost set. The recoil can prevent it from sweeping as effectively, but still very dangerous.
 
-&SaNeski - Gyarados-Mega
+&Sky Might Fall - Gyarados-Mega
 - Ability: Cursed Aura - Opponent takes 15% on entry and exit of this Pokémon
 - Move: Silent Departure - 100 BP Dark type U-turn
 - Movepool: Sucker Punch, Night Slash, Crabhammer, Pursuit, Focus Energy, Dragon Dance
-- Notes:  100 BP STAB U-turn, plus all the damage from Cursed Aura really tears holes through teams, so be very careful! It will be switching around a LOT.
+- Notes: 100 BP STAB U-turn, plus all the damage from Cursed Aura really tears holes through teams, so be very careful! It will be switching around a LOT.
 
 @Alpha Ninja - Slowbro-Mega
 - Ability: Mega Poison - Poison Heal + Poisons on entry + moves never miss
@@ -112,6 +112,12 @@ fender - Gible
 - Movepool: Protect, Moonblast, Ice Beam
 - Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
 
+%Irraquated - Greninja
+- Ability: woops lmao - Protean + Adaptability
+- Move: Unlucky Mate - Priority +1 Dark type move with 100BP, Heals 50% of damage dealt.
+- Movepool: Hydropump, Boomburst, Secret Sword, Thunderbolt, Ice Beam, Moonblast
+- Notes: Hits many pokemon, extremely hard with a full STAB Adaptability Boosted movepool of incredibly Powerful moves. Can recover a lot of health by taking out opponents, although it won't be living many hits. And neither will anything facing it.
+
 %iSandman - Landorus-Incarnate
 - Ability: God's Force - Sheer Force
 - Move: Mega Earth Fissure - 110 BP special, ground type attack, with secondary effects, hits non grounded pokemon for 1.5x damage.
@@ -160,17 +166,11 @@ fender - Gible
 - Movepool: Ice Beam, Extrasensory, Dark Pulse
 - Notes: Despite having no reliable recovery, if this pokemon gets too many boosts, few Pokmeon can stop it, from hitting hard and fast. Great, full STAB coverage makes it hard to take hits from this Pokemon.
 
-+Imp Fallen Blood - Sceptile-Mega (Grass/Flying)
-- Ability: Pirate - Trace + Gastro Acid
-- Move: Jet Gattling - 120 BP special Grass type move, 60% of lowering special defense by 2 stages.
-- Movepool: Aeroblast, Aura Sphere, Earth Power
-- Notes: A unique pokemon in this format, acting as a check to many water types, and a good wallbreaker if used right. Can really take advantage of a lot of pokemon in the tier by taking their abilities away, and using it itself. 
-
-+Irraquated - Greninja
-- Ability: woops lmao - Protean + Adaptability
-- Move: Unlucky Mate - Priority +1 Dark type move with 100BP, Heals 50% of damage dealt.
-- Movepool: Hydropump, Boomburst, Secret Sword, Thunderbolt, Ice Beam, Moonblast
-- Notes: Hits many pokemon, extremely hard with a full STAB Adaptability Boosted movepool of incredibly Powerful moves. Can recover a lot of health by taking out opponents, although it won't be living many hits. And neither will anything facing it.
++Otami - Vileplume
+- Ability: s-s-senpai - Raises SpDef and Def by 1 stage, lowers opponent's SpDef by 2 Stages, and causes Infatuation on entry.
+- Move: what do you mean - 110 BP Special Grass Move. 30% chance to confuse the target.
+- Movepool: Spore, Nasty Plot, Sludge Bomb, Psychic 
+- Notes: It's a fantastic wallbreaker, with a STAB 110 BP Move, and against lowered Special Defense, it can obliterate opponents if they're not ready. It can also take some hits, giving it more durability and more potential to kill. It has a setup option in Nasty Plot, and Spore as well put threats to sleep, and infatuation with chance to confuse can really be game changing. It's an answer to many of the bulky Water types in the tier, and if used right, can be a cute destructiveflower.
 
 +Piscean - Miltank (Normal/Ghost type)
 - Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on entry
@@ -189,6 +189,12 @@ Gnarly Commie - Munchlax
 - Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, +2 Priority, and bypasses protect.
 - Movepool: Belly Drum, Pursuit, Drain Punch
 - Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
+
+Imp Fallen Blood - Sceptile-Mega (Grass/Flying)
+- Ability: Pirate - Trace + Gastro Acid
+- Move: Jet Gattling - 120 BP special Grass type move, 60% of lowering special defense by 2 stages.
+- Movepool: Aeroblast, Aura Sphere, Earth Power
+- Notes: A unique pokemon in this format, acting as a check to many water types, and a good wallbreaker if used right. Can really take advantage of a lot of pokemon in the tier by taking their abilities away, and using it itself. 
 
 Mr. CGTNathan - Cofagrigus
 - Ability: Graveyard - Trick room is active when this Pokémon is on the field, completely reverses priority.
