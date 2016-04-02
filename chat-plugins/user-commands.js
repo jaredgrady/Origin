@@ -451,7 +451,7 @@ exports.commands = {
 		}
 
 		let userid = toId(this.targetUsername);
-		if (userid.length >= 19 || userid.length < 3) return this.popupReply("\"" + this.targetUsername + "\" is not a legal username.");
+		if (userid.length >= 19) return this.popupReply("\"" + this.targetUsername + "\" is not a legal username.");
 
 		let sendSuccess = Tells.addTell(user, userid, target);
 		if (!sendSuccess) {
