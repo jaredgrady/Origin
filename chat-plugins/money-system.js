@@ -188,7 +188,6 @@ exports.commands = {
 		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 bucks at a time.");
 		if (user.userid === username && !this.can('bypassall')) return this.errorReply("no");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		if (username.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 
 		if (typeof amount === 'string') return this.errorReply(amount);
 
@@ -216,7 +215,6 @@ exports.commands = {
 		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 bucks at a time.");
 		if (amount > Db('money').get(uid)) return this.sendReply("The user's total money is less than " + amount + ".");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		if (username.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 
 		if (typeof amount === 'string') return this.sendReply(amount);
 
@@ -253,7 +251,6 @@ exports.commands = {
 
 		if (toId(username) === user.userid) return this.sendReply("You cannot transfer to yourself.");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-		if (username.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (amount > Db('money').get(user.userid, 0)) return this.errorReply("You cannot transfer more money than what you have.");
 		if (!Users.get(username) && cmd !== 'forcetransfer') return this.errorReply('The target user could not be found');
