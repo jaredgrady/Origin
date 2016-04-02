@@ -10,6 +10,7 @@ exports.parseEmoticons = parseEmoticons;
 let emotes = {
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
 	'4Head': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0',
+	'Cate': 'http://i.imgur.com/728AQQN.jpg',
 	'DansGame': 'https://static-cdn.jtvnw.net/emoticons/v1/33/1.0',
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
 	'EleGiggle': 'https://static-cdn.jtvnw.net/emoticons/v1/4339/2.0',
