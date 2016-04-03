@@ -33,7 +33,7 @@ global.Cynesthesia = require("./hentai-server.js");
 let commands = exports.commands = {
 
 	version: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox("Server version: <b>" + CommandParser.package.version + "</b>");
 	},
 
@@ -641,7 +641,7 @@ let commands = exports.commands = {
 
 	roomdesc: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
 			if (!room.desc) return this.sendReply("This room does not have a description set.");
 			this.sendReplyBox("The room description is: " + room.desc.replace(re, '<a href="$1">$1</a>'));
@@ -666,7 +666,7 @@ let commands = exports.commands = {
 	topic: 'roomintro',
 	roomintro: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
 			if (room.id !== "lobby" && room.id !== "tournaments") {
 				this.sendReply('|raw|<div class="infobox">' + room.introMessage + '</div>');
@@ -742,7 +742,7 @@ let commands = exports.commands = {
 
 	roomalias: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!room.aliases || !room.aliases.length) return this.sendReplyBox("This room does not have any aliases.");
 			return this.sendReplyBox("This room has the following aliases: " + room.aliases.join(", ") + "");
 		}
@@ -2066,7 +2066,7 @@ let commands = exports.commands = {
 			}
 		} else if (target === 'battles') {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
-			Simulator.SimulatorProcess.reinit();
+			Simulator.SimulatorProcess.respawn();
 			return this.sendReply("Battles have been hotpatched. Any battles started after now will use the new code; however, in-progress battles will continue to use the old code.");
 		} else if (target === 'formats') {
 			try {
@@ -2080,7 +2080,7 @@ let commands = exports.commands = {
 				// respawn validator processes
 				TeamValidator.PM.respawn();
 				// respawn simulator processes
-				Simulator.SimulatorProcess.reinit();
+				Simulator.SimulatorProcess.respawn();
 				// broadcast the new formats list to clients
 				Rooms.global.send(Rooms.global.formatListText);
 
@@ -2391,7 +2391,8 @@ let commands = exports.commands = {
 
 	eval: function (target, room, user, connection) {
 		if (!~developers.indexOf(user.userid) && !this.can('hotpatch')) return this.errorReply("/eval - Access denied.");
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
+		if (!this.broadcasting) this.sendReply('||>> ' + target);
 		try {
 			let battle = room.battle;
 			let me = user;
@@ -2405,7 +2406,7 @@ let commands = exports.commands = {
 		if (!~developers.indexOf(user.userid)) {
 			return this.errorReply("/evalbattle - Access denied.");
 		}
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!room.battle) {
 			return this.errorReply("/evalbattle - This isn't a battle room.");
 		}

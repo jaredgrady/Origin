@@ -102,7 +102,7 @@ let Room = (() => {
 		// room.decision(), where room.constructor === BattleRoom.
 		message = CommandParser.parse(message, this, user, connection);
 
-		if (message && message !== true) {
+		if (message && message !== true && typeof message.then !== 'function') {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "To " + this.id, message);
 				connection.sendTo(this, '|c|' + user.getIdentity(this.id) + '|' + message);

@@ -113,11 +113,9 @@ function ipSearch(ip, table) {
 	return false;
 }
 function checkBanned(ip) {
-	if (!ip) return false;
 	return ipSearch(ip, bannedIps);
 }
 function checkLocked(ip) {
-	if (!ip) return false;
 	return ipSearch(ip, lockedIps);
 }
 Users.checkBanned = checkBanned;
@@ -439,6 +437,7 @@ class User {
 		this.chatQueue = null;
 		this.chatQueueTimeout = null;
 		this.lastChatMessage = 0;
+		this.broadcasting = false;
 
 		// for the anti-spamming mechanism
 		this.lastMessage = '';

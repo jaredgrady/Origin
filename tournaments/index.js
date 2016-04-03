@@ -843,7 +843,7 @@ let commands = {
 			}
 		},
 		getusers: function (tournament) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			let users = usersToNames(tournament.generator.getUsers(true).sort());
 			this.sendReplyBox("<strong>" + users.length + " users remain in this tournament:</strong><br />" + Tools.escapeHTML(users.join(", ")));
 		},
@@ -1050,8 +1050,8 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 	if (!params[0]) params = [];
 
 	if (cmd === '') {
-		if (!this.canBroadcast()) return;
-		this.sendReply('|tournaments|info|' + JSON.stringify(Object.keys(exports.tournaments).filter(function (tournament) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|tournaments|info|' + JSON.stringify(Object.keys(exports.tournaments).filter(tournament => {
 			tournament = exports.tournaments[tournament];
 			return !tournament.room.isPrivate && !tournament.room.isPersonal && !tournament.room.staffRoom;
 		}).map(function (tournament) {
@@ -1170,7 +1170,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 	}
 };
 CommandParser.commands.tournamenthelp = function (target, room, user) {
-	if (!this.canBroadcast()) return;
+	if (!this.runBroadcast()) return;
 	return this.sendReplyBox(
 		"- create/new &lt;format>, &lt;type> [, &lt;comma-separated arguments>]: Creates a new tournament in the current room.<br />" +
 		"- settype &lt;type> [, &lt;comma-separated arguments>]: Modifies the type of tournament after it's been created, but before it has started.<br />" +
