@@ -221,7 +221,7 @@ Profile.prototype.checkBadges = function () {
 	if (typeof badges === 'undefined' || badges === null) badges = [];
 	//All the checks
 	if (this.user && this.user.userid in Users.vips) badges.push('vip');
-	if (this.user && this.user.can('lock')) badges.push('staff');
+	if (this.user && this.user.isStaff) badges.push('staff');
 	if (Db('ontime').get(this.user.userid) > 1080000000) badges.push('Nolife Master');
 	if (Db('rpsrank').get(this.user.userid, []) > 1500) badges.push('rpsmaster');
 	if (Db('dicewins').get(this.user.userid, []) > 1000) badges.push('Persistent!');
