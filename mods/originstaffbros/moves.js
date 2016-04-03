@@ -17128,9 +17128,9 @@ exports.BattleMovedex = {
 		target: "target",
 		type: "Ground",
 	},
-	
+
 	// omega chime
-		"audioshock": {
+	"audioshock": {
 		isNonstandard: true,
 		accuracy: 100,
 		basePower: 100,
@@ -17139,14 +17139,17 @@ exports.BattleMovedex = {
 		name: "Audioshock",
 		pp: 20,
 		priority: 1,
-		flags: {protect: 1, mirror: 1},
-		onTryHit: function (target, source, move) {
+		flags: {
+			protect: 1,
+			mirror: 1
+		},
+		onTryHit: function(target, source, move) {
 			this.attrLastMove('[anim]boomburst');
 		},
-		onMoveFail: function (target, source, move) {
+		onMoveFail: function(target, source, move) {
 			this.attrLastMove('[anim]boomburst');
 		},
-		onHit: function (target, source, move) {
+		onHit: function(target, source, move) {
 			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
 		},
 		secondary: {
