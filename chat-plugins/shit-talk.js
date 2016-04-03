@@ -26,7 +26,9 @@ const insultsC = [
 exports.commands = {
 	insult: function (target, room, user) {
 		if (!this.canTalk()) return false;
+		if (!this.can('lock')) return false;
 		if (!target) return this.errorReply('Must specify a target user.');
+		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		let parts = [insultsA[Math.floor(Math.random() * insultsA.length)], insultsB[Math.floor(Math.random() * insultsB.length)], insultsC[Math.floor(Math.random() * insultsC.length)]];
 		let group = user.getIdentity().charAt(0);
 		if (room.auth) group = room.auth[user.userid] || group;
