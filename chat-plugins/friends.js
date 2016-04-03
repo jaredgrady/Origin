@@ -84,7 +84,7 @@ function getFriendsOutput() {
 
 exports.commands = {
 	friends: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let data = Db('FriendsDB').get(toId(user));
 		if (typeof data !== 'undefined' && data !== null) {
 			let rows = data.split(",");

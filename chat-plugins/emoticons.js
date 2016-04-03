@@ -256,7 +256,7 @@ let emotes_table = create_table();
 exports.commands = {
 	emotes: 'emoticons',
 	emoticons: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply("|raw|" + emotes_table);
 	},
 	emoticonshelp: ["/emoticons - Get a list of emoticons."],
@@ -290,7 +290,7 @@ exports.commands = {
 
 	rande: 'randemote',
 	randemote: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let rng = Math.floor(Math.random() * emotesKeys.length);
 		let randomEmote = emotesKeys[rng];
 		this.sendReplyBox("<img src='" + emotes[randomEmote] + "' title='" + randomEmote + "' height='50' width='50' />");

@@ -124,7 +124,7 @@ exports.commands = {
 		case 'list':
 		case 'view':
 		default:
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (room.shopList.length < 1) return this.sendReplyBox('<center><b><u>This shop has no items!</u></b></center>');
 			let output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2><table cellpadding="6" border="1"><table cellpadding="6" border="1"><tr><td align="center"><h3><u>Item</u></h3></td><td align="center"><h3><u>Description</u></h3></td><td align="center"><h3><u>Price</u></h3></td></tr>';
 			for (let u in room.shopList) {
@@ -183,7 +183,7 @@ exports.commands = {
 			Rooms.global.addTask(room, "Shop Purchase - " + room.shop[toId(item)].name, user.name);
 			break;
 		case 'help':
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			this.sendReplyBox('The following is a list of league shop commands: <br />' +
 				'/leagueshop view/list - Shows a complete list of shop items.`<br />' +
 				'/leagueshop add [item name], [description], [price] - Adds an item to the shop.<br />' +

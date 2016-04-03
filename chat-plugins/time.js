@@ -28,7 +28,7 @@ function displayTime(t) {
 
 exports.commands = {
 	regdate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		target = toId(target);
 		if (!target) target = toId(user.name);
 		request('http://pokemonshowdown.com/users/' + target, function (error, response, body) {
@@ -48,7 +48,7 @@ exports.commands = {
 	regdatehelp: ["/regdate - Please specify a valid username."],
 
 	seen: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help seen');
 		let targetUser = Users.get(target);
 		if (targetUser && targetUser.connected) return this.sendReplyBox(targetUser.name + " is <b>currently online</b>.");
@@ -63,7 +63,7 @@ exports.commands = {
 	nolife: 'ontime',
 	userontime: 'ontime',
 	ontime: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 
 		const userid = target ? toId(target) : user.userid;
 		const currentOntime = Ontime[userid] ? Date.now() - Ontime[userid] : 0;
@@ -91,7 +91,7 @@ exports.commands = {
 	nolifeladder: 'ontimeladder',
 	mostonline: 'ontimeladder',
 	ontimeladder: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('ontime').object()).map(function (name) {
 			let currentOntime = 0;
 			if (Ontime[name]) currentOntime = Date.now() - Ontime[name];
@@ -106,7 +106,7 @@ exports.commands = {
 
 	ontimestaff: 'staffontime',
 	staffontime: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!this.can('receiveauthmessages')) return false;
 		let keys = Object.keys(Db('ontime').object())
 			.filter(function (name) {

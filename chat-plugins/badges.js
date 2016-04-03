@@ -115,7 +115,7 @@ exports.commands = {
 			this.sendReply("Badge set.");
 			break;
 		case 'list':
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			badges = Object.keys(badgeIcons);
 			output = '<table> <tr>';
 			for (let i = 0; i < badges.length; i++) {
@@ -126,7 +126,7 @@ exports.commands = {
 			this.sendReplyBox(output);
 			break;
 		case 'info':
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 			badge = parts[1].trim();
 			if (!badgeDescriptions[badge]) return this.errorReply('This badge does not exist, please check /badges list');

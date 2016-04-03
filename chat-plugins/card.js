@@ -146,7 +146,7 @@ cacheRarity();
 exports.commands = {
 	packs: 'pack',
 	pack: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) target = user.name;
 		target = toId(target);
 		if (!userPacks[target] || userPacks[target].length === 0) {
@@ -182,14 +182,14 @@ exports.commands = {
 	},
 
 	packshop: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		return this.sendReply('|raw|' + getShopDisplay(shop));
 	},
 
 	open: 'openpack',
 	openpacks: 'openpack',
 	openpack: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) {
 			this.sendReply('/openpack [pack] - Open a Pokemon Card Pack. Alias: /open, /openpacks');
 			return this.parse('/packs');
@@ -254,7 +254,7 @@ exports.commands = {
 	showcards: 'showcase',
 	showcard: 'showcase',
 	showcase: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let userid = user.userid;
 		if (target) userid = toId(target);
 		const cards = Db('cards').get(userid, []);
@@ -267,7 +267,7 @@ exports.commands = {
 
 	card: function (target, room, user) {
 		if (!target) return this.sendReply('/card [name] - Shows information about a card.');
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let cardName = toId(target);
 		if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ': card not found.');
 		let card = cards[cardName];
@@ -281,7 +281,7 @@ exports.commands = {
 	},
 
 	cardladder: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('points').object()).map(function (name) {
 			return {name: name, points: getPointTotal(name)};
 		});
@@ -854,7 +854,7 @@ exports.commands = {
 	psgo: 'cardshelp',
 	origincg: 'cardshelp',
 	cardshelp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		return this.sendReplyBox('<center><b><u>Origin Trading Card Game:</u></b></center><br>' +
 			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
 			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +

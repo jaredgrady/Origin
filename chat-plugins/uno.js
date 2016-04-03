@@ -613,7 +613,7 @@ exports.commands = {
 			break;
 		case "getusers":
 			if (!UNO[roomid]) return false;
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			this.sendReplyBox("Players: (" + UNO[roomid].list.length + ")<br />" + UNO[roomid].list.join(", "));
 			break;
 		default:

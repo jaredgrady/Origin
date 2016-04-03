@@ -163,7 +163,7 @@ exports.commands = {
 	atm: 'wallet',
 	purse: 'wallet',
 	wallet: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) target = user.name;
 
 		const targetId = toId(target);
@@ -276,7 +276,7 @@ exports.commands = {
 	store: 'shop',
 	shop: function (target, room, user) {
 		if (room.id !== 'lobby' && !room.battle) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 		}
 		return this.sendReply("|raw|" + shopDisplay);
 	},
@@ -392,7 +392,7 @@ exports.commands = {
 	richladder: 'richestuser',
 	richestusers: 'richestuser',
 	richestuser: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('money').object()).map(function (name) {
 			return {name: name, money: Db('money').get(name)};
 		});
@@ -481,7 +481,7 @@ exports.commands = {
 
 	diceladder: 'dicegameladder',
 	dicegameladder: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('dicewins').object()).map(function (name) {
 			return {name: name, dicewins: Db('dicewins').get(name)};
 		});
@@ -494,7 +494,7 @@ exports.commands = {
 
 	dicewins: 'dicegamewins',
 	dicegamewins: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) target = user.name;
 
 		const targetId = toId(target);
@@ -541,7 +541,7 @@ exports.commands = {
 
 	bucks: 'economystats',
 	economystats: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		const users = Object.keys(Db('money').object());
 		const total = users.reduce(function (acc, cur) {
 			return acc + Db('money').get(cur);

@@ -55,7 +55,7 @@ function rankLadder(title, type, array, prop) {
 
 exports.commands = {
 	mostusedword: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		get('word').then(data => {
 			this.sendReplyBox(rankLadder('Most Used Word', 'Count', data, 'word'));
 			room.update();
@@ -65,7 +65,7 @@ exports.commands = {
 	},
 
 	mostusedphrase: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		get('phrase').then(data => {
 			this.sendReplyBox(rankLadder('Most Used Phrase', 'Count', data, 'phrase'));
 			room.update();
@@ -75,7 +75,7 @@ exports.commands = {
 	},
 
 	mostactiveuser: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		get('user').then(data => {
 			this.sendReplyBox(rankLadder('Most Active User', 'Activity', data, 'user'));
 			room.update();
@@ -85,7 +85,7 @@ exports.commands = {
 	},
 
 	mostactiveroom: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		get('room').then(data => {
 			this.sendReplyBox(rankLadder('Most Active Room', 'Activity', data, 'room'));
 			room.update();

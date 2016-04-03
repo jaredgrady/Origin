@@ -22,7 +22,7 @@ function getMonData(target) {
 exports.commands = {
 	ossb: 'ssb',
 	ssb: function (target, room, user) {
-		if (!this.canBroadcast()) return false;
+		if (!this.runBroadcast()) return false;
 		if (!target) return this.parse("/help ssb");
 		let targetData = getMonData(toId(target));
 		if (!targetData) return this.errorReply("The staffmon \"" + toId(target) + "\" could not be found.");
@@ -33,7 +33,7 @@ exports.commands = {
 
 	ossbcredits: 'ssbcredits',
 	ssbcredits: function (target, room, user) {
-		if (!this.canBroadcast()) return false;
+		if (!this.runBroadcast()) return false;
 		this.sendReplyBox(
 			"<center><b>Origin Super Staff Bros Credits:</b></center>" +
 			"<b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br />" +

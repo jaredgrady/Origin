@@ -257,13 +257,13 @@ exports.commands = {
 			}
 		},
 		rank: function (target, room, user) {
-			if (!this.canBroadcast()) return false;
+			if (!this.runBroadcast()) return false;
 			target = (toId(target) ? (Users.get(target) ? Users.get(target).name : target) : user.name);
 			let userRank = Db("rpsrank").get(toId(target), 1000);
 			this.sendReplyBox("Rank - <b>" + target + "</b>: " + userRank);
 		},
 		ladder: function (target, room, user) {
-			if (!this.canBroadcast()) return false;
+			if (!this.runBroadcast()) return false;
 			let keys = Object.keys(Db('rpsrank').object()).map(function (name) {
 				return {name: name, points: Db('rpsrank').get(name)};
 			});

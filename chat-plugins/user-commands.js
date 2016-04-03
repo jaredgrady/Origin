@@ -188,7 +188,7 @@ exports.commands = {
 
 	def: 'define',
 	define: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help define');
 		if (target.length > 50) return this.errorReply("Phrase cannot be longer than 50 characters.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
@@ -244,7 +244,7 @@ exports.commands = {
 
 	fhtmlbox: 'floathtmlbox',
 	floathtmlbox: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		room.update();
 		this.parse('/htmlbox ' + Float.renderElement(target));
 	},
@@ -252,7 +252,7 @@ exports.commands = {
 	u: 'ud',
 	urbandefine: 'ud',
 	ud: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help ud');
 		if (target.length > 50) return this.errorReply("Phrase cannot be longer than 50 characters.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
@@ -290,7 +290,7 @@ exports.commands = {
 	helix: 'm8b',
 	magic8ball: 'm8b',
 	m8b: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let random = Math.floor(20 * Math.random()) + 1;
 		let results = '';
 		if (random === 1) {
@@ -378,7 +378,7 @@ exports.commands = {
 	poofhelp: ["/poof - Disconnects the user and leaves a message in the room."],
 
 	randp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let shinyPoke = "";
 		let x;
 		if (/shiny/i.test(target)) shinyPoke = "-shiny";
@@ -416,14 +416,14 @@ exports.commands = {
 
 	sb: 'showdownboilerplate',
 	showdownboilerplate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply("|raw|This server uses <a href='https://github.com/CreaturePhil/Showdown-Boilerplate'>Showdown-Boilerplate</a>.");
 	},
 	showdownboilerplatehelp: ["/showdownboilerplate - Links to the Showdown-Boilerplate repository on Github."],
 
 	cmdlist: 'commands',
 	commands: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply("|raw|For a complete list of the commands are Origin, check out this thread.  <a href='http://origin-forums.com/index.php?/topic/70-origin-chat-commands/'>Origin Commands</a>.");
 	},
 
@@ -469,7 +469,7 @@ exports.commands = {
 
 	roomhelp: function (target, room, user) {
 		if (room.id === 'lobby' || room.battle) return this.sendReply("This command is too spammy for lobby/battles.");
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox(
 			"Room drivers (%) can use:<br />" +
 			"- /warn OR /k <em>username</em>: warn a user and show the Pokemon Showdown rules<br />" +
@@ -507,7 +507,7 @@ exports.commands = {
 
 	originhelp: 'serverhelp',
 	serverhelp: function (target, room, user, connection) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (user.isStaff) {
 			connection.sendTo(room.id, '|raw|<div class="infobox"><center><b><u>List of <i>staff</i> commands:</u></b></center><br /><b>/clearall</b> - Clear all messages in the room.<br /><b>/endpoll</b> - End the poll in the room.<br /><b>/givemoney</b> <i>name</i>, <i>amount</i> - Give a user a certain amount of money.<br /><b>/hide</b> - Hide your staff symbol.<br /><b>/pmall</b> <i>message</i> - Private message all users in the server.<br /><b>/pmstaff</b> <i>message</i> - Private message all staff.<br /><b>/poll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a poll where users can vote on an option.<br /><b>/reload</b> - Reload commands.<br /><b>/reloadfile</b> <i>file directory</i> - Reload a certain file.<br /><b>/resetmoney</b> <i>name</i> - Reset the user\'s money to 0.<br /><b>/rmall</b> <i>message</i> - Private message all users in the room.<br /><b>/show</b> - Show your staff symbol.<br /><b>/strawpoll</b> <i>question</i>, <i>option 1</i>, <i>option 2</i>... - Create a strawpoll, declares the link to all rooms and pm all users in the server.<br /><b>/toggleemoticons</b> - Toggle emoticons on or off.<br /><b>/takemoney</b> <i>user</i>, <i>amount</i> - Take a certain amount of money from a user.<br /><b>/trainercard</b> <i>help</i> - Makes adding trainer cards EZ.<br /></div>');
 		}

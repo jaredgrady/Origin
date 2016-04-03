@@ -54,7 +54,7 @@ let commands = {
 		this.sendReply("Job " + target + " deleted.");
 	},
 	list: function (target, room, user) {
-		if (!this.canBroadcast()) return false;
+		if (!this.runBroadcast()) return false;
 		// dont broadcast complete button, only show that button for staff.
 		this.sendReplyBox(genJobTable(!this.broadcasting && ["%", "@", "&", "~"].indexOf(user.group) > -1));
 	},

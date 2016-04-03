@@ -59,7 +59,7 @@ exports.commands = {
 	crashlogshelp: ["/crashlogs - Shows logs of past server errors. Requires system operator status"],
 
 	caledrith: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.parse('!data purrloin');
 	},
 
@@ -81,7 +81,7 @@ exports.commands = {
 
 	iconcss: function (target, room, user) {
 		if (!this.can('mute')) return false;
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 
 		let args = target.split(',');
 		if (args.length < 3) return this.parse('/help iconcss');

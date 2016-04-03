@@ -39,7 +39,7 @@ exports.commands = {
 				return "\\" + match;
 			}).trim();
 			/* jshint ignore:start */
-			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox('" + html + "');");
+			trainerCards[commandName] = new Function('target', 'room', 'user', "if (!room.disableTrainerCards) if (!this.runBroadcast()) return; this.sendReplyBox('" + html + "');");
 			/* jshint ignore:end */
 			saveTrainerCards();
 			this.sendReply("The trainer card \"" + commandName + "\" has been added.");
@@ -109,7 +109,7 @@ exports.commands = {
 			if (!commandName) return this.errorReply("/trainercard view, [command name] - Views html of trainer card")
 			let htmlOutput = false;
 			for (let tc in trainerCards) {
-				if (tc === commandName) htmlOutput = trainerCards[commandName].toString().split('\n')[2].toString().split('if (!room.disableTrainerCards) if (!this.canBroadcast()) return; this.sendReplyBox(\'').toString().split('\');')[0].toString().slice(1);
+				if (tc === commandName) htmlOutput = trainerCards[commandName].toString().split('\n')[2].toString().split('if (!room.disableTrainerCards) if (!this.runBroadcast()) return; this.sendReplyBox(\'').toString().split('\');')[0].toString().slice(1);
 			}
 			if (htmlOutput === false) return this.errorReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			return this.sendReply(htmlOutput);
@@ -118,7 +118,7 @@ exports.commands = {
 		default:
 		case 'info':
 		case 'help':
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			this.sendReplyBox(
 				"EZ-TC Commands:<br />" +
 				"/trainercard add, [command name], [html] - Adds a trainer card.<br />" +
