@@ -17128,4 +17128,36 @@ exports.BattleMovedex = {
 		target: "target",
 		type: "Ground",
 	},
+	
+	// omega chime
+		"audioshock": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "audioshock",
+		name: "Audioshock",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]boomburst');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]boomburst');
+		},
+		onHit: function (target, source, move) {
+			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
+		},
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
 };

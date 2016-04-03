@@ -4241,4 +4241,33 @@ exports.BattleAbilities = {
 		id: "countermeta",
 		name: "Counter-Meta",
 	},
+
+	// Omega Chime
+	"waveguard": {
+		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.boost({spa:1, spd:1, spe:1, def:1});
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
+			}
+		},
+		onAnyModifyBoost: function (boosts, target) {
+			let source = this.effectData.target;
+			if (source === target) return;
+			if (source === this.activePokemon && target === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (target === this.activePokemon && source === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
+		},
+		id: "waveguard",
+		name: "Wave Guard",
+	},
 };

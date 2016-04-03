@@ -261,6 +261,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
+			' Omega Chimе': { // (type) fairy/psychic
+				species: 'Chimecho', ability: 'Wave Guard', item: 'Life Orb',
+				moves: ['psystrike', 'recover', 'earthpower'],
+				baseSignatureMove: 'audioshock', signatureMove: "Audioshock",
+				evs: {spd:4, spa:252, spe:252}, nature: 'Modest',
+			},
 		};
 		// Generate the team randomly.
 		let pool = Object.keys(sets).randomize();

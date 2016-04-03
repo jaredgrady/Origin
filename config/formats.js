@@ -2275,6 +2275,10 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
 				pokemon.types = ["Normal", "Ghost"];
 			}
+			if (name === 'omegachim' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Fairy/Psychic');
+				pokemon.types = ["Fairy", "Psychic"];
+			}
 
 			// Edgy switch-in sentences go here.
 			// Admins
@@ -2397,6 +2401,9 @@ exports.Formats = [
 			}*/
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
+			}
+			if (name === 'omegachim') {
+				this.add('c|Omega Chimе|Listen to the sound of the wind, it\'s calling you. Warning you.');
 			}
 			/* no quote
 			if (name === 'originserver') {
@@ -2532,6 +2539,9 @@ exports.Formats = [
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
 			}
+			if (name === 'omegachim') {
+				this.add('c|Omega Chimе|Oh, how I love the sound of silence.');
+			}
 			/* no quote
 			if (name === 'originserver') {
 				this.add('c|originserver|');
@@ -2665,6 +2675,9 @@ exports.Formats = [
 			}*/
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|Tactical retreat!');
+			}
+			if (name === 'omegachim') {
+				this.add('c|Omega Chimе|The sound of the wind... it\'s fading...');
 			}
 			/* no quote
 			if (name === 'originserver') {
