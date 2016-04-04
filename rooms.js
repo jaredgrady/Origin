@@ -1529,7 +1529,7 @@ let ChatRoom = (() => {
 	ChatRoom.prototype.onConnect = function (user, connection) {
 		let userList = this.userList ? this.userList : this.getUserList();
 		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
-		if (Rooms.global.Poll[this]) Rooms.global.Poll.onConnect(user, connection, this);
+		if (Rooms.global.Poll[this.id]) Rooms.global.Poll.onConnect(user, connection, this.id);
 		if (this.game && this.game.onConnect) this.game.onConnect(user, connection);
 	};
 	ChatRoom.prototype.onJoin = function (user, connection) {
