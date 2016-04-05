@@ -102,6 +102,7 @@ let emotes = {
 	'hypnotoad': 'http://i.imgur.com/lJtbSfl.gif',
 	'jcena': 'http://i.imgur.com/hPz30Ol.jpg?2',
 	'Kappa': 'http://i.imgur.com/ZxRU4z3.png?1',
+	'kappapride': 'http://i.imgur.com/GMs8OxU.jpg',
 	'Kreygasm': 'https://static-cdn.jtvnw.net/emoticons/v1/41/1.0',
 	'Lennyf': 'http://i.imgur.com/FhOwY2P.png',
 	'llamacool': 'http://i.imgur.com/X1x3728.gif',
