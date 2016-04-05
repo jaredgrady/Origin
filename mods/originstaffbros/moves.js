@@ -17133,15 +17133,16 @@ exports.BattleMovedex = {
 	"audioshock": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 65,
 		category: "Special",
 		id: "audioshock",
 		name: "Audioshock",
-		pp: 20,
-		priority: 1,
+		pp: 15,
+		priority: 0,
 		flags: {
 			protect: 1,
 			mirror: 1,
+			sound: 1,
 		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]boomburst');
@@ -17153,7 +17154,7 @@ exports.BattleMovedex = {
 			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
 		},
 		secondary: {
-			chance: 70,
+			chance: 40,
 			self: {
 				boosts: {
 					spa: 1,
