@@ -343,7 +343,7 @@ exports.commands = {
 	takecustomsymbol: 'takesymbol',
 	takesymbol: function (target, room, user) {
 		let targetUser = Users.get(toId(target));
-		if (!this.can('lock')) return this.errorReply("/takesymbol - Access Denied");
+		if (!this.can('lock')) return this.errorReply("/takesymbol - Access denied");
 		if (!target) return this.parse('/help takesymbol');
 		if (!targetUser.hasCustomSymbol) return this.errorReply("This user does not have a custom symbol.");
 		let targetSymbol = targetUser.customSymbol;
@@ -406,9 +406,9 @@ exports.commands = {
 	dicestart: 'startdice',
 	startdice: function (target, room, user) {
 		if (!target) return this.parse('/help startdice');
-		if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply("Dice games can't be used outside of  Casino.");
+		if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply("Dice games can't be used outside of the Casino.");
 		if (!this.can('broadcast', null, room)) return this.errorReply("You must be at least a voice to start a dice game.");
-		if (room.id === 'casino' && target > 500) return this.errorReply("Dice can only be started for amounts less than 500 bucks.");
+		if (room.id === 'casino' && target > 500) return this.errorReply("Dice can only be started for amounts less 500 bucks or less.");
 		if (!this.canTalk()) return this.errorReply("You cannot start dice games while unable to speak.");
 
 		let amount = isMoney(target);
@@ -523,7 +523,7 @@ exports.commands = {
 	resetdicewinshelp: ["/resetdicewins - Resets the dice wins ladder."],
 
 	registershop: function (target, room, user) {
-		if (!user.can('declare')) return this.errorReply("/registershop - Access Denied");
+		if (!user.can('declare')) return this.errorReply("/registershop - Access denied");
 		if (!target) return this.errorReply("Please specifiy a room. Use /help registershop for more information.");
 		if (!Rooms(toId(target))) return this.errorReply("The specified room does not exist");
 		let targetRoom = Rooms(toId(target));

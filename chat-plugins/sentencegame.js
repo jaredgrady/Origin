@@ -25,7 +25,7 @@ exports.commands = {
 
 	newsentence: 'sentence',
 	sentence: function (target, room, user) {
-		if (!this.can('lock', null, room)) return this.errorReply('/sentence - Access denied');
+		if (!this.can('lock', null, room)) return this.errorReply('/sentence - Access denied.');
 		if (room.sentence) return this.errorReply('There is already a sentence game in this room.');
 		if (room.battle) return this.errorReply('You cannot play sentence game in battle rooms.');
 		if (!target) return this.errorReply('You must specify a sentence length.');
@@ -68,7 +68,7 @@ exports.commands = {
 	},
 
 	endsentence: function (target, room, user) {
-		if (!this.can('lock', null, room)) return this.errorReply('/endsentence - Access denied');
+		if (!this.can('lock', null, room)) return this.errorReply('/endsentence - Access denied.');
 		if (!room.sentence) return this.errorReply('There is not a sentence game in this room.');
 		delete room.sentence;
 		room.addRaw('<div class="sentence-container"><font size="3">The Sentence Game was ended by <i>' + user + '</i>.</font></div>');

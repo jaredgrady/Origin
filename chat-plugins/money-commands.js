@@ -327,7 +327,7 @@ exports.commands = {
 	slots: {
 		start: 'roll',
 		roll: function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply('Slots must be played in The Casino.');
+			if (room.id !== 'casino') return this.errorReply('Slots must be played in the Casino.');
 			if (room.slotsEnabled === false) return this.errorReply('Slots is currently disabled.');
 			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
 			if (!room.slotsAnte) room.slotsAnte = 3;
@@ -394,14 +394,14 @@ exports.commands = {
 
 		enable: function (target, room, user, cmd) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access Denied.');
+			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access denied.');
 			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 
 		disable: function (target, room, user, cmd) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('makechatroom')) return this.errorReply('/slots disable - Access Denied.');
+			if (!user.can('makechatroom')) return this.errorReply('/slots disable - Access denied.');
 			room.slotsEnabled = false;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.sendReply("Slots has been disabled.");
@@ -409,7 +409,7 @@ exports.commands = {
 
 		ante: function (target, room, user) {
 			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access Denied.');
+			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access denied.');
 			if (!target) return this.parse('/help slotsante');
 			target = parseInt(target);
 			if (isNaN(target)) return this.errorReply('Must be a number, silly.');

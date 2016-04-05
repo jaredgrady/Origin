@@ -441,7 +441,7 @@ exports.commands = {
 		case "join":
 			if (!UNO[roomid] || UNO[roomid].start) return false;
 			if (!verifyAlts(userid, UNO[roomid].list) || UNO[roomid].list.indexOf(userid) > -1) return this.errorReply("You already have an alt joined.");
-			if (UNO[roomid].list.length >= 30) return this.errorReply('There cannot be more than 30 players');
+			if (UNO[roomid].list.length >= 30) return this.errorReply("There cannot be more than 30 players in a game of UNO.");
 			if (UNO[roomid].pot) {
 				if (Db("money").get(userid, 0) < UNO[roomid].pot) return this.errorReply("You do not have enough bucks to join.");
 				Db("money").set(userid, Db("money").get(userid, 0) - UNO[roomid].pot);
@@ -478,8 +478,8 @@ exports.commands = {
 			}
 			break;
 		case "start":
-			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start");
-			if (!this.can("mute", null, room)) return this.errorReply('You must be @ or higher to start a game');
+			if (!UNO[roomid] || UNO[roomid].start) return this.errorReply("No game of UNO in this room to start.");
+			if (!this.can("mute", null, room)) return this.errorReply("You must be % or higher to start a game of UNO.");
 			if (UNO[roomid].list.length < 2) return this.errorReply("There aren't enough players to start!");
 			this.privateModCommand(user.name + " has started the game");
 			//start the game!
@@ -593,16 +593,15 @@ exports.commands = {
 			if (!UNO[roomid].lastDraw) return false;
 			this.add("|raw|</b>" + user.name + "</b> has passed!");
 			user.sendTo(roomid, "|uhtmlchange|" + UNO[roomid].rand.toString() + UNO[roomid].id + "|");
-			if (UNO[roomid].lastplay) {
-				this.add(UNO[roomid].lastplay);
-			}
+			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
 			getNextPlayer(roomid);
 			initTurn(this, roomid);
 			room.update();
 			break;
 		case "end":
-			if (!UNO[roomid] || !this.can("mute", null, room)) return false;
+			if (!UNO[roomid]) return this.errorReply("No game of UNO in this room to end.");
+			if (!this.can("mute", null, room)) return this.errorReply("You must be % or higher to end a game of UNO.");
 			if (UNO[roomid].pot && !this.can('ban')) return this.errorReply("You cannot end a game that is for bucks!");
 			if (UNO[roomid].lastplay) this.add(UNO[roomid].lastplay);
 			clearDQ(roomid);
