@@ -87,7 +87,8 @@ exports.commands = {
 	mostactiveroom: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		get('room').then(data => {
-			this.sendReplyBox(rankLadder('Most Active Room', 'Activity', data, 'room'));
+			const result = data.filter(r => Rooms.get(toId(r.room)) && !Rooms.get(toId(r.room)).isPrivate);
+			this.sendReplyBox(rankLadder('Most Active Room', 'Activity', result, 'room'));
 			room.update();
 		}).catch(() => {
 			console.error('All data servers are down.');
