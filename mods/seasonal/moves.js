@@ -530,6 +530,7 @@ exports.BattleMovedex = {
 		basePower: 120,
 		category: "Physical",
 		id: "buzzaxerampage",
+		isNonstandard: true,
 		isViable: true,
 		name: "Buzz Axe Rampage",
 		pp: 15,
@@ -765,6 +766,7 @@ exports.BattleMovedex = {
 		category: "Special",
 		defensiveCategory: "Physical",
 		id: "cosmosray",
+		isNonstandard: true,
 		name: "Cosmos Ray",
 		pp: 20,
 		priority: 0,
@@ -920,6 +922,7 @@ exports.BattleMovedex = {
 		basePower: 90,
 		category: "Physical",
 		id: "doubleedgy",
+		isNonstandard: true,
 		name: "Double-Edgy",
 		pp: 15,
 		priority: 0,
@@ -1112,6 +1115,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		id: "excuse",
+		isNonstandard: true,
 		isViable: true,
 		name: "Excuse",
 		pp: 10,
@@ -1546,22 +1550,8 @@ exports.BattleMovedex = {
 			if (ppData && ppData.pp) {
 				ppData.pp = Math.round(ppData.pp * 10 + this.random(3) + 5) / 10;
 			}
-			let moves = [];
-			for (let i in exports.BattleMovedex) {
-				let move = exports.BattleMovedex[i];
-				if (i !== move.id) continue;
-				if (move.isNonstandard) continue;
-				moves.push(move);
-			}
-			let randomMove = false;
-			if (moves.length) {
-				moves.sort((a, b) => a.num - b.num);
-				randomMove = moves[this.random(moves.length)].id;
-			}
-			if (!randomMove) {
-				return false;
-			}
-			this.useMove(randomMove, target);
+			const moves = Object.keys(exports.BattleMovedex);
+			this.useMove(moves[this.random(moves.length)], target);
 		},
 		onTryHit: function (target, source, effect) {
 			if (!source.isActive) return null;
@@ -1596,14 +1586,12 @@ exports.BattleMovedex = {
 					// Why not?
 					"shiny", "randomly", "'); DROP TABLE colors; --", "Ho-Oh", "blue screen",
 				];
-				let colorText = [];
-				let used = {};
-				for (let i = 0; i < this.random(3) + 1; i++) {
-					let dice = this.random(colors.length);
-					if (!(dice in used)) {
-						colorText.push(colors[dice]);
-						used[dice] = true;
-					}
+				const colorText = [];
+				const times = this.random(3) + 1;
+				for (let i = 0; i < times; i++) {
+					const dice = this.random(colors.length);
+					colorText.push(colors[dice]);
+					colors.splice(dice, 1);
 				}
 				this.add('-message', "Ho-Oh is now colored " + colorText.join(" and ") + "! As well as every other \u3069\u25C0mon.");
 			},
@@ -1655,8 +1643,8 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {snatch: 1},
 		boosts: {
-			spe: 3,
-			atk: 3,
+			spe: 2,
+			atk: 2,
 		},
 		secondary: false,
 		target: "self",
@@ -2323,6 +2311,7 @@ exports.BattleMovedex = {
 		basePower: 100,
 		category: "Special",
 		id: "maelstrm",
+		isNonstandard: true,
 		name: "Maelström",
 		pp: 5,
 		priority: 0,
@@ -2562,6 +2551,7 @@ exports.BattleMovedex = {
 		basePower: 130,
 		category: "Physical",
 		id: "neattokick",
+		isNonstandard: true,
 		isViable: true,
 		name: "Neatto Kick",
 		pp: 10,
@@ -2703,6 +2693,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		id: "ofcurse",
+		isNonstandard: true,
 		isViable: true,
 		name: "Of Curse",
 		pp: 40,
@@ -2736,7 +2727,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Ghost",
 	},
-	// m00ns
+	// starry
 	oh: {
 		accuracy: 100,
 		category: "Status",
@@ -3029,6 +3020,7 @@ exports.BattleMovedex = {
 		basePower: 110,
 		category: "Special",
 		id: "postmortem",
+		isNonstandard: true,
 		name: "Postmortem",
 		pp: 10,
 		priority: 0,
@@ -3141,6 +3133,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Special",
 		id: "pureskill",
+		isNonstandard: true,
 		isViable: true,
 		name: "Pure Skill",
 		pp: 5,
@@ -3221,6 +3214,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		id: "ragequit",
+		isNonstandard: true,
 		name: "Rage Quit",
 		pp: 40,
 		priority: 0,
@@ -3627,6 +3621,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		id: "shitpostparadise",
+		isNonstandard: true,
 		name: "Shitpost Paradise",
 		pp: 10,
 		priority: 0,
@@ -3892,6 +3887,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		id: "spikeyrain",
+		isNonstandard: true,
 		name: "SPIKEY RAIN",
 		pp: 10,
 		priority: 0,
@@ -4354,6 +4350,7 @@ exports.BattleMovedex = {
 		},
 		category: "Special",
 		id: "ultimatedismissal",
+		isNonstandard: true,
 		name: "Ultimate Dismissal",
 		pp: 10,
 		priority: 0,

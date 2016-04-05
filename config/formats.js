@@ -870,7 +870,7 @@ exports.Formats = [
 			if (name === 'galbia' || name === 'aurora') {
 				this.setWeather('sandstorm');
 			}
-			if (name === 'gangnamstyle') {
+			if (name === 'rodan') {
 				pokemon.addVolatile('gonnamakeyousweat', pokemon);
 			}
 			if (name === 'giagantic') {
@@ -1142,8 +1142,8 @@ exports.Formats = [
 			if (name === 'galom') {
 				this.add('c|+Galom|To the end.');
 			}
-			if (name === 'gangnamstyle') { // don't delete
-				this.add("c|+Gangnam Style|Here I Come, Rougher Than The Rest of 'Em.");
+			if (name === 'rodan') { // don't delete
+				this.add("c|+RODAN|Here I Come, Rougher Than The Rest of 'Em.");
 			}
 			if (name === 'geoffbruedly') {
 				this.add("c|%GeoffBruedly|FOR WINRY");
@@ -1275,9 +1275,6 @@ exports.Formats = [
 				sentences = ["This is divine retribution!", "I will handle this myself!", "Let battle commence!"];
 				this.add('c|@Lyto|' + sentences[this.random(3)]);
 			}
-			if (name === 'm00ns') {
-				this.add('c|%m00ns|oh');
-			}
 			if (name === 'macle') {
 				this.add("c|+macle|Follow the Frog Blog");
 			}
@@ -1403,6 +1400,9 @@ exports.Formats = [
 			}
 			if (name === 'starmei') {
 				this.add('c|+Starmei|Starmei wins again');
+			}
+			if (name === 'starry') {
+				this.add('c|%starry|oh');
 			}
 			if (name === 'steamroll') {
 				this.add('c|@Steamroll|Banhammer ready!');
@@ -1673,8 +1673,8 @@ exports.Formats = [
 			if (name === 'galom') {
 				this.add('c|+Galom|GAME OVER.');
 			}
-			if (name === 'gangnamstyle') {
-				this.add("c|+Gangnam Style|The Great Emeralds power allows me to feel... ");
+			if (name === 'rodan') {
+				this.add("c|+RODAN|The Great Emeralds power allows me to feel... ");
 			}
 			if (name === 'geoffbruedly') {
 				this.add("c|%GeoffBruedly|IM SORRY WINRY");
@@ -1797,9 +1797,6 @@ exports.Formats = [
 			if (name === 'mizuhime') {
 				this.add('c|+Mizuhime|I got Gimped.');
 			}
-			if (name === 'm00ns') {
-				this.add('c|%m00ns|o-oh');
-			}
 			if (name === 'nv') {
 				this.add('c|+nv|Too cute for this game ;~;');
 			}
@@ -1848,8 +1845,8 @@ exports.Formats = [
 				this.add("c|+SailorCosmos|Cosmos Gorgeous Retreat!");
 			}
 			if (name === 'scotteh') {
-				this.add('-message', '▄███████▄.▲.▲.▲.▲.▲.▲');
-				this.add('-message', '█████████████████████▀▀');
+				this.add('c|&Scotteh|▄███████▄.▲.▲.▲.▲.▲.▲');
+				this.add('c|&Scotteh|█████████████████████▀▀');
 			}
 			if (name === 'scpinion') {
 				this.add("c|@scpinion|guys, I don't even know how to pronounce scpinion");
@@ -1895,6 +1892,9 @@ exports.Formats = [
 			}
 			if (name === 'starmei') {
 				this.add('c|+Starmei|//message AM, must be nice being this lucky');
+			}
+			if (name === 'starry') {
+				this.add('c|%starry|o-oh');
 			}
 			if (name === 'steamroll') {
 				this.add('c|@Steamroll|Not my problem anymore!');
