@@ -219,3 +219,9 @@ Origin Server - Mew
 - Move: Tri Spikes - Puts up 3 layers of spikes
 - Movepool: Transform, Psystrike, Recover
 - Notes: Supports teams well with Hazards, and is really a blessing to have against the plethora of sweepers in the tier. 
+
+Omega Chime - Chimecho
+- Ability: Wave Guard - Magic Guard + Unaware. Raises Speed, Defense, Special Attack and Special Defense by one stage upon entry.
+- Move: Audioshock - 80 BP Fairy Type Move. Sound Move. 60% chance to raise Special Attack by one Stage.
+- Movepool: Recover, Psystrike, Earthpower
+- Notes: (Notes to yet be written lol)
