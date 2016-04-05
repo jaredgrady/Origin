@@ -17133,7 +17133,7 @@ exports.BattleMovedex = {
 	"audioshock": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 65,
+		basePower: 80,
 		category: "Special",
 		id: "audioshock",
 		name: "Audioshock",
@@ -17154,7 +17154,7 @@ exports.BattleMovedex = {
 			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
 		},
 		secondary: {
-			chance: 40,
+			chance: 60,
 			self: {
 				boosts: {
 					spa: 1,
