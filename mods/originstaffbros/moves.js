@@ -16395,29 +16395,45 @@ exports.BattleMovedex = {
 	},
 
 	// Irraquated
-	"unluckymate": {
+	"time2die": {
 		isNonstandard: true,
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		id: "unluckymate",
-		name: "Unlucky Mate",
-		pp: 15,
+		accuracy: 85,
+		basePower: 130,
+		category: "Physical",
+		id: "time2die",
+		name: "Time 2 die",
+		pp: 20,
 		priority: 1,
-		flags: {protect: 1, mirror: 1, heal: 1},
-		drain: [1, 2],
+		flags: {protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
+			this.add('c|%Irraquated|TIME TO DIE KIDDO');
+			this.attrLastMove('[still]');
+			this.add('-anim', source, 'Thunder', target);
+			this.add('-anim', source, 'Dark Pulse', source);
+			this.add('-anim', source, 'Dragon Ascent', target);
+			this.add('-anim', source, 'Night Shade', source);
+			this.add('-anim', source, 'Origin Pulse', target);
+			this.add('-anim', source, 'Play Rough', target);
+			this.add('-anim', source, 'Megahorn', target);
+			this.add('-anim', source, 'Stone Edge', source);
+			this.add('-anim', source, 'Sacred Fire', target);
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]darkpulse');
+			this.add('c|%Irraquated|TIME TO DIE *misses*');
+			this.add('c|%Irraquated|Shit.');
+			this.add('c|%Irraquated|Well played ' + target.side.foe.name + ", well played. >_>");
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Irraquated|Oof, unlucky mate.');
+			if (target.hp <= 0 || target.fainted) {
+				this.add('c|%Irraquated|Looks like it was __TIME TO DIE__ hehehehhe...');
+			}
 		},
-		secondary: false,
+		secondary: {
+			chance: 60,
+			status: 'brn',
+		},
 		target: "normal",
-		type: "Dark",
+		type: "Fire",
 	},
 
 	// iSandman
