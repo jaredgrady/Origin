@@ -113,8 +113,8 @@ fender - Gible - Life Orb
 - Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
 
 %Irraquated - Ho-oh - Life Orb
-- Ability: What's the time? - Desolate Land + Magic Guard
-- Move: Time 2 Die - 100 BP Fire type move, 60% chance to burn. (Has a lot of animations, but they have no effect. BESIDES LOOKING AWESEOME)
+- Ability: What's the time? - Desolate Land + Magic Guard + Regenerator
+- Move: Time 2 Die - 100 BP Fire type move, 60% chance to burn.
 - Movepool: Recover, Brave Bird, Wood Hammer
 - Notes: If you think it's not time to die, then you're wrong. There are little things that can take hits from this, with its Sun Boosted STAB Move tearing holes through teams. Ho-Oh's usually crippling weakness to Rocks and Water Moves is fixed by its Ability, making it even harder to combat. However, it's quite slow compared to most of the dangerous sweepers running wild in OSSB, and doesn't have a lot of Physical bulk, so it can be quite easily taken down by strong physical sweepers. However, it is still a very dangerous threat you don't want to face.
 
