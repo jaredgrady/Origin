@@ -4,6 +4,7 @@
   "description": "The server for the Pokémon Showdown battle simulator",
   "version": "0.10.2",
   "dependencies": {
+	"autolinker": "0.25.1",
     "cloud-env": "0.1.1",
     "colors": "1.1.2",
     "data.maybe": "^1.2.1",
