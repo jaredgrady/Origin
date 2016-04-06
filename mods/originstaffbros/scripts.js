@@ -142,7 +142,7 @@ exports.BattleScripts = {
 				species: 'Ho-oh', ability: 'What\'s the time?', item: 'Life Orb', gender: 'M',
 				moves: ['recover', 'bravebird', 'woodhammer'],
 				baseSignatureMove: 'time2die', signatureMove: "Time 2 Die",
-				evs: {atk:252, spe:252, hp:4}, nature: 'Adamant',
+				evs: {hp:248, atk:196, spd:52, spe:12}, nature: 'Adamant',
 			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
