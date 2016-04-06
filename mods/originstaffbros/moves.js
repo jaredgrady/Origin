@@ -16408,15 +16408,9 @@ exports.BattleMovedex = {
 		onTryHit: function (target, source, move) {
 			this.add('c|%Irraquated|TIME TO DIE KIDDO');
 			this.attrLastMove('[still]');
-			this.add('-anim', source, 'Thunder', target);
 			this.add('-anim', source, 'Dark Pulse', source);
 			this.add('-anim', source, 'Dragon Ascent', target);
-			this.add('-anim', source, 'Night Shade', source);
-			this.add('-anim', source, 'Origin Pulse', target);
-			this.add('-anim', source, 'Play Rough', target);
-			this.add('-anim', source, 'Megahorn', target);
-			this.add('-anim', source, 'Stone Edge', source);
-			this.add('-anim', source, 'Sacred Fire', target);
+			this.add('-anim', target, 'Sacred Fire', target);
 		},
 		onMoveFail: function (target, source, move) {
 			this.add('c|%Irraquated|TIME TO DIE *misses*');
