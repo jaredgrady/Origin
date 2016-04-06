@@ -3803,20 +3803,35 @@ exports.BattleAbilities = {
 	},
 
 	// Irraquated
-	"woopslmao": {
+	"whatsthetime": {
 		isNonstandard: true,
-		onPrepareHit: function (source, target, move) {
-			let type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.add('-start', source, 'typechange', type, '[from] Protean');
+		onStart: function (source) {
+			this.setWeather('desolateland');
+		},
+		onAnySetWeather: function (target, source, weather) {
+			if (this.getWeather().id === 'desolateland' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
+		},
+		onEnd: function (pokemon) {
+			if (this.weatherData.source !== pokemon) return;
+			for (let i = 0; i < this.sides.length; i++) {
+				for (let j = 0; j < this.sides[i].active.length; j++) {
+					let target = this.sides[i].active[j];
+					if (target === pokemon) continue;
+					if (target && target.hp && target.hasAbility('desolateland')) {
+						this.weatherData.source = target;
+						return;
+					}
+				}
+			}
+			this.clearWeather();
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
 			}
 		},
-		onModifyMove: function (move) {
-			move.stab = 2;
-		},
-		id: "woopslmao",
-		name: "Woops lmao",
+		id: "whatsthetime",
+		name: "What's the time?",
 	},
 
 	// isandman

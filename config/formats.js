@@ -2347,7 +2347,7 @@ exports.Formats = [
 				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
 			}
 			if (name === 'irraquated') {
-				this.add('c|%Irraquated|Oh so you\'re the guy...');
+				this.add('c|%Irraquated|Lol you look p weak from over on the winners side. xaa');
 			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|ENTER SANDMAN');
@@ -2482,8 +2482,7 @@ exports.Formats = [
 				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
 			}
 			if (name === 'irraquated') {
-				this.add('c|%Irraquated|it was meant to be.');
-				this.add('c|%Irraquated|Six god is watching, I hope you\'re prepared to face him.');
+				this.add('c|%Irraquated|Just a prank bro? ...right?');
 			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
@@ -2620,7 +2619,7 @@ exports.Formats = [
 				this.add('c|%hayleysworld|My bad memes will be back!');
 			}
 			if (name === 'irraquated') {
-				this.add('c|%Irraquated|I have to go make some vegemite toast brb lol');
+				this.add('c|%Irraquated|Your death awaits you mate.');
 			}
 			if (name === 'isandman') {
 				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');

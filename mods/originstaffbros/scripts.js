@@ -139,10 +139,10 @@ exports.BattleScripts = {
 				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
 			},
 			'%Irraquated': {
-				species: 'Greninja', ability: 'Woops lmao', item: 'Life Orb', gender: 'M', shiny: true,
-				moves: ['hydropump', 'boomburst', 'secretsword', 'thunderbolt', 'icebeam', 'moonblast'],
-				baseSignatureMove: 'unluckymate', signatureMove: "Unlucky Mate",
-				evs: {spa:252, spe:252, hp:4}, nature: 'Timid',
+				species: 'Ho-oh', ability: 'What\'s the time?', item: 'Life Orb', gender: 'M',
+				moves: ['recover', 'bravebird', 'woodhammer'],
+				baseSignatureMove: 'time2die', signatureMove: "Time 2 Die",
+				evs: {atk:252, spe:252, hp:4}, nature: 'Adamant',
 			},
 			'%iSandman': {
 				species: 'Landorus', ability: 'God\'s Force', item: 'Life Orb', gender: 'M',
