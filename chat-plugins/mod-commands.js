@@ -672,11 +672,9 @@ exports.commands = {
 		case 'add':
 			if (parts.length < 3) return this.errorReply("Invalid command. `/ads add, room, message`.");
 			if (!Rooms.global.ads) Rooms.global.ads = [];
+			let adIps = Rooms.global.ads.map(ad => ad.ip);
 			for (let ip in user.ips) {
-				let adIps = Rooms.global.ads.map(ad => ad.ip);
-				if (adIps.indexOf(ip) >= 0) {
-					return this.sendReply("You already have an advertisement in the queue. Please wait for it to be broadcast before adding another one.");
-				}
+				if (adIps.indexOf(ip) >= 0) return this.errorReply("You already have an advertisement in the queue. Please wait for it to be broadcast before adding another one.");
 			}
 			let inputRoom = Tools.escapeHTML(parts[1]);
 			let targetRoom = Rooms.search(inputRoom);
