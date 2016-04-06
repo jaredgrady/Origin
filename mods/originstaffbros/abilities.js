@@ -3830,6 +3830,9 @@ exports.BattleAbilities = {
 				return false;
 			}
 		},
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
+		},
 		id: "whatsthetime",
 		name: "What's the time?",
 	},
