@@ -114,7 +114,7 @@ fender - Gible
 
 %Irraquated - Ho-oh - Life orb
 - Ability: What's the time? - Desolate Land + Magic Guard
-- Move: Time 2 Die - 130 BP Fire type move, 60% chance to burn. (Has a lot of animations, but they have no effect. BESIDES LOOKING AWESEOME)
+- Move: Time 2 Die - 100 BP Fire type move, 60% chance to burn. (Has a lot of animations, but they have no effect. BESIDES LOOKING AWESEOME)
 - Movepool: Recover, Brave Bird, Wood Hammer
 - Notes: (To be added)
 
