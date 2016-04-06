@@ -16398,7 +16398,7 @@ exports.BattleMovedex = {
 	"time2die": {
 		isNonstandard: true,
 		accuracy: 85,
-		basePower: 130,
+		basePower: 100,
 		category: "Physical",
 		id: "time2die",
 		name: "Time 2 die",
