@@ -1048,7 +1048,7 @@ let commands = exports.commands = {
 			return this.errorReply("Room bans are not meant to be used in room " + room.id + ".");
 		}
 		if (targetUser.isStaff && !room.isPrivate && !room.battle && !room.isPersonal) {
-			this.errorReply("You are not allowed to ban global staff. If you continuosly try to do so, you will be locked.");
+			this.errorReply("You are not allowed to ban global staff. If you continuously try to do so, you will be locked.");
 			return Monitor.log("[RoomMonitor] " + user.name + " tried to ban staff member: " + targetUser.name + " from the room: " + room.id + ".");
 		}
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
