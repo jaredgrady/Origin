@@ -49,7 +49,7 @@ exports.commands = {
 		join: function (target, room, user) {
 			let gang = toId(target);
 			if (user.gang !== '') return this.errorReply('You are already in a gang');
-			if (!gangs[gang])  return this.errorReply('This gang does not exist.');
+			if (!gangs[gang]) return this.errorReply('This gang does not exist.');
 			Db("gangs").set(user.userid, gang);
 			user.gang = gang;
 			this.sendReply('You have joined the gang: ' + gang);
@@ -114,7 +114,7 @@ exports.commands = {
 			});
 			if (!keys.length) return this.sendReplyBox("Turf ladder is empty.");
 			keys.sort(function (a, b) { return b.gangladder - a.gangladder; });
-			this.sendReplyBox(rankLadder('Turf Wars', 'Points', keys.slice(0, 100), 'gangladder'));
+			this.sendReplyBox(rankLadder('Turf Wars', 'Points', keys.slice(0, 100), 'gangladder', 'Gang'));
 		},
 		givepoints: function (target, room, user) {
 			let parts = target.split(',');
