@@ -97,6 +97,10 @@ function label(text) {
 	return bold(font(profileColor, text + ':')) + SPACE;
 }
 
+function caps(text) {
+	return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 function currencyName(amount) {
 	let name = " buck";
 	return amount === 1 ? name : name + "s";
@@ -192,7 +196,7 @@ Profile.prototype.gang = function () {
 	} else {
 		gangrank = '';
 	}
-	if (this.user.gang) return label('Gang') + gang + gangrank + BR + SPACE;
+	if (this.user.gang) return label('Gang') + caps(gang) + caps(gangrank) + BR + SPACE;
 	return '';
 };
 

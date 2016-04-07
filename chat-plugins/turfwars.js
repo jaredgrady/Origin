@@ -7,35 +7,30 @@
 const rankLadder = require('../rank-ladder');
 const gangs = {
 	rocket: {
-		icon: '',
+		icon: 'http://i.imgur.com/eaTAxKU.gif',
 		name: 'Rocket',
 	},
 	magma: {
-		icon: '',
+		icon: 'http://i.imgur.com/reKEhUA.png',
 		name: 'Magma',
 	},
 	aqua: {
-		icon: '',
+		icon: 'http://i.imgur.com/n9sKSKj.png',
 		name: 'Aqua',
 	},
 	galactic: {
-		icon: '',
+		icon: 'http://i.imgur.com/gixvv00.jpg',
 		name: 'Galactic',
 	},
 	plasma: {
-		icon: '',
+		icon: 'http://i.imgur.com/zzhoJX2.gif',
 		name: 'Plasma',
 	},
 	flare: {
-		icon: '',
+		icon: 'http://i.imgur.com/X6g6fbc.png',
 		name: 'Flare',
 	},
 };
-
-function isMember(user) {
-	if (user.gang === '') return false;
-	return true;
-}
 
 function isCapo(user) {
 	if (user.gangrank !== 'capo' || user.gangrank !== 'godfather') return false;
@@ -54,7 +49,7 @@ exports.commands = {
 		add: function (target, room, user) {
 			let targetUser = Users(toId(target));
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			if (!isCapo(user.userid) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== '') return this.errorReply('User is already a member of a rival gang.');
 			Db("gangs").set(targetUser, user.gang);
 			targetUser.gang = user.gang;
@@ -64,7 +59,7 @@ exports.commands = {
 		remove: function (target, room, user) {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			if (!isCapo(user.userid) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangs").set(targetUser, '');
 			targetUser.gang = '';
@@ -74,7 +69,7 @@ exports.commands = {
 		promote: function (target, room, user) {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangranks").set(targetUser, 'capo');
 			user.gangrank = 'capo';
@@ -84,7 +79,7 @@ exports.commands = {
 		demote: function (target, room, user) {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (!isGodfather(user) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangranks").set(targetUser, '');
 			user.gangrank = '';
