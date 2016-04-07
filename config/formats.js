@@ -2722,6 +2722,600 @@ exports.Formats = [
 		},
 	},
 	{
+		name: "Origin Super Staff Bros Doubles.",
+		section: "Other Metagames",
+		gameType: 'doubles',
+		mod: 'originstaffbros',
+		team: 'randomOriginStaffBros',
+		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+		onBegin: function () {
+			this.add('message', "3");
+			this.add('message', "2");
+			this.add('message', "1");
+			this.add('message', "GET READY...");
+			this.add('message', "GOOOO!!!");
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
+			this.add('raw|<br />');
+			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
+			this.add('raw|<br />');
+			// This variable saves the status of a spammy conversation to be played, so it's only played once.
+			this.convoPlayed = false;
+
+			// This code here is used for the renaming of moves showing properly on client.
+			let globalRenamedMoves = {
+				'defog': "Defrog",
+			};
+			let customRenamedMoves = {
+				"cathy": {
+					'kingsshield': "Heavy Dosage of Fun",
+				},
+			};
+
+			let allPokemon = this.p1.pokemon.concat(this.p2.pokemon);
+
+			for (let i = 0, len = allPokemon.length; i < len; i++) {
+				let pokemon = allPokemon[i];
+				let last = pokemon.moves.length - 1;
+				if (pokemon.moves[last]) {
+					pokemon.moves[last] = toId(pokemon.set.signatureMove);
+					pokemon.moveset[last].move = pokemon.set.signatureMove;
+					pokemon.baseMoveset[last].move = pokemon.set.signatureMove;
+				}
+				for (let j = 0; j < pokemon.moveset.length; j++) {
+					let moveData = pokemon.moveset[j];
+					if (globalRenamedMoves[moveData.id]) {
+						pokemon.moves[j] = toId(pokemon.set.signatureMove);
+						moveData.move = globalRenamedMoves[moveData.id];
+						pokemon.baseMoveset[j].move = globalRenamedMoves[moveData.id];
+					}
+
+					let customRenamedSet = customRenamedMoves[toId(pokemon.name)];
+					if (customRenamedSet && customRenamedSet[moveData.id]) {
+						pokemon.moves[j] = toId(pokemon.set.signatureMove);
+						moveData.move = customRenamedSet[moveData.id];
+						pokemon.baseMoveset[j].move = customRenamedSet[moveData.id];
+					}
+				}
+			}
+		},
+
+		// This allows for their changed abilities.
+		onUpdate: function (pokemon) {
+			let name = toId(pokemon.name);
+			if (pokemon.template.isMega) {
+				if (name === 'arkenciel' && pokemon.getAbility().id === 'toughclaws') {
+					pokemon.setAbility('abnegate');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'saneski' && pokemon.getAbility().id === 'moldbreaker') {
+					pokemon.setAbility('cursedaura');
+				}
+				if (name === 'mightysciz' && pokemon.getAbility().id === 'toughclaws') {
+					pokemon.setAbility('dragonsfire');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'alphaninja' && pokemon.getAbility().id === 'shellarmor') {
+					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'aurastormlucario' && pokemon.getAbility().id === 'adaptability') {
+					pokemon.setAbility('auraguard');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'safetyshark' && pokemon.getAbility().id === 'sandforce') {
+					pokemon.setAbility('magicguard');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'impfallenblood' && pokemon.getAbility().id === 'lightningrod') {
+					pokemon.setAbility('pirate');
+					this.add('-ability', pokemon, pokemon.ability);
+					pokemon.types = ["Grass", "Flying"];
+					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
+				}
+			}
+		},
+
+		onSwitchInPriority: 1,
+		onSwitchIn: function (pokemon) {
+			let name = toId(pokemon.illusion ? pokemon.illusion.name : pokemon.name);
+			if (pokemon.getAbility().id === 'wonderguard') {
+				pokemon.addVolatile('curse', pokemon);
+				this.add('-message', pokemon.name + "'s Wonder Guard has cursed it!");
+			}
+			if (name === 'masterfloat' && !pokemon.illusion) {
+				this.boost({atk:3}, pokemon, pokemon, 'Magic Immunity');
+			}
+			if (name === 'selena' && !pokemon.illusion) {
+				this.boost({def:2, spd:2}, pokemon, pokemon, 'beauty');
+			}
+
+			// Add here more hacky stuff for mega abilities.
+			// This happens when the mega switches in, as opposed to mega-evolving on the turn.
+			if (pokemon.template.isMega) {
+				if (name === 'arkenciel' && pokemon.getAbility().id !== 'abnegate') {
+					pokemon.setAbility('abnegate');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'saneski' && pokemon.getAbility().id !== 'cursedaura') {
+					// pokemon.setAbility('cursedaura');
+				}
+				if (name === 'mightysciz' && pokemon.getAbility().id !== 'dragonsfire') {
+					pokemon.setAbility('dragonsfire');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'alphaninja' && pokemon.getAbility().id !== 'megapoison') {
+					pokemon.setAbility('megapoison');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'aurastormlucario' && pokemon.getAbility().id !== 'auraguard') {
+					pokemon.setAbility('auraguard');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'safetyshark' && pokemon.getAbility().id !== 'magicguard') {
+					pokemon.setAbility('magicguard');
+					this.add('-ability', pokemon, pokemon.ability);
+				}
+				if (name === 'impfallenblood' && pokemon.getAbility().id !== 'pirate') {
+					pokemon.setAbility('pirate');
+					this.add('-ability', pokemon, pokemon.ability);
+					pokemon.types = ["Grass", "Flying"];
+					this.add('-start', pokemon, 'typechange', 'Grass/Flying');
+				}
+			} else {
+				pokemon.canMegaEvo = this.canMegaEvo(pokemon); // Bypass one mega limit.
+			}
+
+			// Add here special typings, done for flavour mainly.
+			if (name === 'paulcentury' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Water/Fire');
+				pokemon.types = ["Water", "Fire"];
+			}
+			if (name === 'hayleysworld' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
+				pokemon.types = ["Water", "Fairy"];
+			}
+			if (name === 'selena' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
+				pokemon.types = ["Bug", "Fairy"];
+			}
+			if (name === 'starfox3' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
+				pokemon.types = ["Bug", "Psychic"];
+			}
+			if (name === 'chronologically' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
+				pokemon.types = ["Fire", "Fighting"];
+			}
+			if (name === 'piscean' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
+				pokemon.types = ["Normal", "Ghost"];
+			}
+
+			// Edgy switch-in sentences go here.
+			// Admins
+			if (name === 'arkenciel') {
+				this.add('c|~ArkenCiel|You\'re alive. We can\'t have that.');
+			}
+			if (name === 'fender') {
+				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
+			}
+			if (name === 'lttesla') {
+				this.add('c|~Lt. Tesla|Hax Gods I summon Thee');
+			}
+			if (name === 'masterfloat') {
+				this.add('c|~Master Float|Don\'t mind me I\'m just floating around minding my own business...');
+			}
+			if (name === 'neosoul') {
+				this.add('c|~Neo Soul|Ayy lmao');
+			}
+			if (name === 'sparkychild') {
+				this.add('c|~sparkychild|We’re all afraid, you know... to get up on stage. Maybe you’ll mess up. Maybe they’ll totally reject you. Even so, you grit your teeth and get up on stage anyway. Something compels us… moves us to play music.');
+			}
+
+			// Leaders
+			if (name === 'erica07') {
+				this.add('c|&Erica*07|Mm, hello.');
+			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|Time for moderation to take its course and slay all the misbehaving Dragons!');
+			}
+			/* no quote
+			if (name === 'saneski') {
+				this.add('c|&SaNeski|');
+			} */
+
+			// Mods
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|sup nigga');
+			}
+			if (name === 'aurastormlucario') {
+				this.add('c|@AuraStormLucario|I\'ll slap you with a piano!');
+			}
+			if (name === 'niisama') {
+				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
+			}
+			if (name === 'paulcentury') {
+				this.add("raw|<div class='chat'><small>@</small><button name='parseCommand' value='/user Paul Century' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#5F4FC1'>Paul Century:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/sVgkUF1.png?1\" title=\"feelssammich\" height=\"50\" width=\"50\" /></em></div>");
+			}
+			if (name === 'safetyshark') {
+				this.add('c|@Safety Shark|C\'mon spammers, I\'m watching.');
+			}
+
+			// Drivers
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|Welcome to the Hax Side');
+			}
+			if (name === 'chiefsokka') {
+				this.add('c|%Chief Sokka|Sokka Reporting for duty Kappa!');
+			}
+			if (name === 'creaturephil') {
+				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
+			}
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
+			}
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|The Queen of the Sea has arrived.');
+			}
+			if (name === 'isandman') {
+				this.add('c|%iSandman|ENTER SANDMAN');
+			}
+			if (name === 'lcehvy12') {
+				this.add('c|%L Chevy 12|I have swooped in to fuck up your day today feelsok');
+			}
+			if (name === 'phoenixgryphon') {
+				this.add('c|%Phoenix Gryphon|hi im birb <:');
+			}
+			if (name === 'selena') {
+				this.add('c|%Selena|o3o hi');
+			}
+			if (name === 'starfox3') {
+				this.add('c|%StarFox :3|The Booty Master has Arrived');
+			}
+
+			// Voices
+			if (name === 'casty') {
+				this.add('c|+casty|I know you were hoping for anything but me.');
+			}
+			if (name === 'chronologically') {
+				this.add("raw|<div class='chat'><small>+</small><button name='parseCommand' value='/user Chronologically' style='background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer'><b><font color='#B64E5A'>Chronologically:</font></b></button><em class='mine'><img src=\"http://i.imgur.com/zRSUw2n.gif\" title=\"feelscx\" height=\"50\" width=\"50\" /></em></div>");
+			}
+			if (name === 'crystalgray') {
+				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
+			}
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|I won\’t forgive anyone who dare to take our flag!');
+			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|Oh so you\'re the guy...');
+			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
+			}
+			if (name === 'sotahigurashi') {
+				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
+			}
+
+			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
+			if (name === 'mrcgtnathan') {
+				this.add('c|Mr. CGTNathan|Welcome to Origin Super Smash Bros, may I show you the door?');
+			}
+			/* no quote
+			if (name === 'nineage') {
+				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
+			}
+			/* no quote
+			if (name === 'originserver') {
+				this.add('c|originserver|');
+			} */
+		},
+
+		// Add here salty tears, that is, custom faint phrases.
+		onFaint: function (pokemon) {
+			let name = toId(pokemon.name);
+
+			// Admins
+			if (name === 'arkenciel') {
+				this.add('c|~ArkenCiel|alright, you got me.');
+			}
+			if (name === 'fender') {
+				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
+			}
+			if (name === 'lttesla') {
+				this.add('c|~Lt. Tesla|Nothing in showdown is certain except Deth and haxes');
+			}
+			if (name === 'masterfloat') {
+				this.add('c|~Master Float|shitzel, fkin hax #blameZarel');
+			}
+			if (name === 'neosoul') {
+				this.add('c|~Neo Soul|Me ded mon!');
+				this.add('c|~Neo Soul|/me shakes dreadlocks');
+			}
+			if (name === 'sparkychild') {
+				this.add('c|~sparkychild|So ephemeral and weak. But it\'s shining with all its might. Thump, Thump, like a heartbeat. This is the light of life.');
+			}
+
+			// Leaders
+			if (name === 'erica07') {
+				this.add('c|&Erica*07|Erica*07 wishes you all a good night.');
+			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
+			}
+			/* no quote
+			if (name === 'saneski') {
+				this.add('c|&SaNeski|');
+			} */
+
+			// Mods
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|fuck this shit nigga');
+			}
+			if (name === 'aurastormlucario') {
+				this.add('c|@AuraStormLucario|U know, this is all ' + pokemon.side.foe.name + '\'s fault');
+			}
+			if (name === 'niisama') {
+				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
+			}
+			if (name === 'paulcentury') {
+				this.add('c|@Paul Century|I\'m out but I\'ll end this with a fuck you but have a nice day');
+			}
+			if (name === 'safetyshark') {
+				this.add('c|@Safety Shark|For the last time, I don\'t have security issues, ok?  First you kill off sparkyboTTT, then me... IM APPEALING TO ZAREL!');
+			}
+
+			// Drivers
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|I went too easy :c');
+			}
+			if (name === 'chiefsokka') {
+				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/DsRQCsI.png" title="feelsrg" height="50" width="50" /></em></div>');
+			}
+			if (name === 'creaturephil') {
+				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
+			}
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|Dang it my hax... they werent enough');
+			}
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|I will stop being afk to get revenge later.');
+			}
+			if (name === 'isandman') {
+				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
+			}
+			if (name === 'lcehvy12') {
+				this.add('c|%L Chevy 12|Screw this, you aren\'t worth it.');
+			}
+			if (name === 'phoenixgryphon') {
+				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
+			}
+			if (name === 'selena') {
+				this.add('c|%Selena|;~; fuck that shit');
+			}
+			if (name === 'starfox3') {
+				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
+			}
+
+			// Voices
+			if (name === 'casty') {
+				this.add('c|+casty|thanks for getting me knocked out, now I can go eat pizza pops and ice cream.');
+				this.clearWeather();
+			}
+			if (name === 'chronologically') {
+				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user Chronologically" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#B64E5A">Chronologically:</font></b></button><em class="mine"><img src="http://i.imgur.com/lv3GmpM.png" title="FacePalm" height="50" width="50" /></em></div>');
+			}
+			if (name === 'crystalgray') {
+				this.add('c|+Crystal Gray|I got cleaned');
+			}
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|Whether you wanna die or not, I don\’t care about whatever you say! Say that kind of thing while you\’re by our sides!');
+			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|it was meant to be.');
+				this.add('c|+Irraquated|Six god is watching, I hope you\'re prepared to face him.');
+			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
+			}
+			if (name === 'sotahigurashi') {
+				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
+			}
+
+			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
+			if (name === 'mrcgtnathan') {
+				this.add('c|Mr. CGTNathan|__My ankle!__');
+			}
+			/* no quote
+			if (name === 'nineage') {
+				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|Omega Nivans|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
+			}
+			/* no quote
+			if (name === 'originserver') {
+				this.add('c|originserver|');
+			} */
+		},
+
+		// Special switch-out events for some mons.
+		onSwitchOut: function (pokemon) {
+			// Transform
+			if (pokemon.originalName) pokemon.name = pokemon.originalName;
+			// Switch Out Messages
+			let name = toId(pokemon.name);
+
+			// Admins
+			if (name === 'arkenciel') {
+				this.add('c|~ArkenCiel|You can consider yourself a little lucky.');
+			}
+			if (name === 'fender') {
+				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user fender" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#CA4D2A">fender:</font></b> !nicememe</button><em class="mine"><img src="http://i.imgur.com/qzcTh6U.gif" title="nicememe" height="300" width="420" /></em></div>');
+			}
+			if (name === 'lttesla') {
+				this.add('c|~Lt. Tesla|see you space cowboy');
+			}
+			if (name === 'masterfloat') {
+				this.add('c|~Master Float|/me floats away quietly');
+			}
+			if (name === 'neosoul') {
+				this.add('c|~Neo Soul|/me moonwalks outta here');
+			}
+			if (name === 'sparkychild') {
+				this.add('c|~sparkychild|By exchanging notes, you get to know one another, to understand one another. As if your souls were connected and your hearts were overlapping. It\'s a conversation through instruments. A miracle that creates harmony. In that moment, music transcends words.');
+			}
+
+			// Leaders
+			if (name === 'erica07') {
+				this.add('c|&Erica*07|Erica*07 tells you all to take care while she\'s gone.');
+			}
+			if (name === 'mightysciz') {
+				this.add('c|&Mighty Sciz|Well... I will be back and face you again');
+			}
+			if (name === 'saneski') {
+				this.add('c|&SaNeski|Do not go gentle into that good night');
+			}
+
+			// Mods
+			if (name === 'alphaninja') {
+				this.add('c|@Alpha Ninja|brb nigga');
+			}
+			if (name === 'aurastormlucario') {
+				this.add('c|@AuraStormLucario|I\'ll be back, skrub');
+			}
+			if (name === 'niisama') {
+				this.add('c|@Nii Sama|Without darkness one cannot know light.');
+			}
+			if (name === 'paulcentury') {
+				this.add('c|@Paul Century|Fuck this shit im out');
+			}
+			if (name === 'safetyshark') {
+				this.add('c|@Safety Shark|Restarting...');
+			}
+
+			// Drivers
+			if (name === 'alliancentg') {
+				this.add('c|%Alliance NTG|Gotta Go, Bathroom');
+			}
+			if (name === 'chiefsokka') {
+				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/M0f2zgJ.jpg?1" title="feelstea" height="50" width="50" /></em></div>');
+			}
+			if (name === 'creaturephil') {
+				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
+			}
+			if (name === 'emge4volco') {
+				this.add('c|%Emg E4 Volco|Welp look like its time to run away like Sanic');
+			}
+			if (name === 'hayleysworld') {
+				this.add('c|%hayleysworld|My bad memes will be back!');
+			}
+			if (name === 'isandman') {
+				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');
+			}
+			if (name === 'lcehvy12') {
+				this.add('c|%L Chevy 12|I live to Fuck You Up another day!');
+			}
+			if (name === 'phoenixgryphon') {
+				this.add('c|%Phoenix Gryphon|pls no kill ty)');
+			}
+			if (name === 'selena') {
+				this.add('c|%Selena|\\o/ gtg');
+			}
+			if (name === 'starfox3') {
+				this.add('c|%StarFox :3|I\'ll git that booty later');
+			}
+
+			// Voices
+			if (name === 'casty') {
+				this.add('c|+casty|I\'d like to go on record and say this was a bad idea');
+				this.clearWeather();
+			}
+			if (name === 'chronologically') {
+				this.add('raw|<div class="chat"><small>+</small><button name="parseCommand" value="/user Chronologically" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#B64E5A">Chronologically:</font></b></button><em class="mine"><img src="http://i.imgur.com/QAuUW7u.jpg?1" title="feelscri" height="50" width="50" /></em></div>');
+			}
+			if (name === 'crystalgray') {
+				this.add('c|+Crystal Gray|you can get wet later ;)');
+			}
+			if (name === 'impfallenblood') {
+				this.add('c|+Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
+			}
+			if (name === 'irraquated') {
+				this.add('c|+Irraquated|I have to go make some vegemite toast brb lol');
+			}
+			if (name === 'piscean') {
+				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
+			}
+			if (name === 'sotahigurashi') {
+				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
+			}
+
+			// Others
+			if (name === 'gnarlycommie') {
+				this.add('c|Gnarly Commie|ok');
+			}
+			/* no quote
+			if (name === 'mrcgtnathan') {
+				this.add('c|Mr. CGTNathan|');
+			}
+			if (name === 'nineage') {
+				this.add('c|nineage|');
+			}*/
+			if (name === 'omeganivans') {
+				this.add('c|&Omega Nivans|Tactical retreat!');
+			}
+			/* no quote
+			if (name === 'originserver') {
+				this.add('c|originserver|');
+			} */
+		},
+
+		onModifyPokemon: function (pokemon) {
+			// let name = toId(pokemon.name);
+			// Enforce choice item locking on custom moves.
+			let moves = pokemon.moveset;
+			if (pokemon.getItem().isChoice && pokemon.lastMove === moves[3].id) {
+				for (let i = 0; i < 3; i++) {
+					if (!moves[i].disabled) {
+						pokemon.disableMove(moves[i].id, false);
+						moves[i].disabled = true;
+					}
+				}
+			}
+			// Enforce taunt disabling custom moves.
+			if (pokemon.volatiles['taunt']) {
+				let moves = pokemon.moveset;
+				for (let i = 0; i < moves.length; i++) {
+					if (this.getMove(moves[i].id).category === 'Status' && !moves[i].disabled) {
+						pokemon.disableMove(moves[i].id, false);
+						moves[i].disabled = true;
+					}
+				}
+			}
+		},
+
+		onModifyMove: function (move, pokemon) {
+			// This is to make signature moves work when transformed.
+			if (move.id === 'transform') {
+				move.onHit = function (target, pokemon) {
+					if (!pokemon.transformInto(target, pokemon)) return false;
+					pokemon.originalName = pokemon.name;
+					pokemon.name = target.name;
+				};
+			}
+			// let name = toId(pokemon.illusion && move.sourceEffect === 'allyswitch' ? pokemon.illusion.name : pokemon.name);
+			// if (move.id === '' && name === '') {}
+		},
+	},
+	{
 		name: "Balanced Hackmons",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3489849/\">Balanced Hackmons</a>",
