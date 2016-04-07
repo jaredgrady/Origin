@@ -62,8 +62,8 @@ exports.commands = {
 			targetUser.popup('You have been added to the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		remove: function (target, room, user) {
+			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			let targetUser = Users(toId(target));
 			if (!isCapo(user.userid) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangs").set(targetUser, '');
@@ -72,8 +72,8 @@ exports.commands = {
 			targetUser.popup('You have been removed from the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		promote: function (target, room, user) {
+			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			let targetUser = Users(toId(target));
 			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangranks").set(targetUser, 'capo');
@@ -82,17 +82,17 @@ exports.commands = {
 			targetUser.popup('You have been promoted to capo in the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		demote: function (target, room, user) {
+			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			let targetUser = Users(toId(target));
 			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangranks").set(targetUser, '');
 			user.gangrank = '';
-			this.sendReply(targetUser + ' has been demoted in the gang: ' + parts[1]);
-			targetUser.popup('You have been demoted in the gang: ' + parts[1] + ' by ' + user + '.');
+			this.sendReply(targetUser + ' has been demoted in the gang: ' + user.gang);
+			targetUser.popup('You have been demoted in the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		godfather: function (target, room, user) {
-			parts = target.split(',');
+			let parts = target.split(',');
 			if (!Users(toId(parts[0]))) return this.errorReply('User not found.');
 			let targetUser = Users(toId(parts[0]));
 			if (!this.can('makechatroom')) return this.errorReply('Access denied.');
@@ -114,7 +114,7 @@ exports.commands = {
 			this.sendReplyBox(rankLadder('Turf Wars', 'Points', keys.slice(0, 100), 'gangladder'));
 		},
 		givepoints: function (target, room, user) {
-			parts = target.split(',');
+			let parts = target.split(',');
 			if (!this.can('makechatroom')) return false;
 			let curgang = toId(parts[0]);
 			let amount = isMoney(parts[1]);
