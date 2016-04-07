@@ -2252,7 +2252,7 @@ exports.Formats = [
 
 			// Add here special typings, done for flavour mainly.
 			if (name === 'paulcentury' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fire');
+				this.add('-start', pokemon, 'typechange', 'Water');
 				pokemon.types = ["Water"];
 			}
 			if (name === 'hayleysworld' && !pokemon.illusion) {
@@ -2867,7 +2867,7 @@ exports.Formats = [
 
 			// Add here special typings, done for flavour mainly.
 			if (name === 'paulcentury' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fire');
+				this.add('-start', pokemon, 'typechange', 'Water');
 				pokemon.types = ["Water"];
 			}
 			if (name === 'hayleysworld' && !pokemon.illusion) {
