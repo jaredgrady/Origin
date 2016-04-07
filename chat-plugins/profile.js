@@ -4,7 +4,6 @@ let color = require('../config/color');
 let moment = require('moment');
 let geoip = {};
 let badgePlugin = require('./badges');
-let turfwars = require('./turfwars');
 
 try {
 	geoip = require('geoip-ultralight');

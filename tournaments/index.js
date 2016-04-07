@@ -768,7 +768,7 @@ class Tournament {
 			let reward = 10;
 			let gang = Db('gangs').get(wid);
 			Db('gangladder').set(gang, Db('gangladder').get(gang, 0) + reward).get(gang);
-			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also earned " + "<font color='" + color + "'>" + reward + "</font> points for the" + gang + "Gang!</b>");
+			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also earned " + "<font color='" + color + "'>" + reward + "</font> points for the" + turfwars.gangs[gang] + "Gang!</b>");
 		}
 
 		delete exports.tournaments[this.room.id];

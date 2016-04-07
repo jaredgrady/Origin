@@ -120,3 +120,5 @@ exports.commands = {
 		},
 	},
 };
+
+module.exports.gangs = gangs;
