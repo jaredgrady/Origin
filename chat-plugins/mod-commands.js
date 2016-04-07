@@ -45,6 +45,14 @@ function clearRoom(room) {
 	}, 1000);
 }
 
+function postAds() {
+	if (Rooms.global.ads.length > 0) {
+		let ad = Rooms.global.ads.shift();
+		Rooms('lobby').addRaw('<div class="infobox"><a href="/' + ad["room"] + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + ad["room"] + '</strong>:</font> ' + ad["message"]  + '</a>  -' + ad["user"]  + '</div>');
+		Rooms('lobby').update();
+	}
+}
+
 exports.commands = {
 	clearroomauth: function (target, room, user, cmd) {
 		if (!this.can('declare') && room.founder !== user.userid) return this.errorReply("/clearroomauth - Access denied.");
@@ -644,14 +652,38 @@ exports.commands = {
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
 
 	ad: 'advertise',
+	ads: 'advertise',
 	advertise: function (target, room, user) {
-		if (!user.can('lock')) return false;
 		let parts = target.split(',');
-		if (parts.length < 2) return this.errorReply("Invalid command. `/ad room, message`.");
-		let innerTarget = Tools.escapeHTML(parts[0]);
-		let message = Tools.escapeHTML(parts.slice(1).join(","));
-		let targetRoom = Rooms.search(innerTarget);
-		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
-		room.addRaw('<div class="infobox"><a href="/' + targetRoom.id + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + targetRoom.id + '</strong>:</font> ' + message + '</a>  -' + toId(user) + '</div>');
+		let cmd = parts[0].trim().toLowerCase();
+		switch (cmd) {
+		case 'enable':
+			if (!this.can('declare')) return false;
+			Rooms.global.adInterval = setInterval(postAds, 300000); //5 minutes
+			this.sendReply("Ads have been enabled.");
+			break;
+		case 'disable':
+			if (!this.can('declare')) return false;
+			clearInterval(Rooms.global.adInterval);
+			this.sendReply("Ads have been disabled.");
+			break;
+		case 'add':
+			if (parts.length < 3) return this.errorReply("Invalid command. `/ads add, room, message`.");
+			if (!Rooms.global.ads) Rooms.global.ads = [];
+			let adIps = Rooms.global.ads.map(ad => ad.ip);
+			for (let ip in user.ips) {
+				if (adIps.indexOf(ip) >= 0) return this.errorReply("You already have an advertisement in the queue. Please wait for it to be broadcast before adding another one.");
+			}
+			let inputRoom = Tools.escapeHTML(parts[1]);
+			let targetRoom = Rooms.search(inputRoom);
+			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + inputRoom  + '" does not exist.');
+			let message = Tools.escapeHTML(parts.slice(2).join(","));
+			Rooms.global.ads.push({ip: user.latestIp, user: toId(user), room: inputRoom, message: message});
+			if (!Rooms.global.adInterval) {
+				Rooms.global.adInterval = setInterval(postAds, 300000); //5 minutes
+			}
+			this.sendReply("Your message has been added to the advertisement queue. You're #" + Rooms.global.ads.length + ".");
+			break;
+		}
 	},
 };
