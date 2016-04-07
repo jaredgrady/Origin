@@ -16397,14 +16397,14 @@ exports.BattleMovedex = {
 	// Irraquated
 	"time2die": {
 		isNonstandard: true,
-		accuracy: 85,
-		basePower: 100,
+		accuracy: 90,
+		basePower: 120,
 		category: "Physical",
 		id: "time2die",
 		name: "Time 2 die",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		onTryHit: function (target, source, move) {
 			this.add('c|%Irraquated|TIME TO DIE KIDDO');
 			this.attrLastMove('[still]');
