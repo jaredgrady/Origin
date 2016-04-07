@@ -450,6 +450,10 @@ class User {
 		// emoticon blocking
 		this.blockEmoticons = Db("ignoremotes").get(this.userid, false);
 
+		// gang info
+		this.gang = Db("gangs").get(this.userid, '');
+		this.gangrank = Db("gangranks").get(this.userid, '');
+
 		// initialize
 		users.set(this.userid, this);
 	}

@@ -5,6 +5,7 @@ const AUTO_DISQUALIFY_WARNING_TIMEOUT = 30 * 1000;
 const AUTO_START_MINIMUM_TIMEOUT = 30 * 1000;
 const MAX_REASON_LENGTH = 300;
 const colors = require('colors');
+let turfwars = require('../chat-plugins/turfwars');
 
 let TournamentGenerators = {
 	roundrobin: require('./generator-round-robin.js').RoundRobin,
@@ -763,6 +764,13 @@ class Tournament {
 			let tourRarity = tourCard(tourSize, toId(winner));
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + tourRarity[0] + ">" + tourRarity[1] + "</font> card: <button name='send' value='/card " + tourRarity[2] + "'>" + tourRarity[3] + "</button> from the tournament.");
 		}
+		if (this.room.isOfficial && tourSize >= 8 && Db('gangs').get(wid) !== ' ') {
+			let reward = 10;
+			let gang = Db('gangs').get(wid);
+			Db('gangladder').set(gang, Db('gangladder').get(gang, 0) + reward).get(gang);
+			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also earned " + "<font color='" + color + "'>" + reward + "</font> points for the" + gang + "Gang!</b>");
+		}
+
 		delete exports.tournaments[this.room.id];
 		delete this.room.game;
 	}
