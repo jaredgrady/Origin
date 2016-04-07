@@ -46,10 +46,18 @@ exports.commands = {
 
 	turf: 'gang',
 	gang: {
+		join: function (target, room, user) {
+			let gang = toId(target);
+			if (user.gang !== '') return this.errorReply('You are already in a gang');
+			if (!gangs[gang])  return this.errorReply('This gang does not exist.');
+			Db("gangs").set(user.userid, gang);
+			user.gang = gang;
+			this.sendReply('You have joined the gang: ' + gang);
+		},
 		add: function (target, room, user) {
 			let targetUser = Users(toId(target));
 			if (!Users(targetUser)) return this.errorReply('User not found.');
-			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (!isGodfather(user) || user.gang === '' && !this.can('makechatroom')) return this.errorReply('Access denied.');
 			if (targetUser.gang !== '') return this.errorReply('User is already a member of a rival gang.');
 			Db("gangs").set(targetUser, user.gang);
 			targetUser.gang = user.gang;
