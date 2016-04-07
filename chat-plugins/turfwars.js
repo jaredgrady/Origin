@@ -32,67 +32,64 @@ const gangs = {
 	},
 };
 
-function isMember(user, gang) {
-	if (user.gang === gang) {
-		return true;
-	} else {
-		return false;
-	}
+function isMember(user) {
+	if (user.gang === '') return false;
+	return true;
 }
 
 function isCapo(user) {
-	if (user.gangrank === 'capo' && user.gangrank === 'godfather') {
-		return true;
-	} else {
-		return false;
-	}
+	if (user.gangrank !== 'capo' || user.gangrank !== 'godfather') return false;
+	return true;
 }
 
 function isGodfather(user, gang) {
-	if (user.gangrank === 'godfather') {
-		return true;
-	} else {
-		return false;
-	}
+	if (user.gangrank !== 'godfather') return false;
+	return true;
 }
 
-let parts;
 exports.commands = {
 
 	turf: 'gang',
 	gang: {
 		add: function (target, room, user) {
-			parts = target.split(',');
-			if (!Users(toId(parts[0]))) return this.errorReply('User not found.');
-			let targetUser = Users(toId(parts[0]));
-			if (!isCapo(user) || !isMember(parts[1]) && !this.can('makechatroom')) return this.errorReply('Access denied.');
-			if (targetUser.gang !== ' ') return this.errorReply('User is already a member of a rival gang.');
-			Db("gangs").set(targetUser, parts[1]);
-			targetUser.gang = parts[1];
-			this.sendReply(targetUser + ' has been added to the gang: ' + parts[1]);
-			targetUser.popup('You have been added to the gang: ' + parts[1] + ' by ' + user + '.');
+			let targetUser = Users(toId(target));
+			if (!Users(targetUser)) return this.errorReply('User not found.');
+			if (!isCapo(user.userid) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (targetUser.gang !== '') return this.errorReply('User is already a member of a rival gang.');
+			Db("gangs").set(targetUser, user.gang);
+			targetUser.gang = user.gang;
+			this.sendReply(targetUser + ' has been added to the gang: ' + user.gang);
+			targetUser.popup('You have been added to the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		remove: function (target, room, user) {
-			parts = target.split(',');
-			if (!Users(toId(parts[0]))) return this.errorReply('User not found.');
-			let targetUser = Users(toId(parts[0]));
-			if (!isCapo(user) || !isMember(parts[1]) && !this.can('makechatroom')) return this.errorReply('Access denied.');
-			if (targetUser.gang !== parts[1]) return this.errorReply('User is not a member of your gang.');
-			Db("gangs").set(targetUser, ' ');
-			targetUser.gang = ' ';
-			this.sendReply(targetUser + ' has been removed from the gang: ' + parts[1]);
-			targetUser.popup('You have been removed from the gang: ' + parts[1] + ' by ' + user + '.');
+			if (!Users(targetUser)) return this.errorReply('User not found.');
+			let targetUser = Users(toId(target));
+			if (!isCapo(user.userid) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
+			Db("gangs").set(targetUser, '');
+			targetUser.gang = '';
+			this.sendReply(targetUser + ' has been removed from the gang: ' + user.gang);
+			targetUser.popup('You have been removed from the gang: ' + user.gang + ' by ' + user + '.');
 		},
 		promote: function (target, room, user) {
-			parts = target.split(',');
-			if (!Users(toId(parts[0]))) return this.errorReply('User not found.');
-			let targetUser = Users(toId(parts[0]));
-			if (!isGodfather(user) || !isMember(parts[1]) && !this.can('makechatroom')) return this.errorReply('Access denied.');
-			if (targetUser.gang !== parts[1]) return this.errorReply('User is not a member of your gang.');
+			if (!Users(targetUser)) return this.errorReply('User not found.');
+			let targetUser = Users(toId(target));
+			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
 			Db("gangranks").set(targetUser, 'capo');
 			user.gangrank = 'capo';
-			this.sendReply(targetUser + ' has been promoted to capo in the gang: ' + parts[1]);
-			targetUser.popup('You have been promoted to capo in the gang: ' + parts[1] + ' by ' + user + '.');
+			this.sendReply(targetUser + ' has been promoted to capo in the gang: ' + user.gang);
+			targetUser.popup('You have been promoted to capo in the gang: ' + user.gang + ' by ' + user + '.');
+		},
+		demote: function (target, room, user) {
+			if (!Users(targetUser)) return this.errorReply('User not found.');
+			let targetUser = Users(toId(target));
+			if (!isGodfather(user) || !isMember(user.gang) && !this.can('makechatroom')) return this.errorReply('Access denied.');
+			if (targetUser.gang !== user.gang) return this.errorReply('User is not a member of your gang.');
+			Db("gangranks").set(targetUser, '');
+			user.gangrank = '';
+			this.sendReply(targetUser + ' has been demoted in the gang: ' + parts[1]);
+			targetUser.popup('You have been demoted in the gang: ' + parts[1] + ' by ' + user + '.');
 		},
 		godfather: function (target, room, user) {
 			parts = target.split(',');
@@ -106,17 +103,6 @@ exports.commands = {
 			user.gang = parts[1];
 			this.sendReply(targetUser + ' has been promoted to godfather of the gang: ' + parts[1]);
 			targetUser.popup('You have been promoted to godfather of the gang: ' + parts[1] + ' by ' + user + '.');
-		},
-		demote: function (target, room, user) {
-			parts = target.split(',');
-			if (!Users(toId(parts[0]))) return this.errorReply('User not found.');
-			let targetUser = Users(toId(parts[0]));
-			if (!isGodfather(user) || !isMember(parts[1]) && !this.can('makechatroom')) return this.errorReply('Access denied.');
-			if (targetUser.gang !== parts[1]) return this.errorReply('User is not a member of your gang.');
-			Db("gangranks").set(targetUser, ' ');
-			user.gangrank = ' ';
-			this.sendReply(targetUser + ' has been demoted in the gang: ' + parts[1]);
-			targetUser.popup('You have been demoted in the gang: ' + parts[1] + ' by ' + user + '.');
 		},
 		ladder: function (target, room, user) {
 			if (!this.runBroadcast()) return;
