@@ -171,8 +171,8 @@ exports.commands = {
 			// sort the members
 			Object.keys(gangData).filter(u => gangData[u] === targetGang).forEach(u => members[gangRanks[u] || "grunt"].push(u));
 			// build the list
-			Object.keys(members).map(u => "<b>" + u.charAt(0).toUpperCase() + u.slice(1) + ": </b><br />" + members[u].sort().map(i => Users.get(i) && Users.get(i).connected ? "<b>" + i + "</b>" : i).join(", ")).join("<br /><br />");
-			this.sendReplyBox("<div style=\"max-height: 250px; overflow-y: scroll\">" + members + "</div>");
+			let display = Object.keys(members).map(u => "<b>" + u.charAt(0).toUpperCase() + u.slice(1) + ": </b><br />" + members[u].sort().map(i => Users.get(i) && Users.get(i).connected ? "<b>" + i + "</b>" : i).join(", ")).join("<br /><br />");
+			this.sendReplyBox("<div style=\"max-height: 250px; overflow-y: scroll\">" + display + "</div>");
 		},
 	},
 };
