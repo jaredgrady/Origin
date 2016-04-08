@@ -158,6 +158,18 @@ exports.commands = {
 			this.sendReply(gang + " has been awarded " + amount + " points.");
 			room.addRaw("<h4>" + gang + "has been awarded " + amount + " points.</h4>");
 		},
+		members: function (target, room, user) {
+			if (!this.runBroadcast()) return false;
+			if ((target && !gangs.hasOwnProperty(toId(target)) || (!target && !gangs.hasOwnProperty(room.id))) return this.errorReply("You have to specify a gang.");
+			gangData = target ? toId(target) : room.id
+			let gangData = Db("gangs").object();
+			let members = Object.keys(gangData)
+				.filter(u => gangData[u] === targetGang)
+				.sort()
+				.map(u => "-" + (Users.get(u) && Users.get(u).connected ? "**" + u + "**" : u))
+				.join("<br />");
+			this.sendReplyBox(members);
+		}
 	},
 };
 
