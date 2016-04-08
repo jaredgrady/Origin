@@ -162,11 +162,16 @@ exports.commands = {
 			if ((target && !gangs.hasOwnProperty(toId(target))) || (!target && !gangs.hasOwnProperty(room.id))) return this.errorReply("You have to specify a gang.");
 			let targetGang = target ? toId(target) : room.id;
 			let gangData = Db("gangs").object();
-			let members = Object.keys(gangData)
-				.filter(u => gangData[u] === targetGang)
-				.sort()
-				.map(u => "- " + (Users.get(u) && Users.get(u).connected ? "<b>" + u + "</b>" : u))
-				.join("<br />");
+			let gangRanks = Db("gangranks").object();
+			let members = {
+				godfather: [],
+				capo: [],
+				grunt: [],
+			};
+			// sort the members
+			Object.keys(gangData).filter(u => gangData[u] === targetGang).forEach(u => members[gangRanks[u] || "grunt"].push(u));
+			// build the list
+			members.map(u => "<b>" + u.charAt(0).toUpperCase() + u.slice(1) + ": </b><br />" + members[u].sort().map(i => Users.get(i) && Users.get(i).connected ? "<b>" + i + "</b>" : i).join(", ")).join("<br /><br />");
 			this.sendReplyBox("<div style=\"max-height: 250px; overflow-y: scroll\">" + members + "</div>");
 		},
 	},
