@@ -15,7 +15,7 @@ exports.BattleMovedex = {
 		boosts: {atk: -1, spa: -1},
 		secondary: false,
 		onHit: function (target, source) {
-			target.trySetStatus('psn', source);  // Doesn't use the status property to prevent the move
+			target.trySetStatus('tox', source);  // Doesn't use the status property to prevent the move
 			target.addVolatile('taunt', source); // from failing before executing all actions.
 			if (source.name === 'Eevee General') this.add("c|~Eevee General|Sorry but I have to go! Please submit your request in <<adminrequests>> and we'll look at it soon.");
 		},
@@ -97,8 +97,8 @@ exports.BattleMovedex = {
 		isNonstandard: true,
 		isViable: true,
 		name: "Army of Mushrooms",
-		pp: 10,
-		priority: 1,
+		pp: 5,
+		priority: -1,
 		flags: {snatch: 1},
 		beforeTurnCallback: function (pokemon) {
 			this.boost({def: 1, spd: 1}, pokemon, pokemon, 'mushroom army');
@@ -643,8 +643,8 @@ exports.BattleMovedex = {
 		isNonstandard: true,
 		name: "Cathy",
 		pp: 10,
-		priority: 0,
-		flags: {heal: 1},
+		priority: 0.1,
+		flags: {heal: 1, mirror: 1},
 		onPrepareHit: function (target, source) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Judgment", target);
@@ -665,7 +665,7 @@ exports.BattleMovedex = {
 				return false;
 			}
 		},
-		heal: [1, 2],
+		heal: [13, 20],
 		secondary: false,
 		target: "self",
 		type: "Normal",
@@ -1467,7 +1467,7 @@ exports.BattleMovedex = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		ignoreImmunity: {'Dark': true},
+		ignoreImmunity: {'Psychic': true},
 		onPrepareHit: function (target, source) {
 			if (toId(source.name) === 'sigilyph') {
 				this.add('c|@Sigilyph|**SOOOOGOOOOLOOOOPH**');
@@ -2592,7 +2592,6 @@ exports.BattleMovedex = {
 		onHit: function (target, source) {
 			source.side.addSideCondition('reflect', source);
 			source.side.addSideCondition('lightscreen', source);
-			source.side.addSideCondition('luckychant', source);
 			source.side.addSideCondition('safeguard', source);
 		},
 		secondary: false,
@@ -3318,6 +3317,7 @@ exports.BattleMovedex = {
 		},
 		selfSwitch: true,
 		secondary: false,
+		ignoreImmunity: true,
 		target: "normal",
 		onPrepareHit: function (target, source) {
 			this.attrLastMove('[still]');
@@ -3937,7 +3937,7 @@ exports.BattleMovedex = {
 	splatter: {
 		accuracy: 100,
 		basePower: 200,
-		category: "Physical",
+		category: "Special",
 		id: "splatter",
 		isViable: true,
 		isNonstandard: true,
@@ -3951,10 +3951,7 @@ exports.BattleMovedex = {
 			this.add('-anim', source, "Explosion", source);
 			this.add('-anim', target, "Rototiller", target);
 		},
-		secondary: {
-			chance: 100,
-			volatileStatus: 'splatter',
-		},
+		volatileStatus: 'splatter',
 		effect: {
 			duration: 2,
 			onStart: function (pokemon) {
@@ -3969,7 +3966,8 @@ exports.BattleMovedex = {
 				pokemon.tryTrap();
 			},
 		},
-		target: "normal",
+		secondary: false,
+		target: "allAdjacentFoes",
 		type: "Bug",
 	},
 	// Jack Higgins
@@ -4169,7 +4167,7 @@ exports.BattleMovedex = {
 	swagplant: {
 		accuracy: 90,
 		basePower: 150,
-		category: "Special",
+		category: "Physical",
 		id: "swagplant",
 		isViable: true,
 		isNonstandard: true,

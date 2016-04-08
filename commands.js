@@ -67,7 +67,7 @@ let commands = exports.commands = {
 			(Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + rankLists[r].sort((a, b) => toId(a).localeCompare(toId(b))).join(", ")
 		);
 
-		if (!buffer.length) buffer = "This server has no global authority.";
+		if (!buffer.length) return connection.popup("This server has no global authority.");
 		connection.popup(buffer.join("\n\n"));
 	},
 	authhelp: ["/auth - Show global staff for the server."],
@@ -181,15 +181,12 @@ let commands = exports.commands = {
 			return this.parse('/help msg');
 		}
 		this.pmTarget = (targetUser || this.targetUsername);
-		if (!targetUser || !targetUser.connected) {
-			if (targetUser && !targetUser.connected) {
-				this.errorReply("User " + this.targetUsername + " is offline. Try using /tell to send them an offline message.");
-				return;
-			} else {
-				this.errorReply("User "  + this.targetUsername + " not found. Did you misspell their name? If they are offline, try using /tell to send them an offline message.");
-				return this.parse('/help tell');
-			}
-			return;
+		if (!targetUser) {
+			this.errorReply("User " + this.targetUsername + " not found. Did you misspell their name?");
+			return this.parse('/help msg');
+		}
+		if (!targetUser.connected) {
+			return this.errorReply("User " + this.targetUsername + " is offline.");
 		}
 
 		if (Config.pmmodchat) {
@@ -704,6 +701,20 @@ let commands = exports.commands = {
 			Rooms.global.writeChatRoomData();
 		}
 	},
+	deletetopic: 'deleteroomintro',
+	deleteroomintro: function (target, room, user) {
+		if (!this.can('declare', null, room)) return false;
+		if (!room.introMessage) return this.errorReply("This room does not have a introduction set.");
+
+		this.privateModCommand("(" + user.name + " deleted the roomintro.)");
+		this.logEntry(target);
+
+		delete room.introMessage;
+		if (room.chatRoomData) {
+			delete room.chatRoomData.introMessage;
+			Rooms.global.writeChatRoomData();
+		}
+	},
 
 	stafftopic: 'staffintro',
 	staffintro: function (target, room, user) {
@@ -736,6 +747,20 @@ let commands = exports.commands = {
 
 		if (room.chatRoomData) {
 			room.chatRoomData.staffMessage = room.staffMessage;
+			Rooms.global.writeChatRoomData();
+		}
+	},
+	deletestafftopic: 'deletestaffintro',
+	deletestaffintro: function (target, room, user) {
+		if (!this.can('ban', null, room)) return false;
+		if (!room.staffMessage) return this.errorReply("This room does not have a staff introduction set.");
+
+		this.privateModCommand("(" + user.name + " deleted the staffintro.)");
+		this.logEntry(target);
+
+		delete room.staffMessage;
+		if (room.chatRoomData) {
+			delete room.chatRoomData.staffMessage;
 			Rooms.global.writeChatRoomData();
 		}
 	},
@@ -787,14 +812,14 @@ let commands = exports.commands = {
 		if (!target) return this.parse('/help roomowner');
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
+		let name = this.targetUsername;
+		let userid = toId(name);
 
 		if (!targetUser) return this.errorReply("User '" + this.targetUsername + "' is not online.");
 		if (!this.can('makeroom')) return false;
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
 
-		let name = targetUser.name;
-
-		room.auth[targetUser.userid] = '#';
+		room.auth[userid] = '#';
 		this.addModCommand("" + name + " was appointed Room Owner by " + user.name + ".");
 		targetUser.popup("You were appointed Room Owner by " + user.name + " in " + room.id + ".");
 		room.onUpdateIdentity(targetUser);
@@ -819,12 +844,10 @@ let commands = exports.commands = {
 		delete room.auth[userid];
 		this.sendReply("(" + name + " is no longer Room Owner.)");
 		if (targetUser) {
-			targetUser.popup("You are no longer a Room Owner of " + room.id + ". (Demoted by " + user.name + ".)");
-			targetUser.updateIdentity();
+			targetUser.popup("You were appointed Room Owner by " + user.name + " in " + room.id + ".");
+			room.onUpdateIdentity(targetUser);
 		}
-		if (room.chatRoomData) {
-			Rooms.global.writeChatRoomData();
-		}
+		Rooms.global.writeChatRoomData();
 	},
 	deroomownerhelp: ["/roomdeowner [username] - Removes [username]'s status as a room owner. Requires: ~"],
 
@@ -842,16 +865,14 @@ let commands = exports.commands = {
 		let name = targetUser ? targetUser.name : this.targetUsername;
 
 		if (!userid) return this.parse('/help roompromote');
-		if (!room.auth || !room.auth[userid]) {
-			if (!targetUser) {
-				return this.errorReply("User '" + name + "' is offline and unauthed, and so can't be promoted.");
-			}
-			if (!targetUser.registered) {
-				return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
-			}
+		if (!targetUser && !Users.isUsernameKnown(userid)) {
+			return this.errorReply("User '" + name + "' is offline and unrecognized, and so can't be promoted.");
+		}
+		if (targetUser && !targetUser.registered) {
+			return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
 		}
 
-		let currentGroup = ((room.auth && room.auth[userid]) || (room.isPrivate !== true && targetUser.group) || ' ');
+		let currentGroup = ((room.auth && room.auth[userid]) || (room.isPrivate !== true && Users.usergroups[userid]) || ' ');
 		let nextGroup = target;
 		if (target === 'deauth') nextGroup = Config.groupsranking[0];
 		if (!nextGroup) {
@@ -1627,6 +1648,10 @@ let commands = exports.commands = {
 		if (!Config.groups[nextGroup]) {
 			return this.errorReply("Group '" + nextGroup + "' does not exist.");
 		}
+		if (!cmd.startsWith('global')) {
+			let groupid = Config.groups[nextGroup].id;
+			return this.errorReply('Did you mean "/room' + groupid + '" or "/global' + groupid + '"?');
+		}
 		if (Config.groups[nextGroup].roomonly) {
 			return this.errorReply("Group '" + nextGroup + "' does not exist as a global rank.");
 		}
@@ -1639,9 +1664,13 @@ let commands = exports.commands = {
 			return this.errorReply("/" + cmd + " - Access denied.");
 		}
 
-		if (!Users.setOfflineGroup(name, nextGroup)) {
-			return this.sendReply("/promote - WARNING: This user is offline and could be unregistered. Use /forcepromote if you're sure you want to risk it.");
+		if (!Users.isUsernameKnown(userid)) {
+			return this.errorReply("/globalpromote - WARNING: '" + name + "' is offline and unrecognized. The username might be misspelled (either by you or the person or told you) or unregistered. Use /forcepromote if you're sure you want to risk it.");
 		}
+		if (targetUser && !targetUser.registered) {
+			return this.errorReply("User '" + name + "' is unregistered, and so can't be promoted.");
+		}
+		Users.setOfflineGroup(name, nextGroup);
 		if (Config.groups[nextGroup].rank < Config.groups[currentGroup].rank) {
 			this.privateModCommand("(" + name + " was demoted to " + groupName + " by " + user.name + ".)");
 			if (targetUser) targetUser.popup("You were demoted to " + groupName + " by " + user.name + ".");
@@ -1688,9 +1717,10 @@ let commands = exports.commands = {
 		let nextGroup = target;
 		if (!Config.groups[nextGroup]) return this.errorReply("Group '" + nextGroup + "' does not exist.");
 
-		if (!Users.setOfflineGroup(name, nextGroup, true)) {
+		if (Users.isUsernameKnown(name)) {
 			return this.errorReply("/forcepromote - Don't forcepromote unless you have to.");
 		}
+		Users.setOfflineGroup(name, nextGroup);
 
 		this.addModCommand("" + name + " was promoted to " + (Config.groups[nextGroup].name || "regular user") + " by " + user.name + ".");
 	},
@@ -1944,6 +1974,8 @@ let commands = exports.commands = {
 
 			if (searchString.match(/^["'].+["']$/)) {
 				searchString = searchString.substring(1, searchString.length - 1);
+			} else if (searchString.includes('_')) {
+				// do an exact search, the approximate search fails for underscores
 			} else if (isWin) {  // ID search with RegEx isn't implemented for windows yet (feel free to add it to winmodlog.cmd)
 				target = '"' + target + '"';  // add quotes to target so the caller knows they are getting a strict match
 			} else {
