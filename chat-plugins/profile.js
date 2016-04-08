@@ -194,8 +194,8 @@ Profile.prototype.gang = function () {
 	let gangsymbol = '';
 	if (gang !== '') gangsymbol = '<img src= ' + turfwars.gangs[gang].icon + ' width="10" height="10"</img>';
 	gang = caps(gang);
-	if (gangrank !== '') gangrank = ' (<font color=#0000ff><b>' + gangrank + '</b></font>)';
-	if (gang) return label('Gang') + gang + gangsymbol + SPACE + gangrank + BR + SPACE;
+	if (gangrank !== '') gangrank = ' (<font color=#00F><b>' + gangrank + '</b></font>)';
+	if (gang) return label('Gang') + gang + SPACE + gangsymbol + SPACE + gangrank + BR + SPACE;
 	return '';
 };
 
@@ -281,7 +281,7 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
+			if (!Users.get(targetUser)) return this.errorReply("The target user is not online.");
 			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			if (!reg.test(parts[2].trim())) return this.sendReply("Enter only alphanumeric characters for the eg. ff80b3");
@@ -299,7 +299,7 @@ exports.commands = {
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
 			if (!userid) return this.sendReply("You didn't specify a user.");
-			if (!Users.get(targetUser)) return this.errorReply('The target user is not online.');
+			if (!Users.get(targetUser)) return this.errorReply("The target user is not online.");
 			if (targetUser.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 			if (targetUser.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 			if (toId(targetUser) !== toId(user) && !this.can('lock')) return this.sendReply("You must be staff to delete other people their custom title.");
