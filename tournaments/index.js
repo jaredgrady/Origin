@@ -764,7 +764,7 @@ class Tournament {
 			let tourRarity = tourCard(tourSize, toId(winner));
 			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + tourRarity[0] + ">" + tourRarity[1] + "</font> card: <button name='send' value='/card " + tourRarity[2] + "'>" + tourRarity[3] + "</button> from the tournament.");
 		}
-		if (this.room.isOfficial && tourSize >= 8 && Db('gangs').get(wid) !== '') {
+		if (this.room.isOfficial && tourSize >= 8 && Db('gangs').get(wid, '') !== '') {
 			let reward = 10;
 			let gang = Db('gangs').get(wid);
 			Db('gangladder').set(gang, Db('gangladder').get(gang, 0) + reward).get(gang);
