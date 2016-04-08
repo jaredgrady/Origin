@@ -28,7 +28,6 @@ exports.commands = {
 		if (!target) target = 'help';
 		let parts = target.split(',');
 		let commandName;
-
 		switch (toId(parts[0])) {
 		case 'add':
 			if (!this.can('declare')) return false;

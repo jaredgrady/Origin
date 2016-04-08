@@ -5,7 +5,7 @@
 // disclaimer: this does NOT do emoticons, the server will NOT apply emoticons for Erica when this is enabled.
 
 // we are using strict mode in this file because Erica is strict af.
-"use strict";
+'use strict';
 
 // list of phrases to replace for length each length is a ARRAY so it randomly chooses one to allow more variety
 const PHRASES = [
@@ -110,5 +110,5 @@ let messageReplacer = function (room, user, message, special, originalPMmessage)
 module.exports = {
 	pixilate: messageReplacer,
 	// default off
-	pixilation: Db("pixilation").object(),
+	pixilation: Db('pixilation').object(),
 };

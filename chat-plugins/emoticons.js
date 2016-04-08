@@ -166,7 +166,6 @@ function parseEmoticons(message, room, user, pm) {
 	let match = false;
 	let len = emotesKeys.length;
 
-
 	while (len--) {
 		if (message && message.indexOf(emotesKeys[len]) >= 0) {
 			match = true;
@@ -306,16 +305,17 @@ exports.commands = {
 	ignoremotes: 'ignoreemotes',
 	ignoreemotes: function (target, room, user) {
 		user.blockEmoticons = true;
-		Db("ignoremotes").set(user.userid, true);
+		Db('ignoremotes').set(user.userid, true);
 		this.sendReply("You are now ignoring emotes.");
 	},
+
 	unblockemote: 'unignoreemotes',
 	unblockemotes: 'unignoreemotes',
 	unblockemoticon: 'unignoreemotes',
 	unblockemoticons: 'unignoreemotes',
 	unignoremotes: 'unignoreemotes',
 	unignoreemotes: function (target, room, user) {
-		Db("ignoremotes").delete(user.userid);
+		Db('ignoremotes').delete(user.userid);
 		user.blockEmoticons = false;
 		this.sendReply("You are no longer ignoring emotes.");
 	},

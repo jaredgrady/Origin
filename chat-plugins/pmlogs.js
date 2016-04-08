@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // pm log age in hours
 const PM_LOG_AGE = 2;
 const reportRoom = "upperstaffroom";
@@ -53,7 +53,7 @@ class PmLogger {
 		// save to database
 		// set id, date to database
 
-		Db("pms").set([id, new Date().toLocaleString()], this.reports[id]);
+		Db('pms').set([id, new Date().toLocaleString()], this.reports[id]);
 		// mark report as saved
 		this.reports[id].saved = true;
 		// success
@@ -150,21 +150,24 @@ exports.commands = {
 		if (!reportSuccess) return this.errorReply("You do not have any recent PMs with this user.");
 		this.sendReply("You have reported user " + targetUser.name);
 	},
+
 	viewreport: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		if (!target) return this.errorReply("Please include the report id you want to view.");
 		let reportExists = PML.viewReport(user, target);
 		if (!reportExists) this.errorReply("That is not a valid report.");
 	},
+
 	savereport: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		if (!target) return this.errorReply("Please include the report id you want to save.");
 		let reportExists = PML.saveReport(target);
 		if (!reportExists) return this.errorReply("That is not a valid report or it has already been saved.");
 		this.sendReply("You have saved the report.");
 	},
+
 	resolvereport: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		if (!target) return this.errorReply("Please include the report id you want to view.");
 		let resolveSuccess = PML.resolve(target);
 		if (!resolveSuccess) return this.errorReply("Report was not found or is already resolved.");
@@ -172,13 +175,14 @@ exports.commands = {
 		// make sure it shows in room
 		rRoom.update();
 	},
+
 	searchreports: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		if (!target) return this.errorReply("Please include which user to search for");
 		target = toId(target);
 		let found = {};
 		// search
-		let savedReports = Db("pms").object();
+		let savedReports = Db('pms').object();
 		for (let id in savedReports) {
 			// dont waste time searching
 			let regex = new RegExp("(^" + target + "\-|\-" + target + "$)", "i");
@@ -198,15 +202,16 @@ exports.commands = {
 		}).join("");
 		this.sendReply("|raw|<table border=1 style=\"border-collapse: collapse;\"><tr><td>Date</td><td>Reporter</td><td>Logs</td></tr>" + tableContents + "</table>");
 	},
+
 	viewsavedreport: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		// you're only viewing this via the button, there's no way you can get the data without the button
 		if (!target) return false;
 		let parts = target.split(",");
 		if (parts.length !== 3) return false;
 		let logId = parts[0];
 		let date = parts.slice(1).join(",");
-		let targetReport = Db("pms").get([logId, date]);
+		let targetReport = Db('pms').get([logId, date]);
 		if (!targetReport) return this.errorReply("Log not found.");
 		let reporter = targetReport.reporter;
 		// popup contents

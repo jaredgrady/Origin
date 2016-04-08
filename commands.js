@@ -28,7 +28,7 @@ const MAX_REASON_LENGTH = 300;
 const MUTE_LENGTH = 7 * 60 * 1000;
 const HOURMUTE_LENGTH = 60 * 60 * 1000;
 const DAYMUTE_LENGTH = 24 * 60 * 60 * 1000;
-global.Cynesthesia = require("./hentai-server.js");
+global.Cynesthesia = require('./hentai-server.js');
 
 let commands = exports.commands = {
 
@@ -74,7 +74,7 @@ let commands = exports.commands = {
 
 	pixilate: function (target, room, user, connection, cmd) {
 		// if user is admin AND dev; this is to prevent admins from trolling.
-		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		if (!target || !user.can('pixilation') || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		target = toId(target);
 		if (target in Cynesthesia.pixilation) return this.errorReply("User " + target + " is already pixilated!");
 		Cynesthesia.pixilation[target] = 1;
@@ -84,7 +84,7 @@ let commands = exports.commands = {
 
 	normalize: function (target, room, user, connection, cmd) {
 		// if user is admin AND dev; this is to prevent admins from trolling.
-		if (!target || !user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		if (!target || !user.can('pixilation') || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		target = toId(target);
 		if (!(target in Cynesthesia.pixilation)) return this.errorReply("User " + target + " is not being pixilated!");
 		delete Cynesthesia.pixilation[target];
@@ -94,8 +94,8 @@ let commands = exports.commands = {
 
 	pixilation: function (target, room, user, connection, cmd) {
 		// if user is admin AND dev; this is to prevent admins from trolling.
-		if (!user.can("pixilation") || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
-		this.sendReplyBox("List of Pixilated users: <br /><br />" + Object.keys(Db("pixilation").object()).sort().map(u => {
+		if (!user.can('pixilation') || developers.indexOf(user.userid) === -1) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		this.sendReplyBox("List of Pixilated users: <br /><br />" + Object.keys(Db('pixilation').object()).sort().map(u => {
 			let User = Users.get(u);
 			return "- " + (User && User.connected ? "<b>" + u + "</b> <font color=\"gray\"><i>(online)</i></font>" : u);
 		}).join("<br />") + "<br /><br /> To add/remove users from this list use /pixilate [user] and /normalize [user].");
