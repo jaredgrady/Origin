@@ -188,14 +188,10 @@ Profile.prototype.friendcode = function () {
 };
 
 Profile.prototype.gang = function () {
-	let gang = this.user.gang;
-	let gangrank;
-	if (this.user.gangrank) {
-		gangrank = ' (<font color=#0000ff><b>' + this.user.gangrank + '</b></font>)';
-	} else {
-		gangrank = '';
-	}
-	if (this.user.gang) return label('Gang') + caps(gang) + caps(gangrank) + BR + SPACE;
+	let gang = caps(Db('gangs').get(this.user.userid, ''));
+	let gangrank = caps(Db('gangranks').get(this.user.userid, ''));
+	if (gangrank !== '') gangrank = ' (<font color=#0000ff><b>' + gangrank + '</b></font>)';
+	if (gang) return label('Gang') + gang + gangrank + BR + SPACE;
 	return '';
 };
 
@@ -221,8 +217,8 @@ Profile.prototype.show = function (callback) {
 		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		SPACE + this.friendcode() +
-		SPACE + this.gang() +
+		this.friendcode() +
+		this.gang() +
 		this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };
 
