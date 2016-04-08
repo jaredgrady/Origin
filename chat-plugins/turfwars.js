@@ -47,6 +47,7 @@ exports.commands = {
 	turf: 'gang',
 	gang: {
 		join: function (target, room, user) {
+			if (!target) return this.errorReply("Must specify a user.");
 			let gang = toId(target);
 			if (user.gang !== '') return this.errorReply("You are already in a gang");
 			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
@@ -55,6 +56,7 @@ exports.commands = {
 			this.sendReply("You have joined the gang: " + gang);
 		},
 		add: function (target, room, user) {
+			if (!target) return this.errorReply("Must specify a user.");
 			let targetUser = Users(toId(target));
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isGodfather(user) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
@@ -65,6 +67,7 @@ exports.commands = {
 			targetUser.popup("You have been added to the gang: " + user.gang + " by " + user + ".");
 		},
 		remove: function (target, room, user) {
+			if (!target) return this.errorReply("Must specify a user.");
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
@@ -75,6 +78,7 @@ exports.commands = {
 			targetUser.popup("You have been removed from the gang: " + user.gang + " by " + user + ".");
 		},
 		promote: function (target, room, user) {
+			if (!target) return this.errorReply("Must specify a user.");
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
@@ -85,6 +89,7 @@ exports.commands = {
 			targetUser.popup("You have been promoted to capo in the gang: " + user.gang + " by " + user + ".");
 		},
 		demote: function (target, room, user) {
+			if (!target) return this.errorReply("Must specify a user.");
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isGodfather(user) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
@@ -96,6 +101,7 @@ exports.commands = {
 		},
 		godfather: function (target, room, user) {
 			let parts = target.split(',');
+			if (parts.length < 2) return this.errorReply("You must specify a gang and amount");
 			let gang = parts[1];
 			if (!Users(toId(parts[0]))) return this.errorReply("User not found.");
 			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
@@ -120,13 +126,14 @@ exports.commands = {
 		},
 		givepoints: function (target, room, user) {
 			let parts = target.split(',');
+			if (parts.length < 2) return this.errorReply("You must specify a gang and amount");
 			if (!this.can('makechatroom')) return false;
-			let curgang = toId(parts[0]);
+			let gang = toId(parts[0]);
 			let amount = isMoney(parts[1]);
-			if (!gangs[curgang]) return this.errorReply("Gang not found.");
-			Db('gangladder').set(curgang, Db('gangladder').get(curgang, 0) + amount).get(curgang);
-			this.sendReply(curgang + " has been awarded " + amount + " points.");
-			room.addRaw("<h4>" + curgang + "has been awarded " + amount + " points.</h4>");
+			if (!gangs[gang]) return this.errorReply("Gang not found.");
+			Db('gangladder').set(gang, Db('gangladder').get(gang, 0) + amount).get(gang);
+			this.sendReply(gang + " has been awarded " + amount + " points.");
+			room.addRaw("<h4>" + gang + "has been awarded " + amount + " points.</h4>");
 		},
 	},
 };
