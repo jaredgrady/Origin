@@ -7,7 +7,7 @@ const color = require('../config/color');
 const def = require('../define');
 const define = def.define;
 const urbandefine = def.urbandefine;
-const Pokedex = require("../data/pokedex.js").BattlePokedex;
+const Pokedex = require('../data/pokedex.js').BattlePokedex;
 const Float = require('float-ui');
 let Float_PS = {};
 let messages = [
@@ -102,7 +102,6 @@ exports.commands = {
 		connection.popup(buffer.join("\n\n"));
 	},
 
-	//Lots of these
 	afk: 'away',
 	busy: 'away',
 	work: 'away',
@@ -144,13 +143,13 @@ exports.commands = {
 
 		if (user.can('lock', null, room)) {
 			this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(user.name) + "</strong></font> is now " + target.toLowerCase() + ".");
-			this.parse("/hide");
+			this.parse('/hide');
 		}
 		user.forceRename(newName, user.registered);
 		user.updateIdentity();
 		user.isAway = true;
 	},
-	awayhelp: ['/away [message] - Sets a users away status.'],
+	awayhelp: ["/away [message] - Sets a users away status."],
 
 	back: function (target, room, user) {
 		if (!user.isAway) return this.sendReply("You are not set as away.");
@@ -171,10 +170,10 @@ exports.commands = {
 		user.isAway = false;
 		if (user.can('lock', null, room)) {
 			this.add("|raw|-- <font color='" + color(user.userid) + "'><strong>" + Tools.escapeHTML(newName) + "</strong></font> is no longer " + status.toLowerCase() + ".");
-			this.parse("/show");
+			this.parse('/show');
 		}
 	},
-	backhelp: ['/back - Sets a users away status back to normal.'],
+	backhelp: ["/back - Sets a users away status back to normal."],
 
 	chatcolour: 'chatcolor',
 	chatcolor: function (target, room, user) {
@@ -184,7 +183,7 @@ exports.commands = {
 		if (!this.canTalk()) return this.errorReply("You may not use this command while unable to speak.");
 		this.add('|raw|' +  bold(font(color(toId(user)), user.name) + ': <font color="' + targets[0].toLowerCase().replace(/[^#a-z0-9]+/g, '') + '">' + Tools.escapeHTML(targets.slice(1).join(",")) + '</font>'));
 	},
-	chatcolorhelp: ['/chatcolor OR /chatcolour [colour], [message] - Outputs a message in a custom colour. Requires VIP.'],
+	chatcolorhelp: ["/chatcolor OR /chatcolour [colour], [message] - Outputs a message in a custom colour. Requires VIP."],
 
 	def: 'define',
 	define: function (target, room, user) {
@@ -557,9 +556,9 @@ exports.commands = {
 		if (room.id !== "lobby") return false;
 		if (!target) return false;
 		if (!this.can('declare', null, room)) return false;
-
-		this.parse("/roomintro " + roomIntro(target));
+		this.parse('/roomintro ' + roomIntro(target));
 	},
+
 	fcadd: 'friendcodeadd',
 	friendcodeadd: function (target, room, user) {
 		if (!target) return this.errorReply("Invalid command. Valid commands are `/friendcodeadd code` and `/friendcoderemove`.");
@@ -569,6 +568,7 @@ exports.commands = {
 		Db('FriencodeDB').set(toId(user), fc);
 		this.sendReply("Friendcode set.");
 	},
+
 	fcrmv: 'friendcoderemove',
 	fcdelete: 'friendcoderemove',
 	friendcoderemove: function (target, room, user) {

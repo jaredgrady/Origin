@@ -4,7 +4,7 @@
  * This file contains all custom commands used to moderate the server.
 ********************/
 const MAX_REASON_LENGTH = 300;
-const fs = require("fs");
+const fs = require('fs');
 let permaUsers;
 
 try {
@@ -57,7 +57,6 @@ exports.commands = {
 			return;
 		}
 		switch (target) {
-
 		case 'voice':
 			count = 0;
 			for (let userid in room.auth) {
@@ -67,12 +66,8 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero roomvoices)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero roomvoices)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " roomvoices have been cleared by " + user.name + ".");
 			break;
 		case 'roomplayer':
@@ -84,12 +79,8 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero roomplayers)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero roomplayers)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " roomplayers have been cleared by " + user.name + ".");
 			break;
 		case 'driver':
@@ -101,15 +92,10 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero drivers)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero drivers)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " drivers have been cleared by " + user.name + ".");
 			break;
-
 		case 'mod':
 			count = 0;
 			for (let userid in room.auth) {
@@ -119,15 +105,10 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero mods)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero mods)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " mods have been cleared by " + user.name + ".");
 			break;
-
 		case 'roomleader':
 			count = 0;
 			for (let userid in room.auth) {
@@ -137,15 +118,10 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero room leaders)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero room leaders)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " room leaders have been cleared by " + user.name + ".");
 			break;
-
 		case 'roomowner':
 			count = 0;
 			for (let userid in room.auth) {
@@ -155,24 +131,16 @@ exports.commands = {
 					if (userid in room.users) room.users[userid].updateIdentity(room.id);
 				}
 			}
-			if (!count) {
-				return this.sendReply("(This room has zero roomowners)");
-			}
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (!count) return this.sendReply("(This room has zero roomowners)");
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All " + count + " roomowners have been cleared by " + user.name + ".");
 			break;
-
 		case 'all':
 			if (!room.auth) return this.errorReply("This room has no auth.");
 			delete room.auth;
-			if (room.chatRoomData) {
-				Rooms.global.writeChatRoomData();
-			}
+			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.addModCommand("All roomauth has been cleared by " + user.name + ".");
 			break;
-
 		default:
 			return this.sendReply("The group specified does not exist.");
 		}
@@ -181,7 +149,6 @@ exports.commands = {
 	clearall: function (target, room, user) {
 		if (!this.can('declare') && !~developers.indexOf(user.userid)) return false;
 		if (room.battle) return this.sendReply("You cannot clearall in battle rooms.");
-
 		clearRoom(room);
 	},
 
@@ -189,8 +156,7 @@ exports.commands = {
 	declarered: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
-		if (!this.canTalk() && !user.can('bypassall')) return this.sendReply('You cannot do this while unable to talk.');
-
+		if (!this.canTalk() && !user.can('bypassall')) return this.errorReply("You cannot do this while unable to talk.");
 		room.addRaw('<div class="broadcast-' + cmd.substr(7) + '"><b>' + target + '</b></div>');
 		room.update();
 		this.logModCommand(user.name + ' declared ' + target);
@@ -202,7 +168,6 @@ exports.commands = {
 		if (!target) return this.parse('/help customgdeclare');
 		if (!parts[4]) return this.parse('/help customgdeclare');
 		if (!this.can('gdeclare')) return false;
-
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px;"><b>We are hosting a <font color="#57194A"><b>' + parts[0] + '</b></font> in <button name="send" value="/join ' + parts[1] + '" style="border-radius: 3px; margin: 3px; padding: 2px 5px; font-weight: bold; font-style: italic; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35); color: #57194A; text-shadow: none;">' + parts[1] + '</button> !<br />The tier is <font style="color: #57194A; font-weight: bold;"><b>' + parts[2] + '</b></font>! Join up and have fun!<br /><br />The prize for the winner is <font style="color: #57194A; font-weight: bold;"><b>' + parts[3] + '</b></font> bucks, while the runner-up will get <font style="color: #57194A; font-weight: bold;"><b>' + parts[4] + '</b></font> bucks!<br /><small><i>~' + user.name + '</i></small></b></div>');
 		}
@@ -213,11 +178,9 @@ exports.commands = {
 	gclearall: 'globalclearall',
 	globalclearall: function (target, room, user) {
 		if (!this.can('gdeclare')) return false;
-
 		for (let u in Users.users) {
 			Users.users[u].popup("All rooms are being clear.");
 		}
-
 		for (let r in Rooms.rooms) {
 			clearRoom(Rooms.rooms[r]);
 		}
@@ -231,28 +194,23 @@ exports.commands = {
 		if (!parts[0] || !parts[1]) return this.parse('/help forcejoin');
 		let userid = toId(parts[0]);
 		let roomid = toId(parts[1]);
-		if (!Users.get(userid)) return this.sendReply('User not found.');
-		if (!Rooms.get(roomid)) return this.sendReply('Room not found.');
+		if (!Users.get(userid)) return this.sendReply("User not found.");
+		if (!Rooms.get(roomid)) return this.sendReply("Room not found.");
 		Users.get(userid).joinRoom(roomid);
 	},
-	forcejoinhelp: ['/forcejoin [target], [room] - Forces a user to join a room'],
+	forcejoinhelp: ["/forcejoin [target], [room] - Forces a user to join a room"],
 
 	k: 'kick',
 	roomkick: 'kick',
 	kick: function (target, room, user) {
 		if (!target) return this.parse('/help kick');
-		if (!this.canTalk()) {
-			return this.sendReply("You cannot do this while unable to talk.");
-		}
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
-		if (!targetUser || !targetUser.connected) return this.sendReply("User \"" + this.targetUsername + "\" not found.");
-		if (!(targetUser in room.users)) {
-			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
-		}
-
-		if (!this.can('mute', targetUser, room) || targetUser.can("rangeban") && !user.can("rangeban")) return false;
+		if (!targetUser || !targetUser.connected) return this.sendReply("User '" + this.targetUsername + "' not found.");
+		if (!(targetUser in room.users)) return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
+		if (!this.can('mute', targetUser, room) || targetUser.can('rangeban') && !user.can('rangeban')) return false;
 
 		this.addModCommand(targetUser.name + " was kicked from the room by " + user.name + ".");
 		targetUser.popup("You were kicked from " + room.id + " by " + user.name + ".");
@@ -261,8 +219,8 @@ exports.commands = {
 	kickhelp: ["/kick - Kick a user out of a room. Requires: % @ # & ~"],
 
 	kickall: function (target, room, user) {
-		if (!this.can('declare')) return this.sendReply('/kickall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
+		if (!this.can('declare')) return this.errorReply("/kickall - Access denied.");
+		if (room.id === 'lobby') return this.errorReply("This command cannot be used in Lobby.");
 		for (let i in room.users) {
 			if (room.users[i] !== user.userid) {
 				room.users[i].leaveRoom(room.id);
@@ -277,7 +235,7 @@ exports.commands = {
 	moddeclare: 'declaremod',
 	declaremod: function (target, room, user, connection) {
 		if (!target) return this.parse('/help declaremod');
-		if (!this.canTalk()) return this.sendReply("You cannot do this while unable to talk.");
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 		if (!this.can('receiveauthmessages', null, room)) return false;
 		return this.privateModCommand('|raw|<div class="broadcast-red"><b><font size=1><i>Private Auth (Driver +) declare from ' + user.name + '<br /></i></font size>' + target + '</b></div>');
 	},
@@ -295,7 +253,8 @@ exports.commands = {
 		user.updateIdentity();
 		this.sendReply("You have hidden your staff symbol.");
 	},
-	unhide: "show",
+
+	unhide: 'show',
 	showauth: 'show',
 	show: function (target, room, user) {
 		if (!this.can('lock')) return false;
@@ -364,9 +323,9 @@ exports.commands = {
 	pmroom: 'rmall',
 	roompm: 'rmall',
 	rmall: function (target, room, user) {
-		if (!this.can('declare', null, room)) return this.sendReply('/rmall - Access denied.');
-		if (room.id === 'lobby') return this.sendReply('This command cannot be used in Lobby.');
-		if (!target) return this.sendReply('/rmall [message] - Sends a pm to all users in the room.');
+		if (!this.can('declare', null, room)) return this.errorReply("/rmall - Access denied.");
+		if (room.id === 'lobby') return this.errorReply("This command cannot be used in Lobby.");
+		if (!target) return this.sendReply("/rmall [message] - Sends a pm to all users in the room.");
 		target = target.replace(/<(?:.|\n)*?>/gm, '');
 
 		let pmName = '~Room PM (' + Tools.escapeHTML(room.title) + ') [Do not reply]';
@@ -378,10 +337,10 @@ exports.commands = {
 		this.privateModCommand('(' + Tools.escapeHTML(user.name) + ' mass PMd: ' + target + ')');
 	},
 
-	plock: "permalock",
+	plock: 'permalock',
 	permalock: function (target, room, user, connection) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.parse("/help permalock");
+		if (!target) return this.parse('/help permalock');
 		let userid = toId(target);
 		let targetUser = Users(target);
 		if (userid in permaUsers) return this.errorReply("User " + userid + " is already perma" + permaUsers[userid] + (permaUsers[userid] === "ban" ? "ned" : "ed") + ".");
@@ -397,10 +356,10 @@ exports.commands = {
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
 	},
 
-	unplock: "unpermalock",
+	unplock: 'unpermalock',
 	unpermalock: function (target, room, user, connection) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.parse("/help unpermalock");
+		if (!target) return this.parse('/help unpermalock');
 		let userid = toId(target);
 		if (!(userid in permaUsers) || permaUsers[userid] !== "lock") return this.errorReply(userid + " is not permalocked!");
 		try {
@@ -411,10 +370,10 @@ exports.commands = {
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
 	},
 
-	pban: "permaban",
+	pban: 'permaban',
 	permaban: function (target, room, user, connection) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.parse("/help permaban");
+		if (!target) return this.parse('/help permaban');
 		let userid = toId(target);
 		let targetUser = Users(target);
 		if (userid in permaUsers && permaUsers[userid] === "ban") return this.errorReply("User " + userid + " is already permabanned.");
@@ -430,10 +389,10 @@ exports.commands = {
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
 	},
 
-	unpban: "unpermaban",
+	unpban: 'unpermaban',
 	unpermaban: function (target, room, user, connection) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.parse("/help unpermaban");
+		if (!target) return this.parse('/help unpermaban');
 		let userid = toId(target);
 		if (!(userid in permaUsers) || permaUsers[userid] !== "ban") return this.errorReply(userid + " is not permabanned!");
 		try {
@@ -444,7 +403,7 @@ exports.commands = {
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
 	},
 
-	plist: "permalist",
+	plist: 'permalist',
 	permalist: function (target, room, user, connection) {
 		if (!this.can('declare')) return false;
 		let buffer = ["<b>Perma'd users:</b>", ""];
@@ -464,9 +423,9 @@ exports.commands = {
 		return this.sendReplyBox("<b>List of Roombanned Users:</b><br />" + Object.keys(room.bannedUsers).join("<br />"));
 	},
 
-	reauth: "repromote",
+	reauth: 'repromote',
 	repromote: function (target, room, user) {
-		if (!this.can("hotpatch")) return false;
+		if (!this.can('hotpatch')) return false;
 		if (!target) return this.errorReply("/repromote targetuser, demote message. Do not use this if you don\'t know what you are doing");
 		let parts = target.replace(/\, /g, ",").split(',');
 		let targetUser = toId(parts.shift());
@@ -483,9 +442,7 @@ exports.commands = {
 
 	rf: 'roomfounder',
 	roomfounder: function (target, room, user) {
-		if (!room.chatRoomData) {
-			return this.sendReply("/roomfounder - This room isn't designed for per-room moderation to be added.");
-		}
+		if (!room.chatRoomData) return this.sendReply("/roomfounder - This room isn't designed for per-room moderation to be added.");
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
@@ -504,9 +461,7 @@ exports.commands = {
 
 	roomdefounder: 'deroomfounder',
 	deroomfounder: function (target, room, user) {
-		if (!room.auth) {
-			return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
-		}
+		if (!room.auth) return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
 		let name = this.targetUsername;
@@ -519,25 +474,20 @@ exports.commands = {
 		delete room.founder;
 		this.sendReply(name + ' was demoted from Room Founder by ' + user.name + '.');
 		if (targetUser) targetUser.updateIdentity();
-		if (room.chatRoomData) {
-			Rooms.global.writeChatRoomData();
-		}
+		if (room.chatRoomData) Rooms.global.writeChatRoomData();
 	},
 
 	roomowner: function (target, room, user) {
-		if (!room.chatRoomData) {
-			return this.sendReply("/roomowner - This room isn't designed for per-room moderation to be added");
-		}
+		if (!room.chatRoomData) return this.sendReply("/roomowner - This room isn't designed for per-room moderation to be added");
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
 		let name = targetUser.name;
 		if (!targetUser.registered) return this.sendReply("User '" + name + "' is not registered.");
-		if (!room.founder) return this.sendReply('The room needs a room founder before it can have a room owner.');
-		if (target === room.founder && !this.can('makeroom')) return this.sendReply('You cannot demote yourself from founder to owner.');
-		if (room.founder !== user.userid && !this.can('makeroom')) return this.sendReply('/roomowner - Access denied.');
+		if (!room.founder) return this.sendReply("The room needs a room founder before it can have a room owner.");
+		if (target === room.founder && !this.can('makeroom')) return this.sendReply("You cannot demote yourself from founder to owner.");
+		if (room.founder !== user.userid && !this.can('makeroom')) return this.errorReply("/roomowner - Access denied.");
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
-
 		room.auth[targetUser.userid] = '#';
 		this.addModCommand("" + name + " was appointed Room Owner by " + user.name + ".");
 		room.onUpdateIdentity(targetUser);
@@ -545,24 +495,18 @@ exports.commands = {
 	},
 
 	deroomowner: function (target, room, user) {
-		if (!room.auth) {
-			return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
-		}
+		if (!room.auth) return this.sendReply("/roomdeowner - This room isn't designed for per-room moderation");
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
 		let name = this.targetUsername;
 		let userid = toId(name);
 		if (!userid || userid === '') return this.sendReply("User '" + name + "' does not exist.");
-
 		if (room.auth[userid] !== '#') return this.sendReply("User '" + name + "' is not a room owner.");
 		if (!room.founder || user.userid !== room.founder && !this.can('makeroom', null, room)) return false;
-
 		delete room.auth[userid];
 		this.sendReply("(" + name + " is no longer Room Owner.)");
 		if (targetUser) targetUser.updateIdentity();
-		if (room.chatRoomData) {
-			Rooms.global.writeChatRoomData();
-		}
+		if (room.chatRoomData) Rooms.global.writeChatRoomData();
 	},
 
 	forceshart: 'shart',
@@ -634,9 +578,7 @@ exports.commands = {
 	unlink: function (target, room, user) {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
-
 		let targetUser = Users.get(target).getLastId();
-
 		this.add('|unlink|' + targetUser);
 		this.addModCommand(targetUser.name + "'s links were unlinked by " + user.name);
 		targetUser.popup(user.name + " has unlinked all your previous messages.");
@@ -651,7 +593,7 @@ exports.commands = {
 		let innerTarget = Tools.escapeHTML(parts[0]);
 		let message = Tools.escapeHTML(parts.slice(1).join(","));
 		let targetRoom = Rooms.search(innerTarget);
-		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
+		if (!targetRoom || targetRoom === Rooms.global) return this.errorReply("The room '" + innerTarget + "' does not exist.");
 		room.addRaw('<div class="infobox"><a href="/' + targetRoom.id + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + targetRoom.id + '</strong>:</font> ' + message + '</a>  -' + toId(user) + '</div>');
 	},
 };

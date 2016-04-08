@@ -3,7 +3,7 @@
 
 // list of methods for tasks which will be global
 
-"use strict";
+'use strict';
 
 const uuid = require('uuid');
 let color = require('../config/color');
@@ -19,7 +19,7 @@ const TaskMethods = {
 			"<th style='box-shadow: 0px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Date</th>" +
 			"<th style='box-shadow: -1px 1px rgba(0, 0, 0, 0.2) inset;' class='tasks-th'>Actions</th><tr>"; // finish defining the table
 		// get the details
-		let taskList = Db("tasks").get(room.id, {});
+		let taskList = Db('tasks').get(room.id, {});
 
 		// sorting for special display method
 		let taskKeys = Object.keys(taskList).reverse();
@@ -72,59 +72,59 @@ const TaskMethods = {
 			status: now,
 		};
 		// set
-		Db("tasks").set([room.id, task.id], task);
+		Db('tasks').set([room.id, task.id], task);
 		return taskId;
 	},
 	remove: function (room, taskId) {
-		if (Db("tasks").has([room.id, taskId])) {
-			Db("tasks").delete([room.id, taskId]);
+		if (Db('tasks').has([room.id, taskId])) {
+			Db('tasks').delete([room.id, taskId]);
 			return true;
 		}
 		return false;
 	},
 	selfAssign: function (room, user, taskId) {
-		let task = Db("tasks").get([room.id, taskId], null);
+		let task = Db('tasks').get([room.id, taskId], null);
 		if (task) {
 			task.assignee = user.name;
-			Db("tasks").set([room.id, taskId], task);
+			Db('tasks').set([room.id, taskId], task);
 			return true;
 		}
 		return false;
 	},
 	complete: function (room, taskId) {
-		let task = Db("tasks").get([room.id, taskId], null);
+		let task = Db('tasks').get([room.id, taskId], null);
 		if (task) {
 			task.status = "Closed";
-			Db("tasks").set([room.id, taskId], task);
+			Db('tasks').set([room.id, taskId], task);
 			return true;
 		}
 		return false;
 	},
 	reopen: function (room, taskId) {
-		let task = Db("tasks").get([room.id, taskId], null);
+		let task = Db('tasks').get([room.id, taskId], null);
 		if (task) {
 			task.status = new Date().toLocaleString() + " (GMT)";
-			Db("tasks").set([room.id, taskId], task);
+			Db('tasks').set([room.id, taskId], task);
 			return true;
 		}
 		return false;
 	},
 	addDetail: function (room, taskId, addition) {
-		let task = Db("tasks").get([room.id, taskId], null);
+		let task = Db('tasks').get([room.id, taskId], null);
 		if (task) {
 			task.details.push(addition);
-			Db("tasks").set([room.id, taskId], task);
+			Db('tasks').set([room.id, taskId], task);
 			return true;
 		}
 		return false;
 	},
 	removeDetail: function (room, taskId, detailLine) {
 		detailLine = parseInt(detailLine);
-		let task = Db("tasks").get([room.id, taskId], null);
+		let task = Db('tasks').get([room.id, taskId], null);
 		if (task && !isNaN(detailLine)) {
 			if (task.details.length >= detailLine) {
 				task.details.splice(detailLine - 1, 1);
-				Db("tasks").set([room.id, taskId], task);
+				Db('tasks').set([room.id, taskId], task);
 				return true;
 			}
 		}
@@ -136,8 +136,8 @@ const TaskMethods = {
 Rooms.global.addTask = TaskMethods.add;
 
 exports.commands = {
-	logs: "task",
-	tasks: "task",
+	logs: 'task',
+	tasks: 'task',
 	task: {
 		add: function (target, room, user) {
 			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
@@ -148,7 +148,7 @@ exports.commands = {
 			TaskMethods.view(room, user, "Your task has been added.", taskId);
 			this.privateModCommand("(" + user.name + " has added a task - " + parts[0] + ")");
 		},
-		"": "view",
+		'': 'view',
 		view: function (target, room, user) {
 			if (room.battle || room.isPersonal) return this.errorReply("You cannot manage tasks in battles or groupchats.");
 			if (!this.can('announce', null, room)) return false;
@@ -209,11 +209,11 @@ exports.commands = {
 			let detail = parts.slice(2).join(",").trim();
 			let success;
 			switch (action) {
-			case "add":
+			case 'add':
 				success = TaskMethods.addDetail(room, taskId, detail);
 				break;
-			case "remove":
-			case "delete":
+			case 'remove':
+			case 'delete':
 				success = TaskMethods.removeDetail(room, taskId, detail);
 				break;
 			default:
@@ -227,11 +227,9 @@ exports.commands = {
 			}
 		},
 	},
-	taskhelp: [
-		"/task add taskName [, details] - adds a new task to the room's list of tasks.",
+	taskhelp: ["/task add taskName [, details] - adds a new task to the room's list of tasks.",
 		"/tasks - views the room's current list of tasks.",
 		"/task detail [add / delete], [TaskID], [new detail / detail id] - modifies the details for each tasks",
 		"The other commands are used when you press the buttons in the control panel in /tasks",
-		"Shop purchases are automatically set as tasks.",
-	],
+		"Shop purchases are automatically set as tasks."],
 };

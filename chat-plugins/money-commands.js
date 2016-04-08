@@ -110,8 +110,8 @@ exports.commands = {
 	artshop: 'leagueshop',
 	roomshop: 'leagueshop',
 	leagueshop: function (target, room, user) {
-		if (!room.founder) return this.sendReply('/leagueshop - league shops require a room founder.');
-		if (!room.hasShop) return this.sendReply('/leagueshop - this room does not have a leagueshop enabled.');
+		if (!room.founder) return this.sendReply("/leagueshop - league shops require a room founder.");
+		if (!room.hasShop) return this.sendReply("/leagueshop - this room does not have a leagueshop enabled.");
 		if (!room.shopList) room.shopList = [];
 		if (!target) target = '';
 		let self = this;
@@ -119,7 +119,6 @@ exports.commands = {
 		let cmdParts = target.split(' ');
 		let cmd = cmdParts.shift().trim().toLowerCase();
 		let params = cmdParts.join(' ').split(',').map(function (param) { return param.trim(); });
-
 		switch (cmd) {
 		case 'list':
 		case 'view':
@@ -136,13 +135,13 @@ exports.commands = {
 			this.sendReplyBox(output);
 			break;
 		case 'add':
-			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
-			if (params.length < 3) return this.sendReply('Usage: /leagueshop add [item name], [description], [price]');
+			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
+			if (params.length < 3) return this.sendReply("/leagueshop add [item name], [description], [price]");
 			if (!room.shopList) room.shopList = [];
 			let name = params.shift();
 			let description = params.shift();
 			let price = Number(params.shift());
-			if (isNaN(price)) return this.sendReply('Usage: /leagueshop add [item name], [description], [price]');
+			if (isNaN(price)) return this.sendReply("/leagueshop add [item name], [description], [price]");
 			room.shop[toId(name)] = {};
 			room.shop[toId(name)].name = name;
 			room.shop[toId(name)].description = description;
@@ -151,29 +150,29 @@ exports.commands = {
 			room.chatRoomData.shop = room.shop;
 			room.chatRoomData.shopList = room.shopList;
 			Rooms.global.writeChatRoomData();
-			this.sendReply('Added "' + name + '" to the league shop for ' + price + ' ' + ((price === 1) ? " buck." : " bucks") + '.');
+			this.sendReply("Added '" + name + "' to the league shop for " + price + " " + ((price === 1) ? " buck." : " bucks") + ".");
 			break;
 		case 'remove':
 		case 'rem':
 		case 'del':
 		case 'delete':
-			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
-			if (params.length < 1) return this.sendReply('Usage: /leagueshop delete [item name]');
+			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
+			if (params.length < 1) return this.sendReply("/leagueshop delete [item name]");
 			item = params.shift();
-			if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "' + item + '" not found.');
+			if (!room.shop[toId(item)]) return this.sendReply("/leagueshop - Item '" + item + "' not found.");
 			delete room.shop[toId(item)];
 			let index = room.shopList.indexOf(toId(item));
 			if (index > -1) {
 				room.shopList.splice(index, 1);
 			}
-			this.sendReply('Removed "' + item + '" from the league shop.');
+			this.sendReply("Removed '" + item + "' from the league shop.");
 			break;
 		case 'buy':
-			if (params.length < 1) return this.sendReply('Usage: /leagueshop buy [item name]');
+			if (params.length < 1) return this.sendReply("/leagueshop buy [item name]");
 			item = params.shift();
-			if (!room.shop[toId(item)]) return this.sendReply('/leagueshop - Item "' + item + '" not found.');
+			if (!room.shop[toId(item)]) return this.sendReply("/leagueshop - Item '" + item + "' not found.");
 			let money = Db('money').get(user, 0);
-			if (money < room.shop[toId(item)].price) return this.sendReply('You don\'t have enough bucks to purchase a ' + item + '. You need ' + ((money - room.shop[toId(item)].price) *  -1) + ' more bucks.');
+			if (money < room.shop[toId(item)].price) return this.errorReply("You don\'t have enough bucks to purchase a '" + item + "'. You need " + ((money - room.shop[toId(item)].price) *  -1) + " more bucks.");
 			let buck = 'buck';
 			if (room.shop[toId(item)].price > 1) buck = 'bucks';
 			if (!room.shopBank) room.shopBank = room.founder;
@@ -199,8 +198,8 @@ exports.commands = {
 			break;
 		case 'setbank':
 		case 'bank':
-			if (user.userid !== room.founder && !user.can('seniorstaff')) return this.sendReply('/leagueshop - Access denied.');
-			if (params.length < 1) return this.sendReply('Usage: /leagueshop bank [username]');
+			if (user.userid !== room.founder && !user.can('seniorstaff')) return this.errorReply("/leagueshop - Access denied.");
+			if (params.length < 1) return this.sendReply("/leagueshop bank [username]");
 			let bank = params.shift();
 			room.shopBank = toId(bank);
 			room.chatRoomData.shopBank = room.shopBank;
@@ -214,7 +213,7 @@ exports.commands = {
 			break;
 		case 'log':
 		case 'viewlog':
-			if (!user.can('roommod', null, room)) return this.sendReply('/leagueshop - Access denied.');
+			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
 			target = params.shift();
 			let lines = 0;
 			if (!target.match('[^0-9]')) {
@@ -250,29 +249,29 @@ exports.commands = {
 			});
 			break;
 		}
-	 },
+	},
 
 	bankadd: function (target, room, user) {
-		if (!user.can('declare', null, room)) return this.sendReply('/bankadd - Access denied.');
+		if (!user.can('declare', null, room)) return this.errorReply("/bankadd - Access denied.");
 		if (!target) return this.parse('/help bankadd');
-		if (!room.shopBank) return this.sendReply('Please /setbank before using this command.');
+		if (!room.shopBank) return this.sendReply("Please /setbank before using this command.");
 		if (!room.bankwhitelist) {
 			room.bankwhitelist = [];
 			room.chatRoomData.bankwhitelist = room.bankwhitelist;
 		}
-		if (room.bankwhitelist[toId(target)]) return this.sendReply('This user is already whitelisted.');
+		if (room.bankwhitelist[toId(target)]) return this.sendReply("This user is already whitelisted.");
 		room.chatRoomData.bankwhitelist.push(toId(target));
 		Rooms.global.writeChatRoomData();
-		this.sendReply('Added "' + target + '" to the whitelist for the room bank"');
+		this.sendReply("Added '" + target + "' to the whitelist for the room bank");
 	},
 
 	bankdelete: function (target, room, user) {
-		if (!user.can('declare', null, room)) return this.sendReply('bankdelete - Access denied.');
+		if (!user.can('declare', null, room)) return this.errorReply("bankdelete - Access denied.");
 		if (!target) return this.parse('/help bankdelete');
-		if (!room.bankwhitelist[toId(target)]) return this.sendReply('User is not whitelisted');
+		if (!room.bankwhitelist[toId(target)]) return this.sendReply("User is not whitelisted");
 		delete room.chatRoomData.bankwhitelist(toId(target));
 		Rooms.global.writeChatRoomData();
-		this.sendReply('Removed "' + target + '" from the whitelist for the room bank"');
+		this.sendReply("Removed '" + target + "' from the whitelist for the room bank");
 	},
 
 	bet: function (target, room, user) {
@@ -280,16 +279,11 @@ exports.commands = {
 		let secondDice = diceTwo();
 		let totalDice = firstDice + secondDice;
 		let house = rng();
-
 		let choice = target.toUpperCase();
-
 		let amount = Db('money').get(user.userid, 0);
-		if (room.id !== 'casino' && !~developers.indexOf(this.userid)) return this.errorReply('betting games can only be used in Casino');
-
+		if (room.id !== 'casino' && !~developers.indexOf(this.userid)) return this.errorReply("betting games can only be used in Casino");
 		if (amount < 2) return this.errorReply("You don't have enough bucks for the bet.");
-
 		if (!target) return this.parse('/help bet');
-
 		switch (choice) {
 		case 'ODD':
 			Db('money').set(user.userid, amount - 2).get(user.userid);
@@ -327,9 +321,9 @@ exports.commands = {
 	slots: {
 		start: 'roll',
 		roll: function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply('Slots must be played in the Casino.');
-			if (room.slotsEnabled === false) return this.errorReply('Slots is currently disabled.');
-			if (user.isRolling) return this.errorReply('Wait till your previous roll finishes to roll again');
+			if (room.id !== 'casino') return this.errorReply("Slots must be played in the Casino.");
+			if (room.slotsEnabled === false) return this.errorReply("Slots is currently disabled.");
+			if (user.isRolling) return this.errorReply("Wait till your previous roll finishes to roll again");
 			if (!room.slotsAnte) room.slotsAnte = 3;
 			if (typeof room.slotsAnte === "string") room.slotsAnte = parseInt(room.slotsAnte);
 			if (isNaN(room.slotsAnte)) room.slotsAnte = 3;
@@ -349,7 +343,6 @@ exports.commands = {
 			}); //returns a character for each;
 			//now that you have your three faces;
 			//get the images for each;
-
 
 			let randNum = Math.floor(Math.random() * 1000);
 			let display = slotMachine(user, randNum, rolls[0], rolls[1], rolls[2]);
@@ -393,26 +386,26 @@ exports.commands = {
 		},
 
 		enable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('makechatroom')) return this.errorReply('/slots enable - Access denied.');
+			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (!user.can('makechatroom')) return this.errorReply("/slots enable - Access denied.");
 			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 
 		disable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('makechatroom')) return this.errorReply('/slots disable - Access denied.');
+			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (!user.can('makechatroom')) return this.errorReply("/slots disable - Access denied.");
 			room.slotsEnabled = false;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
 			this.sendReply("Slots has been disabled.");
 		},
 
 		ante: function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply('Can only be used in casino.');
-			if (!user.can('hotpatch')) return this.errorReply('/slots ante - Access denied.');
+			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (!user.can('hotpatch')) return this.errorReply("/slots ante - Access denied.");
 			if (!target) return this.parse('/help slotsante');
 			target = parseInt(target);
-			if (isNaN(target)) return this.errorReply('Must be a number, silly.');
+			if (isNaN(target)) return this.errorReply("Must be a number, silly.");
 			room.slotsAnte = target;
 			if (room.chatRoomData) {
 				room.chatRoomData.slotsAnte = room.slotsAnte;
@@ -429,6 +422,5 @@ exports.commands = {
 		"/slots enable - Enable the playing of slots. Requires: ~",
 		"/slots disable - Disable the playing of slots. Requires: ~",
 		"/slots ante - Sets the ante for playing slots. Requires: ~",
-		"/slots roll - Pay the ante and play a game of slots.",
-	],
+		"/slots roll - Pay the ante and play a game of slots."],
 };
