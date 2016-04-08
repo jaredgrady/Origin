@@ -191,7 +191,8 @@ Profile.prototype.friendcode = function () {
 Profile.prototype.gang = function () {
 	let gang = Db('gangs').get(this.user.userid, '');
 	let gangrank = caps(Db('gangranks').get(this.user.userid, ''));
-	let gangsymbol = '<img src= ' + turfwars.gangs[gang].icon + ' width="10" height="10"</img>';
+	let gangsymbol = '';
+	if (gang !== '') gangsymbol = '<img src= ' + turfwars.gangs[gang].icon + ' width="10" height="10"</img>';
 	gang = caps(gang);
 	if (gangrank !== '') gangrank = ' (<font color=#0000ff><b>' + gangrank + '</b></font>)';
 	if (gang) return label('Gang') + gang + gangsymbol + SPACE + gangrank + BR + SPACE;
