@@ -9,26 +9,32 @@ const gangs = {
 	rocket: {
 		icon: 'http://i.imgur.com/eaTAxKU.gif',
 		name: 'Rocket',
+		godfather: 'Lt. Tesla',
 	},
 	magma: {
 		icon: 'http://i.imgur.com/reKEhUA.png',
 		name: 'Magma',
+		godfather: 'ArkenCiel',
 	},
 	aqua: {
 		icon: 'http://i.imgur.com/n9sKSKj.png',
 		name: 'Aqua',
+		godfather: 'Hayleysworld',
 	},
 	galactic: {
 		icon: 'http://i.imgur.com/gixvv00.jpg',
 		name: 'Galactic',
+		godfather: 'Selena',
 	},
 	plasma: {
 		icon: 'http://i.imgur.com/zzhoJX2.gif',
 		name: 'Plasma',
+		godfather: 'Mighty Sciz',
 	},
 	flare: {
 		icon: 'http://i.imgur.com/X6g6fbc.png',
 		name: 'Flare',
+		godfather: 'AuraStormLucario',
 	},
 };
 
@@ -42,10 +48,27 @@ function isGodfather(user, gang) {
 	return true;
 }
 
+function gangDisplay(gang) {
+	let info = gangs[gang];
+	let visuals = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + info.icon + '" height="50" width="50" align="right">' +
+		'<br /><br /><h1>' + info.name + '</font></h1>' +
+		'<br /><br /><font color="#AAA"><i>Godfather: </i></font>' + info.godfather +
+		'<br clear="all">';
+	return visuals;
+}
+
 exports.commands = {
 
 	turf: 'gang',
 	gang: {
+		info: function (target, room, user) {
+			if (!this.runBroadcast()) return;
+			if (!target) return this.errorReply("Must specify a gang.");
+			let gang = toId(target);
+			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
+			let display = gangDisplay(gang);
+			this.sendReplyBox(display);
+		},
 		join: function (target, room, user) {
 			if (!target) return this.errorReply("Must specify a user.");
 			let gang = toId(target);
