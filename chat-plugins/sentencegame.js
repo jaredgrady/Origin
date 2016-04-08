@@ -22,7 +22,6 @@ function endDisplay(arr) {
 }
 
 exports.commands = {
-
 	newsentence: 'sentence',
 	sentence: function (target, room, user) {
 		if (!this.can('lock', null, room)) return this.errorReply("/sentence - Access denied.");

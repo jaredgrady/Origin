@@ -268,6 +268,7 @@ exports.commands = {
 		}
 		this.sendReplyBox(profile.show());
 	},
+
 	customtitle: function (target, room, user) {
 		let parts = target.split(',');
 		let cmd = parts[0].trim().toLowerCase();

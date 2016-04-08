@@ -44,6 +44,7 @@ exports.commands = {
 		saveVips();
 		this.privateModCommand("(" + user.name + " has removed VIP status from " + target + ")");
 	},
+
 	vip: 'viphelp',
 	viphelp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
