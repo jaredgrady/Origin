@@ -4,6 +4,7 @@ let color = require('../config/color');
 let moment = require('moment');
 let geoip = {};
 let badgePlugin = require('./badges');
+let turfwars = require('../chat-plugins/turfwars');
 
 try {
 	geoip = require('geoip-ultralight');
@@ -188,10 +189,12 @@ Profile.prototype.friendcode = function () {
 };
 
 Profile.prototype.gang = function () {
-	let gang = caps(Db('gangs').get(this.user.userid, ''));
+	let gang = Db('gangs').get(this.user.userid, '');
 	let gangrank = caps(Db('gangranks').get(this.user.userid, ''));
+	let gangsymbol = '<img src= ' + turfwars.gangs[gang].icon + ' width="10" height="10"</img>';
+	gang = caps(gang);
 	if (gangrank !== '') gangrank = ' (<font color=#0000ff><b>' + gangrank + '</b></font>)';
-	if (gang) return label('Gang') + gang + gangrank + BR + SPACE;
+	if (gang) return label('Gang') + gang + gangsymbol + SPACE + gangrank + BR + SPACE;
 	return '';
 };
 
@@ -217,7 +220,7 @@ Profile.prototype.show = function (callback) {
 		SPACE + this.name() + this.title() + BR +
 		SPACE + this.group() + this.vip() + this.dev() + BR +
 		SPACE + this.money(Db('money').get(userid, 0)) + BR +
-		this.friendcode() +
+		SPACE + this.friendcode() +
 		this.gang() +
 		this.seen(Db('seen').get(userid)) + '</div><div style="float: left; text-align: center; border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset; margin: 2px 2px 2px 0px" class="card-button">' + this.badges() + '</div>' + '<br clear="all">';
 };

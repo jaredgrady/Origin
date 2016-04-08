@@ -96,17 +96,18 @@ exports.commands = {
 		},
 		godfather: function (target, room, user) {
 			let parts = target.split(',');
+			let gang = parts[1];
 			if (!Users(toId(parts[0]))) return this.errorReply("User not found.");
-			if (!gangs[parts[1]]) return this.errorReply("This gang does not exist.");
+			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
 			let targetUser = Users(toId(parts[0]));
 			if (!this.can('makechatroom')) return this.errorReply("Access denied.");
 			if (targetUser.gang !== '') return this.errorReply("User is in a gang already.");
 			Db("gangranks").set(targetUser, 'godfather');
-			Db("gangs").set(targetUser, parts[1]);
+			Db("gangs").set(targetUser, gang);
 			user.gangrank = 'godfather';
-			user.gang = parts[1];
-			this.sendReply(targetUser + " has been promoted to godfather of the gang: " + parts[1]);
-			targetUser.popup("You have been promoted to godfather of the gang: " + parts[1] + " by " + user + ".");
+			user.gang = gang;
+			this.sendReply(targetUser + " has been promoted to godfather of the gang: " + gang);
+			targetUser.popup("You have been promoted to godfather of the gang: " + gang + " by " + user + ".");
 		},
 		ladder: function (target, room, user) {
 			if (!this.runBroadcast()) return;
