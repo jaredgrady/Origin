@@ -166,9 +166,9 @@ exports.commands = {
 			let members = Object.keys(gangData)
 				.filter(u => gangData[u] === targetGang)
 				.sort()
-				.map(u => "-" + (Users.get(u) && Users.get(u).connected ? "**" + u + "**" : u))
+				.map(u => "- " + (Users.get(u) && Users.get(u).connected ? "<b>" + u + "</b>" : u))
 				.join("<br />");
-			this.sendReplyBox(members);
+			this.sendReplyBox("<div style=\"max-height: 250px; overflow-y: scroll\">" + members + "</div>");
 		}
 	},
 };
