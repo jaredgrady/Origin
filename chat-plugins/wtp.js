@@ -65,19 +65,18 @@ function showCard(card, winner) {
 	return display;
 }
 
-
 exports.commands = {
 	wtp: 'whosthatpokemon',
 	whosthatpokemon: function (target, room, user) {
 		if (!this.can('ban', null, room)) return false;
 		let params = target.split(',');
-		if (params.length < 3) return this.errorReply('Must have one mon and a 3 hints');
+		if (params.length < 3) return this.errorReply("Must have one mon and a 3 hints");
 		let mon;
-		if (room.wtp) return this.errorReply('Already a game of wtp in progess.');
+		if (room.wtp) return this.errorReply("Already a game of wtp in progess.");
 		if (checkMon(params[0])) {
 			mon = toId(params[0]);
 		} else {
-			return this.errorReply('Pokemon not found.');
+			return this.errorReply("Pokemon not found.");
 		}
 		let hint1 = params[1];
 		let hint2 = params[2];
@@ -88,7 +87,7 @@ exports.commands = {
 
 	guessmon: function (target, room, user) {
 		if (!target) return this.parse('/help guess');
-		if (!room.wtp) return this.errorReply('There is no game of wtp in progress.');
+		if (!room.wtp) return this.errorReply("There is no game of wtp in progress.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 		let guessedmon = toId(target);
 		room.wtp.guess(guessedmon, user);
@@ -96,7 +95,7 @@ exports.commands = {
 
 	wtpend: function (target, room, user) {
 		if (!this.can('ban', null, room)) return false;
-		if (!room.wtp) return this.errorReply('There is no game of wtp in progress.');
+		if (!room.wtp) return this.errorReply("There is no game of wtp in progress.");
 		room.addRaw('<h4>The game of Who\'s that Pokemon was ended early. The pokemon was <font color="red">' + room.wtp.mon + '.</font></h4>');
 		room.wtp.endGame();
 	},

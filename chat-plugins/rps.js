@@ -118,8 +118,8 @@ class RPSGame {
 			this.p2.send("|pm|~Rock/Paper/Scissors Host|" + this.p2.userid + "|/html The game with " + this.p1.name + " was a tie! " + this.p1.name + " has chosen " + choiceNames[this.p1choice] + ".");
 			if (this.gameType === "bucks") {
 				//return their 3 bucks each
-				Db("money").set(this.p1.userid, Db("money").get(this.p1.userid, 0) + 3);
-				Db("money").set(this.p2.userid, Db("money").get(this.p2.userid, 0) + 3);
+				Db('money').set(this.p1.userid, Db('money').get(this.p1.userid, 0) + 3);
+				Db('money').set(this.p2.userid, Db('money').get(this.p2.userid, 0) + 3);
 			}
 		} else if (gameResult === "p1") {
 			winner = this.p1;
@@ -140,12 +140,12 @@ class RPSGame {
 		loser.send("|pm|~Rock/Paper/Scissors Host|" + loser.userid + "|/html You have lost the game against " + winner.name + "! " + (!inactivity ? winner.name + " has chosen " + choiceNames[(loser.userid === this.p1.userid ? this.p2choice : this.p1choice)] + "." : ""));
 		if (this.gameType === "bucks") {
 			//set but bucks
-			Db("money").set(winner.userid, Db("money").get(winner.userid, 0) + 6);
+			Db('money').set(winner.userid, Db('money').get(winner.userid, 0) + 6);
 			winner.send("|pm|~Rock/Paper/Scissors Host|" + winner.userid + "|/html You have also won 6 bucks.");
 		} else {
 			//do rank change
-			let winnerPoints = Db("rpsrank").get(winner.userid, 1000);
-			let loserPoints = Db("rpsrank").get(loser.userid, 1000);
+			let winnerPoints = Db('rpsrank').get(winner.userid, 1000);
+			let loserPoints = Db('rpsrank').get(loser.userid, 1000);
 			let difference = Math.abs(winnerPoints - loserPoints);
 			let winnerPointGain, loserPointGain;
 			let pointGain = ~~(difference / 4) + 8;
@@ -166,7 +166,7 @@ class RPSGame {
 			if (winnerPointGain < 12) winnerPointGain = 12;
 			if (winnerPointGain > 75) winnerPointGain = 75;
 			let winnerFinalPoints = winnerPoints + winnerPointGain;
-			Db("rpsrank").set(winner.userid, winnerFinalPoints);
+			Db('rpsrank').set(winner.userid, winnerFinalPoints);
 
 			//deduct points from loser
 			if (winnerPoints > loserPoints) {
@@ -178,7 +178,7 @@ class RPSGame {
 			let loserFinalPoints = loserPoints + loserPointGain;
 			//unable to go below 1000;
 			if (loserFinalPoints < 1000) loserFinalPoints = 1000;
-			Db("rpsrank").set(loser.userid, loserFinalPoints);
+			Db('rpsrank').set(loser.userid, loserFinalPoints);
 
 			//announce the change in rank
 			winner.send("|pm|~Rock/Paper/Scissors Host|" + winner.userid + "|/html " + winner.name + ": " + winnerPoints + " --> " + winnerFinalPoints + "<br>" + loser.name + ": " + loserPoints + " --> " + loserFinalPoints);
@@ -210,7 +210,7 @@ function updateSearches() {
 			updatedSearches[user.userid] = Rooms.global.RPS.searches[userid];
 		} else {
 			//return bucks if it's a search for bucks
-			if (updatedSearches[userid] === "bucks") Db("money").set(userid, Db("money").get(userid, 0) + 3);
+			if (updatedSearches[userid] === "bucks") Db('money').set(userid, Db('money').get(userid, 0) + 3);
 		}
 	}
 	Rooms.global.RPS.searches = updatedSearches;
@@ -223,9 +223,9 @@ exports.commands = {
 			updateSearches();
 			let gameType = "ladder";
 			if (target && target === "bucks") {
-				if (Db("money").get(user.userid, 0) >= 3) {
+				if (Db('money').get(user.userid, 0) >= 3) {
 					gameType = "bucks";
-					Db("money").set(user.userid, (Db("money").get(user.userid, 0) - 3));
+					Db('money').set(user.userid, (Db('money').get(user.userid, 0) - 3));
 				} else {
 					return this.errorReply("You do not have enough bucks (3) to search for a game of Rock/Paper/Scissors for bucks.");
 				}
@@ -238,7 +238,7 @@ exports.commands = {
 			if (!user.RPSgame || user.RPSgame !== "searching") return this.errorReply("You are not searching for a game of Rock/Paper/Scissors!");
 			updateSearches();
 			if (Rooms.global.RPS.searches[user.userid] === "bucks") {
-				Db("money").set(user.userid, Db("money").get(user.userid, 0) + 3);
+				Db('money').set(user.userid, Db('money').get(user.userid, 0) + 3);
 			}
 			delete Rooms.global.RPS.searches[user.userid];
 			user.RPSgame = null;
@@ -259,7 +259,7 @@ exports.commands = {
 		rank: function (target, room, user) {
 			if (!this.runBroadcast()) return false;
 			target = (toId(target) ? (Users.get(target) ? Users.get(target).name : target) : user.name);
-			let userRank = Db("rpsrank").get(toId(target), 1000);
+			let userRank = Db('rpsrank').get(toId(target), 1000);
 			this.sendReplyBox("Rank - <b>" + target + "</b>: " + userRank);
 		},
 		ladder: function (target, room, user) {
@@ -271,14 +271,13 @@ exports.commands = {
 			keys.sort(function (a, b) { return b.points - a.points; });
 			this.sendReplyBox(rankLadder('Rock/Paper/Scissors Ladder', 'RPS Points', keys.slice(0, 100), 'points'));
 		},
-		"": "help",
-		"help": function (target, room, user) {
-			this.parse("/help rps");
+		'': 'help',
+		help: function (target, room, user) {
+			this.parse('/help rps');
 		},
 	},
 	rpshelp: ["/rps search (bucks) - searches for a game of Rock/Paper/Scissors either for ladder points or for bucks.",
-	"/rps endsearch - stop searching for a game of Rock/Paper/Scissors.",
-	"/rps rank [user] - shows rank for Rock/Paper/Scissors for either a user or yourself.",
-	"/rps ladder - shows top 100 on the RPS ladder.",
-	],
+		"/rps endsearch - stop searching for a game of Rock/Paper/Scissors.",
+		"/rps rank [user] - shows rank for Rock/Paper/Scissors for either a user or yourself.",
+		"/rps ladder - shows top 100 on the RPS ladder."],
 };

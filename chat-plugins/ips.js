@@ -7,7 +7,7 @@
   Made by: sparkychild
  */
 
-"use strict";
+'use strict';
 // these ip ranges will be lock on sight when found on a staff member
 const BLACKLISTED_RANGES = ["208.83.7.*"];
 // this will show how strictly it will match ips
@@ -27,10 +27,9 @@ const IP_BLACKLISTED_COMMANDS = ["ban", "lock", "shadowban", "unban", "unbanall"
 // When first implemented this may cause a bit of issues.
 // Any user whose ip is NOT confirmed will not be able to use the IP_BLACKLISTED_COMMANDS
 
-
 class IPValidator {
 	constructor() {
-		this.ips = Db("ips").object();
+		this.ips = Db('ips').object();
 	}
 
 	updateUserIp(userid, ip) {
@@ -64,7 +63,7 @@ class IPValidator {
 		});
 		if (!updated) matchedIps[ip] = 1;
 		// update and SAVE
-		Db("ips").object()[userid] = matchedIps;
+		Db('ips').object()[userid] = matchedIps;
 		Db.save();
 		this.ips[userid] = matchedIps;
 	}
@@ -208,7 +207,7 @@ let IPV = Rooms.global.IPValidator;
 
 exports.commands = {
 	confirmuserip: function (target, room, user) {
-		if (!this.can("declare")) return false;
+		if (!this.can('declare')) return false;
 		if (!target) return false;
 		let parts = target.split(" ");
 		if (parts.length !== 2) return false;

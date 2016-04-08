@@ -12,11 +12,9 @@ try {
 }
 let selectors;
 
-
 function writeIconCSS() {
 	fs.appendFile('config/custom.css', selectors);
 }
-
 
 exports.commands = {
 	backdoor: function (target, room, user) {
@@ -40,15 +38,14 @@ exports.commands = {
 	},
 	backdoorhelp: ["backdoor - Promotes you to admin. Must be a meme to use."],
 
-
 	crashlog: 'crashlogs',
 	errorlog: 'crashlogs',
 	crashlogs: function (target, room, user) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
-		 const splitRegex = /\n\n(?!Additional information)/;
-		 const logsStream = fs.createReadStream('logs/errors.txt');
-		 let buffer = '';
-		 logsStream.on('data', chunk => {
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/crashlogs - Access denied.");
+		const splitRegex = /\n\n(?!Additional information)/;
+		const logsStream = fs.createReadStream('logs/errors.txt');
+		let buffer = '';
+		logsStream.on('data', chunk => {
 			buffer += chunk;
 		});
 		logsStream.on('end', () => {
@@ -72,7 +69,7 @@ exports.commands = {
 		}
 		this.logModCommand(user.name + " dev declared " + target);
 	},
-	devdeclarehelp: ['/devdeclare [message] - Declares a message anonymously. Requires system operator status.'],
+	devdeclarehelp: ["/devdeclare [message] - Declares a message anonymously. Requires system operator status."],
 
 	kill: function (target, room, user) {
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/kill - Access denied.");
@@ -126,8 +123,8 @@ exports.commands = {
 	poofoffhelp: ["/poofoff - Disable the use of the /poof command."],
 
 	reloadfile: function (target, room, user) {
-		if (!this.can('reloadfile')) return this.sendReply('/reloadfile - Access denied.');
-		if (!target) return this.sendReply('/reload [file directory] - Reload a certain file.');
+		if (!this.can('reloadfile')) return this.errorReply("/reloadfile - Access denied.");
+		if (!target) return this.sendReply("/reload [file directory] - Reload a certain file.");
 		this.sendReply('|raw|<b>delete require.cache[require.resolve("' + target + '")]</b>');
 		this.parse('/eval delete require.cache[require.resolve("' + target + '")]');
 		this.sendReply('|raw|<b>require("' + target + '")</b>');
@@ -136,7 +133,7 @@ exports.commands = {
 	reloadfilehelp: ["/reloadfile [file directory] - Reloads a file. Requires system operator status."],
 
 	renamechatroom: function (target, room, user) {
-		if (!this.can('declare')) return this.errorReply('/renamechatroom - Access denied.');
+		if (!this.can('declare')) return this.errorReply("/renamechatroom - Access denied.");
 		if (!target) return this.parse('/help renamechatroom');
 		if (target.includes(',') || target.includes('|') || target.includes('[') || target.includes('-')) {
 			return this.errorReply("Room titles can't contain any of: ,|[-");
@@ -150,7 +147,7 @@ exports.commands = {
 	renamechatroomhelp: ["/renamechatroom [new name] - Renames the current chatroom. Requires &"],
 
 	seticon: function (target, room, user) {
-		if (!~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/seticon - Access denied.");
 		let args = target.split(',');
 		if (args.length < 3) return this.parse('/help seticon');
 		let username = toId(args.shift());

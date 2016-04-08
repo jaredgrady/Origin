@@ -21,11 +21,11 @@ function saveVips() {
 exports.commands = {
 	givevip: function (target, room, user) {
 		if (!this.can('givevip')) return false;
-		if (!target) return this.sendReply("Usage: /givevip [user]");
+		if (!target) return this.sendReply("/givevip [user]");
 		if (Users.vips[toId(target)]) return this.sendReply(target + " already has vip.");
 		let targetUser = Users(target);
 
-		if (!targetUser) return this.sendReply("User \"" + target + "\" not found.");
+		if (!targetUser) return this.sendReply("User '" + target + "' not found.");
 		if (!targetUser.connected) return this.sendReply(targetUser.name + " is not online.");
 		if (!targetUser.registered) return this.sendReply(targetUser.name + " is not registered.");
 
@@ -37,8 +37,8 @@ exports.commands = {
 
 	takevip: function (target, room, user) {
 		if (!this.can('givevip')) return false;
-		if (!target) return this.sendReply("Usage: /takevip [user]");
-		if (!Users.vips[toId(target)]) return this.sendReply("User \"" + target + "\" does not have VIP.");
+		if (!target) return this.sendReply("/takevip [user]");
+		if (!Users.vips[toId(target)]) return this.sendReply("User '" + target + "' does not have VIP.");
 
 		delete Users.vips[toId(target)];
 		saveVips();
