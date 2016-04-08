@@ -1,13 +1,14 @@
 'use strict';
 
-function rankLadder(title, type, array, prop) {
+function rankLadder(title, type, array, prop, group) {
+	let groupHeader = group || 'Username';
 	const ladderTitle = '<center><h4><u>' + title + '</u></h4></center>';
 	const thStyle = 'class="rankladder-headers default-td" style="background: -moz-linear-gradient(#576468, #323A3C); background: -webkit-linear-gradient(#576468, #323A3C); background: -o-linear-gradient(#576468, #323A3C); background: linear-gradient(#576468, #323A3C); box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
 	const tableTop = '<div style="max-height: 310px; overflow-y: scroll;">' +
 		'<table style="width: 100%; border-collapse: collapse;">' +
 		'<tr>' +
 			'<th ' + thStyle + '>Rank</th>' +
-			'<th ' + thStyle + '>Username</th>' +
+			'<th ' + thStyle + '>' + groupHeader + '</th>' +
 			'<th ' + thStyle + '>' + type + '</th>' +
 		'</tr>';
 	const tableBottom = '</table></div>';
