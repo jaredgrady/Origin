@@ -94,7 +94,7 @@ exports.commands = {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
-			if (targetUser.gang !== user.gang) return this.errorReply("User is not a member of your gang.");
+			if (targetUser.gang !== user.gang && !this.can('makechatroom')) return this.errorReply("User is not a member of your gang.");
 			Db('gangs').set(targetUser, '');
 			targetUser.gang = '';
 			this.sendReply(targetUser + " has been removed from the gang: " + user.gang);
@@ -105,7 +105,7 @@ exports.commands = {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isCapo(user.userid) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
-			if (targetUser.gang !== user.gang) return this.errorReply("User is not a member of your gang.");
+			if (targetUser.gang !== user.gang && !this.can('makechatroom')) return this.errorReply("User is not a member of your gang.");
 			Db('gangranks').set(targetUser, 'capo');
 			user.gangrank = 'capo';
 			this.sendReply(targetUser + " has been promoted to capo in the gang: " + user.gang);
@@ -116,7 +116,7 @@ exports.commands = {
 			let targetUser = toId(target);
 			if (!Users(targetUser)) return this.errorReply("User not found.");
 			if (!isGodfather(user) || user.gang === '' && !this.can('makechatroom')) return this.errorReply("Access denied.");
-			if (targetUser.gang !== user.gang) return this.errorReply("User is not a member of your gang.");
+			if (targetUser.gang !== user.gang && !this.can('makechatroom')) return this.errorReply("User is not a member of your gang.");
 			Db('gangranks').set(targetUser, '');
 			user.gangrank = '';
 			this.sendReply(targetUser + " has been demoted in the gang: " + user.gang);
@@ -130,7 +130,6 @@ exports.commands = {
 			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
 			let targetUser = Users(toId(parts[0]));
 			if (!this.can('makechatroom')) return this.errorReply("Access denied.");
-			if (targetUser.gang !== '') return this.errorReply("User is in a gang already.");
 			Db('gangranks').set(targetUser, 'godfather');
 			Db('gangs').set(targetUser, gang);
 			user.gangrank = 'godfather';
@@ -161,7 +160,7 @@ exports.commands = {
 		members: function (target, room, user) {
 			if (!this.runBroadcast()) return false;
 			if ((target && !gangs.hasOwnProperty(toId(target))) || (!target && !gangs.hasOwnProperty(room.id))) return this.errorReply("You have to specify a gang.");
-			let targetGang = target ? toId(target) : room.id
+			let targetGang = target ? toId(target) : room.id;
 			let gangData = Db("gangs").object();
 			let members = Object.keys(gangData)
 				.filter(u => gangData[u] === targetGang)
@@ -169,7 +168,7 @@ exports.commands = {
 				.map(u => "- " + (Users.get(u) && Users.get(u).connected ? "<b>" + u + "</b>" : u))
 				.join("<br />");
 			this.sendReplyBox("<div style=\"max-height: 250px; overflow-y: scroll\">" + members + "</div>");
-		}
+		},
 	},
 };
 

@@ -448,11 +448,11 @@ class User {
 		this.s3 = '';
 
 		// emoticon blocking
-		this.blockEmoticons = Db("ignoremotes").get(this.userid, false);
+		this.blockEmoticons = false;
 
 		// gang info
-		this.gang = Db("gangs").get(this.userid, '');
-		this.gangrank = Db("gangranks").get(this.userid, '');
+		this.gang = '';
+		this.gangrank = '';
 
 		// initialize
 		users.set(this.userid, this);
@@ -882,6 +882,9 @@ class User {
 			Rooms.global.checkAutojoin(user);
 			if (Config.loginfilter) Config.loginfilter(user, this, userType);
 			UAT.check(this);
+			this.gang = Db("gangs").get(this.userid, '');
+			this.gangrank = Db("gangranks").get(this.userid, '');
+			this.blockEmoticons = Db("ignoremotes").get(this.userid, false);
 			return true;
 		}
 
@@ -890,6 +893,9 @@ class User {
 			Rooms.global.checkAutojoin(this);
 			if (Config.loginfilter) Config.loginfilter(this, null, userType);
 			UAT.check(this);
+			this.gang = Db("gangs").get(this.userid, '');
+			this.gangrank = Db("gangranks").get(this.userid, '');
+			this.blockEmoticons = Db("ignoremotes").get(this.userid, false);
 			return true;
 		}
 		return false;
