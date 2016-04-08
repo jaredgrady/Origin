@@ -45,7 +45,6 @@ exports.commands = {
 			this.sendReply("The trainer card \"" + commandName + "\" has been added.");
 			this.logModCommand(user.name + " added the trainer card " + commandName);
 			break;
-
 		case 'rem':
 		case 'del':
 		case 'delete':
@@ -61,7 +60,6 @@ exports.commands = {
 			this.sendReply("The trainer card \"" + commandName + "\" has been removed.");
 			this.logModCommand(user.name + " removed the trainer card " + commandName);
 			break;
-
 		case 'list':
 			if (!this.can('declare')) return false;
 			let output = "<b>There's a total of " + Object.keys(trainerCards).length + " trainer cards added with this command:</b><br />";
@@ -70,7 +68,6 @@ exports.commands = {
 			}
 			this.sendReplyBox(output);
 			break;
-
 		case 'off':
 			if (!this.can('roommod', null, room)) return false;
 			if (room.disableTrainerCards) return this.errorReply("Broadcasting trainer cards is already disabled in this room.");
@@ -81,7 +78,6 @@ exports.commands = {
 			}
 			this.privateModCommand("(" + user.name + " has disabled broadcasting trainer cards in this room.)");
 			break;
-
 		case 'on':
 			if (!this.can('roommod', null, room)) return false;
 			if (!room.disableTrainerCards) return this.errorReply("Broadcasing trainer cards is already enabled in this room.");
@@ -92,7 +88,6 @@ exports.commands = {
 			}
 			this.privateModCommand("(" + user.name + " has enabled broadcasting trainer cards in this room.)");
 			break;
-
 		case 'reload':
 			if (!this.can('hotpatch')) {
 				return false;
@@ -102,7 +97,6 @@ exports.commands = {
 				return this.sendReply("Trainer cards have been reloaded.");
 			}
 			break;
-
 		case 'view':
 			if (!this.can('declare')) return false;
 			commandName = toId(parts[1]);
@@ -114,7 +108,6 @@ exports.commands = {
 			if (htmlOutput === false) return this.errorReply("/trainercards - The command \"" + commandName + "\" does not exist, or was added manually.");
 			return this.sendReply(htmlOutput);
 			break;
-
 		default:
 		case 'info':
 		case 'help':

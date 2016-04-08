@@ -248,7 +248,6 @@ Profile.prototype.checkBadges = function () {
 	}
 	if (total >= 750) badges.push('Collector');
 
-
 	let uniqueBadges = [];
 	uniqueBadges = badges.filter(function (elem, pos) {
 		return badges.indexOf(elem) === pos;

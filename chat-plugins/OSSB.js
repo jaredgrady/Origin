@@ -1,5 +1,5 @@
 'use strict';
-let fs = require("fs");
+let fs = require('fs');
 let monData;
 try {
 	monData = fs.readFileSync("data/OSSB-data.txt").toString().split("\n\n");
@@ -23,7 +23,7 @@ exports.commands = {
 	ossb: 'ssb',
 	ssb: function (target, room, user) {
 		if (!this.runBroadcast()) return false;
-		if (!target) return this.parse("/help ssb");
+		if (!target) return this.parse('/help ssb');
 		let targetData = getMonData(toId(target));
 		if (!targetData) return this.errorReply("The staffmon \"" + toId(target) + "\" could not be found.");
 		return this.sendReplyBox(targetData);

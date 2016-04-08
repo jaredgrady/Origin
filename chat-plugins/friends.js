@@ -10,7 +10,6 @@ let offlineFriendListOutput = '';
 let numOnline = 0;
 let numOffline = 0;
 
-
 /**
  * Friends constructor.
  *
@@ -81,7 +80,6 @@ function getFriendsOutput() {
 	return '<center><div style="width: 330px;"><div style="' + inlinecss + ' float: left;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Online Users(' + numOnline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + onlineFriendListOutput + '</div></div><div style="' + inlinecss + ' float: right;"><center><font style="color: white; font-weight: bold; text-shadow: 0px -1px 0px #143E57;">Offline Users(' + numOffline + '):</font></center><div style=\'background: url("http://i.imgur.com/Q8vHT0Y.png"); border: 1px solid #000; margin-top: 5px; padding: 5px;\'>' + offlineFriendListOutput + '</div></div><div style="clear: both;"></div></div></center>';
 }
 
-
 exports.commands = {
 	friends: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -109,6 +107,7 @@ exports.commands = {
 			this.sendReplyBox('You have no friends ;(' + BR + '/addfriend to add a friend');
 		}
 	},
+
 	addfriend: function (target, room, user) {
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		if (target.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
@@ -132,8 +131,9 @@ exports.commands = {
 			insertStatement += uniqueFriends[i] + ',';
 		}
 		Db('FriendsDB').set(toId(user),  insertStatement);
-		this.sendReply(target + ' has been added to your friend list.');
+		this.sendReply(target + " has been added to your friend list.");
 	},
+
 	unfriend: 'removefriend',
 	removefriend: function (target, room, user) {
 		if (target.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
@@ -160,11 +160,11 @@ exports.commands = {
 			insertStatement += uniqueFriends[i] + ',';
 		}
 		Db('FriendsDB').set(toId(user),  insertStatement);
-		this.sendReply(target + ' has been removed from your friend list.');
+		this.sendReply(target + " has been removed from your friend list.");
 	},
 
 	friendlist: function (room, user) {
-		this.sendReplyBox('/friends list of friends' + BR + '/addfriend to add a friend' + BR + '/removefriend to remove a friend'  + BR + BR + 'Friendlist made by Niisama');
+		this.sendReplyBox('/friends - list of friends' + BR + '/addfriend - to add a friend' + BR + '/removefriend - to remove a friend'  + BR + BR + 'Friendlist made by Niisama');
 	},
 	friendshelp: ["/addfriend to add a new friend"],
 };

@@ -86,7 +86,7 @@ global.parseWarlic = parseWarlic;
 
 exports.commands = {
 	togglewarlic: function (target, room, user) {
-		if (!this.can('hotpatch') && !~developers.indexOf(user.userid)) return this.errorReply("Access denied.");
+		if (!this.can('hotpatch') && !~developers.indexOf(user.userid)) return this.errorReply("The command '/togglewarlic' was unrecognized. To send a message starting with '/togglewarlic', type '//togglewarlic'.");
 		room.WarlicMode = !room.WarlicMode;
 		this.sendReply("Warlic Mode is set to " + room.WarlicMode + " in this room.");
 		if (room.WarlicMode) {

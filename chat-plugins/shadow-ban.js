@@ -182,7 +182,6 @@ exports.commands = {
 		if (!target) return this.sendReply("/unshadowban OR /unsban [username] - Undoes /shadowban (except the secondary command).");
 		this.splitTarget(target);
 
-
 		let targets = removeUser(this.targetUser || this.targetUsername);
 		if (targets.length === 0) {
 			return this.sendReply('||' + this.targetUsername + " is not shadow banned.");
@@ -193,7 +192,7 @@ exports.commands = {
 	},
 
 	sbanlist: function (target, room, user, connection, cmd) {
-		if (!user.can("lock")) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		if (!user.can('lock')) return this.errorReply("The command '/" + cmd + "' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 		let sbanList = {};
 

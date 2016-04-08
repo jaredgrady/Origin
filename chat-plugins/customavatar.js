@@ -106,7 +106,6 @@ exports.commands = {
 				return;
 			}
 			Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a custom avatar from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + avatar + '" width="80" height="80">');
-
 		/* falls through */
 		case 'forceset':
 			if (user.avatarCooldown && !this.can('lock')) {
@@ -142,7 +141,6 @@ exports.commands = {
 				room.update();
 			}.bind(this));
 			break;
-
 		case 'delete':
 			userid = toId(parts[1]);
 			if (!this.can('lock') && !this.can('vip')) return false;
@@ -162,7 +160,6 @@ exports.commands = {
 				this.sendReply(userid + "'s custom avatar removed successfully");
 			}.bind(this));
 			break;
-
 		case 'change':
 			userid = toId(parts[1]);
 			targetUser = Users.getExact(userid);
@@ -172,7 +169,6 @@ exports.commands = {
 			this.parse('/customavatar delete, ' + targetUser);
 			this.parse('/customavatar set, ' + targetUser + ', ' + avatar);
 			break;
-
 		case 'reload':
 			if (!this.can('hotpatch')) return false;
 			reloadCustomAvatars();
@@ -182,7 +178,6 @@ exports.commands = {
 			}
 			this.sendReply("You have reloaded all custom avatars on the server.");
 			break;
-
 		default:
 			return this.sendReply("Invalid command. Valid commands are `/customavatar set, user, avatar` and `/customavatar delete, user`.");
 		}
