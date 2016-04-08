@@ -161,7 +161,7 @@ exports.commands = {
 		members: function (target, room, user) {
 			if (!this.runBroadcast()) return false;
 			if ((target && !gangs.hasOwnProperty(toId(target))) || (!target && !gangs.hasOwnProperty(room.id))) return this.errorReply("You have to specify a gang.");
-			gangData = target ? toId(target) : room.id
+			let targetGang = target ? toId(target) : room.id
 			let gangData = Db("gangs").object();
 			let members = Object.keys(gangData)
 				.filter(u => gangData[u] === targetGang)
