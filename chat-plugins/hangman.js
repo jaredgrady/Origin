@@ -280,7 +280,8 @@ exports.commands = {
 			room.game.display(user, this.broadcasting);
 		},
 
-		'': function (target, room, user) {
+		'': 'help',
+		help: function (target, room, user) {
 			return this.parse('/help hangman');
 		},
 	},

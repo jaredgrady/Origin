@@ -149,9 +149,7 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		if (!target) target = user.name;
 		target = toId(target);
-		if (!userPacks[target] || userPacks[target].length === 0) {
-			return this.sendReply((target === user.userid ? 'You have' : target + ' has') + ' no packs.');
-		}
+		if (!userPacks[target] || userPacks[target].length === 0) return this.sendReply((target === user.userid ? 'You have' : target + ' has') + ' no packs.');
 		this.sendReply('|raw|<u><b>List of packs:</b></u>');
 		for (let i = 0; i < userPacks[target].length; i++) {
 			this.sendReply('|raw| <button name="send" value="/openpack ' + userPacks[target][i] + '"> Press to open <b>' + toTitleCase(userPacks[target][i]) + '</b> pack</button>');
@@ -160,21 +158,21 @@ exports.commands = {
 
 	buypacks: 'buypack',
 	buypack: function (target, room, user) {
-		if (!target) return this.sendReply('/buypack - Buys a pack from the pack shop. Alias: /buypacks');
+		if (!target) return this.sendReply("/buypack - Buys a pack from the pack shop. Alias: /buypacks");
 		let self = this;
 		let packId = toId(target);
 		let amount = Db('money').get(user.userid, 0);
-		if (cleanShop.indexOf(packId) < 0) return self.sendReply('This is not a valid pack. Use /packshop to see all packs.');
+		if (cleanShop.indexOf(packId) < 0) return self.sendReply("This is not a valid pack. Use /packshop to see all packs.");
 		let shopIndex = cleanShop.indexOf(toId(target));
-		if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply('This pack is not currently in circulation.  Please use /packshop to see the current packs.');
+		if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply("This pack is not currently in circulation.  Please use /packshop to see the current packs.");
 		let cost = shop[shopIndex][2];
-		if (cost > amount) return self.sendReply('You need ' + (cost - amount) + ' more bucks to buy this pack.');
+		if (cost > amount) return self.sendReply("You need " + (cost - amount) + " more bucks to buy this pack.");
 		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
 		let pack = toId(target);
 		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost +
 			' bucks. Use <button name="send" value="/openpack ' +
 			pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
-		self.sendReply('You have until the server restarts to open your pack.');
+		self.sendReply("You have until the server restarts to open your pack.");
 		if (!userPacks[user.userid]) userPacks[user.userid] = [];
 		userPacks[user.userid].push(pack);
 		if (room.id !== 'lobby' && room.id !== 'casino') room.addRaw(user.name + ' has bought <b>' + target + ' pack </b> from the shop.');
@@ -191,12 +189,12 @@ exports.commands = {
 	openpack: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		if (!target) {
-			this.sendReply('/openpack [pack] - Open a Pokemon Card Pack. Alias: /open, /openpacks');
+			this.sendReply("/openpack [pack] - Open a Pokemon Card Pack. Alias: /open, /openpacks");
 			return this.parse('/packs');
 		}
-		if (cleanShop.indexOf(toId(target)) < 0) return this.sendReply('This pack does not exist.');
-		if (!userPacks[user.userid] || userPacks[user.userid].length === 0) return this.sendReply('You have no packs.');
-		if (userPacks[user.userid].indexOf(toId(target)) < 0) return this.sendReply('You do not have this pack.');
+		if (cleanShop.indexOf(toId(target)) < 0) return this.sendReply("This pack does not exist.");
+		if (!userPacks[user.userid] || userPacks[user.userid].length === 0) return this.sendReply("You have no packs.");
+		if (userPacks[user.userid].indexOf(toId(target)) < 0) return this.sendReply("You do not have this pack.");
 		let newPack;
 		for (let i = 0; i < 3; i++) {
 			newPack = toId(target);
@@ -215,18 +213,18 @@ exports.commands = {
 
 	givepacks: 'givepack',
 	givepack: function (target, room, user) {
-		if (!user.can('declare')) return this.errorReply('/givepack - Access denied.');
-		if (!target) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
+		if (!user.can('declare')) return this.errorReply("/givepack - Access denied.");
+		if (!target) return this.sendReply("/givepack [user], [pack] - Give a user a pack.");
 		let parts = target.split(',');
 		this.splitTarget(parts[0]);
-		if (!parts[1]) return this.sendReply('/givepack [user], [pack] - Give a user a pack. Alias: /givepacks');
+		if (!parts[1]) return this.sendReply("/givepack [user], [pack] - Give a user a pack.");
 		let pack = toId(parts[1]);
 		let userid = toId(this.targetUsername);
-		if (cleanShop.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
-		if (!this.targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
+		if (cleanShop.indexOf(pack) < 0) return this.sendReply("This pack does not exist.");
+		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
 		if (!userPacks[userid]) userPacks[userid] = [];
 		userPacks[userid].push(pack);
-		this.sendReply(this.targetUsername + ' was given ' + pack + ' pack. This user now has ' + userPacks[userid].length + ' pack(s).');
+		this.sendReply(this.targetUsername + " was given " + pack + " pack. This user now has " + userPacks[userid].length + " pack(s).");
 		Users.get(this.targetUsername).connections[0].sendTo(room.id,
 			'|raw|' + user.name + ' has given you ' + pack + ' pack. You have until the server restarts to open your pack.' +
 			'Use <button name="send" value="/openpack ' + pack + '"><b>/openpack ' + pack + '</b></button> to open your pack.');
@@ -234,20 +232,20 @@ exports.commands = {
 
 	takepacks: 'takepack',
 	takepack: function (target, room, user) {
-		if (!user.can('takepack')) return this.errorReply('/takepack - Access denied.');
-		if (!target) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
+		if (!user.can('takepack')) return this.errorReply("/takepack - Access denied.");
+		if (!target) return this.sendReply("/takepack [user], [pack] - Take a pack from a user.");
 		let parts = target.split(',');
 		this.splitTarget(parts[0]);
-		if (!parts[1]) return this.sendReply('/takepack [user], [pack] - Take a pack from a user. Alias: /takepacks');
+		if (!parts[1]) return this.sendReply("/takepack [user], [pack] - Take a pack from a user.");
 		let pack = toId(parts[1]);
 		let userid = toId(this.targetUsername);
 		let packIndex = userPacks[userid].indexOf(pack);
-		if (packShop.indexOf(pack) < 0) return this.sendReply('This pack does not exist.');
-		if (!this.targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
+		if (packShop.indexOf(pack) < 0) return this.sendReply("This pack does not exist.");
+		if (!this.targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
 		if (!userPacks[userid]) userPacks[userid] = [];
-		if (packIndex < 0) return this.sendReply('This user does not have this pack.');
+		if (packIndex < 0) return this.sendReply("This user does not have this pack.");
 		userPacks[userid].splice(packIndex, 1);
-		this.sendReply(this.targetUsername + ' lost ' + pack + ' pack. This user now has ' + userPacks[userid].length + ' pack(s).');
+		this.sendReply(this.targetUsername + " lost " + pack + " pack. This user now has " + userPacks[userid].length + " pack(s).");
 		Users.get(this.targetUsername).send('|raw|' + user.name + ' has taken ' + pack + ' pack from you. You now have ' +  userPacks[userid].length + ' pack(s).');
 	},
 
@@ -266,10 +264,10 @@ exports.commands = {
 	},
 
 	card: function (target, room, user) {
-		if (!target) return this.sendReply('/card [name] - Shows information about a card.');
+		if (!target) return this.sendReply("/card [name] - Shows information about a card.");
 		if (!this.runBroadcast()) return;
 		let cardName = toId(target);
-		if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ': card not found.');
+		if (!cards.hasOwnProperty(cardName)) return this.sendReply(target + ": card not found.");
 		let card = cards[cardName];
 		let html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + card.card + '" height="220" title="' + card.name + '" align="right">' +
 			'<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">' + card.title + '</span>' +
@@ -290,11 +288,9 @@ exports.commands = {
 		this.sendReplyBox(rankLadder('Card Ladder', 'Points', keys.slice(0, 100), 'points'));
 	},
 
-	// searching cards
-	cs: "cardsearch",
-	cardsearch: "searchcard",
+	cs: 'cardsearch',
+	cardsearch: 'searchcard',
 	searchcard: function (target, room, user) {
-		// consts
 		const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 		const categories = {
 			Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'], // rarities
@@ -307,7 +303,6 @@ exports.commands = {
 
 		const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">"; // code for scrollable html
 		const divEnd = "</div>";
-
 		const definePopup = "|wide||html|<center><b>CardSearch</b></center><br />";
 		const generalMenu = "<center>" +
 			'<button name="send" value="/searchcard letter" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
@@ -319,13 +314,10 @@ exports.commands = {
 		// quick fix for when target ends with a comma
 		target = target.replace(/\,[\s]+$/i, "");
 		let parts = target.split(",");
-
 		let actionCommand = parts.shift();
-
 		let cardDisplay;
-
 		switch (toId(actionCommand)) {
-		case "letter":
+		case 'letter':
 			let letter = toId(parts[0]);
 
 			const letterMenu = '<center>' + letters.map(l => {
@@ -354,7 +346,7 @@ exports.commands = {
 			user.lastCardSearch = target;
 			user.popup(definePopup + generalMenu + letterMenu + scrollable + cardDisplay + divEnd);
 			break;
-		case "category":
+		case 'category':
 			// clean all the parts first
 			parts = parts.map(p => {
 				return toId(p);
@@ -431,7 +423,7 @@ exports.commands = {
 			}).join("&nbsp;");
 			user.popup(definePopup + generalMenu + categoryMenu + scrollable + cardDisplay + divEnd);
 			break;
-		case "card":
+		case 'card':
 			let backButton = '<button name="send" value="/cardsearch ' + user.lastCardSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
 			if (!parts[0] || !(toId(parts[0]) in cards)) {
 				return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Card</b></font></center>');
@@ -480,14 +472,14 @@ exports.commands = {
 
 			user.popup(definePopup + backButton + cardDisplay);
 			break;
-		case "error":
+		case 'error':
 		default:
 			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for CardSearch</b></font></center>');
 			break;
 		}
 	},
 
-	trade: "tradecard",
+	trade: 'tradecard',
 	tradecard: function (target, room, user) {
 		if (!target) return this.errorReply("/tradecard [card ID], [user], [targetCard ID]");
 		let parts = target.split(",").map(p => toId(p));
@@ -497,7 +489,7 @@ exports.commands = {
 		// check for user's card
 		let forTrade = parts[0];
 		match = false;
-		let userCards = Db("cards").get(user.userid, []);
+		let userCards = Db('cards').get(user.userid, []);
 		for (let i = 0; i < userCards.length; i++) {
 			if (userCards[i].title === forTrade) {
 				match = true;
@@ -510,7 +502,7 @@ exports.commands = {
 		let targetUser = parts[1];
 		let targetTrade = parts[2];
 
-		let targetCards = Db("cards").get(targetUser, []);
+		let targetCards = Db('cards').get(targetUser, []);
 		match = false;
 		for (let i = 0; i < targetCards.length; i++) {
 			if (targetCards[i].title === targetTrade) {
@@ -531,7 +523,7 @@ exports.commands = {
 			id: tradeId,
 		};
 
-		Db("cardtrades").set(tradeId, newTrade);
+		Db('cardtrades').set(tradeId, newTrade);
 
 		// send messages
 		this.sendReply("Your trade has been taken submitted.");
@@ -539,13 +531,13 @@ exports.commands = {
 		user.send("|pm|~OriginCardTradeClient|" + user.userid + "|/html <div class=\"broadcast-green\">Your trade with " + Tools.escapeHTML(targetUser) + " has been initiated.  Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
 	},
 
-	trades: "viewcardtrades",
+	trades: 'viewcardtrades',
 	viewcardtrades: function (target, room, user) {
 		// popup variables
 		const popup = "|html|<center><b><font color=\"blue\">Trade Manager</font></b></center><br />";
 
 		// get the user's trades
-		let allTrades = Db("cardtrades").object();
+		let allTrades = Db('cardtrades').object();
 		let userTrades = [];
 		for (let id in allTrades) {
 			let trade = allTrades[id];
@@ -651,19 +643,14 @@ exports.commands = {
 
 	tradeaction: function (target, room, user) {
 		if (!target) return false; // due to the complexity of the command, this should only be used through the viewtrades screen
-
 		let parts = target.split(",").map(p => p.trim());
-
 		let action = toId(parts.shift());
-
 		const backButton = '<button name="send" value="' + (user.lastTradeCommand || '/viewcardtrades') + '" style="background-color:aliceblue;height:30px">< Back</button><br /><br />';
 		const tradeError = "|html|" + backButton + '<center><font color="red"><b>ERROR: Invalid Trade / You cannot accept your own trade request!</b></font><center>';
-
 		let trade;
-
 		switch (action) {
-		case "confirmaccept":
-		case "accept":
+		case 'confirmaccept':
+		case 'accept':
 			if (!parts[0]) return false;
 			if (action === "accept") {
 				// make the user confirm the decision
@@ -673,7 +660,7 @@ exports.commands = {
 			}
 			// finalize trade
 			// get the trade
-			trade = Db("cardtrades").get(parts[0], null);
+			trade = Db('cardtrades').get(parts[0], null);
 			if (!trade) return user.popup(tradeError);
 
 			// check if the trade involves the user
@@ -690,7 +677,7 @@ exports.commands = {
 			// now double check that both users still have those cards
 			// check user first
 			match = false;
-			let userCards = Db("cards").get(user.userid, []);
+			let userCards = Db('cards').get(user.userid, []);
 			for (let i = 0; i < userCards.length; i++) {
 				if (userCards[i].title === trade[accepter + "Exchange"]) {
 					match = true;
@@ -698,18 +685,18 @@ exports.commands = {
 				}
 			}
 
-			if (!match) return this.parse("/tradeaction forcecancel, " + trade.id);
+			if (!match) return this.parse('/tradeaction forcecancel, ' + trade.id);
 
 			// check target
 			match = false;
-			let targetCards = Db("cards").get(trade[otherTarget], []);
+			let targetCards = Db('cards').get(trade[otherTarget], []);
 			for (let i = 0; i < targetCards.length; i++) {
 				if (targetCards[i].title === trade[otherTarget + "Exchange"]) {
 					match = true;
 					break;
 				}
 			}
-			if (!match) return this.parse("/tradeaction forcecancel, " + trade.id);
+			if (!match) return this.parse('/tradeaction forcecancel, ' + trade.id);
 
 			// now go ahead with the trade!
 			// for "from" first
@@ -721,11 +708,11 @@ exports.commands = {
 			removeCard(trade.toExchange, trade.to);
 
 			// update points
-			Db("points").set(trade.to, getPointTotal(trade.to));
-			Db("points").set(trade.from, getPointTotal(trade.from));
+			Db('points').set(trade.to, getPointTotal(trade.to));
+			Db('points').set(trade.from, getPointTotal(trade.from));
 
 			// remove the trade
-			Db("cardtrades").delete(parts[0]);
+			Db('cardtrades').delete(parts[0]);
 
 			// on trade success
 			// send popups to both user and target saying the trade with user was a success
@@ -742,14 +729,14 @@ exports.commands = {
 
 			// log trades and delete the data from list of trades.
 			let now = Date.now().toString();
-			Db("completedTrades").set(now, trade);
+			Db('completedTrades').set(now, trade);
 			break;
-		case "forcecancel":
-		case "cancel":
-		case "reject":
+		case 'forcecancel':
+		case 'cancel':
+		case 'reject':
 			if (!parts[0]) return false;
 			// check for trade
-			trade = Db("cardtrades").get(parts[0], null);
+			trade = Db('cardtrades').get(parts[0], null);
 
 			if (!trade) return user.popup(tradeError);
 
@@ -769,7 +756,7 @@ exports.commands = {
 			}
 
 			// remove the trade
-			Db("cardtrades").delete(parts[0]);
+			Db('cardtrades').delete(parts[0]);
 
 			// letting the users involved know
 			let targetUser;
@@ -783,7 +770,8 @@ exports.commands = {
 			break;
 		}
 	},
-	confirmtransfercard: "transfercard",
+
+	confirmtransfercard: 'transfercard',
 	transfercard: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transfercard [user], [card ID]");
 
@@ -802,8 +790,8 @@ exports.commands = {
 		// complete transfer
 		addCard(targetUser, card);
 
-		Db("points").set(targetUser, getPointTotal(targetUser));
-		Db("points").set(user.userid, getPointTotal(user.userid));
+		Db('points').set(targetUser, getPointTotal(targetUser));
+		Db('points').set(user.userid, getPointTotal(user.userid));
 
 		// build transfer profile
 		let newTransfer = {
@@ -813,17 +801,17 @@ exports.commands = {
 		};
 		// log it
 		let now = Date.now().toString();
-		Db("completedTrades").set(now, newTransfer);
+		Db('completedTrades').set(now, newTransfer);
 		user.popup("You have successfully transfered " + card + " to " + targetUser + ".");
 	},
 
-	confirmtransferallcards: "transferallcards",
+	confirmtransferallcards: 'transferallcards',
 	transferallcards: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transferallcards [user]");
 		let targetUser = toId(target);
 		if (!targetUser) return this.errorReply("/transferallcards [user]");
-		let userCards = Db("cards").get(user.userid, []);
-		let targetCards = Db("cards").get(targetUser, []);
+		let userCards = Db('cards').get(user.userid, []);
+		let targetCards = Db('cards').get(targetUser, []);
 
 		if (!userCards.length) return this.errorReply("You don't have any cards.");
 
@@ -833,11 +821,11 @@ exports.commands = {
 		}
 
 		// now the real work
-		Db("cards").set(targetUser, targetCards.concat(userCards));
-		Db("cards").set(user.userid, []);
+		Db('cards').set(targetUser, targetCards.concat(userCards));
+		Db('cards').set(user.userid, []);
 
-		Db("points").set(targetUser, getPointTotal(targetUser));
-		Db("points").set(user.userid, getPointTotal(user.userid));
+		Db('points').set(targetUser, getPointTotal(targetUser));
+		Db('points').set(user.userid, getPointTotal(user.userid));
 
 		user.popup("You have transfered all your cards to " + targetUser + ".");
 
@@ -848,26 +836,26 @@ exports.commands = {
 		};
 
 		let now = Date.now().toString();
-		Db("completedTrades").set(now, newTransfer);
+		Db('completedTrades').set(now, newTransfer);
 	},
 
 	psgo: 'cardshelp',
 	origincg: 'cardshelp',
 	cardshelp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		return this.sendReplyBox('<center><b><u>Origin Trading Card Game:</u></b></center><br>' +
-			'<b>/buypack</b> - Buys a pack from the pack shop.<br>' +
-			'<b>/packshop</b> - Shows the shop for buying packs.<br>' +
-			'<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>' +
-			'<b>/packs</b> - Shows a display of all your unopened packs.<br>' +
-			'<b>/showcase</b> - Shows a display of all cards that you have.<br>' +
-			'<b>/card</b> - Shows data and information on any specifc card.<br>' +
-			'<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>' +
-			'<b>/cardsearch</b> - Opens a window allowing you to search through all the cards.<br>' +
-			'<b>/trade</b> - /trade [user\'s card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>' +
-			'<b>/trades</b> - View your current pending trade requests.<br>' +
-			'<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>' +
-			'<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>'
+		return this.sendReplyBox("<center><b><u>Origin Trading Card Game:</u></b></center><br>" +
+			"<b>/buypack</b> - Buys a pack from the pack shop.<br>" +
+			"<b>/packshop</b> - Shows the shop for buying packs.<br>" +
+			"<b>/openpack</b> - Opens a pack that has been purchased from the shop.<br>" +
+			"<b>/packs</b> - Shows a display of all your unopened packs.<br>" +
+			"<b>/showcase</b> - Shows a display of all cards that you have.<br>" +
+			"<b>/card</b> - Shows data and information on any specifc card.<br>" +
+			"<b>/cardladder</b> - Shows the leaderboard of the users with the most card points.<br>" +
+			"<b>/cardsearch</b> - Opens a window allowing you to search through all the cards.<br>" +
+			"<b>/trade</b> - /trade [user\'s card], [targetUser], [targetUser\'s card] - starts a new trade request.<br>" +
+			"<b>/trades</b> - View your current pending trade requests.<br>" +
+			"<b>/transfercard</b> - /transfercard [targetUser], [card] - transfers a card to the target user.<br>" +
+			"<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>"
 		);
 	},
 };

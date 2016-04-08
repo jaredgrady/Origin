@@ -386,14 +386,14 @@ exports.commands = {
 		},
 
 		enable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (room.id !== 'casino') return this.errorReply("Can only be used in Casino.");
 			if (!user.can('makechatroom')) return this.errorReply("/slots enable - Access denied.");
 			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 
 		disable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (room.id !== 'casino') return this.errorReply("Can only be used in Casino.");
 			if (!user.can('makechatroom')) return this.errorReply("/slots disable - Access denied.");
 			room.slotsEnabled = false;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();
@@ -401,7 +401,7 @@ exports.commands = {
 		},
 
 		ante: function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply("Can only be used in casino.");
+			if (room.id !== 'casino') return this.errorReply("Can only be used in Casino.");
 			if (!user.can('hotpatch')) return this.errorReply("/slots ante - Access denied.");
 			if (!target) return this.parse('/help slotsante');
 			target = parseInt(target);
