@@ -291,69 +291,8 @@ exports.commands = {
 	magic8ball: 'm8b',
 	m8b: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		let random = Math.floor(20 * Math.random()) + 1;
-		let results = '';
-		if (random === 1) {
-			results = 'Signs point to yes.';
-		}
-		if (random === 2) {
-			results = 'Yes.';
-		}
-		if (random === 3) {
-			results = 'Reply hazy, try again.';
-		}
-		if (random === 4) {
-			results = 'Without a doubt.';
-		}
-		if (random === 5) {
-			results = 'My sources say no.';
-		}
-		if (random === 6) {
-			results = 'As I see it, yes.';
-		}
-		if (random === 7) {
-			results = 'You may rely on it.';
-		}
-		if (random === 8) {
-			results = 'Concentrate and ask again.';
-		}
-		if (random === 9) {
-			results = 'Outlook not so good.';
-		}
-		if (random === 10) {
-			results = 'It is decidedly so.';
-		}
-		if (random === 11) {
-			results = 'Better not tell you now.';
-		}
-		if (random === 12) {
-			results = 'Very doubtful.';
-		}
-		if (random === 13) {
-			results = 'Yes - definitely.';
-		}
-		if (random === 14) {
-			results = 'It is certain.';
-		}
-		if (random === 15) {
-			results = 'Cannot predict now.';
-		}
-		if (random === 16) {
-			results = 'Most likely.';
-		}
-		if (random === 17) {
-			results = 'Ask again later.';
-		}
-		if (random === 18) {
-			results = 'My reply is no.';
-		}
-		if (random === 19) {
-			results = 'Outlook good.';
-		}
-		if (random === 20) {
-			results = 'Don\'t count on it.';
-		}
-		return this.sendReplyBox('' + results + '');
+		let results = ['Signs point to yes.', 'Yes.', 'Reply hazy, try again.', 'Without a doubt.', 'My sources say no.', 'As I see it, yes.', 'You may rely on it.', 'Concentrate and ask again.', 'Outlook not so good.', 'It is decidedly so.', 'Better not tell you now.', 'Very doubtful.', 'Yes - definitely.', 'It is certain.', 'Cannot predict now.', 'Most likely.', 'Ask again later.', 'My reply is no.', 'Outlook good.', 'Don\'t count on it.'];
+		return this.sendReplyBox(results[Math.floor(20 * Math.random())]);
 	},
 
 	d: 'poof',
