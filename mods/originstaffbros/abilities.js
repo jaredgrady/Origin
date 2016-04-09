@@ -3496,7 +3496,6 @@ exports.BattleAbilities = {
 		onModifyMove: function (move, pokemon) {
 			if (pokemon.types.indexOf(move.type) > -1) {
 				move.ignoreDefensive = true;
-				move.infiltrates = true;
 			}
 		},
 
