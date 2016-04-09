@@ -33,6 +33,7 @@ exports.BattleAliases = {
 	"monorandom": "Monotype Random Battle",
 	"ce": "Catch and Evolve",
 	"ossb": "Origin Super Staff Bros",
+	"ossb doubles": "Origin Super Staff Bros Doubles",
 
 	// mega evos
 	"maero": "Aerodactyl-Mega",
