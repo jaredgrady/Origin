@@ -28,11 +28,11 @@ fender - Gible - Life Orb
 - Movepool: Torment, Taunt, Encore
 - Notes: A one time nuke, who is exceptionally good at stopping set up sweepers which run wild in this meta. 
 
-~sparkychild - Cresselia - Leftovers
-- Ability: Cantabile - Unaware + Magic Bounce
-- Move: Nanairo Shinfonī - Special, 6BP move, hits with each type once, heals status. PP: 20 / Accuracy: 100% / Priority: 0
-- Movepool: Recover, Fiery Dance, Agility
-- Notes: Much easier to force out with powerful attacks.  Can still be dangerous if it sets up
+~sparkychild - Pikachu <==> Fennekin - Light Ball
+- Ability: Furry Tale - STAB moves get +1 priority, and ignore defense boosts and substitutes, sets heavy rain for Pikachu form
+- Move: Furry Cosplay, switches forms between Pikachu and Fennekin and will replace moves accordingly.  Boosts speed and special attack by 1 stage, but will not boost them higher than +1.  Has a 15% chance of failing and KO'ing itself.  Changes weather accordingly for the form.
+- Movepool: Thunder/Searing Shot, Steam Eruption/SolarBeam, Hurricane/Earth Power
+- Notes: Priority, Neo Soul, CGTNathan and Erica hurts it a lot.  Watch out for it's ability to form change and turn a losing type matchup into a favourable matchup.
 
 &Erica07 - Meloetta - Leftovers
 - Ability: Mischievous - Prankster + Ignores substitutes and type effectiveness.
