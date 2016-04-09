@@ -15941,38 +15941,71 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
-	// Sparkychild
-	"nanairoshinfonii": {
+	// sparkychild
+	"furrycosplay": {
 		isNonstandard: true,
 		accuracy: true,
-		basePower: 6,
-		category: "Special",
-		id: "nanairoshinfonii",
-		name: "Nanairo Shinfonī",
-		pp: 20,
-		priority: 0,
-		multihit: 18,
-		ignoreImmunity: true,
-		typechart: ["Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Grass", "Water", "Electric", "Psychic", "Ice", "Dragon", "Dark", "Fairy"],
-		flags: {protect: 1, mirror: 1},
-		onPrepareHit: function () {
-			this.add("c|~sparkychild|♩ ♫ ♪ ♬ ♫ ♪ ♩ ♬");
+		category: "Status",
+		id: "furrycosplay",
+		isViable: true,
+		name: "Furry Cosplay",
+		pp: 5,
+		priority: 5,
+		flags: {},
+		onTryHit: function (source, target) {
+			this.attrLastMove("[still]");
 		},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]sing');
-			source.cureStatus();
+		onHit: function (pokemon, target, move) {
+			// litle surprise - 15% chance of failing so GL!
+			if (Math.random() >  0.85) {
+				this.add("c|~sparkychild|Ahhhh! s-stop looking at me like that! i-i was just changing my costume... o////o");
+				this.add("c|~sparkychild|/me faints");
+				pokemon.selfFaint = true;
+				return pokemon.faint();
+			}
+			// substitute moves and set weather
+			function setMove(oldMove, moveid) {
+				let index = pokemon.moves.indexOf(oldMove);
+				if (index === -1) return;
+				let move = Tools.getMove(moveid);
+				let sketchedMove = {
+					move: move.name,
+					id: move.id,
+					pp: move.pp,
+					maxpp: move.pp,
+					target: move.target,
+					disabled: false,
+					used: false,
+				};
+				pokemon.moveset[index] = sketchedMove;
+				pokemon.moves[index] = toId(move.name);
+			}
+			// protect
+			this.useMove("Protect", pokemon);
+			let subs = [["thunder", "searingshot"], ["steameruption", "solarbeam"], ["hurricane", "earthpower"]]
+			if (pokemon.template.speciesid === 'pikachu' && pokemon.formeChange('Fennekin')) {
+				subs.forEach(s => setMove(s[0], s[1]));
+				this.add('-formechange', pokemon, 'Fennekin', '[msg]');
+				this.setWeather('desolateland');
+			} else if (pokemon.formeChange('Pikachu')) {
+				subs.forEach(s => setMove(s[1], s[0]));
+				this.add('-formechange', pokemon, 'Pikachu', '[msg]');
+				this.setWeather('primordialsea');
+			}
+			// make changing form available in consecutive turns
+			delete pokemon.volatiles.stall;
+			
+			// limit boosts from this move.
+			let SpABoost = 1;
+			let SpeBoost = 1;
+			if (pokemon.boosts.spa && pokemon.boosts.spa >= 1) SpABoost = 0;
+			if (pokemon.boosts.spe && pokemon.boosts.spe >= 1) SpABoost = 0;
+			this.boost({spa:SpABoost,spe:SpeBoost}, pokemon);
+			
+			this.add("c|~sparkychild|There! All done! D-do you like it? :3");
 		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]sing');
-		},
-		onHit: function (target, source, move) {
-			// shuffle through the types
-			move.type = move.typechart.shift();
-			move.typechart.push(move.type);
-		},
-		secondary: false,
-		target: "allAdjacentFoes",
-		type: "Fairy",
+		target: "self",
+		type: "Normal",
 	},
 
 	// Leaders

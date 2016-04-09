@@ -38,18 +38,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'sodone', signatureMove: "So Done",
 				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
 			},
-			/* pikachu
-			'~sparkychild': { // complete custom electric/psychic typing
-				species: 'Pikachu', ability: 'Regenerator', item: 'Light Ball', gender: 'F',
-				moves: ['thunderbolt', 'ice beam', 'psystrike'],
-				baseSignatureMove: 'makeabot', signatureMove: "Make-a-bot",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
-			}, */
-			'~sparkychild': {
-				species: 'Cresselia', ability: 'Cantabile', item: 'Leftovers', gender: "F",
-				moves: ['recover', 'fierydance', 'agility'],
-				baseSignatureMove: 'nanairoshinfonii', signatureMove: "Nanairo Shinfonī",
-				evs: {hp:252, def:184, spe:72}, nature: 'Calm',
+			'~sparkychild': { 
+				species: 'Pikachu', ability: 'Furry Tale', item: 'Light Ball',
+				moves: ['Thunder','Steam Eruption', 'hurricane'],
+				baseSignatureMove: 'furrycosplay', signatureMove: "Furry Cosplay",
+				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
 
 			// Leaders.

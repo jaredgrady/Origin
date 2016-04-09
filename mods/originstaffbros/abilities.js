@@ -3484,42 +3484,43 @@ exports.BattleAbilities = {
 		name: "Shadow Prankster",
 	},
 
-	// Sparkychild
-	"cantabile": {
-		// unaware
+	// sparkychild
+	"furrytale": {
 		isNonstandard: true,
-		desc: "This Pokemon ignores other Pokemon's Attack, Special Attack, and accuracy stat stages when taking damage, and ignores other Pokemon's Defense, Special Defense, and evasiveness stat stages when dealing damage.",
-		shortDesc: "This Pokemon ignores other Pokemon's stat stages when taking or doing damage.",
-		id: "cantabile",
-		name: "Cantabile",
-		onAnyModifyBoost: function (boosts, target) {
-			let source = this.effectData.target;
-			if (source === target) return;
-			if (source === this.activePokemon && target === this.activeTarget) {
-				boosts['def'] = 0;
-				boosts['spd'] = 0;
-				boosts['evasion'] = 0;
-			}
-			if (target === this.activePokemon && source === this.activeTarget) {
-				boosts['atk'] = 0;
-				boosts['spa'] = 0;
-				boosts['accuracy'] = 0;
+		name: "Furry Tale",
+		id: "furrytale",
+		// priority for stabs feelsarken
+		onModifyPriority: function (priority, pokemon, target, move) {
+			if (move && pokemon.types.indexOf(move.type) > -1) return priority + 1;
+		},
+		onModifyMove: function (move, pokemon) {
+			if (pokemon.types.indexOf(move.type) > -1) {
+				move.ignoreDefensive = true;
+				move.infiltrates = true;
 			}
 		},
-		// magic bounce
-		onTryHit: function (target, source, move) {
-			if (target === source || move.hasBounced || !move.flags['reflectable']) return;
-			let newMove = this.getMoveCopy(move.id);
-			newMove.hasBounced = true;
-			this.useMove(newMove, target, source);
-			return null;
+		
+		// weather for the respective forms
+		// set rain for pikachu
+		onStart: function (source) {
+			this.setWeather('primordialsea');
 		},
-		onAllyTryHitSide: function (target, source, move) {
-			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) return;
-			let newMove = this.getMoveCopy(move.id);
-			newMove.hasBounced = true;
-			this.useMove(newMove, target, source);
-			return null;
+		onAnySetWeather: function (target, source, weather) {
+			if (this.getWeather().id === 'primordialsea' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
+		},
+		onEnd: function (pokemon) {
+			if (this.weatherData.source !== pokemon) return;
+			for (let i = 0; i < this.sides.length; i++) {
+				for (let j = 0; j < this.sides[i].active.length; j++) {
+					let target = this.sides[i].active[j];
+					if (target === pokemon) continue;
+					if (target && target.hp && target.hasAbility('furrytale')) {
+						this.weatherData.source = target;
+						return;
+					}
+				}
+			}
+			this.clearWeather();
 		},
 	},
 
@@ -3963,7 +3964,6 @@ exports.BattleAbilities = {
 				};
 				pokemon.moveset[index] = sketchedMove;
 				pokemon.moves[index] = toId(move.name);
-				console.log(JSON.stringify(pokemon.moveset));
 			}
 			if (pokemon.baseTemplate.species !== 'Castform' || pokemon.transformed) return;
 			let forme = null;

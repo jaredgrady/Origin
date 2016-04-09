@@ -2310,7 +2310,7 @@ exports.Formats = [
 				this.add('c|~Neo Soul|Ayy lmao');
 			}
 			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|We’re all afraid, you know... to get up on stage. Maybe you’ll mess up. Maybe they’ll totally reject you. Even so, you grit your teeth and get up on stage anyway. Something compels us… moves us to play music.');
+				this.add('c|~sparkychild|D-do you think i\'m cute? :3');
 			}
 
 			// Leaders
@@ -2444,8 +2444,8 @@ exports.Formats = [
 				this.add('c|~Neo Soul|Me ded mon!');
 				this.add('c|~Neo Soul|/me shakes dreadlocks');
 			}
-			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|So ephemeral and weak. But it\'s shining with all its might. Thump, Thump, like a heartbeat. This is the light of life.');
+			if (name === 'sparkychild' && !pokemon.selfFaint) {
+				this.add('c|~sparkychild|My fur is ruined....');
 			}
 
 			// Leaders
@@ -2581,9 +2581,6 @@ exports.Formats = [
 			}
 			if (name === 'neosoul') {
 				this.add('c|~Neo Soul|/me moonwalks outta here');
-			}
-			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|By exchanging notes, you get to know one another, to understand one another. As if your souls were connected and your hearts were overlapping. It\'s a conversation through instruments. A miracle that creates harmony. In that moment, music transcends words.');
 			}
 
 			// Leaders
@@ -2921,7 +2918,7 @@ exports.Formats = [
 				this.add('c|~Neo Soul|Ayy lmao');
 			}
 			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|We’re all afraid, you know... to get up on stage. Maybe you’ll mess up. Maybe they’ll totally reject you. Even so, you grit your teeth and get up on stage anyway. Something compels us… moves us to play music.');
+				this.add('c|~sparkychild|D-do you think i\'m cute? :3');
 			}
 
 			// Leaders
@@ -3049,9 +3046,10 @@ exports.Formats = [
 				this.add('c|~Neo Soul|Me ded mon!');
 				this.add('c|~Neo Soul|/me shakes dreadlocks');
 			}
-			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|So ephemeral and weak. But it\'s shining with all its might. Thump, Thump, like a heartbeat. This is the light of life.');
+			if (name === 'sparkychild' && !pokemon.selfFaint) {
+				this.add('c|~sparkychild|My fur is ruined....');
 			}
+
 
 			// Leaders
 			if (name === 'erica07') {
@@ -3181,9 +3179,6 @@ exports.Formats = [
 			}
 			if (name === 'neosoul') {
 				this.add('c|~Neo Soul|/me moonwalks outta here');
-			}
-			if (name === 'sparkychild') {
-				this.add('c|~sparkychild|By exchanging notes, you get to know one another, to understand one another. As if your souls were connected and your hearts were overlapping. It\'s a conversation through instruments. A miracle that creates harmony. In that moment, music transcends words.');
 			}
 
 			// Leaders
