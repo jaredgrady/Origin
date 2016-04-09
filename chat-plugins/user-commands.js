@@ -577,6 +577,7 @@ exports.commands = {
 		Db('FriencodeDB').delete(toId(user));
 		this.sendReply("Friendcode removed.");
 	},
+
 	anime: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		if (room.id !== 'otakulair') return this.errorReply("This command can only be used in the Otaku Lair.");
