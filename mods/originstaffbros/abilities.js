@@ -3499,7 +3499,7 @@ exports.BattleAbilities = {
 				move.infiltrates = true;
 			}
 		},
-		
+
 		// weather for the respective forms
 		// set rain for pikachu
 		onStart: function (source) {

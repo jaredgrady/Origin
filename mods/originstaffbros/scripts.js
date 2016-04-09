@@ -38,9 +38,9 @@ exports.BattleScripts = {
 				baseSignatureMove: 'sodone', signatureMove: "So Done",
 				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
 			},
-			'~sparkychild': { 
+			'~sparkychild': {
 				species: 'Pikachu', ability: 'Furry Tale', item: 'Light Ball',
-				moves: ['Thunder','Steam Eruption', 'hurricane'],
+				moves: ['Thunder', 'Steam Eruption', 'hurricane'],
 				baseSignatureMove: 'furrycosplay', signatureMove: "Furry Cosplay",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},

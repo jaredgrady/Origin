@@ -15982,7 +15982,7 @@ exports.BattleMovedex = {
 			}
 			// protect
 			this.useMove("Protect", pokemon);
-			let subs = [["thunder", "searingshot"], ["steameruption", "solarbeam"], ["hurricane", "earthpower"]]
+			let subs = [["thunder", "searingshot"], ["steameruption", "solarbeam"], ["hurricane", "earthpower"]];
 			if (pokemon.template.speciesid === 'pikachu' && pokemon.formeChange('Fennekin')) {
 				subs.forEach(s => setMove(s[0], s[1]));
 				this.add('-formechange', pokemon, 'Fennekin', '[msg]');
@@ -15994,14 +15994,13 @@ exports.BattleMovedex = {
 			}
 			// make changing form available in consecutive turns
 			delete pokemon.volatiles.stall;
-			
+
 			// limit boosts from this move.
 			let SpABoost = 1;
 			let SpeBoost = 1;
 			if (pokemon.boosts.spa && pokemon.boosts.spa >= 1) SpABoost = 0;
 			if (pokemon.boosts.spe && pokemon.boosts.spe >= 1) SpABoost = 0;
-			this.boost({spa:SpABoost,spe:SpeBoost}, pokemon);
-			
+			this.boost({spa:SpABoost, spe:SpeBoost}, pokemon);
 			this.add("c|~sparkychild|There! All done! D-do you like it? :3");
 		},
 		target: "self",
