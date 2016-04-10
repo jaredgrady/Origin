@@ -169,8 +169,8 @@ exports.commands = {
 		const targetId = toId(target);
 		if (!targetId) return this.parse('/help wallet');
 
-		const amount = Db('money').get(toId(target), 0);
-		this.sendReplyBox(Tools.escapeHTML(target) + " has " + amount + currencyName(amount) + ".");
+		const amount = Db('money').get(targetId, 0);
+		this.sendReplyBox('<b><font color="' + color(targetId) + '">' + Tools.escapeHTML(target) + '</font></b> has ' + amount + currencyName(amount) + '.');
 	},
 	wallethelp: ["/wallet [user] - Shows the amount of money a user has."],
 
@@ -501,8 +501,8 @@ exports.commands = {
 		const targetId = toId(target);
 		if (!targetId) return this.parse('/help dicewins');
 
-		const dicewins = Db('dicewins').get(toId(target), 0);
-		this.sendReplyBox(Tools.escapeHTML(target) + " has " + dicewins + " dicewins.");
+		const dicewins = Db('dicewins').get(targetId, 0);
+		this.sendReplyBox('<b><font color="' + color(targetId) + '">' + Tools.escapeHTML(target) + '</font></b> has ' + dicewins + ' dicewins.');
 	},
 	dicewinshelp: 'dicegamewinshelp',
 	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],

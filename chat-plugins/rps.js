@@ -4,7 +4,8 @@
 * * * * * * * * * * * */
 'use strict';
 
-const rankLadder = require('../rank-ladder');
+let color = require('../config/color');
+let rankLadder = require('../rank-ladder');
 
 if (!Rooms.global.RPS) {
 	Rooms.global.RPS = {
@@ -260,7 +261,7 @@ exports.commands = {
 			if (!this.runBroadcast()) return false;
 			target = (toId(target) ? (Users.get(target) ? Users.get(target).name : target) : user.name);
 			let userRank = Db('rpsrank').get(toId(target), 1000);
-			this.sendReplyBox("Rank - <b>" + target + "</b>: " + userRank);
+			this.sendReplyBox('<b><font color="' + color(target) + '">' + target + '</font></b>\'s RPS rank is: ' + userRank);
 		},
 		ladder: function (target, room, user) {
 			if (!this.runBroadcast()) return false;
