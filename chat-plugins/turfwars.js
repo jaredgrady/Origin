@@ -78,6 +78,15 @@ exports.commands = {
 			user.gang = gang;
 			this.sendReply("You have joined the gang: " + gang);
 		},
+		leave: function (target, room, user) {
+			if (!user.gang) return this.errorReply("You are not currently in a gang!");
+			if (!target || user.gang !== toId(target)) return this.errorReply("Please specify what gang you are leaving to confirm your choice.");
+			Db("gangs").delete(user.userid);
+			Db("gangranks").delete(user.userid);
+			user.gang = "";
+			user.gangrank = "";
+			this.sendReply("You have left the gang " + toId(target) + ".")
+		},
 		add: function (target, room, user) {
 			if (!target) return this.errorReply("Must specify a user.");
 			let targetUser = Users(toId(target));
