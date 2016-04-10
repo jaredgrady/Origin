@@ -107,7 +107,7 @@ exports.commands = {
 			targetUser = Users.getExact(userid);
 			badges = Db('badgesDB').get(userid);
 			badge = parts[2].trim();
-			if (!badgeIcons[badge]) return this.sendReply("This badge does not exist, please check /badges list");
+			if (!badgeIcons[badge]) return this.errorReply("This badge does not exist, please check /badges list");
 			if (!Db('badgesDB').has(userid)) badges = [];
 			badges = badges.filter(b => b !== badge);
 			badges.push(badge);
