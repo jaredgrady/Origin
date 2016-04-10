@@ -15999,7 +15999,7 @@ exports.BattleMovedex = {
 			let SpABoost = 1;
 			let SpeBoost = 1;
 			if (pokemon.boosts.spa && pokemon.boosts.spa >= 1) SpABoost = 0;
-			if (pokemon.boosts.spe && pokemon.boosts.spe >= 1) SpABoost = 0;
+			if (pokemon.boosts.spe && pokemon.boosts.spe >= 1) SpeBoost = 0;
 			this.boost({spa:SpABoost, spe:SpeBoost}, pokemon);
 			this.add("c|~sparkychild|There! All done! D-do you like it? :3");
 		},
