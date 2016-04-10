@@ -17167,7 +17167,7 @@ exports.BattleMovedex = {
 			this.useMove('spikes', target);
 		},
 		secondary: false,
-		target: "target",
+		target: "self",
 		type: "Ground",
 	},
 
