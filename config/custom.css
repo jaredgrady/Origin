@@ -247,46 +247,6 @@
 /***********************
 * Donation Benefit CSS *
 ***********************/
-.pm-window-masterfloat h3 {
-  background: #B9FCEE url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-  background-position: 225px -8px !important;
-  color: #1EA88C !important;
-  text-shadow: 0px 0px 2px #B6F3E7 !important;
-  border-color: #1F6C5D !important; }
-
-.pm-window-masterfloat h3:hover, .pm-window-masterfloat.focused h3, .pm-window-masterfloat.focused h3:hover {
-  background: #A5EFE0 url("http://www.serebii.net/pokedex-dp/icon/419.gif") no-repeat !important;
-  background-position: 225px -8px !important;
-  color: #1EA88C !important;
-  text-shadow: 0px 0px 2px #B6F3E7 !important;
-  border-color: #1F6C5D !important; }
-
-.pm-window-masterfloat h3 small, .pm-window-masterfloat h3 .minimizebutton, .pm-window-masterfloat h3 .closebutton, .pm-window-masterfloat h3:hover .minimizebutton {
-  color: #106B59 !important; }
-
-.pm-window-masterfloat h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #106B59 !important; }
-
-.pm-window-masterfloat h3 .closebutton:hover {
-  color: #982929 !important; }
-
-.pm-window-masterfloat h3 .minimizebutton:hover {
-  color: #987729 !important; }
-
-.pm-window-masterfloat .pm-log, .pm-window-masterfloat.focused .pm-log {
-  background: rgba(236, 255, 251, 0.9) url("http://i.imgur.com/uyQdt6w.png?1") top right no-repeat !important;
-  border-color: #1F6C5D !important; }
-
-.pm-window-masterfloat .pm-log-add, .pm-window-masterfloat.focused .pm-log-add {
-  background: #52C7B0 !important;
-  border-color: #1F6C5D !important; }
-
-.pm-window-masterfloat .pm-log-add .textbox {
-  border-color: #1F6C5D !important;
-  background: rgba(243, 255, 253, 0.95) !important;
-  color: #000 !important; }
-
-/*Float~end*/
 /*Neo*/
 .pm-window-neosoul h3 {
   background: rgba(36, 110, 148, 0.8) url("http://forums.tppc.info/images/pokemon/202.gif") no-repeat !important;
@@ -420,22 +380,6 @@
   text-shadow: 0px 0px 2px #000 !important; }
 
 /*fender~end*/
-/*origincardtradeclient*/
-.pm-window-origincardtradeclient h3.pm-notifying {
-  border-color: #000 !important;
-  background: rgba(255, 0, 0, 0.85) url("http://i.imgur.com/GtcMGsq.png") no-repeat !important;
-  background-position: 225px 0px !important;
-  color: #FFF !important;
-  text-shadow: none !important;
-  font-style: italic !important; }
-
-.pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton:hover {
-  color: #000 !important; }
-
-.pm-window-origincardtradeclient h3.pm-notifying .closebutton, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying small {
-  color: #FFF !important; }
-
-/*origincardtradeclient~end*/
 /*aurastormlucario*/
 .pm-window-aurastormlucario h3 {
   background: rgba(80, 200, 255, 0.8) url("http://www.serebii.net/pokedex-dp/icon/448.gif") no-repeat !important;
@@ -526,6 +470,22 @@
   color: #777 !important; }
 
 /*aurastormlucario~end*/
+/*origincardtradeclient*/
+.pm-window-origincardtradeclient h3.pm-notifying {
+  border-color: #000 !important;
+  background: rgba(255, 0, 0, 0.85) url("http://i.imgur.com/GtcMGsq.png") no-repeat !important;
+  background-position: 225px 0px !important;
+  color: #FFF !important;
+  text-shadow: none !important;
+  font-style: italic !important; }
+
+.pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton:hover {
+  color: #000 !important; }
+
+.pm-window-origincardtradeclient h3.pm-notifying .closebutton, .pm-window-origincardtradeclient h3.pm-notifying .minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying .closebutton:hover + .minimizebutton.minimizebutton, .pm-window-origincardtradeclient h3.pm-notifying small {
+  color: #FFF !important; }
+
+/*origincardtradeclient~end*/
 /*katheyisme123*/
 .pm-window-katheyisme123 h3 {
   background: rgba(56, 54, 49, 0.8) url("http://forums.tppc.info/images/pokemon/648.gif") no-repeat !important;
@@ -2386,7 +2346,7 @@
 #lobby-userlist-user-piscean, #hayleysden-userlist-user-piscean, #zu-userlist-user-piscean {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-rs/icon/230.gif") right no-repeat; }
 
-#lobby-userlist-user-hayleysworld, #hayleysden-userlist-user-hayleysworld, #zu-userlist-user-hayleysworld {
+#lobby-userlist-user-hayleysworld, #hayleysden-userlist-user-hayleysworld, #marketplace-userlist-user-hayleysworld {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat; }
 
 #lobby-userlist-user-phoenixshady, #premierdraftdivision-userlist-user-phoenixshady, #phoenixleague-userlist-user-phoenixshady {
