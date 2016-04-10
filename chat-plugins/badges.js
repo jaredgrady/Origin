@@ -42,6 +42,7 @@ module.exports.badgeIcons = {
 	'Big Brother Badge':'http://i.imgur.com/qcOQDhT.png',
 	'Good User':'http://i.imgur.com/XXWuh8V.png',
 	'NTG Badge':'http://i.imgur.com/7vBjDyV.png',
+	'Tesla Badge':'http://i.imgur.com/T9k98kI.gif',
 };
 
 let badgeDescriptions = {
@@ -81,6 +82,7 @@ let badgeDescriptions = {
 	'Big Brother Badge':'Send Nii Sama a gif or vine that makes him laugh.',
 	'Good User':'Hidden Achievement',
 	'NTG Badge':'Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.',
+	'Tesla Badge':'Get 10 parahaxes in an official tournament match and win.',
 };
 
 function badgeImg(link, name) {
