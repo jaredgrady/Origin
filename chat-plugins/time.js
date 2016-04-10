@@ -56,7 +56,7 @@ exports.commands = {
 		target = Tools.escapeHTML(target);
 		let seen = Db('seen').get(toId(target));
 		if (!seen) return this.sendReplyBox('<b><font color="' + color(toId(target)) + '">' + target + '</b> has never been online on this server.');
-		this.sendReplyBox('<b><font color="' + color(toId(targetUser)) + '">' + target + '</font></b> was last seen <b>' + moment(seen).fromNow() + '</b>.');
+		this.sendReplyBox('<b><font color="' + color(toId(target)) + '">' + target + '</font></b> was last seen <b>' + moment(seen).fromNow() + '</b>.');
 	},
 	seenhelp: ["/seen - Shows when the user last connected on the server."],
 
