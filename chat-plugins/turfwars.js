@@ -78,7 +78,7 @@ exports.commands = {
 			user.gang = gang;
 			this.sendReply("You have joined the gang: " + gang);
 		},
-		confirmleave: "leave"
+		confirmleave: "leave",
 		leave: function (target, room, user, connection, cmd) {
 			if (!user.gang) return this.errorReply("You are not currently in a gang!");
 			if (!target || user.gang !== toId(target)) return this.errorReply("Please specify what gang you are leaving to confirm your choice.");
