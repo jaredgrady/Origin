@@ -277,7 +277,7 @@ exports.BattleScripts = {
 					}
 				}
 				if (monIds.indexOf(userid) === -1 && monName) {
-					pool[1] = monName;
+					pool[2] = monName;
 				}
 			}
 			let rank = pool[i].charAt(0);
