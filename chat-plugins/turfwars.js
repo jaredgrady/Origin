@@ -80,7 +80,7 @@ exports.commands = {
 		confirmleave: "leave",
 		leave: function (target, room, user, connection, cmd) {
 			if (!user.gang) return this.errorReply("You are not currently in a gang!");
-			if (isCapo(user.userid)) return this.errorReply("You cannot leave a gang if you have a gang rank of godfather or capo")
+			if (isCapo(user.userid)) return this.errorReply("You cannot leave a gang if you have a gang rank of godfather or capo");
 			if (!target || user.gang !== toId(target)) return this.errorReply("Please specify what gang you are leaving to confirm your choice.");
 			if (Db('money').get(user.userid, 0) < 10) return this.errorReply("You need 10 bucks to leave a gang feelsjig... otherwise the godfathers will hunt you down feelsnv...");
 			if (!/^(turf|gang)?\s?confirmleave/i.test(cmd)) return this.errorReply("You will require a fee of 10 bucks to leave a gang.  To confirm your choice, do /turf confirmleave [gang name]");
