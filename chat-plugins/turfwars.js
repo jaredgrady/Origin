@@ -85,7 +85,7 @@ exports.commands = {
 			Db("gangranks").delete(user.userid);
 			user.gang = "";
 			user.gangrank = "";
-			this.sendReply("You have left the gang " + toId(target) + ".")
+			this.sendReply("You have left the gang " + toId(target) + ".");
 		},
 		add: function (target, room, user) {
 			if (!target) return this.errorReply("Must specify a user.");
