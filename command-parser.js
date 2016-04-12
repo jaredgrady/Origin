@@ -6,7 +6,7 @@
  * (scroll down to its definition for details)
  *
  * Individual commands are put in:
- *   commands.js - "core" commands that shouldn't be modified
+ *   commands.js - "core" commands that shouldn't be modified 
  *   chat-plugins/ - other commands that can be safely modified
  *
  * The command API is (mostly) documented in chat-plugins/COMMANDS.md
@@ -363,7 +363,7 @@ class CommandContext {
 			}
 			//servers Spam
 			if (!user.can('lock') && Rooms('shadowbanroom')) {
-				let serverexceptions = {'origin': 1, 'showdown': 1, 'smogtours': 1};
+				let serverexceptions = {'origin': 1, 'showdown': 1, 'smogtours': 1, 'showdown-afd': 1};
 				if (Config.serverexceptions) {
 					for (let i in Config.serverexceptions) serverexceptions[i] = 1;
 				}
