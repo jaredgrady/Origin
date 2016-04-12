@@ -638,7 +638,7 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 			let groupid = Config.groups[g].id;
 			if (cmd === groupid) {
 				return parse('/promote ' + toId(target) + ', ' + g, room, user, connection, levelsDeep + 1);
-			} else if (cmd === 'global' + groupid) {
+			} else if (cmd === 'global' + groupid || cmd === 'g' + groupid) {
 				return parse('/globalpromote ' + toId(target) + ', ' + g, room, user, connection, levelsDeep + 1);
 			} else if (cmd === 'de' + groupid || cmd === 'un' + groupid || cmd === 'globalde' + groupid || cmd === 'deglobal' + groupid) {
 				return parse('/demote ' + toId(target), room, user, connection, levelsDeep + 1);

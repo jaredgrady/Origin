@@ -1734,6 +1734,7 @@ let commands = exports.commands = {
 		return this.parse('/demote ' + target + ', deauth');
 	},
 
+	gdeauth: 'globaldeauth',
 	deglobalvoice: 'globaldeauth',
 	deglobalauth: 'globaldeauth',
 	globaldevoice: 'globaldeauth',
