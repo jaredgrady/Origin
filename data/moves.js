@@ -1433,6 +1433,7 @@ exports.BattleMovedex = {
 			if (source.hp && item.isBerry && target.takeItem(source)) {
 				this.add('-enditem', target, item.name, '[from] stealeat', '[move] Bug Bite', '[of] ' + source);
 				this.singleEvent('Eat', item, null, source, null, null);
+				this.runEvent('EatItem', source, null, null, item);
 				source.ateBerry = true;
 			}
 		},
@@ -4445,6 +4446,7 @@ exports.BattleMovedex = {
 				if (item.isBerry && item.id !== 'enigmaberry') {
 					move.onHit = function (foe) {
 						this.singleEvent('Eat', item, null, foe, null, null);
+						this.runEvent('EatItem', foe, null, null, item);
 						foe.ateBerry = true;
 					};
 				} else if (item.fling.effect) {
@@ -4602,8 +4604,8 @@ exports.BattleMovedex = {
 			onStart: function (pokemon) {
 				this.add('-start', pokemon, 'move: Focus Energy');
 			},
-			onModifyMove: function (move) {
-				move.critRatio += 2;
+			onModifyCritRatio: function (critRatio) {
+				return critRatio + 2;
 			},
 		},
 		secondary: false,
@@ -9767,6 +9769,7 @@ exports.BattleMovedex = {
 			if (source.hp && item.isBerry && target.takeItem(source)) {
 				this.add('-enditem', target, item.name, '[from] stealeat', '[move] Pluck', '[of] ' + source);
 				this.singleEvent('Eat', item, null, source, null, null);
+				this.runEvent('EatItem', source, null, null, item);
 				source.ateBerry = true;
 			}
 		},
@@ -14634,7 +14637,8 @@ exports.BattleMovedex = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: [3, 3],
+		multihit: 3,
+		multiaccuracy: true,
 		effect: {
 			duration: 1,
 			onStart: function () {

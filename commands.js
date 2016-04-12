@@ -488,7 +488,11 @@ let commands = exports.commands = {
 	deletechatroom: 'deleteroom',
 	deletegroupchat: 'deleteroom',
 	deleteroom: function (target, room, user) {
-		if (!this.can('declare') && !~developers.indexOf(user.userid)) return;
+		if (room.isPersonal) {
+			if (!this.can('editroom', null, room)) return;
+		} else {
+			if (!this.can('declare') && !~developers.indexOf(user.userid)) return;
+		}
 		let roomid = target.trim();
 		if (!roomid) return this.parse('/help deleteroom');
 		let targetRoom = Rooms.search(roomid);
@@ -1649,6 +1653,7 @@ let commands = exports.commands = {
 		}
 		if (!cmd.startsWith('global')) {
 			let groupid = Config.groups[nextGroup].id;
+			if (!groupid && nextGroup === Config.groupsranking[0]) groupid = 'deauth';
 			return this.errorReply('Did you mean "/room' + groupid + '" or "/global' + groupid + '"?');
 		}
 		if (Config.groups[nextGroup].roomonly) {
@@ -1727,6 +1732,13 @@ let commands = exports.commands = {
 	devoice: 'deauth',
 	deauth: function (target, room, user) {
 		return this.parse('/demote ' + target + ', deauth');
+	},
+
+	deglobalvoice: 'globaldeauth',
+	deglobalauth: 'globaldeauth',
+	globaldevoice: 'globaldeauth',
+	globaldeauth: function (target, room, user) {
+		return this.parse('/globaldemote ' + target + ', deauth');
 	},
 
 	deroomvoice: 'roomdeauth',
