@@ -6,7 +6,7 @@
  * (scroll down to its definition for details)
  *
  * Individual commands are put in:
- *   commands.js - "core" commands that shouldn't be modified 
+ *   commands.js - "core" commands that shouldn't be modified
  *   chat-plugins/ - other commands that can be safely modified
  *
  * The command API is (mostly) documented in chat-plugins/COMMANDS.md
