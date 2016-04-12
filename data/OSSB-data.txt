@@ -184,6 +184,12 @@ fender - Gible - Life Orb
 - Movepool: U-turn, V-Create, Bolt Strike
 - Notes: Hits very hard, and prepare to be walled if you do not deal with this quickly enough. Severely weak to hazards and residual damage, with no way to recover anything.
 
++Master Bui - Buizel - Eviolite
+- Ability: Ocean's Grace - Serene Grace + Primordial Sea + Parental Bond
+- Move: Dance of the Sea - 100BP, +1 priority, Special Water type move. 50% confusion and 50% chance to boost Defense and SpDef by one stage. 10PP, 100% Accuracy
+- Movepool: Charge Beam, Earth Power, Ice Beam
+- Notes: While it does not initially hit hard, it gets extremely bulky really quickly, potential counters include sparkychild, Tesla, Imp Fallen Blood, Erica, and anything with Unaware-type abilities.  Master Bui also does not fare well against status, so use that to your advantage. Bui~!
+
 Gnarly Commie - Munchlax - Eviolite
 - Ability: Communism - Increases defense, special defense, and speed by 2 stages when it KO's an opposing Pokemon.
 - Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, and bypasses protect. PP: 10 / Accuracy: 100% / Priority: 2
