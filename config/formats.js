@@ -2080,6 +2080,7 @@ exports.Formats = [
 		ruleset: ['OU'],
 		banlist: ['Allow CAP'],
 	},
+	{
 		name: "CAP Doubles",
 		section: "Other Metagames",
 
