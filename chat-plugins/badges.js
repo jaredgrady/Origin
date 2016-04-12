@@ -114,7 +114,7 @@ exports.commands = {
 			Db('badgesDB').set(toId(userid), badges);
 			if (Users.get(targetUser)) Users.get(userid).popup('|modal||html|<font color="red"><strong>ATTENTION!</strong></font><br /> You have received a badge from <b><font color="' + color(user.userid) + '">' + Tools.escapeHTML(user.name) + '</font></b>: <img src="' + badgeIcons[badge] + '" width="16" height="16">');
 			this.logModCommand(user.name + " gave the badge '" + badge + "' badge to " + userid + ".");
-			this.sendReply("Badge set.");
+			this.sendReply("The " + badge +  " was given to " + user + ".");
 			break;
 		case 'list':
 			if (!this.runBroadcast()) return;
@@ -146,7 +146,7 @@ exports.commands = {
 			badges = badges.filter(b => b !== badge);
 			Db('badgesDB').set(toId(userid), badges);
 			this.logModCommand(user.name + " took the badge '" + badge + "' badge from " + userid + ".");
-			this.sendReply("Badge taken.");
+			this.sendReply("The " + badge +  " was taken from " + user + ".");
 			break;
 		case 'deleteall':
 			if (!(~developers.indexOf(user.userid) || user.userid === 'niisama')) return this.errorReply("/badges deleteall - Access denied.");
@@ -156,6 +156,7 @@ exports.commands = {
 			let badgeObject = Db('badgesDB').object();
 			let users = Object.keys(badgeObject);
 			users.forEach(u => Db('badgesDB').set(u, (badgeObject[u].filter(b => b !== badge))));
+			this.sendReply("All badges deleted.");
 			break;
 		default:
 			return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
