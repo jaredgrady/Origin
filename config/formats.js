@@ -2387,6 +2387,9 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
 			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui|Bui~");
+			}
 			if (name === 'otami') {
 				this.add('c|+Otami|hi fam! how are you? :3c');
 			}
@@ -2523,6 +2526,9 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|I got cleaned');
 			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
+			}
 			if (name === 'otami') {
 				this.add('c|+Otami|feelsotami');
 			}
@@ -2656,6 +2662,9 @@ exports.Formats = [
 			}
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|you can get wet later ;)');
+			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui|Brbui~!");
 			}
 			if (name === 'otami') {
 				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
@@ -2998,6 +3007,9 @@ exports.Formats = [
 			if (name === 'irraquated') {
 				this.add('c|+Irraquated|Oh so you\'re the guy...');
 			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui|Bui~");
+			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
@@ -3130,6 +3142,9 @@ exports.Formats = [
 				this.add('c|+Irraquated|it was meant to be.');
 				this.add('c|+Irraquated|Six god is watching, I hope you\'re prepared to face him.');
 			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
+			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
 			}
@@ -3257,6 +3272,9 @@ exports.Formats = [
 			}
 			if (name === 'irraquated') {
 				this.add('c|+Irraquated|I have to go make some vegemite toast brb lol');
+			}
+			if (name === "masterbui") {
+				this.add("c|+Master Bui|Brbui~!");
 			}
 			if (name === 'piscean') {
 				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');

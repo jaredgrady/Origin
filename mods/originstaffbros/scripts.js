@@ -193,6 +193,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
+			'+Master Bui': {
+				species: 'Buizel', ability: 'Ocean\'s Grace', item: 'Eviolite', gender: 'M',
+				moves: ['earthpower', 'icebeam', 'chargebeam'],
+				baseSignatureMove: 'danceofthesea', signatureMove: "Dance of the Sea",
+				evs: {hp:216, def:132, spd:160}, nature: 'Calm',
+			},
 			'+Otami': {
 				species: 'Vileplume', ability: 'S-S-Senpai', item: 'Black Sludge', gender: 'M',
 				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],

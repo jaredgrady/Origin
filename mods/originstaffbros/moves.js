@@ -17089,6 +17089,38 @@ exports.BattleMovedex = {
 		type: "Bird",
 	},
 
+	// Master Bui (masterbui)
+	"danceofthesea": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "danceofthesea",
+		name: "Dance of the Sea",
+		pp: 10,
+		priority: 1,
+		onTryHit: function () {
+			this.attrLastMove("[anim]hydropump");
+		},
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		type: "Water",
+		secondaries: [
+			{
+				chance: 50,
+				self: {
+					boosts: {
+						def:1,
+						spd:1,
+					},
+				},
+			}, {
+				chance: 50,
+				volatileStatus: 'confusion',
+			},
+		],
+	},
+
 	// Omega Nivans
 	"antimaterialrifle": {
 		isNonstandard: true,

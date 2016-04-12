@@ -4160,6 +4160,60 @@ exports.BattleAbilities = {
 		name: "NoAbility",
 	},
 
+	// Master Bui (masterbui)
+	"oceansgrace": {
+		isNonstandard: true,
+		id: "oceansgrace",
+		name: "Ocean's Grace",
+		// primordial sea
+		onStart: function (source) {
+			this.setWeather('primordialsea');
+		},
+		onAnySetWeather: function (target, source, weather) {
+			if (this.getWeather().id === 'primordialsea' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
+		},
+		onEnd: function (pokemon) {
+			if (this.weatherData.source !== pokemon) return;
+			for (let i = 0; i < this.sides.length; i++) {
+				for (let j = 0; j < this.sides[i].active.length; j++) {
+					let target = this.sides[i].active[j];
+					if (target === pokemon) continue;
+					if (target && target.hp && target.hasAbility('primordialsea')) {
+						this.weatherData.source = target;
+						return;
+					}
+				}
+			}
+			this.clearWeather();
+		},
+		onPrepareHit: function (source, target, move) {
+			if (move.id in {iceball: 1, rollout: 1}) return;
+			if (move.category !== 'Status' && !move.selfdestruct && !move.multihit && !move.flags['charge'] && !move.spreadHit) {
+				move.multihit = 2;
+				source.addVolatile('oceansgrace');
+			}
+		},
+		effect: {
+			duration: 1,
+			onBasePowerPriority: 8,
+			onBasePower: function (basePower) {
+				if (this.effectData.hit) {
+					return this.chainModify(0.5);
+				} else {
+					this.effectData.hit = true;
+				}
+			},
+		},
+		onModifyMove: function (move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (let i = 0; i < move.secondaries.length; i++) {
+					move.secondaries[i].chance *= 2;
+				}
+			}
+		},
+	},
+
 	// Mr. CGTNathan
 	"graveyard": {
 		isNonstandard: true,
