@@ -16178,6 +16178,155 @@ exports.BattleMovedex = {
 		type: "Fighting",
 	},
 
+	// hayleysworld
+	"revengeofneptune": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		id: "revengeofneptune",
+		name: "Revenge of Neptune",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
+		self: {
+			boosts: {
+				def: 1,
+				spa: 1,
+				spd: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hydropump');
+		},
+		onHit: function (target, source, move) {
+			this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
+			this.useMove('wish', source);
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+	},
+
+	// LChevy12
+	"flyingforretress": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		id: "flyingforretress",
+		name: "Flying Forretress",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1},
+		self: {
+			chance: 60,
+			boosts: {
+				def: 1,
+				spd: 1,
+			},
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]skydrop');
+			if (target.fainted) return false;
+			if (source.removeVolatile(move.id)) {
+				if (target !== source.volatiles['twoturnmove'].source) return false;
+
+				if (target.hasType('Flying')) {
+					this.add('-immune', target, '[msg]');
+					this.add('-end', target, 'Flying Forretress');
+					return null;
+				}
+			} else {
+				if (target.volatiles['substitute'] || target.side === source.side) {
+					return false;
+				}
+				this.add('-prepare', source, move.name, target);
+				source.addVolatile('twoturnmove', target);
+				return null;
+			}
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]skydrop');
+		},
+		onHit: function (target, source) {
+			this.add('c|@LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
+			this.add('-end', target, 'Flying Forretress');
+		},
+		effect: {
+			duration: 2,
+			onStart: function () {
+				this.effectData.source.removeVolatile('followme');
+				this.effectData.source.removeVolatile('ragepowder');
+			},
+			onAnyDragOut: function (pokemon) {
+				if (pokemon === this.effectData.target || pokemon === this.effectData.source) return false;
+			},
+			onFoeTrapPokemonPriority: -15,
+			onFoeTrapPokemon: function (defender) {
+				if (defender !== this.effectData.source) return;
+				defender.trapped = true;
+			},
+			onFoeBeforeMovePriority: 12,
+			onFoeBeforeMove: function (attacker, defender, move) {
+				if (attacker === this.effectData.source) {
+					this.debug('Flying Forretress nullifying.');
+					return null;
+				}
+			},
+			onRedirectTargetPriority: 99,
+			onRedirectTarget: function (target, source, source2) {
+				if (source !== this.effectData.target) return;
+				if (this.effectData.source.fainted) return;
+				return this.effectData.source;
+			},
+			onAnyAccuracy: function (accuracy, target, source, move) {
+				if (target !== this.effectData.target && target !== this.effectData.source) {
+					return;
+				}
+				if (source === this.effectData.target && target === this.effectData.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return;
+				}
+				if (move.id === 'skyuppercut' || move.id === 'thunder' || move.id === 'hurricane' || move.id === 'smackdown' || move.id === 'thousandarrows' || move.id === 'helpinghand') {
+					return;
+				}
+				if (source.hasAbility('noguard') || target.hasAbility('noguard')) {
+					return;
+				}
+				if (source.volatiles['lockon'] && target === source.volatiles['lockon'].source) return;
+				return 0;
+			},
+			onAnyBasePower: function (basePower, target, source, move) {
+				if (target !== this.effectData.target && target !== this.effectData.source) {
+					return;
+				}
+				if (source === this.effectData.target && target === this.effectData.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+			onFaint: function (target) {
+				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Flying Forretress', '[interrupt]');
+				}
+			},
+		},
+		secondary: false,
+		target: "normal",
+		type: "Flying",
+	},
+
 	// Nii Sama
 	"shadowdrain": {
 		isNonstandard: true,
@@ -16390,42 +16539,6 @@ exports.BattleMovedex = {
 		type: "Fire",
 	},
 
-	// hayleysworld
-	"revengeofneptune": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		id: "revengeofneptune",
-		name: "Revenge of Neptune",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
-		self: {
-			boosts: {
-				def: 1,
-				spa: 1,
-				spd: 1,
-			},
-		},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
-		},
-		onHit: function (target, source, move) {
-			this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
-			this.useMove('wish', source);
-		},
-		secondary: {
-			chance: 30,
-			status: 'brn',
-		},
-		target: "normal",
-		type: "Water",
-	},
-
 	// Irraquated
 	"time2die": {
 		isNonstandard: true,
@@ -16493,119 +16606,6 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ground",
-	},
-
-	// LChevy12
-	"flyingforretress": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 130,
-		category: "Physical",
-		id: "flyingforretress",
-		name: "Flying Forretress",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1},
-		self: {
-			chance: 60,
-			boosts: {
-				def: 1,
-				spd: 1,
-			},
-		},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]skydrop');
-			if (target.fainted) return false;
-			if (source.removeVolatile(move.id)) {
-				if (target !== source.volatiles['twoturnmove'].source) return false;
-
-				if (target.hasType('Flying')) {
-					this.add('-immune', target, '[msg]');
-					this.add('-end', target, 'Flying Forretress');
-					return null;
-				}
-			} else {
-				if (target.volatiles['substitute'] || target.side === source.side) {
-					return false;
-				}
-				this.add('-prepare', source, move.name, target);
-				source.addVolatile('twoturnmove', target);
-				return null;
-			}
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]skydrop');
-		},
-		onHit: function (target, source) {
-			this.add('c|%LChevy12|Haha! You\'re trapped in between my bullshit and your stupidity!');
-			this.add('-end', target, 'Flying Forretress');
-		},
-		effect: {
-			duration: 2,
-			onStart: function () {
-				this.effectData.source.removeVolatile('followme');
-				this.effectData.source.removeVolatile('ragepowder');
-			},
-			onAnyDragOut: function (pokemon) {
-				if (pokemon === this.effectData.target || pokemon === this.effectData.source) return false;
-			},
-			onFoeTrapPokemonPriority: -15,
-			onFoeTrapPokemon: function (defender) {
-				if (defender !== this.effectData.source) return;
-				defender.trapped = true;
-			},
-			onFoeBeforeMovePriority: 12,
-			onFoeBeforeMove: function (attacker, defender, move) {
-				if (attacker === this.effectData.source) {
-					this.debug('Flying Forretress nullifying.');
-					return null;
-				}
-			},
-			onRedirectTargetPriority: 99,
-			onRedirectTarget: function (target, source, source2) {
-				if (source !== this.effectData.target) return;
-				if (this.effectData.source.fainted) return;
-				return this.effectData.source;
-			},
-			onAnyAccuracy: function (accuracy, target, source, move) {
-				if (target !== this.effectData.target && target !== this.effectData.source) {
-					return;
-				}
-				if (source === this.effectData.target && target === this.effectData.source) {
-					return;
-				}
-				if (move.id === 'gust' || move.id === 'twister') {
-					return;
-				}
-				if (move.id === 'skyuppercut' || move.id === 'thunder' || move.id === 'hurricane' || move.id === 'smackdown' || move.id === 'thousandarrows' || move.id === 'helpinghand') {
-					return;
-				}
-				if (source.hasAbility('noguard') || target.hasAbility('noguard')) {
-					return;
-				}
-				if (source.volatiles['lockon'] && target === source.volatiles['lockon'].source) return;
-				return 0;
-			},
-			onAnyBasePower: function (basePower, target, source, move) {
-				if (target !== this.effectData.target && target !== this.effectData.source) {
-					return;
-				}
-				if (source === this.effectData.target && target === this.effectData.source) {
-					return;
-				}
-				if (move.id === 'gust' || move.id === 'twister') {
-					return this.chainModify(2);
-				}
-			},
-			onFaint: function (target) {
-				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
-					this.add('-end', target.volatiles['twoturnmove'].source, 'Flying Forretress', '[interrupt]');
-				}
-			},
-		},
-		secondary: false,
-		target: "normal",
-		type: "Flying",
 	},
 
 	// Phoenix Gryphon
@@ -16810,6 +16810,38 @@ exports.BattleMovedex = {
 		],
 		target: "normal",
 		type: "Water",
+	},
+
+	// Master Bui
+	"danceofthesea": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		id: "danceofthesea",
+		name: "Dance of the Sea",
+		pp: 10,
+		priority: 1,
+		onTryHit: function () {
+			this.attrLastMove("[anim]hydropump");
+		},
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		type: "Water",
+		secondaries: [
+			{
+				chance: 50,
+				self: {
+					boosts: {
+						def:1,
+						spd:1,
+					},
+				},
+			}, {
+				chance: 50,
+				volatileStatus: 'confusion',
+			},
+		],
 	},
 
 	// Otami
@@ -17089,36 +17121,40 @@ exports.BattleMovedex = {
 		type: "Bird",
 	},
 
-	// Master Bui (masterbui)
-	"danceofthesea": {
+	// omega chime
+	"audioshock": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 80,
 		category: "Special",
-		id: "danceofthesea",
-		name: "Dance of the Sea",
-		pp: 10,
-		priority: 1,
-		onTryHit: function () {
-			this.attrLastMove("[anim]hydropump");
+		id: "audioshock",
+		name: "Audioshock",
+		pp: 15,
+		priority: 0,
+		flags: {
+			protect: 1,
+			mirror: 1,
+			sound: 1,
 		},
-		flags: {protect: 1, mirror: 1},
-		target: "normal",
-		type: "Water",
-		secondaries: [
-			{
-				chance: 50,
-				self: {
-					boosts: {
-						def:1,
-						spd:1,
-					},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]boomburst');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]boomburst');
+		},
+		onHit: function (target, source, move) {
+			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
+		},
+		secondary: {
+			chance: 60,
+			self: {
+				boosts: {
+					spa: 1,
 				},
-			}, {
-				chance: 50,
-				volatileStatus: 'confusion',
 			},
-		],
+		},
+		target: "normal",
+		type: "Fairy",
 	},
 
 	// Omega Nivans
@@ -17201,41 +17237,5 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Ground",
-	},
-
-	// omega chime
-	"audioshock": {
-		isNonstandard: true,
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		id: "audioshock",
-		name: "Audioshock",
-		pp: 15,
-		priority: 0,
-		flags: {
-			protect: 1,
-			mirror: 1,
-			sound: 1,
-		},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]boomburst');
-		},
-		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]boomburst');
-		},
-		onHit: function (target, source, move) {
-			this.add('c| Omega Chimе|These sounds you hear, they\'ll consume your mind. They\'ll destroy you.');
-		},
-		secondary: {
-			chance: 60,
-			self: {
-				boosts: {
-					spa: 1,
-				},
-			},
-		},
-		target: "normal",
-		type: "Fairy",
 	},
 };

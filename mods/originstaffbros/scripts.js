@@ -81,6 +81,18 @@ exports.BattleScripts = {
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
 			},
+			'@hayleysworld': { // (type) water/fairy
+				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
+				moves: ['moonblast', 'icebeam', 'protect'],
+				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
+				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
+			},
+			'@L Chevy 12': {
+				species: 'Archeops', ability: 'Fuck You Up', item: 'Life Orb', gender: 'M', shiny: true, // power herb + recycle?
+				moves: ['Head Smash', 'Brave Bird', ['earthquake', 'ironhead'][this.random(2)], 'roost'],
+				baseSignatureMove: 'flyingforretress', signatureMove: "Flying Forretress",
+				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
+			},
 			'@Nii sama': {
 				species: 'Darkrai', ability: 'Goodnight', item: 'Life Orb',
 				moves: ['shadowball', 'dreameater', 'nastyplot'],
@@ -125,12 +137,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'volcanionsupersmash', signatureMove: "Volcanion Super Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
 			},
-			'%hayleysworld': { // (type) water/fairy
-				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
-				moves: ['moonblast', 'icebeam', 'protect'],
-				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
-				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
-			},
 			'%Irraquated': {
 				species: 'Ho-oh', ability: 'What\'s the time?', item: 'Life Orb', gender: 'M',
 				moves: ['recover', 'bravebird', 'woodhammer'],
@@ -142,12 +148,6 @@ exports.BattleScripts = {
 				moves: ['rockpolish', 'sludgewave', 'psychic'],
 				baseSignatureMove: 'megaearthfissure', signatureMove: "Mega Earth Fissure",
 				evs: {spa:252, spd:4, spe:252}, nature: 'Timid',
-			},
-			'%L Chevy 12': {
-				species: 'Archeops', ability: 'Fuck You Up', item: 'Life Orb', gender: 'M', shiny: true, // power herb + recycle?
-				moves: ['Head Smash', 'Brave Bird', ['earthquake', 'ironhead'][this.random(2)], 'roost'],
-				baseSignatureMove: 'flyingforretress', signatureMove: "Flying Forretress",
-				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
 			'%Phoenix Gryphon': {
 				species: 'Staravia', ability: 'Feather Coat', item: 'Eviolite', gender: 'M',
@@ -161,12 +161,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'bitchslap', signatureMove: 'Bitchslap',
 				evs:{spa:224, spd:32, spe:252}, nature: "Timid",
 			},
-			/* '%Selena': {
-				species: 'Quagsire', ability: 'Sap Sipper', item: 'Liechi Berry', gender: 'M',
-				moves: ['waterfall', 'earthquake', ['stoneedge', 'rockslide'][this.random(2)], 'icepunch'],
-				baseSignatureMove: 'swagger', signatureMove: "Bad Pun",
-				evs: {hp:248, atk:252, spe:8}, nature: 'Naughty',
-			}, */
 			'%Starfox :3': { // (type) bug/psychic
 				species: 'Victini', ability: 'Shittiest User', item: 'Leftovers', shiny: true,
 				moves: ['vcreate', 'megahorn', 'recover'],
@@ -243,6 +237,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'breakcode', signatureMove: "Break Code",
 				evs: {hp:252, atk:4, spe:252}, nature: 'Jolly',
 			},
+			' Omega Chimе': { // (type) fairy/psychic
+				species: 'Chimecho', ability: 'Wave Guard', item: 'Life Orb',
+				moves: ['psystrike', 'recover', 'earthpower'],
+				baseSignatureMove: 'audioshock', signatureMove: "Audioshock",
+				evs: {spd:4, spa:252, spe:252}, nature: 'Modest',
+			},
 			' Omega Nivans': {
 				species: 'Octillery', ability: 'Machine Gunner', item: 'Expert Belt', gender: 'M',
 				moves: [
@@ -259,12 +259,6 @@ exports.BattleScripts = {
 				moves: ['psystrike', 'recover', 'transform'],
 				baseSignatureMove: 'trispikes', signatureMove: "Tri Spikes",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
-			},
-			' Omega Chimе': { // (type) fairy/psychic
-				species: 'Chimecho', ability: 'Wave Guard', item: 'Life Orb',
-				moves: ['psystrike', 'recover', 'earthpower'],
-				baseSignatureMove: 'audioshock', signatureMove: "Audioshock",
-				evs: {spd:4, spa:252, spe:252}, nature: 'Modest',
 			},
 		};
 		// Generate the team randomly.

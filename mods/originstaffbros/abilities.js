@@ -3671,6 +3671,39 @@ exports.BattleAbilities = {
 		name: "Aura Guard",
 	},
 
+	// hayleysworld
+	"aquaticmemes": {
+		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.add('-ability', pokemon, 'Aquatic Memes');
+			this.boost({def:1, spa:1, spd:1});
+		},
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
+		},
+		id: "aquaticmemes",
+		name: "Aquatic Memes",
+	},
+
+	// LChevy12
+	"fuckyouup": {
+		isNonstandard: true,
+		onBasePowerPriority: 8,
+		onBasePower: function (basePower, attacker, defender, move) {
+			if (move.flags['contact']) return this.chainModify([0x14CD, 0x1000]);
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual: function (pokemon) {
+			if (pokemon.activeTurns) this.boost({spe:1});
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') return damage / 3;
+		},
+		id: "fuckyouup",
+		name: "Fuck You Up",
+	},
+
 	// Nii Sama
 	"goodnight": {
 		isNonStandard: true,
@@ -3788,20 +3821,6 @@ exports.BattleAbilities = {
 		id: "adaptabulksturdy",
 	},
 
-	// hayleysworld
-	"aquaticmemes": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Aquatic Memes');
-			this.boost({def:1, spa:1, spd:1});
-		},
-		onSwitchOut: function (pokemon) {
-			pokemon.heal(pokemon.maxhp / 3);
-		},
-		id: "aquaticmemes",
-		name: "Aquatic Memes",
-	},
-
 	// Irraquated
 	"whatsthetime": {
 		isNonstandard: true,
@@ -3856,25 +3875,6 @@ exports.BattleAbilities = {
 		},
 		id: "godsforce",
 		name: "God's Force",
-	},
-
-	// LChevy12
-	"fuckyouup": {
-		isNonstandard: true,
-		onBasePowerPriority: 8,
-		onBasePower: function (basePower, attacker, defender, move) {
-			if (move.flags['contact']) return this.chainModify([0x14CD, 0x1000]);
-		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 1,
-		onResidual: function (pokemon) {
-			if (pokemon.activeTurns) this.boost({spe:1});
-		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') return damage / 3;
-		},
-		id: "fuckyouup",
-		name: "Fuck You Up",
 	},
 
 	// Phoenix Gryphon
@@ -4041,6 +4041,60 @@ exports.BattleAbilities = {
 		name: "Speedy Gonzales",
 	},
 
+	// Master Bui
+	"oceansgrace": {
+		isNonstandard: true,
+		id: "oceansgrace",
+		name: "Ocean's Grace",
+		// primordial sea
+		onStart: function (source) {
+			this.setWeather('primordialsea');
+		},
+		onAnySetWeather: function (target, source, weather) {
+			if (this.getWeather().id === 'primordialsea' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
+		},
+		onEnd: function (pokemon) {
+			if (this.weatherData.source !== pokemon) return;
+			for (let i = 0; i < this.sides.length; i++) {
+				for (let j = 0; j < this.sides[i].active.length; j++) {
+					let target = this.sides[i].active[j];
+					if (target === pokemon) continue;
+					if (target && target.hp && target.hasAbility('primordialsea')) {
+						this.weatherData.source = target;
+						return;
+					}
+				}
+			}
+			this.clearWeather();
+		},
+		onPrepareHit: function (source, target, move) {
+			if (move.id in {iceball: 1, rollout: 1}) return;
+			if (move.category !== 'Status' && !move.selfdestruct && !move.multihit && !move.flags['charge'] && !move.spreadHit) {
+				move.multihit = 2;
+				source.addVolatile('oceansgrace');
+			}
+		},
+		effect: {
+			duration: 1,
+			onBasePowerPriority: 8,
+			onBasePower: function (basePower) {
+				if (this.effectData.hit) {
+					return this.chainModify(0.5);
+				} else {
+					this.effectData.hit = true;
+				}
+			},
+		},
+		onModifyMove: function (move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (let i = 0; i < move.secondaries.length; i++) {
+					move.secondaries[i].chance *= 2;
+				}
+			}
+		},
+	},
+
 	// Otami
 	"sssenpai": {
 		isNonstandard: true,
@@ -4160,60 +4214,6 @@ exports.BattleAbilities = {
 		name: "NoAbility",
 	},
 
-	// Master Bui (masterbui)
-	"oceansgrace": {
-		isNonstandard: true,
-		id: "oceansgrace",
-		name: "Ocean's Grace",
-		// primordial sea
-		onStart: function (source) {
-			this.setWeather('primordialsea');
-		},
-		onAnySetWeather: function (target, source, weather) {
-			if (this.getWeather().id === 'primordialsea' && !(weather.id in {desolateland:1, primordialsea:1, deltastream:1})) return false;
-		},
-		onEnd: function (pokemon) {
-			if (this.weatherData.source !== pokemon) return;
-			for (let i = 0; i < this.sides.length; i++) {
-				for (let j = 0; j < this.sides[i].active.length; j++) {
-					let target = this.sides[i].active[j];
-					if (target === pokemon) continue;
-					if (target && target.hp && target.hasAbility('primordialsea')) {
-						this.weatherData.source = target;
-						return;
-					}
-				}
-			}
-			this.clearWeather();
-		},
-		onPrepareHit: function (source, target, move) {
-			if (move.id in {iceball: 1, rollout: 1}) return;
-			if (move.category !== 'Status' && !move.selfdestruct && !move.multihit && !move.flags['charge'] && !move.spreadHit) {
-				move.multihit = 2;
-				source.addVolatile('oceansgrace');
-			}
-		},
-		effect: {
-			duration: 1,
-			onBasePowerPriority: 8,
-			onBasePower: function (basePower) {
-				if (this.effectData.hit) {
-					return this.chainModify(0.5);
-				} else {
-					this.effectData.hit = true;
-				}
-			},
-		},
-		onModifyMove: function (move) {
-			if (move.secondaries) {
-				this.debug('doubling secondary chance');
-				for (let i = 0; i < move.secondaries.length; i++) {
-					move.secondaries[i].chance *= 2;
-				}
-			}
-		},
-	},
-
 	// Mr. CGTNathan
 	"graveyard": {
 		isNonstandard: true,
@@ -4271,6 +4271,35 @@ exports.BattleAbilities = {
 		name: "ERROR",
 	},
 
+	// Omega Chime
+	"waveguard": {
+		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.boost({spa:1, spd:1, spe:1, def:1});
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
+			}
+		},
+		onAnyModifyBoost: function (boosts, target) {
+			let source = this.effectData.target;
+			if (source === target) return;
+			if (source === this.activePokemon && target === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (target === this.activePokemon && source === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
+		},
+		id: "waveguard",
+		name: "Wave Guard",
+	},
+
 	// Omega Nivans
 	"machinegunner": {
 		isNonstandard: true,
@@ -4311,34 +4340,5 @@ exports.BattleAbilities = {
 		},
 		id: "countermeta",
 		name: "Counter-Meta",
-	},
-
-	// Omega Chime
-	"waveguard": {
-		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.boost({spa:1, spd:1, spe:1, def:1});
-		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
-		},
-		onAnyModifyBoost: function (boosts, target) {
-			let source = this.effectData.target;
-			if (source === target) return;
-			if (source === this.activePokemon && target === this.activeTarget) {
-				boosts['def'] = 0;
-				boosts['spd'] = 0;
-				boosts['evasion'] = 0;
-			}
-			if (target === this.activePokemon && source === this.activeTarget) {
-				boosts['atk'] = 0;
-				boosts['spa'] = 0;
-				boosts['accuracy'] = 0;
-			}
-		},
-		id: "waveguard",
-		name: "Wave Guard",
 	},
 };
