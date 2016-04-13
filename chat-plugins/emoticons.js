@@ -124,6 +124,7 @@ let emotes = {
 	'llamarawr': 'http://i.imgur.com/KWAQbPu.gif',
 	'llamatea': 'http://i.imgur.com/nJnakEU.gif',
 	'llamayawn': 'http://i.imgur.com/SVj8kBt.gif',
+	'lelelol': 'http://i.imgur.com/R2g0RHT.gif',
 	'meGusta': 'http://cdn.overclock.net/3/36/50x50px-ZC-369517fd_me-gusta-me-gusta-s.png',
 	'MingLee': 'https://static-cdn.jtvnw.net/emoticons/v1/68856/2.0',
 	'noface': 'http://i.imgur.com/H744eRE.png',
