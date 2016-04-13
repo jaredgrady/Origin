@@ -620,7 +620,7 @@ exports.commands = {
 			let targetRoom = Rooms.search(inputRoom);
 			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + inputRoom  + '" does not exist.');
 			let message = Tools.escapeHTML(parts.slice(2).join(","));
-			Rooms.global.ads.push({ip: user.latestIp, user: toId(user), room: inputRoom, message: message});
+			Rooms.global.ads.push({ip: user.latestIp, user: toId(user), room: targetRoom, message: message});
 			if (!Rooms.global.adInterval) {
 				Rooms.global.adInterval = setInterval(postAds, 300000); //5 minutes
 			}
