@@ -3795,29 +3795,29 @@ exports.BattleAbilities = {
 	},
 
 	// Emg E4 Volco
-   "letsdothis": {
-        isNonstandard: true,
-        desc: "User and Find Out",
-        shortDesc: "Use and Find Out",
-        onModifyDefPriority: 6,
-        onModifyDef: function (def) {
-            return this.chainModify(1);
-        },
-        onModifySpDPriority: 6,
-        onModifySpD: function (spd) {
-            return this.chainModify(1);
-        },
-        onStart: function (pokemon) {
-            this.boost({atk: 2, spe: 2});
-        },
-        onDamage: function (damage, target, source, effect) {
-            if (effect.effectType !== 'Move') {
-                return false;
-            }
-        },
-        id: "letsdothis",
-        name: "Let's Do This",
-    },
+	"letsdothis": {
+		isNonstandard: true,
+		desc: "User and Find Out",
+		shortDesc: "Use and Find Out",
+		onModifyDefPriority: 6,
+		onModifyDef: function (def) {
+			return this.chainModify(1);
+		},
+		onModifySpDPriority: 6,
+		onModifySpD: function (spd) {
+			return this.chainModify(1);
+		},
+		onStart: function (pokemon) {
+		this.boost({atk: 2, spe: 2});
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+			return false;
+			}
+		},
+        	id: "letsdothis",
+        	name: "Let's Do This",
+	},
 	// Irraquated
 	"whatsthetime": {
 		isNonstandard: true,
