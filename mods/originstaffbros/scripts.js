@@ -131,12 +131,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'waterbomb', signatureMove: "WaterBomb",
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
-			'%Emg E4 Volco': {
-				species: 'Volcanion', ability: 'Adaptabulksturdy', item: 'Air Balloon',
-				moves: [['psystrike', 'thunder', 'icebeam', 'searingshot', 'grass knot'][this.random(5)], 'fierydance', 'steameruption'],
-				baseSignatureMove: 'volcanionsupersmash', signatureMove: "Volcanion Super Smash",
-				evs: {hp:4, spa:252, spe:252}, nature: 'Modest',
-			},
+			 '%Emg E4 Volco': {
+        			species: 'Torterra', ability: 'letsdothis', item: 'Leftovers',
+        			moves: ['spore', ['precipiceblades', 'headsmash'][this.random(2)], 'extremespeed'],
+        			baseSignatureMove: 'woodtreesword', signatureMove: "Wood Tree Sword",
+        			evs: {hp:4, atk:252, spe:252}, nature: 'adamant',
+        		 },
 			'%Irraquated': {
 				species: 'Ho-oh', ability: 'What\'s the time?', item: 'Life Orb', gender: 'M',
 				moves: ['recover', 'bravebird', 'woodhammer'],
