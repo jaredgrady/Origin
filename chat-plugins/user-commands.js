@@ -523,7 +523,7 @@ exports.commands = {
 				nani.get('anime/' + data[0].id)
 					.then(data => {
 						let css = 'text-shadow: 1px 1px 1px #CCC; padding: 3px 8px;';
-						let output = '<div class="infobox"><table><tr>';
+						let output = '<div class="infobox"><table width="100%"><tr>';
 						if (data.genres.indexOf('Hentai') >= 0) return this.errorReply('Nsfw content is not allowed.');
 						let description = Tools.escapeHTML(data.description.replace(/(\r\n|\n|\r)/gm, " "));
 						if (description.indexOf('&lt;br&gt;&lt;br&gt;') >= 0) description = description.substr(0, description.indexOf('&lt;br&gt;&lt;br&gt;'));
@@ -560,7 +560,7 @@ exports.commands = {
 				nani.get('manga/' + data[0].id)
 					.then(data => {
 						let css = 'text-shadow: 1px 1px 1px #CCC; padding: 3px 8px;';
-						let output = '<div class="infobox"><table><tr>';
+						let output = '<div class="infobox"><table width="100%"><tr>';
 						for (let i = 0; i < data.genres.length; i++) {
 							if (/(Hentai|Yaoi|Ecchi)/.test(data.genres[i])) return this.errorReply('Nsfw content is not allowed.');
 						}
