@@ -132,7 +132,7 @@ exports.BattleScripts = {
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
 			 '%Emg E4 Volco': {
-        			species: 'Torterra', ability: 'letsdothis', item: 'Leftovers',
+        			species: 'Torterra', ability: 'letsdothis', item: 'Leftovers', gender: 'M',
         			moves: ['spore', ['precipiceblades', 'headsmash'][this.random(2)], 'extremespeed'],
         			baseSignatureMove: 'woodtreesword', signatureMove: "Wood Tree Sword",
         			evs: {hp:4, atk:252, spe:252}, nature: 'adamant',
