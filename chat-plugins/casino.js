@@ -1,10 +1,13 @@
 'use strict';
 /********************
- * Money Commmands
- * This file handles everything that uses the money system indirectly, including leagueshops and all non-dice games.
+ * Casino
+ * This file handles all money and casino related games
 ********************/
 const fs = require('fs');
 let color = require('../config/color');
+let rankLadder = require('../rank-ladder');
+let highRollers = ['fender', 'madschemin', 'tyedolla'];
+let toggleRolling = false;
 
 let faces = {
 	"sv": {
@@ -107,172 +110,147 @@ function isOdd(n) {
 }
 
 exports.commands = {
-	artshop: 'leagueshop',
-	roomshop: 'leagueshop',
-	leagueshop: function (target, room, user) {
-		if (!room.founder) return this.sendReply("/leagueshop - league shops require a room founder.");
-		if (!room.hasShop) return this.sendReply("/leagueshop - this room does not have a leagueshop enabled.");
-		if (!room.shopList) room.shopList = [];
-		if (!target) target = '';
-		let self = this;
-		let item;
-		let cmdParts = target.split(' ');
-		let cmd = cmdParts.shift().trim().toLowerCase();
-		let params = cmdParts.join(' ').split(',').map(function (param) { return param.trim(); });
-		switch (cmd) {
-		case 'list':
-		case 'view':
-		default:
-			if (!this.runBroadcast()) return;
-			if (room.shopList.length < 1) return this.sendReplyBox('<center><b><u>This shop has no items!</u></b></center>');
-			let output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2><table cellpadding="6" border="1"><table cellpadding="6" border="1"><tr><td align="center"><h3><u>Item</u></h3></td><td align="center"><h3><u>Description</u></h3></td><td align="center"><h3><u>Price</u></h3></td></tr>';
-			for (let u in room.shopList) {
-				if (!room.shop[room.shopList[u]] || !room.shop[room.shopList[u]].name || !room.shop[room.shopList[u]].description || !room.shop[room.shopList[u]].price) continue;
-				output += '<tr><td align="center"><button name="send" value="/leagueshop buy ' + Tools.escapeHTML(room.shopList[u]) + '" ><b>' + Tools.escapeHTML(room.shop[room.shopList[u]].name) +
-				'</b></button></td><td align="center">' + Tools.escapeHTML(room.shop[room.shopList[u]].description.toString()) + '</td><td align="center">' + room.shop[room.shopList[u]].price + '</td></tr>';
+	dicegame: 'startdice',
+	dicestart: 'startdice',
+	startdice: function (target, room, user) {
+		if (!target) return this.parse('/help startdice');
+		if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply("Dice games can't be used outside of the Casino.");
+		if (!this.can('broadcast', null, room)) return this.errorReply("You must be at least a voice to start a dice game.");
+		if (room.id === 'casino' && target > 500) return this.errorReply("Dice can only be started for amounts less 500 bucks or less.");
+		if (!this.canTalk()) return this.errorReply("You cannot start dice games while unable to speak.");
+
+		let amount = isMoney(target);
+
+		if (Db('money').get(user.userid, 0) < amount) return this.errorReply("You don't have enough bucks to start that dice game.");
+		if (typeof amount === 'string') return this.sendReply(amount);
+		if (!room.dice) room.dice = {};
+		if (room.dice.started) return this.errorReply("A dice game has already started in this room.");
+
+		room.dice.started = true;
+		room.dice.bet = amount;
+		room.dice.startTime = Date.now(); // Prevent ending a dice game too early.
+
+		room.addRaw("<div class='infobox' style='background: rgba(190, 190, 190, 0.4); border-radius: 2px;'><div style='background: url(\"http://i.imgur.com/otpca0K.png?1\") left center no-repeat;'><div style='background: url(\"http://i.imgur.com/rrq3gEp.png\") right center no-repeat;'><center><h2 style='color: #444;'><font color='" + color(toId(this.user.name)) + "'>" + user.name + "</font> has started a dice game for <font style='color: #F00; text-decoration: underline;'>" + amount + "</font>" + currencyName(amount) + ".</h2></center><center><button name='send' value='/joindice' style='border: 1px solid #dcdcdc; -moz-box-shadow:inset 0px 1px 0px 0px #fff; -webkit-box-shadow:inset 0px 1px 0px 0px #fff; box-shadow:inset 0px 1px 0px 0px #fff; background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9)); background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%); background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%); background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%); background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%); background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\"#f9f9f9\", endColorstr=\"#e9e9e9\",GradientType=0); background-color:#f9f9f9; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; display:inline-block; cursor:pointer; color:#666; font-family:Arial; font-size:15px; font-weight:bold; padding:6px 24px; text-decoration:none; text-shadow:0px 1px 0px #fff;'>Click to join.</button></center><br /></div></div></div>");
+		this.parse('/joindice');
+	},
+	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
+
+	joindice: function (target, room, user) {
+		if (!room.dice || (room.dice.p1 && room.dice.p2)) return this.errorReply("There is no dice game in it's signup phase in this room.");
+		if (!this.canTalk()) return this.errorReply("You may not join dice games while unable to speak.");
+		if (room.dice.p1 === user.userid) return this.errorReply("You already entered this dice game.");
+		if (Db('money').get(user.userid, 0) < room.dice.bet) return this.errorReply("You don't have enough bucks to join this game.");
+		Db('money').set(user.userid, Db('money').get(user.userid) - room.dice.bet);
+		if (!room.dice.p1) {
+			room.dice.p1 = user.userid;
+			room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
+			return;
+		}
+		room.dice.p2 = user.userid;
+		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
+		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
+		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
+			while (p1Number <= p2Number) {
+				p1Number = Math.floor(6 * Math.random()) + 1;
+				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
-			output += '</table></center><br />';
-			this.sendReplyBox(output);
-			break;
-		case 'add':
-			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
-			if (params.length < 3) return this.sendReply("/leagueshop add [item name], [description], [price]");
-			if (!room.shopList) room.shopList = [];
-			let name = params.shift();
-			let description = params.shift();
-			let price = Number(params.shift());
-			if (isNaN(price)) return this.sendReply("/leagueshop add [item name], [description], [price]");
-			room.shop[toId(name)] = {};
-			room.shop[toId(name)].name = name;
-			room.shop[toId(name)].description = description;
-			room.shop[toId(name)].price = price;
-			room.shopList.push(toId(name));
-			room.chatRoomData.shop = room.shop;
-			room.chatRoomData.shopList = room.shopList;
-			Rooms.global.writeChatRoomData();
-			this.sendReply("Added '" + name + "' to the league shop for " + price + " " + ((price === 1) ? " buck." : " bucks") + ".");
-			break;
-		case 'remove':
-		case 'rem':
-		case 'del':
-		case 'delete':
-			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
-			if (params.length < 1) return this.sendReply("/leagueshop delete [item name]");
-			item = params.shift();
-			if (!room.shop[toId(item)]) return this.sendReply("/leagueshop - Item '" + item + "' not found.");
-			delete room.shop[toId(item)];
-			let index = room.shopList.indexOf(toId(item));
-			if (index > -1) {
-				room.shopList.splice(index, 1);
+		}
+		if (highRollers.indexOf(room.dice.p2) > -1 && toggleRolling) {
+			while (p2Number <= p1Number) {
+				p1Number = Math.floor(6 * Math.random()) + 1;
+				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
-			this.sendReply("Removed '" + item + "' from the league shop.");
-			break;
-		case 'buy':
-			if (params.length < 1) return this.sendReply("/leagueshop buy [item name]");
-			item = params.shift();
-			if (!room.shop[toId(item)]) return this.sendReply("/leagueshop - Item '" + item + "' not found.");
-			let money = Db('money').get(user, 0);
-			if (money < room.shop[toId(item)].price) return this.errorReply("You don\'t have enough bucks to purchase a '" + item + "'. You need " + ((money - room.shop[toId(item)].price) *  -1) + " more bucks.");
-			let buck = 'buck';
-			if (room.shop[toId(item)].price > 1) buck = 'bucks';
-			if (!room.shopBank) room.shopBank = room.founder;
-			this.parse('/forcetransfer ' + room.shopBank + ',' + room.shop[toId(item)].price);
-			fs.appendFile('logs/leagueshop_' + room.id + '.txt', '[' + new Date().toJSON() + '] ' + user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + buck + '.\n');
-			room.add(user.name + ' has purchased a ' + room.shop[toId(item)].name + ' for ' + room.shop[toId(item)].price + ' ' + ((price === 1) ? " buck." : " bucks."));
-			Rooms.global.addTask(room, "Shop Purchase - " + room.shop[toId(item)].name, user.name);
-			break;
-		case 'help':
-			if (!this.runBroadcast()) return;
-			this.sendReplyBox('The following is a list of league shop commands: <br />' +
-				'/leagueshop view/list - Shows a complete list of shop items.`<br />' +
-				'/leagueshop add [item name], [description], [price] - Adds an item to the shop.<br />' +
-				'/leagueshop delete/remove [item name] - Removes an item from the shop.<br />' +
-				'/leagueshop buy [item name] - Purchases an item from the shop.<br />' +
-				'/leagueshop viewlog [number of lines OR word to search for] - Views the last 15 lines in the shop log.<br />' +
-				'/leagueshop bank [username] - Sets the room bank to [username]. The room bank receives all funds from purchases in the shop.<br />' +
-				'/withdraw - Allows roomowners and whitelisted users to withdraw from their leaguebank.<br />' +
-				'/deposit - Deposits bucks into the league bank.<br />' +
-				'/bankadd - Whitelists additional users to use /withdraw.<br />' +
-				'/bankdelete - Removes users from the bank whitelist.'
-			);
-			break;
-		case 'setbank':
-		case 'bank':
-			if (user.userid !== room.founder && !user.can('seniorstaff')) return this.errorReply("/leagueshop - Access denied.");
-			if (params.length < 1) return this.sendReply("/leagueshop bank [username]");
-			let bank = params.shift();
-			room.shopBank = toId(bank);
-			room.chatRoomData.shopBank = room.shopBank;
-			if (!room.bankwhitelist) {
-				room.bankwhitelist = [];
-				room.chatRoomData.bankwhitelist = room.bankwhitelist;
+		}
+		let output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
+		while (p1Number === p2Number) {
+			output += "Tie... rolling again.<br>";
+			p1Number = Math.floor(6 * Math.random()) + 1;
+			p2Number = Math.floor(6 * Math.random()) + 1;
+			output += room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
+		}
+		let winner = room.dice[p1Number > p2Number ? 'p1' : 'p2'];
+		output += "<font color=#24678d><b>" + winner + "</b></font> has won <font color=#24678d><b>" + room.dice.bet + "</b></font>" + currencyName(room.dice.bet) + ".<br>Better luck next time " + room.dice[p1Number < p2Number ? 'p1' : 'p2'] + "!</div>";
+		room.addRaw(output);
+		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
+		Db('dicewins').set(winner, Db('dicewins').get(winner, 0) + 1);
+		delete room.dice;
+	},
+	joindicehelp: ["/joindice - Joins a dice game."],
+
+	enddice: function (target, room, user) {
+		if (!user.can('broadcast', null, room)) return false;
+		if (!room.dice) return this.errorReply("There is no dice game in this room.");
+		if ((Date.now() - room.dice.startTime) < 15000 && !user.can('broadcast', null, room)) return this.errorReply("Regular users may not end a dice game within the first minute of it starting.");
+		if (room.dice.p2) return this.errorReply("Dice game has already started.");
+		if (room.dice.p1) Db('money').set(room.dice.p1, Db('money').get(room.dice.p1, 0) + room.dice.bet);
+		delete room.dice;
+		room.addRaw("<b>" + user.name + " ended the dice game.");
+	},
+	enddicehelp: ["/enddice - Ends a dice game. Requires +"],
+
+	diceladder: 'dicegameladder',
+	dicegameladder: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		let keys = Object.keys(Db('dicewins').object()).map(function (name) {
+			return {name: name, dicewins: Db('dicewins').get(name)};
+		});
+		if (!keys.length) return this.sendReplyBox("Dice ladder is empty.");
+		keys.sort(function (a, b) { return b.dicewins - a.dicewins; });
+		this.sendReplyBox(rankLadder('Dice Ladder', 'Wins', keys.slice(0, 100), 'dicewins'));
+	},
+	diceladderhelp: 'dicegameladderhelp',
+	dicegameladderhelp: ["/diceladder - Shows the dice ladder."],
+
+	dicewins: 'dicegamewins',
+	dicegamewins: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		if (!target) target = user.name;
+
+		const targetId = toId(target);
+		if (!targetId) return this.parse('/help dicewins');
+
+		const dicewins = Db('dicewins').get(targetId, 0);
+		this.sendReplyBox('<b><font color="' + color(targetId) + '">' + Tools.escapeHTML(target) + '</font></b> has ' + dicewins + ' dicewins.');
+	},
+	dicewinshelp: 'dicegamewinshelp',
+	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],
+
+	resetdicewins: function (target, room, user) {
+		if (!this.can('declare', null, room)) return false;
+		let wins = Db('dicewins').object();
+		Object.keys(wins)
+		.filter(function (name) {
+			return Db('dicewins').get(name);
+		})
+		.forEach(function (name) {
+			delete wins[name];
+		});
+		Db.save();
+		this.sendReply("The dice wins ladder has been reset.");
+	},
+	resetdicewinshelp: ["/resetdicewins - Resets the dice wins ladder."],
+
+	togglerolling: function (target, room, user) {
+		if (!this.can('bypassall') && !~highRollers.indexOf(user.userid)) return false;
+		if (!target) return this.sendReply("Either toggle it on or off.");
+		if (target === 'on') {
+			if (toggleRolling === true) {
+				return this.sendReply("We are already rolling");
+			} else {
+				toggleRolling = true;
+				return this.sendReply("We are now rolling!");
 			}
-			Rooms.global.writeChatRoomData();
-			room.add('|raw|<div class="broadcast-green"><b>' + user.name + ' has just registered a bank ' + room.shopBank + ' for this room.  Use /bankadd [username] to add (/bankdelete to remove) new users to access the bank through /withdraw.  Roomowners can /withdraw by default.</b></div>');
-			room.update();
-			break;
-		case 'log':
-		case 'viewlog':
-			if (!user.can('roommod', null, room)) return this.errorReply("/leagueshop - Access denied.");
-			target = params.shift();
-			let lines = 0;
-			if (!target.match('[^0-9]')) {
-				lines = parseInt(target || 15, 10);
-				if (lines > 100) lines = 100;
+		}
+		if (target === 'off') {
+			if (toggleRolling === false) {
+				return this.sendReply("We are not rolling right now.");
+			} else {
+				toggleRolling = false;
+				return this.sendReply("We are not rolling anymore.");
 			}
-			let filename = 'logs/leagueshop_' + room.id + '.txt';
-			let command = 'tail -' + lines + ' ' + filename;
-			let grepLimit = 100;
-			if (!lines || lines < 0) { // searching for a word instead
-				if (target.match(/^["'].+["']$/)) target = target.substring(1, target.length - 1);
-				command = "awk '{print NR,$0}' " + filename + " | sort -nr | cut -d' ' -f2- | grep -m" + grepLimit + " -i '" + target.replace(/\\/g, '\\\\\\\\').replace(/["'`]/g, '\'\\$&\'').replace(/[\{\}\[\]\(\)\$\^\.\?\+\-\*]/g, '[$&]') + "'";
-			}
-			require('child_process').exec(command, function (error, stdout, stderr) {
-				if (error && stderr) {
-					user.popup('/leagueshop viewlog erred - the shop log does not support Windows');
-					console.log('/leagueshop viewlog error: ' + error);
-					return false;
-				}
-				if (lines) {
-					if (!stdout) {
-						user.popup('The log is empty.');
-					} else {
-						user.popup('Displaying the last ' + lines + ' lines of shop purchases:\n\n' + stdout);
-					}
-				} else {
-					if (!stdout) {
-						user.popup('No purchases containing "' + target + '" were found.');
-					} else {
-						user.popup('Displaying the last ' + grepLimit + ' logged purchases containing "' + target + '":\n\n' + stdout);
-					}
-				}
-			});
-			break;
 		}
 	},
-
-	bankadd: function (target, room, user) {
-		if (!user.can('declare', null, room)) return this.errorReply("/bankadd - Access denied.");
-		if (!target) return this.parse('/help bankadd');
-		if (!room.shopBank) return this.sendReply("Please /setbank before using this command.");
-		if (!room.bankwhitelist) {
-			room.bankwhitelist = [];
-			room.chatRoomData.bankwhitelist = room.bankwhitelist;
-		}
-		if (room.bankwhitelist[toId(target)]) return this.sendReply("This user is already whitelisted.");
-		room.chatRoomData.bankwhitelist.push(toId(target));
-		Rooms.global.writeChatRoomData();
-		this.sendReply("Added '" + target + "' to the whitelist for the room bank");
-	},
-
-	bankdelete: function (target, room, user) {
-		if (!user.can('declare', null, room)) return this.errorReply("bankdelete - Access denied.");
-		if (!target) return this.parse('/help bankdelete');
-		if (!room.bankwhitelist[toId(target)]) return this.sendReply("User is not whitelisted");
-		delete room.chatRoomData.bankwhitelist(toId(target));
-		Rooms.global.writeChatRoomData();
-		this.sendReply("Removed '" + target + "' from the whitelist for the room bank");
-	},
+	togglerollinghelp: ["/togglerolling - Enables or disables dice globally. Requires ~"],
 
 	bet: function (target, room, user) {
 		let firstDice = diceOne();
