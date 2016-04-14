@@ -836,11 +836,7 @@ exports.Formats = [
 
 			// Add here special typings, done for flavour mainly.
 			if (name === 'ascriptmaster') {
-				pokemon.typesData = [{
-					type: 'Electric',
-					suppressed: false,
-					isAdded: false,
-				}];
+				pokemon.setType('Electric');
 				pokemon.addVolatile('ascriptinnate', pokemon);
 			}
 
@@ -895,7 +891,7 @@ exports.Formats = [
 				pokemon.addVolatile('arachnophobia', pokemon);
 			}
 			if (name === 'marshmallon') {
-				this.boost({def: 2}, pokemon, pokemon, 'fur coat innate');
+				this.boost({def: 1}, pokemon, pokemon, 'fur coat innate');
 			}
 			if (name === 'mizuhime' || name === 'kalalokki' || name === 'sweep') {
 				this.setWeather('raindance');
@@ -1389,9 +1385,9 @@ exports.Formats = [
 				this.add('c|+Sonired|~');
 			}
 			if (name === 'spacebass') {
-				this.add('c|%SpaceBass|He aims his good ear best he can towards conversation and sometimes leans in awkward toward your seat');
-				this.add('c|%SpaceBass|And if by chance one feels their space too invaded, then try your best to calmly be discreet');
-				this.add('c|%SpaceBass|Because this septic breathed man that stands before you is a champion from days gone by');
+				this.add('c|@SpaceBass|He aims his good ear best he can towards conversation and sometimes leans in awkward toward your seat');
+				this.add('c|@SpaceBass|And if by chance one feels their space too invaded, then try your best to calmly be discreet');
+				this.add('c|@SpaceBass|Because this septic breathed man that stands before you is a champion from days gone by');
 			}
 			if (name === 'sparktrain') {
 				this.add('c|+sparktrain|hi');
@@ -1895,9 +1891,9 @@ exports.Formats = [
 				this.add('c|+Snowy|i never understood this i always hear them be like "yo whats up monica" "u tryna blaze monica"');
 			}
 			if (name === 'spacebass') {
-				this.add('c|%SpaceBass|And the tales of whales and woe off his liquored toungue will flow, the light will soft white twinkle off the cataracts in his eye');
-				this.add("c|%SpaceBass|So if by chance you're cornered near the bathroom, or he blocks you sprawled in his aisle seat");
-				this.add("c|%SpaceBass|Embrace the chance to hear some tales of greatness, 'cause he's the most interesting ball of toxins you're ever apt to meet");
+				this.add('c|@SpaceBass|And the tales of whales and woe off his liquored toungue will flow, the light will soft white twinkle off the cataracts in his eye');
+				this.add("c|@SpaceBass|So if by chance you're cornered near the bathroom, or he blocks you sprawled in his aisle seat");
+				this.add("c|@SpaceBass|Embrace the chance to hear some tales of greatness, 'cause he's the most interesting ball of toxins you're ever apt to meet");
 			}
 			if (name === 'specsmegabeedrill') {
 				this.add('c|+SpecsMegaBeedrill|Tryhard.');
@@ -2052,13 +2048,17 @@ exports.Formats = [
 
 							this.add("c|\u2605" + swapmon1.side.name + "|Bye-bye, " + swapmon2.name + "!");
 							this.add("c|\u2605" + swapmon2.side.name + "|Bye-bye, " + swapmon1.name + "!");
-							this.add('-anim', swapmon1.side.active, "Luster Purge", swapmon2.side.active);
-							this.add('-anim', swapmon2.side.active, "Aura Sphere", swapmon2.side.active);
-							this.add('message', swapmon2.side.name + " received " + swapmon2.name + "! Take good care of " + swapmon2.name + "!");
-							this.add('-anim', swapmon2.side.active, "Luster Purge", swapmon1.side.active);
-							this.add('-anim', swapmon1.side.active, "Aura Sphere", swapmon1.side.active);
-							this.add('message', swapmon1.side.name + " received " + swapmon1.name + "! Take good care of " + swapmon1.name + "!");
-
+							if (swapmon1.side.active[0].hp && swapmon2.side.active[0].hp) {
+								this.add('-anim', swapmon1.side.active, "Healing Wish", swapmon1.side.active);
+								this.add('-anim', swapmon2.side.active, "Aura Sphere", swapmon2.side.active);
+								this.add('message', swapmon2.side.name + " received " + swapmon2.name + "! Take good care of " + swapmon2.name + "!");
+								this.add('-anim', swapmon2.side.active, "Healing Wish", swapmon2.side.active);
+								this.add('-anim', swapmon1.side.active, "Aura Sphere", swapmon1.side.active);
+								this.add('message', swapmon1.side.name + " received " + swapmon1.name + "! Take good care of " + swapmon1.name + "!");
+							} else {
+								this.add('message', swapmon2.side.name + " received " + swapmon2.name + "! Take good care of " + swapmon2.name + "!");
+								this.add('message', swapmon1.side.name + " received " + swapmon1.name + "! Take good care of " + swapmon1.name + "!");
+							}
 							swapped = true;
 							break;
 						}

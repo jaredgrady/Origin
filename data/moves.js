@@ -43,6 +43,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"acid": {
 		num: 51,
@@ -64,6 +65,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"acidarmor": {
 		num: 151,
@@ -83,6 +85,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"acidspray": {
 		num: 491,
@@ -105,6 +108,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Beautiful",
 	},
 	"acrobatics": {
 		num: 512,
@@ -129,6 +133,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"acupressure": {
 		num: 367,
@@ -161,6 +166,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentAllyOrSelf",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"aerialace": {
 		num: 332,
@@ -178,6 +184,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"aeroblast": {
 		num: 177,
@@ -196,6 +203,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"afteryou": {
 		num: 495,
@@ -223,6 +231,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"agility": {
 		num: 97,
@@ -243,6 +252,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"aircutter": {
 		num: 314,
@@ -260,6 +270,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"airslash": {
 		num: 403,
@@ -280,6 +291,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"allyswitch": {
 		num: 502,
@@ -306,6 +318,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"amnesia": {
 		num: 133,
@@ -325,6 +338,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Cute",
 	},
 	"ancientpower": {
 		num: 246,
@@ -353,6 +367,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"aquajet": {
 		num: 453,
@@ -370,6 +385,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Cool",
 	},
 	"aquaring": {
 		num: 392,
@@ -396,6 +412,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"aquatail": {
 		num: 401,
@@ -413,6 +430,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"armthrust": {
 		num: 292,
@@ -430,6 +448,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"aromatherapy": {
 		num: 312,
@@ -457,6 +476,7 @@ exports.BattleMovedex = {
 		},
 		target: "allyTeam",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"aromaticmist": {
 		num: 597,
@@ -476,6 +496,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentAlly",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"assist": {
 		num: 274,
@@ -514,6 +535,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"assurance": {
 		num: 372,
@@ -555,6 +577,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"astonish": {
 		num: 310,
@@ -574,6 +597,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cute",
 	},
 	"attackorder": {
 		num: 454,
@@ -592,6 +616,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"attract": {
 		num: 213,
@@ -647,6 +672,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"aurasphere": {
 		num: 396,
@@ -664,6 +690,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Fighting",
+		contestType: "Beautiful",
 	},
 	"aurorabeam": {
 		num: 62,
@@ -685,6 +712,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"autotomize": {
 		num: 475,
@@ -735,6 +763,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Steel",
+		contestType: "Beautiful",
 	},
 	"avalanche": {
 		num: 419,
@@ -759,6 +788,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"babydolleyes": {
 		num: 608,
@@ -778,6 +808,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"barrage": {
 		num: 140,
@@ -795,6 +826,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"barrier": {
 		num: 112,
@@ -814,6 +846,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"batonpass": {
 		num: 226,
@@ -832,6 +865,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"beatup": {
 		num: 251,
@@ -875,6 +909,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"belch": {
 		num: 562,
@@ -892,6 +927,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"bellydrum": {
 		num: 187,
@@ -915,6 +951,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"bestow": {
 		num: 516,
@@ -945,6 +982,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"bide": {
 		num: 117,
@@ -1006,6 +1044,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"bind": {
 		num: 20,
@@ -1023,6 +1062,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"bite": {
 		num: 44,
@@ -1042,6 +1082,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"blastburn": {
 		num: 307,
@@ -1061,6 +1102,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"blazekick": {
 		num: 299,
@@ -1082,6 +1124,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"blizzard": {
 		num: 59,
@@ -1105,6 +1148,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"block": {
 		num: 335,
@@ -1126,6 +1170,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"blueflare": {
 		num: 551,
@@ -1146,6 +1191,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"bodyslam": {
 		num: 34,
@@ -1166,6 +1212,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"boltstrike": {
 		num: 550,
@@ -1186,6 +1233,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Beautiful",
 	},
 	"boneclub": {
 		num: 125,
@@ -1205,6 +1253,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"bonerush": {
 		num: 198,
@@ -1222,6 +1271,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"bonemerang": {
 		num: 155,
@@ -1240,6 +1290,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"boomburst": {
 		num: 586,
@@ -1257,6 +1308,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"bounce": {
 		num: 340,
@@ -1309,6 +1361,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Cute",
 	},
 	"bravebird": {
 		num: 413,
@@ -1327,6 +1380,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"brickbreak": {
 		num: 280,
@@ -1351,6 +1405,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"brine": {
 		num: 362,
@@ -1373,6 +1428,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"bubble": {
 		num: 145,
@@ -1394,6 +1450,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Water",
+		contestType: "Cute",
 	},
 	"bubblebeam": {
 		num: 61,
@@ -1415,6 +1472,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"bugbite": {
 		num: 450,
@@ -1440,6 +1498,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cute",
 	},
 	"bugbuzz": {
 		num: 405,
@@ -1462,6 +1521,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Bug",
+		contestType: "Beautiful",
 	},
 	"bulkup": {
 		num: 339,
@@ -1483,6 +1543,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"bulldoze": {
 		num: 523,
@@ -1504,6 +1565,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacent",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"bulletpunch": {
 		num: 418,
@@ -1521,6 +1583,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Tough",
 	},
 	"bulletseed": {
 		num: 331,
@@ -1539,6 +1602,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"calmmind": {
 		num: 347,
@@ -1560,6 +1624,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"camouflage": {
 		num: 293,
@@ -1589,6 +1654,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"captivate": {
 		num: 445,
@@ -1614,6 +1680,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"celebrate": {
 		num: 606,
@@ -1634,6 +1701,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"charge": {
 		num: 268,
@@ -1670,6 +1738,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"chargebeam": {
 		num: 451,
@@ -1693,6 +1762,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Beautiful",
 	},
 	"charm": {
 		num: 204,
@@ -1712,6 +1782,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"chatter": {
 		num: 448,
@@ -1733,6 +1804,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Cute",
 	},
 	"chipaway": {
 		num: 498,
@@ -1751,6 +1823,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"circlethrow": {
 		num: 509,
@@ -1768,6 +1841,7 @@ exports.BattleMovedex = {
 		forceSwitch: true,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"clamp": {
 		num: 128,
@@ -1785,6 +1859,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"clearsmog": {
 		num: 499,
@@ -1806,6 +1881,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Beautiful",
 	},
 	"closecombat": {
 		num: 370,
@@ -1829,6 +1905,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"coil": {
 		num: 489,
@@ -1851,6 +1928,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"cometpunch": {
 		num: 4,
@@ -1868,6 +1946,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"confide": {
 		num: 590,
@@ -1887,6 +1966,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"confuseray": {
 		num: 109,
@@ -1904,6 +1984,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"confusion": {
 		num: 93,
@@ -1923,6 +2004,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"constrict": {
 		num: 132,
@@ -1944,6 +2026,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"conversion": {
 		num: 160,
@@ -1965,6 +2048,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"conversion2": {
 		num: 176,
@@ -2002,6 +2086,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"copycat": {
 		num: 383,
@@ -2025,6 +2110,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"cosmicpower": {
 		num: 322,
@@ -2045,6 +2131,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"cottonguard": {
 		num: 538,
@@ -2065,6 +2152,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Grass",
+		contestType: "Cute",
 	},
 	"cottonspore": {
 		num: 178,
@@ -2090,6 +2178,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"counter": {
 		num: 68,
@@ -2137,6 +2226,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "scripted",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"covet": {
 		num: 343,
@@ -2167,6 +2257,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"crabhammer": {
 		num: 152,
@@ -2185,6 +2276,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"craftyshield": {
 		num: 578,
@@ -2217,6 +2309,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Fairy",
+		contestType: "Clever",
 	},
 	"crosschop": {
 		num: 238,
@@ -2235,6 +2328,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"crosspoison": {
 		num: 440,
@@ -2255,6 +2349,7 @@ exports.BattleMovedex = {
 		critRatio: 2,
 		target: "normal",
 		type: "Poison",
+		contestType: "Cool",
 	},
 	"crunch": {
 		num: 242,
@@ -2277,6 +2372,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"crushclaw": {
 		num: 306,
@@ -2298,6 +2394,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"crushgrip": {
 		num: 462,
@@ -2317,6 +2414,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"curse": {
 		num: 174,
@@ -2361,6 +2459,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		nonGhostTarget: "self",
 		type: "Ghost",
+		contestType: "Tough",
 	},
 	"cut": {
 		num: 15,
@@ -2377,6 +2476,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"darkpulse": {
 		num: 399,
@@ -2397,6 +2497,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Dark",
+		contestType: "Cool",
 	},
 	"darkvoid": {
 		num: 464,
@@ -2415,6 +2516,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"dazzlinggleam": {
 		num: 605,
@@ -2432,6 +2534,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"defendorder": {
 		num: 455,
@@ -2453,6 +2556,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"defensecurl": {
 		num: 111,
@@ -2473,6 +2577,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"defog": {
 		num: 432,
@@ -2506,6 +2611,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"destinybond": {
 		num: 194,
@@ -2541,6 +2647,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"detect": {
 		num: 197,
@@ -2566,6 +2673,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"diamondstorm": {
 		num: 591,
@@ -2590,6 +2698,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Rock",
+		contestType: "Beautiful",
 	},
 	"dig": {
 		num: 91,
@@ -2639,6 +2748,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"disable": {
 		num: 50,
@@ -2704,6 +2814,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"disarmingvoice": {
 		num: 574,
@@ -2720,6 +2831,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"discharge": {
 		num: 435,
@@ -2740,6 +2852,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacent",
 		type: "Electric",
+		contestType: "Beautiful",
 	},
 	"dive": {
 		num: 291,
@@ -2789,6 +2902,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"dizzypunch": {
 		num: 146,
@@ -2808,6 +2922,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"doomdesire": {
 		num: 353,
@@ -2849,6 +2964,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Beautiful",
 	},
 	"doubleedge": {
 		num: 38,
@@ -2867,6 +2983,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"doublehit": {
 		num: 458,
@@ -2884,6 +3001,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"doublekick": {
 		num: 24,
@@ -2901,6 +3019,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"doubleslap": {
 		num: 3,
@@ -2918,6 +3037,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"doubleteam": {
 		num: 104,
@@ -2937,6 +3057,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"dracometeor": {
 		num: 434,
@@ -2959,6 +3080,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Beautiful",
 	},
 	"dragonascent": {
 		num: 620,
@@ -2981,6 +3103,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Beautiful",
 	},
 	"dragonbreath": {
 		num: 225,
@@ -3000,6 +3123,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"dragonclaw": {
 		num: 337,
@@ -3017,6 +3141,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"dragondance": {
 		num: 349,
@@ -3038,6 +3163,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"dragonpulse": {
 		num: 406,
@@ -3055,6 +3181,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Dragon",
+		contestType: "Beautiful",
 	},
 	"dragonrage": {
 		num: 82,
@@ -3072,6 +3199,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"dragonrush": {
 		num: 407,
@@ -3091,6 +3219,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Dragon",
+		contestType: "Tough",
 	},
 	"dragontail": {
 		num: 525,
@@ -3108,6 +3237,7 @@ exports.BattleMovedex = {
 		forceSwitch: true,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Tough",
 	},
 	"drainingkiss": {
 		num: 577,
@@ -3125,6 +3255,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"drainpunch": {
 		num: 409,
@@ -3143,6 +3274,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"dreameater": {
 		num: 138,
@@ -3166,6 +3298,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"drillpeck": {
 		num: 65,
@@ -3183,6 +3316,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"drillrun": {
 		num: 529,
@@ -3201,6 +3335,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"dualchop": {
 		num: 530,
@@ -3218,6 +3353,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Tough",
 	},
 	"dynamicpunch": {
 		num: 223,
@@ -3237,6 +3373,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"earthpower": {
 		num: 414,
@@ -3259,6 +3396,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ground",
+		contestType: "Beautiful",
 	},
 	"earthquake": {
 		num: 89,
@@ -3276,6 +3414,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"echoedvoice": {
 		num: 497,
@@ -3315,6 +3454,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"eerieimpulse": {
 		num: 598,
@@ -3334,6 +3474,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"eggbomb": {
 		num: 121,
@@ -3350,6 +3491,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"electricterrain": {
 		num: 604,
@@ -3396,6 +3538,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"electrify": {
 		num: 582,
@@ -3424,6 +3567,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"electroball": {
 		num: 486,
@@ -3457,6 +3601,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"electroweb": {
 		num: 527,
@@ -3478,6 +3623,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Electric",
+		contestType: "Beautiful",
 	},
 	"embargo": {
 		num: 373,
@@ -3506,6 +3652,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"ember": {
 		num: 52,
@@ -3525,6 +3672,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Cute",
 	},
 	"encore": {
 		num: 227,
@@ -3583,6 +3731,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"endeavor": {
 		num: 283,
@@ -3608,6 +3757,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"endure": {
 		num: 203,
@@ -3645,6 +3795,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"energyball": {
 		num: 412,
@@ -3667,6 +3818,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"entrainment": {
 		num: 494,
@@ -3699,6 +3851,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"eruption": {
 		num: 284,
@@ -3719,6 +3872,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"explosion": {
 		num: 153,
@@ -3737,6 +3891,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"extrasensory": {
 		num: 326,
@@ -3757,6 +3912,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"extremespeed": {
 		num: 245,
@@ -3774,6 +3930,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"facade": {
 		num: 263,
@@ -3797,6 +3954,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"feintattack": {
 		num: 185,
@@ -3813,6 +3971,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"fairylock": {
 		num: 587,
@@ -3839,6 +3998,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Fairy",
+		contestType: "Clever",
 	},
 	"fairywind": {
 		num: 584,
@@ -3855,6 +4015,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"fakeout": {
 		num: 252,
@@ -3882,6 +4043,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"faketears": {
 		num: 313,
@@ -3901,6 +4063,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Cute",
 	},
 	"falseswipe": {
 		num: 206,
@@ -3918,6 +4081,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"featherdance": {
 		num: 297,
@@ -3937,6 +4101,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Flying",
+		contestType: "Beautiful",
 	},
 	"feint": {
 		num: 364,
@@ -3955,6 +4120,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"fellstinger": {
 		num: 565,
@@ -3981,6 +4147,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"fierydance": {
 		num: 552,
@@ -4005,6 +4172,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"finalgambit": {
 		num: 515,
@@ -4028,6 +4196,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"fireblast": {
 		num: 126,
@@ -4048,6 +4217,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"firefang": {
 		num: 424,
@@ -4073,6 +4243,7 @@ exports.BattleMovedex = {
 		],
 		target: "normal",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"firepledge": {
 		num: 519,
@@ -4142,6 +4313,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"firepunch": {
 		num: 7,
@@ -4162,6 +4334,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Tough",
 	},
 	"firespin": {
 		num: 83,
@@ -4179,6 +4352,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"fissure": {
 		num: 90,
@@ -4196,6 +4370,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"flail": {
 		num: 175,
@@ -4231,6 +4406,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"flameburst": {
 		num: 481,
@@ -4258,6 +4434,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"flamecharge": {
 		num: 488,
@@ -4282,6 +4459,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"flamewheel": {
 		num: 172,
@@ -4301,6 +4479,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"flamethrower": {
 		num: 53,
@@ -4321,6 +4500,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"flareblitz": {
 		num: 394,
@@ -4342,6 +4522,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"flash": {
 		num: 148,
@@ -4361,6 +4542,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"flashcannon": {
 		num: 430,
@@ -4383,6 +4565,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Beautiful",
 	},
 	"flatter": {
 		num: 260,
@@ -4403,6 +4586,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"fling": {
 		num: 374,
@@ -4464,6 +4648,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Cute",
 	},
 	"flowershield": {
 		num: 579,
@@ -4496,6 +4681,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"fly": {
 		num: 19,
@@ -4545,6 +4731,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Clever",
 	},
 	"flyingpress": {
 		num: 560,
@@ -4564,6 +4751,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"focusblast": {
 		num: 411,
@@ -4586,6 +4774,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"focusenergy": {
 		num: 116,
@@ -4611,6 +4800,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"focuspunch": {
 		num: 264,
@@ -4647,6 +4837,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"followme": {
 		num: 266,
@@ -4678,6 +4869,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"forcepalm": {
 		num: 395,
@@ -4697,6 +4889,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"foresight": {
 		num: 193,
@@ -4730,6 +4923,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"forestscurse": {
 		num: 571,
@@ -4751,6 +4945,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"foulplay": {
 		num: 492,
@@ -4769,6 +4964,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"freezedry": {
 		num: 573,
@@ -4792,6 +4988,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"freezeshock": {
 		num: 553,
@@ -4823,6 +5020,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"frenzyplant": {
 		num: 338,
@@ -4842,6 +5040,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"frostbreath": {
 		num: 524,
@@ -4859,6 +5058,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"frustration": {
 		num: 218,
@@ -4879,6 +5079,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"furyattack": {
 		num: 31,
@@ -4896,6 +5097,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"furycutter": {
 		num: 210,
@@ -4933,6 +5135,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"furyswipes": {
 		num: 154,
@@ -4950,6 +5153,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"fusionbolt": {
 		num: 559,
@@ -4977,6 +5181,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"fusionflare": {
 		num: 558,
@@ -5004,6 +5209,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"futuresight": {
 		num: 248,
@@ -5047,6 +5253,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"gastroacid": {
 		num: 380,
@@ -5077,6 +5284,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"geargrind": {
 		num: 544,
@@ -5095,6 +5303,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Clever",
 	},
 	"geomancy": {
 		num: 601,
@@ -5130,6 +5339,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"gigadrain": {
 		num: 202,
@@ -5148,6 +5358,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"gigaimpact": {
 		num: 416,
@@ -5167,6 +5378,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"glaciate": {
 		num: 549,
@@ -5188,6 +5400,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"glare": {
 		num: 137,
@@ -5206,6 +5419,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"grassknot": {
 		num: 447,
@@ -5248,6 +5462,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cute",
 	},
 	"grasspledge": {
 		num: 520,
@@ -5312,6 +5527,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"grasswhistle": {
 		num: 320,
@@ -5329,6 +5545,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"grassyterrain": {
 		num: 580,
@@ -5381,6 +5598,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"gravity": {
 		num: 356,
@@ -5461,6 +5679,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"growl": {
 		num: 45,
@@ -5480,6 +5699,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"growth": {
 		num: 74,
@@ -5503,6 +5723,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"grudge": {
 		num: 288,
@@ -5541,6 +5762,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Ghost",
+		contestType: "Tough",
 	},
 	"guardsplit": {
 		num: 470,
@@ -5566,6 +5788,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"guardswap": {
 		num: 385,
@@ -5596,6 +5819,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"guillotine": {
 		num: 12,
@@ -5613,6 +5837,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"gunkshot": {
 		num: 441,
@@ -5633,6 +5858,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"gust": {
 		num: 16,
@@ -5649,6 +5875,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Clever",
 	},
 	"gyroball": {
 		num: 360,
@@ -5672,6 +5899,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"hail": {
 		num: 258,
@@ -5689,6 +5917,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"hammerarm": {
 		num: 359,
@@ -5711,6 +5940,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"happyhour": {
 		num: 603,
@@ -5731,6 +5961,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"harden": {
 		num: 106,
@@ -5750,6 +5981,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"haze": {
 		num: 114,
@@ -5775,6 +6007,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"headcharge": {
 		num: 543,
@@ -5793,6 +6026,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"headsmash": {
 		num: 457,
@@ -5811,6 +6045,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"headbutt": {
 		num: 29,
@@ -5830,6 +6065,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"healbell": {
 		num: 215,
@@ -5854,6 +6090,7 @@ exports.BattleMovedex = {
 		},
 		target: "allyTeam",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"healblock": {
 		num: 377,
@@ -5905,6 +6142,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"healorder": {
 		num: 456,
@@ -5923,6 +6161,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"healpulse": {
 		num: 505,
@@ -5946,6 +6185,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"healingwish": {
 		num: 361,
@@ -6000,6 +6240,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"heartstamp": {
 		num: 531,
@@ -6019,6 +6260,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Cute",
 	},
 	"heartswap": {
 		num: 391,
@@ -6049,6 +6291,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"heatcrash": {
 		num: 535,
@@ -6082,6 +6325,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Tough",
 	},
 	"heatwave": {
 		num: 257,
@@ -6102,6 +6346,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"heavyslam": {
 		num: 484,
@@ -6136,6 +6381,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Tough",
 	},
 	"helpinghand": {
 		num: 270,
@@ -6169,6 +6415,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentAlly",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"hex": {
 		num: 506,
@@ -6190,6 +6437,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"hiddenpower": {
 		num: 237,
@@ -6209,6 +6457,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"hiddenpowerbug": {
 		accuracy: 100,
@@ -6224,6 +6473,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"hiddenpowerdark": {
 		accuracy: 100,
@@ -6239,6 +6489,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"hiddenpowerdragon": {
 		accuracy: 100,
@@ -6254,6 +6505,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Clever",
 	},
 	"hiddenpowerelectric": {
 		accuracy: 100,
@@ -6270,6 +6522,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"hiddenpowerfighting": {
 		accuracy: 100,
@@ -6286,6 +6539,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Clever",
 	},
 	"hiddenpowerfire": {
 		accuracy: 100,
@@ -6302,6 +6556,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Clever",
 	},
 	"hiddenpowerflying": {
 		accuracy: 100,
@@ -6317,6 +6572,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Flying",
+		contestType: "Clever",
 	},
 	"hiddenpowerghost": {
 		accuracy: 100,
@@ -6332,6 +6588,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"hiddenpowergrass": {
 		accuracy: 100,
@@ -6348,6 +6605,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"hiddenpowerground": {
 		accuracy: 100,
@@ -6363,6 +6621,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Clever",
 	},
 	"hiddenpowerice": {
 		accuracy: 100,
@@ -6379,6 +6638,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Clever",
 	},
 	"hiddenpowerpoison": {
 		accuracy: 100,
@@ -6394,6 +6654,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"hiddenpowerpsychic": {
 		accuracy: 100,
@@ -6409,6 +6670,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"hiddenpowerrock": {
 		accuracy: 100,
@@ -6424,6 +6686,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Clever",
 	},
 	"hiddenpowersteel": {
 		accuracy: 100,
@@ -6439,6 +6702,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Clever",
 	},
 	"hiddenpowerwater": {
 		accuracy: 100,
@@ -6454,6 +6718,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Clever",
 	},
 	"highjumpkick": {
 		num: 136,
@@ -6475,6 +6740,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"holdback": {
 		num: 610,
@@ -6492,6 +6758,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"holdhands": {
 		num: 615,
@@ -6511,6 +6778,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentAlly",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"honeclaws": {
 		num: 468,
@@ -6532,6 +6800,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Dark",
+		contestType: "Cute",
 	},
 	"hornattack": {
 		num: 30,
@@ -6548,6 +6817,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"horndrill": {
 		num: 32,
@@ -6565,6 +6835,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"hornleech": {
 		num: 532,
@@ -6583,6 +6854,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Tough",
 	},
 	"howl": {
 		num: 336,
@@ -6602,6 +6874,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"hurricane": {
 		num: 542,
@@ -6629,6 +6902,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Tough",
 	},
 	"hydrocannon": {
 		num: 308,
@@ -6648,6 +6922,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"hydropump": {
 		num: 56,
@@ -6665,6 +6940,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"hyperbeam": {
 		num: 63,
@@ -6684,6 +6960,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"hyperfang": {
 		num: 158,
@@ -6703,6 +6980,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"hyperspacefury": {
 		num: 621,
@@ -6738,6 +7016,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"hyperspacehole": {
 		num: 593,
@@ -6755,6 +7034,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"hypervoice": {
 		num: 304,
@@ -6772,6 +7052,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"hypnosis": {
 		num: 95,
@@ -6789,6 +7070,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"iceball": {
 		num: 301,
@@ -6836,6 +7118,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"icebeam": {
 		num: 58,
@@ -6856,6 +7139,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"iceburn": {
 		num: 554,
@@ -6887,6 +7171,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"icefang": {
 		num: 423,
@@ -6912,6 +7197,7 @@ exports.BattleMovedex = {
 		],
 		target: "normal",
 		type: "Ice",
+		contestType: "Cool",
 	},
 	"icepunch": {
 		num: 8,
@@ -6932,6 +7218,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"iceshard": {
 		num: 420,
@@ -6949,6 +7236,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"iciclecrash": {
 		num: 556,
@@ -6969,6 +7257,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"iciclespear": {
 		num: 333,
@@ -6987,6 +7276,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"icywind": {
 		num: 196,
@@ -7008,6 +7298,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"imprison": {
 		num: 286,
@@ -7047,6 +7338,7 @@ exports.BattleMovedex = {
 		pressureTarget: "foeSide",
 		target: "self",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"incinerate": {
 		num: 510,
@@ -7069,6 +7361,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Fire",
+		contestType: "Tough",
 	},
 	"inferno": {
 		num: 517,
@@ -7088,6 +7381,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"infestation": {
 		num: 611,
@@ -7105,6 +7399,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cute",
 	},
 	"ingrain": {
 		num: 275,
@@ -7139,6 +7434,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"iondeluge": {
 		num: 569,
@@ -7169,6 +7465,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Electric",
+		contestType: "Beautiful",
 	},
 	"irondefense": {
 		num: 334,
@@ -7188,6 +7485,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Steel",
+		contestType: "Tough",
 	},
 	"ironhead": {
 		num: 442,
@@ -7208,6 +7506,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Tough",
 	},
 	"irontail": {
 		num: 231,
@@ -7229,6 +7528,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"judgment": {
 		num: 449,
@@ -7249,6 +7549,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"jumpkick": {
 		num: 26,
@@ -7270,6 +7571,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"karatechop": {
 		num: 2,
@@ -7287,6 +7589,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"kinesis": {
 		num: 134,
@@ -7306,6 +7609,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"kingsshield": {
 		num: 588,
@@ -7353,6 +7657,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"knockoff": {
 		num: 282,
@@ -7386,6 +7691,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"landswrath": {
 		num: 616,
@@ -7402,6 +7708,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Ground",
+		contestType: "Beautiful",
 	},
 	"lastresort": {
 		num: 387,
@@ -7430,6 +7737,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"lavaplume": {
 		num: 436,
@@ -7450,6 +7758,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacent",
 		type: "Fire",
+		contestType: "Tough",
 	},
 	"leafblade": {
 		num: 348,
@@ -7468,6 +7777,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"leafstorm": {
 		num: 437,
@@ -7490,6 +7800,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"leaftornado": {
 		num: 536,
@@ -7511,6 +7822,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"leechlife": {
 		num: 141,
@@ -7528,6 +7840,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"leechseed": {
 		num: 73,
@@ -7569,6 +7882,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"leer": {
 		num: 43,
@@ -7588,6 +7902,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"lick": {
 		num: 122,
@@ -7607,6 +7922,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cute",
 	},
 	"lightofruin": {
 		num: 617,
@@ -7626,6 +7942,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"lightscreen": {
 		num: 113,
@@ -7670,6 +7987,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"lockon": {
 		num: 199,
@@ -7700,6 +8018,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"lovelykiss": {
 		num: 142,
@@ -7718,6 +8037,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"lowkick": {
 		num: 67,
@@ -7754,6 +8074,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"lowsweep": {
 		num: 490,
@@ -7775,6 +8096,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Clever",
 	},
 	"luckychant": {
 		num: 381,
@@ -7804,6 +8126,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"lunardance": {
 		num: 461,
@@ -7861,6 +8184,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"lusterpurge": {
 		num: 295,
@@ -7882,6 +8206,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"machpunch": {
 		num: 183,
@@ -7899,6 +8224,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"magiccoat": {
 		num: 277,
@@ -7942,6 +8268,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"magicroom": {
 		num: 478,
@@ -7983,6 +8310,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"magicalleaf": {
 		num: 345,
@@ -7999,6 +8327,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"magmastorm": {
 		num: 463,
@@ -8016,6 +8345,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Tough",
 	},
 	"magnetbomb": {
 		num: 443,
@@ -8032,6 +8362,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"magneticflux": {
 		num: 602,
@@ -8058,6 +8389,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"magnetrise": {
 		num: 393,
@@ -8089,6 +8421,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"magnitude": {
 		num: 222,
@@ -8133,6 +8466,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"matblock": {
 		num: 561,
@@ -8177,6 +8511,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"mefirst": {
 		num: 382,
@@ -8215,6 +8550,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentFoe",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"meanlook": {
 		num: 212,
@@ -8236,6 +8572,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"meditate": {
 		num: 96,
@@ -8255,6 +8592,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"megadrain": {
 		num: 72,
@@ -8272,6 +8610,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"megakick": {
 		num: 25,
@@ -8288,6 +8627,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"megapunch": {
 		num: 5,
@@ -8304,6 +8644,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"megahorn": {
 		num: 224,
@@ -8321,6 +8662,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"memento": {
 		num: 262,
@@ -8343,6 +8685,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"metalburst": {
 		num: 368,
@@ -8390,6 +8733,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "scripted",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"metalclaw": {
 		num: 232,
@@ -8413,6 +8757,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"metalsound": {
 		num: 319,
@@ -8432,6 +8777,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Steel",
+		contestType: "Clever",
 	},
 	"meteormash": {
 		num: 309,
@@ -8456,6 +8802,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"metronome": {
 		num: 118,
@@ -8495,6 +8842,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"milkdrink": {
 		num: 208,
@@ -8513,6 +8861,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"mimic": {
 		num: 102,
@@ -8548,6 +8897,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"mindreader": {
 		num: 170,
@@ -8571,6 +8921,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"minimize": {
 		num: 107,
@@ -8605,6 +8956,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"miracleeye": {
 		num: 357,
@@ -8638,6 +8990,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"mirrorcoat": {
 		num: 243,
@@ -8685,6 +9038,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "scripted",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"mirrormove": {
 		num: 119,
@@ -8708,6 +9062,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Flying",
+		contestType: "Clever",
 	},
 	"mirrorshot": {
 		num: 429,
@@ -8729,6 +9084,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Beautiful",
 	},
 	"mist": {
 		num: 54,
@@ -8769,6 +9125,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"mistball": {
 		num: 296,
@@ -8790,6 +9147,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"mistyterrain": {
 		num: 581,
@@ -8829,6 +9187,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"moonblast": {
 		num: 585,
@@ -8851,6 +9210,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"moonlight": {
 		num: 236,
@@ -8877,6 +9237,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Fairy",
+		contestType: "Beautiful",
 	},
 	"morningsun": {
 		num: 234,
@@ -8903,6 +9264,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"mudslap": {
 		num: 189,
@@ -8924,6 +9286,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ground",
+		contestType: "Cute",
 	},
 	"mudbomb": {
 		num: 426,
@@ -8945,6 +9308,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ground",
+		contestType: "Cute",
 	},
 	"mudshot": {
 		num: 341,
@@ -8966,6 +9330,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"mudsport": {
 		num: 300,
@@ -9006,6 +9371,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Ground",
+		contestType: "Cute",
 	},
 	"muddywater": {
 		num: 330,
@@ -9027,6 +9393,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"mysticalfire": {
 		num: 595,
@@ -9048,6 +9415,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"nastyplot": {
 		num: 417,
@@ -9068,6 +9436,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"naturalgift": {
 		num: 363,
@@ -9111,6 +9480,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"naturepower": {
 		num: 267,
@@ -9139,6 +9509,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"needlearm": {
 		num: 302,
@@ -9158,6 +9529,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"nightdaze": {
 		num: 539,
@@ -9179,6 +9551,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Dark",
+		contestType: "Cool",
 	},
 	"nightshade": {
 		num: 101,
@@ -9197,6 +9570,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"nightslash": {
 		num: 400,
@@ -9215,6 +9589,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Cool",
 	},
 	"nightmare": {
 		num: 171,
@@ -9250,6 +9625,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"nobleroar": {
 		num: 568,
@@ -9270,6 +9646,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"nuzzle": {
 		num: 609,
@@ -9290,6 +9667,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cute",
 	},
 	"oblivionwing": {
 		num: 613,
@@ -9308,6 +9686,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"octazooka": {
 		num: 190,
@@ -9329,6 +9708,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"odorsleuth": {
 		num: 316,
@@ -9349,6 +9729,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"ominouswind": {
 		num: 466,
@@ -9376,6 +9757,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ghost",
+		contestType: "Beautiful",
 	},
 	"originpulse": {
 		num: 618,
@@ -9392,6 +9774,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, pulse: 1, mirror: 1},
 		target: "allAdjacentFoes",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"outrage": {
 		num: 200,
@@ -9417,6 +9800,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "randomNormal",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"overheat": {
 		num: 315,
@@ -9439,6 +9823,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"painsplit": {
 		num: 220,
@@ -9462,6 +9847,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"paraboliccharge": {
 		num: 570,
@@ -9479,6 +9865,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Electric",
+		contestType: "Clever",
 	},
 	"partingshot": {
 		num: 575,
@@ -9501,6 +9888,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Cool",
 	},
 	"payday": {
 		num: 6,
@@ -9520,6 +9908,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"payback": {
 		num: 371,
@@ -9544,6 +9933,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"peck": {
 		num: 64,
@@ -9560,6 +9950,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"perishsong": {
 		num: 195,
@@ -9609,6 +10000,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"petalblizzard": {
 		num: 572,
@@ -9626,6 +10018,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"petaldance": {
 		num: 80,
@@ -9651,6 +10044,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "randomNormal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"phantomforce": {
 		num: 566,
@@ -9693,6 +10087,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cool",
 	},
 	"pinmissile": {
 		num: 42,
@@ -9710,6 +10105,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"playnice": {
 		num: 589,
@@ -9729,6 +10125,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"playrough": {
 		num: 583,
@@ -9751,6 +10148,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"pluck": {
 		num: 365,
@@ -9776,6 +10174,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cute",
 	},
 	"poisonfang": {
 		num: 305,
@@ -9795,6 +10194,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"poisongas": {
 		num: 139,
@@ -9812,6 +10212,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"poisonjab": {
 		num: 398,
@@ -9832,6 +10233,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"poisonpowder": {
 		num: 77,
@@ -9855,6 +10257,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"poisonsting": {
 		num: 40,
@@ -9874,6 +10277,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"poisontail": {
 		num: 342,
@@ -9894,6 +10298,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"pound": {
 		num: 1,
@@ -9910,6 +10315,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"powder": {
 		num: 600,
@@ -9946,6 +10352,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"powdersnow": {
 		num: 181,
@@ -9965,6 +10372,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"powergem": {
 		num: 408,
@@ -9982,6 +10390,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Beautiful",
 	},
 	"powersplit": {
 		num: 471,
@@ -10007,6 +10416,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"powerswap": {
 		num: 384,
@@ -10037,6 +10447,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"powertrick": {
 		num: 379,
@@ -10080,6 +10491,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"poweruppunch": {
 		num: 612,
@@ -10104,6 +10516,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"powerwhip": {
 		num: 438,
@@ -10121,6 +10534,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Tough",
 	},
 	"precipiceblades": {
 		num: 619,
@@ -10137,6 +10551,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1, nonsky: 1},
 		target: "allAdjacentFoes",
 		type: "Ground",
+		contestType: "Cool",
 	},
 	"present": {
 		num: 217,
@@ -10165,6 +10580,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"protect": {
 		num: 182,
@@ -10209,6 +10625,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"psybeam": {
 		num: 60,
@@ -10228,6 +10645,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"psychup": {
 		num: 244,
@@ -10252,6 +10670,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"psychic": {
 		num: 94,
@@ -10274,6 +10693,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"psychoboost": {
 		num: 354,
@@ -10296,6 +10716,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"psychocut": {
 		num: 427,
@@ -10314,6 +10735,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"psychoshift": {
 		num: 375,
@@ -10337,6 +10759,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"psyshock": {
 		num: 473,
@@ -10355,6 +10778,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Beautiful",
 	},
 	"psystrike": {
 		num: 540,
@@ -10373,6 +10797,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"psywave": {
 		num: 149,
@@ -10392,6 +10817,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"punishment": {
 		num: 386,
@@ -10413,6 +10839,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Cool",
 	},
 	"pursuit": {
 		num: 228,
@@ -10474,6 +10901,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"quash": {
 		num: 511,
@@ -10507,6 +10935,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"quickattack": {
 		num: 98,
@@ -10524,6 +10953,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"quickguard": {
 		num: 501,
@@ -10570,6 +11000,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"quiverdance": {
 		num: 483,
@@ -10592,6 +11023,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Bug",
+		contestType: "Beautiful",
 	},
 	"rage": {
 		num: 99,
@@ -10626,6 +11058,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"ragepowder": {
 		num: 476,
@@ -10657,6 +11090,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"raindance": {
 		num: 240,
@@ -10674,6 +11108,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"rapidspin": {
 		num: 229,
@@ -10707,6 +11142,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"razorleaf": {
 		num: 75,
@@ -10724,6 +11160,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"razorshell": {
 		num: 534,
@@ -10746,6 +11183,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Cool",
 	},
 	"razorwind": {
 		num: 13,
@@ -10781,6 +11219,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"recover": {
 		num: 105,
@@ -10799,6 +11238,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"recycle": {
 		num: 278,
@@ -10820,6 +11260,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"reflect": {
 		num: 115,
@@ -10863,6 +11304,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"reflecttype": {
 		num: 513,
@@ -10885,6 +11327,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"refresh": {
 		num: 287,
@@ -10904,6 +11347,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"relicsong": {
 		num: 547,
@@ -10940,6 +11384,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"rest": {
 		num: 156,
@@ -10965,6 +11410,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Cute",
 	},
 	"retaliate": {
 		num: 514,
@@ -10988,6 +11434,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"return": {
 		num: 216,
@@ -11008,6 +11455,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"revenge": {
 		num: 279,
@@ -11031,6 +11479,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"reversal": {
 		num: 179,
@@ -11066,6 +11515,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"roar": {
 		num: 46,
@@ -11084,6 +11534,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"roaroftime": {
 		num: 459,
@@ -11103,6 +11554,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Beautiful",
 	},
 	"rockblast": {
 		num: 350,
@@ -11121,6 +11573,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"rockclimb": {
 		num: 431,
@@ -11140,6 +11593,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"rockpolish": {
 		num: 397,
@@ -11160,6 +11614,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"rockslide": {
 		num: 157,
@@ -11180,6 +11635,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"rocksmash": {
 		num: 249,
@@ -11201,6 +11657,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"rockthrow": {
 		num: 88,
@@ -11217,6 +11674,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"rocktomb": {
 		num: 317,
@@ -11238,6 +11696,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Rock",
+		contestType: "Clever",
 	},
 	"rockwrecker": {
 		num: 439,
@@ -11257,6 +11716,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"roleplay": {
 		num: 272,
@@ -11287,6 +11747,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Cute",
 	},
 	"rollingkick": {
 		num: 27,
@@ -11306,6 +11767,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"rollout": {
 		num: 205,
@@ -11353,6 +11815,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Cute",
 	},
 	"roost": {
 		num: 355,
@@ -11378,6 +11841,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Flying",
+		contestType: "Clever",
 	},
 	"rototiller": {
 		num: 563,
@@ -11415,6 +11879,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"round": {
 		num: 496,
@@ -11447,6 +11912,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"sacredfire": {
 		num: 221,
@@ -11467,6 +11933,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"sacredsword": {
 		num: 533,
@@ -11486,6 +11953,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"safeguard": {
 		num: 219,
@@ -11538,6 +12006,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"sandattack": {
 		num: 28,
@@ -11557,6 +12026,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Cute",
 	},
 	"sandtomb": {
 		num: 328,
@@ -11574,6 +12044,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ground",
+		contestType: "Clever",
 	},
 	"sandstorm": {
 		num: 201,
@@ -11591,6 +12062,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"scald": {
 		num: 503,
@@ -11612,6 +12084,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"scaryface": {
 		num: 184,
@@ -11631,6 +12104,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"scratch": {
 		num: 10,
@@ -11647,6 +12121,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"screech": {
 		num: 103,
@@ -11666,6 +12141,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"searingshot": {
 		num: 545,
@@ -11685,6 +12161,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacent",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"secretpower": {
 		num: 290,
@@ -11726,6 +12203,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"secretsword": {
 		num: 548,
@@ -11744,6 +12222,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Beautiful",
 	},
 	"seedbomb": {
 		num: 402,
@@ -11761,6 +12240,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Tough",
 	},
 	"seedflare": {
 		num: 465,
@@ -11783,6 +12263,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"seismictoss": {
 		num: 69,
@@ -11801,6 +12282,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"selfdestruct": {
 		num: 120,
@@ -11818,6 +12300,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"shadowball": {
 		num: 247,
@@ -11840,6 +12323,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"shadowclaw": {
 		num: 421,
@@ -11858,6 +12342,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cool",
 	},
 	"shadowforce": {
 		num: 467,
@@ -11901,6 +12386,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cool",
 	},
 	"shadowpunch": {
 		num: 325,
@@ -11918,6 +12404,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"shadowsneak": {
 		num: 425,
@@ -11935,6 +12422,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"sharpen": {
 		num: 159,
@@ -11954,6 +12442,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"sheercold": {
 		num: 329,
@@ -11971,6 +12460,7 @@ exports.BattleMovedex = {
 		ohko: true,
 		target: "normal",
 		type: "Ice",
+		contestType: "Beautiful",
 	},
 	"shellsmash": {
 		num: 504,
@@ -11995,6 +12485,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"shiftgear": {
 		num: 508,
@@ -12016,6 +12507,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Steel",
+		contestType: "Clever",
 	},
 	"shockwave": {
 		num: 351,
@@ -12032,6 +12524,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"signalbeam": {
 		num: 324,
@@ -12052,6 +12545,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Bug",
+		contestType: "Beautiful",
 	},
 	"silverwind": {
 		num: 318,
@@ -12079,6 +12573,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Bug",
+		contestType: "Beautiful",
 	},
 	"simplebeam": {
 		num: 493,
@@ -12110,6 +12605,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"sing": {
 		num: 47,
@@ -12127,6 +12623,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"sketch": {
 		num: 166,
@@ -12164,6 +12661,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"skillswap": {
 		num: 285,
@@ -12201,6 +12699,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"skullbash": {
 		num: 130,
@@ -12231,6 +12730,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"skyattack": {
 		num: 143,
@@ -12263,6 +12763,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"skydrop": {
 		num: 507,
@@ -12369,6 +12870,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Tough",
 	},
 	"skyuppercut": {
 		num: 327,
@@ -12385,6 +12887,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"slackoff": {
 		num: 303,
@@ -12403,6 +12906,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"slam": {
 		num: 21,
@@ -12419,6 +12923,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"slash": {
 		num: 163,
@@ -12436,6 +12941,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"sleeppowder": {
 		num: 79,
@@ -12460,6 +12966,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"sleeptalk": {
 		num: 214,
@@ -12499,6 +13006,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"sludge": {
 		num: 124,
@@ -12518,6 +13026,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"sludgebomb": {
 		num: 188,
@@ -12538,6 +13047,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"sludgewave": {
 		num: 482,
@@ -12558,6 +13068,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacent",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"smackdown": {
 		num: 479,
@@ -12604,6 +13115,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"smellingsalts": {
 		num: 265,
@@ -12627,6 +13139,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"smog": {
 		num: 123,
@@ -12646,6 +13159,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Poison",
+		contestType: "Tough",
 	},
 	"smokescreen": {
 		num: 108,
@@ -12665,6 +13179,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"snarl": {
 		num: 555,
@@ -12686,6 +13201,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"snatch": {
 		num: 289,
@@ -12719,6 +13235,7 @@ exports.BattleMovedex = {
 		pressureTarget: "foeSide",
 		target: "self",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"snore": {
 		num: 173,
@@ -12742,6 +13259,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"spikyshield": {
 		num: 596,
@@ -12789,6 +13307,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Grass",
+		contestType: "Tough",
 	},
 	"soak": {
 		num: 487,
@@ -12809,6 +13328,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Cute",
 	},
 	"softboiled": {
 		num: 135,
@@ -12827,6 +13347,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"solarbeam": {
 		num: 76,
@@ -12862,6 +13383,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"sonicboom": {
 		num: 49,
@@ -12879,6 +13401,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"spacialrend": {
 		num: 460,
@@ -12897,6 +13420,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Beautiful",
 	},
 	"spark": {
 		num: 209,
@@ -12916,6 +13440,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"spiderweb": {
 		num: 169,
@@ -12937,6 +13462,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"spikecannon": {
 		num: 131,
@@ -12954,6 +13480,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"spikes": {
 		num: 191,
@@ -12989,6 +13516,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "foeSide",
 		type: "Ground",
+		contestType: "Clever",
 	},
 	"spitup": {
 		num: 255,
@@ -13017,6 +13545,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"spite": {
 		num: 180,
@@ -13040,6 +13569,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Tough",
 	},
 	"splash": {
 		num: 150,
@@ -13060,6 +13590,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"spore": {
 		num: 147,
@@ -13084,6 +13615,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Beautiful",
 	},
 	"stealthrock": {
 		num: 446,
@@ -13112,6 +13644,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "foeSide",
 		type: "Rock",
+		contestType: "Cool",
 	},
 	"steameruption": {
 		num: 592,
@@ -13134,6 +13667,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"steelwing": {
 		num: 211,
@@ -13157,6 +13691,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Cool",
 	},
 	"stickyweb": {
 		num: 564,
@@ -13185,6 +13720,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "foeSide",
 		type: "Bug",
+		contestType: "Tough",
 	},
 	"stockpile": {
 		num: 254,
@@ -13224,6 +13760,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"stomp": {
 		num: 23,
@@ -13243,6 +13780,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"stoneedge": {
 		num: 444,
@@ -13261,6 +13799,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"storedpower": {
 		num: 500,
@@ -13280,6 +13819,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"stormthrow": {
 		num: 480,
@@ -13298,6 +13838,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"steamroller": {
 		num: 537,
@@ -13317,6 +13858,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Bug",
+		contestType: "Tough",
 	},
 	"strength": {
 		num: 70,
@@ -13333,6 +13875,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"stringshot": {
 		num: 81,
@@ -13352,6 +13895,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Bug",
+		contestType: "Clever",
 	},
 	"struggle": {
 		num: 165,
@@ -13379,6 +13923,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "randomNormal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"strugglebug": {
 		num: 522,
@@ -13400,6 +13945,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Bug",
+		contestType: "Cute",
 	},
 	"stunspore": {
 		num: 78,
@@ -13423,6 +13969,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"submission": {
 		num: 66,
@@ -13440,6 +13987,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"substitute": {
 		num: 164,
@@ -13514,6 +14062,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"suckerpunch": {
 		num: 389,
@@ -13539,6 +14088,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"sunnyday": {
 		num: 241,
@@ -13556,6 +14106,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"superfang": {
 		num: 162,
@@ -13576,6 +14127,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"superpower": {
 		num: 276,
@@ -13599,6 +14151,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"supersonic": {
 		num: 48,
@@ -13616,6 +14169,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"surf": {
 		num: 57,
@@ -13633,6 +14187,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"swagger": {
 		num: 207,
@@ -13653,6 +14208,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"swallow": {
 		num: 256,
@@ -13677,6 +14233,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"sweetkiss": {
 		num: 186,
@@ -13694,6 +14251,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fairy",
+		contestType: "Cute",
 	},
 	"sweetscent": {
 		num: 230,
@@ -13713,6 +14271,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"swift": {
 		num: 129,
@@ -13729,6 +14288,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"switcheroo": {
 		num: 415,
@@ -13771,6 +14331,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"swordsdance": {
 		num: 14,
@@ -13791,6 +14352,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"synchronoise": {
 		num: 485,
@@ -13810,6 +14372,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"synthesis": {
 		num: 235,
@@ -13836,6 +14399,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"tackle": {
 		num: 33,
@@ -13852,6 +14416,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"tailglow": {
 		num: 294,
@@ -13872,6 +14437,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Bug",
+		contestType: "Beautiful",
 	},
 	"tailslap": {
 		num: 541,
@@ -13890,6 +14456,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"tailwhip": {
 		num: 39,
@@ -13909,6 +14476,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"tailwind": {
 		num: 366,
@@ -13947,6 +14515,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"takedown": {
 		num: 36,
@@ -13964,6 +14533,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"taunt": {
 		num: 269,
@@ -14010,6 +14580,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"technoblast": {
 		num: 546,
@@ -14030,6 +14601,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"teeterdance": {
 		num: 298,
@@ -14047,6 +14619,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacent",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"telekinesis": {
 		num: 477,
@@ -14082,6 +14655,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"teleport": {
 		num: 100,
@@ -14099,6 +14673,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Psychic",
+		contestType: "Cool",
 	},
 	"thief": {
 		num: 168,
@@ -14129,6 +14704,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"thousandarrows": {
 		num: 614,
@@ -14158,6 +14734,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Ground",
+		contestType: "Beautiful",
 	},
 	"thousandwaves": {
 		num: 615,
@@ -14178,6 +14755,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Ground",
+		contestType: "Tough",
 	},
 	"thrash": {
 		num: 37,
@@ -14202,6 +14780,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "randomNormal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"thunder": {
 		num: 87,
@@ -14229,6 +14808,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"thunderfang": {
 		num: 422,
@@ -14253,6 +14833,7 @@ exports.BattleMovedex = {
 		],
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"thunderpunch": {
 		num: 9,
@@ -14273,6 +14854,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"thundershock": {
 		num: 84,
@@ -14292,6 +14874,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"thunderwave": {
 		num: 86,
@@ -14311,6 +14894,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"thunderbolt": {
 		num: 85,
@@ -14331,6 +14915,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"tickle": {
 		num: 321,
@@ -14351,6 +14936,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"topsyturvy": {
 		num: 576,
@@ -14378,6 +14964,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Clever",
 	},
 	"torment": {
 		num: 259,
@@ -14406,6 +14993,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Dark",
+		contestType: "Tough",
 	},
 	"toxic": {
 		num: 92,
@@ -14425,6 +15013,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"toxicspikes": {
 		num: 390,
@@ -14467,6 +15056,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "foeSide",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"transform": {
 		num: 144,
@@ -14488,6 +15078,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"triattack": {
 		num: 161,
@@ -14517,6 +15108,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"trick": {
 		num: 271,
@@ -14559,6 +15151,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"trickortreat": {
 		num: 567,
@@ -14580,6 +15173,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cute",
 	},
 	"trickroom": {
 		num: 433,
@@ -14620,6 +15214,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"triplekick": {
 		num: 167,
@@ -14654,6 +15249,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"trumpcard": {
 		num: 376,
@@ -14686,6 +15282,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cool",
 	},
 	"twineedle": {
 		num: 41,
@@ -14706,6 +15303,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"twister": {
 		num: 239,
@@ -14725,6 +15323,7 @@ exports.BattleMovedex = {
 		},
 		target: "allAdjacentFoes",
 		type: "Dragon",
+		contestType: "Cool",
 	},
 	"uturn": {
 		num: 369,
@@ -14743,6 +15342,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cute",
 	},
 	"uproar": {
 		num: 253,
@@ -14802,6 +15402,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "randomNormal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"vcreate": {
 		num: 557,
@@ -14826,6 +15427,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Cool",
 	},
 	"vacuumwave": {
 		num: 410,
@@ -14842,6 +15444,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"venomdrench": {
 		num: 599,
@@ -14864,6 +15467,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Poison",
+		contestType: "Clever",
 	},
 	"venoshock": {
 		num: 474,
@@ -14886,6 +15490,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Poison",
+		contestType: "Beautiful",
 	},
 	"vicegrip": {
 		num: 11,
@@ -14902,6 +15507,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"vinewhip": {
 		num: 22,
@@ -14918,6 +15524,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Cool",
 	},
 	"vitalthrow": {
 		num: 233,
@@ -14934,6 +15541,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Cool",
 	},
 	"voltswitch": {
 		num: 521,
@@ -14952,6 +15560,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"volttackle": {
 		num: 344,
@@ -14973,6 +15582,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"wakeupslap": {
 		num: 358,
@@ -14996,6 +15606,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fighting",
+		contestType: "Tough",
 	},
 	"watergun": {
 		num: 55,
@@ -15012,6 +15623,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Cute",
 	},
 	"waterpledge": {
 		num: 518,
@@ -15081,6 +15693,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"waterpulse": {
 		num: 352,
@@ -15100,6 +15713,7 @@ exports.BattleMovedex = {
 		},
 		target: "any",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"watersport": {
 		num: 346,
@@ -15140,6 +15754,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Water",
+		contestType: "Cute",
 	},
 	"waterspout": {
 		num: 323,
@@ -15160,6 +15775,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allAdjacentFoes",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"waterfall": {
 		num: 127,
@@ -15180,6 +15796,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Tough",
 	},
 	"watershuriken": {
 		num: 594,
@@ -15197,6 +15814,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Cool",
 	},
 	"weatherball": {
 		num: 311,
@@ -15235,6 +15853,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Beautiful",
 	},
 	"whirlpool": {
 		num: 250,
@@ -15252,6 +15871,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Water",
+		contestType: "Beautiful",
 	},
 	"whirlwind": {
 		num: 18,
@@ -15270,6 +15890,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Clever",
 	},
 	"wideguard": {
 		num: 469,
@@ -15315,6 +15936,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Rock",
+		contestType: "Tough",
 	},
 	"wildcharge": {
 		num: 528,
@@ -15333,6 +15955,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Electric",
+		contestType: "Tough",
 	},
 	"willowisp": {
 		num: 261,
@@ -15351,6 +15974,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Fire",
+		contestType: "Beautiful",
 	},
 	"wingattack": {
 		num: 17,
@@ -15367,6 +15991,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "any",
 		type: "Flying",
+		contestType: "Cool",
 	},
 	"wish": {
 		num: 273,
@@ -15400,6 +16025,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"withdraw": {
 		num: 110,
@@ -15419,6 +16045,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Water",
+		contestType: "Cute",
 	},
 	"wonderroom": {
 		num: 472,
@@ -15457,6 +16084,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "all",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"woodhammer": {
 		num: 452,
@@ -15475,6 +16103,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Tough",
 	},
 	"workup": {
 		num: 526,
@@ -15495,6 +16124,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"worryseed": {
 		num: 388,
@@ -15529,6 +16159,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Grass",
+		contestType: "Clever",
 	},
 	"wrap": {
 		num: 35,
@@ -15546,6 +16177,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"wringout": {
 		num: 378,
@@ -15565,6 +16197,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Tough",
 	},
 	"xscissor": {
 		num: 404,
@@ -15582,6 +16215,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Bug",
+		contestType: "Cool",
 	},
 	"yawn": {
 		num: 281,
@@ -15615,6 +16249,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
+		contestType: "Cute",
 	},
 	"zapcannon": {
 		num: 192,
@@ -15634,6 +16269,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
 	},
 	"zenheadbutt": {
 		num: 428,
@@ -15654,6 +16290,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Psychic",
+		contestType: "Clever",
 	},
 	"paleowave": {
 		accuracy: 100,
@@ -15676,6 +16313,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Rock",
+		contestType: "Beautiful",
 	},
 	"shadowstrike": {
 		accuracy: 95,
@@ -15698,6 +16336,7 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Ghost",
+		contestType: "Clever",
 	},
 	"magikarpsrevenge": {
 		accuracy: true,
@@ -15737,5 +16376,6 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Water",
+		contestType: "Cute",
 	},
 };
