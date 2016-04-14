@@ -3797,8 +3797,6 @@ exports.BattleAbilities = {
 	// Emg E4 Volco
 	"letsdothis": {
 		isNonstandard: true,
-		desc: "User and Find Out",
-		shortDesc: "Use and Find Out",
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
 			return this.chainModify(1);
@@ -3811,13 +3809,12 @@ exports.BattleAbilities = {
 			this.boost({atk: 2, spe: 2});
 		},
 		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') {
-				return false;
-			}
+			if (effect.effectType !== 'Move') return false;
 		},
 		id: "letsdothis",
 		name: "Let's Do This",
 	},
+
 	// Irraquated
 	"whatsthetime": {
 		isNonstandard: true,
