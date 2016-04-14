@@ -16508,30 +16508,30 @@ exports.BattleMovedex = {
 	},
 
 	// Emg E4 Volco
-    "woodtreesword": {
-        isNonstandard: true,
-        accuracy: 90,
-        basePower: 150,
-        category: "Physical",
-        desc: "Use and Find Out.",
-        shortDesc: "Use and Find Out.",
-        pp: 15,
-        priority: 0,
-        flags: {contact: 1, protect: 1, mirror: 1},
-        recoil: [33, 100],
-        onTryHit: function (target, source, move) {
-            this.attrLastMove('[anim]woodhammer');
-        },
-        onMoveFail: function (target, source, move) {
-            this.attrLastMove('[anim]woodhammer');
-        },
-        onHit: function (target, source, move) {
-            this.add('c|%Emg E4 Volco|Let\'s do this');
-        },
-        secondary: false,
-        target: "normal",
-        type: "Grass",
-    },
+	"woodtreesword": {
+		isNonstandard: true,
+		accuracy: 90,
+		basePower: 150,
+		category: "Physical",
+		desc: "Use and Find Out.",
+		shortDesc: "Use and Find Out.",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]woodhammer');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]woodhammer');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|%Emg E4 Volco|Let\'s do this');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Grass",
+	},
 
 	// Irraquated
 	"time2die": {
