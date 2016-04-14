@@ -368,7 +368,7 @@ function clearDQ(roomid) {
 	clearTimeout(UNO[roomid].timer);
 }
 
-function initTurn(context, roomid, repost) {
+function initTurn(context, roomid, repost, room) {
 	let currentPlayer = UNO[roomid].player;
 	UNO[roomid].id++;
 	let playerName = Users(currentPlayer) ? Users(currentPlayer).name : currentPlayer;
