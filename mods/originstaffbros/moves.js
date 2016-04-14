@@ -16508,35 +16508,27 @@ exports.BattleMovedex = {
 	},
 
 	// Emg E4 Volco
-	"volcanionsupersmash": {
+	"woodtreesword": {
 		isNonstandard: true,
-		accuracy: 80,
+		accuracy: 90,
 		basePower: 150,
-		category: "Special",
-		id: "volcanionsupersmash",
-		name: "Volcanion Super smash",
-		pp: 5,
+		category: "Physical",
+		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1},
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]flareblitz');
+			this.attrLastMove('[anim]woodhammer');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]flareblitz');
+			this.attrLastMove('[anim]woodhammer');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Emg E4 Volcо|Get ready because here comes my ultimate attack');
+			this.add('c|%Emg E4 Volco|Let\'s do this');
 		},
-		secondary: {
-			chance: 80,
-			self: {
-				boosts: {
-					spe: 2,
-				},
-			},
-		},
+		secondary: false,
 		target: "normal",
-		type: "Fire",
+		type: "Grass",
 	},
 
 	// Irraquated

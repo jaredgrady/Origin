@@ -3795,30 +3795,24 @@ exports.BattleAbilities = {
 	},
 
 	// Emg E4 Volco
-	"adaptabulksturdy": {
+	"letsdothis": {
 		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
-			return this.chainModify(2);
+			return this.chainModify(1);
 		},
-		onModifyMove: function (move) {
-			move.stab = 2;
+		onModifySpDPriority: 6,
+		onModifySpD: function (spd) {
+			return this.chainModify(1);
 		},
-		onTryHit: function (pokemon, target, move) {
-			if (move.ohko) {
-				this.add('-immune', pokemon, '[msg]', '[from] ability: Sturdy');
-				return null;
-			}
+		onStart: function (pokemon) {
+			this.boost({atk: 2, spe: 2});
 		},
-		onDamagePriority: -100,
 		onDamage: function (damage, target, source, effect) {
-			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
-				this.add('-ability', target, 'Sturdy');
-				return target.hp - 1;
-			}
+			if (effect.effectType !== 'Move') return false;
 		},
-		name: "Adaptabulksturdy",
-		id: "adaptabulksturdy",
+		id: "letsdothis",
+		name: "Let's Do This",
 	},
 
 	// Irraquated
