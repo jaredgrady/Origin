@@ -3808,14 +3808,14 @@ exports.BattleAbilities = {
 			return this.chainModify(1);
 		},
 		onStart: function (pokemon) {
-		this.boost({atk: 2, spe: 2});
+			this.boost({atk: 2, spe: 2});
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (effect.effectType !== 'Move') {
-			return false;
+				return false;
 			}
 		},
-        	id: "letsdothis",
+		id: "letsdothis",
         	name: "Let's Do This",
 	},
 	// Irraquated
