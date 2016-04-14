@@ -374,7 +374,7 @@ function initTurn(context, roomid, repost) {
 	let playerName = Users(currentPlayer) ? Users(currentPlayer).name : currentPlayer;
 	//announce the turn
 	if (!repost) {
-		context.add("|raw|" + playerName + "'s turn!");
+		Users(currentPlayer).sendTo(room, "|c:|" + ~~(Date.now() / 1000) + "|~UNOManager|" + playerName + ", it's your turn!");
 		UNO[roomid].lastDraw = null;
 		runDQ(context, roomid);
 	}
@@ -489,6 +489,7 @@ exports.commands = {
 			UNO[roomid].player = UNO[roomid].list[~~(Math.random() * UNO[roomid].list)];
 			let playerName = Users(UNO[roomid].player) ? Users(UNO[roomid].player).name : UNO[roomid].player;
 			this.add("The first player is: " + playerName);
+			Users(toId(playerName)).sendTo(room, "|c:|" + ~~(Date.now() / 1000) + "|~UNOManager| " + playerName + ", it's your turn!");
 			//get top card
 			initTopCard(roomid);
 			while (UNO[roomid].top === "WW" || UNO[roomid].top === "W+4") {
