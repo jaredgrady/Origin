@@ -43,6 +43,12 @@ module.exports.badgeIcons = {
 	'Good User':'http://i.imgur.com/XXWuh8V.png',
 	'NTG Badge':'http://i.imgur.com/7vBjDyV.png',
 	'Tesla Badge':'http://i.imgur.com/T9k98kI.gif',
+	'Pokemon Master':'http://i.imgur.com/GPRTXkL.png',
+	'Unlucky Player':'http://i.imgur.com/UlL6VPV.png',
+	'Team Player':'http://i.imgur.com/gEkfYun.gif',
+	'Next Level Official':'http://i.imgur.com/1caPwea.png',
+	'Nimbus Badge':'http://i.imgur.com/JuLNTKj.png',
+	'Flag Runner':'http://i.imgur.com/jxriD4D.png',
 };
 
 let badgeDescriptions = {
@@ -83,6 +89,12 @@ let badgeDescriptions = {
 	'Good User':'Hidden Achievement',
 	'NTG Badge':'Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.',
 	'Tesla Badge':'Get 5 parahaxes in a row in an official tournament match and win.',
+	'Pokemon Master':'Successfully defeat a League.',
+	'Unlucky Player':'Lose 5 official tournament matches due to RNG/Hax - provide replays.',
+	'Team Player':'Be a member of the Event Team.',
+	'Next Level Official':'Auth in 2 official rooms or more.',
+	'Nimbus Badge':'Solve Irraquated\'s code riddle.',
+	'Flag Runner':'Take on CreaturePhil & his team in 10 rounds of Tagpro.',
 };
 
 function badgeImg(link, name) {
