@@ -5384,12 +5384,16 @@ exports.BattleFormatsData = {
 		randomDoubleBattleMoves: ["psychic", "darkpulse", "focusblast", "protect", "hyperspacefury", "zenheadbutt", "icepunch", "drainpunch", "gunkshot"],
 		eventOnly: true,
 		unobtainableShiny: true,
-		tier: "OU",
+		tier: "Uber",
 	},
 	volcanion: {
-		isUnreleased: true,
 		randomBattleMoves: ["substitute", "steameruption", "fireblast", "sludgewave", "hiddenpowerice", "earthpower", "superpower"],
 		randomDoubleBattleMoves: ["substitute", "steameruption", "heatwave", "sludgebomb", "rockslide", "earthquake", "protect"],
+		eventPokemon: [
+			{"generation": 6, "level": 70, "moves":["steameruption", "overheat", "hydropump", "mist"], "pokeball": "cherishball"},
+		],
+		eventOnly: true,
+		unobtainableShiny: true,
 		tier: "OU",
 	},
 	missingno: {

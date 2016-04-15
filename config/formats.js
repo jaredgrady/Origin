@@ -1149,7 +1149,7 @@ exports.Formats = [
 				this.add("c|%GeoffBruedly|FOR WINRY");
 			}
 			if (name === 'giagantic') {
-				this.add("c|+Giagantic|e.e");
+				this.add("c|%Giagantic|e.e");
 			}
 			if (name === 'golui') {
 				this.add("c|+Golui|Golly gee");
@@ -1494,7 +1494,7 @@ exports.Formats = [
 				}
 			}
 			if (name === 'zeroluxgiven') {
-				this.add('c|+Zero Lux Given|This should be an electrifying battle!');
+				this.add('c|%Zero Lux Given|This should be an electrifying battle!');
 			}
 			if (name === 'zodiax') {
 				this.add('c|%Zodiax|Introducing 7 time Grand Champion to the battle!');
@@ -1684,7 +1684,7 @@ exports.Formats = [
 				this.add("c|%GeoffBruedly|IM SORRY WINRY");
 			}
 			if (name === 'giagantic') {
-				this.add("c|+Giagantic|x.x");
+				this.add("c|%Giagantic|x.x");
 			}
 			if (name === 'golui') {
 				this.add("c|+Golui|Freeze in hell");
@@ -1983,7 +1983,7 @@ exports.Formats = [
 				}
 			}
 			if (name === 'zeroluxgiven') {
-				this.add('c|+Zero Lux Given|I\'ve been beaten, what a shock!');
+				this.add('c|%Zero Lux Given|I\'ve been beaten, what a shock!');
 			}
 			if (name === 'zodiax') {
 				this.add('c|%Zodiax|We need to go full out again soon...');
@@ -3602,7 +3602,7 @@ exports.Formats = [
 		column: 3,
 
 		mod: 'gen5',
-		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Team Preview'],
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Sand Stream ++ Sand Rush', 'Soul Dew'],
 	},
 	{
