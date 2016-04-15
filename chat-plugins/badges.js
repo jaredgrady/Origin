@@ -88,7 +88,7 @@ let badgeDescriptions = {
 	'Big Brother Badge':'Send Nii Sama a gif or vine that makes him laugh.',
 	'Good User':'Hidden Achievement',
 	'NTG Badge':'Defeat NTG best of 5 in the tiers: 1v1, Mono, Randbat, UU, Hackmons Cup.',
-	'Tesla Badge':'Get 5 parahaxes in a row in an official tournament match and win.',
+	'Tesla Badge':'Get 4 parahaxes in a row in an official tournament match and win.',
 	'Pokemon Master':'Successfully defeat a League.',
 	'Unlucky Player':'Lose 5 official tournament matches due to RNG/Hax - provide replays.',
 	'Team Player':'Be a member of the Event Team.',
