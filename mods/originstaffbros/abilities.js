@@ -3726,22 +3726,23 @@ exports.BattleAbilities = {
 	},
 
 	// Paul Century
-	"bropower": {
+	"sodope": {
 		isNonstandard: true,
-		onTryHit: function (target, source, move) {
-			if (target !== source && move.type === 'Electric') {
-				if (!this.heal(target.maxhp / 4)) this.add('-immune', target, '[msg]');
-				return null;
-			}
+		onModifyMove: function (move) {
+			move.stab = 2;
 		},
-		onSwitchOut: function (pokemon) {
-			pokemon.heal(pokemon.maxhp / 3);
+		onPrepareHit: function (source, target, move) {
+			let type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] Protean');
+			}
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (effect.effectType !== 'Move') return false;
 		},
-		id: "bropower",
-		name: "Bro Power",
+		id: "sodope",
+		name: "so dope",
 	},
 
 	// Safety Shark magic guard
@@ -3806,7 +3807,7 @@ exports.BattleAbilities = {
 			return this.chainModify(1);
 		},
 		onStart: function (pokemon) {
-			this.boost({atk: 2, spe: 2});
+			this.boost({atk:2, spe:2});
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (effect.effectType !== 'Move') return false;

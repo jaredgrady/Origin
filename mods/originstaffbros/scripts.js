@@ -100,10 +100,10 @@ exports.BattleScripts = {
 				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
 			'@Paul Century': { // (typing) water/fire
-				species: 'Slowbro', ability: 'Bro Power', item: 'Rocky Helmet', gender: 'M', shiny: true,
-				moves: ['roar', 'stickyweb', 'slackoff'],
+				species: 'Slowbro', ability: 'so dope', item: 'Lax Incense', gender: 'M', shiny: true,
+				moves: ['steameruption', 'thunderbolt', 'bugbuzz'],
 				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
-				evs: {hp:248, spa:252, spd:8}, nature: 'Modest',
+				evs: {hp:252, spa:252, def:4}, nature: 'Modest',
 			},
 			'@Safety Shark': { // (mega ability) magicguard
 				species: 'Garchomp', ability: 'Rough Skin', item: 'Garchompite', gender: 'M',

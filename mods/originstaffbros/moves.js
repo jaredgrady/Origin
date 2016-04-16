@@ -16360,19 +16360,13 @@ exports.BattleMovedex = {
 	"omegablast": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 100,
 		category: "Special",
-		defensiveCategory: "Physical",
 		id: "omegablast",
 		name: "Omega Blast",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		self: {
-			boosts: {
-				def: 2,
-			},
-		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]psystrike');
 		},
@@ -16380,12 +16374,10 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psystrike');
 		},
 		onHit: function (target, source, move) {
+			this.boost([atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2][this.random(7)])
 			this.add('c|@Paul Century|Dope');
 		},
-		secondary: {
-			chance: 80,
-			status: 'brn',
-		},
+		secondary: false,
 		target: "normal",
 		type: "Water",
 	},

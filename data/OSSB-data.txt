@@ -82,11 +82,11 @@ fender - Gible - Life Orb
 - Movepool: Nasty Plot, Shadow Ball, Dream Eater
 - Notes: Stops any sweeper in their tracks, however it does follow sleep clause, so save it for when you really need it.
 
-@Paul Century - Slowbro (Water type) - Rocky Helmet
-- Ability: Bro Power - Volt Absorb + Regenerator + Magic Guard
-- Move: Omega Blast - Special, 130BP Water type move that raises defense by 2 stages, and has a 80% chance to burn the opponent. PP: 10 / Accuracy: 100% / Priority: 0
-- Movepool: Roar, Sticky Web, Slack Off
-- Notes: Very good physical wall that can stop the very common Physical sweepers in the metagame in its tracks, with a very high chance to burn, immunity to Status, Electric moves and residual damage, and ways to boost its defense even higher. Regenerator helps in keeping it healthy, making it one of the best walls in the metagame.
+@Paul Century - Slowbro - Lax IncenseThe
+- Ability: Bro Power - Adaptability + Protean + Magic Guard
+- Move: Omega Blast - Special, 100BP Psychic type move that raises a random stat by 3 stages. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: Steam Eruption, Thunderbolt, Bug Buzz
+- Notes:
 
 @Safety Shark - Garchomp-mega - Garchompite
 - Ability: Magic Guard
