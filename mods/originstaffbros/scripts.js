@@ -199,12 +199,6 @@ exports.BattleScripts = {
 				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
 				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
 			},
-			'+Piscean': { // (type) normal/ghost
-				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
-				moves: ['roar', 'stealthrock', 'milkdrink'],
-				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
-				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
-			},
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',
 				moves: ['vcreate', 'uturn', 'boltstrike'],
@@ -218,6 +212,12 @@ exports.BattleScripts = {
 				moves: ['bellydrum', 'drainpunch', 'pursuit'],
 				baseSignatureMove: 'ebat', signatureMove: '/ebat',
 				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
+			},
+			' Hat Blaze': {
+				species: 'Blaziken', ability: 'Blaze Power', item: 'Life Orb', gender: 'M',
+				moves: ['highjumpkick', 'flareblitz', ['bravebird', 'needlearm', 'zenheadbut', 'poisonjab', 'feint', 'mimic', 'roost'][this.random(7)]],
+				baseSignatureMove: 'trublock', signatureMove: 'TruBlock',
+				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
 			' Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
 				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',

@@ -20,19 +20,20 @@ function getMonData(target) {
 }
 
 exports.commands = {
-	ossb: 'ssb',
-	ssb: function (target, room, user) {
+	ssb: 'ossb',
+	ossb: function (target, room, user) {
 		if (!this.runBroadcast()) return false;
 		if (!target) return this.parse('/help ssb');
+		if (target === 'credits') return this.parse('/ossb credits')
 		let targetData = getMonData(toId(target));
 		if (!targetData) return this.errorReply("The staffmon \"" + toId(target) + "\" could not be found.");
 		return this.sendReplyBox(targetData);
 	},
-	ossbhelp: 'ssbhelp',
-	ssbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
+	ssbhelp: 'ssbhelp',
+	ossbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
 
-	ossbcredits: 'ssbcredits',
-	ssbcredits: function (target, room, user) {
+	ssbcredits: 'ossbcredits',
+	ossbcredits: function (target, room, user) {
 		if (!this.runBroadcast()) return false;
 		this.sendReplyBox(
 			"<center><b>Origin Super Staff Bros Credits:</b></center>" +

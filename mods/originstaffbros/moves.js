@@ -16861,56 +16861,6 @@ exports.BattleMovedex = {
 		type: "Grass",
 	},
 
-	// Piscean
-	"fatnissevereat": {
-		isNonstandard: true,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		id: "fatnissevereat",
-		name: "Fatniss Evereat",
-		pp: 15,
-		priority: 4,
-		flags: {},
-		volatileStatus: 'magiccoat',
-		effect: {
-			duration: 1,
-			onStart: function (target) {
-				this.add('-singleturn', target, 'move: Magic Coat');
-			},
-			onTryHitPriority: 2,
-			onTryHit: function (target, source, move) {
-				this.attrLastMove('[anim]magicbounce');
-				if (target === source || move.hasBounced || !move.flags['reflectable']) return;
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
-			onAllyTryHitSide: function (target, source, move) {
-				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) return;
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
-		},
-		onHit: function (source, target, move) {
-			this.add('c|+Piscean|NO! I\'M THE FATTEST! ୧( ಠ Д ಠ )୨');
-			source.cureStatus();
-			this.useMove("toxic", source);
-		},
-		self: {
-			boosts: {
-				def:1,
-				spd:1,
-			},
-		},
-		secondary: false,
-		target: "self",
-		type: "Psychic",
-	},
-
 	// Sota Higurashi
 	"zencreate": {
 		isNonstandard: true,
@@ -16967,6 +16917,33 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "target",
+		type: "Normal",
+	},
+
+	// Hat Blze
+	"trublock": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "trublock",
+		name: "TruBlock",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		onTry: function (pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.add('-fail', pokemon);
+				this.add('-hint', "TruBlock only works on your first turn out.");
+				return null;
+			} else {
+				this.attrLastMove('[anim]swordsdance');
+				this.useMove('protect', target);
+				this.boost({spe:2, def:1, spd:1});
+			}
+		},
+		secondary: false,
+		target: "self",
 		type: "Normal",
 	},
 

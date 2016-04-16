@@ -2129,7 +2129,7 @@ exports.Formats = [
 			this.add('message', "1");
 			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
-			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>@hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
 			this.add('raw|<br />');
 			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
 			this.add('raw|<br />');
@@ -2281,10 +2281,6 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
 			}
-			if (name === 'piscean' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
-				pokemon.types = ["Normal", "Ghost"];
-			}
 			if (name === 'omegachim' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fairy/Psychic');
 				pokemon.types = ["Fairy", "Psychic"];
@@ -2390,9 +2386,6 @@ exports.Formats = [
 			}
 			if (name === 'otami') {
 				this.add('c|+Otami|hi fam! how are you? :3c');
-			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
@@ -2530,9 +2523,6 @@ exports.Formats = [
 			if (name === 'otami') {
 				this.add('c|+Otami|feelsotami');
 			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
@@ -2666,9 +2656,6 @@ exports.Formats = [
 			}
 			if (name === 'otami') {
 				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
-			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
@@ -2750,7 +2737,7 @@ exports.Formats = [
 			this.add('message', "1");
 			this.add('message', "GET READY...");
 			this.add('message', "GOOOO!!!");
-			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>%hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3, +Piscean</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
+			this.add('raw|<div class="infobox"><center><b>Origin Super Staff Bros Credits:</b></center><b>%Emg E4 Volco</b> - Concepts, Programming, Organization, Testing, Hosting a test server.<br /><b>@AuraStormLucario</b> - Concepts, Programming, Organization, Testing.<br /><b>~sparkychild</b> - Programming, Organization, Testing, Pokemon Descriptions.<br /><b>@hayleysworld, Omega Chime</b> - Pokemon Descriptions, Testing.<br /><b>@PaulCentury, %Selena, %Starfox:3</b> - Testing.<br /><b>Other Origin Staff Members</b> - Participation and support in helping to complete this project.');
 			this.add('raw|<br />');
 			this.add('raw|<font size="5" style="font-weight:bold">/ssb [staff member name] - displays data for a staffmon\'s movepool, custom move, and custom ability.</font>');
 			this.add('raw|<br />');
@@ -2902,10 +2889,6 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
 			}
-			if (name === 'piscean' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Normal/Ghost');
-				pokemon.types = ["Normal", "Ghost"];
-			}
 			if (name === 'omegachim' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fairy/Psychic');
 				pokemon.types = ["Fairy", "Psychic"];
@@ -3011,9 +2994,6 @@ exports.Formats = [
 			}
 			if (name === 'otami') {
 				this.add('c|+Otami|hi fam! how are you? :3c');
-			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|I am a bad omen ヽ(´・ω・`)ﾉ');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
@@ -3151,9 +3131,6 @@ exports.Formats = [
 			if (name === 'otami') {
 				this.add('c|+Otami|feelsotami');
 			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|Your memes were stronger than mine... ( ◕ ʖ̯ ◕ )');
-			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
@@ -3287,9 +3264,6 @@ exports.Formats = [
 			}
 			if (name === 'otami') {
 				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
-			}
-			if (name === 'piscean') {
-				this.add('c|+Piscean|I\'ll be back, bitch ੧(❛〜❛✿)੭');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');

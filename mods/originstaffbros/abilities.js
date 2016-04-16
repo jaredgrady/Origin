@@ -4109,36 +4109,6 @@ exports.BattleAbilities = {
 		name: "S-S-Senpai",
 	},
 
-	// Piscean
-	"noyou": {
-		isNonstandard: true,
-		onAfterDamageOrder: 1,
-		onAfterDamage: function (damage, target, source, move) {
-			if (move && move.effectType === 'Move' && move.crit) {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage, source, target, null, true);
-				}
-			} else {
-				if (source !== target && move && move.effectType === 'Move') {
-					this.damage(damage / 3, source, target, null, true);
-				}
-			}
-		},
-		onStart: function (pokemon) {
-			let foeactive = pokemon.side.foe.active;
-			let activated = false;
-			for (let i = 0; i < foeactive.length; i++) {
-				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (!activated) {
-					this.useMove("light screen", pokemon, pokemon);
-					this.useMove("reflect", pokemon, pokemon);
-				}
-			}
-		},
-		id: "noyou",
-		name: "No, You!",
-	},
-
 	// Sota Higurashi contrary
 
 	// Others
@@ -4150,6 +4120,37 @@ exports.BattleAbilities = {
 		},
 		id: "communism",
 		name: "Communism",
+	},
+
+	// Hat Blaze
+	"blazepower": {
+		isNonstandard: true,
+		onStart: function (source) {
+			source.trySetStatus('tox');
+		},
+		onTryHit: function (pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[msg]', '[from] ability: Sturdy');
+				return null;
+			}
+		},
+		onDamagePriority: -100,
+		onDamage: function (damage, target, source, effect) {
+			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Sturdy');
+				return target.hp - 1;
+			}
+			if (effect.effectType !== 'Move') {
+				return false;
+			}
+		},
+		onModifyAtk: function (atk, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		id: "blazepower",
+		name: "Blaze Power",
 	},
 
 	// Imp Fallen Blood
