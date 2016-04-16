@@ -24,7 +24,7 @@ exports.commands = {
 	ossb: function (target, room, user) {
 		if (!this.runBroadcast()) return false;
 		if (!target) return this.parse('/help ssb');
-		if (target === 'credits') return this.parse('/ossb credits')
+		if (target === 'credits') return this.parse('/ossb credits');
 		let targetData = getMonData(toId(target));
 		if (!targetData) return this.errorReply("The staffmon \"" + toId(target) + "\" could not be found.");
 		return this.sendReplyBox(targetData);
