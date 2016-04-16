@@ -199,12 +199,14 @@ exports.BattleScripts = {
 				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
 				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
 			},
+			/*
 			'+Piscean': { // (type) normal/ghost
 				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
 				moves: ['roar', 'stealthrock', 'milkdrink'],
 				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
 				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
 			},
+			*/
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',
 				moves: ['vcreate', 'uturn', 'boltstrike'],
