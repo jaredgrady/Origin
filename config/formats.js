@@ -2381,6 +2381,9 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
 			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|Try Busting Through Me!");
+			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui|Bui~");
 			}
@@ -2517,6 +2520,9 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|I got cleaned');
 			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|I see, Well played My Friend!");
+			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
 			}
@@ -2650,6 +2656,9 @@ exports.Formats = [
 			}
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|you can get wet later ;)');
+			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|Time to Regenerate my Cells!");
 			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui|Brbui~!");
@@ -2989,6 +2998,9 @@ exports.Formats = [
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|Ayyyyyyy lmao');
 			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|Try Busting Through Me!");
+			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui|Bui~");
 			}
@@ -3013,11 +3025,11 @@ exports.Formats = [
 			if (name === 'nineage') {
 				this.add('c|nineage|');
 			}*/
-			if (name === 'omeganivans') {
-				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
-			}
 			if (name === 'omegachim') {
 				this.add('c|Omega Chimе|Listen to the sound of the wind, it\'s calling you. Warning you.');
+			}
+			if (name === 'omeganivans') {
+				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
 			}
 			/* no quote
 			if (name === 'originserver') {
@@ -3124,6 +3136,9 @@ exports.Formats = [
 			}
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|I got cleaned');
+			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|I see, Well played My Friend!");
 			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
@@ -3258,6 +3273,9 @@ exports.Formats = [
 			}
 			if (name === 'crystalgray') {
 				this.add('c|+Crystal Gray|you can get wet later ;)');
+			}
+			if (name === "jigglykong") {
+				this.add("c|+Jigglykong|Time to Regenerate my Cells!");
 			}
 			if (name === "masterbui") {
 				this.add("c|+Master Bui|Brbui~!");

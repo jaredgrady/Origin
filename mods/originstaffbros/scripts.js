@@ -187,6 +187,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
+			'+Jigglykong': {
+				species: 'Porygon2', ability: '3bulky5u', item: 'Eviolite', gender: 'M',
+				moves: ['toxic', 'recover', 'healbell'],
+				baseSignatureMove: 'plasmablast', signatureMove: "Plasma Blast",
+				evs: {hp:252, def:100, spa:60, spd:92}, nature: 'Bold',
+			},
 			'+Master Bui': {
 				species: 'Buizel', ability: 'Ocean\'s Grace', item: 'Eviolite', gender: 'M',
 				moves: ['earthpower', 'icebeam', 'chargebeam'],
@@ -271,7 +277,7 @@ exports.BattleScripts = {
 				});
 				let monName;
 				for (let mon in sets) {
-					if (toId(mon) === userid || (userid === "jigglykong" && toId(mon) === "sotahigurashi")) {
+					if (toId(mon) === userid/* || (userid === "jigglykong" && toId(mon) === "sotahigurashi")*/) {
 						monName = mon;
 						break;
 					}

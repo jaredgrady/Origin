@@ -4035,6 +4035,39 @@ exports.BattleAbilities = {
 		name: "Speedy Gonzales",
 	},
 
+	// Jigglykong
+	"3bulky5u": {
+		isNonstandard: true,
+		onAnyModifyBoost: function (boosts, target) {
+			let source = this.effectData.target;
+			if (source === target) return;
+			if (source === this.activePokemon && target === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (target === this.activePokemon && source === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
+		},
+		onSwitchOut: function (pokemon) {
+			pokemon.heal(pokemon.maxhp / 3);
+		},
+		onUpdate: function (pokemon) {
+			if (pokemon.status === 'slp') {
+				this.add('-activate', pokemon, 'ability: Insomnia');
+				pokemon.cureStatus();
+			}
+		},
+		onImmunity: function (type, pokemon) {
+			if (type === 'slp') return false;
+		},
+		id: "3bulky5u",
+		name: "3bulky5u",
+	},
+
 	// Master Bui
 	"oceansgrace": {
 		isNonstandard: true,

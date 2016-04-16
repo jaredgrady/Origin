@@ -16165,7 +16165,6 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]aurasphere');
 		},
 		onHit: function (source, target, move) {
-			this.add("c|@AuraStormLucario|get rekt");
 			if (target.stats.def > target.stats.spd) {
 				move.defensiveCategory = 'Special';
 			} else {
@@ -16592,6 +16591,7 @@ exports.BattleMovedex = {
 			this.add('c|%iSandman|WOA WE OUT HERE');
 		},
 		secondary: {
+			chance: 100,
 			boosts: {
 				spd: -1,
 			},
@@ -16743,6 +16743,11 @@ exports.BattleMovedex = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		self: {
+			boosts: {
+				atk:1,
+			},
+		},
 		onModifyMove: function (move, pokemon) {
 			move.category = "Physical";
 		},
@@ -16751,11 +16756,6 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source, move) {
 			this.add('c|+Chronologically|9 out of 10 memers recommend this move');
-		},
-		self: {
-			boosts: {
-				atk:1,
-			},
 		},
 		secondary: false,
 		target: "normal",
@@ -16804,6 +16804,38 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
+	// Jigglykong
+	"plasmablast": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 140,
+		category: "Special",
+		id: "plasmablast",
+		name: "Plasma Blast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness: function (typeMod, type, move) {
+			return typeMod + this.getEffectiveness('Electric', type);
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		/* no quote
+		onHit: function (target, source, move) {
+			this.add('c|+Jigglykong|');
+		}, */
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Normal",
+	},
+
 	// Master Bui
 	"danceofthesea": {
 		isNonstandard: true,
@@ -16814,12 +16846,10 @@ exports.BattleMovedex = {
 		name: "Dance of the Sea",
 		pp: 10,
 		priority: 1,
+		flags: {protect: 1, mirror: 1},
 		onTryHit: function () {
 			this.attrLastMove("[anim]hydropump");
 		},
-		flags: {protect: 1, mirror: 1},
-		target: "normal",
-		type: "Water",
 		secondaries: [
 			{
 				chance: 50,
@@ -16834,6 +16864,8 @@ exports.BattleMovedex = {
 				volatileStatus: 'confusion',
 			},
 		],
+		target: "normal",
+		type: "Water",
 	},
 
 	// Otami
