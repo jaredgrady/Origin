@@ -178,12 +178,6 @@ fender - Gible - Life Orb
 - Movepool: Spore, Nasty Plot, Sludge Bomb, Psychic 
 - Notes: It's a fantastic wallbreaker, with a STAB 110 BP Move, and against lowered Special Defense, it can obliterate opponents if they're not ready. It can also take some hits, giving it more durability and more potential to kill. It has a setup option in Nasty Plot, and Spore as well put threats to sleep, and infatuation with chance to confuse can really be game changing. It's an answer to many of the bulky Water types in the tier, and if used right, can be a cute destructiveflower.
 
-+Piscean - Miltank (Normal/Ghost type) - Leftovers
-- Ability: No, you! - If it gets hits by a move, the user receives 33% recoil, if hit by a crit it returns 100% recoil, uses reflect and light screen on entry
-- Move: Fatniss Evereat - Magic coat for the turn, uses toxic, cures status, boosts defense and special defense by 1 stage. PP: 15 / Accuracy: 100% / Priority: 4
-- Movepool: Roar, Stealth Rock, Milk Drink
-- Notes: A good counter to set up pokemon by punishing pokemon when they hit it. Can be stopped by Taunt, and by the many Pokemon imune to Toxic and residual damage, but it always very annoying to kill and deal with, and can support its team quite a lot.
-
 +Sota Higurashi - Victini - Expert Belt
 - Ability: Contrary
 - Move: Zen Create - Psychic type V-Create. PP: 5 / Accuracy: 95% / Priority: 0
