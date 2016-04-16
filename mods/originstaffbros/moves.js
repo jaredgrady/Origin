@@ -16374,7 +16374,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psystrike');
 		},
 		onHit: function (target, source, move) {
-			this.boost([atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2][this.random(7)])
+			this.boost({atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2}[this.random(7)])
 			this.add('c|@Paul Century|Dope');
 		},
 		secondary: false,
