@@ -2385,6 +2385,9 @@
 #lobby-userlist-user-celestialmoth, #monotype-userlist-user-celestialmoth, #tournaments-userlist-user-celestialmoth {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/KAXQItp.png") right no-repeat; }
 
+#phoenixleague-userlist-user-waszap, #thelotusleague-userlist-user-waszap, #monotype-userlist-user-waszap {
+    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/068.gif") right no-repeat; }
+
 /* Symbol Color */
 #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
   color: #0D00BF; }
