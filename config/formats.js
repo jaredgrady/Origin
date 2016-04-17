@@ -2262,8 +2262,8 @@ exports.Formats = [
 
 			// Add here special typings, done for flavour mainly.
 			if (name === 'hayleysworld' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.types = ["Water", "Fairy"];
+				this.add('-start', pokemon, 'typechange', 'Electric/Dark');
+				pokemon.types = ["Electric", "Dark"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
@@ -2875,8 +2875,8 @@ exports.Formats = [
 
 			// Add here special typings, done for flavour mainly.
 			if (name === 'hayleysworld' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Water/Fairy');
-				pokemon.types = ["Water", "Fairy"];
+				this.add('-start', pokemon, 'typechange', 'Electric/Dark');
+				pokemon.types = ["Electric", "Dark"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');

@@ -3672,17 +3672,33 @@ exports.BattleAbilities = {
 	},
 
 	// hayleysworld
-	"aquaticmemes": {
+	"electricmemes": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.add('-ability', pokemon, 'Aquatic Memes');
-			this.boost({def:1, spa:1, spd:1});
+			this.add('-ability', pokemon, 'Electric Memes');
+			this.boost({def:1, spd:1, spe:1});
 		},
-		onSwitchOut: function (pokemon) {
-			pokemon.heal(pokemon.maxhp / 3);
+		onAnyModifyBoost: function (boosts, target) {
+			let source = this.effectData.target;
+			if (source === target) return;
+			if (source === this.activePokemon && target === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (target === this.activePokemon && source === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
 		},
-		id: "aquaticmemes",
-		name: "Aquatic Memes",
+		onBasePower: function (basePower, attacker, defender, move) {
+			if (move.flags['bite']) {
+				return this.chainModify(1.5);
+			}
+		},
+		id: "electricmemes",
+		name: "Electric Memes",
 	},
 
 	// LChevy12
@@ -3707,12 +3723,6 @@ exports.BattleAbilities = {
 	// Nii Sama
 	"goodnight": {
 		isNonStandard: true,
-		onImmunity: function (type, pokemon) {
-			if (type === 'slp') return false;
-		},
-		onAllyModifyMove: function (move) {
-			if (typeof move.accuracy === "number") move.accuracy = true;
-		},
 		onStart: function (pokemon) {
 			let foeactive = pokemon.side.foe.active;
 			let activated = false;
@@ -3720,6 +3730,12 @@ exports.BattleAbilities = {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
 				if (!activated) this.useMove("dark void", pokemon, foeactive[i]);
 			}
+		},
+		onImmunity: function (type, pokemon) {
+			if (type === 'slp') return false;
+		},
+		onAllyModifyMove: function (move) {
+			if (typeof move.accuracy === "number") move.accuracy = true;
 		},
 		id: "goodnight",
 		name: "Goodnight",
@@ -3797,6 +3813,9 @@ exports.BattleAbilities = {
 
 	// Emg E4 Volco
 	"letsdothis": {
+		onStart: function (pokemon) {
+			this.boost({atk:2, spe:2});
+		},
 		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
@@ -3805,9 +3824,6 @@ exports.BattleAbilities = {
 		onModifySpDPriority: 6,
 		onModifySpD: function (spd) {
 			return this.chainModify(1);
-		},
-		onStart: function (pokemon) {
-			this.boost({atk:2, spe:2});
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (effect.effectType !== 'Move') return false;
@@ -4072,8 +4088,6 @@ exports.BattleAbilities = {
 	// Master Bui
 	"oceansgrace": {
 		isNonstandard: true,
-		id: "oceansgrace",
-		name: "Ocean's Grace",
 		// primordial sea
 		onStart: function (source) {
 			this.setWeather('primordialsea');
@@ -4121,6 +4135,8 @@ exports.BattleAbilities = {
 				}
 			}
 		},
+		id: "oceansgrace",
+		name: "Ocean's Grace",
 	},
 
 	// Otami

@@ -82,10 +82,10 @@ exports.BattleScripts = {
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
 			},
 			'@hayleysworld': { // (type) water/fairy
-				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
-				moves: ['moonblast', 'icebeam', 'protect'],
-				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
-				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
+				species: 'Luxray', ability: 'Electric Memes', item: 'Leftovers', gender: 'F', shiny: true,
+				moves: ['thunderfang', 'firefang', 'icefang'],
+				baseSignatureMove: 'revengeofzeus', signatureMove: "Revenge of Zeus",
+				evs: {hp:4, atk:252, spe:252}, nature: 'Jolly',
 			},
 			'@L Chevy 12': {
 				species: 'Archeops', ability: 'Fuck You Up', item: 'Life Orb', gender: 'M', shiny: true, // power herb + recycle?

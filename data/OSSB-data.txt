@@ -64,11 +64,11 @@ fender - Gible - Life Orb
 - Movepool: Ice Punch, Bullet Punch, Swords Dance, Stealth Rock
 - Notes: Have fun hitting hard! Extremely strong STAB, setup options and very little ways to stop it.
 
-@hayleysworld - Vaporeon (Water/Fairy type) - Leftovers
-- Ability: Aquatic Dreams - Gets a boost of 1 stage to SpD and Def upon entry; Regenerator upon switch
-- Move: Revenge of Neptune - 90BP Special Water move, 100% to raise defense, special attack, and special defense by 1 stage, puts up a wish, 30% chance to burn.  PP: 10 / Accuracy: 100% / Priority: 0
-- Movepool: Protect, Moonblast, Ice Beam
-- Notes: It's pretty broken if you don't have a way to stop it, and will either sweep or wall your team if used correctly, though it has checks and counters so it's not completely unstoppable.
+@hayleysworld - Luxray (Electric/Dark type) - Leftovers
+- Ability: Electric Memes - Strong Jaw + Unaware + Gets a boost of 1 stage to SpD and Def and 2 stages to Spe upon entry; Regenerator upon switch
+- Move: Revenge of Zeus - 95BP Physical Dark move, 30% to flinch, 30% chance to paralyze opponent. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: Thunder Fang, Ice Fang, Fire Fang
+- Notes:
 
 @L Chevy 12 - Archeops - Life Orb
 - Ability: fuckyouup - Tough Claws, recoil reduced by 80%, Speed Boost

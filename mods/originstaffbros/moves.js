@@ -16178,39 +16178,36 @@ exports.BattleMovedex = {
 	},
 
 	// hayleysworld
-	"revengeofneptune": {
+	"revengeofzeus": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		id: "revengeofneptune",
-		name: "Revenge of Neptune",
+		basePower: 95,
+		category: "Physical",
+		id: "revengeofzeus",
+		name: "Revenge of Zeus",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
-		self: {
-			boosts: {
-				def: 1,
-				spa: 1,
-				spd: 1,
-			},
-		},
+		flags: {protect: 1, mirror: 1, contact: 1, bite: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]crunch');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]crunch');
 		},
 		onHit: function (target, source, move) {
-			this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
-			this.useMove('wish', source);
+			this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/5WmS1ba.gif" title="feelslux" height="50" width="50" /></em></div>');
 		},
-		secondary: {
-			chance: 30,
-			status: 'brn',
-		},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'par',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
 		target: "normal",
-		type: "Water",
+		type: "Electric",
 	},
 
 	// LChevy12
@@ -16374,7 +16371,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psystrike');
 		},
 		onHit: function (target, source, move) {
-			this.boost({atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2}[this.random(7)]);
+			// this.boost({atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2}[this.random(7)]);
 			this.add('c|@Paul Century|Dope');
 		},
 		secondary: false,
