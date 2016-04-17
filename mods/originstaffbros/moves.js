@@ -16647,33 +16647,33 @@ exports.BattleMovedex = {
 	},
 
 	// Starfox:3
-	"mindwrecker": {
+	"voltturn": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 70,
 		category: "Physical",
-		id: "mindwrecker",
-		name: "Mind Wrecker",
-		pp: 10,
+		id: "voltturn",
+		name: "Volt Turn",
+		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]psychic');
+			this.attrLastMove('[anim]uturn');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]psychic');
+			this.attrLastMove('[anim]uturn');
 		},
+		/* no quote
 		onHit: function (target, source, move) {
-			this.add('c|%Starfox :3|get rekt');
-		},
+			this.add('c|%Starfox:3|/me flies away');
+		}, */
+		selfSwitch: true,
 		secondary: {
-			chance: 100,
-			boosts: {
-				spd: -1,
-			},
+			chance: 30,
+			status: 'par',
 		},
 		target: "normal",
-		type: "Psychic",
+		type: "Electric",
 	},
 
 	// Voices

@@ -161,11 +161,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'bitchslap', signatureMove: 'Bitchslap',
 				evs:{spa:224, spd:32, spe:252}, nature: "Timid",
 			},
-			'%Starfox :3': { // (type) bug/psychic
-				species: 'Victini', ability: 'Shittiest User', item: 'Leftovers', shiny: true,
-				moves: ['vcreate', 'megahorn', 'recover'],
-				baseSignatureMove: 'mindwrecker', signatureMove: "Mind Wrecker",
-				evs: {atk:252, def:4, spe:252}, nature: 'Adamant',
+			'%Starfox :3': {
+				species: 'Emolga', ability: 'Light Speed', item: 'Life Orb', gender: 'M',
+				moves: ['Volt Tackle', 'Flare Blitz', 'Brave Bird'],
+				baseSignatureMove: 'voltturn', signatureMove: "Volt Turn",
+				evs: {hp:4, atk:252, spe:252}, nature: 'Jolly',
 			},
 
 			// Voices.

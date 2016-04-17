@@ -2269,10 +2269,6 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
 				pokemon.types = ["Bug", "Fairy"];
 			}
-			if (name === 'starfox3' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
-				pokemon.types = ["Bug", "Psychic"];
-			}
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
@@ -2364,7 +2360,7 @@ exports.Formats = [
 				this.add('c|%Selena|o3o hi');
 			}
 			if (name === 'starfox3') {
-				this.add('c|%StarFox :3|The Booty Master has Arrived');
+				this.add('c|%StarFox :3|Hello, I am the Scrub Lord, how do you do?');
 			}
 
 			// Voices
@@ -2502,7 +2498,7 @@ exports.Formats = [
 				this.add('c|%Selena|;~; fuck that shit');
 			}
 			if (name === 'starfox3') {
-				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
+				this.add('c|%StarFox :3|You won\'t get away with this!');
 			}
 
 			// Voices
@@ -2639,7 +2635,7 @@ exports.Formats = [
 				this.add('c|%Selena|\\o/ gtg');
 			}
 			if (name === 'starfox3') {
-				this.add('c|%StarFox :3|I\'ll git that booty later');
+				this.add('c|%StarFox :3|/me flies away.');
 			}
 
 			// Voices
@@ -2882,10 +2878,6 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
 				pokemon.types = ["Bug", "Fairy"];
 			}
-			if (name === 'starfox3' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
-				pokemon.types = ["Bug", "Psychic"];
-			}
 			if (name === 'chronologically' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
@@ -2977,7 +2969,7 @@ exports.Formats = [
 				this.add('c|%Selena|o3o hi');
 			}
 			if (name === 'starfox3') {
-				this.add('c|%StarFox :3|The Booty Master has Arrived');
+				this.add('c|%StarFox :3|Hello, I am the Scrub Lord, how do you do?');
 			}
 
 			// Voices
@@ -3115,7 +3107,7 @@ exports.Formats = [
 				this.add('c|%Selena|;~; fuck that shit');
 			}
 			if (name === 'starfox3') {
-				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
+				this.add('c|%StarFox :3|You won\'t get away with this!');
 			}
 
 			// Voices
@@ -3252,7 +3244,7 @@ exports.Formats = [
 				this.add('c|%Selena|\\o/ gtg');
 			}
 			if (name === 'starfox3') {
-				this.add('c|%StarFox :3|I\'ll git that booty later');
+				this.add('c|%StarFox :3|/me flies away.');
 			}
 
 			// Voices

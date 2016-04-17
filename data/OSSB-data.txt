@@ -112,11 +112,11 @@ fender - Gible - Life Orb
 - Movepool: Volt Switch, Will-o-wisp, Pain Split
 - Notes: Good check to some of the metagame's scary physical attackers and water types, and the burn chance is quite amazing together with the accuracy. Harvest Sitrus Berry keeps it alive for more time than you'll want it to. 
 
-%Emg E4 Volco - Volcanion - Balloon
-- Ability: Adaptabulksturdy (Adaptability + fur coat + sturdy)
-- Move: Volcanion Super Smash - 150BP special, fire type move, 80% to boost user's speed by 2 stages. PP: 5 / Accuracy: 80% / Priority: 0
-- Movepool: Psystrike, Thunder, Searing Shot, Steam Eruption
-- Notes: Taking a hit from this is not fun, it's power is surprisingly high and can threaten frail sweepers by forcing them to attack or switch instead of boosting. Sturdy and Fur Coat are neat because it can let it get a KO on dangerous threats the rest of your team wouldn't be able to stop by living its hits and dishing out massive damage. However, it misses its attacks quite oftem, which can really be annoying.
+%Emg E4 Volco - Torterra
+- Ability: Let's Do This - Defenses Raised by 1.5, Boosts Attack and Speed by 2 Stages + Magic Guard
+- Move: Wood Tree Sword - 140BP Physical grass type move, 33% Recoil. PP: 15 / Accuracy: 90% / Priority: 0
+- Movepool: Precipice Blades, Extreme Speed, Head Smash
+- Notes: Volco is very hard to beat, as it is an extremely good wallbreaker, with high speed and devastating power, it's STAB + Rock Coverage hits all the tier for neutral damage, and even has Extreme Speed for revenge kills.
 
 %Irraquated - Ho-oh - Life Orb
 - Ability: What's the time? - Desolate Land + Magic Guard + Regenerator
@@ -142,11 +142,11 @@ fender - Gible - Life Orb
 - Movepool: Light of Ruin, Quiver Dance, Bug Buzz, Air Slash, Heat Wave, Recover, Heal Bell
 - Notes: Amazing boosting sweeper with quite some bulk behind it, due to the boosts. It's typing lets it stop a lot of the strong priority users in the Metagame, and Magic Guard means it doesn't just get destroyed by hazards. With one Quiver Dance, a move from this thing will be very hard to switch into.
 
-%Starfox :3 - Victini (Bug/Psychic type) - Leftovers
-- Ability: Shit User - Defiant + lowers opponent's defense by 1 stage + Raises Speed by 2.
-- Move: REKTMIND - Physical Psychic attack, 130BP, lowers opponent's Special defense by 1 stage. PP: 10 / Accuracy: 100% / Priority: 0
-- Movepool: Recover, V-Create, Megahorn
-- Notes: A great revenge killer and wallbreaker, with good coverage. Strong priority can stop it, however it is still quite hard to deal with.
+%Starfox :3 - Emolga - Life Orb
+- Ability: Light Speed - Adaptability + Rock Head, attack is boosted by 1 stage on entry, all electric moves have their priority increased by 1
+- Move: Volt Turn - Physical Electric attack, 70BP, lowers opponent's Special defense by 1 stage. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: Volt Tackle, Flare Blitz, Brave Bird
+- Notes: 
 
 +casty - Castform - Focus Sash
 - Ability: Forecast 2 - +1 defense and special defense on entry, summons Hail, Intense Sun, Sandstorm or Heavy Rain and boosts defense and special defense by 1 stage, then changes its for depending on what weather was summoned.

@@ -3813,10 +3813,10 @@ exports.BattleAbilities = {
 
 	// Emg E4 Volco
 	"letsdothis": {
+		isNonstandard: true,
 		onStart: function (pokemon) {
 			this.boost({atk:2, spe:2});
 		},
-		isNonstandard: true,
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
 			return this.chainModify(1);
@@ -3922,31 +3922,22 @@ exports.BattleAbilities = {
 	},
 
 	// Starfox:3
-	"shittiestuser": {
+	"lightspeed": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.boost({spe:2}, pokemon);
-			let foeactive = pokemon.side.foe.active;
-			for (let i = 0; i < foeactive.length; i++) {
-				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (foeactive[i].volatiles['substitute']) {
-					this.add('-activate', foeactive[i], 'Substitute', 'ability: Shittiest User', '[of] ' + pokemon);
-				} else {
-					this.add('-ability', pokemon, 'Shittiest User', '[of] ' + foeactive[i]);
-					this.boost({def:-1}, foeactive[i], pokemon);
-				}
-			}
+			this.boost({atk:1});
 		},
-		onAfterEachBoost: function (boost, target, source) {
-			if (!source || target.side === source.side) return;
-			let statsLowered = false;
-			for (let i in boost) {
-				if (boost[i] < 0) statsLowered = true;
-			}
-			if (statsLowered) this.boost({atk:2});
+		onModifyPriority: function (priority, pokemon, target, move) {
+			if (move && move.type === 'Electric') return priority + 1;
 		},
-		id: "shittiestuser",
-		name: "Shittiest User",
+		onModifyMove: function (move) {
+			move.stab = 2;
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect.id === 'recoil' && this.activeMove.id !== 'struggle') return null;
+		},
+		id: "lightspeed",
+		name: "Light Speed",
 	},
 
 	// Voices
