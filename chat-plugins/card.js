@@ -775,7 +775,7 @@ exports.commands = {
 	confirmtransfercard: 'transfercard',
 	transfercard: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transfercard [user], [card ID]");
-
+		if (toId(target) === user) return this.errorReply("You cannot transfer cards to yourself.");
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the card being transfered.
 		let targetUser = parts.shift();
@@ -809,6 +809,7 @@ exports.commands = {
 	confirmtransferallcards: 'transferallcards',
 	transferallcards: function (target, room, user, connection, cmd) {
 		if (!target) return this.errorReply("/transferallcards [user]");
+		if (toId(target) === user) return this.errorReply("You cannot transfer cards to yourself.");
 		let targetUser = toId(target);
 		if (!targetUser) return this.errorReply("/transferallcards [user]");
 		let userCards = Db('cards').get(user.userid, []);
