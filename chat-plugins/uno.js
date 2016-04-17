@@ -374,7 +374,7 @@ function initTurn(context, roomid, repost, room) {
 	let playerName = Users(currentPlayer) ? Users(currentPlayer).name : currentPlayer;
 	//announce the turn
 	if (!repost) {
-		Users(currentPlayer).sendTo(room, "|c:|" + ~~(Date.now() / 1000) + "|~UNOManager|" + playerName + ", it's your turn!");
+		Users(currentPlayer).sendTo(context.room, "|c:|" + ~~(Date.now() / 1000) + "|~UNOManager|" + playerName + ", it's your turn!");
 		UNO[roomid].lastDraw = null;
 		runDQ(context, roomid);
 	}
