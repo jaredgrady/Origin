@@ -92,7 +92,7 @@ let badgeDescriptions = {
 	'Pokemon Master':'Successfully defeat a League.',
 	'Unlucky Player':'Lose 5 official tournament matches due to RNG/Hax - provide replays.',
 	'Team Player':'Be a member of the Event Team.',
-	'Next Level Official':'Auth in 2 official rooms or more.',
+	'Next Level Official':'Staff in 2 official rooms or more.',
 	'Nimbus Badge':'Solve Irraquated\'s code riddle.',
 	'Flag Runner':'Take on CreaturePhil & his team in 10 rounds of Tagpro.',
 };
