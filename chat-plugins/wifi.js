@@ -296,6 +296,7 @@ let commands = {
 	guessanswer: 'guess',
 	guess: function (target, room, user) {
 		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 		if (!giveaways[room.id]) return this.errorReply("There is no giveaway going on at the moment.");
 		if (giveaways[room.id].type !== 'question') return this.errorReply("This is not a question giveaway.");
 		giveaways[room.id].guessAnswer(user, target, this);
@@ -329,7 +330,7 @@ let commands = {
 	joinlotto: 'join',
 	joinlottery: 'join',
 	join: function (target, room, user, conn, cmd) {
-		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 		let giveaway = giveaways[room.id];
 		if (!giveaway) return this.errorReply("There is no giveaway going on at the moment.");
 		if (giveaway.type !== 'lottery') return this.errorReply("This is not a lottery giveaway.");
