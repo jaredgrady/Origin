@@ -2256,8 +2256,8 @@
 #upperstaff-userlist-user-masterfloat {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat; }
 
-#lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel {
-  background: rgba(255, 255, 255, 0.65) url("http://sprites.pokecheck.org/icon/201.png") right no-repeat; }
+#lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel, #thearbiterleague-userlist-user-arkenciel {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/GnR9tYz.gif") right no-repeat; }
 
 #lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #lucarioslair-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat; }
@@ -2385,8 +2385,11 @@
 #lobby-userlist-user-celestialmoth, #monotype-userlist-user-celestialmoth, #tournaments-userlist-user-celestialmoth {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/KAXQItp.png") right no-repeat; }
 
+#lobby-userlist-user-hatfila, #monotype-userlist-user-hatfila, #thehatleague-userlist-user-hatfila {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/PCnrFSu.gif") right no-repeat; }
+
 #phoenixleague-userlist-user-waszap, #thelotusleague-userlist-user-waszap, #monotype-userlist-user-waszap {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/068.gif") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/068.gif") right no-repeat; }
 
 /* Symbol Color */
 #monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
