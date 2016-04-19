@@ -94,14 +94,14 @@ fender - Gible - Life Orb
 - Movepool: Knock Off, Earthquake, Recover
 - Notes: Good physical set up sweeper that takes everything down. Once it gets a couple boosts, it's hard to come back.
 
-%Alliance NTG - Dragonite - Weakness Policy
-- Ability: Simple
-- Move: Dragon Energy - 60 BP Dragon Type Physical move. Raises Attack and Speed by 2 Stages. PP: 20 / Accuracy: 100% / Priority: 1
-- Movepool: ExtremeSpeed, Dragon Claw, Earthquake
-- Notes: Good and fast Setup Sweeper, with a weak yet very dangerous boosting move, and Extreme Speed for revenge killing. Can be hard to start the sweep, with so many extremly powerful attackers taking it down easily, but once it's boosted, it can be a huge threat to unprepared teams.
+%01NTG - Dragonite - Leftovers
+- Ability: Magical Multicoat - Multiscale + Fur Coat + Magic Bounce, +1 speed on entry
+- Move: Dragon Synergy - 80 BP Dragon Type Physical move. Raises attack, defense, and special defense by 1 stage, and paralyzes opponent. PP: 20 / Accuracy: 100% / Priority: 0
+- Movepool: ExtremeSpeed, Roost, Dragon Tail, Iron Head, Earthquake, Fire Punch, Icicle Crash, Knock Off
+- Notes: 
 
 %Chief Sokka - Gliscor - Toxic Orb
-- Ability: Cancerous Ability - Poison Heal, +1 special defense on entry.
+- Ability: Cancerous Ability - Poison Heal, +1 special defense on entry
 - Move: Super Bat - Brave Bird (25% recoil)
 - Movepool: Knock Off, Swords Dance, Earthquake, Roost
 - Notes: Physically Bulky as an Gliscor, with a neat boost to Special Defense. Can also boost and sweep lategame, against slower threats, and has the neat Flying STAB that Gliscor usually lack.

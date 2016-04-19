@@ -3764,7 +3764,47 @@ exports.BattleAbilities = {
 	// Safety Shark magic guard
 
 	// Drivers
-	// Alliance NTG simple
+	// 01NTG
+	"magicalmulticoat": {
+		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.boost({spe:1});
+		},
+		onModifyDefPriority: 6,
+		onModifyDef: function (def) {
+			return this.chainModify(2);
+		},
+		onSourceModifyDamage: function (damage, source, target, move) {
+			if (target.hp >= target.maxhp) {
+				this.debug('Multiscale weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onTryHitPriority: 1,
+		onTryHit: function (target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide: function (target, source, move) {
+			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		effect: {
+			duration: 1,
+		},
+		id: "magicalmulticoat",
+		name: "Magical Multicoat",
+	},
 
 	// Chief Sokka
 	"cancerousability": {

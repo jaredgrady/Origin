@@ -113,11 +113,11 @@ exports.BattleScripts = {
 			},
 
 			// Drivers.
-			'%Alliance NTG': {
-				species: 'Dragonite', ability: 'Simple', item: 'Weakness Policy', gender: 'M',
-				moves: ['dragonclaw', 'extremespeed', 'earthquake'],
-				baseSignatureMove: 'dragonenergy', signatureMove: "Dragon Energy",
-				evs: {atk:252, spd:252, spe:4}, nature: 'Adamant',
+			'%01NTG': {
+				species: 'Dragonite', ability: 'Magical Multicoat', item: 'Leftovers', gender: 'M',
+				moves: ['roost', 'extremespeed', ['dragontail', 'ironhead', 'earthquake', 'firepunch', 'iciclecrash', 'knockoff'][this.random(6)]],
+				baseSignatureMove: 'dragonsynergy', signatureMove: "Dragon Synergy",
+				evs: {atk:252, def:128, spd:128}, nature: 'Adamant',
 			},
 			'%Chief Sokka': {
 				species: 'Gliscor', ability: 'Cancerous Ability', item: 'Toxic Orb', gender: 'M',

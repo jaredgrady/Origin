@@ -2335,8 +2335,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|Welcome to the Hax Side');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|Welcome to the 69th annual Hax Olympics.');
 			}
 			if (name === 'chiefsokka') {
 				this.add('c|%Chief Sokka|Sokka Reporting for duty Kappa!');
@@ -2473,8 +2473,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|I went too easy :c');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|Welp, now I can go to the bathroom and die irl.');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/DsRQCsI.png" title="feelsrg" height="50" width="50" /></em></div>');
@@ -2610,8 +2610,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|Gotta Go, Bathroom');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|brb. Gotta go get some food :3');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/M0f2zgJ.jpg?1" title="feelstea" height="50" width="50" /></em></div>');
@@ -2944,8 +2944,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|Welcome to the Hax Side');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|Welcome to the 69th annual Hax Olympics.');
 			}
 			if (name === 'chiefsokka') {
 				this.add('c|%Chief Sokka|Sokka Reporting for duty Kappa!');
@@ -3082,8 +3082,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|I went too easy :c');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|Welp, now I can go to the bathroom and die irl.');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/DsRQCsI.png" title="feelsrg" height="50" width="50" /></em></div>');
@@ -3219,8 +3219,8 @@ exports.Formats = [
 			}
 
 			// Drivers
-			if (name === 'alliancentg') {
-				this.add('c|%Alliance NTG|Gotta Go, Bathroom');
+			if (name === '01ntg') {
+				this.add('c|%01NTG|brb. Gotta go get some food :3');
 			}
 			if (name === 'chiefsokka') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user chiefsokka" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A052D2">Chief Sokka:</font></b></button> Time to dump the responsibility on someone else <em class="mine"><img src="http://i.imgur.com/M0f2zgJ.jpg?1" title="feelstea" height="50" width="50" /></em></div>');

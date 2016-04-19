@@ -16410,33 +16410,37 @@ exports.BattleMovedex = {
 	},
 
 	// Drivers
-	// Alliance NTG
-	"dragonenergy": {
+	// 01NTG
+	"dragonsynergy": {
 		isNonstandard: true,
 		accuracy: true,
-		basePower: 60,
-		category: "Status",
-		id: "dragonenergy",
-		name: "Dragon Energy",
+		basePower: 80,
+		category: "Physical",
+		id: "dragonsynergy",
+		name: "Dragon Synergy",
 		pp: 20,
-		priority: 1,
+		priority: 0,
 		flags: {snatch: 1},
 		self: {
 			boosts: {
 				atk: 1,
-				spe: 1,
+				def: 1,
+				spd: 1,
 			},
 		},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]dragonascent');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]dragonascent');
 		},
 		onHit: function (source, target, move) {
-			this.add("c|%Alliance NTG|Behold my godly hax");
+			this.add("c|%01NTG|I don't even know what synergy means. I don't like science :x");
 		},
-		secondary: false,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Dragon",
 	},
