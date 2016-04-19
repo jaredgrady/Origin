@@ -94,7 +94,7 @@ let badgeDescriptions = {
 	'Team Player':'Be a member of the Event Team.',
 	'Next Level Official':'Staff in 2 official rooms or more.',
 	'Nimbus Badge':'Solve Irraquated\'s code riddle.',
-	'Flag Runner':'Take on CreaturePhil & his team in 10 rounds of Tagpro.',
+	'Flag Runner':'Take on a global staff member & his team in 10 rounds of Tagpro.',
 };
 
 function badgeImg(link, name) {
