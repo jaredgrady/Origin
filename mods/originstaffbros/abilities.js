@@ -3886,22 +3886,27 @@ exports.BattleAbilities = {
 	},
 
 	// Selena
-	"headstrong": {
+	"wingsofreason": {
 		isNonstandard: true,
-		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') return false;
+		onDamagePriority: -100,
+		onStart: function (source) {
+			this.boost({atk:1, def:1, spd:1}, source);
 		},
-		onBasePower: function (basePower, attacker, defender, move) {
-			if (move.recoil || move.hasCustomRecoil) {
-				this.debug('Reckless boost');
-				return this.chainModify([0x1333, 0x1000]);
+		onDamage: function (damage, target, source, effect) {
+			if (target.hp < target.maxhp / 5 && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Sturdy');
+				return target.hp - 1;
 			}
 		},
-		onModifySpA: function (atk) {
-			return this.chainModify(1.3);
+		onModifyMove: function (move) {
+			if (!move.heal && move.category !== "Status") {
+				move.drain = [1, 2];
+			}
 		},
-		id: "headstrong",
-		name: "Headstrong",
+		id: "wingsofreason",
+		name: "Wings of Reason",
+		rating: 3,
+		num: 5,
 	},
 
 	// Starfox:3

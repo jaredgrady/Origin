@@ -16629,34 +16629,27 @@ exports.BattleMovedex = {
 	},
 
 	// Selena
-	"bitchslap": {
-		isNonstandard: true,
+	"mercuriusblade": {
+		isNonstandard:true,
 		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		defensiveCategory: "Physical",
-		id: "bitchslap",
-		name: "Bitchslap",
+		basePower: 100,
+		category: "Physical",
+		id: "mercuriusblade",
+		name: "Mercurius Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]wakeupslap');
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [3, 4],
+		onTryHit: function () {
+			this.attrLastMove("[anim]razorshell");
 		},
-		onEffectiveness: function (typeMod, type, move) {
-			return typeMod + this.getEffectiveness('Rock', type);
+		onHit: function () {
+			this.add('raw|<div class="broadcast-red"><center>Ultimate Brave Burst: Mercurius Blade</center></div>');
 		},
-		onHit: function (target, source, move) {
-			this.add("c|%Selena|bish pls");
-		},
-		secondary: {
-			chance: 30,
-			status: 'par',
-		},
+		secondary: false,
 		target: "normal",
-		type: "Fighting",
+		type: "Water",
 	},
-
 	// Starfox:3
 	"mindwrecker": {
 		isNonstandard: true,
