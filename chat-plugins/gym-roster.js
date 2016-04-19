@@ -105,6 +105,7 @@ exports.commands = {
 			Rooms.global.writeChatRoomData();
 			room.add(gymLeader + " has been appointed as the " + type + " gym leader for this league by " + user + ".");
 		},
+		delete: 'remove',
 		remove: function (target, room, user) {
 			if (!this.can('declare', null, room)) return false;
 			let parts = target.split(',');
@@ -137,6 +138,15 @@ exports.commands = {
 			room.chatRoomData.gymleaders[type][position] = newLeader;
 			Rooms.global.writeChatRoomData();
 			room.add(newLeader + " has been appointed as the " + type + " gym leader for this league by " + user + ".");
+		},
+		help: function (target, room, user) {
+			if (!this.runBroadcast()) return;
+			this.sendReplyBox('The following is a list of gym roster commands: <br />' +
+				'/gym leaders/list - Shows a complete list of gym leaders in a league.<br />' +
+				'/gym add [type], [user] - Appoints a user as a gym leader for a type.<br />' +
+				'/gym delete/remove [type], [user] - Removes a user as a gym leader from a type.<br />' +
+				'/gym replace [type], [old user], [new user]- Replaces a gym leader of a type with a new gym leader.'
+			);
 		},
 	},
 };
