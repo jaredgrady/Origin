@@ -156,10 +156,10 @@ exports.BattleScripts = {
 				evs: {hp:252, atk:252, def:4}, nature: 'Impish',
 			},
 			'%Selena': { // (type) bug/fairy
-				species: 'Vivillon', ability: 'Headstrong', item: 'Leftovers', gender: 'F',
-				moves: ['lightofruin', 'quiverdance',  ['recover', 'heatwave', 'bugbuzz'][this.random(3)]],
-				baseSignatureMove: 'bitchslap', signatureMove: 'Bitchslap',
-				evs:{spa:224, spd:32, spe:252}, nature: "Timid",
+				species: 'Samurott', ability: 'Wings of Reason', item: 'Leftovers', gender: 'F',
+				moves: ['nightslash', 'sacredsword', 'iciclecrash'],
+				baseSignatureMove: 'mercuriusblade', signatureMove: 'Mercurius Blade',
+				evs:{hp:252, atk:252, spe:4}, nature: "Adamant",
 			},
 			'%Starfox :3': { // (type) bug/psychic
 				species: 'Victini', ability: 'Shittiest User', item: 'Leftovers', shiny: true,

@@ -2220,9 +2220,6 @@ exports.Formats = [
 			if (name === 'masterfloat' && !pokemon.illusion) {
 				this.boost({atk:3}, pokemon, pokemon, 'Magic Immunity');
 			}
-			if (name === 'selena' && !pokemon.illusion) {
-				this.boost({def:2, spd:2}, pokemon, pokemon, 'beauty');
-			}
 
 			// Add here more hacky stuff for mega abilities.
 			// This happens when the mega switches in, as opposed to mega-evolving on the turn.
@@ -2270,8 +2267,8 @@ exports.Formats = [
 				pokemon.types = ["Water"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
-				pokemon.types = ["Bug", "Fairy"];
+				this.add('-start', pokemon, 'typechange', 'Water/Ice');
+				pokemon.types = ["Water", "Ice"];
 			}
 			if (name === 'starfox3' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
@@ -2369,7 +2366,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|o3o hi');
+				this.add('c|%Selena|Lucina realized her own secret. When she told me her secret and her deepest fears, I knew we could never be apart.');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|The Booty Master has Arrived');
@@ -2507,7 +2504,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|;~; fuck that shit');
+				this.add('c|%Selena|Say, where\'s our next adventure taking us? The vastness of the horizon is just marvelous...and I get the feeling I\'ve grown a little, too.');
 			}
 			if (name === 'starfox3') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
@@ -2644,7 +2641,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|\\o/ gtg');
+				this.add('c|%Selena|Ahh, I love this feeling of freedom! But I almost miss the constant bickering of home...almost.');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|I\'ll git that booty later');
@@ -2841,9 +2838,6 @@ exports.Formats = [
 			if (name === 'masterfloat' && !pokemon.illusion) {
 				this.boost({atk:3}, pokemon, pokemon, 'Magic Immunity');
 			}
-			if (name === 'selena' && !pokemon.illusion) {
-				this.boost({def:2, spd:2}, pokemon, pokemon, 'beauty');
-			}
 
 			// Add here more hacky stuff for mega abilities.
 			// This happens when the mega switches in, as opposed to mega-evolving on the turn.
@@ -2891,8 +2885,8 @@ exports.Formats = [
 				pokemon.types = ["Water"];
 			}
 			if (name === 'selena' && !pokemon.illusion) {
-				this.add('-start', pokemon, 'typechange', 'Bug/Fairy');
-				pokemon.types = ["Bug", "Fairy"];
+				this.add('-start', pokemon, 'typechange', 'Water/Ice');
+				pokemon.types = ["Water", "Ice"];
 			}
 			if (name === 'starfox3' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Bug/Psychic');
@@ -2990,7 +2984,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|o3o hi');
+				this.add('c|%Selena|Lucina realized her own secret. When she told me her secret and her deepest fears, I knew we could never be apart.');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|The Booty Master has Arrived');
@@ -3128,7 +3122,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|;~; fuck that shit');
+				this.add('c|%Selena|Say, where\'s our next adventure taking us? The vastness of the horizon is just marvelous...and I get the feeling I\'ve grown a little, too.');
 			}
 			if (name === 'starfox3') {
 				this.add('raw|<div class="chat"><small>%</small><button name="parseCommand" value="/user Starfox:3" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#A72A36">Starfox:3:</font></b></button><em class="mine"><img src="http://i.imgur.com/FPolh5d.jpg" title="feelsemo" height="50" width="50" /></em></div>');
@@ -3265,7 +3259,7 @@ exports.Formats = [
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');
 			}
 			if (name === 'selena') {
-				this.add('c|%Selena|\\o/ gtg');
+				this.add('c|%Selena|Ahh, I love this feeling of freedom! But I almost miss the constant bickering of home...almost.');
 			}
 			if (name === 'starfox3') {
 				this.add('c|%StarFox :3|I\'ll git that booty later');
