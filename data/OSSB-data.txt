@@ -136,11 +136,11 @@ fender - Gible - Life Orb
 - Movepool: Toxic, Brave Bird, Roost
 - Notes: Extremely hard to take down with physical attackers, use this to your advantage and sweep with a recoilless Brave Bird! However, don't forget to use Nidificate, or it will be very weak.
 
-%Selena - Vivillon (Bug/Fairy type) - Leftovers
-- Ability: Headstrong - Magic Guard + Reckless + 1.3x modifier on all special moves, defense and special defense are boosted by 2 stages on entry.
-- Move: Bitchslap - Dual type Fighting/Rock Special attack, 80 BP, hits the opponent's Defence, 30% chance of paralyzing. PP: 10 / Accuracy: 100% / Priority: 0
-- Movepool: Light of Ruin, Quiver Dance, Bug Buzz, Air Slash, Heat Wave, Recover, Heal Bell
-- Notes: Amazing boosting sweeper with quite some bulk behind it, due to the boosts. It's typing lets it stop a lot of the strong priority users in the Metagame, and Magic Guard means it doesn't just get destroyed by hazards. With one Quiver Dance, a move from this thing will be very hard to switch into.
+%Selena - Samurott (Water/Ice) - Leftovers
+- Ability: Wings of Reason - All moves heal 50% of damage dealt + Sturdy that always activates at 20% health or less + Attack, Defense, and Special Defense are boosted by 1 stage on entry.
+- Move: Mercurius Blade - Water Type Physical attack, 100 BP, heals 75% of damage dealt and is not affected by ability's draining effect. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: Night Slash, Icicle Crash, Sacred Sword
+- Notes: A very good draining sweeper. If their HP drops below 20%, you can't KO them, meaning they get a free turn to attack. and consequentially, heal. Make sure you hit with a powerful attack, or have boosts, because if you don't KO, you're going to regret it.
 
 %Starfox :3 - Victini (Bug/Psychic type) - Leftovers
 - Ability: Shit User - Defiant + lowers opponent's defense by 1 stage + Raises Speed by 2.
