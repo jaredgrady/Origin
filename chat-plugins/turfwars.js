@@ -22,12 +22,12 @@ const gangs = {
 		godfather: 'Hayleysworld',
 	},
 	galactic: {
-		icon: 'http://i.imgur.com/gixvv00.jpg',
+		icon: 'http://i.imgur.com/qmsDFHx.png',
 		name: 'Galactic',
 		godfather: 'Selena',
 	},
 	plasma: {
-		icon: 'http://i.imgur.com/zzhoJX2.gif',
+		icon: 'http://i.imgur.com/czbcEE4.gif',
 		name: 'Plasma',
 		godfather: 'Mighty Sciz',
 	},
@@ -50,10 +50,11 @@ function isGodfather(user, gang) {
 
 function gangDisplay(gang) {
 	let info = gangs[gang];
-	let visuals = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + info.icon + '" height="50" width="50" align="right">' +
-		'<br /><br /><h1>' + info.name + '</font></h1>' +
-		'<br /><br /><font color="#AAA"><i>Godfather: </i></font>' + info.godfather +
-		'<br clear="all">';
+	let visuals = '<div class="' + info.name + '" style="width: 40%; margin: auto; text-align: center; box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8) inset; border-radius: 8px;">' +
+		'<div style="width: 100%; background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); margin: auto; padding-top: 5px;"><img src="' + info.icon + '" width="16" height="16" /></div>' +
+		'<font style="font-size: 14pt; color: #000;">' + info.name + '</font>' +
+		'<div style="width: 100%; background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); margin: auto; padding: 4px 0px;">Godfather: <span>' + info.godfather + '</span></div>' +
+		'</div>';
 	return visuals;
 }
 
@@ -66,7 +67,7 @@ exports.commands = {
 			let gang = toId(target);
 			if (!gangs[gang]) return this.errorReply("This gang does not exist.");
 			let display = gangDisplay(gang);
-			this.sendReplyBox(display);
+			this.sendReply("|raw|" + display);
 		},
 		join: function (target, room, user) {
 			if (!target) return this.errorReply("You must specify a user.");
