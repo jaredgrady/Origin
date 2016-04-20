@@ -64,7 +64,7 @@ class IPValidator {
 		if (!updated) matchedIps[ip] = 1;
 		// update and SAVE
 		Db('ips').object()[userid] = matchedIps;
-		Db.save(); // eslint-disable-line radix
+		Db.save();
 		this.ips[userid] = matchedIps;
 	}
 
@@ -75,7 +75,7 @@ class IPValidator {
 		// if the user has no IP previously recorded
 		// record this new ip, and exit
 		if (!this.ips[user.userid]) {
-			this.updateUserIp(user.userid, user.latestIp); // eslint-disable-line radix
+			this.updateUserIp(user.userid, user.latestIp);
 			return true;
 		}
 		// matching
@@ -180,7 +180,7 @@ class IPValidator {
 
 	check(user, message) {
 		if (!user) return false;
-		let safeIp = this.validate(user); // eslint-disable-line radix
+		let safeIp = this.validate(user);
 		if (!safeIp) {
 			// block some commands from being used.
 			if (message && ((message.indexOf("/") === 0 && message.indexOf("//") !== 0) || message.indexOf("!") === 0)) {
