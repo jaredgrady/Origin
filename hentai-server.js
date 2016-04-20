@@ -110,5 +110,5 @@ let messageReplacer = function (room, user, message, special, originalPMmessage)
 module.exports = {
 	pixilate: messageReplacer,
 	// default off
-	pixilation: Db('pixilation').object(), // eslint-disable-line radix
+	pixilation: Db('pixilation').object(),
 };
