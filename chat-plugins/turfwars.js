@@ -50,10 +50,12 @@ function isGodfather(user, gang) {
 
 function gangDisplay(gang) {
 	let info = gangs[gang];
+	let inlineCss = "width: 100%; background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); margin: auto;";
+	
 	let visuals = '<div class="' + info.name + '" style="width: 40%; margin: auto; text-align: center; box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8) inset; border-radius: 8px;">' +
-		'<div style="width: 100%; background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); margin: auto; padding-top: 5px;"><img src="' + info.icon + '" width="16" height="16" /></div>' +
+		'<div style="' + inlineCss + ' padding-top: 5px;"><img src="' + info.icon + '" width="16" height="16" /></div>' +
 		'<font style="font-size: 14pt; color: #000;">' + info.name + '</font>' +
-		'<div style="width: 100%; background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); margin: auto; padding: 4px 0px;">Godfather: <span>' + info.godfather + '</span></div>' +
+		'<div style="' + inlineCss + ' padding: 4px 0px;">Godfather: <span>' + info.godfather + '</span></div>' +
 		'</div>';
 	return visuals;
 }
