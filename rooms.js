@@ -738,6 +738,9 @@ let GlobalRoom = (() => {
 			if (user.can("upperstaff")) {
 				user.joinRoom("upperstaffroom", connection);
 			}
+			if (developers.indexOf(user) > -1) {
+				user.joinRoom("development", connection);
+			}
 			if (room.staffAutojoin === true && user.isStaff ||
 					typeof room.staffAutojoin === 'string' && room.staffAutojoin.indexOf(user.group) >= 0 ||
 					room.auth && user.userid in room.auth) {
