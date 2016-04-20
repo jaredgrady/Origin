@@ -512,6 +512,15 @@ body {
   color: #005C3E;
 }
 
+.broadcast-blue:hover, .broadcast-green:hover, .broadcast-red:hover {
+  font-weight: bold;
+}
+
+.message-announce {
+    background: rgba(17, 72, 79, 0.8);
+    color: #FFF;
+}
+
 .ps-overlay {
   background: rgba(0, 0, 0, 0.35);
 }
