@@ -286,6 +286,71 @@
   border: 1px solid #B35151;
 }
 
+.Rocket {
+  background: rgba(60, 60, 60, 0.5);
+  border: 1px solid #555;
+  color: #AAA;
+}
+
+.Rocket span {
+  color: #D40000;
+  text-shadow: 0px 0px 2px #AAA;
+}
+
+.Aqua {
+  background: rgba(175, 185, 190, 0.5);
+  border: 1px solid #ACC2CD;
+  color: #CFE5F0;
+}
+
+.Aqua span {
+  color: #05008D;
+  text-shadow: 0px 0px 2px #C7C8F0;
+}
+
+.Magma {
+  background: rgba(212, 0, 0, 0.5);
+  border: 1px solid #ECB9B9;
+  color: #F0C8C8;
+}
+
+.Magma span {
+  color: #8D0000;
+  text-shadow: 0px 0px 2px #F0C8C8;
+}
+
+.Flare {
+  background: rgba(237, 77, 5, 0.5);
+  border: 1px solid #E14102;
+  color: #FF8D4A;
+}
+
+.Flare span {
+  color: #C03A00;
+  text-shadow: 0px 0px 2px #FF8D4A;
+}
+
+.Galactic {
+  background: rgba(110, 203, 203, 0.5);
+  border: 1px solid #64B3B3;
+  color: #FFEAAE;
+}
+
+.Galactic span {
+  color: #FFCD46;
+}
+
+.Plasma {
+  background: rgba(156, 235, 219, 0.5);
+  border: 1px solid #4BB29D;
+  color: #C1FAEF;
+}
+
+.Plasma span {
+  color: #196455;
+  text-shadow: 0px 0px 2px #C1FAEF;
+}
+
 /**************************
 * Custom Classes CSS ~end *
 **************************/
