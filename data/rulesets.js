@@ -631,7 +631,7 @@ exports.BattleFormats = {
 				typeTable = typeTable.filter(type => template.types.indexOf(type) >= 0);
 				if (!typeTable.length) return ["Your team must share a type."];
 			}
-			if (format.id === 'monotype') {
+/*			if (format.id === 'monotype') {
 				// Very complex bans
 				if (typeTable.length > 1) return;
 				switch (typeTable[0]) {
@@ -639,7 +639,7 @@ exports.BattleFormats = {
 					if (teamHas['aegislash']) return ["Aegislash is banned from Steel monotype teams."];
 					break;
 				}
-			}
+			} */
 		},
 	},
 	megarayquazaclause: {
