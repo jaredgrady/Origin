@@ -64,7 +64,7 @@ function gymDisplay(room) {
 	for (let i = 0; i < data.length; i++) {
 		if (Users(room.gymleaders[data[i]][0])) onlineA = "rgba(46, 204, 64, 0.8)";
 		if (Users(room.gymleaders[data[i]][1])) onlineB = "rgba(46, 204, 64, 0.8)";
-		if (room.gymleaders[data[i]][1] !== 'open') double = " - <span style='background: " + onlineB ";'>" + room.gymleaders[data[i]][1] + "</span>";
+		if (room.gymleaders[data[i]][1] !== 'open') double = " - <span style='background: " + onlineB + ";'>" + room.gymleaders[data[i]][1] + "</span>";
 		output += '<td style="text-align: center; padding: 5px; background: #EEE; border: 1px solid #2D416F; box-shadow: 1px 1px rgba(255, 255, 255, 0.7) inset, -1px -1px rgba(170, 183, 191, 0.8) inset;">' + typeTag(typeImg[data[i]], data[i]) + '<br /><div style="color: #FFF; text-shadow: 1px 1px 4px #222; text-align: center; padding: 3px 2px; background: #999; border: 1px solid #000; box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px rgba(0, 0, 0, 0.2) inset;"><span style="background: ' + onlineA + ';">' + room.gymleaders[data[i]][0] + '</span>' + double + '</div></td>';
 		if (i % 3 === 1) output += '</tr><tr>';
 		double = '';
