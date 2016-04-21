@@ -21,7 +21,7 @@ const typeImg = {
 	'dark': 'http://i.imgur.com/j2oN3AN.png',
 	'ice': 'http://i.imgur.com/IvWOxNP.png',
 	'dragon': 'http://i.imgur.com/KHNW9Uh.png',
-	'fairy': 'http://i.imgur.com/Ze90HHG.png'	
+	'fairy': 'http://i.imgur.com/Ze90HHG.png',
 };
 
 class Gymleaders {
