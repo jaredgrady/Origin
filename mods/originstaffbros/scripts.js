@@ -81,7 +81,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
 			},
-			'@hayleysworld': { // (type) water/fairy
+			'@hayleysworld': { // (type) electric/dark
 				species: 'Luxray', ability: 'Electric Memes', item: 'Leftovers', gender: 'F', shiny: true,
 				moves: ['thunderfang', 'firefang', 'icefang'],
 				baseSignatureMove: 'revengeofzeus', signatureMove: "Revenge of Zeus",
@@ -99,7 +99,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'shadowdrain', signatureMove: "Shadow Drain",
 				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
-			'@Paul Century': { // (typing) water/fire
+			'@Paul Century': {
 				species: 'Slowbro', ability: 'so dope', item: 'Lax Incense', gender: 'M', shiny: true,
 				moves: ['steameruption', 'thunderbolt', 'bugbuzz'],
 				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
@@ -199,11 +199,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'danceofthesea', signatureMove: "Dance of the Sea",
 				evs: {hp:216, def:132, spd:160}, nature: 'Calm',
 			},
-			'+Otami': {
-				species: 'Vileplume', ability: 'S-S-Senpai', item: 'Black Sludge', gender: 'M',
-				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],
-				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
-				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
+			'+Otami': { // (typing) psychic/fairy
+				species: 'Espeon', ability: 'Telekinetic', item: 'Leftovers', gender: 'M',
+				moves: ['moonblast', 'psychic', 'cosmicpower', 'storedpower', ['substitute', 'recover', 'hypnosis'][this.random(3)]],
+				baseSignatureMove: 'telekineticchant', signatureMove: "Telekinetic Chant",
+				evs: {hp:4, spa:252, spd:252}, nature: 'Modest',
 			},
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',

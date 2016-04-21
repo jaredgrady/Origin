@@ -16862,28 +16862,38 @@ exports.BattleMovedex = {
 	},
 
 	// Otami
-	"whatdoyoumean": {
+	"telekineticchant": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 110,
+		basePower: 90,
 		category: "Special",
-		id: "whatdoyoumean",
-		name: "What Do You Mean",
+		id: "telekineticchant",
+		name: "Telekinetic Chant",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]solarbeam');
+			this.attrLastMove('[anim]psyshock');
 		},
 		onHit: function (target, source, move) {
-			this.add("c|+Otami|what do you mean fam?");
+			this.add("c|+Otami|Telekinetic powers are like so fetch");
 		},
-		secondary: {
-			chance: 30,
-			volatileStatus: 'confusion',
-		},
+		secondaries: [
+			{
+				chance: 40,
+				status: 'slp',
+			}, {
+				chance: 20,
+				self: {
+					boosts: {
+						spa:2,
+						spd:2,
+					},
+				},
+			},
+		],
 		target: "normal",
-		type: "Grass",
+		type: "Psychic",
 	},
 
 	// Sota Higurashi

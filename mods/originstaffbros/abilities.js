@@ -4171,23 +4171,41 @@ exports.BattleAbilities = {
 	},
 
 	// Otami
-	"sssenpai": {
+	"telekinetic": {
 		isNonstandard: true,
-		onStart: function (pokemon) {
-			this.boost({def:1, spd:1, spe:1});
-			let foeactive = pokemon.side.foe.active;
-			for (let i = 0; i < foeactive.length; i++) {
-				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
-				if (foeactive[i].volatiles['substitute']) {
-					this.add('-activate', foeactive[i], 'Substitute', 'ability: S-S-Senpai', '[of] ' + pokemon);
-				} else {
-					this.add('-ability', pokemon, 'S-S-Senpai', '[of] ' + foeactive[i]);
-					this.boost({spd:-2}, foeactive[i], pokemon);
-				}
+		onDamage: function (damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
 			}
 		},
-		id: "sssenpai",
-		name: "S-S-Senpai",
+		onAfterDamage: function (damage, target, source, effect) {
+			if (effect && (effect.type === 'Dark' || effect.type === 'Bug' || effect.type === 'Ghost')) {
+				this.boost({spe:1});
+			}
+		},
+		onTryHit: function (target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide: function (target, source, move) {
+			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		effect: {
+			duration: 1,
+		},
+		id: "telekinetic",
+		name: "Telekinetic",
 	},
 
 	// Sota Higurashi contrary

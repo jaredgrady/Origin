@@ -2273,6 +2273,14 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
 			}
+			if (name === 'chronologically' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
+				pokemon.types = ["Fire", "Fighting"];
+			}
+			if (name === 'otami' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Psychic/Fairy');
+				pokemon.types = ["Psychic", "Fairy"];
+			}
 			if (name === 'omegachim' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fairy/Psychic');
 				pokemon.types = ["Fairy", "Psychic"];
@@ -2380,7 +2388,7 @@ exports.Formats = [
 				this.add("c|+Master Bui|Bui~");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|hi fam! how are you? :3c');
+				this.add('c|+Otami|Hey I\'m Otami and I like pears.');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
@@ -2519,7 +2527,7 @@ exports.Formats = [
 				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|feelsotami');
+				this.add('c|+Otami|#BlameHayley2K16');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
@@ -2656,7 +2664,7 @@ exports.Formats = [
 				this.add("c|+Master Bui|Brbui~!");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
+				this.add('c|+Otami|Like totally, like wow! Like i\'m leaving right now. Leave a message, at the beep... I\'ll be back if you\'re not a creep.');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
@@ -2882,6 +2890,10 @@ exports.Formats = [
 				this.add('-start', pokemon, 'typechange', 'Fire/Fighting');
 				pokemon.types = ["Fire", "Fighting"];
 			}
+			if (name === 'otami' && !pokemon.illusion) {
+				this.add('-start', pokemon, 'typechange', 'Psychic/Fairy');
+				pokemon.types = ["Psychic", "Fairy"];
+			}
 			if (name === 'omegachim' && !pokemon.illusion) {
 				this.add('-start', pokemon, 'typechange', 'Fairy/Psychic');
 				pokemon.types = ["Fairy", "Psychic"];
@@ -2989,7 +3001,7 @@ exports.Formats = [
 				this.add("c|+Master Bui|Bui~");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|hi fam! how are you? :3c');
+				this.add('c|+Otami|Hey I\'m Otami and I like pears.');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
@@ -3128,7 +3140,7 @@ exports.Formats = [
 				this.add("c|+Master Bui| Gtg now, Hayley's calling >~>");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|feelsotami');
+				this.add('c|+Otami|#BlameHayley2K16');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
@@ -3265,7 +3277,7 @@ exports.Formats = [
 				this.add("c|+Master Bui|Brbui~!");
 			}
 			if (name === 'otami') {
-				this.add('c|+Otami|brb telling Hayley you are bullying me xoxo');
+				this.add('c|+Otami|Like totally, like wow! Like i\'m leaving right now. Leave a message, at the beep... I\'ll be back if you\'re not a creep.');
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');

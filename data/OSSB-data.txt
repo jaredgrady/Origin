@@ -168,15 +168,15 @@ fender - Gible - Life Orb
 
 +Master Bui - Buizel - Eviolite
 - Ability: Ocean's Grace - Serene Grace + Primordial Sea + Parental Bond
-- Move: Dance of the Sea - 100BP, +1 priority, Special Water type move. 50% confusion and 50% chance to boost Defense and SpDef by one stage. 10PP, 100% Accuracy
+- Move: Dance of the Sea - 100BP, +1 priority, Special Water type move. 50% confusion and 50% chance to boost defense and special defense by one stage. 10PP, 100% Accuracy
 - Movepool: Charge Beam, Earth Power, Ice Beam
 - Notes: While it does not initially hit hard, it gets extremely bulky really quickly, potential counters include sparkychild, Tesla, Imp Fallen Blood, Erica, and anything with Unaware-type abilities.  Master Bui also does not fare well against status, so use that to your advantage. Bui~!
 
-+Otami - Vileplume - Black Sludge
-- Ability: s-s-senpai - Raises SpDef and Def by 1 stage, lowers opponent's SpDef by 2 Stages, and causes Infatuation on entry.
-- Move: what do you mean - 110 BP Special Grass Move. 30% chance to confuse the target. PP: 20 / Accuracy: 100% / Priority: 0
-- Movepool: Spore, Nasty Plot, Sludge Bomb, Psychic 
-- Notes: It's a fantastic wallbreaker, with a STAB 110 BP Move, and against lowered Special Defense, it can obliterate opponents if they're not ready. It can also take some hits, giving it more durability and more potential to kill. It has a setup option in Nasty Plot, and Spore as well put threats to sleep, and infatuation with chance to confuse can really be game changing. It's an answer to many of the bulky Water types in the tier, and if used right, can be a cute destructiveflower.
++Otami - Espeon (Psychic/Fairy type)- Leftovers
+- Ability: Telekinetic - Magic Bounce + Magic Guard + Rattled
+- Move: Telekinetic Chant - 90 BP Specail Psychic type move. 40% of putting target to sleep, 20% chance to boost special attack and special defense by 2 stages. PP: 20 / Accuracy: 100% / Priority: 0
+- Movepool: Cosmic Power, Stored Power, Moonblast, Psychic, Substitute, Recover, Hypnosis
+- Notes:
 
 +Sota Higurashi - Victini - Expert Belt
 - Ability: Contrary
