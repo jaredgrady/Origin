@@ -2330,7 +2330,7 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
 			}
 			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|The Queen of the Sea has arrived.');
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> The Queen of the Sea has arrived. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');				
 			}
 			if (name === 'lcehvy12') {
 				this.add('c|@L Chevy 12|I have swooped in to fuck up your day today feelsok');
@@ -2359,7 +2359,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Lol you look p weak from over on the winners side. xaa');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|ENTER SANDMAN');
+				this.add('c|%iSandman|Enter sandman!');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
@@ -2468,7 +2468,7 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
 			}
 			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|I will stop being afk to get revenge later.');
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> I will stop being afk to get revenge later. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
 				this.add('c|@L Chevy 12|Screw this, you aren\'t worth it.');
@@ -2497,7 +2497,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Just a prank bro? ...right?');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
+				this.add('c|%iSandman|Exit light, enter night, take my hand, off to never land');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
@@ -2605,10 +2605,10 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Without darkness one cannot know light.');
 			}
 			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|My bad memes will be back!');
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> My bad memes will be back! <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Chevy 12|I live to Fuck You Up another day!');
+				this.add('c|@L Chevy 12|I live to Fuck You Up another day!');
 			}
 			if (name === 'paulcentury') {
 				this.add('c|@Paul Century|Fuck this shit im out');
@@ -2634,7 +2634,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Your death awaits you mate.');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');
+				this.add('c|%iSandman|joy bangla, joy bangobandhu');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');
@@ -2943,7 +2943,7 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
 			}
 			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|The Queen of the Sea has arrived.');
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> The Queen of the Sea has arrived. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
 				this.add('c|@L Chevy 12|I have swooped in to fuck up your day today feelsok');
@@ -2972,7 +2972,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Lol you look p weak from over on the winners side. xaa');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|ENTER SANDMAN');
+				this.add('c|%iSandman|Enter sandman!');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|hi im birb <:');
@@ -3080,8 +3080,8 @@ exports.Formats = [
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
 			}
-			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|I will stop being afk to get revenge later.');
+			if (name === 'hayleysworld')
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> I will stop being afk to get revenge later. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
 				this.add('c|@L Chevy 12|Screw this, you aren\'t worth it.');
@@ -3110,7 +3110,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Just a prank bro? ...right?');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|EXIT LIGHT ENTER NIGHT TAKE MY HAND, OFF TO NEVER NEVER LAND');
+				this.add('c|%iSandman|Exit light, enter night, take my hand, off to never land');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|fuck this game idk why i even play pokemon');
@@ -3218,10 +3218,10 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Without darkness one cannot know light.');
 			}
 			if (name === 'hayleysworld') {
-				this.add('c|@hayleysworld|My bad memes will be back!');
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> My bad memes will be back! <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
-				this.add('c|%L Chevy 12|I live to Fuck You Up another day!');
+				this.add('c|@L Chevy 12|I live to Fuck You Up another day!');
 			}
 			if (name === 'paulcentury') {
 				this.add('c|@Paul Century|Fuck this shit im out');
@@ -3247,7 +3247,7 @@ exports.Formats = [
 				this.add('c|%Irraquated|Your death awaits you mate.');
 			}
 			if (name === 'isandman') {
-				this.add('c|%iSandman|JOY BANGLA , JOY BANGOBANDHU');
+				this.add('c|%iSandman|joy bangla, joy bangobandhu');
 			}
 			if (name === 'phoenixgryphon') {
 				this.add('c|%Phoenix Gryphon|pls no kill ty)');
