@@ -2182,7 +2182,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'skynightfall' && pokemon.getAbility().id === 'moldbreaker') {
+				if (name === 'skymightfall' && pokemon.getAbility().id === 'moldbreaker') {
 					pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id === 'toughclaws') {
@@ -2231,7 +2231,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'skynightfall' && pokemon.getAbility().id !== 'cursedaura') {
+				if (name === 'skymightfall' && pokemon.getAbility().id !== 'cursedaura') {
 					// pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id !== 'dragonsfire') {
@@ -2315,7 +2315,7 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|Time for moderation to take its course and slay all the misbehaving Dragons!');
 			}
 			/* no quote
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|');
 			} */
 
@@ -2453,7 +2453,7 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
 			}
 			/* no quote
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|');
 			} */
 
@@ -2590,7 +2590,7 @@ exports.Formats = [
 			if (name === 'mightysciz') {
 				this.add('c|&Mighty Sciz|Well... I will be back and face you again');
 			}
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|Do not go gentle into that good night');
 			}
 
@@ -2799,7 +2799,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'skynightfall' && pokemon.getAbility().id === 'moldbreaker') {
+				if (name === 'skymightfall' && pokemon.getAbility().id === 'moldbreaker') {
 					pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id === 'toughclaws') {
@@ -2848,7 +2848,7 @@ exports.Formats = [
 					pokemon.setAbility('abnegate');
 					this.add('-ability', pokemon, pokemon.ability);
 				}
-				if (name === 'skynightfall' && pokemon.getAbility().id !== 'cursedaura') {
+				if (name === 'skymightfall' && pokemon.getAbility().id !== 'cursedaura') {
 					// pokemon.setAbility('cursedaura');
 				}
 				if (name === 'mightysciz' && pokemon.getAbility().id !== 'dragonsfire') {
@@ -2928,7 +2928,7 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|Time for moderation to take its course and slay all the misbehaving Dragons!');
 			}
 			/* no quote
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|');
 			} */
 
@@ -3066,7 +3066,7 @@ exports.Formats = [
 				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
 			}
 			/* no quote
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|');
 			} */
 
@@ -3203,7 +3203,7 @@ exports.Formats = [
 			if (name === 'mightysciz') {
 				this.add('c|&Mighty Sciz|Well... I will be back and face you again');
 			}
-			if (name === 'skynightfall') {
+			if (name === 'skymightfall') {
 				this.add('c|&Sky Might Fall|Do not go gentle into that good night');
 			}
 
