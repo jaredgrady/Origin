@@ -173,7 +173,7 @@ exports.Formats = [
 		section: "Monotype Tier",
 
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
-		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
+		banlist: ['Arceus', 'Aegislash', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
 			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
@@ -212,7 +212,7 @@ exports.Formats = [
 		section: "Monotype Tier",
 
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
-		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
+		banlist: ['Arceus', 'Aegislash', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
 			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
@@ -221,9 +221,11 @@ exports.Formats = [
 	{
 		name: "Monotype Type-Bans",
 		desc: [
-			"Current Monotype meta with type bans Enabled",
-			"Zard X available on Fire only, Aegislash available on Ghost only, Hoopa Unbound available on Dark only, Mega Sableye available on Ghost only",
-			"Smooth-Rock available on all types except Ground, Damp-Rock available on all types except Water",
+			"<b><u>Monotype format with complex type-bans</u></b>",
+			"&bullet; Aegislash is available on GHOST, banned on STEEL",
+			"&bullet; Mega Charizard x available on FIRE, banned on FLYING",
+			"&bullet; Hoopa-Unbound is available on DARK, banned on PSYCHIC",
+			"&bullet; Mega sableye is available on GHOST, banned on DARK",
 		],
 		section: "Monotype Tier",
 		mod: 'typebans',
@@ -236,8 +238,8 @@ exports.Formats = [
 	{
 		name: "Monotype X/Y",
 		desc: [
-			"Monotype format up until before ORAS",
-			"&bullet; <a href=\"http://pastebin.com/qfpLMWiR\">Bans & Unbans</a>",
+			"Monotype format before the release of ORAS",
+			"&bullet; <a href=\"https://docs.google.com/document/d/1xtDnwJvLqFMj35D0i5jtOFBj7kOyMQmyWnmr7Vk3CLA/edit\">Bans & Unbans</a>",
 			"Message user: Sky Might Fall, if you notice any irregularities or have something to contribute",
 		],
 		section: "Monotype Tier",
@@ -245,7 +247,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
 		banlist: ['Arceus', 'Audinite', 'Beedrillite', 'Blaziken', 'Cameruptite', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Diancite', 'Galladite', 'Giratina', 'Giratina-Origin', 'Glalitite', 'Groudon', 'Heart Stamp', 'Ho-Oh', 'Hoopa', 'Hoopa-Unbound',
 			'Kyogre', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lugia', 'Mewtwo', 'Palkia', 'Pidgeotite', 'Rayquaza', 'Reshiram', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Altarianite', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Sablenite', 'Sceptilite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Soul Dew', 'Swampertite',
+			'Altarianite', 'Damp Rock', 'Gengarite', 'Volcanion', 'Kangaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Sablenite', 'Sceptilite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Soul Dew', 'Swampertite',
 		],
 	},
 	{
