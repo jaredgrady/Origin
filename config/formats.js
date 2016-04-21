@@ -2330,7 +2330,7 @@ exports.Formats = [
 				this.add('c|@Nii Sama|Stars, hide your fires; Let not light see my black and deep desires.');
 			}
 			if (name === 'hayleysworld') {
-				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> The Queen of the Sea has arrived. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');			
+				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> The Queen of the Sea has arrived. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
 			if (name === 'lcehvy12') {
 				this.add('c|@L Chevy 12|I have swooped in to fuck up your day today feelsok');
