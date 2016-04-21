@@ -4,24 +4,24 @@
  * This file handles gym leader info
 ********************/
 const typeImg = {
+	'normal': 'http://i.imgur.com/V3uMU0p.png',
 	'fire': 'http://i.imgur.com/yu29NVo.png',
 	'water': 'http://i.imgur.com/nVlPHRf.png',
 	'grass': 'http://i.imgur.com/nLeC2Zf.png',
-	'normal': 'http://i.imgur.com/V3uMU0p.png',
+	'electric': 'http://i.imgur.com/Ck57l72.png',
 	'fighting': 'http://i.imgur.com/p7jVd86.png',
 	'flying': 'http://i.imgur.com/DnlEWFo.png',
-	'electric': 'http://i.imgur.com/Ck57l72.png',
-	'psychic': 'http://i.imgur.com/iabGU27.png',
-	'ice': 'http://i.imgur.com/IvWOxNP.png',
 	'poison': 'http://i.imgur.com/BWXWJcn.png',
 	'ground': 'http://i.imgur.com/MF488fV.png',
 	'rock': 'http://i.imgur.com/QBKxfMN.png',
-	'dragon': 'http://i.imgur.com/KHNW9Uh.png',
-	'dark': 'http://i.imgur.com/j2oN3AN.png',
-	'fairy': 'http://i.imgur.com/Ze90HHG.png',
 	'bug': 'http://i.imgur.com/AmpKmBV.png',
+	'psychic': 'http://i.imgur.com/iabGU27.png',
 	'ghost': 'http://i.imgur.com/Qg7fJr4.png',
-	'steel': 'http://i.imgur.com/P0rW7lc.png'
+	'steel': 'http://i.imgur.com/P0rW7lc.png',
+	'dark': 'http://i.imgur.com/j2oN3AN.png',
+	'ice': 'http://i.imgur.com/IvWOxNP.png',
+	'dragon': 'http://i.imgur.com/KHNW9Uh.png',
+	'fairy': 'http://i.imgur.com/Ze90HHG.png'	
 };
 
 class Gymleaders {
@@ -66,7 +66,7 @@ function gymDisplay(room) {
 		if (Users(room.gymleaders[data[i]][1])) onlineB = "rgba(46, 204, 64, 0.8)";
 		if (room.gymleaders[data[i]][1] !== 'open') double = " - <span style='background: " + onlineB + ";'>" + room.gymleaders[data[i]][1] + "</span>";
 		output += '<td style="text-align: center; padding: 5px; background: #EEE; border: 1px solid #2D416F; box-shadow: 1px 1px rgba(255, 255, 255, 0.7) inset, -1px -1px rgba(170, 183, 191, 0.8) inset;">' + typeTag(typeImg[data[i]], data[i]) + '<br /><div style="color: #FFF; text-shadow: 1px 1px 4px #222; text-align: center; padding: 3px 2px; background: #999; border: 1px solid #000; box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px rgba(0, 0, 0, 0.2) inset;"><span style="background: ' + onlineA + ';">' + room.gymleaders[data[i]][0] + '</span>' + double + '</div></td>';
-		if (i % 3 === 1) output += '</tr><tr>';
+		if (i % 3 === 2) output += '</tr><tr>';
 		double = '';
 		onlineA = "rgba(231, 20, 20, 0.8)";
 		onlineB = "rgba(231, 20, 20, 0.8)";
