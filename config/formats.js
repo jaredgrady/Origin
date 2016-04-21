@@ -3080,10 +3080,10 @@ exports.Formats = [
 			if (name === 'niisama') {
 				this.add('c|@Nii Sama|Normal people have no idea how beautiful the darkness is...');
 			}
-			if (name === 'hayleysworld')
+			if (name === 'hayleysworld') {
 				this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> I will stop being afk to get revenge later. <em class="mine"><img src="http://i.imgur.com/KWAQbPu.gif" title="feelslux" height="50" width="50" /></em></div>');
 			}
-			if (name === 'lcehvy12') {
+			if (name === 'lchevy12') {
 				this.add('c|@L Chevy 12|Screw this, you aren\'t worth it.');
 			}
 			if (name === 'paulcentury') {
