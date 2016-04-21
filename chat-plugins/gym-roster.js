@@ -4,24 +4,24 @@
  * This file handles gym leader info
 ********************/
 const typeImg = {
-	'normal': 'http://i.imgur.com/jFxjGND.gif',
-	'fire': 'http://i.imgur.com/oDZxmZw.gif',
-	'water': 'http://i.imgur.com/N3xHy1i.gif',
-	'grass': 'http://i.imgur.com/kewQFI5.gif',
-	'electric': 'http://i.imgur.com/DV8aj4g.gif',
-	'fighting': 'http://i.imgur.com/bvEuKx4.gif',
-	'flying': 'http://i.imgur.com/uwudbeN.gif',
-	'poison': 'http://i.imgur.com/qO6tmtB.gif',
-	'ground': 'http://i.imgur.com/oEBnyyX.gif',
-	'rock': 'http://i.imgur.com/nrUlNwC.gif',
-	'bug': 'http://i.imgur.com/jb0SxKp.gif',
-	'psychic': 'http://i.imgur.com/B42tHZt.gif',
-	'ghost': 'http://i.imgur.com/iKH40xG.gif',
-	'steel': 'http://i.imgur.com/yGCQD5n.gif',
-	'dark': 'http://i.imgur.com/lzNKxBP.gif',
-	'ice': 'http://i.imgur.com/7BEzV1q.gif',
-	'dragon': 'http://i.imgur.com/kWHK1UD.gif',
-	'fairy': 'http://i.imgur.com/gVC0eMb.png',
+	'fire': 'http://i.imgur.com/yu29NVo.png',
+	'water': 'http://i.imgur.com/nVlPHRf.png',
+	'grass': 'http://i.imgur.com/nLeC2Zf.png',
+	'normal': 'http://i.imgur.com/V3uMU0p.png',
+	'fighting': 'http://i.imgur.com/p7jVd86.png',
+	'flying': 'http://i.imgur.com/DnlEWFo.png',
+	'electric': 'http://i.imgur.com/Ck57l72.png',
+	'psychic': 'http://i.imgur.com/iabGU27.png',
+	'ice': 'http://i.imgur.com/IvWOxNP.png',
+	'poison': 'http://i.imgur.com/BWXWJcn.png',
+	'ground': 'http://i.imgur.com/MF488fV.png',
+	'rock': 'http://i.imgur.com/QBKxfMN.png',
+	'dragon': 'http://i.imgur.com/KHNW9Uh.png',
+	'dark': 'http://i.imgur.com/j2oN3AN.png',
+	'fairy': 'http://i.imgur.com/Ze90HHG.png',
+	'bug': 'http://i.imgur.com/AmpKmBV.png',
+	'ghost': 'http://i.imgur.com/Qg7fJr4.png',
+	'steel': 'http://i.imgur.com/P0rW7lc.png'
 };
 
 class Gymleaders {
@@ -51,31 +51,27 @@ function bold(text) {
 	return '<b>' + text + '</b>';
 }
 
-function font(color, text) {
-	return '<font color="' + color + '">' + text + '</font>';
-}
-
 function typeTag(link, name) {
-	return '<img src="' + link + '" height="14" width="32" alt="' + name + '" title="' + name + '" >';
+	return '<img src="' + link + '" height="105" width="100" alt="' + name + '" title="' + name + '" style="border-radius: 5px; box-shadow: 0px 0px 2px #000;" />';
 }
 
 function gymDisplay(room) {
 	let data = Object.keys(room.gymleaders);
-	let output = '<center><h4><u>' + room.title + ' Gym Leaders</u></h4></center><table><tr>';
+	let output = '<center><h4><u>' + room.title + ' Gym Leaders</u></h4></center><div style="width: 100%; max-height: 450px; overflow-y: scroll;"><table style="border-collapse: collapse; margin: auto;"><tr>';
 	let double = '';
-	let onlineA = "#e71414";
-	let onlineB = "#e71414";
+	let onlineA = "rgba(231, 20, 20, 0.8)";
+	let onlineB = "rgba(231, 20, 20, 0.8)";
 	for (let i = 0; i < data.length; i++) {
-		if (Users(room.gymleaders[data[i]][0])) onlineA = "#2ECC40";
-		if (Users(room.gymleaders[data[i]][1])) onlineB = "#2ECC40";
-		if (room.gymleaders[data[i]][1] !== 'open') double = " - " + font(onlineB, room.gymleaders[data[i]][1]);
-		output += '<td>' + typeTag(typeImg[data[i]], data[i]) + '</td> <td>' + font(onlineA, room.gymleaders[data[i]][0]) + double + '</td>';
-		if (i % 2 === 1) output += '</tr> <tr>';
+		if (Users(room.gymleaders[data[i]][0])) onlineA = "rgba(46, 204, 64, 0.8)";
+		if (Users(room.gymleaders[data[i]][1])) onlineB = "rgba(46, 204, 64, 0.8)";
+		if (room.gymleaders[data[i]][1] !== 'open') double = " - <span style='background: " + onlineB ";'>" + room.gymleaders[data[i]][1] + "</span>";
+		output += '<td style="text-align: center; padding: 5px; background: #EEE; border: 1px solid #2D416F; box-shadow: 1px 1px rgba(255, 255, 255, 0.7) inset, -1px -1px rgba(170, 183, 191, 0.8) inset;">' + typeTag(typeImg[data[i]], data[i]) + '<br /><div style="color: #FFF; text-shadow: 1px 1px 4px #222; text-align: center; padding: 3px 2px; background: #999; border: 1px solid #000; box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px rgba(0, 0, 0, 0.2) inset;"><span style="background: ' + onlineA + ';">' + room.gymleaders[data[i]][0] + '</span>' + double + '</div></td>';
+		if (i % 3 === 1) output += '</tr><tr>';
 		double = '';
-		onlineA = "#e71414";
-		onlineB = "#e71414";
+		onlineA = "rgba(231, 20, 20, 0.8)";
+		onlineB = "rgba(231, 20, 20, 0.8)";
 	}
-	output += '</tr> <table>';
+	output += '</tr><table></div>';
 	return output;
 }
 
@@ -87,7 +83,7 @@ exports.commands = {
 			if (!this.runBroadcast()) return;
 			if (!room.gymleaders) return this.errorReply("This room has no gym leaders set.");
 			let display = gymDisplay(room);
-			this.sendReplyBox(display);
+			this.sendReply("|raw|" + display);
 		},
 		add: function (target, room, user) {
 			if (!this.can('declare', null, room)) return false;
