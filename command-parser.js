@@ -369,7 +369,7 @@ class CommandContext {
 				}
 				let serverAd = getServersAds(message);
 				if (message.indexOf('pandorashowdown.net') >= 0) serverAd.push('pandora');
-				if (serverAd.length || message.indexOf("http://pastebin.com/XDNtNkjQ") > -1) {
+				if (serverAd.length) {
 					for (let i = 0; i < serverAd.length; i++) {
 						if (!serverexceptions[serverAd[i]]) {
 							if (!room && targetUser) {
@@ -383,6 +383,17 @@ class CommandContext {
 							}
 							return false;
 						}
+					}
+				}
+				if (message.indexOf("pastebin.com/XDNtNkjQ") > -1) {
+					if (!room && targetUser) {
+						connection.send('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + message);
+						Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM to ' + targetUser.getIdentity() + '__) -- ' + message);
+						Rooms('shadowbanroom').update();
+					} else if (room) {
+						connection.sendTo(room, '|c|' + user.getIdentity(room.id) + '|' + message);
+						Rooms('shadowbanroom').add('|c|' + user.getIdentity(room.id) + '|(__' + room.id + '__) -- ' + message);
+						Rooms('shadowbanroom').update();
 					}
 				}
 			}
