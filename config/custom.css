@@ -2796,6 +2796,9 @@ This makes everything into a mew*/
   background: #B4DCE4;
   color: #0C3A43; }
 
+.dark .greentext {
+  color: #187902 !important; }
+
 .chat-log-add {
   border-color: #336251;
   background: rgba(51, 98, 81, 0.6); }
