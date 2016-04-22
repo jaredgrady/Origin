@@ -4,8 +4,20 @@ let enable = true;
 
 const spins = {
 	'golem': 0,
+	'primeape': 0,
+	'marowak': 0,
+	'electrode': 0,
+	'seaking': 0,
+	'moltres': 0,
+	'rattata': 0,
+	'zubat': 0,
+	'dratini': 0,
+	'haunter': 0,
+	'poliwhirl': 0,
+	'victreebel': 0,
+	'flareon': 0,
 	'onix': 0,
-	'rhydon': 1,
+	'rhydon': 0,
 	'pikachu': 1,
 	'mew': 1,
 	'bulbasaur': 2,
@@ -18,6 +30,18 @@ const spins = {
 const wheelTrozei = {
 
 	'golem': 'http://cdn.bulbagarden.net/upload/1/13/Spr_3f_076.png',
+	'primeape': 'http://img.pokemondb.net/sprites/yellow/normal/primeape-color.png',
+	'marowak': 'http://pldh.net/media/pokemon/gen3/frlg/105.png',
+	'electrode': 'http://pldh.net/media/pokemon/gen3/emerald/101.png',
+	'seaking': 'http://cdn.bulbagarden.net/upload/3/3c/Spr_3r_119.png',
+	'moltres': 'http://img.pokemondb.net/sprites/yellow/normal/moltres-color.png',
+	'rattata': 'http://img.pokemondb.net/sprites/silver/normal/rattata.png',
+	'zubat': 'http://pldh.net/media/pokemon/gen3/frlg/041.png',
+	'dratini': 'http://pldh.net/media/pokemon/gen3/frlg/147.png',
+	'haunter': 'http://cdn.bulbagarden.net/upload/b/bd/Spr_1y_093.png',
+	'poliwhirl': 'http://pldh.net/media/pokemon/gen2/silver/061.png',
+	'victreebel': 'http://orig08.deviantart.net/1cee/f/2010/297/6/f/071___victreebel_by_sprite3g-d31ew0z.png',
+	'flareon': 'http://pldh.net/media/pokemon/gen3/frlg/136.png',
 	'onix': 'http://img.pokemondb.net/sprites/emerald/normal/onix.png',
 	'rhydon': 'http://www.poke-amph.com/frlg/sprites/large/112.png',
 	'pikachu': 'http://pldh.net/media/pokemon/gen3/frlg/025.png',
@@ -36,7 +60,7 @@ function spin() {
 }
 
 function rng() {
-	return Math.floor(Math.random() * 10);
+	return Math.floor(Math.random() * 22);
 }
 
 function display(result, user, wheel) {
@@ -66,7 +90,7 @@ exports.commands = {
 
 			const result = spin();
 			const chancePercentage = rng();
-			const chancesGenerated = 10 + availableSpins.indexOf(result) * 1;
+			const chancesGenerated = 22 + availableSpins.indexOf(result) * 1;
 
 			if (chancePercentage <= chancesGenerated) {
 				Db('money').set(user.userid, (amount + spins[result]));
@@ -90,7 +114,6 @@ exports.commands = {
 			return this.sendReplyBox('<div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
 	'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
-    '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
     '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
     '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
@@ -100,7 +123,6 @@ exports.commands = {
 		wofhelp:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
     '<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
-    '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
     '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
     '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
