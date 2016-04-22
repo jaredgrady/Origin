@@ -12,20 +12,20 @@ const spins = {
 	'mew': 2,
 	'bulbasaur': 3,
 	'charmander': 5,
-	'magikarp': 6,
+	'slowbro': 6,
 	'squirtle': 10,
 };
 
 const wheelTrozei = {
 
-	'golem': 'http://www.poke-amph.com/frlg/sprites/large/076.png',
+	'golem': 'http://cdn.bulbagarden.net/upload/1/13/Spr_3f_076.png',
 	'onix': 'http://img.pokemondb.net/sprites/emerald/normal/onix.png',
 	'rhydon': 'http://www.poke-amph.com/frlg/sprites/large/112.png',
 	'pikachu': 'http://pldh.net/media/pokemon/gen3/frlg/025.png',
 	'mew': 'http://img.pokemondb.net/sprites/emerald/normal/mew.png',
 	'bulbasaur': 'http://pldh.net/media/pokemon/gen3/rusa/001.png',
 	'charmander': 'http://img.pokemondb.net/sprites/emerald/normal/charmander.png',
-	'magikarp': 'http://img.pokemondb.net/sprites/emerald/normal/magikarp.png',
+	'slowbro': 'http://www.serebii.net/Shiny/RuSa/256.gif',
 	'squirtle': 'http://pldh.net/media/pokemon/gen3/frlg/007.png',
 };
 
@@ -58,7 +58,7 @@ exports.commands = {
 	wheel: {
 		start: 'spin',
 		 'spin': function (target, room, user) {
-			if (room.id !== 'jirachisarcade') return this.errorReply('Arcade games can only be played in the "Arcade".');
+			if (room.id !== 'casino') return this.errorReply('Wheel of Fortune can only be played in the "Casino".');
 			if (!this.canTalk()) return this.errorReply('/wheel spin - Access Denied.');
 
 			const amount = Db('money').get(user.userid, 0);
@@ -82,7 +82,7 @@ exports.commands = {
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
     '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
     '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 2 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 3 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Magikarp: 6 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
     '<center><font size = 4, color = "white"><b>Spin the <button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button> 3 bucks per a spin!</b></font></center></div>');
 		},
@@ -92,7 +92,7 @@ exports.commands = {
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
     '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
     '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 2 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 3 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Magikarp: 6 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
     '<center><font size = 4, color = "white"><b>Spin the<button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button>  3 bucks per a spin!</b></font></center></div>'],
 	},
