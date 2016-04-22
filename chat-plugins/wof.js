@@ -26,7 +26,7 @@ const wheelTrozei = {
 	'mew': 'http://img.pokemondb.net/sprites/emerald/normal/mew.png',
 	'bulbasaur': 'http://pldh.net/media/pokemon/gen3/rusa/001.png',
 	'charmander': 'http://img.pokemondb.net/sprites/emerald/normal/charmander.png',
-	'magikarp': 'http://img.pokemondb.net/sprites/emerald/normal/magikarp.png'
+	'magikarp': 'http://img.pokemondb.net/sprites/emerald/normal/magikarp.png',
 	'slowbro': 'http://www.serebii.net/Shiny/RuSa/256.gif',
 	'squirtle': 'http://pldh.net/media/pokemon/gen3/frlg/007.png',
 };
