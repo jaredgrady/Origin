@@ -85,6 +85,7 @@ exports.commands = {
 			if (room.id !== 'casino') return this.errorReply('Wheel of Fortune can only be played in the "Casino".');
 			if (!this.canTalk()) return this.errorReply('/wheel spin - Access Denied.');
 			if (!enable) return this.errorReply('Wheel of fortune is temporarily disabled.');
+			Db('money').set(user.userid, (amount - 3));
 			const amount = Db('money').get(user.userid, 0);
 			if (amount < 3) return this.errorReply('You don\'t have enough bucks to play this game. You need ' + (3 - amount) + currencyName(amount) + ' more.');
 
@@ -96,7 +97,6 @@ exports.commands = {
 				Db('money').set(user.userid, (amount + spins[result]));
 				return this.sendReplyBox(display(true, user.name, result));
 			}
-			Db('money').set(user.userid, (amount - 3));
 			return this.sendReplyBox(display(false, user.name, spin()));
 		},
 		'toggle': function (target, room, user) {
