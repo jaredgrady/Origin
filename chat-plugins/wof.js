@@ -12,7 +12,7 @@ const spins = {
 	'mew': 1,
 	'bulbasaur': 2,
 	'charmander': 3,
-	'magikarp': 3
+	'magikarp': 3,
 	'slowbro': 6,
 	'squirtle': 10,
 };
