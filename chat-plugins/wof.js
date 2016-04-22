@@ -9,9 +9,10 @@ const spins = {
 	'onix': 0,
 	'rhydon': 1,
 	'pikachu': 1,
-	'mew': 2,
-	'bulbasaur': 3,
-	'charmander': 5,
+	'mew': 1,
+	'bulbasaur': 2,
+	'charmander': 3,
+	'magikarp': 3
 	'slowbro': 6,
 	'squirtle': 10,
 };
@@ -25,6 +26,7 @@ const wheelTrozei = {
 	'mew': 'http://img.pokemondb.net/sprites/emerald/normal/mew.png',
 	'bulbasaur': 'http://pldh.net/media/pokemon/gen3/rusa/001.png',
 	'charmander': 'http://img.pokemondb.net/sprites/emerald/normal/charmander.png',
+	'magikarp': 'http://img.pokemondb.net/sprites/emerald/normal/magikarp.png'
 	'slowbro': 'http://www.serebii.net/Shiny/RuSa/256.gif',
 	'squirtle': 'http://pldh.net/media/pokemon/gen3/frlg/007.png',
 };
@@ -36,7 +38,7 @@ function spin() {
 }
 
 function rng() {
-	return Math.floor(Math.random() * 9);
+	return Math.floor(Math.random() * 10);
 }
 
 function display(result, user, wheel) {
@@ -66,7 +68,7 @@ exports.commands = {
 
 			const result = spin();
 			const chancePercentage = rng();
-			const chancesGenerated = 9 + availableSpins.indexOf(result) * 1;
+			const chancesGenerated = 10 + availableSpins.indexOf(result) * 1;
 
 			if (chancePercentage <= chancesGenerated) {
 				Db('money').set(user.userid, (amount + spins[result]));
@@ -81,8 +83,8 @@ exports.commands = {
 	'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
     '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 2 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 3 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
     '<center><font size = 4, color = "white"><b>Spin the <button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button> 3 bucks per a spin!</b></font></center></div>');
 		},
@@ -91,8 +93,8 @@ exports.commands = {
     '<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
     '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
     '<center><font size = 2, color = "white">Golem:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Onix:  0 bucks<span style="display:inline-block; width: 20px,;"></span>Rhydon:  1 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 2 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 3 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
+    '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
     '<center><font size = 4, color = "white"><b>Spin the<button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button>  3 bucks per a spin!</b></font></center></div>'],
 	},
