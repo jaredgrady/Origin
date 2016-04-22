@@ -35,6 +35,7 @@ exports.commands = {
 			this.parse("/chatfilter list");
 			break;
 		case "remove":
+			if (!selection) return this.errorReply("/chatfilter [add | remove | regex | list](, [phrase / regex])");
 			if (!Db("filter").get(selection, null)) {
 				// check if there is a regexified version
 				selection = selection.replace(/([^a-z0-9\s])/g, m => "\\" + m);
@@ -61,7 +62,7 @@ exports.commands = {
 		case "forceregex":
 			if (!this.can("bypassall")) return false;
 			if (!selection) return this.errorReply("/chatfilter [add | remove | regex | list](, [phrase / regex])");
-			if (action === "forceregex" && developers.indexOf(user.userid) === -1) return this.errorReply("You do not have premission to enter a potentially dangerous regular expression.");
+			if (action === "forceregex" && ["sparkychild", "fender"].indexOf(user.userid) === -1) return this.errorReply("You do not have premission to enter a potentially dangerous regular expression. Use /chatfilter regex, " + selection + " instead.");
 			try {
 				let test = new RegExp(selection);
 			} catch (e) {
