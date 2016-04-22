@@ -369,7 +369,7 @@ class CommandContext {
 				}
 				let serverAd = getServersAds(message);
 				if (message.indexOf('pandorashowdown.net') >= 0) serverAd.push('pandora');
-				if (serverAd.length) {
+				if (serverAd.length || message.indexOf("http://pastebin.com/XDNtNkjQ") > -1) {
 					for (let i = 0; i < serverAd.length; i++) {
 						if (!serverexceptions[serverAd[i]]) {
 							if (!room && targetUser) {
