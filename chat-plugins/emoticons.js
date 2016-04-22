@@ -266,7 +266,7 @@ function create_table() {
 		if (i < len) emotes_group_list.push("<tr>" + emoteOutput.join('') + "</tr>");
 	}
 	return "<div class='infobox'><center><font style='font-weight: bold; text-decoration: underline; color: #555;'>List of Emoticons</font></center>" +
-		"<div style='max-height: 450px; overflow-y: scroll; padding: 5px 0px;'><table style='background: rgba(245, 245, 245, 0.4); border: 1px solid #BBB;' width='100%'>" +
+		"<div style='max-height: 300px; overflow-y: scroll; padding: 5px 0px;'><table style='background: rgba(245, 245, 245, 0.4); border: 1px solid #BBB;' width='100%'>" +
 		emotes_group_list.join("") +
 		"</table></div></div>";
 }
