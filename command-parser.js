@@ -395,6 +395,7 @@ class CommandContext {
 						Rooms('shadowbanroom').add('|c|' + user.getIdentity(room.id) + '|(__' + room.id + '__) -- ' + message);
 						Rooms('shadowbanroom').update();
 					}
+					return false;
 				}
 			}
 			return message;
