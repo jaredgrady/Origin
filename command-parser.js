@@ -76,6 +76,8 @@ for (let file of fs.readdirSync(path.resolve(__dirname, 'chat-plugins'))) {
 	Object.assign(commands, require('./chat-plugins/' + file).commands);
 }
 
+const filterMessage = require("./chat-plugins/filter.js").filterMessage;
+
 /*********************************************************
  * Modlog
  *********************************************************/
@@ -385,7 +387,7 @@ class CommandContext {
 						}
 					}
 				}
-				if (message.indexOf("pastebin.com/XDNtNkjQ") > -1) {
+				if (filterMessage(message)) {
 					if (!room && targetUser) {
 						connection.send('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + message);
 						Rooms('shadowbanroom').add('|c|' + user.getIdentity() + '|(__PM to ' + targetUser.getIdentity() + '__) -- ' + message);
