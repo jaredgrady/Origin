@@ -4,7 +4,10 @@ let filterRegex = null;
 
 function buildFilterRegex() {
 	let filter = Object.keys(Db("filter").object());
-	if (!filter.length) return filterRegex = null;
+	if (!filter.length) {
+		filterRegex = null;
+		return;
+	}
 	// regex pattern taken from client
 	filterRegex = new RegExp('(?:\\b|(?!\\w))(?:' + filter.join("|") + ')(?:\\b|\\B(?!\\w))', 'i');
 }
