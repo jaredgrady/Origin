@@ -95,4 +95,6 @@ exports.commands = {
     '<center><font size = 2, color = "white">Charmander: 5 bucks<span style="display:inline-block; width: 20px,;"></span>Magikarp: 6 bucks</center><br>' +
     '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
     '<center><font size = 4, color = "white"><b>Spin the<button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button>  3 bucks per a spin!</b></font></center></div>'],
+},
+
 };
