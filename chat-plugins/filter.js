@@ -30,7 +30,7 @@ exports.commands = {
 			// de-regexify this.
 			selection = selection.replace(/([^a-z0-9\s])/g, m => "\\" + m);
 			if (Db("filter").get(selection, null)) return this.errorReply("This is already being filtered.");
-			Db("filter").set(selection, 1);
+			Db("filter").set([selection], 1);
 			buildFilterRegex();
 			this.parse("/chatfilter list");
 			break;
@@ -53,7 +53,7 @@ exports.commands = {
 			} catch (e) {
 				return this.errorReply(e.message.substr(0, 28) === 'Invalid regular expression: ' ? e.message : 'Invalid regular expression: /' + selection + '/: ' + e.message);
 			}
-			Db("filter").set(selection, 1);
+			Db("filter").set([selection], 1);
 			buildFilterRegex();
 			this.parse("/chatfilter list");
 			break;
@@ -67,7 +67,7 @@ exports.commands = {
 			} catch (e) {
 				return this.errorReply(e.message.substr(0, 28) === 'Invalid regular expression: ' ? e.message : 'Invalid regular expression: /' + selection + '/: ' + e.message);
 			}
-			Db("filter").set(selection, 1);
+			Db("filter").set([selection], 1);
 			buildFilterRegex();
 			this.parse("/chatfilter list");
 			break;
