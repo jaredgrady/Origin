@@ -1,1 +1,391 @@
+.astext {
+  border: none;
+  background: none;
+  padding: 0;
+  height: -20em;
+  font-family: Verdana,sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
 
+.important {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* /nightclub - CSS */
+
+.nightclub {
+  background: rgba(0, 0, 0, 0.85);
+  margin:-3px;
+  text-shadow: 0px 0px 2px #000;
+  color: #FFF;
+}
+
+/* /poll & /tierpoll - CSS */
+
+.pollButton {
+  background: #F8F8F8;
+  color: #444;
+  border: 1px solid #AAA;
+  margin: 2px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+.pollButton:hover {
+  background: #F6F6F6;
+  border-color: #337AB7;
+  color: #276297;
+}
+
+
+/* /shop - CSS */
+
+
+.table-header {
+  background: #061C2A;
+  padding: 8px 25px;
+  border: 1px solid #768D9C;
+  color: #FFF;
+  font-size: 13pt;
+}
+
+.table-option {
+  background: rgba(248, 248, 248, 0.9);
+  border: 1px solid #768D9C;
+  text-align: center;
+  padding: 5px;
+}
+
+.table-option:hover {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.table-btn {
+  background: #CFE0EB;
+  border: none;
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 11pt;
+  text-shadow: 1px 1px #FFF, 0px -1px #FFF;
+}
+
+.table-btn:hover {
+  color: #11527D;
+}
+
+
+/* Origin roomintro - CSS */
+
+
+.intro-tabbarbtn {
+  background: rgba(243, 197, 234, 0.2);
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #693A60;
+  text-align: center;
+  width: 75px;
+  height: 35px;
+  color: #803C6F;
+  text-shadow: 0 0 2px #fce8f1;
+  margin: 0px 5px;
+}
+
+.intro-tabbarbtn:hover {
+  background: rgba(243, 197, 234, 0.7);
+}
+
+
+/* Touraments roomintro - CSS */
+
+
+.tour-btn {
+  background: none;
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding-right: 8px;
+  padding-right: 30px;
+  color: #DDD;
+  font-size: 11pt;
+  text-align: right;
+}
+
+.tour-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #8E85DE;
+  border-left: 4px solid #8E85DE;
+}
+
+
+/* ladder - CSS */
+
+
+.rankladder-headers {
+  background: #454E50;
+  color: #FFF;
+  text-shadow: 1px 1px #262B2C, -1px 1px #262B2C;
+  border: 1px solid #222;
+}
+
+.default-td {
+  padding: 5px;
+  border: 1px solid #222;
+}
+
+.rankladder-tds {
+  background: #FCFCFC;
+}
+
+.rankladder-tds:hover {
+  background: #EFEFEF;
+}
+
+.first {
+  background: #CFB53B;
+  color: #645722;
+  text-shadow: 0px 0px 2px #F6EAB9;
+  padding: 8px;
+}
+
+.first:hover {
+  background: #D5BD5B;
+}
+
+.second {
+  background: #C0C0C0;
+  color: #5B5B5B;
+  text-shadow: 0px 0px 2px #EEE;
+  padding: 8px;
+}
+
+.second:hover {
+  background: #CACACA;
+}
+
+.third {
+  background: #CD7F32;
+  color: #694725;
+  text-shadow: 0px 0px 2px #E4BA91;
+  padding: 8px;
+}
+
+.third:hover {
+  background: #CD9054;
+}
+
+
+/* /packshop & /showcase - CSS */
+
+
+.card-th {
+  background-color: #DCE9F9;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  border: 1px solid #CCC;
+}
+
+.card-td {
+  background: #FFF;
+  border: 1px solid #CCC;
+  text-align: center;
+}
+
+.card-div {
+  padding: 5px;
+  color: #333;
+}
+
+.card-th:hover, .card-td:hover {
+  color: #222;
+}
+
+.card-button {
+  margin: 0px 3px;
+}
+
+.card-td button, .card-button {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  color: #333;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
+.card-td button:hover, .card-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid #CCC;
+  text-shadow: 1px 1px 1px #EEE; 
+}
+
+.card-td button:focus, .card-button:focus {
+  background: rgba(227, 235, 246, 0.8);
+  border: 1px solid #9EB2D0;
+}
+
+.card-name {
+  background-color: #DCE9F9;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  font-size: 25pt;
+  font-weight: bold;
+  padding: 12px 18px 10px 18px;
+  border: 1px solid #CCC;
+  color: #444;
+}
+
+
+/* /sentence - CSS */
+
+
+.sentence-container {
+  background: #EEE;
+  padding: 4px;
+  border-width: 1px 15px;
+  border-style: solid;
+  border-color: #CCC;
+  color: #333;
+  text-shadow: 1px 1px #FFF;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* /tasks - CSS */
+
+
+.tasks-th, .tasks-td {
+  border: 1px solid #803C6F;
+  padding: 3px 8px;
+}
+
+.tasks-th {
+  background: #FFE0A7;
+  color: #803C6F;
+  text-shadow: none;
+  font-style: italic;
+}
+
+.tasks-td:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#selfassign-button {
+  background: #A5E6E6;
+  color: #074141;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
+  border: 1px solid #6BC1C1;
+  padding: 3px 7px;
+}
+
+#selfassign-button:hover {
+  background: #BDEBEB;
+  border: 1px solid #50B2B2;
+}
+
+#close-button {
+  background: #A6E6AD;
+  color: #07400F;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
+  border: 1px solid #6BC37A;
+  padding: 3px 7px;
+}
+
+#close-button:hover {
+  background: #BDECBE;
+  border: 1px solid #51B351;
+}
+
+#reopen-button {
+  background: #A6A6E6;
+  color: #070940;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
+  border: 1px solid #6B6BC3;
+  padding: 3px 7px;
+}
+
+#reopen-button:hover {
+  background: #BDBDEC;
+  border: 1px solid #5A51B3;
+}
+
+#delete-button {
+  background: #E6A6A6;
+  color: #400707;
+  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
+  border: 1px solid #C36B6B;
+  padding: 3px 7px;
+}
+
+#delete-button:hover {
+  background: #ECBDBD;
+  border: 1px solid #B35151;
+}
+
+
+/* /gang info - CSS */
+
+
+.Rocket {
+  background: rgba(60, 60, 60, 0.5);
+  border: 1px solid #555;
+  color: #AAA;
+}
+
+.Rocket span {
+  color: #D40000;
+  text-shadow: 0px 0px 2px #AAA;
+}
+
+.Aqua {
+  background: rgba(175, 185, 190, 0.5);
+  border: 1px solid #ACC2CD;
+  color: #CFE5F0;
+}
+
+.Aqua span {
+  color: #05008D;
+  text-shadow: 0px 0px 2px #C7C8F0;
+}
+
+.Magma {
+  background: rgba(212, 0, 0, 0.5);
+  border: 1px solid #ECB9B9;
+  color: #F0C8C8;
+}
+
+.Magma span {
+  color: #8D0000;
+  text-shadow: 0px 0px 2px #F0C8C8;
+}
+
+.Flare {
+  background: rgba(237, 77, 5, 0.5);
+  border: 1px solid #E14102;
+  color: #FF8D4A;
+}
+
+.Flare span {
+  color: #C03A00;
+  text-shadow: 0px 0px 2px #FF8D4A;
+}
+
+.Galactic {
+  background: rgba(110, 203, 203, 0.5);
+  border: 1px solid #64B3B3;
+  color: #FFEAAE;
+}
+
+.Galactic span {
+  color: #FFCD46;
+}
+
+.Plasma {
+  background: rgba(156, 235, 219, 0.5);
+  border: 1px solid #4BB29D;
+  color: #C1FAEF;
+}
+
+.Plasma span {
+  color: #196455;
+  text-shadow: 0px 0px 2px #C1FAEF;
+}
