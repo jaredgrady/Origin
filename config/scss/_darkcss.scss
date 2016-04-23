@@ -29,6 +29,18 @@ $c8: #803C6F;
       text-shadow: 0px 0px 2px #000;
     }
 
+    button {
+      background: rgba(9, 24, 31, 0.95);
+      border-color: #8BBDC6;
+      color: #8BBDC6;
+    }
+
+    button:hover {
+      background: rgba(9, 24, 31, 0.98);
+      border-color: #B998AB;
+      color: #B998AB;
+    }
+
     .select {
       background: rgba(45, 45, 45, 0.95) !important;
       color: #E2E2E2 !important;
@@ -129,14 +141,15 @@ $c8: #803C6F;
 
     .userbar {
       button.icon {
-        border: 1px solid #803C6F;
-        background: #CD9FC4;
-        color: #803C6F;
-        text-shadow: 0px 0px 2px #FCE8F1;
+        border: 1px solid $c2;
+        background: rgba(45, 45, 45, 0.7);
+        color: #BBB;
+        text-shadow: 0px 0px 2px #61B7C4;
       }
 
       button.icon:hover {
-        color: #DBAED2;
+        color: #E2E2E2;
+        background: rgba(45, 45, 45, 0.95);
       }
 
       .username {
@@ -173,14 +186,14 @@ $c8: #803C6F;
   .roomcounters {
     button {
       background: rgba(9, 24, 31, 0.95);
-      border-color: #B998AB;
-      color: #B998AB;
+      border-color: #8BBDC6;
+      color: #8BBDC6;
     }
 
     button:hover {
       background: rgba(9, 24, 31, 0.98);
-      border-color: #8BBDC6;
-      color: #8BBDC6;
+      border-color: #B998AB;
+      color: #B998AB;
     }
 
     .picon {
@@ -359,8 +372,6 @@ $c8: #803C6F;
     }
   }
 
-
-
   .pm-window h3:hover {
     background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
     background-position: 225px;
@@ -415,6 +426,10 @@ $c8: #803C6F;
     color: #0000EE;
   }
 
+  .unread {
+    background: none;
+  }
+
   .pm-log-add {
     background: rgba(34, 34, 34, 0.8);
     color: #DDD;
@@ -454,6 +469,101 @@ $c8: #803C6F;
   /***************************
   * Mainmenuwrapper CSS ~end *
   ***************************/
+
+  /************
+  * Popup CSS *
+  ************/
+
+  .ps-popup {
+    a {
+      color: #91C2C9;
+      text-shadow: 0px 0px 2px #111;
+    }
+
+    a:hover {
+      color: #B6DFDB;
+    }
+
+    a.ilink.yours {
+      color: #498E98;
+      text-shadow: 0px 0px 2px #111;
+    }
+
+    a.ilink.yours:hover {
+      color: #61B7C4;
+    }
+  }
+
+  /*****************
+  * Popup CSS ~end *
+  *****************/
+
+  /******************
+  * Teambuilder CSS *
+  ******************/
+
+  .teambuilder-results {
+    h3, .utilichart h3 {
+      background: #3A3A3A !important;
+      color: #E2E2E2 !important;
+      border-color: $c2 !important;
+      text-shadow: 1px 1px $c2 !important;
+    }
+
+    .result a.cur, .result a.cur:hover , .result a:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #000;
+    }
+  }
+
+  .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
+    color: #61B7C4;
+  }
+
+  .setmenu button, .teamlist button {
+    background: rgba(9, 24, 31, 0.95) !important;
+    border-color: #B998AB !important;
+    color: #B998AB !important;
+    text-shadow: none !important;   
+  }
+
+  .setmenu button:hover, .teamlist button:hover {
+    background: rgba(9, 24, 31, 0.98) !important;
+    border-color: #8BBDC6 !important;
+    color: #8BBDC6 !important;
+  }
+
+  .utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
+    text-shadow: none !important;
+  }
+
+  .setchart, .setchart-nickname {
+    background: #3A3A3A;
+    border-color: $c2;
+  }
+
+  .setchart label, .setchart-nickname label {
+    color: #8BBDC6;
+    text-shadow: 1px 0px $c2;
+  }
+
+  .teamlist .team {
+    background: rgba(9, 24, 31, 0.95);
+    border-color: #B998AB;
+    color: #B998AB;
+    text-shadow: none !important;
+  }
+
+  .teamlist .team:hover {
+    background: rgba(9, 24, 31, 0.98);
+    border-color: #8BBDC6;
+    color: #8BBDC6;
+    text-shadow: none !important;
+  }
+
+  /***********************
+  * Teambuilder CSS ~end *
+  ***********************/
 
   /*************
   * Battle CSS *
