@@ -7,7 +7,6 @@
 @import "icons";
 @import "teambuilder";
 @import "battle";
-@import "darkcss";
 
 $c1: #11484F;
 $c3: #336251;
@@ -767,3 +766,5 @@ a.subtle, a.subtle:hover {
 /******************
 * Ladder CSS ~end *
 ******************/
+
+@import "darkcss";

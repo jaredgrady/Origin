@@ -67,12 +67,12 @@ $c8: #803C6F;
       opacity: 0;
     }
 
-    .dark .maintabbarbottom {
+    .maintabbarbottom {
       background: #3A3A3A;
       border-color: #111;
     }
 
-    .dark .tabbar {
+    .tabbar {
       a.button.notifying {
         background: #B4DCE4;
         border-color: #8BBDC6;
@@ -304,24 +304,24 @@ $c8: #803C6F;
     color: #FBE7F0;
     text-shadow: 0px 0px 2px $c8;
 
-    .dark .select:disabled, .dark .select:disabled:hover {
+    .select:disabled, .dark .select:disabled:hover {
       background: rgba(45, 45, 45, 0.5) !important;   
       border-color: $c2 !important;   
     }
 
-    .dark .teamselect:disabled strong {
+    .teamselect:disabled strong {
       color: #E2E2E2 !important;
       text-shadow: 1px 1px $c2 !important;
     }
 
-    .dark .select, .button {
+    .select, .button {
       background: rgba(45, 45, 45, 0.95) !important;
       color: #E2E2E2 !important;
       border-color: $c2 !important;
       text-shadow: 1px 1px $c2 !important;
     }
     
-    .dark .select:hover, .button:hover  {
+    .select:hover, .button:hover  {
       background: rgba(30, 30, 30, 0.95) !important;
       color: #8BBDC6 !important;
       border-color: $c2 !important;
