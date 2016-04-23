@@ -1,13 +1,10 @@
 // run filters
-"use strict";
+'use strict';
 let filterRegex = null;
 
 function buildFilterRegex() {
-	let filter = Object.keys(Db("filter").object());
-	if (!filter.length) {
-		filterRegex = null;
-		return;
-	}
+	let filter = Object.keys(Db('filter').object());
+	if (!filter.length) return filterRegex = null;
 	// regex pattern taken from client
 	filterRegex = new RegExp('(?:\\b|(?!\\w))(?:' + filter.join("|") + ')(?:\\b|\\B(?!\\w))', 'i');
 }
@@ -32,21 +29,21 @@ exports.commands = {
 			if (!selection) return this.errorReply("/chatfilter [add | remove | regex | list](, [phrase / regex])");
 			// de-regexify this.
 			selection = selection.replace(/([^a-z0-9\s])/g, m => "\\" + m);
-			if (Db("filter").get(selection, null)) return this.errorReply("This is already being filtered.");
-			Db("filter").set([selection], 1);
+			if (Db('filter').get(selection, null)) return this.errorReply("This is already being filtered.");
+			Db('filter').set([selection], 1);
 			buildFilterRegex();
-			this.parse("/chatfilter list");
+			this.parse('/chatfilter list');
 			break;
 		case "remove":
 			if (!selection) return this.errorReply("/chatfilter [add | remove | regex | list](, [phrase / regex])");
-			if (!Db("filter").get(selection, null)) {
+			if (!Db('filter').get(selection, null)) {
 				// check if there is a regexified version
 				selection = selection.replace(/([^a-z0-9\s])/g, m => "\\" + m);
-				if (!Db("filter").get(selection, null)) return this.errorReply("The selection is not found!");
+				if (!Db('filter').get(selection, null)) return this.errorReply("The selection is not found!");
 			}
-			Db("filter").delete(selection);
+			Db('filter').delete(selection);
 			buildFilterRegex();
-			this.parse("/chatfilter list");
+			this.parse('/chatfilter list');
 			break;
 		case "regex":
 			if (!this.can("bypassall")) return false;
@@ -57,9 +54,9 @@ exports.commands = {
 			} catch (e) {
 				return this.errorReply(e.message.substr(0, 28) === 'Invalid regular expression: ' ? e.message : 'Invalid regular expression: /' + selection + '/: ' + e.message);
 			}
-			Db("filter").set([selection], 1);
+			Db('filter').set([selection], 1);
 			buildFilterRegex();
-			this.parse("/chatfilter list");
+			this.parse('/chatfilter list');
 			break;
 		// forceregex is for bypassing patterns that is otherwise limited by the ReDoS checker.
 		case "forceregex":
@@ -71,12 +68,12 @@ exports.commands = {
 			} catch (e) {
 				return this.errorReply(e.message.substr(0, 28) === 'Invalid regular expression: ' ? e.message : 'Invalid regular expression: /' + selection + '/: ' + e.message);
 			}
-			Db("filter").set([selection], 1);
+			Db('filter').set([selection], 1);
 			buildFilterRegex();
-			this.parse("/chatfilter list");
+			this.parse('/chatfilter list');
 			break;
 		default:
-			this.sendReply("List of filtered phrases: " + Object.keys(Db("filter").object()).join(", "));
+			this.sendReply("List of filtered phrases: " + Object.keys(Db('filter').object()).join(", "));
 			break;
 		}
 	},

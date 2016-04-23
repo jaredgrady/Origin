@@ -28,7 +28,6 @@ const spins = {
 };
 
 const wheelTrozei = {
-
 	'golem': 'http://cdn.bulbagarden.net/upload/1/13/Spr_3f_076.png',
 	'primeape': 'http://img.pokemondb.net/sprites/yellow/normal/primeape-color.png',
 	'marowak': 'http://pldh.net/media/pokemon/gen3/frlg/105.png',
@@ -81,10 +80,10 @@ function display(result, user, wheel) {
 exports.commands = {
 	wheel: {
 		start: 'spin',
-		 'spin': function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply('Wheel of Fortune can only be played in the "Casino".');
-			if (!this.canTalk()) return this.errorReply('/wheel spin - Access Denied.');
-			if (!enable) return this.errorReply('Wheel of fortune is temporarily disabled.');
+		spin: function (target, room, user) {
+			if (room.id !== 'casino') return this.errorReply("Wheel of Fortune can only be played in the Casino.");
+			if (!this.canTalk()) return this.errorReply("/wheel spin - Access denied.");
+			if (!enable) return this.errorReply("Wheel of fortune is temporarily disabled.");
 			let amount = Db('money').get(user.userid, 0);
 			Db('money').set(user.userid, (amount - 3));
 			if (amount < 3) return this.errorReply('You don\'t have enough bucks to play this game. You need ' + (3 - amount) + currencyName(amount) + ' more.');
@@ -99,7 +98,7 @@ exports.commands = {
 			}
 			return this.sendReplyBox(display(false, user.name, spin()));
 		},
-		'toggle': function (target, room, user) {
+		toggle: function (target, room, user) {
 			if (!this.can('declare')) return;
 			if (enable) {
 				enable = false;
@@ -109,24 +108,16 @@ exports.commands = {
 				this.sendReply("Wheel of Fortune has been enabled.");
 			}
 		},
-		 '': function (target, room, user) {
+		'': function (target, room, user) {
 			if (!this.canBroadcast()) return;
-			return this.sendReplyBox('<div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
-	'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
-    '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
-    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
-    '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
-    '<center><font size = 4, color = "white"><b>Spin the <button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button> 3 bucks per a spin!</b></font></center></div>');
+			return this.parse('/help wof');
 		},
-
 		wofhelp:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
-    '<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
-    '<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
-    '<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
-    '<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
-    '<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
-    '<center><font size = 4, color = "white"><b>Spin the<button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button>  3 bucks per a spin!</b></font></center></div>'],
+			'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
+			'<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
+			'<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
+			'<center><font size = 2, color = "white">Magikarp: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Charmander: 3 bucks<span style="display:inline-block; width: 20px,;"></span>Slowbro: 6 bucks</center><br>' +
+			'<center><font size = 2, color = "white"><b><i>Squirtle: 10 bucks</i></b></center></font><br>' +
+			'<center><font size = 4, color = "white"><b>Spin the<button name = "send", value = "/wheel spin"><font color = "red"><b>WHEEL!</b></font></button>  3 bucks per a spin!</b></font></center></div>'],
 	},
-
 };
