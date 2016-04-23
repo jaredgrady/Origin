@@ -85,8 +85,8 @@ exports.commands = {
 			if (!this.canTalk()) return this.errorReply("/wheel spin - Access denied.");
 			if (!enable) return this.errorReply("Wheel of fortune is temporarily disabled.");
 			let amount = Db('money').get(user.userid, 0);
-			Db('money').set(user.userid, (amount - 3));
 			if (amount < 3) return this.errorReply('You don\'t have enough bucks to play this game. You need ' + (3 - amount) + currencyName(amount) + ' more.');
+			Db('money').set(user.userid, Db('money').get(user.userid) - 3);
 
 			const result = spin();
 			const chancePercentage = rng();
@@ -110,9 +110,9 @@ exports.commands = {
 		},
 		'': function (target, room, user) {
 			if (!this.canBroadcast()) return;
-			return this.parse('/help wof');
+			return this.parse('/help wheel');
 		},
-		wofhelp:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
+		wheelhelp:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
 			'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
 			'<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
 			'<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
