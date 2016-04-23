@@ -184,6 +184,19 @@ exports.commands = {
 			this.sendReply(gang + " has been deducted of " + amount + " points.");
 			room.addRaw("<h4>" + gang + "has been deducted of " + amount + " points.</h4>");
 		},
+		resetladder: function (target, room, user) {
+			if (!this.can('hotpatch')) return false;
+			let allGangs = Db('gangranks').object();
+			Object.keys(allGangs)
+				.filter(function (gang) {
+					return Db('gangranks').get(gang) < 1;
+				})
+				.forEach(function (gang) {
+					delete allGangs[gang];
+				});
+			Db.save();
+			this.sendReply("The Turf Wars Ladder has been reset.");
+		},
 		members: function (target, room, user) {
 			if (!this.runBroadcast()) return false;
 			if ((target && !gangs.hasOwnProperty(toId(target))) || (!target && !gangs.hasOwnProperty(room.id))) return this.errorReply("You must specify a gang.");
