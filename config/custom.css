@@ -2812,6 +2812,297 @@
 #tooltipwrapper .tooltip p.section {
   border-top: 1px solid #11484F; }
 
+.dark {
+  /**************
+  * General CSS *
+  **************/
+  /*******************
+  * General CSS ~end *
+  *******************/
+  /*************
+  * Header CSS *
+  *************/
+  /******************
+  * Header CSS ~end *
+  ******************/
+  /***************
+  * Roomlist CSS *
+  ***************/
+  /********************
+  * Roomlist CSS ~end *
+  ********************/
+  /***********
+  * Chat CSS *
+  ***********/
+  /****************
+  * Chat CSS ~end *
+  ****************/
+  /*******************
+  * Tournaments CSS *
+  ******************/
+  /***********************
+  * Tournaments CSS ~end *
+  ***********************/
+  /**********************
+  * Mainmenuwrapper CSS *
+  **********************/
+  /***************************
+  * Mainmenuwrapper CSS ~end *
+  ***************************/
+  /*************
+  * Battle CSS *
+  *************/
+  /******************
+  * Battle CSS ~end *
+  ******************/ }
+  .dark body {
+    background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat; }
+  .dark .ps-room.ps-room-light {
+    background: none;
+    border-color: #09181F; }
+  .dark .ps-room.ps-room-light.scrollable {
+    background: rgba(19, 36, 46, 0.6); }
+    .dark .ps-room.ps-room-light.scrollable .rooms-officialchatrooms, .dark .ps-room.ps-room-light.scrollable .rooms-chatrooms {
+      color: #DDD;
+      text-shadow: 1px 1px #222222; }
+    .dark .ps-room.ps-room-light.scrollable p {
+      color: #EEE;
+      text-shadow: 0px 0px 2px #000; }
+    .dark .ps-room.ps-room-light.scrollable .select {
+      background: rgba(45, 45, 45, 0.95) !important;
+      color: #E2E2E2 !important;
+      border-color: #222222 !important;
+      text-shadow: 1px 1px #222222 !important; }
+    .dark .ps-room.ps-room-light.scrollable .select:hover {
+      background: rgba(30, 30, 30, 0.95) !important;
+      color: #8BBDC6 !important;
+      border-color: #222222 !important;
+      text-shadow: 1px 1px #222222 !important; }
+  .dark .chat.mine {
+    background: transparent; }
+  .dark .ps-overlay {
+    background: rgba(0, 0, 0, 0.5); }
+  .dark .header {
+    background: rgba(19, 36, 46, 0.5) url("http://i.imgur.com/A3wunN6.png?1") no-repeat; }
+    .dark .header .logo {
+      opacity: 0; }
+    .dark .header .dark .maintabbarbottom {
+      background: #3A3A3A;
+      border-color: #111; }
+    .dark .header .dark .tabbar a.button.notifying {
+      background: #B4DCE4;
+      border-color: #8BBDC6;
+      color: #4A7179;
+      text-shadow: none;
+      font-style: italic; }
+    .dark .header .dark .tabbar a.button.notifying:hover {
+      background: #A0CCD5;
+      border-color: #8BBDC6;
+      color: #4A7179;
+      text-shadow: none;
+      font-style: italic; }
+    .dark .header .dark .tabbar a.button.subtle-notifying, .dark .header .dark .tabbar a.button.subtle-notifying:hover {
+      color: #EB86BF; }
+    .dark .header .dark .tabbar a.button.cur, .dark .header .dark .tabbar a.button.cur:hover {
+      background: #3A3A3A;
+      border-color: #111;
+      color: #F9F9F9;
+      text-shadow: 1px 1px #111; }
+    .dark .header .dark .tabbar a.button {
+      background: rgba(45, 45, 45, 0.7);
+      color: #BBB;
+      border-color: #222222;
+      text-shadow: 1px 1px #222222; }
+    .dark .header .dark .tabbar a.button:hover {
+      background: rgba(45, 45, 45, 0.95);
+      color: #E2E2E2;
+      border-color: #222222;
+      text-shadow: 1px 1px #222222; }
+    .dark .header .dark .tabbar .closebutton, .dark .header .dark .tabbar .minimizebutton {
+      color: #BBB; }
+    .dark .header .dark .tabbar .minimizebutton:hover {
+      color: #FFE1B9 !important; }
+    .dark .header .dark .tabbar .closebutton:hover {
+      color: #FFB9B9; }
+    .dark .header .userbar button.icon {
+      border: 1px solid #803C6F;
+      background: #CD9FC4;
+      color: #803C6F;
+      text-shadow: 0px 0px 2px #FCE8F1; }
+    .dark .header .userbar button.icon:hover {
+      color: #DBAED2; }
+    .dark .header .userbar .username {
+      text-shadow: 1px 1px 0px #111, 1px -1px 0px #111, -1px 1px 0px #111, -1px -1px 0px #111; }
+  .dark .roomlist a.ilink {
+    background: rgba(9, 24, 31, 0.95);
+    border-color: #B998AB;
+    color: #B998AB; }
+  .dark .roomlist a.ilink:hover {
+    background: rgba(9, 24, 31, 0.98);
+    border-color: #8BBDC6;
+    color: #8BBDC6; }
+  .dark .roomlist .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important; }
+  .dark .roomcounters button {
+    background: rgba(9, 24, 31, 0.95);
+    border-color: #B998AB;
+    color: #B998AB; }
+  .dark .roomcounters button:hover {
+    background: rgba(9, 24, 31, 0.98);
+    border-color: #8BBDC6;
+    color: #8BBDC6; }
+  .dark .roomcounters .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important; }
+  .dark .userlist {
+    background: rgba(14, 36, 49, 0.8);
+    border-color: #09181F;
+    color: #11484F;
+    text-shadow: none; }
+    .dark .userlist li {
+      background: rgba(255, 255, 255, 0.65);
+      border-color: #1D4254; }
+      .dark .userlist li em.group {
+        color: #333; }
+      .dark .userlist li button span {
+        text-shadow: 0px 0px 2px #EEE; }
+      .dark .userlist li button:hover {
+        background: rgba(255, 255, 255, 0.5); }
+    .dark .userlist strong, .dark .userlist span {
+      text-shadow: 0px 0px 2px #FFF; }
+  .dark .userlist-minimized .userlist-count:hover {
+    background: rgba(255, 255, 255, 0.5); }
+  .dark .chat-log {
+    background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
+    color: #000; }
+    .dark .chat-log .chat small {
+      color: #11484F; }
+    .dark .chat-log a {
+      color: #0000EE; }
+  .dark .chat-log-add {
+    background: rgba(34, 34, 34, 0.8);
+    color: #DDD; }
+  .dark .chat.highlighted {
+    background: #B4DCE4;
+    color: #0C3A43; }
+  .dark .greentext {
+    color: #187902; }
+  .dark .tournament-title {
+    background: rgba(19, 36, 46, 0.6);
+    color: #EEE;
+    text-shadow: 0px -1px 0px #222222; }
+  .dark .tournament-tools {
+    background: rgba(19, 36, 46, 0.6);
+    border-color: #111; }
+    .dark .tournament-tools button {
+      background: rgba(9, 24, 31, 0.95);
+      border-color: #B998AB;
+      color: #B998AB; }
+    .dark .tournament-tools button:hover {
+      background: rgba(9, 24, 31, 0.98);
+      border-color: #8BBDC6;
+      color: #8BBDC6; }
+  .dark .dark .tournament-bracket-tree {
+    background: rgba(19, 36, 46, 0.5); }
+  .dark .menugroup {
+    border: 1px solid #000;
+    background: rgba(45, 45, 45, 0.25);
+    color: #FBE7F0;
+    text-shadow: 0px 0px 2px #803C6F; }
+    .dark .menugroup .dark .select:disabled, .dark .menugroup .dark .select:disabled:hover {
+      background: rgba(45, 45, 45, 0.5) !important;
+      border-color: #222222 !important; }
+    .dark .menugroup .dark .teamselect:disabled strong {
+      color: #E2E2E2 !important;
+      text-shadow: 1px 1px #222222 !important; }
+    .dark .menugroup .dark .select, .dark .menugroup .button {
+      background: rgba(45, 45, 45, 0.95) !important;
+      color: #E2E2E2 !important;
+      border-color: #222222 !important;
+      text-shadow: 1px 1px #222222 !important; }
+    .dark .menugroup .dark .select:hover, .dark .menugroup .button:hover {
+      background: rgba(30, 30, 30, 0.95) !important;
+      color: #8BBDC6 !important;
+      border-color: #222222 !important;
+      text-shadow: 1px 1px #222222 !important; }
+  .dark .pm-window .closebutton, .dark .pm-window .minimizebutton {
+    color: #BBB; }
+  .dark .pm-window h3 {
+    background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+    background-position: 225px;
+    color: #BBB;
+    border-color: #3D3D3D;
+    text-shadow: 0px -1px 0px #3D3D3D; }
+    .dark .pm-window h3 small {
+      color: #BBB; }
+    .dark .pm-window h3 .minimizebutton:hover {
+      color: #FFE1B9 !important; }
+    .dark .pm-window h3 .closebutton:hover {
+      color: #FFB9B9; }
+    .dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
+      color: #CCC !important; }
+  .dark .pm-window h3:hover {
+    background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+    background-position: 225px;
+    color: #E2E2E2;
+    border-color: #3D3D3D;
+    text-shadow: 0px -1px 0px #3D3D3D; }
+    .dark .pm-window h3:hover .minimizebutton {
+      color: #BBB; }
+  .dark .pm-window.focused h3, .dark .pm-window.focused h3:hover {
+    background: #3A3A3A url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
+    background-position: 225px;
+    border-color: #111;
+    color: #F9F9F9;
+    text-shadow: 0px -1px 0px #111; }
+  .dark .pm-window.focused h3:hover {
+    color: #8BBDC6; }
+  .dark .message-pm {
+    color: #46806A; }
+  .dark .pm-window h3.pm-notifying {
+    background: #B4DCE4;
+    border-color: #8BBDC6;
+    color: #4A7179;
+    text-shadow: none;
+    font-style: italic; }
+  .dark .pm-window h3.pm-notifying:hover {
+    background: #A0CCD5;
+    border-color: #8BBDC6;
+    color: #4A7179;
+    text-shadow: none;
+    font-style: italic; }
+  .dark .pm-log, .dark .pm-window.focused .pm-log {
+    background: rgba(242, 247, 250, 0.925) none repeat scroll 0% 0%;
+    color: #000;
+    border-color: #888; }
+  .dark .pm-log a {
+    color: #0000EE; }
+  .dark .pm-log-add {
+    background: rgba(34, 34, 34, 0.8);
+    color: #DDD; }
+  .dark .challenge {
+    background: #FCD2B3 none repeat scroll 0% 0%;
+    border: 1px solid #F57B21;
+    color: #682F05; }
+  .dark .pm-log-add {
+    background: rgba(34, 34, 34, 0.8);
+    color: #DDD; }
+    .dark .pm-log-add .textbox {
+      border-color: #999; }
+  .dark .pm-window.focused .pm-log-add {
+    border-color: #000;
+    background: #222222; }
+  .dark .mainmenufooter {
+    color: #91C2C9; }
+    .dark .mainmenufooter a {
+      color: #91C2C9; }
+    .dark .mainmenufooter a:hover {
+      color: #B6DFDB; }
+  .dark .battle-log a {
+    color: #0000EE; }
+  .dark .battle-log-add {
+    background: rgba(34, 34, 34, 0.8);
+    color: #DDD; }
+
 /************************************
 * IMPORTS - MIXINS - VARIABLES ~end *
 ************************************/
