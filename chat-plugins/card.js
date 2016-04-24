@@ -860,4 +860,37 @@ exports.commands = {
 			"<b>/transferallcards</b> - /transferallcards [user] - transfers all of your cards to the target user.<br>"
 		);
 	},
+
+	givecard: 'spawncard',
+	spawncard: function (target, room, user, connection, cmd) {
+		if (!this.can('declare')) return false;
+		if (!target) return this.errorReply("/givecard [user], [card ID]");
+		let parts = target.split(",").map(p => toId(p));
+		// find targetUser and the card being given.
+		let targetUser = parts.shift();
+		let card = parts[0].trim();
+		if (!targetUser || !card) return this.errorReply("/givecard [user], [card ID]");
+		if (!cards.hasOwnProperty(card)) return this.sendReply(target + ": card not found.");
+		//Give the card to the user.
+		card = cards[card];
+		addCard(targetUser, card.title);
+		user.popup("You have successfully given " + card.name + " to " + targetUser + ".");
+		this.logModCommand(user.name + "gave the card '" + card.name + "' to " + targetUser + ".");
+	},
+
+	takecard: function (target, room, user, connection, cmd) {
+		if (!this.can('declare')) return false;
+		if (!target) return this.errorReply("/takecard [user], [card ID]");
+		let parts = target.split(",").map(p => toId(p));
+		// find targetUser and the card being taken.
+		let targetUser = parts.shift();
+		let card = parts[0].trim();
+		if (!targetUser || !card) return this.errorReply("/takecard [user], [card ID]");
+		if (!cards.hasOwnProperty(card)) return this.sendReply(target + ": card not found.");
+		//Take the card from the user.
+		card = cards[card];
+		removeCard(card.title, targetUser);
+		user.popup("You have successfully taken " + card.name + " from " + targetUser + ".");
+		this.logModCommand(user.name + " took the card '" + card.name + "' from " + targetUser + ".");
+	},
 };
