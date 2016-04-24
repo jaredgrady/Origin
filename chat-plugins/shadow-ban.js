@@ -17,7 +17,7 @@ if (!room) {
 
 	if (room.chatRoomData) {
 		room.chatRoomData.isHidden = true;
-		room.chatRoomData.modjoin = true;
+		room.chatRoomData.modjoin = "%";
 		room.chatRoomData.staffAutojoin = true;
 		room.chatRoomData.addedUsers = room.addedUsers;
 
