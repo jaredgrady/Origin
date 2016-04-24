@@ -93,7 +93,7 @@ exports.commands = {
 			const chancesGenerated = 22 + availableSpins.indexOf(result) * 1;
 
 			if (chancePercentage <= chancesGenerated) {
-				Db('money').set(user.userid, (Db('money').get(user.userid) + spins[result]));
+				Db('money').set(user.userid, (Db('money').get(user.userid) + spins[result]) - 3);
 				return this.sendReplyBox(display(true, user.name, result));
 			}
 			return this.sendReplyBox(display(false, user.name, spin()));
@@ -112,7 +112,7 @@ exports.commands = {
 			if (!this.canBroadcast()) return;
 			return this.parse('/help wheel');
 		},
-		wheelhelp:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
+		help:['|html| <div style="background-image:&quot;http://vignette1.wikia.nocookie.net/gameshows/images/6/61/Wheel_of_Fortune_Puzzle_Board_6.png/revision/latest?cb=20130127193907&quot;); background-size: 100% 100%" border="0" width="100%"><center><font size = 5, color = "purple"><center><b>Wheel of Fortune! </font></center><br>' +
 			'<center><font size = 2, color = "white"><center><b>You spin the wheel and you will receive the amount of<br> bucks that Pokemon is worth.</b></font></center> <br>' +
 			'<center><font size = 2, color = "white"><i>Here are the spin Prizes!</i></center><br>' +
 			'<center><font size = 2, color = "white">Pikachu: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Mew: 1 bucks<span style="display:inline-block; width: 20px,;"></span>Bulbasaur: 2 bucks</center><br>' +
