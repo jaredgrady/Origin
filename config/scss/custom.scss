@@ -12,7 +12,24 @@ $c1: #11484F;
 $c3: #336251;
 $c8: #803C6F;
 $c9: #96BFB8;
+$cb: #BBCCC9;
 $cc: #CD9FC4;
+$cf: #FFE0A7;
+
+@mixin broadcast($background, $brdclr, $shadow) {
+  background: $background;
+  border: 1px solid $brdclr;
+  color: $brdclr;
+  text-shadow: 0px 0px 2px $shadow;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 5px;
+}
+
+@mixin roomicon($image) {
+  background: rgba(255, 255, 255, 0.65) url($image) left no-repeat;
+}
 
 /************************************
 * IMPORTS - MIXINS - VARIABLES ~end *
@@ -33,19 +50,19 @@ $cc: #CD9FC4;
 /* Room Icon */
 
 #lobby-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/P4DEqSG.png") left no-repeat;
+  @include roomicon("http://i.imgur.com/P4DEqSG.png");
 }
 
 #tournaments-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat;
+  @include roomicon("http://i.imgur.com/xUptAEf.png");
 }
 
 #theomegaleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") no-repeat;
+  @include roomicon("http://i.imgur.com/EfrHru3.png");
 }
 
 #thelotusleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/X87OO7r.png") left no-repeat;
+  @include roomicon("http://i.imgur.com/X87OO7r.png");
 }
 
 /* Room Icon ~end */
@@ -76,7 +93,7 @@ body {
   }
 
   .button {
-    background: #BBCCC9;    
+    background: $cb;    
     border: 1px solid $c1;
     color: $c1;
     text-shadow: 0px 0px 2px $c9;
@@ -88,12 +105,12 @@ body {
   }
 
   .rooms-officialchatrooms, .rooms-chatrooms {
-    color: #BBCCC9;
+    color: $cb;
     text-shadow: 0px 0px 2px $c1;
   }
 
   .select {
-    background: #FFE0A7 !important;
+    background: $cf !important;
     border-color: $c8 !important;
     color: $c8 !important;
     text-shadow: none !important;
@@ -111,17 +128,6 @@ body {
 
 .chat.mine {
   background: rgba(0, 0, 0, 0);
-}
-
-@mixin broadcast($background, $brdclr, $shadow) {
-  background: $background;
-  border: 1px solid $brdclr;
-  color: $brdclr;
-  text-shadow: 0px 0px 2px $shadow;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 8px;
-  margin: 5px;
 }
 
 .broadcast-blue {
@@ -195,7 +201,7 @@ body {
 
   .tabbar {
     a.button.notifying {
-      background: #FFE0A7;
+      background: $cf;
       border-color: $c8;
       color: $c8;
       text-shadow: none;
@@ -271,7 +277,7 @@ body {
   }
 
   a.ilink {
-    background: #BBCCC9;    
+    background: $cb;    
     border-color: $c1;
     color: $c1;
     text-shadow: 0px 0px 2px $c9;
@@ -292,7 +298,7 @@ body {
 
 .roomcounters {
   button {
-    background: #BBCCC9;    
+    background: $cb;    
     border-color: $c1;
     color: $c1;
     text-shadow: 0px 0px 2px $c9;
@@ -465,7 +471,7 @@ body {
   }
 
   .select, .button {
-    background: #FFE0A7 !important;
+    background: $cf !important;
     border-color: $c8 !important;
     color: $c8 !important;
     text-shadow: none !important;
@@ -646,7 +652,7 @@ body {
 ************/
 
 .ps-popup {
-  background: #BBCCC9;    
+  background: $cb;    
   border-color: $c1;
 
   a {
@@ -670,7 +676,7 @@ body {
     background: #17626E;
     border: 1px solid $c1;
     padding: 2px 5px;
-    color: #BBCCC9;
+    color: $cb;
     text-shadow: 0px -1px 0px $c1;
   }
 

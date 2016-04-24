@@ -1,6 +1,7 @@
 $c1: #11484F;
 $c2: #222222;
 $c8: #803C6F;
+$c8b: #8BBDC6;
 
 .dark {
   /**************
@@ -31,8 +32,8 @@ $c8: #803C6F;
 
     button {
       background: rgba(9, 24, 31, 0.95);
-      border-color: #8BBDC6;
-      color: #8BBDC6;
+      border-color: $c8b;
+      color: $c8b;
     }
 
     button:hover {
@@ -50,7 +51,7 @@ $c8: #803C6F;
 
     .select:hover {
       background: rgba(30, 30, 30, 0.95) !important;
-      color: #8BBDC6 !important;
+      color: $c8b !important;
       border-color: $c2 !important;
       text-shadow: 1px 1px $c2 !important;
     }
@@ -87,7 +88,7 @@ $c8: #803C6F;
     .tabbar {
       a.button.notifying {
         background: #B4DCE4;
-        border-color: #8BBDC6;
+        border-color: $c8b;
         color: #4A7179;
         text-shadow: none;
         font-style: italic;
@@ -95,7 +96,7 @@ $c8: #803C6F;
 
       a.button.notifying:hover {
         background: #A0CCD5;
-        border-color: #8BBDC6;
+        border-color: $c8b;
         color: #4A7179;
         text-shadow: none;
         font-style: italic;
@@ -174,8 +175,8 @@ $c8: #803C6F;
 
     a.ilink:hover {
       background: rgba(9, 24, 31, 0.98);
-      border-color: #8BBDC6;
-      color: #8BBDC6;
+      border-color: $c8b;
+      color: $c8b;
     }
 
     .picon {
@@ -186,8 +187,8 @@ $c8: #803C6F;
   .roomcounters {
     button {
       background: rgba(9, 24, 31, 0.95);
-      border-color: #8BBDC6;
-      color: #8BBDC6;
+      border-color: $c8b;
+      color: $c8b;
     }
 
     button:hover {
@@ -294,8 +295,8 @@ $c8: #803C6F;
 
     button:hover {
       background: rgba(9, 24, 31, 0.98);
-      border-color: #8BBDC6;
-      color: #8BBDC6;
+      border-color: $c8b;
+      color: $c8b;
     }
   }
 
@@ -336,7 +337,7 @@ $c8: #803C6F;
     
     .select:hover, .button:hover  {
       background: rgba(30, 30, 30, 0.95) !important;
-      color: #8BBDC6 !important;
+      color: $c8b !important;
       border-color: $c2 !important;
       text-shadow: 1px 1px $c2 !important;
     }
@@ -393,7 +394,7 @@ $c8: #803C6F;
   }
 
   .pm-window.focused h3:hover {
-    color: #8BBDC6;
+    color: $c8b;
   }
 
   .message-pm {
@@ -402,7 +403,7 @@ $c8: #803C6F;
 
   .pm-window h3.pm-notifying {
     background: #B4DCE4;
-    border-color: #8BBDC6;
+    border-color: $c8b;
     color: #4A7179;
     text-shadow: none;
     font-style: italic;
@@ -410,7 +411,7 @@ $c8: #803C6F;
 
   .pm-window h3.pm-notifying:hover {
     background: #A0CCD5;
-    border-color: #8BBDC6;
+    border-color: $c8b;
     color: #4A7179;
     text-shadow: none;
     font-style: italic;
@@ -503,6 +504,8 @@ $c8: #803C6F;
   ******************/
 
   .teambuilder-results {
+    background: rgba(0, 0, 0, 0.3);
+
     h3, .utilichart h3 {
       background: #3A3A3A !important;
       color: #E2E2E2 !important;
@@ -529,8 +532,8 @@ $c8: #803C6F;
 
   .setmenu button:hover, .teamlist button:hover {
     background: rgba(9, 24, 31, 0.98) !important;
-    border-color: #8BBDC6 !important;
-    color: #8BBDC6 !important;
+    border-color: $c8b !important;
+    color: $c8b !important;
   }
 
   .utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
@@ -543,7 +546,7 @@ $c8: #803C6F;
   }
 
   .setchart label, .setchart-nickname label {
-    color: #8BBDC6;
+    color: $c8b;
     text-shadow: 1px 0px $c2;
   }
 
@@ -556,9 +559,15 @@ $c8: #803C6F;
 
   .teamlist .team:hover {
     background: rgba(9, 24, 31, 0.98);
-    border-color: #8BBDC6;
-    color: #8BBDC6;
+    border-color: $c8b;
+    color: $c8b;
     text-shadow: none !important;
+  }
+
+  .setchart input.incomplete {
+    background: #2F252A;
+    color: #CE3FB6;
+    border-color: #CE3FB6
   }
 
   /***********************

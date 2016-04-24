@@ -2474,8 +2474,65 @@
 .folder .selectFolder:hover {
   background: #D4E5E2; }
 
+.teambar button {
+  background: #BBCCC9;
+  border-color: #11484F;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8; }
+
+.teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
+  background: #BBCCC9;
+  border-color: #0E3339;
+  color: #0E3339;
+  text-shadow: none; }
+
+.jslider .jslider-label {
+  opacity: 1;
+  color: #062529; }
+
+.jslider .jslider-value {
+  background: #CBE1DD;
+  border: 1px solid #0C2D32;
+  color: #11484F;
+  text-shadow: 0px 0px 2px #96BFB8; }
+
 .teamchartbox {
   border-color: #11484F; }
+  .teamchartbox .setmenu button, .teamchartbox .teamlist button {
+    color: #5B274D;
+    text-shadow: 0px 0px 2px #FCE8F1; }
+  .teamchartbox .setmenu button:hover, .teamchartbox .teamlist button:hover {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important; }
+  .teamchartbox .setchart {
+    border-color: #175964;
+    background: #447F69 no-repeat scroll 10px 5px none; }
+    .teamchartbox .setchart label {
+      text-shadow: 0px -1px 0px #175964;
+      color: #E6FFF7; }
+    .teamchartbox .setchart .setdetails, .teamchartbox .setchart .setstats, .teamchartbox .setchart input, .teamchartbox .setchart .statform input.inputform {
+      border-color: #175964; }
+      .teamchartbox .setchart .setdetails label, .teamchartbox .setchart .setstats label, .teamchartbox .setchart input label, .teamchartbox .setchart .statform input.inputform label {
+        color: #11424A;
+        text-shadow: none; }
+    .teamchartbox .setchart .setdetails:hover, .teamchartbox .setchart .setstats:hover, .teamchartbox .setchart input:hover, .teamchartbox .setchart .statform input.inputform:hover {
+      border-color: #11424A; }
+    .teamchartbox .setchart input.incomplete {
+      background: #FFF5FA;
+      color: #CE3FB6;
+      border-color: #CE3FB6; }
+  .teamchartbox .setchart-nickname {
+    background: #336251;
+    border-color: #11484F; }
+    .teamchartbox .setchart-nickname label {
+      text-shadow: 0px -1px 0px #11484F;
+      color: #E6FFF7; }
+    .teamchartbox .setchart-nickname input {
+      border-color: #11484F; }
+    .teamchartbox .setchart-nickname input:hover {
+      border-color: #0A2B30; }
 
 .teamlist .team {
   background: #BBCCC9;
@@ -2489,248 +2546,160 @@
   color: #0E3339;
   text-shadow: none; }
 
-.setchart {
-  border-color: #175964;
-  background: #447F69 no-repeat scroll 10px 5px none; }
-
-.setchart-nickname {
-  background: #336251;
-  border-color: #11484F; }
-
-.setchart input, .setdetails, .setstats, .statform input.inputform {
-  border-color: #175964; }
-
-.setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
-  border-color: #11424A; }
-
-.setchart .setdetails label, .setchart .setstats label {
-  color: #11424A;
-  text-shadow: none; }
-
-.setchart label {
-  text-shadow: 0px -1px 0px #175964;
-  color: #E6FFF7; }
-
-.setchart-nickname label {
-  text-shadow: 0px -1px 0px #11484F;
-  color: #E6FFF7; }
-
-.setchart-nickname input {
-  border-color: #11484F; }
-
-.setchart-nickname input:hover {
-  border-color: #0A2B30; }
-
-.setchart input.incomplete {
-  background: #FFF5FA;
-  color: #CE3FB6;
-  border-color: #CE3FB6; }
-
-.dark .setchart input.incomplete {
-  background: #2F252A;
-  color: #CE3FB6;
-  border-color: #CE3FB6; }
-
 .teambuilder-results {
   background: rgba(255, 255, 255, 0.3); }
-
-.dark .teambuilder-results {
-  background: rgba(0, 0, 0, 0.3); }
-
-.teambuilder-results h3, .teambuilder-results .utilichart h3 {
-  border-color: #803C6F !important;
-  background: #F3C5EA !important;
-  color: #803C6F !important;
-  text-shadow: none !important; }
-
-.teambuilder-results .firstresult a {
-  background: #BBCCC9;
-  border-color: #11484F; }
-
-.teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
-  background: #CBE1DD;
-  border-color: #0C2D32; }
-
-.utilichart b {
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-  font-style: italic; }
-
-.utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
-  color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-.utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
-  color: #11484F; }
-
-.utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-  color: #1B606B; }
-
-.utilichart .numcol {
-  color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1; }
-
-.utilichart .typecol img {
-  opacity: 0.75; }
-
-.utilichart .filtercol em {
-  color: #5F2D52;
-  border: 1px solid #5F2D52; }
-
-.teambar button {
-  background: #BBCCC9;
-  border-color: #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-.teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
-  background: #BBCCC9;
-  border-color: #0E3339;
-  color: #0E3339;
-  text-shadow: none; }
-
-.setmenu button, .teamlist button {
-  color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1; }
-
-.setmenu button:hover, .teamlist button:hover {
-  border-color: #803C6F !important;
-  background: #F3C5EA !important;
-  color: #803C6F !important;
-  text-shadow: none !important; }
-
-.statform p.suggested button {
-  background: #BBCCC9;
-  border: 1px solid #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-  padding: 2px 5px; }
-
-.statform p.suggested button:hover {
-  background: #CBE1DD;
-  border-color: #0C2D32; }
-
-.statform p.suggested a {
-  color: #11484F; }
-
-.statform .col div label, .statform .col div em, .detailsform label {
-  color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-.statform .col div b {
-  color: #031315;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-.jslider .jslider-label {
-  opacity: 1;
-  color: #062529; }
-
-.jslider .jslider-value {
-  background: #CBE1DD;
-  border: 1px solid #0C2D32;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
+  .teambuilder-results h3, .teambuilder-results .utilichart h3 {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important; }
+  .teambuilder-results .firstresult a {
+    background: #BBCCC9;
+    border-color: #11484F; }
+  .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
+    background: #CBE1DD;
+    border-color: #0C2D32; }
+  .teambuilder-results .utilichart b {
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+    font-style: italic; }
+  .teambuilder-results .utilichart .movenamecol, .teambuilder-results .utilichart .namecol, .teambuilder-results .utilichart .pokemonnamecol {
+    color: #062529;
+    text-shadow: 0px 0px 2px #96BFB8; }
+  .teambuilder-results .utilichart .itemdesccol, .teambuilder-results .utilichart .abilitydesccol, .teambuilder-results .utilichart .movedesccol, .teambuilder-results .utilichart .statcol, .teambuilder-results .utilichart .bstcol, .teambuilder-results .utilichart .labelcol, .teambuilder-results .utilichart .widelabelcol, .teambuilder-results .utilichart .pplabelcol, .teambuilder-results .utilichart .abilitycol, .teambuilder-results .utilichart .twoabilitycol {
+    color: #11484F; }
+  .teambuilder-results .utilichart .labelcol em, .teambuilder-results .utilichart .widelabelcol em, .teambuilder-results .utilichart .pplabelcol em, .teambuilder-results .utilichart .statcol em, .teambuilder-results .utilichart .bstcol em {
+    color: #1B606B; }
+  .teambuilder-results .utilichart .numcol {
+    color: #5B274D;
+    text-shadow: 0px 0px 2px #FCE8F1; }
+  .teambuilder-results .utilichart .typecol img {
+    opacity: 0.75; }
+  .teambuilder-results .utilichart .filtercol em {
+    color: #5F2D52;
+    border: 1px solid #5F2D52; }
+  .teambuilder-results .statform p.suggested button {
+    background: #BBCCC9;
+    border: 1px solid #11484F;
+    color: #11484F;
+    text-shadow: 0px 0px 2px #96BFB8;
+    padding: 2px 5px; }
+  .teambuilder-results .statform p.suggested button:hover {
+    background: #CBE1DD;
+    border-color: #0C2D32; }
+  .teambuilder-results .statform p.suggested a {
+    color: #11484F; }
+  .teambuilder-results .statform .col div label, .teambuilder-results .statform .col div em {
+    color: #062529;
+    text-shadow: 0px 0px 2px #96BFB8; }
+  .teambuilder-results .statform .col div b {
+    color: #031315;
+    text-shadow: 0px 0px 2px #96BFB8; }
+  .teambuilder-results .detailsform label {
+    color: #062529;
+    text-shadow: 0px 0px 2px #96BFB8; }
 
 .ps-room.ps-room-opaque {
   background: rgba(51, 98, 81, 0.6); }
+  .ps-room.ps-room-opaque .battle {
+    border-color: #11484F !important; }
+    .ps-room.ps-room-opaque .battle .rightbar, .ps-room.ps-room-opaque .battle .leftbar {
+      background: rgba(51, 98, 81, 0.6);
+      border-color: #11484F; }
+      .ps-room.ps-room-opaque .battle .rightbar .trainer strong, .ps-room.ps-room-opaque .battle .leftbar .trainer strong {
+        color: #E6FDFF;
+        text-shadow: 0px -1px 0px #11484F; }
+      .ps-room.ps-room-opaque .battle .rightbar .trainer div, .ps-room.ps-room-opaque .battle .leftbar .trainer div {
+        opacity: 1; }
+    .ps-room.ps-room-opaque .battle .turnstatus-protect {
+      background: url("http://i.imgur.com/RVxCoHz.png");
+      opacity: 1 !important;
+      height: 103px !important;
+      width: 150px !important;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none; }
+    .ps-room.ps-room-opaque .battle .sidecondition-safeguard {
+      background: url("http://i.imgur.com/FrCoWCW.png");
+      opacity: 0.6 !important;
+      height: 90px !important;
+      width: 130px !important;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none; }
+    .ps-room.ps-room-opaque .battle .sidecondition-reflect {
+      background: url("http://i.imgur.com/X1XDxVB.png");
+      opacity: 0.7 !important;
+      height: 90px !important;
+      width: 130px !important;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none; }
+    .ps-room.ps-room-opaque .battle .sidecondition-lightscreen {
+      background: url("http://i.imgur.com/8eLftNA.png");
+      opacity: 0.6 !important;
+      height: 90px !important;
+      width: 130px !important;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none; }
+    .ps-room.ps-room-opaque .battle #tooltipwrapper {
+      text-align: left;
+      color: #11484F;
+      text-shadow: 0px 0px 2px #96BFB8; }
+    .ps-room.ps-room-opaque .battle #tooltipwrapper .tooltip {
+      width: 300px;
+      background: #BBCCC9;
+      border-color: #11484F;
+      border-radius: 1px; }
+    .ps-room.ps-room-opaque .battle #tooltipwrapper .tooltip h2 {
+      padding: 2px 4px;
+      margin: 0;
+      border-bottom: 1px solid #11484F;
+      font-size: 10pt;
+      color: #0B2D32;
+      text-shadow: 0px 0px 2px #96BFB8; }
+    .ps-room.ps-room-opaque .battle #tooltipwrapper .tooltip p {
+      padding: 2px 4px;
+      margin: 0;
+      font-size: 8pt; }
+    .ps-room.ps-room-opaque .battle #tooltipwrapper .tooltip p.section {
+      border-top: 1px solid #11484F; }
+    .ps-room.ps-room-opaque .battle .backdrop {
+      background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
+      opacity: 0.6; }
+  .ps-room.ps-room-opaque .battle-log {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #803C6F; }
+    .ps-room.ps-room-opaque .battle-log h2 {
+      border-color: #803C6F;
+      background: #F3C5EA;
+      color: #803C6F;
+      text-shadow: none;
+      text-align: center; }
+    .ps-room.ps-room-opaque .battle-log h2:hover {
+      color: #642F56; }
+    .ps-room.ps-room-opaque .battle-log .rated strong {
+      border-color: #803C6F;
+      background: #F3C5EA;
+      color: #803C6F;
+      text-shadow: none;
+      border: 1px solid #803C6F;
+      padding: 3px 6px; }
+    .ps-room.ps-room-opaque .battle-log .chat strong {
+      color: #803C6F; }
+  .ps-room.ps-room-opaque .battle-log-add {
+    border-color: #803C6F;
+    background: #F3C5EA; }
+    .ps-room.ps-room-opaque .battle-log-add .chatbox label {
+      text-shadow: 0px 0px #E4B7DB; }
+    .ps-room.ps-room-opaque .battle-log-add .textbox {
+      border-color: #803C6F; }
 
 .ps-room .battle-controls {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25) !important;
   padding-top: 10px;
   padding-bottom: 10px; }
-
-.battle-log {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: #803C6F; }
-
-.battle-log h2 {
-  border-color: #803C6F;
-  background: #F3C5EA;
-  color: #803C6F;
-  text-shadow: none;
-  text-align: center; }
-
-.battle-log h2:hover {
-  color: #642F56; }
-
-.battle-log .rated strong {
-  border-color: #803C6F;
-  background: #F3C5EA;
-  color: #803C6F;
-  text-shadow: none;
-  border: 1px solid #803C6F;
-  padding: 3px 6px; }
-
-.battle-log .chat strong {
-  color: #803C6F; }
-
-.battle-log-add {
-  border-color: #803C6F;
-  background: #F3C5EA; }
-
-.battle-log-add .chatbox label {
-  text-shadow: 0px 0px #E4B7DB; }
-
-.battle-log-add .textbox {
-  border-color: #803C6F; }
-
-.turnstatus-protect {
-  background: url(http://i.imgur.com/RVxCoHz.png);
-  opacity: 1 !important;
-  height: 103px !important;
-  width: 150px !important;
-  border-radius: 0;
-  border-width: 0;
-  box-shadow: none;
-  opacity: 0.9; }
-
-.sidecondition-safeguard {
-  background: url(http://i.imgur.com/FrCoWCW.png);
-  opacity: 0.6 !important;
-  height: 90px !important;
-  width: 130px !important;
-  border-radius: 0;
-  opacity: 0.9;
-  border-width: 0;
-  box-shadow: none; }
-
-.sidecondition-reflect {
-  background: url(http://i.imgur.com/X1XDxVB.png);
-  opacity: 0.7 !important;
-  height: 90px !important;
-  width: 130px !important;
-  border-radius: 0;
-  border-width: 0;
-  opacity: 0.9;
-  box-shadow: none; }
-
-.sidecondition-lightscreen {
-  background: url(http://i.imgur.com/8eLftNA.png);
-  opacity: 0.6 !important;
-  height: 90px !important;
-  width: 130px !important;
-  opacity: 0.9;
-  border-radius: 0;
-  border-width: 0;
-  box-shadow: none; }
-
-.backdrop {
-  background: transparent url("http://i.imgur.com/Ly6TWVD.png?1") no-repeat scroll right top !important;
-  opacity: 0.6; }
-
-.battle {
-  border-color: #11484F !important; }
-
-.rightbar, .leftbar {
-  background: rgba(51, 98, 81, 0.6);
-  border-color: #11484F; }
-
-.trainer strong {
-  color: #E6FDFF;
-  text-shadow: 0px -1px 0px #11484F; }
-
-.trainer div {
-  opacity: 1; }
 
 .battle-controls .whatdo {
   color: #111; }
@@ -2788,33 +2757,6 @@
 .movemenu button {
   border: 1px solid #0E3339 !important; }
 
-#tooltipwrapper {
-  text-align: left;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-#tooltipwrapper .tooltip {
-  width: 300px;
-  background: #BBCCC9;
-  border-color: #11484F;
-  border-radius: 1px; }
-
-#tooltipwrapper .tooltip h2 {
-  padding: 2px 4px;
-  margin: 0;
-  border-bottom: 1px solid #11484F;
-  font-size: 10pt;
-  color: #0B2D32;
-  text-shadow: 0px 0px 2px #96BFB8; }
-
-#tooltipwrapper .tooltip p {
-  padding: 2px 4px;
-  margin: 0;
-  font-size: 8pt; }
-
-#tooltipwrapper .tooltip p.section {
-  border-top: 1px solid #11484F; }
-
 /************************************
 * IMPORTS - MIXINS - VARIABLES ~end *
 ************************************/
@@ -2831,10 +2773,10 @@
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/P4DEqSG.png") left no-repeat; }
 
 #tournaments-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") left no-repeat; }
 
 #theomegaleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") left no-repeat; }
 
 #thelotusleague-userlist-users {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/X87OO7r.png") left no-repeat; }
@@ -3660,14 +3602,16 @@ a.subtle, a.subtle:hover {
     text-shadow: 0px 0px 2px #111; }
   .dark .ps-popup a.ilink.yours:hover {
     color: #61B7C4; }
-  .dark .teambuilder-results h3, .dark .teambuilder-results .utilichart h3 {
-    background: #3A3A3A !important;
-    color: #E2E2E2 !important;
-    border-color: #222222 !important;
-    text-shadow: 1px 1px #222222 !important; }
-  .dark .teambuilder-results .result a.cur, .dark .teambuilder-results .result a.cur:hover, .dark .teambuilder-results .result a:hover {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #000; }
+  .dark .teambuilder-results {
+    background: rgba(0, 0, 0, 0.3); }
+    .dark .teambuilder-results h3, .dark .teambuilder-results .utilichart h3 {
+      background: #3A3A3A !important;
+      color: #E2E2E2 !important;
+      border-color: #222222 !important;
+      text-shadow: 1px 1px #222222 !important; }
+    .dark .teambuilder-results .result a.cur, .dark .teambuilder-results .result a.cur:hover, .dark .teambuilder-results .result a:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #000; }
   .dark .utilichart .labelcol em, .dark .utilichart .widelabelcol em, .dark .utilichart .pplabelcol em, .dark .utilichart .statcol em, .dark .utilichart .bstcol em {
     color: #61B7C4; }
   .dark .setmenu button, .dark .teamlist button {
@@ -3697,6 +3641,10 @@ a.subtle, a.subtle:hover {
     border-color: #8BBDC6;
     color: #8BBDC6;
     text-shadow: none !important; }
+  .dark .setchart input.incomplete {
+    background: #2F252A;
+    color: #CE3FB6;
+    border-color: #CE3FB6; }
   .dark .battle-log a {
     color: #0000EE; }
   .dark .battle-log-add {

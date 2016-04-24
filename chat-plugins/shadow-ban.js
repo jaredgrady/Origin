@@ -10,14 +10,14 @@ if (!room) {
 	Rooms.global.addChatRoom(ROOM_NAME);
 	room = Rooms.get(toId(ROOM_NAME));
 
-	room.isPrivate = true;
-	room.staffRoom = true;
+	room.isHidden = true;
+	room.modjoin = "%";
 	room.staffAutojoin = true;
 	room.addedUsers = {};
 
 	if (room.chatRoomData) {
-		room.chatRoomData.isPrivate = true;
-		room.chatRoomData.staffRoom = true;
+		room.chatRoomData.isHidden = true;
+		room.chatRoomData.modjoin = "%";
 		room.chatRoomData.staffAutojoin = true;
 		room.chatRoomData.addedUsers = room.addedUsers;
 
