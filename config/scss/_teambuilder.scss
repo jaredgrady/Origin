@@ -1,209 +1,45 @@
+$c1: #11484F;
+$c9: #96BFB8;
+$cb: #BBCCC9;
+
 .folder .selectFolder, .folderpane h3 {
-  background: #BBCCC9;
+  background: $cb;
 }
 
 .folderpane h3 {
-  color: #11484F !important;
+  color: $c1 !important;
   text-shadow: none !important;
 }
 
 .folderpane {
-  border-left: 5px solid #BBCCC9;
+  border-left: 5px solid $cb;
 }
 
 .folderlistafter:before, .folderlistbefore:before, .folderlist .foldersep::before{
-  background: #BBCCC9;
+  background: $cb;
 }
 
 .folder.cur .selectFolder, .folder.cur .selectFolder:hover {
-  border-color: #11484F;
-  background: #BBCCC9;
+  border-color: $c1;
+  background: $cb;
 }
 
 .folder .selectFolder:hover {
   background: #D4E5E2;
 }
 
-.teamchartbox {
-  border-color: #11484F;
-}
-
-.teamlist .team {
-  background: #BBCCC9;    
-  border-color: #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.teamlist .team:hover {
-  background: #D4E5E2;    
-  border-color: #0E3339;
-  color: #0E3339;
-  text-shadow: none;
-}
-
-.setchart {
-  border-color: #175964;
-  background: #447F69 no-repeat scroll 10px 5px none;
-}
-
-.setchart-nickname {
-  background: #336251;
-  border-color: #11484F;
-}
-
-.setchart input, .setdetails, .setstats, .statform input.inputform {
-  border-color: #175964;
-}
-
-.setchart input:hover, .setdetails:hover, .setstats:hover, .statform input.inputform:hover {
-  border-color: #11424A;
-}
-
-.setchart .setdetails label, .setchart .setstats label {
-  color: #11424A;
-  text-shadow: none;
-}
-
-.setchart label {
-  text-shadow: 0px -1px 0px #175964;
-  color: #E6FFF7;
-}
-
-.setchart-nickname label {
-  text-shadow: 0px -1px 0px #11484F;
-  color: #E6FFF7;
-}
-
-.setchart-nickname input {
-  border-color: #11484F;
-}
-
-.setchart-nickname input:hover {
-  border-color: #0A2B30;
-}
-
-.setchart input.incomplete {
-  background: #FFF5FA;
-  color: #CE3FB6;
-  border-color: #CE3FB6;
-}
-
-.dark .setchart input.incomplete {
-  background: #2F252A;
-  color: #CE3FB6;
-  border-color: #CE3FB6
-}
-
-.teambuilder-results {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.dark .teambuilder-results {
-    background: rgba(0, 0, 0, 0.3)
-}
-
-.teambuilder-results h3, .teambuilder-results .utilichart h3 {
-  border-color: #803C6F !important;
-  background: #F3C5EA !important;
-  color: #803C6F !important;
-  text-shadow: none !important;
-}
-
-.teambuilder-results .firstresult a {
-  background: #BBCCC9;    
-  border-color: #11484F;
-}
-
-.teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
-  background: #CBE1DD;    
-  border-color: #0C2D32;
-}
-
-.utilichart b {
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-  font-style: italic;
-}
-
-.utilichart .movenamecol, .utilichart .namecol, .utilichart .pokemonnamecol {
-  color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.utilichart .itemdesccol, .utilichart .abilitydesccol, .utilichart .movedesccol, .utilichart .statcol, .utilichart .bstcol, .utilichart .labelcol, .utilichart .widelabelcol, .utilichart .pplabelcol, .utilichart .abilitycol, .utilichart .twoabilitycol {
-  color: #11484F;
-}
-
-.utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-  color: #1B606B;
-}
-
-.utilichart .numcol {
-  color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
-
-.utilichart .typecol img {
-  opacity: 0.75;
-}
-
-.utilichart .filtercol em {
-  color: #5F2D52;
-  border: 1px solid #5F2D52;
-}
-
 .teambar button {
-  background: #BBCCC9;    
-  border-color: #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
+  background: $cb;    
+  border-color: $c1;
+  color: $c1;
+  text-shadow: 0px 0px 2px $c9;
 }
 
 .teambar button:hover, .teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {
-  background: #BBCCC9;    
+  background: $cb;    
   border-color: #0E3339;
   color: #0E3339;
   text-shadow: none;
-}
-
-.setmenu button, .teamlist button {
-  color: #5B274D;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
-
-.setmenu button:hover, .teamlist button:hover {
-  border-color: #803C6F !important;
-  background: #F3C5EA !important;
-  color: #803C6F !important;
-  text-shadow: none !important;
-}
-
-.statform p.suggested button {
-  background: #BBCCC9;    
-  border: 1px solid #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-  padding: 2px 5px;
-}
-
-.statform p.suggested button:hover {
-  background: #CBE1DD;    
-  border-color: #0C2D32;
-}
-
-.statform p.suggested a {
-  color: #11484F;
-}
-
-.statform .col div label, .statform .col div em, .detailsform label {
-  color: #062529;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.statform .col div b {
-  color: #031315;
-  text-shadow: 0px 0px 2px #96BFB8;
 }
 
 .jslider .jslider-label {
@@ -214,6 +50,197 @@
 .jslider .jslider-value {
   background: #CBE1DD;    
   border: 1px solid #0C2D32;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
+  color: $c1;
+  text-shadow: 0px 0px 2px $c9;
+}
+
+.teamchartbox {
+  border-color: $c1;
+
+  .setmenu button, .teamlist button {
+    color: #5B274D;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+
+  .setmenu button:hover, .teamlist button:hover {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+  }
+
+  .setchart {
+    border-color: #175964;
+    background: #447F69 no-repeat scroll 10px 5px none;
+
+    label {
+      text-shadow: 0px -1px 0px #175964;
+      color: #E6FFF7;
+    }
+
+    .setdetails {
+      border-color: #175964;
+
+      label {
+        color: #11424A;
+        text-shadow: none;
+      }
+    }
+
+    .setdetails:hover {
+      border-color: #11424A;
+    }
+
+    .setstats {
+      @extend .setdetails;
+    }
+
+    .setstats:hover {
+      @extend .setdetails:hover;
+    }
+
+    input {
+      @extend .setdetails;
+    }
+
+    input:hover {
+      @extend .setdetails:hover;
+    }
+
+    input.incomplete {
+      background: #FFF5FA;
+      color: #CE3FB6;
+      border-color: #CE3FB6;
+    }
+
+    .statform input.inputform {
+      @extend .setdetails;
+    }
+
+    .statform input.inputform:hover {
+      @extend .setdetails:hover;
+    }
+  }
+
+  .setchart-nickname {
+    background: #336251;
+    border-color: $c1;
+
+    label {
+      text-shadow: 0px -1px 0px $c1;
+      color: #E6FFF7;
+    }
+
+    input {
+      border-color: $c1;
+    }
+
+    input:hover {
+      border-color: #0A2B30;
+    }
+  }
+}
+
+.teamlist .team {
+  background: $cb;    
+  border-color: $c1;
+  color: $c1;
+  text-shadow: 0px 0px 2px $c9;
+}
+
+.teamlist .team:hover {
+  background: #D4E5E2;    
+  border-color: #0E3339;
+  color: #0E3339;
+  text-shadow: none;
+}
+
+.teambuilder-results {
+  background: rgba(255, 255, 255, 0.3);
+
+  h3, .utilichart h3 {
+    border-color: #803C6F !important;
+    background: #F3C5EA !important;
+    color: #803C6F !important;
+    text-shadow: none !important;
+  }
+
+  .firstresult a {
+    background: $cb;    
+    border-color: $c1;
+  }
+
+  .firstresult a:hover, .result a:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
+  }
+
+  .utilichart {
+    b {
+      color: $c1;
+      text-shadow: 0px 0px 2px $c9;
+      font-style: italic;
+    }
+
+    .movenamecol, .namecol, .pokemonnamecol {
+      color: #062529;
+      text-shadow: 0px 0px 2px $c9;
+    }
+
+    .itemdesccol, .abilitydesccol, .movedesccol, .statcol, .bstcol, .labelcol, .widelabelcol, .pplabelcol, .abilitycol, .twoabilitycol {
+      color: $c1;
+    }
+
+    .labelcol em, .widelabelcol em, .pplabelcol em, .statcol em, .bstcol em {
+      color: #1B606B;
+    }
+
+    .numcol {
+      color: #5B274D;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
+
+    .typecol img {
+      opacity: 0.75;
+    }
+
+    .filtercol em {
+      color: #5F2D52;
+      border: 1px solid #5F2D52;
+    }
+  }
+
+  .statform {
+    p.suggested button {
+      background: $cb;    
+      border: 1px solid $c1;
+      color: $c1;
+      text-shadow: 0px 0px 2px $c9;
+      padding: 2px 5px;
+    }
+
+    p.suggested button:hover {
+      background: #CBE1DD;    
+      border-color: #0C2D32;
+    }
+
+    p.suggested a {
+      color: $c1;
+    }
+
+    .col div label, .col div em {
+      color: #062529;
+      text-shadow: 0px 0px 2px $c9;
+    }
+
+    .col div b {
+      color: #031315;
+      text-shadow: 0px 0px 2px $c9;
+    }
+  }
+
+  .detailsform label {
+    color: #062529;
+    text-shadow: 0px 0px 2px $c9;
+  }
 }
