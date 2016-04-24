@@ -468,7 +468,7 @@ class Tournament {
 			this.generator.setUserBusy(matchFrom.to, false);
 			this.inProgressMatches.set(player, null);
 			delete matchFrom.room.tour;
-			matchFrom.room.battle.forfeit(player.userid);
+			if (matchFrom.room.battle) matchFrom.room.battle.forfeit(player.userid);
 		}
 
 		let matchTo = null;
@@ -479,7 +479,7 @@ class Tournament {
 			this.generator.setUserBusy(matchTo, false);
 			let matchRoom = this.inProgressMatches.get(matchTo).room;
 			delete matchRoom.tour;
-			matchRoom.battle.forfeit(player.userid);
+			if (matchRoom.battle) matchRoom.battle.forfeit(player.userid);
 			this.inProgressMatches.set(matchTo, null);
 		}
 
@@ -730,10 +730,10 @@ class Tournament {
 			}
 		}
 	}
-	onBattleWin(room, winner) {
+	onBattleWin(room, winnerid) {
 		let from = this.players[room.p1.userid];
 		let to = this.players[room.p2.userid];
-		if (winner) winner = this.players[winner.userid];
+		let winner = this.players[winnerid];
 
 		let result = 'draw';
 		if (from === winner) {
@@ -760,7 +760,7 @@ class Tournament {
 		let error = this.generator.setMatchResult([from, to], result, room.battle.score);
 		if (error) {
 			// Should never happen
-			return this.room.add("Unexpected " + error + " from setMatchResult([" + from.userid + ", " + to.userid + "], " + result + ", " + room.battle.score + ") in onBattleWin(" + room.id + ", " + winner.userid + "). Please report this to an admin.").update();
+			return this.room.add("Unexpected " + error + " from setMatchResult([" + from.userid + ", " + to.userid + "], " + result + ", " + room.battle.score + ") in onBattleWin(" + room.id + ", " + winnerid + "). Please report this to an admin.").update();
 		}
 
 		this.room.add('|tournament|battleend|' + from.name + '|' + to.name + '|' + result + '|' + room.battle.score.join(','));
@@ -1027,14 +1027,14 @@ let commands = {
 		setautodq: function (tournament, user, params, cmd) {
 			if (params.length < 1) {
 				if (tournament.autoDisqualifyTimeout !== Infinity) {
-					return this.sendReply("Usage: " + cmd + " <minutes|off>; The current automatic disqualify timer is set to " + (tournament.autoDisqualifyTimeout / 1000 / 60) + " minutes");
+					return this.sendReply("Usage: " + cmd + " <minutes|off>; The current automatic disqualify timer is set to " + (tournament.autoDisqualifyTimeout / 1000 / 60) + " minute(s)");
 				} else {
 					return this.sendReply("Usage: " + cmd + " <minutes|off>");
 				}
 			}
 			if (params[0].toLowerCase() === 'infinity' || params[0] === '0') params[0] = 'off';
 			let timeout = params[0].toLowerCase() === 'off' ? Infinity : params[0] * 60 * 1000;
-			if (timeout === tournament.autoDisqualifyTimeout) return this.errorReply("The automatic tournament disqualify timer is already set to " + params[0] + " minutes.");
+			if (timeout === tournament.autoDisqualifyTimeout) return this.errorReply("The automatic tournament disqualify timer is already set to " + params[0] + " minute(s).");
 			if (tournament.setAutoDisqualifyTimeout(timeout, this)) {
 				this.privateModCommand("(The tournament auto disqualify timer was set to " + params[0] + " by " + user.name + ")");
 			}

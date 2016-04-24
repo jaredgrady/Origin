@@ -877,6 +877,9 @@ exports.Formats = [
 			if (name === 'giagantic') {
 				pokemon.addVolatile('deltastreaminnate', pokemon);
 			}
+			if (name === 'hashtag') {
+				this.boost({spe:1}, pokemon, pokemon, 'innate ability');
+			}
 			if (name === 'haund') {
 				pokemon.addVolatile('prodigy', pokemon);
 			}
@@ -1205,6 +1208,9 @@ exports.Formats = [
 			}
 			if (name === 'iyarito') {
 				this.add('c|+Iyarito|Welp');
+			}
+			if (name === 'jackhiggins') {
+				this.add("c|+Jack Higgins|Ciran was right, fun deserved to be banned");
 			}
 			if (name === 'jasmine') {
 				this.add("c|+Jasmine|I'm still relevant!");
@@ -1739,6 +1745,9 @@ exports.Formats = [
 			}
 			if (name === 'iyarito') {
 				this.add('c|+Iyarito|Owwnn ;_;');
+			}
+			if (name === 'jackhiggins') {
+				this.add("c|+Jack Higgins|I blame HiMyNamesL");
 			}
 			if (name === 'jasmine') {
 				this.add("raw|<div class=\"broadcast-red\"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>");

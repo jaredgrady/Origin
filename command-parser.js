@@ -116,6 +116,13 @@ class CommandContext {
 		this.targetUser = null;
 	}
 
+	updateBanwords() {
+		if (this.room.banwords && this.room.banwords.length) {
+			this.room.banwordRegex = new RegExp('(?:\\b|(?!\\w))(?:' + this.room.banwords.join('|') + ')(?:\\b|\\B(?!\\w))', 'i');
+		} else {
+			this.room.banwordRegex = true;
+		}
+	}
 	sendReply(data) {
 		if (this.broadcasting) {
 			this.room.add(data);
@@ -331,7 +338,9 @@ class CommandContext {
 				connection.popup("Your message can't be blank.");
 				return false;
 			}
-			if (message.length > MAX_MESSAGE_LENGTH && !user.can('ignorelimits')) {
+			let length = message.length;
+			length += 10 * message.replace(/[^\ufdfd]*/g, '').length;
+			if (length > MAX_MESSAGE_LENGTH && !user.can('ignorelimits')) {
 				this.errorReply("Your message is too long: " + message);
 				return false;
 			}
@@ -345,8 +354,13 @@ class CommandContext {
 
 			// replace Warlic with warlic in all room other than staff
 			message = message.replace(/\bWarlic\b/ig, 'warlic');
-
 			message = message.replace(/\bnigger\b/ig, 'meanie');
+			
+			if (!this.room.banwordRegex) this.updateBanwords();
+			if (this.room.banwordRegex !== true && this.room.banwordRegex.test(message) && !user.can('mute', null, this.room)) {
+				this.errorReply("Your message contained banned words.");
+				return false;
+			}
 
 			if (room && room.id === 'lobby') {
 				let normalized = message.trim();
