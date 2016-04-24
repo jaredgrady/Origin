@@ -355,7 +355,7 @@ class CommandContext {
 			// replace Warlic with warlic in all room other than staff
 			message = message.replace(/\bWarlic\b/ig, 'warlic');
 			message = message.replace(/\bnigger\b/ig, 'meanie');
-			
+
 			if (!this.room.banwordRegex) this.updateBanwords();
 			if (this.room.banwordRegex !== true && this.room.banwordRegex.test(message) && !user.can('mute', null, this.room)) {
 				this.errorReply("Your message contained banned words.");
