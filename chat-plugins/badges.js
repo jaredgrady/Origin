@@ -49,6 +49,7 @@ module.exports.badgeIcons = {
 	'Next Level Official':'http://i.imgur.com/1caPwea.png',
 	'Nimbus Badge':'http://i.imgur.com/JuLNTKj.png',
 	'Flag Runner':'http://i.imgur.com/jxriD4D.png',
+	'Pixel Badge':'http://i.imgur.com/jxriD4D.png',
 };
 
 let badgeDescriptions = {
@@ -95,6 +96,7 @@ let badgeDescriptions = {
 	'Next Level Official':'Staff in 2 official rooms or more.',
 	'Nimbus Badge':'Solve Irraquated\'s code riddle.',
 	'Flag Runner':'Take on a global staff member & his/her team in 10 rounds of Tagpro.',
+	'Pixel Badge':'Needed so I can remove',
 };
 
 function badgeImg(link, name) {
