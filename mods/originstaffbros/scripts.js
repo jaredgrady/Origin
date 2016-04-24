@@ -199,28 +199,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'danceofthesea', signatureMove: "Dance of the Sea",
 				evs: {hp:216, def:132, spd:160}, nature: 'Calm',
 			},
-<<<<<<< HEAD
-			'+Otami': {
-				species: 'Vileplume', ability: 'S-S-Senpai', item: 'Black Sludge', gender: 'M',
-				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],
-				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
-				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
-			},
-			/*
-			'+Piscean': { // (type) normal/ghost
-				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
-				moves: ['roar', 'stealthrock', 'milkdrink'],
-				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
-				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
-=======
 			'+Otami': { // (typing) psychic/fairy
 				species: 'Espeon', ability: 'Telekinetic', item: 'Leftovers', gender: 'M',
 				moves: ['moonblast', 'psychic', 'cosmicpower', 'storedpower', ['substitute', 'recover', 'hypnosis'][this.random(3)]],
 				baseSignatureMove: 'telekineticchant', signatureMove: "Telekinetic Chant",
 				evs: {hp:4, spa:252, spd:252}, nature: 'Modest',
->>>>>>> origin/ossb
 			},
-			*/
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',
 				moves: ['vcreate', 'uturn', 'boltstrike'],
