@@ -1,0 +1,779 @@
+MPORTS - MIXINS - VARIABLES *
+*******************************/
+
+@import "customclasses";
+@import "PMbox";
+@import "icons";
+@import "teambuilder";
+@import "battle";
+
+$c1: #11484F;
+$c3: #336251;
+$c8: #803C6F;
+$c9: #96BFB8;
+$cb: #BBCCC9;
+$cc: #CD9FC4;
+$cf: #FFE0A7;
+
+@mixin broadcast($background, $brdclr, $shadow) {
+  background: $background;
+  border: 1px solid $brdclr;
+  color: $brdclr;
+  text-shadow: 0px 0px 2px $shadow;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 5px;
+}
+
+@mixin roomicon($image) {
+  background: rgba(255, 255, 255, 0.65) url($image) left no-repeat;
+}
+
+/************************************
+* IMPORTS - MIXINS - VARIABLES ~end *
+************************************/
+
+/***********************
+* Donation Benefit CSS *
+***********************/
+
+/* Symbol Color */
+
+#monotype-userlist-user-shadeprise em.group, #japanslair-userlist-user-shadeprise em.group, #theshadeleague-userlist-user-shadeprise em.group {
+  color: #0D00BF;
+}
+
+/* Symbol color ~end */
+
+/* Room Icon */
+
+#lobby-userlist-users {
+  @include roomicon("http://i.imgur.com/P4DEqSG.png");
+}
+
+#tournaments-userlist-users {
+  @include roomicon("http://i.imgur.com/xUptAEf.png");
+}
+
+#theomegaleague-userlist-users {
+  @include roomicon("http://i.imgur.com/EfrHru3.png");
+}
+
+#thelotusleague-userlist-users {
+  @include roomicon("http://i.imgur.com/X87OO7r.png");
+}
+
+/* Room Icon ~end */
+
+/****************************
+* Donation Benefit CSS ~end *
+****************************/
+
+/**************
+* General CSS *
+**************/
+
+body {
+  background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
+}
+
+.ps-room.ps-room-light {
+  background: rgba(0, 0, 0, 0);
+  border-color: $c1;
+}
+
+.ps-room.ps-room-light.scrollable {
+  background: rgba(51, 98, 81, 0.6);
+
+  p {
+    color: #031012;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  .button {
+    background: $cb;    
+    border: 1px solid $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  .button:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
+  }
+
+  .rooms-officialchatrooms, .rooms-chatrooms {
+    color: $cb;
+    text-shadow: 0px 0px 2px $c1;
+  }
+
+  .select {
+    background: $cf !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+
+  .select:hover {
+    background: #F2CF99 !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+}
+
+.chat.mine {
+  background: rgba(0, 0, 0, 0);
+}
+
+.broadcast-blue {
+  @include broadcast($cc, #0B1361, #B287A9);
+
+  a {
+    color: #000F98;
+  }
+
+  button {
+    background: #A87C9F;
+    border: 1px solid #090F47;
+    color: #FFF9FF;
+    text-shadow: 0px 0px 2px #090F47;
+    padding: 2px 8px;
+  }
+
+  button:hover {
+    background: #9F7697;
+  }
+}
+
+.broadcast-red {
+  @include broadcast(#FFEBF4, #B52C43, #F2DBE5);
+
+  a {
+    color: #B3001E;
+  }
+}
+
+.broadcast-green {
+  @include broadcast(#B5D896, #20493B, #A4C786);
+
+  a {
+    color: #005C3E;
+  }
+}
+
+.broadcast-blue:hover, .broadcast-green:hover, .broadcast-red:hover {
+  font-weight: bold;
+}
+
+.message-announce {
+    background: rgba(17, 72, 79, 0.8);
+    color: #FFF;
+}
+
+.ps-overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/*******************
+* General CSS ~end *
+*******************/
+
+/*************
+* Header CSS *
+*************/
+
+.header {
+  background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
+
+  .logo {
+    opacity: 0;
+  }
+
+  .maintabbarbottom {
+    border-color: $c8;
+    background: $cc;
+  }
+
+  .tabbar {
+    a.button.notifying {
+      background: $cf;
+      border-color: $c8;
+      color: $c8;
+      text-shadow: none;
+      font-style: italic;
+    }
+
+    a.button.notifying:hover {
+      background: #F9D990;  
+      border-color: $c8;
+      color: $c8;
+    }
+
+    a.button.subtle-notifying, a.button.subtle-notifying:hover {
+      color: #07948F;
+    }
+
+    a.button.cur, a.button.cur:hover {
+      border-color: $c8;
+      background: $cc;
+      color: $c8;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
+
+    a.button {
+      border-color: $c8;
+      background: #F3C5EA;
+      color: $c8;
+      text-shadow: none;
+    }
+
+    a.button:hover {
+      background: #E5B6DC;
+    }
+
+    .closebutton {
+      color: $c8;
+    }
+
+    .closebutton:hover {
+      color: #AF3B3B;
+    }
+  }
+  .userbar {
+    button.icon {
+      border: 1px solid $c8;
+      background: $cc;
+      color: $c8;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
+
+    button.icon:hover {
+      background: #DBAED2;
+    }
+
+    .username {
+      text-shadow: 1px 1px 0px $c1, 1px -1px 0px $c1, -1px 1px 0px $c1, -1px -1px 0px $c1;
+    }
+  }
+}
+
+/******************
+* Header CSS ~end *
+******************/
+
+/***************
+* Roomlist CSS *
+***************/
+
+.roomlist {
+  h2 {
+    color: #FEE2B3;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  a.ilink {
+    background: $cb;    
+    border-color: $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  a.ilink:hover {
+    background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
+    background-position: 300px -9px;
+    border-color: #092125;
+    color: #092125;
+    text-shadow: none;
+  }
+
+  .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+  }
+}
+
+.roomcounters {
+  button {
+    background: $cb;    
+    border-color: $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  button:hover {
+    background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
+    background-position: 300px -9px;
+    border-color: #092125;
+    color: #092125;
+    text-shadow: none;
+  }
+
+  .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+  }
+}
+
+/********************
+* Roomlist CSS ~end *
+********************/
+
+/***********
+* Chat CSS *
+***********/
+
+.userlist {
+  background: rgba(17, 72, 79, 0.6);
+  border-color: $c1;
+  color: $c1;
+
+  li {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: $c1;
+
+    em.group {
+      color: $c1;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.userlist-minimized .userlist-count:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.infobox {
+  border-color: $c1;
+}
+
+.chat-log {
+  background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
+  color: #000;
+
+  .chat small {
+    color: $c1;
+  }
+
+  .chat.mine.chat small {
+    color: #0A292E;
+  }
+}
+
+.chat.highlighted {
+  background: rgba(178, 215, 148, 0.7);
+}
+
+.chat-log-add {
+  border-color: $c3;
+  background: rgba(51, 98, 81, 0.6);
+
+  .textbox {
+    border-color: $c3;
+  }
+}
+
+.chatbox label {
+  text-shadow: 0px 0px 2px $c3;
+}
+
+/****************
+* Chat CSS ~end *
+****************/
+
+/*******************
+* Tournaments CSS *
+******************/
+
+.tournament-title {
+  background: rgba(17, 72, 79, 0.6);
+  text-shadow: 0px -1px 0px $c1;
+  color: #AFCFD4;
+}
+
+.tournament-status, .tournament-toggle {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: $c1;
+  text-shadow: none;
+  color: $c1;
+}
+
+.tournament-tools {
+  border-color: $c1;
+  background: rgba(51, 98, 81, 0.6);
+
+  .select {
+    border-color: $c1;
+    background: $c3;
+    color: #D9FCEF;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  .select:hover {
+    background: #3D735F;
+  }
+
+  .select:disabled, .select:disabled:hover {
+    background: rgba(51, 98, 81, 0.45);
+    color: $c1 !important;
+    text-shadow: none !important;
+    border-color: $c1 !important;
+  }
+
+  button {
+    border-color: $c1;
+    background: $c3;
+    color: #D9FCEF;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  button:hover {
+    background: #3D735F;
+  }
+}
+
+.tournament-wrapper, .tournament-box {
+  border-color: $c1;
+}
+
+.tournament-box {
+  background: url("http://i.imgur.com/xQmFRxz.jpg?2");
+}
+
+/***********************
+* Tournaments CSS ~end *
+***********************/
+
+/**********************
+* Mainmenuwrapper CSS *
+**********************/
+
+.menugroup {
+  border: 1px solid $c8;
+  background: rgba(128, 60, 111, 0.25);
+  color: #FBE7F0;
+  text-shadow: 0px 0px 2px $c8;
+
+  .select:disabled, .select:disabled:hover {
+    background: rgba(255, 224, 167, 0.7) !important;
+    border-color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+
+  .teamselect:disabled strong {
+    color: $c8 !important;
+  }
+
+  .select, .button {
+    background: $cf !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+
+  .select:hover, .button:hover {
+    background: #F2CF99 !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+}
+
+.pm-window h3 {
+  border-color: $c3;
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+  background-position: 225px;
+  color: #E5FFF6;
+  text-shadow: 0px -1px 0px $c3;
+
+  small {
+    color: #B2DBCD;
+  }
+
+  .closebutton, .minimizebutton {
+    color: #D3F5E8;
+  }
+
+  .closebutton:hover {
+    color: #F7A4A4;
+  }
+
+  .minimizebutton:hover {
+    color: #F7D0A4;
+  }
+
+  .closebutton:hover + .minimizebutton {
+    color: #D3F5E8 !important;
+  }
+}
+
+.pm-window h3:hover {
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
+  background-position: 225px;
+  color: #CBEBE0;
+
+  .minimizebutton {
+    color: #D3F5E8;
+  }
+}
+
+.pm-window.focused h3, .pm-window.focused h3:hover {
+  border-color: $c3;
+  background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
+  background-position: 225px;
+  color: #E5FFF6;
+  text-shadow: 0px -1px 0px $c3;
+}
+
+
+.message-pm {
+  color: #46806A;
+}
+
+.pm-window h3.pm-notifying {
+  border-color: $c8;
+  background: #F3C5EA url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
+  background-position: 225px -9px;
+  color: $c8;
+  text-shadow: none;
+
+  small {
+    color: #A4578F;
+  }
+
+  .closebutton, .minimizebutton {
+    color: $c8;
+  }
+
+  .closebutton:hover {
+    color: #AF3B3B;
+  }
+
+  .minimizebutton:hover {
+    color: #AF813B;
+  }
+
+  .closebutton:hover + .minimizebutton {
+    color: $c8 !important;
+  }
+}
+
+.pm-window h3.pm-notifying:hover {
+  background: #E5B6DC url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
+  background-position: 225px -9px;
+}
+
+.pm-log, .pm-window.focused .pm-log {
+  border-color: $c3;
+}
+
+.unread {
+  background: none;
+}
+
+.challenge {
+  border-color: $c8;
+  background: #F3C5EA;
+  color: $c8;
+  text-shadow: none;
+
+  .select {
+    border-color: $c8;
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+
+  .select:hover {
+    background: #DBAED2;
+  }
+
+  .select:disabled {
+    background: rgba(205, 159, 196, 0.5);
+  }
+
+  .select.preselected, .select.preselected:disabled {
+    color: $c8;
+  }
+
+  .buttonbar button {
+    border: 1px solid $c8;
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+    padding: 2px 5px;
+  }
+
+  .buttonbar button:hover {
+    background: #DBAED2;
+  }
+}
+
+.pm-log-add {
+  border-color: $c3;
+  background: rgba(51, 98, 81, 0.6);
+
+  .textbox {
+    border-color: $c3;
+  }
+}
+
+.pm-window.focused .pm-log-add {
+  border-color: $c3;
+  background: rgba(51, 98, 81, 0.75);
+}
+
+.mainmenufooter {
+  color: #F2D19C;
+
+  a {
+    color: #FFE1B3;
+  }
+
+  a:hover {
+    color: #F2D19C;
+  }
+} 
+
+/***************************
+* Mainmenuwrapper CSS ~end *
+***************************/
+
+/************
+* Popup CSS *
+************/
+
+.ps-popup {
+  background: $cb;    
+  border-color: $c1;
+
+  a {
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  a:hover {
+    color: #173B40;
+  }
+
+  a.ilink.yours {
+    color: #0B282C;
+  }
+
+  a.ilink.yours:hover {
+    color: #04171A;
+  }
+
+  .buttonbar button {
+    background: #17626E;
+    border: 1px solid $c1;
+    padding: 2px 5px;
+    color: $cb;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  .buttonbar button:hover {
+    background: #1B545C;
+  }
+
+  .popupmenu {
+    h3 {
+      color: $c1;
+      text-shadow: 0px 0px 2px $c9;
+    }
+
+    button.sel {
+      border-color: $c1;
+    }
+
+    button:hover, button.sel:hover {
+      border-color: $c1;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  } 
+  .avatarlist button {
+    border-color: $c1;
+  }
+
+  .avatarlist button:hover {
+    border-color: $c1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #062529;
+  }
+
+  .bglist {
+    button {
+      border-color: $c1;
+    }
+      
+    button:hover {
+      border-color: $c1;
+      background: rgba(255, 255, 255, 0.35);
+    }
+      
+    button.cur, button.cur:hover {
+      border-color: #092428;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.credits h2, .credits ul {
+  color: $c1;
+  text-shadow: 0px 0px 2px $c9;
+}
+
+a.subtle, a.subtle:hover {
+  color: #000;
+}
+
+.effect-volume em, .music-volume em {
+  color: #062529;
+}
+
+/*****************
+* Popup CSS ~end *
+*****************/
+
+/*************
+* Ladder CSS *
+*************/
+
+.ladder {
+  table, th, td {
+    border-color: $c8;
+  }
+
+  th {
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+
+  td {
+    background: rgba(255, 246, 250, 0.75);
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
+
+  td:hover {
+    background: rgba(255, 246, 250, 0.95);
+  }  
+}
+
+/******************
+* Ladder CSS ~end *
+******************/
+
+@import "darkcss";
