@@ -146,7 +146,7 @@ exports.commands = {
 			if (!parts[1]) return this.errorReply("Invalid command. Valid commands are `/badges list`, `/badges info, badgeName`, `/badges set, user, badgeName` and `/badges take, user, badgeName`.");
 			badge = parts[1].trim();
 			if (!badgeDescriptions[badge]) return this.errorReply("This badge does not exist, please check /badges list");
-			this.sendReply(badgeIcons[badge] + " " + badge + ": " + badgeDescriptions[badge]);
+			this.sendReplyBox('<img src="' + badgeIcons[badge] + '"> ' + badge + ': ' + badgeDescriptions[badge]);
 			break;
 		case 'take':
 			if (!this.can('lock')) return false;
