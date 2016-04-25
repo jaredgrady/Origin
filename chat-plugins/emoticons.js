@@ -9,7 +9,6 @@ exports.parseEmoticons = parseEmoticons;
 
 let emotes = {
 	'(ditto)': 'https://cdn.betterttv.net/emote/554da1a289d53f2d12781907/2x',
-	'feelswndo': 'http://media.tumblr.com/68eb56721b0833c66c8a9542ed515594/tumblr_inline_mkj23fgNsZ1qz4rgp.gif'
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
 	'4Head': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0',
 	'Cate': 'http://i.imgur.com/728AQQN.jpg',
@@ -104,6 +103,7 @@ let emotes = {
 	'feelsdrg': 'http://i.imgur.com/UZzWcA3.png',
 	'feelsvolc': 'http://i.imgur.com/QXlKzZd.png?1',
 	'feelsvpn': 'http://i.imgur.com/ODTZISl.gif',
+	'feelswndo': 'http://media.tumblr.com/68eb56721b0833c66c8a9542ed515594/tumblr_inline_mkj23fgNsZ1qz4rgp.gif'
 	'feelsweird': 'https://cdn.betterttv.net/emote/5603731ce5fc5eff1de93229/2x',
 	'feelswin': 'http://i.imgur.com/rbs9pZG.png?1',
 	'feelsya': 'https://cdn.betterttv.net/emote/5678a310bf317838643c8188/2x',
