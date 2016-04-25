@@ -19,7 +19,7 @@ module.exports.badgeIcons = {
 	'Achievement Unlocked!':'http://i.imgur.com/YRgMD4s.png',
 	'Persistent!':'http://i.imgur.com/C6gknys.png',
 	'Active Poster!':'http://i.imgur.com/GuGCyrY.png',
-	//'Float Badge':'http://i.imgur.com/1vdYBhD.png',
+	'Float Badge':'http://i.imgur.com/1vdYBhD.png',
 	'Commie Badge':'http://i.imgur.com/2GF7zFk.png',
 	'Cannon Badge':'http://i.imgur.com/QPofWrT.png',
 	'Lexida':'https://i.imgur.com/O0smUtt.png',
@@ -49,6 +49,7 @@ module.exports.badgeIcons = {
 	'Next Level Official':'http://i.imgur.com/1caPwea.png',
 	'Nimbus Badge':'http://i.imgur.com/JuLNTKj.png',
 	'Flag Runner':'http://i.imgur.com/jxriD4D.png',
+	'Pixel Badge':'http://i.imgur.com/jxriD4D.png',
 };
 
 let badgeDescriptions = {
@@ -65,7 +66,7 @@ let badgeDescriptions = {
 	'Achievement Unlocked!':'Earn 3,000 points on Safety Shark\'s leaderboard.',
 	'Persistent!':'1000 wins on the dice ladder.',
 	'Active Poster!':'Have 120 posts on the forums and a reputation of at least 40.',
-	//'Float Badge':'Defeat Master Float in Anything Goes.',
+	'Float Badge':'Defeat Master Float in Anything Goes.',
 	'Commie Badge':'Defeat Gnarly Commie in OU, best of 3.',
 	'Cannon Badge':'Defeat Volco in UU.',
 	'Lexida':'Impress Selena.',
@@ -95,6 +96,7 @@ let badgeDescriptions = {
 	'Next Level Official':'Staff in 2 official rooms or more.',
 	'Nimbus Badge':'Solve Irraquated\'s code riddle.',
 	'Flag Runner':'Take on a global staff member & his/her team in 10 rounds of Tagpro.',
+	'Pixel Badge':'Needed so I can remove',
 };
 
 function badgeImg(link, name) {

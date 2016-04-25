@@ -1,232 +1,239 @@
-#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+@mixin icon($img) {
+  background: rgba(255, 255, 255, 0.65) url($img) right no-repeat;
+}
+
+#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
+  @include icon("http://i.imgur.com/XP2BA5M.png");
 }
 
 #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
-  background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat;
+  @include icon("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png");
 }
 
 #cultofexcadrill-userlist-user-allegiantexca, #theallegiantleague-userlist-user-allegiantexca, #monotypeutoring-userlist-user-allegiantexca, #phoenixleague-userlist-user-allegiantexca {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons/645-therian.png") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons/645-therian.png");
 }
 
 #theallegiantleague-userlist-user-allegintpana {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/718.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/718.png");
 }
 
 #lobby-userlist-user-austin, #development-userlist-user-austin, #casino-userlist-user-austin, #staff-userlist-user-austin, #therebelleague-userlist-user-austin {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons_action/446.gif");
 }
 
 #lobby-userlist-user-princesshigh, #hayleysden-userlist-user-princesshigh, #zu-userlist-user-princesshigh, #voidleague-userlist-user-princesshigh {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/282.gif") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons_action/282.gif");
 }
 
 #lobby-userlist-user-cristiian, #tournaments-userlist-user-cristiian, #monotype-userlist-user-cristiian {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/4a7efMj.gif") right no-repeat;
+  @include icon("http://i.imgur.com/4a7efMj.gif");
 }
 
 #tournaments-userlist-user-resourceful {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/379.png") right no-repeat;  
+  @include icon("http://www.serebii.net/pokedex-xy/icon/379.png");
 }
 
 #lobby-userlist-user-neosoul, #staff-userlist-user-neosoul, #voidleague-userlist-user-neosoul {
-  background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/202.gif") right no-repeat;  
+  @include icon("http://pokedream.com/pokedex/images/mini/202.gif");
 }
 
 #lobby-userlist-user-lttesla, #staff-userlist-user-lttesla, #sunyshorecity-userlist-user-lttesla {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/AfayGLZ.png") right no-repeat;
+  @include icon("http://i.imgur.com/AfayGLZ.png");
 }
 
 #lobby-userlist-user-notorangejuice, #staff-userlist-user-notorangejuice {
-  background: rgba(255, 255, 255, 0.65) url("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif") right no-repeat;
+  @include icon("http://tiny-images.pokemonlake.com/Rotom%28Frost%29.gif");
 }
 
 #lobby-userlist-user-impfallenblood, #thelegionofdoom-userlist-user-impfallenblood, #staff-userlist-user-impfallenblood {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat;
-}
-
-#upperstaff-userlist-user-masterfloat { 
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/XP2BA5M.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/461.png");
 }
 
 #lobby-userlist-user-arkenciel, #staff-userlist-user-arkenciel, #thearbiterleague-userlist-user-arkenciel {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/GnR9tYz.gif") right no-repeat;
+  @include icon("http://i.imgur.com/GnR9tYz.gif");
 }
 
 #lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #lucarioslair-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-dp/icon/448.gif");
 }
 
 #lobby-userlist-user-japan, #japanslair-userlist-user-japan, #casino-userlist-user-japan, #tournaments-userlist-user-japan, #voidleague-userlist-user-japan {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mpATs8Z.png") right no-repeat;
+  @include icon("http://i.imgur.com/mpATs8Z.png");
 }
 
 #lobby-userlist-user-phoenixsacred, #monotype-userlist-user-phoenixsacred, #allianceleague-userlist-user-phoenixsacred, #phoenixleague-userlist-user-phoenixsacred, #halloffame-userlist-user-phoenixsacred {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/sugimori/645-therian.png") right no-repeat;
+  @include icon("http://pldh.net/media/sugimori/645-therian.png");
 }
 
 #lobby-userlist-user-paulcentury, #theomegaleague-userlist-user-paulcentury, #casino-userlist-user-paulcentury, #smogontiers-userlist-user-paulcentury {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/080.gif") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons_action/080.gif");
 }
 
 #lobby-userlist-user-chronologically, #1v1-userlist-user-chronologically, #yugioh-userlist-user-chronologically, #allianceleague-userlist-user-chronologically {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/QkhfELA.png") right no-repeat;
+  @include icon("http://i.imgur.com/QkhfELA.png");
 }
 
 #lobby-userlist-user-theace22, #catchevolve-userlist-user-theace22, #othertiers-userlist-user-theace22 {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/059.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/059.png");
 }
 
 #lobby-userlist-user-voidtrent, #voidleague-userlist-user-voidtrent, #alliancecup-userlist-user-voidtrent {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/037.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/037.png");
 }
 
 #lobby-userlist-user-mightysciz, #tournaments-userlist-user-mightysciz, #othermetas-userlist-user-mightysciz, #psmd-userlist-user-mightysciz, #theheartlessleague-userlist-user-mightysciz {  
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kfBjKIM.gif") right no-repeat;
+  @include icon("http://i.imgur.com/kfBjKIM.gif");
 }
 
 #lobby-userlist-user-lmaoitsbt, #thelotusleague-userlist-user-lmaoitsbt, #hayleysden-userlist-user-lmaoitsbt {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/385.gif") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons_action/385.gif");
 }
 
 #lobby-userlist-user-duttyvybz, #casino-userlist-user-duttyvybz, #japanslair-userlist-user-duttyvybz {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/052.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/052.png");
 }
 
 #lobby-userlist-user-phoenixgryphon, #casino-userlist-user-phoenixgryphon, #staff-userlist-user-phoenixgryphon {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-dp/icon/396.gif") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-dp/icon/396.gif");
 }
 
 #lobby-userlist-user-selena, #casino-userlist-user-selena, #artshop-userlist-user-selena {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/WAmpyL4.png") right no-repeat;
+  @include icon("http://i.imgur.com/WAmpyL4.png");
 }
 
 #monotype-userlist-user-swltech, #swl-userlist-user-swltech, #casino-userlist-user-swltech, #tournaments-userlist-user-swltech {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/JE1MeGe.gif") right no-repeat;
+  @include icon("http://i.imgur.com/JE1MeGe.gif");
 }
 
 #lobby-userlist-user-emge4volco, #staff-userlist-user-emge4volco, #theemergenceleague-userlist-user-emge4volco, #ossb-userlist-user-emge4volco {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/721.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/721.png");
 }
 
 #lobby-userlist-user-exotickey, #theomegaleague-userlist-user-exotickey, #hayleysden-userlist-user-exotickey {
-  background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/028.gif") right no-repeat;
+  @include icon("http://pldh.net/media/pokecons_action/028.gif");
 }
 
 #lobby-userlist-user-katheyisme123, #femalehq-userlist-user-katheyisme123, #casino-userlist-user-katheyisme123 {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/9C4khjv.gif") right no-repeat;
+  @include icon("http://i.imgur.com/9C4khjv.gif");
 }
 
 #lobby-userlist-user-omegachim, #casino-userlist-user-omegachim, #ossb-userlist-user-omegachim, #ucl-userlist-user-omegachim, #phoenixleague-userlist-user-omegachim {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/280.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/280.png");
 }
 
 #lobby-userlist-user-phoenixtana, #phoenixleague-userlist-user-phoenixtana, #monotype-userlist-user-phoenixtana {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat;
+  @include icon("http://i.imgur.com/qKMupjd.png?1");
 }
 
 #hingostraphouse-userlist-user-sariisaur, #phoenixleague-userlist-user-sariisaur, #theallegiantleague-userlist-user-sariisaur {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/6Ybg61Q.png") right no-repeat;
+  @include icon("http://i.imgur.com/6Ybg61Q.png");
 }
 
 #lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat;
+  @include icon("http://i.imgur.com/DunzDPZ.gif");
 }
 
 #lobby-userlist-user-phoenixeien, #phoenixleague-userlist-user-phoenixeien, #hingostraphouse-userlist-user-phoenixeien, #swl-userlist-user-phoenixeien {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat;
+  @include icon("http://i.imgur.com/mCHbFVE.png");
 }
 
 #lobby-userlist-user-pndas, #thelotusleague-userlist-user-pndas, #monotype-userlist-user-pndas, #casino-userlist-user-pndas, #halloffame-userlist-user-pndas {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/NcP1gJ1.gif") right no-repeat;
+  @include icon("http://i.imgur.com/NcP1gJ1.gif");
 }
 
 #lobby-userlist-user-gyaratoast, #breadsmash-userlist-user-gyaratoast, #squad-userlist-user-gyaratoast, #pokemonjourney-userlist-user-gyaratoast, #sotascapfun-userlist-user-gyaratoast  {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/OXs5rDM.png") right no-repeat;
+  @include icon("http://i.imgur.com/OXs5rDM.png");
 }
 
 #lobby-userlist-user-lotuswincon, #thelotusleague-userlist-user-lotuswincon, #thepandaclub-userlist-user-lotuswincon {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/s8pvxAi.gif") right no-repeat;
+  @include icon("http://i.imgur.com/s8pvxAi.gif");
 }
 
 #lobby-userlist-user-swleric, #swl-userlist-user-swleric, #monotype-userlist-user-swleric {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-bw/icon/596.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-bw/icon/596.png");
 }
 
 #lobby-userlist-user-swlconfluxx, #phoenixleague-userlist-user-swlconfluxx, #swl-userlist-user-swlconfluxx, #premierdraftdivision-userlist-user-swlconfluxx {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/720-u.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/720-u.png");
 }
 
 #lobby-userlist-user-crystalxvz, #crystalleague-userlist-user-crystalxvz, #casino-userlist-user-crystalxvz, #1v1-userlist-user-crystalxvz {
-  background: rgba(255, 255, 255, 0.65) url("http://imgur.com/PHgv3DL") right no-repeat;
+  @include icon("http://imgur.com/PHgv3DL");
 }
 
 #lobby-userlist-user-niisama, #staff-userlist-user-niisama, #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat;
+  @include icon("http://i.imgur.com/wM5E2W5.gif");
 }
 
 #lobby-userlist-user-piscean, #hayleysden-userlist-user-piscean, #marketplace-userlist-user-piscean {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-rs/icon/230.gif") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-rs/icon/230.gif");
 }
 
 #lobby-userlist-user-hayleysworld, #hayleysden-userlist-user-hayleysworld, #marketplace-userlist-user-hayleysworld {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/Iss3eDr.png") right no-repeat;
+  @include icon("http://i.imgur.com/Iss3eDr.png");
 }
 
 #lobby-userlist-user-phoenixshady, #premierdraftdivision-userlist-user-phoenixshady, #phoenixleague-userlist-user-phoenixshady {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/3u9r8Zt.png?1") right no-repeat;
+  @include icon("http://i.imgur.com/3u9r8Zt.png?1");
 }
 
 #lobby-userlist-user-starfox3, #staff-userlist-user-starfox3, #ossb-userlist-user-starfox3, #casino-userlist-user-starfox3, #smogontiers-userlist-user-starfox3 {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/kuLIhtK.gif") right no-repeat;
+  @include icon("http://i.imgur.com/kuLIhtK.gif");
 }
 
 #lobby-userlist-user-calucha, #alliance-userlist-user-calucha, #1v1-userlist-user-calucha {
-  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/499.png") right no-repeat;
+  @include icon("http://www.serebii.net/pokedex-xy/icon/499.png");
 }
 
 #lobby-userlist-user-alliancentg, #monotype-userlist-user-alliancentg, #casino-userlist-user-alliancentg {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/w5laVDX.gif") right no-repeat;
+  @include icon("http://i.imgur.com/w5laVDX.gif");
 }
 
 #lobby-userlist-user-dellven, #theimmortalleague-userlist-user-dellven, #casino-userlist-user-dellven {
-  background: rgba(255, 255, 255, 0.65) url("http://piskel-imgstore-b.appspot.com/img/25e78087-f5f8-11e5-9314-1b60fb12fd3a.gif") right no-repeat;
+  @include icon("http://piskel-imgstore-b.appspot.com/img/25e78087-f5f8-11e5-9314-1b60fb12fd3a.gif");
 }
 
 #lobby-userlist-user-crystalxman, #tournaments-userlist-user-crystalxman, #monotype-userlist-user-crystalxman, #crystalleague-userlist-user-crystalxman {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/HtAmm50.gif") right no-repeat;
+  @include icon("http://i.imgur.com/HtAmm50.gif");
 }
 
 #lobby-userlist-user-seoking, #monotype-userlist-user-seoking, #hayleysden-userlist-user-seoking, #swl-userlist-user-seoking {
-  background: rgba(255, 255, 255, 0.65) url("http://forums.tppc.info/images/pokemon/560.gif") right no-repeat;
+  @include icon("http://forums.tppc.info/images/pokemon/560.gif");
 }
 
 #lobby-userlist-user-omeganivans, #hayleysden-userlist-user-omeganivans, #theomegaleague-userlist-user-omeganivans {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/c5eeP7n.gif") right no-repeat;
+  @include icon("http://i.imgur.com/c5eeP7n.gif");
 }
 
 #lobby-userlist-user-trafalgarlaw, #voidleague-userlist-user-trafalgarlaw, #yugioh-userlist-user-trafalgarlaw {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/5XEA8Km.png") right no-repeat;
+  @include icon("http://i.imgur.com/5XEA8Km.png");
 }
 
 #lobby-userlist-user-lotusnyx, #tournaments-userlist-user-lotusnyx, #thelotusleague-userlist-user-lotusnyx {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/VXYqV7f.png") right no-repeat;
+  @include icon("http://i.imgur.com/VXYqV7f.png");
 }
 
 #lobby-userlist-user-catalystic, #thelotusleague-userlist-user-catalystic, #monotype-userlist-user-catalystic {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/SCs4fRA.png") right no-repeat;
+  @include icon("http://i.imgur.com/SCs4fRA.png");
 }
 
 #lobby-userlist-user-celestialmoth, #monotype-userlist-user-celestialmoth, #tournaments-userlist-user-celestialmoth {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/KAXQItp.png") right no-repeat;
+  @include icon("http://i.imgur.com/KAXQItp.png");
 }
 
 #lobby-userlist-user-hatfila, #monotype-userlist-user-hatfila, #thehatleague-userlist-user-hatfila {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/PCnrFSu.gif") right no-repeat;
+  @include icon("http://i.imgur.com/PCnrFSu.gif");
 }
 
 #phoenixleague-userlist-user-waszap, #thelotusleague-userlist-user-waszap, #monotype-userlist-user-waszap {
-    background: rgba(255, 255, 255, 0.65) url("http://pldh.net/media/pokecons_action/068.gif") right no-repeat;
+    @include icon("http://pldh.net/media/pokecons_action/068.gif");
 }
 
+#lobby-userlist-user-missflower, #casino-userlist-user-missflower, #ossb-userlist-user-missflower {
+    @include icon("http://vignette3.wikia.nocookie.net/pokemon/images/2/27/PR_Vileplume_Sprite.png/revision/latest?cb=20130101181006");
+}
+
+#lobby-userlist-user-wndo, #smogontiers-userlist-user-wndo, #thearbiterleague-userlist-user-wndo, #leaguecentral-userlist-user-wndo {
+  @include icon("http://pokedream.com/pokedex/images/mini/007.gif");
+}

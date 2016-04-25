@@ -81,11 +81,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'aurastorm', signatureMove: "AuraStorm",
 				evs: {hp: 4, atk:252, spe:252}, nature: 'Jolly',
 			},
-			'@hayleysworld': { // (type) water/fairy
-				species: 'Vaporeon', ability: 'Aquatic Memes', item: 'Leftovers', gender: 'F',
-				moves: ['moonblast', 'icebeam', 'protect'],
-				baseSignatureMove: 'revengeofneptune', signatureMove: "Revenge of Neptune",
-				evs: {hp:252, def:228, spd:28}, nature: 'Bold',
+			'@hayleysworld': { // (type) electric/dark
+				species: 'Luxray', ability: 'Electric Memes', item: 'Leftovers', gender: 'F', shiny: true,
+				moves: ['thunderfang', 'firefang', 'icefang'],
+				baseSignatureMove: 'revengeofzeus', signatureMove: "Revenge of Zeus",
+				evs: {hp:4, atk:252, spe:252}, nature: 'Jolly',
 			},
 			'@L Chevy 12': {
 				species: 'Archeops', ability: 'Fuck You Up', item: 'Life Orb', gender: 'M', shiny: true, // power herb + recycle?
@@ -99,11 +99,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'shadowdrain', signatureMove: "Shadow Drain",
 				evs: {spa:248, def:238, spd:28}, nature: 'bold',
 			},
-			'@Paul Century': { // (typing) water/fire
-				species: 'Slowbro', ability: 'Bro Power', item: 'Rocky Helmet', gender: 'M', shiny: true,
-				moves: ['roar', 'stickyweb', 'slackoff'],
+			'@Paul Century': {
+				species: 'Slowbro', ability: 'so dope', item: 'Lax Incense', gender: 'M', shiny: true,
+				moves: ['steameruption', 'thunderbolt', 'bugbuzz'],
 				baseSignatureMove: 'omegablast', signatureMove: "Omega Blast",
-				evs: {hp:248, spa:252, spd:8}, nature: 'Modest',
+				evs: {hp:252, spa:252, def:4}, nature: 'Modest',
 			},
 			'@Safety Shark': { // (mega ability) magicguard
 				species: 'Garchomp', ability: 'Rough Skin', item: 'Garchompite', gender: 'M',
@@ -113,11 +113,11 @@ exports.BattleScripts = {
 			},
 
 			// Drivers.
-			'%Alliance NTG': {
-				species: 'Dragonite', ability: 'Simple', item: 'Weakness Policy', gender: 'M',
-				moves: ['dragonclaw', 'extremespeed', 'earthquake'],
-				baseSignatureMove: 'dragonenergy', signatureMove: "Dragon Energy",
-				evs: {atk:252, spd:252, spe:4}, nature: 'Adamant',
+			'%01NTG': {
+				species: 'Dragonite', ability: 'Magical Multicoat', item: 'Leftovers', gender: 'M',
+				moves: ['roost', 'extremespeed', ['dragontail', 'ironhead', 'earthquake', 'firepunch', 'iciclecrash', 'knockoff'][this.random(6)]],
+				baseSignatureMove: 'dragonsynergy', signatureMove: "Dragon Synergy",
+				evs: {atk:252, def:128, spd:128}, nature: 'Adamant',
 			},
 			'%Chief Sokka': {
 				species: 'Gliscor', ability: 'Cancerous Ability', item: 'Toxic Orb', gender: 'M',
@@ -161,11 +161,11 @@ exports.BattleScripts = {
 				baseSignatureMove: 'mercuriusblade', signatureMove: 'Mercurius Blade',
 				evs:{hp:252, atk:252, spe:4}, nature: "Adamant",
 			},
-			'%Starfox :3': { // (type) bug/psychic
-				species: 'Victini', ability: 'Shittiest User', item: 'Leftovers', shiny: true,
-				moves: ['vcreate', 'megahorn', 'recover'],
-				baseSignatureMove: 'mindwrecker', signatureMove: "Mind Wrecker",
-				evs: {atk:252, def:4, spe:252}, nature: 'Adamant',
+			'%Starfox :3': {
+				species: 'Emolga', ability: 'Light Speed', item: 'Life Orb', gender: 'M',
+				moves: ['Volt Tackle', 'Flare Blitz', 'Brave Bird'],
+				baseSignatureMove: 'voltturn', signatureMove: "Volt Turn",
+				evs: {hp:4, atk:252, spe:252}, nature: 'Jolly',
 			},
 
 			// Voices.
@@ -187,26 +187,24 @@ exports.BattleScripts = {
 				baseSignatureMove: 'hydrosmash', signatureMove: "Hydro Smash",
 				evs: {hp:4, spa:252, spe:252}, nature: 'Timid',
 			},
+			'+Jigglykong': {
+				species: 'Porygon2', ability: '3bulky5u', item: 'Eviolite', gender: 'M',
+				moves: ['toxic', 'recover', 'healbell'],
+				baseSignatureMove: 'plasmablast', signatureMove: "Plasma Blast",
+				evs: {hp:252, def:100, spa:60, spd:92}, nature: 'Bold',
+			},
 			'+Master Bui': {
 				species: 'Buizel', ability: 'Ocean\'s Grace', item: 'Eviolite', gender: 'M',
 				moves: ['earthpower', 'icebeam', 'chargebeam'],
 				baseSignatureMove: 'danceofthesea', signatureMove: "Dance of the Sea",
 				evs: {hp:216, def:132, spd:160}, nature: 'Calm',
 			},
-			'+Otami': {
-				species: 'Vileplume', ability: 'S-S-Senpai', item: 'Black Sludge', gender: 'M',
-				moves: ['sludgebomb', 'spore', 'psychic', 'nastyplot'],
-				baseSignatureMove: 'whatdoyoumean', signatureMove: "What do you mean",
-				evs: {hp:4, spa:252, spd:252}, nature: 'Gentle',
+			'+Otami': { // (typing) psychic/fairy
+				species: 'Espeon', ability: 'Telekinetic', item: 'Leftovers', gender: 'M',
+				moves: ['moonblast', 'psychic', 'cosmicpower', 'storedpower', ['substitute', 'recover', 'hypnosis'][this.random(3)]],
+				baseSignatureMove: 'telekineticchant', signatureMove: "Telekinetic Chant",
+				evs: {hp:4, spa:252, spd:252}, nature: 'Modest',
 			},
-			/*
-			'+Piscean': { // (type) normal/ghost
-				species: 'Miltank', ability: 'No, You!', item: 'Leftovers', gender: 'M',
-				moves: ['roar', 'stealthrock', 'milkdrink'],
-				baseSignatureMove: 'fatnissevereat', signatureMove: "Fatniss Evereat",
-				evs: {hp:252, def:252, spd:4}, nature: 'Bold',
-			},
-			*/
 			'+Sota Higurashi': {
 				species: 'Victini', ability: 'Contrary', item: 'Expert Belt',
 				moves: ['vcreate', 'uturn', 'boltstrike'],
@@ -220,6 +218,12 @@ exports.BattleScripts = {
 				moves: ['bellydrum', 'drainpunch', 'pursuit'],
 				baseSignatureMove: 'ebat', signatureMove: '/ebat',
 				evs: {hp:4, atk:252, def:252}, nature: 'Adamant',
+			},
+			' Hat Blaze': {
+				species: 'Blaziken', ability: 'Blaze Power', item: 'Life Orb', gender: 'M',
+				moves: ['highjumpkick', 'flareblitz', ['bravebird', 'needlearm', 'zenheadbut', 'poisonjab', 'feint', 'mimic', 'roost'][this.random(7)]],
+				baseSignatureMove: 'trublock', signatureMove: 'TruBlock',
+				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
 			' Imp Fallen Blood': { // (mega ability) pirate (typing) grass/flying
 				species: 'Sceptile', ability: 'overgrow', item: 'Sceptilite', gender: 'M',
@@ -273,7 +277,7 @@ exports.BattleScripts = {
 				});
 				let monName;
 				for (let mon in sets) {
-					if (toId(mon) === userid || (userid === "jigglykong" && toId(mon) === "sotahigurashi")) {
+					if (toId(mon) === userid/* || (userid === "jigglykong" && toId(mon) === "sotahigurashi")*/) {
 						monName = mon;
 						break;
 					}

@@ -1,366 +1,43 @@
-/*********************
-* Custom Classes CSS *
-*********************/
+/*******************************
+* IMPORTS - MIXINS - VARIABLES *
+*******************************/
 
-.astext {
-  border: none;
-  background: none;
-  padding: 0;
-  height: -20em;
-  font-family: Verdana,sans-serif;
-  font-size: 12px;
-  cursor: pointer;
-}
+@import "customclasses";
+@import "PMbox";
+@import "icons";
+@import "teambuilder";
+@import "battle";
 
-.pollButton {
-  background: #F8F8F8;
-  color: #444;
-  border: 1px solid #AAA;
-  margin: 2px;
-  padding-top: 2px;
-  padding-bottom: 3px;
-}
+$c1: #11484F;
+$c3: #336251;
+$c8: #803C6F;
+$c9: #96BFB8;
+$cb: #BBCCC9;
+$cc: #CD9FC4;
+$cf: #FFE0A7;
 
-.pollButton:hover {
-  background: #F6F6F6;
-  border-color: #337AB7;
-  color: #276297;
-}
-
-.table-header {
-  background: #061C2A;
-  padding: 8px 25px;
-  border: 1px solid #768D9C;
-  color: #FFF;
-  font-size: 13pt;
-}
-
-.table-option {
-  background: rgba(248, 248, 248, 0.9);
-  border: 1px solid #768D9C;
+@mixin broadcast($background, $brdclr, $shadow) {
+  background: $background;
+  border: 1px solid $brdclr;
+  color: $brdclr;
+  text-shadow: 0px 0px 2px $shadow;
   text-align: center;
-  padding: 5px;
-}
-
-.table-option:hover {
-  background: rgba(255, 255, 255, 0.98);
-}
-
-.table-btn {
-  background: #CFE0EB;
-  border: none;
-  width: 100%;
-  padding: 20px 0px;
-  font-size: 11pt;
-  text-shadow: 1px 1px #FFF, 0px -1px #FFF;
-}
-
-.table-btn:hover {
-  color: #11527D;
-}
-
-.intro-tabbarbtn {
-  background: rgba(243, 197, 234, 0.2);
-  border-width: 0px 1px;
-  border-style: solid;
-  border-color: #693A60;
-  text-align: center;
-  width: 75px;
-  height: 35px;
-  color: #803C6F;
-  text-shadow: 0 0 2px #fce8f1;
-  margin: 0px 5px;
-}
-
-.intro-tabbarbtn:hover {
-  background: rgba(243, 197, 234, 0.7);
-}
-
-.important {
-  font-weight: bold;
-  font-style: italic;
-}
-
-.rankladder-headers {
-  background: #454E50;
-  color: #FFF;
-  text-shadow: 1px 1px #262B2C, -1px 1px #262B2C;
-  border: 1px solid #222;
-}
-
-.default-td {
-  padding: 5px;
-  border: 1px solid #222;
-}
-
-.rankladder-tds {
-  background: #FCFCFC;
-}
-
-.rankladder-tds:hover {
-  background: #EFEFEF;
-}
-
-.first {
-  background: #CFB53B;
-  color: #645722;
-  text-shadow: 0px 0px 2px #F6EAB9;
+  font-family: sans-serif;
   padding: 8px;
+  margin: 5px;
 }
 
-.first:hover {
-  background: #D5BD5B;
+@mixin roomicon($image) {
+  background: rgba(255, 255, 255, 0.65) url($image) left no-repeat;
 }
 
-.second {
-  background: #C0C0C0;
-  color: #5B5B5B;
-  text-shadow: 0px 0px 2px #EEE;
-  padding: 8px;
-}
-
-.second:hover {
-  background: #CACACA;
-}
-
-.third {
-  background: #CD7F32;
-  color: #694725;
-  text-shadow: 0px 0px 2px #E4BA91;
-  padding: 8px;
-}
-
-.third:hover {
-  background: #CD9054;
-}
-
-.card-th {
-  background-color: #DCE9F9;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-  border: 1px solid #CCC;
-}
-
-.card-td {
-  background: #FFF;
-  border: 1px solid #CCC;
-  text-align: center;
-}
-
-.card-div {
-  padding: 5px;
-  color: #333;
-}
-
-.card-th:hover, .card-td:hover {
-  color: #222;
-}
-
-.card-button {
-  margin: 0px 3px;
-}
-
-.card-td button, .card-button {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5px 15px;
-  color: #333;
-  text-shadow: 1px 1px 1px #FFF;
-}
-
-.card-td button:hover, .card-button:hover {
-  background: rgba(0, 0, 0, 0.06);
-  border: 1px solid #CCC;
-  text-shadow: 1px 1px 1px #EEE; 
-}
-
-.card-td button:focus, .card-button:focus {
-  background: rgba(227, 235, 246, 0.8);
-  border: 1px solid #9EB2D0;
-}
-
-.card-name {
-  background-color: #DCE9F9;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-  font-size: 25pt;
-  font-weight: bold;
-  padding: 12px 18px 10px 18px;
-  border: 1px solid #CCC;
-  color: #444;
-}
-
-.tour-btn {
-  background: none;
-  width: 100%;
-  height: 50px;
-  border: none;
-  padding-right: 8px;
-  padding-right: 30px;
-  color: #DDD;
-  font-size: 11pt;
-  text-align: right;
-}
-
-.tour-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #8E85DE;
-  border-left: 4px solid #8E85DE;
-}
-
-.sentence-container {
-  background: #EEE;
-  padding: 4px;
-  border-width: 1px 15px;
-  border-style: solid;
-  border-color: #CCC;
-  color: #333;
-  text-shadow: 1px 1px #FFF;
-  font-weight: bold;
-  text-align: center;
-}
-
-.tasks-th, .tasks-td {
-  border: 1px solid #803C6F;
-  padding: 3px 8px;
-}
-
-.tasks-th {
-  background: #FFE0A7;
-  color: #803C6F;
-  text-shadow: none;
-  font-style: italic;
-}
-
-.tasks-td:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#selfassign-button {
-  background: #A5E6E6;
-  color: #074141;
-  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
-  border: 1px solid #6BC1C1;
-  padding: 3px 7px;
-}
-
-#selfassign-button:hover {
-  background: #BDEBEB;
-  border: 1px solid #50B2B2;
-}
-
-#close-button {
-  background: #A6E6AD;
-  color: #07400F;
-  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
-  border: 1px solid #6BC37A;
-  padding: 3px 7px;
-}
-
-#close-button:hover {
-  background: #BDECBE;
-  border: 1px solid #51B351;
-}
-
-#reopen-button {
-  background: #A6A6E6;
-  color: #070940;
-  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
-  border: 1px solid #6B6BC3;
-  padding: 3px 7px;
-}
-
-#reopen-button:hover {
-  background: #BDBDEC;
-  border: 1px solid #5A51B3;
-}
-
-#delete-button {
-  background: #E6A6A6;
-  color: #400707;
-  text-shadow: 1px 0px 1px rgba(255, 255, 255, .8);
-  border: 1px solid #C36B6B;
-  padding: 3px 7px;
-}
-
-#delete-button:hover {
-  background: #ECBDBD;
-  border: 1px solid #B35151;
-}
-
-.Rocket {
-  background: rgba(60, 60, 60, 0.5);
-  border: 1px solid #555;
-  color: #AAA;
-}
-
-.Rocket span {
-  color: #D40000;
-  text-shadow: 0px 0px 2px #AAA;
-}
-
-.Aqua {
-  background: rgba(175, 185, 190, 0.5);
-  border: 1px solid #ACC2CD;
-  color: #CFE5F0;
-}
-
-.Aqua span {
-  color: #05008D;
-  text-shadow: 0px 0px 2px #C7C8F0;
-}
-
-.Magma {
-  background: rgba(212, 0, 0, 0.5);
-  border: 1px solid #ECB9B9;
-  color: #F0C8C8;
-}
-
-.Magma span {
-  color: #8D0000;
-  text-shadow: 0px 0px 2px #F0C8C8;
-}
-
-.Flare {
-  background: rgba(237, 77, 5, 0.5);
-  border: 1px solid #E14102;
-  color: #FF8D4A;
-}
-
-.Flare span {
-  color: #C03A00;
-  text-shadow: 0px 0px 2px #FF8D4A;
-}
-
-.Galactic {
-  background: rgba(110, 203, 203, 0.5);
-  border: 1px solid #64B3B3;
-  color: #FFEAAE;
-}
-
-.Galactic span {
-  color: #FFCD46;
-}
-
-.Plasma {
-  background: rgba(156, 235, 219, 0.5);
-  border: 1px solid #4BB29D;
-  color: #C1FAEF;
-}
-
-.Plasma span {
-  color: #196455;
-  text-shadow: 0px 0px 2px #C1FAEF;
-}
-
-/**************************
-* Custom Classes CSS ~end *
-**************************/
+/************************************
+* IMPORTS - MIXINS - VARIABLES ~end *
+************************************/
 
 /***********************
 * Donation Benefit CSS *
 ***********************/
-
-@import "PMbox";
-@import "icons";
 
 /* Symbol Color */
 
@@ -373,19 +50,19 @@
 /* Room Icon */
 
 #lobby-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/P4DEqSG.png") left no-repeat;
+  @include roomicon("http://i.imgur.com/P4DEqSG.png");
 }
 
 #tournaments-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/xUptAEf.png") no-repeat;
+  @include roomicon("http://i.imgur.com/xUptAEf.png");
 }
 
 #theomegaleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/EfrHru3.png") no-repeat;
+  @include roomicon("http://i.imgur.com/EfrHru3.png");
 }
 
 #thelotusleague-userlist-users {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/X87OO7r.png") left no-repeat;
+  @include roomicon("http://i.imgur.com/X87OO7r.png");
 }
 
 /* Room Icon ~end */
@@ -401,115 +78,92 @@
 body {
   background: url("http://i.imgur.com/aXop9m5.jpg") bottom left;
 }
-.dark body {
-  background: #000 url("http://i.imgur.com/D2kCH7Y.jpg") bottom left no-repeat;
-}
 
 .ps-room.ps-room-light {
   background: rgba(0, 0, 0, 0);
-  border-color: #11484F;
-}
-.dark .ps-room.ps-room-light {
-  background: none;
-  border-color: #09181F;
+  border-color: $c1;
 }
 
 .ps-room.ps-room-light.scrollable {
   background: rgba(51, 98, 81, 0.6);
-}
-.dark .ps-room.ps-room-light.scrollable {
-  background: rgba(19, 36, 46, 0.6);
+
+  p {
+    color: #031012;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  .button {
+    background: $cb;    
+    border: 1px solid $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  .button:hover {
+    background: #CBE1DD;    
+    border-color: #0C2D32;
+  }
+
+  .rooms-officialchatrooms, .rooms-chatrooms {
+    color: $cb;
+    text-shadow: 0px 0px 2px $c1;
+  }
+
+  .select {
+    background: $cf !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
+
+  .select:hover {
+    background: #F2CF99 !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
 }
 
-.rooms-officialchatrooms, .rooms-chatrooms {
-  color: #BBCCC9;
-  text-shadow: 0px 0px 2px #11484F;
-}
-.dark .rooms-officialchatrooms, .dark .rooms-chatrooms {
-  color: #DDD;
-  text-shadow: 1px 1px #222;
-}
-
-.ps-room.ps-room-light.scrollable p {
-  color: #031012;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-.dark .ps-room.ps-room-light.scrollable p {
-  color: #EEE;
-  text-shadow: 0px 0px 2px #000;
-}
-
-.ps-room.ps-room-light.scrollable .button {
-  background: #BBCCC9;    
-  border: 1px solid #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.ps-room.ps-room-light.scrollable .button:hover {
-  background: #CBE1DD;    
-  border-color: #0C2D32;
-}
-
-.chat.mine, .dark .chat.mine {
+.chat.mine {
   background: rgba(0, 0, 0, 0);
 }
 
 .broadcast-blue {
-  background: #CD9FC4;
-  border: 1px solid #0B1361;
-  color: #0B1361;
-  text-shadow: 0px 0px 2px #B287A9;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 8px;
-  margin: 5px;
-}
+  @include broadcast($cc, #0B1361, #B287A9);
 
-.broadcast-blue a {
-  color: #000F98;
-}
+  a {
+    color: #000F98;
+  }
 
-.broadcast-blue button {
-  background: #A87C9F;
-  border: 1px solid #090F47;
-  color: #FFF9FF;
-  text-shadow: 0px 0px 2px #090F47;
-  padding: 2px 8px;
-}
+  button {
+    background: #A87C9F;
+    border: 1px solid #090F47;
+    color: #FFF9FF;
+    text-shadow: 0px 0px 2px #090F47;
+    padding: 2px 8px;
+  }
 
-.broadcast-blue button:hover {
-  background: #9F7697;
+  button:hover {
+    background: #9F7697;
+  }
 }
 
 .broadcast-red {
-  background: #FFEBF4;
-  border: 1px solid #B52C43;
-  color: #B52C43;
-  text-shadow: 0px 0px 2px #F2DBE5;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 8px;
-  margin: 5px;
-}
+  @include broadcast(#FFEBF4, #B52C43, #F2DBE5);
 
-.broadcast-red a {
-  color: #B3001E;
+  a {
+    color: #B3001E;
+  }
 }
 
 .broadcast-green {
-  background: #B5D896;
-  border: 1px solid #20493B;
-  color: #20493B;
-  text-shadow: 0px 0px 2px #A4C786;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 8px;
-  margin: 5px;
-}
+  @include broadcast(#B5D896, #20493B, #A4C786);
 
-.broadcast-green a {
-  color: #005C3E;
+  a {
+    color: #005C3E;
+  }
 }
 
 .broadcast-blue:hover, .broadcast-green:hover, .broadcast-red:hover {
@@ -524,9 +178,6 @@ body {
 .ps-overlay {
   background: rgba(0, 0, 0, 0.35);
 }
-.dark .ps-overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
 
 /*******************
 * General CSS ~end *
@@ -538,128 +189,77 @@ body {
 
 .header {
   background: rgba(17, 72, 79, 0.6) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
-}
-.dark .header {
-  background: rgba(19, 36, 46, 0.5) url("http://i.imgur.com/A3wunN6.png?1") no-repeat;
-}
 
-.dark .header .logo, .header .logo {
-  opacity: 0;
-}
+  .logo {
+    opacity: 0;
+  }
 
-.maintabbarbottom {
-  border-color: #803C6F;
-  background: #CD9FC4;
-}
-.dark .maintabbarbottom {
-  background: #3A3A3A;
-  border-color: #111;
-}
+  .maintabbarbottom {
+    border-color: $c8;
+    background: $cc;
+  }
 
-.tabbar a.button.notifying {
-  background: #FFE0A7;
-  border-color: #803C6F;
-  color: #803C6F;
-  text-shadow: none;
-  font-style: italic;
-}
-.dark .tabbar a.button.notifying {
-  background: #B4DCE4;
-  border-color: #8BBDC6;
-  color: #4A7179;
-  text-shadow: none;
-  font-style: italic;
-}
+  .tabbar {
+    a.button.notifying {
+      background: $cf;
+      border-color: $c8;
+      color: $c8;
+      text-shadow: none;
+      font-style: italic;
+    }
 
-.tabbar a.button.notifying:hover {
-  background: #F9D990;  
-  border-color: #803C6F;
-  color: #803C6F;
-}
-.dark .tabbar a.button.notifying:hover {
-  background: #A0CCD5;
-  border-color: #8BBDC6;
-  color: #4A7179;
-  text-shadow: none;
-  font-style: italic;
-}
+    a.button.notifying:hover {
+      background: #F9D990;  
+      border-color: $c8;
+      color: $c8;
+    }
 
-.tabbar a.button.subtle-notifying, .tabbar a.button.subtle-notifying:hover {
-  color: #07948F;
-}
-.dark .tabbar a.button.subtle-notifying, .dark .tabbar a.button.subtle-notifying:hover {
-  color: #EB86BF;
-}
+    a.button.subtle-notifying, a.button.subtle-notifying:hover {
+      color: #07948F;
+    }
 
-.tabbar a.button.cur, .tabbar a.button.cur:hover {
-  border-color: #803C6F;
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
-.dark .tabbar a.button.cur, .dark .tabbar a.button.cur:hover {
-  background: #3A3A3A;
-  border-color: #111;
-  color: #F9F9F9;
-  text-shadow: 1px 1px #111;
-}
+    a.button.cur, a.button.cur:hover {
+      border-color: $c8;
+      background: $cc;
+      color: $c8;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
 
-.tabbar a.button {
-  border-color: #803C6F;
-  background: #F3C5EA;
-  color: #803C6F;
-  text-shadow: none;
-}
-.dark .tabbar a.button {
-  background: rgba(45, 45, 45, 0.7);
-  color: #BBB;
-  border-color: #222;
-  text-shadow: 1px 1px #222;
-}
+    a.button {
+      border-color: $c8;
+      background: #F3C5EA;
+      color: $c8;
+      text-shadow: none;
+    }
 
-.tabbar a.button:hover {
-  background: #E5B6DC;
-}
-.dark .tabbar a.button:hover {
-  background: rgba(45, 45, 45, 0.95);
-  color: #E2E2E2;
-  border-color: #222;
-  text-shadow: 1px 1px #222;
-}
+    a.button:hover {
+      background: #E5B6DC;
+    }
 
-.tabbar .closebutton {
-  color: #803C6F;
-}
+    .closebutton {
+      color: $c8;
+    }
 
-.tabbar .closebutton:hover {
-  color: #AF3B3B;
-}
+    .closebutton:hover {
+      color: #AF3B3B;
+    }
+  }
+  .userbar {
+    button.icon {
+      border: 1px solid $c8;
+      background: $cc;
+      color: $c8;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
 
-.userbar button.icon {
-  border: 1px solid #803C6F;
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
-.dark .userbar button.icon {
-  border: 1px solid #803C6F;
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
+    button.icon:hover {
+      background: #DBAED2;
+    }
 
-.userbar button.icon:hover {
-  background: #DBAED2;
-}
-.dark .userbar button.icon:hover {
-  color: #B4DCE4;
-}
-
-.userbar .username {
-  text-shadow: 1px 1px 0px #11484F, 1px -1px 0px #11484F, -1px 1px 0px #11484F, -1px -1px 0px #11484F;
-}
-.dark .userbar .username {
-  text-shadow: 1px 1px 0px #111, 1px -1px 0px #111, -1px 1px 0px #111, -1px -1px 0px #111;
+    .username {
+      text-shadow: 1px 1px 0px $c1, 1px -1px 0px $c1, -1px 1px 0px $c1, -1px -1px 0px $c1;
+    }
+  }
 }
 
 /******************
@@ -670,40 +270,51 @@ body {
 * Roomlist CSS *
 ***************/
 
-.roomlist h2 {
-  color: #FEE2B3;
-  text-shadow: 0px -1px 0px #11484F;
+.roomlist {
+  h2 {
+    color: #FEE2B3;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  a.ilink {
+    background: $cb;    
+    border-color: $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  a.ilink:hover {
+    background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
+    background-position: 300px -9px;
+    border-color: #092125;
+    color: #092125;
+    text-shadow: none;
+  }
+
+  .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+  }
 }
 
-.roomlist a.ilink, .roomcounters button {
-  background: #BBCCC9;    
-  border-color: #11484F;
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-.dark .roomlist a.ilink, .dark .roomcounters button {
-  background: rgba(9, 24, 31, 0.95);
-  border-color: #B998AB;
-  color: #B998AB;
-}
+.roomcounters {
+  button {
+    background: $cb;    
+    border-color: $c1;
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
 
-.roomlist a.ilink:hover, .roomcounters button:hover {
-  background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
-  background-position: 300px -9px;
-  border-color: #092125;
-  color: #092125;
-  text-shadow: none;
-}
-.dark .roomlist a.ilink:hover, .dark .roomcounters button:hover {
-  background: rgba(9, 24, 31, 0.98);
-  border-color: #8BBDC6;
-  color: #8BBDC6;
-}
+  button:hover {
+    background: #9DB9B4 url("http://i.imgur.com/j9SgQOs.png?1") no-repeat;
+    background-position: 300px -9px;
+    border-color: #092125;
+    color: #092125;
+    text-shadow: none;
+  }
 
-/*.picon, .dark .picon {
-This makes everything into a mew*/
-.roomcounters .picon, .roomlist .picon, .dark .roomcounters .picon, .dark .roomlist .picon {
-  background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+  .picon {
+    background: url("http://i.imgur.com/6fLZPHJ.png?1") no-repeat !important;
+  }
 }
 
 /********************
@@ -716,91 +327,59 @@ This makes everything into a mew*/
 
 .userlist {
   background: rgba(17, 72, 79, 0.6);
-  border-color: #11484F;
-  color: #11484F;
-}
-.dark .userlist {
-  background: rgba(14, 36, 49, 0.8);
-  border-color: #09181F;
-  color: #11484F;
-  text-shadow: none;
+  border-color: $c1;
+  color: $c1;
+
+  li {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: $c1;
+
+    em.group {
+      color: $c1;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
-.userlist li {
-  background: rgba(255, 255, 255, 0.65);
-  border-color: #11484F;
-}
-.dark .userlist li {
-  background: rgba(255, 255, 255, 0.65);
-  border-color: #1D4254;
-}
-
-.userlist li em.group {
-  color: #11484F;
-}
-.dark .userlist li em.group {
-  color: #333;
-}
-
-.dark .userlist strong, .dark .userlist span {
-  text-shadow: 0px 0px 2px #FFF;
-}
-
-.dark .userlist li button span {
-  text-shadow: 0px 0px 2px #EEE;
-}
-
-.userlist li button:hover, .userlist-minimized .userlist-count:hover, .dark .userlist li button:hover, .dark .userlist-minimized .userlist-count:hover {
+.userlist-minimized .userlist-count:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
 .infobox {
-  border-color: #11484F;
+  border-color: $c1;
 }
 
-.chat-log, .dark .chat-log {
+.chat-log {
   background: rgba(255, 247, 251, 0.8) url("http://i.imgur.com/Tj9rEUu.png?1") top right no-repeat;
   color: #000;
-}
 
-.chat-log .chat small, .dark .chat-log .chat small {
-  color: #11484F;
-}
+  .chat small {
+    color: $c1;
+  }
 
-.chat-log .chat.mine.chat small {
-  color: #0A292E;
+  .chat.mine.chat small {
+    color: #0A292E;
+  }
 }
 
 .chat.highlighted {
   background: rgba(178, 215, 148, 0.7);
 }
-.dark .chat.highlighted {
-  background: #B4DCE4;
-  color: #0C3A43;
-}
-
-.dark .greentext {
-    color: #187902 !important;
-}
 
 .chat-log-add {
-  border-color: #336251;
+  border-color: $c3;
   background: rgba(51, 98, 81, 0.6);
-}
 
-.chat-log-add .textbox {
-  border-color: #336251;
+  .textbox {
+    border-color: $c3;
+  }
 }
 
 .chatbox label {
-  text-shadow: 0px 0px 2px #336251;
-}
-
-.nightclub {
-  background: rgba(0, 0, 0, 0.85);
-  margin:-3px;
-  text-shadow: 0px 0px 2px #000;
-  color: #FFF;
+  text-shadow: 0px 0px 2px $c3;
 }
 
 /****************
@@ -813,110 +392,57 @@ This makes everything into a mew*/
 
 .tournament-title {
   background: rgba(17, 72, 79, 0.6);
-  text-shadow: 0px -1px 0px #11484F;
+  text-shadow: 0px -1px 0px $c1;
   color: #AFCFD4;
-}
-.dark .tournament-title {
-  background: rgba(19, 36, 46, 0.6);
-  color: #EEE;
-  text-shadow: 0px -1px 0px #222;
 }
 
 .tournament-status, .tournament-toggle {
   background: rgba(255, 255, 255, 0.65);
-  border-color: #11484F;
+  border-color: $c1;
   text-shadow: none;
-  color: #11484F;
+  color: $c1;
 }
 
 .tournament-tools {
-  border-color: #11484F;
+  border-color: $c1;
   background: rgba(51, 98, 81, 0.6);
-}
-.dark .tournament-tools {
-  background: rgba(19, 36, 46, 0.6);
-  border-color: #111;
-}
 
-.tournament-tools .select {
-  border-color: #11484F;
-  background: #336251;
-  color: #D9FCEF;
-  text-shadow: 0px -1px 0px #11484F;
-}
+  .select {
+    border-color: $c1;
+    background: $c3;
+    color: #D9FCEF;
+    text-shadow: 0px -1px 0px $c1;
+  }
 
-.tournament-tools .select:hover {
-  background: #3D735F;
-}
+  .select:hover {
+    background: #3D735F;
+  }
 
-.tournament-tools .select:disabled, .tournament-tools .select:disabled:hover {
-  background: rgba(51, 98, 81, 0.45);
-  color: #11484F !important;
-  text-shadow: none !important;
-  border-color: #11484F !important;
-}
+  .select:disabled, .select:disabled:hover {
+    background: rgba(51, 98, 81, 0.45);
+    color: $c1 !important;
+    text-shadow: none !important;
+    border-color: $c1 !important;
+  }
 
-.tournament-tools button {
-  border-color: #11484F;
-  background: #336251;
-  color: #D9FCEF;
-  text-shadow: 0px -1px 0px #11484F;
-}
-.dark .tournament-tools button {
-  background: rgba(9, 24, 31, 0.95);
-  border-color: #B998AB;
-  color: #B998AB;
-}
+  button {
+    border-color: $c1;
+    background: $c3;
+    color: #D9FCEF;
+    text-shadow: 0px -1px 0px $c1;
+  }
 
-.tournament-tools button:hover {
-  background: #3D735F;
-}
-.dark .tournament-tools button:hover {
-  background: rgba(9, 24, 31, 0.98);
-  border-color: #8BBDC6;
-  color: #8BBDC6;
+  button:hover {
+    background: #3D735F;
+  }
 }
 
 .tournament-wrapper, .tournament-box {
-  border-color: #11484F;
+  border-color: $c1;
 }
 
 .tournament-box {
   background: url("http://i.imgur.com/xQmFRxz.jpg?2");
-}
-
-.dark .tournament-bracket-tree-node > rect {
-  fill: rgba(9, 24, 31, 0.95);
-  stroke: #000;
-}
-
-.dark .tournament-bracket-tree-node-match-team {
-  fill: #8BBDC6;
-}
-
-.dark .tournament-bracket-tree-node-match-team-draw, .dark .tournament-bracket-tree-node-match-team-loss {
-  fill: #AAA;
-}
-
-.dark .tournament-bracket-tree-node > text {
-  fill: #EEE;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
-}
-
-.dark .tournament-bracket-tree-link-active {
-  stroke: #8BBDC6;
-}
-
-.dark .tournament-bracket-tree-node > text > a {
-  fill: #B998AB;
-}
-
-.dark .tournament-bracket-tree-node > text > a:hover {
-  fill: #9E7D8F;
-}
-
-.dark .tournament-bracket-tree {
-  background: rgba(19, 36, 46, 0.5);
 }
 
 /***********************
@@ -928,286 +454,194 @@ This makes everything into a mew*/
 **********************/
 
 .menugroup {
-  border: 1px solid #803C6F;
+  border: 1px solid $c8;
   background: rgba(128, 60, 111, 0.25);
   color: #FBE7F0;
-  text-shadow: 0px 0px 2px #803C6F;
-}
-.dark .menugroup {
-  border: 1px solid #000;
-  background: rgba(45, 45, 45, 0.25);
-  color: #FBE7F0;
-  text-shadow: 0px 0px 2px #803C6F;
-}
+  text-shadow: 0px 0px 2px $c8;
 
-.menugroup .select:disabled, .menugroup .select:disabled:hover {
-  background: rgba(255, 224, 167, 0.7) !important;
-  border-color: #803C6F !important;
-  text-shadow: none !important;
-  font-style: italic !important;
-}
-.dark .select:disabled, .dark .select:disabled:hover {
-  background: rgba(45, 45, 45, 0.5) !important;   
-  border-color: #222 !important;   
-}
+  .select:disabled, .select:disabled:hover {
+    background: rgba(255, 224, 167, 0.7) !important;
+    border-color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
 
-.teamselect:disabled strong {
-  color: #803C6F !important;
-}
-.dark .teamselect:disabled strong {
-  color: #E2E2E2 !important;
-  text-shadow: 1px 1px #222 !important;
-}
+  .teamselect:disabled strong {
+    color: $c8 !important;
+  }
 
-.menugroup .select, .menugroup .button, .ps-room.ps-room-light.scrollable  .select {
-  background: #FFE0A7 !important;
-  border-color: #803C6F !important;
-  color: #803C6F !important;
-  text-shadow: none !important;
-  font-style: italic !important;
-}
-.dark .select, .dark .menugroup .button, .dark .ps-room.ps-room-light.scrollable  .select {
-  background: rgba(45, 45, 45, 0.95) !important;
-  color: #E2E2E2 !important;
-  border-color: #222 !important;
-  text-shadow: 1px 1px #222 !important;
-}
+  .select, .button {
+    background: $cf !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
 
-.menugroup .select:hover, .menugroup .button:hover, .ps-room.ps-room-light.scrollable  .select:hover {
-  background: #F2CF99 !important;
-  border-color: #803C6F !important;
-  color: #803C6F !important;
-  text-shadow: none !important;
-  font-style: italic !important;
-}
-.dark .select:hover, .dark .menugroup .button:hover, .dark .ps-room.ps-room-light.scrollable  .select:hover {
-  background: rgba(30, 30, 30, 0.95) !important;
-  color: #8BBDC6 !important;
-  border-color: #222 !important;
-  text-shadow: 1px 1px #222 !important;
+  .select:hover, .button:hover {
+    background: #F2CF99 !important;
+    border-color: $c8 !important;
+    color: $c8 !important;
+    text-shadow: none !important;
+    font-style: italic !important;
+  }
 }
 
 .pm-window h3 {
-  border-color: #336251;
+  border-color: $c3;
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #E5FFF6;
-  text-shadow: 0px -1px 0px #336251;
-}
-.dark .pm-window h3 {
-  background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
-  background-position: 225px;
-  color: #BBB;
-  border-color: #3D3D3D;
-  text-shadow: 0px -1px 0px #3D3D3D;
+  text-shadow: 0px -1px 0px $c3;
+
+  small {
+    color: #B2DBCD;
+  }
+
+  .closebutton, .minimizebutton {
+    color: #D3F5E8;
+  }
+
+  .closebutton:hover {
+    color: #F7A4A4;
+  }
+
+  .minimizebutton:hover {
+    color: #F7D0A4;
+  }
+
+  .closebutton:hover + .minimizebutton {
+    color: #D3F5E8 !important;
+  }
 }
 
 .pm-window h3:hover {
   background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #CBEBE0;
-}
-.dark .pm-window h3:hover {
-  background: rgba(45, 45, 45, 0.7) url("http://i.imgur.com/6fLZPHJ.png?1") bottom right no-repeat;
-  background-position: 225px;
-  color: #E2E2E2;
-  border-color: #3D3D3D;
-  text-shadow: 0px -1px 0px #3D3D3D;
-}
 
-.pm-window h3 small {
-  color: #B2DBCD;
+  .minimizebutton {
+    color: #D3F5E8;
+  }
 }
 
 .pm-window.focused h3, .pm-window.focused h3:hover {
-  border-color: #336251;
+  border-color: $c3;
   background: rgba(51, 98, 81, 0.8) url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
   background-position: 225px;
   color: #E5FFF6;
-  text-shadow: 0px -1px 0px #336251;
-}
-.dark .pm-window.focused h3, .dark .pm-window.focused h3:hover {
-  background: #3A3A3A url("http://i.imgur.com/k1v7Evr.png?1") bottom right no-repeat;
-  background-position: 225px;
-  border-color: #111;
-  color: #F9F9F9;
-  text-shadow: 0px -1px 0px #111;
-}
-.dark .pm-window.focused h3:hover {
-  color: #8BBDC6;
+  text-shadow: 0px -1px 0px $c3;
 }
 
-.pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
-  color: #D3F5E8;
-}
 
-.pm-window h3 .closebutton:hover {
-  color: #F7A4A4;
-}
-
-.pm-window h3 .minimizebutton:hover {
-  color: #F7D0A4;
-}
-
-.pm-window h3 .closebutton:hover + .minimizebutton {
-  color: #D3F5E8 !important;
-}
-.dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CCC !important;
-}
-
-.message-pm, .dark .message-pm {
+.message-pm {
   color: #46806A;
 }
 
 .pm-window h3.pm-notifying {
-  border-color: #803C6F;
+  border-color: $c8;
   background: #F3C5EA url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
   background-position: 225px -9px;
-  color: #803C6F;
+  color: $c8;
   text-shadow: none;
-}
-.dark .pm-window h3.pm-notifying {
-  background: #B4DCE4;
-  border-color: #8BBDC6;
-  color: #4A7179;
-  text-shadow: none;
-  font-style: italic;
+
+  small {
+    color: #A4578F;
+  }
+
+  .closebutton, .minimizebutton {
+    color: $c8;
+  }
+
+  .closebutton:hover {
+    color: #AF3B3B;
+  }
+
+  .minimizebutton:hover {
+    color: #AF813B;
+  }
+
+  .closebutton:hover + .minimizebutton {
+    color: $c8 !important;
+  }
 }
 
 .pm-window h3.pm-notifying:hover {
   background: #E5B6DC url("http://pokedream.com/pokedex/images/mini/151.gif") no-repeat;
   background-position: 225px -9px;
 }
-.dark .pm-window h3.pm-notifying:hover {
-  background: #A0CCD5;
-  border-color: #8BBDC6;
-  color: #4A7179;
-  text-shadow: none;
-  font-style: italic;
-}
-
-.pm-window h3.pm-notifying small {
-  color: #A4578F;
-}
-
-.pm-window h3.pm-notifying .closebutton, .pm-window h3.pm-notifying .minimizebutton {
-  color: #803C6F;
-}
-
-.pm-window h3.pm-notifying .closebutton:hover {
-  color: #AF3B3B;
-}
-
-.pm-window h3.pm-notifying .minimizebutton:hover {
-  color: #AF813B;
-}
-
-.pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
-  color: #803C6F !important;
-}
-.dark .pm-window h3 .closebutton:hover + .minimizebutton.minimizebutton {
-  color: #CCC !important;
-}
 
 .pm-log, .pm-window.focused .pm-log {
-  border-color: #336251;
+  border-color: $c3;
 }
-.dark .pm-log, .dark .pm-window.focused .pm-log {
-  background: rgba(242, 247, 250, 0.925) none repeat scroll 0% 0%;
-  color: #000;
-  border-color: #888;
+
+.unread {
+  background: none;
 }
 
 .challenge {
-  border-color: #803C6F;
+  border-color: $c8;
   background: #F3C5EA;
-  color: #803C6F;
+  color: $c8;
   text-shadow: none;
-}
-.dark .challenge {
-  background: #FCD2B3 none repeat scroll 0% 0%;
-  border: 1px solid #F57B21;
-  color: #682F05;
-}
 
-.challenge .select {
-  border-color: #803C6F;
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
+  .select {
+    border-color: $c8;
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
 
-.challenge .select:hover {
-  background: #DBAED2;
-}
+  .select:hover {
+    background: #DBAED2;
+  }
 
-.challenge .select:disabled {
-  background: rgba(205, 159, 196, 0.5);
-}
+  .select:disabled {
+    background: rgba(205, 159, 196, 0.5);
+  }
 
-.challenge .select.preselected, .challenge .select.preselected:disabled {
-  color: #803C6F;
-}
+  .select.preselected, .select.preselected:disabled {
+    color: $c8;
+  }
 
-.challenge .buttonbar button {
-  border: 1px solid #803C6F;
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-  padding: 2px 5px;
-}
+  .buttonbar button {
+    border: 1px solid $c8;
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+    padding: 2px 5px;
+  }
 
-.challenge .buttonbar button:hover {
-  background: #DBAED2;
+  .buttonbar button:hover {
+    background: #DBAED2;
+  }
 }
 
 .pm-log-add {
-  border-color: #336251;
+  border-color: $c3;
   background: rgba(51, 98, 81, 0.6);
-}
-.dark .pm-log-add {
-  background: rgba(34, 34, 34, 0.8);
-  color: #DDD;
+
+  .textbox {
+    border-color: $c3;
+  }
 }
 
 .pm-window.focused .pm-log-add {
-  border-color: #336251;
+  border-color: $c3;
   background: rgba(51, 98, 81, 0.75);
-}
-.dark .pm-window.focused .pm-log-add {
-  border-color: #000;
-  background: #222;
-}
-
-.pm-log-add .textbox {
-  border-color: #336251;
-}
-.dark .pm-log-add .textbox {
-  border-color: #999;
-}
-
-.mainmenufooter a {
-  color: #FFE1B3;
-}
-.dark .mainmenufooter a {
-  color: #91C2C9;
-}
-
-.mainmenufooter a:hover {
-  color: #F2D19C;
-}
-.dark .mainmenufooter a:hover {
-  color: #B6DFDB;
 }
 
 .mainmenufooter {
   color: #F2D19C;
-}
-.dark .mainmenufooter {
-  color: #91C2C9;
-}
-  
+
+  a {
+    color: #FFE1B3;
+  }
+
+  a:hover {
+    color: #F2D19C;
+  }
+} 
 
 /***************************
 * Mainmenuwrapper CSS ~end *
@@ -1218,87 +652,95 @@ This makes everything into a mew*/
 ************/
 
 .ps-popup {
-  background: #BBCCC9;    
-  border-color: #11484F;
+  background: $cb;    
+  border-color: $c1;
+
+  a {
+    color: $c1;
+    text-shadow: 0px 0px 2px $c9;
+  }
+
+  a:hover {
+    color: #173B40;
+  }
+
+  a.ilink.yours {
+    color: #0B282C;
+  }
+
+  a.ilink.yours:hover {
+    color: #04171A;
+  }
+
+  .buttonbar button {
+    background: #17626E;
+    border: 1px solid $c1;
+    padding: 2px 5px;
+    color: $cb;
+    text-shadow: 0px -1px 0px $c1;
+  }
+
+  .buttonbar button:hover {
+    background: #1B545C;
+  }
+
+  .popupmenu {
+    h3 {
+      color: $c1;
+      text-shadow: 0px 0px 2px $c9;
+    }
+
+    button.sel {
+      border-color: $c1;
+    }
+
+    button:hover, button.sel:hover {
+      border-color: $c1;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  } 
+  .avatarlist button {
+    border-color: $c1;
+  }
+
+  .avatarlist button:hover {
+    border-color: $c1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #062529;
+  }
+
+  .bglist {
+    button {
+      border-color: $c1;
+    }
+      
+    button:hover {
+      border-color: $c1;
+      background: rgba(255, 255, 255, 0.35);
+    }
+      
+    button.cur, button.cur:hover {
+      border-color: #092428;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
-.ps-popup a, .credits h2, .credits ul {
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.ps-popup a:hover {
-  color: #173B40;
-}
-
-.ps-popup a.ilink.yours {
-  color: #0B282C;
-}
-
-.ps-popup a.ilink.yours:hover {
-  color: #04171A;
-}
-
-.ps-popup .buttonbar button {
-  background: #17626E;
-  border: 1px solid #11484F;
-  padding: 2px 5px;
-  color: #BBCCC9;
-  text-shadow: 0px -1px 0px #11484F;
-}
-
-.ps-popup .buttonbar button:hover {
-  background: #1B545C;
-}
-
-.popupmenu h3 {
-  color: #11484F;
-  text-shadow: 0px 0px 2px #96BFB8;
-}
-
-.popupmenu button.sel {
-  border-color: #11484F;
-}
-
-.popupmenu button:hover, .popupmenu button.sel:hover {
-  border-color: #11484F;
-  background: rgba(255, 255, 255, 0.3);
+.credits h2, .credits ul {
+  color: $c1;
+  text-shadow: 0px 0px 2px $c9;
 }
 
 a.subtle, a.subtle:hover {
   color: #000;
 }
 
-.avatarlist button {
-  border-color: #11484F;
-}
-
-.avatarlist button:hover {
-  border-color: #11484F;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .effect-volume em, .music-volume em {
   color: #062529;
-}
-
-.ps-popup hr {
-  border: none;
-  border-bottom: 1px solid #062529;
-}
-
-.bglist button {
-  border-color: #11484F;
-}
-  
-.bglist button:hover {
-  border-color: #11484F;
-  background: rgba(255, 255, 255, 0.35);
-}
-  
-.bglist button.cur, .bglist button.cur:hover {
-  border-color: #092428;
-  background: rgba(255, 255, 255, 0.5);
 }
 
 /*****************
@@ -1309,53 +751,30 @@ a.subtle, a.subtle:hover {
 * Ladder CSS *
 *************/
 
-.ladder th {
-  background: #CD9FC4;
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
+.ladder {
+  table, th, td {
+    border-color: $c8;
+  }
 
-.ladder td {
-  background: rgba(255, 246, 250, 0.75);
-  color: #803C6F;
-  text-shadow: 0px 0px 2px #FCE8F1;
-}
+  th {
+    background: $cc;
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
 
-.ladder td:hover {
-  background: rgba(255, 246, 250, 0.95);
-}
+  td {
+    background: rgba(255, 246, 250, 0.75);
+    color: $c8;
+    text-shadow: 0px 0px 2px #FCE8F1;
+  }
 
-.ladder table, .ladder td, .ladder th {
-  border-color: #803C6F;
+  td:hover {
+    background: rgba(255, 246, 250, 0.95);
+  }  
 }
 
 /******************
 * Ladder CSS ~end *
 ******************/
 
-@import "teambuilder";
-
-@import "battle";
-
-/* Extra Dark */
-
-.dark .chat-log a, .dark .pm-log a, .dark .battle-log a {
-  color: #0000EE;
-}
-
-.dark .pm-window h3 small, .dark .pm-window .closebutton, .dark .tabbar .closebutton, .dark .pm-window .minimizebutton, .dark .tabbar .minimizebutton, .dark .pm-window h3:hover .minimizebutton {
-  color: #BBB;
-}
-
-.dark .pm-window .closebutton:hover, .dark .tabbar .closebutton:hover {
-  color: #FFB9B9;
-}
-
-.dark .pm-window .minimizebutton:hover, .dark .tabbar .minimizebutton:hover {
-  color: #FFE1B9 !important;
-}
-
-.dark .chat-log-add, .dark .pm-log-add, .dark .battle-log-add {
-  background: rgba(34, 34, 34, 0.8);
-  color: #DDD;
-}
+@import "darkcss";

@@ -16165,7 +16165,6 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]aurasphere');
 		},
 		onHit: function (source, target, move) {
-			this.add("c|@AuraStormLucario|get rekt");
 			if (target.stats.def > target.stats.spd) {
 				move.defensiveCategory = 'Special';
 			} else {
@@ -16179,39 +16178,36 @@ exports.BattleMovedex = {
 	},
 
 	// hayleysworld
-	"revengeofneptune": {
+	"revengeofzeus": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		id: "revengeofneptune",
-		name: "Revenge of Neptune",
+		basePower: 95,
+		category: "Physical",
+		id: "revengeofzeus",
+		name: "Revenge of Zeus",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, snatch: 1, heal: 1},
-		self: {
-			boosts: {
-				def: 1,
-				spa: 1,
-				spd: 1,
-			},
-		},
+		flags: {protect: 1, mirror: 1, contact: 1, bite: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]crunch');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]hydropump');
+			this.attrLastMove('[anim]crunch');
 		},
 		onHit: function (target, source, move) {
-			this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/ODTZISl.gif" title="feelsvpn" height="50" width="50" /></em></div>');
-			this.useMove('wish', source);
+			this.add('raw|<div class="chat"><small>@</small><button name="parseCommand" value="/user hayleysworld" style="background:none;border:0;padding:0 5px 0 0;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:9pt;cursor:pointer"><b><font color="#9347D1">hayleysworld:</font></b></button> HOT <em class="mine"><img src="http://i.imgur.com/5WmS1ba.gif" title="feelslux" height="50" width="50" /></em></div>');
 		},
-		secondary: {
-			chance: 30,
-			status: 'brn',
-		},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'par',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
 		target: "normal",
-		type: "Water",
+		type: "Electric",
 	},
 
 	// LChevy12
@@ -16361,19 +16357,13 @@ exports.BattleMovedex = {
 	"omegablast": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 100,
 		category: "Special",
-		defensiveCategory: "Physical",
 		id: "omegablast",
 		name: "Omega Blast",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		self: {
-			boosts: {
-				def: 2,
-			},
-		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]psystrike');
 		},
@@ -16381,12 +16371,10 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psystrike');
 		},
 		onHit: function (target, source, move) {
+			// this.boost({atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2}[this.random(7)]);
 			this.add('c|@Paul Century|Dope');
 		},
-		secondary: {
-			chance: 80,
-			status: 'brn',
-		},
+		secondary: false,
 		target: "normal",
 		type: "Water",
 	},
@@ -16422,33 +16410,37 @@ exports.BattleMovedex = {
 	},
 
 	// Drivers
-	// Alliance NTG
-	"dragonenergy": {
+	// 01NTG
+	"dragonsynergy": {
 		isNonstandard: true,
 		accuracy: true,
-		basePower: 60,
-		category: "Status",
-		id: "dragonenergy",
-		name: "Dragon Energy",
+		basePower: 80,
+		category: "Physical",
+		id: "dragonsynergy",
+		name: "Dragon Synergy",
 		pp: 20,
-		priority: 1,
+		priority: 0,
 		flags: {snatch: 1},
 		self: {
 			boosts: {
 				atk: 1,
-				spe: 1,
+				def: 1,
+				spd: 1,
 			},
 		},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]dragonascent');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]dragondance');
+			this.attrLastMove('[anim]dragonascent');
 		},
 		onHit: function (source, target, move) {
-			this.add("c|%Alliance NTG|Behold my godly hax");
+			this.add("c|%01NTG|I don't even know what synergy means. I don't like science :x");
 		},
-		secondary: false,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Dragon",
 	},
@@ -16592,6 +16584,7 @@ exports.BattleMovedex = {
 			this.add('c|%iSandman|WOA WE OUT HERE');
 		},
 		secondary: {
+			chance: 100,
 			boosts: {
 				spd: -1,
 			},
@@ -16651,33 +16644,33 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 	// Starfox:3
-	"mindwrecker": {
+	"voltturn": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 70,
 		category: "Physical",
-		id: "mindwrecker",
-		name: "Mind Wrecker",
-		pp: 10,
+		id: "voltturn",
+		name: "Volt Turn",
+		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]psychic');
+			this.attrLastMove('[anim]uturn');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]psychic');
+			this.attrLastMove('[anim]uturn');
 		},
+		/* no quote
 		onHit: function (target, source, move) {
-			this.add('c|%Starfox :3|get rekt');
-		},
+			this.add('c|%Starfox:3|/me flies away');
+		}, */
+		selfSwitch: true,
 		secondary: {
-			chance: 100,
-			boosts: {
-				spd: -1,
-			},
+			chance: 30,
+			status: 'par',
 		},
 		target: "normal",
-		type: "Psychic",
+		type: "Electric",
 	},
 
 	// Voices
@@ -16736,6 +16729,11 @@ exports.BattleMovedex = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		self: {
+			boosts: {
+				atk:1,
+			},
+		},
 		onModifyMove: function (move, pokemon) {
 			move.category = "Physical";
 		},
@@ -16744,11 +16742,6 @@ exports.BattleMovedex = {
 		},
 		onHit: function (target, source, move) {
 			this.add('c|+Chronologically|9 out of 10 memers recommend this move');
-		},
-		self: {
-			boosts: {
-				atk:1,
-			},
 		},
 		secondary: false,
 		target: "normal",
@@ -16797,6 +16790,38 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
+	// Jigglykong
+	"plasmablast": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 140,
+		category: "Special",
+		id: "plasmablast",
+		name: "Plasma Blast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness: function (typeMod, type, move) {
+			return typeMod + this.getEffectiveness('Electric', type);
+		},
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]hyperspacefury');
+		},
+		/* no quote
+		onHit: function (target, source, move) {
+			this.add('c|+Jigglykong|');
+		}, */
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Normal",
+	},
+
 	// Master Bui
 	"danceofthesea": {
 		isNonstandard: true,
@@ -16807,12 +16832,10 @@ exports.BattleMovedex = {
 		name: "Dance of the Sea",
 		pp: 10,
 		priority: 1,
+		flags: {protect: 1, mirror: 1},
 		onTryHit: function () {
 			this.attrLastMove("[anim]hydropump");
 		},
-		flags: {protect: 1, mirror: 1},
-		target: "normal",
-		type: "Water",
 		secondaries: [
 			{
 				chance: 50,
@@ -16827,80 +16850,42 @@ exports.BattleMovedex = {
 				volatileStatus: 'confusion',
 			},
 		],
+		target: "normal",
+		type: "Water",
 	},
 
 	// Otami
-	"whatdoyoumean": {
+	"telekineticchant": {
 		isNonstandard: true,
 		accuracy: 100,
-		basePower: 110,
+		basePower: 90,
 		category: "Special",
-		id: "whatdoyoumean",
-		name: "What Do You Mean",
+		id: "telekineticchant",
+		name: "Telekinetic Chant",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]solarbeam');
+			this.attrLastMove('[anim]psyshock');
 		},
 		onHit: function (target, source, move) {
-			this.add("c|+Otami|what do you mean fam?");
+			this.add("c|+Otami|Telekinetic powers are like so fetch");
 		},
-		secondary: {
-			chance: 30,
-			volatileStatus: 'confusion',
-		},
+		secondaries: [
+			{
+				chance: 40,
+				status: 'slp',
+			}, {
+				chance: 20,
+				self: {
+					boosts: {
+						spa:2,
+						spd:2,
+					},
+				},
+			},
+		],
 		target: "normal",
-		type: "Grass",
-	},
-
-	// Piscean
-	"fatnissevereat": {
-		isNonstandard: true,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		id: "fatnissevereat",
-		name: "Fatniss Evereat",
-		pp: 15,
-		priority: 4,
-		flags: {},
-		volatileStatus: 'magiccoat',
-		effect: {
-			duration: 1,
-			onStart: function (target) {
-				this.add('-singleturn', target, 'move: Magic Coat');
-			},
-			onTryHitPriority: 2,
-			onTryHit: function (target, source, move) {
-				this.attrLastMove('[anim]magicbounce');
-				if (target === source || move.hasBounced || !move.flags['reflectable']) return;
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
-			onAllyTryHitSide: function (target, source, move) {
-				if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) return;
-				let newMove = this.getMoveCopy(move.id);
-				newMove.hasBounced = true;
-				this.useMove(newMove, target, source);
-				return null;
-			},
-		},
-		onHit: function (source, target, move) {
-			this.add('c|+Piscean|NO! I\'M THE FATTEST! ୧( ಠ Д ಠ )୨');
-			source.cureStatus();
-			this.useMove("toxic", source);
-		},
-		self: {
-			boosts: {
-				def:1,
-				spd:1,
-			},
-		},
-		secondary: false,
-		target: "self",
 		type: "Psychic",
 	},
 
@@ -16960,6 +16945,33 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "target",
+		type: "Normal",
+	},
+
+	// Hat Blze
+	"trublock": {
+		isNonstandard: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		id: "trublock",
+		name: "TruBlock",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		onTry: function (pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.add('-fail', pokemon);
+				this.add('-hint', "TruBlock only works on your first turn out.");
+				return null;
+			} else {
+				this.attrLastMove('[anim]swordsdance');
+				this.useMove('protect', target);
+				this.boost({spe:2, def:1, spd:1});
+			}
+		},
+		secondary: false,
+		target: "self",
 		type: "Normal",
 	},
 
