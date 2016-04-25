@@ -29,7 +29,6 @@ exports.commands = {
 		if (!targetData) return this.errorReply("The staffmon '" + toId(target) + "' could not be found.");
 		return this.sendReplyBox(targetData);
 	},
-	ssbhelp: 'ssbhelp',
 	ossbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
 
 	ssbcredits: 'ossbcredits',
