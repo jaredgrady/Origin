@@ -829,7 +829,7 @@ class Tournament {
 		}
 		if (this.room.isOfficial && tourSize >= 4) {
 			let tourRarity = tourCard(tourSize, toId(winner));
-			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + tourRarity[0] + ">" + tourRarity[1] + "</font> card: <button name='send' value='/card " + tourRarity[2] + "'>" + tourRarity[3] + "</button> from the tournament.");
+			this.room.addRaw("<b><font color='" + color + "'>" + Tools.escapeHTML(winner) + "</font> has also won a <font color=" + tourRarity[0] + ">" + tourRarity[1] + "</font> card: <button class='tourcard-btn' style='border-radius: 20px; box-shadow: 1px 1px rgba(255, 255, 255, 0.3) inset, -1px -1px rgba(0, 0, 0, 0.2) inset, 2px 2px 2px rgba(0, 0, 0, 0.5);' name='send' value='/card " + tourRarity[2] + "'>" + tourRarity[3] + "</button> from the tournament.");
 		}
 		if (this.room.isOfficial && tourSize >= 8 && Db('gangs').get(wid, '') !== '') {
 			let reward = 10;
