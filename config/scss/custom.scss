@@ -654,6 +654,10 @@ body {
 .ps-popup {
   background: $cb;    
   border-color: $c1;
+  
+  .preview {
+    text-shadow: 1px 1px 1px #FFF;
+  }
 
   a {
     color: $c1;
