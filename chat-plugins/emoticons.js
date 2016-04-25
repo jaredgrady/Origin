@@ -30,6 +30,7 @@ let emotes = {
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelsbt': 'http://i.imgur.com/rghiV9b.png',
+	'feelsbunny': 'http://orig04.deviantart.net/a762/f/2012/352/9/5/dancing_bunny_by_onisuu-d5oee23.gif',
 	'feelschar': 'http://orig04.deviantart.net/9abc/f/2013/118/8/e/charizard_lick_icon_by_spritegirl999-d63d7sf.gif',
 	'feelschime': 'http://i.imgur.com/uIIBChH.png',
 	'feelscool': 'http://i.imgur.com/qdGngVl.jpg?1',
