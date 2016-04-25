@@ -13,6 +13,23 @@
   font-style: italic;
 }
 
+/* Tour card button */
+
+.tourcard-btn {
+  background: #333;
+  padding: 3px 12px;
+  color: #088CC7;
+  text-shadow: 0px -1px 0px #000;
+  border: 1px solid #000;
+}
+
+.tourcard-btn:hover {
+  border-width: 2px;
+  border-color: #088CC7;
+  padding: 2px 11px;
+  color: #1CA0E2;
+}
+
 /* /nightclub - CSS */
 
 .nightclub {

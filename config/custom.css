@@ -14,6 +14,20 @@
   font-weight: bold;
   font-style: italic; }
 
+/* Tour card button */
+.tourcard-btn {
+  background: #333;
+  padding: 3px 12px;
+  color: #088CC7;
+  text-shadow: 0px -1px 0px #000;
+  border: 1px solid #000; }
+
+.tourcard-btn:hover {
+  border-width: 2px;
+  border-color: #088CC7;
+  padding: 2px 11px;
+  color: #1CA0E2; }
+
 /* /nightclub - CSS */
 .nightclub {
   background: rgba(0, 0, 0, 0.85);
@@ -2454,6 +2468,9 @@
 #lobby-userlist-user-missflower, #casino-userlist-user-missflower, #ossb-userlist-user-missflower {
   background: rgba(255, 255, 255, 0.65) url("http://vignette3.wikia.nocookie.net/pokemon/images/2/27/PR_Vileplume_Sprite.png/revision/latest?cb=20130101181006") right no-repeat; }
 
+#lobby-userlist-user-wndo, #smogontiers-userlist-user-wndo, #thearbiterleague-userlist-user-wndo, #leaguecentral-userlist-user-wndo {
+  background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/007.gif") right no-repeat; }
+
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
@@ -3153,9 +3170,18 @@ body {
 .pm-log, .pm-window.focused .pm-log {
   border-color: #336251; }
 
+/* news */
+.newsentry h4 {
+  color: #803C6F; }
+
 .unread {
   background: none; }
 
+.pm-window.news-embed h3, .pm-window.news-embed h3:hover {
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/xdwfs4k.png?1") bottom right no-repeat;
+  background-position: 225px; }
+
+/* news */
 .challenge {
   border-color: #803C6F;
   background: #F3C5EA;
@@ -3207,6 +3233,12 @@ body {
 .ps-popup {
   background: #BBCCC9;
   border-color: #11484F; }
+  .ps-popup .preview {
+    text-shadow: 1px 1px 1px #FFF; }
+  .ps-popup input {
+    border-color: #11484F; }
+  .ps-popup input:hover {
+    border-color: #0B282C; }
   .ps-popup a {
     color: #11484F;
     text-shadow: 0px 0px 2px #96BFB8; }

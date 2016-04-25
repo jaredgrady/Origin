@@ -26,7 +26,7 @@ let shop = [
     ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
     ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float or AuraStormLucario with the icon and rooms you want it in (Size must be 32x32, 3 rooms maximum, will take time to appear).', 350],
     ['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
-    ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM Master Float to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
+    ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM AuraStormLucario to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
 
 let shopDisplay = getShopDisplay(shop);

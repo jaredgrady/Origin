@@ -16948,7 +16948,7 @@ exports.BattleMovedex = {
 		type: "Normal",
 	},
 
-	// Hat Blze
+	// Hat Blaze
 	"trublock": {
 		isNonstandard: true,
 		accuracy: true,
@@ -16972,7 +16972,7 @@ exports.BattleMovedex = {
 		},
 		secondary: false,
 		target: "self",
-		type: "Normal",
+		type: "Fire",
 	},
 
 	// Imp Fallen Blood

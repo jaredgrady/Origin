@@ -575,9 +575,22 @@ body {
   border-color: $c3;
 }
 
+/* news */
+
+.newsentry h4 {
+  color: $c8;
+}
+
 .unread {
   background: none;
 }
+
+.pm-window.news-embed h3, .pm-window.news-embed h3:hover {
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/xdwfs4k.png?1") bottom right no-repeat;
+  background-position: 225px;
+}
+
+/* news */
 
 .challenge {
   border-color: $c8;
@@ -654,6 +667,18 @@ body {
 .ps-popup {
   background: $cb;    
   border-color: $c1;
+  
+  .preview {
+    text-shadow: 1px 1px 1px #FFF;
+  }
+
+  input {
+    border-color: $c1;
+  }
+
+  input:hover {
+    border-color: #0B282C;
+  }
 
   a {
     color: $c1;
