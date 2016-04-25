@@ -3170,9 +3170,18 @@ body {
 .pm-log, .pm-window.focused .pm-log {
   border-color: #336251; }
 
+/* news */
+.newsentry h4 {
+  color: #803C6F; }
+
 .unread {
   background: none; }
 
+.pm-window.news-embed h3, .pm-window.news-embed h3:hover {
+  background: rgba(51, 98, 81, 0.6) url("http://i.imgur.com/xdwfs4k.png?1") bottom right no-repeat;
+  background-position: 225px; }
+
+/* news */
 .challenge {
   border-color: #803C6F;
   background: #F3C5EA;
@@ -3224,6 +3233,12 @@ body {
 .ps-popup {
   background: #BBCCC9;
   border-color: #11484F; }
+  .ps-popup .preview {
+    text-shadow: 1px 1px 1px #FFF; }
+  .ps-popup input {
+    border-color: #11484F; }
+  .ps-popup input:hover {
+    border-color: #0B282C; }
   .ps-popup a {
     color: #11484F;
     text-shadow: 0px 0px 2px #96BFB8; }
