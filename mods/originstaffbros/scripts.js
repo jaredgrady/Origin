@@ -221,7 +221,7 @@ exports.BattleScripts = {
 			},
 			' Hat Blaze': {
 				species: 'Blaziken', ability: 'Blaze Power', item: 'Life Orb', gender: 'M',
-				moves: ['highjumpkick', 'flareblitz', ['bravebird', 'needlearm', 'zenheadbut', 'poisonjab', 'feint', 'mimic', 'roost'][this.random(7)]],
+				moves: ['highjumpkick', 'flareblitz', ['bravebird', 'needlearm', 'zenheadbutt', 'poisonjab', 'feint', 'mimic', 'roost'][this.random(7)]],
 				baseSignatureMove: 'trublock', signatureMove: 'TruBlock',
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
