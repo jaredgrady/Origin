@@ -3,6 +3,21 @@ const color = require('../config/color');
 let enable = true;
 
 const spins = {
+	'pinsir': 0,
+	'scyther': 0,
+	'tauros': 0,
+	'magmar': 0,
+	'kangaskhan': 0,
+	'butterfree': 0,
+	'beedrill': 0,
+	'metapod': 0,
+	'kakuna': 0,
+	'vaporeon': 0,
+	'jolteon': 0,
+	'dugtrio': 0,
+	'porygon': 0,
+	'magnemite': 0,
+	'tangela': 0,
 	'golem': 0,
 	'zapdos': 0,
 	'articuno': 0,
@@ -31,6 +46,21 @@ const spins = {
 };
 
 const wheelTrozei = {
+	'pinsir': 'http://img.pokemondb.net/sprites/emerald/normal/pinsir.png',
+	'scyther': 'http://pldh.net/media/pokemon/gen3/frlg/123.png',
+	'tauros': 'http://pldh.net/media/pokemon/gen3/frlg/128.png',
+	'magmar': 'http://pldh.net/media/pokemon/gen3/frlg/126.png',
+	'kangaskhan': 'http://cdn.bulbagarden.net/upload/8/8e/Spr_1b_115.png',
+	'butterfree': 'http://img.pokemondb.net/sprites/firered-leafgreen/normal/butterfree.png',
+	'beedrill': 'http://pldh.net/media/pokemon/gen3/frlg/015.png',
+	'metapod': 'http://pldh.net/media/pokemon/gen3/frlg/011.png',
+	'kakuna': 'http://pldh.net/media/pokemon/gen3/frlg/014.png',
+	'vaporeon': 'http://pldh.net/media/pokemon/gen3/frlg/134.png',
+	'jolteon': 'http://cdn.bulbagarden.net/upload/0/02/Spr_3r_135.png',
+	'dugtrio': 'http://pldh.net/media/pokemon/gen3/frlg/051.png',
+	'porygon': 'http://pldh.net/media/pokemon/gen3/frlg/137.png',
+	'magnemite': 'http://pldh.net/media/pokemon/gen3/frlg/081.png',
+	'tangela': 'http://pldh.net/media/pokemon/gen3/frlg/114.png',
 	'golem': 'http://cdn.bulbagarden.net/upload/1/13/Spr_3f_076.png',
 	'zapdos': 'http://pldh.net/media/pokemon/gen3/frlg/145.png',
 	'articuno': 'http://fantasy.dragonsoul.com/en/lugia.us/www.lugia.us/media/Sprites/la/lg144.gif',
