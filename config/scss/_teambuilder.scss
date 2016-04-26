@@ -1,4 +1,5 @@
 $c1: #11484F;
+$c8: #803C6F;
 $c9: #96BFB8;
 $cb: #BBCCC9;
 
@@ -63,9 +64,9 @@ $cb: #BBCCC9;
   }
 
   .setmenu button:hover, .teamlist button:hover {
-    border-color: #803C6F !important;
+    border-color: $c8 !important;
     background: #F3C5EA !important;
-    color: #803C6F !important;
+    color: $c8 !important;
     text-shadow: none !important;
   }
 
@@ -159,9 +160,9 @@ $cb: #BBCCC9;
   background: rgba(255, 255, 255, 0.3);
 
   h3, .utilichart h3 {
-    border-color: #803C6F !important;
+    border-color: $c8 !important;
     background: #F3C5EA !important;
-    color: #803C6F !important;
+    color: $c8 !important;
     text-shadow: none !important;
   }
 
@@ -176,6 +177,28 @@ $cb: #BBCCC9;
   }
 
   .utilichart {
+    .sortrow {
+      background: #F3C5EA;
+      border-top: 1px solid $c8;
+      border-bottom: 1px solid $c8;
+      color: $c8;
+    }
+
+    .sortcol {
+      color: $c8;
+    }
+
+    .sortcol:hover {
+      background: #E5B6DC;
+    }
+
+    .sortcol.cur {
+      font-weight: bold;
+      background: #CD9FC4;
+      color: $c8;
+      text-shadow: 0px 0px 2px #FCE8F1;
+    }
+
     b {
       color: $c1;
       text-shadow: 0px 0px 2px $c9;
