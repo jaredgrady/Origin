@@ -109,7 +109,6 @@ exports.commands = {
 		},
 		'': 'help',
 		help: function (target, room, user) {
-			if (!this.runBroadcast()) return;
 			return this.parse('/help wheel');
 		},
 	},
