@@ -16371,12 +16371,25 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]psystrike');
 		},
 		onHit: function (target, source, move) {
-			// this.boost({atk:2, def:2, spa:2, spd:2, spe:2, evasion:2, accuracy:2}[this.random(7)]);
-			this.add('c|@Paul Century|Dope');
+			let stats = [];
+			for (let stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				let randomStat = stats[this.random(stats.length)];
+				let boost = {};
+				boost[randomStat] = 2;
+				this.boost(boost);
+				this.add('c|@Paul Century|Dope');
+			} else {
+				return false;
+			}
 		},
 		secondary: false,
 		target: "normal",
-		type: "Water",
+		type: "Psychic",
 	},
 
 	// Safety Shark
