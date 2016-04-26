@@ -24,13 +24,15 @@ exports.commands = {
 		default:
 			if (!this.runBroadcast()) return;
 			if (room.shopList.length < 1) return this.sendReplyBox('<center><b><u>This shop has no items!</u></b></center>');
-			let output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2><table cellpadding="6" border="1"><table cellpadding="6" border="1"><tr><td align="center"><h3><u>Item</u></h3></td><td align="center"><h3><u>Description</u></h3></td><td align="center"><h3><u>Price</u></h3></td></tr>';
+			let thInline = "box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px 1px rgba(0, 0, 0, 0.5) inset;";
+			let tdInline = "box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5) inset;";
+			let output = '<center><h2><u>' + Tools.escapeHTML(room.title) + '\'s Shop</u></h2></center><table style="background: #F6F6F6; width: 100%; border-collapse: collapse;"><tr><th class="ls-th" style="' + thInline + '">Item</th><th class="ls-th" style="' + thInline + '">Description</th<th class="ls-th" style="' + thInline + '">Price</th></tr>';
 			for (let u in room.shopList) {
 				if (!room.shop[room.shopList[u]] || !room.shop[room.shopList[u]].name || !room.shop[room.shopList[u]].description || !room.shop[room.shopList[u]].price) continue;
-				output += '<tr><td align="center"><button name="send" value="/leagueshop buy ' + Tools.escapeHTML(room.shopList[u]) + '" ><b>' + Tools.escapeHTML(room.shop[room.shopList[u]].name) +
-				'</b></button></td><td align="center">' + Tools.escapeHTML(room.shop[room.shopList[u]].description.toString()) + '</td><td align="center">' + room.shop[room.shopList[u]].price + '</td></tr>';
+				output += '<tr><td class="ls-td" style="' + tdInline + '"><button style="border-radius: 4px; box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5) inset;" name="send" value="/leagueshop buy ' + Tools.escapeHTML(room.shopList[u]) + '" ><b>' + Tools.escapeHTML(room.shop[room.shopList[u]].name) +
+				'</b></button></td><td class="ls-td" style="' + tdInline + '">' + Tools.escapeHTML(room.shop[room.shopList[u]].description.toString()) + '</td><td class="ls-td" style="' + tdInline + '">' + room.shop[room.shopList[u]].price + '</td></tr>';
 			}
-			output += '</table></center><br />';
+			output += '</table><br />';
 			this.sendReplyBox(output);
 			break;
 		case 'add':

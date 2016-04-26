@@ -14,6 +14,48 @@
   font-weight: bold;
   font-style: italic; }
 
+/* League Shop */
+.dark .ls-th {
+  background: #11484F;
+  border: 1px solid #000;
+  padding: 8px 10px;
+  color: #8BBDC6;
+  text-shadow: 1px 1px #000; }
+
+.dark .ls-th:hover {
+  color: #A2D6E1; }
+
+.ls-th {
+  background: #336251;
+  border: 1px solid #000;
+  padding: 8px 10px;
+  color: #BBCCC9;
+  text-shadow: 1px 1px #000; }
+
+.ls-th:hover {
+  color: #CFF0EB; }
+
+.ls-td {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #999;
+  padding: 5px 6px;
+  text-align: center; }
+  .ls-td button {
+    background: #DDD;
+    border: 1px solid #999;
+    padding: 2px 10px; }
+  .ls-td button:hover {
+    background: #AED2DA;
+    border: 1px solid #1DA8C4;
+    color: #093E49; }
+
+.ls-td:hover {
+  background: rgba(235, 247, 245, 0.8); }
+  .ls-td:hover button {
+    background: #AED2DA;
+    border: 1px solid #1DA8C4;
+    color: #093E49; }
+
 /* Tour card button */
 .tourcard-btn {
   background: #333;
