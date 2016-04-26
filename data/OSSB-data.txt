@@ -65,7 +65,7 @@ fender - Gible - Life Orb
 - Notes: Have fun hitting hard! Extremely strong STAB, setup options and very little ways to stop it.
 
 @hayleysworld - Luxray (Electric/Dark type) - Leftovers
-- Ability: Electric Memes - Strong Jaw + Unaware + Gets a boost of 1 stage to SpD and Def and 2 stages to Spe upon entry; Regenerator upon switch
+- Ability: Electric Memes - Strong Jaw + Unaware + Regenerator, boosts defense and special defense by 1 stage and speed by 2 stages upon entry
 - Move: Revenge of Zeus - 95BP Physical Dark move, 30% to flinch, 30% chance to paralyze opponent. PP: 10 / Accuracy: 100% / Priority: 0
 - Movepool: Thunder Fang, Ice Fang, Fire Fang
 - Notes:

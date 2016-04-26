@@ -3676,7 +3676,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onStart: function (pokemon) {
 			this.add('-ability', pokemon, 'Electric Memes');
-			this.boost({def:1, spd:1, spe:1});
+			this.boost({def:1, spd:1, spe:2});
 		},
 		onAnyModifyBoost: function (boosts, target) {
 			let source = this.effectData.target;

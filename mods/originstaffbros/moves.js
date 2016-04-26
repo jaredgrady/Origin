@@ -16207,7 +16207,7 @@ exports.BattleMovedex = {
 			},
 		],
 		target: "normal",
-		type: "Electric",
+		type: "Dark",
 	},
 
 	// LChevy12
