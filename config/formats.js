@@ -3366,6 +3366,55 @@ exports.Formats = [
 		banlist: ['Groudon-Primal', 'Kyogre-Primal', 'Arena Trap', 'Huge Power', 'Parental Bond', 'Pure Power', 'Shadow Tag', 'Wonder Guard', 'Assist', 'Chatter'],
 	},
 	{
+		name: "Blindmons",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3537013/\">Blindmons</a>"],
+		section: "Other Metagames",
+
+		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Baton Pass Clause'],
+		banlist: ['Uber', 'Shadow Tag', 'Arena Trap', 'Flower Gift', 'Forecast', 'Zen Mode', 'Illusion', 'Imposter', 'Soul Dew', 'Transform', 'Relic Song'],
+
+		onBegin: function () {
+			for (let i = 0; i < this.p1.pokemon.length; i++) {
+				this.p1.pokemon[i].canMegaEvo = false;
+			}
+			for (let i = 0; i < this.p2.pokemon.length; i++) {
+				this.p2.pokemon[i].canMegaEvo = false;
+			}
+		},
+		onChangeSet: function (set) {
+			if (!this.nickorder) this.nickorder = 1;
+			set.name = 'Battler No.' + this.nickorder;
+			this.nickorder++;
+		},
+		onBeforeSwitchIn: function (pokemon) {
+			const illusion = {
+				name: "Pokemon " + (pokemon.position + 1),
+				template: pokemon.template,
+				details: 'Unown' + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : ''),
+			};
+			illusion.fullname = pokemon.side.id + ': ' + illusion.name;
+			pokemon.illusion = illusion;
+		},
+		onSwitchIn: function (pokemon) {
+			let moveprompt = this.getMove(pokemon.moves[0]).name;
+			if (pokemon.moveset.length > 1) {
+				moveprompt += " and " + this.getMove(pokemon.moves[1]).name;
+			}
+			this.add('-message', pokemon.side.name + "'s " + (pokemon.illusion.name || "Pokemon") + " knows " + moveprompt + ".");
+		},
+		onDamage: function (damage, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				target.illusion = null;
+			}
+		},
+		onAfterDamage: function (damage, target) {
+			if (!target.hp) {
+				target.illusion = null;
+				this.add('replace', target, target.getDetails);
+			}
+		},
+	},
+	{
 		name: "1v1",
 		desc: [
 			"Bring three Pok&eacute;mon to Team Preview and choose one to battle.",
@@ -4046,54 +4095,5 @@ exports.Formats = [
 		searchShow: false,
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod'],
-	},
-	{
-		name: "Blindmons",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3537013/\">Blindmons</a>"],
-		section: "Other Metagames",
-
-		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Baton Pass Clause'],
-		banlist: ['Uber', 'Shadow Tag', 'Arena Trap', 'Flower Gift', 'Forecast', 'Zen Mode', 'Illusion', 'Imposter', 'Soul Dew', 'Transform', 'Relic Song'],
-
-		onBegin: function () {
-			for (let i = 0; i < this.p1.pokemon.length; i++) {
-				this.p1.pokemon[i].canMegaEvo = false;
-			}
-			for (let i = 0; i < this.p2.pokemon.length; i++) {
-				this.p2.pokemon[i].canMegaEvo = false;
-			}
-		},
-		onChangeSet: function (set) {
-			if (!this.nickorder) this.nickorder = 1;
-			set.name = 'Battler No.' + this.nickorder;
-			this.nickorder++;
-		},
-		onBeforeSwitchIn: function (pokemon) {
-			const illusion = {
-				name: "Pokemon " + (pokemon.position + 1),
-				template: pokemon.template,
-				details: 'Unown' + (pokemon.level === 100 ? '' : ', L' + pokemon.level) + (pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : ''),
-			};
-			illusion.fullname = pokemon.side.id + ': ' + illusion.name;
-			pokemon.illusion = illusion;
-		},
-		onSwitchIn: function (pokemon) {
-			let moveprompt = this.getMove(pokemon.moves[0]).name;
-			if (pokemon.moveset.length > 1) {
-				moveprompt += " and " + this.getMove(pokemon.moves[1]).name;
-			}
-			this.add('-message', pokemon.side.name + "'s " + (pokemon.illusion.name || "Pokemon") + " knows " + moveprompt + ".");
-		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				target.illusion = null;
-			}
-		},
-		onAfterDamage: function (damage, target) {
-			if (!target.hp) {
-				target.illusion = null;
-				this.add('replace', target, target.getDetails);
-			}
-		},
 	},
 ];
