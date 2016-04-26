@@ -23,13 +23,18 @@ exports.commands = {
 	ssb: 'ossb',
 	ossb: function (target, room, user) {
 		if (!this.runBroadcast()) return false;
-		if (!target) return this.parse('/help ssb');
+		if (!target || target === 'help') return this.parse('/help ossb');
 		if (target === 'credits') return this.parse('/ossbcredits');
 		let targetData = getMonData(toId(target));
 		if (!targetData) return this.errorReply("The staffmon '" + toId(target) + "' could not be found.");
 		return this.sendReplyBox(targetData);
 	},
-	ossbhelp: ["/ssb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability."],
+
+	ssbhelp: 'ossbhelp',
+	ossbhelp: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		return this.sendReplyBox("/ossb [staff member\'s name] - displays data for a staffmon\'s movepool, custom move, and custom ability.");
+	},
 
 	ssbcredits: 'ossbcredits',
 	ossbcredits: function (target, room, user) {
