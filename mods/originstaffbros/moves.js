@@ -16381,7 +16381,7 @@ exports.BattleMovedex = {
 				let randomStat = stats[this.random(stats.length)];
 				let boost = {};
 				boost[randomStat] = 3;
-				this.boost(boost, target);
+				this.boost(boost, source);
 				this.add('c|@Paul Century|Dope');
 			} else {
 				return false;
