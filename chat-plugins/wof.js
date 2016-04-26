@@ -29,7 +29,7 @@ const spins = {
 
 const wheelTrozei = {
 	'golem': 'http://cdn.bulbagarden.net/upload/1/13/Spr_3f_076.png',
-	'primeape': 'http://img.pokemondb.net/sprites/yellow/normal/primeape-color.png',
+	'primeape': 'http://pldh.net/media/pokemon/gen3/frlg/057.png',
 	'marowak': 'http://pldh.net/media/pokemon/gen3/frlg/105.png',
 	'electrode': 'http://pldh.net/media/pokemon/gen3/emerald/101.png',
 	'seaking': 'http://cdn.bulbagarden.net/upload/3/3c/Spr_3r_119.png',
