@@ -8,7 +8,7 @@ let rankLadder = require('../rank-ladder');
 global.currencyName = function (amount) {
 	let name = " credit";
 	return amount === 1 ? name : name + "s";
-}
+};
 
 global.isCredits = function (credits) {
 	let numCredits = Number(credits);
@@ -16,7 +16,7 @@ global.isCredits = function (credits) {
 	if (String(credits).includes('.')) return "Cannot contain a decimal.";
 	if (numCredits < 1) return "Cannot be less than one credit.";
 	return numCredits;
-}
+};
 
 global.logCredits = function (message) {
 	if (!message) return;
@@ -24,7 +24,7 @@ global.logCredits = function (message) {
 	let date = "[" + new Date().toUTCString() + "] ";
 	let msg = message + "\n";
 	fs.appendFile(file, date + msg);
-}
+};
 
 exports.commands = {
 
