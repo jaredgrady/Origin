@@ -2513,6 +2513,9 @@
 #lobby-userlist-user-wndo, #smogontiers-userlist-user-wndo, #thearbiterleague-userlist-user-wndo, #leaguecentral-userlist-user-wndo {
   background: rgba(255, 255, 255, 0.65) url("http://pokedream.com/pokedex/images/mini/007.gif") right no-repeat; }
 
+#lobby-userlist-user-hatasurax, #thehatleague-userlist-user-hatasurax, #monotype-userlist-user-hatasurax {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKERIO3.gif") right no-repeat; }
+
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
