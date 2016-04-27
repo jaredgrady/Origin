@@ -157,7 +157,7 @@ exports.commands = {
 		});
 	},
 	creditsloghelp: ["/creditslog - Displays a log of all transactions in the economy."],
-,
+
 	creditladder: function (target, room, user) {
 		if (room.id !== 'marketplace') return this.errorReply("Creditladder can only be viewed in the Marketplace");
 		if (!this.runBroadcast()) return;
