@@ -101,7 +101,6 @@ exports.commands = {
 
 	transfercredits: 'transfercredits',
 	transfercredits: function (target, room, user, connection, cmd) {
-		if (room.id !== 'marketplace') return this.errorReply("Credits can only be transfered in the Marketplace");
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfercredits');
 
 		let parts = target.split(',');
