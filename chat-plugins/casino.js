@@ -6,7 +6,7 @@
 const fs = require('fs');
 let color = require('../config/color');
 let rankLadder = require('../rank-ladder');
-let highRollers = ['fender', 'madschemin', 'tyedolla'];
+let highRollers = ['fender'];
 let toggleRolling = false;
 
 let faces = {
