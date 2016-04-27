@@ -113,12 +113,7 @@ exports.commands = {
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		if (typeof amount === 'string') return this.sendReply(amount);
 		if (amount > Db('credits').get(user.userid, 0)) return this.errorReply("You cannot transfer more credits than what you have.");
-		if (!Users.get(username) && cmd !== 'forcetransfer') return this.errorReply("The target user could not be found");
-		if (Users.get(username)) {
-			if (!Users.get(username).registered && cmd !== 'forcetransfer') {
-				return this.errorReply("WARNING: The user you are trying to transfer to is unregistered. If you want to transfer anyway use /forcetransfer [user], [amount]");
-			}
-		}
+		if (!Users.get(username) && cmd !== 'transfercredits') return this.errorReply("The target user could not be found");
 		Db('credits')
 			.set(user.userid, Db('credits').get(user.userid) - amount)
 			.set(uid, Db('credits').get(uid, 0) + amount);
