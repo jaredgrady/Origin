@@ -99,7 +99,6 @@ exports.commands = {
 	},
 	resetcreditshelp: ["/resetcredits [user] - Reset user's credits to zero."],
 
-	transfercredits: 'transfercredits',
 	transfercredits: function (target, room, user, connection, cmd) {
 		if (!target || target.indexOf(',') < 0) return this.parse('/help transfercredits');
 
