@@ -3700,8 +3700,18 @@ a.subtle, a.subtle:hover {
     .dark .teambuilder-results .result a.cur, .dark .teambuilder-results .result a.cur:hover, .dark .teambuilder-results .result a:hover {
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid #000; }
-  .dark .utilichart .labelcol em, .dark .utilichart .widelabelcol em, .dark .utilichart .pplabelcol em, .dark .utilichart .statcol em, .dark .utilichart .bstcol em {
-    color: #61B7C4; }
+    .dark .teambuilder-results .utilichart .labelcol em, .dark .teambuilder-results .utilichart .widelabelcol em, .dark .teambuilder-results .utilichart .pplabelcol em, .dark .teambuilder-results .utilichart .statcol em, .dark .teambuilder-results .utilichart .bstcol em {
+      color: #61B7C4;
+      text-shadow: 1px 1px #000; }
+    .dark .teambuilder-results .utilichart .itemdesccol, .dark .teambuilder-results .utilichart .abilitydesccol, .dark .teambuilder-results .utilichart .movedesccol, .dark .teambuilder-results .utilichart .statcol, .dark .teambuilder-results .utilichart .bstcol, .dark .teambuilder-results .utilichart .labelcol, .dark .teambuilder-results .utilichart .widelabelcol, .dark .teambuilder-results .utilichart .pplabelcol, .dark .teambuilder-results .utilichart .abilitycol, .dark .teambuilder-results .utilichart .twoabilitycol {
+      color: #EEE;
+      text-shadow: 1px 1px #000; }
+    .dark .teambuilder-results .utilichart .movenamecol, .dark .teambuilder-results .utilichart .namecol, .dark .teambuilder-results .utilichart .pokemonnamecol {
+      color: #FFF;
+      text-shadow: 1px 1px #000; }
+    .dark .teambuilder-results .utilichart .numcol {
+      color: #61B7C4;
+      text-shadow: 1px 1px #000; }
   .dark .setmenu button, .dark .teamlist button {
     background: rgba(9, 24, 31, 0.95) !important;
     border-color: #B998AB !important;
@@ -3714,7 +3724,7 @@ a.subtle, a.subtle:hover {
   .dark .utilichart .movenamecol, .dark .utilichart .namecol, .dark .utilichart .pokemonnamecol {
     text-shadow: none !important; }
   .dark .setchart, .dark .setchart-nickname {
-    background: #3A3A3A;
+    background: #3A3A3A no-repeat;
     border-color: #222222; }
   .dark .setchart label, .dark .setchart-nickname label {
     color: #8BBDC6;

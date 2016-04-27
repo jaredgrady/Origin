@@ -517,10 +517,28 @@ $c8b: #8BBDC6;
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid #000;
     }
-  }
 
-  .utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {
-    color: #61B7C4;
+    .utilichart {
+      .labelcol em, .widelabelcol em, .pplabelcol em, .statcol em, .bstcol em {
+        color: #61B7C4;
+        text-shadow: 1px 1px #000;
+      }
+
+      .itemdesccol, .abilitydesccol, .movedesccol, .statcol, .bstcol, .labelcol, .widelabelcol, .pplabelcol, .abilitycol, .twoabilitycol {
+        color: #EEE;
+        text-shadow: 1px 1px #000;
+      }
+
+      .movenamecol, .namecol, .pokemonnamecol {
+        color: #FFF;
+        text-shadow: 1px 1px #000;
+      }
+
+      .numcol {
+        color: #61B7C4;
+        text-shadow: 1px 1px #000;
+      }
+    } 
   }
 
   .setmenu button, .teamlist button {
@@ -541,7 +559,7 @@ $c8b: #8BBDC6;
   }
 
   .setchart, .setchart-nickname {
-    background: #3A3A3A;
+    background: #3A3A3A no-repeat;
     border-color: $c2;
   }
 
