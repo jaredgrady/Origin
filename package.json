@@ -38,15 +38,14 @@
     "ofe": "0.1.2"
   },
   "engines": {
-    "node": "> 5.0.0"
+    "node": "> 4.0.0"
   },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha",
+    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha"
     "sass": "gulp sass",
     "sass:watch": "gulp sass:watch",
-    "lint": "eslint --rulesdir=dev-tools/eslint --cache ."
   },
   "bin": "./pokemon-showdown",
   "homepage": "http://pokemonshowdown.com",
