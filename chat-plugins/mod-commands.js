@@ -626,6 +626,8 @@ exports.commands = {
 			}
 			this.sendReply("Your message has been added to the advertisement queue. You're #" + Rooms.global.ads.length + ".");
 			break;
+		default:
+			return this.errorReply("Invalid command. `/ads add, room, message`.");
 		}
 	},
 };
