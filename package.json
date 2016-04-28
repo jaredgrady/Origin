@@ -43,9 +43,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha",
-    "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch"
+    "test": "eslint --rulesdir=dev-tools/eslint --cache . && mocha"
   },
   "bin": "./pokemon-showdown",
   "homepage": "http://pokemonshowdown.com",
