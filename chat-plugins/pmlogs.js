@@ -34,7 +34,8 @@ class PmLogger {
 		let self = this;
 		for (let id in this.logs) {
 			// for each item in logs
-			let buffer =  {};
+			let buffer = {};
+			/* eslint-disable */
 			Object.keys(this.logs[id]).filter(d => {
 				// filter out old logs
 				if (d >= cutOffAge) return d;
@@ -46,7 +47,7 @@ class PmLogger {
 			this.logs[id] = buffer;
 		}
 	}
-
+		/* eslint-enable */
 	saveReport(id) {
 		// check if there is a report
 		if (!this.reports[id] || this.reports[id].saved) return false;

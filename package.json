@@ -74,11 +74,10 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "eslint": "1.10.3",
-    "eslint-plugin-mocha": "^1.1.0",
+    "eslint": "^2.8.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.2.0",
-    "mocha": "2.4.5",
-    "mock-fs": "3.7.0"
+	"mocha": "^2.4.5",
+    "mock-fs": "^3.8.0"
   }
 }

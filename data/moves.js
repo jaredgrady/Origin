@@ -5622,34 +5622,33 @@ exports.BattleMovedex = {
 			},
 			onStart: function () {
 				this.add('-fieldstart', 'move: Gravity');
-				for (let side of this.sides) {
-					for (let pokemon of side.pokemon) {
-						let applies = false;
-						if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
-							applies = true;
-							this.cancelMove(pokemon);
-							pokemon.removeVolatile('twoturnmove');
-						}
-						if (pokemon.volatiles['skydrop']) {
-							applies = true;
-							this.cancelMove(pokemon);
-
-							if (pokemon.volatiles['skydrop'].source) {
-								this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
-							}
-							pokemon.removeVolatile('skydrop');
-							pokemon.removeVolatile('twoturnmove');
-						}
-						if (pokemon.volatiles['magnetrise']) {
-							applies = true;
-							delete pokemon.volatiles['magnetrise'];
-						}
-						if (pokemon.volatiles['telekinesis']) {
-							applies = true;
-							delete pokemon.volatiles['telekinesis'];
-						}
-						if (applies) this.add('-activate', pokemon, 'Gravity');
+				const allActivePokemon = this.sides[0].active.concat(this.sides[1].active);
+				for (let pokemon of allActivePokemon) {
+					let applies = false;
+					if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly')) {
+						applies = true;
+						this.cancelMove(pokemon);
+						pokemon.removeVolatile('twoturnmove');
 					}
+					if (pokemon.volatiles['skydrop']) {
+						applies = true;
+						this.cancelMove(pokemon);
+
+						if (pokemon.volatiles['skydrop'].source) {
+							this.add('-end', pokemon.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+						}
+						pokemon.removeVolatile('skydrop');
+						pokemon.removeVolatile('twoturnmove');
+					}
+					if (pokemon.volatiles['magnetrise']) {
+						applies = true;
+						delete pokemon.volatiles['magnetrise'];
+					}
+					if (pokemon.volatiles['telekinesis']) {
+						applies = true;
+						delete pokemon.volatiles['telekinesis'];
+					}
+					if (applies) this.add('-activate', pokemon, 'Gravity');
 				}
 			},
 			onModifyAccuracy: function (accuracy) {

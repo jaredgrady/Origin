@@ -111,6 +111,7 @@ before('initialization', function (done) {
 			mock(fsSandbox);
 		}
 	};
+
 	for (let ext in Module._extensions) {
 		let defaultLoader = Module._extensions[ext];
 		Module._extensions[ext] = function (module, filename) {
@@ -122,6 +123,7 @@ before('initialization', function (done) {
 			}
 		};
 	}
+
 	Module.prototype.__compile__ = Module.prototype._compile;
 	Module.prototype._compile = function (content, filename) {
 		// Use the sandbox to evaluate the code in our modules.

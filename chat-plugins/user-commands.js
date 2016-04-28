@@ -205,6 +205,7 @@ exports.commands = {
 					self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
 					room.update();
 				}
+				/* eslint-disable */
 				maybe.map(function (definition) {
 					const sanitizeDef = definition.slice(0, 400).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
 					const trimDef = definition.length > 400 ? sanitizeDef + '...' : sanitizeDef;
@@ -213,6 +214,7 @@ exports.commands = {
 					self.sendReplyBox(output);
 					room.update();
 				});
+				/* eslint-enable */
 			}
 		);
 	},
@@ -264,6 +266,7 @@ exports.commands = {
 			function error(err) {
 				console.error(err);
 			},
+			/* eslint-disable */
 			function success(maybe) {
 				if (!maybe.value) {
 					self.sendReplyBox("No results for <b>\"" + Tools.escapeHTML(target) + "\"</b>.");
@@ -281,7 +284,7 @@ exports.commands = {
 		);
 	},
 	udhelp: ["/urbandefine [phrase] - Shows the urban definition of the phrase. If you don't put in a phrase, it will show you a random phrase from urbandefine."],
-
+			/* eslint-enable */
 	helixfossil: 'm8b',
 	helix: 'm8b',
 	magic8ball: 'm8b',
