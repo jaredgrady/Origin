@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const userUtils = require('./../../dev-tools/users-utils.js');
 const User = userUtils.User;
 
@@ -30,3 +30,4 @@ describe('Learn', function () {
 		});
 	});
 });
+*/

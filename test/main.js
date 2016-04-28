@@ -130,6 +130,8 @@ before('initialization', function (done) {
 		mock(fsSandbox);
 		try {
 			return this.__compile__(content, filename);
+		} catch (e) {
+			return console.error(e);
 		} finally {
 			mock.restore();
 		}
