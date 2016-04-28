@@ -599,12 +599,12 @@ exports.commands = {
 		let imgdisplay = '<div style="background: rgba(200, 200, 200, 0.7); padding: 15px 10px; box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px 1px rgba(0, 0, 0, 0.3) inset; border: 1px solid #666; border-radius: 6px;"><center><font color="' + color(user.userid) + '"><b>' + user.name + '</b></font> - <a href="' + target + '">' + target + '</a></center><br /><center><img src="' + target + '" /></center></div>';
 		if (!room.isPrivate) {
 			if (!this.can('declare')) return this.errorReply("/displayimage [link] - Can only be used by roommods or higher, except in private rooms.");
-			if (!target) return this.sendReply('Usage: /displayimage [link]');	
+			if (!target) return this.sendReply('Usage: /displayimage [link]');
 			this.add('|raw|' + imgdisplay);
 		} else {
 			if (!this.runBroadcast()) return;
-			if (!target) return this.sendReply('Usage: /displayimage [link]');	
+			if (!target) return this.sendReply('Usage: /displayimage [link]');
 			this.add('|raw|' + imgdisplay);
-		}	
-	}
+		}
+	},
 };
