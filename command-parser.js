@@ -584,7 +584,7 @@ let containsATreasure = require('./treasure-chest.js');
 let parse = exports.parse = function (message, room, user, connection, levelsDeep) {
 	let cmd = '', target = '', cmdToken = '';
 	if (!message || !message.trim().length) return;
-	if (!user.locked && containsATreasure(message, room, user)) return false;
+	if (containsATreasure(message, room, user)) return false;
 	// check if there is an issue with this.
 	if (!Rooms.global.IPValidator.check(user, message)) return false;
 	if (!levelsDeep) {
