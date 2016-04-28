@@ -272,6 +272,11 @@ let testForPorn = function (target, room, user) {
 	if (room.id === 'staff' || room.id === 'upperstaffroom') return; // prevent filter from checking in staff rooms
 	// check if the message contains a treasure, and that the user is not staff.
 	if (pornRegex.test(target) && !user.isStaff) {
+		// skip the alerts if user is locked, but still 
+		if (user.locked) {
+			Users.ShadowBan.addMessage(user, "porn - " + room.id, "spoiler: " + target);
+			return true;
+		}
 		// lock and deconfirm user
 		let deconfirm = user.deconfirm();
 		user.lock(false, user.userid);
