@@ -40,7 +40,7 @@ let pornSites = [
 	"youjizz.com",
 	"tube8.com",
 	"exhentai.org",
-	"helixstudios.com"
+	"helixstudios.com",
 	".paheal.",
 	"meatspin.",
 	"2girls1cup.",
@@ -53,7 +53,7 @@ let pornSites = [
 	"slimjimboner",
 	"specialfriedrice",
 	"lazysunday",
-	"helixstudios"
+	"helixstudios",
 	"happypuppies",
 	"manhub",
 	"sourmath",
