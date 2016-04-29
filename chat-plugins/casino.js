@@ -149,6 +149,7 @@ exports.commands = {
 		room.dice.p2 = user.userid;
 		room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
 		let p1Number = Math.floor(6 * Math.random()) + 1, p2Number = Math.floor(6 * Math.random()) + 1;
+		/*
 		if (highRollers.indexOf(room.dice.p1) > -1 && toggleRolling) {
 			while (p1Number <= p2Number) {
 				p1Number = Math.floor(6 * Math.random()) + 1;
@@ -161,6 +162,7 @@ exports.commands = {
 				p2Number = Math.floor(6 * Math.random()) + 1;
 			}
 		}
+		*/
 		let output = "<div class='infobox'>Game has two players, starting now.<br>Rolling the dice.<br>" + room.dice.p1 + " has rolled a " + p1Number + ".<br>" + room.dice.p2 + " has rolled a " + p2Number + ".<br>";
 		while (p1Number === p2Number) {
 			output += "Tie... rolling again.<br>";
