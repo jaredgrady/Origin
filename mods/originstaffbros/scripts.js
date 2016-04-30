@@ -211,6 +211,12 @@ exports.BattleScripts = {
 				baseSignatureMove: 'zencreate', signatureMove: "Zen Create",
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
+			'W♡ndo': {
+				species: 'Squirtle', ability: 'Squirtle Squad', item: 'King\'s Rock', gender: 'M',
+				moves: ['protect', 'toxic', 'recover'],
+				basesignatureMove: 'squadout', signatureMove: 'Squad Out',
+				evs: {hp:252, def:128, spd:128}, nature: 'Bold',
+			},
 
 			// Others
 			' Gnarly Commie': {

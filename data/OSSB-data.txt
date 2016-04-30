@@ -12,7 +12,7 @@ fender - Gible - Life Orb
 
 ~Lt. Tesla - Raichu - No Item
 - Ability: Beard Coat - Gives +1 speed, special defense, defense
-- Move: Side B off Ledge - 80 BP, physical electric attack. Targets weaker defensive stat.  Raises attack by 1 stage. PP: 10 / Accuracy: 100% / Priority: 1
+- Move: Side B off Ledge - 80 BP, physical electric attack, targets weaker defensive stat, and raises attack by 1 stage. PP: 10 / Accuracy: 100% / Priority: 1
 - Movepool: Ice Punch, Seed Bomb, Recover
 - Notes: Well it seems like a thick beard really is the best defense and offense!  Good set up sweeper as well as an effective revenge killer. Very good at cleaning late game when bulkier walls that checking are gone.
 
@@ -120,7 +120,7 @@ fender - Gible - Life Orb
 
 %Irraquated - Ho-oh - Life Orb
 - Ability: What's the time? - Desolate Land + Magic Guard + Regenerator
-- Move: Time 2 Die - 120 BP Fire type move, 60% chance to burn. Thaws user. PP: 20 / Accuracy: 90% / Priority: 0
+- Move: Time 2 Die - 120 BP Physical Fire type move, 60% chance to burn. Thaws user. PP: 20 / Accuracy: 90% / Priority: 0
 - Movepool: Recover, Brave Bird, Wood Hammer
 - Notes: If you think it's not time to die, then you're wrong. There are little things that can take hits from this, with its Sun Boosted STAB Move tearing holes through teams. Ho-Oh's usually crippling weakness to Rocks and Water Moves is fixed by its Ability, making it even harder to combat. However, it's quite slow compared to most of the dangerous sweepers running wild in OSSB, and doesn't have a lot of Physical bulk, so it can be quite easily taken down by strong physical sweepers. However, it is still a very dangerous threat you don't want to face.
 
@@ -190,9 +190,15 @@ fender - Gible - Life Orb
 - Movepool: U-turn, V-Create, Bolt Strike
 - Notes: Hits very hard, and prepare to be walled if you do not deal with this quickly enough. Severely weak to hazards and residual damage, with no way to recover anything.
 
++W♡ndo - Squirtle - King's Rock
+- Ability: Squirtle Squad - 20 BP Special Water Type attack, always hits 5 times and causes confusion. PP: 20 / Accuracy: 100% / Priority: 2
+- Move: Squad Out - Lightning Rod, raises evasion by 6 stages
+- Movepool: Protect, Toxic, Recover
+- Notes: 
+
 Gnarly Commie - Munchlax - Eviolite
 - Ability: Communism - Increases defense, special defense, and speed by 2 stages when it KO's an opposing Pokemon.
-- Move: /ebat - Heals to full hp, 102 BP Physical Normal Type attack, and bypasses protect. PP: 10 / Accuracy: 100% / Priority: 2
+- Move: /ebat - 102 BP Physical Normal Type attack, Heals to full hp and bypasses protect. PP: 10 / Accuracy: 100% / Priority: 2
 - Movepool: Belly Drum, Pursuit, Drain Punch
 - Notes: The bulk is real.  If you give Munchlax a free chance to use belly drum, say goodbye to your team...Belly.
 

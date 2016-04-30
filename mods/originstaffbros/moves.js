@@ -16934,6 +16934,33 @@ exports.BattleMovedex = {
 		type: "Psychic",
 	},
 
+	// W♡ndo
+	"squadout": {
+		isNonstandard: true,
+		accuracy: 100,
+		basePower: 20,
+		category: "Special",
+		id: "squadout",
+		name: "Squad Out",
+		pp: 20,
+		priority: 2,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'confusion',
+		multihit: 5,
+		onTryHit: function (target, source, move) {
+			this.attrLastMove('[anim]watershuriken');
+		},
+		onMoveFail: function (target, source, move) {
+			this.attrLastMove('[anim]watershuriken');
+		},
+		onHit: function (target, source, move) {
+			this.add('c|+W♡ndo|lol rip');
+		},
+		secondary: false,
+		target: "normal",
+		type: "Water",
+	},
+
 	// Others
 	// Gnarly Commie
 	"ebat": {

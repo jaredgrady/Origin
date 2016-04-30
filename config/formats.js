@@ -2399,6 +2399,9 @@ exports.Formats = [
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
 			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|The loneliest Squirtle has arrived')
+			}
 
 			// Others
 			if (name === 'gnarlycommie') {
@@ -2538,6 +2541,9 @@ exports.Formats = [
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|Hax')
+			}
 
 			// Others
 			if (name === 'gnarlycommie') {
@@ -2674,6 +2680,9 @@ exports.Formats = [
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
+			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|Fuck this shit I\'m out o/')
 			}
 
 			// Others
@@ -3009,6 +3018,9 @@ exports.Formats = [
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey Guys, Try and Fite the Sweg');
 			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|The loneliest Squirtle has arrived')
+			}
 
 			// Others
 			if (name === 'gnarlycommie') {
@@ -3148,6 +3160,9 @@ exports.Formats = [
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|I shall be avenged. Don\'t forget me.');
 			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|Hax')
+			}
 
 			// Others
 			if (name === 'gnarlycommie') {
@@ -3284,6 +3299,9 @@ exports.Formats = [
 			}
 			if (name === 'sotahigurashi') {
 				this.add('c|+Sota Higurashi|Ey teammates, Swegtini needs a lil help');
+			}
+			if (name === 'wndo') {
+				this.add('c|+W♡ndo|Fuck this shit I\'m out o/')
 			}
 
 			// Others
