@@ -229,26 +229,7 @@ exports.commands = {
 		this.sendReplyBox(rankLadder('Credit Ladder', 'credits', keys.slice(0, 100), 'credits'));
 	},
 	creditladderhelp: ["/creditladder - Displays users ranked by the amount of Origin credits they possess."],
-/*
-	registercreditshop: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credit Shops can only be registered in the Marketplace");
-		if (!user.can('roomban')) return this.errorReply("/registercreditshop - Access denied");
-		if (!target) return this.errorReply("Please specifiy a room. Use /help registercreditshop for more information.");
-		if (!Rooms(toId(target))) return this.errorReply("The specified room does not exist");
-		let targetRoom = Rooms(toId(target));
-		targetRoom.add('|raw|<div class="broadcast-green"><b>' + user.name + ' has just added a credit shop to this room.</b></div>');
-		targetRoom.update();
-		if (!targetRoom.creditshop) {
-			targetRoom.creditshop = {};
-			targetRoom.creditshopList = [];
-			targetRoom.chatRoomData.creditshop = targetRoom.creditshop;
-			targetRoom.chatRoomData.creditshopList = targetRoom.creditshopList;
-		}
-		if (!targetRoom.hascreditshop) targetRoom.hascreditshop = targetRoom.chatRoomData.hascreditshop = true;
-		Rooms.global.writeChatRoomData();
-	},
-	registercreditshophelp: ["/registercreditshop [room] - Adds a credit shop to a room."],
-*/
+
 	credits: function (target, room, user) {
 		if (room.id !== 'marketplace') return this.errorReply("Credit stats can only be viewed in the Marketplace");
 		if (!this.runBroadcast()) return;
@@ -264,8 +245,7 @@ exports.commands = {
 	creditsstatshelp: ["/credits - Gives information about the state of the economy."],
 
 	cleancredits: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credits can only be cleaned in the Marketplace");
-		if (!this.can('declare', null, room)) return false;
+		if (!this.can('forcewin')) return false;
 		let creditsObject = Db('credits').object();
 		Object.keys(creditsObject)
 			.filter(function (name) {
@@ -299,37 +279,4 @@ exports.commands = {
 		handleBoughtItem.call(this, target.toLowerCase(), user, cost);
 	},
 	claimhelp: ["/claim [command] - Buys an item from the creditshop."],
-		/*
-		case 'add':
-			if (!user.can('roommod', null, room)) return this.errorReply("/creditshop - Access denied.");
-			if (params.length < 3) return this.sendReply("/creditshop add [item name], [description], [price]");
-			if (!room.shopList) room.shopList = [];
-			let name = params.shift();
-			let description = params.shift();
-			let price = Number(params.shift());
-			if (isNaN(price)) return this.sendReply("/creditshop add [item name], [description], [price]");
-			room.shop[toId(name)] = {};
-			room.shop[toId(name)].name = name;
-			room.shop[toId(name)].description = description;
-			room.shop[toId(name)].price = price;
-			room.shopList.push(toId(name));
-			room.chatRoomData.shop = room.shop;
-			room.chatRoomData.shopList = room.shopList;
-			Rooms.global.writeChatRoomData();
-			this.sendReply("Added '" + name + "' to the credit shop for " + price + " " + ((price === 1) ? " credit." : " credits") + ".");
-			break;
-		case 'remove':
-		case 'rem':
-		case 'del':
-		case 'delete':
-			if (!user.can('roommod', null, room)) return this.errorReply("/creditshop - Access denied.");
-			if (params.length < 1) return this.sendReply("/creditshop delete [item name]");
-			item = params.shift();
-			if (!room.shop[toId(item)]) return this.sendReply("/creditshop - Item '" + item + "' not found.");
-			delete room.shop[toId(item)];
-			let index = room.shopList.indexOf(toId(item));
-			if (index > -1) room.shopList.splice(index, 1)
-			this.sendReply("Removed '" + item + "' from the credit shop.");
-			break;
-		*/
 };
