@@ -2358,8 +2358,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Lol you look p weak from over on the winners side. xaa');
@@ -2496,8 +2496,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|Dang it my hax... they werent enough');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|Dang it my hax... they werent enough');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Just a prank bro? ...right?');
@@ -2633,8 +2633,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|Welp look like its time to run away like Sanic');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|Welp this isn\'t looking good');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Your death awaits you mate.');
@@ -2968,8 +2968,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Lol you look p weak from over on the winners side. xaa');
@@ -3106,8 +3106,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|Dang it my hax... they werent enough');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|Dang it my hax... they werent enough');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Just a prank bro? ...right?');
@@ -3243,8 +3243,8 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'emge4volco') {
-				this.add('c|%Emg E4 Volco|Welp look like its time to run away like Sanic');
+			if (name === 'Emg рrоf Volcо') {
+				this.add('c|%Emg рrоf Volcо|Welp this isn\'t looking good');
 			}
 			if (name === 'irraquated') {
 				this.add('c|%Irraquated|Your death awaits you mate.');
