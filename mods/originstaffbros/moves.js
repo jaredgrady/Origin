@@ -16811,7 +16811,7 @@ exports.BattleMovedex = {
 		category: "Special",
 		id: "plasmablast",
 		name: "Plasma Blast",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness: function (typeMod, type, move) {
