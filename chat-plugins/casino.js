@@ -3,7 +3,7 @@
  * Casino
  * This file handles all money and casino related games
 ********************/
-const fs = require('fs');
+
 let color = require('../config/color');
 let rankLadder = require('../rank-ladder');
 let highRollers = ['fender'];

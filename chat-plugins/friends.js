@@ -113,7 +113,7 @@ exports.commands = {
 		if (target.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 		let insertStatement = '';
 
-		Db('FriendsDB').set(toId(user),  Db('FriendsDB').get(toId(user)) + ',undefined,');
+		Db('FriendsDB').set(toId(user), Db('FriendsDB').get(toId(user)) + ',undefined,');
 		let data = Db('FriendsDB').get(toId(user));
 		let rows = data.split(",");
 		let friends = [];
@@ -130,7 +130,7 @@ exports.commands = {
 		for (let i = 0; i < uniqueFriends.length; i++) {
 			insertStatement += uniqueFriends[i] + ',';
 		}
-		Db('FriendsDB').set(toId(user),  insertStatement);
+		Db('FriendsDB').set(toId(user), insertStatement);
 		this.sendReply(target + " has been added to your friend list.");
 	},
 
@@ -140,7 +140,7 @@ exports.commands = {
 		if (target.length < 3) return this.sendReply("Usernames are required to be greater than 2 characters long.");
 		let insertStatement = '';
 
-		Db('FriendsDB').set(toId(user),  Db('FriendsDB').get(toId(user)) + ',undefined,');
+		Db('FriendsDB').set(toId(user), Db('FriendsDB').get(toId(user)) + ',undefined,');
 		let data = Db('FriendsDB').get(toId(user));
 		let rows = data.split(",");
 		let friends = [];
@@ -159,12 +159,12 @@ exports.commands = {
 		for (let i = 0; i < uniqueFriends.length; i++) {
 			insertStatement += uniqueFriends[i] + ',';
 		}
-		Db('FriendsDB').set(toId(user),  insertStatement);
+		Db('FriendsDB').set(toId(user), insertStatement);
 		this.sendReply(target + " has been removed from your friend list.");
 	},
 
 	friendlist: function (room, user) {
-		this.sendReplyBox('/friends - list of friends' + BR + '/addfriend - to add a friend' + BR + '/removefriend - to remove a friend'  + BR + BR + 'Friendlist made by Niisama');
+		this.sendReplyBox('/friends - list of friends' + BR + '/addfriend - to add a friend' + BR + '/removefriend - to remove a friend' + BR + BR + 'Friendlist made by Niisama');
 	},
 	friendshelp: ["/addfriend to add a new friend"],
 };

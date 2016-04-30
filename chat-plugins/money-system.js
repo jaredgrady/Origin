@@ -12,21 +12,21 @@ let highRollers = ['fender', 'madschemin', 'tyedolla'];
 let toggleRolling = false;
 
 let shop = [
-    ['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
-    ['Fix', 'Buys the ability to alter your current custom avatar, trainer card, title or icon. (don\'t buy if you don\'t have one)', 10],
-    ['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 10],
-    ['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
-    ['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly, can be refused.)', 25],
-    ['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float or AuraStormLucario with the extra room you want (Will take time to appear).', 30],
-    ['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
-    ['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
-    ['Room Rename', 'Rename your chatroom to another name', 45],
-    ['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
-    ['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused. You are responsible for your room, if you get in trouble your room may be deleted.)', 90],
-    ['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
-    ['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float or AuraStormLucario with the icon and rooms you want it in (Size must be 32x32, 3 rooms maximum, will take time to appear).', 350],
-    ['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
-    ['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM AuraStormLucario to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
+	['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
+	['Fix', 'Buys the ability to alter your current custom avatar, trainer card, title or icon. (don\'t buy if you don\'t have one)', 10],
+	['Title', 'Buys an custom title that will appear next to your name in profile. (You select the text and color of your title. Can be refused within reason.)', 10],
+	['Global Declare', 'Buys the ability to globally declare for a user-run event that awards bucks.', 15],
+	['Avatar', 'Buys an custom avatar to be applied to your name. (You supply. Images larger than 80x80 may not show correctly, can be refused.)', 25],
+	['Extra Rooms for Icon', 'Allows your icon to appear in an extra room, PM Master Float or AuraStormLucario with the extra room you want (Will take time to appear).', 30],
+	['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused).', 40],
+	['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 45],
+	['Room Rename', 'Rename your chatroom to another name', 45],
+	['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
+	['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused. You are responsible for your room, if you get in trouble your room may be deleted.)', 90],
+	['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
+	['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float or AuraStormLucario with the icon and rooms you want it in (Size must be 32x32, 3 rooms maximum, will take time to appear).', 350],
+	['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
+	['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM AuraStormLucario to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
 ];
 
 let shopDisplay = getShopDisplay(shop);
@@ -288,7 +288,7 @@ exports.commands = {
 		let cost = findItem.call(this, target, amount);
 		if (!cost) return;
 		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
-		this.sendReply("You have bought " + target + " for " + cost +  currencyName(cost) + ". You now have " + total + currencyName(total) + " left.");
+		this.sendReply("You have bought " + target + " for " + cost + currencyName(cost) + ". You now have " + total + currencyName(total) + " left.");
 		room.addRaw(user.name + " has bought <b>" + target + "</b> from the shop.");
 		logMoney(user.name + " has bought " + target + " from the shop. This user now has " + total + currencyName(total) + ".");
 		handleBoughtItem.call(this, target.toLowerCase(), user, cost);

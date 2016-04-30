@@ -17621,8 +17621,8 @@ exports.BattleMovedex = {
 				this.boost({spe:1}, target, source);
 				this.add('-start', target, 'typechange', 'Fire/Flying');
 				target.typesData = [
-					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Fire', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'raindance':
@@ -17630,8 +17630,8 @@ exports.BattleMovedex = {
 				this.boost({spa:1}, target, source);
 				this.add('-start', target, 'typechange', 'Water/Flying');
 				target.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Water', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'sandstorm':
@@ -17639,8 +17639,8 @@ exports.BattleMovedex = {
 				this.boost({atk:1}, target, source);
 				this.add('-start', target, 'typechange', 'Rock/Flying');
 				target.typesData = [
-					{type: 'Rock', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Rock', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'hail':
@@ -17648,8 +17648,8 @@ exports.BattleMovedex = {
 				this.boost({def:1}, target, source);
 				this.add('-start', target, 'typechange', 'Ice/Flying');
 				target.typesData = [
-					{type: 'Ice', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Ice', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'none':
@@ -17657,8 +17657,8 @@ exports.BattleMovedex = {
 				this.boost({spd:1}, target, source);
 				this.add('-start', target, 'typechange', 'Normal/Flying');
 				target.typesData = [
-					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Normal', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			}
@@ -17695,8 +17695,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ground', suppressed: false, isAdded: false},
 				];
 				this.useMove('destinybond', target);
 				this.useMove('reflect', target);
@@ -17736,8 +17736,8 @@ exports.BattleMovedex = {
 				this.add('c|#Safety Shark|"Safety Shark says: jd is bad for your health." ~Safety Shark 2015');
 				this.add('-start', target, 'typechange', 'Dragon/Rock');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Rock', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Rock', suppressed: false, isAdded: false},
 				];
 				this.boost({def: 3});
 				this.useMove('rollout', target);
@@ -17765,15 +17765,15 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Steel/Fire');
 				target.typesData = [
-					{type: 'Steel', suppressed: false,  isAdded: false},
-					{type: 'Fire', suppressed: false,  isAdded: false},
+					{type: 'Steel', suppressed: false, isAdded: false},
+					{type: 'Fire', suppressed: false, isAdded: false},
 				];
 				this.useMove('sacredfire', target);
 				this.useMove('ironhead', target);
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ground', suppressed: false, isAdded: false},
 				];
 				break;
 			case 11:
@@ -17781,8 +17781,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Ghost');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ghost', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ghost', suppressed: false, isAdded: false},
 				];
 				if (source.hp > source.maxhp * 0.5) {
 					this.useMove('curse', target);
@@ -17794,8 +17794,8 @@ exports.BattleMovedex = {
 				this.add('c|#Safety Shark|"Welcome to the Salty Spitoon! How tough are ya?" ~CGTNathan 2015');
 				this.add('-start', target, 'typechange', 'Dragon/Dark');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Dark', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Dark', suppressed: false, isAdded: false},
 				];
 				this.useMove('knockoff', target);
 				let enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
@@ -17807,8 +17807,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Normal');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Normal', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Normal', suppressed: false, isAdded: false},
 				];
 				enemy = target.side.foe.active[target.side.foe.active.length - 1 - target.position];
 				if (!enemy.volatiles['substitute']) {
@@ -17821,8 +17821,8 @@ exports.BattleMovedex = {
 				this.boost({atk: -2});
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ground', suppressed: false, isAdded: false},
 				];
 				break;
 			case 14:
@@ -17830,8 +17830,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Water');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Water', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Water', suppressed: false, isAdded: false},
 				];
 				this.boost({spa: 1});
 				this.useMove('scald', target);
@@ -17841,8 +17841,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ground', suppressed: false, isAdded: false},
 				];
 				this.useMove('reflect', target);
 				this.useMove('lightscreen', target);
@@ -17866,8 +17866,8 @@ exports.BattleMovedex = {
 				this.runMegaEvo(target);
 				this.add('-start', target, 'typechange', 'Dragon/Ground');
 				target.typesData = [
-					{type: 'Dragon', suppressed: false,  isAdded: false},
-					{type: 'Ground', suppressed: false,  isAdded: false},
+					{type: 'Dragon', suppressed: false, isAdded: false},
+					{type: 'Ground', suppressed: false, isAdded: false},
 				];
 				this.useMove('reflect', target);
 				this.useMove('lightscreen', target);

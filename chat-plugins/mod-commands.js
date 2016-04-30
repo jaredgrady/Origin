@@ -48,7 +48,7 @@ function clearRoom(room) {
 function postAds() {
 	if (Rooms.global.ads.length > 0) {
 		let ad = Rooms.global.ads.shift();
-		Rooms('lobby').addRaw('<div class="infobox"><a href="/' + ad["room"] + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + ad["room"] + '</strong>:</font> ' + ad["message"]  + '</a>  -' + ad["user"]  + '</div>');
+		Rooms('lobby').addRaw('<div class="infobox"><a href="/' + ad["room"] + '" class="ilink"><font color="#04B404"> Advertisement <strong>' + ad["room"] + '</strong>:</font> ' + ad["message"] + '</a>  -' + ad["user"] + '</div>');
 		Rooms('lobby').update();
 	}
 }
@@ -618,7 +618,7 @@ exports.commands = {
 			}
 			let inputRoom = Tools.escapeHTML(parts[1]);
 			let targetRoom = Rooms.search(inputRoom);
-			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + inputRoom  + '" does not exist.');
+			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + inputRoom + '" does not exist.');
 			let message = Tools.escapeHTML(parts.slice(2).join(","));
 			Rooms.global.ads.push({ip: user.latestIp, user: toId(user), room: targetRoom, message: message});
 			if (!Rooms.global.adInterval) {

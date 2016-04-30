@@ -13,7 +13,6 @@ exports.commands = {
 		if (!room.hasShop) return this.sendReply("/leagueshop - this room does not have a leagueshop enabled.");
 		if (!room.shopList) room.shopList = [];
 		if (!target) target = '';
-		let self = this;
 		let item;
 		let cmdParts = target.split(' ');
 		let cmd = cmdParts.shift().trim().toLowerCase();
@@ -73,7 +72,7 @@ exports.commands = {
 			item = params.shift();
 			if (!room.shop[toId(item)]) return this.sendReply("/leagueshop - Item '" + item + "' not found.");
 			let money = Db('money').get(user, 0);
-			if (money < room.shop[toId(item)].price) return this.errorReply("You don\'t have enough bucks to purchase a '" + item + "'. You need " + ((money - room.shop[toId(item)].price) *  -1) + " more bucks.");
+			if (money < room.shop[toId(item)].price) return this.errorReply("You don\'t have enough bucks to purchase a '" + item + "'. You need " + ((money - room.shop[toId(item)].price) * -1) + " more bucks.");
 			let buck = 'buck';
 			if (room.shop[toId(item)].price > 1) buck = 'bucks';
 			if (!room.shopBank) room.shopBank = room.founder;

@@ -3411,7 +3411,7 @@ exports.BattleAbilities = {
 		},
 		onAfterDamageOrder: 1,
 		onAfterDamage: function (damage, target, source, move) {
-			if (source && source !== target && move  && !target.hp) {
+			if (source && source !== target && move && !target.hp) {
 				this.damage(source.maxhp / 3, source, target, null, true);
 			}
 		},
@@ -3787,7 +3787,7 @@ exports.BattleAbilities = {
 		name: "Leaguehopper",
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
+			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par', 'psn', 'tox'];
 			let leaguehop = statuses[this.random(statuses.length)];
 			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
@@ -3799,7 +3799,7 @@ exports.BattleAbilities = {
 		onResidualOrder: 10,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par',  'psn', 'tox'];
+			let statuses = ['brn', 'par', 'slp', 'frz', 'psn', 'tox', 'brn', 'par', 'psn', 'tox', 'brn', 'par', 'psn', 'tox'];
 			let leaguehop = statuses[this.random(statuses.length)];
 			let target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (!target.volatiles['substitute']) {
@@ -3937,8 +3937,8 @@ exports.BattleAbilities = {
 				this.boost({spe:1});
 				this.add('-start', pokemon, 'typechange', 'Fire/Flying');
 				pokemon.typesData = [
-					{type: 'Fire', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Fire', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'raindance':
@@ -3946,8 +3946,8 @@ exports.BattleAbilities = {
 				this.boost({spa:1});
 				this.add('-start', pokemon, 'typechange', 'Water/Flying');
 				pokemon.typesData = [
-					{type: 'Water', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Water', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'sandstorm':
@@ -3955,8 +3955,8 @@ exports.BattleAbilities = {
 				this.boost({atk:1});
 				this.add('-start', pokemon, 'typechange', 'Rock/Flying');
 				pokemon.typesData = [
-					{type: 'Rock', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Rock', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'hail':
@@ -3964,8 +3964,8 @@ exports.BattleAbilities = {
 				this.boost({def:1});
 				this.add('-start', pokemon, 'typechange', 'Ice/Flying');
 				pokemon.typesData = [
-					{type: 'Ice', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Ice', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			case 'none':
@@ -3973,8 +3973,8 @@ exports.BattleAbilities = {
 				this.boost({spd:1});
 				this.add('-start', pokemon, 'typechange', 'Normal/Flying');
 				pokemon.typesData = [
-					{type: 'Normal', suppressed: false,  isAdded: false},
-					{type: 'Flying', suppressed: false,  isAdded: false},
+					{type: 'Normal', suppressed: false, isAdded: false},
+					{type: 'Flying', suppressed: false, isAdded: false},
 				];
 				break;
 			}

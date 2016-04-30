@@ -205,7 +205,7 @@ exports.commands = {
 			let cardName = cards[card].name;
 			let packName = packShop[cleanShop.indexOf(toId(target))];
 			this.sendReplyBox(user.name + ' got <font color="' + colors[cards[card].rarity] + '">' + cards[card].rarity + '</font>' +
-			'<button name="send" value="/card ' + card  + '"><b>' + cardName + '</b></button> from a' +
+			'<button name="send" value="/card ' + card + '"><b>' + cardName + '</b></button> from a' +
 			'<button name="send" value="/buypack ' + packName + '">' + packName + ' Pack</button>.');
 		}
 		let usrIndex = userPacks[user.userid].indexOf(newPack);
@@ -247,7 +247,7 @@ exports.commands = {
 		if (packIndex < 0) return this.sendReply("This user does not have this pack.");
 		userPacks[userid].splice(packIndex, 1);
 		this.sendReply(this.targetUsername + " lost " + pack + " pack. This user now has " + userPacks[userid].length + " pack(s).");
-		Users.get(this.targetUsername).send('|raw|' + user.name + ' has taken ' + pack + ' pack from you. You now have ' +  userPacks[userid].length + ' pack(s).');
+		Users.get(this.targetUsername).send('|raw|' + user.name + ' has taken ' + pack + ' pack from you. You now have ' + userPacks[userid].length + ' pack(s).');
 	},
 
 	showcards: 'showcase',
@@ -356,7 +356,7 @@ exports.commands = {
 			// create category menu
 			let categoryMenu = "";
 			for (let c in categories) {
-				categoryMenu += '<b>' + c  + ' -</b> ' + categories[c].map(k => {
+				categoryMenu += '<b>' + c + ' -</b> ' + categories[c].map(k => {
 					let m = toId(k);
 					// add a special search condition for rarity
 					if (c === "Rarity") m += "rarity";
@@ -437,9 +437,9 @@ exports.commands = {
 			// the name of the card
 			let cardName = "<b>Name:</b> " + card.name + "<br />";
 			// the id of the card
-			let cardId =  "<font color=\"gray\">(" + card.title + ")</font><br />";
+			let cardId = "<font color=\"gray\">(" + card.title + ")</font><br />";
 			// rarity display
-			let cardRarityPoints = '<b>Rarity: </b><font color="' + colors[card.rarity] + '">' + card.rarity + '</font> (' + card.points +  ')<br />';
+			let cardRarityPoints = '<b>Rarity: </b><font color="' + colors[card.rarity] + '">' + card.rarity + '</font> (' + card.points + ')<br />';
 			// collections
 			let cardCollection = '<b>Packs: </b>' + card.collection.join(", ") + "<br />";
 			// get users that have the card
@@ -458,7 +458,7 @@ exports.commands = {
 			}
 			// show duplicates as (x#)
 			cardHolders = Object.keys(cardHolders).sort().map(u => {
-				return "&nbsp;- " + u  + (cardHolders[u] > 1 ? " (x" + cardHolders[u] + ")" : "");
+				return "&nbsp;- " + u + (cardHolders[u] > 1 ? " (x" + cardHolders[u] + ")" : "");
 			});
 
 			// build the display!
@@ -576,7 +576,7 @@ exports.commands = {
 		// the image
 		let cardImage = '<img src="' + card.card + '" height=250>';
 		// rarity display
-		let cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points +  ')<br />';
+		let cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points + ')<br />';
 		let userSideDisplay = '<center>' + user.userid + '<br />' + cardImage + "<br />" + cardRarityPoints + '</center>';
 
 		// now build the target's side
@@ -584,7 +584,7 @@ exports.commands = {
 		// the image
 		cardImage = '<img src="' + card.card + '" height=250>';
 		// rarity display
-		cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points +  ')<br />';
+		cardRarityPoints = '(<font color="' + colors[card.rarity] + '">' + card.rarity + '</font> - ' + card.points + ')<br />';
 		let targetSideDisplay = "<center>" + (displayTrade.from !== user.userid ? displayTrade.from : displayTrade.to) + '<br />' + cardImage + "<br />" + cardRarityPoints + "</center>";
 
 		// now build the entire popup

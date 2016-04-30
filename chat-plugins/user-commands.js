@@ -178,7 +178,7 @@ exports.commands = {
 		if (targets.length < 2) return this.parse('/help chatcolor');
 		if (!this.can('vip') || !this.canBroadcast()) return;
 		if (!this.canTalk()) return this.errorReply("You may not use this command while unable to speak.");
-		this.add('|raw|' +  bold(font(color(toId(user)), user.name) + ': <font color="' + targets[0].toLowerCase().replace(/[^#a-z0-9]+/g, '') + '">' + Tools.escapeHTML(targets.slice(1).join(",")) + '</font>'));
+		this.add('|raw|' + bold(font(color(toId(user)), user.name) + ': <font color="' + targets[0].toLowerCase().replace(/[^#a-z0-9]+/g, '') + '">' + Tools.escapeHTML(targets.slice(1).join(",")) + '</font>'));
 	},
 	chatcolorhelp: ["/chatcolor OR /chatcolour [colour], [message] - Outputs a message in a custom colour. Requires VIP."],
 
@@ -429,17 +429,17 @@ exports.commands = {
 			"- /roomintro <em>intro</em>: sets the room introduction that will be displayed for all users joining the room<br />" +
 			"- /rules <em>rules link</em>: set the room rules link seen when using /rules<br />" +
 			"- /roommod, /roomdriver <em>username</em>: appoint a room moderator/driver<br />" +
-            "- /roomdemod, /roomdedriver <em>username</em>: remove a room moderator/driver<br />" +
-            "- /modchat <em>[%/@/#]</em>: set modchat level<br />" +
-            "- /declare <em>message</em>: make a large blue declaration to the room<br />" +
-            "- !htmlbox <em>HTML code</em>: broadcasts a box of HTML code to the room<br />" +
-            "- !showimage <em>[url], [width], [height]</em>: shows an image to the room<br />" +
-            "<br />" +
-            "Room founders (#) can also use<br />" +
-            "- /roomowner <em>username</em> - Appoints username as a room owner<br />" +
-            "<br />" +
-            "More detailed help can be found in the <a href=\"https://www.smogon.com/sim/roomauth_guide\">roomauth guide</a><br />" +
-            "</div>"
+			"- /roomdemod, /roomdedriver <em>username</em>: remove a room moderator/driver<br />" +
+			"- /modchat <em>[%/@/#]</em>: set modchat level<br />" +
+			"- /declare <em>message</em>: make a large blue declaration to the room<br />" +
+			"- !htmlbox <em>HTML code</em>: broadcasts a box of HTML code to the room<br />" +
+			"- !showimage <em>[url], [width], [height]</em>: shows an image to the room<br />" +
+			"<br />" +
+			"Room founders (#) can also use<br />" +
+			"- /roomowner <em>username</em> - Appoints username as a room owner<br />" +
+			"<br />" +
+			"More detailed help can be found in the <a href=\"https://www.smogon.com/sim/roomauth_guide\">roomauth guide</a><br />" +
+			"</div>"
 		);
 	},
 

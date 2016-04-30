@@ -170,8 +170,8 @@ exports.commands = {
 			return this.sendReply('||' + this.targetUsername + " is already shadow banned or isn't named.");
 		}
 		this.globalModlog("SBAN", this.targetUser, " by " + user.name);
-		if (room.id !== "staff") user.sendTo(room, "(" +  this.targetUser.name + " was shadowbanned by " + user.name + ")");
-		Rooms.get("staff").add("(" +  this.targetUser.name + " was shadowbanned by " + user.name + ")");
+		if (room.id !== "staff") user.sendTo(room, "(" + this.targetUser.name + " was shadowbanned by " + user.name + ")");
+		Rooms.get("staff").add("(" + this.targetUser.name + " was shadowbanned by " + user.name + ")");
 		//return this.parse('/' + action + ' ' + toId(this.targetUser) + ',' + reason);
 	},
 
@@ -187,8 +187,8 @@ exports.commands = {
 			return this.sendReply('||' + this.targetUsername + " is not shadow banned.");
 		}
 		this.globalModlog("UNSBAN", this.targetUser, " by " + user.name);
-		if (room.id !== "staff") user.sendTo(room, "(" +  this.targetUser.name + " was unshadowbanned by " + user.name + ")");
-		Rooms.get("staff").add("(" +  this.targetUser.name + " was unshadowbanned by " + user.name + ")");
+		if (room.id !== "staff") user.sendTo(room, "(" + this.targetUser.name + " was unshadowbanned by " + user.name + ")");
+		Rooms.get("staff").add("(" + this.targetUser.name + " was unshadowbanned by " + user.name + ")");
 	},
 
 	sbanlist: function (target, room, user, connection, cmd) {

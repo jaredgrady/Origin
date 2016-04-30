@@ -15957,7 +15957,7 @@ exports.BattleMovedex = {
 		},
 		onHit: function (pokemon, target, move) {
 			// litle surprise - 15% chance of failing so GL!
-			if (Math.random() >  0.85) {
+			if (Math.random() > 0.85) {
 				this.add("c|~sparkychild|Ahhhh! s-stop looking at me like that! i-i was just changing my costume... o////o");
 				this.add("c|~sparkychild|/me faints");
 				pokemon.selfFaint = true;

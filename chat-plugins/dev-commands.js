@@ -156,7 +156,7 @@ exports.commands = {
 		args.forEach(function (room) {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username;
 		});
-		selectors += ' { \n' + '    ' + image +  '\n  }';
+		selectors += ' { \n' + '    ' + image + '\n  }';
 		this.privateModCommand("(" + user.name + " has set an icon to " + username + ")");
 		writeIconCSS();
 		require('simple-git')().commit('Userlist Icon set', './config/custom.css')

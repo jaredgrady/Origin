@@ -37,9 +37,9 @@ const TaskMethods = {
 
 			// task action buttons
 			const selfAssignTask = '<button name="send" value="/task selfassign ' + room.id + ', ' + task.id + '" id="selfassign-button">Self Assign</button><br />';
-			const deleteTask = '<button name="send" value="/task delete ' + room.id + ', '  + task.id + '" id="delete-button">Delete</font></button><br />';
-			const completeTask = '<button name="send" value="/task complete ' + room.id + ', '  + task.id + '" id="close-button">Close</font></button><br />';
-			const reopenTask = '<button name="send" value="/task reopen ' + room.id + ', '  + task.id + '" id="reopen-button">Reopen</font></button><br />';
+			const deleteTask = '<button name="send" value="/task delete ' + room.id + ', ' + task.id + '" id="delete-button">Delete</font></button><br />';
+			const completeTask = '<button name="send" value="/task complete ' + room.id + ', ' + task.id + '" id="close-button">Close</font></button><br />';
+			const reopenTask = '<button name="send" value="/task reopen ' + room.id + ', ' + task.id + '" id="reopen-button">Reopen</font></button><br />';
 
 			display += "<tr>" +
 				"<td style='box-shadow: 1px 0px rgba(0, 0, 0, 0.2) inset;' class='tasks-td'><center>" + Tools.escapeHTML(task.name) + '<br /><font color="gray">(ID: ' + task.id + ')</font></center></td>' + // task id
