@@ -245,7 +245,7 @@ exports.commands = {
 	creditsstatshelp: ["/credits - Gives information about the state of the economy."],
 
 	cleancredits: function (target, room, user) {
-		if (!this.can('forcewin')) return false;
+		if (!~developers.indexOf(user.userid)) return this.errorReply("/cleancredits - Access denied.");
 		let creditsObject = Db('credits').object();
 		Object.keys(creditsObject)
 			.filter(function (name) {
