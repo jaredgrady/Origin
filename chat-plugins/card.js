@@ -166,7 +166,7 @@ exports.commands = {
 		let amount = Db('money').get(user.userid, 0);
 		if (cleanShop.indexOf(packId) < 0) return self.sendReply("This is not a valid pack. Use /packshop to see all packs.");
 		let shopIndex = cleanShop.indexOf(toId(target));
-		if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash') return self.sendReply("This pack is not currently in circulation.  Please use /packshop to see the current packs.");
+		if (packId !== 'xybase' && packId !== 'xyfuriousfists' && packId !== 'xyflashfire' && packId !== 'xyphantomforces' && packId !== 'xyroaringskies' && packId !== 'xyprimalclash' && packId !== 'xyancientorigins') return self.sendReply("This pack is not currently in circulation.  Please use /packshop to see the current packs.");
 		let cost = shop[shopIndex][2];
 		if (cost > amount) return self.sendReply("You need " + (cost - amount) + " more bucks to buy this pack.");
 		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
