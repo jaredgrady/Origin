@@ -382,8 +382,8 @@ let commands = exports.commands = {
 			if (Rooms.get('staff')) {
 				Rooms.get('staff').add('|raw|<div class="broadcast-green">Public chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
 			}
-			if (Rooms.get('staff')) {
-				Rooms.get('staff').add('|raw|<div class="broadcast-green">Public chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
+			if (Rooms.get('ustaff')) {
+				Rooms.get('ustaff').add('|raw|<div class="broadcast-green">Public chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
 			}
 			this.sendReply("The chat room '" + target + "' was created.");
 		}
