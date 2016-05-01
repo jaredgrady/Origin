@@ -16943,10 +16943,16 @@ exports.BattleMovedex = {
 		id: "squadout",
 		name: "Squad Out",
 		pp: 20,
-		priority: 2,
+		priority: 3,
 		flags: {protect: 1, mirror: 1},
 		volatileStatus: 'confusion',
 		multihit: 5,
+		onBasePowerPriority: 4,
+		onBasePower: function (basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
 		onTryHit: function (target, source, move) {
 			this.attrLastMove('[anim]watershuriken');
 		},

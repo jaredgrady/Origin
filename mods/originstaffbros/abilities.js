@@ -4218,6 +4218,11 @@ exports.BattleAbilities = {
 	// W♡ndo
 	"squirtlesquad": {
 		isNonstandard: true,
+		onStart: function (pokemon) {
+			this.add('-ability', pokemon, 'Squirtle Squad');
+			this.useMove('substitute', pokemon);
+			this.boost({evasion:6});
+		},
 		onTryHit: function (target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.boost({spa:1})) {
