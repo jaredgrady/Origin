@@ -68,14 +68,14 @@ function addDualcard(name, dualcard) {
 	let newDualcard = {};
 	newDualcard.id = uuid.v1();
 	newDualcard.title = dualcards[dualcard].title;
-	newDualcard.dualcard = dualcards[dualcard].dualcard;
+	newDualcard.card = dualcards[dualcard].card;
 	newDualcard.name = dualcards[dualcard].name;
 	newDualcard.rarity = dualcards[dualcard].rarity;
-	newDualcard.lifepoints = dualcards[dualcard].lifepoints;
+	newDualcard.points = dualcards[dualcard].points;
 
 	let userid = toId(name);
 	Db('dualcards').set(userid, Db('dualcards').get(userid, []).concat([newDualcard]));
-	Db('lifepoints').set(userid, Db('lifepoints').get(userid, 0) + newDualcard.lifepoints);
+	Db('lifepoints').set(userid, Db('lifepoints').get(userid, 0) + newDualcard.points);
 }
 
 function removeDualcard(dualcardTitle, userid) {
@@ -101,7 +101,7 @@ function getPointTotal(userid) {
 	let totalDualcards = Db('dualcards').get(userid, []);
 	let total = 0;
 	for (let i = 0; i < totalDualcards.length; i++) {
-		total += totalDualcards[i].lifepoints;
+		total += totalDualcards[i].points;
 	}
 	return total;
 }
@@ -111,7 +111,7 @@ function getShopDisplay(shop) {
 		"<tr><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Command</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Description</th><th class='card-th' style='background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;'>Cost</th></tr>";
 	let start = 0;
 	while (start < shop.length) {
-		display += "<tr>" + "<td class='card-td'><button name='send' value='/buyygo " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
+		display += "<tr>" + "<td class='card-td'><button name='send' value='/buybooster " + shop[start][0] + "' style='border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;'><b>" + shop[start][0] + "</b></button></td>" +
 			"<td class='card-td'>" + shop[start][1] + "</td>" +
 			"<td class='card-td'>" + shop[start][2] + "</td>" +
 			"</tr>";
@@ -148,15 +148,15 @@ exports.commands = {
 		if (!target) return this.sendReply("/buybooster - Buys a pack from the pack shop. Alias: /buyboosters");
 		let self = this;
 		let ygoId = toId(target);
-		let amount = Db('credits').get(user.userid, 0);
+		let amount = Db('money').get(user.userid, 0);
 		if (cleanShop.indexOf(ygoId) < 0) return self.sendReply("This is not a valid pack. Use /ygoshop to see all packs.");
 		let shopIndex = cleanShop.indexOf(toId(target));
 		let cost = ygoshop[shopIndex][2];
-		if (cost > amount) return self.sendReply("You need " + (cost - amount) + " more credits to buy this pack.");
-		let total = Db('credits').set(user.userid, amount - cost).get(user.userid);
+		if (cost > amount) return self.sendReply("You need " + (cost - amount) + " more money to buy this pack.");
+		let total = Db('money').set(user.userid, amount - cost).get(user.userid);
 		let ygo = toId(target);
 		self.sendReply('|raw|You have bought ' + target + ' pack for ' + cost +
-			' credits. Use <button name="send" value="/openbooster ' +
+			' money. Use <button name="send" value="/openbooster ' +
 			ygo + '"><b>/openbooster ' + ygo + '</b></button> to open your pack.');
 		self.sendReply("You have until the server restarts to open your pack.");
 		if (!userYgos[user.userid]) userYgos[user.userid] = [];
@@ -241,7 +241,7 @@ exports.commands = {
 		const dualcards = Db('dualcards').get(userid, []);
 		if (!dualcards.length) return this.sendReplyBox(userid + " has no dualcards.");
 		const dualcardsMapping = dualcards.map(function (dualcard) {
-			return '<button name="send" value="/dualcard ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.dualcard + '" width="80" title="' + dualcard.name + '"></button>';
+			return '<button name="send" value="/dualcard ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="80" title="' + dualcard.name + '"></button>';
 		});
 		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + dualcardsMapping.join('') + '</div><br><center><b><font color="' + color(userid) + '">' + userid + '</font> has ' + dualcards.length + ' dualcards and ' + getPointTotal(userid) + ' lifepoints.</b></center>');
 	},
@@ -252,10 +252,10 @@ exports.commands = {
 		let dualcardName = toId(target);
 		if (!dualcards.hasOwnProperty(dualcardName)) return this.sendReply(target + ": dualcard not found.");
 		let dualcard = dualcards[dualcardName];
-		let html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + dualcard.dualcard + '" height="220" title="' + dualcard.name + '" align="right">' +
+		let html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + dualcard.card + '" height="220" title="' + dualcard.name + '" align="right">' +
 			'<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">' + dualcard.title + '</span>' +
 			'<br /><br /><h1><font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font></h1>' +
-			'<br /><br /><font color="#AAA"><i>Points:</i></font> ' + dualcard.lifepoints +
+			'<br /><br /><font color="#AAA"><i>Points:</i></font> ' + dualcard.points +
 			'<br /><br /><font color="#AAA"><i>Found in Boosters:</i></font>' + dualcard.collection.join(', ') +
 			'<br clear="all">';
 		this.sendReply('|raw|' + html);
@@ -318,7 +318,7 @@ exports.commands = {
 			// make graphics for the letter
 			dualcardDisplay = Object.keys(letterMons[letter]).sort().map(m => {
 				let dualcard = dualcards[m];
-				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.dualcard + '" width="100" title="' + dualcard.name + '"></button>';
+				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
 			}).join("&nbsp;");
 			// send the popup
 			user.lastDualcardSearch = target;
@@ -397,7 +397,7 @@ exports.commands = {
 			// build the display
 			dualcardDisplay = Object.keys(paramDualcards).sort().map(m => {
 				let dualcard = paramDualcards[m];
-				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.dualcard + '" width="100" title="' + dualcard.name + '"></button>';
+				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
 			}).join("&nbsp;");
 			user.popup(definePopup + generalMenu + categoryMenu + scrollable + dualcardDisplay + divEnd);
 			break;
@@ -410,13 +410,13 @@ exports.commands = {
 			// build the display screen for the card
 			let dualcard = dualcards[toId(parts[0])];
 			// the image
-			let dualcardImage = '<img src="' + dualcard.dualcard + '" height=250>';
+			let dualcardImage = '<img src="' + dualcard.card + '" height=250>';
 			// the name of the dualcard
 			let dualcardName = "<b>Name:</b> " + dualcard.name + "<br />";
 			// the id of the dualcard
 			let dualcardId = "<font color=\"gray\">(" + dualcard.title + ")</font><br />";
 			// rarity display
-			let dualcardRarityLifepoints = '<b>Rarity: </b><font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> (' + dualcard.lifepoints + ')<br />';
+			let dualcardRarityLifepoints = '<b>Rarity: </b><font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> (' + dualcard.points + ')<br />';
 			// collections
 			let dualcardCollection = '<b>Packs: </b>' + dualcard.collection.join(", ") + "<br />";
 			// get users that have the dualcard
@@ -549,17 +549,17 @@ exports.commands = {
 		// build the user's card first
 		let dualcard = dualcards[(displayTrade.from === user.userid ? displayTrade.fromExchange : displayTrade.toExchange)];
 		// the image
-		let dualcardImage = '<img src="' + dualcard.dualcard + '" height=250>';
+		let dualcardImage = '<img src="' + dualcard.card + '" height=250>';
 		// rarity display
-		let dualcardRarityLifepoints = '(<font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> - ' + dualcard.lifepoints + ')<br />';
+		let dualcardRarityLifepoints = '(<font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> - ' + dualcard.points + ')<br />';
 		let userSideDisplay = '<center>' + user.userid + '<br />' + dualcardImage + "<br />" + dualcardRarityLifepoints + '</center>';
 
 		// now build the target's side
 		dualcard = dualcards[(displayTrade.from !== user.userid ? displayTrade.fromExchange : displayTrade.toExchange)];
 		// the image
-		dualcardImage = '<img src="' + dualcard.dualcard + '" height=250>';
+		dualcardImage = '<img src="' + dualcard.card + '" height=250>';
 		// rarity display
-		dualcardRarityLifepoints = '(<font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> - ' + dualcard.lifepoints + ')<br />';
+		dualcardRarityLifepoints = '(<font color="' + colors[dualcard.rarity] + '">' + dualcard.rarity + '</font> - ' + dualcard.points + ')<br />';
 		let targetSideDisplay = "<center>" + (displayTrade.from !== user.userid ? displayTrade.from : displayTrade.to) + '<br />' + dualcardImage + "<br />" + dualcardRarityLifepoints + "</center>";
 
 		// now build the entire popup
