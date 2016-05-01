@@ -191,8 +191,8 @@ fender - Gible - Life Orb
 - Notes: Hits very hard, and prepare to be walled if you do not deal with this quickly enough. Severely weak to hazards and residual damage, with no way to recover anything.
 
 +W♡ndo - Squirtle - King's Rock
-- Ability: Squirtle Squad - 20 BP Special Water Type attack, always hits 5 times and causes confusion, power doubles if opponent is poisoned. PP: 20 / Accuracy: 100% / Priority: 3
-- Move: Squad Out - Lightning Rod, raises evasion by 6 stages
+- Ability: Squirtle Squad - Lightning Rod, raises evasion by 6 stages
+- Move: Squad Out - 20 BP Special Water Type attack, always hits 5 times and causes confusion, power doubles if opponent is poisoned. PP: 20 / Accuracy: 100% / Priority: 3
 - Movepool: Protect, Toxic, Recover
 - Notes: 
 
