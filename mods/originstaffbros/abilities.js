@@ -4220,7 +4220,6 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onStart: function (pokemon) {
 			this.add('-ability', pokemon, 'Squirtle Squad');
-			this.useMove('substitute', pokemon);
 			this.boost({evasion:6});
 		},
 		onTryHit: function (target, source, move) {
@@ -4235,7 +4234,7 @@ exports.BattleAbilities = {
 			if (move.type !== 'Electric' || move.id in {firepledge:1, grasspledge:1, waterpledge:1}) return;
 			if (this.validTarget(this.effectData.target, source, move.target)) {
 				if (this.effectData.target !== target) {
-					this.add('-activate', this.effectData.target, 'ability: Squirlte Squad');
+					this.add('-activate', this.effectData.target, 'ability: Squirtle Squad');
 				}
 				return this.effectData.target;
 			}
