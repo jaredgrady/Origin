@@ -118,7 +118,7 @@ exports.Formats = [
 		'Golem', 'Gorebyss', 'Gourgeist-Super', 'Grumpig', 'Heat Rock', 'Jumpluff', 'Kadabra', 'Kingler', 'Lapras',
 		'Leafeon', 'Leavanny', 'Lickilicky', 'Lumineon', 'Machoke', 'Marowak', 'Metang', 'Mightyena', 'Misdreavus',
 		'Monferno', 'Mr. Mime', 'Ninetales', 'Ninjask', 'Pawniard', 'Pelipper', 'Politoed', 'Probopass', 'Purugly',
-		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web',
+		'Raichu', 'Rampardos', 'Rapidash', 'Regice', 'Relicanth', 'Roselia', 'Rotom-Frost', 'Simisear', 'Stoutland', 'Stunfisk', 'Swanna', 'Tangela', 'Torkoal', 'Ursaring', 'Vigoroth', 'Vullaby', 'Zebstrika', 'Sticky Web',
 		],
 	},
 	{
