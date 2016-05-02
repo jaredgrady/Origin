@@ -16512,7 +16512,7 @@ exports.BattleMovedex = {
 		type: "Water",
 	},
 
-	// Emg E4 Volco
+	// Emg rf Volc
 	"woodtreesword": {
 		isNonstandard: true,
 		accuracy: 90,
@@ -16529,7 +16529,7 @@ exports.BattleMovedex = {
 			this.attrLastMove('[anim]woodhammer');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Emg E4 Volco|Let\'s do this');
+			this.add('c|%Emg рrоf Volcо|Let\'s do this');
 		},
 		secondary: false,
 		target: "normal",

@@ -131,7 +131,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'waterbomb', signatureMove: "WaterBomb",
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
-			'%Emg E4 Volco': {
+			'%Emg рrоf Volcо': {
 				species: 'Torterra', ability: 'Let\'s Do This', item: 'Leftovers', gender: 'M',
 				moves: ['spore', ['precipiceblades', 'headsmash'][this.random(2)], 'extremespeed'],
 				baseSignatureMove: 'woodtreesword', signatureMove: "Wood Tree Sword",
