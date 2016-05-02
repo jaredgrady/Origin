@@ -2968,7 +2968,7 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'Emg рrоf Volcо') {
+			if (name === 'emgрrоfvolcо') {
 				this.add('c|%Emg рrоf Volcо|I\'m gonna break you... Like a Kit-Kat Bar - TFS Goku');
 			}
 			if (name === 'irraquated') {
@@ -3106,7 +3106,7 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'Emg рrоf Volcо') {
+			if (name === 'emgрrоfvolcо') {
 				this.add('c|%Emg рrоf Volcо|Dang it my hax... they werent enough');
 			}
 			if (name === 'irraquated') {
@@ -3243,7 +3243,7 @@ exports.Formats = [
 			if (name === 'creaturephil') {
 				this.add('c|%CreaturePhil|Check out http://elloworld.noip.me:8001/ or else feelsgn!');
 			}
-			if (name === 'Emg рrоf Volcо') {
+			if (name === 'emgрrоfvolcо') {
 				this.add('c|%Emg рrоf Volcо|Welp this isn\'t looking good');
 			}
 			if (name === 'irraquated') {
