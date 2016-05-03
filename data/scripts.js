@@ -651,6 +651,8 @@ exports.BattleScripts = {
 		for (let i = 0; i < side.pokemon.length; i++) {
 			side.pokemon[i].canMegaEvo = false;
 		}
+
+		this.runEvent('AfterMega', pokemon);
 		return true;
 	},
 
@@ -779,13 +781,7 @@ exports.BattleScripts = {
 			}
 
 			// Random ability
-			let abilities = [template.abilities['0']];
-			if (template.abilities['1']) {
-				abilities.push(template.abilities['1']);
-			}
-			if (template.abilities['H']) {
-				abilities.push(template.abilities['H']);
-			}
+			let abilities = Object.values(template.abilities);
 			let ability = abilities[this.random(abilities.length)];
 
 			// Four random unique moves from the movepool
@@ -2293,6 +2289,9 @@ exports.BattleScripts = {
 
 			// Only certain NFE Pokemon are allowed
 			if (template.evos.length && !allowedNFE[template.species]) continue;
+
+			// Slaking, without ability swap or a similar gimmick, makes the battle 5v6 at best
+			if (template.species === 'Slaking') continue;
 
 			let tier = template.tier;
 			switch (tier) {
