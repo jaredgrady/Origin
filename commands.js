@@ -1572,13 +1572,8 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help banip');
 		}
-<<<<<<< HEAD
 		if (!this.can('declare')) return false;
-		if (Users.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
-=======
-		if (!this.can('rangeban')) return false;
 		if (Punishments.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
->>>>>>> upstream/master
 
 		Punishments.bannedIps[target] = '#ipban';
 		this.addModCommand("" + user.name + " temporarily banned the " + (target.charAt(target.length - 1) === '*' ? "IP range" : "IP") + ": " + target);
@@ -1591,13 +1586,8 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help unbanip');
 		}
-<<<<<<< HEAD
-		if (!this.can('declare') && !~developers.indexOf(user.userid)) return false;
-		if (!Users.bannedIps[target]) {
-=======
-		if (!this.can('rangeban')) return false;
+		if (!this.can('declare')) return false;
 		if (!Punishments.bannedIps[target]) {
->>>>>>> upstream/master
 			return this.errorReply("" + target + " is not a banned IP or IP range.");
 		}
 		delete Punishments.bannedIps[target];
