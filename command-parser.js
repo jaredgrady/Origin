@@ -359,7 +359,6 @@ class CommandContext {
 				this.errorReply("Your message contains banned characters.");
 				return false;
 			}
-
 			// replace Warlic with warlic in all room other than staff
 			message = message.replace(/\bWarlic\b/ig, 'warlic');
 			message = message.replace(/\bnigger\b/ig, 'meanie');
