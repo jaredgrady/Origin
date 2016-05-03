@@ -3788,7 +3788,7 @@ exports.BattleAbilities = {
 	"cancerousability": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.boost({def:1})
+			this.boost({def:1});
 			this.boost({spd:1});
 		},
 		onDamage: function (damage, target, source, effect) {
