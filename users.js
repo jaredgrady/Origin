@@ -1174,20 +1174,20 @@ class User {
 					}
 				}
 			});
-			lockedUsers[userid] = userid;
+			Punishments.lockedUsers[userid] = userid;
 		}
 
 		for (let ip in this.ips) {
-			bannedIps[ip] = userid;
+			   Punishments.bannedIps[ip] = userid;
 		}
-		if (this.autoconfirmed) bannedUsers[this.autoconfirmed] = userid;
+		if (this.autoconfirmed) Punishments.bannedUsers[this.autoconfirmed] = userid;
 		if (this.registered) {
-			bannedUsers[this.userid] = userid;
+			Punishments.bannedUsers[this.userid] = userid;
 			this.autoconfirmed = '';
 		}
 		UAT.lock(this);
 		this.locked = userid; // in case of merging into a recently banned account
-		lockedUsers[this.userid] = userid;
+		Punishments.lockedUsers[this.userid] = userid;
 		this.disconnectAll();
 	}
 	lock(noRecurse, userid) {
@@ -1203,14 +1203,14 @@ class User {
 					}
 				}
 			});
-			lockedUsers[userid] = userid;
+			Punishments.lockedUsers[userid] = userid;
 		}
 
 		for (let ip in this.ips) {
-			lockedIps[ip] = userid;
+			Punishments.lockedIps[ip] = userid;
 		}
-		if (this.autoconfirmed) lockedUsers[this.autoconfirmed] = userid;
-		lockedUsers[this.userid] = userid;
+		if (this.autoconfirmed) Punishments.lockedUsers[this.autoconfirmed] = userid;
+		Punishments.lockedUsers[this.userid] = userid;
 		this.locked = userid;
 		this.autoconfirmed = '';
 		this.updateIdentity();
