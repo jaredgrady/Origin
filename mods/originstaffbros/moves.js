@@ -16426,12 +16426,12 @@ exports.BattleMovedex = {
 	// 01NTG
 	"dragonsynergy": {
 		isNonstandard: true,
-		accuracy: true,
+		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
 		id: "dragonsynergy",
 		name: "Dragon Synergy",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
 		self: {
@@ -16451,7 +16451,7 @@ exports.BattleMovedex = {
 			this.add("c|%01NTG|I don't even know what synergy means. I don't like science :x");
 		},
 		secondary: {
-			chance: 100,
+			chance: 50,
 			status: 'par',
 		},
 		target: "normal",
@@ -16516,9 +16516,9 @@ exports.BattleMovedex = {
 	"woodtreesword": {
 		isNonstandard: true,
 		accuracy: 90,
-		basePower: 150,
+		basePower: 120,
 		category: "Physical",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		recoil: [33, 100],
@@ -16656,6 +16656,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	},
+
 	// Starfox:3
 	"voltturn": {
 		isNonstandard: true,

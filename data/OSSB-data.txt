@@ -95,13 +95,13 @@ fender - Gible - Life Orb
 - Notes: Good physical set up sweeper that takes everything down. Once it gets a couple boosts, it's hard to come back.
 
 %01NTG - Dragonite - Leftovers
-- Ability: Magical Multicoat - Multiscale + Fur Coat + Magic Bounce, +1 speed on entry
-- Move: Dragon Synergy - 80 BP Dragon Type Physical move. Raises attack, defense, and special defense by 1 stage, and paralyzes opponent. PP: 20 / Accuracy: 100% / Priority: 0
+- Ability: Magical Multicoat - Multiscale + Fur Coat, +1 speed on entry
+- Move: Dragon Synergy - 80 BP Dragon Type Physical move. Raises attack, defense, and special defense by 1 stage, and 50% chance to paralyze opponent. PP: 10 / Accuracy: 100% / Priority: 0
 - Movepool: ExtremeSpeed, Roost, Dragon Tail, Iron Head, Earthquake, Fire Punch, Icicle Crash, Knock Off
 - Notes:
 
 %Chief Sokka - Gliscor - Toxic Orb
-- Ability: Cancerous Ability - Poison Heal, +1 special defense on entry
+- Ability: Cancerous Ability - Poison Heal, defense and special defense are boosted by 1 stage
 - Move: Super Bat - Brave Bird (25% recoil)
 - Movepool: Knock Off, Swords Dance, Earthquake, Roost
 - Notes: Physically Bulky as an Gliscor, with a neat boost to Special Defense. Can also boost and sweep lategame, against slower threats, and has the neat Flying STAB that Gliscor usually lack.
@@ -113,8 +113,8 @@ fender - Gible - Life Orb
 - Notes: Good check to some of the metagame's scary physical attackers and water types, and the burn chance is quite amazing together with the accuracy. Harvest Sitrus Berry keeps it alive for more time than you'll want it to.
 
 %Emg E4 Volco - Torterra
-- Ability: Let's Do This - Defenses Raised by 1.5, Boosts Attack and Speed by 2 Stages + Magic Guard
-- Move: Wood Tree Sword - 140BP Physical grass type move, 33% Recoil. PP: 15 / Accuracy: 90% / Priority: 0
+- Ability: Let's Do This - Magic Guard + Defenses Raised by 1.5, attack and speed boosted by 1 stage on entry
+- Move: Wood Tree Sword - 120BP Physical Grass Type move, 33% Recoil. PP: 10 / Accuracy: 90% / Priority: 0
 - Movepool: Precipice Blades, Extreme Speed, Head Smash
 - Notes: Volco is very hard to beat, as it is an extremely good wallbreaker, with high speed and devastating power, it's STAB + Rock Coverage hits all the tier for neutral damage, and even has Extreme Speed for revenge kills.
 

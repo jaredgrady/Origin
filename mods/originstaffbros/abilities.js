@@ -3780,28 +3780,6 @@ exports.BattleAbilities = {
 				return this.chainModify(0.5);
 			}
 		},
-		onTryHitPriority: 1,
-		onTryHit: function (target, source, move) {
-			if (target === source || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
-			let newMove = this.getMoveCopy(move.id);
-			newMove.hasBounced = true;
-			this.useMove(newMove, target, source);
-			return null;
-		},
-		onAllyTryHitSide: function (target, source, move) {
-			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
-				return;
-			}
-			let newMove = this.getMoveCopy(move.id);
-			newMove.hasBounced = true;
-			this.useMove(newMove, target, source);
-			return null;
-		},
-		effect: {
-			duration: 1,
-		},
 		id: "magicalmulticoat",
 		name: "Magical Multicoat",
 	},
@@ -3810,6 +3788,7 @@ exports.BattleAbilities = {
 	"cancerousability": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
+			this.boost({def:1})
 			this.boost({spd:1});
 		},
 		onDamage: function (damage, target, source, effect) {
@@ -3855,7 +3834,7 @@ exports.BattleAbilities = {
 	"letsdothis": {
 		isNonstandard: true,
 		onStart: function (pokemon) {
-			this.boost({atk:2, spe:2});
+			this.boost({atk:1, spe:1});
 		},
 		onModifyDefPriority: 6,
 		onModifyDef: function (def) {
