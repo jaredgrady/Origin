@@ -574,6 +574,10 @@ BattlePokemon = (() => {
 			if (moveEntry.id === 'hiddenpower') {
 				moveName = 'Hidden Power ' + this.hpType;
 				if (this.battle.gen < 6) moveName += ' ' + this.hpPower;
+			} else if (moveEntry.id === 'return') {
+				moveName = 'Return ' + this.battle.getMove('return').basePowerCallback(this);
+			} else if (moveEntry.id === 'frustration') {
+				moveName = 'Frustration ' + this.battle.getMove('frustration').basePowerCallback(this);
 			}
 			let target = moveEntry.target;
 			if (moveEntry.id === 'curse') {
@@ -1081,7 +1085,7 @@ BattlePokemon = (() => {
 		item = this.battle.getItem(item);
 
 		let effectid;
-		if (effect) effectid = effect.id;
+		if (this.battle.effect) effectid = this.battle.effect.id;
 		if (item.id === 'leppaberry' && effectid !== 'trick' && effectid !== 'switcheroo') {
 			this.isStale = 2;
 			this.isStaleSource = 'getleppa';

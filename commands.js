@@ -220,6 +220,7 @@ let commands = exports.commands = {
 		target = this.canTalk(target, null, targetUser);
 		if (!target) return false;
 
+		let message;
 		if (target.charAt(0) === '/' && target.charAt(1) !== '/') {
 			// PM command
 			let innerCmdIndex = target.indexOf(' ');
@@ -229,6 +230,10 @@ let commands = exports.commands = {
 			case 'me':
 			case 'mee':
 			case 'announce':
+				break;
+			case 'ME':
+			case 'MEE':
+				message = '|pm|' + user.getIdentity().toUpperCase() + '|' + targetUser.getIdentity() + '|/' + innerCmd.toLowerCase() + ' ' + innerTarget;
 				break;
 			case 'invite':
 			case 'inv': {
@@ -267,9 +272,9 @@ let commands = exports.commands = {
 		let originalMessage = target;
 		if ((!user.blockEmoticons && !targetUser.blockEmoticons) && emoteMsg) target = '/html ' + emoteMsg;
 
-		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
-
+		if (!message) message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
 		user.send(message);
+
 		if (targetUser !== user) {
 			if (Users.ShadowBan.checkBanned(user)) {
 				Users.ShadowBan.addMessage(user, "Private to " + targetUser.getIdentity(), target);
@@ -1296,7 +1301,7 @@ let commands = exports.commands = {
 		let name = targetUser.getLastName();
 		let userid = targetUser.getLastId();
 
-		if ((targetUser.locked || Users.checkBanned(targetUser.latestIp)) && !target) {
+		if ((targetUser.locked || Punishments.checkBanned(targetUser.latestIp)) && !target) {
 			let problem = " but was already " + (targetUser.locked ? "locked" : "banned");
 			return this.privateModCommand("(" + name + " would be locked by " + user.name + problem + ".)");
 		}
@@ -1335,7 +1340,7 @@ let commands = exports.commands = {
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
 
 		this.globalModlog("LOCK", targetUser, " by " + user.name + (target ? ": " + target : ""));
-		targetUser.lock(false, userid);
+		Punishments.lock(targetUser, false, userid);
 		return true;
 	},
 	lockhelp: ["/lock OR /l [username], [reason] - Locks the user from talking in all chats. Requires: % @ & ~"],
@@ -1416,7 +1421,7 @@ let commands = exports.commands = {
 			reason = ' (' + targetUser.locked + ')';
 		}
 
-		let unlocked = Users.unlock(target);
+		let unlocked = Punishments.unlock(target);
 
 		if (unlocked) {
 			let names = Object.keys(unlocked);
@@ -1446,7 +1451,7 @@ let commands = exports.commands = {
 		let name = targetUser.getLastName();
 		let userid = targetUser.getLastId();
 
-		if (Users.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
+		if (Punishments.checkBanned(targetUser.latestIp) && !target && !targetUser.connected) {
 			let problem = " but was already banned";
 			return this.privateModCommand("(" + name + " would be banned by " + user.name + problem + ".)");
 		}
@@ -1490,7 +1495,7 @@ let commands = exports.commands = {
 
 		this.add('|unlink|hide|' + userid);
 		if (userid !== toId(this.inputUsername)) this.add('|unlink|hide|' + toId(this.inputUsername));
-		targetUser.ban(false, userid);
+		Punishments.ban(targetUser, false, userid);
 		this.globalModlog("BAN", targetUser, " by " + user.name + (target ? ": " + target : ""));
 		return true;
 	},
@@ -1500,7 +1505,7 @@ let commands = exports.commands = {
 		if (!target) return this.parse('/help unban');
 		if (!this.can('ban')) return false;
 
-		let name = Users.unban(target);
+		let name = Punishments.unban(target);
 
 		if (name) {
 			this.addModCommand("" + name + " was unbanned by " + user.name + ".");
@@ -1525,7 +1530,7 @@ let commands = exports.commands = {
 		// we have to do this the hard way since it's no longer a global
 		let punishKeys = ['bannedIps', 'bannedUsers', 'lockedIps', 'lockedUsers', 'lockedRanges', 'rangeLockedUsers'];
 		for (let i = 0; i < punishKeys.length; i++) {
-			let dict = Users[punishKeys[i]];
+			let dict = Punishments[punishKeys[i]];
 			for (let entry in dict) delete dict[entry];
 		}
 		this.addModCommand("All bans and locks have been lifted by " + user.name + ".");
@@ -1567,10 +1572,15 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help banip');
 		}
+<<<<<<< HEAD
 		if (!this.can('declare')) return false;
 		if (Users.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
+=======
+		if (!this.can('rangeban')) return false;
+		if (Punishments.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
+>>>>>>> upstream/master
 
-		Users.bannedIps[target] = '#ipban';
+		Punishments.bannedIps[target] = '#ipban';
 		this.addModCommand("" + user.name + " temporarily banned the " + (target.charAt(target.length - 1) === '*' ? "IP range" : "IP") + ": " + target);
 	},
 	baniphelp: ["/banip OR /ipban [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
@@ -1581,11 +1591,16 @@ let commands = exports.commands = {
 		if (!target) {
 			return this.parse('/help unbanip');
 		}
+<<<<<<< HEAD
 		if (!this.can('declare') && !~developers.indexOf(user.userid)) return false;
 		if (!Users.bannedIps[target]) {
+=======
+		if (!this.can('rangeban')) return false;
+		if (!Punishments.bannedIps[target]) {
+>>>>>>> upstream/master
 			return this.errorReply("" + target + " is not a banned IP or IP range.");
 		}
-		delete Users.bannedIps[target];
+		delete Punishments.bannedIps[target];
 		this.addModCommand("" + user.name + " unbanned the " + (target.charAt(target.length - 1) === '*' ? "IP range" : "IP") + ": " + target);
 	},
 	unbaniphelp: ["/unbanip OR /unipban [ip] - Kick users on this IP or IP range from all rooms and bans it. Accepts wildcards to ban ranges. Requires: & ~"],
@@ -1596,9 +1611,9 @@ let commands = exports.commands = {
 
 		let isIp = (target.slice(-1) === '*');
 		let range = (isIp ? target : Users.shortenHost(target));
-		if (Users.lockedRanges[range]) return this.errorReply("The range " + range + " has already been temporarily locked.");
+		if (Punishments.lockedRanges[range]) return this.errorReply("The range " + range + " has already been temporarily locked.");
 
-		Users.lockRange(range, isIp);
+		Punishments.lockRange(range, isIp);
 		this.addModCommand("" + user.name + " temporarily locked the range: " + range);
 	},
 
@@ -1608,9 +1623,9 @@ let commands = exports.commands = {
 		if (!this.can('forcewin')) return false;
 
 		let range = (target.slice(-1) === '*' ? target : Users.shortenHost(target));
-		if (!Users.lockedRanges[range]) return this.errorReply("The range " + range + " is not locked.");
+		if (!Punishments.lockedRanges[range]) return this.errorReply("The range " + range + " is not locked.");
 
-		Users.unlockRange(range);
+		Punishments.unlockRange(range);
 		this.addModCommand("" + user.name + " unlocked the range " + range + ".");
 	},
 
@@ -1912,10 +1927,10 @@ let commands = exports.commands = {
 		}
 		if (!this.can('forcerename', targetUser)) return false;
 
-		let entry = targetUser.name + " was namelocked by " + user.name + (reason ? ": " + reason : "");
-		this.privateModCommand("(" + entry + ")");
+		this.addModCommand("" + targetUser.name + " was namelocked by " + user.name + "." + (reason ? ": " + reason : ""));
+		this.globalModlog("NAMELOCK", targetUser, " by " + user.name + (reason ? ": " + reason : ""));
 		Rooms.global.cancelSearch(targetUser);
-		targetUser.lockName();
+		Punishments.lockName(targetUser);
 		targetUser.popup("|modal|" + user.name + " has locked your name and you can't change names anymore" + (reason ? ": " + reason : "."));
 		return true;
 	},
@@ -1932,7 +1947,7 @@ let commands = exports.commands = {
 			reason = ' (' + targetUser.namelocked + ')';
 		}
 
-		let unlocked = Users.unnamelock(target);
+		let unlocked = Punishments.unnamelock(target);
 
 		if (unlocked) {
 			this.addModCommand(unlocked + " was unnamelocked by " + user.name + "." + reason);
@@ -1957,7 +1972,7 @@ let commands = exports.commands = {
 			return false;
 		}
 
-		if (targetUser.locked || Users.checkBanned(targetUser.latestIp)) {
+		if (targetUser.locked || Punishments.checkBanned(targetUser.latestIp)) {
 			hidetype = 'hide|';
 		} else if ((room.bannedUsers[toId(name)] && room.bannedIps[targetUser.latestIp]) || user.can('rangeban') || ~developers.indexOf(user.userid)) {
 			hidetype = 'roomhide|';
@@ -1999,7 +2014,7 @@ let commands = exports.commands = {
 			}
 
 			room.banwords = room.banwords.concat(words);
-			this.updateBanwords();
+			room.banwordRegex = null;
 			if (words.length > 1) {
 				this.privateModCommand("(The banwords '" + words.join(', ') + "' were added by " + user.name + ".)");
 				this.sendReply("Banned phrases succesfully added. The list is currently: " + room.banwords.join(', '));
@@ -2030,7 +2045,7 @@ let commands = exports.commands = {
 				room.banwords.splice(index, 1);
 			}
 
-			this.updateBanwords();
+			room.banwordRegex = null;
 			if (words.length > 1) {
 				this.privateModCommand("(The banwords '" + words.join(', ') + "' were removed by " + user.name + ".)");
 				this.sendReply("Banned phrases succesfully deleted. The list is currently: " + room.banwords.join(', '));
@@ -2467,11 +2482,11 @@ let commands = exports.commands = {
 				if (!line) continue;
 				if (line.includes('/')) {
 					rangebans.push(line);
-				} else if (line && !Users.bannedIps[line]) {
-					Users.bannedIps[line] = '#ipban';
+				} else if (line && !Punishments.bannedIps[line]) {
+					Punishments.bannedIps[line] = '#ipban';
 				}
 			}
-			Users.checkRangeBanned = Cidr.checker(rangebans);
+			Punishments.checkRangeBanned = Cidr.checker(rangebans);
 			connection.sendTo(room, "ipbans.txt has been reloaded.");
 		});
 	},
