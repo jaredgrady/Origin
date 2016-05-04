@@ -7,10 +7,14 @@ const MAX_REASON_LENGTH = 300;
 const colors = require('colors');
 let turfwars = require('../chat-plugins/turfwars');
 
-let TournamentGenerators = {
-	roundrobin: require('./generator-round-robin.js').RoundRobin,
-	elimination: require('./generator-elimination.js').Elimination,
+let TournamentGenerators = Object.create(null);
+let generatorFiles = {
+	'roundrobin': 'generator-round-robin.js',
+	'elimination': 'generator-elimination.js',
 };
+for (let type in generatorFiles) {
+	TournamentGenerators[type] = require('./' + generatorFiles[type]);
+}
 
 exports.tournaments = {};
 

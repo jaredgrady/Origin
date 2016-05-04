@@ -130,6 +130,8 @@ global.Ladders = require(Config.remoteladder ? './ladders-remote.js' : './ladder
 
 global.Users = require('./users.js');
 
+global.Cidr = require('./cidr.js');
+
 global.Punishments = require('./punishments.js');
 
 global.Rooms = require('./rooms.js');
@@ -159,8 +161,6 @@ try {
 } catch (e) {
 	global.Dnsbl = {query: () => {}, reverse: require('dns').reverse};
 }
-
-global.Cidr = require('./cidr.js');
 
 if (Config.crashguard) {
 	// graceful crash - allow current battles to finish before restarting
@@ -208,23 +208,6 @@ Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.TeamValidator = require('./team-validator.js');
 TeamValidator.PM.spawn();
-
-// load ipbans at our leisure
-fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), (err, data) => {
-	if (err) return;
-	data = ('' + data).split("\n");
-	let rangebans = [];
-	for (let i = 0; i < data.length; i++) {
-		data[i] = data[i].split('#')[0].trim();
-		if (!data[i]) continue;
-		if (data[i].includes('/')) {
-			rangebans.push(data[i]);
-		} else if (!Punishments.bannedIps[data[i]]) {
-			Punishments.bannedIps[data[i]] = '#ipban';
-		}
-	}
-	Punishments.checkRangeBanned = Cidr.checker(rangebans);
-});
 
 /*********************************************************
  * Start up the REPL server
