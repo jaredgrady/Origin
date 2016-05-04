@@ -22,7 +22,7 @@ let creditShop = [
     ['Ruby Ticket', 'Can be exchanged for 5 PSGO packs, 50 bucks and an avatar recolor', 200],
     ['Sapphire Ticket', 'Can be exchanged for 7 PSGO packs and 100 bucks', 280],
     ['Emerald Ticket', 'Can be exchanged for 5 PSGO packs, 100 bucks and Marketplace Partner (Can be taken away if neccesary)', 325],
-    ['Rainbow Ticket', 'Can be exchanged for 10 PSGO packs and 100 bucks', 515],
+    ['Rainbow Ticket', 'Can be exchanged for 10 PSGO packs and 200 bucks', 515],
 ];
 
 let creditShopDisplay = getShopDisplay(creditShop);
@@ -81,8 +81,8 @@ function findItem(item, money) {
 
 function handleBoughtItem(item, user, cost) {
 	let msg = '**' + user.name + " has bought " + item + ".**";
-	Rooms.rooms.marketplace.add('|c|~Credit Shop Alert|' + msg);
-	Rooms.rooms.marketplace.update();
+	Rooms.rooms.marketplacestaff.add('|c|~Credit Shop Alert|' + msg);
+	Rooms.rooms.marketplacestaff.update();
 	logMoney(user.name + ' has spent ' + cost + ' credits on a ' + item);
 }
 
