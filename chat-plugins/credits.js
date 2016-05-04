@@ -41,7 +41,7 @@ function getShopDisplay(creditShop) {
 	return display;
 }
 
-function creditsName(amount) {
+function currencyName(amount) {
 	let name = " credit";
 	return amount === 1 ? name : name + "s";
 }
