@@ -81,7 +81,7 @@ function findItem(item, money) {
 
 function handleBoughtItem(item, user, cost) {
 	let msg = '**' + user.name + " has bought " + item + ".**";
-	Rooms.rooms.marketplace.add('|c|~Shop Alert|' + msg);
+	Rooms.rooms.marketplace.add('|c|~Credit Shop Alert|' + msg);
 	Rooms.rooms.marketplace.update();
 	logMoney(user.name + ' has spent ' + cost + ' credits on a ' + item);
 }
@@ -101,7 +101,7 @@ exports.commands = {
 	creditatmhelp: ["/creditatm [user] - Shows the amount of credits a user has."],
 
 	givecredits: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credits can only be given out in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credits can only be given out in the Marketplace.");
 		if (!this.can('declare', null, room)) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help givecredits');
 
@@ -111,9 +111,7 @@ exports.commands = {
 		let amount = isCredits(parts[1]);
 
 		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 credits at a time.");
-		if (user.userid === username && !this.can('bypassall')) return this.errorReply("no");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-
 		if (typeof amount === 'string') return this.errorReply(amount);
 
 		let total = Db('credits').set(uid, Db('credits').get(uid, 0) + amount).get(uid);
@@ -126,7 +124,7 @@ exports.commands = {
 	givecreditshelp: ["/givecredits [user], [amount] - Give a user a certain amount of credits."],
 
 	takecredits: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credits can only be taken in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credits can only be taken in the Marketplace.");
 		if (!this.can('declare', null, room)) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help takecredits');
 
@@ -135,10 +133,9 @@ exports.commands = {
 		let uid = toId(username);
 		let amount = isCredits(parts[1]);
 
-		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 credits at a time.");
 		if (amount > Db('credits').get(uid)) return this.sendReply("The user's total credits is less than " + amount + ".");
+		if (amount > 1000) return this.sendReply("You cannot remove more than 1,000 credits at a time.");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
-
 		if (typeof amount === 'string') return this.sendReply(amount);
 
 		let total = Db('credits').set(uid, Db('credits').get(uid, 0) - amount).get(uid);
@@ -151,7 +148,7 @@ exports.commands = {
 	takecreditshelp: ["/takecredits [user], [amount] - Take a certain amount of credits from a user."],
 
 	resetcredits: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credits can only be reset in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credits can only be reset in the Marketplace.");
 		if (!this.can('declare', null, room)) return false;
 		Db('credits').set(toId(target), 0);
 		this.sendReply(target + " now has " + 0 + currencyName(0) + ".");
@@ -187,7 +184,7 @@ exports.commands = {
 	transfercreditshelp: ["/transfercredits [user], [amount] - Transfer a certain amount of credits to a user."],
 
 	creditslog: function (target, room, user, connection) {
-		if (room.id !== 'marketplace') return this.errorReply("Credit log can only be used in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credit log can only be used in the Marketplace.");
 		if (!this.can('declare', null, room)) return;
 		let numLines = 14;
 		let matching = true;
@@ -219,7 +216,7 @@ exports.commands = {
 	creditsloghelp: ["/creditslog - Displays a log of all transactions in the economy."],
 
 	creditladder: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Creditladder can only be viewed in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Creditladder can only be viewed in the Marketplace.");
 		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('credits').object()).map(function (name) {
 			return {name: name, credits: Db('credits').get(name)};
@@ -231,7 +228,7 @@ exports.commands = {
 	creditladderhelp: ["/creditladder - Displays users ranked by the amount of Origin credits they possess."],
 
 	credits: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Credit stats can only be viewed in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credit stats can only be viewed in the Marketplace.");
 		if (!this.runBroadcast()) return;
 		const users = Object.keys(Db('credits').object());
 		const total = users.reduce(function (acc, cur) {
@@ -262,7 +259,7 @@ exports.commands = {
 /***********************************/
 	credit: 'creditshop',
 	creditshop: function (target, room, user) {
-		if (room.id !== 'marketplace') return this.errorReply("Creditshop can only be viewed in the Marketplace");
+		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Creditshop can only be viewed in the Marketplace.");
 		if (!this.runBroadcast()) return;
 		return this.sendReply("|raw|" + creditShopDisplay);
 	},
