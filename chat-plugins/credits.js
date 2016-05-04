@@ -102,7 +102,7 @@ exports.commands = {
 
 	givecredits: function (target, room, user) {
 		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credits can only be given out in the Marketplace.");
-		if (!this.can('declare', null, room)) return false;
+		if (!this.can('ban', null, room)) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help givecredits');
 
 		let parts = target.split(',');
@@ -110,6 +110,7 @@ exports.commands = {
 		let uid = toId(username);
 		let amount = isCredits(parts[1]);
 
+		if (user.userid === username && !this.can('declare', null, room)) return this.errorReply("no");
 		if (amount > 1000) return this.sendReply("You cannot give more than 1,000 credits at a time.");
 		if (username.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 		if (typeof amount === 'string') return this.errorReply(amount);
@@ -125,7 +126,7 @@ exports.commands = {
 
 	takecredits: function (target, room, user) {
 		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credits can only be taken in the Marketplace.");
-		if (!this.can('declare', null, room)) return false;
+		if (!this.can('ban', null, room)) return false;
 		if (!target || target.indexOf(',') < 0) return this.parse('/help takecredits');
 
 		let parts = target.split(',');
@@ -185,7 +186,7 @@ exports.commands = {
 
 	creditslog: function (target, room, user, connection) {
 		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credit log can only be used in the Marketplace.");
-		if (!this.can('declare', null, room)) return;
+		if (!this.can('ban', null, room)) return;
 		let numLines = 14;
 		let matching = true;
 		if (target && /\,/i.test(target)) {
