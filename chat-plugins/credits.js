@@ -32,7 +32,7 @@ function getShopDisplay(creditShop) {
 		'<tr><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Item</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Description</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Cost</th></tr>';
 	let start = 0;
 	while (start < creditShop.length) {
-		display += '<tr><td class="table-option"><button class="table-btn" name="send" value="/buy ' + creditShop[start][0] + '">' + creditShop[start][0] + '</button></td>' +
+		display += '<tr><td class="table-option"><button class="table-btn" name="send" value="/claim ' + creditShop[start][0] + '">' + creditShop[start][0] + '</button></td>' +
 			'<td class="table-option">' + creditShop[start][1] + '</td>' +
 			'<td class="table-option">' + creditShop[start][2] + '</td></tr>';
 		start++;
