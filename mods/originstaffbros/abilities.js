@@ -3926,7 +3926,7 @@ exports.BattleAbilities = {
 		isNonstandard: true,
 		onDamagePriority: -100,
 		onStart: function (source) {
-			this.boost({atk:1, def:1, spd:1}, source);
+			this.boost({atk:1, def:1, spd:1, spe:1}, source);
 		},
 		onDamage: function (damage, target, source, effect) {
 			if (target.hp < target.maxhp / 5 && damage >= target.hp && effect && effect.effectType === 'Move') {
