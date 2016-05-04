@@ -119,6 +119,7 @@ exports.commands = {
 		amount = amount + currencyName(amount);
 		total = total + currencyName(total);
 		this.sendReply(username + " was given " + amount + ". " + username + " now has " + total + ".");
+		this.privateModCommand(username + " was given " + amount + ". " + username + " now has " + total + ".");
 		if (Users.get(username)) Users.get(username).popup(user.name + " has given you " + amount + ". You now have " + total + ".");
 		logCredits(username + " was given " + amount + " by " + user.name + ".");
 	},
@@ -143,6 +144,7 @@ exports.commands = {
 		amount = amount + currencyName(amount);
 		total = total + currencyName(total);
 		this.sendReply(username + " lost " + amount + ". " + username + " now has " + total + ".");
+		this.privateModCommand(username + " lost " + amount + ". " + username + " now has " + total + ".");
 		if (Users.get(username)) Users.get(username).popup(user.name + " has taken " + amount + " from you. You now have " + total + ".");
 		logCredits(username + " had " + amount + " taken away by " + user.name + ".");
 	},
