@@ -137,9 +137,9 @@ fender - Gible - Life Orb
 - Notes: Extremely hard to take down with physical attackers, use this to your advantage and sweep with a recoilless Brave Bird! However, don't forget to use Nidificate, or it will be very weak.
 
 %Selena - Samurott (Water/Ice) - Leftovers
-- Ability: Wings of Reason - All moves heal 50% of damage dealt + Sturdy that always activates at 20% health or less + Attack, Defense, and Special Defense are boosted by 1 stage on entry.
-- Move: Mercurius Blade - Water Type Physical attack, 100 BP, heals 75% of damage dealt and is not affected by ability's draining effect. PP: 10 / Accuracy: 100% / Priority: 0
-- Movepool: Night Slash, Icicle Crash, Sacred Sword
+- Ability: Wings of Reason - All moves heal 50% of damage dealt + Sturdy that always activates at 20% health or less + attack, defense, special defense, and speed are boosted by 1 stage on entry.
+- Move: Mercurius Blade - Ice Type Physical attack, 100 BP, heals 75% of damage dealt and is not affected by ability's draining effect. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: Sacred Sword, Razor Shell, Swords Dance
 - Notes: A very good draining sweeper. If their HP drops below 20%, you can't KO them, meaning they get a free turn to attack. and consequentially, heal. Make sure you hit with a powerful attack, or have boosts, because if you don't KO, you're going to regret it.
 
 %Starfox :3 - Emolga - Life Orb

@@ -157,7 +157,7 @@ exports.BattleScripts = {
 			},
 			'%Selena': { // (type) bug/fairy
 				species: 'Samurott', ability: 'Wings of Reason', item: 'Leftovers', gender: 'F',
-				moves: ['nightslash', 'sacredsword', 'iciclecrash'],
+				moves: ['sacredsword', 'razorshell', 'swordsdance'],
 				baseSignatureMove: 'mercuriusblade', signatureMove: 'Mercurius Blade',
 				evs:{hp:252, atk:252, spe:4}, nature: "Adamant",
 			},
@@ -211,7 +211,7 @@ exports.BattleScripts = {
 				baseSignatureMove: 'zencreate', signatureMove: "Zen Create",
 				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
 			},
-			'W♡ndo': {
+			'+W♡ndo': {
 				species: 'Squirtle', ability: 'Squirtle Squad', item: 'King\'s Rock', gender: 'M',
 				moves: ['protect', 'toxic', 'recover'],
 				basesignatureMove: 'squadout', signatureMove: 'Squad Out',

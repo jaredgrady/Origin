@@ -16647,14 +16647,14 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [3, 4],
 		onTryHit: function () {
-			this.attrLastMove("[anim]razorshell");
+			this.attrLastMove("[anim]iciclecrash");
 		},
 		onHit: function () {
 			this.add('raw|<div class="broadcast-red"><center>Ultimate Brave Burst: Mercurius Blade</center></div>');
 		},
 		secondary: false,
 		target: "normal",
-		type: "Water",
+		type: "Ice",
 	},
 
 	// Starfox:3
