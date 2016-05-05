@@ -593,6 +593,25 @@ exports.commands = {
 	},
 	unlinkhelp: ["/unlink [username] - Attempts to unlink every link sent by [username]. Requires: % @ & ~"],
 
+	timedgdeclare: function (target, room, user) {
+		if (!target || !this.can('declare')) return this.errorReply("/help timedgdeclare");
+		let parts = target.split(',');
+		if (parts.length !== 2) return this.errorReply('/help timedgdeclare');
+		let delayInMins = Tools.escapeHTML(parts[0].trim());
+		if (isNaN(delayInMins)) return this.errorReply('Please give a delay in in minutes, /help timedgdeclare');
+		delayInMins = delayInMins * 1000 * 60;
+		let declare = this.canHTML(parts.slice(1).join(","));
+		if (!declare) return;
+		 setTimeout(f => {
+			 for (let id in Rooms.rooms) {
+				 if (id !== 'global' && Rooms.rooms[id].userCount > 3) Rooms.rooms[id].addRaw('<div class="broadcast-blue" style="border-radius: 5px; max-height: 300px; overflow-y: scroll;"><b>' + declare + '</b></div>');
+			 }
+		 }, delayInMins);
+		this.logModCommand(toId(user) + 'scheduled a timed declare: ' + declare);
+		return this.sendReply('Your declare has been scheduled.');
+	},
+	timedgdeclarehelp: ["/timedgdclare [delay in minutes], [declare] - Will declare something after a given delay. Requires: & ~"],
+
 	ad: 'advertise',
 	ads: 'advertise',
 	advertise: function (target, room, user) {
