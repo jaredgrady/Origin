@@ -17,16 +17,18 @@ const colors = {
 };
 
 const ygoshop = [
-	['Starter Deck: Yugi', 'Get three dualcards from Yugis Starter Deck.', 10],
-	['Starter Deck: Joey', 'Get three dualcards from Joeys Starter Deck.', 10],
-	['Starter Deck: Kaiba', 'Get three dualcards from Kaibas Starter Deck.', 10],
-	['Starter Deck: Pegasus', 'Get three dualcards from Pegasus Starter Deck.', 10],
-	['Dark Legion', 'Get three dualcards from the the Dark Legions Structure Deck.', 20],
-	['Emperor of Darkness', 'Get three dualcards from the Emperor of Darkness Structure Deck.', 20],
-	['Master of Pendulum', 'Get three dualcards from the Master of Pendulum Structure Deck.', 20],
-	['Absolute Powerforce', 'Get three dualcards from the Absolute Powerful Deck.', 25],
+	['Basic Pack', 'Get three duelcards from across all decks', 5],
+	['Premium Pack', 'Get three duelcards with a higher chance of rares.', 8],
+	['Starter Deck: Yugi', 'Get three duelcards from Yugis Starter Deck.', 8],
+	['Starter Deck: Joey', 'Get three duelcards from Joeys Starter Deck.', 8],
+	['Starter Deck: Kaiba', 'Get three duelcards from Kaibas Starter Deck.', 8],
+	['Starter Deck: Pegasus', 'Get three duelcards from Pegasus Starter Deck.', 8],
+	['Dark Legion', 'Get three duelcards from the the Dark Legions Structure Deck.', 10],
+	['Emperor of Darkness', 'Get three duelcards from the Emperor of Darkness Structure Deck.', 10],
+	['Master of Pendulum', 'Get three duelcards from the Master of Pendulum Structure Deck.', 10],
+	['Absolute Powerforce', 'Get three duelcards from the Absolute Powerful Deck.', 12],
 ];
-let ygoShop = ['Starter Deck: Yugi', 'Starter Deck: Joey', 'Starter Deck: Kaiba', 'Starter Deck: Pegasus', 'Dark Legion', 'Emperor of Darkness', 'Master of Pendulum', 'Absolute Powerforce'];
+let ygoShop = ['Starter Deck: Yugi', 'Starter Deck: Joey', 'Starter Deck: Kaiba', 'Starter Deck: Pegasus', 'Dark Legion', 'Emperor of Darkness', 'Master of Pendulum', 'Absolute Powerforce', 'Basic Pack', 'Premium Pack'];
 const dualcardRarity = ['Common', 'Rare', 'SuperRare', 'UltraRare', 'SecretRare', 'ShatterfoilRare', 'UltimateRare, GhostRare'];
 let rareCache = [];
 let cleanShop = [];
@@ -174,7 +176,7 @@ exports.commands = {
 	openbooster: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		if (!target) {
-			this.sendReply("/openbooster [pack] - Open a YuGiOh Dualcard Pack. Alias: /openboosters");
+			this.sendReply("/openbooster [pack] - Open a YuGiOh Duelcard Pack. Alias: /openboosters");
 			return this.parse('/boosters');
 		}
 		if (cleanShop.indexOf(toId(target)) < 0) return this.sendReply("This pack does not exist.");
@@ -189,7 +191,7 @@ exports.commands = {
 			let dualcardName = dualcards[dualcard].name;
 			let ygoName = ygoShop[cleanShop.indexOf(toId(target))];
 			this.sendReplyBox(user.name + ' got <font color="' + colors[dualcards[dualcard].rarity] + '">' + dualcards[dualcard].rarity + '</font>' +
-			'<button name="send" value="/dualcard ' + dualcard + '"><b>' + dualcardName + '</b></button> from a' +
+			'<button name="send" value="/duelcard ' + dualcard + '"><b>' + dualcardName + '</b></button> from a' +
 			'<button name="send" value="/buybooster ' + ygoName + '">' + ygoName + ' Pack</button>.');
 		}
 		let usrIndex = userYgos[user.userid].indexOf(newYgo);
@@ -241,16 +243,16 @@ exports.commands = {
 		const dualcards = Db('dualcards').get(userid, []);
 		if (!dualcards.length) return this.sendReplyBox(userid + " has no dualcards.");
 		const dualcardsMapping = dualcards.map(function (dualcard) {
-			return '<button name="send" value="/dualcard ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="80" title="' + dualcard.name + '"></button>';
+			return '<button name="send" value="/duelcard ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="80" title="' + dualcard.name + '"></button>';
 		});
-		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + dualcardsMapping.join('') + '</div><br><center><b><font color="' + color(userid) + '">' + userid + '</font> has ' + dualcards.length + ' dualcards and ' + getPointTotal(userid) + ' lifepoints.</b></center>');
+		this.sendReplyBox('<div style="max-height: 300px; overflow-y: scroll;">' + dualcardsMapping.join('') + '</div><br><center><b><font color="' + color(userid) + '">' + userid + '</font> has ' + dualcards.length + ' duelcards and ' + getPointTotal(userid) + ' Lifepoints.</b></center>');
 	},
 
-	dualcard: function (target, room, user) {
-		if (!target) return this.sendReply("/dualcard [name] - Shows information about a dualcard.");
+	duelcard: function (target, room, user) {
+		if (!target) return this.sendReply("/duelcard [name] - Shows information about a dualcard.");
 		if (!this.runBroadcast()) return;
 		let dualcardName = toId(target);
-		if (!dualcards.hasOwnProperty(dualcardName)) return this.sendReply(target + ": dualcard not found.");
+		if (!dualcards.hasOwnProperty(dualcardName)) return this.sendReply(target + ": duelcard not found.");
 		let dualcard = dualcards[dualcardName];
 		let html = '<div class="card-div card-td" style="box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);"><img src="' + dualcard.card + '" height="220" title="' + dualcard.name + '" align="right">' +
 			'<span class="card-name" style="border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-image: -moz-linear-gradient(center top , #EBF3FC, #DCE9F9);  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset, 0px 0px 2px rgba(0, 0, 0, 0.2);">' + dualcard.title + '</span>' +
@@ -261,18 +263,18 @@ exports.commands = {
 		this.sendReply('|raw|' + html);
 	},
 
-	dualcardladder: function (target, room, user) {
+	duelcardladder: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		let keys = Object.keys(Db('lifepoints').object()).map(function (name) {
 			return {name: name, lifepoints: getPointTotal(name)};
 		});
-		if (!keys.length) return this.sendReplyBox("Dualcard ladder is empty.");
+		if (!keys.length) return this.sendReplyBox("Duelcard ladder is empty.");
 		keys.sort(function (a, b) { return b.lifepoints - a.lifepoints; });
-		this.sendReplyBox(rankLadder('Dualcard Ladder', 'lifepoints', keys.slice(0, 100), 'lifepoints'));
+		this.sendReplyBox(rankLadder('Duelcard Ladder', 'Lifepoints', keys.slice(0, 100), 'Lifepoints'));
 	},
 
-	dus: 'dualsearch',
-	dualsearch: function (target, room, user) {
+	dus: 'duelsearch',
+	duelsearch: function (target, room, user) {
 		const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 		const categories = {
 			Rarity: ['Common', 'Rare', 'SuperRare', 'UltraRare', 'SecretRare', 'ShatterfoilRare', 'UltimateRare, GhostRare'], // rarities
@@ -281,10 +283,10 @@ exports.commands = {
 
 		const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">"; // code for scrollable html
 		const divEnd = "</div>";
-		const definePopup = "|wide||html|<center><b>dualcardSearch</b></center><br />";
+		const definePopup = "|wide||html|<center><b>duelcardSearch</b></center><br />";
 		const generalMenu = "<center>" +
-			'<button name="send" value="/searchdualcard letter" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
-			'<button name="send" value="/searchdualcard category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' + // category
+			'<button name="send" value="/searchduelcard letter" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' + // alphabetical
+			'<button name="send" value="/searchduelcard category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' + // category
 			'</center><br />';
 		if (!target) {
 			return user.popup(definePopup + generalMenu);
@@ -299,7 +301,7 @@ exports.commands = {
 			let letter = toId(parts[0]);
 
 			const letterMenu = '<center>' + letters.map(l => {
-				return '<button name="send" value="/searchdualcard letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
+				return '<button name="send" value="/searchduelcard letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
 			}).join("&nbsp;") + "</center><br />";
 
 			if (!letter || letters.indexOf(letter) === -1) {
@@ -318,7 +320,7 @@ exports.commands = {
 			// make graphics for the letter
 			dualcardDisplay = Object.keys(letterMons[letter]).sort().map(m => {
 				let dualcard = dualcards[m];
-				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
+				return '<button name="send" value="/searchduelcard duelcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
 			}).join("&nbsp;");
 			// send the popup
 			user.lastDualcardSearch = target;
@@ -350,7 +352,7 @@ exports.commands = {
 
 					let style = (parts.indexOf(m) > -1 ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\""); // button style checking if currently searching
 
-					return '<button name="send" value="/searchdualcard category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
+					return '<button name="send" value="/searchduelcard category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
 				}).join("&nbsp;") + "<br />";
 			}
 			if (!parts.length) {
@@ -397,14 +399,14 @@ exports.commands = {
 			// build the display
 			dualcardDisplay = Object.keys(paramDualcards).sort().map(m => {
 				let dualcard = paramDualcards[m];
-				return '<button name="send" value="/searchdualcard dualcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
+				return '<button name="send" value="/searchduelcard duelcard, ' + dualcard.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="card-button"><img src="' + dualcard.card + '" width="100" title="' + dualcard.name + '"></button>';
 			}).join("&nbsp;");
 			user.popup(definePopup + generalMenu + categoryMenu + scrollable + dualcardDisplay + divEnd);
 			break;
-		case 'dualcard':
-			let backButton = '<button name="send" value="/dualcardsearch ' + user.lastDualcardSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
+		case 'duelcard':
+			let backButton = '<button name="send" value="/duelcardsearch ' + user.lastDualcardSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
 			if (!parts[0] || !(toId(parts[0]) in dualcards)) {
-				return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid dualcard</b></font></center>');
+				return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid duelcard</b></font></center>');
 			}
 
 			// build the display screen for the card
@@ -443,7 +445,7 @@ exports.commands = {
 				"<td>" + dualcardImage + "</td>" + // Card on the left
 				"<td>" + // details now
 				dualcardName + dualcardId + dualcardRarityLifepoints + dualcardCollection +
-				"<b>Users with this dualcard:</b><br />" + // dualcard holders
+				"<b>Users with this duelcard:</b><br />" + // dualcard holders
 				"<div style=\"max-height: 130px; overflow-y: scroll\">" + // scrollable
 				dualcardHolders.join("<br />") + "<br />" +
 				"</td></tr></table></center>"; // close the table
@@ -452,15 +454,15 @@ exports.commands = {
 			break;
 		case 'error':
 		default:
-			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for dualcardSearch</b></font></center>');
+			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for duelcardSearch</b></font></center>');
 			break;
 		}
 	},
 
-	tradedualcard: function (target, room, user) {
-		if (!target) return this.errorReply("/tradedualcard [dualcard ID], [user], [targetDualcard ID]");
+	tradeduelcard: function (target, room, user) {
+		if (!target) return this.errorReply("/tradeduelcard [duelcard ID], [user], [targetDuelcard ID]");
 		let parts = target.split(",").map(p => toId(p));
-		if (parts.length !== 3) return this.errorReply("/tradedualcard [your dualcard's ID], [targetUser], [targetdualcard ID]");
+		if (parts.length !== 3) return this.errorReply("/tradeduelcard [your duelcard's ID], [targetUser], [targetduelcard ID]");
 		let match;
 
 		// check for user's dualcard
@@ -473,7 +475,7 @@ exports.commands = {
 				break;
 			}
 		}
-		if (!match) return this.errorReply("You don't have that dualcard!");
+		if (!match) return this.errorReply("You don't have that duelcard!");
 
 		// check for target's card
 		let targetUser = parts[1];
@@ -508,7 +510,7 @@ exports.commands = {
 		user.send("|pm|~OriginCardTradeClient|" + user.userid + "|/html <div class=\"broadcast-green\">Your trade with " + Tools.escapeHTML(targetUser) + " has been initiated.  Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
 	},
 
-	viewdualcardtrades: function (target, room, user) {
+	viewduelcardtrades: function (target, room, user) {
 		// popup variables
 		const popup = "|html|<center><b><font color=\"blue\">Trade Manager</font></b></center><br />";
 
@@ -578,8 +580,8 @@ exports.commands = {
 			navigationButtons = '<center><button style="background-color:deepskyblue;height:30px;width:30px">1</button></center>';
 		} else {
 			// build min and mas
-			let min = '<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewdualcardtrades 0">1</button>&nbsp;&nbsp;&nbsp;';
-			let max = '&nbsp;&nbsp;&nbsp;<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewdualcardtrades last">' + (userTrades.length) + '</button>';
+			let min = '<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewduelcardtrades 0">1</button>&nbsp;&nbsp;&nbsp;';
+			let max = '&nbsp;&nbsp;&nbsp;<button style="background-color:lightblue;height:30px;width:30px" name="send" value="/viewduelcardtrades last">' + (userTrades.length) + '</button>';
 			// lazy replace for colour
 			if (target === 0) min = min.replace("background-color:lightblue;height:30px", "background-color:deepskyblue;height:30px");
 			if (target === userTrades.length - 1) max = max.replace("background-color:lightblue;height:30px", "background-color:deepskyblue;height:30px");
@@ -597,14 +599,14 @@ exports.commands = {
 					middle = (displayRange[0] !== 1 ? "... " : "") + displayRange.map(n => {
 						n = parseInt(n);
 						let style = n === target ? "background-color:deepskyblue;height:30px;width:30px" : "background-color:aliceblue;height:30px;width:30px";
-						return '<button style="' + style + '" name="send" value="/viewdualcardtrades ' + n + '">' + (n + 1) + '</button>';
+						return '<button style="' + style + '" name="send" value="/viewduelcardtrades ' + n + '">' + (n + 1) + '</button>';
 					}).join("&nbsp;") + (displayRange[displayRange.length - 1] !== range.length ? " ..." : "");
 				} else {
 					// just map the range
 					middle = range.map(n => {
 						n = parseInt(n);
 						let style = n === target ? "background-color:deepskyblue;height:30px;width:30px" : "background-color:aliceblue;height:30px;width:30px";
-						return '<button style="' + style + '" name="send" value="/viewdualcardtrades ' + n + '">' + (n + 1) + '</button>';
+						return '<button style="' + style + '" name="send" value="/viewduelcardtrades ' + n + '">' + (n + 1) + '</button>';
 					}).join("&nbsp;");
 				}
 			}
@@ -612,7 +614,7 @@ exports.commands = {
 			navigationButtons = "<center>" + min + middle + max + "</center>";
 		}
 		// add the navigation buttons to the popup
-		user.lastTradeCommand = "/viewdualcardtrades " + target;
+		user.lastTradeCommand = "/viewduelcardtrades " + target;
 		tradeScreen += navigationButtons;
 		user.popup(tradeScreen);
 	},
@@ -621,7 +623,7 @@ exports.commands = {
 		if (!target) return false; // due to the complexity of the command, this should only be used through the viewtrades screen
 		let parts = target.split(",").map(p => p.trim());
 		let action = toId(parts.shift());
-		const backButton = '<button name="send" value="' + (user.lastTradeCommand || '/viewdualcardtrades') + '" style="background-color:aliceblue;height:30px">< Back</button><br /><br />';
+		const backButton = '<button name="send" value="' + (user.lastTradeCommand || '/viewduelcardtrades') + '" style="background-color:aliceblue;height:30px">< Back</button><br /><br />';
 		const tradeError = "|html|" + backButton + '<center><font color="red"><b>ERROR: Invalid Trade / You cannot accept your own trade request!</b></font><center>';
 		let trade;
 		switch (action) {
@@ -747,18 +749,18 @@ exports.commands = {
 		}
 	},
 
-	confirmtransferdualcard: 'transferdualcard',
-	transferdualcard: function (target, room, user, connection, cmd) {
-		if (!target) return this.errorReply("/transferdualcard [user], [dualcard ID]");
-		if (toId(target) === user) return this.errorReply("You cannot transfer dualcards to yourself.");
+	confirmtransferduelcard: 'transferduelcard',
+	transferduelcard: function (target, room, user, connection, cmd) {
+		if (!target) return this.errorReply("/transferduelcard [user], [duelcard ID]");
+		if (toId(target) === user) return this.errorReply("You cannot transfer duelcards to yourself.");
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the dualcard being transfered.
 		let targetUser = parts.shift();
 		let dualcard = parts[0];
-		if (!targetUser || !dualcard) return this.errorReply("/transferdualcard [user], [dualcard ID]");
+		if (!targetUser || !dualcard) return this.errorReply("/transferduelcard [user], [duelcard ID]");
 
 		if (cmd === "transferdualcard") {
-			return user.popup('|html|<center><button name="send" value="/confirmtransferdualcard ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
+			return user.popup('|html|<center><button name="send" value="/confirmtransferduelcard ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
 		}
 		// check if dualcard can been removed
 		let canTransfer = removeDualcard(dualcard, user.userid);
@@ -781,20 +783,20 @@ exports.commands = {
 		user.popup("You have successfully transfered " + dualcard + " to " + targetUser + ".");
 	},
 
-	confirmtransferalldualcards: 'transferalldualcards',
-	transferalldualcards: function (target, room, user, connection, cmd) {
-		if (!target) return this.errorReply("/transferalldualcards [user]");
-		if (toId(target) === user) return this.errorReply("You cannot transfer dualcards to yourself.");
+	confirmtransferallduelcards: 'transferallduelcards',
+	transferallduelcards: function (target, room, user, connection, cmd) {
+		if (!target) return this.errorReply("/transferallduelcards [user]");
+		if (toId(target) === user) return this.errorReply("You cannot transfer duelcards to yourself.");
 		let targetUser = toId(target);
-		if (!targetUser) return this.errorReply("/transferalldualcards [user]");
+		if (!targetUser) return this.errorReply("/transferallduelcards [user]");
 		let userDualcards = Db('dualcards').get(user.userid, []);
 		let targetDualcards = Db('dualcards').get(targetUser, []);
 
 		if (!userDualcards.length) return this.errorReply("You don't have any cards.");
 
 		// confirmation
-		if (cmd === "transferalldualcards") {
-			return user.popup('|html|<center><button name="send" value="/confirmtransferalldualcards ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
+		if (cmd === "transferallduelcards") {
+			return user.popup('|html|<center><button name="send" value="/confirmtransferallduelcards ' + target + '" style="background-color:red;height:65px;width:150px"><b><font color="white" size=3>Confirm Transfer to ' + targetUser + '</font></b></button>');
 		}
 
 		// now the real work
@@ -804,7 +806,7 @@ exports.commands = {
 		Db('Lifepoints').set(targetUser, getPointTotal(targetUser));
 		Db('Lifepoints').set(user.userid, getPointTotal(user.userid));
 
-		user.popup("You have transfered all your dualcards to " + targetUser + ".");
+		user.popup("You have transfered all your duelcards to " + targetUser + ".");
 
 		let newTransfer = {
 			from: user.userid,
@@ -816,55 +818,55 @@ exports.commands = {
 		Db('completedTrades').set(now, newTransfer);
 	},
 
-	ygotcg: 'dualcardshelp',
-	dualcardshelp: function (target, room, user) {
+	ygotcg: 'duelcardshelp',
+	duelcardshelp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		return this.sendReplyBox("<center><b><u>YuGiOh Trading Card Game:</u></b></center><br>" +
 			"<b>/buybooster</b> - Buys a booster from the ygo shop.<br>" +
 			"<b>/ygoshop</b> - Shows the shop for buying boosters.<br>" +
 			"<b>/openboosterk</b> - Opens a booster that has been purchased from the shop.<br>" +
 			"<b>/boosters</b> - Shows a display of all your unopened boosters.<br>" +
-			"<b>/deck</b> - Shows a display of all dualcards that you have.<br>" +
-			"<b>/dualcard</b> - Shows data and information on any specifc dualcard.<br>" +
-			"<b>/dualcardladder</b> - Shows the leaderboard of the users with the most dualcard Lifepoints.<br>" +
-			"<b>/dualcardsearch</b> - Opens a window allowing you to search through all the dualcards.<br>" +
-			"<b>/tradedualcard</b> - /swap [user\'s dualcard], [targetUser], [targetUser\'s dualcard] - starts a new trade request.<br>" +
-			"<b>/viewdualcardtrades</b> - View your current pending trade requests.<br>" +
-			"<b>/transferdualcard</b> - /transferdualcard [targetUser], [dualcard] - transfers a dualcard to the target user.<br>" +
-			"<b>/transferalldualcards</b> - /transferalldualcards [user] - transfers all of your dualcards to the target user.<br>"
+			"<b>/deck</b> - Shows a display of all duelcards that you have.<br>" +
+			"<b>/duelcard</b> - Shows data and information on any specifc duelcard.<br>" +
+			"<b>/duelcardladder</b> - Shows the leaderboard of the users with the most duelcard Lifepoints.<br>" +
+			"<b>/duelcardsearch</b> - Opens a window allowing you to search through all the duelcards.<br>" +
+			"<b>/tradeduelcard</b> - /swap [user\'s duelcard], [targetUser], [targetUser\'s duelcard] - starts a new trade request.<br>" +
+			"<b>/viewduelcardtrades</b> - View your current pending trade requests.<br>" +
+			"<b>/transferduelcard</b> - /transferduelcard [targetUser], [duelcard] - transfers a duelcard to the target user.<br>" +
+			"<b>/transferallduelcards</b> - /transferallduelcards [user] - transfers all of your duelcards to the target user.<br>"
 		);
 	},
 
-	givedualcard: 'spawndualcard',
+	giveduelcard: 'spawnduelcard',
 	spawndualcard: function (target, room, user, connection, cmd) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.errorReply("/givedualcard [user], [dualcard ID]");
+		if (!target) return this.errorReply("/giveduelcard [user], [duelcard ID]");
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the dualcard being given.
 		let targetUser = parts.shift();
 		let dualcard = parts[0].trim();
-		if (!targetUser || !dualcard) return this.errorReply("/givedualcard [user], [dualcard ID]");
-		if (!dualcards.hasOwnProperty(dualcard)) return this.sendReply(target + ": dualcard not found.");
+		if (!targetUser || !dualcard) return this.errorReply("/giveduelcard [user], [duelcard ID]");
+		if (!dualcards.hasOwnProperty(dualcard)) return this.sendReply(target + ": duelcard not found.");
 		//Give the dualcard to the user.
 		dualcard = dualcards[dualcard];
 		addDualcard(targetUser, dualcard.title);
 		user.popup("You have successfully given " + dualcard.name + " to " + targetUser + ".");
-		this.logModCommand(user.name + "gave the dualcard '" + dualcard.name + "' to " + targetUser + ".");
+		this.logModCommand(user.name + "gave the duelcard '" + dualcard.name + "' to " + targetUser + ".");
 	},
 
-	takedualcard: function (target, room, user, connection, cmd) {
+	takeduelcard: function (target, room, user, connection, cmd) {
 		if (!this.can('declare')) return false;
-		if (!target) return this.errorReply("/takedualcard [user], [dualcard ID]");
+		if (!target) return this.errorReply("/takeduelcard [user], [duelcard ID]");
 		let parts = target.split(",").map(p => toId(p));
 		// find targetUser and the dualcard being taken.
 		let targetUser = parts.shift();
 		let dualcard = parts[0].trim();
-		if (!targetUser || !dualcard) return this.errorReply("/takedualcard [user], [dualcard ID]");
-		if (!dualcards.hasOwnProperty(dualcard)) return this.sendReply(target + ": dualcard not found.");
+		if (!targetUser || !dualcard) return this.errorReply("/takeduelcard [user], [duelcard ID]");
+		if (!dualcards.hasOwnProperty(dualcard)) return this.sendReply(target + ": duelcard not found.");
 		//Take the dualcard from the user.
 		dualcard = dualcards[dualcard];
 		removeDualcard(dualcard.title, targetUser);
 		user.popup("You have successfully taken " + dualcard.name + " from " + targetUser + ".");
-		this.logModCommand(user.name + " took the dualcard '" + dualcard.name + "' from " + targetUser + ".");
+		this.logModCommand(user.name + " took the duelcard '" + dualcard.name + "' from " + targetUser + ".");
 	},
 };
