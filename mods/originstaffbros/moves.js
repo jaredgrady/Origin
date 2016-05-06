@@ -16513,27 +16513,45 @@ exports.BattleMovedex = {
 	},
 
 	// Emg E4 Volco
-	"woodtreesword": {
+	"volcanosrevenge": {
 		isNonstandard: true,
-		accuracy: 90,
-		basePower: 120,
+		accuracy: 100,
+		basePower: 130,
 		category: "Physical",
-		pp: 10,
+		desc: "Use and Find Out.",
+		shortDesc: "Use and Find Out.",
+		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [33, 100],
 		onTryHit: function (target, source, move) {
-			this.attrLastMove('[anim]woodhammer');
+			this.attrLastMove('[anim]steameruption');
 		},
 		onMoveFail: function (target, source, move) {
-			this.attrLastMove('[anim]woodhammer');
+			this.attrLastMove('[anim]steameruption');
 		},
 		onHit: function (target, source, move) {
-			this.add('c|%Emg E4 Volco|Let\'s do this');
+			this.add('c|%Emg E4 Volco|Time for revenge');
 		},
-		secondary: false,
+				secondaries: [
+			{
+				chance: 30,
+				volatileStatus: 'confusion',
+			}, {
+				chance: 40,
+				volatileStatus: 'flinch',
+			},
+		{
+			chance: 30,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
+		],
 		target: "normal",
-		type: "Grass",
+		type: "Water",
 	},
 
 	// Irraquated
