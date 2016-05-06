@@ -113,10 +113,10 @@ fender - Gible - Life Orb
 - Notes: Good check to some of the metagame's scary physical attackers and water types, and the burn chance is quite amazing together with the accuracy. Harvest Sitrus Berry keeps it alive for more time than you'll want it to.
 
 %Emg E4 Volco - Torterra
-- Ability: Let's Do This - Magic Guard + Defenses Raised by 1.5, attack and speed boosted by 1 stage on entry
-- Move: Wood Tree Sword - 120BP Physical Grass Type move, 33% Recoil. PP: 10 / Accuracy: 90% / Priority: 0
-- Movepool: Precipice Blades, Extreme Speed, Head Smash
-- Notes: Volco is very hard to beat, as it is an extremely good wallbreaker, with high speed and devastating power, it's STAB + Rock Coverage hits all the tier for neutral damage, and even has Extreme Speed for revenge kills.
+- Ability: Volcanic Ash -  +2 Sp. Attack +2 Speed. Magic Bounce + Adaptability + Levitate 
+- Move: Volcano's Revenge - 130BP Special water Type move, increases Sp.Def and Def by 1 stage 30%, 30% to Confuse, 40% to flinch. PP: 10 / Accuracy: 100% / Priority: 0
+- Movepool: - Earth Power, Giga Drain, Blue Flare
+- Notes: It's powerful with its adaptability Blue Flare/ Volcano's Revenge and spA +2, can recover with giga drain.
 
 %Irraquated - Ho-oh - Life Orb
 - Ability: What's the time? - Desolate Land + Magic Guard + Regenerator
