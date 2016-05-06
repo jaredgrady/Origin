@@ -16517,10 +16517,10 @@ exports.BattleMovedex = {
 		isNonstandard: true,
 		accuracy: 100,
 		basePower: 130,
-		category: "Physical",
+		category: "Special",
 		desc: "Use and Find Out.",
 		shortDesc: "Use and Find Out.",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit: function (target, source, move) {
