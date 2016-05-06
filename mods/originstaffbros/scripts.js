@@ -132,10 +132,10 @@ exports.BattleScripts = {
 				evs: {hp:248, def:252, spe:8}, nature: 'Modest',
 			},
 			'%Emg E4 Volco': {
-				species: 'Torterra', ability: 'Let\'s Do This', item: 'Leftovers', gender: 'M',
-				moves: ['spore', ['precipiceblades', 'headsmash'][this.random(2)], 'extremespeed'],
-				baseSignatureMove: 'woodtreesword', signatureMove: "Wood Tree Sword",
-				evs: {hp:4, atk:252, spe:252}, nature: 'Adamant',
+				species: 'Volcanion', ability: 'volcanicash', item: 'Assualt Vest',
+				moves: ['earthpower', 'blueflare', 'gigadrain'],
+				baseSignatureMove: 'volcanosrevenge', signatureMove: "Volcano's Revenge",
+				evs: {hp:4, spa:252, spe:252}, nature: 'modest',
 			},
 			'%Irraquated': {
 				species: 'Ho-oh', ability: 'What\'s the time?', item: 'Life Orb', gender: 'M',
