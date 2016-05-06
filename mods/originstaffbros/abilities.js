@@ -3831,24 +3831,43 @@ exports.BattleAbilities = {
 	},
 
 	// Emg E4 Volco
-	"letsdothis": {
+	"volcanicash": { 
 		isNonstandard: true,
+		desc: "Use and Find Out",
+		shortDesc: "Use and Find Out",
 		onStart: function (pokemon) {
-			this.boost({atk:1, spe:1});
+			this.boost({spa: 2, spe: 2});
 		},
-		onModifyDefPriority: 6,
-		onModifyDef: function (def) {
-			return this.chainModify(1);
+		onImmunity: function (type) {
+			if (type === 'Ground') return false;
 		},
-		onModifySpDPriority: 6,
-		onModifySpD: function (spd) {
-			return this.chainModify(1);
+		onModifyMove: function (move) {
+			move.stab = 2;
 		},
-		onDamage: function (damage, target, source, effect) {
-			if (effect.effectType !== 'Move') return false;
+				onTryHitPriority: 1,
+		onTryHit: function (target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
 		},
-		id: "letsdothis",
-		name: "Let's Do This",
+		onAllyTryHitSide: function (target, source, move) {
+			if (target.side === source.side || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			let newMove = this.getMoveCopy(move.id);
+			newMove.hasBounced = true;
+			this.useMove(newMove, target, source);
+			return null;
+		},
+		effect: {
+			duration: 1,
+		},
+		id: "volcanosrevenge",
+		name: "Volcano's Revenge",
 	},
 
 	// Irraquated
