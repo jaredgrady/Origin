@@ -95,6 +95,7 @@ let emotes = {
 	'feelssakis': 'http://i.imgur.com/yThm3fM.png?1',
 	'feelssammich': 'http://i.imgur.com/sVgkUF1.png?1',
 	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
+	'feelsserp': 'http://i.imgur.com/PtCTxmY.png',
 	'feelsseis': 'http://i.imgur.com/gGGYxrE.png?1',
 	'feelsshi': 'http://i.imgur.com/VzlGZ1M.jpg',
 	'feelsshrk': 'http://i.imgur.com/amTG3jF.jpg',
