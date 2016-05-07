@@ -15,6 +15,7 @@ let emotes = {
 	'DansGame': 'https://static-cdn.jtvnw.net/emoticons/v1/33/1.0',
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
 	'EleGiggle': 'https://static-cdn.jtvnw.net/emoticons/v1/4339/2.0',
+	'enteirawr': 'http://i.imgur.com/HZWoAMx.gif',
 	'FacePalm': 'http://i.imgur.com/lv3GmpM.png',
 	'FailFish': 'https://static-cdn.jtvnw.net/emoticons/v1/360/1.0',
 	'feelsackbr': 'http://i.imgur.com/BzZJedC.jpg?1',
