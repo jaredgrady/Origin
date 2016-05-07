@@ -3831,7 +3831,7 @@ exports.BattleAbilities = {
 	},
 
 	// Emg E4 Volco
-	"volcanicash": { 
+	"volcanicash": {
 		isNonstandard: true,
 		desc: "Use and Find Out",
 		shortDesc: "Use and Find Out",
@@ -3844,7 +3844,7 @@ exports.BattleAbilities = {
 		onModifyMove: function (move) {
 			move.stab = 2;
 		},
-				onTryHitPriority: 1,
+		onTryHitPriority: 1,
 		onTryHit: function (target, source, move) {
 			if (target === source || move.hasBounced || !move.flags['reflectable']) {
 				return;
