@@ -69,6 +69,7 @@ let emotes = {
 	'feelsllama': 'http://i.imgur.com/oSLSk2I.gif',
 	'feelslot': 'http://i.imgur.com/tl88F7i.png?1',
 	'feelslug': 'http://i.imgur.com/REEBSOT.png?1',
+	'feelslux': 'http://i.imgur.com/hDKCZMt.gif',
 	'feelsmd': 'http://i.imgur.com/DJHMdSw.png',
 	'feelsmerry': 'https://cdn.betterttv.net/emote/5658e10f18d1dbe358624e35/2x',
 	'feelsmixtape': 'http://i.imgur.com/7lncwng.png',
