@@ -2435,7 +2435,7 @@
 #lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/DunzDPZ.gif") right no-repeat; }
 
-#lobby-userlist-user-phoenixeien, #phoenixleague-userlist-user-phoenixeien, #hingostraphouse-userlist-user-phoenixeien, #swl-userlist-user-phoenixeien {
+#lobby-userlist-user-eienseiryuu, #phoenixleague-userlist-user-eienseiryuu, #hingostraphouse-userlist-user-eienseiryuu, #swl-userlist-user-eienseiryuu {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/mCHbFVE.png") right no-repeat; }
 
 #lobby-userlist-user-pndas, #thelotusleague-userlist-user-pndas, #monotype-userlist-user-pndas, #casino-userlist-user-pndas, #halloffame-userlist-user-pndas {
@@ -2515,6 +2515,9 @@
 
 #lobby-userlist-user-thcfancii, #artshop-userlist-user-thcfancii, #thehyperioncoalition-userlist-user-thcfancii {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/ZBHPKBj.gif") right no-repeat; }
+
+#x-userlist-user-confluxx, #divinity-userlist-user-confluxx, #phoenixleague-userlist-user-confluxx, #theempire-userlist-user-confluxx {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/HkktAxJ.gif") right no-repeat; }
 
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
