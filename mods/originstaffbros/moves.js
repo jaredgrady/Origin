@@ -16532,24 +16532,24 @@ exports.BattleMovedex = {
 		onHit: function (target, source, move) {
 			this.add('c|%Emg E4 Volco|Time for revenge');
 		},
-				secondaries: [
-			{
-				chance: 30,
-				volatileStatus: 'confusion',
-			}, {
-				chance: 40,
-				volatileStatus: 'flinch',
-			},
-		{
-			chance: 30,
-			self: {
+		secondaries: [
+					{
+						chance: 30,
+						volatileStatus: 'confusion',
+					}, {
+						chance: 40,
+						volatileStatus: 'flinch',
+					},
+					{
+						chance: 30,
+						self: {
 				boosts: {
 					def: 1,
 					spd: 1,
 				},
 			},
-		},
-		],
+					},
+				],
 		target: "normal",
 		type: "Water",
 	},
