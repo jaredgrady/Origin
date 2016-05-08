@@ -30,8 +30,8 @@ let nameLockedUsers = Punishments.nameLockedUsers = Object.create(null);
 let lockedRanges = Punishments.lockedRanges = Object.create(null);
 let rangelockedUsers = Punishments.rangeLockedUsers = Object.create(null);
 let UAT = Users.UAT = require("./uat.js");
-
 // load ipbans at our leisure
+
 let loadBanlist = Punishments.loadBanlist = function () {
 	return new Promise(function (resolve, reject) {
 		fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), (err, data) => {
@@ -138,7 +138,7 @@ Punishments.lock = function (user, noRecurse, name) {
 			if (user === thisUser || thisUser.confirmed) return;
 			for (let myIp in thisUser.ips) {
 				if (myIp in user.ips) {
-					this.ban(thisUser, true, name);
+					this.lock(thisUser, true, name);
 					return;
 				}
 			}
@@ -190,7 +190,7 @@ Punishments.unlock = function (name, unlocked, noRecurse) {
 };
 Punishments.lockRange = function (range, ip) {
 	if (lockedRanges[range]) return;
-	rangelockedUsers[range] = {};
+	rangeLockedUsers[range] = {};
 	if (ip) {
 		lockedIps[range] = range;
 		ip = range.slice(0, -1);
@@ -202,7 +202,7 @@ Punishments.lockRange = function (range, ip) {
 		} else {
 			if (range !== Users.shortenHost(curUser.latestHost)) return;
 		}
-		rangelockedUsers[range][curUser.userid] = 1;
+		rangeLockedUsers[range][curUser.userid] = 1;
 		curUser.locked = '#range';
 		curUser.send("|popup|You are locked because someone on your ISP has spammed, and your ISP does not give us any way to tell you apart from them.");
 		curUser.updateIdentity();
@@ -216,7 +216,7 @@ Punishments.lockRange = function (range, ip) {
 Punishments.unlockRange = function (range) {
 	if (!lockedRanges[range]) return;
 	clearTimeout(lockedRanges[range]);
-	for (let i in rangelockedUsers[range]) {
+	for (let i in rangeLockedUsers[range]) {
 		let user = Users(i);
 		if (user) {
 			user.locked = false;
@@ -225,7 +225,7 @@ Punishments.unlockRange = function (range) {
 	}
 	if (lockedIps[range]) delete lockedIps[range];
 	delete lockedRanges[range];
-	delete rangelockedUsers[range];
+	delete rangeLockedUsers[range];
 };
 Punishments.lockName = function (user) {
 	let userid = user.userid;

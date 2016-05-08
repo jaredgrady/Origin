@@ -427,13 +427,13 @@ class User {
 			if (typeof jurisdiction !== 'string') {
 				return !!jurisdiction;
 			}
-			if (jurisdiction.indexOf(targetGroup) >= 0) {
+			if (jurisdiction.includes(targetGroup)) {
 				return true;
 			}
-			if (jurisdiction.indexOf('s') >= 0 && target === this) {
+			if (jurisdiction.includes('s') && target === this) {
 				return true;
 			}
-			if (jurisdiction.indexOf('u') >= 0 && Config.groupsranking.indexOf(group) > Config.groupsranking.indexOf(targetGroup)) {
+			if (jurisdiction.includes('u') && Config.groupsranking.indexOf(group) > Config.groupsranking.indexOf(targetGroup)) {
 				return true;
 			}
 		}
@@ -474,10 +474,10 @@ class User {
 		if (!this.can('console')) return false; // normal permission check
 
 		let whitelist = Config.consoleips || ['127.0.0.1'];
-		if (whitelist.indexOf(connection.ip) >= 0) {
+		if (whitelist.includes(connection.ip)) {
 			return true; // on the IP whitelist
 		}
-		if (whitelist.indexOf(this.userid) >= 0) {
+		if (whitelist.includes(this.userid)) {
 			return true; // on the userid whitelist
 		}
 
@@ -837,7 +837,7 @@ class User {
 			let range = this.locked || Users.shortenHost(this.latestHost);
 			if (Punishments.lockedRanges[range]) {
 				this.send("|popup|You are in a range that has been temporarily locked from talking in chats and PMing regular users.");
-				Punishments.rangelockedUsers[range][this.userid] = 1;
+				Punishments.rangeLockedUsers[range][this.userid] = 1;
 				this.locked = '#range';
 			}
 		} else if (this.locked && (this.locked === '#range' || Punishments.lockedRanges[this.locked])) {
@@ -1681,7 +1681,7 @@ Users.socketConnect = function (worker, workerid, socketid, ip, useragent) {
 				let shortHost = Users.shortenHost(hosts[0]);
 				if (Punishments.lockedRanges[shortHost]) {
 					user.send("|popup|You are locked because someone on your ISP has spammed, and your ISP does not give us any way to tell you apart from them.");
-					Punishments.rangelockedUsers[shortHost][user.userid] = 1;
+					Punishments.rangeLockedUsers[shortHost][user.userid] = 1;
 					user.locked = '#range';
 					user.updateIdentity();
 				}

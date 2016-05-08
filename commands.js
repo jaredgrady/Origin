@@ -56,7 +56,7 @@ let commands = exports.commands = {
 			let rank = Users.usergroups[u].charAt(0);
 			if (rank === ' ' || rank === '+') continue;
 			// In case the usergroups.csv file is not proper, we check for the server ranks.
-			if (ranks.indexOf(rank) >= 0) {
+			if (ranks.includes(rank)) {
 				let name = Users.usergroups[u].substr(1);
 				if (!rankLists[rank]) rankLists[rank] = [];
 				if (name) rankLists[rank].push(name);
@@ -1917,7 +1917,7 @@ let commands = exports.commands = {
 		}
 		if (!this.can('forcerename', targetUser)) return false;
 
-		this.addModCommand("" + targetUser.name + " was namelocked by " + user.name + "." + (reason ? ": " + reason : ""));
+		this.addModCommand("" + targetUser.name + " was namelocked by " + user.name + "." + (reason ? " (" + reason + ")" : ""));
 		this.globalModlog("NAMELOCK", targetUser, " by " + user.name + (reason ? ": " + reason : ""));
 		Rooms.global.cancelSearch(targetUser);
 		Punishments.lockName(targetUser);
