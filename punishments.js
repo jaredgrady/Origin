@@ -28,7 +28,7 @@ let nameLockedIps = Punishments.nameLockedIps = Object.create(null);
 let lockedUsers = Punishments.lockedUsers = Object.create(null);
 let nameLockedUsers = Punishments.nameLockedUsers = Object.create(null);
 let lockedRanges = Punishments.lockedRanges = Object.create(null);
-let rangelockedUsers = Punishments.rangeLockedUsers = Object.create(null);
+let rangeLockedUsers = Punishments.rangeLockedUsers = Object.create(null);
 let UAT = Users.UAT = require("./uat.js");
 // load ipbans at our leisure
 
