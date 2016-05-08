@@ -3114,6 +3114,9 @@ body {
   text-shadow: none;
   color: #11484F; }
 
+.tournament-status:hover, .tournament-toggle:hover {
+  background: rgba(255, 255, 255, 0.8); }
+
 .tournament-tools {
   border-color: #11484F;
   background: rgba(51, 98, 81, 0.6); }
@@ -3141,6 +3144,9 @@ body {
   border-color: #11484F; }
 
 .tournament-box {
+  background: url("http://i.imgur.com/xQmFRxz.jpg?2"); }
+
+.ps-popup.tournament-popout-bracket {
   background: url("http://i.imgur.com/xQmFRxz.jpg?2"); }
 
 /***********************
