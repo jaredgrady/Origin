@@ -583,6 +583,40 @@ exports.commands = {
 	},
 	sharthelp: ["/shart [username], [reason] - Kick user from all rooms and ban user's IP address with reason. Requires: @ & ~"],
 
+	registercasino: function (target, room, user) {
+		if (!user.can('declare')) return this.errorReply("/registercasino - Access denied");
+		if (!target) return this.parse("/help registercasino");
+		if (!Rooms(toId(target))) return this.errorReply("The specified room does not exist");
+		let targetRoom = Rooms(toId(target));
+		targetRoom.add('|raw|<div class="broadcast-green"><b>' + user.name + ' has just added Casino Games to this room.</b></div>');
+		targetRoom.update();
+		if (!targetRoom.isCasino) {
+			targetRoom.isCasino = true;
+			targetRoom.chatRoomData.isCasino = true;
+			Rooms.global.writeChatRoomData();
+		} else {
+			this.errorReply("This room already is registered as a Casino.");
+		}
+	},
+	registercasinohelp: ["/registercasino [room] - Adds Casino Games to a room. Requires & ~"],
+
+	deregistercasino: function (target, room, user) {
+		if (!user.can('declare')) return this.errorReply("/deregistershop - Access denied");
+		if (!target) return this.parse("/help deregistercasino");
+		if (!Rooms(toId(target))) return this.errorReply("The specified room does not exist");
+		let targetRoom = Rooms(toId(target));
+		targetRoom.update();
+		if (targetRoom.isCasino) {
+			delete targetRoom.isCasino;
+			delete targetRoom.chatRoomData.isCasino;
+			Rooms.global.writeChatRoomData();
+			this.sendReply("Casino games have been removed from this room.");
+		} else {
+			this.errorReply("This room is not registered as a Casino.");
+		}
+	},
+	deregistercasinohelp: ["/deregistercasino [room] - Removes Casino Games from a room. Requires & ~"],
+
 	unlink: function (target, room, user) {
 		if (!target || !this.can('mute')) return this.parse('/help unlink');
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");

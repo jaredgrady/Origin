@@ -114,7 +114,7 @@ exports.commands = {
 	dicestart: 'startdice',
 	startdice: function (target, room, user) {
 		if (!target) return this.parse('/help startdice');
-		if (room.id !== 'casino' && !~developers.indexOf(user.userid)) return this.errorReply("Dice games can't be used outside of the Casino.");
+		if (room.id !== 'casino' && !room.isCasino) return this.errorReply("Dice games can't be used outside of Casino Rooms.");
 		if (!this.can('broadcast', null, room)) return this.errorReply("You must be at least a voice to start a dice game.");
 		if (room.id === 'casino' && target > 500) return this.errorReply("Dice can only be started for amounts less 500 bucks or less.");
 		if (!this.canTalk()) return this.errorReply("You cannot start dice games while unable to speak.");
@@ -174,7 +174,7 @@ exports.commands = {
 		output += "<font color=#24678d><b>" + winner + "</b></font> has won <font color=#24678d><b>" + room.dice.bet + "</b></font>" + currencyName(room.dice.bet) + ".<br>Better luck next time " + room.dice[p1Number < p2Number ? 'p1' : 'p2'] + "!</div>";
 		room.addRaw(output);
 		Db('money').set(winner, Db('money').get(winner, 0) + room.dice.bet * 2);
-		Db('dicewins').set(winner, Db('dicewins').get(winner, 0) + 1);
+		if (room.id === 'casino') Db('dicewins').set(winner, Db('dicewins').get(winner, 0) + 1);
 		delete room.dice;
 	},
 	joindicehelp: ["/joindice - Joins a dice game."],
@@ -301,7 +301,7 @@ exports.commands = {
 	slots: {
 		start: 'roll',
 		roll: function (target, room, user) {
-			if (room.id !== 'casino') return this.errorReply("Slots must be played in the Casino.");
+			if (room.id !== 'casino' && !room.isCasino) return this.errorReply("Slots must be played in Casino Rooms.");
 			if (room.slotsEnabled === false) return this.errorReply("Slots is currently disabled.");
 			if (user.isRolling) return this.errorReply("Wait till your previous roll finishes to roll again");
 			if (!room.slotsAnte) room.slotsAnte = 3;
@@ -366,14 +366,14 @@ exports.commands = {
 		},
 
 		enable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply("Can only be used in Casino.");
+			if (room.id !== 'casino' && !~developers.indexOf(this.userid)) return this.errorReply("Can only be used in Casino.");
 			if (!user.can('makechatroom')) return this.errorReply("/slots enable - Access denied.");
 			room.slotsEnabled = true;
 			this.sendReply("Slots has been enabled.");
 		},
 
 		disable: function (target, room, user, cmd) {
-			if (room.id !== 'casino') return this.errorReply("Can only be used in Casino.");
+			if (room.id !== 'casino' && !~developers.indexOf(this.userid)) return this.errorReply("Can only be used in Casino.");
 			if (!user.can('makechatroom')) return this.errorReply("/slots disable - Access denied.");
 			room.slotsEnabled = false;
 			if (room.chatRoomData) Rooms.global.writeChatRoomData();

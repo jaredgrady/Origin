@@ -2,7 +2,7 @@
 /********************
  * Money System
  * (Formerly economy.js)
- * This file handles the money system and some of its key commands, including dice games and the shop
+ * This file handles the money system and some of its key commands like the shop
 ********************/
 let fs = require('fs');
 let color = require('../config/color');
@@ -24,6 +24,7 @@ let shop = [
 	['League Shop', 'Purchases a League Shop for use in your league room, room must be a league room.', 70],
 	['Room', 'Buys a chatroom for you to own. (Can be deleted if it goes inactive for too long. Within reason, can be refused. You are responsible for your room, if you get in trouble your room may be deleted.)', 90],
 	['Custom Emote', 'Buys a custom emote to be displays when the command is entered. (Size must be 50x50, can be refused)', 100],
+	['Casino Games', 'Allows Casino Games to be played in your chatroom. (Notice: Global Staff are not responsible for gambling in non-official rooms.)', 200],
 	['Userlist Icon', 'Purchases a userlist icon of your choice, PM Master Float or AuraStormLucario with the icon and rooms you want it in (Size must be 32x32, 3 rooms maximum, will take time to appear).', 350],
 	['Room Icon', 'Purchases an icon of your choice for the top of the userlist in your chatroom. (Must be approved by room founder of room)', 400],
 	['Custom PM-box Theme', 'Buys a customizable PM theme for people to see when they PM you. PM AuraStormLucario to get it customized. Example with Neo\'s: <a href="http:\/\/i.imgur.com/ToSmCbs.png">Custom PM-box</a>', 500],
