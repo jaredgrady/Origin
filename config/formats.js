@@ -3547,6 +3547,33 @@ exports.Formats = [
 		},
 	},
 	{
+		name: 'Monocolor',
+		desc: [
+			"All Pok&eacute;mon on a team must share a color.",
+			"&bullet; /ds [color],all - Returns all the pok&eacute;mon with that color, helpful for team making.",
+			"&bullet; Valid colors are Black, White, Gray, Green, Blue, Red, Yellow, Brown, Pink, Purple.",
+			"&bullet; <a href=\"http://pastebin.com/raw/wS9dK5mB\">Monocolor Banlist</a>",
+			"&bullet; Viability Rankings coming soon.",
+		],
+		section: "Other Metagames",
+
+		mod: 'monocolor',
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Color Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Speed', 'Darkrai', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Hoopa-Unbound', 'Ho-Oh',
+				'Kyogre', 'Kyurem-White', 'Landorus', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
+				'Blazikenite', 'Damp Rock', 'Gengarite', 'Kanghaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Soul Dew',
+			],
+	},
+	{
+		name: 'Random Monocolor',
+		section: "Other Metagames",
+
+		mod: 'monocolor',
+		team: 'randomMonocolor',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Color Clause'],
+	},
+	{
 		name: "STABmons",
 		desc: [
 			"Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.",
