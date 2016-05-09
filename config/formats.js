@@ -64,7 +64,7 @@ exports.Formats = [
 	{
 		name: "UU",
 		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3557948/\">np: UU Stage 6</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3571928/\">np: UU Stage 7</a>",
 			"&bullet; <a href=\"https://www.smogon.com/dex/xy/tags/uu/\">UU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3555277/\">UU Viability Ranking</a>",
 		],
@@ -276,7 +276,7 @@ exports.Formats = [
 	{
 		name: "Doubles OU",
 		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3545903/\">np: Doubles OU Stage 3</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3569913/\">np: Doubles OU Stage 4</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3498688/\">Doubles OU Banlist</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3535930/\">Doubles OU Viability Ranking</a>",
 		],
