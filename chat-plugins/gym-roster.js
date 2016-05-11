@@ -52,24 +52,27 @@ function bold(text) {
 }
 
 function typeTag(link, name) {
-	return '<img src="' + link + '" height="105" width="100" alt="' + name + '" title="' + name + '" style="border-radius: 5px; box-shadow: 0px 0px 2px #000;" />';
+	return '<img src="' + link + '" height="100" width="94" alt="' + name + '" title="' + name + '" style="border-radius: 5px; box-shadow: 0px 0px 2px #000;" />';
 }
 
 function gymDisplay(room) {
 	let data = Object.keys(room.gymleaders);
 	let output = '<center><h4><u>' + room.title + ' Gym Leaders</u></h4></center><div style="width: 100%; max-height: 450px; overflow-y: scroll;"><table style="border-collapse: collapse; margin: auto;"><tr>';
+	let single = '';
 	let double = '';
-	let onlineA = "rgba(231, 20, 20, 0.8)";
-	let onlineB = "rgba(231, 20, 20, 0.8)";
+	let onlineA = 'rgba(231, 20, 20, 0.8)';
+	let onlineB = 'rgba(231, 20, 20, 0.8)';
 	for (let i = 0; i < data.length; i++) {
-		if (Users(room.gymleaders[data[i]][0])) onlineA = "rgba(46, 204, 64, 0.8)";
-		if (Users(room.gymleaders[data[i]][1])) onlineB = "rgba(46, 204, 64, 0.8)";
-		if (room.gymleaders[data[i]][1] !== 'open') double = " - <span style='background: " + onlineB + ";'>" + room.gymleaders[data[i]][1] + "</span>";
-		output += '<td style="text-align: center; padding: 5px; background: #EEE; border: 1px solid #2D416F; box-shadow: 1px 1px rgba(255, 255, 255, 0.7) inset, -1px -1px rgba(170, 183, 191, 0.8) inset;">' + typeTag(typeImg[data[i]], data[i]) + '<br /><div style="color: #FFF; text-shadow: 1px 1px 4px #222; text-align: center; padding: 3px 2px; background: #999; border: 1px solid #000; box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px rgba(0, 0, 0, 0.2) inset;"><span style="background: ' + onlineA + ';">' + room.gymleaders[data[i]][0] + '</span>' + double + '</div></td>';
-		if (i % 3 === 2) output += '</tr><tr>';
+		if (Users(room.gymleaders[data[i]][0])) onlineA = 'rgba(46, 204, 64, 0.8)';
+		if (Users(room.gymleaders[data[i]][1])) onlineB = 'rgba(46, 204, 64, 0.8)';
+		single = '<span style="background: rgba(42, 33, 218, 0.8);">' + room.gymleaders[data[i]][0] + '</span>';
+		if (room.gymleaders[data[i]][0] !== 'open') single = '<span><button class="astext" name="parseCommand" value="/user ' + room.gymleaders[data[i]][0] + '" style="background: ' + onlineA + '; color: white;">' + room.gymleaders[data[i]][0] + '</button></span>';
+		if (room.gymleaders[data[i]][1] !== 'open') double = ' - <span><button class="astext" name="parseCommand" value="/user ' + room.gymleaders[data[i]][1] + '" style="background: ' + onlineB + '; color: white;">' + room.gymleaders[data[i]][1] + '</button></span>';
+		output += '<td style="text-align: center; padding: 5px; background: #EEE; border: 1px solid #2D416F; box-shadow: 1px 1px rgba(255, 255, 255, 0.7) inset, -1px -1px rgba(170, 183, 191, 0.8) inset;">' + typeTag(typeImg[data[i]], data[i]) + '<br /><div style="color: #FFF; text-shadow: 1px 1px 4px #222; text-align: center; padding: 3px 2px; background: #999; border: 1px solid #000; box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset, -1px -1px rgba(0, 0, 0, 0.2) inset;">' + single + double + '</div></td>';
+		if (i % 6 === 5) output += '</tr><tr>';
 		double = '';
-		onlineA = "rgba(231, 20, 20, 0.8)";
-		onlineB = "rgba(231, 20, 20, 0.8)";
+		onlineA = 'rgba(231, 20, 20, 0.8)';
+		onlineB = 'rgba(231, 20, 20, 0.8)';
 	}
 	output += '</tr><table></div>';
 	return output;
@@ -81,7 +84,7 @@ exports.commands = {
 		list: 'leaders',
 		leaders: function (target, room, user) {
 			if (!this.runBroadcast()) return;
-			if (!room.gymleaders) return this.errorReply("This room has no gym leaders set.");
+			if (!room.gymleaders) return this.sendReplyBox("This room has no gym leaders set.");
 			let display = gymDisplay(room);
 			this.sendReply("|raw|" + display);
 		},
@@ -94,6 +97,7 @@ exports.commands = {
 			let type = toId(parts[0]);
 			let gymLeader = toId(parts[1]);
 			if (!room.gymleaders[type]) return this.errorReply("Type: " + type + " not found. Did you spell it correctly?");
+			if (gymLeader.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 			if (room.gymleaders[type][0] !== 'open' && room.gymleaders[type][1] !== 'open') return this.errorReply("These gym leader positions are already filled. Use /gym replace to remove them and add a new leader.");
 			if (room.gymleaders[type][0] !== 'open') position = 1;
 			room.gymleaders[type][position] = gymLeader;
@@ -127,6 +131,7 @@ exports.commands = {
 			let gymLeader = toId(parts[1]);
 			let newLeader = toId(parts[2]);
 			let position = 0;
+			if (gymLeader.length >= 19 || newLeader.length >= 19) return this.sendReply("Usernames are required to be less than 19 characters long.");
 			if (!room.gymleaders[type]) return this.errorReply("Type: " + type + " not found. Did you spell it correctly?");
 			if (room.gymleaders[type][0] === 'open' && room.gymleaders[type][1] === 'open') return this.errorReply("All gym leader positions for this type are already open.");
 			if (room.gymleaders[type][0] !== gymLeader) position = 1;
@@ -135,13 +140,14 @@ exports.commands = {
 			Rooms.global.writeChatRoomData();
 			room.add(newLeader + " has been appointed as the " + type + " gym leader for this league by " + user + ".");
 		},
+		'': 'help',
 		help: function (target, room, user) {
 			if (!this.runBroadcast()) return;
 			this.sendReplyBox('The following is a list of gym roster commands: <br />' +
 				'/gym leaders/list - Shows a complete list of gym leaders in a league.<br />' +
 				'/gym add [type], [user] - Appoints a user as a gym leader for a type.<br />' +
 				'/gym delete/remove [type], [user] - Removes a user as a gym leader from a type.<br />' +
-				'/gym replace [type], [old user], [new user]- Replaces a gym leader of a type with a new gym leader.'
+				'/gym replace [type], [old user], [new user] - Replaces a gym leader of a type with a new gym leader.'
 			);
 		},
 	},
