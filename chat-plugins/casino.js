@@ -219,7 +219,7 @@ exports.commands = {
 	dicegamewinshelp: ["/dicewins [user] - Shows how many dice wins a user has."],
 
 	resetdicewins: function (target, room, user) {
-		if (!this.can('declare', null, room)) return false;
+		if (!this.can('declare', null, room) || room.id !== 'casino') return false;
 		let wins = Db('dicewins').object();
 		Object.keys(wins)
 		.filter(function (name) {
