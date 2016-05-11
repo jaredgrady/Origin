@@ -150,6 +150,7 @@ let emotes = {
 	'wtfman': 'http://i.imgur.com/kwR8Re9.png',
 	'WutFace': 'https://static-cdn.jtvnw.net/emoticons/v1/28087/2.0',
 	'xaa': 'http://i.imgur.com/V728AvL.png',
+	'Xaaentei': 'http://i.imgur.com/FgsNIPv.png',
 	'xoxo': 'http://orig00.deviantart.net/b49d/f/2014/220/5/3/ichigo_not_impressed_icon_by_magical_icon-d7u92zg.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png',
