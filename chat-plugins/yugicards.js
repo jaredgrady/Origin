@@ -543,9 +543,9 @@ exports.commands = {
 
 		// show trade details
 		let displayTrade = userTrades[target];
-		const acceptReject = '<center>' + (displayTrade.from === user.userid ? "" : '<button name="send" value="/tradeaction accept, ' + displayTrade.id + '" style=\"background-color:green;height:30px\"><b>Accept</b></button>') + // accept button
+		const acceptReject = '<center>' + (displayTrade.from === user.userid ? "" : '<button name="send" value="/tradeactionduel accept, ' + displayTrade.id + '" style=\"background-color:green;height:30px\"><b>Accept</b></button>') + // accept button
 			'&nbsp;&nbsp;' + // spacing
-			'<button name="send" value="/tradeaction ' + (displayTrade.from === user.userid ? "cancel" : "reject") + ', ' + displayTrade.id + '" style=\"background-color:red;height:30px\"><b>' + (displayTrade.from === user.userid ? "Cancel" : "Reject") + '</b></button></center>' + // reject button
+			'<button name="send" value="/tradeactionduel ' + (displayTrade.from === user.userid ? "cancel" : "reject") + ', ' + displayTrade.id + '" style=\"background-color:red;height:30px\"><b>' + (displayTrade.from === user.userid ? "Cancel" : "Reject") + '</b></button></center>' + // reject button
 			'<br /><br />'; // new line
 
 		// build the user's card first
@@ -619,7 +619,7 @@ exports.commands = {
 		user.popup(tradeScreen);
 	},
 
-	tradeaction: function (target, room, user) {
+	tradeactionduel: function (target, room, user) {
 		if (!target) return false; // due to the complexity of the command, this should only be used through the viewtrades screen
 		let parts = target.split(",").map(p => p.trim());
 		let action = toId(parts.shift());
@@ -634,7 +634,7 @@ exports.commands = {
 				// make the user confirm the decision
 				// build a back button
 				return user.popup("|html|" + backButton + // back button
-				'<center><button name="send" value="/tradeaction confirmaccept, ' + parts[0] + '" style="background-color:red;height:65px;width:150px"><b>Confirm Trade</b></button></center>');
+				'<center><button name="send" value="/tradeactionduel confirmaccept, ' + parts[0] + '" style="background-color:red;height:65px;width:150px"><b>Confirm Trade</b></button></center>');
 			}
 			// finalize trade
 			// get the trade
@@ -663,7 +663,7 @@ exports.commands = {
 				}
 			}
 
-			if (!match) return this.parse('/tradeaction forcecancel, ' + trade.id);
+			if (!match) return this.parse('/tradeactionduel forcecancel, ' + trade.id);
 
 			// check target
 			match = false;
@@ -674,7 +674,7 @@ exports.commands = {
 					break;
 				}
 			}
-			if (!match) return this.parse('/tradeaction forcecancel, ' + trade.id);
+			if (!match) return this.parse('/tradeactionduel forcecancel, ' + trade.id);
 
 			// now go ahead with the trade!
 			// for "from" first
