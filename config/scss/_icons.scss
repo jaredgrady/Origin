@@ -2,7 +2,7 @@
   background: rgba(255, 255, 255, 0.65) url($img) right no-repeat;
 }
 
-#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #theomegaleague-userlist-user-masterfloat, #thebotlab-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
+#tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
   @include icon("http://i.imgur.com/1YB5mAQ.png");
 }
 
