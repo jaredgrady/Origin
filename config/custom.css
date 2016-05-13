@@ -2522,6 +2522,9 @@
 #x-userlist-user-confluxx, #divinity-userlist-user-confluxx, #phoenixleague-userlist-user-confluxx, #theempire-userlist-user-confluxx {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/HkktAxJ.gif") right no-repeat; }
 
+#lobby-userlist-user-allianceaegis, #monotype-userlist-user-allianceaegis, #theempire-userlist-user-allianceaegis {
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/sXwwoPH.png?1") right no-repeat; }
+
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
