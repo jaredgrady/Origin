@@ -2,11 +2,11 @@
   background: rgba(255, 255, 255, 0.65) url($img) right no-repeat;
 }
 
-#tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
+#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaffroom-userlist-user-masterfloat {
   @include icon("http://i.imgur.com/T4kUexF.png");
 }
 
-#tournaments-userlist-user-masterfloat strong, #otakulair-userlist-user-masterfloat strong, #rocket-userlist-user-masterfloat strong, #staff-userlist-user-masterfloat strong, #upperstaff-userlist-user-masterfloat strong {
+#lobby-userlist-user-masterfloat strong, #tournaments-userlist-user-masterfloat strong, #otakulair-userlist-user-masterfloat strong, #rocket-userlist-user-masterfloat strong, #staff-userlist-user-masterfloat strong, #upperstaffroom-userlist-user-masterfloat strong {
   text-shadow: 1px 1px 1px #FFF, 0px 0px 2px #FFF;
 }
 
