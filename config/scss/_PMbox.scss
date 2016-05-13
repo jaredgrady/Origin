@@ -1036,9 +1036,9 @@
   
 /*impfallenblood~end*/
 
-/*alliancentg*/
+/*01ntg*/
 
-.pm-window-alliancentg h3 {
+.pm-window-01ntg h3 {
   background: rgba(213, 139, 49, 0.6) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFEEBD !important;
@@ -1046,7 +1046,7 @@
   border-color: #8A5E54 !important;
 }
 
-.pm-window-alliancentg h3:hover {
+.pm-window-01ntg h3:hover {
   background: rgba(213, 139, 49, 0.65) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFAE6 !important;
@@ -1054,7 +1054,7 @@
   border-color: #8A5E54 !important;    
 }
 
-.pm-window-alliancentg.focused h3, .pm-window-alliancentg.focused h3:hover {
+.pm-window-01ntg.focused h3, .pm-window-01ntg.focused h3:hover {
   background: rgba(213, 139, 49, 0.8) url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #FFFAE6 !important;
@@ -1062,47 +1062,47 @@
   border-color: #442720 !important;
 }
 
-.pm-window-alliancentg h3 small {
+.pm-window-01ntg h3 small {
   color: #59CDB3 !important;
 }
 
-.pm-window-alliancentg h3 .minimizebutton, .dark .pm-window-alliancentg h3 .minimizebutton, .pm-window-alliancentg h3 .closebutton, .pm-window-alliancentg h3:hover .minimizebutton {
+.pm-window-01ntg h3 .minimizebutton, .dark .pm-window-01ntg h3 .minimizebutton, .pm-window-01ntg h3 .closebutton, .pm-window-01ntg h3:hover .minimizebutton {
   color: #E2D29E !important;
 }
 
-.pm-window-alliancentg h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-alliancentg h3 .closebutton:hover + .minimizebutton.minimizebutton {
+.pm-window-01ntg h3 .closebutton:hover + .minimizebutton.minimizebutton, .dark .pm-window-01ntg h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #E2D29E !important;
 }
 
-.pm-window-alliancentg h3 .closebutton:hover {
+.pm-window-01ntg h3 .closebutton:hover {
   color: #FEF8CB !important;
 }
 
-.pm-window-alliancentg h3 .minimizebutton:hover, .dark .pm-window-alliancentg h3 .minimizebutton:hover {
+.pm-window-01ntg h3 .minimizebutton:hover, .dark .pm-window-01ntg h3 .minimizebutton:hover {
   color: #FEF8CB !important;
 }
 
-.pm-window-alliancentg .pm-log, .pm-window-alliancentg.focused .pm-log {
+.pm-window-01ntg .pm-log, .pm-window-01ntg.focused .pm-log {
   background: rgba(255, 255, 245, 0.92) url("http://i.imgur.com/9WLAbsz.png?1") right no-repeat !important;
   border-color: #BA877A !important;
 }
 
-.pm-window-alliancentg .pm-log .chat small {
+.pm-window-01ntg .pm-log .chat small {
   color: #8A5E54 !important;
 }
 
-.pm-window-alliancentg .pm-log-add, .pm-window-alliancentg.focused .pm-log-add {
+.pm-window-01ntg .pm-log-add, .pm-window-01ntg.focused .pm-log-add {
   background: #186A62 !important;
   border-color: #114D47 !important;
 }
 
-.pm-window-alliancentg .pm-log-add .textbox {
+.pm-window-01ntg .pm-log-add .textbox {
   border-color: #092926 !important;
   background: rgba(246, 246, 246, 0.95) !important;
   color: #000 !important;
 }
 
-.pm-window-alliancentg h3.pm-notifying {
+.pm-window-01ntg h3.pm-notifying {
    border-color: #114D47 !important;
   background: #186A62 url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
@@ -1111,7 +1111,7 @@
   font-style: italic !important;
 }
 
-.pm-window-alliancentg h3.pm-notifying:hover {
+.pm-window-01ntg h3.pm-notifying:hover {
   border-color: #114D47 !important;
   background: #125851 url("http://i.imgur.com/n5yzicS.png") no-repeat !important;
   background-position: 225px -4px !important;
@@ -1120,35 +1120,35 @@
   font-style: italic !important;
 }
 
-.pm-window-alliancentg .challenge {
+.pm-window-01ntg .challenge {
   background: #FFEEBD url("http://i.imgur.com/f4BEG7u.png?1") bottom left no-repeat !important;
   color: #442720 !important;
   border-color: #8A5E54 !important;
 }
 
-.pm-window-alliancentg .challenge .select, .pm-window-alliancentg .challenge .buttonbar button {
+.pm-window-01ntg .challenge .select, .pm-window-01ntg .challenge .buttonbar button {
   background: #8A5E54 !important;
   border-color: #442720 !important;
   color: #FFF3AE !important;
   text-shadow: 1px 1px 1px #442720 !important;
 }
 
-.pm-window-alliancentg .challenge .select:hover, .pm-window-alliancentg .challenge .buttonbar button:hover {
+.pm-window-01ntg .challenge .select:hover, .pm-window-01ntg .challenge .buttonbar button:hover {
   background: #64433B !important;
   border-color: #39201A !important;
 } 
 
-.pm-window-alliancentg .challenge .select:disabled {
+.pm-window-01ntg .challenge .select:disabled {
   background: rgba(100, 67, 59, 0.5) !important;
   border-color: #442720 !important;
 }
 
-.pm-window-alliancentg .challenge .teamselect:disabled strong {
+.pm-window-01ntg .challenge .teamselect:disabled strong {
   color: #39201A !important;
   text-shadow: none !important;
 }
   
-/*alliancentg~end*/
+/*01ntg~end*/
 
 /*swleric*/
 
