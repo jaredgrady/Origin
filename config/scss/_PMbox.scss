@@ -2414,3 +2414,105 @@
 }
 
 /* omega exo ~end */
+
+/*wndo*/
+
+.pm-window-wndo h3 {
+  background: rgba(153, 204, 255, 0.8) url("http://pokedream.com/pokedex/images/mini/007.gif") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #ff8000 !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #ff8000 !important;
+}
+
+.pm-window-wndo  h3:hover, .pm-window-wndo.focused h3, .pm-window-wndo.focused h3:hover {
+  background: rgba(255, 128, 0, 0.9) url("http://pokedream.com/pokedex/images/mini/007.gif") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #99ccff !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #99ccff !important;
+}
+
+.pm-window-wndo h3 small, .pm-window-wndo h3 .minimizebutton, .pm-window-wndo h3 .closebutton, .pm-window-wndo h3:hover .minimizebutton {
+  color: #ff3300 !important;
+}
+
+.pm-window-wndo h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #ff3300 !important;
+}
+
+.pm-window-wndo h3 .closebutton:hover {
+  color: #ff33cc !important;
+}
+
+.pm-window-wndo h3 .minimizebutton:hover {
+  color: #ff33cc !important;
+}
+
+.pm-window-wndo .pm-log, .pm-window-wndo.focused .pm-log {
+  background: rgba(255, 240, 236, 0.95) url("http://files.gamebanana.com/img/ico/sprays/darkmagiciangirllf6_copy.png") right no-repeat !important;
+  border-color: #00ff00 !important;
+}
+
+.pm-window-wndo .pm-log .chat small {
+  color: #ff9900 !important;
+}
+
+.pm-window-wndo .pm-log-add, .pm-window-wndo.focused .pm-log-add {
+  background: #ff6633 !important;
+  border-color: #00ff00 !important;
+}
+
+.pm-window-wndo .pm-log-add .textbox {
+  border-color: #00ff00 !important;
+  background: rgba(255, 102, 153, 0.9) !important;
+  color: #000 !important;
+}
+
+.pm-window-wndo h3.pm-notifying {
+  border-color: #00ff00 !important;
+  background: #000 url("http://pokedream.com/pokedex/images/mini/007.gif") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #53ff1a !important;
+  text-shadow: 0px 0px 2px #fff !important;
+  font-style: italic;
+}
+
+.pm-window-wndo h3.pm-notifying:hover {
+  border-color: #00ff00 !important;
+  background: #fff url("http://pokedream.com/pokedex/images/mini/007.gif") no-repeat !important;
+  background-position: 225px -4px !important;
+  color: #ff99cc !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  font-style: italic;
+}
+
+.pm-window-wndo .challenge {
+  background: url ("http://findicons.com/files/icons/2597/the_clean_desk/40/heart.png") !important;
+  color: #000 !important;
+  border-color: #00ff00 !important;
+}
+
+.pm-window-wndo .challenge .select, .pm-window-wndo .challenge .buttonbar button {
+  background: #ff6633 !important;
+  border-color: #00ff00 !important;
+  color: #000 !important;
+  text-shadow: 0px -1px 0px #BF5664 !important;
+}
+
+.pm-window-wndo .challenge .select:hover, .pm-window-wndo .challenge .buttonbar button:hover {
+  background: #ff99dd !important;
+  border-color: #00ff00 !important;
+} 
+
+.pm-window-wndo .challenge .select:disabled {
+  background: rgba(255, 51, 0, 0.6) !important;
+  border-color: #000 !important;
+}
+
+.pm-window-wndo .challenge .teamselect:disabled strong {
+  color: #ff99dd !important;
+  text-shadow: none !important;
+}
+
+/*wndo*/
