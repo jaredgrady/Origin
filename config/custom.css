@@ -2337,7 +2337,10 @@
 
 /* omega exo ~end */
 #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
-  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/1YB5mAQ.png") right no-repeat; }
+  background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/T4kUexF.png") right no-repeat; }
+
+#tournaments-userlist-user-masterfloat strong, #otakulair-userlist-user-masterfloat strong, #rocket-userlist-user-masterfloat strong, #staff-userlist-user-masterfloat strong, #upperstaff-userlist-user-masterfloat strong {
+  text-shadow: 1px 1px 1px #FFF, 0px 0px 2px #FFF; }
 
 #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
   background: rgba(255, 255, 255, 0.65) url("http://cdn.bulbagarden.net/upload/e/e3/Cynthia_IV_OD.png") right no-repeat; }
