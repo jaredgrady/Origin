@@ -685,57 +685,57 @@
   border-color: #759665 !important; }
 
 /*katheyisme123~end*/
-/*sariisaur*/
-.pm-window-sariisaur h3 {
+/*sarii*/
+.pm-window-sarii h3 {
   background: rgba(162, 59, 69, 0.8) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
   background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
   border-color: #983841 !important; }
 
-.pm-window-sariisaur h3:hover {
+.pm-window-sarii h3:hover {
   background: rgba(162, 59, 69, 0.85) url("http://www.serebii.net/pokedex-xy/icon/001.png") no-repeat !important;
   background-position: 225px -3px !important;
   color: #FDE0E2 !important;
   text-shadow: 0px 0px 2px #842730 !important;
   border-color: #983841 !important; }
 
-.pm-window-sariisaur.focused h3, .pm-window-sariisaur.focused h3:hover {
+.pm-window-sarii.focused h3, .pm-window-sarii.focused h3:hover {
   background: rgba(162, 59, 69, 0.9) url("http://i.imgur.com/6Ybg61Q.png") no-repeat !important;
   background-position: 225px -4px !important;
   color: #D2F6C5 !important;
   text-shadow: 0px 0px 2px #983841 !important;
   border-color: #983841 !important; }
 
-.pm-window-sariisaur h3 small, .pm-window-sariisaur h3 .minimizebutton, .pm-window-sariisaur h3 .closebutton, .pm-window-sariisaur h3:hover .minimizebutton {
+.pm-window-sarii h3 small, .pm-window-sarii h3 .minimizebutton, .pm-window-sarii h3 .closebutton, .pm-window-sarii h3:hover .minimizebutton {
   color: #FAACB2 !important; }
 
-.pm-window-sariisaur h3 .closebutton:hover + .minimizebutton.minimizebutton {
+.pm-window-sarii h3 .closebutton:hover + .minimizebutton.minimizebutton {
   color: #FAACB2 !important; }
 
-.pm-window-sariisaur h3 .closebutton:hover {
+.pm-window-sarii h3 .closebutton:hover {
   color: #D2F6C5 !important; }
 
-.pm-window-sariisaur h3 .minimizebutton:hover {
+.pm-window-sarii h3 .minimizebutton:hover {
   color: #D2F6C5 !important; }
 
-.pm-window-sariisaur .pm-log, .pm-window-sariisaur.focused .pm-log {
+.pm-window-sarii .pm-log, .pm-window-sarii.focused .pm-log {
   background: rgba(243, 255, 239, 0.92) url("http://i.imgur.com/ZjO43fl.png?1") right no-repeat !important;
   border-color: #949494 !important; }
 
-.pm-window-sariisaur .pm-log .chat small {
+.pm-window-sarii .pm-log .chat small {
   color: #5A5A5A !important; }
 
-.pm-window-sariisaur .pm-log-add, .pm-window-sariisaur.focused .pm-log-add {
+.pm-window-sarii .pm-log-add, .pm-window-sarii.focused .pm-log-add {
   background: #75CFB4 !important;
   border-color: #206F5F !important; }
 
-.pm-window-sariisaur .pm-log-add .textbox {
+.pm-window-sarii .pm-log-add .textbox {
   border-color: #206F5F !important;
   background: rgba(243, 255, 239, 0.92) !important;
   color: #000 !important; }
 
-.pm-window-sariisaur h3.pm-notifying {
+.pm-window-sarii h3.pm-notifying {
   border-color: #AB3E48 !important;
   background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
   background-position: 225px -7px !important;
@@ -743,7 +743,7 @@
   font-style: italic !important;
   text-shadow: none !important; }
 
-.pm-window-sariisaur h3.pm-notifying:hover {
+.pm-window-sarii h3.pm-notifying:hover {
   border-color: #AB3E48 !important;
   background: #4CA88F url("http://orig14.deviantart.net/bb20/f/2015/254/8/6/mega_venusaur_icon_by_commander_f-d995w5o.gif") no-repeat !important;
   background-position: 225px -8px !important;
@@ -751,26 +751,26 @@
   font-style: italic !important;
   text-shadow: none !important; }
 
-.pm-window-sariisaur .challenge {
+.pm-window-sarii .challenge {
   background: #FFB5BA !important;
   color: #A23B45 !important;
   border-color: #A23B45 !important; }
 
-.pm-window-sariisaur .challenge .select, .pm-window-sariisaur .challenge .buttonbar button {
+.pm-window-sarii .challenge .select, .pm-window-sarii .challenge .buttonbar button {
   background: #B0F597 !important;
   border-color: #396A39 !important;
   color: #396A39 !important;
   text-shadow: none !important; }
 
-.pm-window-sariisaur .challenge .select:hover, .pm-window-sariisaur .challenge .buttonbar button:hover {
+.pm-window-sarii .challenge .select:hover, .pm-window-sarii .challenge .buttonbar button:hover {
   background: #D2F6C5 !important;
   border-color: #396A39 !important; }
 
-.pm-window-sariisaur .challenge .select:disabled {
+.pm-window-sarii .challenge .select:disabled {
   background: rgba(176, 245, 151, 0.5) !important;
   border-color: #396A39 !important; }
 
-/*sariisaur~end*/
+/*sarii~end*/
 /*pndas*/
 .pm-window-pndas h3 {
   background: rgba(74, 74, 74, 0.8) url("http://i.imgur.com/78hqXIv.png") no-repeat !important;
@@ -2336,10 +2336,10 @@
   color: #2B4A68 !important; }
 
 /* omega exo ~end */
-#tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaff-userlist-user-masterfloat {
+#lobby-userlist-user-masterfloat, #tournaments-userlist-user-masterfloat, #otakulair-userlist-user-masterfloat, #rocket-userlist-user-masterfloat, #staff-userlist-user-masterfloat, #upperstaffroom-userlist-user-masterfloat {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/T4kUexF.png") right no-repeat; }
 
-#tournaments-userlist-user-masterfloat strong, #otakulair-userlist-user-masterfloat strong, #rocket-userlist-user-masterfloat strong, #staff-userlist-user-masterfloat strong, #upperstaff-userlist-user-masterfloat strong {
+#lobby-userlist-user-masterfloat strong, #tournaments-userlist-user-masterfloat strong, #otakulair-userlist-user-masterfloat strong, #rocket-userlist-user-masterfloat strong, #staff-userlist-user-masterfloat strong, #upperstaffroom-userlist-user-masterfloat strong {
   text-shadow: 1px 1px 1px #FFF, 0px 0px 2px #FFF; }
 
 #lobby-userlist-user-fender, #development-userlist-user-fender, #casino-userlist-user-fender, #staff-userlist-user-fender {
@@ -2432,7 +2432,7 @@
 #lobby-userlist-user-phoenixtana, #phoenixleague-userlist-user-phoenixtana, #monotype-userlist-user-phoenixtana {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/qKMupjd.png?1") right no-repeat; }
 
-#hingostraphouse-userlist-user-sariisaur, #phoenixleague-userlist-user-sariisaur, #theallegiantleague-userlist-user-sariisaur {
+#lobby-userlist-user-sarii, #thearbiterleague-userlist-user-sarii, #theempire-userlist-user-sarii {
   background: rgba(255, 255, 255, 0.65) url("http://i.imgur.com/6Ybg61Q.png") right no-repeat; }
 
 #lobby-userlist-user-chleg, #premierdraftdivision-userlist-user-chleg, #casino-userlist-user-chleg, #monotype-userlist-user-chleg {
