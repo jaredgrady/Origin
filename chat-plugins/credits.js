@@ -17,18 +17,18 @@ let creditShop = [
     ['Green Ticket', 'Can be exchanged for a recolored avatar, 30 bucks and 2 PSGO packs', 100],
     ['Black Ticket', 'Can be exchanged for 100 bucks', 175],
     ['Silver Ticket', 'Can be exchanged for 1 PSGO pack and 20 bucks', 55],
-    ['Crystal Ticket', 'Can be exchanged for 2 cards from the Marketpace ATM showcase', 100],
+    ['Crystal Ticket', 'Can be exchanged for 2 cards from the <button name="send" value="/showcase marketplaceatm">Marketplace ATM showcase</button>', 100],
     ['Gold Ticket', 'Can be exchanged for 2 PSGO packs and 50 bucks', 120],
     ['Ruby Ticket', 'Can be exchanged for 5 PSGO packs, 50 bucks and an avatar recolor', 200],
     ['Sapphire Ticket', 'Can be exchanged for 7 PSGO packs and 100 bucks', 280],
-    ['Emerald Ticket', 'Can be exchanged for 5 PSGO packs, 100 bucks and Marketplace Partner (Can be taken away if neccesary)', 325],
+    ['Emerald Ticket', 'Can be exchanged for 5 PSGO packs, 100 bucks and Marketplace Partner (Can be taken away if necessary)', 325],
     ['Rainbow Ticket', 'Can be exchanged for 10 PSGO packs and 200 bucks', 515],
 ];
 
 let creditShopDisplay = getShopDisplay(creditShop);
 
 function getShopDisplay(creditShop) {
-	let display = '<center><b><font color="red" size="4">Read the description of the ticket you want to buy if you haven\'t already.<br>When you buy your ticekt, PM a & or # to claim your reward.</font></b></center></center><div style="box-shadow: 4px 4px 4px #000 inset, -4px -4px 4px #000 inset, 5px 3px 8px rgba(0, 0, 0, 0.6); max-height: 310px; overflow-y: scroll;"><table style="width: 100%; border-collapse: collapse;"><table style="width: 100%; border-collapse: collapse;"><tr><th colspan="3" class="table-header" style="background: -moz-linear-gradient(right, #09263A, #03121C); background: -webkit-linear-gradient(left, #09263A, #03121C); background: -o-linear-gradient(right, #09263A, #03121C); background: linear-gradient(right, #09263A, #03121C); padding: 8px 20px 16px 8px; box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset; text-shadow: 1px 1px #0A2D43, 2px 2px #0A2D43, 3px 3px #0A2D43, 4px 4px #0A2D43, 5px 5px #0A2D43, 6px 6px #0A2D43, 7px 7px #0A2D43, 8px 8px #0A2D43, 9px 9px #0A2D43, 10px 10px #0A2D43;"><h2>Marketplace Credit Shop</h2></th></tr>' +
+	let display = '<center><b><font color="red" size="4">Read the description of the ticket you want to buy if you haven\'t already.<br>When you buy your ticket, PM a & or # to claim your reward.</font></b></center></center><div style="box-shadow: 4px 4px 4px #000 inset, -4px -4px 4px #000 inset, 5px 3px 8px rgba(0, 0, 0, 0.6); max-height: 310px; overflow-y: scroll;"><table style="width: 100%; border-collapse: collapse;"><table style="width: 100%; border-collapse: collapse;"><tr><th colspan="3" class="table-header" style="background: -moz-linear-gradient(right, #09263A, #03121C); background: -webkit-linear-gradient(left, #09263A, #03121C); background: -o-linear-gradient(right, #09263A, #03121C); background: linear-gradient(right, #09263A, #03121C); padding: 8px 20px 16px 8px; box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset; text-shadow: 1px 1px #0A2D43, 2px 2px #0A2D43, 3px 3px #0A2D43, 4px 4px #0A2D43, 5px 5px #0A2D43, 6px 6px #0A2D43, 7px 7px #0A2D43, 8px 8px #0A2D43, 9px 9px #0A2D43, 10px 10px #0A2D43;"><h2>Marketplace Credit Shop</h2></th></tr>' +
 		'<tr><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Item</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Description</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Cost</th></tr>';
 	let start = 0;
 	while (start < creditShop.length) {
@@ -62,16 +62,16 @@ function logCredits(message) {
 	fs.appendFile(file, date + msg);
 }
 
-function findItem(item, money) {
+function findItem(item, credits) {
 	let len = creditShop.length;
 	let price = 0;
 	let amount = 0;
 	while (len--) {
 		if (item.toLowerCase() !== creditShop[len][0].toLowerCase()) continue;
 		price = creditShop[len][2];
-		if (price > money) {
-			amount = price - money;
-			this.sendReply("You don't have you enough money for this. You need " + amount + currencyName(amount) + " more to buy " + item + ".");
+		if (price > credits) {
+			amount = price - credits;
+			this.sendReply("You don't have you enough credits for this. You need " + amount + currencyName(amount) + " more to buy " + item + ".");
 			return false;
 		}
 		return price;
@@ -230,7 +230,8 @@ exports.commands = {
 	},
 	creditladderhelp: ["/creditladder - Displays users ranked by the amount of Origin credits they possess."],
 
-	credits: function (target, room, user) {
+	credits: 'creditsstats',
+	creditsstats: function (target, room, user) {
 		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Credit stats can only be viewed in the Marketplace.");
 		if (!this.runBroadcast()) return;
 		const users = Object.keys(Db('credits').object());
@@ -259,7 +260,6 @@ exports.commands = {
 	},
 	cleancreditshelp: ["/cleancredits - Cleans credit database by removing users with less than one credit."],
 
-/***********************************/
 	credit: 'creditshop',
 	creditshop: function (target, room, user) {
 		if (room.id !== 'marketplace' && room.id !== 'marketplacestaff') return this.errorReply("Creditshop can only be viewed in the Marketplace.");
