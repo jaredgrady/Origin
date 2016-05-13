@@ -129,6 +129,7 @@ let emotes = {
 	'Kreygasm': 'https://static-cdn.jtvnw.net/emoticons/v1/41/1.0',
 	'lelefp': 'http://i.imgur.com/pWlEKa3.jpg',
 	'lelelol': 'http://i.imgur.com/R2g0RHT.gif',
+	'lelewhat': 'http://i.imgur.com/capG93y.png',
 	'Lennyf': 'http://i.imgur.com/FhOwY2P.png',
 	'llamacool': 'http://i.imgur.com/X1x3728.gif',
 	'llamanoodle': 'http://i.imgur.com/SUZkz5p.gif',
