@@ -2101,23 +2101,24 @@ exports.Formats = [
 		],
 	},
 	{
-        name: "[Gen 5] CAP",
-        section: "Other Metagames",
+        	name: "[Gen 5] CAP",
+		section: "Other Metagames",
 
-        mod: 'gen5',
-        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-        banlist: ['Uber', 'Excadrill', 'Drizzle ++ Swift Swim', 'Soul Dew', 'Allow CAP', 'Cawmodore', 'Volkraken', 'Plasmanta', 'Naviathan', 'Swagger']
+        	mod: 'gen5',
+        	ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+        	banlist: ['Uber', 'Excadrill', 'Drizzle ++ Swift Swim', 'Soul Dew', 'Allow CAP', 'Cawmodore', 'Volkraken', 'Plasmanta', 'Naviathan', 'Swagger'],
 	},
 	{
-        name: "CAP Monotype",
-        section: "Other Metagames",
+        	name: "CAP Monotype",
+        	section: "Other Metagames",
 
-        ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
-        banlist: ['Allow CAP', 'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon',
-            'Ho-Oh', 'Hoopa-Unbound', 'Kyogre', 'Kyurem-White', 'Landorus', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
-            'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
-        ],
-    	},
+        	ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
+        	banlist: ['Allow CAP', 'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon',
+        		'Ho-Oh', 'Hoopa-Unbound', 'Kyogre', 'Kyurem-White', 'Landorus', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
+        		'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
+        	],
+		
+	},
 	{
 		name: "Battle Factory",
 		section: "Other Metagames",
