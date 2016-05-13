@@ -91,6 +91,7 @@ let emotes = {
 	'feelspuke': 'http://i.imgur.com/nQbRspU.png?1',
 	'feelsrb': 'http://i.imgur.com/L6ak1Uk.png',
 	'feelsreally': 'https://cdn.betterttv.net/emote/55b0fa13f54d6ecb7927ec54/2x',
+	'feelsrekt': 'http://i.imgur.com/aNJyMr7.gif',
 	'feelsrg': 'http://i.imgur.com/DsRQCsI.png',
 	'feelsrs': 'http://i.imgur.com/qGEot0R.png',
 	'feelssad': 'https://cdn.betterttv.net/emote/5613b7ca141069f91f48acca/2x',
