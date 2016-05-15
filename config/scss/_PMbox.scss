@@ -2515,3 +2515,77 @@
 }
 
 /*wndo ~end*/
+
+/*vanitas*/
+
+.pm-window-vanitas h3 {
+  background: rgba(92, 92, 214, 0.8) url("http://pokedream.com/pokedex/images/mini/461.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #fff !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #8600b3 !important;
+}
+
+.pm-window-vanitas h3:hover, .pm-window-vanitas.focused h3, .pm-window-vanitas.focused h3:hover {
+  background: rgba(92, 92, 214, 0.8) url("http://pokedream.com/pokedex/images/mini/461.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #fff !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  border-color: #8600b3 !important;
+}
+
+.pm-window-vanitas h3 small, .pm-window-vanitas h3 .minimizebutton, .pm-window-vanitas h3 .closebutton, .pm-window-vanitas h3:hover .minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-vanitas h3 .closebutton:hover + .minimizebutton.minimizebutton {
+  color: #FFF !important;
+}
+
+.pm-window-vanitas h3 .closebutton:hover {
+  color: #000 !important;
+}
+
+.pm-window-vanitas h3 .minimizebutton:hover {
+  color: #000 !important;
+}
+
+.pm-window-vanitas .pm-log, .pm-window-vanitas.focused .pm-log {
+  background: rgba(230, 153, 255, 0.95) url("http://i.imgur.com/Jn0QJDv.png") right no-repeat !important;
+  border-color: #8600B3 !important;
+}
+
+.pm-window-vanitas .pm-log .chat small {
+  color: #5c5cd6 !important;
+}
+
+.pm-window-vanitas .pm-log-add, .pm-window-vanitas.focused .pm-log-add {
+  background: #5c5cd6 !important;
+  border-color: #8600B3 !important;
+}
+
+.pm-window-vanitas .pm-log-add .textbox {
+  border-color: #8600B3 !important;
+  background: rgba(230, 153, 255, 0.95) !important;
+  color: #000 !important;
+}
+
+.pm-window-vanitas h3.pm-notifying {
+  border-color: #000 !important;
+  background: #fff url("http://pokedream.com/pokedex/images/mini/461.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #000 !important;
+  text-shadow: 0px 0px 2px #FFF !important;
+  font-style: italic !important;
+}
+
+.pm-window-vanitas h3.pm-notifying:hover {
+  border-color: #fff !important;
+  background: #000 url("http://pokedream.com/pokedex/images/mini/461.gif") no-repeat !important;
+  background-position: 225px -8px !important;
+  color: #fff !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  font-style: italic !important;
+}
+
+/*vanitas ~end*/
