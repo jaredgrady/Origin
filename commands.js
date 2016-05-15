@@ -2196,7 +2196,7 @@ let commands = exports.commands = {
 	hotpatch: function (target, room, user) {
 		if (!target) return this.parse('/help hotpatch');
 		if (!~developers.indexOf(user.userid)) return this.errorReply("/hotpatch - Access denied.");
-		this.logEntry(user.name + " used /hotpatch " + target);	
+		this.logEntry(user.name + " used /hotpatch " + target);
 		if (Monitor.hotpatchLock) return this.errorReply("Hotpatch is currently been disabled. (" + Monitor.hotpatchLock + ")");
 
 		let staff = Rooms('staff');
