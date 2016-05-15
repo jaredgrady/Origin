@@ -175,6 +175,9 @@ if (Config.crashguard) {
 		}
 		Rooms.global.lockdown = true;
 	});
+	process.on('unhandledRejection', function (err) {
+		throw err;
+	});
 }
 
 /*********************************************************

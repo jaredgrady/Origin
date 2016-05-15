@@ -6,11 +6,27 @@
 
 'use strict';
 
-// checks whether any alt of the user is present in list.
-function checkAllAlts(user, list) {
-	for (let prevName in user.prevNames) {
-		if (prevName === user.userid) continue;
-		if (prevName in list) return 'previous name ' + prevName;
+let banned = Object.create(null);
+
+class Giveaway {
+	constructor(host, giver, room, prize) {
+		if (room.gaNumber) {
+			room.gaNumber++;
+		} else {
+			room.gaNumber = 1;
+		}
+		this.host = host;
+		this.giver = giver;
+		this.room = room;
+		this.prize = prize;
+		this.phase = 'pending';
+
+		this.excluded = {};
+		this.excluded[host.latestIp] = host.userid;
+		this.excluded[giver.latestIp] = giver.userid;
+		Object.assign(this.excluded, banned);
+
+		this.joined = {};
 	}
 	let ip = user.latestIp;
 	for (let id in list) {
@@ -19,16 +35,38 @@ function checkAllAlts(user, list) {
 	}
 	return false;
 }
+	checkJoined(user) {
+		for (let ip in this.joined) {
+			if (user.latestIp === ip) return ip;
+			if (this.joined[ip] in user.prevNames) return this.joined[ip];
+		}
+		return false;
+	}
 
-let giveaways = {};
-let wifiRoom = Rooms.get('marketplace');
+	banUser(user) {
+		for (let ip in this.joined) {
+			if (user.latestIp === ip || this.joined[ip] in user.prevNames) {
+				this.excluded[ip] = this.joined[ip];
+				if (this.generateReminder) user.sendTo(this.room, '|uhtmlchange|giveaway' + this.room.gaNumber + this.phase + '|<div class="broadcast-blue">' + this.generateReminder() + '</div>');
+				delete this.joined[ip];
+			}
+		}
+	}
 
-// import giveaways if stored in room
-if (wifiRoom) {
-	if (wifiRoom.giveaways) {
-		giveaways = wifiRoom.giveaways;
-	} else {
-		wifiRoom.giveaways = giveaways;
+	unbanUser(user) {
+		for (let ip in this.excluded) {
+			if (user.latestIp === ip || this.joined[ip] in user.prevNames) {
+				delete this.excluded[ip];
+			}
+		}
+	}
+
+	checkExcluded(user) {
+		for (let ip in this.excluded) {
+			if (user.latestIp === ip) return true;
+			if (this.excluded[ip] in user.prevNames) return true;
+		}
+		return false;
 	}
 }
 
@@ -69,9 +107,12 @@ let QuestionGiveAway = (() => {
 		if (!this.answered[userid]) this.answered[userid] = 0;
 		if (this.answered[userid] >= 3) return output.sendReply("You have already guessed three times. You cannot guess anymore in this giveaway.");
 
-		if (toId(guess) in this.answers) {
-			this.winner = user;
-			return this.onEnd();
+		for (let i = 0; i < this.answers.length; i++) {
+			if (toId(this.answers[i]) === toId(guess)) {
+				this.winner = user;
+				this.clearTimer();
+				return this.end();
+			}
 		}
 
 		this.answered[userid]++;
@@ -116,12 +157,10 @@ let QuestionGiveAway = (() => {
 			if (!this.winner) {
 				this.room.addRaw("<b>The giveaway has been forcibly ended as no one has answered the question.</b>");
 			} else {
-				let ans = [];
-				for (let i in this.answers) {
-					ans.push(this.answers[i]);
-				}
-				this.room.addRaw("<div class='broadcast-blue'><b>" + Tools.escapeHTML(this.winner.name) + "</b> won " + Tools.escapeHTML(this.giver.name) + "'s giveaway. Congratulations!<br/>" +
-					"Correct answer(s): " + ans.join(', '));
+				this.phase = 'ended';
+				this.clearTimer();
+				this.send('<p style="text-align:center;font-size:14pt;font-weight:bold;"><b>' + Tools.escapeHTML(this.winner.name) + '</b> won ' + Tools.escapeHTML(this.giver.name) + '\'s giveaway for a <b>' + Tools.escapeHTML(this.prize) + '</b>! Congratulations!</p>' +
+				'<p style="text-align:center;">Correct answer(s): ' + this.answers.join(', ') + '</p>');
 				if (this.winner.connected) this.winner.popup('You have won the giveaway. PM **' + Tools.escapeHTML(this.giver.name) + '** to claim your prize!');
 			}
 		}
@@ -213,22 +252,12 @@ let LotteryGiveAway = (() => {
 			this.room.addRaw("<b>The giveaway was forcibly ended as not enough users participated.</b>").update();
 		} else {
 			this.phase = 'ended';
-			let finallist = [];
-			for (let id in this.winners) {
-				finallist.push(this.winners[id].name);
+			this.send('<p style="text-align:center;font-size:12pt;font-weight:bold;">Lottery Draw</p><p style="text-align:center;">' + Object.keys(this.joined).length + " users joined " + Tools.escapeHTML(this.giver.name) + "'s giveaway for: <b>" + Tools.escapeHTML(this.prize) + "</b><br/>" +
+				"Our lucky winner" + (this.winners.length > 1 ? "s" : "") + ": <b>" + Tools.escapeHTML(this.winners.reduce((prev, cur, index, array) => prev + cur.name + (index === array.length - 1 ? "" : ', '), '')) + "!</b> Congratulations!</p>");
+			for (let i = 0; i < this.winners.length; i++) {
+				if (this.winners[i].connected) this.winners[i].popup("You have won the lottery giveaway! PM **" + this.giver.name + "** to claim your prize!");
 			}
-			let multiWin = finallist.length > 1;
-			finallist = finallist.join(', ');
-			this.room.addRaw(
-				"<div class='broadcast-blue'><font size='2'><b>Lottery Draw: </b></font>" + this.totalusers + " joined " + Tools.escapeHTML(this.giver.name) + "'s giveaway.<br/>" +
-				"Our lucky winner" + (multiWin ? "s" : "") + ": <b>" + Tools.escapeHTML(finallist) + "!</b> Congratulations!"
-			).update();
-
-			for (let id in this.winners) {
-				let targetUser = this.winners[id];
-				if (targetUser.connected) targetUser.popup("You have won the lottery giveaway! PM **" + this.giver.name + "** to claim your prize!");
-			}
-			if (this.giver.connected) this.giver.popup("The following users have won your lottery giveaway:\n" + finallist);
+			if (this.giver.connected) this.giver.popup("The following users have won your lottery giveaway:\n" + Tools.escapeHTML(this.winners.reduce((prev, cur, index, array) => prev + cur.name + (index === array.length - 1 ? "" : ', '), '')));
 		}
 		delete giveaways[this.room.id];
 	};
@@ -349,13 +378,52 @@ let commands = {
 		}
 	},
 	// general.
+	ban: function (target, room, user) {
+		if (!target) return false;
+		if (room.id !== 'wifi') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (!this.can('warn', null, room)) return false;
+
+		target = this.splitTarget(target);
+		let targetUser = this.targetUser;
+		if (!targetUser) return this.errorReply("User '" + this.targetUsername + "' not found.");
+		if (target.length > 300) {
+			return this.errorReply("The reason is too long. It cannot exceed 300 characters.");
+		}
+		if (targetUser.latestIp in banned || Object.values(banned).indexOf(toId(targetUser)) > -1) return this.errorReply("User '" + this.targetUsername + "' is already banned from entering giveaways.");
+		banned[targetUser.latestIp] = toId(targetUser);
+		if (room.giveaway) room.giveaway.banUser(targetUser);
+		this.addModCommand("" + targetUser.name + " was banned from entering giveaways by " + user.name + "." + (target ? " (" + target + ")" : ""));
+	},
+	unban: function (target, room, user) {
+		if (!target) return false;
+		if (room.id !== 'wifi') return this.errorReply("This command can only be used in the Wi-Fi room.");
+		if (!this.can('warn', null, room)) return false;
+
+		this.splitTarget(target);
+		let targetUser = this.targetUser;
+		if (!targetUser) return this.errorReply("User '" + this.targetUsername + "' not found.");
+		if (!(targetUser.latestIp in banned)) {
+			if (Object.values(banned).indexOf(toId(targetUser)) < 0) return this.errorReply("User '" + this.targetUsername + "' isn't banned from entering giveaways.");
+
+			for (let ip in banned) {
+				if (banned[ip] === toId(targetUser)) delete banned[ip];
+			}
+		}
+		delete banned[targetUser.latestIp];
+		if (room.giveaway) room.giveaway.unbanUser(targetUser);
+		this.addModCommand("" + targetUser.name + " was unbanned from entering giveaways by " + user.name + ".");
+	},
 	stop: 'end',
 	end: function (target, room, user) {
 		if (room.id !== 'marketplace') return this.errorReply("This command can only be used in the Marketplace room.");
 		if (!giveaways[room.id]) return this.errorReply("There is no giveaway going on at the moment.");
 		if (!this.can('warn', null, room) && user.userid !== giveaways[room.id].host.userid) return false;
 
-		giveaways[room.id].onEnd(true);
+		if (target && target.length > 300) {
+			return this.errorReply("The reason is too long. It cannot exceed 300 characters.");
+		}
+		room.giveaway.end(true);
+		this.privateModCommand("(The giveaway was forcibly ended by " + user.name + (target ? ": " + target : "") + ")");
 	},
 	rm: 'remind',
 	remind: function (target, room, user) {
@@ -381,11 +449,12 @@ let commands = {
 		case 'staff':
 			if (!this.can('warn', null, room)) return;
 			reply = '<strong>Staff commands:</strong><br />' +
-			        '- question or qg <em>User, Prize, Question, Answer</em> - Start a new question giveaway (Requires: % @ # & ~)<br />' +
-			        '- lottery or lg <em>User, Prize[, Number of Winners]</em> - Starts a lottery giveaway (Requires: % @ # & ~)<br />' +
+			        '- question or qg <em>User | Prize | Question | Answer[,Answer2,Answer3]</em> - Start a new question giveaway (voices can only host for themselves, staff can for all users) (Requires: + % @ # & ~)<br />' +
+			        '- lottery or lg <em>User | Prize[| Number of Winners]</em> - Starts a lottery giveaway (voices can only host for themselves, staff can for all users) (Requires: + % @ # & ~)<br />' +
 			        '- changequestion - Changes the question of a question giveaway (Requires: giveaway host)<br />' +
 			        '- changeanswer - Changes the answer of a question giveaway (Requires: giveaway host)<br />' +
 					'- viewanswer - Shows the answer in a question giveaway (only to giveaway host/giver)<br />' +
+					'- ban - Temporarily bans a user from entering giveaways (Requires: % @ # & ~)<br />' +
 			        '- end - Forcibly ends the current giveaway (Requires: % @ # & ~)<br />';
 			break;
 		case 'game':
