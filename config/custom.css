@@ -2671,6 +2671,9 @@
 #lobby-userlist-user-vanitas, #smogontiers-userlist-user-vanitas, #yugioh-userlist-user-vanitas {
   background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/461.png") right no-repeat; }
 
+#lobby-userlist-user-quizzyy, #ossb-userlist-user-quizzyy, #marketplace-userlist-user-quizzyy {
+  background: rgba(255, 255, 255, 0.65) url("http://www.serebii.net/pokedex-xy/icon/248.png") right no-repeat; }
+
 .folder .selectFolder, .folderpane h3 {
   background: #BBCCC9; }
 
