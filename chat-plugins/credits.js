@@ -21,7 +21,7 @@ let creditShop = [
     ['Gold Ticket', 'Can be exchanged for 2 PSGO packs and 50 bucks', 120],
     ['Ruby Ticket', 'Can be exchanged for 5 PSGO packs, 50 bucks and an avatar recolor', 200],
     ['Sapphire Ticket', 'Can be exchanged for 7 PSGO packs and 100 bucks', 280],
-    ['Emerald Ticket', 'Can be exchanged for 5 PSGO packs, 100 bucks and Marketplace Partner (Can be taken away if necessary)', 325],
+    ['Emerald Ticket', 'Can be exchanged for 5 PSGO packs, 100 bucks and Marketplace Partner (Can be taken away if necessary)', 400],
     ['Rainbow Ticket', 'Can be exchanged for 10 PSGO packs and 200 bucks', 515],
 ];
 
