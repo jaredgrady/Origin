@@ -86,6 +86,7 @@ let emotes = {
 	'feelspika': 'http://i.imgur.com/mBq3BAW.png',
 	'feelspink': 'http://i.imgur.com/jqfB8Di.png',
 	'feelspix': 'http://cbc.pokecommunity.com/config/emoticons/pix.png',
+	'feelsspl': 'http://i.imgur.com/RIOKSJ3.gif',
 	'feelspn': 'http://i.imgur.com/wSSM6Zk.png',
 	'feelspoli': 'http://i.imgur.com/FnzhrWa.jpg?1',
 	'feelsPoli': 'http://i.imgur.com/sbKhXZE.jpg?1',
