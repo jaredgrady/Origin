@@ -192,13 +192,13 @@ exports.Formats = [
 			 'Damp Rock', 'Gengarite', 'Mawilite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 	},
-	{
+/*	{
 		name: "Monotype Random Battle",
 		section: "Monotype Tier",
 
 		team: 'randomMonotype',
 		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},
+	}, */
 	{
 		name: "Monotype Turbo",
 		desc: [
@@ -2133,7 +2133,7 @@ exports.Formats = [
 		},
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 	},
-	{
+/*	{
 		name: "LC Random Battle",
 		section: "Other Metagames",
 
@@ -2141,7 +2141,7 @@ exports.Formats = [
 		team: 'randomLC',
 		maxForcedLevel: 5,
 		ruleset: ['PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},
+	}, */
 	{
 		name: "Origin Super Staff Bros.",
 		section: "Other Metagames",
@@ -2764,7 +2764,7 @@ exports.Formats = [
 			// if (move.id === '' && name === '') {}
 		},
 	},
-	{
+/*	{
 		name: "Origin Super Staff Bros Doubles.",
 		section: "Other Metagames",
 		gameType: 'doubles',
@@ -2961,7 +2961,7 @@ exports.Formats = [
 			} */
 
 			// Mods
-			if (name === 'alphaninja') {
+	/*		if (name === 'alphaninja') {
 				this.add('c|@Alpha Ninja|sup nigga');
 			}
 			if (name === 'aurastormlucario') {
@@ -3048,20 +3048,13 @@ exports.Formats = [
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|Welcome to Origin Super Smash Bros, may I show you the door?');
 			}
-			/* no quote
-			if (name === 'nineage') {
-				this.add('c|nineage|');
-			}*/
+
 			if (name === 'omegachim') {
 				this.add('c|Omega Chimе|Listen to the sound of the wind, it\'s calling you. Warning you.');
 			}
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|Rabinov, reporting for duty!');
 			}
-			/* no quote
-			if (name === 'originserver') {
-				this.add('c|originserver|');
-			} */
 		},
 
 		// Add here salty tears, that is, custom faint phrases.
@@ -3096,10 +3089,6 @@ exports.Formats = [
 			if (name === 'mightysciz') {
 				this.add('c|&Mighty Sciz|I failed my part as a Dragon Slayer...');
 			}
-			/* no quote
-			if (name === 'skymightfall') {
-				this.add('c|&Sky Might Fall|');
-			} */
 
 			// Mods
 			if (name === 'alphaninja') {
@@ -3190,20 +3179,13 @@ exports.Formats = [
 			if (name === 'mrcgtnathan') {
 				this.add('c|Mr. CGTNathan|__My ankle!__');
 			}
-			/* no quote
-			if (name === 'nineage') {
-				this.add('c|nineage|');
-			}*/
 			if (name === 'omegachim') {
 				this.add('c|Omega Chimе|Oh, how I love the sound of silence.');
 			}
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|HQ this is Piers! We\'re overwhelmed at Point B; Alpha Team, tactical retreat!');
 			}
-			/* no quote
-			if (name === 'originserver') {
-				this.add('c|originserver|');
-			} */
+	
 		},
 
 		// Special switch-out events for some mons.
@@ -3327,23 +3309,12 @@ exports.Formats = [
 			if (name === 'impfallenblood') {
 				this.add('c|Imp Fallen Blood|If strong guys like this are going to appear on our road later, if I don’t get stronger, I won’t be able to protect my nakama.');
 			}
-			/* no quote
-			if (name === 'mrcgtnathan') {
-				this.add('c|Mr. CGTNathan|');
-			}
-			if (name === 'nineage') {
-				this.add('c|nineage|');
-			}*/
 			if (name === 'omegachim') {
 				this.add('c|Omega Chimе|The sound of the wind... it\'s fading...');
 			}
 			if (name === 'omeganivans') {
 				this.add('c|Omega Nivans|Tactical retreat!');
 			}
-			/* no quote
-			if (name === 'originserver') {
-				this.add('c|originserver|');
-			} */
 		},
 
 		onModifyPokemon: function (pokemon) {
@@ -3382,7 +3353,7 @@ exports.Formats = [
 			// let name = toId(pokemon.illusion && move.sourceEffect === 'allyswitch' ? pokemon.illusion.name : pokemon.name);
 			// if (move.id === '' && name === '') {}
 		},
-	},
+	}, */
 	{
 		name: "Balanced Hackmons",
 		desc: [
@@ -3580,7 +3551,7 @@ exports.Formats = [
 				'Blazikenite', 'Damp Rock', 'Gengarite', 'Kanghaskhanite', 'Lucarionite', 'Metagrossite', 'Salamencite', 'Soul Dew',
 			],
 	},
-	{
+/*	{
 		name: 'Random Monocolor',
 		section: "Other Metagames",
 
@@ -3588,7 +3559,7 @@ exports.Formats = [
 		team: 'randomMonocolor',
 		searchShow: false,
 		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Color Clause'],
-	},
+	}, */
 	{
 		name: "STABmons",
 		desc: [
@@ -3781,7 +3752,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
 		banlist: ['Dark Void', 'Sky Drop'],
 	},
-	{
+/*	{
 		name: "[Gen 5] Random Battle",
 		section: "BW2 Singles",
 
@@ -3789,7 +3760,7 @@ exports.Formats = [
 		searchShow: false,
 		team: 'random',
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},
+	}, */
 	{
 		name: "[Gen 5] Custom Game",
 		section: "BW2 Singles",
@@ -3885,7 +3856,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause'],
 		banlist: ['Uber'],
 	},
-	{
+/*	{
 		name: "[Gen 4] Random Battle",
 		section: "Past Generations",
 
@@ -3893,7 +3864,7 @@ exports.Formats = [
 		searchShow: false,
 		team: 'random',
 		ruleset: ['Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-	},
+	}, */
 	{
 		name: "[Gen 4] Random Doubles Battle",
 		section: 'Past Generations',
