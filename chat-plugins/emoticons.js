@@ -11,6 +11,7 @@ let emotes = {
 	'4Head': 'https://static-cdn.jtvnw.net/emoticons/v1/354/1.0',
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
 	'(ditto)': 'https://cdn.betterttv.net/emote/554da1a289d53f2d12781907/2x',
+	'BlueCatz': 'http://i.imgur.com/v7UdPzU.png',
 	'Cate': 'http://i.imgur.com/728AQQN.jpg',
 	'DansGame': 'https://static-cdn.jtvnw.net/emoticons/v1/33/1.0',
 	'Doge': 'http://fc01.deviantart.net/fs71/f/2014/279/4/5/doge__by_honeybunny135-d81wk54.png',
