@@ -207,7 +207,7 @@ let IPV = Rooms.global.IPValidator;
 
 exports.commands = {
 	confirmuserip: function (target, room, user) {
-		if (!this.can('declare')) return false;
+		if (!this.can('ban')) return false;
 		if (!target) return false;
 		let parts = target.split(" ");
 		if (parts.length !== 2) return false;
