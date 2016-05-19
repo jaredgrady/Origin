@@ -49045,7 +49045,6 @@ exports.BattleLearnsets = {
 		gigaimpact: ["6M"],
 		gust: ["6L1", "6S0"],
 		hiddenpower: ["6M"],
->>>>>>> upstream/master
 		holdhands: ["6S0"],
 		hurricane: ["6L50"],
 		hyperbeam: ["6M"],
