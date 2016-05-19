@@ -335,6 +335,7 @@ Punishments.unnamelock = function (name) {
 		Users.users.forEach(curUser => {
 			if (curUser.locked === id) {
 				curUser.locked = false;
+				curUser.namelocked = false;
 				curUser.updateIdentity();
 				success.push(curUser.getLastName());
 			}
