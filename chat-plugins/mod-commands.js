@@ -17,7 +17,7 @@ Users.parsePerma = function (userid, targetUser) {
 	if (!userid) return;
 	if (userid in permaUsers) {
 		try {
-			Punishments[id](Users.get(userid));
+			Punishments[permaUsers[userid]](Users.get(userid));
 		} catch (e) {
 			console.log("ERROR: unable to apply perma to " + userid);
 		}
