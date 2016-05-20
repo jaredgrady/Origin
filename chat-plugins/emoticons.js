@@ -100,6 +100,7 @@ let emotes = {
 	'feelssad': 'https://cdn.betterttv.net/emote/5613b7ca141069f91f48acca/2x',
 	'feelssakis': 'http://i.imgur.com/yThm3fM.png?1',
 	'feelssammich': 'http://i.imgur.com/sVgkUF1.png?1',
+	'feelssaur': 'http://i.imgur.com/Te4RZSV.png',
 	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
 	'feelsserp': 'http://i.imgur.com/PtCTxmY.png',
 	'feelsseis': 'http://i.imgur.com/gGGYxrE.png?1',
