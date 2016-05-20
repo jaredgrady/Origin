@@ -17,7 +17,7 @@ Users.parsePerma = function (userid, targetUser) {
 	if (!userid) return;
 	if (userid in permaUsers) {
 		try {
-			targetUser[permaUsers[userid]](false, userid);
+			Punishments[id](Users.get(userid));
 		} catch (e) {
 			console.log("ERROR: unable to apply perma to " + userid);
 		}
@@ -358,7 +358,7 @@ exports.commands = {
 		}
 		permaUsers[userid] = "lock";
 		try {
-			Users.get(userid).lock(false, userid);
+			Punishments.lock(userid);
 		} catch (e) {}
 		this.addModCommand(userid + " was permalocked by " + user.name + ".");
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
@@ -371,7 +371,7 @@ exports.commands = {
 		let userid = toId(target);
 		if (!(userid in permaUsers) || permaUsers[userid] !== "lock") return this.errorReply(userid + " is not permalocked!");
 		try {
-			Users.unlock(userid);
+			Punishments.unlock(userid);
 		} catch (e) {}
 		delete permaUsers[userid];
 		this.addModCommand(userid + " was unpermalocked by " + user.name + ".");
@@ -391,7 +391,7 @@ exports.commands = {
 		}
 		permaUsers[userid] = "ban";
 		try {
-			Users.get(userid).ban(false, userid);
+			Punishments.ban(userid);
 		} catch (e) {}
 		this.addModCommand(userid + " was permabanned by " + user.name + ".");
 		fs.writeFileSync("config/perma.json", JSON.stringify(permaUsers));
@@ -404,7 +404,7 @@ exports.commands = {
 		let userid = toId(target);
 		if (!(userid in permaUsers) || permaUsers[userid] !== "ban") return this.errorReply(userid + " is not permabanned!");
 		try {
-			Users.unban(userid);
+			Punishments.unban(userid);
 		} catch (e) {}
 		delete permaUsers[userid];
 		this.addModCommand(userid + " was unpermabanned by " + user.name + ".");
