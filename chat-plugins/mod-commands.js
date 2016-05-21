@@ -671,7 +671,8 @@ exports.commands = {
 			}
 			let inputRoom = Tools.escapeHTML(parts[1]);
 			let targetRoom = Rooms.search(inputRoom);
-			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + inputRoom + '" does not exist.');
+			if (!targetRoom || targetRoom === Rooms.global) return this.errorReply("The room '" + inputRoom + "' does not exist.");
+			if (!this.can('ban', null, targetRoom)) return this.errorReply("You cannot advertise the room '" + targetRoom + "' because you are not staff in there.");
 			let message = Tools.escapeHTML(parts.slice(2).join(","));
 			Rooms.global.ads.push({ip: user.latestIp, user: toId(user), room: targetRoom, message: message});
 			if (!Rooms.global.adInterval) {
