@@ -122,7 +122,7 @@
   @include icon("http://i.imgur.com/9C4khjv.gif");
 }
 
-#lobby-userlist-user-omegachim, #casino-userlist-user-omegachim, #ossb-userlist-user-omegachim, #ucl-userlist-user-omegachim, #phoenixleague-userlist-user-omegachim {
+#lobby-userlist-user-chimechoo, #casino-userlist-user-chimechoo, #ossb-userlist-user-chimechoo, #ucl-userlist-user-chimechoo, #phoenixleague-userlist-user-chimechoo {
   @include icon("http://www.serebii.net/pokedex-xy/icon/280.png");
 }
 
@@ -231,7 +231,7 @@
 }
 
 #phoenixleague-userlist-user-waszap, #thelotusleague-userlist-user-waszap, #monotype-userlist-user-waszap {
-    @include icon("http://pldh.net/media/pokecons_action/068.gif");
+  @include icon("http://pldh.net/media/pokecons_action/068.gif");
 }
 
 #lobby-userlist-user-wndo, #smogontiers-userlist-user-wndo, #thearbiterleague-userlist-user-wndo, #leaguecentral-userlist-user-wndo {
@@ -243,15 +243,15 @@
 }
 
 #plutoscave-userlist-user-thcfancii, #artshop-userlist-user-thcfancii, #thehyperioncoalition-userlist-user-thcfancii {
-    @include icon("http://i.imgur.com/Uxoo5hq.png");
+  @include icon("http://i.imgur.com/Uxoo5hq.png");
 }
 
 #x-userlist-user-confluxx, #divinity-userlist-user-confluxx, #phoenixleague-userlist-user-confluxx, #theempire-userlist-user-confluxx {
-    @include icon("http://i.imgur.com/HkktAxJ.gif");
+  @include icon("http://i.imgur.com/HkktAxJ.gif");
 }
 
 #lobby-userlist-user-allianceaegis, #monotype-userlist-user-allianceaegis, #theempire-userlist-user-allianceaegis, #tournaments-userlist-user-allianceaegis {
-    @include icon("http://i.imgur.com/sXwwoPH.png?1");
+  @include icon("http://i.imgur.com/sXwwoPH.png?1");
 }
 
 #lobby-userlist-user-vanitas, #smogontiers-userlist-user-vanitas, #yugioh-userlist-user-vanitas {
@@ -260,4 +260,8 @@
 
 #lobby-userlist-user-quizzyy, #ossb-userlist-user-quizzyy, #marketplace-userlist-user-quizzyy {
   @include icon("http://www.serebii.net/pokedex-xy/icon/248.png");
+}
+
+#lobby-userlist-user-alankh, #leaguecentral-userlist-user-alankh, #thezetaleague-userlist-user-alankh {
+  @include icon("http://pldh.net/media/pokecons_action/003.gif");
 }
